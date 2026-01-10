@@ -1,0 +1,638 @@
+{
+  "en": {
+    "title": "Equal Principal Amortization Calculator",
+    "seoTitle": "Equal Principal Amortization Calculator - Alternative Loan Payment Schedule",
+    "metaDescription": "Calculate loan payments with equal principal amortization. Alternative to standard amortization with constant principal payments and decreasing interest. Free equal principal loan calculator.",
+    "keywords": [
+      "equal principal amortization calculator",
+      "constant principal payment calculator",
+      "alternative amortization calculator",
+      "equal principal loan calculator",
+      "flat principal amortization",
+      "principal constant amortization calculator"
+    ],
+    "longTailKeywords": [
+      "equal principal amortization calculator online",
+      "calculate loan with equal principal payments",
+      "alternative to standard amortization calculator",
+      "equal principal loan payment schedule",
+      "constant principal amortization formula",
+      "flat principal payment loan calculator",
+      "equal principal vs standard amortization",
+      "alternative loan amortization calculator",
+      "constant principal repayment calculator",
+      "equal principal installment calculator"
+    ],
+    "slug": "equal-principal-amortization-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "amortization",
+      "principal payment",
+      "alternative method",
+      "loan calculation",
+      "payment schedule",
+      "financial planning"
+    ],
+    "description": "Calculate loan payments using equal principal amortization - an alternative method where principal payments remain constant while interest payments decrease over time. Compare with standard amortization and see the differences in payment structure.",
+    "summary": "Calculate loans with equal principal amortization method",
+    "instructions": [
+      "Enter the loan amount, interest rate, and loan term",
+      "Choose whether to show the amortization schedule",
+      "Click 'Calculate' to see equal principal payment breakdown",
+      "Compare with standard amortization if desired",
+      "Export the amortization schedule if needed"
+    ],
+    "calculatorComponent": "EqualPrincipalAmortizationCalculator",
+    "examples": [
+      {
+        "title": "Equal Principal Mortgage",
+        "description": "Comparing equal principal vs standard amortization for a mortgage",
+        "input": {
+          "loanAmount": 300000,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "showSchedule": false
+        },
+        "output": {
+          "firstMonthPayment": "$2,483.33",
+          "lastMonthPayment": "$1,083.33",
+          "totalInterest": "$320,000",
+          "averagePayment": "$1,783.33",
+          "paymentRange": "$1,083 - $2,483 monthly",
+          "standardComparison": "Standard: $1,927 constant vs Equal Principal: $1,783 average (7% savings)"
+        }
+      },
+      {
+        "title": "Equal Principal Car Loan",
+        "description": "Using equal principal for an auto loan",
+        "input": {
+          "loanAmount": 25000,
+          "interestRate": 7.5,
+          "loanTerm": 5,
+          "showSchedule": false
+        },
+        "output": {
+          "firstMonthPayment": "$583.33",
+          "lastMonthPayment": "$416.67",
+          "totalInterest": "$3,000",
+          "averagePayment": "$500.00",
+          "paymentRange": "$417 - $583 monthly",
+          "standardComparison": "Standard: $530 constant vs Equal Principal: $500 average (6% savings)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Discover an alternative approach to loan repayment with our equal principal amortization calculator. Unlike standard amortization where your monthly payments stay the same but principal payments increase over time, equal principal amortization keeps your principal payments constant while interest payments decrease. This method offers a different payment structure that may better suit your cash flow needs and financial planning goals.",
+      "benefits": [
+        "Calculate loan payments using the equal principal method",
+        "See how payments change over the life of the loan",
+        "Compare with standard amortization to understand differences",
+        "Plan your budget with decreasing payment amounts",
+        "Understand alternative loan payment structures",
+        "Export detailed amortization schedules for analysis"
+      ],
+      "steps": [
+        "Enter your loan amount, interest rate, and term",
+        "Choose whether to display the amortization schedule",
+        "Click 'Calculate' to see your equal principal payment breakdown",
+        "Review the payment summary and schedule details",
+        "Compare with standard amortization if desired",
+        "Export or save your results for financial planning"
+      ],
+      "inputsExplained": [
+        "Loan amount is the total principal you want to borrow",
+        "Annual interest rate is the yearly rate charged on the loan",
+        "Loan term is the number of years to repay the loan",
+        "Show amortization schedule displays the detailed payment breakdown"
+      ],
+      "formulaExplanation": "Equal principal amortization divides the total loan amount by the number of payments to determine the constant principal portion. Each month, interest is calculated on the remaining balance, and the total payment is principal plus interest. As the balance decreases, interest payments decrease while principal payments remain the same, creating a declining total payment over time.",
+      "examples": [
+        "A $300,000 loan at 6.5% over 30 years with equal principal amortization starts at $2,483 monthly and decreases to $1,083, averaging $1,783 monthly - compared to standard amortization's constant $1,927 payment",
+        "A $25,000 car loan at 7.5% over 5 years shows equal principal payments ranging from $583 to $417 monthly, averaging $500 compared to standard amortization's $530 constant payment"
+      ],
+      "resultsExplanation": [
+        "First month payment shows the highest payment (maximum interest)",
+        "Last month payment shows the lowest payment (minimum interest)",
+        "Total interest displays the complete interest cost over the loan term",
+        "Average monthly payment shows the mean payment across all months",
+        "Payment range indicates the spread between highest and lowest payments",
+        "Standard comparison shows how equal principal compares to traditional amortization",
+        "Amortization schedule provides month-by-month payment breakdown"
+      ],
+      "whoItsFor": "This equal principal amortization calculator is ideal for borrowers who want to understand alternative loan payment structures, financial planners analyzing different repayment methods, and anyone interested in how amortization methods affect their cash flow. It's particularly useful for those who prefer declining payments over constant payments and want to explore all available loan calculation options.",
+      "disclaimer": "This calculator demonstrates equal principal amortization for educational purposes. Actual loan terms and availability depend on lender policies and credit conditions. Equal principal loans may not be available from all lenders and could have different qualification requirements than standard amortization loans.",
+      "relatedTools": [
+        "mortgage calculator",
+        "loan calculator",
+        "amortization schedule calculator",
+        "loan payment table generator",
+        "loan affordability calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is equal principal amortization?",
+          "answer": "Equal principal amortization is an alternative loan repayment method where the principal portion of each payment remains constant throughout the loan term, while the interest portion decreases as the loan balance is paid down. This creates declining total payments over time."
+        },
+        {
+          "question": "How does equal principal differ from standard amortization?",
+          "answer": "In standard amortization, monthly payments stay constant but the principal portion increases over time while interest decreases. In equal principal amortization, the principal portion stays constant while interest decreases, making total payments decrease over time."
+        },
+        {
+          "question": "When would someone use equal principal amortization?",
+          "answer": "Equal principal amortization might be preferred by borrowers who want declining payments (easier early in loan when finances might be tight) rather than constant payments, or by those who want to pay more principal early in the loan term."
+        },
+        {
+          "question": "Are equal principal loans widely available?",
+          "answer": "Equal principal amortization is less common than standard amortization but may be available through some lenders, particularly for certain types of loans or in specific markets. Availability varies by lender and loan type."
+        },
+        {
+          "question": "Which method costs less in total interest?",
+          "answer": "Both methods result in the same total interest cost for the same loan terms. The difference is in payment timing - equal principal has higher early payments that decline, while standard amortization has constant payments."
+        },
+        {
+          "question": "Can I export the amortization schedule?",
+          "answer": "Yes, the calculator includes export functionality to save your equal principal amortization schedule as a CSV file for use in spreadsheets or financial planning software."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Amortización de Principal Igual",
+    "seoTitle": "Calculadora de Amortización de Principal Igual - Programa Alternativo de Pagos de Préstamo",
+    "metaDescription": "Calcula pagos de préstamo con amortización de principal igual. Alternativa a amortización estándar con pagos constantes de principal e intereses decrecientes. Calculadora gratuita de préstamo de principal igual.",
+    "keywords": [
+      "calculadora amortización principal igual",
+      "calculadora pago principal constante",
+      "calculadora amortización alternativa",
+      "calculadora préstamo principal igual",
+      "amortización principal plano",
+      "calculadora amortización principal constante"
+    ],
+    "longTailKeywords": [
+      "calculadora amortización principal igual online",
+      "calcular préstamo con pagos principales iguales",
+      "alternativa calculadora amortización estándar",
+      "programa pago préstamo principal igual",
+      "fórmula amortización principal constante",
+      "calculadora pago principal plano préstamo",
+      "principal igual vs amortización estándar",
+      "calculadora amortización préstamo alternativa",
+      "calculadora reembolso principal constante",
+      "calculadora cuota principal igual"
+    ],
+    "slug": "equal-principal-amortization-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "amortización",
+      "pago principal",
+      "método alternativo",
+      "cálculo préstamo",
+      "programa pago",
+      "planificación financiera"
+    ],
+    "description": "Calcula pagos de préstamo usando amortización de principal igual - un método alternativo donde los pagos de principal permanecen constantes mientras los pagos de intereses disminuyen con el tiempo. Compara con amortización estándar y ve las diferencias en estructura de pago.",
+    "summary": "Calcula préstamos con método de amortización de principal igual",
+    "instructions": [
+      "Ingresa el monto del préstamo, tasa de interés y plazo del préstamo",
+      "Elige si mostrar el programa de amortización",
+      "Haz clic en 'Calcular' para ver desglose de pago de principal igual",
+      "Compara con amortización estándar si lo deseas",
+      "Exporta el programa de amortización si es necesario"
+    ],
+    "calculatorComponent": "EqualPrincipalAmortizationCalculator",
+    "examples": [
+      {
+        "title": "Hipoteca de Principal Igual",
+        "description": "Comparando principal igual vs amortización estándar para hipoteca",
+        "input": {
+          "loanAmount": 300000,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "showSchedule": false
+        },
+        "output": {
+          "firstMonthPayment": "$2,483.33",
+          "lastMonthPayment": "$1,083.33",
+          "totalInterest": "$320,000",
+          "averagePayment": "$1,783.33",
+          "paymentRange": "$1,083 - $2,483 mensuales",
+          "standardComparison": "Estándar: $1,927 constante vs Principal Igual: $1,783 promedio (7% ahorro)"
+        }
+      },
+      {
+        "title": "Préstamo Auto Principal Igual",
+        "description": "Usando principal igual para préstamo de auto",
+        "input": {
+          "loanAmount": 25000,
+          "interestRate": 7.5,
+          "loanTerm": 5,
+          "showSchedule": false
+        },
+        "output": {
+          "firstMonthPayment": "$583.33",
+          "lastMonthPayment": "$416.67",
+          "totalInterest": "$3,000",
+          "averagePayment": "$500.00",
+          "paymentRange": "$417 - $583 mensuales",
+          "standardComparison": "Estándar: $530 constante vs Principal Igual: $500 promedio (6% ahorro)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Descubre un enfoque alternativo para reembolso de préstamo con nuestra calculadora de amortización de principal igual. A diferencia de amortización estándar donde tus pagos mensuales permanecen iguales pero pagos de principal aumentan con el tiempo, amortización de principal igual mantiene tus pagos de principal constantes mientras pagos de intereses disminuyen. Este método ofrece una estructura de pago diferente que puede adaptarse mejor a tus necesidades de flujo de efectivo y objetivos de planificación financiera.",
+      "benefits": [
+        "Calcula pagos de préstamo usando el método de principal igual",
+        "Ve cómo cambian los pagos durante la vida del préstamo",
+        "Compara con amortización estándar para entender diferencias",
+        "Planea tu presupuesto con montos de pago decrecientes",
+        "Entiende estructuras alternativas de pago de préstamo",
+        "Exporta programas detallados de amortización para análisis"
+      ],
+      "steps": [
+        "Ingresa tu monto de préstamo, tasa de interés y plazo",
+        "Elige si mostrar el programa de amortización",
+        "Haz clic en 'Calcular' para ver tu desglose de pago de principal igual",
+        "Revisa el resumen de pago y detalles del programa",
+        "Compara con amortización estándar si lo deseas",
+        "Exporta o guarda tus resultados para planificación financiera"
+      ],
+      "inputsExplained": [
+        "Monto del préstamo es el principal total que quieres pedir prestado",
+        "Tasa de interés anual es la tasa anual cobrada en el préstamo",
+        "Plazo del préstamo es el número de años para reembolsar el préstamo",
+        "Mostrar programa de amortización muestra el desglose detallado de pago"
+      ],
+      "formulaExplanation": "Amortización de principal igual divide el monto total del préstamo por el número de pagos para determinar la porción principal constante. Cada mes, intereses se calculan sobre el saldo restante, y el pago total es principal más intereses. Conforme el saldo disminuye, pagos de intereses disminuyen mientras pagos de principal permanecen iguales, creando un pago total decreciente con el tiempo.",
+      "examples": [
+        "Un préstamo de $300,000 al 6.5% durante 30 años con amortización de principal igual comienza en $2,483 mensuales y disminuye a $1,083, promediando $1,783 mensuales - comparado con pago constante de $1,927 de amortización estándar",
+        "Un préstamo de auto de $25,000 al 7.5% durante 5 años muestra pagos de principal igual desde $583 hasta $417 mensuales, promediando $500 comparado con pago constante de $530 de amortización estándar"
+      ],
+      "resultsExplanation": [
+        "Pago primer mes muestra el pago más alto (intereses máximos)",
+        "Pago último mes muestra el pago más bajo (intereses mínimos)",
+        "Intereses totales muestra el costo completo de intereses durante el plazo del préstamo",
+        "Pago mensual promedio muestra el pago medio a través de todos los meses",
+        "Rango de pagos indica la diferencia entre pagos más altos y más bajos",
+        "Comparación estándar muestra cómo principal igual se compara con amortización tradicional",
+        "Programa de amortización proporciona desglose mes a mes de pagos"
+      ],
+      "whoItsFor": "Esta calculadora de amortización de principal igual es ideal para prestatarios que quieren entender estructuras alternativas de pago de préstamo, planificadores financieros analizando diferentes métodos de reembolso, y cualquiera interesado en cómo métodos de amortización afectan su flujo de efectivo. Es particularmente útil para aquellos que prefieren pagos decrecientes sobre pagos constantes y quieren explorar todas las opciones disponibles de cálculo de préstamo.",
+      "disclaimer": "Esta calculadora demuestra amortización de principal igual para propósitos educativos. Términos reales de préstamo y disponibilidad dependen de políticas de prestamista y condiciones de crédito. Préstamos de principal igual pueden no estar disponibles de todos los prestamistas y podrían tener diferentes requisitos de calificación que préstamos de amortización estándar.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora préstamo",
+        "calculadora tabla amortización",
+        "generador tabla pagos préstamo",
+        "calculadora capacidad préstamo"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es amortización de principal igual?",
+          "answer": "Amortización de principal igual es un método alternativo de reembolso de préstamo donde la porción principal de cada pago permanece constante durante el plazo del préstamo, mientras la porción de intereses disminuye conforme el saldo del préstamo se paga. Esto crea pagos totales decrecientes con el tiempo."
+        },
+        {
+          "question": "¿Cómo difiere principal igual de amortización estándar?",
+          "answer": "En amortización estándar, pagos mensuales permanecen constantes pero la porción principal aumenta con el tiempo mientras intereses disminuyen. En amortización de principal igual, la porción principal permanece constante mientras intereses disminuyen, haciendo que pagos totales disminuyan con el tiempo."
+        },
+        {
+          "question": "¿Cuándo alguien usaría amortización de principal igual?",
+          "answer": "Amortización de principal igual podría preferirse por prestatarios que quieren pagos decrecientes (más fácil temprano en préstamo cuando finanzas podrían estar apretadas) en lugar de pagos constantes, o por aquellos que quieren pagar más principal temprano en el plazo del préstamo."
+        },
+        {
+          "question": "¿Son préstamos de principal igual ampliamente disponibles?",
+          "answer": "Amortización de principal igual es menos común que amortización estándar pero puede estar disponible a través de algunos prestamistas, particularmente para ciertos tipos de préstamos o en mercados específicos. Disponibilidad varía por prestamista y tipo de préstamo."
+        },
+        {
+          "question": "¿Qué método cuesta menos en intereses totales?",
+          "answer": "Ambos métodos resultan en el mismo costo total de intereses para los mismos términos de préstamo. La diferencia está en sincronización de pago - principal igual tiene pagos más altos tempranos que declinan, mientras amortización estándar tiene pagos constantes."
+        },
+        {
+          "question": "¿Puedo exportar el programa de amortización?",
+          "answer": "Sí, la calculadora incluye funcionalidad de exportación para guardar tu programa de amortización de principal igual como archivo CSV para uso en hojas de cálculo o software de planificación financiera."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Amortização de Principal Igual",
+    "seoTitle": "Calculadora de Amortização de Principal Igual - Programa Alternativo de Pagamentos de Empréstimo",
+    "metaDescription": "Calcule pagamentos de empréstimo com amortização de principal igual. Alternativa à amortização padrão com pagamentos constantes de principal e juros decrescentes. Calculadora gratuita de empréstimo de principal igual.",
+    "keywords": [
+      "calculadora amortização principal igual",
+      "calculadora pagamento principal constante",
+      "calculadora amortização alternativa",
+      "calculadora empréstimo principal igual",
+      "amortização principal plano",
+      "calculadora amortização principal constante"
+    ],
+    "longTailKeywords": [
+      "calculadora amortização principal igual online",
+      "calcular empréstimo com pagamentos principais iguais",
+      "alternativa calculadora amortização padrão",
+      "programa pagamento empréstimo principal igual",
+      "fórmula amortização principal constante",
+      "calculadora pagamento principal plano empréstimo",
+      "principal igual vs amortização padrão",
+      "calculadora amortização empréstimo alternativa",
+      "calculadora reembolso principal constante",
+      "calculadora parcela principal igual"
+    ],
+    "slug": "equal-principal-amortization-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "amortização",
+      "pagamento principal",
+      "método alternativo",
+      "cálculo empréstimo",
+      "programa pagamento",
+      "planejamento financeiro"
+    ],
+    "description": "Calcule pagamentos de empréstimo usando amortização de principal igual - um método alternativo onde pagamentos de principal permanecem constantes enquanto pagamentos de juros diminuem com o tempo. Compare com amortização padrão e veja as diferenças na estrutura de pagamento.",
+    "summary": "Calcule empréstimos com método de amortização de principal igual",
+    "instructions": [
+      "Digite o valor do empréstimo, taxa de juros e prazo do empréstimo",
+      "Escolha se mostrar o programa de amortização",
+      "Clique em 'Calcular' para ver detalhamento de pagamento de principal igual",
+      "Compare com amortização padrão se desejar",
+      "Exporte o programa de amortização se necessário"
+    ],
+    "calculatorComponent": "EqualPrincipalAmortizationCalculator",
+    "examples": [
+      {
+        "title": "Hipoteca de Principal Igual",
+        "description": "Comparando principal igual vs amortização padrão para hipoteca",
+        "input": {
+          "loanAmount": 300000,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "showSchedule": false
+        },
+        "output": {
+          "firstMonthPayment": "$2,483.33",
+          "lastMonthPayment": "$1,083.33",
+          "totalInterest": "$320,000",
+          "averagePayment": "$1,783.33",
+          "paymentRange": "$1,083 - $2,483 mensais",
+          "standardComparison": "Padrão: $1,927 constante vs Principal Igual: $1,783 médio (7% economia)"
+        }
+      },
+      {
+        "title": "Empréstimo Carro Principal Igual",
+        "description": "Usando principal igual para empréstimo de carro",
+        "input": {
+          "loanAmount": 25000,
+          "interestRate": 7.5,
+          "loanTerm": 5,
+          "showSchedule": false
+        },
+        "output": {
+          "firstMonthPayment": "$583.33",
+          "lastMonthPayment": "$416.67",
+          "totalInterest": "$3,000",
+          "averagePayment": "$500.00",
+          "paymentRange": "$417 - $583 mensais",
+          "standardComparison": "Padrão: $530 constante vs Principal Igual: $500 médio (6% economia)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Descubra uma abordagem alternativa para reembolso de empréstimo com nossa calculadora de amortização de principal igual. Ao contrário da amortização padrão onde seus pagamentos mensais permanecem os mesmos mas pagamentos de principal aumentam com o tempo, amortização de principal igual mantém seus pagamentos de principal constantes enquanto pagamentos de juros diminuem. Este método oferece uma estrutura de pagamento diferente que pode se adequar melhor às suas necessidades de fluxo de caixa e objetivos de planejamento financeiro.",
+      "benefits": [
+        "Calcule pagamentos de empréstimo usando o método de principal igual",
+        "Veja como os pagamentos mudam durante a vida do empréstimo",
+        "Compare com amortização padrão para entender diferenças",
+        "Planeje seu orçamento com valores de pagamento decrescentes",
+        "Entenda estruturas alternativas de pagamento de empréstimo",
+        "Exporte programas detalhados de amortização para análise"
+      ],
+      "steps": [
+        "Digite seu valor de empréstimo, taxa de juros e prazo",
+        "Escolha se exibir o programa de amortização",
+        "Clique em 'Calcular' para ver seu detalhamento de pagamento de principal igual",
+        "Revise o resumo de pagamento e detalhes do programa",
+        "Compare com amortização padrão se desejar",
+        "Exporte ou salve seus resultados para planejamento financeiro"
+      ],
+      "inputsExplained": [
+        "Valor do empréstimo é o principal total que você quer emprestar",
+        "Taxa de juros anual é a taxa anual cobrada no empréstimo",
+        "Prazo do empréstimo é o número de anos para reembolsar o empréstimo",
+        "Mostrar programa de amortização exibe o detalhamento de pagamento"
+      ],
+      "formulaExplanation": "Amortização de principal igual divide o valor total do empréstimo pelo número de pagamentos para determinar a porção principal constante. Cada mês, juros são calculados sobre o saldo restante, e o pagamento total é principal mais juros. Conforme o saldo diminui, pagamentos de juros diminuem enquanto pagamentos de principal permanecem os mesmos, criando um pagamento total decrescente com o tempo.",
+      "examples": [
+        "Um empréstimo de R$ 300.000 a 6.5% durante 30 anos com amortização de principal igual começa em R$ 2,483 mensais e diminui para R$ 1,083, medindo R$ 1,783 mensais - comparado ao pagamento constante de R$ 1,927 da amortização padrão",
+        "Um empréstimo de carro de R$ 25.000 a 7.5% durante 5 anos mostra pagamentos de principal igual variando de R$ 583 para R$ 417 mensais, medindo R$ 500 comparado ao pagamento constante de R$ 530 da amortização padrão"
+      ],
+      "resultsExplanation": [
+        "Pagamento primeiro mês mostra o pagamento mais alto (juros máximos)",
+        "Pagamento último mês mostra o pagamento mais baixo (juros mínimos)",
+        "Juros totais mostra o custo completo de juros durante o prazo do empréstimo",
+        "Pagamento mensal médio mostra o pagamento médio através de todos os meses",
+        "Intervalo de pagamentos indica a diferença entre pagamentos mais altos e mais baixos",
+        "Comparação padrão mostra como principal igual se compara à amortização tradicional",
+        "Programa de amortização fornece detalhamento mês a mês de pagamentos"
+      ],
+      "whoItsFor": "Esta calculadora de amortização de principal igual é ideal para tomadores que querem entender estruturas alternativas de pagamento de empréstimo, planejadores financeiros analisando diferentes métodos de reembolso, e qualquer pessoa interessada em como métodos de amortização afetam seu fluxo de caixa. É particularmente útil para aqueles que preferem pagamentos decrescentes sobre pagamentos constantes e querem explorar todas as opções disponíveis de cálculo de empréstimo.",
+      "disclaimer": "Esta calculadora demonstra amortização de principal igual para propósitos educacionais. Termos reais de empréstimo e disponibilidade dependem de políticas de credor e condições de crédito. Empréstimos de principal igual podem não estar disponíveis de todos os credores e poderiam ter diferentes requisitos de qualificação que empréstimos de amortização padrão.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora empréstimo",
+        "calculadora tabela amortização",
+        "gerador tabela pagamentos empréstimo",
+        "calculadora capacidade empréstimo"
+      ],
+      "faqs": [
+        {
+          "question": "O que é amortização de principal igual?",
+          "answer": "Amortização de principal igual é um método alternativo de reembolso de empréstimo onde a porção principal de cada pagamento permanece constante durante o prazo do empréstimo, enquanto a porção de juros diminui conforme o saldo do empréstimo é pago. Isso cria pagamentos totais decrescentes com o tempo."
+        },
+        {
+          "question": "Como principal igual difere da amortização padrão?",
+          "answer": "Na amortização padrão, pagamentos mensais permanecem constantes mas a porção principal aumenta com o tempo enquanto juros diminuem. Na amortização de principal igual, a porção principal permanece constante enquanto juros diminuem, fazendo pagamentos totais diminuírem com o tempo."
+        },
+        {
+          "question": "Quando alguém usaria amortização de principal igual?",
+          "answer": "Amortização de principal igual poderia ser preferida por tomadores que querem pagamentos decrescentes (mais fácil no início do empréstimo quando finanças podem estar apertadas) em vez de pagamentos constantes, ou por aqueles que querem pagar mais principal no início do prazo do empréstimo."
+        },
+        {
+          "question": "São empréstimos de principal igual amplamente disponíveis?",
+          "answer": "Amortização de principal igual é menos comum que amortização padrão mas pode estar disponível através de alguns credores, particularmente para certos tipos de empréstimos ou em mercados específicos. Disponibilidade varia por credor e tipo de empréstimo."
+        },
+        {
+          "question": "Qual método custa menos em juros totais?",
+          "answer": "Ambos métodos resultam no mesmo custo total de juros para os mesmos termos de empréstimo. A diferença está no timing do pagamento - principal igual tem pagamentos mais altos iniciais que declinam, enquanto amortização padrão tem pagamentos constantes."
+        },
+        {
+          "question": "Posso exportar o programa de amortização?",
+          "answer": "Sim, a calculadora inclui funcionalidade de exportação para salvar seu programa de amortização de principal igual como arquivo CSV para uso em planilhas ou software de planejamento financeiro."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Amortissement de Principal Égal",
+    "seoTitle": "Calculateur d'Amortissement de Principal Égal - Programme Alternatif de Paiements d'Emprunt",
+    "metaDescription": "Calculez paiements d'emprunt avec amortissement de principal égal. Alternative à amortissement standard avec paiements constants de principal et intérêts décroissants. Calculateur gratuit d'emprunt de principal égal.",
+    "keywords": [
+      "calculateur amortissement principal égal",
+      "calculateur paiement principal constant",
+      "calculateur amortissement alternatif",
+      "calculateur emprunt principal égal",
+      "amortissement principal plat",
+      "calculateur amortissement principal constant"
+    ],
+    "longTailKeywords": [
+      "calculateur amortissement principal égal en ligne",
+      "calculer emprunt avec paiements principaux égaux",
+      "alternative calculateur amortissement standard",
+      "programme paiement emprunt principal égal",
+      "formule amortissement principal constant",
+      "calculateur paiement principal plat emprunt",
+      "principal égal vs amortissement standard",
+      "calculateur amortissement emprunt alternatif",
+      "calculateur remboursement principal constant",
+      "calculateur mensualité principal égal"
+    ],
+    "slug": "equal-principal-amortization-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "amortissement",
+      "paiement principal",
+      "méthode alternative",
+      "calcul emprunt",
+      "programme paiement",
+      "planification financière"
+    ],
+    "description": "Calculez paiements d'emprunt utilisant amortissement de principal égal - une méthode alternative où paiements de principal restent constants tandis que paiements d'intérêts diminuent avec le temps. Comparez avec amortissement standard et voyez les différences dans structure de paiement.",
+    "summary": "Calculez emprunts avec méthode d'amortissement de principal égal",
+    "instructions": [
+      "Entrez le montant d'emprunt, taux d'intérêt et durée d'emprunt",
+      "Choisissez si afficher le programme d'amortissement",
+      "Cliquez sur 'Calculer' pour voir décomposition de paiement de principal égal",
+      "Comparez avec amortissement standard si désiré",
+      "Exportez le programme d'amortissement si nécessaire"
+    ],
+    "calculatorComponent": "EqualPrincipalAmortizationCalculator",
+    "examples": [
+      {
+        "title": "Hypothèque de Principal Égal",
+        "description": "Comparant principal égal vs amortissement standard pour hypothèque",
+        "input": {
+          "loanAmount": 300000,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "showSchedule": false
+        },
+        "output": {
+          "firstMonthPayment": "$2,483.33",
+          "lastMonthPayment": "$1,083.33",
+          "totalInterest": "$320,000",
+          "averagePayment": "$1,783.33",
+          "paymentRange": "$1,083 - $2,483 mensuels",
+          "standardComparison": "Standard: $1,927 constant vs Principal Égal: $1,783 moyen (7% économie)"
+        }
+      },
+      {
+        "title": "Emprunt Auto Principal Égal",
+        "description": "Utilisant principal égal pour emprunt auto",
+        "input": {
+          "loanAmount": 25000,
+          "interestRate": 7.5,
+          "loanTerm": 5,
+          "showSchedule": false
+        },
+        "output": {
+          "firstMonthPayment": "$583.33",
+          "lastMonthPayment": "$416.67",
+          "totalInterest": "$3,000",
+          "averagePayment": "$500.00",
+          "paymentRange": "$417 - $583 mensuels",
+          "standardComparison": "Standard: $530 constant vs Principal Égal: $500 moyen (6% économie)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Découvrez une approche alternative pour remboursement d'emprunt avec notre calculateur d'amortissement de principal égal. Contrairement à amortissement standard où vos paiements mensuels restent les mêmes mais paiements de principal augmentent avec le temps, amortissement de principal égal maintient vos paiements de principal constants tandis que paiements d'intérêts diminuent. Cette méthode offre une structure de paiement différente qui peut mieux convenir à vos besoins de trésorerie et objectifs de planification financière.",
+      "benefits": [
+        "Calculez paiements d'emprunt utilisant la méthode de principal égal",
+        "Voyez comment les paiements changent pendant la vie de l'emprunt",
+        "Comparez avec amortissement standard pour comprendre différences",
+        "Planifiez votre budget avec montants de paiement décroissants",
+        "Comprenez structures alternatives de paiement d'emprunt",
+        "Exportez programmes détaillés d'amortissement pour analyse"
+      ],
+      "steps": [
+        "Entrez votre montant d'emprunt, taux d'intérêt et durée",
+        "Choisissez si afficher le programme d'amortissement",
+        "Cliquez sur 'Calculer' pour voir votre décomposition de paiement de principal égal",
+        "Examinez le résumé de paiement et détails du programme",
+        "Comparez avec amortissement standard si désiré",
+        "Exportez ou sauvegardez vos résultats pour planification financière"
+      ],
+      "inputsExplained": [
+        "Montant d'emprunt est le principal total que vous voulez emprunter",
+        "Taux d'intérêt annuel est le taux annuel chargé sur l'emprunt",
+        "Durée d'emprunt est le nombre d'années pour rembourser l'emprunt",
+        "Afficher programme d'amortissement montre la décomposition détaillée de paiement"
+      ],
+      "formulaExplanation": "Amortissement de principal égal divise le montant total d'emprunt par le nombre de paiements pour déterminer la portion principal constante. Chaque mois, intérêts sont calculés sur le solde restant, et le paiement total est principal plus intérêts. Conforme le solde diminue, paiements d'intérêts diminuent tandis que paiements de principal restent les mêmes, créant un paiement total décroissant avec le temps.",
+      "examples": [
+        "Un emprunt de 300 000 € à 6.5% sur 30 ans avec amortissement de principal égal commence à 2 483 € mensuels et diminue à 1 083 €, moyennant 1 783 € mensuels - comparé au paiement constant de 1 927 € de l'amortissement standard",
+        "Un emprunt auto de 25 000 € à 7.5% sur 5 ans montre paiements de principal égal variant de 583 € à 417 € mensuels, moyennant 500 € comparé au paiement constant de 530 € de l'amortissement standard"
+      ],
+      "resultsExplanation": [
+        "Paiement premier mois montre le paiement le plus élevé (intérêts maximum)",
+        "Paiement dernier mois montre le paiement le plus bas (intérêts minimum)",
+        "Intérêts totaux montre le coût complet d'intérêts pendant la durée d'emprunt",
+        "Paiement mensuel moyen montre le paiement moyen à travers tous les mois",
+        "Plage de paiements indique l'écart entre paiements les plus élevés et plus bas",
+        "Comparaison standard montre comment principal égal se compare à amortissement traditionnel",
+        "Programme d'amortissement fournit décomposition mois par mois de paiements"
+      ],
+      "whoItsFor": "Ce calculateur d'amortissement de principal égal est idéal pour emprunteurs qui veulent comprendre structures alternatives de paiement d'emprunt, planificateurs financiers analysant différentes méthodes de remboursement, et quiconque intéressé par comment méthodes d'amortissement affectent leur trésorerie. Il est particulièrement utile pour ceux qui préfèrent paiements décroissants sur paiements constants et veulent explorer toutes les options disponibles de calcul d'emprunt.",
+      "disclaimer": "Ce calculateur démontre amortissement de principal égal pour fins éducatives. Termes réels d'emprunt et disponibilité dépendent de politiques de prêteur et conditions de crédit. Emprunts de principal égal peuvent ne pas être disponibles auprès de tous prêteurs et pourraient avoir différents exigences de qualification qu'emprunts d'amortissement standard.",
+      "relatedTools": [
+        "calculateur hypothèque",
+        "calculateur emprunt",
+        "calculateur tableau amortissement",
+        "générateur tableau paiements emprunt",
+        "calculateur capacité emprunt"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'amortissement de principal égal?",
+          "answer": "Amortissement de principal égal est une méthode alternative de remboursement d'emprunt où la portion principal de chaque paiement reste constante pendant la durée d'emprunt, tandis que la portion d'intérêts diminue conforme le solde d'emprunt est payé. Cela crée paiements totaux décroissants avec le temps."
+        },
+        {
+          "question": "Comment principal égal diffère-t-il d'amortissement standard?",
+          "answer": "Dans amortissement standard, paiements mensuels restent constants mais la portion principal augmente avec le temps tandis qu'intérêts diminuent. Dans amortissement de principal égal, la portion principal reste constante tandis qu'intérêts diminuent, faisant paiements totaux diminuer avec le temps."
+        },
+        {
+          "question": "Quand quelqu'un utiliserait-il amortissement de principal égal?",
+          "answer": "Amortissement de principal égal pourrait être préféré par emprunteurs qui veulent paiements décroissants (plus facile tôt dans emprunt quand finances pourraient être serrées) plutôt que paiements constants, ou par ceux qui veulent payer plus principal tôt dans durée d'emprunt."
+        },
+        {
+          "question": "Les emprunts de principal égal sont-ils largement disponibles?",
+          "answer": "Amortissement de principal égal est moins commun qu'amortissement standard mais peut être disponible auprès de certains prêteurs, particulièrement pour certains types d'emprunts ou dans marchés spécifiques. Disponibilité varie par prêteur et type d'emprunt."
+        },
+        {
+          "question": "Quelle méthode coûte moins en intérêts totaux?",
+          "answer": "Les deux méthodes aboutissent au même coût total d'intérêts pour mêmes termes d'emprunt. La différence est dans timing de paiement - principal égal a paiements plus élevés initiaux qui déclinent, tandis qu'amortissement standard a paiements constants."
+        },
+        {
+          "question": "Puis-je exporter le programme d'amortissement?",
+          "answer": "Oui, le calculateur inclut fonctionnalité d'exportation pour sauvegarder votre programme d'amortissement de principal égal comme fichier CSV pour utilisation dans feuilles de calcul ou logiciel de planification financière."
+        }
+      ]
+    }
+  }
+}

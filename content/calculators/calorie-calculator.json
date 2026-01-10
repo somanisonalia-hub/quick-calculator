@@ -1,0 +1,226 @@
+{
+  "en": {
+    "title": "Calorie Calculator",
+    "seoTitle": "Calorie Calculator - Daily Calorie Needs Calculator Online",
+    "metaDescription": "Free calorie calculator. Calculate your daily calorie needs for weight loss, maintenance, and gain. Includes TDEE calculation with activity levels and goals.",
+    "keywords": ["calorie calculator", "daily calorie needs", "TDEE calculator", "weight loss calories", "maintenance calories"],
+    "longTailKeywords": ["how many calories should I eat daily", "calorie calculator for weight loss", "daily calorie intake calculator", "TDEE calculation", "calories for weight gain"],
+    "slug": "calorie-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["calories", "TDEE", "nutrition", "weight loss", "diet"],
+    "summary": "Calculate your Total Daily Energy Expenditure (TDEE) and daily calorie needs for different fitness goals.",
+    "description": "Our comprehensive calorie calculator determines your Total Daily Energy Expenditure (TDEE) by combining your Basal Metabolic Rate (BMR) with your activity level. Get personalized calorie recommendations for weight loss, maintenance, or weight gain based on your goals and lifestyle.",
+    "instructions": [
+      "Enter your personal details (age, gender, height, weight)",
+      "Select your activity level and fitness goal",
+      "Get your TDEE and recommended daily calorie intake",
+      "Adjust your nutrition plan based on the results"
+    ],
+    "calculatorComponent": {
+      "componentName": "CalorieCalculator",
+      "inputs": [
+        { "name": "age", "label": "Age", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
+        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "height", "label": "Height (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "weight", "label": "Weight (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
+        { "name": "activityLevel", "label": "Activity Level", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] },
+        { "name": "goal", "label": "Goal", "type": "select", "default": "maintain", "options": ["lose", "maintain", "gain"] },
+        { "name": "rate", "label": "Rate", "type": "select", "default": "moderate", "options": ["slow", "moderate", "fast"] }
+      ],
+      "formula": "TDEE = BMR × Activity Factor; Daily Calories = TDEE ± Deficit/Surplus",
+      "output": { "label": "Daily Calories Needed", "default": "Enter your details above", "format": "number", "unit": "calories/day" },
+      "additionalOutputs": [
+        { "label": "BMR (Basal Metabolic Rate)", "field": "bmr", "format": "number", "unit": "calories/day" },
+        { "label": "TDEE (Total Daily Energy Expenditure)", "field": "tdee", "format": "number", "unit": "calories/day" },
+        { "label": "Weekly Change", "field": "weeklyChange", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Weight Loss Calculator",
+        "input": "30-year-old male, 175cm, 80kg, moderate activity, weight loss goal",
+        "output": "TDEE: 2,600 calories, Daily intake: 2,100 calories (lose 1 lb/week)"
+      },
+      {
+        "title": "Maintenance Calculator",
+        "input": "25-year-old female, 165cm, 60kg, light activity, maintain weight",
+        "output": "TDEE: 1,950 calories, Daily intake: 1,950 calories"
+      },
+      {
+        "title": "Weight Gain Calculator",
+        "input": "35-year-old male, 180cm, 70kg, active lifestyle, weight gain goal",
+        "output": "TDEE: 2,800 calories, Daily intake: 3,150 calories (gain 1 lb/week)"
+      }
+    ],
+    "relatedCalculators": ["bmr-calculator", "body-fat-calculator", "bmi-calculator"]
+  },
+  "es": {
+    "title": "Calculadora de Calorías",
+    "seoTitle": "Calculadora de Calorías - Calculadora de Necesidades Diarias de Calorías Online",
+    "metaDescription": "Calculadora gratuita de calorías. Calcula tus necesidades diarias de calorías para pérdida, mantenimiento y ganancia de peso. Incluye cálculo TDEE con niveles de actividad y metas.",
+    "keywords": ["calculadora calorías", "necesidades calorías diarias", "calculadora TDEE", "calorías pérdida peso", "calorías mantenimiento"],
+    "longTailKeywords": ["cuántas calorías debo comer diariamente", "calculadora calorías para pérdida peso", "calculadora ingesta calorías diaria", "cálculo TDEE", "calorías para ganancia peso"],
+    "slug": "calorie-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["calorías", "TDEE", "nutrición", "pérdida peso", "dieta"],
+    "summary": "Calcula tu Gasto Energético Total Diario (TDEE) y necesidades calóricas diarias para diferentes metas de fitness.",
+    "description": "Nuestra calculadora integral de calorías determina tu Gasto Energético Total Diario (TDEE) combinando tu Tasa Metabólica Basal (BMR) con tu nivel de actividad. Obtén recomendaciones personalizadas de calorías para pérdida de peso, mantenimiento o ganancia de peso basadas en tus metas y estilo de vida.",
+    "instructions": [
+      "Ingresa tus datos personales (edad, género, altura, peso)",
+      "Selecciona tu nivel de actividad y meta de fitness",
+      "Obtén tu TDEE y ingesta calórica diaria recomendada",
+      "Ajusta tu plan nutricional basado en los resultados"
+    ],
+    "calculatorComponent": {
+      "componentName": "CalorieCalculator",
+      "inputs": [
+        { "name": "age", "label": "Edad", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
+        { "name": "gender", "label": "Género", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "height", "label": "Altura (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "weight", "label": "Peso (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
+        { "name": "activityLevel", "label": "Nivel de Actividad", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] },
+        { "name": "goal", "label": "Meta", "type": "select", "default": "maintain", "options": ["lose", "maintain", "gain"] },
+        { "name": "rate", "label": "Velocidad", "type": "select", "default": "moderate", "options": ["slow", "moderate", "fast"] }
+      ],
+      "formula": "TDEE = BMR × Factor Actividad; Calorías Diarias = TDEE ± Déficit/Excedente",
+      "output": { "label": "Calorías Diarias Necesarias", "default": "Ingresa tus datos arriba", "format": "number", "unit": "calorías/día" },
+      "additionalOutputs": [
+        { "label": "BMR (Tasa Metabólica Basal)", "field": "bmr", "format": "number", "unit": "calorías/día" },
+        { "label": "TDEE (Gasto Energético Total Diario)", "field": "tdee", "format": "number", "unit": "calorías/día" },
+        { "label": "Cambio Semanal", "field": "weeklyChange", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Calculadora Pérdida de Peso",
+        "input": "Hombre de 30 años, 175cm, 80kg, actividad moderada, meta pérdida peso",
+        "output": "TDEE: 2,600 calorías, Ingesta diaria: 2,100 calorías (perder 0.5 kg/semana)"
+      },
+      {
+        "title": "Calculadora Mantenimiento",
+        "input": "Mujer de 25 años, 165cm, 60kg, actividad ligera, mantener peso",
+        "output": "TDEE: 1,950 calorías, Ingesta diaria: 1,950 calorías"
+      },
+      {
+        "title": "Calculadora Ganancia de Peso",
+        "input": "Hombre de 35 años, 180cm, 70kg, estilo de vida activo, meta ganancia peso",
+        "output": "TDEE: 2,800 calorías, Ingesta diaria: 3,150 calorías (ganar 0.5 kg/semana)"
+      }
+    ],
+    "relatedCalculators": ["bmr-calculator", "body-fat-calculator", "bmi-calculator"]
+  },
+  "pt": {
+    "title": "Calculadora de Calorias",
+    "seoTitle": "Calculadora de Calorias - Calculadora de Necessidades Diárias de Calorias Online",
+    "metaDescription": "Calculadora gratuita de calorias. Calcule suas necessidades diárias de calorias para perda, manutenção e ganho de peso. Inclui cálculo TDEE com níveis de atividade e metas.",
+    "keywords": ["calculadora calorias", "necessidades calorias diárias", "calculadora TDEE", "calorias perda peso", "calorias manutenção"],
+    "longTailKeywords": ["quantas calorias devo comer diariamente", "calculadora calorias para perda peso", "calculadora ingesta calorias diária", "cálculo TDEE", "calorias para ganho peso"],
+    "slug": "calorie-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["calorias", "TDEE", "nutrição", "perda peso", "dieta"],
+    "summary": "Calcule seu Gasto Energético Total Diário (TDEE) e necessidades calóricas diárias para diferentes metas de fitness.",
+    "description": "Nossa calculadora abrangente de calorias determina seu Gasto Energético Total Diário (TDEE) combinando sua Taxa Metabólica Basal (BMR) com seu nível de atividade. Obtenha recomendações personalizadas de calorias para perda de peso, manutenção ou ganho de peso baseadas em suas metas e estilo de vida.",
+    "instructions": [
+      "Digite seus dados pessoais (idade, gênero, altura, peso)",
+      "Selecione seu nível de atividade e meta de fitness",
+      "Obtenha seu TDEE e ingesta calórica diária recomendada",
+      "Ajuste seu plano nutricional baseado nos resultados"
+    ],
+    "calculatorComponent": {
+      "componentName": "CalorieCalculator",
+      "inputs": [
+        { "name": "age", "label": "Idade", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
+        { "name": "gender", "label": "Gênero", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "height", "label": "Altura (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "weight", "label": "Peso (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
+        { "name": "activityLevel", "label": "Nível de Atividade", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] },
+        { "name": "goal", "label": "Meta", "type": "select", "default": "maintain", "options": ["lose", "maintain", "gain"] },
+        { "name": "rate", "label": "Velocidade", "type": "select", "default": "moderate", "options": ["slow", "moderate", "fast"] }
+      ],
+      "formula": "TDEE = BMR × Fator Atividade; Calorias Diárias = TDEE ± Déficit/Excedente",
+      "output": { "label": "Calorias Diárias Necessárias", "default": "Digite seus dados acima", "format": "number", "unit": "calorias/dia" },
+      "additionalOutputs": [
+        { "label": "BMR (Taxa Metabólica Basal)", "field": "bmr", "format": "number", "unit": "calorias/dia" },
+        { "label": "TDEE (Gasto Energético Total Diário)", "field": "tdee", "format": "number", "unit": "calorias/dia" },
+        { "label": "Mudança Semanal", "field": "weeklyChange", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Calculadora Perda de Peso",
+        "input": "Homem de 30 anos, 175cm, 80kg, atividade moderada, meta perda peso",
+        "output": "TDEE: 2,600 calorias, Ingesta diária: 2,100 calorias (perder 0.5 kg/semana)"
+      },
+      {
+        "title": "Calculadora Manutenção",
+        "input": "Mulher de 25 anos, 165cm, 60kg, atividade leve, manter peso",
+        "output": "TDEE: 1,950 calorias, Ingesta diária: 1,950 calorias"
+      },
+      {
+        "title": "Calculadora Ganho de Peso",
+        "input": "Homem de 35 anos, 180cm, 70kg, estilo de vida ativo, meta ganho peso",
+        "output": "TDEE: 2,800 calorias, Ingesta diária: 3,150 calorias (ganhar 0.5 kg/semana)"
+      }
+    ],
+    "relatedCalculators": ["bmr-calculator", "body-fat-calculator", "bmi-calculator"]
+  },
+  "fr": {
+    "title": "Calculateur de Calories",
+    "seoTitle": "Calculateur de Calories - Calculateur de Besoins Caloriques Quotidiens en Ligne",
+    "metaDescription": "Calculateur gratuit de calories. Calculez vos besoins caloriques quotidiens pour perte, maintenance et gain de poids. Inclut calcul TDEE avec niveaux d'activité et objectifs.",
+    "keywords": ["calculateur calories", "besoins caloriques quotidiens", "calculateur TDEE", "calories perte poids", "calories maintenance"],
+    "longTailKeywords": ["combien calories devrais-je manger quotidiennement", "calculateur calories pour perte poids", "calculateur apport calorique quotidien", "calcul TDEE", "calories pour gain poids"],
+    "slug": "calorie-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["calories", "TDEE", "nutrition", "perte poids", "régime"],
+    "summary": "Calculez votre Dépense Énergétique Totale Quotidienne (TDEE) et besoins caloriques quotidiens pour différents objectifs fitness.",
+    "description": "Notre calculateur complet de calories détermine votre Dépense Énergétique Totale Quotidienne (TDEE) en combinant votre Taux Métabolique Basal (BMR) avec votre niveau d'activité. Obtenez recommandations caloriques personnalisées pour perte poids, maintenance ou gain poids basées sur vos objectifs et style vie.",
+    "instructions": [
+      "Entrez vos données personnelles (âge, genre, taille, poids)",
+      "Sélectionnez votre niveau d'activité et objectif fitness",
+      "Obtenez votre TDEE et apport calorique quotidien recommandé",
+      "Ajustez votre plan nutritionnel basé sur les résultats"
+    ],
+    "calculatorComponent": {
+      "componentName": "CalorieCalculator",
+      "inputs": [
+        { "name": "age", "label": "Âge", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
+        { "name": "gender", "label": "Genre", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "height", "label": "Taille (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "weight", "label": "Poids (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
+        { "name": "activityLevel", "label": "Niveau d'Activité", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] },
+        { "name": "goal", "label": "Objectif", "type": "select", "default": "maintain", "options": ["lose", "maintain", "gain"] },
+        { "name": "rate", "label": "Vitesse", "type": "select", "default": "moderate", "options": ["slow", "moderate", "fast"] }
+      ],
+      "formula": "TDEE = BMR × Facteur Activité; Calories Quotidiennes = TDEE ± Déficit/Excédent",
+      "output": { "label": "Calories Quotidiennes Nécessaires", "default": "Entrez vos données ci-dessus", "format": "number", "unit": "calories/jour" },
+      "additionalOutputs": [
+        { "label": "BMR (Taux Métabolique Basal)", "field": "bmr", "format": "number", "unit": "calories/jour" },
+        { "label": "TDEE (Dépense Énergétique Totale Quotidienne)", "field": "tdee", "format": "number", "unit": "calories/jour" },
+        { "label": "Changement Hebdomadaire", "field": "weeklyChange", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Calculateur Perte de Poids",
+        "input": "Homme de 30 ans, 175cm, 80kg, activité modérée, objectif perte poids",
+        "output": "TDEE: 2,600 calories, Apport quotidien: 2,100 calories (perdre 0.5 kg/semaine)"
+      },
+      {
+        "title": "Calculateur Maintenance",
+        "input": "Femme de 25 ans, 165cm, 60kg, activité légère, maintenir poids",
+        "output": "TDEE: 1,950 calories, Apport quotidien: 1,950 calories"
+      },
+      {
+        "title": "Calculateur Gain de Poids",
+        "input": "Homme de 35 ans, 180cm, 70kg, style vie actif, objectif gain poids",
+        "output": "TDEE: 2,800 calories, Apport quotidien: 3,150 calories (gagner 0.5 kg/semaine)"
+      }
+    ],
+    "relatedCalculators": ["bmr-calculator", "body-fat-calculator", "bmi-calculator"]
+  }
+}

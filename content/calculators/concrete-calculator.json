@@ -1,0 +1,1646 @@
+{
+  "en": {
+    "title": "Concrete Calculator",
+    "seoTitle": "Concrete Calculator - Calculate Concrete Volume and Bags Needed",
+    "metaDescription": "Calculate concrete volume for slabs, footings, columns, and walls. Get accurate concrete bag calculations and material estimates for your construction projects.",
+    "keywords": [
+      "concrete calculator",
+      "concrete volume calculator",
+      "concrete bags calculator",
+      "slab concrete calculator",
+      "concrete material calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate concrete volume for slab",
+      "concrete calculator for footings and foundations",
+      "how many bags of concrete do I need calculator",
+      "concrete volume calculator for driveway",
+      "concrete calculator for columns and posts",
+      "how to calculate concrete for walls",
+      "concrete calculator with rebar and forms",
+      "ready mix concrete volume calculator",
+      "concrete calculator for garage floor",
+      "how much concrete do I need calculator"
+    ],
+    "slug": "concrete-calculator",
+    "category": "Utility",
+    "difficulty": "Intermediate",
+    "tags": [
+      "concrete",
+      "construction",
+      "volume",
+      "material",
+      "building",
+      "slab",
+      "footing",
+      "column",
+      "wall"
+    ],
+    "description": "Calculate concrete volume and material requirements for all your construction projects. Our comprehensive concrete calculator handles slabs, footings, columns, walls, and more. Get accurate estimates for ready-mix concrete, concrete bags, and additional materials like rebar and forms.",
+    "summary": "Calculate concrete volume and material requirements for construction projects.",
+    "instructions": [
+      "Select the concrete structure type (slab, footing, column, wall, etc.)",
+      "Enter the dimensions in feet (length, width, height/thickness)",
+      "Choose your concrete strength (PSI rating)",
+      "Select ready-mix or bags for delivery preference",
+      "Add waste factor for cuts and spillage (recommended 5-10%)",
+      "Click 'Calculate' to see volume in cubic yards/feet and bags needed"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "structureType",
+          "label": "Structure Type",
+          "type": "select",
+          "options": [
+            "slab",
+            "footing",
+            "column",
+            "wall",
+            "steps",
+            "tube"
+          ],
+          "default": "slab"
+        },
+        {
+          "name": "length",
+          "label": "Length (ft)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType !== 'tube'"
+        },
+        {
+          "name": "width",
+          "label": "Width (ft)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType !== 'tube'"
+        },
+        {
+          "name": "thickness",
+          "label": "Thickness/Height (inches)",
+          "type": "number",
+          "default": 4,
+          "min": 2,
+          "max": 24,
+          "step": 0.25,
+          "conditional": "structureType === 'slab' || structureType === 'footing'"
+        },
+        {
+          "name": "height",
+          "label": "Height (ft)",
+          "type": "number",
+          "default": 8,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType === 'wall' || structureType === 'column'"
+        },
+        {
+          "name": "diameter",
+          "label": "Diameter (inches)",
+          "type": "number",
+          "default": 12,
+          "min": 4,
+          "max": 48,
+          "step": 0.25,
+          "conditional": "structureType === 'column' || structureType === 'tube'"
+        },
+        {
+          "name": "quantity",
+          "label": "Number of Pieces",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "conditional": "structureType === 'column' || structureType === 'footing'"
+        },
+        {
+          "name": "concreteType",
+          "label": "Concrete Type",
+          "type": "select",
+          "options": [
+            "readyMix",
+            "bags"
+          ],
+          "default": "readyMix"
+        },
+        {
+          "name": "strength",
+          "label": "Concrete Strength (PSI)",
+          "type": "select",
+          "options": [
+            "2000",
+            "2500",
+            "3000",
+            "3500",
+            "4000",
+            "5000"
+          ],
+          "default": "3000"
+        },
+        {
+          "name": "wasteFactor",
+          "label": "Waste Factor (%)",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "max": 20,
+          "step": 1
+        }
+      ],
+      "formula": "Slab: Volume = Length × Width × Thickness ÷ 27 (cubic yards); Footing: Volume = Length × Width × Thickness ÷ 27; Column: Volume = π × (Diameter÷2)² × Height ÷ 27; Wall: Volume = Length × Height × Thickness ÷ 27; Bags: Volume × 27 ÷ 0.45 (45lb bags) or ÷ 0.6 (60lb bags)",
+      "output": {
+        "label": "Concrete Volume",
+        "default": "Enter dimensions above",
+        "format": "volume"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Cubic Yards",
+          "field": "cubicYards",
+          "format": "decimal"
+        },
+        {
+          "label": "Cubic Feet",
+          "field": "cubicFeet",
+          "format": "decimal"
+        },
+        {
+          "label": "Bags Needed (80lb)",
+          "field": "bags80lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Bags Needed (60lb)",
+          "field": "bags60lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Bags Needed (50lb)",
+          "field": "bags50lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Ready Mix Trucks",
+          "field": "readyMixTrucks",
+          "format": "decimal"
+        }
+      ],
+      "componentName": "ConcreteCalculator"
+    },
+    "examples": [
+      {
+        "title": "Garage Slab Foundation",
+        "input": {
+          "structureType": "slab",
+          "length": 24,
+          "width": 24,
+          "thickness": 6,
+          "concreteType": "readyMix",
+          "strength": "3000",
+          "wasteFactor": 5
+        },
+        "output": {
+          "cubicYards": 8.89,
+          "cubicFeet": 240,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.89
+        },
+        "explanation": "A 24×24 foot garage slab with 6-inch thickness requires approximately 8.89 cubic yards of concrete. Order 9 cubic yards to account for waste. One standard ready-mix truck holds 9-10 cubic yards."
+      },
+      {
+        "title": "House Footings",
+        "input": {
+          "structureType": "footing",
+          "length": 40,
+          "width": 2,
+          "thickness": 12,
+          "quantity": 4,
+          "concreteType": "bags",
+          "strength": "3000",
+          "wasteFactor": 10
+        },
+        "output": {
+          "cubicYards": 1.48,
+          "cubicFeet": 40,
+          "bags80lb": 37,
+          "bags60lb": 49,
+          "bags50lb": 59,
+          "readyMixTrucks": 0.15
+        },
+        "explanation": "Four 40-foot long, 2-foot wide, 12-inch deep footings require 1.48 cubic yards. With bags, you'd need approximately 37-59 bags depending on bag size (80lb, 60lb, or 50lb)."
+      },
+      {
+        "title": "Concrete Columns",
+        "input": {
+          "structureType": "column",
+          "diameter": 16,
+          "height": 10,
+          "quantity": 6,
+          "concreteType": "readyMix",
+          "strength": "4000",
+          "wasteFactor": 5
+        },
+        "output": {
+          "cubicYards": 2.32,
+          "cubicFeet": 62.58,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.23
+        },
+        "explanation": "Six 16-inch diameter columns, 10 feet tall each, require 2.32 cubic yards. This is a small load that could be delivered in one truck with other concrete orders."
+      },
+      {
+        "title": "Basement Wall",
+        "input": {
+          "structureType": "wall",
+          "length": 60,
+          "width": 0.67,
+          "height": 8,
+          "concreteType": "readyMix",
+          "strength": "3000",
+          "wasteFactor": 8
+        },
+        "output": {
+          "cubicYards": 3.56,
+          "cubicFeet": 96,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.36
+        },
+        "explanation": "A 60-foot long basement wall, 8 inches thick and 8 feet tall, requires 3.56 cubic yards. This wall volume calculation includes the standard 8-inch thickness for poured concrete walls."
+      },
+      {
+        "title": "Driveway Project",
+        "input": {
+          "structureType": "slab",
+          "length": 50,
+          "width": 12,
+          "thickness": 5,
+          "concreteType": "readyMix",
+          "strength": "4000",
+          "wasteFactor": 7
+        },
+        "output": {
+          "cubicYards": 10.42,
+          "cubicFeet": 281.25,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 1.04
+        },
+        "explanation": "A 50×12 foot driveway with 5-inch thickness requires 10.42 cubic yards. This would typically require about 1 truck of ready-mix concrete, with some left over for small repairs."
+      },
+      {
+        "title": "Small Patio",
+        "input": {
+          "structureType": "slab",
+          "length": 12,
+          "width": 12,
+          "thickness": 4,
+          "concreteType": "bags",
+          "strength": "3000",
+          "wasteFactor": 10
+        },
+        "output": {
+          "cubicYards": 0.59,
+          "cubicFeet": 16,
+          "bags80lb": 15,
+          "bags60lb": 20,
+          "bags50lb": 24,
+          "readyMixTrucks": 0.06
+        },
+        "explanation": "A 12×12 foot patio with 4-inch thickness needs about 0.59 cubic yards. For bags, you'd need 15-24 bags depending on size. This is a manageable DIY project."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Addition Calculator",
+        "slug": "addition-calculator",
+        "description": "Basic math calculations."
+      },
+      {
+        "name": "Percent Calculator",
+        "slug": "percent-calculator",
+        "description": "Calculate percentages and ratios."
+      },
+      {
+        "name": "Budget Calculator",
+        "slug": "budget-calculator",
+        "description": "Plan construction budgets."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Master concrete calculations for all your construction projects with our comprehensive concrete calculator that provides accurate volume estimates and material requirements. Whether you're pouring a driveway, foundation, patio, or structural elements, getting the concrete volume right is crucial to avoid costly mistakes. Our calculator handles all common concrete applications including slabs, footings, columns, walls, and stairs. From DIY homeowners to professional contractors, accurate concrete calculations save time, money, and prevent material waste. Understanding how to calculate concrete volume properly ensures your projects are completed efficiently and cost-effectively.",
+      "benefits": [
+        "Calculate exact concrete volume for any project shape and size",
+        "Get accurate bag counts for DIY projects or cubic yard estimates for ready-mix",
+        "Handle complex shapes including footings, columns, walls, and stairs",
+        "Account for waste factors to avoid running short on material",
+        "Compare costs between ready-mix delivery and bagged concrete",
+        "Plan material delivery timing to prevent concrete curing issues",
+        "Scale calculations for multiple pours or large commercial projects",
+        "Avoid over-ordering or under-ordering concrete materials"
+      ],
+      "steps": [
+        "Select your project type (slab, footing, column, wall, etc.)",
+        "Enter dimensions in feet (length, width, thickness/height)",
+        "Choose concrete strength requirements for your application",
+        "Select delivery method (ready-mix trucks or bags)",
+        "Add waste factor (5-10% recommended for cuts and spillage)",
+        "Review volume calculations and material recommendations"
+      ],
+      "inputsExplained": [
+        "Project type determines calculation method (slab, footing, column, etc.)",
+        "Dimensions must be in feet for accurate volume calculations",
+        "Thickness/depth affects total volume significantly",
+        "Concrete strength (PSI) determines bag size and mix requirements",
+        "Waste factor accounts for spillage, cuts, and uneven surfaces"
+      ],
+      "formulaExplanation": "Concrete volume calculations vary by project type. For slabs: Volume = Length × Width × Thickness. For footings: Volume = Perimeter × Width × Depth. For columns: Volume = π × r² × Height (circular) or Length × Width × Height (rectangular). For walls: Volume = Length × Height × Thickness. All calculations are in cubic feet, then converted to cubic yards (divide by 27) for ready-mix or bags (divide by bag volume). Waste factors (5-10%) are added for cuts, spillage, and imperfect forms. Understanding these formulas helps you order the right amount and plan for multiple pours.",
+      "examples": [
+        "20×30 foot driveway with 4-inch thickness requires 7.4 cubic yards (about 200 bags) of concrete for complete coverage.",
+        "House foundation footings (200 linear feet × 2 feet wide × 1 foot deep) needs 37 cubic yards of concrete for structural support.",
+        "16×20 foot garage slab with 6-inch thickness requires 3.6 cubic yards (97 bags) plus rebar and vapor barrier materials."
+      ],
+      "resultsExplanation": [
+        "Cubic yards shows volume for ready-mix concrete delivery",
+        "Bag count indicates number of 80lb or 60lb bags needed for DIY",
+        "Waste factor recommendations prevent running short",
+        "Cost estimates help budget for concrete and delivery",
+        "Mix recommendations ensure proper concrete strength"
+      ],
+      "whoItsFor": "This concrete calculator serves DIY homeowners planning patios, driveways, and small repairs, contractors estimating commercial projects, builders calculating foundation requirements, landscapers planning walkways and retaining walls, remodelers working with structural elements, and anyone involved in construction. It's particularly valuable for first-time concrete workers, those scaling recipes for large projects, people comparing ready-mix vs. bagged options, and contractors bidding jobs. The calculator works for residential, commercial, and industrial concrete applications of any size.",
+      "disclaimer": "This concrete calculator provides volume estimates based on standard formulas and typical waste factors. Actual concrete needs may vary based on specific project conditions, form complexity, rebar requirements, and local codes. Concrete calculations do not include forms, rebar, gravel base, or finishing materials. Waste factors vary by project complexity and worker experience. Ready-mix concrete requires planning for delivery timing and pump needs. This tool is for estimation purposes and does not replace professional engineering calculations or local building codes compliance.",
+      "relatedTools": [
+        "Volume calculators for other construction materials",
+        "Cost calculators for complete project budgeting",
+        "Measurement converters for international units"
+      ],
+      "faqs": [
+        {
+          "question": "How do I calculate concrete volume for a slab?",
+          "answer": "Multiply length × width × thickness (all in feet) to get cubic feet, then divide by 27 for cubic yards. For a 20×30 foot driveway with 4-inch thickness: 20 × 30 × 0.33 = 198 cubic feet ÷ 27 = 7.33 cubic yards. Add 5-10% waste factor for cuts and spillage. This gives you the ready-mix amount or helps calculate bag quantities (each 80lb bag yields about 0.6 cubic feet of concrete)."
+        },
+        {
+          "question": "How many bags of concrete do I need?",
+          "answer": "Divide total cubic feet by bag yield (0.45-0.6 cubic feet per 60-80lb bag). For 198 cubic feet from above: 198 ÷ 0.6 = 330 bags (80lb bags) or 198 ÷ 0.45 = 440 bags (60lb bags). Always add waste factor and buy extra. Bag sizes vary: 60lb bags yield ~0.45 cubic feet, 80lb bags yield ~0.6 cubic feet. Mix entire bags at once to avoid waste."
+        },
+        {
+          "question": "What's the difference between ready-mix and bagged concrete?",
+          "answer": "Ready-mix is delivered in trucks (minimum 1-2 cubic yards) and mixed on-site for consistent quality. Bagged concrete is pre-mixed dry material you mix with water yourself. Ready-mix costs more but saves labor and ensures proper mixing. Bagged concrete is cheaper for small projects but requires mixing equipment and physical labor. Ready-mix is better for large projects, bagged for small repairs or when delivery is difficult."
+        },
+        {
+          "question": "How much does concrete cost per cubic yard?",
+          "answer": "Ready-mix costs $100-150 per cubic yard depending on location and strength. Bagged concrete costs $4-6 per 80lb bag ($133-200 per cubic yard equivalent). Delivery adds $50-100 per load. Total costs include forms ($1-3 per square foot), rebar ($0.50-1 per square foot), and finishing. Factor in waste (5-10%) and never order exactly - concrete is cheaper than delays or additional deliveries."
+        },
+        {
+          "question": "Do I need to account for waste when calculating concrete?",
+          "answer": "Always add 5-10% waste factor for spillage, uneven forms, cuts, and imperfect mixing. For complex projects with many corners or irregular shapes, add 10-15%. Over-ordering is cheaper than under-ordering - concrete is inexpensive compared to labor delays. Keep extra concrete for small repairs or future projects. Ready-mix suppliers often provide waste estimates based on project complexity."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Concreto",
+    "seoTitle": "Calculadora de Concreto - Calcular Volumen de Concreto y Bolsas Necesarias",
+    "metaDescription": "Calcula el volumen de concreto para losas, cimientos, columnas y paredes. Obtén cálculos precisos de bolsas de concreto y estimaciones de materiales para tus proyectos de construcción.",
+    "keywords": [
+      "calculadora concreto",
+      "calculadora volumen concreto",
+      "calculadora bolsas concreto",
+      "calculadora losa concreto",
+      "calculadora material concreto"
+    ],
+    "longTailKeywords": [
+      "como calcular volumen de concreto para losa",
+      "calculadora de concreto para cimientos y fundaciones",
+      "cuantas bolsas de concreto necesito calculadora",
+      "calculadora volumen concreto para entrada",
+      "calculadora de concreto para columnas y postes",
+      "como calcular concreto para paredes",
+      "calculadora de concreto con varillas y formas",
+      "calculadora volumen concreto premezclado",
+      "calculadora de concreto para piso de garaje",
+      "cuanto concreto necesito calculadora"
+    ],
+    "slug": "concrete-calculator",
+    "category": "Utility",
+    "difficulty": "Intermediate",
+    "tags": [
+      "concreto",
+      "construcción",
+      "volumen",
+      "material",
+      "edificación",
+      "losa",
+      "cimiento",
+      "columna",
+      "pared"
+    ],
+    "description": "Calcula el volumen de concreto y los requisitos de materiales para todos tus proyectos de construcción. Nuestra calculadora integral de concreto maneja losas, cimientos, columnas, paredes y más. Obtén estimaciones precisas para concreto premezclado, bolsas de concreto y materiales adicionales como varillas y formas.",
+    "summary": "Calcula el volumen de concreto y requisitos de materiales para proyectos de construcción.",
+    "instructions": [
+      "Selecciona el tipo de estructura de concreto (losa, cimiento, columna, pared, etc.)",
+      "Ingresa las dimensiones en pies (longitud, ancho, altura/espesor)",
+      "Elige la resistencia del concreto (clasificación PSI)",
+      "Selecciona premezclado o bolsas para preferencia de entrega",
+      "Agrega factor de desperdicio para cortes y derrames (recomendado 5-10%)",
+      "Haz clic en 'Calcular' para ver el volumen en yardas cúbicas/pies y bolsas necesarias"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "structureType",
+          "label": "Tipo de Estructura",
+          "type": "select",
+          "options": [
+            "slab",
+            "footing",
+            "column",
+            "wall",
+            "steps",
+            "tube"
+          ],
+          "default": "slab"
+        },
+        {
+          "name": "length",
+          "label": "Longitud (pies)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType !== 'tube'"
+        },
+        {
+          "name": "width",
+          "label": "Ancho (pies)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType !== 'tube'"
+        },
+        {
+          "name": "thickness",
+          "label": "Espesor/Altura (pulgadas)",
+          "type": "number",
+          "default": 4,
+          "min": 2,
+          "max": 24,
+          "step": 0.25,
+          "conditional": "structureType === 'slab' || structureType === 'footing'"
+        },
+        {
+          "name": "height",
+          "label": "Altura (pies)",
+          "type": "number",
+          "default": 8,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType === 'wall' || structureType === 'column'"
+        },
+        {
+          "name": "diameter",
+          "label": "Diámetro (pulgadas)",
+          "type": "number",
+          "default": 12,
+          "min": 4,
+          "max": 48,
+          "step": 0.25,
+          "conditional": "structureType === 'column' || structureType === 'tube'"
+        },
+        {
+          "name": "quantity",
+          "label": "Número de Piezas",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "conditional": "structureType === 'column' || structureType === 'footing'"
+        },
+        {
+          "name": "concreteType",
+          "label": "Tipo de Concreto",
+          "type": "select",
+          "options": [
+            "readyMix",
+            "bags"
+          ],
+          "default": "readyMix"
+        },
+        {
+          "name": "strength",
+          "label": "Resistencia del Concreto (PSI)",
+          "type": "select",
+          "options": [
+            "2000",
+            "2500",
+            "3000",
+            "3500",
+            "4000",
+            "5000"
+          ],
+          "default": "3000"
+        },
+        {
+          "name": "wasteFactor",
+          "label": "Factor de Desperdicio (%)",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "max": 20,
+          "step": 1
+        }
+      ],
+      "formula": "Losa: Volumen = Longitud × Ancho × Espesor ÷ 27 (yardas cúbicas); Cimiento: Volumen = Longitud × Ancho × Espesor ÷ 27; Columna: Volumen = π × (Diámetro÷2)² × Altura ÷ 27; Pared: Volumen = Longitud × Altura × Espesor ÷ 27; Bolsas: Volumen × 27 ÷ 0.45 (bolsas de 45lb) o ÷ 0.6 (bolsas de 60lb)",
+      "output": {
+        "label": "Volumen de Concreto",
+        "default": "Ingresa dimensiones arriba",
+        "format": "volume"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Yardas Cúbicas",
+          "field": "cubicYards",
+          "format": "decimal"
+        },
+        {
+          "label": "Pies Cúbicos",
+          "field": "cubicFeet",
+          "format": "decimal"
+        },
+        {
+          "label": "Bolsas Necesarias (80lb)",
+          "field": "bags80lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Bolsas Necesarias (60lb)",
+          "field": "bags60lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Bolsas Necesarias (50lb)",
+          "field": "bags50lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Camiones de Concreto Premezclado",
+          "field": "readyMixTrucks",
+          "format": "decimal"
+        }
+      ],
+      "componentName": "ConcreteCalculator"
+    },
+    "examples": [
+      {
+        "title": "Fundación de Losa de Garaje",
+        "input": {
+          "structureType": "slab",
+          "length": 24,
+          "width": 24,
+          "thickness": 6,
+          "concreteType": "readyMix",
+          "strength": "3000",
+          "wasteFactor": 5
+        },
+        "output": {
+          "cubicYards": 8.89,
+          "cubicFeet": 240,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.89
+        },
+        "explanation": "Una losa de garaje de 24×24 pies con 6 pulgadas de espesor requiere aproximadamente 8.89 yardas cúbicas de concreto. Ordena 9 yardas cúbicas para contabilizar desperdicio. Un camión estándar de concreto premezclado contiene 9-10 yardas cúbicas."
+      },
+      {
+        "title": "Cimientos de Casa",
+        "input": {
+          "structureType": "footing",
+          "length": 40,
+          "width": 2,
+          "thickness": 12,
+          "quantity": 4,
+          "concreteType": "bags",
+          "strength": "3000",
+          "wasteFactor": 10
+        },
+        "output": {
+          "cubicYards": 1.48,
+          "cubicFeet": 40,
+          "bags80lb": 37,
+          "bags60lb": 49,
+          "bags50lb": 59,
+          "readyMixTrucks": 0.15
+        },
+        "explanation": "Cuatro cimientos de 40 pies de largo, 2 pies de ancho, 12 pulgadas de profundidad requieren 1.48 yardas cúbicas. Con bolsas, necesitarías aproximadamente 37-59 bolsas dependiendo del tamaño (80lb, 60lb, o 50lb)."
+      },
+      {
+        "title": "Columnas de Concreto",
+        "input": {
+          "structureType": "column",
+          "diameter": 16,
+          "height": 10,
+          "quantity": 6,
+          "concreteType": "readyMix",
+          "strength": "4000",
+          "wasteFactor": 5
+        },
+        "output": {
+          "cubicYards": 2.32,
+          "cubicFeet": 62.58,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.23
+        },
+        "explanation": "Seis columnas de 16 pulgadas de diámetro, 10 pies de altura cada una, requieren 2.32 yardas cúbicas. Esta es una carga pequeña que podría entregarse en un camión con otros pedidos de concreto."
+      },
+      {
+        "title": "Pared de Sótano",
+        "input": {
+          "structureType": "wall",
+          "length": 60,
+          "width": 0.67,
+          "height": 8,
+          "concreteType": "readyMix",
+          "strength": "3000",
+          "wasteFactor": 8
+        },
+        "output": {
+          "cubicYards": 3.56,
+          "cubicFeet": 96,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.36
+        },
+        "explanation": "Una pared de sótano de 60 pies de largo, 8 pulgadas de espesor y 8 pies de altura, requiere 3.56 yardas cúbicas. Este cálculo de volumen de pared incluye el espesor estándar de 8 pulgadas para paredes de concreto vertido."
+      },
+      {
+        "title": "Proyecto de Entrada",
+        "input": {
+          "structureType": "slab",
+          "length": 50,
+          "width": 12,
+          "thickness": 5,
+          "concreteType": "readyMix",
+          "strength": "4000",
+          "wasteFactor": 7
+        },
+        "output": {
+          "cubicYards": 10.42,
+          "cubicFeet": 281.25,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 1.04
+        },
+        "explanation": "Una entrada de 50×12 pies con 5 pulgadas de espesor requiere 10.42 yardas cúbicas. Esto típicamente requeriría aproximadamente 1 camión de concreto premezclado, con algo de sobra para reparaciones pequeñas."
+      },
+      {
+        "title": "Patio Pequeño",
+        "input": {
+          "structureType": "slab",
+          "length": 12,
+          "width": 12,
+          "thickness": 4,
+          "concreteType": "bags",
+          "strength": "3000",
+          "wasteFactor": 10
+        },
+        "output": {
+          "cubicYards": 0.59,
+          "cubicFeet": 16,
+          "bags80lb": 15,
+          "bags60lb": 20,
+          "bags50lb": 24,
+          "readyMixTrucks": 0.06
+        },
+        "explanation": "Un patio de 12×12 pies con 4 pulgadas de espesor necesita aproximadamente 0.59 yardas cúbicas. Para bolsas, necesitarías 15-24 bolsas dependiendo del tamaño. Este es un proyecto DIY manejable."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Suma",
+        "slug": "addition-calculator",
+        "description": "Cálculos matemáticos básicos."
+      },
+      {
+        "name": "Calculadora de Porcentajes",
+        "slug": "percent-calculator",
+        "description": "Calcula porcentajes y proporciones."
+      },
+      {
+        "name": "Calculadora de Presupuesto",
+        "slug": "budget-calculator",
+        "description": "Planea presupuestos de construcción."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Domina cálculos de concreto para todos tus proyectos de construcción con nuestra calculadora integral de concreto que proporciona estimaciones precisas de volumen y requerimientos de material. Ya sea que viertas una entrada de autos, fundación, patio, o elementos estructurales, obtener el volumen de concreto correcto es crucial para evitar errores costosos. Nuestra calculadora maneja todas las aplicaciones comunes de concreto incluyendo losas, zapatas, columnas, paredes, y escaleras. Desde propietarios DIY hasta contratistas profesionales, cálculos precisos de concreto ahorran tiempo, dinero, y previenen desperdicio de material. Entender cómo calcular volumen de concreto apropiadamente asegura que tus proyectos se completen eficientemente y costo-efectivamente.",
+      "benefits": [
+        "Calcula volumen exacto de concreto para cualquier forma y tamaño de proyecto",
+        "Obtén conteos precisos de sacos para proyectos DIY o estimaciones de yardas cúbicas para concreto premezclado",
+        "Maneja formas complejas incluyendo zapatas, columnas, paredes, y escaleras",
+        "Considera factores de desperdicio para evitar quedarte corto de material",
+        "Compara costos entre entrega de concreto premezclado y concreto en sacos",
+        "Planea timing de entrega de material para prevenir problemas de curado de concreto",
+        "Escala cálculos para múltiples vertidos o proyectos comerciales grandes",
+        "Evita ordenar de más o de menos materiales de concreto"
+      ],
+      "steps": [
+        "Selecciona tipo de estructura de concreto (losas, zapatas, columnas, paredes, etc.)",
+        "Ingresa dimensiones en pies (largo, ancho, alto/espesor)",
+        "Elige resistencia de concreto requerida (calificación PSI)",
+        "Selecciona método de entrega (camiones premezclados o sacos)",
+        "Agrega factor de desperdicio para cortes y derrames (recomendado 5-10%)",
+        "Revisa cálculos de volumen y recomendaciones de material"
+      ],
+      "inputsExplained": [
+        "Tipo de proyecto determina método de cálculo (losas, zapatas, columnas, etc.)",
+        "Dimensiones deben estar en pies para cálculos precisos de volumen",
+        "Espesor/profundidad afecta volumen total significativamente",
+        "Resistencia de concreto (PSI) determina tamaño de saco y requerimientos de mezcla",
+        "Factor de desperdicio considera derrames, cortes, y superficies irregulares"
+      ],
+      "formulaExplanation": "Los cálculos de volumen de concreto varían por tipo de proyecto. Para losas: Volumen = Largo × Ancho × Espesor. Para zapatas: Volumen = Perímetro × Ancho × Profundidad. Para columnas: Volumen = π × r² × Altura (circular) o Largo × Ancho × Altura (rectangular). Para paredes: Volumen = Largo × Altura × Espesor. Todos los cálculos están en pies cúbicos, luego convertidos a yardas cúbicas (divide por 27) para premezclado o sacos (divide por volumen de saco). Factores de desperdicio (5-10%) se agregan para cortes, derrames, y formas imperfectas. Entender estas fórmulas te ayuda a ordenar la cantidad correcta y planear para múltiples vertidos.",
+      "examples": [
+        "Entrada de autos de 20×30 pies con espesor de 4 pulgadas requiere 7.4 yardas cúbicas (cerca de 200 sacos) de concreto para cobertura completa.",
+        "Zapatas de fundación de casa (200 pies lineales × 2 pies ancho × 1 pie profundidad) necesita 37 yardas cúbicas de concreto para soporte estructural.",
+        "Losa de garaje de 16×20 pies con espesor de 6 pulgadas requiere 3.6 yardas cúbicas (97 sacos) más materiales de refuerzo y barrera de vapor."
+      ],
+      "resultsExplanation": [
+        "Yardas cúbicas muestra volumen para entrega de concreto premezclado",
+        "Conteo de sacos indica número de sacos de 80lb o 60lb necesarios para DIY",
+        "Recomendaciones de factor de desperdicio previenen quedarte corto",
+        "Estimaciones de costo ayudan presupuestar concreto y entrega",
+        "Recomendaciones de mezcla aseguran resistencia apropiada de concreto"
+      ],
+      "whoItsFor": "Esta calculadora de concreto sirve propietarios DIY planeando patios, entradas de autos, y reparaciones pequeñas, contratistas estimando proyectos comerciales, constructores calculando requerimientos de fundación, paisajistas planeando caminos y muros de contención, remodeladores trabajando con elementos estructurales, y cualquiera involucrado en construcción. Es particularmente valiosa para trabajadores de concreto primerizos, aquellos escalando recetas para proyectos grandes, personas comparando opciones premezcladas vs. en sacos, y contratistas cotizando trabajos. La calculadora funciona para aplicaciones residenciales, comerciales, e industriales de concreto de cualquier tamaño.",
+      "disclaimer": "Esta calculadora de concreto proporciona estimaciones de volumen basadas en fórmulas estándar y factores típicos de desperdicio. Las necesidades reales de concreto pueden variar basado en condiciones específicas del proyecto, complejidad de formas, requerimientos de refuerzo, y códigos locales. Los cálculos de concreto no incluyen formas, refuerzo, base de grava, o materiales de terminación. Los factores de desperdicio varían por complejidad del proyecto y experiencia del trabajador. Concreto premezclado requiere planificación para timing de entrega y necesidades de bomba. Esta herramienta es para estimación y no reemplaza cálculos de ingeniería profesional o cumplimiento de códigos de construcción locales.",
+      "relatedTools": [
+        "Calculadoras de volumen para otros materiales de construcción",
+        "Calculadoras de costo para presupuestación completa de proyecto",
+        "Convertidores de medición para unidades internacionales"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo calculo volumen de concreto para una losa?",
+          "answer": "Multiplica largo × ancho × espesor (todo en pies) para obtener pies cúbicos, luego divide por 27 para yardas cúbicas. Para entrada de autos de 20×30 pies con espesor de 4 pulgadas: 20 × 30 × 0.33 = 198 pies cúbicos ÷ 27 = 7.33 yardas cúbicas. Agrega factor de desperdicio de 5-10% para cortes y derrames. Esto te da la cantidad de premezclado o ayuda calcular cantidades de sacos (cada saco de 80lb produce cerca de 0.6 pies cúbicos de concreto)."
+        },
+        {
+          "question": "¿Cuántos sacos de concreto necesito?",
+          "answer": "Divide pies cúbicos totales por rendimiento de saco (0.45-0.6 pies cúbicos por saco de 60-80lb). Para 198 pies cúbicos de arriba: 198 ÷ 0.6 = 330 sacos (sacos de 80lb) o 198 ÷ 0.45 = 440 sacos (sacos de 60lb). Siempre agrega factor de desperdicio y compra extra. Los tamaños de saco varían: sacos de 60lb producen ~0.45 pies cúbicos, sacos de 80lb producen ~0.6 pies cúbicos. Mezcla sacos enteros a la vez para evitar desperdicio."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre concreto premezclado y en sacos?",
+          "answer": "Concreto premezclado se entrega en camiones (mínimo 1-2 yardas cúbicas) y se mezcla en sitio para calidad consistente. Concreto en sacos es material seco premezclado que mezclas con agua tú mismo. Concreto premezclado cuesta más pero ahorra trabajo y asegura mezcla apropiada. Concreto en sacos es más barato para proyectos pequeños pero requiere equipo de mezcla y trabajo físico. Concreto premezclado es mejor para proyectos grandes, en sacos para reparaciones pequeñas o cuando entrega es difícil."
+        },
+        {
+          "question": "¿Cuánto cuesta el concreto por yarda cúbica?",
+          "answer": "Concreto premezclado cuesta $100-150 por yarda cúbica dependiendo de ubicación y resistencia. Concreto en sacos cuesta $4-6 por saco de 80lb ($133-200 por yarda cúbica equivalente). Entrega agrega $50-100 por carga. Costos totales incluyen formas ($1-3 por pie cuadrado), refuerzo ($0.50-1 por pie cuadrado), y terminación. Considera desperdicio (5-10%) y nunca ordenes exactamente - concreto es más barato que demoras o entregas adicionales."
+        },
+        {
+          "question": "¿Necesito considerar desperdicio al calcular concreto?",
+          "answer": "Siempre agrega factor de desperdicio de 5-10% para derrames, formas irregulares, cortes, y mezcla imperfecta. Para proyectos complejos con muchas esquinas o formas irregulares, agrega 10-15%. Ordenar de más es más barato que ordenar de menos - concreto es barato comparado con demoras de trabajo. Mantén concreto extra para reparaciones pequeñas o proyectos futuros. Proveedores de premezclado a menudo proporcionan estimaciones de desperdicio basado en complejidad del proyecto."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Concreto",
+    "seoTitle": "Calculadora de Concreto - Calcular Volume de Concreto e Sacos Necessários",
+    "metaDescription": "Calcule volume de concreto para lajes, sapatas, colunas e paredes. Obtenha cálculos precisos de sacos de concreto e estimativas de materiais para seus projetos de construção.",
+    "keywords": [
+      "calculadora concreto",
+      "calculadora volume concreto",
+      "calculadora sacos concreto",
+      "calculadora laje concreto",
+      "calculadora material concreto"
+    ],
+    "longTailKeywords": [
+      "como calcular volume de concreto para laje",
+      "calculadora de concreto para sapatas e fundações",
+      "quantos sacos de concreto preciso calculadora",
+      "calculadora volume concreto para entrada",
+      "calculadora de concreto para colunas e postes",
+      "como calcular concreto para paredes",
+      "calculadora de concreto com vergalhão e formas",
+      "calculadora volume concreto usinado",
+      "calculadora de concreto para piso de garagem",
+      "quanto concreto preciso calculadora"
+    ],
+    "slug": "concrete-calculator",
+    "category": "Utility",
+    "difficulty": "Intermediate",
+    "tags": [
+      "concreto",
+      "construção",
+      "volume",
+      "material",
+      "edificação",
+      "laje",
+      "sapata",
+      "coluna",
+      "parede"
+    ],
+    "description": "Calcule volume de concreto e requisitos de materiais para todos os seus projetos de construção. Nossa calculadora abrangente de concreto trata lajes, sapatas, colunas, paredes e muito mais. Obtenha estimativas precisas para concreto usinado, sacos de concreto e materiais adicionais como vergalhão e formas.",
+    "summary": "Calcule volume de concreto e requisitos de materiais para projetos de construção.",
+    "instructions": [
+      "Selecione o tipo de estrutura de concreto (laje, sapata, coluna, parede, etc.)",
+      "Digite as dimensões em pés (comprimento, largura, altura/espessura)",
+      "Escolha a resistência do concreto (classificação PSI)",
+      "Selecione usinado ou sacos para preferência de entrega",
+      "Adicione fator de desperdício para cortes e derramamento (recomendado 5-10%)",
+      "Clique em 'Calcular' para ver volume em jardas cúbicas/pés e sacos necessários"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "structureType",
+          "label": "Tipo de Estrutura",
+          "type": "select",
+          "options": [
+            "slab",
+            "footing",
+            "column",
+            "wall",
+            "steps",
+            "tube"
+          ],
+          "default": "slab"
+        },
+        {
+          "name": "length",
+          "label": "Comprimento (pés)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType !== 'tube'"
+        },
+        {
+          "name": "width",
+          "label": "Largura (pés)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType !== 'tube'"
+        },
+        {
+          "name": "thickness",
+          "label": "Espessura/Altura (polegadas)",
+          "type": "number",
+          "default": 4,
+          "min": 2,
+          "max": 24,
+          "step": 0.25,
+          "conditional": "structureType === 'slab' || structureType === 'footing'"
+        },
+        {
+          "name": "height",
+          "label": "Altura (pés)",
+          "type": "number",
+          "default": 8,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType === 'wall' || structureType === 'column'"
+        },
+        {
+          "name": "diameter",
+          "label": "Diâmetro (polegadas)",
+          "type": "number",
+          "default": 12,
+          "min": 4,
+          "max": 48,
+          "step": 0.25,
+          "conditional": "structureType === 'column' || structureType === 'tube'"
+        },
+        {
+          "name": "quantity",
+          "label": "Número de Peças",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "conditional": "structureType === 'column' || structureType === 'footing'"
+        },
+        {
+          "name": "concreteType",
+          "label": "Tipo de Concreto",
+          "type": "select",
+          "options": [
+            "readyMix",
+            "bags"
+          ],
+          "default": "readyMix"
+        },
+        {
+          "name": "strength",
+          "label": "Resistência do Concreto (PSI)",
+          "type": "select",
+          "options": [
+            "2000",
+            "2500",
+            "3000",
+            "3500",
+            "4000",
+            "5000"
+          ],
+          "default": "3000"
+        },
+        {
+          "name": "wasteFactor",
+          "label": "Fator de Desperdício (%)",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "max": 20,
+          "step": 1
+        }
+      ],
+      "formula": "Laje: Volume = Comprimento × Largura × Espessura ÷ 27 (jardas cúbicas); Sapata: Volume = Comprimento × Largura × Espessura ÷ 27; Coluna: Volume = π × (Diâmetro÷2)² × Altura ÷ 27; Parede: Volume = Comprimento × Altura × Espessura ÷ 27; Sacos: Volume × 27 ÷ 0.45 (sacos de 45lb) ou ÷ 0.6 (sacos de 60lb)",
+      "output": {
+        "label": "Volume de Concreto",
+        "default": "Digite dimensões acima",
+        "format": "volume"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Jardas Cúbicas",
+          "field": "cubicYards",
+          "format": "decimal"
+        },
+        {
+          "label": "Pés Cúbicos",
+          "field": "cubicFeet",
+          "format": "decimal"
+        },
+        {
+          "label": "Sacos Necessários (80lb)",
+          "field": "bags80lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Sacos Necessários (60lb)",
+          "field": "bags60lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Sacos Necessários (50lb)",
+          "field": "bags50lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Caminhões de Concreto Usinado",
+          "field": "readyMixTrucks",
+          "format": "decimal"
+        }
+      ],
+      "componentName": "ConcreteCalculator"
+    },
+    "examples": [
+      {
+        "title": "Fundação de Laje de Garagem",
+        "input": {
+          "structureType": "slab",
+          "length": 24,
+          "width": 24,
+          "thickness": 6,
+          "concreteType": "readyMix",
+          "strength": "3000",
+          "wasteFactor": 5
+        },
+        "output": {
+          "cubicYards": 8.89,
+          "cubicFeet": 240,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.89
+        },
+        "explanation": "Uma laje de garagem de 24×24 pés com 6 polegadas de espessura requer aproximadamente 8.89 jardas cúbicas de concreto. Peça 9 jardas cúbicas para contabilizar desperdício. Um caminhão padrão de concreto usinado contém 9-10 jardas cúbicas."
+      },
+      {
+        "title": "Sapatas de Casa",
+        "input": {
+          "structureType": "footing",
+          "length": 40,
+          "width": 2,
+          "thickness": 12,
+          "quantity": 4,
+          "concreteType": "bags",
+          "strength": "3000",
+          "wasteFactor": 10
+        },
+        "output": {
+          "cubicYards": 1.48,
+          "cubicFeet": 40,
+          "bags80lb": 37,
+          "bags60lb": 49,
+          "bags50lb": 59,
+          "readyMixTrucks": 0.15
+        },
+        "explanation": "Quatro sapatas de 40 pés de comprimento, 2 pés de largura, 12 polegadas de profundidade requerem 1.48 jardas cúbicas. Com sacos, você precisaria de aproximadamente 37-59 sacos dependendo do tamanho (80lb, 60lb, ou 50lb)."
+      },
+      {
+        "title": "Colunas de Concreto",
+        "input": {
+          "structureType": "column",
+          "diameter": 16,
+          "height": 10,
+          "quantity": 6,
+          "concreteType": "readyMix",
+          "strength": "4000",
+          "wasteFactor": 5
+        },
+        "output": {
+          "cubicYards": 2.32,
+          "cubicFeet": 62.58,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.23
+        },
+        "explanation": "Seis colunas de 16 polegadas de diâmetro, 10 pés de altura cada uma, requerem 2.32 jardas cúbicas. Esta é uma carga pequena que poderia ser entregue em um caminhão com outros pedidos de concreto."
+      },
+      {
+        "title": "Parede de Porão",
+        "input": {
+          "structureType": "wall",
+          "length": 60,
+          "width": 0.67,
+          "height": 8,
+          "concreteType": "readyMix",
+          "strength": "3000",
+          "wasteFactor": 8
+        },
+        "output": {
+          "cubicYards": 3.56,
+          "cubicFeet": 96,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.36
+        },
+        "explanation": "Uma parede de porão de 60 pés de comprimento, 8 polegadas de espessura e 8 pés de altura, requer 3.56 jardas cúbicas. Este cálculo de volume de parede inclui a espessura padrão de 8 polegadas para paredes de concreto vertido."
+      },
+      {
+        "title": "Projeto de Entrada",
+        "input": {
+          "structureType": "slab",
+          "length": 50,
+          "width": 12,
+          "thickness": 5,
+          "concreteType": "readyMix",
+          "strength": "4000",
+          "wasteFactor": 7
+        },
+        "output": {
+          "cubicYards": 10.42,
+          "cubicFeet": 281.25,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 1.04
+        },
+        "explanation": "Uma entrada de 50×12 pés com 5 polegadas de espessura requer 10.42 jardas cúbicas. Isso normalmente requeriria cerca de 1 caminhão de concreto usinado, com um pouco sobrando para reparos pequenos."
+      },
+      {
+        "title": "Pátio Pequeno",
+        "input": {
+          "structureType": "slab",
+          "length": 12,
+          "width": 12,
+          "thickness": 4,
+          "concreteType": "bags",
+          "strength": "3000",
+          "wasteFactor": 10
+        },
+        "output": {
+          "cubicYards": 0.59,
+          "cubicFeet": 16,
+          "bags80lb": 15,
+          "bags60lb": 20,
+          "bags50lb": 24,
+          "readyMixTrucks": 0.06
+        },
+        "explanation": "Um pátio de 12×12 pés com 4 polegadas de espessura precisa de aproximadamente 0.59 jardas cúbicas. Para sacos, você precisaria de 15-24 sacos dependendo do tamanho. Este é um projeto DIY manejável."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Adição",
+        "slug": "addition-calculator",
+        "description": "Cálculos matemáticos básicos."
+      },
+      {
+        "name": "Calculadora de Porcentagem",
+        "slug": "percent-calculator",
+        "description": "Calcule porcentagens e proporções."
+      },
+      {
+        "name": "Calculadora de Orçamento",
+        "slug": "budget-calculator",
+        "description": "Planeje orçamentos de construção."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Domine cálculos de concreto para todos os seus projetos de construção com nossa calculadora abrangente de concreto que fornece estimativas precisas de volume e requerimentos de material. Seja derramando entrada de carros, fundação, pátio, ou elementos estruturais, obter volume de concreto correto é crucial para evitar erros custosos. Nossa calculadora lida com todas aplicações comuns de concreto incluindo lajes, sapatas, colunas, paredes, e escadas. De proprietários DIY a contratadores profissionais, cálculos precisos de concreto economizam tempo, dinheiro, e previnem desperdício de material. Entender como calcular volume de concreto adequadamente garante que seus projetos sejam completados eficientemente e custo-efetivamente.",
+      "benefits": [
+        "Calcule volume exato de concreto para qualquer forma e tamanho de projeto",
+        "Obtenha contagens precisas de sacos para projetos DIY ou estimativas de jardas cúbicas para concreto pronto",
+        "Lide com formas complexas incluindo sapatas, colunas, paredes, e escadas",
+        "Considere fatores de desperdício para evitar ficar curto de material",
+        "Compare custos entre entrega de concreto pronto e concreto em sacos",
+        "Planeje timing de entrega de material para prevenir problemas de cura de concreto",
+        "Dimensione cálculos para múltiplas derramadas ou projetos comerciais grandes",
+        "Evite super-ordenar ou sub-ordenar materiais de concreto"
+      ],
+      "steps": [
+        "Selecione tipo de estrutura de concreto (laje, sapata, coluna, parede, etc.)",
+        "Digite dimensões em pés (comprimento, largura, altura/espessura)",
+        "Escolha resistência de concreto requerida (classificação PSI)",
+        "Selecione método de entrega (caminhões prontos ou sacos)",
+        "Adicione fator de desperdício para cortes e derramamentos (recomendado 5-10%)",
+        "Revise cálculos de volume e recomendações de material"
+      ],
+      "inputsExplained": [
+        "Tipo de projeto determina método de cálculo (laje, sapata, coluna, etc.)",
+        "Dimensões devem estar em pés para cálculos precisos de volume",
+        "Espessura/profundidade afeta volume total significativamente",
+        "Resistência de concreto (PSI) determina tamanho de saco e requerimentos de mistura",
+        "Fator de desperdício considera derramamentos, cortes, e superfícies irregulares"
+      ],
+      "formulaExplanation": "Cálculos de volume de concreto variam por tipo de projeto. Para lajes: Volume = Comprimento × Largura × Espessura. Para sapatas: Volume = Perímetro × Largura × Profundidade. Para colunas: Volume = π × r² × Altura (circular) ou Comprimento × Largura × Altura (retangular). Para paredes: Volume = Comprimento × Altura × Espessura. Todos cálculos estão em pés cúbicos, então convertidos para jardas cúbicas (divida por 27) para pronto ou sacos (divida por volume de saco). Fatores de desperdício (5-10%) são adicionados para cortes, derramamentos, e formas imperfeitas. Entender estas fórmulas ajuda você a ordenar quantidade certa e planejar para múltiplas derramadas.",
+      "examples": [
+        "Entrada de carros 20×30 pés com espessura 4 polegadas requer 7.4 jardas cúbicas (cerca de 200 sacos) de concreto para cobertura completa.",
+        "Sapatas de fundação de casa (200 pés lineares × 2 pés largo × 1 pé profundo) precisa 37 jardas cúbicas de concreto para suporte estrutural.",
+        "Laje de garagem 16×20 pés com espessura 6 polegadas requer 3.6 jardas cúbicas (97 sacos) mais materiais de reforço e barreira de vapor."
+      ],
+      "resultsExplanation": [
+        "Jardas cúbicas mostra volume para entrega de concreto pronto",
+        "Contagem de sacos indica número de sacos de 80lb ou 60lb necessários para DIY",
+        "Recomendações de fator de desperdício previnem ficar curto",
+        "Estimativas de custo ajudam orçar concreto e entrega",
+        "Recomendações de mistura garantem resistência apropriada de concreto"
+      ],
+      "whoItsFor": "Esta calculadora de concreto serve proprietários DIY planejando pátios, entradas de carros, e reparos pequenos, contratadores estimando projetos comerciais, construtores calculando requerimentos de fundação, paisagistas planejando caminhos e muros de contenção, reformadores trabalhando com elementos estruturais, e qualquer pessoa envolvida em construção. É particularmente valiosa para trabalhadores de concreto iniciantes, aqueles dimensionando receitas para projetos grandes, pessoas comparando opções prontas vs. em sacos, e contratadores cotizando trabalhos. A calculadora funciona para aplicações residenciais, comerciais, e industriais de concreto de qualquer tamanho.",
+      "disclaimer": "Esta calculadora de concreto fornece estimativas de volume baseadas em fórmulas padrão e fatores típicos de desperdício. Necessidades reais de concreto podem variar baseado em condições específicas do projeto, complexidade de formas, requerimentos de reforço, e códigos locais. Cálculos de concreto não incluem formas, reforço, base de cascalho, ou materiais de acabamento. Fatores de desperdício variam por complexidade do projeto e experiência do trabalhador. Concreto pronto requer planejamento para timing de entrega e necessidades de bomba. Esta ferramenta é para estimativa e não substitui cálculos de engenharia profissional ou conformidade de códigos de construção locais.",
+      "relatedTools": [
+        "Calculadoras de volume para outros materiais de construção",
+        "Calculadoras de custo para orçamentação completa de projeto",
+        "Conversores de medição para unidades internacionais"
+      ],
+      "faqs": [
+        {
+          "question": "Como calculo volume de concreto para uma laje?",
+          "answer": "Multiplique comprimento × largura × espessura (tudo em pés) para obter pés cúbicos, então divida por 27 para jardas cúbicas. Para entrada de carros 20×30 pés com espessura 4 polegadas: 20 × 30 × 0.33 = 198 pés cúbicos ÷ 27 = 7.33 jardas cúbicas. Adicione fator de desperdício 5-10% para cortes e derramamentos. Isso dá quantidade de pronto ou ajuda calcular quantidades de sacos (cada saco de 80lb produz cerca de 0.6 pés cúbicos de concreto)."
+        },
+        {
+          "question": "Quantos sacos de concreto eu preciso?",
+          "answer": "Divida pés cúbicos totais por rendimento de saco (0.45-0.6 pés cúbicos por saco de 60-80lb). Para 198 pés cúbicos de cima: 198 ÷ 0.6 = 330 sacos (sacos de 80lb) ou 198 ÷ 0.45 = 440 sacos (sacos de 60lb). Sempre adicione fator de desperdício e compre extra. Tamanhos de saco variam: sacos de 60lb produzem ~0.45 pés cúbicos, sacos de 80lb produzem ~0.6 pés cúbicos. Misture sacos inteiros de uma vez para evitar desperdício."
+        },
+        {
+          "question": "Qual é diferença entre concreto pronto e em sacos?",
+          "answer": "Concreto pronto é entregue em caminhões (mínimo 1-2 jardas cúbicas) e misturado no local para qualidade consistente. Concreto em sacos é material seco pré-misturado que você mistura com água você mesmo. Concreto pronto custa mais mas economiza trabalho e garante mistura apropriada. Concreto em sacos é mais barato para projetos pequenos mas requer equipamento de mistura e trabalho físico. Concreto pronto é melhor para projetos grandes, em sacos para reparos pequenos ou quando entrega é difícil."
+        },
+        {
+          "question": "Quanto custa concreto por jarda cúbica?",
+          "answer": "Concreto pronto custa $100-150 por jarda cúbica dependendo de localização e resistência. Concreto em sacos custa $4-6 por saco de 80lb ($133-200 por jarda cúbica equivalente). Entrega adiciona $50-100 por carga. Custos totais incluem formas ($1-3 por pé quadrado), reforço ($0.50-1 por pé quadrado), e acabamento. Considere desperdício (5-10%) e nunca ordene exatamente - concreto é mais barato que atrasos ou entregas adicionais."
+        },
+        {
+          "question": "Eu preciso considerar desperdício ao calcular concreto?",
+          "answer": "Sempre adicione fator de desperdício de 5-10% para derramamentos, formas irregulares, cortes, e mistura imperfeita. Para projetos complexos com muitas esquinas ou formas irregulares, adicione 10-15%. Super-ordenar é mais barato que sub-ordenar - concreto é barato comparado a atrasos de trabalho. Mantenha concreto extra para reparos pequenos ou projetos futuros. Fornecedores de pronto frequentemente fornecem estimativas de desperdício baseado em complexidade do projeto."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculatrice de Béton",
+    "seoTitle": "Calculatrice de Béton - Calculer Volume de Béton et Sacs Nécessaires",
+    "metaDescription": "Calculez le volume de béton pour dalles, semelles, colonnes et murs. Obtenez des calculs précis de sacs de béton et estimations de matériaux pour vos projets de construction.",
+    "keywords": [
+      "calculatrice béton",
+      "calculatrice volume béton",
+      "calculatrice sacs béton",
+      "calculatrice dalle béton",
+      "calculatrice matériau béton"
+    ],
+    "longTailKeywords": [
+      "comment calculer volume de béton pour dalle",
+      "calculatrice de béton pour semelles et fondations",
+      "combien de sacs de béton ai-je besoin calculatrice",
+      "calculatrice volume béton pour allée",
+      "calculatrice de béton pour colonnes et poteaux",
+      "comment calculer béton pour murs",
+      "calculatrice de béton avec ferraillage et coffrage",
+      "calculatrice volume béton prêt à l'emploi",
+      "calculatrice de béton pour sol de garage",
+      "combien de béton ai-je besoin calculatrice"
+    ],
+    "slug": "concrete-calculator",
+    "category": "Utility",
+    "difficulty": "Intermediate",
+    "tags": [
+      "béton",
+      "construction",
+      "volume",
+      "matériau",
+      "bâtiment",
+      "dalle",
+      "semelle",
+      "colonne",
+      "mur"
+    ],
+    "description": "Calculez le volume de béton et les exigences de matériaux pour tous vos projets de construction. Notre calculatrice complète de béton traite dalles, semelles, colonnes, murs et plus encore. Obtenez des estimations précises pour béton prêt à l'emploi, sacs de béton et matériaux supplémentaires comme ferraillage et coffrage.",
+    "summary": "Calculez le volume de béton et exigences de matériaux pour projets de construction.",
+    "instructions": [
+      "Sélectionnez le type de structure en béton (dalle, semelle, colonne, mur, etc.)",
+      "Entrez les dimensions en pieds (longueur, largeur, hauteur/épaisseur)",
+      "Choisissez la résistance du béton (classement PSI)",
+      "Sélectionnez prêt à l'emploi ou sacs pour préférence de livraison",
+      "Ajoutez facteur de gaspillage pour coupes et déversements (recommandé 5-10%)",
+      "Cliquez sur 'Calculer' pour voir le volume en verges cubes/pieds et sacs nécessaires"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "structureType",
+          "label": "Type de Structure",
+          "type": "select",
+          "options": [
+            "slab",
+            "footing",
+            "column",
+            "wall",
+            "steps",
+            "tube"
+          ],
+          "default": "slab"
+        },
+        {
+          "name": "length",
+          "label": "Longueur (pieds)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType !== 'tube'"
+        },
+        {
+          "name": "width",
+          "label": "Largeur (pieds)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType !== 'tube'"
+        },
+        {
+          "name": "thickness",
+          "label": "Épaisseur/Hauteur (pouces)",
+          "type": "number",
+          "default": 4,
+          "min": 2,
+          "max": 24,
+          "step": 0.25,
+          "conditional": "structureType === 'slab' || structureType === 'footing'"
+        },
+        {
+          "name": "height",
+          "label": "Hauteur (pieds)",
+          "type": "number",
+          "default": 8,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "structureType === 'wall' || structureType === 'column'"
+        },
+        {
+          "name": "diameter",
+          "label": "Diamètre (pouces)",
+          "type": "number",
+          "default": 12,
+          "min": 4,
+          "max": 48,
+          "step": 0.25,
+          "conditional": "structureType === 'column' || structureType === 'tube'"
+        },
+        {
+          "name": "quantity",
+          "label": "Nombre de Pièces",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "conditional": "structureType === 'column' || structureType === 'footing'"
+        },
+        {
+          "name": "concreteType",
+          "label": "Type de Béton",
+          "type": "select",
+          "options": [
+            "readyMix",
+            "bags"
+          ],
+          "default": "readyMix"
+        },
+        {
+          "name": "strength",
+          "label": "Résistance du Béton (PSI)",
+          "type": "select",
+          "options": [
+            "2000",
+            "2500",
+            "3000",
+            "3500",
+            "4000",
+            "5000"
+          ],
+          "default": "3000"
+        },
+        {
+          "name": "wasteFactor",
+          "label": "Facteur de Gaspillage (%)",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "max": 20,
+          "step": 1
+        }
+      ],
+      "formula": "Dalle : Volume = Longueur × Largeur × Épaisseur ÷ 27 (verges cubes) ; Semelle : Volume = Longueur × Largeur × Épaisseur ÷ 27 ; Colonne : Volume = π × (Diamètre÷2)² × Hauteur ÷ 27 ; Mur : Volume = Longueur × Hauteur × Épaisseur ÷ 27 ; Sacs : Volume × 27 ÷ 0.45 (sacs de 45lb) ou ÷ 0.6 (sacs de 60lb)",
+      "output": {
+        "label": "Volume de Béton",
+        "default": "Entrez les dimensions ci-dessus",
+        "format": "volume"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Verges Cubes",
+          "field": "cubicYards",
+          "format": "decimal"
+        },
+        {
+          "label": "Pieds Cubes",
+          "field": "cubicFeet",
+          "format": "decimal"
+        },
+        {
+          "label": "Sacs Nécessaires (80lb)",
+          "field": "bags80lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Sacs Nécessaires (60lb)",
+          "field": "bags60lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Sacs Nécessaires (50lb)",
+          "field": "bags50lb",
+          "format": "decimal"
+        },
+        {
+          "label": "Camions de Béton Prêt à l'Emploi",
+          "field": "readyMixTrucks",
+          "format": "decimal"
+        }
+      ],
+      "componentName": "ConcreteCalculator"
+    },
+    "examples": [
+      {
+        "title": "Fondation de Dalle de Garage",
+        "input": {
+          "structureType": "slab",
+          "length": 24,
+          "width": 24,
+          "thickness": 6,
+          "concreteType": "readyMix",
+          "strength": "3000",
+          "wasteFactor": 5
+        },
+        "output": {
+          "cubicYards": 8.89,
+          "cubicFeet": 240,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.89
+        },
+        "explanation": "Une dalle de garage de 24×24 pieds avec 6 pouces d'épaisseur nécessite environ 8.89 verges cubes de béton. Commandez 9 verges cubes pour tenir compte du gaspillage. Un camion standard de béton prêt à l'emploi contient 9-10 verges cubes."
+      },
+      {
+        "title": "Semelles de Maison",
+        "input": {
+          "structureType": "footing",
+          "length": 40,
+          "width": 2,
+          "thickness": 12,
+          "quantity": 4,
+          "concreteType": "bags",
+          "strength": "3000",
+          "wasteFactor": 10
+        },
+        "output": {
+          "cubicYards": 1.48,
+          "cubicFeet": 40,
+          "bags80lb": 37,
+          "bags60lb": 49,
+          "bags50lb": 59,
+          "readyMixTrucks": 0.15
+        },
+        "explanation": "Quatre semelles de 40 pieds de long, 2 pieds de large, 12 pouces de profondeur nécessitent 1.48 verges cubes. Avec des sacs, vous auriez besoin d'environ 37-59 sacs selon la taille (80lb, 60lb, ou 50lb)."
+      },
+      {
+        "title": "Colonnes de Béton",
+        "input": {
+          "structureType": "column",
+          "diameter": 16,
+          "height": 10,
+          "quantity": 6,
+          "concreteType": "readyMix",
+          "strength": "4000",
+          "wasteFactor": 5
+        },
+        "output": {
+          "cubicYards": 2.32,
+          "cubicFeet": 62.58,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.23
+        },
+        "explanation": "Six colonnes de 16 pouces de diamètre, 10 pieds de hauteur chacune, nécessitent 2.32 verges cubes. C'est une petite charge qui pourrait être livrée dans un camion avec d'autres commandes de béton."
+      },
+      {
+        "title": "Mur de Sous-Sol",
+        "input": {
+          "structureType": "wall",
+          "length": 60,
+          "width": 0.67,
+          "height": 8,
+          "concreteType": "readyMix",
+          "strength": "3000",
+          "wasteFactor": 8
+        },
+        "output": {
+          "cubicYards": 3.56,
+          "cubicFeet": 96,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 0.36
+        },
+        "explanation": "Un mur de sous-sol de 60 pieds de long, 8 pouces d'épaisseur et 8 pieds de hauteur, nécessite 3.56 verges cubes. Ce calcul de volume de mur inclut l'épaisseur standard de 8 pouces pour les murs de béton coulé."
+      },
+      {
+        "title": "Projet d'Allée",
+        "input": {
+          "structureType": "slab",
+          "length": 50,
+          "width": 12,
+          "thickness": 5,
+          "concreteType": "readyMix",
+          "strength": "4000",
+          "wasteFactor": 7
+        },
+        "output": {
+          "cubicYards": 10.42,
+          "cubicFeet": 281.25,
+          "bags80lb": 0,
+          "bags60lb": 0,
+          "bags50lb": 0,
+          "readyMixTrucks": 1.04
+        },
+        "explanation": "Une allée de 50×12 pieds avec 5 pouces d'épaisseur nécessite 10.42 verges cubes. Cela nécessiterait typiquement environ 1 camion de béton prêt à l'emploi, avec un peu en surplus pour de petites réparations."
+      },
+      {
+        "title": "Petit Patio",
+        "input": {
+          "structureType": "slab",
+          "length": 12,
+          "width": 12,
+          "thickness": 4,
+          "concreteType": "bags",
+          "strength": "3000",
+          "wasteFactor": 10
+        },
+        "output": {
+          "cubicYards": 0.59,
+          "cubicFeet": 16,
+          "bags80lb": 15,
+          "bags60lb": 20,
+          "bags50lb": 24,
+          "readyMixTrucks": 0.06
+        },
+        "explanation": "Un patio de 12×12 pieds avec 4 pouces d'épaisseur a besoin d'environ 0.59 verges cubes. Pour les sacs, vous auriez besoin de 15-24 sacs selon la taille. C'est un projet DIY gérable."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice d'Addition",
+        "slug": "addition-calculator",
+        "description": "Calculs mathématiques de base."
+      },
+      {
+        "name": "Calculatrice de Pourcentage",
+        "slug": "percent-calculator",
+        "description": "Calculez les pourcentages et proportions."
+      },
+      {
+        "name": "Calculatrice de Budget",
+        "slug": "budget-calculator",
+        "description": "Planifiez les budgets de construction."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Maîtrisez les calculs de béton pour tous vos projets de construction avec notre calculatrice complète de béton qui fournit des estimations précises de volume et exigences de matériaux. Que vous couliez une entrée, fondation, patio, ou éléments structurels, obtenir le volume de béton correct est crucial pour éviter des erreurs coûteuses. Notre calculatrice gère toutes applications courantes de béton incluant dalles, semelles, colonnes, murs, et escaliers. De propriétaires DIY à entrepreneurs professionnels, calculs précis de béton économisent temps, argent, et préviennent gaspillage de matériaux. Comprendre comment calculer volume de béton correctement assure que vos projets sont complétés efficacement et rentable.",
+      "benefits": [
+        "Calculez volume exact de béton pour toute forme et taille de projet",
+        "Obtenez comptages précis sacs pour projets DIY ou estimations verges cubes pour béton prêt",
+        "Gérez formes complexes incluant semelles, colonnes, murs, et escaliers",
+        "Tenez compte facteurs gaspillage pour éviter manquer de matériaux",
+        "Comparez coûts entre livraison béton prêt et béton en sacs",
+        "Planifiez timing livraison matériaux pour prévenir problèmes durcissement béton",
+        "Mettez à l'échelle calculs pour coulées multiples ou projets commerciaux grands",
+        "Évitez sur-commander ou sous-commander matériaux béton"
+      ],
+      "steps": [
+        "Sélectionnez type structure béton (dalle, semelle, colonne, mur, etc.)",
+        "Entrez dimensions en pieds (longueur, largeur, hauteur/épaisseur)",
+        "Choisissez résistance béton requise (classement PSI)",
+        "Sélectionnez méthode livraison (camions prêts ou sacs)",
+        "Ajoutez facteur gaspillage pour coupes et déversements (recommandé 5-10%)",
+        "Examinez calculs volume et recommandations matériaux"
+      ],
+      "inputsExplained": [
+        "Type projet détermine méthode calcul (dalle, semelle, colonne, etc.)",
+        "Dimensions doivent être en pieds pour calculs volume précis",
+        "Épaisseur/profondeur affecte volume total significativement",
+        "Résistance béton (PSI) détermine taille sac et exigences mélange",
+        "Facteur gaspillage considère déversements, coupes, et surfaces irrégulières"
+      ],
+      "formulaExplanation": "Calculs volume béton varient par type projet. Pour dalles : Volume = Longueur × Largeur × Épaisseur. Pour semelles : Volume = Périmètre × Largeur × Profondeur. Pour colonnes : Volume = π × r² × Hauteur (circulaire) ou Longueur × Largeur × Hauteur (rectangulaire). Pour murs : Volume = Longueur × Hauteur × Épaisseur. Tous calculs sont en pieds cubes, puis convertis en verges cubes (divisez par 27) pour prêt ou sacs (divisez par volume sac). Facteurs gaspillage (5-10%) sont ajoutés pour coupes, déversements, et formes imparfaites. Comprendre ces formules vous aide commander bonne quantité et planifier coulées multiples.",
+      "examples": [
+        "Entrée 20×30 pieds avec épaisseur 4 pouces nécessite 7.4 verges cubes (environ 200 sacs) de béton pour couverture complète.",
+        "Semelles fondation maison (200 pieds linéaires × 2 pieds large × 1 pied profond) nécessite 37 verges cubes de béton pour support structurel.",
+        "Dalle garage 16×20 pieds avec épaisseur 6 pouces nécessite 3.6 verges cubes (97 sacs) plus matériaux armature et barrière vapeur."
+      ],
+      "resultsExplanation": [
+        "Verges cubes montre volume pour livraison béton prêt",
+        "Comptage sacs indique nombre sacs 80lb ou 60lb nécessaires pour DIY",
+        "Recommandations facteur gaspillage préviennent manquer",
+        "Estimations coût aident budgétiser béton et livraison",
+        "Recommandations mélange assurent résistance béton appropriée"
+      ],
+      "whoItsFor": "Cette calculatrice béton sert propriétaires DIY planifiant patios, entrées, et réparations petites, entrepreneurs estimant projets commerciaux, constructeurs calculant exigences fondation, paysagistes planifiant chemins et murs de soutènement, rénovateurs travaillant avec éléments structurels, et quiconque impliqué en construction. Elle est particulièrement précieuse pour travailleurs béton débutants, ceux mettant à l'échelle recettes pour projets grands, personnes comparant options prêts vs. sacs, et entrepreneurs soumissionnant travaux. La calculatrice fonctionne pour applications béton résidentielles, commerciales, et industrielles de toute taille.",
+      "disclaimer": "Cette calculatrice béton fournit estimations volume basées sur formules standard et facteurs gaspillage typiques. Besoins béton réels peuvent varier basé sur conditions projet spécifiques, complexité coffrages, exigences armature, et codes locaux. Calculs béton n'incluent pas coffrages, armature, base gravier, ou matériaux finition. Facteurs gaspillage varient par complexité projet et expérience travailleur. Béton prêt nécessite planification pour timing livraison et besoins pompe. Cet outil est pour estimation et ne remplace pas calculs ingénierie professionnels ou conformité codes construction locaux.",
+      "relatedTools": [
+        "Calculateurs volume pour autres matériaux construction",
+        "Calculateurs coût pour budgétisation projet complète",
+        "Convertisseurs mesure pour unités internationales"
+      ],
+      "faqs": [
+        {
+          "question": "Comment calculer volume béton pour une dalle ?",
+          "answer": "Multipliez longueur × largeur × épaisseur (tout en pieds) pour obtenir pieds cubes, puis divisez par 27 pour verges cubes. Pour entrée 20×30 pieds avec épaisseur 4 pouces : 20 × 30 × 0.33 = 198 pieds cubes ÷ 27 = 7.33 verges cubes. Ajoutez facteur gaspillage 5-10% pour coupes et déversements. Cela vous donne quantité prêt ou aide calculer quantités sacs (chaque sac 80lb produit environ 0.6 pieds cubes de béton)."
+        },
+        {
+          "question": "Combien sacs de béton ai-je besoin ?",
+          "answer": "Divisez pieds cubes totaux par rendement sac (0.45-0.6 pieds cubes par sac 60-80lb). Pour 198 pieds cubes d'en haut : 198 ÷ 0.6 = 330 sacs (sacs 80lb) ou 198 ÷ 0.45 = 440 sacs (sacs 60lb). Ajoutez toujours facteur gaspillage et achetez extra. Tailles sac varient : sacs 60lb produisent ~0.45 pieds cubes, sacs 80lb produisent ~0.6 pieds cubes. Mélangez sacs entiers à la fois pour éviter gaspillage."
+        },
+        {
+          "question": "Quelle est différence entre béton prêt et en sacs ?",
+          "answer": "Béton prêt est livré en camions (minimum 1-2 verges cubes) et mélangé sur site pour qualité consistante. Béton en sacs est matériau sec pré-mélangé vous mélangez avec eau vous-même. Béton prêt coûte plus mais économise travail et assure mélange approprié. Béton en sacs est moins cher pour projets petits mais nécessite équipement mélange et travail physique. Béton prêt est meilleur pour projets grands, en sacs pour réparations petites ou quand livraison est difficile."
+        },
+        {
+          "question": "Combien coûte béton par verge cube ?",
+          "answer": "Béton prêt coûte $100-150 par verge cube selon localisation et résistance. Béton en sacs coûte $4-6 par sac 80lb ($133-200 par verge cube équivalent). Livraison ajoute $50-100 par chargement. Coûts totaux incluent coffrages ($1-3 par pied carré), armature ($0.50-1 par pied carré), et finition. Facteur gaspillage (5-10%) et ne commandez jamais exactement - béton est moins cher que délais ou livraisons supplémentaires."
+        },
+        {
+          "question": "Dois-je tenir compte gaspillage en calculant béton ?",
+          "answer": "Ajoutez toujours facteur gaspillage 5-10% pour déversements, coffrages irréguliers, coupes, et mélange imparfait. Pour projets complexes avec beaucoup coins ou formes irrégulières, ajoutez 10-15%. Sur-commander est moins cher que sous-commander - béton est bon marché comparé à délais travail. Gardez béton extra pour réparations petites ou projets futurs. Fournisseurs prêt fournissent souvent estimations gaspillage basé sur complexité projet."
+        }
+      ]
+    }
+  }
+}

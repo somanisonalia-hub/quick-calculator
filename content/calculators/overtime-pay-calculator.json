@@ -1,0 +1,587 @@
+{
+  "en": {
+    "title": "Overtime Pay Calculator",
+    "seoTitle": "Overtime Pay Calculator - Calculate Overtime Wages & Extra Pay",
+    "metaDescription": "Calculate your overtime pay and total earnings including regular and overtime hours. Free overtime calculator for hours worked over 40 per week.",
+    "keywords": [
+      "overtime pay calculator",
+      "overtime calculator",
+      "overtime wages",
+      "overtime hours calculator",
+      "calculate overtime pay",
+      "overtime rate calculator"
+    ],
+    "slug": "overtime-pay-calculator",
+    "category": "Financial",
+    "calculatorComponent": "OvertimePayCalculator",
+    "difficulty": "Basic",
+    "tags": [
+      "overtime",
+      "overtime pay",
+      "extra pay",
+      "overtime calculator",
+      "wages",
+      "payroll"
+    ],
+    "summary": "Calculate overtime pay for hours worked over 40 per week.",
+    "description": "Calculate your overtime pay based on hours worked beyond the standard 40-hour workweek. Includes calculations for different overtime multipliers (1.5x, 2x) and shows total earnings including regular and overtime pay.",
+    "instructions": [
+      "Enter your regular hourly rate",
+      "Specify total hours worked in the week",
+      "Choose overtime multiplier (usually 1.5x for overtime, 2x for double time)",
+      "View your overtime pay breakdown and total earnings"
+    ],
+    "inputs": [
+      {
+        "name": "hourlyRate",
+        "label": "Regular Hourly Rate ($)",
+        "type": "number",
+        "default": 20,
+        "min": 0,
+        "max": 500,
+        "step": 0.01,
+        "unit": "$"
+      },
+      {
+        "name": "totalHours",
+        "label": "Total Hours Worked",
+        "type": "number",
+        "default": 45,
+        "min": 0,
+        "max": 80,
+        "step": 0.5,
+        "unit": "hours"
+      },
+      {
+        "name": "overtimeMultiplier",
+        "label": "Overtime Multiplier",
+        "type": "select",
+        "default": "1.5",
+        "options": [
+          "1.5",
+          "2.0"
+        ]
+      }
+    ],
+    "formula": "Regular Hours = min(40, Total Hours)\nOvertime Hours = max(0, Total Hours - 40)\nOvertime Rate = Regular Rate × Multiplier\nOvertime Pay = Overtime Hours × Overtime Rate\nTotal Pay = (Regular Hours × Regular Rate) + Overtime Pay",
+    "output": {
+      "label": "Total Weekly Pay",
+      "default": "$0.00",
+      "format": "currency",
+      "unit": "$"
+    },
+    "additionalOutputs": [
+      {
+        "name": "regularPay",
+        "label": "Regular Pay (40 hours)",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "overtimePay",
+        "label": "Overtime Pay",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "overtimeHours",
+        "label": "Overtime Hours",
+        "default": "0",
+        "format": "number",
+        "unit": "hours"
+      },
+      {
+        "name": "overtimeRate",
+        "label": "Overtime Rate",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$/hour"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Standard Overtime",
+        "inputs": {
+          "hourlyRate": 20,
+          "totalHours": 45,
+          "overtimeMultiplier": "1.5"
+        },
+        "outputs": {
+          "totalWeeklyPay": 900,
+          "regularPay": 800,
+          "overtimePay": 150,
+          "overtimeHours": 5,
+          "overtimeRate": 30
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "paycheck-calculator",
+      "hourly-to-salary-calculator",
+      "salary-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate your overtime pay quickly and accurately with our free Overtime Pay Calculator. Whether you're tracking your weekly earnings or planning your work schedule, understanding overtime pay is essential for proper compensation.",
+      "benefits": [
+        "Calculate overtime pay for any number of extra hours",
+        "Support for different overtime multipliers (1.5x, 2x)",
+        "Clear breakdown of regular vs overtime pay",
+        "Help ensure you're paid correctly for extra work",
+        "Plan earnings based on expected work hours"
+      ],
+      "howToUse": [
+        "Enter your regular hourly wage rate",
+        "Input the total number of hours you worked in the week",
+        "Select the appropriate overtime multiplier",
+        "Review your pay breakdown showing regular and overtime amounts"
+      ],
+      "formulaExplanation": "Overtime pay is calculated using the FLSA standard: Hours 1-40 are paid at regular rate, hours over 40 are paid at regular rate × overtime multiplier.",
+      "examples": [
+        "40 regular hours at $20/hour = $800",
+        "5 overtime hours at $30/hour (1.5x rate) = $150",
+        "Total pay for 45 hours = $950"
+      ],
+      "whoShouldUse": "Hourly employees, payroll managers, anyone working overtime hours, workers wanting to understand their overtime pay.",
+      "importantNotes": "Overtime rules may vary by country and industry. This calculator follows standard FLSA guidelines where overtime is 1.5x regular rate for hours over 40 per week.",
+      "relatedTools": [
+        "Paycheck Calculator - Calculate take-home pay after taxes",
+        "Hourly to Salary Calculator - Convert hourly wages to annual salary",
+        "Salary Calculator - Calculate total compensation packages"
+      ],
+      "faqs": [
+        {
+          "question": "What is overtime pay?",
+          "answer": "Overtime pay is additional compensation for hours worked beyond the standard workweek, typically over 40 hours."
+        },
+        {
+          "question": "When does overtime start?",
+          "answer": "Under FLSA regulations, overtime typically begins after 40 hours in a workweek."
+        },
+        {
+          "question": "What is double time?",
+          "answer": "Double time is when overtime is paid at twice the regular hourly rate instead of the standard 1.5x rate."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Pago de Horas Extras",
+    "seoTitle": "Calculadora de Pago de Horas Extras - Calcula Salarios por Horas Extras y Pago Extra",
+    "metaDescription": "Calcula tu pago de horas extras y ganancias totales incluyendo horas regulares y extras. Calculadora gratuita de horas extras para horas trabajadas sobre 40 por semana.",
+    "keywords": [
+      "calculadora pago horas extras",
+      "calculadora horas extras",
+      "salarios horas extras",
+      "calculadora horas extras",
+      "calcular pago horas extras",
+      "calculadora tarifa horas extras"
+    ],
+    "slug": "overtime-pay-calculator",
+    "category": "Financial",
+    "calculatorComponent": "OvertimePayCalculator",
+    "difficulty": "Basic",
+    "tags": [
+      "horas extras",
+      "pago horas extras",
+      "pago extra",
+      "calculadora horas extras",
+      "salarios",
+      "nómina"
+    ],
+    "summary": "Calcula pago de horas extras para horas trabajadas sobre 40 por semana.",
+    "description": "Calcula tu pago de horas extras basado en horas trabajadas más allá de la semana laboral estándar de 40 horas. Incluye cálculos para diferentes multiplicadores de horas extras (1.5x, 2x) y muestra ganancias totales incluyendo pago regular y de horas extras.",
+    "instructions": [
+      "Ingresa tu tarifa por hora regular",
+      "Especifica total de horas trabajadas en la semana",
+      "Elige multiplicador de horas extras (usualmente 1.5x para horas extras, 2x para tiempo doble)",
+      "Ve tu desglose de pago de horas extras y ganancias totales"
+    ],
+    "inputs": [
+      {
+        "name": "hourlyRate",
+        "label": "Tarifa por Hora Regular ($)",
+        "type": "number",
+        "default": 20,
+        "min": 0,
+        "max": 500,
+        "step": 0.01,
+        "unit": "$"
+      },
+      {
+        "name": "totalHours",
+        "label": "Total de Horas Trabajadas",
+        "type": "number",
+        "default": 45,
+        "min": 0,
+        "max": 80,
+        "step": 0.5,
+        "unit": "horas"
+      },
+      {
+        "name": "overtimeMultiplier",
+        "label": "Multiplicador de Horas Extras",
+        "type": "select",
+        "default": "1.5",
+        "options": [
+          "1.5",
+          "2.0"
+        ]
+      }
+    ],
+    "formula": "Horas Regulares = mín(40, Horas Totales)\nHoras Extras = máx(0, Horas Totales - 40)\nTarifa Horas Extras = Tarifa Regular × Multiplicador\nPago Horas Extras = Horas Extras × Tarifa Horas Extras\nPago Total = (Horas Regulares × Tarifa Regular) + Pago Horas Extras",
+    "output": {
+      "label": "Pago Semanal Total",
+      "default": "$0.00",
+      "format": "currency",
+      "unit": "$"
+    },
+    "additionalOutputs": [
+      {
+        "name": "regularPay",
+        "label": "Pago Regular (40 horas)",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "overtimePay",
+        "label": "Pago de Horas Extras",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "overtimeHours",
+        "label": "Horas Extras",
+        "default": "0",
+        "format": "number",
+        "unit": "horas"
+      },
+      {
+        "name": "overtimeRate",
+        "label": "Tarifa de Horas Extras",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$/hora"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Horas Extras Estándar",
+        "inputs": {
+          "hourlyRate": 20,
+          "totalHours": 45,
+          "overtimeMultiplier": "1.5"
+        },
+        "outputs": {
+          "totalWeeklyPay": 900,
+          "regularPay": 800,
+          "overtimePay": 150,
+          "overtimeHours": 5,
+          "overtimeRate": 30
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "paycheck-calculator",
+      "hourly-to-salary-calculator",
+      "salary-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcula tu pago de horas extras de manera rápida y precisa con nuestra Calculadora de Pago de Horas Extras gratuita.",
+      "benefits": [
+        "Calcula pago de horas extras para cualquier número de horas extra",
+        "Soporte para diferentes multiplicadores de horas extras (1.5x, 2x)",
+        "Desglose claro de pago regular vs horas extras"
+      ],
+      "howToUse": [
+        "Ingresa tu tarifa por hora regular",
+        "Ingresa el número total de horas que trabajaste en la semana",
+        "Selecciona el multiplicador de horas extras apropiado",
+        "Revisa tu desglose de pago mostrando montos regulares y de horas extras"
+      ],
+      "formulaExplanation": "El pago de horas extras se calcula usando el estándar FLSA: Las horas 1-40 se pagan a tarifa regular, las horas sobre 40 se pagan a tarifa regular × multiplicador de horas extras.",
+      "examples": [
+        "40 horas regulares a $20/hora = $800",
+        "5 horas extras a $30/hora (tarifa 1.5x) = $150",
+        "Pago total por 45 horas = $950"
+      ],
+      "whoShouldUse": "Empleados por hora, gerentes de nómina, cualquier persona trabajando horas extras.",
+      "importantNotes": "Las reglas de horas extras pueden variar por país e industria.",
+      "relatedTools": [
+        "Calculadora de Nómina - Calcula salario neto después de impuestos",
+        "Calculadora de Horas a Salario - Convierte salarios por hora a anual",
+        "Calculadora de Salario - Calcula paquetes de compensación total"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es el pago de horas extras?",
+          "answer": "El pago de horas extras es compensación adicional por horas trabajadas más allá de la semana laboral estándar."
+        },
+        {
+          "question": "¿Cuándo comienzan las horas extras?",
+          "answer": "Bajo regulaciones FLSA, las horas extras típicamente comienzan después de 40 horas en una semana laboral."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Pagamento de Horas Extras",
+    "seoTitle": "Calculadora de Pagamento de Horas Extras - Calcula Salários por Horas Extras e Pagamento Extra",
+    "metaDescription": "Calcule seu pagamento de horas extras e ganhos totais incluindo horas regulares e extras. Calculadora gratuita de horas extras para horas trabalhadas sobre 40 por semana.",
+    "keywords": [
+      "calculadora pagamento horas extras",
+      "calculadora horas extras",
+      "salários horas extras"
+    ],
+    "slug": "overtime-pay-calculator",
+    "category": "Financial",
+    "calculatorComponent": "OvertimePayCalculator",
+    "difficulty": "Basic",
+    "tags": [
+      "horas extras",
+      "pagamento horas extras",
+      "pagamento extra"
+    ],
+    "summary": "Calcule pagamento de horas extras para horas trabalhadas sobre 40 por semana.",
+    "description": "Calcule seu pagamento de horas extras baseado em horas trabalhadas além da semana de trabalho padrão de 40 horas.",
+    "instructions": [
+      "Digite sua taxa por hora regular",
+      "Especifique total de horas trabalhadas na semana",
+      "Escolha multiplicador de horas extras",
+      "Veja sua quebra de pagamento de horas extras e ganhos totais"
+    ],
+    "inputs": [
+      {
+        "name": "hourlyRate",
+        "label": "Taxa por Hora Regular (R$)",
+        "type": "number",
+        "default": 20,
+        "min": 0,
+        "max": 500,
+        "step": 0.01,
+        "unit": "R$"
+      },
+      {
+        "name": "totalHours",
+        "label": "Total de Horas Trabalhadas",
+        "type": "number",
+        "default": 45,
+        "min": 0,
+        "max": 80,
+        "step": 0.5,
+        "unit": "horas"
+      },
+      {
+        "name": "overtimeMultiplier",
+        "label": "Multiplicador de Horas Extras",
+        "type": "select",
+        "default": "1.5",
+        "options": [
+          "1.5",
+          "2.0"
+        ]
+      }
+    ],
+    "formula": "Horas Regulares = mín(40, Horas Totais)\nHoras Extras = máx(0, Horas Totais - 40)\nPagamento Total = (Horas Regulares × Taxa Regular) + (Horas Extras × Taxa Horas Extras)",
+    "output": {
+      "label": "Pagamento Semanal Total",
+      "default": "R$0.00",
+      "format": "currency",
+      "unit": "R$"
+    },
+    "additionalOutputs": [
+      {
+        "name": "regularPay",
+        "label": "Pagamento Regular (40 horas)",
+        "default": "R$0.00",
+        "format": "currency",
+        "unit": "R$"
+      },
+      {
+        "name": "overtimePay",
+        "label": "Pagamento de Horas Extras",
+        "default": "R$0.00",
+        "format": "currency",
+        "unit": "R$"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Horas Extras Padrão",
+        "inputs": {
+          "hourlyRate": 20,
+          "totalHours": 45,
+          "overtimeMultiplier": "1.5"
+        },
+        "outputs": {
+          "totalWeeklyPay": 900,
+          "regularPay": 800,
+          "overtimePay": 150
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "paycheck-calculator",
+      "hourly-to-salary-calculator",
+      "salary-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule seu pagamento de horas extras de forma rápida e precisa.",
+      "benefits": [
+        "Calcule pagamento de horas extras para qualquer número de horas extra",
+        "Suporte para diferentes multiplicadores de horas extras"
+      ],
+      "howToUse": [
+        "Digite sua taxa por hora regular",
+        "Insira o número total de horas que trabalhou na semana",
+        "Selecione o multiplicador de horas extras apropriado"
+      ],
+      "formulaExplanation": "Pagamento de horas extras é calculado usando horas acima de 40 pagas a uma taxa maior.",
+      "examples": [
+        "40 horas regulares a R$20/hora = R$800",
+        "5 horas extras a R$30/hora = R$150"
+      ],
+      "whoShouldUse": "Funcionários por hora, gerentes de folha de pagamento.",
+      "importantNotes": "Regras de horas extras podem variar por país e indústria.",
+      "relatedTools": [
+        "Calculadora de Contracheque - Calcule salário líquido após impostos"
+      ],
+      "faqs": [
+        {
+          "question": "O que é pagamento de horas extras?",
+          "answer": "Pagamento de horas extras é compensação adicional por horas trabalhadas além da semana padrão."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Paiement d'Heures Supplémentaires",
+    "seoTitle": "Calculateur de Paiement d'Heures Supplémentaires - Calcule les Salaires d'Heures Supplémentaires",
+    "metaDescription": "Calculez votre paiement d'heures supplémentaires et revenus totaux.",
+    "keywords": [
+      "calculateur paiement heures supplémentaires",
+      "calculateur heures supplémentaires"
+    ],
+    "slug": "overtime-pay-calculator",
+    "category": "Financial",
+    "calculatorComponent": "OvertimePayCalculator",
+    "difficulty": "Basic",
+    "tags": [
+      "heures supplémentaires",
+      "paiement heures supplémentaires"
+    ],
+    "summary": "Calculez le paiement d'heures supplémentaires pour heures travaillées au-delà de 40 par semaine.",
+    "description": "Calculez votre paiement d'heures supplémentaires basé sur les heures travaillées au-delà de la semaine standard.",
+    "instructions": [
+      "Entrez votre taux horaire régulier",
+      "Spécifiez le total d'heures travaillées dans la semaine",
+      "Choisissez le multiplicateur d'heures supplémentaires"
+    ],
+    "inputs": [
+      {
+        "name": "hourlyRate",
+        "label": "Taux Horaire Régulier (€)",
+        "type": "number",
+        "default": 20,
+        "min": 0,
+        "max": 500,
+        "step": 0.01,
+        "unit": "€"
+      },
+      {
+        "name": "totalHours",
+        "label": "Total d'Heures Travaillées",
+        "type": "number",
+        "default": 45,
+        "min": 0,
+        "max": 80,
+        "step": 0.5,
+        "unit": "heures"
+      },
+      {
+        "name": "overtimeMultiplier",
+        "label": "Multiplicateur d'Heures Supplémentaires",
+        "type": "select",
+        "default": "1.5",
+        "options": [
+          "1.5",
+          "2.0"
+        ]
+      }
+    ],
+    "formula": "Paiement Total = (Heures Régulières × Taux Régulier) + (Heures Supplémentaires × Taux Heures Supplémentaires)",
+    "output": {
+      "label": "Paiement Hebdomadaire Total",
+      "default": "€0.00",
+      "format": "currency",
+      "unit": "€"
+    },
+    "additionalOutputs": [
+      {
+        "name": "regularPay",
+        "label": "Paiement Régulier (40 heures)",
+        "default": "€0.00",
+        "format": "currency",
+        "unit": "€"
+      },
+      {
+        "name": "overtimePay",
+        "label": "Paiement d'Heures Supplémentaires",
+        "default": "€0.00",
+        "format": "currency",
+        "unit": "€"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Heures Supplémentaires Standard",
+        "inputs": {
+          "hourlyRate": 20,
+          "totalHours": 45,
+          "overtimeMultiplier": "1.5"
+        },
+        "outputs": {
+          "totalWeeklyPay": 900,
+          "regularPay": 800,
+          "overtimePay": 150
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "paycheck-calculator",
+      "hourly-to-salary-calculator",
+      "salary-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez votre paiement d'heures supplémentaires rapidement et précisément.",
+      "benefits": [
+        "Calculez le paiement d'heures supplémentaires pour n'importe quel nombre d'heures extra",
+        "Support pour différents multiplicateurs d'heures supplémentaires"
+      ],
+      "howToUse": [
+        "Entrez votre taux horaire régulier",
+        "Saisissez le nombre total d'heures que vous avez travaillées",
+        "Sélectionnez le multiplicateur d'heures supplémentaires approprié"
+      ],
+      "formulaExplanation": "Le paiement d'heures supplémentaires est calculé selon les heures au-delà de 40 payées à un taux plus élevé.",
+      "examples": [
+        "40 heures régulières à €20/heure = €800",
+        "5 heures supplémentaires à €30/heure = €150"
+      ],
+      "whoShouldUse": "Employés horaires, gestionnaires de paie.",
+      "importantNotes": "Les règles d'heures supplémentaires peuvent varier par pays et industrie.",
+      "relatedTools": [
+        "Calculateur de Paie - Calculez le salaire net après impôts"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce que le paiement d'heures supplémentaires ?",
+          "answer": "Le paiement d'heures supplémentaires est une compensation supplémentaire pour les heures travaillées au-delà de la semaine standard."
+        }
+      ]
+    }
+  }
+}

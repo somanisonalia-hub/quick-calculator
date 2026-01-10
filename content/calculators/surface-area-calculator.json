@@ -1,0 +1,51 @@
+{
+  "en": {
+    "title": "Surface Area Calculator",
+    "seoTitle": "Surface Area Calculator - Calculate Surface Area of 3D Shapes Online",
+    "metaDescription": "Free surface area calculator for 3D shapes. Calculate surface area of cube, sphere, cylinder, cone, rectangular prism, and more.",
+    "keywords": ["surface area calculator", "3d shapes surface area", "cube surface area", "sphere surface area"],
+    "longTailKeywords": ["how to calculate surface area", "surface area of cylinder", "surface area of sphere", "surface area of cube"],
+    "slug": "surface-area-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["surface area", "3d shapes", "geometry", "cube", "sphere", "cylinder"],
+    "summary": "Calculate the surface area of various 3D shapes.",
+    "description": "Calculate surface area of cubes, spheres, cylinders, cones, and other 3D geometric shapes.",
+    "instructions": ["Select shape and enter dimensions"],
+    "calculatorComponent": {
+      "componentName": "SurfaceAreaCalculator",
+      "inputs": [
+        { "name": "shape", "label": "Shape", "type": "select", "default": "cube", "options": ["cube", "sphere", "cylinder"] },
+        { "name": "side", "label": "Side", "type": "number", "default": 5 },
+        { "name": "radius", "label": "Radius", "type": "number", "default": 5 },
+        { "name": "height", "label": "Height", "type": "number", "default": 10 }
+      ],
+      "formula": "Surface area formulas for 3D shapes",
+      "output": { "label": "Surface Area", "default": "Enter dimensions", "format": "number" }
+    },
+    "examples": [{"title": "Cube", "input": "Side = 5", "output": "150 sq units"}],
+    "relatedCalculators": ["volume-calculator", "circle-area-calculator"]
+  },
+  "es": {
+    "title": "Calculadora de Área Superficial",
+    "slug": "surface-area-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "calculatorComponent": { "componentName": "SurfaceAreaCalculator" }
+  },
+  "pt": {
+    "title": "Calculadora de Área Superficial",
+    "slug": "surface-area-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "calculatorComponent": { "componentName": "SurfaceAreaCalculator" }
+  },
+  "fr": {
+    "title": "Calculateur d'Aire de Surface",
+    "slug": "surface-area-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "calculatorComponent": { "componentName": "SurfaceAreaCalculator" }
+  }
+}

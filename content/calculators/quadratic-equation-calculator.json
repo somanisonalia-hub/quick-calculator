@@ -1,0 +1,66 @@
+{
+  "en": {
+    "title": "Quadratic Equation Calculator",
+    "seoTitle": "Quadratic Equation Calculator - Solve ax²+bx+c=0 Online",
+    "metaDescription": "Free quadratic equation calculator. Solve quadratic equations using quadratic formula. Find roots, discriminant, and step-by-step solutions.",
+    "keywords": ["quadratic equation calculator", "quadratic formula", "solve quadratic equation", "ax2+bx+c=0"],
+    "longTailKeywords": ["how to solve quadratic equation", "quadratic formula calculator", "find roots of quadratic equation", "algebra quadratic calculator"],
+    "slug": "quadratic-equation-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "difficulty": "advanced",
+    "tags": ["quadratic", "equation", "algebra", "roots", "discriminant"],
+    "summary": "Solve quadratic equations ax²+bx+c=0 using the quadratic formula.",
+    "description": "Solve quadratic equations and find roots using the quadratic formula. Shows discriminant, real/complex roots, and step-by-step solutions.",
+    "instructions": ["Enter coefficients a, b, c", "Get instant solutions", "View discriminant and root types"],
+    "calculatorComponent": {
+      "componentName": "QuadraticEquationCalculator",
+      "inputs": [
+        { "name": "a", "label": "Coefficient a", "type": "number", "default": 1 },
+        { "name": "b", "label": "Coefficient b", "type": "number", "default": -5 },
+        { "name": "c", "label": "Coefficient c", "type": "number", "default": 6 }
+      ],
+      "formula": "x = [-b ± √(b²-4ac)] / (2a)",
+      "output": { "label": "Roots", "default": "Enter coefficients", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Discriminant", "field": "discriminant", "format": "number" },
+        { "label": "Root Type", "field": "rootType", "format": "text" },
+        { "label": "Formula", "field": "formula", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Real Roots",
+        "input": "x² - 5x + 6 = 0",
+        "output": "Roots: x = 2, x = 3"
+      },
+      {
+        "title": "Complex Roots",
+        "input": "x² + 2x + 5 = 0",
+        "output": "Roots: x = -1 ± 2i"
+      }
+    ],
+    "relatedCalculators": ["scientific-calculator", "percentage-calculator"]
+  },
+  "es": {
+    "title": "Calculadora de Ecuaciones Cuadráticas",
+    "slug": "quadratic-equation-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "calculatorComponent": { "componentName": "QuadraticEquationCalculator" }
+  },
+  "pt": {
+    "title": "Calculadora de Equações Quadráticas",
+    "slug": "quadratic-equation-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "calculatorComponent": { "componentName": "QuadraticEquationCalculator" }
+  },
+  "fr": {
+    "title": "Calculateur d'Équations Quadratiques",
+    "slug": "quadratic-equation-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "calculatorComponent": { "componentName": "QuadraticEquationCalculator" }
+  }
+}

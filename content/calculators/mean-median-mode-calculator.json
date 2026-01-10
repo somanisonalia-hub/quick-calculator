@@ -1,0 +1,494 @@
+{
+  "en": {
+    "title": "Mean Median Mode Calculator",
+    "seoTitle": "Mean Median Mode Calculator - Calculate Statistical Measures Online",
+    "metaDescription": "Free mean, median, and mode calculator. Calculate central tendency measures for data sets. Perfect for statistics students and data analysis.",
+    "keywords": [
+      "mean median mode calculator",
+      "central tendency calculator",
+      "statistics calculator",
+      "average calculator",
+      "data analysis"
+    ],
+    "longTailKeywords": [
+      "how to calculate mean median mode",
+      "central tendency calculator online",
+      "statistics calculator for data sets",
+      "average median mode finder",
+      "statistical measures calculator"
+    ],
+    "slug": "mean-median-mode-calculator",
+    "category": "math",
+    "difficulty": "intermediate",
+    "tags": [
+      "statistics",
+      "mean",
+      "median",
+      "mode",
+      "data analysis",
+      "math"
+    ],
+    "summary": "Calculate mean, median, and mode - the three measures of central tendency for statistical data analysis.",
+    "description": "Our comprehensive mean median mode calculator helps you analyze data sets by calculating the three fundamental measures of central tendency. Perfect for statistics students, researchers, and anyone working with data analysis. Get instant results with step-by-step explanations.",
+    "instructions": [
+      "Enter your data set (comma-separated values or one per line)",
+      "Choose whether to include step-by-step calculations",
+      "Get instant results for mean, median, and mode",
+      "View detailed explanations of each statistical measure"
+    ],
+    "calculatorComponent": "MeanMedianModeCalculator",
+    "examples": [
+      {
+        "title": "Basic Data Set",
+        "input": "2, 4, 6, 8, 10",
+        "output": "Mean: 6, Median: 6, Mode: No mode"
+      },
+      {
+        "title": "Data with Mode",
+        "input": "1, 2, 2, 3, 4, 4, 4, 5",
+        "output": "Mean: 3.125, Median: 3.5, Mode: 4"
+      }
+    ],
+    "relatedCalculators": [
+      "percent-calculator",
+      "percentage-change-calculator",
+      "standard-deviation-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Master the three fundamental measures of central tendency with our comprehensive mean, median, and mode calculator that makes statistical analysis accessible to everyone. Mean, median, and mode are the cornerstones of descriptive statistics, providing insights into data distribution and central values. Whether you're a student learning statistics, a researcher analyzing survey data, or a professional making data-driven decisions, our calculator provides instant calculations with clear explanations. Understanding these measures is essential for interpreting data across science, business, social sciences, and everyday decision-making.",
+      "benefits": [
+        "Calculate all three measures of central tendency simultaneously",
+        "Understand how different measures represent your data differently",
+        "Handle datasets of any size with instant results",
+        "Learn statistical concepts through interactive calculations",
+        "Compare mean, median, and mode to understand data distribution",
+        "Apply statistical measures to real-world data analysis",
+        "Build confidence in statistical interpretation skills",
+        "Use results for research, business analysis, and decision making"
+      ],
+      "steps": [
+        "Enter your dataset as comma-separated values or one number per line",
+        "Choose whether to view step-by-step calculation explanations",
+        "Review all three measures: mean, median, and mode",
+        "Compare the measures to understand your data's central tendency",
+        "Apply the results to your statistical analysis or research"
+      ],
+      "inputsExplained": [
+        "Dataset can be any numbers representing your measurements or observations",
+        "Numbers can be whole numbers, decimals, positive, or negative",
+        "Data can be in any order - calculator sorts automatically for calculations",
+        "Dataset size is unlimited - works with small samples or large datasets"
+      ],
+      "formulaExplanation": "Mean is calculated by summing all values and dividing by count (Σx/n). Median requires sorting data and finding middle value (for odd count) or average of two middle values (for even count). Mode is the most frequently occurring value(s). Each measure serves different purposes: mean shows mathematical average, median shows middle value resistant to outliers, mode shows most common value. Understanding when to use each measure is crucial for accurate data interpretation in research and analysis.",
+      "examples": [
+        "Test scores dataset [85, 92, 78, 96, 88] shows mean = 87.8, median = 88, mode = none - indicating normally distributed data.",
+        "Income data [25,000, 35,000, 35,000, 45,000, 200,000] shows mean = 68,000, median = 35,000 - revealing how outliers skew the mean.",
+        "Survey responses [4, 5, 4, 4, 3, 5, 4] shows mean = 4.14, median = 4, mode = 4 - demonstrating agreement around central value."
+      ],
+      "resultsExplanation": [
+        "Mean represents the arithmetic average of all values",
+        "Median shows the middle value when data is sorted",
+        "Mode displays the most frequently occurring value(s)",
+        "Comparison helps understand data distribution and skewness"
+      ],
+      "whoItsFor": "This statistics calculator serves students learning introductory statistics, researchers analyzing survey data, business analysts studying performance metrics, scientists working with experimental data, educators teaching statistical concepts, data analysts processing information, and anyone needing to understand data patterns. It's particularly valuable for homework help, research analysis, business reporting, quality control, and understanding population characteristics. The calculator works for any dataset from simple classroom examples to complex research data.",
+      "disclaimer": "This statistical calculator provides descriptive statistics for educational and analytical purposes. Results are based on standard statistical formulas and practices. The calculator does not perform inferential statistics, hypothesis testing, or advanced statistical analysis. For complex research, consult qualified statisticians. Central tendency measures are descriptive tools and may not capture full data distribution. Always consider data quality, sample size, and research context when interpreting results.",
+      "relatedTools": [
+        "Percent calculators for expressing statistical relationships",
+        "Percentage change calculators for measuring variation",
+        "Standard deviation calculators for measuring data spread"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between mean, median, and mode?",
+          "answer": "Mean is the average (sum divided by count), median is the middle value when sorted, and mode is the most frequent value. Each measures central tendency differently: mean is affected by all values, median is resistant to outliers, mode shows popularity. For example, with data [1, 2, 3, 4, 100], mean = 22, median = 3, mode = none. Choose based on your data and what 'typical' means to you."
+        },
+        {
+          "question": "When should I use median instead of mean?",
+          "answer": "Use median when data has outliers or skewed distribution. Mean can be misleading with extreme values. For example, average income in a neighborhood with one billionaire would be skewed high, while median gives better sense of typical income. Median is preferred for ordinal data, housing prices, and income distributions. Use mean for normally distributed data without outliers."
+        },
+        {
+          "question": "How do I calculate mean manually?",
+          "answer": "Add all numbers together, then divide by how many numbers you have. For [5, 7, 3, 9, 4]: Sum = 5+7+3+9+4 = 28. Count = 5. Mean = 28÷5 = 5.6. This works for any size dataset. For weighted mean, multiply each value by its weight before summing, then divide by sum of weights."
+        },
+        {
+          "question": "What does it mean when mean and median are far apart?",
+          "answer": "It indicates skewed distribution or outliers. If mean > median, data is right-skewed (positively skewed) with some high values pulling mean up. If mean < median, data is left-skewed with some low values pulling mean down. Large gaps suggest data is not normally distributed. This affects which measure best represents 'typical' value."
+        },
+        {
+          "question": "Can there be more than one mode?",
+          "answer": "Yes, datasets can be multimodal with multiple modes (values that appear equally most often). For example, [1, 2, 2, 3, 3, 4] has two modes (2 and 3). Datasets with all unique values have no mode. Understanding multimodality helps identify subgroups or patterns in data. In some contexts, having multiple modes indicates data complexity."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Media Mediana Moda",
+    "seoTitle": "Calculadora de Media Mediana Moda - Calcula Medidas Estadísticas en Línea",
+    "metaDescription": "Calculadora gratuita de media, mediana y moda. Calcula medidas de tendencia central para conjuntos de datos. Perfecta para estudiantes de estadística y análisis de datos.",
+    "keywords": [
+      "calculadora media mediana moda",
+      "calculadora tendencia central",
+      "calculadora estadística",
+      "calculadora promedio",
+      "análisis datos"
+    ],
+    "longTailKeywords": [
+      "cómo calcular media mediana moda",
+      "calculadora de tendencia central online",
+      "calculadora estadística para conjuntos de datos",
+      "buscador promedio mediana moda",
+      "calculadora medidas estadísticas"
+    ],
+    "slug": "mean-median-mode-calculator",
+    "category": "math",
+    "difficulty": "intermediate",
+    "tags": [
+      "estadística",
+      "media",
+      "mediana",
+      "moda",
+      "análisis datos",
+      "matemáticas"
+    ],
+    "summary": "Calcula media, mediana y moda - las tres medidas de tendencia central para análisis estadístico de datos.",
+    "description": "Nuestra completa calculadora de media mediana moda te ayuda a analizar conjuntos de datos calculando las tres medidas fundamentales de tendencia central. Perfecta para estudiantes de estadística, investigadores y cualquier persona que trabaje con análisis de datos. Obtén resultados instantáneos con explicaciones paso a paso.",
+    "instructions": [
+      "Ingresa tu conjunto de datos (valores separados por comas o uno por línea)",
+      "Elige si incluir cálculos paso a paso",
+      "Obtén resultados instantáneos para media, mediana y moda",
+      "Ve explicaciones detalladas de cada medida estadística"
+    ],
+    "calculatorComponent": "MeanMedianModeCalculator",
+    "examples": [
+      {
+        "title": "Conjunto de Datos Básico",
+        "input": "2, 4, 6, 8, 10",
+        "output": "Media: 6, Mediana: 6, Moda: Sin moda"
+      },
+      {
+        "title": "Datos con Moda",
+        "input": "1, 2, 2, 3, 4, 4, 4, 5",
+        "output": "Media: 3.125, Mediana: 3.5, Moda: 4"
+      }
+    ],
+    "relatedCalculators": [
+      "percent-calculator",
+      "percentage-change-calculator",
+      "standard-deviation-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Domina las tres medidas fundamentales de tendencia central con nuestra calculadora integral de media, mediana y moda que hace análisis estadístico accesible a todos. Media, mediana y moda son las piedras angulares de estadística descriptiva, proporcionando insights en distribución de datos y valores centrales. Ya sea estudiante aprendiendo estadística, investigador analizando datos de encuesta, o profesional tomando decisiones basadas en datos, nuestra calculadora proporciona cálculos instantáneos con explicaciones claras. Entender estas medidas es esencial para interpretar datos a través de ciencia, negocios, ciencias sociales, y toma de decisiones cotidiana.",
+      "benefits": [
+        "Calcula las tres medidas de tendencia central simultáneamente",
+        "Entiende cómo diferentes medidas representan tus datos diferente",
+        "Maneja conjuntos de datos de cualquier tamaño con resultados instantáneos",
+        "Aprende conceptos estadísticos a través de cálculos interactivos",
+        "Compara media, mediana y moda para entender distribución de datos",
+        "Aplica medidas estadísticas a análisis de datos del mundo real",
+        "Construye confianza en habilidades de interpretación estadística",
+        "Usa resultados para investigación, análisis de negocios, y toma de decisiones"
+      ],
+      "steps": [
+        "Ingresa tu conjunto de datos como valores separados por coma o uno por línea",
+        "Elige si ver explicaciones de cálculo paso a paso",
+        "Revisa las tres medidas: media, mediana y moda",
+        "Compara las medidas para entender tendencia central de tus datos",
+        "Aplica los resultados a tu análisis estadístico o investigación"
+      ],
+      "inputsExplained": [
+        "Conjunto de datos puede ser cualquier números representando tus mediciones u observaciones",
+        "Números pueden ser enteros, decimales, positivos o negativos",
+        "Datos pueden estar en cualquier orden - calculadora ordena automáticamente para cálculos",
+        "Tamaño de conjunto de datos es ilimitado - funciona con muestras pequeñas o grandes conjuntos de datos"
+      ],
+      "formulaExplanation": "Media se calcula sumando todos los valores y dividiendo por conteo (Σx/n). Mediana requiere ordenar datos y encontrar valor medio (para conteo impar) o promedio de dos valores medios (para conteo par). Moda es el valor(es) que ocurre más frecuentemente. Cada medida sirve propósitos diferentes: media muestra promedio matemático, mediana muestra valor medio resistente a valores atípicos, moda muestra valor más común. Entender cuándo usar cada medida es crucial para interpretación precisa de datos en investigación y análisis.",
+      "examples": [
+        "Conjunto de datos de calificaciones [85, 92, 78, 96, 88] muestra media = 87.8, mediana = 88, moda = ninguna - indicando datos distribuidos normalmente.",
+        "Datos de ingreso [25,000, 35,000, 35,000, 45,000, 200,000] muestra media = 68,000, mediana = 35,000 - revelando cómo valores atípicos sesgan la media.",
+        "Respuestas de encuesta [4, 5, 4, 4, 3, 5, 4] muestra media = 4.14, mediana = 4, moda = 4 - demostrando acuerdo alrededor de valor central."
+      ],
+      "resultsExplanation": [
+        "Media representa el promedio aritmético de todos los valores",
+        "Mediana muestra el valor medio cuando datos están ordenados",
+        "Moda muestra el valor(es) que ocurre más frecuentemente",
+        "Comparación ayuda entender distribución de datos y asimetría"
+      ],
+      "whoItsFor": "Esta calculadora estadística sirve estudiantes aprendiendo estadística introductoria, investigadores analizando datos de encuesta, analistas de negocios estudiando métricas de desempeño, científicos trabajando con datos experimentales, educadores enseñando conceptos estadísticos, analistas de datos procesando información, y cualquiera necesitando entender patrones de datos. Es particularmente valiosa para ayuda con tarea, análisis de investigación, reportes de negocios, control de calidad, y entendiendo características poblacionales. La calculadora funciona para cualquier conjunto de datos desde ejemplos simples de clase hasta datos complejos de investigación.",
+      "disclaimer": "Esta calculadora estadística proporciona estadística descriptiva para propósitos educativos y analíticos. Los resultados están basados en fórmulas estadísticas estándar y prácticas. La calculadora no realiza estadística inferencial, pruebas de hipótesis, o análisis estadístico avanzado. Para investigación compleja, consulta estadísticos calificados. Las medidas de tendencia central son herramientas descriptivas y pueden no capturar distribución completa de datos. Siempre considera calidad de datos, tamaño de muestra, y contexto de investigación cuando interpretando resultados.",
+      "relatedTools": [
+        "Calculadoras de porcentaje para expresar relaciones estadísticas",
+        "Calculadoras de cambio porcentual para medir variación",
+        "Calculadoras de desviación estándar para medir dispersión de datos"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre media, mediana y moda?",
+          "answer": "Media es el promedio (suma dividida por conteo), mediana es el valor medio cuando ordenado, y moda es el valor más frecuente. Cada mide tendencia central diferente: media es afectada por todos los valores, mediana es resistente a valores atípicos, moda muestra popularidad. Por ejemplo, con datos [1, 2, 3, 4, 100], media = 22, mediana = 3, moda = ninguna. Elige basado en tus datos y qué significa 'típico' para ti."
+        },
+        {
+          "question": "¿Cuándo debería usar mediana en lugar de media?",
+          "answer": "Usa mediana cuando datos tienen valores atípicos o distribución sesgada. Media puede ser engañosa con valores extremos. Por ejemplo, ingreso promedio en un vecindario con un billonario sería sesgado alto, mientras mediana da mejor sentido de ingreso típico. Mediana es preferida para datos ordinales, precios de vivienda, y distribuciones de ingreso. Usa media para datos distribuidos normalmente sin valores atípicos."
+        },
+        {
+          "question": "¿Cómo calculo media manualmente?",
+          "answer": "Suma todos los números juntos, luego divide por cuántos números tienes. Para [5, 7, 3, 9, 4]: Suma = 5+7+3+9+4 = 28. Conteo = 5. Media = 28÷5 = 5.6. Esto funciona para cualquier tamaño de conjunto de datos. Para media ponderada, multiplica cada valor por su peso antes de sumar, luego divide por suma de pesos."
+        },
+        {
+          "question": "¿Qué significa cuando media y mediana están muy separadas?",
+          "answer": "Indica distribución sesgada o valores atípicos. Si media > mediana, datos están sesgados a la derecha (sesgo positivo) con algunos valores altos jalando media arriba. Si media < mediana, datos están sesgados a la izquierda con algunos valores bajos jalando media abajo. Grandes brechas sugieren datos no están distribuidos normalmente. Esto afecta cuál medida mejor representa valor 'típico'."
+        },
+        {
+          "question": "¿Puede haber más de una moda?",
+          "answer": "Sí, conjuntos de datos pueden ser multimodales con múltiples modas (valores que aparecen igual más a menudo). Por ejemplo, [1, 2, 2, 3, 3, 4] tiene dos modas (2 y 3). Conjuntos de datos con todos valores únicos no tienen moda. Entender multimodalidad ayuda identificar subgrupos o patrones en datos. En algunos contextos, tener múltiples modas indica complejidad de datos."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Média Mediana Moda",
+    "seoTitle": "Calculadora de Média Mediana Moda - Calcule Medidas Estatísticas Online",
+    "metaDescription": "Calculadora gratuita de média, mediana e moda. Calcule medidas de tendência central para conjuntos de dados. Perfeita para estudantes de estatística e análise de dados.",
+    "keywords": [
+      "calculadora média mediana moda",
+      "calculadora tendência central",
+      "calculadora estatística",
+      "calculadora média",
+      "análise dados"
+    ],
+    "longTailKeywords": [
+      "como calcular média mediana moda",
+      "calculadora de tendência central online",
+      "calculadora estatística para conjuntos de dados",
+      "localizador média mediana moda",
+      "calculadora medidas estatísticas"
+    ],
+    "slug": "mean-median-mode-calculator",
+    "category": "math",
+    "difficulty": "intermediate",
+    "tags": [
+      "estatística",
+      "média",
+      "mediana",
+      "moda",
+      "análise dados",
+      "matemática"
+    ],
+    "summary": "Calcule média, mediana e moda - as três medidas de tendência central para análise estatística de dados.",
+    "description": "Nossa calculadora completa de média mediana moda ajuda você a analisar conjuntos de dados calculando as três medidas fundamentais de tendência central. Perfeita para estudantes de estatística, pesquisadores e qualquer pessoa que trabalhe com análise de dados. Obtenha resultados instantâneos com explicações passo a passo.",
+    "instructions": [
+      "Digite seu conjunto de dados (valores separados por vírgulas ou um por linha)",
+      "Escolha se incluir cálculos passo a passo",
+      "Obtenha resultados instantâneos para média, mediana e moda",
+      "Veja explicações detalhadas de cada medida estatística"
+    ],
+    "calculatorComponent": "MeanMedianModeCalculator",
+    "examples": [
+      {
+        "title": "Conjunto de Dados Básico",
+        "input": "2, 4, 6, 8, 10",
+        "output": "Média: 6, Mediana: 6, Moda: Sem moda"
+      },
+      {
+        "title": "Dados com Moda",
+        "input": "1, 2, 2, 3, 4, 4, 4, 5",
+        "output": "Média: 3.125, Mediana: 3.5, Moda: 4"
+      }
+    ],
+    "relatedCalculators": [
+      "percent-calculator",
+      "percentage-change-calculator",
+      "standard-deviation-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Domine as três medidas fundamentais de tendência central com nossa calculadora abrangente de média, mediana e moda que torna análise estatística acessível a todos. Média, mediana e moda são as pedras fundamentais da estatística descritiva, fornecendo insights em distribuição de dados e valores centrais. Seja você estudante aprendendo estatística, pesquisador analisando dados de pesquisa, ou profissional tomando decisões baseadas em dados, nossa calculadora fornece cálculos instantâneos com explicações claras. Entender estas medidas é essencial para interpretar dados através de ciência, negócios, ciências sociais, e tomada de decisões cotidiana.",
+      "benefits": [
+        "Calcule todas as três medidas de tendência central simultaneamente",
+        "Entenda como diferentes medidas representam seus dados diferente",
+        "Lide com conjuntos de dados de qualquer tamanho com resultados instantâneos",
+        "Aprenda conceitos estatísticos através de cálculos interativos",
+        "Compare média, mediana e moda para entender distribuição de dados",
+        "Aplique medidas estatísticas a análise de dados do mundo real",
+        "Construa confiança em habilidades de interpretação estatística",
+        "Use resultados para pesquisa, análise de negócios, e tomada de decisões"
+      ],
+      "steps": [
+        "Digite seu conjunto de dados como valores separados por vírgula ou um por linha",
+        "Escolha se visualizar explicações de cálculo passo a passo",
+        "Revise todas as três medidas: média, mediana e moda",
+        "Compare as medidas para entender tendência central de seus dados",
+        "Aplique os resultados à sua análise estatística ou pesquisa"
+      ],
+      "inputsExplained": [
+        "Conjunto de dados pode ser qualquer números representando suas medições ou observações",
+        "Números podem ser números inteiros, decimais, positivos ou negativos",
+        "Dados podem estar em qualquer ordem - calculadora ordena automaticamente para cálculos",
+        "Tamanho do conjunto de dados é ilimitado - funciona com amostras pequenas ou grandes conjuntos de dados"
+      ],
+      "formulaExplanation": "Média é calculada somando todos os valores e dividindo por contagem (Σx/n). Mediana requer ordenar dados e encontrar valor do meio (para contagem ímpar) ou média de dois valores do meio (para contagem par). Moda é o valor(es) que ocorre mais frequentemente. Cada medida serve propósitos diferentes: média mostra média matemática, mediana mostra valor do meio resistente a valores discrepantes, moda mostra valor mais comum. Entender quando usar cada medida é crucial para interpretação precisa de dados em pesquisa e análise.",
+      "examples": [
+        "Conjunto de dados de pontuações de teste [85, 92, 78, 96, 88] mostra média = 87.8, mediana = 88, moda = nenhuma - indicando dados distribuídos normalmente.",
+        "Dados de renda [25,000, 35,000, 35,000, 45,000, 200,000] mostra média = 68,000, mediana = 35,000 - revelando como valores discrepantes enviesam a média.",
+        "Respostas de pesquisa [4, 5, 4, 4, 3, 5, 4] mostra média = 4.14, mediana = 4, moda = 4 - demonstrando acordo ao redor de valor central."
+      ],
+      "resultsExplanation": [
+        "Média representa a média aritmética de todos os valores",
+        "Mediana mostra o valor do meio quando dados estão ordenados",
+        "Moda mostra o valor(es) que ocorre mais frequentemente",
+        "Comparação ajuda entender distribuição de dados e assimetria"
+      ],
+      "whoItsFor": "Esta calculadora estatística serve estudantes aprendendo estatística introdutória, pesquisadores analisando dados de pesquisa, analistas de negócios estudando métricas de desempenho, cientistas trabalhando com dados experimentais, educadores ensinando conceitos estatísticos, analistas de dados processando informação, e qualquer pessoa precisando entender padrões de dados. É particularmente valiosa para ajuda com dever de casa, análise de pesquisa, relatórios de negócios, controle de qualidade, e entendendo características populacionais. A calculadora funciona para qualquer conjunto de dados de exemplos simples de classe a dados complexos de pesquisa.",
+      "disclaimer": "Esta calculadora estatística fornece estatística descritiva para propósitos educacionais e analíticos. Resultados são baseados em fórmulas estatísticas padrão e práticas. A calculadora não realiza estatística inferencial, testes de hipótese, ou análise estatística avançada. Para pesquisa complexa, consulte estatísticos qualificados. Medidas de tendência central são ferramentas descritivas e podem não capturar distribuição completa de dados. Sempre considere qualidade de dados, tamanho de amostra, e contexto de pesquisa quando interpretando resultados.",
+      "relatedTools": [
+        "Calculadoras de porcentagem para expressar relações estatísticas",
+        "Calculadoras de mudança porcentual para medir variação",
+        "Calculadoras de desvio padrão para medir dispersão de dados"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre média, mediana e moda?",
+          "answer": "Média é a média (soma dividida por contagem), mediana é o valor do meio quando ordenado, e moda é o valor mais frequente. Cada mede tendência central diferente: média é afetada por todos os valores, mediana é resistente a valores discrepantes, moda mostra popularidade. Por exemplo, com dados [1, 2, 3, 4, 100], média = 22, mediana = 3, moda = nenhuma. Escolha baseado em seus dados e o que 'típico' significa para você."
+        },
+        {
+          "question": "Quando devo usar mediana em vez de média?",
+          "answer": "Use mediana quando dados têm valores discrepantes ou distribuição enviesada. Média pode ser enganosa com valores extremos. Por exemplo, renda média em um bairro com um bilionário seria enviesada alta, enquanto mediana dá melhor sentido de renda típica. Mediana é preferida para dados ordinais, preços de imóveis, e distribuições de renda. Use média para dados distribuídos normalmente sem valores discrepantes."
+        },
+        {
+          "question": "Como calculo média manualmente?",
+          "answer": "Some todos os números juntos, então divida por quantos números você tem. Para [5, 7, 3, 9, 4]: Soma = 5+7+3+9+4 = 28. Contagem = 5. Média = 28÷5 = 5.6. Isso funciona para qualquer tamanho de conjunto de dados. Para média ponderada, multiplique cada valor por seu peso antes de somar, então divida por soma de pesos."
+        },
+        {
+          "question": "¿O que significa quando média e mediana estão muito distantes?",
+          "answer": "Indica distribuição enviesada ou valores discrepantes. Se média > mediana, dados estão enviesados à direita (enviesamento positivo) com alguns valores altos puxando média para cima. Se média < mediana, dados estão enviesados à esquerda com alguns valores baixos puxando média para baixo. Grandes lacunas sugerem dados não estão distribuídos normalmente. Isso afeta qual medida melhor representa valor 'típico'."
+        },
+        {
+          "question": "Pode haver mais de uma moda?",
+          "answer": "Sim, conjuntos de dados podem ser multimodais com múltiplas modas (valores que aparecem igualmente mais frequentemente). Por exemplo, [1, 2, 2, 3, 3, 4] tem duas modas (2 e 3). Conjuntos de dados com todos valores únicos não têm moda. Entender multimodalidade ajuda identificar subgrupos ou padrões em dados. Em alguns contextos, ter múltiplas modas indica complexidade de dados."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur Moyenne Médiane Mode",
+    "seoTitle": "Calculateur Moyenne Médiane Mode - Calculez les Mesures Statistiques en Ligne",
+    "metaDescription": "Calculateur gratuit de moyenne, médiane et mode. Calculez les mesures de tendance centrale pour les ensembles de données. Parfait pour les étudiants en statistique et l'analyse de données.",
+    "keywords": [
+      "calculateur moyenne médiane mode",
+      "calculateur tendance centrale",
+      "calculateur statistique",
+      "calculateur moyenne",
+      "analyse données"
+    ],
+    "longTailKeywords": [
+      "comment calculer moyenne médiane mode",
+      "calculateur de tendance centrale en ligne",
+      "calculateur statistique pour ensembles de données",
+      "chercheur moyenne médiane mode",
+      "calculateur mesures statistiques"
+    ],
+    "slug": "mean-median-mode-calculator",
+    "category": "math",
+    "difficulty": "intermediate",
+    "tags": [
+      "statistiques",
+      "moyenne",
+      "médiane",
+      "mode",
+      "analyse données",
+      "mathématiques"
+    ],
+    "summary": "Calculez la moyenne, médiane et mode - les trois mesures de tendance centrale pour l'analyse statistique des données.",
+    "description": "Notre calculateur complet de moyenne médiane mode vous aide à analyser les ensembles de données en calculant les trois mesures fondamentales de tendance centrale. Parfait pour les étudiants en statistique, les chercheurs et toute personne travaillant avec l'analyse de données. Obtenez des résultats instantanés avec des explications étape par étape.",
+    "instructions": [
+      "Entrez votre ensemble de données (valeurs séparées par des virgules ou une par ligne)",
+      "Choisissez d'inclure ou non les calculs étape par étape",
+      "Obtenez des résultats instantanés pour la moyenne, médiane et mode",
+      "Consultez les explications détaillées de chaque mesure statistique"
+    ],
+    "calculatorComponent": "MeanMedianModeCalculator",
+    "examples": [
+      {
+        "title": "Ensemble de Données de Base",
+        "input": "2, 4, 6, 8, 10",
+        "output": "Moyenne: 6, Médiane: 6, Mode: Aucun mode"
+      },
+      {
+        "title": "Données avec Mode",
+        "input": "1, 2, 2, 3, 4, 4, 4, 5",
+        "output": "Moyenne: 3.125, Médiane: 3.5, Mode: 4"
+      }
+    ],
+    "relatedCalculators": [
+      "percent-calculator",
+      "percentage-change-calculator",
+      "standard-deviation-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Maîtrisez les trois mesures fondamentales de tendance centrale avec notre calculatrice complète de moyenne, médiane et mode qui rend l'analyse statistique accessible à tous. Moyenne, médiane et mode sont les pierres angulaires de la statistique descriptive, fournissant des insights sur la distribution des données et les valeurs centrales. Que vous soyez étudiant apprenant la statistique, chercheur analysant des données d'enquête, ou professionnel prenant des décisions basées sur les données, notre calculatrice fournit des calculs instantanés avec des explications claires. Comprendre ces mesures est essentiel pour interpréter les données à travers la science, les affaires, les sciences sociales, et la prise de décision quotidienne.",
+      "benefits": [
+        "Calculez les trois mesures de tendance centrale simultanément",
+        "Comprenez comment différentes mesures représentent vos données différemment",
+        "Gérez des ensembles de données de toute taille avec résultats instantanés",
+        "Apprenez concepts statistiques par calculs interactifs",
+        "Comparez moyenne, médiane et mode pour comprendre distribution des données",
+        "Appliquez mesures statistiques à analyse de données du monde réel",
+        "Construisez confiance en compétences d'interprétation statistique",
+        "Utilisez résultats pour recherche, analyse d'affaires, et prise de décisions"
+      ],
+      "steps": [
+        "Entrez votre ensemble de données comme valeurs séparées par virgule ou une par ligne",
+        "Choisissez si afficher explications de calcul étape par étape",
+        "Examinez les trois mesures : moyenne, médiane et mode",
+        "Comparez les mesures pour comprendre tendance centrale de vos données",
+        "Appliquez les résultats à votre analyse statistique ou recherche"
+      ],
+      "inputsExplained": [
+        "Ensemble de données peut être tout nombres représentant vos mesures ou observations",
+        "Nombres peuvent être nombres entiers, décimaux, positifs ou négatifs",
+        "Données peuvent être dans n'importe quel ordre - calculatrice trie automatiquement pour calculs",
+        "Taille ensemble de données est illimitée - fonctionne avec petits échantillons ou grands ensembles de données"
+      ],
+      "formulaExplanation": "Moyenne est calculée en additionnant toutes valeurs et divisant par compte (Σx/n). Médiane nécessite trier données et trouver valeur du milieu (pour compte impair) ou moyenne de deux valeurs du milieu (pour compte pair). Mode est la valeur(s) apparaissant le plus fréquemment. Chaque mesure sert des buts différents : moyenne montre moyenne mathématique, médiane montre valeur du milieu résistante aux valeurs aberrantes, mode montre valeur la plus commune. Comprendre quand utiliser chaque mesure est crucial pour interprétation précise de données en recherche et analyse.",
+      "examples": [
+        "Ensemble de données scores test [85, 92, 78, 96, 88] montre moyenne = 87.8, médiane = 88, mode = aucun - indiquant données distribuées normalement.",
+        "Données revenu [25,000, 35,000, 35,000, 45,000, 200,000] montre moyenne = 68,000, médiane = 35,000 - révélant comment valeurs aberrantes faussent moyenne.",
+        "Réponses enquête [4, 5, 4, 4, 3, 5, 4] montre moyenne = 4.14, médiane = 4, mode = 4 - démontrant accord autour valeur centrale."
+      ],
+      "resultsExplanation": [
+        "Moyenne représente moyenne arithmétique de toutes valeurs",
+        "Médiane montre valeur du milieu quand données sont triées",
+        "Mode affiche valeur(s) apparaissant le plus fréquemment",
+        "Comparaison aide comprendre distribution des données et asymétrie"
+      ],
+      "whoItsFor": "Cette calculatrice statistique sert étudiants apprenant statistique introductoire, chercheurs analysant données d'enquête, analystes d'affaires étudiant métriques performance, scientifiques travaillant avec données expérimentales, éducateurs enseignant concepts statistiques, analystes de données traitant information, et quiconque ayant besoin comprendre patterns de données. Elle est particulièrement précieuse pour aide devoirs, analyse recherche, rapports d'affaires, contrôle qualité, et compréhension caractéristiques populationnelles. La calculatrice fonctionne pour tout ensemble de données d'exemples classe simples à données recherche complexes.",
+      "disclaimer": "Cette calculatrice statistique fournit statistiques descriptives à fins éducatives et analytiques. Résultats sont basés sur formules statistiques standard et pratiques. La calculatrice ne réalise pas statistiques inférentielles, tests d'hypothèse, ou analyse statistique avancée. Pour recherche complexe, consultez statisticiens qualifiés. Mesures tendance centrale sont outils descriptifs et peuvent ne pas capturer distribution complète de données. Considérez toujours qualité des données, taille échantillon, et contexte recherche en interprétant résultats.",
+      "relatedTools": [
+        "Calculateurs pourcentage pour exprimer relations statistiques",
+        "Calculateurs changement pourcentage pour mesurer variation",
+        "Calculateurs écart type pour mesurer dispersion des données"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est différence entre moyenne, médiane et mode ?",
+          "answer": "Moyenne est moyenne (somme divisée par compte), médiane est valeur du milieu quand triée, et mode est valeur la plus fréquente. Chaque mesure tendance centrale différemment : moyenne est affectée par toutes valeurs, médiane est résistante aux valeurs aberrantes, mode montre popularité. Par exemple, avec données [1, 2, 3, 4, 100], moyenne = 22, médiane = 3, mode = aucun. Choisissez basé sur vos données et ce que 'typique' signifie pour vous."
+        },
+        {
+          "question": "Quand devrais-je utiliser médiane au lieu de moyenne ?",
+          "answer": "Utilisez médiane quand données ont valeurs aberrantes ou distribution asymétrique. Moyenne peut être trompeuse avec valeurs extrêmes. Par exemple, revenu moyen dans quartier avec un milliardaire serait asymétrique haut, tandis que médiane donne meilleur sens revenu typique. Médiane est préférée pour données ordinales, prix logement, et distributions revenu. Utilisez moyenne pour données distribuées normalement sans valeurs aberrantes."
+        },
+        {
+          "question": "Comment calculer moyenne manuellement ?",
+          "answer": "Additionnez tous nombres ensemble, puis divisez par combien nombres vous avez. Pour [5, 7, 3, 9, 4] : Somme = 5+7+3+9+4 = 28. Compte = 5. Moyenne = 28÷5 = 5.6. Cela fonctionne pour toute taille ensemble de données. Pour moyenne pondérée, multipliez chaque valeur par son poids avant addition, puis divisez par somme des poids."
+        },
+        {
+          "question": "¿Que signifie quand moyenne et médiane sont loin l'une de l'autre ?",
+          "answer": "Cela indique distribution asymétrique ou valeurs aberrantes. Si moyenne > médiane, données sont asymétriques droite (asymétrie positive) avec quelques valeurs élevées tirant moyenne vers haut. Si moyenne < médiane, données sont asymétriques gauche avec quelques valeurs basses tirant moyenne vers bas. Grands écarts suggèrent données ne sont pas distribuées normalement. Cela affecte quelle mesure représente mieux valeur 'typique'."
+        },
+        {
+          "question": "Peut-il y avoir plus d'une mode ?",
+          "answer": "Oui, ensembles de données peuvent être multimodaux avec multiples modes (valeurs apparaissant également le plus souvent). Par exemple, [1, 2, 2, 3, 3, 4] a deux modes (2 et 3). Ensembles de données avec toutes valeurs uniques n'ont pas mode. Comprendre multimodalité aide identifier sous-groupes ou patterns dans données. Dans certains contextes, avoir multiples modes indique complexité des données."
+        }
+      ]
+    }
+  }
+}

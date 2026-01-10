@@ -1,0 +1,602 @@
+{
+  "en": {
+    "title": "Equivalent Interest Rate Calculator",
+    "seoTitle": "Equivalent Interest Rate Calculator - Find Equivalent Rates Across Compounding Frequencies",
+    "metaDescription": "Calculate equivalent interest rates across different compounding frequencies. Free equivalent rate calculator showing how rates change with different compounding periods.",
+    "keywords": [
+      "equivalent interest rate calculator",
+      "equivalent rate calculator",
+      "compounding equivalent rates",
+      "equivalent annual rate calculator",
+      "rate equivalence calculator",
+      "equivalent yield calculator"
+    ],
+    "longTailKeywords": [
+      "equivalent interest rate calculator online",
+      "calculate equivalent rates with different compounding",
+      "equivalent annual rate calculation",
+      "find equivalent interest rates",
+      "equivalent rate converter calculator",
+      "compounding frequency equivalent rates",
+      "equivalent interest rate formula",
+      "annual equivalent rate calculator",
+      "equivalent yield rate calculator",
+      "rate equivalence across periods"
+    ],
+    "slug": "equivalent-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Advanced",
+    "tags": [
+      "equivalent rate",
+      "compounding frequency",
+      "rate equivalence",
+      "annual equivalent",
+      "yield equivalence",
+      "rate comparison"
+    ],
+    "description": "Calculate equivalent interest rates across different compounding frequencies. Find what rate in one compounding period equals a rate in another compounding period.",
+    "summary": "Calculate equivalent interest rates across different compounding frequencies",
+    "instructions": [
+      "Enter the known interest rate and its compounding frequency",
+      "Select the target compounding frequency you want to convert to",
+      "Click 'Calculate' to find the equivalent rate",
+      "Compare how the same economic return is expressed differently",
+      "Use equivalent rates to compare investments with different compounding"
+    ],
+    "calculatorComponent": "EquivalentInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Monthly to Quarterly Equivalence",
+        "description": "Find quarterly equivalent of 0.5% monthly rate",
+        "input": {
+          "knownRate": 0.5,
+          "knownFrequency": "12",
+          "targetFrequency": "4"
+        },
+        "output": {
+          "equivalentRate": "2.01%",
+          "knownRateDetails": "0.50% compounded monthly",
+          "equivalentRateDetails": "2.01% compounded quarterly",
+          "rateDifference": "1.51%",
+          "economicEquivalence": "Both rates produce the same annual return of 6.17%"
+        }
+      },
+      {
+        "title": "Annual to Monthly Equivalence",
+        "description": "Find monthly equivalent of 6% annual rate",
+        "input": {
+          "knownRate": 6,
+          "knownFrequency": "1",
+          "targetFrequency": "12"
+        },
+        "output": {
+          "equivalentRate": "0.49%",
+          "knownRateDetails": "6.00% compounded annually",
+          "equivalentRateDetails": "0.49% compounded monthly",
+          "rateDifference": "-5.51%",
+          "economicEquivalence": "Both rates produce the same annual return of 6.00%"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Understanding equivalent interest rates is crucial for accurate financial comparisons. Different compounding frequencies can make the same economic return appear as different rates. Our equivalent interest rate calculator helps you find what rate in one compounding period equals the same economic return in another compounding period.",
+      "benefits": [
+        "Find equivalent rates across different compounding frequencies",
+        "Compare rates quoted with different compounding periods accurately",
+        "Understand how compounding affects rate representation",
+        "Make apples-to-apples comparisons between different investments",
+        "Calculate equivalent rates for loan and investment analysis",
+        "See how the same economic return appears as different rates"
+      ],
+      "steps": [
+        "Enter the interest rate you know and its compounding frequency",
+        "Select the target compounding frequency you want to convert to",
+        "Review the equivalent rate that produces the same economic return",
+        "Compare the rate difference between compounding frequencies",
+        "Use equivalent rates for accurate financial comparisons",
+        "Repeat calculations for different rate scenarios"
+      ],
+      "inputsExplained": [
+        "Known rate is the interest rate you have and want to convert",
+        "Known frequency is how often the known rate compounds",
+        "Target frequency is the compounding period you want to convert to",
+        "The calculator finds the equivalent rate in the target frequency"
+      ],
+      "formulaExplanation": "The equivalent rate calculation uses compound interest formulas to find what rate in one compounding frequency produces the same economic return as a rate in another compounding frequency. This involves calculating the effective annual rate first, then finding the equivalent periodic rate.",
+      "examples": [
+        "A 0.5% monthly rate is equivalent to a 2.01% quarterly rate, as both produce the same annual return when compounded properly",
+        "A 6% annual rate is equivalent to a 0.49% monthly rate, showing how different compounding frequencies affect rate representation"
+      ],
+      "resultsExplanation": [
+        "Equivalent rate shows the rate in target frequency that produces same economic return",
+        "Known rate details identify the original rate and its compounding",
+        "Equivalent rate details show the converted rate and its compounding",
+        "Rate difference highlights how compounding frequency affects rate levels",
+        "Economic equivalence confirms both rates produce the same annual return",
+        "All results help you understand rate relationships across compounding frequencies"
+      ],
+      "whoItsFor": "This equivalent interest rate calculator is essential for financial analysts, investment advisors, loan officers, and anyone who needs to compare rates with different compounding frequencies. It's particularly valuable for comparing investment returns, loan rates, and understanding how compounding affects rate representation.",
+      "disclaimer": "This calculator finds mathematically equivalent rates across different compounding frequencies. The equivalence assumes the same economic return over the same time period. Actual investment returns and borrowing costs may vary based on specific terms and conditions.",
+      "relatedTools": [
+        "effective annual rate calculator",
+        "nominal interest rate calculator",
+        "compound interest calculator",
+        "apr calculator",
+        "interest rate table calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What are equivalent interest rates?",
+          "answer": "Equivalent interest rates are different rates that produce the same economic return when compounded over the same time period. They represent the same investment or borrowing cost expressed with different compounding frequencies."
+        },
+        {
+          "question": "Why do equivalent rates differ?",
+          "answer": "Equivalent rates differ because compounding frequency affects how interest is calculated. More frequent compounding means you need a lower periodic rate to achieve the same annual return."
+        },
+        {
+          "question": "When should I use equivalent rates?",
+          "answer": "Use equivalent rates when comparing financial products with different compounding frequencies. This ensures you're comparing rates that represent the same economic value."
+        },
+        {
+          "question": "How does compounding frequency affect equivalent rates?",
+          "answer": "Higher compounding frequency requires lower equivalent rates for the same economic return. For example, monthly compounding requires lower rates than annual compounding for the same annual return."
+        },
+        {
+          "question": "Can equivalent rates be higher than the original rate?",
+          "answer": "No, equivalent rates are typically lower when converting from lower frequency to higher frequency compounding, and higher when converting from higher frequency to lower frequency compounding."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Tasa de Interés Equivalente",
+    "seoTitle": "Calculadora de Tasa de Interés Equivalente - Encuentra Tasas Equivalentes Entre Frecuencias de Capitalización",
+    "metaDescription": "Calcula tasas de interés equivalentes entre diferentes frecuencias de capitalización. Calculadora gratuita de tasa equivalente mostrando cómo cambian las tasas con diferentes períodos de capitalización.",
+    "keywords": [
+      "calculadora tasa interés equivalente",
+      "calculadora tasa equivalente",
+      "equivalentes capitalización tasas",
+      "calculadora tasa anual equivalente",
+      "calculadora equivalencia tasas",
+      "calculadora rendimiento equivalente"
+    ],
+    "longTailKeywords": [
+      "calculadora tasa interés equivalente online",
+      "calcular tasas equivalentes con diferente capitalización",
+      "cálculo tasa anual equivalente",
+      "encontrar tasas interés equivalentes",
+      "calculadora conversor tasa equivalente",
+      "frecuencia capitalización tasas equivalentes",
+      "fórmula tasa interés equivalente",
+      "calculadora tasa equivalente anual",
+      "calculadora tasa rendimiento equivalente",
+      "equivalencia tasa entre períodos"
+    ],
+    "slug": "equivalent-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Advanced",
+    "tags": [
+      "tasa equivalente",
+      "frecuencia capitalización",
+      "equivalencia tasa",
+      "equivalente anual",
+      "equivalencia rendimiento",
+      "comparación tasa"
+    ],
+    "description": "Calcula tasas de interés equivalentes entre diferentes frecuencias de capitalización. Encuentra qué tasa en un período de capitalización equivale a una tasa en otro período de capitalización.",
+    "summary": "Calcula tasas de interés equivalentes entre diferentes frecuencias de capitalización",
+    "instructions": [
+      "Ingresa la tasa de interés conocida y su frecuencia de capitalización",
+      "Selecciona la frecuencia de capitalización objetivo a la que quieres convertir",
+      "Haz clic en 'Calcular' para encontrar la tasa equivalente",
+      "Compara cómo el mismo retorno económico se expresa diferente",
+      "Usa tasas equivalentes para comparar inversiones con diferente capitalización"
+    ],
+    "calculatorComponent": "EquivalentInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Equivalencia Mensual a Trimestral",
+        "description": "Encuentra equivalente trimestral de 0.5% tasa mensual",
+        "input": {
+          "knownRate": 0.5,
+          "knownFrequency": "12",
+          "targetFrequency": "4"
+        },
+        "output": {
+          "equivalentRate": "2.01%",
+          "knownRateDetails": "0.50% capitalizado mensualmente",
+          "equivalentRateDetails": "2.01% capitalizado trimestralmente",
+          "rateDifference": "1.51%",
+          "economicEquivalence": "Ambas tasas producen el mismo retorno anual de 6.17%"
+        }
+      },
+      {
+        "title": "Equivalencia Anual a Mensual",
+        "description": "Encuentra equivalente mensual de 6% tasa anual",
+        "input": {
+          "knownRate": 6,
+          "knownFrequency": "1",
+          "targetFrequency": "12"
+        },
+        "output": {
+          "equivalentRate": "0.49%",
+          "knownRateDetails": "6.00% capitalizado anualmente",
+          "equivalentRateDetails": "0.49% capitalizado mensualmente",
+          "rateDifference": "-5.51%",
+          "economicEquivalence": "Ambas tasas producen el mismo retorno anual de 6.00%"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender tasas de interés equivalentes es crucial para comparaciones financieras precisas. Diferentes frecuencias de capitalización pueden hacer que el mismo retorno económico aparezca como diferentes tasas. Nuestra calculadora de tasa de interés equivalente te ayuda a encontrar qué tasa en un período de capitalización equivale al mismo retorno económico en otro período de capitalización.",
+      "benefits": [
+        "Encuentra tasas equivalentes entre diferentes frecuencias de capitalización",
+        "Compara tasas cotizadas con diferentes períodos de capitalización con precisión",
+        "Entiende cómo capitalización afecta representación de tasa",
+        "Hace comparaciones manzana a manzana entre diferentes inversiones",
+        "Calcula tasas equivalentes para análisis de préstamo e inversión",
+        "Ve cómo el mismo retorno económico aparece como diferentes tasas"
+      ],
+      "steps": [
+        "Ingresa la tasa de interés que conoces y su frecuencia de capitalización",
+        "Selecciona la frecuencia de capitalización objetivo a la que quieres convertir",
+        "Revisa la tasa equivalente que produce el mismo retorno económico",
+        "Compara la diferencia de tasa entre frecuencias de capitalización",
+        "Usa tasas equivalentes para comparaciones financieras precisas",
+        "Repite cálculos para diferentes escenarios de tasa"
+      ],
+      "inputsExplained": [
+        "Tasa conocida es la tasa de interés que tienes y quieres convertir",
+        "Frecuencia conocida es con qué frecuencia capitaliza la tasa conocida",
+        "Frecuencia objetivo es el período de capitalización al que quieres convertir",
+        "La calculadora encuentra la tasa equivalente en la frecuencia objetivo"
+      ],
+      "formulaExplanation": "El cálculo de tasa equivalente usa fórmulas de interés compuesto para encontrar qué tasa en una frecuencia de capitalización produce el mismo retorno económico que una tasa en otra frecuencia de capitalización. Esto involucra calcular la tasa anual efectiva primero, luego encontrar la tasa periódica equivalente.",
+      "examples": [
+        "Una tasa mensual de 0.5% es equivalente a una tasa trimestral de 2.01%, ya que ambas producen el mismo retorno anual cuando capitalizadas apropiadamente",
+        "Una tasa anual de 6% es equivalente a una tasa mensual de 0.49%, mostrando cómo diferentes frecuencias de capitalización afectan representación de tasa"
+      ],
+      "resultsExplanation": [
+        "Tasa equivalente muestra la tasa en frecuencia objetivo que produce mismo retorno económico",
+        "Detalles tasa conocida identifican la tasa original y su capitalización",
+        "Detalles tasa equivalente muestran la tasa convertida y su capitalización",
+        "Diferencia tasa destaca cómo frecuencia de capitalización afecta niveles de tasa",
+        "Equivalencia económica confirma ambas tasas producen el mismo retorno anual",
+        "Todos los resultados te ayudan a entender relaciones de tasa entre frecuencias de capitalización"
+      ],
+      "whoItsFor": "Esta calculadora de tasa de interés equivalente es esencial para analistas financieros, asesores de inversión, oficiales de préstamo y cualquiera que necesite comparar tasas con diferentes frecuencias de capitalización. Es particularmente valiosa para comparar retornos de inversión, tasas de préstamo y entender cómo capitalización afecta representación de tasa.",
+      "disclaimer": "Esta calculadora encuentra tasas matemáticamente equivalentes entre diferentes frecuencias de capitalización. La equivalencia asume el mismo retorno económico durante el mismo período de tiempo. Los retornos reales de inversión y costos de endeudamiento pueden variar basado en términos y condiciones específicos.",
+      "relatedTools": [
+        "calculadora tasa efectiva anual",
+        "calculadora tasa interés nominal",
+        "calculadora interés compuesto",
+        "calculadora TAE",
+        "calculadora tabla tasas interés"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué son tasas de interés equivalentes?",
+          "answer": "Las tasas de interés equivalentes son diferentes tasas que producen el mismo retorno económico cuando capitalizadas durante el mismo período de tiempo. Representan el mismo costo de inversión o endeudamiento expresado con diferentes frecuencias de capitalización."
+        },
+        {
+          "question": "¿Por qué difieren las tasas equivalentes?",
+          "answer": "Las tasas equivalentes difieren porque frecuencia de capitalización afecta cómo se calcula el interés. Capitalización más frecuente significa que necesitas una tasa periódica más baja para lograr el mismo retorno anual."
+        },
+        {
+          "question": "¿Cuándo debo usar tasas equivalentes?",
+          "answer": "Usa tasas equivalentes al comparar productos financieros con diferentes frecuencias de capitalización. Esto asegura que estás comparando tasas que representan el mismo valor económico."
+        },
+        {
+          "question": "¿Cómo afecta frecuencia de capitalización las tasas equivalentes?",
+          "answer": "Frecuencia de capitalización más alta requiere tasas equivalentes más bajas para el mismo retorno económico. Por ejemplo, capitalización mensual requiere tasas más bajas que capitalización anual para el mismo retorno anual."
+        },
+        {
+          "question": "¿Pueden tasas equivalentes ser más altas que la tasa original?",
+          "answer": "No, las tasas equivalentes son típicamente más bajas al convertir de frecuencia más baja a más alta de capitalización, y más altas al convertir de frecuencia más alta a más baja de capitalización."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Taxa de Juros Equivalente",
+    "seoTitle": "Calculadora de Taxa de Juros Equivalente - Encontre Taxas Equivalentes Entre Frequências de Capitalização",
+    "metaDescription": "Calcule taxas de juros equivalentes entre diferentes frequências de capitalização. Calculadora gratuita de taxa equivalente mostrando como taxas mudam com diferentes períodos de capitalização.",
+    "keywords": [
+      "calculadora taxa juros equivalente",
+      "calculadora taxa equivalente",
+      "equivalentes capitalização taxas",
+      "calculadora taxa anual equivalente",
+      "calculadora equivalência taxas",
+      "calculadora rendimento equivalente"
+    ],
+    "longTailKeywords": [
+      "calculadora taxa juros equivalente online",
+      "calcular taxas equivalentes com diferente capitalização",
+      "cálculo taxa anual equivalente",
+      "encontrar taxas juros equivalentes",
+      "calculadora conversor taxa equivalente",
+      "frequência capitalização taxas equivalentes",
+      "fórmula taxa juros equivalente",
+      "calculadora taxa equivalente anual",
+      "calculadora taxa rendimento equivalente",
+      "equivalência taxa entre períodos"
+    ],
+    "slug": "equivalent-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Advanced",
+    "tags": [
+      "taxa equivalente",
+      "frequência capitalização",
+      "equivalência taxa",
+      "equivalente anual",
+      "equivalência rendimento",
+      "comparação taxa"
+    ],
+    "description": "Calcule taxas de juros equivalentes entre diferentes frequências de capitalização. Encontre que taxa em um período de capitalização equivale a uma taxa em outro período de capitalização.",
+    "summary": "Calcule taxas de juros equivalentes entre diferentes frequências de capitalização",
+    "instructions": [
+      "Digite a taxa de juros conhecida e sua frequência de capitalização",
+      "Selecione a frequência de capitalização alvo para a qual você quer converter",
+      "Clique em 'Calcular' para encontrar a taxa equivalente",
+      "Compare como o mesmo retorno econômico é expresso diferente",
+      "Use taxas equivalentes para comparar investimentos com diferente capitalização"
+    ],
+    "calculatorComponent": "EquivalentInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Equivalência Mensal para Trimestral",
+        "description": "Encontre equivalente trimestral de 0.5% taxa mensal",
+        "input": {
+          "knownRate": 0.5,
+          "knownFrequency": "12",
+          "targetFrequency": "4"
+        },
+        "output": {
+          "equivalentRate": "2.01%",
+          "knownRateDetails": "0.50% capitalizado mensalmente",
+          "equivalentRateDetails": "2.01% capitalizado trimestralmente",
+          "rateDifference": "1.51%",
+          "economicEquivalence": "Ambas taxas produzem o mesmo retorno anual de 6.17%"
+        }
+      },
+      {
+        "title": "Equivalência Anual para Mensal",
+        "description": "Encontre equivalente mensal de 6% taxa anual",
+        "input": {
+          "knownRate": 6,
+          "knownFrequency": "1",
+          "targetFrequency": "12"
+        },
+        "output": {
+          "equivalentRate": "0.49%",
+          "knownRateDetails": "6.00% capitalizado anualmente",
+          "equivalentRateDetails": "0.49% capitalizado mensalmente",
+          "rateDifference": "-5.51%",
+          "economicEquivalence": "Ambas taxas produzem o mesmo retorno anual de 6.00%"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender taxas de juros equivalentes é crucial para comparações financeiras precisas. Diferentes frequências de capitalização podem fazer o mesmo retorno econômico aparecer como diferentes taxas. Nossa calculadora de taxa de juros equivalente ajuda você a encontrar que taxa em um período de capitalização equivale ao mesmo retorno econômico em outro período de capitalização.",
+      "benefits": [
+        "Encontre taxas equivalentes entre diferentes frequências de capitalização",
+        "Compare taxas cotadas com diferentes períodos de capitalização com precisão",
+        "Entenda como capitalização afeta representação de taxa",
+        "Faça comparações maçã com maçã entre diferentes investimentos",
+        "Calcule taxas equivalentes para análise de empréstimo e investimento",
+        "Veja como o mesmo retorno econômico aparece como diferentes taxas"
+      ],
+      "steps": [
+        "Digite a taxa de juros que você conhece e sua frequência de capitalização",
+        "Selecione a frequência de capitalização alvo para a qual você quer converter",
+        "Revise a taxa equivalente que produz o mesmo retorno econômico",
+        "Compare a diferença de taxa entre frequências de capitalização",
+        "Use taxas equivalentes para comparações financeiras precisas",
+        "Repita cálculos para diferentes cenários de taxa"
+      ],
+      "inputsExplained": [
+        "Taxa conhecida é a taxa de juros que você tem e quer converter",
+        "Frequência conhecida é com que frequência a taxa conhecida capitaliza",
+        "Frequência alvo é o período de capitalização para o qual você quer converter",
+        "A calculadora encontra a taxa equivalente na frequência alvo"
+      ],
+      "formulaExplanation": "O cálculo de taxa equivalente usa fórmulas de juros compostos para encontrar que taxa em uma frequência de capitalização produz o mesmo retorno econômico que uma taxa em outra frequência de capitalização. Isso envolve calcular a taxa anual efetiva primeiro, então encontrar a taxa periódica equivalente.",
+      "examples": [
+        "Uma taxa mensal de 0.5% é equivalente a uma taxa trimestral de 2.01%, pois ambas produzem o mesmo retorno anual quando capitalizadas apropriadamente",
+        "Uma taxa anual de 6% é equivalente a uma taxa mensal de 0.49%, mostrando como diferentes frequências de capitalização afetam representação de taxa"
+      ],
+      "resultsExplanation": [
+        "Taxa equivalente mostra a taxa na frequência alvo que produz mesmo retorno econômico",
+        "Detalhes taxa conhecida identificam a taxa original e sua capitalização",
+        "Detalhes taxa equivalente mostram a taxa convertida e sua capitalização",
+        "Diferença taxa destaca como frequência de capitalização afeta níveis de taxa",
+        "Equivalência econômica confirma ambas taxas produzem o mesmo retorno anual",
+        "Todos os resultados ajudam você a entender relações de taxa entre frequências de capitalização"
+      ],
+      "whoItsFor": "Esta calculadora de taxa de juros equivalente é essencial para analistas financeiros, assessores de investimento, oficiais empréstimo e qualquer pessoa que precise comparar taxas com diferentes frequências de capitalização. É particularmente valiosa para comparar retornos investimento, taxas empréstimo e entender como capitalização afeta representação de taxa.",
+      "disclaimer": "Esta calculadora encontra taxas matematicamente equivalentes entre diferentes frequências de capitalização. A equivalência assume o mesmo retorno econômico durante o mesmo período de tempo. Retornos reais investimento e custos empréstimo podem variar baseado em termos e condições específicos.",
+      "relatedTools": [
+        "calculadora taxa efetiva anual",
+        "calculadora taxa juros nominal",
+        "calculadora juros compostos",
+        "calculadora CET",
+        "calculadora tabela taxas juros"
+      ],
+      "faqs": [
+        {
+          "question": "O que são taxas de juros equivalentes?",
+          "answer": "Taxas de juros equivalentes são diferentes taxas que produzem o mesmo retorno econômico quando capitalizadas durante o mesmo período de tempo. Elas representam o mesmo custo investimento ou empréstimo expresso com diferentes frequências de capitalização."
+        },
+        {
+          "question": "¿Por que taxas equivalentes diferem?",
+          "answer": "Taxas equivalentes diferem porque frequência de capitalização afeta como juros é calculado. Capitalização mais frequente significa que você precisa de uma taxa periódica mais baixa para lograr o mesmo retorno anual."
+        },
+        {
+          "question": "¿Quando devo usar taxas equivalentes?",
+          "answer": "Use taxas equivalentes ao comparar produtos financeiros com diferentes frequências de capitalização. Isso assegura que você está comparando taxas que representam o mesmo valor econômico."
+        },
+        {
+          "question": "¿Como frequência de capitalização afeta taxas equivalentes?",
+          "answer": "Frequência de capitalização mais alta requer taxas equivalentes mais baixas para o mesmo retorno econômico. Por exemplo, capitalização mensal requer taxas mais baixas que capitalização anual para o mesmo retorno anual."
+        },
+        {
+          "question": "¿Podem taxas equivalentes ser maiores que a taxa original?",
+          "answer": "Não, taxas equivalentes são tipicamente mais baixas ao converter de frequência mais baixa para mais alta de capitalização, e mais altas ao converter de frequência mais alta para mais baixa de capitalização."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Taux d'Intérêt Équivalent",
+    "seoTitle": "Calculateur de Taux d'Intérêt Équivalent - Trouvez Taux Équivalents Entre Fréquences de Capitalisation",
+    "metaDescription": "Calculez taux d'intérêt équivalents entre différentes fréquences de capitalisation. Calculateur gratuit de taux équivalent montrant comment taux changent avec différents périodes de capitalisation.",
+    "keywords": [
+      "calculateur taux intérêt équivalent",
+      "calculateur taux équivalent",
+      "équivalents capitalisation taux",
+      "calculateur taux annuel équivalent",
+      "calculateur équivalence taux",
+      "calculateur rendement équivalent"
+    ],
+    "longTailKeywords": [
+      "calculateur taux intérêt équivalent en ligne",
+      "calculer taux équivalents avec différente capitalisation",
+      "calcul taux annuel équivalent",
+      "trouver taux intérêt équivalents",
+      "calculateur convertisseur taux équivalent",
+      "fréquence capitalisation taux équivalents",
+      "formule taux intérêt équivalent",
+      "calculateur taux équivalent annuel",
+      "calculateur taux rendement équivalent",
+      "équivalence taux entre périodes"
+    ],
+    "slug": "equivalent-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Advanced",
+    "tags": [
+      "taux équivalent",
+      "fréquence capitalisation",
+      "équivalence taux",
+      "équivalent annuel",
+      "équivalence rendement",
+      "comparaison taux"
+    ],
+    "description": "Calculez taux d'intérêt équivalents entre différentes fréquences de capitalisation. Trouvez quel taux dans une période de capitalisation équivaut à un taux dans une autre période de capitalisation.",
+    "summary": "Calculez taux d'intérêt équivalents entre différentes fréquences de capitalisation",
+    "instructions": [
+      "Entrez taux d'intérêt connu et sa fréquence de capitalisation",
+      "Sélectionnez fréquence de capitalisation cible vers laquelle vous voulez convertir",
+      "Cliquez sur 'Calculer' pour trouver taux équivalent",
+      "Comparez comment même retour économique est exprimé différemment",
+      "Utilisez taux équivalents pour comparer investissements avec différente capitalisation"
+    ],
+    "calculatorComponent": "EquivalentInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Équivalence Mensuel vers Trimestriel",
+        "description": "Trouvez équivalent trimestriel de 0.5% taux mensuel",
+        "input": {
+          "knownRate": 0.5,
+          "knownFrequency": "12",
+          "targetFrequency": "4"
+        },
+        "output": {
+          "equivalentRate": "2.01%",
+          "knownRateDetails": "0.50% capitalisé mensuellement",
+          "equivalentRateDetails": "2.01% capitalisé trimestriellement",
+          "rateDifference": "1.51%",
+          "economicEquivalence": "Les deux taux produisent même retour annuel de 6.17%"
+        }
+      },
+      {
+        "title": "Équivalence Annuel vers Mensuel",
+        "description": "Trouvez équivalent mensuel de 6% taux annuel",
+        "input": {
+          "knownRate": 6,
+          "knownFrequency": "1",
+          "targetFrequency": "12"
+        },
+        "output": {
+          "equivalentRate": "0.49%",
+          "knownRateDetails": "6.00% capitalisé annuellement",
+          "equivalentRateDetails": "0.49% capitalisé mensuellement",
+          "rateDifference": "-5.51%",
+          "economicEquivalence": "Les deux taux produisent même retour annuel de 6.00%"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Comprendre taux d'intérêt équivalents est crucial pour comparaisons financières précises. Différentes fréquences de capitalisation peuvent faire apparaître même retour économique comme différents taux. Notre calculateur de taux d'intérêt équivalent vous aide à trouver quel taux dans une période de capitalisation équivaut à même retour économique dans une autre période de capitalisation.",
+      "benefits": [
+        "Trouvez taux équivalents entre différentes fréquences de capitalisation",
+        "Comparez taux cotés avec différents périodes de capitalisation avec précision",
+        "Comprenez comment capitalisation affecte représentation de taux",
+        "Faites comparaisons pomme à pomme entre différents investissements",
+        "Calculez taux équivalents pour analyse prêt et investissement",
+        "Voyez comment même retour économique apparaît comme différents taux"
+      ],
+      "steps": [
+        "Entrez taux d'intérêt que vous connaissez et sa fréquence de capitalisation",
+        "Sélectionnez fréquence de capitalisation cible vers laquelle vous voulez convertir",
+        "Examinez taux équivalent qui produit même retour économique",
+        "Comparez différence de taux entre fréquences de capitalisation",
+        "Utilisez taux équivalents pour comparaisons financières précises",
+        "Répétez calculs pour différents scénarios de taux"
+      ],
+      "inputsExplained": [
+        "Taux connu est taux d'intérêt que vous avez et voulez convertir",
+        "Fréquence connue est fréquence à laquelle taux connu capitalise",
+        "Fréquence cible est période de capitalisation vers laquelle vous voulez convertir",
+        "Le calculateur trouve taux équivalent dans fréquence cible"
+      ],
+      "formulaExplanation": "Le calcul de taux équivalent utilise formules intérêt composé pour trouver quel taux dans une fréquence de capitalisation produit même retour économique qu'un taux dans une autre fréquence de capitalisation. Cela implique calculer taux annuel effectif d'abord, puis trouver taux périodique équivalent.",
+      "examples": [
+        "Un taux mensuel de 0.5% est équivalent à un taux trimestriel de 2.01%, car les deux produisent même retour annuel lorsqu'ils sont capitalisés correctement",
+        "Un taux annuel de 6% est équivalent à un taux mensuel de 0.49%, montrant comment différentes fréquences de capitalisation affectent représentation de taux"
+      ],
+      "resultsExplanation": [
+        "Taux équivalent montre taux dans fréquence cible qui produit même retour économique",
+        "Détails taux connu identifient taux original et sa capitalisation",
+        "Détails taux équivalent montrent taux converti et sa capitalisation",
+        "Différence taux met en évidence comment fréquence de capitalisation affecte niveaux de taux",
+        "Équivalence économique confirme les deux taux produisent même retour annuel",
+        "Tous résultats vous aident à comprendre relations de taux entre fréquences de capitalisation"
+      ],
+      "whoItsFor": "Ce calculateur de taux d'intérêt équivalent est essentiel pour analystes financiers, conseillers investissement, officiers prêt et quiconque a besoin de comparer taux avec différentes fréquences de capitalisation. Il est particulièrement précieux pour comparer retours investissement, taux prêt et comprendre comment capitalisation affecte représentation de taux.",
+      "disclaimer": "Ce calculateur trouve taux mathématiquement équivalents entre différentes fréquences de capitalisation. L'équivalence suppose même retour économique sur même période de temps. Retours réels investissement et coûts emprunt peuvent varier selon termes et conditions spécifiques.",
+      "relatedTools": [
+        "calculateur taux effectif annuel",
+        "calculateur taux intérêt nominal",
+        "calculateur intérêt composé",
+        "calculateur TAEG",
+        "calculateur tableau taux intérêt"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce que taux d'intérêt équivalents?",
+          "answer": "Taux d'intérêt équivalents sont différents taux qui produisent même retour économique lorsqu'ils sont capitalisés sur même période de temps. Ils représentent même coût investissement ou emprunt exprimé avec différentes fréquences de capitalisation."
+        },
+        {
+          "question": "¿Pourquoi taux équivalents diffèrent-ils?",
+          "answer": "Taux équivalents diffèrent car fréquence de capitalisation affecte comment intérêt est calculé. Capitalisation plus fréquente signifie vous avez besoin d'un taux périodique plus bas pour atteindre même retour annuel."
+        },
+        {
+          "question": "¿Quand utiliser taux équivalents?",
+          "answer": "Utilisez taux équivalents lors de comparaison produits financiers avec différentes fréquences de capitalisation. Cela assure vous comparez taux qui représentent même valeur économique."
+        },
+        {
+          "question": "¿Comment fréquence de capitalisation affecte-t-elle taux équivalents?",
+          "answer": "Fréquence de capitalisation plus élevée nécessite taux équivalents plus bas pour même retour économique. Par exemple, capitalisation mensuelle nécessite taux plus bas que capitalisation annuelle pour même retour annuel."
+        },
+        {
+          "question": "¿Taux équivalents peuvent-ils être plus élevés que taux original?",
+          "answer": "Non, taux équivalents sont typiquement plus bas lors de conversion de fréquence plus basse vers plus élevée de capitalisation, et plus élevés lors de conversion de fréquence plus élevée vers plus basse de capitalisation."
+        }
+      ]
+    }
+  }
+}

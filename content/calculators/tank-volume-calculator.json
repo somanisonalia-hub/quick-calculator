@@ -1,0 +1,498 @@
+{
+  "en": {
+    "title": "Tank Volume Calculator",
+    "seoTitle": "Tank Volume Calculator - Calculate Tank Capacity for Rectangular, Cylindrical & Irregular Shapes",
+    "metaDescription": "Free tank volume calculator for rectangular, cylindrical, and irregular shaped tanks. Calculate capacity in gallons, liters, cubic feet, and more. Perfect for water storage, fuel tanks, and industrial applications.",
+    "keywords": [
+      "tank volume calculator",
+      "tank capacity calculator",
+      "cylindrical tank volume",
+      "rectangular tank calculator",
+      "tank size calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate tank volume",
+      "tank capacity calculator online",
+      "water tank volume calculator",
+      "fuel tank capacity calculator",
+      "rectangular cylindrical tank volume"
+    ],
+    "slug": "tank-volume-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": [
+      "volume",
+      "tank",
+      "capacity",
+      "measurement",
+      "industrial",
+      "construction"
+    ],
+    "summary": "Calculate tank volume and capacity for rectangular, cylindrical, and irregular shaped tanks in multiple units.",
+    "description": "Our comprehensive tank volume calculator handles rectangular, cylindrical, and irregular shaped tanks. Calculate capacity in gallons, liters, cubic feet, cubic meters, and more. Essential for water storage, fuel tanks, chemical storage, and construction projects. Get accurate volume calculations instantly.",
+    "instructions": [
+      "Select your tank shape (rectangular, cylindrical, or irregular)",
+      "Enter the dimensions (length, width, height, diameter, etc.)",
+      "Choose your preferred units (gallons, liters, cubic feet, etc.)",
+      "Get instant volume calculations with multiple unit conversions"
+    ],
+    "calculatorComponent": "TankVolumeCalculator",
+    "examples": [
+      {
+        "title": "Rectangular Tank",
+        "input": "Length: 10ft, Width: 5ft, Height: 6ft",
+        "output": "Volume: 300 cubic feet, 2,244 gallons, 8,498 liters"
+      },
+      {
+        "title": "Cylindrical Tank",
+        "input": "Diameter: 8ft, Height: 10ft",
+        "output": "Volume: 502.7 cubic feet, 3,771 gallons, 14,265 liters"
+      }
+    ],
+    "relatedCalculators": [
+      "concrete-calculator",
+      "square-footage-calculator",
+      "percent-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Master tank capacity calculations with our comprehensive volume calculator that handles rectangular, cylindrical, and irregular shaped tanks for any industrial, agricultural, or storage application. Whether you're planning water storage, fuel tanks, chemical containment, or agricultural irrigation systems, accurate volume calculations are essential for proper sizing and cost estimation. Our calculator provides instant results in multiple units including gallons, liters, cubic feet, and cubic meters, helping you make informed decisions for tanks of any shape or purpose. Understanding tank volume requirements ensures you purchase the right equipment and avoid costly mistakes.",
+      "benefits": [
+        "Calculate volume for rectangular, cylindrical, and irregular shaped tanks",
+        "Get results in multiple units (gallons, liters, cubic feet, cubic meters)",
+        "Handle complex tank geometries including horizontal and vertical orientations",
+        "Account for liquid displacement and tank shape variations",
+        "Plan storage capacity for water, fuel, chemicals, and other liquids",
+        "Make informed purchasing decisions for tank equipment and materials",
+        "Ensure compliance with capacity requirements for various applications",
+        "Avoid over-sizing or under-sizing tanks for your specific needs"
+      ],
+      "steps": [
+        "Select your tank shape type (rectangular, cylindrical, or custom)",
+        "Enter dimensions in your preferred units (feet, meters, inches)",
+        "Specify tank orientation if applicable (horizontal/vertical)",
+        "Choose output units for volume calculations",
+        "Review capacity results and plan your tank requirements"
+      ],
+      "inputsExplained": [
+        "Tank shape determines the calculation formula used",
+        "Dimensions vary by shape (length/width/height for rectangular, diameter/height for cylindrical)",
+        "Units can be mixed (feet for dimensions, gallons for capacity)",
+        "Orientation affects calculation for cylindrical tanks",
+        "Shape complexity determines the calculation method needed"
+      ],
+      "formulaExplanation": "Tank volume calculations use geometric formulas: Rectangular tanks = Length × Width × Height. Cylindrical tanks = π × r² × Height (vertical) or Length × Width × Height × 0.7854 (horizontal cylinders). Irregular shapes require custom calculations. All results convert between units using standard conversion factors (1 cubic foot = 7.4805 gallons, 1 cubic meter = 1,000 liters). Understanding these formulas helps you verify calculations and choose appropriate tank sizes for your specific liquid storage needs.",
+      "examples": [
+        "Rectangular water tank (10ft × 5ft × 6ft) holds 300 cubic feet or 2,244 gallons of water for residential storage.",
+        "Cylindrical fuel tank (8ft diameter × 10ft height) contains 502 cubic feet or 3,771 gallons for diesel storage.",
+        "Irregular shaped chemical containment tank requires custom volume calculation for hazardous material storage compliance."
+      ],
+      "resultsExplanation": [
+        "Primary volume shows capacity in selected units",
+        "Multiple unit conversions provide flexibility for different applications",
+        "Capacity calculations account for tank shape and orientation",
+        "Results help determine appropriate tank size for your needs"
+      ],
+      "whoItsFor": "This tank volume calculator serves farmers planning irrigation systems, construction companies estimating concrete forms, industrial facilities calculating chemical storage needs, homeowners planning water storage, fuel distributors sizing tank capacity, environmental engineers designing containment systems, plumbers estimating water heater capacity, and anyone working with liquid storage. It's particularly valuable for agricultural water storage, fuel tank sizing, chemical containment planning, and construction volume calculations. The calculator works for residential, commercial, industrial, and agricultural tank applications of any size.",
+      "disclaimer": "This tank volume calculator provides geometric volume estimates based on entered dimensions and standard formulas. Actual tank capacity may vary due to internal structures, fittings, valves, and safety margins required by local codes. Results do not account for thermal expansion, evaporation losses, or unusable space in tanks. Always consult local building codes, environmental regulations, and tank manufacturers for actual capacity specifications. This tool is for estimation purposes and should not replace professional engineering calculations for critical applications.",
+      "relatedTools": [
+        "Concrete calculators for tank construction material estimates",
+        "Area calculators for tank base and surface area calculations",
+        "Percentage calculators for fill level and capacity planning"
+      ],
+      "faqs": [
+        {
+          "question": "How do I calculate the volume of a rectangular tank?",
+          "answer": "Multiply length × width × height. For a 10ft × 5ft × 6ft tank: 10 × 5 × 6 = 300 cubic feet. Convert to gallons by multiplying by 7.4805 (300 × 7.4805 = 2,244 gallons). This formula works for any rectangular or box-shaped tank, including concrete forms, plastic tanks, and metal containers. Always measure internal dimensions for accurate capacity."
+        },
+        {
+          "question": "How do I calculate the volume of a cylindrical tank?",
+          "answer": "For vertical cylinders: π × radius² × height. For an 8ft diameter × 10ft height tank: radius = 4ft, volume = 3.1416 × 16 × 10 = 502.7 cubic feet. For horizontal cylinders, use the formula for partially filled cylinders. Always specify whether your tank is horizontal or vertical, as this affects the calculation. Cylindrical tanks are common for propane, compressed air, and some water storage applications."
+        },
+        {
+          "question": "What units should I use for tank volume calculations?",
+          "answer": "Use consistent units throughout your calculation. For water tanks, gallons or liters are practical. For fuel tanks, gallons are standard in the US. For industrial applications, cubic meters or cubic feet may be preferred. Our calculator automatically converts between units. Choose units that match your application - gallons for residential water, liters for metric countries, cubic feet for concrete volume calculations."
+        },
+        {
+          "question": "How much does tank volume cost to build or purchase?",
+          "answer": "Tank costs vary widely by material and size. Plastic tanks cost $1-3 per gallon capacity. Steel tanks range from $2-5 per gallon. Concrete tanks can be $5-10 per gallon for large installations. Fuel tanks are $3-8 per gallon. Costs include materials, installation, and accessories. Always add 10-20% contingency for fittings, valves, and overflow prevention. Consider local codes and permits that may increase total project costs."
+        },
+        {
+          "question": "Do I need to account for unusable space in tanks?",
+          "answer": "Yes, always subtract unusable space. Tanks have 5-10% unusable volume due to fittings, valves, and safety margins. Cylindrical tanks lose volume when horizontal. Irregular shaped tanks may have complex unusable spaces. Environmental regulations require reserve capacity for spills. For drinking water tanks, account for air space. Always consult manufacturer specifications for actual usable capacity, which may be less than geometric volume."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Volumen de Tanque",
+    "seoTitle": "Calculadora de Volumen de Tanque - Calcula Capacidad para Formas Rectangulares, Cilíndricas e Irregulares",
+    "metaDescription": "Calculadora gratuita de volumen de tanque para tanques rectangulares, cilíndricos y de formas irregulares. Calcula capacidad en galones, litros, pies cúbicos y más. Perfecta para almacenamiento de agua, tanques de combustible y aplicaciones industriales.",
+    "keywords": [
+      "calculadora volumen tanque",
+      "calculadora capacidad tanque",
+      "volumen tanque cilíndrico",
+      "calculadora tanque rectangular",
+      "calculadora tamaño tanque"
+    ],
+    "longTailKeywords": [
+      "cómo calcular volumen de tanque",
+      "calculadora capacidad tanque online",
+      "calculadora volumen tanque agua",
+      "calculadora capacidad tanque combustible",
+      "volumen tanque rectangular cilíndrico"
+    ],
+    "slug": "tank-volume-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": [
+      "volumen",
+      "tanque",
+      "capacidad",
+      "medidas",
+      "industrial",
+      "construcción"
+    ],
+    "summary": "Calcula volumen y capacidad de tanques para formas rectangulares, cilíndricas e irregulares en múltiples unidades.",
+    "description": "Nuestra completa calculadora de volumen de tanque maneja tanques rectangulares, cilíndricos y de formas irregulares. Calcula capacidad en galones, litros, pies cúbicos, metros cúbicos y más. Esencial para almacenamiento de agua, tanques de combustible, almacenamiento químico y proyectos de construcción. Obtén cálculos precisos de volumen al instante.",
+    "instructions": [
+      "Selecciona la forma de tu tanque (rectangular, cilíndrico o irregular)",
+      "Ingresa las dimensiones (longitud, ancho, altura, diámetro, etc.)",
+      "Elige tus unidades preferidas (galones, litros, pies cúbicos, etc.)",
+      "Obtén cálculos instantáneos de volumen con múltiples conversiones de unidades"
+    ],
+    "calculatorComponent": "TankVolumeCalculator",
+    "examples": [
+      {
+        "title": "Tanque Rectangular",
+        "input": "Longitud: 10ft, Ancho: 5ft, Altura: 6ft",
+        "output": "Volumen: 300 pies cúbicos, 2,244 galones, 8,498 litros"
+      },
+      {
+        "title": "Tanque Cilíndrico",
+        "input": "Diámetro: 8ft, Altura: 10ft",
+        "output": "Volumen: 502.7 pies cúbicos, 3,771 galones, 14,265 litros"
+      }
+    ],
+    "relatedCalculators": [
+      "concrete-calculator",
+      "square-footage-calculator",
+      "percent-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Domine cálculos de capacidad de tanque con nuestra calculadora integral de volumen que maneja tanques rectangulares, cilíndricos, e irregulares para cualquier aplicación industrial, agrícola, o almacenamiento. Ya sea que planee almacenamiento de agua, tanques de combustible, contención química, o sistemas de irrigación agrícola, cálculos precisos de volumen son esenciales para dimensionamiento apropiado y estimación de costo. Nuestra calculadora proporciona resultados instantáneos en múltiples unidades incluyendo galones, litros, pies cúbicos, y metros cúbicos, ayudándole a tomar decisiones informadas para tanques de cualquier forma o propósito. Entender requerimientos de volumen de tanque asegura que compre el equipo correcto y evite errores costosos.",
+      "benefits": [
+        "Calcule volumen para tanques rectangulares, cilíndricos, e irregulares",
+        "Obtenga resultados en múltiples unidades (galones, litros, pies cúbicos, metros cúbicos)",
+        "Maneje geometrías complejas de tanque incluyendo orientaciones horizontal y vertical",
+        "Considere desplazamiento de líquido y variaciones de forma de tanque",
+        "Planee capacidad de almacenamiento para agua, combustible, químicos, y otros líquidos",
+        "Tome decisiones informadas de compra para equipo de tanque y materiales",
+        "Asegure cumplimiento con requerimientos de capacidad para varias aplicaciones",
+        "Evite dimensionar de más o de menos tanques para sus necesidades específicas"
+      ],
+      "steps": [
+        "Seleccione tipo de forma de tanque (rectangular, cilíndrico, o personalizado)",
+        "Ingresa dimensiones en unidades preferidas (pies, metros, pulgadas)",
+        "Especifica orientación de tanque si aplicable (horizontal/vertical)",
+        "Elige unidades de salida para cálculos de volumen",
+        "Revisa resultados de capacidad y planea requerimientos de tanque"
+      ],
+      "inputsExplained": [
+        "Forma de tanque determina fórmula de cálculo usada",
+        "Dimensiones varían por forma (largo/ancho/altura para rectangular, diámetro/altura para cilíndrico)",
+        "Unidades pueden mezclarse (pies para dimensiones, galones para capacidad)",
+        "Orientación afecta cálculo para tanques cilíndricos",
+        "Complejidad de forma determina método de cálculo necesario"
+      ],
+      "formulaExplanation": "Cálculos de volumen de tanque usan fórmulas geométricas: Tanques rectangulares = Largo × Ancho × Altura. Tanques cilíndricos = π × r² × Altura (vertical) o Largo × Ancho × Altura × 0.7854 (cilindros horizontales). Formas irregulares requieren cálculos personalizados. Todos resultados convierten entre unidades usando factores de conversión estándar (1 pie cúbico = 7.4805 galones, 1 metro cúbico = 1,000 litros). Entender estas fórmulas le ayuda a verificar cálculos y elegir tamaños apropiados de tanque para sus necesidades específicas de almacenamiento de líquido.",
+      "examples": [
+        "Tanque de agua rectangular (10ft × 5ft × 6ft) contiene 300 pies cúbicos o 2,244 galones de agua para almacenamiento residencial.",
+        "Tanque de combustible cilíndrico (8ft diámetro × 10ft altura) contiene 502 pies cúbicos o 3,771 galones para almacenamiento de diesel.",
+        "Tanque de contención química de forma irregular requiere cálculo personalizado de volumen para cumplimiento de almacenamiento de material peligroso."
+      ],
+      "resultsExplanation": [
+        "Volumen primario muestra capacidad en unidades seleccionadas",
+        "Conversiones de múltiples unidades proporcionan flexibilidad para diferentes aplicaciones",
+        "Cálculos de capacidad consideran forma y orientación de tanque",
+        "Resultados ayudan determinar tamaño apropiado de tanque para sus necesidades"
+      ],
+      "whoItsFor": "Esta calculadora de volumen de tanque sirve agricultores planeando sistemas de irrigación, compañías de construcción estimando formas de concreto, instalaciones industriales calculando necesidades de almacenamiento químico, propietarios de casa planeando almacenamiento de agua, distribuidores de combustible dimensionando capacidad de tanque, ingenieros ambientales diseñando sistemas de contención, plomeros estimando capacidad de calentador de agua, y cualquiera trabajando con almacenamiento de líquido. Es particularmente valiosa para almacenamiento de agua agrícola, dimensionamiento de tanque de combustible, planificación de contención química, y cálculos de volumen de construcción. La calculadora funciona para aplicaciones residenciales, comerciales, industriales, y agrícolas de cualquier tamaño.",
+      "disclaimer": "Esta calculadora de volumen de tanque proporciona estimaciones de volumen geométrico basadas en dimensiones ingresadas y fórmulas estándar. Capacidad real de tanque puede variar debido a estructuras internas, accesorios, válvulas, y márgenes de seguridad requeridos por códigos locales. Resultados no consideran expansión térmica, pérdidas de evaporación, o espacio inutilizable en tanques. Siempre consulte códigos de construcción locales, regulaciones ambientales, y fabricantes de tanque para especificaciones de capacidad real. Esta herramienta es para estimación y no debería reemplazar cálculos de ingeniería profesional para aplicaciones críticas.",
+      "relatedTools": [
+        "Calculadoras de concreto para estimaciones de material de construcción de tanque",
+        "Calculadoras de área para cálculos de base y área superficial de tanque",
+        "Calculadoras de porcentaje para planificación de nivel de llenado y capacidad"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo calculo el volumen de un tanque rectangular?",
+          "answer": "Multiplica largo × ancho × altura. Para tanque de 10ft × 5ft × 6ft: 10 × 5 × 6 = 300 pies cúbicos. Convierte a galones multiplicando por 7.4805 (300 × 7.4805 = 2,244 galones). Esta fórmula funciona para cualquier tanque rectangular o en forma de caja, incluyendo formas de concreto, tanques plásticos, y contenedores metálicos. Siempre mide dimensiones internas para capacidad precisa."
+        },
+        {
+          "question": "¿Cómo calculo el volumen de un tanque cilíndrico?",
+          "answer": "Para cilindros verticales: π × radio² × altura. Para tanque de 8ft diámetro × 10ft altura: radio = 4ft, volumen = 3.1416 × 16 × 10 = 502.7 pies cúbicos. Para cilindros horizontales, usa fórmula para cilindros parcialmente llenos. Siempre especifica si tu tanque es horizontal o vertical, ya que afecta cálculo. Tanques cilíndricos son comunes para propano, aire comprimido, y algunos almacenamientos de agua."
+        },
+        {
+          "question": "¿Qué unidades debería usar para cálculos de volumen de tanque?",
+          "answer": "Usa unidades consistentes a través de tu cálculo. Para tanques de agua, galones o litros son prácticos. Para tanques de combustible, galones son estándar en EE.UU. Para aplicaciones industriales, metros cúbicos o pies cúbicos pueden preferirse. Nuestra calculadora automáticamente convierte entre unidades. Elige unidades que coincidan con tu aplicación - galones para agua residencial, litros para países métricos, pies cúbicos para cálculos de volumen de concreto."
+        },
+        {
+          "question": "¿Cuánto cuesta construir o comprar volumen de tanque?",
+          "answer": "Costos de tanque varían ampliamente por material y tamaño. Tanques plásticos cuestan $1-3 por galón de capacidad. Tanques de acero van de $2-5 por galón. Tanques de concreto pueden ser $5-10 por galón para instalaciones grandes. Tanques de combustible son $3-8 por galón. Costos incluyen materiales, instalación, y accesorios. Siempre agrega 10-20% contingencia para accesorios, válvulas, y prevención de desbordamiento. Considera códigos locales y permisos que pueden aumentar costos totales de proyecto."
+        },
+        {
+          "question": "¿Necesito considerar espacio inutilizable en tanques?",
+          "answer": "Sí, siempre resta espacio inutilizable. Tanques tienen 5-10% volumen inutilizable debido a accesorios, válvulas, y márgenes de seguridad. Tanques cilíndricos pierden volumen cuando horizontales. Tanques de forma irregular pueden tener espacios inutilizables complejos. Regulaciones ambientales requieren capacidad de reserva para derrames. Para tanques de agua potable, considera espacio de aire. Siempre consulta especificaciones de fabricante para capacidad utilizable real, que puede ser menos que volumen geométrico."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Volume de Tanque",
+    "seoTitle": "Calculadora de Volume de Tanque - Calcule Capacidade para Formas Retangulares, Cilíndricas e Irregulares",
+    "metaDescription": "Calculadora gratuita de volume de tanque para tanques retangulares, cilíndricos e de formas irregulares. Calcule capacidade em galões, litros, pés cúbicos e mais. Perfeita para armazenamento de água, tanques de combustível e aplicações industriais.",
+    "keywords": [
+      "calculadora volume tanque",
+      "calculadora capacidade tanque",
+      "volume tanque cilíndrico",
+      "calculadora tanque retangular",
+      "calculadora tamanho tanque"
+    ],
+    "longTailKeywords": [
+      "como calcular volume de tanque",
+      "calculadora capacidade tanque online",
+      "calculadora volume tanque água",
+      "calculadora capacidade tanque combustível",
+      "volume tanque retangular cilíndrico"
+    ],
+    "slug": "tank-volume-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": [
+      "volume",
+      "tanque",
+      "capacidade",
+      "medidas",
+      "industrial",
+      "construção"
+    ],
+    "summary": "Calcule volume e capacidade de tanques para formas retangulares, cilíndricas e irregulares em múltiplas unidades.",
+    "description": "Nossa calculadora completa de volume de tanque lida com tanques retangulares, cilíndricos e de formas irregulares. Calcule capacidade em galões, litros, pés cúbicos, metros cúbicos e mais. Essencial para armazenamento de água, tanques de combustível, armazenamento químico e projetos de construção. Obtenha cálculos precisos de volume instantaneamente.",
+    "instructions": [
+      "Selecione a forma do seu tanque (retangular, cilíndrico ou irregular)",
+      "Digite as dimensões (comprimento, largura, altura, diâmetro, etc.)",
+      "Escolha suas unidades preferidas (galões, litros, pés cúbicos, etc.)",
+      "Obtenha cálculos instantâneos de volume com múltiplas conversões de unidades"
+    ],
+    "calculatorComponent": "TankVolumeCalculator",
+    "examples": [
+      {
+        "title": "Tanque Retangular",
+        "input": "Comprimento: 10ft, Largura: 5ft, Altura: 6ft",
+        "output": "Volume: 300 pés cúbicos, 2,244 galões, 8,498 litros"
+      },
+      {
+        "title": "Tanque Cilíndrico",
+        "input": "Diâmetro: 8ft, Altura: 10ft",
+        "output": "Volume: 502.7 pés cúbicos, 3,771 galões, 14,265 litros"
+      }
+    ],
+    "relatedCalculators": [
+      "concrete-calculator",
+      "square-footage-calculator",
+      "percent-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Domine cálculos de capacidade de tanque com nossa calculadora integral de volume que lida com tanques retangulares, cilíndricos, e irregulares para qualquer aplicação industrial, agrícola, ou armazenamento. Seja planejando armazenamento de água, tanques de combustível, contenção química, ou sistemas de irrigação agrícola, cálculos precisos de volume são essenciais para dimensionamento apropriado e estimativa de custo. Nossa calculadora fornece resultados instantâneos em múltiplas unidades incluindo galões, litros, pés cúbicos, e metros cúbicos, ajudando você a tomar decisões informadas para tanques de qualquer forma ou propósito. Entender requerimentos de volume de tanque garante que você compre o equipamento correto e evite erros custosos.",
+      "benefits": [
+        "Calcule volume para tanques retangulares, cilíndricos, e irregulares",
+        "Obtenha resultados em múltiplas unidades (galões, litros, pés cúbicos, metros cúbicos)",
+        "Lide com geometrias complexas de tanque incluindo orientações horizontal e vertical",
+        "Considere deslocamento de líquido e variações de forma de tanque",
+        "Planeje capacidade de armazenamento para água, combustível, químicos, e outros líquidos",
+        "Tome decisões informadas de compra para equipamento de tanque e materiais",
+        "Garanta conformidade com requerimentos de capacidade para várias aplicações",
+        "Evite dimensionar demais ou de menos tanques para suas necessidades específicas"
+      ],
+      "steps": [
+        "Selecione tipo de forma de tanque (retangular, cilíndrico, ou personalizado)",
+        "Digite dimensões em unidades preferidas (pés, metros, polegadas)",
+        "Especifique orientação de tanque se aplicável (horizontal/vertical)",
+        "Escolha unidades de saída para cálculos de volume",
+        "Revise resultados de capacidade e planeje requerimentos de tanque"
+      ],
+      "inputsExplained": [
+        "Forma de tanque determina fórmula de cálculo usada",
+        "Dimensões variam por forma (comprimento/largura/altura para retangular, diâmetro/altura para cilíndrico)",
+        "Unidades podem ser misturadas (pés para dimensões, galões para capacidade)",
+        "Orientação afeta cálculo para tanques cilíndricos",
+        "Complexidade de forma determina método de cálculo necessário"
+      ],
+      "formulaExplanation": "Cálculos de volume de tanque usam fórmulas geométricas: Tanques retangulares = Comprimento × Largura × Altura. Tanques cilíndricos = π × r² × Altura (vertical) ou Comprimento × Largura × Altura × 0.7854 (cilindros horizontais). Formas irregulares requerem cálculos personalizados. Todos resultados convertem entre unidades usando fatores de conversão padrão (1 pé cúbico = 7.4805 galões, 1 metro cúbico = 1,000 litros). Entender estas fórmulas ajuda você a verificar cálculos e escolher tamanhos apropriados de tanque para suas necessidades específicas de armazenamento de líquido.",
+      "examples": [
+        "Tanque de água retangular (10ft × 5ft × 6ft) contém 300 pés cúbicos ou 2,244 galões de água para armazenamento residencial.",
+        "Tanque de combustível cilíndrico (8ft diâmetro × 10ft altura) contém 502 pés cúbicos ou 3,771 galões para armazenamento de diesel.",
+        "Tanque de contenção química de forma irregular requer cálculo personalizado de volume para conformidade de armazenamento de material perigoso."
+      ],
+      "resultsExplanation": [
+        "Volume primário mostra capacidade em unidades selecionadas",
+        "Conversões de múltiplas unidades fornecem flexibilidade para diferentes aplicações",
+        "Cálculos de capacidade consideram forma e orientação de tanque",
+        "Resultados ajudam determinar tamanho apropriado de tanque para suas necessidades"
+      ],
+      "whoItsFor": "Esta calculadora de volume de tanque serve agricultores planejando sistemas de irrigação, empresas de construção estimando formas de concreto, instalações industriais calculando necessidades de armazenamento químico, proprietários de casa planejando armazenamento de água, distribuidores de combustível dimensionando capacidade de tanque, engenheiros ambientais projetando sistemas de contenção, encanadores estimando capacidade de aquecedor de água, e qualquer pessoa trabalhando com armazenamento de líquido. É particularmente valiosa para armazenamento de água agrícola, dimensionamento de tanque de combustível, planejamento de contenção química, e cálculos de volume de construção. A calculadora funciona para aplicações residenciais, comerciais, industriais, e agrícolas de qualquer tamanho.",
+      "disclaimer": "Esta calculadora de volume de tanque fornece estimativas de volume geométrico baseadas em dimensões inseridas e fórmulas padrão. Capacidade real de tanque pode variar devido a estruturas internas, acessórios, válvulas, e margens de segurança requeridas por códigos locais. Resultados não consideram expansão térmica, perdas de evaporação, ou espaço inutilizável em tanques. Sempre consulte códigos de construção locais, regulações ambientais, e fabricantes de tanque para especificações de capacidade real. Esta ferramenta é para estimativa e não deveria substituir cálculos de engenharia profissional para aplicações críticas.",
+      "relatedTools": [
+        "Calculadoras de concreto para estimativas de material de construção de tanque",
+        "Calculadoras de área para cálculos de base e área superficial de tanque",
+        "Calculadoras de porcentagem para planejamento de nível de enchimento e capacidade"
+      ],
+      "faqs": [
+        {
+          "question": "Como calculo o volume de um tanque retangular?",
+          "answer": "Multiplique comprimento × largura × altura. Para tanque de 10ft × 5ft × 6ft: 10 × 5 × 6 = 300 pés cúbicos. Converta para galões multiplicando por 7.4805 (300 × 7.4805 = 2,244 galões). Esta fórmula funciona para qualquer tanque retangular ou em forma de caixa, incluindo formas de concreto, tanques plásticos, e contêineres metálicos. Sempre meça dimensões internas para capacidade precisa."
+        },
+        {
+          "question": "Como calculo o volume de um tanque cilíndrico?",
+          "answer": "Para cilindros verticais: π × raio² × altura. Para tanque de 8ft diâmetro × 10ft altura: raio = 4ft, volume = 3.1416 × 16 × 10 = 502.7 pés cúbicos. Para cilindros horizontais, use fórmula para cilindros parcialmente cheios. Sempre especifique se seu tanque é horizontal ou vertical, pois afeta cálculo. Tanques cilíndricos são comuns para propano, ar comprimido, e alguns armazenamentos de água."
+        },
+        {
+          "question": "Quais unidades devo usar para cálculos de volume de tanque?",
+          "answer": "Use unidades consistentes através de seu cálculo. Para tanques de água, galões ou litros são práticos. Para tanques de combustível, galões são padrão nos EUA. Para aplicações industriais, metros cúbicos ou pés cúbicos podem ser preferidos. Nossa calculadora automaticamente converte entre unidades. Escolha unidades que combinem com sua aplicação - galões para água residencial, litros para países métricos, pés cúbicos para cálculos de volume de concreto."
+        },
+        {
+          "question": "Quanto custa construir ou comprar volume de tanque?",
+          "answer": "Custos de tanque variam amplamente por material e tamanho. Tanques plásticos custam $1-3 por galão de capacidade. Tanques de aço vão de $2-5 por galão. Tanques de concreto podem ser $5-10 por galão para instalações grandes. Tanques de combustível são $3-8 por galão. Custos incluem materiais, instalação, e acessórios. Sempre adicione 10-20% contingência para acessórios, válvulas, e prevenção de transbordamento. Considere códigos locais e permissões que podem aumentar custos totais de projeto."
+        },
+        {
+          "question": "Preciso considerar espaço inutilizável em tanques?",
+          "answer": "Sim, sempre subtraia espaço inutilizável. Tanques têm 5-10% volume inutilizável devido a acessórios, válvulas, e margens de segurança. Tanques cilíndricos perdem volume quando horizontais. Tanques de forma irregular podem ter espaços inutilizáveis complexos. Regulações ambientais requerem capacidade de reserva para derramamentos. Para tanques de água potável, considere espaço de ar. Sempre consulte especificações de fabricante para capacidade utilizável real, que pode ser menos que volume geométrico."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Volume de Réservoir",
+    "seoTitle": "Calculateur de Volume de Réservoir - Calculez la Capacité pour Formes Rectangulaires, Cylindriques et Irrégulières",
+    "metaDescription": "Calculateur gratuit de volume de réservoir pour réservoirs rectangulaires, cylindriques et de formes irrégulières. Calculez la capacité en gallons, litres, pieds cubes et plus. Parfait pour le stockage d'eau, réservoirs de carburant et applications industrielles.",
+    "keywords": [
+      "calculateur volume réservoir",
+      "calculateur capacité réservoir",
+      "volume réservoir cylindrique",
+      "calculateur réservoir rectangulaire",
+      "calculateur taille réservoir"
+    ],
+    "longTailKeywords": [
+      "comment calculer volume réservoir",
+      "calculateur capacité réservoir en ligne",
+      "calculateur volume réservoir eau",
+      "calculateur capacité réservoir carburant",
+      "volume réservoir rectangulaire cylindrique"
+    ],
+    "slug": "tank-volume-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": [
+      "volume",
+      "réservoir",
+      "capacité",
+      "mesures",
+      "industriel",
+      "construction"
+    ],
+    "summary": "Calculez le volume et la capacité des réservoirs pour formes rectangulaires, cylindriques et irrégulières en multiples unités.",
+    "description": "Notre calculateur complet de volume de réservoir gère les réservoirs rectangulaires, cylindriques et de formes irrégulières. Calculez la capacité en gallons, litres, pieds cubes, mètres cubes et plus. Essentiel pour le stockage d'eau, réservoirs de carburant, stockage chimique et projets de construction. Obtenez des calculs de volume précis instantanément.",
+    "instructions": [
+      "Sélectionnez la forme de votre réservoir (rectangulaire, cylindrique ou irrégulier)",
+      "Entrez les dimensions (longueur, largeur, hauteur, diamètre, etc.)",
+      "Choisissez vos unités préférées (gallons, litres, pieds cubes, etc.)",
+      "Obtenez des calculs de volume instantanés avec multiples conversions d'unités"
+    ],
+    "calculatorComponent": "TankVolumeCalculator",
+    "examples": [
+      {
+        "title": "Réservoir Rectangulaire",
+        "input": "Longueur: 10ft, Largeur: 5ft, Hauteur: 6ft",
+        "output": "Volume: 300 pieds cubes, 2,244 gallons, 8,498 litres"
+      },
+      {
+        "title": "Réservoir Cylindrique",
+        "input": "Diamètre: 8ft, Hauteur: 10ft",
+        "output": "Volume: 502.7 pieds cubes, 3,771 gallons, 14,265 litres"
+      }
+    ],
+    "relatedCalculators": [
+      "concrete-calculator",
+      "square-footage-calculator",
+      "percent-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Maîtrisez calculs capacité réservoir avec notre calculatrice complète volume qui gère réservoirs rectangulaires, cylindriques, et formes irrégulières pour toute application industrielle, agricole, ou stockage. Que vous planifiez stockage eau, réservoirs carburant, confinement chimique, ou systèmes irrigation agricole, calculs volume précis sont essentiels pour dimensionnement approprié et estimation coût. Notre calculatrice fournit résultats instantanés en multiples unités incluant gallons, litres, pieds cubes, et mètres cubes, vous aidant prendre décisions éclairées pour réservoirs toute forme ou but. Comprendre exigences volume réservoir assure vous achetez équipement correct et évitez erreurs coûteuses.",
+      "benefits": [
+        "Calculez volume pour réservoirs rectangulaires, cylindriques, et irréguliers",
+        "Obtenez résultats en multiples unités (gallons, litres, pieds cubes, mètres cubes)",
+        "Gérez géométries réservoir complexes incluant orientations horizontale et verticale",
+        "Tenez compte déplacement liquide et variations forme réservoir",
+        "Planifiez capacité stockage pour eau, carburant, produits chimiques, et autres liquides",
+        "Prenez décisions éclairées achat pour équipement réservoir et matériaux",
+        "Assurez conformité avec exigences capacité pour diverses applications",
+        "Évitez sur-dimensionner ou sous-dimensionner réservoirs pour vos besoins spécifiques"
+      ],
+      "steps": [
+        "Sélectionnez type forme réservoir (rectangulaire, cylindrique, ou personnalisé)",
+        "Entrez dimensions en unités préférées (pieds, mètres, pouces)",
+        "Spécifiez orientation réservoir si applicable (horizontal/vertical)",
+        "Choisissez unités sortie pour calculs volume",
+        "Examinez résultats capacité et planifiez exigences réservoir"
+      ],
+      "inputsExplained": [
+        "Forme réservoir détermine formule calcul utilisée",
+        "Dimensions varient par forme (longueur/largeur/hauteur pour rectangulaire, diamètre/hauteur pour cylindrique)",
+        "Unités peuvent être mélangées (pieds pour dimensions, gallons pour capacité)",
+        "Orientation affecte calcul pour réservoirs cylindriques",
+        "Complexité forme détermine méthode calcul nécessaire"
+      ],
+      "formulaExplanation": "Calculs volume réservoir utilisent formules géométriques : Réservoirs rectangulaires = Longueur × Largeur × Hauteur. Réservoirs cylindriques = π × r² × Hauteur (vertical) ou Longueur × Largeur × Hauteur × 0.7854 (cylindres horizontaux). Formes irrégulières nécessitent calculs personnalisés. Tous résultats convertissent entre unités utilisant facteurs conversion standard (1 pied cube = 7.4805 gallons, 1 mètre cube = 1,000 litres). Comprendre ces formules vous aide vérifier calculs et choisir tailles réservoir appropriées pour vos besoins spécifiques stockage liquide.",
+      "examples": [
+        "Réservoir eau rectangulaire (10ft × 5ft × 6ft) contient 300 pieds cubes ou 2,244 gallons eau pour stockage résidentiel.",
+        "Réservoir carburant cylindrique (8ft diamètre × 10ft hauteur) contient 502 pieds cubes ou 3,771 gallons pour stockage diesel.",
+        "Réservoir confinement produits chimiques forme irrégulière nécessite calcul volume personnalisé pour conformité stockage matière dangereuse."
+      ],
+      "resultsExplanation": [
+        "Volume primaire montre capacité en unités sélectionnées",
+        "Conversions unités multiples fournissent flexibilité pour différentes applications",
+        "Calculs capacité tiennent compte forme et orientation réservoir",
+        "Résultats aident déterminer taille réservoir appropriée pour vos besoins"
+      ],
+      "whoItsFor": "Cette calculatrice volume réservoir sert agriculteurs planifiant systèmes irrigation, entreprises construction estimant formes béton, installations industrielles calculant besoins stockage produits chimiques, propriétaires maison planifiant stockage eau, distributeurs carburant dimensionnant capacité réservoir, ingénieurs environnementaux concevant systèmes confinement, plombiers estimant capacité chauffe-eau, et quiconque travaillant avec stockage liquide. Elle est particulièrement précieuse pour stockage eau agricole, dimensionnement réservoir carburant, planification confinement produits chimiques, et calculs volume construction. La calculatrice fonctionne pour applications résidentielles, commerciales, industrielles, et agricoles toute taille.",
+      "disclaimer": "Cette calculatrice volume réservoir fournit estimations volume géométrique basées sur dimensions saisies et formules standard. Capacité réservoir réelle peut varier dû structures internes, raccords, vannes, et marges sécurité requises par codes locaux. Résultats ne tiennent pas compte expansion thermique, pertes évaporation, ou espace inutilisable dans réservoirs. Consultez toujours codes construction locaux, réglementations environnementales, et fabricants réservoir pour spécifications capacité réelle. Cet outil est pour estimation et ne devrait pas remplacer calculs ingénierie professionnels pour applications critiques.",
+      "relatedTools": [
+        "Calculateurs béton pour estimations matériau construction réservoir",
+        "Calculateurs aire pour calculs base et aire surface réservoir",
+        "Calculateurs pourcentage pour planification niveau remplissage et capacité"
+      ],
+      "faqs": [
+        {
+          "question": "Comment calculer volume réservoir rectangulaire ?",
+          "answer": "Multipliez longueur × largeur × hauteur. Pour réservoir 10ft × 5ft × 6ft : 10 × 5 × 6 = 300 pieds cubes. Convertissez gallons en multipliant par 7.4805 (300 × 7.4805 = 2,244 gallons). Cette formule fonctionne pour tout réservoir rectangulaire ou forme boîte, incluant formes béton, réservoirs plastique, et conteneurs métal. Mesurez toujours dimensions internes pour capacité précise."
+        },
+        {
+          "question": "Comment calculer volume réservoir cylindrique ?",
+          "answer": "Pour cylindres verticaux : π × rayon² × hauteur. Pour réservoir 8ft diamètre × 10ft hauteur : rayon = 4ft, volume = 3.1416 × 16 × 10 = 502.7 pieds cubes. Pour cylindres horizontaux, utilisez formule cylindres partiellement remplis. Spécifiez toujours si votre réservoir est horizontal ou vertical, car affecte calcul. Réservoirs cylindriques sont communs pour propane, air comprimé, et certains stockages eau."
+        },
+        {
+          "question": "Quelles unités utiliser pour calculs volume réservoir ?",
+          "answer": "Utilisez unités cohérentes à travers votre calcul. Pour réservoirs eau, gallons ou litres sont pratiques. Pour réservoirs carburant, gallons sont standard aux États-Unis. Pour applications industrielles, mètres cubes ou pieds cubes peuvent être préférés. Notre calculatrice convertit automatiquement entre unités. Choisissez unités correspondant votre application - gallons pour eau résidentielle, litres pour pays métriques, pieds cubes pour calculs volume béton."
+        },
+        {
+          "question": "Combien coûte construire ou acheter volume réservoir ?",
+          "answer": "Coûts réservoir varient largement par matériau et taille. Réservoirs plastique coûtent $1-3 par gallon capacité. Réservoirs acier vont de $2-5 par gallon. Réservoirs béton peuvent être $5-10 par gallon pour installations grandes. Réservoirs carburant sont $3-8 par gallon. Coûts incluent matériaux, installation, et accessoires. Ajoutez toujours 10-20% contingence pour raccords, vannes, et prévention débordement. Considérez codes locaux et permis qui peuvent augmenter coûts projet total."
+        },
+        {
+          "question": "Dois-je tenir compte espace inutilisable dans réservoirs ?",
+          "answer": "Oui, soustrayez toujours espace inutilisable. Réservoirs ont 5-10% volume inutilisable dû raccords, vannes, et marges sécurité. Réservoirs cylindriques perdent volume quand horizontaux. Réservoirs forme irrégulière peuvent avoir espaces inutilisables complexes. Réglementations environnementales requièrent capacité réserve pour déversements. Pour réservoirs eau potable, tenez compte espace air. Consultez toujours spécifications fabricant pour capacité utilisable réelle, qui peut être moins que volume géométrique."
+        }
+      ]
+    }
+  }
+}

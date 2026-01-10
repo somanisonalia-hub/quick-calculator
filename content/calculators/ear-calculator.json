@@ -1,0 +1,594 @@
+{
+  "en": {
+    "title": "Effective Annual Rate Calculator",
+    "seoTitle": "EAR Calculator - Effective Annual Rate Calculator",
+    "metaDescription": "Calculate Effective Annual Rate (EAR) showing the true annual interest rate with compounding. Free EAR calculator comparing nominal rates with different compounding frequencies.",
+    "keywords": [
+      "EAR calculator",
+      "effective annual rate calculator",
+      "compounding calculator",
+      "annual effective rate",
+      "true interest rate calculator",
+      "nominal vs effective rate"
+    ],
+    "longTailKeywords": [
+      "effective annual rate calculator online",
+      "calculate EAR with compounding frequency",
+      "EAR calculator for investments",
+      "compounding interest effective rate",
+      "nominal interest rate to effective rate",
+      "annual effective yield calculator",
+      "true annual return calculator",
+      "effective annual interest rate formula",
+      "compounding frequency impact calculator",
+      "EAR vs nominal rate comparison"
+    ],
+    "slug": "ear-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "EAR",
+      "effective annual rate",
+      "compounding",
+      "interest rate",
+      "nominal rate",
+      "annual yield"
+    ],
+    "description": "Calculate the Effective Annual Rate (EAR) to see the true annual interest rate when compounding is involved. Compare how different compounding frequencies affect the actual return on investments or cost of borrowing.",
+    "summary": "Calculate Effective Annual Rate (EAR) with compounding",
+    "instructions": [
+      "Enter the nominal interest rate (stated annual rate)",
+      "Select the compounding frequency (daily, monthly, quarterly, etc.)",
+      "Click 'Calculate EAR' to see the effective annual rate",
+      "Compare EAR across different compounding frequencies",
+      "Use EAR to compare different investment or loan offers"
+    ],
+    "calculatorComponent": "EARCalculator",
+    "examples": [
+      {
+        "title": "Credit Card EAR Calculation",
+        "description": "Calculate EAR for a credit card with 18% nominal APR compounded monthly",
+        "input": {
+          "nominalRate": 18,
+          "compoundingFrequency": "12"
+        },
+        "output": {
+          "ear": "19.56%",
+          "nominalRateDisplay": "18.00%",
+          "difference": "1.56%",
+          "compoundingEffect": "Monthly compounding adds 1.56% to the effective rate",
+          "frequencyComparison": "Annual: 18.00% vs Monthly: 19.56% (8.7% increase)"
+        }
+      },
+      {
+        "title": "Savings Account EAR",
+        "description": "Calculate EAR for a savings account with 4% nominal rate compounded quarterly",
+        "input": {
+          "nominalRate": 4,
+          "compoundingFrequency": "4"
+        },
+        "output": {
+          "ear": "4.06%",
+          "nominalRateDisplay": "4.00%",
+          "difference": "0.06%",
+          "compoundingEffect": "Quarterly compounding adds 0.06% to the effective rate",
+          "frequencyComparison": "Annual: 4.00% vs Quarterly: 4.06% (1.5% increase)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Understanding the Effective Annual Rate (EAR) is crucial for making informed financial decisions. Unlike the nominal interest rate, EAR shows the true annual cost of borrowing or return on investment when compounding effects are included. Our EAR calculator helps you compare different compounding frequencies and understand their impact on your money.",
+      "benefits": [
+        "Calculate the true annual interest rate with compounding effects",
+        "Compare different compounding frequencies on equal terms",
+        "Understand the real cost of borrowing or return on investment",
+        "Make informed decisions when comparing financial products",
+        "See how often compounding occurs affects your returns",
+        "Compare nominal rates with their effective equivalents"
+      ],
+      "steps": [
+        "Enter the nominal interest rate (stated annual rate)",
+        "Select how often compounding occurs",
+        "Review the calculated effective annual rate",
+        "Compare EAR across different compounding frequencies",
+        "Use EAR to compare different investment or loan offers",
+        "Understand how compounding frequency affects your money"
+      ],
+      "inputsExplained": [
+        "Nominal rate is the stated annual interest rate without compounding",
+        "Compounding frequency shows how often interest is calculated and added",
+        "Higher compounding frequency results in higher effective rates",
+        "The calculator shows the difference between nominal and effective rates"
+      ],
+      "formulaExplanation": "EAR is calculated using the formula (1 + r/n)^n - 1, where r is the nominal rate and n is the compounding frequency. This formula accounts for the effect of compounding by showing what the annual rate would be if interest were paid once per year at that equivalent rate.",
+      "examples": [
+        "An 18% nominal rate compounded monthly has an EAR of 19.56%, meaning you're effectively paying 1.56% more due to monthly compounding",
+        "A 4% savings rate compounded quarterly has an EAR of 4.06%, giving you 0.06% more return due to quarterly compounding"
+      ],
+      "resultsExplanation": [
+        "EAR shows the true annual rate accounting for compounding effects",
+        "Nominal rate is the stated rate without compounding consideration",
+        "Difference shows how much compounding adds to the effective rate",
+        "Compounding effect explains the impact of the compounding frequency",
+        "Frequency comparison shows EAR differences across compounding methods",
+        "All results help you understand the true cost or return of financial products"
+      ],
+      "whoItsFor": "This EAR calculator is essential for investors comparing different savings or investment products, borrowers evaluating loan terms, students learning about compound interest, and anyone who wants to understand the true cost of borrowing or return on investment. It's particularly valuable for financial planners and analysts who need to compare financial products on an equal basis.",
+      "disclaimer": "EAR calculations show the annualized effect of compounding but do not include fees, taxes, or other costs that may affect actual returns or borrowing costs. Actual investment returns and borrowing costs may vary based on specific terms and conditions.",
+      "relatedTools": [
+        "compound interest calculator",
+        "apr calculator",
+        "nominal interest rate calculator",
+        "loan calculator",
+        "savings calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is Effective Annual Rate (EAR)?",
+          "answer": "EAR is the true annual interest rate that accounts for compounding effects. It shows what the annual rate would be if interest were paid once per year at an equivalent rate."
+        },
+        {
+          "question": "How does EAR differ from nominal interest rate?",
+          "answer": "Nominal rate is the stated annual rate without considering compounding. EAR includes compounding effects to show the true annual cost or return."
+        },
+        {
+          "question": "Why is compounding frequency important?",
+          "answer": "More frequent compounding results in higher effective rates because interest is calculated on previously earned interest more often, leading to exponential growth."
+        },
+        {
+          "question": "When should I use EAR instead of nominal rate?",
+          "answer": "Use EAR when comparing financial products with different compounding frequencies. It gives you the true annualized cost or return for accurate comparisons."
+        },
+        {
+          "question": "Does EAR include fees and other costs?",
+          "answer": "No, EAR only accounts for interest compounding. It does not include fees, taxes, or other costs that may affect the actual return or cost."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de TAE",
+    "seoTitle": "Calculadora de TAE - Calculadora de Tasa Anual Efectiva",
+    "metaDescription": "Calcula la Tasa Anual Efectiva (TAE) mostrando la tasa de interés anual real con capitalización. Calculadora gratuita de TAE comparando tasas nominales con diferentes frecuencias de capitalización.",
+    "keywords": [
+      "calculadora TAE",
+      "calculadora tasa anual efectiva",
+      "calculadora capitalización",
+      "tasa anual efectiva",
+      "calculadora tasa interés real",
+      "nominal vs tasa efectiva"
+    ],
+    "longTailKeywords": [
+      "calculadora tasa anual efectiva online",
+      "calcular TAE con frecuencia capitalización",
+      "calculadora TAE para inversiones",
+      "capitalización interés tasa efectiva",
+      "tasa interés nominal a efectiva",
+      "calculadora rendimiento anual efectivo",
+      "calculadora retorno anual real",
+      "fórmula tasa interés anual efectiva",
+      "calculadora impacto frecuencia capitalización",
+      "TAE vs tasa nominal comparación"
+    ],
+    "slug": "ear-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "TAE",
+      "tasa anual efectiva",
+      "capitalización",
+      "tasa interés",
+      "tasa nominal",
+      "rendimiento anual"
+    ],
+    "description": "Calcula la Tasa Anual Efectiva (TAE) para ver la tasa de interés anual real cuando la capitalización está involucrada. Compara cómo diferentes frecuencias de capitalización afectan el retorno real de inversiones o costo de endeudamiento.",
+    "summary": "Calcula Tasa Anual Efectiva (TAE) con capitalización",
+    "instructions": [
+      "Ingresa la tasa de interés nominal (tasa anual declarada)",
+      "Selecciona la frecuencia de capitalización (diaria, mensual, trimestral, etc.)",
+      "Haz clic en 'Calcular TAE' para ver la tasa anual efectiva",
+      "Compara TAE entre diferentes frecuencias de capitalización",
+      "Usa TAE para comparar diferentes ofertas de inversión o préstamo"
+    ],
+    "calculatorComponent": "EARCalculator",
+    "examples": [
+      {
+        "title": "Cálculo TAE Tarjeta de Crédito",
+        "description": "Calcula TAE para una tarjeta de crédito con 18% TAE nominal capitalizado mensualmente",
+        "input": {
+          "nominalRate": 18,
+          "compoundingFrequency": "12"
+        },
+        "output": {
+          "ear": "19.56%",
+          "nominalRateDisplay": "18.00%",
+          "difference": "1.56%",
+          "compoundingEffect": "Capitalización mensual añade 1.56% a la tasa efectiva",
+          "frequencyComparison": "Anual: 18.00% vs Mensual: 19.56% (8.7% aumento)"
+        }
+      },
+      {
+        "title": "TAE Cuenta de Ahorros",
+        "description": "Calcula TAE para una cuenta de ahorros con 4% tasa nominal capitalizado trimestralmente",
+        "input": {
+          "nominalRate": 4,
+          "compoundingFrequency": "4"
+        },
+        "output": {
+          "ear": "4.06%",
+          "nominalRateDisplay": "4.00%",
+          "difference": "0.06%",
+          "compoundingEffect": "Capitalización trimestral añade 0.06% a la tasa efectiva",
+          "frequencyComparison": "Anual: 4.00% vs Trimestral: 4.06% (1.5% aumento)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender la Tasa Anual Efectiva (TAE) es crucial para tomar decisiones financieras informadas. A diferencia de la tasa de interés nominal, la TAE muestra el costo real anual de endeudamiento o retorno de inversión cuando los efectos de capitalización están incluidos. Nuestra calculadora de TAE te ayuda a comparar diferentes frecuencias de capitalización y entender su impacto en tu dinero.",
+      "benefits": [
+        "Calcula la tasa de interés anual real con efectos de capitalización",
+        "Compara diferentes frecuencias de capitalización en términos iguales",
+        "Entiende el costo real de endeudamiento o retorno de inversión",
+        "Toma decisiones informadas al comparar productos financieros",
+        "Ve cómo la frecuencia de capitalización ocurre afecta tus retornos",
+        "Compara tasas nominales con sus equivalentes efectivos"
+      ],
+      "steps": [
+        "Ingresa la tasa de interés nominal (tasa anual declarada)",
+        "Selecciona con qué frecuencia ocurre la capitalización",
+        "Revisa la tasa anual efectiva calculada",
+        "Compara TAE entre diferentes frecuencias de capitalización",
+        "Usa TAE para comparar diferentes ofertas de inversión o préstamo",
+        "Entiende cómo la frecuencia de capitalización afecta tu dinero"
+      ],
+      "inputsExplained": [
+        "La tasa nominal es la tasa de interés anual declarada sin capitalización",
+        "La frecuencia de capitalización muestra con qué frecuencia se calcula y añade el interés",
+        "Frecuencia de capitalización más alta resulta en tasas efectivas más altas",
+        "La calculadora muestra la diferencia entre tasas nominales y efectivas"
+      ],
+      "formulaExplanation": "La TAE se calcula usando la fórmula (1 + r/n)^n - 1, donde r es la tasa nominal y n es la frecuencia de capitalización. Esta fórmula considera el efecto de capitalización mostrando cuál sería la tasa anual si el interés se pagara una vez por año a esa tasa equivalente.",
+      "examples": [
+        "Una tasa nominal del 18% capitalizado mensualmente tiene una TAE del 19.56%, significando que efectivamente estás pagando 1.56% más debido a capitalización mensual",
+        "Una tasa de ahorro del 4% capitalizado trimestralmente tiene una TAE del 4.06%, dándote 0.06% más retorno debido a capitalización trimestral"
+      ],
+      "resultsExplanation": [
+        "TAE muestra la tasa anual real considerando efectos de capitalización",
+        "Tasa nominal es la tasa declarada sin consideración de capitalización",
+        "Diferencia muestra cuánto añade la capitalización a la tasa efectiva",
+        "Efecto de capitalización explica el impacto de la frecuencia de capitalización",
+        "Comparación de frecuencia muestra diferencias TAE entre métodos de capitalización",
+        "Todos los resultados te ayudan a entender el costo real o retorno de productos financieros"
+      ],
+      "whoItsFor": "Esta calculadora de TAE es esencial para inversores comparando diferentes productos de ahorro o inversión, prestatarios evaluando términos de préstamo, estudiantes aprendiendo sobre interés compuesto, y cualquiera que quiera entender el costo real de endeudamiento o retorno de inversión. Es particularmente valiosa para planificadores financieros y analistas que necesitan comparar productos financieros en base igual.",
+      "disclaimer": "Los cálculos de TAE muestran el efecto anualizado de capitalización pero no incluyen comisiones, impuestos u otros costos que pueden afectar retornos reales de inversión o costos de endeudamiento. Los retornos reales de inversión y costos de endeudamiento pueden variar basado en términos y condiciones específicos.",
+      "relatedTools": [
+        "calculadora interés compuesto",
+        "calculadora TAE",
+        "calculadora tasa interés nominal",
+        "calculadora préstamo",
+        "calculadora ahorros"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es la Tasa Anual Efectiva (TAE)?",
+          "answer": "La TAE es la tasa de interés anual real que considera efectos de capitalización. Muestra cuál sería la tasa anual si el interés se pagara una vez por año a una tasa equivalente."
+        },
+        {
+          "question": "¿Cómo difiere la TAE de la tasa de interés nominal?",
+          "answer": "La tasa nominal es la tasa anual declarada sin considerar capitalización. La TAE incluye efectos de capitalización para mostrar el costo real o retorno anual."
+        },
+        {
+          "question": "¿Por qué es importante la frecuencia de capitalización?",
+          "answer": "Capitalización más frecuente resulta en tasas efectivas más altas porque el interés se calcula sobre interés ganado previamente más frecuentemente, llevando a crecimiento exponencial."
+        },
+        {
+          "question": "¿Cuándo debo usar TAE en lugar de tasa nominal?",
+          "answer": "Usa TAE al comparar productos financieros con diferentes frecuencias de capitalización. Te da el costo real o retorno anualizado para comparaciones precisas."
+        },
+        {
+          "question": "¿Incluye la TAE comisiones y otros costos?",
+          "answer": "No, la TAE solo considera capitalización de interés. No incluye comisiones, impuestos u otros costos que pueden afectar el retorno o costo real."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Taxa Efetiva Anual",
+    "seoTitle": "Calculadora de Taxa Efetiva Anual - Calculadora de TEA",
+    "metaDescription": "Calcule Taxa Efetiva Anual (TEA) mostrando a taxa de juros anual real com capitalização. Calculadora gratuita de TEA comparando taxas nominais com diferentes frequências de capitalização.",
+    "keywords": [
+      "calculadora TEA",
+      "calculadora taxa efetiva anual",
+      "calculadora capitalização",
+      "taxa anual efetiva",
+      "calculadora taxa juros real",
+      "nominal vs taxa efetiva"
+    ],
+    "longTailKeywords": [
+      "calculadora taxa efetiva anual online",
+      "calcular TEA com frequência capitalização",
+      "calculadora TEA para investimentos",
+      "capitalização juros taxa efetiva",
+      "taxa juros nominal para efetiva",
+      "calculadora rendimento anual efetivo",
+      "calculadora retorno anual real",
+      "fórmula taxa juros anual efetiva",
+      "calculadora impacto frequência capitalização",
+      "TEA vs taxa nominal comparação"
+    ],
+    "slug": "ear-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "TEA",
+      "taxa efetiva anual",
+      "capitalização",
+      "taxa juros",
+      "taxa nominal",
+      "rendimento anual"
+    ],
+    "description": "Calcule a Taxa Efetiva Anual (TEA) para ver a taxa de juros anual real quando a capitalização está envolvida. Compare como diferentes frequências de capitalização afetam o retorno real de investimentos ou custo de empréstimo.",
+    "summary": "Calcule Taxa Efetiva Anual (TEA) com capitalização",
+    "instructions": [
+      "Digite a taxa de juros nominal (taxa anual declarada)",
+      "Selecione a frequência de capitalização (diária, mensal, trimestral, etc.)",
+      "Clique em 'Calcular TEA' para ver a taxa anual efetiva",
+      "Compare TEA entre diferentes frequências de capitalização",
+      "Use TEA para comparar diferentes ofertas de investimento ou empréstimo"
+    ],
+    "calculatorComponent": "EARCalculator",
+    "examples": [
+      {
+        "title": "Cálculo TEA Cartão de Crédito",
+        "description": "Calcule TEA para um cartão de crédito com 18% CET nominal capitalizado mensalmente",
+        "input": {
+          "nominalRate": 18,
+          "compoundingFrequency": "12"
+        },
+        "output": {
+          "ear": "19.56%",
+          "nominalRateDisplay": "18.00%",
+          "difference": "1.56%",
+          "compoundingEffect": "Capitalização mensal adiciona 1.56% à taxa efetiva",
+          "frequencyComparison": "Anual: 18.00% vs Mensal: 19.56% (8.7% aumento)"
+        }
+      },
+      {
+        "title": "TEA Conta Poupança",
+        "description": "Calcule TEA para uma conta poupança com 4% taxa nominal capitalizado trimestralmente",
+        "input": {
+          "nominalRate": 4,
+          "compoundingFrequency": "4"
+        },
+        "output": {
+          "ear": "4.06%",
+          "nominalRateDisplay": "4.00%",
+          "difference": "0.06%",
+          "compoundingEffect": "Capitalização trimestral adiciona 0.06% à taxa efetiva",
+          "frequencyComparison": "Anual: 4.00% vs Trimestral: 4.06% (1.5% aumento)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender a Taxa Efetiva Anual (TEA) é crucial para tomar decisões financeiras informadas. Ao contrário da taxa de juros nominal, a TEA mostra o custo real anual de empréstimo ou retorno de investimento quando os efeitos de capitalização estão incluídos. Nossa calculadora de TEA ajuda você a comparar diferentes frequências de capitalização e entender seu impacto em seu dinheiro.",
+      "benefits": [
+        "Calcule a taxa de juros anual real com efeitos de capitalização",
+        "Compare diferentes frequências de capitalização em termos iguais",
+        "Entenda o custo real de empréstimo ou retorno de investimento",
+        "Tome decisões informadas ao comparar produtos financeiros",
+        "Veja como a frequência de capitalização ocorre afeta seus retornos",
+        "Compare taxas nominais com seus equivalentes efetivos"
+      ],
+      "steps": [
+        "Digite a taxa de juros nominal (taxa anual declarada)",
+        "Selecione com que frequência ocorre a capitalização",
+        "Revise a taxa anual efetiva calculada",
+        "Compare TEA entre diferentes frequências de capitalização",
+        "Use TEA para comparar diferentes ofertas de investimento ou empréstimo",
+        "Entenda como a frequência de capitalização afeta seu dinheiro"
+      ],
+      "inputsExplained": [
+        "Taxa nominal é a taxa de juros anual declarada sem capitalização",
+        "Frequência de capitalização mostra com que frequência o juros é calculado e adicionado",
+        "Frequência de capitalização mais alta resulta em taxas efetivas mais altas",
+        "A calculadora mostra a diferença entre taxas nominais e efetivas"
+      ],
+      "formulaExplanation": "A TEA é calculada usando a fórmula (1 + r/n)^n - 1, onde r é a taxa nominal e n é a frequência de capitalização. Esta fórmula considera o efeito de capitalização mostrando qual seria a taxa anual se o juros fosse pago uma vez por ano a essa taxa equivalente.",
+      "examples": [
+        "Uma taxa nominal de 18% capitalizado mensalmente tem uma TEA de 19.56%, significando que você está efetivamente pagando 1.56% a mais devido à capitalização mensal",
+        "Uma taxa de poupança de 4% capitalizado trimestralmente tem uma TEA de 4.06%, dando a você 0.06% mais retorno devido à capitalização trimestral"
+      ],
+      "resultsExplanation": [
+        "TEA mostra a taxa anual real considerando efeitos de capitalização",
+        "Taxa nominal é a taxa declarada sem consideração de capitalização",
+        "Diferença mostra quanto a capitalização adiciona à taxa efetiva",
+        "Efeito de capitalização explica o impacto da frequência de capitalização",
+        "Comparação de frequência mostra diferenças TEA entre métodos de capitalização",
+        "Todos os resultados ajudam você a entender o custo real ou retorno de produtos financeiros"
+      ],
+      "whoItsFor": "Esta calculadora de TEA é essencial para investidores comparando diferentes produtos de poupança ou investimento, tomadores avaliando termos de empréstimo, estudantes aprendendo sobre juros compostos, e qualquer pessoa que queira entender o custo real de empréstimo ou retorno de investimento. É particularmente valiosa para planejadores financeiros e analistas que precisam comparar produtos financeiros em base igual.",
+      "disclaimer": "Os cálculos de TEA mostram o efeito anualizado de capitalização mas não incluem taxas, impostos ou outros custos que podem afetar retornos reais de investimento ou custos de empréstimo. Retornos reais de investimento e custos de empréstimo podem variar baseado em termos e condições específicos.",
+      "relatedTools": [
+        "calculadora juros compostos",
+        "calculadora CET",
+        "calculadora taxa juros nominal",
+        "calculadora empréstimo",
+        "calculadora poupança"
+      ],
+      "faqs": [
+        {
+          "question": "O que é Taxa Efetiva Anual (TEA)?",
+          "answer": "A TEA é a taxa de juros anual real que considera efeitos de capitalização. Mostra qual seria a taxa anual se o juros fosse pago uma vez por ano a uma taxa equivalente."
+        },
+        {
+          "question": "Como a TEA difere da taxa de juros nominal?",
+          "answer": "A taxa nominal é a taxa anual declarada sem considerar capitalização. A TEA inclui efeitos de capitalização para mostrar o custo real ou retorno anual."
+        },
+        {
+          "question": "¿Por que a frequência de capitalização é importante?",
+          "answer": "Capitalização mais frequente resulta em taxas efetivas mais altas porque o juros é calculado sobre juros ganhos previamente mais frequentemente, levando a crescimento exponencial."
+        },
+        {
+          "question": "Quando devo usar TEA em vez de taxa nominal?",
+          "answer": "Use TEA ao comparar produtos financeiros com diferentes frequências de capitalização. Dá a você o custo real ou retorno anualizado para comparações precisas."
+        },
+        {
+          "question": "A TEA inclui taxas e outros custos?",
+          "answer": "Não, a TEA apenas considera capitalização de juros. Não inclui taxas, impostos ou outros custos que podem afetar o retorno ou custo real."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Taux Effectif Annuel",
+    "seoTitle": "Calculateur de Taux Effectif Annuel - Calculateur de TEA",
+    "metaDescription": "Calculez le Taux Effectif Annuel (TEA) montrant le taux d'intérêt annuel réel avec capitalisation. Calculateur gratuit de TEA comparant taux nominaux avec différentes fréquences de capitalisation.",
+    "keywords": [
+      "calculateur TEA",
+      "calculateur taux effectif annuel",
+      "calculateur capitalisation",
+      "taux annuel effectif",
+      "calculateur taux intérêt réel",
+      "nominal vs taux effectif"
+    ],
+    "longTailKeywords": [
+      "calculateur taux effectif annuel en ligne",
+      "calculer TEA avec fréquence capitalisation",
+      "calculateur TEA pour investissements",
+      "capitalisation intérêt taux effectif",
+      "taux intérêt nominal vers effectif",
+      "calculateur rendement annuel effectif",
+      "calculateur retour annuel réel",
+      "formule taux intérêt annuel effectif",
+      "calculateur impact fréquence capitalisation",
+      "TEA vs taux nominal comparaison"
+    ],
+    "slug": "ear-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "TEA",
+      "taux effectif annuel",
+      "capitalisation",
+      "taux intérêt",
+      "taux nominal",
+      "rendement annuel"
+    ],
+    "description": "Calculez le Taux Effectif Annuel (TEA) pour voir le taux d'intérêt annuel réel lorsque la capitalisation est impliquée. Comparez comment différentes fréquences de capitalisation affectent le retour réel sur investissements ou coût d'emprunt.",
+    "summary": "Calculez Taux Effectif Annuel (TEA) avec capitalisation",
+    "instructions": [
+      "Entrez le taux d'intérêt nominal (taux annuel déclaré)",
+      "Sélectionnez la fréquence de capitalisation (quotidienne, mensuelle, trimestrielle, etc.)",
+      "Cliquez sur 'Calculer TEA' pour voir le taux annuel effectif",
+      "Comparez TEA entre différentes fréquences de capitalisation",
+      "Utilisez TEA pour comparer différentes offres d'investissement ou prêt"
+    ],
+    "calculatorComponent": "EARCalculator",
+    "examples": [
+      {
+        "title": "Calcul TEA Carte de Crédit",
+        "description": "Calculez TEA pour une carte de crédit avec 18% TAEG nominal capitalisé mensuellement",
+        "input": {
+          "nominalRate": 18,
+          "compoundingFrequency": "12"
+        },
+        "output": {
+          "ear": "19.56%",
+          "nominalRateDisplay": "18.00%",
+          "difference": "1.56%",
+          "compoundingEffect": "Capitalisation mensuelle ajoute 1.56% au taux effectif",
+          "frequencyComparison": "Annuel: 18.00% vs Mensuel: 19.56% (8.7% augmentation)"
+        }
+      },
+      {
+        "title": "TEA Compte Épargne",
+        "description": "Calculez TEA pour un compte épargne avec 4% taux nominal capitalisé trimestriellement",
+        "input": {
+          "nominalRate": 4,
+          "compoundingFrequency": "4"
+        },
+        "output": {
+          "ear": "4.06%",
+          "nominalRateDisplay": "4.00%",
+          "difference": "0.06%",
+          "compoundingEffect": "Capitalisation trimestrielle ajoute 0.06% au taux effectif",
+          "frequencyComparison": "Annuel: 4.00% vs Trimestriel: 4.06% (1.5% augmentation)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Comprendre le Taux Effectif Annuel (TEA) est crucial pour prendre des décisions financières éclairées. Contrairement au taux d'intérêt nominal, le TEA montre le coût réel annuel d'emprunt ou retour sur investissement lorsque les effets de capitalisation sont inclus. Notre calculateur TEA vous aide à comparer différentes fréquences de capitalisation et comprendre leur impact sur votre argent.",
+      "benefits": [
+        "Calculez le taux d'intérêt annuel réel avec effets de capitalisation",
+        "Comparez différentes fréquences de capitalisation sur termes égaux",
+        "Comprenez le coût réel d'emprunt ou retour sur investissement",
+        "Prenez des décisions éclairées lors de comparaison produits financiers",
+        "Voyez comment fréquence de capitalisation affecte vos retours",
+        "Comparez taux nominaux avec leurs équivalents effectifs"
+      ],
+      "steps": [
+        "Entrez le taux d'intérêt nominal (taux annuel déclaré)",
+        "Sélectionnez fréquence de capitalisation",
+        "Examinez le taux annuel effectif calculé",
+        "Comparez TEA entre différentes fréquences de capitalisation",
+        "Utilisez TEA pour comparer différentes offres d'investissement ou prêt",
+        "Comprenez comment fréquence de capitalisation affecte votre argent"
+      ],
+      "inputsExplained": [
+        "Taux nominal est le taux d'intérêt annuel déclaré sans capitalisation",
+        "Fréquence de capitalisation montre fréquence de calcul et ajout d'intérêt",
+        "Fréquence de capitalisation plus élevée résulte en taux effectifs plus élevés",
+        "Le calculateur montre différence entre taux nominaux et effectifs"
+      ],
+      "formulaExplanation": "Le TEA est calculé utilisant la formule (1 + r/n)^n - 1, où r est le taux nominal et n est la fréquence de capitalisation. Cette formule tient compte de l'effet de capitalisation en montrant quel serait le taux annuel si intérêt était payé une fois par an à ce taux équivalent.",
+      "examples": [
+        "Un taux nominal de 18% capitalisé mensuellement a un TEA de 19.56%, signifiant vous payez effectivement 1.56% de plus dû à capitalisation mensuelle",
+        "Un taux épargne de 4% capitalisé trimestriellement a un TEA de 4.06%, vous donnant 0.06% plus retour dû à capitalisation trimestrielle"
+      ],
+      "resultsExplanation": [
+        "TEA montre le taux annuel réel tenant compte effets de capitalisation",
+        "Taux nominal est le taux déclaré sans considération de capitalisation",
+        "Différence montre combien capitalisation ajoute au taux effectif",
+        "Effet capitalisation explique impact de fréquence de capitalisation",
+        "Comparaison fréquence montre différences TEA entre méthodes de capitalisation",
+        "Tous résultats vous aident à comprendre coût réel ou retour de produits financiers"
+      ],
+      "whoItsFor": "Ce calculateur TEA est essentiel pour investisseurs comparant différents produits épargne ou investissement, emprunteurs évaluant termes prêt, étudiants apprenant intérêt composé, et quiconque veut comprendre coût réel d'emprunt ou retour sur investissement. Il est particulièrement précieux pour planificateurs financiers et analystes qui ont besoin de comparer produits financiers sur base égale.",
+      "disclaimer": "Les calculs TEA montrent effet annualisé de capitalisation mais n'incluent pas frais, taxes ou autres coûts pouvant affecter retours réels d'investissement ou coûts d'emprunt. Retours réels d'investissement et coûts d'emprunt peuvent varier basé sur termes et conditions spécifiques.",
+      "relatedTools": [
+        "calculateur intérêt composé",
+        "calculateur TAEG",
+        "calculateur taux intérêt nominal",
+        "calculateur prêt",
+        "calculateur épargne"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce que le Taux Effectif Annuel (TEA)?",
+          "answer": "Le TEA est le taux d'intérêt annuel réel tenant compte effets de capitalisation. Montre quel serait le taux annuel si intérêt était payé une fois par an à un taux équivalent."
+        },
+        {
+          "question": "Comment le TEA diffère-t-il du taux d'intérêt nominal?",
+          "answer": "Taux nominal est le taux annuel déclaré sans considérer capitalisation. Le TEA inclut effets de capitalisation pour montrer coût réel ou retour annuel."
+        },
+        {
+          "question": "Pourquoi fréquence de capitalisation est-elle importante?",
+          "answer": "Capitalisation plus fréquente résulte en taux effectifs plus élevés car intérêt est calculé sur intérêt gagné précédemment plus souvent, menant à croissance exponentielle."
+        },
+        {
+          "question": "Quand utiliser TEA au lieu de taux nominal?",
+          "answer": "Utilisez TEA lors de comparaison produits financiers avec différentes fréquences de capitalisation. Donne coût réel ou retour annualisé pour comparaisons précises."
+        },
+        {
+          "question": "Le TEA inclut-il frais et autres coûts?",
+          "answer": "Non, le TEA considère seulement capitalisation d'intérêt. N'inclut pas frais, taxes ou autres coûts pouvant affecter retour ou coût réel."
+        }
+      ]
+    }
+  }
+}

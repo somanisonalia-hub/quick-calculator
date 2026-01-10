@@ -1,0 +1,226 @@
+{
+  "en": {
+    "title": "Volume Calculator",
+    "seoTitle": "Volume Calculator - Calculate Volume of 3D Shapes Online",
+    "metaDescription": "Free volume calculator for 3D shapes. Calculate volume of cube, sphere, cylinder, cone, rectangular prism, and more. Step-by-step solutions.",
+    "keywords": ["volume calculator", "3d shapes volume", "cube volume", "sphere volume", "cylinder volume"],
+    "longTailKeywords": ["how to calculate volume", "volume of cylinder formula", "volume of sphere formula", "volume of cube formula", "geometry volume calculator"],
+    "slug": "volume-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["volume", "3d shapes", "geometry", "cube", "sphere", "cylinder", "cone"],
+    "summary": "Calculate the volume of various 3D shapes including cubes, spheres, cylinders, and cones.",
+    "description": "Our comprehensive volume calculator supports multiple 3D shapes with accurate formulas and step-by-step calculations. Perfect for geometry students, engineers, architects, and anyone working with three-dimensional objects.",
+    "instructions": [
+      "Select the 3D shape you want to calculate",
+      "Enter the required dimensions",
+      "Get instant volume calculation",
+      "View formula and step-by-step solution"
+    ],
+    "calculatorComponent": {
+      "componentName": "VolumeCalculator",
+      "inputs": [
+        { "name": "shape", "label": "3D Shape", "type": "select", "default": "cube", "options": ["cube", "rectangularPrism", "sphere", "cylinder", "cone", "pyramid"] },
+        { "name": "side", "label": "Side Length", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "length", "label": "Length", "type": "number", "default": 6, "min": 0, "step": 0.01 },
+        { "name": "width", "label": "Width", "type": "number", "default": 4, "min": 0, "step": 0.01 },
+        { "name": "height", "label": "Height", "type": "number", "default": 3, "min": 0, "step": 0.01 },
+        { "name": "radius", "label": "Radius", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+      ],
+      "formula": "Volume formulas vary by shape: Cube = s³, Sphere = (4/3)πr³, Cylinder = πr²h, etc.",
+      "output": { "label": "Volume", "default": "Select shape and enter dimensions", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Formula Used", "field": "formula", "format": "text" },
+        { "label": "Surface Area", "field": "surfaceArea", "format": "number" },
+        { "label": "Shape Properties", "field": "properties", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Cube Volume",
+        "input": "Side = 5 units",
+        "output": "Volume = 125 cubic units"
+      },
+      {
+        "title": "Sphere Volume",
+        "input": "Radius = 3 units",
+        "output": "Volume = 113.10 cubic units"
+      },
+      {
+        "title": "Cylinder Volume",
+        "input": "Radius = 4, Height = 6 units",
+        "output": "Volume = 301.59 cubic units"
+      }
+    ],
+    "relatedCalculators": ["surface-area-calculator", "circle-area-calculator", "triangle-area-calculator"]
+  },
+  "es": {
+    "title": "Calculadora de Volumen",
+    "seoTitle": "Calculadora de Volumen - Calcula Volumen de Formas 3D Online",
+    "metaDescription": "Calculadora gratuita de volumen para formas 3D. Calcula volumen de cubo, esfera, cilindro, cono, prisma rectangular y más. Soluciones paso a paso.",
+    "keywords": ["calculadora volumen", "volumen formas 3d", "volumen cubo", "volumen esfera", "volumen cilindro"],
+    "longTailKeywords": ["como calcular volumen", "formula volumen cilindro", "formula volumen esfera", "formula volumen cubo", "calculadora geometria volumen"],
+    "slug": "volume-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["volumen", "formas 3d", "geometria", "cubo", "esfera", "cilindro", "cono"],
+    "summary": "Calcula el volumen de varias formas 3D incluyendo cubos, esferas, cilindros y conos.",
+    "description": "Nuestra calculadora integral de volumen soporta múltiples formas 3D con fórmulas precisas y cálculos paso a paso. Perfecta para estudiantes de geometría, ingenieros, arquitectos, y cualquiera trabajando con objetos tridimensionales.",
+    "instructions": [
+      "Selecciona la forma 3D que quieres calcular",
+      "Ingresa las dimensiones requeridas",
+      "Obtén cálculo instantáneo de volumen",
+      "Ve fórmula y solución paso a paso"
+    ],
+    "calculatorComponent": {
+      "componentName": "VolumeCalculator",
+      "inputs": [
+        { "name": "shape", "label": "Forma 3D", "type": "select", "default": "cube", "options": ["cube", "rectangularPrism", "sphere", "cylinder", "cone", "pyramid"] },
+        { "name": "side", "label": "Longitud Lado", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "length", "label": "Longitud", "type": "number", "default": 6, "min": 0, "step": 0.01 },
+        { "name": "width", "label": "Anchura", "type": "number", "default": 4, "min": 0, "step": 0.01 },
+        { "name": "height", "label": "Altura", "type": "number", "default": 3, "min": 0, "step": 0.01 },
+        { "name": "radius", "label": "Radio", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+      ],
+      "formula": "Fórmulas de volumen varían por forma: Cubo = l³, Esfera = (4/3)πr³, Cilindro = πr²h, etc.",
+      "output": { "label": "Volumen", "default": "Selecciona forma e ingresa dimensiones", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Fórmula Usada", "field": "formula", "format": "text" },
+        { "label": "Área Superficial", "field": "surfaceArea", "format": "number" },
+        { "label": "Propiedades Forma", "field": "properties", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Volumen Cubo",
+        "input": "Lado = 5 unidades",
+        "output": "Volumen = 125 unidades cúbicas"
+      },
+      {
+        "title": "Volumen Esfera",
+        "input": "Radio = 3 unidades",
+        "output": "Volumen = 113.10 unidades cúbicas"
+      },
+      {
+        "title": "Volumen Cilindro",
+        "input": "Radio = 4, Altura = 6 unidades",
+        "output": "Volumen = 301.59 unidades cúbicas"
+      }
+    ],
+    "relatedCalculators": ["surface-area-calculator", "circle-area-calculator", "triangle-area-calculator"]
+  },
+  "pt": {
+    "title": "Calculadora de Volume",
+    "seoTitle": "Calculadora de Volume - Calcule Volume de Formas 3D Online",
+    "metaDescription": "Calculadora gratuita de volume para formas 3D. Calcule volume de cubo, esfera, cilindro, cone, prisma retangular e mais. Soluções passo a passo.",
+    "keywords": ["calculadora volume", "volume formas 3d", "volume cubo", "volume esfera", "volume cilindro"],
+    "longTailKeywords": ["como calcular volume", "formula volume cilindro", "formula volume esfera", "formula volume cubo", "calculadora geometria volume"],
+    "slug": "volume-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["volume", "formas 3d", "geometria", "cubo", "esfera", "cilindro", "cone"],
+    "summary": "Calcule o volume de várias formas 3D incluindo cubos, esferas, cilindros e cones.",
+    "description": "Nossa calculadora abrangente de volume suporta múltiplas formas 3D com fórmulas precisas e cálculos passo a passo. Perfeita para estudantes de geometria, engenheiros, arquitetos, e qualquer um trabalhando com objetos tridimensionais.",
+    "instructions": [
+      "Selecione a forma 3D que quer calcular",
+      "Digite as dimensões necessárias",
+      "Obtenha cálculo instantâneo de volume",
+      "Veja fórmula e solução passo a passo"
+    ],
+    "calculatorComponent": {
+      "componentName": "VolumeCalculator",
+      "inputs": [
+        { "name": "shape", "label": "Forma 3D", "type": "select", "default": "cube", "options": ["cube", "rectangularPrism", "sphere", "cylinder", "cone", "pyramid"] },
+        { "name": "side", "label": "Comprimento Lado", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "length", "label": "Comprimento", "type": "number", "default": 6, "min": 0, "step": 0.01 },
+        { "name": "width", "label": "Largura", "type": "number", "default": 4, "min": 0, "step": 0.01 },
+        { "name": "height", "label": "Altura", "type": "number", "default": 3, "min": 0, "step": 0.01 },
+        { "name": "radius", "label": "Raio", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+      ],
+      "formula": "Fórmulas de volume variam por forma: Cubo = l³, Esfera = (4/3)πr³, Cilindro = πr²h, etc.",
+      "output": { "label": "Volume", "default": "Selecione forma e digite dimensões", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Fórmula Usada", "field": "formula", "format": "text" },
+        { "label": "Área Superficial", "field": "surfaceArea", "format": "number" },
+        { "label": "Propriedades Forma", "field": "properties", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Volume Cubo",
+        "input": "Lado = 5 unidades",
+        "output": "Volume = 125 unidades cúbicas"
+      },
+      {
+        "title": "Volume Esfera",
+        "input": "Raio = 3 unidades",
+        "output": "Volume = 113.10 unidades cúbicas"
+      },
+      {
+        "title": "Volume Cilindro",
+        "input": "Raio = 4, Altura = 6 unidades",
+        "output": "Volume = 301.59 unidades cúbicas"
+      }
+    ],
+    "relatedCalculators": ["surface-area-calculator", "circle-area-calculator", "triangle-area-calculator"]
+  },
+  "fr": {
+    "title": "Calculateur de Volume",
+    "seoTitle": "Calculateur de Volume - Calculez Volume de Formes 3D en Ligne",
+    "metaDescription": "Calculateur gratuit de volume pour formes 3D. Calculez volume de cube, sphère, cylindre, cône, prisme rectangulaire et plus. Solutions étape par étape.",
+    "keywords": ["calculateur volume", "volume formes 3d", "volume cube", "volume sphère", "volume cylindre"],
+    "longTailKeywords": ["comment calculer volume", "formule volume cylindre", "formule volume sphère", "formule volume cube", "calculateur géométrie volume"],
+    "slug": "volume-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["volume", "formes 3d", "géométrie", "cube", "sphère", "cylindre", "cône"],
+    "summary": "Calculez volume de diverses formes 3D incluant cubes, sphères, cylindres et cônes.",
+    "description": "Notre calculateur complet de volume supporte multiples formes 3D avec formules précises et calculs étape par étape. Parfait pour étudiants de géométrie, ingénieurs, architectes, et quiconque travaillant avec objets tridimensionnels.",
+    "instructions": [
+      "Sélectionnez forme 3D que vous voulez calculer",
+      "Entrez dimensions requises",
+      "Obtenez calcul instantané de volume",
+      "Visualisez formule et solution étape par étape"
+    ],
+    "calculatorComponent": {
+      "componentName": "VolumeCalculator",
+      "inputs": [
+        { "name": "shape", "label": "Forme 3D", "type": "select", "default": "cube", "options": ["cube", "rectangularPrism", "sphere", "cylinder", "cone", "pyramid"] },
+        { "name": "side", "label": "Longueur Côté", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "length", "label": "Longueur", "type": "number", "default": 6, "min": 0, "step": 0.01 },
+        { "name": "width", "label": "Largeur", "type": "number", "default": 4, "min": 0, "step": 0.01 },
+        { "name": "height", "label": "Hauteur", "type": "number", "default": 3, "min": 0, "step": 0.01 },
+        { "name": "radius", "label": "Rayon", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+      ],
+      "formula": "Formules de volume varient selon forme: Cube = c³, Sphère = (4/3)πr³, Cylindre = πr²h, etc.",
+      "output": { "label": "Volume", "default": "Sélectionnez forme et entrez dimensions", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Formule Utilisée", "field": "formula", "format": "text" },
+        { "label": "Aire de Surface", "field": "surfaceArea", "format": "number" },
+        { "label": "Propriétés Forme", "field": "properties", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Volume Cube",
+        "input": "Côté = 5 unités",
+        "output": "Volume = 125 unités cubiques"
+      },
+      {
+        "title": "Volume Sphère",
+        "input": "Rayon = 3 unités",
+        "output": "Volume = 113.10 unités cubiques"
+      },
+      {
+        "title": "Volume Cylindre",
+        "input": "Rayon = 4, Hauteur = 6 unités",
+        "output": "Volume = 301.59 unités cubiques"
+      }
+    ],
+    "relatedCalculators": ["surface-area-calculator", "circle-area-calculator", "triangle-area-calculator"]
+  }
+}

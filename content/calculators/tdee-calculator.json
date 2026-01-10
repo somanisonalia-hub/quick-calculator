@@ -1,0 +1,1230 @@
+{
+  "en": {
+    "title": "TDEE Calculator",
+    "seoTitle": "TDEE Calculator - Total Daily Energy Expenditure Calculator",
+    "metaDescription": "Calculate your Total Daily Energy Expenditure (TDEE) to understand how many calories you burn daily. Free TDEE calculator for weight management and fitness goals.",
+    "keywords": [
+      "tdee calculator",
+      "total daily energy expenditure",
+      "daily calorie burn calculator",
+      "bmr tdee calculator",
+      "calorie expenditure calculator",
+      "metabolic rate calculator",
+      "daily energy calculator",
+      "how many calories do I burn daily",
+      "tdee calculation",
+      "energy expenditure calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate tdee",
+      "what is my total daily energy expenditure",
+      "tdee calculator based on activity level",
+      "daily calorie expenditure calculator",
+      "tdee vs bmr calculator",
+      "how many calories do I burn in a day",
+      "tdee calculator with exercise frequency",
+      "daily energy expenditure calculation",
+      "tdee calculator for weight loss",
+      "how to find your tdee"
+    ],
+    "slug": "tdee-calculator",
+    "category": "Health",
+    "calculatorComponent": "TDEECalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "tdee calculator",
+      "daily energy expenditure",
+      "calorie burn",
+      "metabolic rate",
+      "activity level",
+      "weight management",
+      "fitness tracking"
+    ],
+    "summary": "Calculate your Total Daily Energy Expenditure (TDEE) to understand your daily calorie burn rate and support weight management goals.",
+    "description": "Professional TDEE calculator that determines your Total Daily Energy Expenditure by combining Basal Metabolic Rate (BMR) with activity level multipliers. Essential for understanding daily caloric needs, weight management planning, and fitness goal setting based on your lifestyle and exercise habits.",
+    "instructions": [
+      "Enter your weight in kilograms or pounds",
+      "Enter your height in centimeters or inches",
+      "Select your gender",
+      "Enter your age",
+      "Choose your activity level that best describes your lifestyle",
+      "Optionally specify your exercise frequency for more precision",
+      "View your BMR, TDEE, and activity level analysis"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Body Weight",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Weight Unit",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "height",
+        "label": "Height",
+        "type": "number",
+        "default": 170,
+        "min": 100,
+        "max": 250,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "heightUnit",
+        "label": "Height Unit",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Gender",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Age",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "years"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Activity Level",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "exerciseFrequency",
+        "label": "Exercise Frequency",
+        "type": "select",
+        "default": "moderate",
+        "options": ["none", "light", "moderate", "heavy", "very_heavy"]
+      }
+    ],
+    "formula": "BMR = 10 × Weight(kg) + 6.25 × Height(cm) - 5 × Age + 5 (men) / -161 (women)\nTDEE = BMR × Activity Multiplier\nActivity Multipliers: Sedentary (1.2), Lightly Active (1.375), Moderately Active (1.55), Very Active (1.725), Extremely Active (1.9)",
+    "output": {
+      "label": "Total Daily Energy Expenditure (TDEE)",
+      "default": "0 calories",
+      "format": "number",
+      "unit": "calories"
+    },
+    "additionalOutputs": [
+      {
+        "name": "bmr",
+        "label": "Basal Metabolic Rate (BMR)",
+        "default": "0 calories",
+        "format": "number",
+        "unit": "calories"
+      },
+      {
+        "name": "activityMultiplier",
+        "label": "Activity Multiplier",
+        "default": "1.0x",
+        "format": "decimal",
+        "unit": "x"
+      },
+      {
+        "name": "activityCategory",
+        "label": "Activity Category",
+        "default": "Moderate",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "weightLossRate",
+        "label": "Weight Loss Rate (500 cal deficit)",
+        "default": "0 lbs/week",
+        "format": "decimal",
+        "unit": "lbs/week"
+      },
+      {
+        "name": "weightGainRate",
+        "label": "Weight Gain Rate (500 cal surplus)",
+        "default": "0 lbs/week",
+        "format": "decimal",
+        "unit": "lbs/week"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Sedentary Office Worker",
+        "inputs": {
+          "weight": 75,
+          "weightUnit": "kg",
+          "height": 175,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 35,
+          "activityLevel": "sedentary",
+          "exerciseFrequency": "none"
+        },
+        "outputs": {
+          "tdee": 2250,
+          "bmr": 1676,
+          "activityMultiplier": 1.2,
+          "activityCategory": "Sedentary",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      },
+      {
+        "title": "Moderately Active Professional",
+        "inputs": {
+          "weight": 70,
+          "weightUnit": "kg",
+          "height": 170,
+          "heightUnit": "cm",
+          "gender": "female",
+          "age": 28,
+          "activityLevel": "moderately_active",
+          "exerciseFrequency": "moderate"
+        },
+        "outputs": {
+          "tdee": 2450,
+          "bmr": 1400,
+          "activityMultiplier": 1.55,
+          "activityCategory": "Moderately Active",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      },
+      {
+        "title": "Very Active Athlete",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "height": 185,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 25,
+          "activityLevel": "very_active",
+          "exerciseFrequency": "very_heavy"
+        },
+        "outputs": {
+          "tdee": 3450,
+          "bmr": 1900,
+          "activityMultiplier": 1.725,
+          "activityCategory": "Very Active",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmr-calculator",
+      "maintenance-calories-calculator",
+      "protein-intake-calculator",
+      "water-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate your Total Daily Energy Expenditure (TDEE) with our comprehensive TDEE Calculator. Understanding your daily calorie burn rate is crucial for effective weight management, fitness planning, and achieving your health goals. Our calculator combines your basal metabolic rate with activity level adjustments to provide accurate TDEE calculations.",
+      "benefits": [
+        "Calculate accurate daily calorie expenditure",
+        "Understand your Basal Metabolic Rate (BMR) contribution",
+        "See how activity level affects total calorie burn",
+        "Get personalized activity level categorization",
+        "Learn expected weight change rates",
+        "Make informed decisions about calorie intake vs expenditure",
+        "Support weight loss, maintenance, or muscle gain goals",
+        "Track the impact of lifestyle changes on metabolism"
+      ],
+      "howToUse": [
+        "Enter your current body weight in kilograms or pounds",
+        "Enter your height in centimeters or inches",
+        "Select your gender for accurate metabolic calculations",
+        "Enter your age for age-appropriate adjustments",
+        "Choose the activity level that best describes your typical daily routine",
+        "Optionally specify your exercise frequency for more precise calculations",
+        "Review your BMR, TDEE, and activity level analysis"
+      ],
+      "formulaExplanation": "TDEE (Total Daily Energy Expenditure) is calculated by multiplying your BMR (Basal Metabolic Rate) by an activity level multiplier. BMR represents calories burned at rest using the Mifflin-St Jeor equation. Activity multipliers range from 1.2 (sedentary) to 1.9 (extremely active) based on lifestyle and exercise habits. This gives your total daily calorie needs to maintain current weight.",
+      "examples": [
+        "A sedentary 35-year-old man weighing 75kg and 175cm tall has a BMR of 1,676 calories and TDEE of 2,250 calories (using 1.2x multiplier), burning about 574 calories through daily activities",
+        "A moderately active 28-year-old woman weighing 70kg and 170cm tall has a BMR of 1,400 calories and TDEE of 2,450 calories (using 1.55x multiplier), with significant calorie burn from regular exercise",
+        "A very active 25-year-old male athlete weighing 80kg and 185cm tall has a BMR of 1,900 calories and TDEE of 3,450 calories (using 1.725x multiplier), requiring high caloric intake to maintain weight"
+      ],
+      "whoShouldUse": "Fitness enthusiasts tracking calorie expenditure, athletes calculating energy needs, individuals on weight loss or muscle gain programs, people changing activity levels, dietitians and nutritionists, those starting new exercise routines, and anyone wanting to understand their metabolic rate and daily energy requirements.",
+      "importantNotes": "TDEE calculations provide estimates based on average activity levels. Individual results may vary based on muscle mass, body composition, genetics, and specific exercise types. Track actual weight changes over 2-4 weeks and adjust calorie intake accordingly. For weight loss, create a moderate deficit (250-500 calories below TDEE). For weight gain, consume 250-500 calories above TDEE. Consult healthcare providers for medical conditions.",
+      "relatedTools": [
+        "BMR Calculator - Calculate basal metabolic rate only",
+        "Maintenance Calories Calculator - Similar to TDEE with macronutrient breakdown",
+        "Protein Intake Calculator - Calculate protein needs for muscle maintenance",
+        "Water Intake Calculator - Calculate hydration requirements",
+        "Ideal Weight Calculator - Find healthy weight ranges"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between BMR and TDEE?",
+          "answer": "BMR (Basal Metabolic Rate) is the calories your body burns at complete rest to maintain basic functions. TDEE (Total Daily Energy Expenditure) includes BMR plus all calories burned through daily activities, exercise, and digestion. TDEE represents your total daily calorie needs to maintain weight."
+        },
+        {
+          "question": "How accurate is TDEE calculation?",
+          "answer": "TDEE calculations are estimates based on population averages. Accuracy depends on how well your activity level matches the selected category. For best results, choose the activity level that most closely matches your lifestyle. Track actual weight changes and adjust as needed - this provides the most accurate personalized data."
+        },
+        {
+          "question": "Why does TDEE vary so much between people?",
+          "answer": "TDEE varies based on age, gender, weight, height, muscle mass, and activity level. Younger people, men, larger individuals, and those with more muscle mass have higher TDEE. Very active people burn significantly more calories daily than sedentary individuals doing the same activities."
+        },
+        {
+          "question": "How do I increase my TDEE?",
+          "answer": "Increase TDEE by building muscle mass (higher BMR), increasing daily activity, adding exercise sessions, or choosing more active occupations. Even small changes like taking stairs instead of elevator or standing instead of sitting can add up. Resistance training is particularly effective for long-term TDEE increases."
+        },
+        {
+          "question": "Can I eat my TDEE to lose weight?",
+          "answer": "Eating at TDEE maintains weight. For weight loss, consume 250-500 calories below TDEE daily for sustainable 0.5-1 lb weekly loss. Larger deficits can work short-term but often lead to muscle loss and metabolic slowdown. Focus on nutrient-dense foods and resistance training to preserve muscle."
+        },
+        {
+          "question": "Does metabolism slow down with age?",
+          "answer": "Yes, BMR decreases about 1-2% per decade after age 20 due to muscle loss and hormonal changes. This lowers TDEE, so older adults may need fewer calories to maintain weight. Regular resistance training and adequate protein intake help maintain muscle mass and metabolic rate."
+        },
+        {
+          "question": "How does exercise affect TDEE?",
+          "answer": "Exercise increases TDEE through immediate calorie burn and long-term muscle building. Resistance training boosts BMR by increasing muscle mass. Cardio burns calories during activity. Both types of exercise contribute to higher daily calorie expenditure and improved metabolic health."
+        },
+        {
+          "question": "Should I track my actual TDEE?",
+          "answer": "Calculator estimates are good starting points, but tracking actual TDEE through weight changes and calorie intake provides more accurate data. Use the calculator as a guide, then adjust based on real results. Tools like fitness trackers can help estimate daily expenditure more precisely."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de TDEE",
+    "seoTitle": "Calculadora de TDEE - Calculadora de Gasto Energético Total Diario",
+    "metaDescription": "Calcula tu Gasto Energético Total Diario (TDEE) para entender cuántas calorías quemas diariamente. Calculadora gratuita de TDEE para manejo de peso y objetivos fitness.",
+    "keywords": [
+      "calculadora tdee",
+      "gasto energético total diario",
+      "calculadora quema calorías diaria",
+      "calculadora bmr tdee",
+      "calculadora gasto calórico",
+      "calculadora tasa metabólica",
+      "calculadora energía diaria",
+      "cuántas calorías quemo diariamente",
+      "cálculo tdee",
+      "calculadora gasto energético"
+    ],
+    "longTailKeywords": [
+      "cómo calcular tdee",
+      "cuál es mi gasto energético total diario",
+      "calculadora tdee basada en nivel actividad",
+      "calculadora gasto calórico diario",
+      "calculadora tdee vs bmr",
+      "cuántas calorías quemo en un día",
+      "calculadora tdee con frecuencia ejercicio",
+      "cálculo gasto energético diario",
+      "calculadora tdee para pérdida peso",
+      "cómo encontrar tu tdee"
+    ],
+    "slug": "tdee-calculator",
+    "category": "Health",
+    "calculatorComponent": "TDEECalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "calculadora tdee",
+      "gasto energético diario",
+      "quema calorías",
+      "tasa metabólica",
+      "nivel actividad",
+      "manejo peso",
+      "seguimiento fitness"
+    ],
+    "summary": "Calcula tu Gasto Energético Total Diario (TDEE) para entender tu tasa de quema calórica diaria y apoyar objetivos de manejo de peso.",
+    "description": "Calculadora profesional de TDEE que determina tu Gasto Energético Total Diario multiplicando la Tasa Metabólica Basal (BMR) por multiplicadores de nivel de actividad. Esencial para entender necesidades calóricas diarias, planificación de manejo de peso y establecimiento de objetivos fitness basados en tu estilo de vida y hábitos de ejercicio.",
+    "instructions": [
+      "Ingresa tu peso corporal en kilogramos o libras",
+      "Ingresa tu altura en centímetros o pulgadas",
+      "Selecciona tu género",
+      "Ingresa tu edad",
+      "Elige tu nivel de actividad que mejor describe tu estilo de vida",
+      "Opcionalmente especifica tu frecuencia de ejercicio para más precisión",
+      "Ve tu BMR, TDEE y análisis de nivel de actividad"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Peso Corporal",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unidad de Peso",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "height",
+        "label": "Altura",
+        "type": "number",
+        "default": 170,
+        "min": 100,
+        "max": 250,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "heightUnit",
+        "label": "Unidad de Altura",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Género",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Edad",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "años"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Nivel de Actividad",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "exerciseFrequency",
+        "label": "Frecuencia de Ejercicio",
+        "type": "select",
+        "default": "moderate",
+        "options": ["none", "light", "moderate", "heavy", "very_heavy"]
+      }
+    ],
+    "formula": "BMR = 10 × Peso(kg) + 6.25 × Altura(cm) - 5 × Edad + 5 (hombres) / -161 (mujeres)\nTDEE = BMR × Multiplicador Actividad\nMultiplicadores Actividad: Sedentario (1.2), Ligeramente Activo (1.375), Moderadamente Activo (1.55), Muy Activo (1.725), Extremadamente Activo (1.9)",
+    "output": {
+      "label": "Gasto Energético Total Diario (TDEE)",
+      "default": "0 calorías",
+      "format": "number",
+      "unit": "calorías"
+    },
+    "additionalOutputs": [
+      {
+        "name": "bmr",
+        "label": "Tasa Metabólica Basal (BMR)",
+        "default": "0 calorías",
+        "format": "number",
+        "unit": "calorías"
+      },
+      {
+        "name": "activityMultiplier",
+        "label": "Multiplicador de Actividad",
+        "default": "1.0x",
+        "format": "decimal",
+        "unit": "x"
+      },
+      {
+        "name": "activityCategory",
+        "label": "Categoría de Actividad",
+        "default": "Moderada",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "weightLossRate",
+        "label": "Tasa Pérdida Peso (500 cal déficit)",
+        "default": "0 lbs/semana",
+        "format": "decimal",
+        "unit": "lbs/semana"
+      },
+      {
+        "name": "weightGainRate",
+        "label": "Tasa Ganancia Peso (500 cal superávit)",
+        "default": "0 lbs/semana",
+        "format": "decimal",
+        "unit": "lbs/semana"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Trabajador Oficina Sedentario",
+        "inputs": {
+          "weight": 75,
+          "weightUnit": "kg",
+          "height": 175,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 35,
+          "activityLevel": "sedentary",
+          "exerciseFrequency": "none"
+        },
+        "outputs": {
+          "tdee": 2250,
+          "bmr": 1676,
+          "activityMultiplier": 1.2,
+          "activityCategory": "Sedentario",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      },
+      {
+        "title": "Profesional Moderadamente Activo",
+        "inputs": {
+          "weight": 70,
+          "weightUnit": "kg",
+          "height": 170,
+          "heightUnit": "cm",
+          "gender": "female",
+          "age": 28,
+          "activityLevel": "moderately_active",
+          "exerciseFrequency": "moderate"
+        },
+        "outputs": {
+          "tdee": 2450,
+          "bmr": 1400,
+          "activityMultiplier": 1.55,
+          "activityCategory": "Moderadamente Activo",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      },
+      {
+        "title": "Atleta Muy Activo",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "height": 185,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 25,
+          "activityLevel": "very_active",
+          "exerciseFrequency": "very_heavy"
+        },
+        "outputs": {
+          "tdee": 3450,
+          "bmr": 1900,
+          "activityMultiplier": 1.725,
+          "activityCategory": "Muy Activo",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmr-calculator",
+      "maintenance-calories-calculator",
+      "protein-intake-calculator",
+      "water-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcula tu Gasto Energético Total Diario (TDEE) con nuestra completa Calculadora de TDEE. Entender tu tasa de quema calórica diaria es crucial para manejo efectivo de peso, planificación fitness y lograr tus objetivos de salud. Nuestra calculadora combina tu tasa metabólica basal con ajustes de nivel de actividad para proporcionar cálculos precisos de TDEE.",
+      "benefits": [
+        "Calcula gasto calórico diario preciso",
+        "Entiende contribución de tu Tasa Metabólica Basal (BMR)",
+        "Ve cómo nivel de actividad afecta quema calórica total",
+        "Obtén categorización personalizada de nivel de actividad",
+        "Aprende tasas esperadas de cambio de peso",
+        "Toma decisiones informadas sobre ingesta vs gasto calórico",
+        "Apoya objetivos de pérdida, mantenimiento o ganancia muscular",
+        "Rastrea impacto de cambios de estilo de vida en metabolismo"
+      ],
+      "howToUse": [
+        "Ingresa tu peso corporal actual en kilogramos o libras",
+        "Ingresa tu altura en centímetros o pulgadas",
+        "Selecciona tu género para cálculos metabólicos precisos",
+        "Ingresa tu edad para ajustes apropiados por edad",
+        "Elige el nivel de actividad que mejor describe tu rutina diaria típica",
+        "Opcionalmente especifica tu frecuencia de ejercicio para cálculos más precisos",
+        "Revisa tu BMR, TDEE y análisis de nivel de actividad"
+      ],
+      "formulaExplanation": "TDEE (Gasto Energético Total Diario) se calcula multiplicando tu BMR (Tasa Metabólica Basal) por un multiplicador de nivel de actividad. BMR representa calorías quemadas en reposo usando ecuación Mifflin-St Jeor. Multiplicadores de actividad van de 1.2 (sedentario) a 1.9 (extremadamente activo) basados en estilo de vida y hábitos de ejercicio. Esto da tus necesidades calóricas totales diarias para mantener peso actual.",
+      "examples": [
+        "Un hombre sedentario de 35 años pesando 75kg y 175cm de altura tiene BMR de 1,676 calorías y TDEE de 2,250 calorías (usando multiplicador 1.2x), quemando cerca de 574 calorías a través de actividades diarias",
+        "Una mujer moderadamente activa de 28 años pesando 70kg y 170cm de altura tiene BMR de 1,400 calorías y TDEE de 2,450 calorías (usando multiplicador 1.55x), con quema calórica significativa de ejercicio regular",
+        "Un atleta hombre muy activo de 25 años pesando 80kg y 185cm de altura tiene BMR de 1,900 calorías y TDEE de 3,450 calorías (usando multiplicador 1.725x), requiriendo ingesta calórica alta para mantener peso"
+      ],
+      "whoShouldUse": "Entusiastas del fitness rastreando gasto calórico, atletas calculando necesidades energéticas, individuos en programas de pérdida o ganancia de peso, personas cambiando niveles de actividad, dietistas y nutricionistas, aquellos comenzando rutinas de ejercicio nuevas, y cualquiera queriendo entender su tasa metabólica y requerimientos energéticos diarios.",
+      "importantNotes": "Cálculos de TDEE proporcionan estimaciones basadas en niveles de actividad promedio. Resultados individuales pueden variar basados en masa muscular, composición corporal, genética y tipos específicos de ejercicio. Rastrea cambios reales de peso sobre 2-4 semanas y ajusta ingesta calórica en consecuencia. Para pérdida de peso, crea déficit moderado (250-500 calorías por debajo de TDEE). Para ganancia de peso, consume 250-500 calorías por encima de TDEE. Consulta proveedores de atención médica para condiciones médicas.",
+      "relatedTools": [
+        "Calculadora BMR - Calcula tasa metabólica basal solo",
+        "Calculadora Calorías Mantenimiento - Similar a TDEE con desglose de macronutrientes",
+        "Calculadora Ingesta Proteína - Calcula necesidades de proteína para mantenimiento muscular",
+        "Calculadora Ingesta Agua - Calcula requerimientos de hidratación",
+        "Calculadora Peso Ideal - Encuentra rangos saludables de peso"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre BMR y TDEE?",
+          "answer": "BMR (Tasa Metabólica Basal) es las calorías que tu cuerpo quema en reposo completo para mantener funciones básicas. TDEE (Gasto Energético Total Diario) incluye BMR más todas calorías quemadas a través de actividades diarias, ejercicio y digestión. TDEE representa tus necesidades calóricas totales diarias para mantener peso."
+        },
+        {
+          "question": "¿Qué tan preciso es el cálculo de TDEE?",
+          "answer": "Cálculos de TDEE son estimaciones basadas en promedios poblacionales. Precisión depende de qué tan bien tu nivel de actividad coincide con la categoría seleccionada. Para mejores resultados, elige el nivel de actividad que más se acerca a tu estilo de vida. Rastrea cambios reales de peso y ajusta según necesidad - esto proporciona datos más precisos personalizados."
+        },
+        {
+          "question": "¿Por qué varía tanto el TDEE entre personas?",
+          "answer": "TDEE varía basándose en edad, género, peso, altura, masa muscular y nivel de actividad. Personas más jóvenes, hombres, individuos más grandes y aquellos con más masa muscular tienen TDEE más alto. Personas muy activas queman significativamente más calorías diariamente que individuos sedentarios haciendo las mismas actividades."
+        },
+        {
+          "question": "¿Cómo aumento mi TDEE?",
+          "answer": "Aumenta TDEE construyendo masa muscular (BMR más alto), aumentando actividad diaria, agregando sesiones de ejercicio, o eligiendo ocupaciones más activas. Incluso cambios pequeños como usar escaleras en lugar de elevador o estar de pie en lugar de sentado pueden sumar. Entrenamiento de resistencia es particularmente efectivo para aumentos de TDEE a largo plazo."
+        },
+        {
+          "question": "¿Puedo comer mi TDEE para perder peso?",
+          "answer": "Comer a TDEE mantiene peso. Para pérdida de peso, consume 250-500 calorías por debajo de TDEE diariamente para pérdida sostenible de 0.5-1 lb semanal. Déficits más grandes pueden funcionar a corto plazo pero a menudo llevan a pérdida muscular y desaceleración metabólica. Enfócate en alimentos densos en nutrientes y entrenamiento de resistencia para preservar músculo."
+        },
+        {
+          "question": "¿Se desacelera el metabolismo con la edad?",
+          "answer": "Sí, BMR disminuye cerca de 1-2% por década después de los 20 debido a pérdida muscular y cambios hormonales. Esto baja TDEE, así que adultos mayores pueden necesitar menos calorías para mantener peso. Entrenamiento de resistencia regular y ingesta adecuada de proteína ayudan mantener masa muscular y tasa metabólica."
+        },
+        {
+          "question": "¿Cómo afecta el ejercicio al TDEE?",
+          "answer": "El ejercicio aumenta TDEE a través de quema calórica inmediata y construcción muscular a largo plazo. Entrenamiento de resistencia aumenta BMR aumentando masa muscular. Cardio quema calorías durante actividad. Ambos tipos de ejercicio contribuyen a gasto calórico diario más alto y salud metabólica mejorada."
+        },
+        {
+          "question": "¿Debería rastrear mi TDEE real?",
+          "answer": "Estimaciones de calculadora son buenos puntos de partida, pero rastrear TDEE real a través de cambios de peso e ingesta calórica proporciona datos más precisos. Usa la calculadora como guía, luego ajusta basándote en resultados reales. Herramientas como rastreadores fitness pueden ayudar estimar gasto diario más precisamente."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de TDEE",
+    "seoTitle": "Calculadora de TDEE - Calculadora de Gasto Energético Total Diário",
+    "metaDescription": "Calcule seu Gasto Energético Total Diário (TDEE) para entender quantas calorias você queima diariamente. Calculadora gratuita de TDEE para gerenciamento de peso e objetivos fitness.",
+    "keywords": [
+      "calculadora tdee",
+      "gasto energético total diário",
+      "calculadora queima calórica diária",
+      "calculadora bmr tdee",
+      "calculadora gasto calórico",
+      "calculadora taxa metabólica",
+      "calculadora energia diária",
+      "quantas calorias queimo diariamente",
+      "cálculo tdee",
+      "calculadora gasto energético"
+    ],
+    "longTailKeywords": [
+      "como calcular tdee",
+      "qual é meu gasto energético total diário",
+      "calculadora tdee baseada em nível atividade",
+      "calculadora gasto calórico diário",
+      "calculadora tdee vs bmr",
+      "quantas calorias queimo em um dia",
+      "calculadora tdee com frequência exercício",
+      "cálculo gasto energético diário",
+      "calculadora tdee para perda peso",
+      "como encontrar seu tdee"
+    ],
+    "slug": "tdee-calculator",
+    "category": "Health",
+    "calculatorComponent": "TDEECalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "calculadora tdee",
+      "gasto energético diário",
+      "queima calorias",
+      "taxa metabólica",
+      "nível atividade",
+      "gerenciamento peso",
+      "acompanhamento fitness"
+    ],
+    "summary": "Calcule seu Gasto Energético Total Diário (TDEE) para entender sua taxa de queima calórica diária e apoiar objetivos de gerenciamento de peso.",
+    "description": "Calculadora profissional de TDEE que determina seu Gasto Energético Total Diário multiplicando a Taxa Metabólica Basal (BMR) por multiplicadores de nível de atividade. Essencial para entender necessidades calóricas diárias, planejamento de gerenciamento de peso e estabelecimento de objetivos fitness baseados em seu estilo de vida e hábitos de exercício.",
+    "instructions": [
+      "Digite seu peso corporal em quilogramas ou libras",
+      "Digite sua altura em centímetros ou polegadas",
+      "Selecione seu gênero",
+      "Digite sua idade",
+      "Escolha seu nível de atividade que melhor descreve seu estilo de vida",
+      "Opcionalmente especifique sua frequência de exercício para mais precisão",
+      "Veja seu BMR, TDEE e análise de nível de atividade"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Peso Corporal",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unidade de Peso",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "height",
+        "label": "Altura",
+        "type": "number",
+        "default": 170,
+        "min": 100,
+        "max": 250,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "heightUnit",
+        "label": "Unidade de Altura",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Gênero",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Idade",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "anos"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Nível de Atividade",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "exerciseFrequency",
+        "label": "Frequência de Exercício",
+        "type": "select",
+        "default": "moderate",
+        "options": ["none", "light", "moderate", "heavy", "very_heavy"]
+      }
+    ],
+    "formula": "BMR = 10 × Peso(kg) + 6.25 × Altura(cm) - 5 × Idade + 5 (homens) / -161 (mulheres)\nTDEE = BMR × Multiplicador Atividade\nMultiplicadores Atividade: Sedentário (1.2), Ligeramente Ativo (1.375), Moderadamente Ativo (1.55), Muito Ativo (1.725), Extremamente Ativo (1.9)",
+    "output": {
+      "label": "Gasto Energético Total Diário (TDEE)",
+      "default": "0 calorias",
+      "format": "number",
+      "unit": "calorias"
+    },
+    "additionalOutputs": [
+      {
+        "name": "bmr",
+        "label": "Taxa Metabólica Basal (BMR)",
+        "default": "0 calorias",
+        "format": "number",
+        "unit": "calorias"
+      },
+      {
+        "name": "activityMultiplier",
+        "label": "Multiplicador de Atividade",
+        "default": "1.0x",
+        "format": "decimal",
+        "unit": "x"
+      },
+      {
+        "name": "activityCategory",
+        "label": "Categoria de Atividade",
+        "default": "Moderada",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "weightLossRate",
+        "label": "Taxa Perda Peso (500 cal déficit)",
+        "default": "0 lbs/semana",
+        "format": "decimal",
+        "unit": "lbs/semana"
+      },
+      {
+        "name": "weightGainRate",
+        "label": "Taxa Ganho Peso (500 cal superávit)",
+        "default": "0 lbs/semana",
+        "format": "decimal",
+        "unit": "lbs/semana"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Trabalhador Escritório Sedentário",
+        "inputs": {
+          "weight": 75,
+          "weightUnit": "kg",
+          "height": 175,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 35,
+          "activityLevel": "sedentary",
+          "exerciseFrequency": "none"
+        },
+        "outputs": {
+          "tdee": 2250,
+          "bmr": 1676,
+          "activityMultiplier": 1.2,
+          "activityCategory": "Sedentário",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      },
+      {
+        "title": "Profissional Moderadamente Ativo",
+        "inputs": {
+          "weight": 70,
+          "weightUnit": "kg",
+          "height": 170,
+          "heightUnit": "cm",
+          "gender": "female",
+          "age": 28,
+          "activityLevel": "moderately_active",
+          "exerciseFrequency": "moderate"
+        },
+        "outputs": {
+          "tdee": 2450,
+          "bmr": 1400,
+          "activityMultiplier": 1.55,
+          "activityCategory": "Moderadamente Ativo",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      },
+      {
+        "title": "Atleta Muito Ativo",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "height": 185,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 25,
+          "activityLevel": "very_active",
+          "exerciseFrequency": "very_heavy"
+        },
+        "outputs": {
+          "tdee": 3450,
+          "bmr": 1900,
+          "activityMultiplier": 1.725,
+          "activityCategory": "Muito Ativo",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmr-calculator",
+      "maintenance-calories-calculator",
+      "protein-intake-calculator",
+      "water-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule seu Gasto Energético Total Diário (TDEE) com nossa completa Calculadora de TDEE. Entender sua taxa de queima calórica diária é crucial para gerenciamento efetivo de peso, planejamento fitness e alcançar seus objetivos de saúde. Nossa calculadora combina sua taxa metabólica basal com ajustes de nível de atividade para fornecer cálculos precisos de TDEE.",
+      "benefits": [
+        "Calcule gasto calórico diário preciso",
+        "Entenda contribuição de sua Taxa Metabólica Basal (BMR)",
+        "Veja como nível de atividade afeta queima calórica total",
+        "Obtenha categorização personalizada de nível de atividade",
+        "Aprenda taxas esperadas de mudança de peso",
+        "Tome decisões informadas sobre ingestão vs gasto calórico",
+        "Apoie objetivos de perda, manutenção ou ganho muscular",
+        "Acompanhe impacto de mudanças de estilo de vida no metabolismo"
+      ],
+      "howToUse": [
+        "Digite seu peso corporal atual em quilogramas ou libras",
+        "Digite sua altura em centímetros ou polegadas",
+        "Selecione seu gênero para cálculos metabólicos precisos",
+        "Digite sua idade para ajustes apropriados por idade",
+        "Escolha o nível de atividade que melhor descreve sua rotina diária típica",
+        "Opcionalmente especifique sua frequência de exercício para cálculos mais precisos",
+        "Revise seu BMR, TDEE e análise de nível de atividade"
+      ],
+      "formulaExplanation": "TDEE (Gasto Energético Total Diário) é calculado multiplicando seu BMR (Taxa Metabólica Basal) por um multiplicador de nível de atividade. BMR representa calorias queimadas em repouso usando equação Mifflin-St Jeor. Multiplicadores de atividade vão de 1.2 (sedentário) a 1.9 (extremamente ativo) baseados em estilo de vida e hábitos de exercício. Isso dá suas necessidades calóricas totais diárias para manter peso atual.",
+      "examples": [
+        "Um homem sedentário de 35 anos pesando 75kg e 175cm de altura tem BMR de 1,676 calorias e TDEE de 2,250 calorias (usando multiplicador 1.2x), queimando cerca de 574 calorias através de atividades diárias",
+        "Uma mulher moderadamente ativa de 28 anos pesando 70kg e 170cm de altura tem BMR de 1,400 calorias e TDEE de 2,450 calorias (usando multiplicador 1.55x), com queima calórica significativa de exercício regular",
+        "Um atleta homem muito ativo de 25 anos pesando 80kg e 185cm de altura tem BMR de 1,900 calorias e TDEE de 3,450 calorias (usando multiplicador 1.725x), requerendo ingestão calórica alta para manter peso"
+      ],
+      "whoShouldUse": "Entusiastas do fitness acompanhando gasto calórico, atletas calculando necessidades energéticas, indivíduos em programas de perda ou ganho de peso, pessoas mudando níveis de atividade, nutricionistas e dietistas, aqueles começando rotinas de exercício novas, e qualquer pessoa querendo entender sua taxa metabólica e requerimentos energéticos diários.",
+      "importantNotes": "Cálculos de TDEE fornecem estimativas baseadas em níveis de atividade médios. Resultados individuais podem variar baseados em massa muscular, composição corporal, genética e tipos específicos de exercício. Acompanhe mudanças reais de peso sobre 2-4 semanas e ajuste ingestão calórica em conformidade. Para perda de peso, crie déficit moderado (250-500 calorias abaixo do TDEE). Para ganho de peso, consuma 250-500 calorias acima do TDEE. Consulte provedores de cuidados de saúde para condições médicas.",
+      "relatedTools": [
+        "Calculadora BMR - Calcule taxa metabólica basal apenas",
+        "Calculadora Calorias Manutenção - Similar ao TDEE com quebra de macronutrientes",
+        "Calculadora Ingestão Proteína - Calcule necessidades de proteína para manutenção muscular",
+        "Calculadora Ingestão Água - Calcule requerimentos de hidratação",
+        "Calculadora Peso Ideal - Encontre faixas saudáveis de peso"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre BMR e TDEE?",
+          "answer": "BMR (Taxa Metabólica Basal) é as calorias seu corpo queima em repouso completo para manter funções básicas. TDEE (Gasto Energético Total Diário) inclui BMR mais todas calorias queimadas através de atividades diárias, exercício e digestão. TDEE representa suas necessidades calóricas totais diárias para manter peso."
+        },
+        {
+          "question": "Quão preciso é o cálculo de TDEE?",
+          "answer": "Cálculos de TDEE são estimativas baseadas em médias populacionais. Precisão depende de quão bem seu nível de atividade combina com a categoria selecionada. Para melhores resultados, escolha o nível de atividade que mais se aproxima de seu estilo de vida. Acompanhe mudanças reais de peso e ajuste conforme necessário - isso fornece dados mais precisos personalizados."
+        },
+        {
+          "question": "Por que TDEE varia tanto entre pessoas?",
+          "answer": "TDEE varia baseando-se em idade, gênero, peso, altura, massa muscular e nível de atividade. Pessoas mais jovens, homens, indivíduos maiores e aqueles com mais massa muscular têm TDEE mais alto. Pessoas muito ativas queimam significativamente mais calorias diariamente que indivíduos sedentários fazendo as mesmas atividades."
+        },
+        {
+          "question": "¿Como aumentar meu TDEE?",
+          "answer": "Aumente TDEE construindo massa muscular (BMR mais alto), aumentando atividade diária, adicionando sessões de exercício, ou escolhendo ocupações mais ativas. Mesmo mudanças pequenas como usar escadas em vez de elevador ou ficar em pé em vez de sentado podem somar. Treinamento de resistência é particularmente efetivo para aumentos de TDEE a longo prazo."
+        },
+        {
+          "question": "Posso comer meu TDEE para perder peso?",
+          "answer": "Comendo em TDEE mantém peso. Para perda de peso, consuma 250-500 calorias abaixo do TDEE diariamente para perda sustentável de 0.5-1 lb semanal. Défícits maiores podem funcionar a curto prazo mas frequentemente levam a perda muscular e desaceleração metabólica. Foque em alimentos densos em nutrientes e treinamento de resistência para preservar músculo."
+        },
+        {
+          "question": "Metabolismo desacelera com a idade?",
+          "answer": "Sim, BMR diminui cerca de 1-2% por década após idade 20 devido a perda muscular e mudanças hormonais. Isso baixa TDEE, então adultos mais velhos podem precisar menos calorias para manter peso. Treinamento de resistência regular e ingestão adequada de proteína ajudam manter massa muscular e taxa metabólica."
+        },
+        {
+          "question": "¿Como exercício afeta TDEE?",
+          "answer": "Exercício aumenta TDEE através de queima calórica imediata e construção muscular a longo prazo. Treinamento de resistência aumenta BMR aumentando massa muscular. Cardio queima calorias durante atividade. Ambos tipos de exercício contribuem para gasto calórico diário mais alto e saúde metabólica melhorada."
+        },
+        {
+          "question": "Devo acompanhar meu TDEE real?",
+          "answer": "Estimativas de calculadora são bons pontos de partida, mas acompanhar TDEE real através de mudanças de peso e ingestão calórica fornece dados mais precisos. Use a calculadora como guia, então ajuste baseando-se em resultados reais. Ferramentas como rastreadores fitness podem ajudar estimar gasto diário mais precisamente."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de TDEE",
+    "seoTitle": "Calculateur de TDEE - Calculateur de Dépense Énergétique Totale Quotidienne",
+    "metaDescription": "Calculez votre Dépense Énergétique Totale Quotidienne (TDEE) pour comprendre combien de calories vous brûlez quotidiennement. Calculateur gratuit de TDEE pour gestion poids et objectifs fitness.",
+    "keywords": [
+      "calculateur tdee",
+      "dépense énergétique totale quotidienne",
+      "calculateur brûlage calorique quotidien",
+      "calculateur bmr tdee",
+      "calculateur dépense calorique",
+      "calculateur taux métabolique",
+      "calculateur énergie quotidienne",
+      "combien calories brûle quotidiennement",
+      "calcul tdee",
+      "calculateur dépense énergétique"
+    ],
+    "longTailKeywords": [
+      "comment calculer tdee",
+      "quel est ma dépense énergétique totale quotidienne",
+      "calculateur tdee basé sur niveau activité",
+      "calculateur dépense calorique quotidienne",
+      "calculateur tdee vs bmr",
+      "combien calories brûle en une journée",
+      "calculateur tdee avec fréquence exercice",
+      "calcul dépense énergétique quotidienne",
+      "calculateur tdee pour perte poids",
+      "comment trouver son tdee"
+    ],
+    "slug": "tdee-calculator",
+    "category": "Health",
+    "calculatorComponent": "TDEECalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "calculateur tdee",
+      "dépense énergétique quotidienne",
+      "brûlage calories",
+      "taux métabolique",
+      "niveau activité",
+      "gestion poids",
+      "suivi fitness"
+    ],
+    "summary": "Calculez votre Dépense Énergétique Totale Quotidienne (TDEE) pour comprendre votre taux de brûlage calorique quotidien et soutenir objectifs gestion poids.",
+    "description": "Calculateur professionnel de TDEE qui détermine votre Dépense Énergétique Totale Quotidienne en multipliant le Taux Métabolique Basal (BMR) par multiplicateurs niveau d'activité. Essentiel pour comprendre besoins caloriques quotidiens, planification gestion poids et établissement objectifs fitness basés sur votre style de vie et habitudes d'exercice.",
+    "instructions": [
+      "Entrez votre poids corporel en kilogrammes ou livres",
+      "Entrez votre taille en centimètres ou pouces",
+      "Sélectionnez votre genre",
+      "Entrez votre âge",
+      "Choisissez votre niveau d'activité qui décrit le mieux votre style de vie",
+      "Spécifiez optionnellement votre fréquence d'exercice pour plus de précision",
+      "Consultez votre BMR, TDEE et analyse niveau d'activité"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Poids Corporel",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unité de Poids",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "height",
+        "label": "Taille",
+        "type": "number",
+        "default": 170,
+        "min": 100,
+        "max": 250,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "heightUnit",
+        "label": "Unité de Taille",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Genre",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Âge",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "ans"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Niveau d'Activité",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "exerciseFrequency",
+        "label": "Fréquence d'Exercice",
+        "type": "select",
+        "default": "moderate",
+        "options": ["none", "light", "moderate", "heavy", "very_heavy"]
+      }
+    ],
+    "formula": "BMR = 10 × Poids(kg) + 6.25 × Taille(cm) - 5 × Âge + 5 (hommes) / -161 (femmes)\nTDEE = BMR × Multiplicateur Activité\nMultiplicateurs Activité: Sédentaire (1.2), Légèrement Actif (1.375), Modérément Actif (1.55), Très Actif (1.725), Extrêmement Actif (1.9)",
+    "output": {
+      "label": "Dépense Énergétique Totale Quotidienne (TDEE)",
+      "default": "0 calories",
+      "format": "number",
+      "unit": "calories"
+    },
+    "additionalOutputs": [
+      {
+        "name": "bmr",
+        "label": "Taux Métabolique Basal (BMR)",
+        "default": "0 calories",
+        "format": "number",
+        "unit": "calories"
+      },
+      {
+        "name": "activityMultiplier",
+        "label": "Multiplicateur d'Activité",
+        "default": "1.0x",
+        "format": "decimal",
+        "unit": "x"
+      },
+      {
+        "name": "activityCategory",
+        "label": "Catégorie d'Activité",
+        "default": "Modérée",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "weightLossRate",
+        "label": "Taux Perte Poids (500 cal déficit)",
+        "default": "0 lbs/semaine",
+        "format": "decimal",
+        "unit": "lbs/semaine"
+      },
+      {
+        "name": "weightGainRate",
+        "label": "Taux Gain Poids (500 cal surplus)",
+        "default": "0 lbs/semaine",
+        "format": "decimal",
+        "unit": "lbs/semaine"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Travailleur Bureau Sédentaire",
+        "inputs": {
+          "weight": 75,
+          "weightUnit": "kg",
+          "height": 175,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 35,
+          "activityLevel": "sedentary",
+          "exerciseFrequency": "none"
+        },
+        "outputs": {
+          "tdee": 2250,
+          "bmr": 1676,
+          "activityMultiplier": 1.2,
+          "activityCategory": "Sédentaire",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      },
+      {
+        "title": "Professionnel Modérément Actif",
+        "inputs": {
+          "weight": 70,
+          "weightUnit": "kg",
+          "height": 170,
+          "heightUnit": "cm",
+          "gender": "female",
+          "age": 28,
+          "activityLevel": "moderately_active",
+          "exerciseFrequency": "moderate"
+        },
+        "outputs": {
+          "tdee": 2450,
+          "bmr": 1400,
+          "activityMultiplier": 1.55,
+          "activityCategory": "Modérément Actif",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      },
+      {
+        "title": "Athlète Très Actif",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "height": 185,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 25,
+          "activityLevel": "very_active",
+          "exerciseFrequency": "very_heavy"
+        },
+        "outputs": {
+          "tdee": 3450,
+          "bmr": 1900,
+          "activityMultiplier": 1.725,
+          "activityCategory": "Très Actif",
+          "weightLossRate": 1.0,
+          "weightGainRate": 1.0
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmr-calculator",
+      "maintenance-calories-calculator",
+      "protein-intake-calculator",
+      "water-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez votre Dépense Énergétique Totale Quotidienne (TDEE) avec notre Calculateur de TDEE complet. Comprendre votre taux de brûlage calorique quotidien est crucial pour gestion poids effective, planification fitness et atteindre vos objectifs santé. Notre calculateur combine votre taux métabolique basal avec ajustements niveau d'activité pour fournir calculs TDEE précis.",
+      "benefits": [
+        "Calculez dépense calorique quotidienne précise",
+        "Comprenez contribution de votre Taux Métabolique Basal (BMR)",
+        "Voyez comment niveau d'activité affecte brûlage calorique total",
+        "Obtenez catégorisation personnalisée niveau d'activité",
+        "Apprenez taux attendus changement poids",
+        "Prenez décisions éclairées sur apport vs dépense calorique",
+        "Soutenez objectifs perte, maintenance ou gain musculaire",
+        "Suivez impact changements style de vie sur métabolisme"
+      ],
+      "howToUse": [
+        "Entrez votre poids corporel actuel en kilogrammes ou livres",
+        "Entrez votre taille en centimètres ou pouces",
+        "Sélectionnez votre genre pour calculs métaboliques précis",
+        "Entrez votre âge pour ajustements appropriés par âge",
+        "Choisissez niveau d'activité qui décrit le mieux votre routine quotidienne typique",
+        "Spécifiez optionnellement votre fréquence d'exercice pour calculs plus précis",
+        "Consultez votre BMR, TDEE et analyse niveau d'activité"
+      ],
+      "formulaExplanation": "TDEE (Dépense Énergétique Totale Quotidienne) est calculée en multipliant votre BMR (Taux Métabolique Basal) par multiplicateur niveau d'activité. BMR représente calories brûlées au repos utilisant équation Mifflin-St Jeor. Multiplicateurs d'activité vont de 1.2 (sédentaire) à 1.9 (extrêmement actif) basés sur style de vie et habitudes d'exercice. Cela donne vos besoins caloriques totaux quotidiens pour maintenir poids actuel.",
+      "examples": [
+        "Un homme sédentaire de 35 ans pesant 75kg et mesurant 175cm a BMR de 1,676 calories et TDEE de 2,250 calories (utilisant multiplicateur 1.2x), brûlant environ 574 calories à travers activités quotidiennes",
+        "Une femme modérément active de 28 ans pesant 70kg et mesurant 170cm a BMR de 1,400 calories et TDEE de 2,450 calories (utilisant multiplicateur 1.55x), avec brûlage calorique significatif d'exercice régulier",
+        "Un athlète homme très actif de 25 ans pesant 80kg et mesurant 185cm a BMR de 1,900 calories et TDEE de 3,450 calories (utilisant multiplicateur 1.725x), nécessitant apport calorique élevé pour maintenir poids"
+      ],
+      "whoShouldUse": "Passionnés de fitness suivant dépense calorique, athlètes calculant besoins énergétiques, individus sur programmes perte ou gain de poids, personnes changeant niveaux d'activité, diététiciens et nutritionnistes, ceux commençant nouvelles routines d'exercice, et quiconque souhaitant comprendre son taux métabolique et exigences énergétiques quotidiennes.",
+      "importantNotes": "Calculs TDEE fournissent estimations basées sur niveaux d'activité moyens. Résultats individuels peuvent varier basés sur masse musculaire, composition corporelle, génétique et types d'exercice spécifiques. Suivez changements poids réels sur 2-4 semaines et ajustez apport calorique en conséquence. Pour perte de poids, créez déficit modéré (250-500 calories en dessous TDEE). Pour gain de poids, consommez 250-500 calories au-dessus TDEE. Consultez fournisseurs de soins de santé pour conditions médicales.",
+      "relatedTools": [
+        "Calculateur BMR - Calculez taux métabolique basal seulement",
+        "Calculateur Calories Maintenance - Similaire à TDEE avec répartition macronutriments",
+        "Calculateur Apport Protéines - Calculez besoins en protéines pour maintenance musculaire",
+        "Calculateur Apport Eau - Calculez besoins en hydratation",
+        "Calculateur Poids Idéal - Trouvez plages poids saines"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre BMR et TDEE ?",
+          "answer": "BMR (Taux Métabolique Basal) est les calories votre corps brûle au repos complet pour maintenir fonctions de base. TDEE (Dépense Énergétique Totale Quotidienne) inclut BMR plus toutes calories brûlées à travers activités quotidiennes, exercice et digestion. TDEE représente vos besoins caloriques totaux quotidiens pour maintenir poids."
+        },
+        {
+          "question": "À quel point le calcul TDEE est-il précis ?",
+          "answer": "Calculs TDEE sont estimations basées sur moyennes populationnelles. Précision dépend de comment bien votre niveau d'activité correspond à catégorie sélectionnée. Pour meilleurs résultats, choisissez niveau d'activité qui correspond le plus à votre style de vie. Suivez changements poids réels et ajustez selon besoin - cela fournit données plus précises personnalisées."
+        },
+        {
+          "question": "Pourquoi TDEE varie-t-il autant entre personnes ?",
+          "answer": "TDEE varie basé sur âge, genre, poids, taille, masse musculaire et niveau d'activité. Personnes plus jeunes, hommes, individus plus grands et ceux avec plus masse musculaire ont TDEE plus élevé. Personnes très actives brûlent significativement plus calories quotidiennement que individus sédentaires faisant mêmes activités."
+        },
+        {
+          "question": "¿Comment augmenter mon TDEE ?",
+          "answer": "Augmentez TDEE en construisant masse musculaire (BMR plus élevé), augmentant activité quotidienne, ajoutant sessions d'exercice, ou choisissant occupations plus actives. Même changements petits comme utiliser escaliers au lieu ascenseur ou rester debout au lieu assis peuvent s'additionner. Entraînement résistance est particulièrement efficace pour augmentations TDEE long terme."
+        },
+        {
+          "question": "Puis-je manger mon TDEE pour perdre du poids ?",
+          "answer": "Manger à TDEE maintient poids. Pour perte de poids, consommez 250-500 calories en dessous TDEE quotidiennement pour perte durable 0.5-1 lb hebdomadaire. Déficits plus grands peuvent fonctionner court terme mais conduisent souvent perte musculaire et ralentissement métabolique. Concentrez-vous sur aliments denses en nutriments et entraînement résistance pour préserver muscle."
+        },
+        {
+          "question": "Le métabolisme ralentit-il avec l'âge ?",
+          "answer": "Oui, BMR diminue environ 1-2% par décennie après âge 20 dû à perte musculaire et changements hormonaux. Cela baisse TDEE, donc adultes plus âgés peuvent avoir besoin moins calories pour maintenir poids. Entraînement résistance régulier et apport protéique adéquat aident maintenir masse musculaire et taux métabolique."
+        },
+        {
+          "question": "¿Comment l'exercice affecte-t-il TDEE ?",
+          "answer": "L'exercice augmente TDEE à travers brûlage calorique immédiat et construction musculaire long terme. Entraînement résistance augmente BMR en augmentant masse musculaire. Cardio brûle calories pendant activité. Les deux types d'exercice contribuent dépense calorique quotidienne plus élevée et santé métabolique améliorée."
+        },
+        {
+          "question": "Dois-je suivre mon TDEE réel ?",
+          "answer": "Estimations calculateur sont bons points de départ, mais suivre TDEE réel à travers changements poids et apport calorique fournit données plus précises. Utilisez calculateur comme guide, puis ajustez basé sur résultats réels. Outils comme trackers fitness peuvent aider estimer dépense quotidienne plus précisément."
+        }
+      ]
+    }
+  }
+}

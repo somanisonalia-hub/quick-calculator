@@ -1,0 +1,482 @@
+{
+  "en": {
+    "title": "Date Calculator",
+    "seoTitle": "Date Calculator - Calculate Days Between Dates, Add or Subtract Time Online",
+    "metaDescription": "Free date calculator. Calculate days between dates, add or subtract days/weeks/months/years from any date. Perfect for planning events, tracking deadlines, and date calculations.",
+    "keywords": ["date calculator", "days between dates", "date difference calculator", "add days to date", "date math calculator"],
+    "longTailKeywords": ["how many days between two dates", "date calculator add days", "calculate days from date", "date difference in days", "add months to date calculator"],
+    "slug": "date-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["date", "calendar", "time", "calculation", "planning"],
+    "summary": "Calculate days between dates, add or subtract time periods, and perform date arithmetic operations.",
+    "description": "Our date calculator helps you calculate the number of days between two dates, add or subtract days, weeks, months, or years from any date, and perform various date-related calculations. Perfect for event planning, deadline tracking, and understanding time periods.",
+    "instructions": [
+      "Choose calculation type (difference between dates or add/subtract from date)",
+      "Enter the required dates and time periods",
+      "Select the units you want to calculate (days, weeks, months, years)",
+      "Get instant date calculation results"
+    ],
+    "calculatorComponent": {
+      "componentName": "DateCalculator",
+      "inputs": [
+        { "name": "calculationType", "label": "Calculation Type", "type": "select", "default": "difference", "options": ["difference", "add", "subtract"] },
+        { "name": "startDate", "label": "Start Date", "type": "date", "default": "2024-01-01" },
+        { "name": "endDate", "label": "End Date", "type": "date", "default": "2024-01-31" },
+        { "name": "addSubtractValue", "label": "Value to Add/Subtract", "type": "number", "default": 30, "min": 1, "max": 10000 },
+        { "name": "addSubtractUnit", "label": "Unit", "type": "select", "default": "days", "options": ["days", "weeks", "months", "years"] }
+      ],
+      "formula": "Date Difference = End Date - Start Date; New Date = Start Date ± (Value × Unit)",
+      "output": { "label": "Result", "default": "Enter dates above", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Total Days", "field": "totalDays", "format": "number" },
+        { "label": "Weeks", "field": "weeks", "format": "number" },
+        { "label": "Months", "field": "months", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Days Between Dates",
+        "input": "From: January 1, 2024, To: January 31, 2024",
+        "output": "30 days difference"
+      },
+      {
+        "title": "Add Days to Date",
+        "input": "Start: January 15, 2024, Add: 45 days",
+        "output": "March 1, 2024"
+      },
+      {
+        "title": "Subtract Months",
+        "input": "Start: July 15, 2024, Subtract: 6 months",
+        "output": "January 15, 2024"
+      }
+    ],
+    "relatedCalculators": ["age-calculator", "time-zone-calculator", "percentage-calculator"],
+    "seoContent": {
+      "introduction": "Calculate dates and time periods with precision using our comprehensive date calculator. This essential planning tool helps you determine days between dates, add or subtract time periods, and perform complex date arithmetic operations. Whether you're planning project deadlines, tracking important events, calculating ages in days, or managing schedules, our calculator handles all date calculations with accuracy. The tool accounts for leap years, varying month lengths, and calendar irregularities to ensure reliable results for any date calculation needs.",
+      "benefits": [
+        "Provides accurate date calculations accounting for leap years and calendar irregularities",
+        "Supports multiple calculation types including differences, additions, and subtractions",
+        "Handles various time units from days to years for comprehensive date math",
+        "Perfect for planning events, deadlines, and project timelines",
+        "Includes business day calculations for professional scheduling",
+        "User-friendly interface suitable for all planning and calculation needs"
+      ],
+      "steps": [
+        "Select your calculation type (find difference between dates or add/subtract time)",
+        "Enter the starting date for your calculation",
+        "Specify the ending date or time period to add/subtract",
+        "Choose the time unit for your calculation (days, weeks, months, or years)",
+        "Review the calculated result and breakdown of time periods"
+      ],
+      "inputsExplained": [
+        "Start date establishes the beginning point for your date calculation",
+        "End date defines the conclusion point when calculating differences between dates",
+        "Time value specifies the quantity of time units to add or subtract",
+        "Time unit determines whether you're working with days, weeks, months, or years"
+      ],
+      "formulaExplanation": "Date calculations follow precise calendar mathematics that account for varying month lengths (28-31 days) and leap year rules. The calculator uses standard date arithmetic where differences are calculated by counting days between dates, and additions/subtractions apply the specified time periods while maintaining calendar accuracy. For example, adding one month to January 31st results in February 28th or 29th depending on leap year status, ensuring realistic date calculations.",
+      "examples": [
+        "Project deadline calculation: From June 1st to August 15th equals 75 days total",
+        "Event planning: Adding 90 days to March 1st gives May 30th for proper scheduling",
+        "Age in days calculation: From birth date January 1, 2000 to January 1, 2024 equals 8,766 days",
+        "Contract period: Subtracting 6 months from December 31st gives June 30th of the previous year"
+      ],
+      "resultsExplanation": [
+        "Total days shows the exact number of days between or added to dates",
+        "Calculated date displays the result of addition or subtraction operations",
+        "Time breakdown provides weeks, months, or other unit conversions for context",
+        "All calculations account for calendar irregularities and leap years"
+      ],
+      "whoItsFor": "This date calculator serves project managers tracking deadlines, event planners organizing timelines, students calculating historical periods, legal professionals working with contract dates, HR departments managing employee schedules, and anyone needing precise date calculations. It's particularly valuable for business professionals calculating delivery times, educators teaching about historical timelines, and individuals planning important life events or managing personal schedules.",
+      "disclaimer": "This calculator provides date calculations based on standard Gregorian calendar rules and current leap year definitions. Results are estimates for planning purposes and should be verified against official calendars or scheduling systems. For legal contracts, official deadlines, or critical business dates, consult with appropriate professionals or use certified calendar systems. Time zone differences and daylight saving time are not factored into calculations.",
+      "relatedTools": [
+        "Age calculators for determining exact ages in various time units",
+        "Time zone converters for coordinating schedules across different regions",
+        "Percentage calculators for determining completion rates and time allocation"
+      ],
+      "faqs": [
+        {
+          "question": "How does the date calculator handle leap years?",
+          "answer": "The calculator automatically accounts for leap years according to Gregorian calendar rules. Years divisible by 4 are leap years, except for years divisible by 100 but not by 400. This ensures accurate calculations for dates spanning February 29th and maintains proper calendar alignment across all date operations."
+        },
+        {
+          "question": "Can I calculate business days excluding weekends?",
+          "answer": "Yes, the calculator includes options for business day calculations that automatically exclude Saturdays and Sundays. This is particularly useful for project planning, contract deadlines, and business scheduling where only weekdays are counted as working days."
+        },
+        {
+          "question": "What happens when adding months to dates like January 31st?",
+          "answer": "The calculator handles irregular month endings intelligently. Adding one month to January 31st results in February 28th or 29th (depending on leap year), not March 3rd. This ensures realistic date calculations that match how people naturally think about monthly periods."
+        },
+        {
+          "question": "Can I calculate dates in the past or future?",
+          "answer": "Yes, the calculator works with any valid dates in the past or future. You can calculate historical date differences, plan far-future events, or determine dates relative to any starting point. The tool handles dates across different centuries and millennia accurately."
+        },
+        {
+          "question": "How accurate are the date calculations for long time periods?",
+          "answer": "Date calculations are highly accurate for any time period within the Gregorian calendar system. The calculator accounts for all calendar irregularities and maintains precision even for calculations spanning multiple decades or centuries. However, extremely long-term calculations may be affected by potential future calendar reforms."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Fechas",
+    "seoTitle": "Calculadora de Fechas - Calcula Días Entre Fechas, Suma o Resta Tiempo Online",
+    "metaDescription": "Calculadora gratuita de fechas. Calcula días entre fechas, suma o resta días/semanas/meses/años de cualquier fecha. Perfecta para planificar eventos, rastrear plazos y cálculos de fechas.",
+    "keywords": ["calculadora fechas", "días entre fechas", "calculadora diferencia fechas", "sumar días a fecha", "calculadora matemática fechas"],
+    "longTailKeywords": ["cuántos días entre dos fechas", "calculadora fechas sumar días", "calcular días desde fecha", "diferencia fechas en días", "sumar meses a fecha calculadora"],
+    "slug": "date-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["fecha", "calendario", "tiempo", "cálculo", "planificación"],
+    "summary": "Calcula días entre fechas, suma o resta períodos de tiempo, y realiza operaciones aritméticas de fechas.",
+    "description": "Nuestra calculadora de fechas te ayuda a calcular el número de días entre dos fechas, sumar o restar días, semanas, meses o años de cualquier fecha, y realizar varios cálculos relacionados con fechas. Perfecta para planificación de eventos, rastreo de plazos y comprensión de períodos de tiempo.",
+    "instructions": [
+      "Elige tipo de cálculo (diferencia entre fechas o sumar/restar de fecha)",
+      "Ingresa las fechas requeridas y períodos de tiempo",
+      "Selecciona las unidades que quieres calcular (días, semanas, meses, años)",
+      "Obtén resultados instantáneos de cálculo de fechas"
+    ],
+    "calculatorComponent": {
+      "componentName": "DateCalculator",
+      "inputs": [
+        { "name": "calculationType", "label": "Tipo de Cálculo", "type": "select", "default": "difference", "options": ["difference", "add", "subtract"] },
+        { "name": "startDate", "label": "Fecha Inicial", "type": "date", "default": "2024-01-01" },
+        { "name": "endDate", "label": "Fecha Final", "type": "date", "default": "2024-01-31" },
+        { "name": "addSubtractValue", "label": "Valor a Sumar/Restar", "type": "number", "default": 30, "min": 1, "max": 10000 },
+        { "name": "addSubtractUnit", "label": "Unidad", "type": "select", "default": "days", "options": ["days", "weeks", "months", "years"] }
+      ],
+      "formula": "Diferencia de Fecha = Fecha Final - Fecha Inicial; Nueva Fecha = Fecha Inicial ± (Valor × Unidad)",
+      "output": { "label": "Resultado", "default": "Ingresa fechas arriba", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Días Totales", "field": "totalDays", "format": "number" },
+        { "label": "Semanas", "field": "weeks", "format": "number" },
+        { "label": "Meses", "field": "months", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Días Entre Fechas",
+        "input": "Desde: 1 enero 2024, Hasta: 31 enero 2024",
+        "output": "30 días de diferencia"
+      },
+      {
+        "title": "Sumar Días a Fecha",
+        "input": "Inicio: 15 enero 2024, Sumar: 45 días",
+        "output": "1 marzo 2024"
+      },
+      {
+        "title": "Restar Meses",
+        "input": "Inicio: 15 julio 2024, Restar: 6 meses",
+        "output": "15 enero 2024"
+      }
+    ],
+    "relatedCalculators": ["age-calculator", "time-zone-calculator", "percentage-calculator"],
+    "seoContent": {
+      "introduction": "Calcula fechas y períodos de tiempo con precisión usando nuestra calculadora integral de fechas. Esta herramienta esencial de planificación te ayuda a determinar días entre fechas, sumar o restar períodos de tiempo, y realizar operaciones aritméticas complejas de fechas. Ya sea que estés planificando plazos de proyecto, rastreando eventos importantes, calculando edades en días, o manejando horarios, nuestra calculadora maneja todos los cálculos de fechas con exactitud. La herramienta considera años bisiestos, longitudes variables de mes, e irregularidades de calendario para asegurar resultados confiables para cualquier necesidad de cálculo de fechas.",
+      "benefits": [
+        "Proporciona cálculos precisos de fechas considerando años bisiestos e irregularidades de calendario",
+        "Soporta múltiples tipos de cálculo incluyendo diferencias, sumas y restas",
+        "Maneja varias unidades de tiempo desde días hasta años para matemática integral de fechas",
+        "Perfecta para planificación de eventos, plazos y líneas de tiempo de proyecto",
+        "Incluye cálculos de días laborables para programación profesional",
+        "Interfaz fácil de usar adecuada para todas las necesidades de planificación y cálculo"
+      ],
+      "steps": [
+        "Selecciona tu tipo de cálculo (encontrar diferencia entre fechas o sumar/restar tiempo)",
+        "Ingresa la fecha inicial para tu cálculo",
+        "Especifica la fecha final o período de tiempo para sumar/restar",
+        "Elige la unidad de tiempo para tu cálculo (días, semanas, meses o años)",
+        "Revisa el resultado calculado y desglose de períodos de tiempo"
+      ],
+      "inputsExplained": [
+        "Fecha inicial establece el punto inicial para tu cálculo de fecha",
+        "Fecha final define el punto de conclusión cuando calculando diferencias entre fechas",
+        "Valor de tiempo especifica la cantidad de unidades de tiempo para sumar o restar",
+        "Unidad de tiempo determina si estás trabajando con días, semanas, meses o años"
+      ],
+      "formulaExplanation": "Los cálculos de fecha siguen matemáticas precisas de calendario que consideran longitudes variables de mes (28-31 días) y reglas de años bisiestos. La calculadora usa aritmética estándar de fecha donde diferencias se calculan contando días entre fechas, y sumas/restas aplican los períodos de tiempo especificados mientras manteniendo exactitud de calendario. Por ejemplo, sumando un mes al 31 de enero resulta en 28 o 29 de febrero dependiendo del año bisiesto, asegurando cálculos realistas de fecha.",
+      "examples": [
+        "Cálculo de plazo de proyecto: Desde 1 junio hasta 15 agosto equivale a 75 días total",
+        "Planificación de evento: Sumando 90 días al 1 marzo da 30 mayo para programación apropiada",
+        "Cálculo de edad en días: Desde fecha de nacimiento 1 enero 2000 hasta 1 enero 2024 equivale a 8,766 días",
+        "Período de contrato: Restando 6 meses del 31 diciembre da 30 junio del año anterior"
+      ],
+      "resultsExplanation": [
+        "Días totales muestra el número exacto de días entre o agregados a fechas",
+        "Fecha calculada muestra el resultado de operaciones de suma o resta",
+        "Desglose de tiempo proporciona semanas, meses u otras conversiones de unidad para contexto",
+        "Todos los cálculos consideran irregularidades de calendario y años bisiestos"
+      ],
+      "whoItsFor": "Esta calculadora de fechas sirve a gerentes de proyecto rastreando plazos, planificadores de eventos organizando líneas de tiempo, estudiantes calculando períodos históricos, profesionales legales trabajando con fechas de contrato, departamentos de RRHH manejando horarios de empleados, y cualquiera necesitando cálculos precisos de fecha. Es particularmente valiosa para profesionales de negocio calculando tiempos de entrega, educadores enseñando sobre líneas de tiempo históricas, e individuos planificando eventos importantes de vida o manejando horarios personales.",
+      "disclaimer": "Esta calculadora proporciona cálculos de fecha basados en reglas estándar de calendario gregoriano y definiciones actuales de años bisiestos. Los resultados son estimaciones para propósitos de planificación y deben verificarse contra calendarios oficiales o sistemas de programación. Para contratos legales, plazos oficiales, o fechas críticas de negocio, consulta con profesionales apropiados o usa sistemas certificados de calendario. Diferencias de zona horaria y horario de verano no se consideran en cálculos.",
+      "relatedTools": [
+        "Calculadoras de edad para determinar edades exactas en varias unidades de tiempo",
+        "Conversores de zona horaria para coordinar horarios a través de diferentes regiones",
+        "Calculadoras de porcentaje para determinar tasas de finalización y asignación de tiempo"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo maneja la calculadora de fechas los años bisiestos?",
+          "answer": "La calculadora considera automáticamente años bisiestos de acuerdo con reglas de calendario gregoriano. Años divisibles por 4 son años bisiestos, excepto años divisibles por 100 pero no por 400. Esto asegura cálculos precisos para fechas abarcando 29 de febrero y mantiene alineación apropiada de calendario a través de todas las operaciones de fecha."
+        },
+        {
+          "question": "¿Puedo calcular días laborables excluyendo fines de semana?",
+          "answer": "Sí, la calculadora incluye opciones para cálculos de días laborables que excluyen automáticamente sábados y domingos. Esto es particularmente útil para planificación de proyecto, plazos de contrato, y programación de negocio donde solo días de semana se cuentan como días laborables."
+        },
+        {
+          "question": "¿Qué sucede cuando sumando meses a fechas como 31 de enero?",
+          "answer": "La calculadora maneja finales irregulares de mes inteligentemente. Sumando un mes al 31 de enero resulta en 28 o 29 de febrero (dependiendo del año bisiesto), no 3 de marzo. Esto asegura cálculos realistas de fecha que coinciden con cómo las personas piensan naturalmente sobre períodos mensuales."
+        },
+        {
+          "question": "¿Puedo calcular fechas en el pasado o futuro?",
+          "answer": "Sí, la calculadora funciona con cualquier fecha válida en el pasado o futuro. Puedes calcular diferencias de fecha histórica, planificar eventos de futuro lejano, o determinar fechas relativas a cualquier punto inicial. La herramienta maneja fechas a través de diferentes siglos y milenios con precisión."
+        },
+        {
+          "question": "¿Qué tan precisos son los cálculos de fecha para períodos largos de tiempo?",
+          "answer": "Los cálculos de fecha son altamente precisos para cualquier período de tiempo dentro del sistema de calendario gregoriano. La calculadora considera todas las irregularidades de calendario y mantiene precisión incluso para cálculos abarcando múltiples décadas o siglos. Sin embargo, cálculos de largo término extremadamente largo pueden ser afectados por reformas potenciales futuras de calendario."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Datas",
+    "seoTitle": "Calculadora de Datas - Calcule Dias Entre Datas, Some ou Subtraia Tempo Online",
+    "metaDescription": "Calculadora gratuita de datas. Calcule dias entre datas, some ou subtraia dias/semanas/meses/anos de qualquer data. Perfeita para planejar eventos, rastrear prazos e cálculos de data.",
+    "keywords": ["calculadora datas", "dias entre datas", "calculadora diferença datas", "somar dias a data", "calculadora matemática datas"],
+    "longTailKeywords": ["quantos dias entre duas datas", "calculadora datas somar dias", "calcular dias a partir data", "diferença datas em dias", "somar meses a data calculadora"],
+    "slug": "date-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["data", "calendário", "tempo", "cálculo", "planejamento"],
+    "summary": "Calcule dias entre datas, some ou subtraia períodos de tempo, e realize operações aritméticas de data.",
+    "description": "Nossa calculadora de datas ajuda você a calcular o número de dias entre duas datas, somar ou subtrair dias, semanas, meses ou anos de qualquer data, e realizar vários cálculos relacionados a data. Perfeita para planejamento de eventos, rastreamento de prazos e compreensão de períodos de tempo.",
+    "instructions": [
+      "Escolha tipo de cálculo (diferença entre datas ou somar/subtrair de data)",
+      "Digite as datas requeridas e períodos de tempo",
+      "Selecione as unidades que você quer calcular (dias, semanas, meses, anos)",
+      "Obtenha resultados instantâneos de cálculo de data"
+    ],
+    "calculatorComponent": {
+      "componentName": "DateCalculator",
+      "inputs": [
+        { "name": "calculationType", "label": "Tipo de Cálculo", "type": "select", "default": "difference", "options": ["difference", "add", "subtract"] },
+        { "name": "startDate", "label": "Data Inicial", "type": "date", "default": "2024-01-01" },
+        { "name": "endDate", "label": "Data Final", "type": "date", "default": "2024-01-31" },
+        { "name": "addSubtractValue", "label": "Valor a Somar/Subtrair", "type": "number", "default": 30, "min": 1, "max": 10000 },
+        { "name": "addSubtractUnit", "label": "Unidade", "type": "select", "default": "days", "options": ["days", "weeks", "months", "years"] }
+      ],
+      "formula": "Diferença de Data = Data Final - Data Inicial; Nova Data = Data Inicial ± (Valor × Unidade)",
+      "output": { "label": "Resultado", "default": "Digite datas acima", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Dias Totais", "field": "totalDays", "format": "number" },
+        { "label": "Semanas", "field": "weeks", "format": "number" },
+        { "label": "Meses", "field": "months", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Dias Entre Datas",
+        "input": "De: 1 janeiro 2024, Para: 31 janeiro 2024",
+        "output": "30 dias de diferença"
+      },
+      {
+        "title": "Somar Dias a Data",
+        "input": "Início: 15 janeiro 2024, Somar: 45 dias",
+        "output": "1 março 2024"
+      },
+      {
+        "title": "Subtrair Meses",
+        "input": "Início: 15 julho 2024, Subtrair: 6 meses",
+        "output": "15 janeiro 2024"
+      }
+    ],
+    "relatedCalculators": ["age-calculator", "time-zone-calculator", "percentage-calculator"],
+    "seoContent": {
+      "introduction": "Calcule datas e períodos de tempo com precisão usando nossa calculadora abrangente de datas. Esta ferramenta essencial de planejamento ajuda você a determinar dias entre datas, somar ou subtrair períodos de tempo, e realizar operações aritméticas complexas de data. Seja você planejando prazos de projeto, rastreando eventos importantes, calculando idades em dias, ou gerenciando cronogramas, nossa calculadora lida com todos os cálculos de data com exatidão. A ferramenta considera anos bissextos, comprimentos variáveis de mês, e irregularidades de calendário para garantir resultados confiáveis para qualquer necessidade de cálculo de data.",
+      "benefits": [
+        "Fornece cálculos precisos de data considerando anos bissextos e irregularidades de calendário",
+        "Suporta múltiplos tipos de cálculo incluindo diferenças, adições e subtrações",
+        "Lida com várias unidades de tempo de dias a anos para matemática abrangente de data",
+        "Perfeita para planejamento de eventos, prazos e cronogramas de projeto",
+        "Inclui cálculos de dias úteis para agendamento profissional",
+        "Interface amigável adequada para todas as necessidades de planejamento e cálculo"
+      ],
+      "steps": [
+        "Selecione seu tipo de cálculo (encontrar diferença entre datas ou somar/subtrair tempo)",
+        "Digite a data inicial para seu cálculo",
+        "Especifique a data final ou período de tempo para somar/subtrair",
+        "Escolha a unidade de tempo para seu cálculo (dias, semanas, meses ou anos)",
+        "Revise o resultado calculado e detalhamento de períodos de tempo"
+      ],
+      "inputsExplained": [
+        "Data inicial estabelece o ponto inicial para seu cálculo de data",
+        "Data final define o ponto de conclusão quando calculando diferenças entre datas",
+        "Valor de tempo especifica a quantidade de unidades de tempo para somar ou subtrair",
+        "Unidade de tempo determina se você está trabalhando com dias, semanas, meses ou anos"
+      ],
+      "formulaExplanation": "Cálculos de data seguem matemática precisa de calendário que considera comprimentos variáveis de mês (28-31 dias) e regras de ano bissexto. A calculadora usa aritmética padrão de data onde diferenças são calculadas contando dias entre datas, e adições/subtrações aplicam os períodos de tempo especificados enquanto mantendo exatidão de calendário. Por exemplo, somando um mês a 31 janeiro resulta em 28 ou 29 fevereiro dependendo do ano bissexto, garantindo cálculos realistas de data.",
+      "examples": [
+        "Cálculo de prazo de projeto: De 1 junho a 15 agosto equivale a 75 dias total",
+        "Planejamento de evento: Somando 90 dias a 1 março dá 30 maio para agendamento apropriado",
+        "Cálculo de idade em dias: Da data de nascimento 1 janeiro 2000 a 1 janeiro 2024 equivale a 8,766 dias",
+        "Período de contrato: Subtraindo 6 meses de 31 dezembro dá 30 junho do ano anterior"
+      ],
+      "resultsExplanation": [
+        "Dias totais mostra o número exato de dias entre ou adicionados a datas",
+        "Data calculada exibe o resultado de operações de adição ou subtração",
+        "Detalhamento de tempo fornece semanas, meses ou outras conversões de unidade para contexto",
+        "Todos os cálculos consideram irregularidades de calendário e anos bissextos"
+      ],
+      "whoItsFor": "Esta calculadora de datas serve gerentes de projeto rastreando prazos, planejadores de eventos organizando cronogramas, estudantes calculando períodos históricos, profissionais legais trabalhando com datas de contrato, departamentos de RH gerenciando cronogramas de funcionários, e qualquer um precisando de cálculos precisos de data. É particularmente valiosa para profissionais de negócio calculando tempos de entrega, educadores ensinando sobre cronogramas históricos, e indivíduos planejando eventos importantes de vida ou gerenciando cronogramas pessoais.",
+      "disclaimer": "Esta calculadora fornece cálculos de data baseados em regras padrão de calendário gregoriano e definições atuais de ano bissexto. Resultados são estimativas para propósitos de planejamento e devem ser verificados contra calendários oficiais ou sistemas de agendamento. Para contratos legais, prazos oficiais, ou datas críticas de negócio, consulte com profissionais apropriados ou use sistemas certificados de calendário. Diferenças de fuso horário e horário de verão não são consideradas em cálculos.",
+      "relatedTools": [
+        "Calculadoras de idade para determinar idades exatas em várias unidades de tempo",
+        "Conversores de fuso horário para coordenar cronogramas através de diferentes regiões",
+        "Calculadoras de porcentagem para determinar taxas de conclusão e alocação de tempo"
+      ],
+      "faqs": [
+        {
+          "question": "Como a calculadora de datas lida com anos bissextos?",
+          "answer": "A calculadora considera automaticamente anos bissextos de acordo com regras de calendário gregoriano. Anos divisíveis por 4 são anos bissextos, exceto anos divisíveis por 100 mas não por 400. Isso garante cálculos precisos para datas abrangendo 29 fevereiro e mantém alinhamento apropriado de calendário através de todas as operações de data."
+        },
+        {
+          "question": "Posso calcular dias úteis excluindo fins de semana?",
+          "answer": "Sim, a calculadora inclui opções para cálculos de dias úteis que excluem automaticamente sábados e domingos. Isso é particularmente útil para planejamento de projeto, prazos de contrato, e agendamento de negócio onde apenas dias da semana são contados como dias de trabalho."
+        },
+        {
+          "question": "¿Qué sucede cuando sumando meses a fechas como 31 enero?",
+          "answer": "A calculadora lida com finais irregulares de mês inteligentemente. Somando um mês a 31 janeiro resulta em 28 ou 29 fevereiro (dependendo do ano bissexto), não 3 março. Isso garante cálculos realistas de data que coincidem com como pessoas pensam naturalmente sobre períodos mensais."
+        },
+        {
+          "question": "Posso calcular datas no passado ou futuro?",
+          "answer": "Sim, a calculadora funciona com qualquer data válida no passado ou futuro. Você pode calcular diferenças de data histórica, planejar eventos de futuro distante, ou determinar datas relativas a qualquer ponto inicial. A ferramenta lida com datas através de diferentes séculos e milênios com precisão."
+        },
+        {
+          "question": "Quão precisos são os cálculos de data para períodos longos de tempo?",
+          "answer": "Cálculos de data são altamente precisos para qualquer período de tempo dentro do sistema de calendário gregoriano. A calculadora considera todas as irregularidades de calendário e mantém precisão mesmo para cálculos abrangendo múltiplas décadas ou séculos. No entanto, cálculos de longo termo extremamente longo podem ser afetados por reformas potenciais futuras de calendário."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Dates",
+    "seoTitle": "Calculateur de Dates - Calculez Jours Entre Dates, Ajoutez ou Soustrayez Temps en Ligne",
+    "metaDescription": "Calculateur gratuit de dates. Calculez jours entre dates, ajoutez ou soustrayez jours/semaines/mois/années de n'importe quelle date. Parfait pour planifier événements, suivre délais et calculs de dates.",
+    "keywords": ["calculateur dates", "jours entre dates", "calculateur différence dates", "ajouter jours à date", "calculateur mathématique dates"],
+    "longTailKeywords": ["combien jours entre deux dates", "calculateur dates ajouter jours", "calculer jours à partir date", "différence dates en jours", "ajouter mois à date calculateur"],
+    "slug": "date-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["date", "calendrier", "temps", "calcul", "planification"],
+    "summary": "Calculez jours entre dates, ajoutez ou soustrayez périodes de temps, et réalisez opérations arithmétiques de dates.",
+    "description": "Notre calculateur de dates vous aide à calculer le nombre de jours entre deux dates, ajouter ou soustraire jours, semaines, mois ou années de n'importe quelle date, et réaliser divers calculs liés aux dates. Parfait pour planification d'événements, suivi de délais et compréhension de périodes de temps.",
+    "instructions": [
+      "Choisissez type de calcul (différence entre dates ou ajouter/soustraire de date)",
+      "Entrez les dates requises et périodes de temps",
+      "Sélectionnez les unités que vous voulez calculer (jours, semaines, mois, années)",
+      "Obtenez résultats instantanés de calcul de dates"
+    ],
+    "calculatorComponent": {
+      "componentName": "DateCalculator",
+      "inputs": [
+        { "name": "calculationType", "label": "Type de Calcul", "type": "select", "default": "difference", "options": ["difference", "add", "subtract"] },
+        { "name": "startDate", "label": "Date de Départ", "type": "date", "default": "2024-01-01" },
+        { "name": "endDate", "label": "Date de Fin", "type": "date", "default": "2024-01-31" },
+        { "name": "addSubtractValue", "label": "Valeur à Ajouter/Soustraire", "type": "number", "default": 30, "min": 1, "max": 10000 },
+        { "name": "addSubtractUnit", "label": "Unité", "type": "select", "default": "days", "options": ["days", "weeks", "months", "years"] }
+      ],
+      "formula": "Différence de Date = Date de Fin - Date de Départ; Nouvelle Date = Date de Départ ± (Valeur × Unité)",
+      "output": { "label": "Résultat", "default": "Entrez dates ci-dessus", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Jours Totaux", "field": "totalDays", "format": "number" },
+        { "label": "Semaines", "field": "weeks", "format": "number" },
+        { "label": "Mois", "field": "months", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Jours Entre Dates",
+        "input": "De: 1 janvier 2024, À: 31 janvier 2024",
+        "output": "30 jours de différence"
+      },
+      {
+        "title": "Ajouter Jours à Date",
+        "input": "Départ: 15 janvier 2024, Ajouter: 45 jours",
+        "output": "1 mars 2024"
+      },
+      {
+        "title": "Soustraire Mois",
+        "input": "Départ: 15 juillet 2024, Soustraire: 6 mois",
+        "output": "15 janvier 2024"
+      }
+    ],
+    "relatedCalculators": ["age-calculator", "time-zone-calculator", "percentage-calculator"],
+    "seoContent": {
+      "introduction": "Calculez dates et périodes de temps avec précision utilisant notre calculateur complet de dates. Cet outil essentiel de planification vous aide à déterminer jours entre dates, ajouter ou soustraire périodes de temps, et réaliser opérations arithmétiques complexes de dates. Que vous planifiez délais de projet, suiviez événements importants, calculiez âges en jours, ou gériez horaires, notre calculateur gère tous les calculs de dates avec exactitude. L'outil considère années bissextiles, longueurs variables de mois, et irrégularités de calendrier pour assurer résultats fiables pour tout besoin de calcul de dates.",
+      "benefits": [
+        "Fournit calculs précis de dates considérant années bissextiles et irrégularités de calendrier",
+        "Supporte multiples types de calcul incluant différences, additions et soustractions",
+        "Gère diverses unités de temps de jours à années pour mathématique complète de dates",
+        "Parfaite pour planification d'événements, délais et chronologies de projet",
+        "Inclut calculs de jours ouvrables pour programmation professionnelle",
+        "Interface conviviale adaptée à tous besoins de planification et calcul"
+      ],
+      "steps": [
+        "Sélectionnez votre type de calcul (trouver différence entre dates ou ajouter/soustraire temps)",
+        "Entrez la date de départ pour votre calcul",
+        "Spécifiez la date de fin ou période de temps pour ajouter/soustraire",
+        "Choisissez l'unité de temps pour votre calcul (jours, semaines, mois ou années)",
+        "Examinez le résultat calculé et décomposition de périodes de temps"
+      ],
+      "inputsExplained": [
+        "Date de départ établit le point initial pour votre calcul de date",
+        "Date de fin définit le point de conclusion lors de calcul de différences entre dates",
+        "Valeur de temps spécifie la quantité d'unités de temps pour ajouter ou soustraire",
+        "Unité de temps détermine si vous travaillez avec jours, semaines, mois ou années"
+      ],
+      "formulaExplanation": "Calculs de dates suivent mathématiques précises de calendrier qui considèrent longueurs variables de mois (28-31 jours) et règles d'années bissextiles. Le calculateur utilise arithmétique standard de date où différences sont calculées en comptant jours entre dates, et additions/soustractions appliquent les périodes de temps spécifiées tout en maintenant exactitude de calendrier. Par exemple, ajoutant un mois à 31 janvier résulte en 28 ou 29 février selon année bissextile, assurant calculs réalistes de date.",
+      "examples": [
+        "Calcul de délai de projet: De 1 juin à 15 août équivaut à 75 jours total",
+        "Planification d'événement: Ajoutant 90 jours à 1 mars donne 30 mai pour programmation appropriée",
+        "Calcul d'âge en jours: De date de naissance 1 janvier 2000 à 1 janvier 2024 équivaut à 8,766 jours",
+        "Période de contrat: Soustrayant 6 mois de 31 décembre donne 30 juin de l'année précédente"
+      ],
+      "resultsExplanation": [
+        "Jours totaux montre le nombre exact de jours entre ou ajoutés à dates",
+        "Date calculée affiche le résultat d'opérations d'addition ou soustraction",
+        "Décomposition de temps fournit semaines, mois ou autres conversions d'unité pour contexte",
+        "Tous les calculs considèrent irrégularités de calendrier et années bissextiles"
+      ],
+      "whoItsFor": "Ce calculateur de dates sert gestionnaires de projet suivant délais, planificateurs d'événements organisant chronologies, étudiants calculant périodes historiques, professionnels légaux travaillant avec dates de contrat, départements RH gérant horaires d'employés, et quiconque ayant besoin de calculs précis de date. Il est particulièrement précieux pour professionnels d'affaires calculant temps de livraison, éducateurs enseignant sur chronologies historiques, et individus planifiant événements importants de vie ou gérant horaires personnels.",
+      "disclaimer": "Ce calculateur fournit calculs de dates basés sur règles standard de calendrier grégorien et définitions actuelles d'années bissextiles. Résultats sont estimations pour buts de planification et doivent être vérifiés contre calendriers officiels ou systèmes de programmation. Pour contrats légaux, délais officiels, ou dates critiques d'affaires, consultez avec professionnels appropriés ou utilisez systèmes certifiés de calendrier. Différences de fuseau horaire et heure d'été ne sont pas prises en compte dans calculs.",
+      "relatedTools": [
+        "Calculateurs d'âge pour déterminer âges exacts en diverses unités de temps",
+        "Convertisseurs de fuseau horaire pour coordonner horaires à travers différentes régions",
+        "Calculateurs de pourcentage pour déterminer taux de réalisation et allocation de temps"
+      ],
+      "faqs": [
+        {
+          "question": "Comment le calculateur de dates gère-t-il les années bissextiles?",
+          "answer": "Le calculateur considère automatiquement années bissextiles selon règles de calendrier grégorien. Années divisibles par 4 sont années bissextiles, excepté années divisibles par 100 mais pas par 400. Cela assure calculs précis pour dates englobant 29 février et maintient alignement approprié de calendrier à travers toutes les opérations de date."
+        },
+        {
+          "question": "Puis-je calculer jours ouvrables excluant fins de semaine?",
+          "answer": "Oui, le calculateur inclut options pour calculs de jours ouvrables qui excluent automatiquement samedis et dimanches. C'est particulièrement utile pour planification de projet, délais de contrat, et programmation d'affaires où seuls jours de semaine sont comptés comme jours de travail."
+        },
+        {
+          "question": "Que se passe-t-il lors d'ajout de mois à dates comme 31 janvier?",
+          "answer": "Le calculateur gère fins irrégulières de mois intelligemment. Ajoutant un mois à 31 janvier résulte en 28 ou 29 février (selon année bissextile), pas 3 mars. Cela assure calculs réalistes de date qui correspondent à comment les gens pensent naturellement sur périodes mensuelles."
+        },
+        {
+          "question": "Puis-je calculer dates dans le passé ou futur?",
+          "answer": "Oui, le calculateur fonctionne avec n'importe quelles dates valides dans le passé ou futur. Vous pouvez calculer différences de date historique, planifier événements de futur lointain, ou déterminer dates relatives à n'importe quel point initial. L'outil gère dates à travers différents siècles et millénaires avec précision."
+        },
+        {
+          "question": "À quel point les calculs de dates sont-ils précis pour longues périodes de temps?",
+          "answer": "Calculs de dates sont hautement précis pour n'importe quelle période de temps dans le système de calendrier grégorien. Le calculateur considère toutes les irrégularités de calendrier et maintient précision même pour calculs englobant multiples décennies ou siècles. Cependant, calculs de très long terme pourraient être affectés par réformes potentielles futures de calendrier."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1282 @@
+{
+  "en": {
+    "title": "Simple Interest Calculator",
+    "seoTitle": "Simple Interest Calculator - Calculate Interest on Loans and Savings",
+    "metaDescription": "Calculate simple interest on loans, savings, and investments. Free simple interest calculator with principal, rate, and time calculations.",
+    "keywords": [
+      "simple interest calculator",
+      "interest calculator",
+      "simple interest formula",
+      "calculate interest",
+      "loan interest calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate simple interest",
+      "simple interest calculator formula",
+      "what is simple interest",
+      "simple interest vs compound interest calculator",
+      "calculate simple interest on loan",
+      "simple interest calculator for savings",
+      "principal rate time calculator",
+      "simple interest calculation examples",
+      "how simple interest works",
+      "simple interest loan calculator"
+    ],
+    "slug": "simple-interest-calculator",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "simple interest",
+      "interest calculation",
+      "principal",
+      "rate",
+      "time",
+      "loan",
+      "savings",
+      "investment"
+    ],
+    "description": "Calculate simple interest on loans, savings accounts, and investments with our easy-to-use calculator. Simple interest is calculated only on the principal amount, making it straightforward to understand and calculate. Perfect for basic financial calculations and understanding fundamental interest concepts.",
+    "summary": "Calculate simple interest on loans and savings.",
+    "instructions": [
+      "Enter the principal amount (initial amount of money)",
+      "Input the annual interest rate (as a percentage)",
+      "Specify the time period in years, months, or days",
+      "Choose your preferred calculation (interest only, total amount, or breakdown)",
+      "Click 'Calculate' to see the simple interest amount and total repayment"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Principal Amount ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "rate",
+          "label": "Annual Interest Rate (%)",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "max": 50,
+          "step": 0.1
+        },
+        {
+          "name": "timeValue",
+          "label": "Time Period",
+          "type": "number",
+          "default": 1,
+          "min": 0.01,
+          "max": 100,
+          "step": 0.01
+        },
+        {
+          "name": "timeUnit",
+          "label": "Time Unit",
+          "type": "select",
+          "options": [
+            "years",
+            "months",
+            "days"
+          ],
+          "default": "years"
+        },
+        {
+          "name": "calculationType",
+          "label": "Calculation Type",
+          "type": "select",
+          "options": [
+            "interestOnly",
+            "totalAmount",
+            "breakdown"
+          ],
+          "default": "breakdown"
+        }
+      ],
+      "formula": "Simple Interest = P × R × T / 100 where P = Principal, R = Rate (%), T = Time (in years); Total Amount = Principal + Simple Interest",
+      "output": {
+        "label": "Simple Interest Amount",
+        "default": "Enter principal, rate, and time above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Principal Amount",
+          "field": "principalAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Total Amount",
+          "field": "totalAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Interest Rate",
+          "field": "interestRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Time Period",
+          "field": "timePeriod",
+          "format": "text"
+        },
+        {
+          "label": "Daily Interest Rate",
+          "field": "dailyRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Monthly Interest Rate",
+          "field": "monthlyRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "SimpleInterestCalculator"
+    },
+    "examples": [
+      {
+        "title": "One-Year Loan",
+        "input": {
+          "principal": 5000,
+          "rate": 6,
+          "timeValue": 1,
+          "timeUnit": "years",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 300,
+          "totalAmount": 5300,
+          "principalAmount": 5000
+        },
+        "explanation": "A $5,000 loan at 6% annual interest for 1 year will accrue $300 in simple interest. The total amount to be repaid is $5,300."
+      },
+      {
+        "title": "Savings Account Interest",
+        "input": {
+          "principal": 10000,
+          "rate": 3,
+          "timeValue": 2,
+          "timeUnit": "years",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 600,
+          "totalAmount": 10600,
+          "principalAmount": 10000
+        },
+        "explanation": "A $10,000 savings account deposit at 3% annual interest will earn $600 in simple interest over 2 years, for a total of $10,600."
+      },
+      {
+        "title": "Short-Term Loan (6 Months)",
+        "input": {
+          "principal": 2000,
+          "rate": 8,
+          "timeValue": 6,
+          "timeUnit": "months",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 80,
+          "totalAmount": 2080,
+          "principalAmount": 2000
+        },
+        "explanation": "A $2,000 loan at 8% annual interest for 6 months will accrue $80 in simple interest. The borrower will repay $2,080 total."
+      },
+      {
+        "title": "Certificate of Deposit",
+        "input": {
+          "principal": 25000,
+          "rate": 4.5,
+          "timeValue": 18,
+          "timeUnit": "months",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 1687.5,
+          "totalAmount": 26687.5,
+          "principalAmount": 25000
+        },
+        "explanation": "A $25,000 certificate of deposit at 4.5% annual interest for 18 months will earn $1,687.50 in simple interest, maturing to $26,687.50."
+      },
+      {
+        "title": "Personal Loan (90 Days)",
+        "input": {
+          "principal": 1500,
+          "rate": 12,
+          "timeValue": 90,
+          "timeUnit": "days",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 45,
+          "totalAmount": 1545,
+          "principalAmount": 1500
+        },
+        "explanation": "A $1,500 personal loan at 12% annual interest for 90 days will accrue $45 in simple interest. Total repayment is $1,545."
+      },
+      {
+        "title": "Investment Return",
+        "input": {
+          "principal": 8000,
+          "rate": 7,
+          "timeValue": 3,
+          "timeUnit": "years",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 1680,
+          "totalAmount": 9680,
+          "principalAmount": 8000
+        },
+        "explanation": "An $8,000 investment at 7% annual simple interest will grow by $1,680 over 3 years, reaching a total value of $9,680."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Compound Interest Calculator",
+        "slug": "compound-interest-calculator",
+        "description": "Calculate compound interest growth."
+      },
+      {
+        "name": "Loan Calculator",
+        "slug": "loan-calculator",
+        "description": "Calculate loan payments and interest."
+      },
+      {
+        "name": "Savings Calculator",
+        "slug": "savings-calculator",
+        "description": "Calculate savings growth."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Master the fundamentals of interest calculations with our comprehensive simple interest calculator that makes understanding loans, savings, and basic investments straightforward. Simple interest is the foundation of all interest calculations, and knowing how to calculate it helps you understand the true cost of borrowing and the growth potential of saving. Whether you're taking out a loan, saving money, or learning about interest for the first time, this calculator demystifies the principal × rate × time formula that governs basic financial calculations worldwide.",
+      "benefits": [
+        "Calculate simple interest for any loan or savings scenario",
+        "Understand the basic components of interest: principal, rate, and time",
+        "Compare simple vs. compound interest to see the difference",
+        "Make informed decisions about loans and savings accounts",
+        "Learn the fundamental formula that underlies all interest calculations",
+        "Plan loan repayments and savings goals with precision",
+        "Avoid surprises from interest charges on loans",
+        "Build confidence in basic financial mathematics"
+      ],
+      "steps": [
+        "Enter the principal amount (the initial sum of money)",
+        "Input the annual interest rate as a percentage",
+        "Specify the time period in years, months, or days",
+        "Choose what you want to calculate (interest only or total amount)",
+        "Click calculate to see the interest amount and total repayment"
+      ],
+      "inputsExplained": [
+        "Principal is the original amount of money you're borrowing or investing",
+        "Interest rate is the annual percentage charged or earned on the principal",
+        "Time period determines how long the interest will accrue",
+        "Calculation type lets you see just the interest or the total amount including principal"
+      ],
+      "formulaExplanation": "Simple interest uses the fundamental formula: Interest = Principal × Rate × Time (I = P × R × T). The total amount is calculated as: Total Amount = Principal + Interest, or Total Amount = Principal × (1 + Rate × Time). This straightforward calculation means interest is earned only on the original principal amount, not on previously earned interest. For example, $1,000 at 5% for 2 years earns $100 in interest, regardless of whether it's a loan or savings account. The formula works the same for both borrowing and lending scenarios.",
+      "examples": [
+        "A $5,000 loan at 8% annual interest for 3 years requires $1,200 in interest payments, making the total repayment $6,200.",
+        "A $10,000 savings account at 3% annual interest grows by $900 over 3 years, reaching a total balance of $10,900.",
+        "A $2,000 certificate of deposit at 4.5% for 2 years earns $180 in interest, growing to $2,180 total.",
+        "$15,000 borrowed at 6% for 4 years costs $3,600 in interest, requiring total repayment of $18,600."
+      ],
+      "resultsExplanation": [
+        "Interest amount shows exactly how much interest you'll pay or earn",
+        "Total amount displays the final sum including principal and interest",
+        "Breakdown helps you understand the portion from interest vs. principal",
+        "Clear calculations help you plan payments or growth accurately"
+      ],
+      "whoItsFor": "This simple interest calculator serves students learning financial mathematics, borrowers understanding loan costs, savers calculating account growth, small business owners pricing loans, teachers demonstrating interest concepts, parents teaching children about money, and anyone needing to understand basic interest calculations. It's particularly valuable for first-time borrowers, basic savings account holders, short-term loan comparisons, and educational purposes. The calculator works for any scenario involving straightforward interest calculations without compounding complexity.",
+      "disclaimer": "This calculator provides simple interest calculations for educational and planning purposes. Actual interest rates and terms may vary by financial institution, loan type, and market conditions. Simple interest is less common for savings accounts and loans than compound interest. This tool does not account for fees, compounding, taxes, or variable rates. For actual loan terms or savings rates, consult your financial institution. Simple interest calculations are estimates and should not replace professional financial advice or official loan documents.",
+      "relatedTools": [
+        "Compound interest calculators for more complex growth calculations",
+        "Loan calculators for installment payment planning",
+        "Savings calculators for long-term accumulation projections"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between simple and compound interest?",
+          "answer": "Simple interest is calculated only on the original principal amount throughout the entire term. Compound interest is calculated on both the principal and previously earned interest. For example, $1,000 at 10% simple interest for 2 years earns $200 total. The same amount with compound interest earns $210 - the extra $10 comes from interest earned on interest. Simple interest is easier to calculate but compound interest grows money faster."
+        },
+        {
+          "question": "When do people use simple interest?",
+          "answer": "Simple interest is used for short-term loans, some personal loans, certain types of bonds, and some savings accounts. It's also used in educational contexts to teach basic interest concepts. Many consumer loans and credit cards use compound interest instead. Simple interest is straightforward and predictable, making it good for understanding the basic mechanics of borrowing and lending before moving to more complex calculations."
+        },
+        {
+          "question": "How do I calculate interest for partial years?",
+          "answer": "Convert the time period to years for the formula. For months, divide by 12 (6 months = 0.5 years). For days, divide by 365 (or 366 in leap years). For example, $1,000 at 8% for 6 months: Interest = $1,000 × 0.08 × 0.5 = $40. This ensures accurate calculations regardless of the time unit. Most calculators handle this conversion automatically, but understanding the math helps you verify results."
+        },
+        {
+          "question": "Is simple interest better for borrowers or lenders?",
+          "answer": "Simple interest is generally better for borrowers because it's easier to understand and calculate. Lenders often prefer compound interest because it generates more interest over time. However, simple interest is more predictable for both parties. Borrowers should understand which type of interest their loans use. For savings, compound interest is usually better for account holders because it grows money faster."
+        },
+        {
+          "question": "How does simple interest affect loan payments?",
+          "answer": "With simple interest loans, you pay interest on the original loan amount for the entire loan term. This means your interest costs are fixed and predictable from the start. Unlike amortizing loans, simple interest loans may have equal payments throughout the term, or interest-only payments with a balloon payment at the end. Understanding simple interest helps you compare different loan structures and calculate total borrowing costs."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Interés Simple",
+    "seoTitle": "Calculadora de Interés Simple - Calcular Interés en Préstamos y Ahorros",
+    "metaDescription": "Calcula interés simple en préstamos, cuentas de ahorro e inversiones. Calculadora gratuita de interés simple con cálculos de principal, tasa y tiempo.",
+    "keywords": [
+      "calculadora interés simple",
+      "calculadora interés",
+      "formula interés simple",
+      "calcular interés",
+      "calculadora interés préstamo"
+    ],
+    "longTailKeywords": [
+      "como calcular interés simple",
+      "calculadora formula interés simple",
+      "que es interés simple",
+      "interés simple vs compuesto calculadora",
+      "calcular interés simple en préstamo",
+      "calculadora interés simple para ahorros",
+      "calculadora principal tasa tiempo",
+      "ejemplos cálculo interés simple",
+      "como funciona interés simple",
+      "calculadora préstamo interés simple"
+    ],
+    "slug": "simple-interest-calculator",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "interés simple",
+      "cálculo interés",
+      "principal",
+      "tasa",
+      "tiempo",
+      "préstamo",
+      "ahorros",
+      "inversión"
+    ],
+    "description": "Calcula interés simple en préstamos, cuentas de ahorro e inversiones con nuestra calculadora fácil de usar. El interés simple se calcula solo sobre el monto principal, haciéndolo directo de entender y calcular. Perfecto para cálculos financieros básicos y comprender conceptos fundamentales de interés.",
+    "summary": "Calcula interés simple en préstamos y ahorros.",
+    "instructions": [
+      "Ingresa el monto principal (cantidad inicial de dinero)",
+      "Ingresa la tasa de interés anual (como porcentaje)",
+      "Especifica el período de tiempo en años, meses o días",
+      "Elige tu cálculo preferido (solo interés, monto total, o desglose)",
+      "Haz clic en 'Calcular' para ver el monto de interés simple y reembolso total"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Monto Principal (€)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "rate",
+          "label": "Tasa de Interés Anual (%)",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "max": 50,
+          "step": 0.1
+        },
+        {
+          "name": "timeValue",
+          "label": "Período de Tiempo",
+          "type": "number",
+          "default": 1,
+          "min": 0.01,
+          "max": 100,
+          "step": 0.01
+        },
+        {
+          "name": "timeUnit",
+          "label": "Unidad de Tiempo",
+          "type": "select",
+          "options": [
+            "years",
+            "months",
+            "days"
+          ],
+          "default": "years"
+        },
+        {
+          "name": "calculationType",
+          "label": "Tipo de Cálculo",
+          "type": "select",
+          "options": [
+            "interestOnly",
+            "totalAmount",
+            "breakdown"
+          ],
+          "default": "breakdown"
+        }
+      ],
+      "formula": "Interés Simple = P × R × T / 100 donde P = Principal, R = Tasa (%), T = Tiempo (en años); Monto Total = Principal + Interés Simple",
+      "output": {
+        "label": "Monto de Interés Simple",
+        "default": "Ingresa principal, tasa y tiempo arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Monto Principal",
+          "field": "principalAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Monto Total",
+          "field": "totalAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Tasa de Interés",
+          "field": "interestRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Período de Tiempo",
+          "field": "timePeriod",
+          "format": "text"
+        },
+        {
+          "label": "Tasa de Interés Diaria",
+          "field": "dailyRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Tasa de Interés Mensual",
+          "field": "monthlyRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "SimpleInterestCalculator"
+    },
+    "examples": [
+      {
+        "title": "Préstamo de Un Año",
+        "input": {
+          "principal": 5000,
+          "rate": 6,
+          "timeValue": 1,
+          "timeUnit": "years",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 300,
+          "totalAmount": 5300,
+          "principalAmount": 5000
+        },
+        "explanation": "Un préstamo de €5,000 al 6% de interés anual por 1 año acumulará €300 en interés simple. El monto total a reembolsar es €5,300."
+      },
+      {
+        "title": "Interés de Cuenta de Ahorro",
+        "input": {
+          "principal": 10000,
+          "rate": 3,
+          "timeValue": 2,
+          "timeUnit": "years",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 600,
+          "totalAmount": 10600,
+          "principalAmount": 10000
+        },
+        "explanation": "Un depósito de €10,000 en cuenta de ahorros al 3% de interés anual ganará €600 en interés simple durante 2 años, para un total de €10,600."
+      },
+      {
+        "title": "Préstamo a Corto Plazo (6 Meses)",
+        "input": {
+          "principal": 2000,
+          "rate": 8,
+          "timeValue": 6,
+          "timeUnit": "months",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 80,
+          "totalAmount": 2080,
+          "principalAmount": 2000
+        },
+        "explanation": "Un préstamo de €2,000 al 8% de interés anual por 6 meses acumulará €80 en interés simple. El prestatario reembolsará €2,080 en total."
+      },
+      {
+        "title": "Certificado de Depósito",
+        "input": {
+          "principal": 25000,
+          "rate": 4.5,
+          "timeValue": 18,
+          "timeUnit": "months",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 1687.5,
+          "totalAmount": 26687.5,
+          "principalAmount": 25000
+        },
+        "explanation": "Un certificado de depósito de €25,000 al 4.5% de interés anual por 18 meses ganará €1,687.50 en interés simple, madurando a €26,687.50."
+      },
+      {
+        "title": "Préstamo Personal (90 Días)",
+        "input": {
+          "principal": 1500,
+          "rate": 12,
+          "timeValue": 90,
+          "timeUnit": "days",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 45,
+          "totalAmount": 1545,
+          "principalAmount": 1500
+        },
+        "explanation": "Un préstamo personal de €1,500 al 12% de interés anual por 90 días acumulará €45 en interés simple. El reembolso total es €1,545."
+      },
+      {
+        "title": "Retorno de Inversión",
+        "input": {
+          "principal": 8000,
+          "rate": 7,
+          "timeValue": 3,
+          "timeUnit": "years",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 1680,
+          "totalAmount": 9680,
+          "principalAmount": 8000
+        },
+        "explanation": "Una inversión de €8,000 al 7% de interés simple anual crecerá €1,680 durante 3 años, alcanzando un valor total de €9,680."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Interés Compuesto",
+        "slug": "compound-interest-calculator",
+        "description": "Calcula crecimiento de interés compuesto."
+      },
+      {
+        "name": "Calculadora de Préstamos",
+        "slug": "loan-calculator",
+        "description": "Calcula pagos de préstamos e interés."
+      },
+      {
+        "name": "Calculadora de Ahorros",
+        "slug": "savings-calculator",
+        "description": "Calcula crecimiento de ahorros."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Domina los fundamentos de cálculos de interés con nuestra calculadora integral de interés simple que hace que entender préstamos, ahorros, e inversiones básicas sea directo. El interés simple es la base de todos los cálculos de interés, y saber cómo calcularlo te ayuda a entender el verdadero costo de endeudamiento y el potencial de crecimiento de ahorrar. Ya sea que estés tomando un préstamo, ahorrando dinero, o aprendiendo sobre interés por primera vez, esta calculadora desmitifica la fórmula principal × tasa × tiempo que gobierna cálculos financieros básicos en todo el mundo.",
+      "benefits": [
+        "Calcula interés simple para cualquier escenario de préstamo o ahorro",
+        "Entiende los componentes básicos de interés: principal, tasa, y tiempo",
+        "Compara interés simple vs. compuesto para ver la diferencia",
+        "Toma decisiones informadas sobre préstamos y cuentas de ahorro",
+        "Aprende la fórmula fundamental que subyace a todos los cálculos de interés",
+        "Planea pagos de préstamos y metas de ahorro con precisión",
+        "Evita sorpresas de cargos de interés en préstamos",
+        "Construye confianza en matemáticas financieras básicas"
+      ],
+      "steps": [
+        "Ingresa el monto principal (la suma inicial de dinero)",
+        "Ingresa la tasa de interés anual como porcentaje",
+        "Especifica el período de tiempo en años, meses, o días",
+        "Elige qué quieres calcular (solo interés o monto total)",
+        "Haz clic en calcular para ver el monto de interés y pago total"
+      ],
+      "inputsExplained": [
+        "Principal es el monto original de dinero que estás pidiendo prestado o invirtiendo",
+        "Tasa de interés es el porcentaje anual cargado o ganado sobre el principal",
+        "Período de tiempo determina cuánto tiempo se acumulará el interés",
+        "Tipo de cálculo te permite ver solo el interés o el monto total incluyendo principal"
+      ],
+      "formulaExplanation": "El interés simple usa la fórmula fundamental: Interés = Principal × Tasa × Tiempo (I = P × R × T). El monto total se calcula como: Monto Total = Principal + Interés, o Monto Total = Principal × (1 + Tasa × Tiempo). Este cálculo directo significa que el interés se gana solo sobre el monto principal original, no sobre interés ganado previamente. Por ejemplo, $1,000 al 5% por 2 años gana $100 en interés, sin importar si es un préstamo o cuenta de ahorro. La fórmula funciona igual para escenarios de endeudamiento y prestamismo.",
+      "examples": [
+        "Un préstamo de $5,000 al 8% interés anual por 3 años requiere $1,200 en pagos de interés, haciendo el pago total $6,200.",
+        "Una cuenta de ahorro de $10,000 al 3% interés anual crece por $900 durante 3 años, alcanzando un balance total de $10,900.",
+        "Un certificado de depósito de $2,000 al 4.5% por 2 años gana $180 en interés, creciendo a $2,180 total.",
+        "$15,000 prestados al 6% por 4 años cuestan $3,600 en interés, requiriendo pago total de $18,600."
+      ],
+      "resultsExplanation": [
+        "Monto de interés muestra exactamente cuánto interés pagarás o ganarás",
+        "Monto total muestra la suma final incluyendo principal e interés",
+        "Desglose te ayuda a entender la porción de interés vs. principal",
+        "Cálculos claros te ayudan a planear pagos o crecimiento con precisión"
+      ],
+      "whoItsFor": "Esta calculadora de interés simple sirve a estudiantes aprendiendo matemáticas financieras, prestatarios entendiendo costos de préstamos, ahorradores calculando crecimiento de cuentas, dueños de pequeños negocios cotizando préstamos, maestros demostrando conceptos de interés, padres enseñando a hijos sobre dinero, y cualquiera necesitando entender cálculos básicos de interés. Es particularmente valiosa para prestatarios primerizos, tenedores de cuentas de ahorro básicas, comparaciones de préstamos a corto plazo, y propósitos educativos. La calculadora funciona para cualquier escenario involucrando cálculos directos de interés sin complejidad de composición.",
+      "disclaimer": "Esta calculadora proporciona cálculos de interés simple para propósitos educativos y de planificación. Las tasas de interés y términos reales pueden variar por institución financiera, tipo de préstamo, y condiciones de mercado. El interés simple es menos común para cuentas de ahorro y préstamos que el interés compuesto. Esta herramienta no considera tarifas, composición, impuestos, o tasas variables. Para términos de préstamo reales o tasas de ahorro, consulta tu institución financiera. Los cálculos de interés simple son estimaciones y no deberían reemplazar consejo financiero profesional o documentos oficiales de préstamo.",
+      "relatedTools": [
+        "Calculadoras de interés compuesto para cálculos de crecimiento más complejos",
+        "Calculadoras de préstamos para planificación de pagos a plazos",
+        "Calculadoras de ahorro para proyecciones de acumulación a largo plazo"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre interés simple e interés compuesto?",
+          "answer": "El interés simple se calcula solo sobre el monto principal original durante todo el término. El interés compuesto se calcula sobre tanto el principal como interés ganado previamente. Por ejemplo, $1,000 al 10% interés simple por 2 años gana $200 total. La misma cantidad con interés compuesto gana $210 - los $10 extra vienen de interés ganado sobre interés. El interés simple es más fácil de calcular pero el interés compuesto hace crecer dinero más rápido."
+        },
+        {
+          "question": "¿Cuándo usan personas interés simple?",
+          "answer": "El interés simple se usa para préstamos a corto plazo, algunos préstamos personales, ciertos tipos de bonos, y algunas cuentas de ahorro. También se usa en contextos educativos para enseñar conceptos básicos de interés. Muchos préstamos de consumidor y tarjetas de crédito usan interés compuesto en su lugar. El interés simple es directo y predecible, haciéndolo bueno para entender la mecánica básica de pedir prestado y prestar antes de pasar a cálculos más complejos."
+        },
+        {
+          "question": "¿Cómo calculo interés para años parciales?",
+          "answer": "Convierte el período de tiempo a años para la fórmula. Para meses, divide por 12 (6 meses = 0.5 años). Para días, divide por 365 (o 366 en años bisiestos). Por ejemplo, $1,000 al 8% por 6 meses: Interés = $1,000 × 0.08 × 0.5 = $40. Esto asegura cálculos precisos sin importar la unidad de tiempo. La mayoría de calculadoras manejan esta conversión automáticamente, pero entender la matemática te ayuda a verificar resultados."
+        },
+        {
+          "question": "¿Es interés simple mejor para prestatarios o prestamistas?",
+          "answer": "El interés simple es generalmente mejor para prestatarios porque es más fácil de entender y calcular. Los prestamistas a menudo prefieren interés compuesto porque genera más interés con el tiempo. Sin embargo, el interés simple es más predecible para ambas partes. Los prestatarios deberían entender qué tipo de interés usan sus préstamos. Para ahorros, el interés compuesto es usualmente mejor para tenedores de cuentas porque hace crecer dinero más rápido."
+        },
+        {
+          "question": "¿Cómo afecta el interés simple a pagos de préstamos?",
+          "answer": "Con préstamos de interés simple, pagas interés sobre el monto original del préstamo por todo el término del préstamo. Esto significa que tus costos de interés son fijos y predecibles desde el inicio. A diferencia de préstamos amortizantes, préstamos de interés simple pueden tener pagos iguales durante el término, o pagos solo de interés con un pago globo al final. Entender interés simple te ayuda a comparar diferentes estructuras de préstamo y calcular costos totales de endeudamiento."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Juros Simples",
+    "seoTitle": "Calculadora de Juros Simples - Calcular Juros em Empréstimos e Poupanças",
+    "metaDescription": "Calcule juros simples em empréstimos, contas de poupança e investimentos. Calculadora gratuita de juros simples com cálculos de principal, taxa e tempo.",
+    "keywords": [
+      "calculadora juros simples",
+      "calculadora juros",
+      "formula juros simples",
+      "calcular juros",
+      "calculadora juros empréstimo"
+    ],
+    "longTailKeywords": [
+      "como calcular juros simples",
+      "calculadora formula juros simples",
+      "o que são juros simples",
+      "juros simples vs compostos calculadora",
+      "calcular juros simples em empréstimo",
+      "calculadora juros simples para poupança",
+      "calculadora principal taxa tempo",
+      "exemplos cálculo juros simples",
+      "como funcionam juros simples",
+      "calculadora empréstimo juros simples"
+    ],
+    "slug": "simple-interest-calculator",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "juros simples",
+      "cálculo juros",
+      "principal",
+      "taxa",
+      "tempo",
+      "empréstimo",
+      "poupanças",
+      "investimento"
+    ],
+    "description": "Calcule juros simples em empréstimos, contas de poupança e investimentos com nossa calculadora fácil de usar. Juros simples são calculados apenas sobre o valor principal, tornando-os diretos de entender e calcular. Perfeito para cálculos financeiros básicos e compreensão de conceitos fundamentais de juros.",
+    "summary": "Calcule juros simples em empréstimos e poupanças.",
+    "instructions": [
+      "Digite o valor principal (quantia inicial de dinheiro)",
+      "Digite a taxa de juros anual (como porcentagem)",
+      "Especifique o período de tempo em anos, meses ou dias",
+      "Escolha seu cálculo preferido (apenas juros, valor total, ou detalhamento)",
+      "Clique em 'Calcular' para ver o valor de juros simples e reembolso total"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Valor Principal (R$)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "rate",
+          "label": "Taxa de Juros Anual (%)",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "max": 50,
+          "step": 0.1
+        },
+        {
+          "name": "timeValue",
+          "label": "Período de Tempo",
+          "type": "number",
+          "default": 1,
+          "min": 0.01,
+          "max": 100,
+          "step": 0.01
+        },
+        {
+          "name": "timeUnit",
+          "label": "Unidade de Tempo",
+          "type": "select",
+          "options": [
+            "years",
+            "months",
+            "days"
+          ],
+          "default": "years"
+        },
+        {
+          "name": "calculationType",
+          "label": "Tipo de Cálculo",
+          "type": "select",
+          "options": [
+            "interestOnly",
+            "totalAmount",
+            "breakdown"
+          ],
+          "default": "breakdown"
+        }
+      ],
+      "formula": "Juros Simples = P × R × T / 100 onde P = Principal, R = Taxa (%), T = Tempo (em anos); Valor Total = Principal + Juros Simples",
+      "output": {
+        "label": "Valor de Juros Simples",
+        "default": "Digite principal, taxa e tempo acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Valor Principal",
+          "field": "principalAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Valor Total",
+          "field": "totalAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Taxa de Juros",
+          "field": "interestRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Período de Tempo",
+          "field": "timePeriod",
+          "format": "text"
+        },
+        {
+          "label": "Taxa de Juros Diária",
+          "field": "dailyRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Taxa de Juros Mensal",
+          "field": "monthlyRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "SimpleInterestCalculator"
+    },
+    "examples": [
+      {
+        "title": "Empréstimo de Um Ano",
+        "input": {
+          "principal": 5000,
+          "rate": 6,
+          "timeValue": 1,
+          "timeUnit": "years",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 300,
+          "totalAmount": 5300,
+          "principalAmount": 5000
+        },
+        "explanation": "Um empréstimo de R$5.000 a 6% de juros anuais por 1 ano acumulará R$300 em juros simples. O valor total a ser reembolsado é R$5.300."
+      },
+      {
+        "title": "Juros de Conta de Poupança",
+        "input": {
+          "principal": 10000,
+          "rate": 3,
+          "timeValue": 2,
+          "timeUnit": "years",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 600,
+          "totalAmount": 10600,
+          "principalAmount": 10000
+        },
+        "explanation": "Um depósito de R$10.000 em conta poupança a 3% de juros anuais ganhará R$600 em juros simples durante 2 anos, para um total de R$10.600."
+      },
+      {
+        "title": "Empréstimo de Curto Prazo (6 Meses)",
+        "input": {
+          "principal": 2000,
+          "rate": 8,
+          "timeValue": 6,
+          "timeUnit": "months",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 80,
+          "totalAmount": 2080,
+          "principalAmount": 2000
+        },
+        "explanation": "Um empréstimo de R$2.000 a 8% de juros anuais por 6 meses acumulará R$80 em juros simples. O tomador reembolsará R$2.080 no total."
+      },
+      {
+        "title": "Certificado de Depósito",
+        "input": {
+          "principal": 25000,
+          "rate": 4.5,
+          "timeValue": 18,
+          "timeUnit": "months",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 1687.5,
+          "totalAmount": 26687.5,
+          "principalAmount": 25000
+        },
+        "explanation": "Um certificado de depósito de R$25.000 a 4.5% de juros anuais por 18 meses ganhará R$1.687,50 em juros simples, amadurecendo para R$26.687,50."
+      },
+      {
+        "title": "Empréstimo Pessoal (90 Dias)",
+        "input": {
+          "principal": 1500,
+          "rate": 12,
+          "timeValue": 90,
+          "timeUnit": "days",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 45,
+          "totalAmount": 1545,
+          "principalAmount": 1500
+        },
+        "explanation": "Um empréstimo pessoal de R$1.500 a 12% de juros anuais por 90 dias acumulará R$45 em juros simples. O reembolso total é R$1.545."
+      },
+      {
+        "title": "Retorno de Investimento",
+        "input": {
+          "principal": 8000,
+          "rate": 7,
+          "timeValue": 3,
+          "timeUnit": "years",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 1680,
+          "totalAmount": 9680,
+          "principalAmount": 8000
+        },
+        "explanation": "Um investimento de R$8.000 a 7% de juros simples anuais crescerá R$1.680 durante 3 anos, alcançando um valor total de R$9.680."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Juros Compostos",
+        "slug": "compound-interest-calculator",
+        "description": "Calcule crescimento de juros compostos."
+      },
+      {
+        "name": "Calculadora de Empréstimos",
+        "slug": "loan-calculator",
+        "description": "Calcule pagamentos de empréstimos e juros."
+      },
+      {
+        "name": "Calculadora de Poupança",
+        "slug": "savings-calculator",
+        "description": "Calcule crescimento de poupança."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Domine os fundamentos de cálculos de juros com nossa calculadora abrangente de juros simples que torna entender empréstimos, poupanças, e investimentos básicos diretos. Os juros simples são a base de todos os cálculos de juros, e saber como calculá-los ajuda você a entender o verdadeiro custo de empréstimo e o potencial de crescimento de economizar. Seja você tomando um empréstimo, economizando dinheiro, ou aprendendo sobre juros pela primeira vez, esta calculadora desmistifica a fórmula principal × taxa × tempo que governa cálculos financeiros básicos em todo o mundo.",
+      "benefits": [
+        "Calcule juros simples para qualquer cenário de empréstimo ou poupança",
+        "Entenda os componentes básicos de juros: principal, taxa, e tempo",
+        "Compare juros simples vs. compostos para ver a diferença",
+        "Tome decisões informadas sobre empréstimos e contas de poupança",
+        "Aprenda a fórmula fundamental que subjaz a todos os cálculos de juros",
+        "Planeje pagamentos de empréstimos e metas de economia com precisão",
+        "Evite surpresas de encargos de juros em empréstimos",
+        "Construa confiança em matemática financeira básica"
+      ],
+      "steps": [
+        "Digite o valor principal (a soma inicial de dinheiro)",
+        "Insira a taxa de juros anual como porcentagem",
+        "Especifique o período de tempo em anos, meses, ou dias",
+        "Escolha o que você quer calcular (apenas juros ou valor total)",
+        "Clique calcular para ver o valor de juros e pagamento total"
+      ],
+      "inputsExplained": [
+        "Principal é o valor original de dinheiro que você está emprestando ou investindo",
+        "Taxa de juros é a porcentagem anual cobrada ou ganha sobre o principal",
+        "Período de tempo determina quanto tempo os juros se acumularão",
+        "Tipo de cálculo permite ver apenas os juros ou o valor total incluindo principal"
+      ],
+      "formulaExplanation": "Os juros simples usam a fórmula fundamental: Juros = Principal × Taxa × Tempo (I = P × R × T). O valor total é calculado como: Valor Total = Principal + Juros, ou Valor Total = Principal × (1 + Taxa × Tempo). Este cálculo direto significa que juros são ganhos apenas sobre o valor principal original, não sobre juros ganhos anteriormente. Por exemplo, $1,000 a 5% por 2 anos ganha $100 em juros, independentemente se é um empréstimo ou conta de poupança. A fórmula funciona igual para cenários de empréstimo e empréstimo.",
+      "examples": [
+        "Um empréstimo de $5,000 a 8% juros anuais por 3 anos requer $1,200 em pagamentos de juros, fazendo o pagamento total $6,200.",
+        "Uma conta de poupança de $10,000 a 3% juros anuais cresce por $900 durante 3 anos, alcançando um saldo total de $10,900.",
+        "Um certificado de depósito de $2,000 a 4.5% por 2 anos ganha $180 em juros, crescendo para $2,180 total.",
+        "$15,000 emprestados a 6% por 4 anos custam $3,600 em juros, requerendo pagamento total de $18,600."
+      ],
+      "resultsExplanation": [
+        "Valor de juros mostra exatamente quanto juros você pagará ou ganhará",
+        "Valor total mostra a soma final incluindo principal e juros",
+        "Quebra ajuda você a entender a porção de juros vs. principal",
+        "Cálculos claros ajudam você a planejar pagamentos ou crescimento com precisão"
+      ],
+      "whoItsFor": "Esta calculadora de juros simples serve estudantes aprendendo matemática financeira, tomadores entendendo custos de empréstimos, economistas calculando crescimento de contas, donos de pequenos negócios cotizando empréstimos, professores demonstrando conceitos de juros, pais ensinando filhos sobre dinheiro, e qualquer pessoa precisando entender cálculos básicos de juros. É particularmente valiosa para tomadores pela primeira vez, detentores de contas de poupança básicas, comparações de empréstimos de curto prazo, e propósitos educacionais. A calculadora funciona para qualquer cenário envolvendo cálculos diretos de juros sem complexidade de composição.",
+      "disclaimer": "Esta calculadora fornece cálculos de juros simples para propósitos educacionais e de planejamento. Taxas de juros e termos reais podem variar por instituição financeira, tipo de empréstimo, e condições de mercado. Juros simples são menos comuns para contas de poupança e empréstimos que juros compostos. Esta ferramenta não considera taxas, composição, impostos, ou taxas variáveis. Para termos de empréstimo reais ou taxas de poupança, consulte sua instituição financeira. Cálculos de juros simples são estimativas e não deveriam substituir conselho financeiro profissional ou documentos oficiais de empréstimo.",
+      "relatedTools": [
+        "Calculadoras de juros compostos para cálculos de crescimento mais complexos",
+        "Calculadoras de empréstimo para planejamento de pagamentos parcelados",
+        "Calculadoras de poupança para projeções de acumulação de longo prazo"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre juros simples e juros compostos?",
+          "answer": "Juros simples são calculados apenas sobre o valor principal original durante todo o termo. Juros compostos são calculados sobre tanto o principal quanto juros ganhos anteriormente. Por exemplo, $1,000 a 10% juros simples por 2 anos ganha $200 total. A mesma quantia com juros compostos ganha $210 - os $10 extras vêm de juros ganhos sobre juros. Juros simples são mais fáceis de calcular mas juros compostos fazem dinheiro crescer mais rápido."
+        },
+        {
+          "question": "Quando pessoas usam juros simples?",
+          "answer": "Juros simples são usados para empréstimos de curto prazo, alguns empréstimos pessoais, certos tipos de títulos, e algumas contas de poupança. Também são usados em contextos educacionais para ensinar conceitos básicos de juros. Muitos empréstimos de consumidor e cartões de crédito usam juros compostos ao invés. Juros simples são diretos e previsíveis, tornando-os bons para entender a mecânica básica de emprestar e emprestar antes de passar para cálculos mais complexos."
+        },
+        {
+          "question": "¿Como calculo juros para anos parciais?",
+          "answer": "Converta o período de tempo para anos para a fórmula. Para meses, divida por 12 (6 meses = 0.5 anos). Para dias, divida por 365 (ou 366 em anos bissextos). Por exemplo, $1,000 a 8% por 6 meses: Juros = $1,000 × 0.08 × 0.5 = $40. Isso garante cálculos precisos independentemente da unidade de tempo. A maioria das calculadoras lida com esta conversão automaticamente, mas entender a matemática ajuda você a verificar resultados."
+        },
+        {
+          "question": "Juros simples são melhores para tomadores ou emprestadores?",
+          "answer": "Juros simples são geralmente melhores para tomadores porque são mais fáceis de entender e calcular. Emprestadores frequentemente preferem juros compostos porque geram mais juros ao longo do tempo. No entanto, juros simples são mais previsíveis para ambas as partes. Tomadores deveriam entender que tipo de juros seus empréstimos usam. Para poupanças, juros compostos são geralmente melhores para detentores de contas porque fazem dinheiro crescer mais rápido."
+        },
+        {
+          "question": "Como juros simples afetam pagamentos de empréstimos?",
+          "answer": "Com empréstimos de juros simples, você paga juros sobre o valor original do empréstimo por todo o termo do empréstimo. Isso significa que seus custos de juros são fixos e previsíveis desde o início. Ao contrário de empréstimos amortizantes, empréstimos de juros simples podem ter pagamentos iguais durante o termo, ou pagamentos apenas de juros com um pagamento globo no final. Entender juros simples ajuda você a comparar diferentes estruturas de empréstimo e calcular custos totais de empréstimo."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculatrice d'Intérêts Simples",
+    "seoTitle": "Calculatrice d'Intérêts Simples - Calculer les Intérêts sur Prêts et Épargnes",
+    "metaDescription": "Calculez les intérêts simples sur prêts, épargnes et investissements. Calculatrice gratuite d'intérêts simples avec calculs de principal, taux et temps.",
+    "keywords": [
+      "calculatrice intérêts simples",
+      "calculatrice intérêt",
+      "formule intérêts simples",
+      "calculer intérêt",
+      "calculatrice intérêt prêt"
+    ],
+    "longTailKeywords": [
+      "comment calculer intérêts simples",
+      "calculatrice formule intérêts simples",
+      "qu'est-ce que les intérêts simples",
+      "intérêts simples vs composés calculatrice",
+      "calculer intérêts simples sur prêt",
+      "calculatrice intérêts simples pour épargne",
+      "calculatrice principal taux temps",
+      "exemples calcul intérêts simples",
+      "comment fonctionnent intérêts simples",
+      "calculatrice prêt intérêts simples"
+    ],
+    "slug": "simple-interest-calculator",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "intérêts simples",
+      "calcul intérêt",
+      "principal",
+      "taux",
+      "temps",
+      "prêt",
+      "épargnes",
+      "investissement"
+    ],
+    "description": "Calculez les intérêts simples sur prêts, comptes d'épargne et investissements avec notre calculatrice facile à utiliser. Les intérêts simples sont calculés uniquement sur le montant principal, les rendant faciles à comprendre et à calculer. Parfait pour les calculs financiers de base et la compréhension des concepts fondamentaux d'intérêt.",
+    "summary": "Calculez les intérêts simples sur prêts et épargnes.",
+    "instructions": [
+      "Entrez le montant principal (montant initial d'argent)",
+      "Saisissez le taux d'intérêt annuel (en pourcentage)",
+      "Spécifiez la période de temps en années, mois ou jours",
+      "Choisissez votre calcul préféré (intérêts seulement, montant total, ou détail)",
+      "Cliquez sur 'Calculer' pour voir le montant d'intérêts simples et le remboursement total"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Montant Principal (€)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "rate",
+          "label": "Taux d'Intérêt Annuel (%)",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "max": 50,
+          "step": 0.1
+        },
+        {
+          "name": "timeValue",
+          "label": "Période de Temps",
+          "type": "number",
+          "default": 1,
+          "min": 0.01,
+          "max": 100,
+          "step": 0.01
+        },
+        {
+          "name": "timeUnit",
+          "label": "Unité de Temps",
+          "type": "select",
+          "options": [
+            "years",
+            "months",
+            "days"
+          ],
+          "default": "years"
+        },
+        {
+          "name": "calculationType",
+          "label": "Type de Calcul",
+          "type": "select",
+          "options": [
+            "interestOnly",
+            "totalAmount",
+            "breakdown"
+          ],
+          "default": "breakdown"
+        }
+      ],
+      "formula": "Intérêts Simples = P × R × T / 100 où P = Principal, R = Taux (%), T = Temps (en années); Montant Total = Principal + Intérêts Simples",
+      "output": {
+        "label": "Montant d'Intérêts Simples",
+        "default": "Entrez principal, taux et temps ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Montant Principal",
+          "field": "principalAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Montant Total",
+          "field": "totalAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Taux d'Intérêt",
+          "field": "interestRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Période de Temps",
+          "field": "timePeriod",
+          "format": "text"
+        },
+        {
+          "label": "Taux d'Intérêt Journalier",
+          "field": "dailyRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Taux d'Intérêt Mensuel",
+          "field": "monthlyRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "SimpleInterestCalculator"
+    },
+    "examples": [
+      {
+        "title": "Prêt d'Un An",
+        "input": {
+          "principal": 5000,
+          "rate": 6,
+          "timeValue": 1,
+          "timeUnit": "years",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 300,
+          "totalAmount": 5300,
+          "principalAmount": 5000
+        },
+        "explanation": "Un prêt de 5 000€ à 6% d'intérêt annuel pour 1 an accumulera 300€ en intérêts simples. Le montant total à rembourser est de 5 300€."
+      },
+      {
+        "title": "Intérêts de Compte d'Épargne",
+        "input": {
+          "principal": 10000,
+          "rate": 3,
+          "timeValue": 2,
+          "timeUnit": "years",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 600,
+          "totalAmount": 10600,
+          "principalAmount": 10000
+        },
+        "explanation": "Un dépôt de 10 000€ sur compte d'épargne à 3% d'intérêt annuel gagnera 600€ en intérêts simples sur 2 ans, pour un total de 10 600€."
+      },
+      {
+        "title": "Prêt à Court Terme (6 Mois)",
+        "input": {
+          "principal": 2000,
+          "rate": 8,
+          "timeValue": 6,
+          "timeUnit": "months",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 80,
+          "totalAmount": 2080,
+          "principalAmount": 2000
+        },
+        "explanation": "Un prêt de 2 000€ à 8% d'intérêt annuel pour 6 mois accumulera 80€ en intérêts simples. L'emprunteur remboursera 2 080€ au total."
+      },
+      {
+        "title": "Certificat de Dépôt",
+        "input": {
+          "principal": 25000,
+          "rate": 4.5,
+          "timeValue": 18,
+          "timeUnit": "months",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 1687.5,
+          "totalAmount": 26687.5,
+          "principalAmount": 25000
+        },
+        "explanation": "Un certificat de dépôt de 25 000€ à 4.5% d'intérêt annuel pour 18 mois gagnera 1 687,50€ en intérêts simples, arrivant à échéance à 26 687,50€."
+      },
+      {
+        "title": "Prêt Personnel (90 Jours)",
+        "input": {
+          "principal": 1500,
+          "rate": 12,
+          "timeValue": 90,
+          "timeUnit": "days",
+          "calculationType": "breakdown"
+        },
+        "output": {
+          "simpleInterest": 45,
+          "totalAmount": 1545,
+          "principalAmount": 1500
+        },
+        "explanation": "Un prêt personnel de 1 500€ à 12% d'intérêt annuel pour 90 jours accumulera 45€ en intérêts simples. Le remboursement total est de 1 545€."
+      },
+      {
+        "title": "Retour sur Investissement",
+        "input": {
+          "principal": 8000,
+          "rate": 7,
+          "timeValue": 3,
+          "timeUnit": "years",
+          "calculationType": "interestOnly"
+        },
+        "output": {
+          "simpleInterest": 1680,
+          "totalAmount": 9680,
+          "principalAmount": 8000
+        },
+        "explanation": "Un investissement de 8 000€ à 7% d'intérêts simples annuels croîtra de 1 680€ sur 3 ans, atteignant une valeur totale de 9 680€."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice d'Intérêts Composés",
+        "slug": "compound-interest-calculator",
+        "description": "Calculez la croissance des intérêts composés."
+      },
+      {
+        "name": "Calculatrice de Prêt",
+        "slug": "loan-calculator",
+        "description": "Calculez les paiements de prêt et intérêts."
+      },
+      {
+        "name": "Calculatrice d'Épargne",
+        "slug": "savings-calculator",
+        "description": "Calculez la croissance de l'épargne."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Maîtrisez les fondamentaux des calculs d'intérêts avec notre calculatrice complète d'intérêts simples qui rend la compréhension des prêts, épargnes, et investissements de base directe. Les intérêts simples sont la base de tous les calculs d'intérêts, et savoir comment les calculer vous aide à comprendre le vrai coût d'emprunt et le potentiel de croissance d'épargner. Que vous preniez un prêt, épargniez de l'argent, ou appreniez sur les intérêts pour la première fois, cette calculatrice démystifie la formule principal × taux × temps qui régit les calculs financiers de base dans le monde entier.",
+      "benefits": [
+        "Calculez les intérêts simples pour tout scénario de prêt ou épargne",
+        "Comprenez les composants de base des intérêts : principal, taux, et temps",
+        "Comparez intérêts simples vs. composés pour voir la différence",
+        "Prenez des décisions éclairées concernant prêts et comptes d'épargne",
+        "Apprenez la formule fondamentale qui sous-tend tous les calculs d'intérêts",
+        "Planifiez remboursements de prêts et objectifs d'épargne avec précision",
+        "Évitez les surprises des charges d'intérêts sur prêts",
+        "Construisez la confiance en mathématiques financières de base"
+      ],
+      "steps": [
+        "Entrez le montant principal (la somme initiale d'argent)",
+        "Saisissez le taux d'intérêt annuel en pourcentage",
+        "Spécifiez la période de temps en années, mois, ou jours",
+        "Choisissez ce que vous voulez calculer (intérêts seulement ou montant total)",
+        "Cliquez calculer pour voir le montant d'intérêts et remboursement total"
+      ],
+      "inputsExplained": [
+        "Principal est le montant original d'argent que vous empruntez ou investissez",
+        "Taux d'intérêt est le pourcentage annuel chargé ou gagné sur le principal",
+        "Période de temps détermine combien de temps les intérêts s'accumuleront",
+        "Type de calcul vous permet de voir juste les intérêts ou le montant total incluant principal"
+      ],
+      "formulaExplanation": "Les intérêts simples utilisent la formule fondamentale : Intérêts = Principal × Taux × Temps (I = P × R × T). Le montant total est calculé comme : Montant Total = Principal + Intérêts, ou Montant Total = Principal × (1 + Taux × Temps). Ce calcul direct signifie que les intérêts sont gagnés seulement sur le montant principal original, pas sur les intérêts gagnés précédemment. Par exemple, 1 000 $ à 5 % pour 2 ans gagne 100 $ en intérêts, peu importe s'il s'agit d'un prêt ou compte d'épargne. La formule fonctionne pareil pour les scénarios d'emprunt et de prêt.",
+      "examples": [
+        "Un prêt de 5 000 $ à 8 % intérêts annuels pour 3 ans requiert 1 200 $ en paiements d'intérêts, faisant le paiement total 6 200 $.",
+        "Un compte d'épargne de 10 000 $ à 3 % intérêts annuels croît de 900 $ sur 3 ans, atteignant un solde total de 10 900 $.",
+        "Un certificat de dépôt de 2 000 $ à 4,5 % pour 2 ans gagne 180 $ en intérêts, croissant à 2 180 $ total.",
+        "15 000 $ empruntés à 6 % pour 4 ans coûtent 3 600 $ en intérêts, requérant remboursement total de 18 600 $."
+      ],
+      "resultsExplanation": [
+        "Montant d'intérêts montre exactement combien d'intérêts vous paierez ou gagnerez",
+        "Montant total affiche la somme finale incluant principal et intérêts",
+        "Ventilation vous aide à comprendre la portion d'intérêts vs. principal",
+        "Calculs clairs vous aident à planifier paiements ou croissance avec précision"
+      ],
+      "whoItsFor": "Cette calculatrice d'intérêts simples sert étudiants apprenant mathématiques financières, emprunteurs comprenant coûts de prêts, épargnants calculant croissance de comptes, propriétaires de petites entreprises cotant prêts, enseignants démontrant concepts d'intérêts, parents enseignant enfants sur l'argent, et quiconque ayant besoin de comprendre calculs d'intérêts de base. Elle est particulièrement précieuse pour emprunteurs première fois, détenteurs de comptes d'épargne de base, comparaisons de prêts à court terme, et fins éducatives. La calculatrice fonctionne pour tout scénario impliquant calculs d'intérêts directs sans complexité de composition.",
+      "disclaimer": "Cette calculatrice fournit calculs d'intérêts simples à des fins éducatives et de planification. Taux d'intérêts et termes réels peuvent varier par institution financière, type de prêt, et conditions de marché. Intérêts simples sont moins communs pour comptes d'épargne et prêts qu'intérêts composés. Cet outil ne tient pas compte frais, composition, taxes, ou taux variables. Pour termes de prêt réels ou taux d'épargne, consultez votre institution financière. Calculs d'intérêts simples sont estimations et ne devraient pas remplacer conseils financiers professionnels ou documents officiels de prêt.",
+      "relatedTools": [
+        "Calculatrices d'intérêts composés pour calculs de croissance plus complexes",
+        "Calculatrices de prêt pour planification de paiements échelonnés",
+        "Calculatrices d'épargne pour projections d'accumulation à long terme"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre intérêts simples et intérêts composés ?",
+          "answer": "Les intérêts simples sont calculés seulement sur le montant principal original pendant tout le terme. Les intérêts composés sont calculés sur le principal et les intérêts gagnés précédemment. Par exemple, 1 000 $ à 10 % intérêts simples pour 2 ans gagne 200 $ total. Le même montant avec intérêts composés gagne 210 $ - les 10 $ extra viennent d'intérêts gagnés sur intérêts. Intérêts simples sont plus faciles à calculer mais intérêts composés font croître l'argent plus rapidement."
+        },
+        {
+          "question": "Quand les gens utilisent-ils les intérêts simples ?",
+          "answer": "Les intérêts simples sont utilisés pour prêts à court terme, certains prêts personnels, certains types d'obligations, et quelques comptes d'épargne. Ils sont aussi utilisés dans contextes éducatifs pour enseigner concepts d'intérêts de base. Beaucoup de prêts de consommation et cartes de crédit utilisent intérêts composés à la place. Intérêts simples sont directs et prévisibles, les rendant bons pour comprendre la mécanique de base d'emprunter et prêter avant de passer à calculs plus complexes."
+        },
+        {
+          "question": "¿Comment calculer les intérêts pour des années partielles ?",
+          "answer": "Convertissez la période de temps en années pour la formule. Pour mois, divisez par 12 (6 mois = 0,5 années). Pour jours, divisez par 365 (ou 366 en années bissextiles). Par exemple, 1 000 $ à 8 % pour 6 mois : Intérêts = 1 000 $ × 0,08 × 0,5 = 40 $. Cela assure calculs précis peu importe l'unité de temps. La plupart des calculatrices gèrent cette conversion automatiquement, mais comprendre les maths vous aide à vérifier résultats."
+        },
+        {
+          "question": "Les intérêts simples sont-ils meilleurs pour emprunteurs ou prêteurs ?",
+          "answer": "Intérêts simples sont généralement meilleurs pour emprunteurs car ils sont plus faciles à comprendre et calculer. Prêteurs préfèrent souvent intérêts composés car ils génèrent plus d'intérêts au fil du temps. Cependant, intérêts simples sont plus prévisibles pour les deux parties. Emprunteurs devraient comprendre quel type d'intérêts leurs prêts utilisent. Pour épargnes, intérêts composés sont habituellement meilleurs pour détenteurs de comptes car ils font croître l'argent plus rapidement."
+        },
+        {
+          "question": "Comment les intérêts simples affectent-ils les paiements de prêts ?",
+          "answer": "Avec prêts d'intérêts simples, vous payez intérêts sur le montant original du prêt pour tout le terme du prêt. Cela signifie que vos coûts d'intérêts sont fixes et prévisibles dès le début. Contrairement à prêts amortissants, prêts d'intérêts simples peuvent avoir paiements égaux pendant le terme, ou paiements d'intérêts seulement avec paiement ballon à la fin. Comprendre intérêts simples vous aide à comparer différentes structures de prêt et calculer coûts totaux d'emprunt."
+        }
+      ]
+    }
+  }
+}

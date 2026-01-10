@@ -1,0 +1,602 @@
+{
+  "en": {
+    "title": "APR Calculator",
+    "seoTitle": "APR Calculator - Annual Percentage Rate Calculator",
+    "metaDescription": "Calculate Annual Percentage Rate (APR) for loans and credit cards. Free APR calculator with detailed breakdown of finance charges and true cost of borrowing.",
+    "keywords": [
+      "APR calculator",
+      "annual percentage rate calculator",
+      "loan APR calculator",
+      "credit card APR calculator",
+      "finance charge calculator",
+      "true interest rate calculator"
+    ],
+    "longTailKeywords": [
+      "APR calculator for loans",
+      "calculate annual percentage rate",
+      "APR calculator online free",
+      "credit card APR calculation",
+      "loan APR vs interest rate",
+      "finance charge to APR calculator",
+      "true cost of borrowing calculator",
+      "APR calculation formula",
+      "annual percentage rate explained",
+      "how to calculate APR on loans"
+    ],
+    "slug": "apr-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "APR",
+      "annual percentage rate",
+      "finance charges",
+      "interest rate",
+      "loan calculator",
+      "credit card"
+    ],
+    "description": "Calculate the Annual Percentage Rate (APR) for loans, credit cards, and other borrowing arrangements. APR represents the true cost of borrowing by including interest and fees. Compare different loan offers and understand the real cost of credit.",
+    "summary": "Calculate Annual Percentage Rate (APR) for loans and credit",
+    "instructions": [
+      "Enter the loan amount or credit limit",
+      "Input the total finance charges or interest paid over the year",
+      "Enter the loan term in years or number of billing cycles",
+      "Click 'Calculate APR' to see the annual percentage rate",
+      "Compare APR across different loan offers to find the best deal"
+    ],
+    "calculatorComponent": "APRCalculator",
+    "examples": [
+      {
+        "title": "Credit Card APR Calculation",
+        "description": "Calculate APR for a credit card with $10,000 limit and $1,200 in finance charges over one year",
+        "input": {
+          "loanAmount": 10000,
+          "financeCharges": 1200,
+          "loanTerm": 1
+        },
+        "output": {
+          "apr": "12.00%",
+          "monthlyPayment": "$333.33",
+          "totalCost": "$11,200",
+          "financeChargeRatio": "12.00%",
+          "costComparison": "$1,200 finance charges on $10,000 balance = 12% APR"
+        }
+      },
+      {
+        "title": "Auto Loan APR",
+        "description": "Calculate APR for a 5-year auto loan with $25,000 amount and $4,500 total finance charges",
+        "input": {
+          "loanAmount": 25000,
+          "financeCharges": 4500,
+          "loanTerm": 5
+        },
+        "output": {
+          "apr": "3.60%",
+          "monthlyPayment": "$483.33",
+          "totalCost": "$29,000",
+          "financeChargeRatio": "18.00%",
+          "costComparison": "$4,500 finance charges over 5 years = 3.6% APR"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Understanding Annual Percentage Rate (APR) is crucial when comparing loans, credit cards, and other borrowing options. Our APR calculator helps you determine the true cost of borrowing by calculating the annualized rate that includes both interest and fees. APR provides a standardized way to compare different financial products and make informed borrowing decisions.",
+      "benefits": [
+        "Calculate the true cost of borrowing including all fees and charges",
+        "Compare different loan and credit card offers on an equal basis",
+        "Understand how finance charges affect your borrowing costs",
+        "Make informed decisions when shopping for loans or credit cards",
+        "See the difference between nominal interest rates and true APR",
+        "Plan your budget with accurate borrowing cost projections"
+      ],
+      "steps": [
+        "Enter the loan amount or credit limit you're considering",
+        "Input the total finance charges (interest + fees) for the period",
+        "Specify the loan term in years",
+        "Review the calculated APR and total borrowing costs",
+        "Compare APR across different offers to find the best value",
+        "Consider how the APR affects your monthly payments and total cost"
+      ],
+      "inputsExplained": [
+        "Loan amount is the principal amount you're borrowing or your credit limit",
+        "Finance charges include all interest, fees, and other charges over the period",
+        "Loan term is the length of time you're borrowing the money (in years)",
+        "The calculator uses these inputs to determine the annualized cost of borrowing"
+      ],
+      "formulaExplanation": "APR is calculated by dividing total finance charges by the loan amount, then dividing by the loan term, and multiplying by 100 to get a percentage. This provides the annualized rate that includes all borrowing costs, making it easy to compare different financial products on an equal basis.",
+      "examples": [
+        "A credit card with $10,000 limit and $1,200 in annual finance charges has a 12% APR, costing $100 per month in finance charges",
+        "A 5-year auto loan of $25,000 with $4,500 in total finance charges represents a 3.6% APR, or $75 per month in finance charges"
+      ],
+      "resultsExplanation": [
+        "APR shows the annualized cost of borrowing including all fees",
+        "Monthly payment indicates your regular payment amount",
+        "Total cost shows the complete amount you'll pay over the loan term",
+        "Finance charge ratio shows what percentage of the loan amount are fees",
+        "Cost comparison helps you understand the real cost impact",
+        "All figures help you compare offers and make informed decisions"
+      ],
+      "whoItsFor": "This APR calculator is essential for anyone considering loans, credit cards, or other borrowing options. It's particularly valuable for home buyers comparing mortgage offers, car buyers evaluating auto loans, students considering student loans, and consumers shopping for the best credit card or personal loan terms.",
+      "disclaimer": "APR calculations are estimates based on the information provided. Actual APR may vary based on credit score, lender policies, and specific terms. APR represents the annualized cost of borrowing but may not reflect all fees or costs associated with a loan.",
+      "relatedTools": [
+        "mortgage calculator",
+        "loan calculator",
+        "credit card calculator",
+        "compound interest calculator",
+        "effective annual rate calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is APR (Annual Percentage Rate)?",
+          "answer": "APR is the annualized cost of borrowing money, expressed as a percentage. It includes both interest and fees, providing a standardized way to compare different loan and credit card offers."
+        },
+        {
+          "question": "How is APR different from interest rate?",
+          "answer": "Interest rate is the cost of borrowing money, while APR includes the interest rate plus all fees and charges. APR gives you the true annualized cost of borrowing."
+        },
+        {
+          "question": "Why is APR important when comparing loans?",
+          "answer": "APR allows you to compare different loan offers on an equal basis by showing the total annualized cost of borrowing, including all fees and charges."
+        },
+        {
+          "question": "Can APR be lower than the interest rate?",
+          "answer": "No, APR is typically higher than the nominal interest rate because it includes fees and charges in addition to interest."
+        },
+        {
+          "question": "How often should I check my credit card APR?",
+          "answer": "Credit card APR can change frequently. Check your statements regularly and shop around for better rates when your current APR increases."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de TAE",
+    "seoTitle": "Calculadora de TAE - Calculadora de Tasa Anual Equivalente",
+    "metaDescription": "Calcula la Tasa Anual Equivalente (TAE) para préstamos y tarjetas de crédito. Calculadora gratuita de TAE con desglose detallado de cargos financieros y costo real del endeudamiento.",
+    "keywords": [
+      "calculadora TAE",
+      "calculadora tasa anual equivalente",
+      "calculadora TAE préstamos",
+      "calculadora TAE tarjetas crédito",
+      "calculadora cargos financieros",
+      "calculadora tasa interés real"
+    ],
+    "longTailKeywords": [
+      "calculadora TAE para préstamos",
+      "calcular tasa anual equivalente",
+      "calculadora TAE online gratis",
+      "cálculo TAE tarjetas crédito",
+      "préstamo TAE vs tasa interés",
+      "cargos financieros a TAE calculadora",
+      "costo real endeudamiento calculadora",
+      "fórmula cálculo TAE",
+      "tasa anual equivalente explicada",
+      "cómo calcular TAE en préstamos"
+    ],
+    "slug": "apr-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "TAE",
+      "tasa anual equivalente",
+      "cargos financieros",
+      "tasa interés",
+      "calculadora préstamo",
+      "tarjeta crédito"
+    ],
+    "description": "Calcula la Tasa Anual Equivalente (TAE) para préstamos, tarjetas de crédito y otros acuerdos de endeudamiento. La TAE representa el costo real del endeudamiento incluyendo intereses y comisiones. Compara diferentes ofertas de préstamo y entiende el costo real del crédito.",
+    "summary": "Calcula Tasa Anual Equivalente (TAE) para préstamos y crédito",
+    "instructions": [
+      "Ingresa el monto del préstamo o límite de crédito",
+      "Ingresa los cargos financieros totales o intereses pagados durante el año",
+      "Ingresa el plazo del préstamo en años o número de ciclos de facturación",
+      "Haz clic en 'Calcular TAE' para ver la tasa anual equivalente",
+      "Compara TAE entre diferentes ofertas de préstamo para encontrar el mejor trato"
+    ],
+    "calculatorComponent": "APRCalculator",
+    "examples": [
+      {
+        "title": "Cálculo TAE Tarjeta de Crédito",
+        "description": "Calcula TAE para una tarjeta de crédito con $10,000 límite y $1,200 en cargos financieros durante un año",
+        "input": {
+          "loanAmount": 10000,
+          "financeCharges": 1200,
+          "loanTerm": 1
+        },
+        "output": {
+          "apr": "12.00%",
+          "monthlyPayment": "$333.33",
+          "totalCost": "$11,200",
+          "financeChargeRatio": "12.00%",
+          "costComparison": "$1,200 cargos financieros en $10,000 saldo = 12% TAE"
+        }
+      },
+      {
+        "title": "TAE Préstamo Auto",
+        "description": "Calcula TAE para un préstamo de auto de 5 años con $25,000 monto y $4,500 cargos financieros totales",
+        "input": {
+          "loanAmount": 25000,
+          "financeCharges": 4500,
+          "loanTerm": 5
+        },
+        "output": {
+          "apr": "3.60%",
+          "monthlyPayment": "$483.33",
+          "totalCost": "$29,000",
+          "financeChargeRatio": "18.00%",
+          "costComparison": "$4,500 cargos financieros durante 5 años = 3.6% TAE"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender la Tasa Anual Equivalente (TAE) es crucial al comparar préstamos, tarjetas de crédito y otras opciones de endeudamiento. Nuestra calculadora de TAE te ayuda a determinar el costo real del endeudamiento calculando la tasa anualizada que incluye tanto intereses como comisiones. La TAE proporciona una manera estandarizada de comparar diferentes productos financieros y tomar decisiones informadas de endeudamiento.",
+      "benefits": [
+        "Calcula el costo real del endeudamiento incluyendo todas las comisiones y cargos",
+        "Compara diferentes ofertas de préstamo y tarjetas de crédito en base igual",
+        "Entiende cómo los cargos financieros afectan tus costos de endeudamiento",
+        "Toma decisiones informadas al comprar préstamos o tarjetas de crédito",
+        "Ve la diferencia entre tasas de interés nominales y TAE real",
+        "Planea tu presupuesto con proyecciones precisas de costos de endeudamiento"
+      ],
+      "steps": [
+        "Ingresa el monto del préstamo o límite de crédito que estás considerando",
+        "Ingresa los cargos financieros totales (intereses + comisiones) para el período",
+        "Especifica el plazo del préstamo en años",
+        "Revisa la TAE calculada y costos totales de endeudamiento",
+        "Compara TAE entre diferentes ofertas para encontrar el mejor valor",
+        "Considera cómo la TAE afecta tus pagos mensuales y costo total"
+      ],
+      "inputsExplained": [
+        "El monto del préstamo es el principal que estás pidiendo prestado o tu límite de crédito",
+        "Los cargos financieros incluyen todos los intereses, comisiones y otros cargos durante el período",
+        "El plazo del préstamo es la duración del tiempo que estás pidiendo el dinero prestado (en años)",
+        "La calculadora usa estas entradas para determinar el costo anualizado del endeudamiento"
+      ],
+      "formulaExplanation": "La TAE se calcula dividiendo los cargos financieros totales por el monto del préstamo, luego dividiendo por el plazo del préstamo, y multiplicando por 100 para obtener un porcentaje. Esto proporciona la tasa anualizada que incluye todos los costos de endeudamiento, facilitando comparar diferentes productos financieros en base igual.",
+      "examples": [
+        "Una tarjeta de crédito con $10,000 límite y $1,200 en cargos financieros anuales tiene una TAE del 12%, costando $100 por mes en cargos financieros",
+        "Un préstamo de auto de 5 años de $25,000 con $4,500 en cargos financieros totales representa una TAE del 3.6%, o $75 por mes en cargos financieros"
+      ],
+      "resultsExplanation": [
+        "TAE muestra el costo anualizado del endeudamiento incluyendo todas las comisiones",
+        "El pago mensual indica tu monto de pago regular",
+        "El costo total muestra el monto completo que pagarás durante el plazo del préstamo",
+        "El ratio de cargos financieros muestra qué porcentaje del monto del préstamo son comisiones",
+        "La comparación de costo te ayuda a entender el impacto real en costo",
+        "Todas las cifras te ayudan a comparar ofertas y tomar decisiones informadas"
+      ],
+      "whoItsFor": "Esta calculadora de TAE es esencial para cualquiera considerando préstamos, tarjetas de crédito u otras opciones de endeudamiento. Es particularmente valiosa para compradores de vivienda comparando ofertas de hipoteca, compradores de auto evaluando préstamos de auto, estudiantes considerando préstamos estudiantiles, y consumidores comprando los mejores términos de tarjeta de crédito o préstamo personal.",
+      "disclaimer": "Los cálculos de TAE son estimaciones basadas en la información proporcionada. La TAE real puede variar basado en puntaje de crédito, políticas del prestamista y términos específicos. La TAE representa el costo anualizado del endeudamiento pero puede no reflejar todas las comisiones o costos asociados con un préstamo.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora préstamo",
+        "calculadora tarjeta crédito",
+        "calculadora interés compuesto",
+        "calculadora tasa efectiva anual"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es la TAE (Tasa Anual Equivalente)?",
+          "answer": "La TAE es el costo anualizado de pedir dinero prestado, expresado como porcentaje. Incluye tanto intereses como comisiones, proporcionando una manera estandarizada de comparar diferentes ofertas de préstamo y tarjetas de crédito."
+        },
+        {
+          "question": "¿Cómo difiere la TAE de la tasa de interés?",
+          "answer": "La tasa de interés es el costo de pedir dinero prestado, mientras la TAE incluye la tasa de interés más todas las comisiones y cargos. La TAE te da el costo real anualizado del endeudamiento."
+        },
+        {
+          "question": "¿Por qué es importante la TAE al comparar préstamos?",
+          "answer": "La TAE te permite comparar diferentes ofertas de préstamo en base igual mostrando el costo total anualizado del endeudamiento, incluyendo todas las comisiones y cargos."
+        },
+        {
+          "question": "¿Puede la TAE ser más baja que la tasa de interés?",
+          "answer": "No, la TAE es típicamente más alta que la tasa de interés nominal porque incluye comisiones y cargos además de intereses."
+        },
+        {
+          "question": "¿Con qué frecuencia debo verificar la TAE de mi tarjeta de crédito?",
+          "answer": "La TAE de tarjetas de crédito puede cambiar frecuentemente. Verifica tus estados regularmente y busca mejores tasas cuando tu TAE actual aumenta."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de CET",
+    "seoTitle": "Calculadora de CET - Calculadora de Custo Efetivo Total",
+    "metaDescription": "Calcule Custo Efetivo Total (CET) para empréstimos e cartões de crédito. Calculadora gratuita de CET com detalhamento de encargos financeiros e custo real do empréstimo.",
+    "keywords": [
+      "calculadora CET",
+      "calculadora custo efetivo total",
+      "calculadora CET empréstimos",
+      "calculadora CET cartões crédito",
+      "calculadora encargos financeiros",
+      "calculadora taxa juros real"
+    ],
+    "longTailKeywords": [
+      "calculadora CET para empréstimos",
+      "calcular custo efetivo total",
+      "calculadora CET online grátis",
+      "cálculo CET cartões crédito",
+      "empréstimo CET vs taxa juros",
+      "encargos financeiros para CET calculadora",
+      "custo real empréstimo calculadora",
+      "fórmula cálculo CET",
+      "custo efetivo total explicado",
+      "como calcular CET em empréstimos"
+    ],
+    "slug": "apr-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "CET",
+      "custo efetivo total",
+      "encargos financeiros",
+      "taxa juros",
+      "calculadora empréstimo",
+      "cartão crédito"
+    ],
+    "description": "Calcule o Custo Efetivo Total (CET) para empréstimos, cartões de crédito e outros acordos de empréstimo. O CET representa o custo real do empréstimo incluindo juros e taxas. Compare diferentes ofertas de empréstimo e entenda o custo real do crédito.",
+    "summary": "Calcule Custo Efetivo Total (CET) para empréstimos e crédito",
+    "instructions": [
+      "Digite o valor do empréstimo ou limite de crédito",
+      "Digite os encargos financeiros totais ou juros pagos durante o ano",
+      "Digite o prazo do empréstimo em anos ou número de ciclos de cobrança",
+      "Clique em 'Calcular CET' para ver o custo efetivo total",
+      "Compare CET entre diferentes ofertas de empréstimo para encontrar o melhor negócio"
+    ],
+    "calculatorComponent": "APRCalculator",
+    "examples": [
+      {
+        "title": "Cálculo CET Cartão de Crédito",
+        "description": "Calcule CET para um cartão de crédito com R$ 10.000 limite e R$ 1.200 em encargos financeiros durante um ano",
+        "input": {
+          "loanAmount": 10000,
+          "financeCharges": 1200,
+          "loanTerm": 1
+        },
+        "output": {
+          "apr": "12.00%",
+          "monthlyPayment": "$333.33",
+          "totalCost": "$11,200",
+          "financeChargeRatio": "12.00%",
+          "costComparison": "R$ 1.200 encargos financeiros em R$ 10.000 saldo = 12% CET"
+        }
+      },
+      {
+        "title": "CET Empréstimo Carro",
+        "description": "Calcule CET para um empréstimo de carro de 5 anos com R$ 25.000 valor e R$ 4.500 encargos financeiros totais",
+        "input": {
+          "loanAmount": 25000,
+          "financeCharges": 4500,
+          "loanTerm": 5
+        },
+        "output": {
+          "apr": "3.60%",
+          "monthlyPayment": "$483.33",
+          "totalCost": "$29,000",
+          "financeChargeRatio": "18.00%",
+          "costComparison": "R$ 4.500 encargos financeiros durante 5 anos = 3.6% CET"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender o Custo Efetivo Total (CET) é crucial ao comparar empréstimos, cartões de crédito e outras opções de empréstimo. Nossa calculadora de CET ajuda você a determinar o custo real do empréstimo calculando a taxa anualizada que inclui tanto juros quanto taxas. O CET fornece uma maneira padronizada de comparar diferentes produtos financeiros e tomar decisões informadas de empréstimo.",
+      "benefits": [
+        "Calcule o custo real do empréstimo incluindo todas as taxas e encargos",
+        "Compare diferentes ofertas de empréstimo e cartões de crédito em base igual",
+        "Entenda como os encargos financeiros afetam seus custos de empréstimo",
+        "Tome decisões informadas ao comprar empréstimos ou cartões de crédito",
+        "Veja a diferença entre taxas de juros nominais e CET real",
+        "Planeje seu orçamento com projeções precisas de custos de empréstimo"
+      ],
+      "steps": [
+        "Digite o valor do empréstimo ou limite de crédito que você está considerando",
+        "Digite os encargos financeiros totais (juros + taxas) para o período",
+        "Especifique o prazo do empréstimo em anos",
+        "Revise o CET calculado e custos totais de empréstimo",
+        "Compare CET entre diferentes ofertas para encontrar o melhor valor",
+        "Considere como o CET afeta seus pagamentos mensais e custo total"
+      ],
+      "inputsExplained": [
+        "O valor do empréstimo é o principal que você está pegando emprestado ou seu limite de crédito",
+        "Os encargos financeiros incluem todos os juros, taxas e outros encargos durante o período",
+        "O prazo do empréstimo é o período de tempo que você está pegando o dinheiro emprestado (em anos)",
+        "A calculadora usa essas entradas para determinar o custo anualizado do empréstimo"
+      ],
+      "formulaExplanation": "O CET é calculado dividindo encargos financeiros totais pelo valor do empréstimo, depois dividindo pelo prazo do empréstimo, e multiplicando por 100 para obter uma porcentagem. Isso fornece a taxa anualizada que inclui todos os custos de empréstimo, facilitando comparar diferentes produtos financeiros em base igual.",
+      "examples": [
+        "Um cartão de crédito com R$ 10.000 limite e R$ 1.200 em encargos financeiros anuais tem um CET de 12%, custando R$ 100 por mês em encargos financeiros",
+        "Um empréstimo de carro de 5 anos de R$ 25.000 com R$ 4.500 em encargos financeiros totais representa um CET de 3.6%, ou R$ 75 por mês em encargos financeiros"
+      ],
+      "resultsExplanation": [
+        "CET mostra o custo anualizado do empréstimo incluindo todas as taxas",
+        "Pagamento mensal indica seu valor de pagamento regular",
+        "Custo total mostra o valor completo que você pagará durante o prazo do empréstimo",
+        "Taxa de encargos financeiros mostra qual porcentagem do valor do empréstimo são taxas",
+        "Comparação de custo ajuda você a entender o impacto real no custo",
+        "Todas as figuras ajudam você a comparar ofertas e tomar decisões informadas"
+      ],
+      "whoItsFor": "Esta calculadora de CET é essencial para qualquer pessoa considerando empréstimos, cartões de crédito ou outras opções de empréstimo. É particularmente valiosa para compradores de imóvel comparando ofertas de hipoteca, compradores de carro avaliando empréstimos de carro, estudantes considerando empréstimos estudantis, e consumidores comprando os melhores termos de cartão de crédito ou empréstimo pessoal.",
+      "disclaimer": "Os cálculos de CET são estimativas baseadas nas informações fornecidas. O CET real pode variar baseado no score de crédito, políticas do credor e termos específicos. O CET representa o custo anualizado do empréstimo mas pode não refletir todas as taxas ou custos associados com um empréstimo.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora empréstimo",
+        "calculadora cartão crédito",
+        "calculadora juros compostos",
+        "calculadora taxa efetiva anual"
+      ],
+      "faqs": [
+        {
+          "question": "O que é CET (Custo Efetivo Total)?",
+          "answer": "CET é o custo anualizado de pegar dinheiro emprestado, expresso como porcentagem. Inclui tanto juros quanto taxas, fornecendo uma maneira padronizada de comparar diferentes ofertas de empréstimo e cartões de crédito."
+        },
+        {
+          "question": "Como o CET difere da taxa de juros?",
+          "answer": "A taxa de juros é o custo de pegar dinheiro emprestado, enquanto o CET inclui a taxa de juros mais todas as taxas e encargos. O CET dá a você o custo real anualizado do empréstimo."
+        },
+        {
+          "question": "Por que o CET é importante ao comparar empréstimos?",
+          "answer": "O CET permite comparar diferentes ofertas de empréstimo em base igual mostrando o custo total anualizado do empréstimo, incluindo todas as taxas e encargos."
+        },
+        {
+          "question": "O CET pode ser menor que a taxa de juros?",
+          "answer": "Não, o CET é tipicamente maior que a taxa de juros nominal porque inclui taxas e encargos além de juros."
+        },
+        {
+          "question": "Com que frequência devo verificar o CET do meu cartão de crédito?",
+          "answer": "O CET do cartão de crédito pode mudar frequentemente. Verifique seus extratos regularmente e procure melhores taxas quando seu CET atual aumentar."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de TAEG",
+    "seoTitle": "Calculateur de TAEG - Calculateur de Taux Annuel Effectif Global",
+    "metaDescription": "Calculez le Taux Annuel Effectif Global (TAEG) pour prêts et cartes de crédit. Calculateur gratuit de TAEG avec détail des frais financiers et coût réel de l'emprunt.",
+    "keywords": [
+      "calculateur TAEG",
+      "calculateur taux annuel effectif global",
+      "calculateur TAEG prêts",
+      "calculateur TAEG cartes crédit",
+      "calculateur frais financiers",
+      "calculateur taux intérêt réel"
+    ],
+    "longTailKeywords": [
+      "calculateur TAEG pour prêts",
+      "calculer taux annuel effectif global",
+      "calculateur TAEG en ligne gratuit",
+      "calcul TAEG cartes crédit",
+      "prêt TAEG vs taux intérêt",
+      "frais financiers vers TAEG calculateur",
+      "coût réel emprunt calculateur",
+      "formule calcul TAEG",
+      "taux annuel effectif global expliqué",
+      "comment calculer TAEG sur prêts"
+    ],
+    "slug": "apr-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "TAEG",
+      "taux annuel effectif global",
+      "frais financiers",
+      "taux intérêt",
+      "calculateur prêt",
+      "carte crédit"
+    ],
+    "description": "Calculez le Taux Annuel Effectif Global (TAEG) pour prêts, cartes de crédit et autres accords d'emprunt. Le TAEG représente le coût réel de l'emprunt incluant intérêts et frais. Comparez différentes offres de prêt et comprenez le coût réel du crédit.",
+    "summary": "Calculez Taux Annuel Effectif Global (TAEG) pour prêts et crédit",
+    "instructions": [
+      "Entrez le montant du prêt ou limite de crédit",
+      "Entrez les frais financiers totaux ou intérêts payés sur l'année",
+      "Entrez la durée du prêt en années ou nombre de cycles de facturation",
+      "Cliquez sur 'Calculer TAEG' pour voir le taux annuel effectif global",
+      "Comparez TAEG entre différentes offres de prêt pour trouver la meilleure affaire"
+    ],
+    "calculatorComponent": "APRCalculator",
+    "examples": [
+      {
+        "title": "Calcul TAEG Carte de Crédit",
+        "description": "Calculez TAEG pour une carte de crédit avec 10 000 € limite et 1 200 € frais financiers sur un an",
+        "input": {
+          "loanAmount": 10000,
+          "financeCharges": 1200,
+          "loanTerm": 1
+        },
+        "output": {
+          "apr": "12.00%",
+          "monthlyPayment": "$333.33",
+          "totalCost": "$11,200",
+          "financeChargeRatio": "12.00%",
+          "costComparison": "1 200 € frais financiers sur 10 000 € solde = 12% TAEG"
+        }
+      },
+      {
+        "title": "TAEG Prêt Auto",
+        "description": "Calculez TAEG pour un prêt auto 5 ans avec 25 000 € montant et 4 500 € frais financiers totaux",
+        "input": {
+          "loanAmount": 25000,
+          "financeCharges": 4500,
+          "loanTerm": 5
+        },
+        "output": {
+          "apr": "3.60%",
+          "monthlyPayment": "$483.33",
+          "totalCost": "$29,000",
+          "financeChargeRatio": "18.00%",
+          "costComparison": "4 500 € frais financiers sur 5 ans = 3.6% TAEG"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Comprendre le Taux Annuel Effectif Global (TAEG) est crucial lors de la comparaison de prêts, cartes de crédit et autres options d'emprunt. Notre calculateur TAEG vous aide à déterminer le coût réel de l'emprunt en calculant le taux annualisé incluant intérêts et frais. Le TAEG fournit une façon standardisée de comparer différents produits financiers et prendre des décisions d'emprunt éclairées.",
+      "benefits": [
+        "Calculez le coût réel de l'emprunt incluant tous frais et charges",
+        "Comparez différentes offres de prêt et cartes de crédit sur une base égale",
+        "Comprenez comment les frais financiers affectent vos coûts d'emprunt",
+        "Prenez des décisions éclairées lors de l'achat de prêts ou cartes de crédit",
+        "Voyez la différence entre taux d'intérêt nominaux et TAEG réel",
+        "Planifiez votre budget avec projections précises de coûts d'emprunt"
+      ],
+      "steps": [
+        "Entrez le montant du prêt ou limite de crédit que vous considérez",
+        "Entrez les frais financiers totaux (intérêts + frais) pour la période",
+        "Spécifiez la durée du prêt en années",
+        "Examinez le TAEG calculé et coûts totaux d'emprunt",
+        "Comparez TAEG entre différentes offres pour trouver la meilleure valeur",
+        "Considérez comment le TAEG affecte vos paiements mensuels et coût total"
+      ],
+      "inputsExplained": [
+        "Le montant du prêt est le principal que vous empruntez ou votre limite de crédit",
+        "Les frais financiers incluent tous intérêts, frais et autres charges sur la période",
+        "La durée du prêt est la période pendant laquelle vous empruntez l'argent (en années)",
+        "Le calculateur utilise ces entrées pour déterminer le coût annualisé de l'emprunt"
+      ],
+      "formulaExplanation": "Le TAEG est calculé en divisant frais financiers totaux par le montant du prêt, puis en divisant par la durée du prêt, et en multipliant par 100 pour obtenir un pourcentage. Cela fournit le taux annualisé incluant tous coûts d'emprunt, facilitant la comparaison de différents produits financiers sur une base égale.",
+      "examples": [
+        "Une carte de crédit avec 10 000 € limite et 1 200 € frais financiers annuels a un TAEG de 12%, coûtant 100 € par mois en frais financiers",
+        "Un prêt auto 5 ans de 25 000 € avec 4 500 € frais financiers totaux représente un TAEG de 3.6%, ou 75 € par mois en frais financiers"
+      ],
+      "resultsExplanation": [
+        "TAEG montre le coût annualisé de l'emprunt incluant tous frais",
+        "Paiement mensuel indique votre montant de paiement régulier",
+        "Coût total montre le montant complet que vous paierez sur la durée du prêt",
+        "Ratio frais financiers montre quel pourcentage du montant du prêt sont frais",
+        "Comparaison coût vous aide à comprendre l'impact réel sur coût",
+        "Toutes figures vous aident à comparer offres et prendre décisions éclairées"
+      ],
+      "whoItsFor": "Ce calculateur TAEG est essentiel pour quiconque considérant prêts, cartes de crédit ou autres options d'emprunt. Il est particulièrement précieux pour acheteurs immobiliers comparant offres d'hypothèque, acheteurs d'auto évaluant prêts auto, étudiants considérant prêts étudiants, et consommateurs achetant meilleurs termes de carte de crédit ou prêt personnel.",
+      "disclaimer": "Les calculs TAEG sont des estimations basées sur les informations fournies. Le TAEG réel peut varier selon score de crédit, politiques de prêteur et termes spécifiques. Le TAEG représente le coût annualisé de l'emprunt mais peut ne pas refléter tous frais ou coûts associés avec un prêt.",
+      "relatedTools": [
+        "calculateur hypothèque",
+        "calculateur prêt",
+        "calculateur carte crédit",
+        "calculateur intérêt composé",
+        "calculateur taux effectif annuel"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce que le TAEG (Taux Annuel Effectif Global)?",
+          "answer": "Le TAEG est le coût annualisé d'emprunter de l'argent, exprimé en pourcentage. Il inclut intérêts et frais, fournissant une façon standardisée de comparer différentes offres de prêt et cartes de crédit."
+        },
+        {
+          "question": "Comment le TAEG diffère-t-il du taux d'intérêt?",
+          "answer": "Le taux d'intérêt est le coût d'emprunter de l'argent, tandis que le TAEG inclut le taux d'intérêt plus tous frais et charges. Le TAEG vous donne le coût réel annualisé de l'emprunt."
+        },
+        {
+          "question": "Pourquoi le TAEG est-il important lors de la comparaison de prêts?",
+          "answer": "Le TAEG vous permet de comparer différentes offres de prêt sur une base égale en montrant le coût total annualisé de l'emprunt, incluant tous frais et charges."
+        },
+        {
+          "question": "Le TAEG peut-il être inférieur au taux d'intérêt?",
+          "answer": "Non, le TAEG est typiquement supérieur au taux d'intérêt nominal car il inclut frais et charges en plus des intérêts."
+        },
+        {
+          "question": "À quelle fréquence dois-je vérifier le TAEG de ma carte de crédit?",
+          "answer": "Le TAEG des cartes de crédit peut changer fréquemment. Vérifiez vos relevés régulièrement et magasinez pour meilleurs taux quand votre TAEG actuel augmente."
+        }
+      ]
+    }
+  }
+}

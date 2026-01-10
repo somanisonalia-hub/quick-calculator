@@ -1,0 +1,594 @@
+{
+  "en": {
+    "title": "Nominal Interest Rate Calculator",
+    "seoTitle": "Nominal Interest Rate Calculator - Convert Nominal to Effective Rates",
+    "metaDescription": "Calculate nominal interest rates and convert between nominal and effective rates. Free nominal rate calculator with compounding frequency adjustments.",
+    "keywords": [
+      "nominal interest rate calculator",
+      "nominal to effective rate calculator",
+      "stated interest rate calculator",
+      "nominal rate conversion",
+      "annual nominal rate",
+      "stated APR calculator"
+    ],
+    "longTailKeywords": [
+      "nominal interest rate calculator online",
+      "convert nominal rate to effective rate",
+      "nominal interest rate vs effective rate",
+      "stated annual interest rate calculator",
+      "nominal APR calculation",
+      "how to calculate nominal interest rate",
+      "nominal rate compounding calculator",
+      "annual nominal interest rate formula",
+      "stated interest rate conversion",
+      "nominal effective rate difference"
+    ],
+    "slug": "nominal-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "nominal rate",
+      "stated rate",
+      "effective rate",
+      "compounding",
+      "interest conversion",
+      "rate calculation"
+    ],
+    "description": "Calculate nominal interest rates and understand the difference between nominal (stated) rates and effective rates. Convert between different rate formats and see how compounding affects your returns.",
+    "summary": "Calculate nominal interest rates and convert to effective rates",
+    "instructions": [
+      "Enter the effective interest rate you want to convert",
+      "Select the compounding frequency",
+      "Click 'Calculate' to see the nominal rate",
+      "Compare nominal vs effective rates",
+      "Understand how compounding reduces nominal rates"
+    ],
+    "calculatorComponent": "NominalInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Monthly Compounding",
+        "description": "Convert 5.12% effective annual rate to nominal rate with monthly compounding",
+        "input": {
+          "effectiveRate": 5.12,
+          "compoundingFrequency": "12"
+        },
+        "output": {
+          "nominalRate": "5.00%",
+          "effectiveRateDisplay": "5.12%",
+          "rateDifference": "-0.12%",
+          "compoundingExplanation": "Monthly compounding requires 5.00% nominal rate to achieve 5.12% effective rate",
+          "rateComparison": "Nominal: 5.00% vs Effective: 5.12% (2.4% difference)"
+        }
+      },
+      {
+        "title": "Quarterly Compounding",
+        "description": "Convert 6.09% effective annual rate to nominal rate with quarterly compounding",
+        "input": {
+          "effectiveRate": 6.09,
+          "compoundingFrequency": "4"
+        },
+        "output": {
+          "nominalRate": "6.00%",
+          "effectiveRateDisplay": "6.09%",
+          "rateDifference": "-0.09%",
+          "compoundingExplanation": "Quarterly compounding requires 6.00% nominal rate to achieve 6.09% effective rate",
+          "rateComparison": "Nominal: 6.00% vs Effective: 6.09% (1.5% difference)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Understanding nominal interest rates is essential for comparing different financial products accurately. Nominal rates (also called stated rates) don't account for compounding effects, while effective rates do. Our nominal interest rate calculator helps you convert between these formats and understand how compounding frequency affects the relationship between nominal and effective rates.",
+      "benefits": [
+        "Convert effective rates to equivalent nominal rates",
+        "Understand the difference between stated and effective rates",
+        "See how compounding frequency affects rate calculations",
+        "Compare rates from different financial institutions accurately",
+        "Calculate the nominal rate needed to achieve a target effective rate",
+        "Understand compounding effects on interest calculations"
+      ],
+      "steps": [
+        "Enter the effective annual rate you want to convert",
+        "Select how often interest compounds (monthly, quarterly, etc.)",
+        "Review the calculated nominal rate",
+        "Compare the nominal and effective rates",
+        "Understand the compounding effect explanation",
+        "Use the results for accurate rate comparisons"
+      ],
+      "inputsExplained": [
+        "Effective rate is the true annual rate including compounding effects",
+        "Compounding frequency shows how often interest is calculated and added",
+        "Higher compounding frequency means lower nominal rate for same effective rate",
+        "The calculator finds the nominal rate that produces your target effective rate"
+      ],
+      "formulaExplanation": "The nominal rate is calculated using the formula: Nominal Rate = n × ((1 + EAR)^(1/n) - 1), where EAR is the effective annual rate and n is the number of compounding periods. This formula finds the stated rate that, when compounded, produces the desired effective rate.",
+      "examples": [
+        "A 5.12% effective annual rate requires only a 5.00% nominal rate when compounded monthly, showing how compounding increases the effective rate",
+        "A 6.09% effective annual rate requires a 6.00% nominal rate when compounded quarterly, demonstrating the compounding effect"
+      ],
+      "resultsExplanation": [
+        "Nominal rate shows the stated annual rate without compounding",
+        "Effective rate displays your input for comparison",
+        "Difference shows how much compounding adds to the effective rate",
+        "Compounding explanation details the relationship between rates",
+        "Rate comparison provides context for the difference",
+        "All results help you understand rate relationships and compounding effects"
+      ],
+      "whoItsFor": "This nominal interest rate calculator is valuable for financial analysts, investors, borrowers, and anyone who needs to compare interest rates from different sources. It's particularly useful for understanding credit card rates, loan comparisons, and investment return calculations where compounding frequency matters.",
+      "disclaimer": "This calculator converts between nominal and effective interest rates based on standard compounding formulas. Actual rates and compounding may vary based on specific financial product terms, payment schedules, and lender policies. The calculations are for educational purposes.",
+      "relatedTools": [
+        "effective annual rate calculator",
+        "compound interest calculator",
+        "apr calculator",
+        "loan calculator",
+        "interest rate table calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is a nominal interest rate?",
+          "answer": "A nominal interest rate (also called stated rate) is the annual interest rate quoted without accounting for compounding effects. It represents the rate that would apply if interest were paid once per year."
+        },
+        {
+          "question": "How does nominal rate differ from effective rate?",
+          "answer": "Nominal rate is the stated annual rate, while effective rate includes the impact of compounding. For the same nominal rate, more frequent compounding results in a higher effective rate."
+        },
+        {
+          "question": "Why do I need to convert between nominal and effective rates?",
+          "answer": "Converting between rates allows you to compare financial products with different compounding frequencies on an equal basis. Effective rates give you the true annual cost or return."
+        },
+        {
+          "question": "Does more frequent compounding mean higher or lower nominal rates?",
+          "answer": "More frequent compounding means you need a lower nominal rate to achieve the same effective rate. The compounding effect 'amplifies' the nominal rate."
+        },
+        {
+          "question": "When should I use nominal rates instead of effective rates?",
+          "answer": "Use nominal rates when you need to understand the stated rate, or when comparing products with identical compounding frequencies. Use effective rates for accurate comparisons across different products."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Tasa de Interés Nominal",
+    "seoTitle": "Calculadora de Tasa de Interés Nominal - Convertir Tasas Nominales a Efectivas",
+    "metaDescription": "Calcula tasas de interés nominales y convierte entre tasas nominales y efectivas. Calculadora gratuita de tasa nominal con ajustes de frecuencia de capitalización.",
+    "keywords": [
+      "calculadora tasa interés nominal",
+      "calculadora nominal a efectiva",
+      "calculadora tasa declarada",
+      "conversión tasa nominal",
+      "tasa nominal anual",
+      "calculadora TAE declarada"
+    ],
+    "longTailKeywords": [
+      "calculadora tasa interés nominal online",
+      "convertir tasa nominal a efectiva",
+      "tasa interés nominal vs efectiva",
+      "calculadora tasa interés anual declarada",
+      "cálculo TAE nominal",
+      "cómo calcular tasa interés nominal",
+      "calculadora capitalización tasa nominal",
+      "fórmula tasa interés nominal anual",
+      "conversión tasa interés declarada",
+      "diferencia tasa nominal efectiva"
+    ],
+    "slug": "nominal-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "tasa nominal",
+      "tasa declarada",
+      "tasa efectiva",
+      "capitalización",
+      "conversión interés",
+      "cálculo tasa"
+    ],
+    "description": "Calcula tasas de interés nominales y entiende la diferencia entre tasas nominales (declaradas) y efectivas. Convierte entre diferentes formatos de tasa y ve cómo la capitalización afecta tus retornos.",
+    "summary": "Calcula tasas de interés nominales y convierte a tasas efectivas",
+    "instructions": [
+      "Ingresa la tasa de interés efectiva que quieres convertir",
+      "Selecciona la frecuencia de capitalización",
+      "Haz clic en 'Calcular' para ver la tasa nominal",
+      "Compara tasas nominales vs efectivas",
+      "Entiende cómo la capitalización reduce tasas nominales"
+    ],
+    "calculatorComponent": "NominalInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Capitalización Mensual",
+        "description": "Convierte 5.12% tasa anual efectiva a tasa nominal con capitalización mensual",
+        "input": {
+          "effectiveRate": 5.12,
+          "compoundingFrequency": "12"
+        },
+        "output": {
+          "nominalRate": "5.00%",
+          "effectiveRateDisplay": "5.12%",
+          "rateDifference": "-0.12%",
+          "compoundingExplanation": "Capitalización mensual requiere 5.00% tasa nominal para lograr 5.12% tasa efectiva",
+          "rateComparison": "Nominal: 5.00% vs Efectiva: 5.12% (2.4% diferencia)"
+        }
+      },
+      {
+        "title": "Capitalización Trimestral",
+        "description": "Convierte 6.09% tasa anual efectiva a tasa nominal con capitalización trimestral",
+        "input": {
+          "effectiveRate": 6.09,
+          "compoundingFrequency": "4"
+        },
+        "output": {
+          "nominalRate": "6.00%",
+          "effectiveRateDisplay": "6.09%",
+          "rateDifference": "-0.09%",
+          "compoundingExplanation": "Capitalización trimestral requiere 6.00% tasa nominal para lograr 6.09% tasa efectiva",
+          "rateComparison": "Nominal: 6.00% vs Efectiva: 6.09% (1.5% diferencia)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender tasas de interés nominales es esencial para comparar diferentes productos financieros con precisión. Las tasas nominales (también llamadas tasas declaradas) no consideran efectos de capitalización, mientras que las tasas efectivas sí. Nuestra calculadora de tasa de interés nominal te ayuda a convertir entre estos formatos y entender cómo la frecuencia de capitalización afecta la relación entre tasas nominales y efectivas.",
+      "benefits": [
+        "Convierte tasas efectivas a tasas nominales equivalentes",
+        "Entiende la diferencia entre tasas declaradas y efectivas",
+        "Ve cómo la frecuencia de capitalización afecta cálculos de tasa",
+        "Compara tasas de diferentes instituciones financieras con precisión",
+        "Calcula la tasa nominal necesaria para lograr una tasa efectiva objetivo",
+        "Entiende efectos de capitalización en cálculos de interés"
+      ],
+      "steps": [
+        "Ingresa la tasa anual efectiva que quieres convertir",
+        "Selecciona con qué frecuencia se capitaliza el interés (mensual, trimestral, etc.)",
+        "Revisa la tasa nominal calculada",
+        "Compara las tasas nominales y efectivas",
+        "Entiende la explicación del efecto de capitalización",
+        "Usa los resultados para comparaciones precisas de tasa"
+      ],
+      "inputsExplained": [
+        "Tasa efectiva es la tasa anual real incluyendo efectos de capitalización",
+        "Frecuencia de capitalización muestra con qué frecuencia se calcula y añade el interés",
+        "Frecuencia de capitalización más alta significa tasa nominal más baja para misma tasa efectiva",
+        "La calculadora encuentra la tasa nominal que produce tu tasa efectiva objetivo"
+      ],
+      "formulaExplanation": "La tasa nominal se calcula usando la fórmula: Tasa Nominal = n × ((1 + TAE)^(1/n) - 1), donde TAE es la tasa anual efectiva y n es el número de períodos de capitalización. Esta fórmula encuentra la tasa declarada que, cuando capitalizada, produce la tasa efectiva deseada.",
+      "examples": [
+        "Una tasa anual efectiva de 5.12% requiere solo una tasa nominal de 5.00% cuando capitalizada mensualmente, mostrando cómo la capitalización aumenta la tasa efectiva",
+        "Una tasa anual efectiva de 6.09% requiere una tasa nominal de 6.00% cuando capitalizada trimestralmente, demostrando el efecto de capitalización"
+      ],
+      "resultsExplanation": [
+        "Tasa nominal muestra la tasa anual declarada sin capitalización",
+        "Tasa efectiva muestra tu entrada para comparación",
+        "Diferencia muestra cuánto añade la capitalización a la tasa efectiva",
+        "Explicación de capitalización detalla la relación entre tasas",
+        "Comparación de tasa proporciona contexto para la diferencia",
+        "Todos los resultados te ayudan a entender relaciones de tasa y efectos de capitalización"
+      ],
+      "whoItsFor": "Esta calculadora de tasa de interés nominal es valiosa para analistas financieros, inversores, prestatarios y cualquiera que necesite comparar tasas de interés de diferentes fuentes. Es particularmente útil para entender tasas de tarjetas de crédito, comparaciones de préstamo y cálculos de retorno de inversión donde la frecuencia de capitalización importa.",
+      "disclaimer": "Esta calculadora convierte entre tasas de interés nominales y efectivas basadas en fórmulas estándar de capitalización. Las tasas reales y capitalización pueden variar basado en términos específicos de producto financiero, cronogramas de pago y políticas de prestamista. Los cálculos son para propósitos educativos.",
+      "relatedTools": [
+        "calculadora tasa efectiva anual",
+        "calculadora interés compuesto",
+        "calculadora TAE",
+        "calculadora préstamo",
+        "calculadora tabla tasas interés"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es una tasa de interés nominal?",
+          "answer": "Una tasa de interés nominal (también llamada tasa declarada) es la tasa de interés anual cotizada sin considerar efectos de capitalización. Representa la tasa que aplicaría si el interés se pagara una vez por año."
+        },
+        {
+          "question": "¿Cómo difiere la tasa nominal de la tasa efectiva?",
+          "answer": "La tasa nominal es la tasa anual declarada, mientras la tasa efectiva incluye el impacto de capitalización. Para la misma tasa nominal, capitalización más frecuente resulta en una tasa efectiva más alta."
+        },
+        {
+          "question": "¿Por qué necesito convertir entre tasas nominales y efectivas?",
+          "answer": "Convertir entre tasas te permite comparar productos financieros con diferentes frecuencias de capitalización en base igual. Las tasas efectivas te dan el costo real o retorno anual."
+        },
+        {
+          "question": "¿Capitalización más frecuente significa tasas nominales más altas o más bajas?",
+          "answer": "Capitalización más frecuente significa que necesitas una tasa nominal más baja para lograr la misma tasa efectiva. El efecto de capitalización 'amplifica' la tasa nominal."
+        },
+        {
+          "question": "¿Cuándo debo usar tasas nominales en lugar de efectivas?",
+          "answer": "Usa tasas nominales cuando necesitas entender la tasa declarada, o al comparar productos con frecuencias de capitalización idénticas. Usa tasas efectivas para comparaciones precisas entre diferentes productos."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Taxa de Juros Nominal",
+    "seoTitle": "Calculadora de Taxa de Juros Nominal - Converter Taxas Nominais para Efetivas",
+    "metaDescription": "Calcule taxas de juros nominais e converta entre taxas nominais e efetivas. Calculadora gratuita de taxa nominal com ajustes de frequência de capitalização.",
+    "keywords": [
+      "calculadora taxa juros nominal",
+      "calculadora nominal para efetiva",
+      "calculadora taxa declarada",
+      "conversão taxa nominal",
+      "taxa nominal anual",
+      "calculadora CET declarada"
+    ],
+    "longTailKeywords": [
+      "calculadora taxa juros nominal online",
+      "converter taxa nominal para efetiva",
+      "taxa juros nominal vs efetiva",
+      "calculadora taxa juros anual declarada",
+      "cálculo CET nominal",
+      "como calcular taxa juros nominal",
+      "calculadora capitalização taxa nominal",
+      "fórmula taxa juros nominal anual",
+      "conversão taxa juros declarada",
+      "diferença taxa nominal efetiva"
+    ],
+    "slug": "nominal-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "taxa nominal",
+      "taxa declarada",
+      "taxa efetiva",
+      "capitalização",
+      "conversão juros",
+      "cálculo taxa"
+    ],
+    "description": "Calcule taxas de juros nominais e entenda a diferença entre taxas nominais (declaradas) e efetivas. Converta entre diferentes formatos de taxa e veja como a capitalização afeta seus retornos.",
+    "summary": "Calcule taxas de juros nominais e converta para taxas efetivas",
+    "instructions": [
+      "Digite a taxa de juros efetiva que você quer converter",
+      "Selecione a frequência de capitalização",
+      "Clique em 'Calcular' para ver a taxa nominal",
+      "Compare taxas nominais vs efetivas",
+      "Entenda como a capitalização reduz taxas nominais"
+    ],
+    "calculatorComponent": "NominalInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Capitalização Mensal",
+        "description": "Converte 5.12% taxa anual efetiva para taxa nominal com capitalização mensal",
+        "input": {
+          "effectiveRate": 5.12,
+          "compoundingFrequency": "12"
+        },
+        "output": {
+          "nominalRate": "5.00%",
+          "effectiveRateDisplay": "5.12%",
+          "rateDifference": "-0.12%",
+          "compoundingExplanation": "Capitalização mensal requer 5.00% taxa nominal para lograr 5.12% taxa efetiva",
+          "rateComparison": "Nominal: 5.00% vs Efetiva: 5.12% (2.4% diferença)"
+        }
+      },
+      {
+        "title": "Capitalização Trimestral",
+        "description": "Converte 6.09% taxa anual efetiva para taxa nominal com capitalização trimestral",
+        "input": {
+          "effectiveRate": 6.09,
+          "compoundingFrequency": "4"
+        },
+        "output": {
+          "nominalRate": "6.00%",
+          "effectiveRateDisplay": "6.09%",
+          "rateDifference": "-0.09%",
+          "compoundingExplanation": "Capitalização trimestral requer 6.00% taxa nominal para lograr 6.09% taxa efetiva",
+          "rateComparison": "Nominal: 6.00% vs Efetiva: 6.09% (1.5% diferença)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender taxas de juros nominais é essencial para comparar diferentes produtos financeiros com precisão. Taxas nominais (também chamadas taxas declaradas) não consideram efeitos de capitalização, enquanto taxas efetivas consideram. Nossa calculadora de taxa de juros nominal ajuda você a converter entre estes formatos e entender como frequência de capitalização afeta a relação entre taxas nominais e efetivas.",
+      "benefits": [
+        "Converte taxas efetivas para taxas nominais equivalentes",
+        "Entende a diferença entre taxas declaradas e efetivas",
+        "Veja como frequência de capitalização afeta cálculos de taxa",
+        "Compare taxas de diferentes instituições financeiras com precisão",
+        "Calcule a taxa nominal necessária para lograr uma taxa efetiva alvo",
+        "Entende efeitos de capitalização em cálculos de juros"
+      ],
+      "steps": [
+        "Digite a taxa anual efetiva que você quer converter",
+        "Selecione com que frequência juros capitaliza (mensal, trimestral, etc.)",
+        "Revise a taxa nominal calculada",
+        "Compare as taxas nominais e efetivas",
+        "Entenda a explicação do efeito de capitalização",
+        "Use os resultados para comparações precisas de taxa"
+      ],
+      "inputsExplained": [
+        "Taxa efetiva é a taxa anual real incluindo efeitos de capitalização",
+        "Frequência de capitalização mostra com que frequência juros é calculado e adicionado",
+        "Frequência de capitalização mais alta significa taxa nominal mais baixa para mesma taxa efetiva",
+        "A calculadora encontra a taxa nominal que produz sua taxa efetiva alvo"
+      ],
+      "formulaExplanation": "A taxa nominal é calculada usando a fórmula: Taxa Nominal = n × ((1 + TEA)^(1/n) - 1), onde TEA é a taxa anual efetiva e n é o número de períodos de capitalização. Esta fórmula encontra a taxa declarada que, quando capitalizada, produz a taxa efetiva desejada.",
+      "examples": [
+        "Uma taxa anual efetiva de 5.12% requer apenas uma taxa nominal de 5.00% quando capitalizada mensalmente, mostrando como capitalização aumenta a taxa efetiva",
+        "Uma taxa anual efetiva de 6.09% requer uma taxa nominal de 6.00% quando capitalizada trimestralmente, demonstrando o efeito de capitalização"
+      ],
+      "resultsExplanation": [
+        "Taxa nominal mostra a taxa anual declarada sem capitalização",
+        "Taxa efetiva mostra sua entrada para comparação",
+        "Diferença mostra quanto capitalização adiciona à taxa efetiva",
+        "Explicação de capitalização detalla a relação entre taxas",
+        "Comparação de taxa fornece contexto para a diferença",
+        "Todos os resultados ajudam você a entender relações de taxa e efeitos de capitalização"
+      ],
+      "whoItsFor": "Esta calculadora de taxa de juros nominal é valiosa para analistas financeiros, investidores, tomadores e qualquer pessoa que precise comparar taxas de juros de diferentes fontes. É particularmente útil para entender taxas de cartões de crédito, comparações de empréstimo e cálculos de retorno de investimento onde frequência de capitalização importa.",
+      "disclaimer": "Esta calculadora converte entre taxas de juros nominais e efetivas baseadas em fórmulas padrão de capitalização. Taxas reais e capitalização podem variar baseado em termos específicos de produto financeiro, cronogramas de pagamento e políticas de credor. Os cálculos são para propósitos educacionais.",
+      "relatedTools": [
+        "calculadora taxa efetiva anual",
+        "calculadora juros compostos",
+        "calculadora CET",
+        "calculadora empréstimo",
+        "calculadora tabela taxas juros"
+      ],
+      "faqs": [
+        {
+          "question": "O que é uma taxa de juros nominal?",
+          "answer": "Uma taxa de juros nominal (também chamada taxa declarada) é a taxa de juros anual cotada sem considerar efeitos de capitalização. Representa a taxa que aplicaria se juros fosse pago uma vez por ano."
+        },
+        {
+          "question": "Como taxa nominal difere da taxa efetiva?",
+          "answer": "Taxa nominal é a taxa anual declarada, enquanto taxa efetiva inclui o impacto de capitalização. Para a mesma taxa nominal, capitalização mais frequente resulta em uma taxa efetiva mais alta."
+        },
+        {
+          "question": "¿Por que preciso converter entre taxas nominais e efetivas?",
+          "answer": "Converter entre taxas permite comparar produtos financeiros com diferentes frequências de capitalização em base igual. Taxas efetivas dão o custo real ou retorno anual."
+        },
+        {
+          "question": "Capitalização mais frequente significa taxas nominais mais altas ou mais baixas?",
+          "answer": "Capitalização mais frequente significa que você precisa de uma taxa nominal mais baixa para lograr a mesma taxa efetiva. O efeito de capitalização 'amplifica' a taxa nominal."
+        },
+        {
+          "question": "Quando devo usar taxas nominais em vez de efetivas?",
+          "answer": "Use taxas nominais quando precisar entender a taxa declarada, ou ao comparar produtos com frequências de capitalização idênticas. Use taxas efetivas para comparações precisas entre diferentes produtos."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Taux d'Intérêt Nominal",
+    "seoTitle": "Calculateur de Taux d'Intérêt Nominal - Convertir Taux Nominaux vers Effectifs",
+    "metaDescription": "Calculez taux d'intérêt nominaux et convertissez entre taux nominaux et effectifs. Calculateur gratuit de taux nominal avec ajustements fréquence de capitalisation.",
+    "keywords": [
+      "calculateur taux intérêt nominal",
+      "calculateur nominal vers effectif",
+      "calculateur taux déclaré",
+      "conversion taux nominal",
+      "taux nominal annuel",
+      "calculateur TAEG déclaré"
+    ],
+    "longTailKeywords": [
+      "calculateur taux intérêt nominal en ligne",
+      "convertir taux nominal vers effectif",
+      "taux intérêt nominal vs effectif",
+      "calculateur taux intérêt annuel déclaré",
+      "calcul TAEG nominal",
+      "comment calculer taux intérêt nominal",
+      "calculateur capitalisation taux nominal",
+      "formule taux intérêt nominal annuel",
+      "conversion taux intérêt déclaré",
+      "différence taux nominal effectif"
+    ],
+    "slug": "nominal-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "taux nominal",
+      "taux déclaré",
+      "taux effectif",
+      "capitalisation",
+      "conversion intérêt",
+      "calcul taux"
+    ],
+    "description": "Calculez taux d'intérêt nominaux et comprenez différence entre taux nominaux (déclarés) et effectifs. Convertissez entre différents formats de taux et voyez comment capitalisation affecte vos retours.",
+    "summary": "Calculez taux d'intérêt nominaux et convertissez vers taux effectifs",
+    "instructions": [
+      "Entrez taux d'intérêt effectif que vous voulez convertir",
+      "Sélectionnez fréquence de capitalisation",
+      "Cliquez sur 'Calculer' pour voir taux nominal",
+      "Comparez taux nominaux vs effectifs",
+      "Comprenez comment capitalisation réduit taux nominaux"
+    ],
+    "calculatorComponent": "NominalInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Capitalisation Mensuelle",
+        "description": "Convertissez 5.12% taux annuel effectif vers taux nominal avec capitalisation mensuelle",
+        "input": {
+          "effectiveRate": 5.12,
+          "compoundingFrequency": "12"
+        },
+        "output": {
+          "nominalRate": "5.00%",
+          "effectiveRateDisplay": "5.12%",
+          "rateDifference": "-0.12%",
+          "compoundingExplanation": "Capitalisation mensuelle requiert 5.00% taux nominal pour atteindre 5.12% taux effectif",
+          "rateComparison": "Nominal: 5.00% vs Effectif: 5.12% (2.4% différence)"
+        }
+      },
+      {
+        "title": "Capitalisation Trimestrielle",
+        "description": "Convertissez 6.09% taux annuel effectif vers taux nominal avec capitalisation trimestrielle",
+        "input": {
+          "effectiveRate": 6.09,
+          "compoundingFrequency": "4"
+        },
+        "output": {
+          "nominalRate": "6.00%",
+          "effectiveRateDisplay": "6.09%",
+          "rateDifference": "-0.09%",
+          "compoundingExplanation": "Capitalisation trimestrielle requiert 6.00% taux nominal pour atteindre 6.09% taux effectif",
+          "rateComparison": "Nominal: 6.00% vs Effectif: 6.09% (1.5% différence)"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Comprendre taux d'intérêt nominaux est essentiel pour comparer différents produits financiers avec précision. Taux nominaux (aussi appelés taux déclarés) ne tiennent pas compte effets de capitalisation, tandis que taux effectifs le font. Notre calculateur de taux d'intérêt nominal vous aide à convertir entre ces formats et comprendre comment fréquence de capitalisation affecte relation entre taux nominaux et effectifs.",
+      "benefits": [
+        "Convertissez taux effectifs vers taux nominaux équivalents",
+        "Comprenez différence entre taux déclarés et effectifs",
+        "Voyez comment fréquence de capitalisation affecte calculs de taux",
+        "Comparez taux de différentes institutions financières avec précision",
+        "Calculez taux nominal nécessaire pour atteindre taux effectif cible",
+        "Comprenez effets de capitalisation sur calculs d'intérêt"
+      ],
+      "steps": [
+        "Entrez taux annuel effectif que vous voulez convertir",
+        "Sélectionnez fréquence de capitalisation d'intérêt (mensuelle, trimestrielle, etc.)",
+        "Examinez taux nominal calculé",
+        "Comparez taux nominaux et effectifs",
+        "Comprenez explication effet de capitalisation",
+        "Utilisez résultats pour comparaisons précises de taux"
+      ],
+      "inputsExplained": [
+        "Taux effectif est taux annuel réel incluant effets de capitalisation",
+        "Fréquence de capitalisation montre fréquence de calcul et ajout d'intérêt",
+        "Fréquence de capitalisation plus élevée signifie taux nominal plus bas pour même taux effectif",
+        "Le calculateur trouve taux nominal qui produit votre taux effectif cible"
+      ],
+      "formulaExplanation": "Le taux nominal est calculé utilisant formule: Taux Nominal = n × ((1 + TEA)^(1/n) - 1), où TEA est taux annuel effectif et n est nombre de périodes de capitalisation. Cette formule trouve taux déclaré qui, lorsqu'il est capitalisé, produit taux effectif désiré.",
+      "examples": [
+        "Un taux annuel effectif de 5.12% requiert seulement un taux nominal de 5.00% lorsqu'il est capitalisé mensuellement, montrant comment capitalisation augmente taux effectif",
+        "Un taux annuel effectif de 6.09% requiert un taux nominal de 6.00% lorsqu'il est capitalisé trimestriellement, démontrant effet de capitalisation"
+      ],
+      "resultsExplanation": [
+        "Taux nominal montre taux annuel déclaré sans capitalisation",
+        "Taux effectif affiche votre entrée pour comparaison",
+        "Différence montre combien capitalisation ajoute au taux effectif",
+        "Explication capitalisation détaille relation entre taux",
+        "Comparaison taux fournit contexte pour différence",
+        "Tous résultats vous aident à comprendre relations de taux et effets de capitalisation"
+      ],
+      "whoItsFor": "Ce calculateur de taux d'intérêt nominal est précieux pour analystes financiers, investisseurs, emprunteurs et quiconque a besoin de comparer taux d'intérêt de différentes sources. Il est particulièrement utile pour comprendre taux cartes de crédit, comparaisons de prêt et calculs de retour d'investissement où fréquence de capitalisation importe.",
+      "disclaimer": "Ce calculateur convertit entre taux d'intérêt nominaux et effectifs basés sur formules standard de capitalisation. Taux réels et capitalisation peuvent varier selon termes spécifiques de produit financier, échéanciers de paiement et politiques de prêteur. Les calculs sont pour fins éducatives.",
+      "relatedTools": [
+        "calculateur taux effectif annuel",
+        "calculateur intérêt composé",
+        "calculateur TAEG",
+        "calculateur prêt",
+        "calculateur tableau taux intérêt"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un taux d'intérêt nominal?",
+          "answer": "Un taux d'intérêt nominal (aussi appelé taux déclaré) est taux d'intérêt annuel coté sans tenir compte effets de capitalisation. Il représente taux qui s'appliquerait si intérêt était payé une fois par an."
+        },
+        {
+          "question": "Comment taux nominal diffère-t-il de taux effectif?",
+          "answer": "Taux nominal est taux annuel déclaré, tandis que taux effectif inclut impact de capitalisation. Pour même taux nominal, capitalisation plus fréquente résulte en taux effectif plus élevé."
+        },
+        {
+          "question": "¿Pourquoi ai-je besoin de convertir entre taux nominaux et effectifs?",
+          "answer": "Convertir entre taux vous permet de comparer produits financiers avec différentes fréquences de capitalisation sur base égale. Taux effectifs vous donnent coût réel ou retour annuel."
+        },
+        {
+          "question": "Capitalisation plus fréquente signifie-t-elle taux nominaux plus élevés ou plus bas?",
+          "answer": "Capitalisation plus fréquente signifie vous avez besoin d'un taux nominal plus bas pour atteindre même taux effectif. L'effet de capitalisation 'amplifie' taux nominal."
+        },
+        {
+          "question": "Quand utiliser taux nominaux au lieu de taux effectifs?",
+          "answer": "Utilisez taux nominaux quand vous avez besoin de comprendre taux déclaré, ou lors de comparaison produits avec fréquences de capitalisation identiques. Utilisez taux effectifs pour comparaisons précises entre différents produits."
+        }
+      ]
+    }
+  }
+}

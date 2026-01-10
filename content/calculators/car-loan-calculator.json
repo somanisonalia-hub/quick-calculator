@@ -1,0 +1,1162 @@
+{
+  "en": {
+    "title": "Car Loan Calculator",
+    "seoTitle": "Car Loan Calculator - Auto Loan Payment Calculator",
+    "metaDescription": "Calculate your car loan payments, total interest, and financing costs. Compare different loan terms and interest rates for auto financing decisions.",
+    "keywords": [
+      "car loan calculator",
+      "auto loan calculator",
+      "car payment calculator",
+      "auto financing calculator",
+      "vehicle loan calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate car loan payments",
+      "auto loan calculator with trade in value",
+      "car payment calculator with down payment",
+      "how much car can I afford calculator",
+      "auto loan interest calculator",
+      "car financing calculator with taxes and fees",
+      "how to calculate monthly car payment",
+      "auto loan calculator for used cars",
+      "car loan calculator with negative equity",
+      "best car loan interest rates calculator"
+    ],
+    "slug": "car-loan-calculator",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "car loan",
+      "auto loan",
+      "vehicle financing",
+      "car payment",
+      "auto financing",
+      "interest rates"
+    ],
+    "description": "Calculate your monthly car loan payments and total financing costs with our comprehensive auto loan calculator. Compare different loan terms, interest rates, and down payments to find the best car financing option. Perfect for car buyers planning their vehicle purchase and understanding the true cost of auto financing.",
+    "summary": "Calculate car loan payments and total financing costs.",
+    "instructions": [
+      "Enter the car price or loan amount you need to finance",
+      "Input your down payment amount to reduce the financed amount",
+      "Select the loan term in months (typically 36-84 months for cars)",
+      "Enter the interest rate (APR) offered by your lender",
+      "Choose whether to include taxes and fees in the calculation",
+      "The calculator will show your monthly payment and total costs"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "carPrice",
+          "label": "Car Price ($)",
+          "type": "number",
+          "default": 30000,
+          "min": 0,
+          "max": 200000,
+          "step": 100
+        },
+        {
+          "name": "downPayment",
+          "label": "Down Payment ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "loanTerm",
+          "label": "Loan Term (months)",
+          "type": "select",
+          "options": [
+            {
+              "value": "36",
+              "label": "36 months (3 years)"
+            },
+            {
+              "value": "48",
+              "label": "48 months (4 years)"
+            },
+            {
+              "value": "60",
+              "label": "60 months (5 years)"
+            },
+            {
+              "value": "72",
+              "label": "72 months (6 years)"
+            },
+            {
+              "value": "84",
+              "label": "84 months (7 years)"
+            }
+          ],
+          "default": "60"
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (APR %)",
+          "type": "number",
+          "default": 5.5,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "salesTax",
+          "label": "Sales Tax Rate (%)",
+          "type": "number",
+          "default": 6,
+          "min": 0,
+          "max": 15,
+          "step": 0.1
+        },
+        {
+          "name": "includeFees",
+          "label": "Include $500 Documentation Fee",
+          "type": "checkbox",
+          "default": true
+        }
+      ],
+      "formula": "Loan Amount = Car Price + Sales Tax - Down Payment + Fees; Monthly Payment = Loan Amount × (r × (1 + r)^n) / ((1 + r)^n - 1) where r = monthly rate, n = months",
+      "output": {
+        "label": "Monthly Payment",
+        "default": "Enter car details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Loan Amount",
+          "field": "loanAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Total Interest Paid",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Total Cost of Car",
+          "field": "totalCost",
+          "format": "currency"
+        },
+        {
+          "label": "Interest Rate (Monthly)",
+          "field": "monthlyRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "CarLoanCalculator"
+    },
+    "examples": [
+      {
+        "title": "New Car Purchase",
+        "input": {
+          "carPrice": 35000,
+          "downPayment": 7000,
+          "loanTerm": "60",
+          "interestRate": 4.5,
+          "salesTax": 7,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 532,
+          "loanAmount": 29200,
+          "totalInterest": 4920,
+          "totalCost": 39920
+        },
+        "explanation": "A $35,000 car with $7,000 down payment, 5-year loan at 4.5% APR, and 7% sales tax results in $532 monthly payments and $39,920 total cost."
+      },
+      {
+        "title": "Used Car Financing",
+        "input": {
+          "carPrice": 20000,
+          "downPayment": 3000,
+          "loanTerm": "48",
+          "interestRate": 6.5,
+          "salesTax": 6,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 454,
+          "loanAmount": 17600,
+          "totalInterest": 2744,
+          "totalCost": 22744
+        },
+        "explanation": "Financing a $20,000 used car with $3,000 down, 4-year term at 6.5% interest results in $454 monthly payments and $22,744 total cost."
+      },
+      {
+        "title": "Luxury Vehicle Loan",
+        "input": {
+          "carPrice": 75000,
+          "downPayment": 15000,
+          "loanTerm": "72",
+          "interestRate": 3.9,
+          "salesTax": 8,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 892,
+          "loanAmount": 64000,
+          "totalInterest": 11744,
+          "totalCost": 86744
+        },
+        "explanation": "A $75,000 luxury car with substantial $15,000 down payment and 6-year financing at 3.9% APR equals $892 monthly payments."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Loan Calculator",
+        "slug": "loan-calculator",
+        "description": "General loan payment calculations."
+      },
+      {
+        "name": "Savings Calculator",
+        "slug": "savings-calculator",
+        "description": "Calculate compound interest growth."
+      },
+      {
+        "name": "Tax Calculator",
+        "slug": "tax-calculator",
+        "description": "Estimate income tax liability."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Navigate the complex world of auto financing with confidence using our comprehensive car loan calculator that reveals exactly how much your vehicle will cost over time. Car loans are one of the largest purchases most people make, and understanding the true cost goes far beyond the sticker price. Our calculator shows you monthly payments, total interest paid, and the complete financing picture so you can make informed decisions about car buying and financing. Whether you're buying new or used, this tool helps you understand the long-term financial commitment of vehicle ownership.",
+      "benefits": [
+        "Calculate exact monthly car loan payments for any vehicle price",
+        "Understand total interest costs over the life of your auto loan",
+        "Compare different loan terms to find the optimal financing period",
+        "See how down payments reduce monthly payments and total costs",
+        "Evaluate the impact of different interest rates on loan affordability",
+        "Plan your budget with realistic vehicle ownership costs",
+        "Avoid buying cars you can't afford with accurate payment projections",
+        "Make informed decisions between buying, leasing, or saving for cash"
+      ],
+      "steps": [
+        "Enter the total price of the vehicle you're considering",
+        "Input your planned down payment amount",
+        "Select your preferred loan term (typically 36-84 months)",
+        "Enter the interest rate (APR) offered by lenders",
+        "Choose whether to include taxes and fees in calculations",
+        "Review monthly payments, total interest, and complete financing costs"
+      ],
+      "inputsExplained": [
+        "Car price is the total amount you're financing (MSRP plus any fees)",
+        "Down payment reduces the amount you need to borrow and monthly payments",
+        "Loan term affects both monthly payment amount and total interest paid",
+        "Interest rate (APR) determines how much extra you'll pay for borrowing",
+        "Taxes and fees add to the total amount financed if included",
+        "Trade-in value can reduce the amount you need to finance"
+      ],
+      "formulaExplanation": "Car loan calculations use standard amortization formulas: Monthly Payment = [Loan Amount × (Interest Rate ÷ 12)] ÷ [1 - (1 + Interest Rate ÷ 12)^(-Loan Term)]. This formula accounts for principal reduction and interest charges each month. Longer loan terms reduce monthly payments but increase total interest paid. Higher interest rates significantly impact total costs. Understanding this helps you see why shorter terms and larger down payments save money, even with higher monthly payments. The formula reveals how auto loans work and why financing decisions matter.",
+      "examples": [
+        "$25,000 car loan at 6% APR for 60 months results in $483 monthly payments and $8,961 total interest - showing how loans extend costs significantly beyond the purchase price.",
+        "Same $25,000 loan with $5,000 down payment reduces monthly payments to $425 and total interest to $7,514 - demonstrating down payment benefits.",
+        "$30,000 luxury vehicle financed for 72 months at 4.5% APR creates $475 monthly payments but $11,278 total interest - illustrating how longer terms increase overall costs."
+      ],
+      "resultsExplanation": [
+        "Monthly payment shows what you'll pay each month for your car loan",
+        "Total interest reveals the complete cost of borrowing beyond the car price",
+        "Total amount paid combines the car price with all financing costs",
+        "Loan-to-value ratio helps assess financing risk and equity position"
+      ],
+      "whoItsFor": "This car loan calculator serves car buyers comparing financing options, first-time buyers understanding loan costs, current car owners considering refinancing, financial advisors helping clients, dealership customers evaluating offers, and anyone wanting to understand vehicle financing. It's particularly valuable for those comparing loan terms, calculating affordability, understanding interest costs, and making informed vehicle purchase decisions. The calculator works for new cars, used cars, and various financing scenarios.",
+      "disclaimer": "This car loan calculator provides estimates based on the information entered. Actual loan terms, interest rates, and payments may vary based on credit score, lender requirements, and market conditions. Additional costs like extended warranties, service contracts, and dealer fees are not included. Interest rates shown are examples and not guaranteed. This tool is for educational purposes and does not constitute financial advice or loan approval. Consult lenders for actual rates and terms. Vehicle values can depreciate rapidly, affecting equity and resale value.",
+      "relatedTools": [
+        "Loan calculators for comparing different financing options",
+        "Savings calculators for building down payment funds",
+        "Tax calculators for understanding vehicle-related deductions"
+      ],
+      "faqs": [
+        {
+          "question": "What's the ideal car loan term for me?",
+          "answer": "The best term depends on your budget and goals. Shorter terms (36-48 months) minimize interest but require higher monthly payments. Longer terms (72-84 months) lower payments but increase total interest significantly. Most experts recommend 60 months as a balance between affordability and cost. Consider your budget stability - if payments might become difficult, choose shorter terms. Calculate break-even points where longer terms actually cost more despite lower monthly payments."
+        },
+        {
+          "question": "How much down payment should I make?",
+          "answer": "Aim for 10-20% down payment to reduce monthly payments and total interest. More is better - 20% or more often qualifies for better rates and avoids expensive lender fees. However, don't deplete emergency savings. Consider trade-in value as down payment. Larger down payments reduce loan-to-value ratio, potentially qualifying you for better rates. Remember, down payments reduce monthly payments and total interest paid over loan life."
+        },
+        {
+          "question": "What's a good interest rate for a car loan?",
+          "answer": "Current good rates vary by credit score and market conditions. Excellent credit (750+): 2-4% APR. Good credit (680-749): 4-7% APR. Fair credit (580-679): 7-12% APR. Poor credit: 12%+ APR. Rates are higher than mortgages due to shorter terms and depreciation risk. Compare multiple lenders including banks, credit unions, and online lenders. Rate shopping can save thousands. Consider pre-approval to lock in rates before car shopping."
+        },
+        {
+          "question": "Should I finance or pay cash for a car?",
+          "answer": "Pay cash if you can afford it without depleting emergency savings - you'll save thousands in interest and have full ownership immediately. Finance if cash payment would strain finances or you need money for other priorities. Calculate the interest cost vs. investment returns elsewhere. If interest rates are low and you have good credit, financing might be viable. Consider opportunity cost - money tied up in car equity could earn returns elsewhere."
+        },
+        {
+          "question": "How do car loans affect my credit score?",
+          "answer": "Applying for loans creates hard inquiries that temporarily lower scores 5-10 points. Closing loans increases credit utilization, potentially lowering scores further. Making on-time payments builds positive credit history. Auto loans are installment loans that help diversify credit mix. Pay off loans quickly to minimize negative impact. Avoid multiple applications - shop rates with one inquiry using pre-approval. Good payment history helps scores more than loan amounts."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Préstamo de Auto",
+    "seoTitle": "Calculadora de Préstamo de Auto - Calculadora de Pago de Auto",
+    "metaDescription": "Calcula tus pagos de préstamo de auto, interés total y costos de financiamiento. Compara diferentes plazos y tasas de interés para decisiones de financiamiento de auto.",
+    "keywords": [
+      "calculadora préstamo auto",
+      "calculadora préstamo carro",
+      "calculadora pago auto",
+      "calculadora financiamiento auto",
+      "calculadora préstamo vehículo"
+    ],
+    "longTailKeywords": [
+      "como calcular pagos de préstamo de auto",
+      "calculadora de préstamo de auto con valor de intercambio",
+      "calculadora de pago de auto con pago inicial",
+      "cuánto auto puedo comprar calculadora",
+      "calculadora de interés de préstamo de auto",
+      "calculadora de financiamiento de auto con impuestos y tarifas",
+      "como calcular pago mensual de auto",
+      "calculadora de préstamo de auto para autos usados",
+      "calculadora de préstamo de auto con equidad negativa",
+      "mejores tasas de interés de préstamo de auto calculadora"
+    ],
+    "slug": "car-loan-calculator",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "préstamo auto",
+      "préstamo carro",
+      "financiamiento vehículo",
+      "pago auto",
+      "financiamiento auto",
+      "tasas interés"
+    ],
+    "description": "Calcula tus pagos mensuales de préstamo de auto y costos totales de financiamiento con nuestra calculadora integral de préstamo de auto. Compara diferentes plazos de préstamo, tasas de interés y pagos iniciales para encontrar la mejor opción de financiamiento de auto. Perfecto para compradores de autos que planean su compra de vehículo y entienden el costo real del financiamiento de auto.",
+    "summary": "Calcula pagos de préstamo de auto y costos totales de financiamiento.",
+    "instructions": [
+      "Ingresa el precio del auto o monto de préstamo que necesitas financiar",
+      "Ingresa tu monto de pago inicial para reducir el monto financiado",
+      "Selecciona el plazo del préstamo en meses (típicamente 36-84 meses para autos)",
+      "Ingresa la tasa de interés (APR) ofrecida por tu prestamista",
+      "Elige si incluir impuestos y tarifas en el cálculo",
+      "La calculadora mostrará tu pago mensual y costos totales"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "carPrice",
+          "label": "Precio del Auto ($)",
+          "type": "number",
+          "default": 30000,
+          "min": 0,
+          "max": 200000,
+          "step": 100
+        },
+        {
+          "name": "downPayment",
+          "label": "Pago Inicial ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "loanTerm",
+          "label": "Plazo del Préstamo (meses)",
+          "type": "select",
+          "options": [
+            {
+              "value": "36",
+              "label": "36 meses (3 años)"
+            },
+            {
+              "value": "48",
+              "label": "48 meses (4 años)"
+            },
+            {
+              "value": "60",
+              "label": "60 meses (5 años)"
+            },
+            {
+              "value": "72",
+              "label": "72 meses (6 años)"
+            },
+            {
+              "value": "84",
+              "label": "84 meses (7 años)"
+            }
+          ],
+          "default": "60"
+        },
+        {
+          "name": "interestRate",
+          "label": "Tasa de Interés (APR %)",
+          "type": "number",
+          "default": 5.5,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "salesTax",
+          "label": "Tasa de Impuesto de Ventas (%)",
+          "type": "number",
+          "default": 6,
+          "min": 0,
+          "max": 15,
+          "step": 0.1
+        },
+        {
+          "name": "includeFees",
+          "label": "Incluir $500 de Tarifa de Documentación",
+          "type": "checkbox",
+          "default": true
+        }
+      ],
+      "formula": "Monto del Préstamo = Precio del Auto + Impuesto de Ventas - Pago Inicial + Tarifas; Pago Mensual = Monto del Préstamo × (r × (1 + r)^n) / ((1 + r)^n - 1) donde r = tasa mensual, n = meses",
+      "output": {
+        "label": "Pago Mensual",
+        "default": "Ingresa detalles del auto arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Monto del Préstamo",
+          "field": "loanAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Interés Total Pagado",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Costo Total del Auto",
+          "field": "totalCost",
+          "format": "currency"
+        },
+        {
+          "label": "Tasa de Interés (Mensual)",
+          "field": "monthlyRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "CarLoanCalculator"
+    },
+    "examples": [
+      {
+        "title": "Compra de Auto Nuevo",
+        "input": {
+          "carPrice": 35000,
+          "downPayment": 7000,
+          "loanTerm": "60",
+          "interestRate": 4.5,
+          "salesTax": 7,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 532,
+          "loanAmount": 29200,
+          "totalInterest": 4920,
+          "totalCost": 39920
+        },
+        "explanation": "Un auto de $35,000 con $7,000 de pago inicial, préstamo de 5 años al 4.5% APR, e impuesto de ventas del 7% resulta en pagos mensuales de $532 y costo total de $39,920."
+      },
+      {
+        "title": "Financiamiento de Auto Usado",
+        "input": {
+          "carPrice": 20000,
+          "downPayment": 3000,
+          "loanTerm": "48",
+          "interestRate": 6.5,
+          "salesTax": 6,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 454,
+          "loanAmount": 17600,
+          "totalInterest": 2744,
+          "totalCost": 22744
+        },
+        "explanation": "Financiar un auto usado de $20,000 con $3,000 de enganche, plazo de 4 años al 6.5% de interés resulta en pagos mensuales de $454 y costo total de $22,744."
+      },
+      {
+        "title": "Préstamo de Vehículo de Lujo",
+        "input": {
+          "carPrice": 75000,
+          "downPayment": 15000,
+          "loanTerm": "72",
+          "interestRate": 3.9,
+          "salesTax": 8,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 892,
+          "loanAmount": 64000,
+          "totalInterest": 11744,
+          "totalCost": 86744
+        },
+        "explanation": "Un auto de lujo de $75,000 con pago inicial sustancial de $15,000 y financiamiento de 6 años al 3.9% APR equivale a pagos mensuales de $892."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Préstamos",
+        "slug": "loan-calculator",
+        "description": "Cálculos generales de pagos de préstamos."
+      },
+      {
+        "name": "Calculadora de Ahorros",
+        "slug": "savings-calculator",
+        "description": "Calcula crecimiento de interés compuesto."
+      },
+      {
+        "name": "Calculadora de Impuestos",
+        "slug": "tax-calculator",
+        "description": "Estima responsabilidad fiscal de ingresos."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Navega el complejo mundo del financiamiento de autos con confianza usando nuestra calculadora integral de préstamo de auto que revela exactamente cuánto te costará tu vehículo con el tiempo. Los préstamos de auto son una de las compras más grandes que hace la mayoría de personas, y entender el costo real va mucho más allá del precio de etiqueta. Nuestra calculadora te muestra pagos mensuales, interés total pagado, y la imagen completa de financiamiento para que tomes decisiones informadas sobre compra y financiamiento de autos. Ya sea que compres nuevo o usado, esta herramienta te ayuda a entender el compromiso financiero a largo plazo de propiedad de vehículo.",
+      "benefits": [
+        "Calcula pagos mensuales exactos de préstamo de auto para cualquier precio de vehículo",
+        "Entiende costos totales de interés durante la vida de tu préstamo de auto",
+        "Compara diferentes plazos de préstamo para encontrar el período óptimo de financiamiento",
+        "Ve cómo pagos iniciales reducen pagos mensuales y costos totales",
+        "Evalúa el impacto de diferentes tasas de interés en asequibilidad de préstamo",
+        "Planea tu presupuesto con costos realistas de propiedad de vehículo",
+        "Evita comprar autos que no puedes permitirte con proyecciones precisas de pago",
+        "Toma decisiones informadas entre comprar, arrendar, o ahorrar por efectivo"
+      ],
+      "steps": [
+        "Ingresa el precio total del vehículo que estás considerando",
+        "Ingresa tu monto planeado de pago inicial",
+        "Selecciona tu plazo preferido de préstamo (típicamente 36-84 meses para autos)",
+        "Ingresa la tasa de interés (APR) ofrecida por tu prestamista",
+        "Elige si incluir impuestos y tarifas en el cálculo",
+        "Revisa pagos mensuales, interés total, y costos completos de financiamiento"
+      ],
+      "inputsExplained": [
+        "Precio de auto es el monto total que estás financiando (MSRP más cualquier tarifa)",
+        "Pago inicial reduce el monto que necesitas pedir prestado y pagos mensuales",
+        "Plazo de préstamo afecta tanto monto de pago mensual como interés total pagado",
+        "Tasa de interés (APR) determina cuánto extra pagarás por pedir prestado",
+        "Impuestos y tarifas agregan al monto total financiado si incluidos",
+        "Valor de permuta puede reducir el monto que necesitas financiar"
+      ],
+      "formulaExplanation": "Los cálculos de préstamo de auto usan fórmulas estándar de amortización: Pago Mensual = [Monto de Préstamo × (Tasa de Interés ÷ 12)] ÷ [1 - (1 + Tasa de Interés ÷ 12)^(-Plazo de Préstamo)]. Esta fórmula considera reducción de principal y cargos de interés cada mes. Plazos de préstamo más largos reducen pagos mensuales pero aumentan interés total pagado. Tasas de interés más altas impactan significativamente costos totales. Entender esto te ayuda a ver por qué plazos más cortos y pagos iniciales más grandes ahorran dinero, incluso con pagos mensuales más altos. La fórmula revela cómo funcionan los préstamos de auto y por qué las decisiones de financiamiento importan.",
+      "examples": [
+        "Préstamo de auto de $25,000 al 6% APR por 60 meses resulta en pagos mensuales de $483 e interés total de $8,961 - mostrando cómo préstamos extienden costos significativamente más allá del precio de compra.",
+        "Mismo préstamo de $25,000 con pago inicial de $5,000 reduce pagos mensuales a $425 e interés total a $7,514 - demostrando beneficios de pago inicial.",
+        "Vehículo de lujo de $30,000 financiado por 72 meses al 4.5% APR crea pagos mensuales de $475 pero interés total de $11,278 - ilustrando cómo plazos más largos aumentan costos generales."
+      ],
+      "resultsExplanation": [
+        "Pago mensual muestra qué pagarás cada mes por tu préstamo de auto",
+        "Interés total revela el costo completo de pedir prestado más allá del precio del auto",
+        "Monto total pagado combina el precio del auto con todos los costos de financiamiento",
+        "Ratio préstamo-valor ayuda evaluar riesgo de financiamiento y posición de capital"
+      ],
+      "whoItsFor": "Esta calculadora de préstamo de auto sirve a compradores de auto comparando opciones de financiamiento, compradores primerizos entendiendo costos de préstamo, dueños actuales de auto considerando refinanciamiento, asesores financieros ayudando clientes, clientes de concesionaria evaluando ofertas, y cualquiera queriendo entender financiamiento de vehículo. Es particularmente valiosa para aquellos comparando plazos de préstamo, calculando asequibilidad, entendiendo costos de interés, y tomando decisiones informadas de compra de vehículo. La calculadora funciona para autos nuevos, usados, y varios escenarios de financiamiento.",
+      "disclaimer": "Esta calculadora de préstamo de auto proporciona estimaciones basadas en la información ingresada. Términos de préstamo reales, tasas de interés, y pagos pueden variar basado en calificación crediticia, requisitos de prestamista, y condiciones de mercado. Costos adicionales como garantías extendidas, contratos de servicio, y tarifas de concesionario no están incluidos. Tasas de interés mostradas son ejemplos y no garantizadas. Esta herramienta es para propósitos educativos y no constituye consejo financiero o aprobación de préstamo. Consulta prestamistas por tasas y términos reales. Valores de vehículo pueden depreciar rápidamente, afectando capital y valor de reventa.",
+      "relatedTools": [
+        "Calculadoras de préstamo para comparar diferentes opciones de financiamiento",
+        "Calculadoras de ahorro para construir fondos de pago inicial",
+        "Calculadoras de impuestos para entender deducciones relacionadas con vehículo"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es el plazo ideal de préstamo de auto para mí?",
+          "answer": "El mejor plazo depende de tu presupuesto y metas. Plazos más cortos (36-48 meses) minimizan interés pero requieren pagos mensuales más altos. Plazos más largos (72-84 meses) bajan pagos pero aumentan interés total significativamente. La mayoría de expertos recomiendan 60 meses como balance entre asequibilidad y costo. Considera estabilidad de presupuesto - si pagos podrían volverse difíciles, elige plazos más cortos. Calcula puntos de equilibrio donde plazos más largos realmente cuestan más a pesar de pagos mensuales más bajos."
+        },
+        {
+          "question": "¿Cuánto pago inicial debería hacer?",
+          "answer": "Apunta a pago inicial de 10-20% para reducir pagos mensuales y costos totales. Más es mejor - 20% o más a menudo califica para mejores tasas y evita tarifas costosas de prestamista. Sin embargo, no agotes ahorros de emergencia. Considera valor de permuta como pago inicial. Pagos iniciales más grandes reducen ratio préstamo-valor, potencialmente calificándote para mejores tasas. Recuerda, pagos iniciales reducen pagos mensuales e interés total pagado durante vida del préstamo."
+        },
+        {
+          "question": "¿Cuál es una buena tasa de interés para préstamo de auto?",
+          "answer": "Tasas buenas actuales varían por calificación crediticia y condiciones de mercado. Crédito excelente (750+): 2-4% APR. Crédito bueno (680-749): 4-7% APR. Crédito regular (580-679): 7-12% APR. Crédito pobre: 12%+ APR. Las tasas son más altas que hipotecas debido a plazos más cortos y riesgo de depreciación. Compara múltiples prestamistas incluyendo bancos, cooperativas de crédito, y prestamistas online. Comparar tasas puede ahorrar miles. Considera pre-aprobación para bloquear tasas antes de comprar auto."
+        },
+        {
+          "question": "¿Debo financiar o pagar en efectivo por un auto?",
+          "answer": "Paga en efectivo si puedes permitirlo sin agotar ahorros de emergencia - ahorrarás miles en interés y tendrás propiedad completa inmediatamente. Financiamiento si pago en efectivo tensionaría finanzas o necesitas dinero para otras prioridades. Calcula costo de interés vs. retornos de inversión en otro lugar. Si tasas de interés son bajas y tienes buen crédito, financiamiento podría ser viable. Considera costo de oportunidad - dinero atado en capital de auto podría ganar retornos en otro lugar."
+        },
+        {
+          "question": "¿Cómo afectan préstamos de auto a mi calificación crediticia?",
+          "answer": "Solicitar préstamos crea consultas difíciles que bajan temporalmente calificaciones 5-10 puntos. Cerrar préstamos aumenta utilización de crédito, potencialmente bajando calificaciones más. Hacer pagos puntuales construye historial crediticio positivo. Préstamos de auto son préstamos a plazos que ayudan diversificar mezcla de crédito. Paga préstamos rápidamente para minimizar impacto negativo. Evita múltiples solicitudes - compara tasas con una consulta usando pre-aprobación. Buen historial de pago ayuda calificaciones más que montos de préstamo."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Empréstimo de Carro",
+    "seoTitle": "Calculadora de Empréstimo de Carro - Calculadora de Pagamento de Carro",
+    "metaDescription": "Calcule seus pagamentos de empréstimo de carro, juros totais e custos de financiamento. Compare diferentes prazos e taxas de juros para decisões de financiamento de carro.",
+    "keywords": [
+      "calculadora empréstimo carro",
+      "calculadora empréstimo auto",
+      "calculadora pagamento carro",
+      "calculadora financiamento auto",
+      "calculadora empréstimo veículo"
+    ],
+    "longTailKeywords": [
+      "como calcular pagamentos de empréstimo de carro",
+      "calculadora de empréstimo de carro com valor de troca",
+      "calculadora de pagamento de carro com entrada",
+      "quanto carro posso comprar calculadora",
+      "calculadora de juros de empréstimo de carro",
+      "calculadora de financiamento de carro com impostos e taxas",
+      "como calcular pagamento mensal de carro",
+      "calculadora de empréstimo de carro para carros usados",
+      "calculadora de empréstimo de carro com equidade negativa",
+      "melhores taxas de juros de empréstimo de carro calculadora"
+    ],
+    "slug": "car-loan-calculator",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "empréstimo carro",
+      "empréstimo auto",
+      "financiamento veículo",
+      "pagamento carro",
+      "financiamento auto",
+      "taxas juros"
+    ],
+    "description": "Calcule seus pagamentos mensais de empréstimo de carro e custos totais de financiamento com nossa calculadora abrangente de empréstimo de carro. Compare diferentes prazos de empréstimo, taxas de juros e pagamentos iniciais para encontrar a melhor opção de financiamento de carro. Perfeito para compradores de carros que planejam sua compra de veículo e entendem o custo real do financiamento de carro.",
+    "summary": "Calcule pagamentos de empréstimo de carro e custos totais de financiamento.",
+    "instructions": [
+      "Digite o preço do carro ou valor do empréstimo que você precisa financiar",
+      "Digite seu valor de entrada para reduzir o valor financiado",
+      "Selecione o prazo do empréstimo em meses (normalmente 36-84 meses para carros)",
+      "Digite a taxa de juros (APR) oferecida pelo seu credor",
+      "Escolha se incluir impostos e taxas no cálculo",
+      "A calculadora mostrará seu pagamento mensal e custos totais"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "carPrice",
+          "label": "Preço do Carro (R$)",
+          "type": "number",
+          "default": 30000,
+          "min": 0,
+          "max": 200000,
+          "step": 100
+        },
+        {
+          "name": "downPayment",
+          "label": "Entrada (R$)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "loanTerm",
+          "label": "Prazo do Empréstimo (meses)",
+          "type": "select",
+          "options": [
+            {
+              "value": "36",
+              "label": "36 meses (3 anos)"
+            },
+            {
+              "value": "48",
+              "label": "48 meses (4 anos)"
+            },
+            {
+              "value": "60",
+              "label": "60 meses (5 anos)"
+            },
+            {
+              "value": "72",
+              "label": "72 meses (6 anos)"
+            },
+            {
+              "value": "84",
+              "label": "84 meses (7 anos)"
+            }
+          ],
+          "default": "60"
+        },
+        {
+          "name": "interestRate",
+          "label": "Taxa de Juros (APR %)",
+          "type": "number",
+          "default": 5.5,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "salesTax",
+          "label": "Taxa de Imposto sobre Vendas (%)",
+          "type": "number",
+          "default": 6,
+          "min": 0,
+          "max": 15,
+          "step": 0.1
+        },
+        {
+          "name": "includeFees",
+          "label": "Incluir R$500 de Taxa de Documentação",
+          "type": "checkbox",
+          "default": true
+        }
+      ],
+      "formula": "Valor do Empréstimo = Preço do Carro + Imposto sobre Vendas - Entrada + Taxas; Pagamento Mensal = Valor do Empréstimo × (r × (1 + r)^n) / ((1 + r)^n - 1) onde r = taxa mensal, n = meses",
+      "output": {
+        "label": "Pagamento Mensal",
+        "default": "Digite detalhes do carro acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Valor do Empréstimo",
+          "field": "loanAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Juros Totais Pagos",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Custo Total do Carro",
+          "field": "totalCost",
+          "format": "currency"
+        },
+        {
+          "label": "Taxa de Juros (Mensal)",
+          "field": "monthlyRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "CarLoanCalculator"
+    },
+    "examples": [
+      {
+        "title": "Compra de Carro Novo",
+        "input": {
+          "carPrice": 35000,
+          "downPayment": 7000,
+          "loanTerm": "60",
+          "interestRate": 4.5,
+          "salesTax": 7,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 532,
+          "loanAmount": 29200,
+          "totalInterest": 4920,
+          "totalCost": 39920
+        },
+        "explanation": "Um carro de R$35.000 com R$7.000 de entrada, empréstimo de 5 anos a 4.5% APR, e imposto sobre vendas de 7% resulta em pagamentos mensais de R$532 e custo total de R$39.920."
+      },
+      {
+        "title": "Financiamento de Carro Usado",
+        "input": {
+          "carPrice": 20000,
+          "downPayment": 3000,
+          "loanTerm": "48",
+          "interestRate": 6.5,
+          "salesTax": 6,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 454,
+          "loanAmount": 17600,
+          "totalInterest": 2744,
+          "totalCost": 22744
+        },
+        "explanation": "Financiar um carro usado de R$20.000 com R$3.000 de entrada, prazo de 4 anos a 6.5% de juros resulta em pagamentos mensais de R$454 e custo total de R$22.744."
+      },
+      {
+        "title": "Empréstimo de Veículo de Luxo",
+        "input": {
+          "carPrice": 75000,
+          "downPayment": 15000,
+          "loanTerm": "72",
+          "interestRate": 3.9,
+          "salesTax": 8,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 892,
+          "loanAmount": 64000,
+          "totalInterest": 11744,
+          "totalCost": 86744
+        },
+        "explanation": "Um carro de luxo de R$75.000 com entrada substancial de R$15.000 e financiamento de 6 anos a 3.9% APR equivale a pagamentos mensais de R$892."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Empréstimo",
+        "slug": "loan-calculator",
+        "description": "Cálculos gerais de pagamentos de empréstimos."
+      },
+      {
+        "name": "Calculadora de Poupança",
+        "slug": "savings-calculator",
+        "description": "Calcule crescimento de juros compostos."
+      },
+      {
+        "name": "Calculadora de Imposto",
+        "slug": "tax-calculator",
+        "description": "Estime responsabilidade fiscal de renda."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Navegue o complexo mundo do financiamento de carros com confiança usando nossa calculadora abrangente de empréstimo de carro que revela exatamente quanto seu veículo custará ao longo do tempo. Empréstimos de carro são uma das maiores compras que a maioria das pessoas faz, e entender o custo real vai muito além do preço da etiqueta. Nossa calculadora mostra pagamentos mensais, juros totais pagos, e a imagem completa de financiamento para que você tome decisões informadas sobre compra e financiamento de carros. Seja comprando novo ou usado, esta ferramenta ajuda você a entender o compromisso financeiro de longo prazo da propriedade de veículo.",
+      "benefits": [
+        "Calcule pagamentos mensais exatos de empréstimo de carro para qualquer preço de veículo",
+        "Entenda custos totais de juros durante a vida de seu empréstimo de carro",
+        "Compare diferentes prazos de empréstimo para encontrar o período ótimo de financiamento",
+        "Veja como pagamentos iniciais reduzem pagamentos mensais e custos totais",
+        "Avalie o impacto de diferentes taxas de juros na acessibilidade de empréstimo",
+        "Planeje seu orçamento com custos realistas de propriedade de veículo",
+        "Evite comprar carros que você não pode pagar com projeções precisas de pagamento",
+        "Tome decisões informadas entre comprar, arrendar, ou economizar para dinheiro"
+      ],
+      "steps": [
+        "Digite o preço total do veículo que você está considerando",
+        "Insira seu valor planejado de pagamento inicial",
+        "Selecione seu prazo preferido de empréstimo (tipicamente 36-84 meses para carros)",
+        "Digite a taxa de juros (APR) oferecida por credores",
+        "Escolha se incluir impostos e taxas no cálculo",
+        "Revise pagamentos mensais, juros totais, e custos completos de financiamento"
+      ],
+      "inputsExplained": [
+        "Preço do carro é o valor total que você está financiando (MSRP mais quaisquer taxas)",
+        "Pagamento inicial reduz o valor que você precisa emprestar e pagamentos mensais",
+        "Prazo de empréstimo afeta tanto valor de pagamento mensal quanto juros totais pagos",
+        "Taxa de juros (APR) determina quanto extra você pagará por emprestar",
+        "Impostos e taxas adicionam ao valor total financiado se incluídos",
+        "Valor de troca pode reduzir o valor que você precisa financiar"
+      ],
+      "formulaExplanation": "Cálculos de empréstimo de carro usam fórmulas padrão de amortização: Pagamento Mensal = [Valor de Empréstimo × (Taxa de Juros ÷ 12)] ÷ [1 - (1 + Taxa de Juros ÷ 12)^(-Prazo de Empréstimo)]. Esta fórmula considera redução de principal e encargos de juros a cada mês. Prazos de empréstimo mais longos reduzem pagamentos mensais mas aumentam juros totais pagos. Taxas de juros mais altas impactam significativamente custos totais. Entender isso ajuda você a ver por que prazos mais curtos e pagamentos iniciais maiores economizam dinheiro, mesmo com pagamentos mensais mais altos. A fórmula revela como empréstimos de carro funcionam e por que decisões de financiamento importam.",
+      "examples": [
+        "Empréstimo de carro de $25,000 a 6% APR por 60 meses resulta em pagamentos mensais de $483 e juros totais de $8,961 - mostrando como empréstimos estendem custos significativamente além do preço de compra.",
+        "Mesmo empréstimo de $25,000 com pagamento inicial de $5,000 reduz pagamentos mensais para $425 e juros totais para $7,514 - demonstrando benefícios de pagamento inicial.",
+        "Veículo de luxo de $30,000 financiado por 72 meses a 4.5% APR cria pagamentos mensais de $475 mas juros totais de $11,278 - ilustrando como prazos mais longos aumentam custos gerais."
+      ],
+      "resultsExplanation": [
+        "Pagamento mensal mostra o que você pagará a cada mês por seu empréstimo de carro",
+        "Juros totais revelam o custo completo de emprestar além do preço do carro",
+        "Valor total pago combina o preço do carro com todos os custos de financiamento",
+        "Razão empréstimo-valor ajuda avaliar risco de financiamento e posição de capital"
+      ],
+      "whoItsFor": "Esta calculadora de empréstimo de carro serve compradores de carro comparando opções de financiamento, compradores pela primeira vez entendendo custos de empréstimo, donos atuais de carro considerando refinanciamento, consultores financeiros ajudando clientes, clientes de concessionária avaliando ofertas, e qualquer pessoa querendo entender financiamento de veículo. É particularmente valiosa para aqueles comparando prazos de empréstimo, calculando acessibilidade, entendendo custos de juros, e tomando decisões informadas de compra de veículo. A calculadora funciona para carros novos, usados, e vários cenários de financiamento.",
+      "disclaimer": "Esta calculadora de empréstimo de carro fornece estimativas baseadas na informação inserida. Termos de empréstimo reais, taxas de juros, e pagamentos podem variar baseados em pontuação de crédito, requisitos de credor, e condições de mercado. Custos adicionais como garantias estendidas, contratos de serviço, e taxas de concessionária não estão incluídos. Taxas de juros mostradas são exemplos e não garantidas. Esta ferramenta é para propósitos educacionais e não constitui conselho financeiro ou aprovação de empréstimo. Consulte credores para taxas e termos reais. Valores de veículo podem depreciar rapidamente, afetando capital e valor de revenda.",
+      "relatedTools": [
+        "Calculadoras de empréstimo para comparar diferentes opções de financiamento",
+        "Calculadoras de poupança para construir fundos de pagamento inicial",
+        "Calculadoras de impostos para entender deduções relacionadas com veículo"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é o prazo ideal de empréstimo de carro para mim?",
+          "answer": "O melhor prazo depende de seu orçamento e metas. Prazos mais curtos (36-48 meses) minimizam juros mas requerem pagamentos mensais mais altos. Prazos mais longos (72-84 meses) baixam pagamentos mas aumentam juros totais significativamente. A maioria dos especialistas recomenda 60 meses como um balance entre acessibilidade e custo. Considere estabilidade de orçamento - se pagamentos podem se tornar difíceis, escolha prazos mais curtos. Calcule pontos de equilíbrio onde prazos mais longos realmente custam mais apesar de pagamentos mensais menores."
+        },
+        {
+          "question": "Quanto pagamento inicial eu deveria fazer?",
+          "answer": "Mire pagamento inicial de 10-20% para reduzir pagamentos mensais e custos totais. Mais é melhor - 20% ou mais frequentemente qualifica para melhores taxas e evita taxas caras de credor. No entanto, não esgote economias de emergência. Considere valor de troca como pagamento inicial. Pagamentos iniciais maiores reduzem razão empréstimo-valor, potencialmente qualificando você para melhores taxas. Lembre-se, pagamentos iniciais reduzem pagamentos mensais e juros totais pagos durante vida do empréstimo."
+        },
+        {
+          "question": "Qual é uma boa taxa de juros para empréstimo de carro?",
+          "answer": "Taxas boas atuais variam por pontuação de crédito e condições de mercado. Crédito excelente (750+): 2-4% APR. Crédito bom (680-749): 4-7% APR. Crédito regular (580-679): 7-12% APR. Crédito pobre: 12%+ APR. Taxas são mais altas que hipotecas devido a prazos mais curtos e risco de depreciação. Compare múltiplos credores incluindo bancos, cooperativas de crédito, e credores online. Comparar taxas pode economizar milhares. Considere pré-aprovação para bloquear taxas antes de comprar carro."
+        },
+        {
+          "question": "Devo financiar ou pagar em dinheiro por um carro?",
+          "answer": "Pague em dinheiro se você puder pagar sem esgotar economias de emergência - você economizará milhares em juros e terá propriedade completa imediatamente. Finance se pagamento em dinheiro tensionaria finanças ou você precisa de dinheiro para outras prioridades. Calcule custo de juros vs. retornos de investimento em outro lugar. Se taxas de juros são baixas e você tem bom crédito, financiamento pode ser viável. Considere custo de oportunidade - dinheiro atado em capital de carro poderia ganhar retornos em outro lugar."
+        },
+        {
+          "question": "Como empréstimos de carro afetam minha pontuação de crédito?",
+          "answer": "Solicitar empréstimos cria consultas difíceis que baixam temporariamente pontuações 5-10 pontos. Fechar empréstimos aumenta utilização de crédito, potencialmente baixando pontuações mais. Fazer pagamentos em dia constrói histórico creditício positivo. Empréstimos de carro são empréstimos parcelados que ajudam diversificar mix de crédito. Pague empréstimos rapidamente para minimizar impacto negativo. Evite múltiplas aplicações - compare taxas com uma consulta usando pré-aprovação. Bom histórico de pagamento ajuda pontuações mais que valores de empréstimo."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculatrice de Prêt Auto",
+    "seoTitle": "Calculatrice de Prêt Auto - Calculatrice de Paiement Auto",
+    "metaDescription": "Calculez vos paiements de prêt auto, intérêts totaux et coûts de financement. Comparez différents délais et taux d'intérêt pour les décisions de financement auto.",
+    "keywords": [
+      "calculatrice prêt auto",
+      "calculatrice prêt voiture",
+      "calculatrice paiement auto",
+      "calculatrice financement auto",
+      "calculatrice prêt véhicule"
+    ],
+    "longTailKeywords": [
+      "comment calculer les paiements de prêt auto",
+      "calculatrice de prêt auto avec valeur de reprise",
+      "calculatrice de paiement auto avec acompte",
+      "combien de voiture puis-je acheter calculatrice",
+      "calculatrice d'intérêt de prêt auto",
+      "calculatrice de financement auto avec taxes et frais",
+      "comment calculer le paiement mensuel de voiture",
+      "calculatrice de prêt auto pour voitures d'occasion",
+      "calculatrice de prêt auto avec équité négative",
+      "meilleurs taux d'intérêt de prêt auto calculatrice"
+    ],
+    "slug": "car-loan-calculator",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "prêt auto",
+      "prêt voiture",
+      "financement véhicule",
+      "paiement auto",
+      "financement auto",
+      "taux intérêt"
+    ],
+    "description": "Calculez vos paiements mensuels de prêt auto et coûts totaux de financement avec notre calculatrice complète de prêt auto. Comparez différents délais de prêt, taux d'intérêt et acomptes pour trouver la meilleure option de financement auto. Parfait pour les acheteurs de voitures qui planifient leur achat de véhicule et comprennent le coût réel du financement auto.",
+    "summary": "Calculez les paiements de prêt auto et coûts totaux de financement.",
+    "instructions": [
+      "Entrez le prix de la voiture ou le montant du prêt à financer",
+      "Entrez votre montant d'acompte pour réduire le montant financé",
+      "Sélectionnez le délai du prêt en mois (généralement 36-84 mois pour les voitures)",
+      "Entrez le taux d'intérêt (APR) offert par votre prêteur",
+      "Choisissez d'inclure les taxes et frais dans le calcul",
+      "La calculatrice affichera votre paiement mensuel et coûts totaux"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "carPrice",
+          "label": "Prix de la Voiture (€)",
+          "type": "number",
+          "default": 30000,
+          "min": 0,
+          "max": 200000,
+          "step": 100
+        },
+        {
+          "name": "downPayment",
+          "label": "Acompte (€)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "loanTerm",
+          "label": "Durée du Prêt (mois)",
+          "type": "select",
+          "options": [
+            {
+              "value": "36",
+              "label": "36 mois (3 ans)"
+            },
+            {
+              "value": "48",
+              "label": "48 mois (4 ans)"
+            },
+            {
+              "value": "60",
+              "label": "60 mois (5 ans)"
+            },
+            {
+              "value": "72",
+              "label": "72 mois (6 ans)"
+            },
+            {
+              "value": "84",
+              "label": "84 mois (7 ans)"
+            }
+          ],
+          "default": "60"
+        },
+        {
+          "name": "interestRate",
+          "label": "Taux d'Intérêt (APR %)",
+          "type": "number",
+          "default": 5.5,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "salesTax",
+          "label": "Taux de Taxe sur les Ventes (%)",
+          "type": "number",
+          "default": 6,
+          "min": 0,
+          "max": 15,
+          "step": 0.1
+        },
+        {
+          "name": "includeFees",
+          "label": "Inclure 500€ de Frais de Documentation",
+          "type": "checkbox",
+          "default": true
+        }
+      ],
+      "formula": "Montant du Prêt = Prix de la Voiture + Taxe sur les Ventes - Acompte + Frais; Paiement Mensuel = Montant du Prêt × (r × (1 + r)^n) / ((1 + r)^n - 1) où r = taux mensuel, n = mois",
+      "output": {
+        "label": "Paiement Mensuel",
+        "default": "Entrez les détails de la voiture ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Montant du Prêt",
+          "field": "loanAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Intérêts Totaux Payés",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Coût Total de la Voiture",
+          "field": "totalCost",
+          "format": "currency"
+        },
+        {
+          "label": "Taux d'Intérêt (Mensuel)",
+          "field": "monthlyRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "CarLoanCalculator"
+    },
+    "examples": [
+      {
+        "title": "Achat de Voiture Neuve",
+        "input": {
+          "carPrice": 35000,
+          "downPayment": 7000,
+          "loanTerm": "60",
+          "interestRate": 4.5,
+          "salesTax": 7,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 532,
+          "loanAmount": 29200,
+          "totalInterest": 4920,
+          "totalCost": 39920
+        },
+        "explanation": "Une voiture de 35 000€ avec 7 000€ d'acompte, prêt de 5 ans à 4.5% APR, et taxe sur les ventes de 7% résulte en paiements mensuels de 532€ et coût total de 39 920€."
+      },
+      {
+        "title": "Financement de Voiture d'Occasion",
+        "input": {
+          "carPrice": 20000,
+          "downPayment": 3000,
+          "loanTerm": "48",
+          "interestRate": 6.5,
+          "salesTax": 6,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 454,
+          "loanAmount": 17600,
+          "totalInterest": 2744,
+          "totalCost": 22744
+        },
+        "explanation": "Financer une voiture d'occasion de 20 000€ avec 3 000€ d'acompte, délai de 4 ans à 6.5% d'intérêt résulte en paiements mensuels de 454€ et coût total de 22 744€."
+      },
+      {
+        "title": "Prêt de Véhicule de Luxe",
+        "input": {
+          "carPrice": 75000,
+          "downPayment": 15000,
+          "loanTerm": "72",
+          "interestRate": 3.9,
+          "salesTax": 8,
+          "includeFees": true
+        },
+        "output": {
+          "monthlyPayment": 892,
+          "loanAmount": 64000,
+          "totalInterest": 11744,
+          "totalCost": 86744
+        },
+        "explanation": "Une voiture de luxe de 75 000€ avec acompte substantiel de 15 000€ et financement de 6 ans à 3.9% APR équivaut à des paiements mensuels de 892€."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice de Prêt",
+        "slug": "loan-calculator",
+        "description": "Calculs généraux de paiements de prêt."
+      },
+      {
+        "name": "Calculatrice d'Épargne",
+        "slug": "savings-calculator",
+        "description": "Calculez la croissance des intérêts composés."
+      },
+      {
+        "name": "Calculatrice d'Impôt",
+        "slug": "tax-calculator",
+        "description": "Estimez la responsabilité fiscale sur le revenu."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Naviguez le monde complexe du financement automobile en toute confiance en utilisant notre calculatrice complète de prêt auto qui révèle exactement combien votre véhicule vous coûtera au fil du temps. Les prêts auto sont l'un des plus gros achats que font la plupart des gens, et comprendre le vrai coût va bien au-delà du prix affiché. Notre calculatrice vous montre les paiements mensuels, les intérêts totaux payés, et l'image complète du financement pour que vous preniez des décisions éclairées concernant l'achat et le financement de voitures. Que vous achetiez neuf ou d'occasion, cet outil vous aide à comprendre l'engagement financier à long terme de la propriété de véhicule.",
+      "benefits": [
+        "Calculez les paiements mensuels exacts de prêt auto pour tout prix de véhicule",
+        "Comprenez les coûts totaux d'intérêts pendant la vie de votre prêt auto",
+        "Comparez différents délais de prêt pour trouver la période optimale de financement",
+        "Voyez comment les acomptes réduisent les paiements mensuels et les coûts totaux",
+        "Évaluez l'impact de différents taux d'intérêt sur l'abordabilité du prêt",
+        "Planifiez votre budget avec des coûts réalistes de propriété de véhicule",
+        "Évitez d'acheter des voitures que vous ne pouvez pas vous permettre avec des projections précises de paiement",
+        "Prenez des décisions éclairées entre acheter, louer, ou épargner pour du comptant"
+      ],
+      "steps": [
+        "Entrez le prix total du véhicule que vous considérez",
+        "Saisissez votre montant prévu d'acompte",
+        "Sélectionnez votre délai préféré de prêt (généralement 36-84 mois pour les voitures)",
+        "Entrez le taux d'intérêt (APR) offert par les prêteurs",
+        "Choisissez d'inclure ou non les taxes et frais dans le calcul",
+        "Examinez les paiements mensuels, intérêts totaux, et coûts complets de financement"
+      ],
+      "inputsExplained": [
+        "Prix de la voiture est le montant total que vous financez (PVP plus tous frais)",
+        "Acompte réduit le montant que vous devez emprunter et les paiements mensuels",
+        "Délai de prêt affecte à la fois le montant de paiement mensuel et les intérêts totaux payés",
+        "Taux d'intérêt (APR) détermine combien extra vous paierez pour emprunter",
+        "Taxes et frais s'ajoutent au montant total financé s'ils sont inclus",
+        "Valeur d'échange peut réduire le montant que vous devez financer"
+      ],
+      "formulaExplanation": "Les calculs de prêt auto utilisent des formules d'amortissement standard : Paiement Mensuel = [Montant du Prêt × (Taux d'Intérêt ÷ 12)] ÷ [1 - (1 + Taux d'Intérêt ÷ 12)^(-Délai du Prêt)]. Cette formule tient compte de la réduction du principal et des charges d'intérêts chaque mois. Les délais de prêt plus longs réduisent les paiements mensuels mais augmentent les intérêts totaux payés. Les taux d'intérêt plus élevés impactent considérablement les coûts totaux. Comprendre cela vous aide à voir pourquoi les délais plus courts et les acomptes plus importants économisent de l'argent, même avec des paiements mensuels plus élevés. La formule révèle comment les prêts auto fonctionnent et pourquoi les décisions de financement importent.",
+      "examples": [
+        "Prêt auto de 25 000 $ à 6 % APR pour 60 mois résulte en paiements mensuels de 483 $ et intérêts totaux de 8 961 $ - montrant comment les prêts étendent les coûts considérablement au-delà du prix d'achat.",
+        "Même prêt de 25 000 $ avec acompte de 5 000 $ réduit les paiements mensuels à 425 $ et intérêts totaux à 7 514 $ - démontrant les avantages de l'acompte.",
+        "Véhicule de luxe de 30 000 $ financé pendant 72 mois à 4,5 % APR crée des paiements mensuels de 475 $ mais intérêts totaux de 11 278 $ - illustrant comment les délais plus longs augmentent les coûts globaux."
+      ],
+      "resultsExplanation": [
+        "Paiement mensuel montre ce que vous paierez chaque mois pour votre prêt auto",
+        "Intérêts totaux révèlent le coût complet d'emprunter au-delà du prix de la voiture",
+        "Montant total payé combine le prix de la voiture avec tous les coûts de financement",
+        "Ratio prêt-valeur aide évaluer le risque de financement et la position d'équité"
+      ],
+      "whoItsFor": "Cette calculatrice de prêt auto sert les acheteurs de voitures comparant les options de financement, les acheteurs première fois comprenant les coûts de prêt, les propriétaires actuels de voitures considérant le refinancement, les conseillers financiers aidant les clients, les clients de concessionnaire évaluant les offres, et quiconque souhaitant comprendre le financement de véhicule. Elle est particulièrement précieuse pour ceux comparant les délais de prêt, calculant l'abordabilité, comprenant les coûts d'intérêts, et prenant des décisions éclairées d'achat de véhicule. La calculatrice fonctionne pour les voitures neuves, d'occasion, et divers scénarios de financement.",
+      "disclaimer": "Cette calculatrice de prêt auto fournit des estimations basées sur l'information saisie. Les termes de prêt réels, taux d'intérêt, et paiements peuvent varier selon le score de crédit, exigences de prêteur, et conditions de marché. Les coûts supplémentaires comme garanties étendues, contrats de service, et frais de concessionnaire ne sont pas inclus. Les taux d'intérêt affichés sont des exemples et non garantis. Cet outil est à des fins éducatives et ne constitue pas un conseil financier ou une approbation de prêt. Consultez les prêteurs pour les taux et termes réels. Les valeurs de véhicule peuvent se déprécier rapidement, affectant l'équité et la valeur de revente.",
+      "relatedTools": [
+        "Calculatrices de prêt pour comparer différentes options de financement",
+        "Calculatrices d'épargne pour construire des fonds d'acompte",
+        "Calculatrices d'impôt pour comprendre les déductions liées au véhicule"
+      ],
+      "faqs": [
+        {
+          "question": "Quel est le délai idéal de prêt auto pour moi ?",
+          "answer": "Le meilleur délai dépend de votre budget et objectifs. Les délais plus courts (36-48 mois) minimisent les intérêts mais requièrent des paiements mensuels plus élevés. Les délais plus longs (72-84 mois) baissent les paiements mais augmentent les intérêts totaux considérablement. La plupart des experts recommandent 60 mois comme équilibre entre abordabilité et coût. Considérez la stabilité de votre budget - si les paiements pourraient devenir difficiles, choisissez des délais plus courts. Calculez les points d'équilibre où les délais plus longs coûtent réellement plus malgré des paiements mensuels plus bas."
+        },
+        {
+          "question": "Combien d'acompte devrais-je faire ?",
+          "answer": "Visez un acompte de 10-20% pour réduire les paiements mensuels et coûts totaux. Plus est mieux - 20% ou plus qualifie souvent pour de meilleurs taux et évite les frais coûteux de prêteur. Cependant, n'épuisez pas les économies d'urgence. Considérez la valeur d'échange comme acompte. Les acomptes plus importants réduisent le ratio prêt-valeur, potentiellement vous qualifiant pour de meilleurs taux. Souvenez-vous, les acomptes réduisent les paiements mensuels et intérêts totaux payés pendant la vie du prêt."
+        },
+        {
+          "question": "Quel est un bon taux d'intérêt pour un prêt auto ?",
+          "answer": "Les taux actuels varient selon le score de crédit et conditions de marché. Crédit excellent (750+) : 2-4% APR. Bon crédit (680-749) : 4-7% APR. Crédit correct (580-679) : 7-12% APR. Mauvais crédit : 12%+ APR. Les taux sont plus élevés que les hypothèques en raison de délais plus courts et risque de dépréciation. Comparez plusieurs prêteurs incluant banques, coopératives de crédit, et prêteurs en ligne. Magasiner les taux peut sauver des milliers. Considérez la pré-approbation pour verrouiller les taux avant de magasiner voitures."
+        },
+        {
+          "question": "Dois-je financer ou payer comptant pour une voiture ?",
+          "answer": "Payez comptant si vous pouvez vous le permettre sans épuiser les économies d'urgence - vous économiserez des milliers en intérêts et aurez propriété complète immédiatement. Financez si le paiement comptant tendrait les finances ou vous avez besoin d'argent pour d'autres priorités. Calculez le coût d'intérêt vs. rendements d'investissement ailleurs. Si les taux d'intérêt sont bas et vous avez bon crédit, le financement pourrait être viable. Considérez le coût d'opportunité - l'argent lié dans l'équité auto pourrait gagner des rendements ailleurs."
+        },
+        {
+          "question": "Comment les prêts auto affectent-ils mon score de crédit ?",
+          "answer": "Demander des prêts crée des demandes difficiles qui baissent temporairement les scores de 5-10 points. Fermer des prêts augmente l'utilisation de crédit, potentiellement baissant les scores plus. Faire des paiements à temps construit un historique de crédit positif. Les prêts auto sont des prêts à tempérament qui aident diversifier le mélange de crédit. Payez les prêts rapidement pour minimiser l'impact négatif. Évitez plusieurs demandes - magasinez les taux avec une demande utilisant pré-approbation. Bon historique de paiement aide les scores plus que montants de prêt."
+        }
+      ]
+    }
+  }
+}

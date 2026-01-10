@@ -1,0 +1,602 @@
+{
+  "en": {
+    "title": "Periodic Interest Rate Calculator",
+    "seoTitle": "Periodic Interest Rate Calculator - Convert Between Periodic and Annual Rates",
+    "metaDescription": "Calculate periodic interest rates and convert between different time periods. Free periodic rate calculator with annual rate conversions and comparisons.",
+    "keywords": [
+      "periodic interest rate calculator",
+      "periodic to annual rate calculator",
+      "monthly interest rate calculator",
+      "quarterly interest rate calculator",
+      "periodic rate conversion",
+      "annual to periodic rate"
+    ],
+    "longTailKeywords": [
+      "periodic interest rate calculator online",
+      "convert periodic rate to annual rate",
+      "monthly to annual interest rate calculator",
+      "quarterly to annual interest rate conversion",
+      "periodic interest rate formula calculator",
+      "calculate periodic rate from annual rate",
+      "interest rate period conversion calculator",
+      "monthly periodic rate calculator",
+      "quarterly periodic rate calculator",
+      "periodic annual rate converter"
+    ],
+    "slug": "periodic-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "periodic rate",
+      "time periods",
+      "rate conversion",
+      "annual rate",
+      "monthly rate",
+      "quarterly rate"
+    ],
+    "description": "Calculate periodic interest rates and convert between different time periods. Convert annual rates to monthly, quarterly, or other periodic rates, and vice versa.",
+    "summary": "Calculate periodic interest rates and convert between time periods",
+    "instructions": [
+      "Enter the known interest rate value",
+      "Select the time period for the input rate",
+      "Choose the target time period for conversion",
+      "Click 'Calculate' to see the converted rate",
+      "Compare rates across different time periods"
+    ],
+    "calculatorComponent": "PeriodicInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Annual to Monthly Conversion",
+        "description": "Convert 6% annual rate to monthly periodic rate",
+        "input": {
+          "inputRate": 6,
+          "inputPeriod": "annual",
+          "outputPeriod": "monthly"
+        },
+        "output": {
+          "convertedRate": "0.50%",
+          "inputSummary": "6.00% Annual Rate",
+          "outputSummary": "0.50% Monthly Rate",
+          "conversionFactor": "12",
+          "periodComparison": "Annual rate divided by 12 = monthly rate"
+        }
+      },
+      {
+        "title": "Monthly to Annual Conversion",
+        "description": "Convert 0.5% monthly rate to annual equivalent",
+        "input": {
+          "inputRate": 0.5,
+          "inputPeriod": "monthly",
+          "outputPeriod": "annual"
+        },
+        "output": {
+          "convertedRate": "6.00%",
+          "inputSummary": "0.50% Monthly Rate",
+          "outputSummary": "6.00% Annual Rate",
+          "conversionFactor": "12",
+          "periodComparison": "Monthly rate multiplied by 12 = annual rate"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Understanding periodic interest rates is essential for accurate financial calculations. Interest rates can be quoted for different time periods (annual, monthly, quarterly, etc.), and converting between them is crucial for proper comparisons. Our periodic interest rate calculator helps you convert rates between different time periods with precision.",
+      "benefits": [
+        "Convert interest rates between any time periods",
+        "Understand how rates change across different frequencies",
+        "Compare rates quoted in different time formats",
+        "Calculate accurate periodic rates for loan payments",
+        "Convert annual rates to monthly or quarterly equivalents",
+        "Handle all common interest rate periods"
+      ],
+      "steps": [
+        "Enter the interest rate value you want to convert",
+        "Select the time period of the input rate",
+        "Choose the target time period for conversion",
+        "Review the converted rate and conversion details",
+        "Use the results for accurate financial calculations",
+        "Repeat conversions for different rate scenarios"
+      ],
+      "inputsExplained": [
+        "Input rate is the interest rate value you want to convert",
+        "Input period is the time period the rate applies to",
+        "Output period is the time period you want to convert to",
+        "The calculator handles all common interest rate periods"
+      ],
+      "formulaExplanation": "The calculator uses simple time period conversions. To convert from annual to periodic rates: divide by the number of periods per year. To convert from periodic to annual rates: multiply by the number of periods per year. This provides accurate conversions between different time periods.",
+      "examples": [
+        "A 6% annual rate converts to 0.5% monthly rate (6% ÷ 12 = 0.5%)",
+        "A 0.5% monthly rate converts to 6% annual rate (0.5% × 12 = 6%)"
+      ],
+      "resultsExplanation": [
+        "Converted rate shows the equivalent rate in the target period",
+        "Input summary identifies what you entered for conversion",
+        "Output summary shows the converted rate with its period",
+        "Conversion factor shows the multiplier/divider used",
+        "Period comparison explains the relationship between periods",
+        "All results help you understand rate conversions accurately"
+      ],
+      "whoItsFor": "This periodic interest rate calculator is valuable for financial professionals, loan officers, investors, and anyone who needs to work with interest rates quoted in different time periods. It's particularly useful for loan calculations, investment analysis, and financial planning where rate period conversions are necessary.",
+      "disclaimer": "This calculator performs mathematical conversions between different time periods for interest rates. The conversions assume simple period relationships and do not account for compounding effects. For compound interest calculations, use appropriate compound interest calculators.",
+      "relatedTools": [
+        "compound interest calculator",
+        "effective annual rate calculator",
+        "nominal interest rate calculator",
+        "loan calculator",
+        "interest rate table calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is a periodic interest rate?",
+          "answer": "A periodic interest rate is the interest rate applied for a specific time period, such as monthly, quarterly, or annually. It represents the rate charged or earned for that particular period."
+        },
+        {
+          "question": "How do I convert annual rates to monthly rates?",
+          "answer": "To convert an annual rate to a monthly rate, divide the annual rate by 12. For example, a 6% annual rate becomes 0.5% monthly (6% ÷ 12 = 0.5%)."
+        },
+        {
+          "question": "How do I convert monthly rates to annual rates?",
+          "answer": "To convert a monthly rate to an annual rate, multiply the monthly rate by 12. For example, a 0.5% monthly rate becomes 6% annually (0.5% × 12 = 6%)."
+        },
+        {
+          "question": "Why do interest rate periods matter?",
+          "answer": "Interest rate periods matter because they affect how interest is calculated and compared. Rates for different periods cannot be directly compared without conversion."
+        },
+        {
+          "question": "Can this calculator handle any time period?",
+          "answer": "Yes, the calculator handles all common interest rate periods including annual, semi-annual, quarterly, monthly, semi-monthly, bi-weekly, weekly, and daily rates."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Tasa de Interés Periódica",
+    "seoTitle": "Calculadora de Tasa de Interés Periódica - Convertir Entre Tasas Periódicas y Anuales",
+    "metaDescription": "Calcula tasas de interés periódicas y convierte entre diferentes períodos de tiempo. Calculadora gratuita de tasa periódica con conversiones de tasa anual y comparaciones.",
+    "keywords": [
+      "calculadora tasa interés periódica",
+      "calculadora periódica a anual",
+      "calculadora tasa interés mensual",
+      "calculadora tasa interés trimestral",
+      "conversión tasa periódica",
+      "anual a tasa periódica"
+    ],
+    "longTailKeywords": [
+      "calculadora tasa interés periódica online",
+      "convertir tasa periódica a anual",
+      "mensual a anual calculadora tasa interés",
+      "trimestral a anual conversión tasa interés",
+      "calculadora fórmula tasa interés periódica",
+      "calcular tasa periódica desde anual",
+      "calculadora conversión período tasa interés",
+      "calculadora tasa periódica mensual",
+      "calculadora tasa periódica trimestral",
+      "conversor tasa periódica anual"
+    ],
+    "slug": "periodic-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "tasa periódica",
+      "períodos tiempo",
+      "conversión tasa",
+      "tasa anual",
+      "tasa mensual",
+      "tasa trimestral"
+    ],
+    "description": "Calcula tasas de interés periódicas y convierte entre diferentes períodos de tiempo. Convierte tasas anuales a mensuales, trimestrales u otros períodos, y viceversa.",
+    "summary": "Calcula tasas de interés periódicas y convierte entre períodos de tiempo",
+    "instructions": [
+      "Ingresa el valor de tasa de interés conocido",
+      "Selecciona el período de tiempo para la tasa entrada",
+      "Elige el período de tiempo objetivo para conversión",
+      "Haz clic en 'Calcular' para ver la tasa convertida",
+      "Compara tasas entre diferentes períodos de tiempo"
+    ],
+    "calculatorComponent": "PeriodicInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Conversión Anual a Mensual",
+        "description": "Convierte 6% tasa anual a tasa periódica mensual",
+        "input": {
+          "inputRate": 6,
+          "inputPeriod": "annual",
+          "outputPeriod": "monthly"
+        },
+        "output": {
+          "convertedRate": "0.50%",
+          "inputSummary": "6.00% Tasa Anual",
+          "outputSummary": "0.50% Tasa Mensual",
+          "conversionFactor": "12",
+          "periodComparison": "Tasa anual dividida por 12 = tasa mensual"
+        }
+      },
+      {
+        "title": "Conversión Mensual a Anual",
+        "description": "Convierte 0.5% tasa mensual a equivalente anual",
+        "input": {
+          "inputRate": 0.5,
+          "inputPeriod": "monthly",
+          "outputPeriod": "annual"
+        },
+        "output": {
+          "convertedRate": "6.00%",
+          "inputSummary": "0.50% Tasa Mensual",
+          "outputSummary": "6.00% Tasa Anual",
+          "conversionFactor": "12",
+          "periodComparison": "Tasa mensual multiplicada por 12 = tasa anual"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender tasas de interés periódicas es esencial para cálculos financieros precisos. Las tasas de interés pueden cotizarse para diferentes períodos de tiempo (anual, mensual, trimestral, etc.), y convertir entre ellas es crucial para comparaciones apropiadas. Nuestra calculadora de tasa de interés periódica te ayuda a convertir tasas entre diferentes períodos de tiempo con precisión.",
+      "benefits": [
+        "Convierte tasas de interés entre cualquier período de tiempo",
+        "Entiende cómo cambian las tasas entre diferentes frecuencias",
+        "Compara tasas cotizadas en diferentes formatos de tiempo",
+        "Calcula tasas periódicas precisas para pagos de préstamo",
+        "Convierte tasas anuales a equivalentes mensuales o trimestrales",
+        "Maneja todos los períodos comunes de tasa de interés"
+      ],
+      "steps": [
+        "Ingresa el valor de tasa de interés que quieres convertir",
+        "Selecciona el período de tiempo de la tasa entrada",
+        "Elige el período de tiempo objetivo para conversión",
+        "Revisa la tasa convertida y detalles de conversión",
+        "Usa los resultados para cálculos financieros precisos",
+        "Repite conversiones para diferentes escenarios de tasa"
+      ],
+      "inputsExplained": [
+        "Tasa entrada es el valor de tasa de interés que quieres convertir",
+        "Período entrada es el período de tiempo al que se aplica la tasa",
+        "Período salida es el período de tiempo al que quieres convertir",
+        "La calculadora maneja todos los períodos comunes de tasa de interés"
+      ],
+      "formulaExplanation": "La calculadora usa conversiones simples de período de tiempo. Para convertir de anual a periódicas: divide por el número de períodos por año. Para convertir de periódicas a anuales: multiplica por el número de períodos por año. Esto proporciona conversiones precisas entre diferentes períodos de tiempo.",
+      "examples": [
+        "Una tasa anual de 6% se convierte en tasa mensual de 0.5% (6% ÷ 12 = 0.5%)",
+        "Una tasa mensual de 0.5% se convierte en tasa anual de 6% (0.5% × 12 = 6%)"
+      ],
+      "resultsExplanation": [
+        "Tasa convertida muestra la tasa equivalente en el período objetivo",
+        "Resumen entrada identifica qué ingresaste para conversión",
+        "Resumen salida muestra la tasa convertida con su período",
+        "Factor conversión muestra el multiplicador/divisor usado",
+        "Comparación período explica la relación entre períodos",
+        "Todos los resultados te ayudan a entender conversiones de tasa con precisión"
+      ],
+      "whoItsFor": "Esta calculadora de tasa de interés periódica es valiosa para profesionales financieros, oficiales de préstamo, inversores y cualquiera que necesite trabajar con tasas de interés cotizadas en diferentes períodos de tiempo. Es particularmente útil para cálculos de préstamo, análisis de inversión y planificación financiera donde conversiones de período de tasa son necesarias.",
+      "disclaimer": "Esta calculadora realiza conversiones matemáticas entre diferentes períodos de tiempo para tasas de interés. Las conversiones asumen relaciones simples de período y no consideran efectos de capitalización. Para cálculos de interés compuesto, usa calculadoras apropiadas de interés compuesto.",
+      "relatedTools": [
+        "calculadora interés compuesto",
+        "calculadora tasa efectiva anual",
+        "calculadora tasa interés nominal",
+        "calculadora préstamo",
+        "calculadora tabla tasas interés"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es una tasa de interés periódica?",
+          "answer": "Una tasa de interés periódica es la tasa de interés aplicada para un período específico de tiempo, como mensual, trimestral o anual. Representa la tasa cobrada o ganada para ese período particular."
+        },
+        {
+          "question": "¿Cómo convierto tasas anuales a mensuales?",
+          "answer": "Para convertir una tasa anual a mensual, divide la tasa anual por 12. Por ejemplo, una tasa anual de 6% se convierte en 0.5% mensual (6% ÷ 12 = 0.5%)."
+        },
+        {
+          "question": "¿Cómo convierto tasas mensuales a anuales?",
+          "answer": "Para convertir una tasa mensual a anual, multiplica la tasa mensual por 12. Por ejemplo, una tasa mensual de 0.5% se convierte en 6% anual (0.5% × 12 = 6%)."
+        },
+        {
+          "question": "¿Por qué importan los períodos de tasa de interés?",
+          "answer": "Los períodos de tasa de interés importan porque afectan cómo se calcula y compara el interés. Las tasas para diferentes períodos no pueden compararse directamente sin conversión."
+        },
+        {
+          "question": "¿Puede esta calculadora manejar cualquier período de tiempo?",
+          "answer": "Sí, la calculadora maneja todos los períodos comunes de tasa de interés incluyendo anual, semi-anual, trimestral, mensual, semi-mensual, quincenal, semanal y diaria."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Taxa de Juros Periódica",
+    "seoTitle": "Calculadora de Taxa de Juros Periódica - Converter Entre Taxas Periódicas e Anuais",
+    "metaDescription": "Calcule taxas de juros periódicas e converta entre diferentes períodos de tempo. Calculadora gratuita de taxa periódica com conversões de taxa anual e comparações.",
+    "keywords": [
+      "calculadora taxa juros periódica",
+      "calculadora periódica para anual",
+      "calculadora taxa juros mensal",
+      "calculadora taxa juros trimestral",
+      "conversão taxa periódica",
+      "anual para taxa periódica"
+    ],
+    "longTailKeywords": [
+      "calculadora taxa juros periódica online",
+      "converter taxa periódica para anual",
+      "mensal para anual calculadora taxa juros",
+      "trimestral para anual conversão taxa juros",
+      "calculadora fórmula taxa juros periódica",
+      "calcular taxa periódica desde anual",
+      "calculadora conversão período taxa juros",
+      "calculadora taxa periódica mensal",
+      "calculadora taxa periódica trimestral",
+      "conversor taxa periódica anual"
+    ],
+    "slug": "periodic-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "taxa periódica",
+      "períodos tempo",
+      "conversão taxa",
+      "taxa anual",
+      "taxa mensal",
+      "taxa trimestral"
+    ],
+    "description": "Calcule taxas de juros periódicas e converta entre diferentes períodos de tempo. Converta taxas anuais para mensais, trimestrais ou outros períodos, e vice-versa.",
+    "summary": "Calcule taxas de juros periódicas e converta entre períodos de tempo",
+    "instructions": [
+      "Digite o valor de taxa de juros conhecido",
+      "Selecione o período de tempo para a taxa entrada",
+      "Escolha o período de tempo objetivo para conversão",
+      "Clique em 'Calcular' para ver a taxa convertida",
+      "Compare taxas entre diferentes períodos de tempo"
+    ],
+    "calculatorComponent": "PeriodicInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Conversão Anual para Mensal",
+        "description": "Converte 6% taxa anual para taxa periódica mensal",
+        "input": {
+          "inputRate": 6,
+          "inputPeriod": "annual",
+          "outputPeriod": "monthly"
+        },
+        "output": {
+          "convertedRate": "0.50%",
+          "inputSummary": "6.00% Taxa Anual",
+          "outputSummary": "0.50% Taxa Mensal",
+          "conversionFactor": "12",
+          "periodComparison": "Taxa anual dividida por 12 = taxa mensal"
+        }
+      },
+      {
+        "title": "Conversão Mensal para Anual",
+        "description": "Converte 0.5% taxa mensal para equivalente anual",
+        "input": {
+          "inputRate": 0.5,
+          "inputPeriod": "monthly",
+          "outputPeriod": "annual"
+        },
+        "output": {
+          "convertedRate": "6.00%",
+          "inputSummary": "0.50% Taxa Mensal",
+          "outputSummary": "6.00% Taxa Anual",
+          "conversionFactor": "12",
+          "periodComparison": "Taxa mensal multiplicada por 12 = taxa anual"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender taxas de juros periódicas é essencial para cálculos financeiros precisos. Taxas de juros podem ser cotadas para diferentes períodos de tempo (anual, mensal, trimestral, etc.), e converter entre elas é crucial para comparações apropriadas. Nossa calculadora de taxa de juros periódica ajuda você a converter taxas entre diferentes períodos de tempo com precisão.",
+      "benefits": [
+        "Converte taxas de juros entre qualquer período de tempo",
+        "Entende como taxas mudam entre diferentes frequências",
+        "Compare taxas cotadas em diferentes formatos de tempo",
+        "Calcule taxas periódicas precisas para pagamentos empréstimo",
+        "Converte taxas anuais para equivalentes mensais ou trimestrais",
+        "Lida com todos os períodos comuns de taxa de juros"
+      ],
+      "steps": [
+        "Digite o valor de taxa de juros que você quer converter",
+        "Selecione o período de tempo da taxa entrada",
+        "Escolha o período de tempo alvo para conversão",
+        "Revise a taxa convertida e detalhes de conversão",
+        "Use os resultados para cálculos financeiros precisos",
+        "Repita conversões para diferentes cenários de taxa"
+      ],
+      "inputsExplained": [
+        "Taxa entrada é o valor de taxa de juros que você quer converter",
+        "Período entrada é o período de tempo ao qual a taxa se aplica",
+        "Período saída é o período de tempo para o qual você quer converter",
+        "A calculadora lida com todos os períodos comuns de taxa de juros"
+      ],
+      "formulaExplanation": "A calculadora usa conversões simples de período de tempo. Para converter de anual para periódicas: divide pelo número de períodos por ano. Para converter de periódicas para anuais: multiplica pelo número de períodos por ano. Isso fornece conversões precisas entre diferentes períodos de tempo.",
+      "examples": [
+        "Uma taxa anual de 6% converte para taxa mensal de 0.5% (6% ÷ 12 = 0.5%)",
+        "Uma taxa mensal de 0.5% converte para taxa anual de 6% (0.5% × 12 = 6%)"
+      ],
+      "resultsExplanation": [
+        "Taxa convertida mostra a taxa equivalente no período alvo",
+        "Resumo entrada identifica o que você digitou para conversão",
+        "Resumo saída mostra a taxa convertida com seu período",
+        "Fator conversão mostra o multiplicador/divisor usado",
+        "Comparação período explica a relação entre períodos",
+        "Todos os resultados ajudam você a entender conversões de taxa com precisão"
+      ],
+      "whoItsFor": "Esta calculadora de taxa de juros periódica é valiosa para profissionais financeiros, oficiais empréstimo, investidores e qualquer pessoa que precise trabalhar com taxas de juros cotadas em diferentes períodos de tempo. É particularmente útil para cálculos empréstimo, análise investimento e planejamento financeiro onde conversões de período taxa são necessárias.",
+      "disclaimer": "Esta calculadora realiza conversões matemáticas entre diferentes períodos de tempo para taxas de juros. As conversões assumem relações simples de período e não consideram efeitos de capitalização. Para cálculos de juros compostos, use calculadoras apropriadas de juros compostos.",
+      "relatedTools": [
+        "calculadora juros compostos",
+        "calculadora taxa efetiva anual",
+        "calculadora taxa juros nominal",
+        "calculadora empréstimo",
+        "calculadora tabela taxas juros"
+      ],
+      "faqs": [
+        {
+          "question": "O que é uma taxa de juros periódica?",
+          "answer": "Uma taxa de juros periódica é a taxa de juros aplicada para um período específico de tempo, como mensal, trimestral ou anual. Representa a taxa cobrada ou ganha para aquele período particular."
+        },
+        {
+          "question": "¿Como converter taxas anuais para mensais?",
+          "answer": "Para converter uma taxa anual para mensal, divide a taxa anual por 12. Por exemplo, uma taxa anual de 6% se torna 0.5% mensal (6% ÷ 12 = 0.5%)."
+        },
+        {
+          "question": "¿Como converter taxas mensais para anuais?",
+          "answer": "Para converter uma taxa mensal para anual, multiplica a taxa mensal por 12. Por exemplo, uma taxa mensal de 0.5% se torna 6% anual (0.5% × 12 = 6%)."
+        },
+        {
+          "question": "¿Por que períodos de taxa de juros importam?",
+          "answer": "Períodos de taxa de juros importam porque afetam como juros é calculado e comparado. Taxas para diferentes períodos não podem ser comparadas diretamente sem conversão."
+        },
+        {
+          "question": "¿Esta calculadora pode lidar com qualquer período de tempo?",
+          "answer": "Sim, a calculadora lida com todos os períodos comuns de taxa de juros incluindo anual, semi-anual, trimestral, mensal, semi-mensal, quinzenal, semanal e diária."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Taux d'Intérêt Périodique",
+    "seoTitle": "Calculateur de Taux d'Intérêt Périodique - Convertir Entre Taux Périodiques et Annuels",
+    "metaDescription": "Calculez taux d'intérêt périodiques et convertissez entre différents périodes de temps. Calculateur gratuit de taux périodique avec conversions taux annuel et comparaisons.",
+    "keywords": [
+      "calculateur taux intérêt périodique",
+      "calculateur périodique vers annuel",
+      "calculateur taux intérêt mensuel",
+      "calculateur taux intérêt trimestriel",
+      "conversion taux périodique",
+      "annuel vers taux périodique"
+    ],
+    "longTailKeywords": [
+      "calculateur taux intérêt périodique en ligne",
+      "convertir taux périodique vers annuel",
+      "mensuel vers annuel calculateur taux intérêt",
+      "trimestriel vers annuel conversion taux intérêt",
+      "calculateur formule taux intérêt périodique",
+      "calculer taux périodique depuis annuel",
+      "calculateur conversion période taux intérêt",
+      "calculateur taux périodique mensuel",
+      "calculateur taux périodique trimestriel",
+      "convertisseur taux périodique annuel"
+    ],
+    "slug": "periodic-interest-rate-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "taux périodique",
+      "périodes temps",
+      "conversion taux",
+      "taux annuel",
+      "taux mensuel",
+      "taux trimestriel"
+    ],
+    "description": "Calculez taux d'intérêt périodiques et convertissez entre différents périodes de temps. Convertissez taux annuels vers mensuels, trimestriels ou autres périodes, et vice-versa.",
+    "summary": "Calculez taux d'intérêt périodiques et convertissez entre périodes de temps",
+    "instructions": [
+      "Entrez valeur taux d'intérêt connue",
+      "Sélectionnez période de temps pour taux entrée",
+      "Choisissez période de temps cible pour conversion",
+      "Cliquez sur 'Calculer' pour voir taux converti",
+      "Comparez taux entre différentes périodes de temps"
+    ],
+    "calculatorComponent": "PeriodicInterestRateCalculator",
+    "examples": [
+      {
+        "title": "Conversion Annuel vers Mensuel",
+        "description": "Convertissez 6% taux annuel vers taux périodique mensuel",
+        "input": {
+          "inputRate": 6,
+          "inputPeriod": "annual",
+          "outputPeriod": "monthly"
+        },
+        "output": {
+          "convertedRate": "0.50%",
+          "inputSummary": "6.00% Taux Annuel",
+          "outputSummary": "0.50% Taux Mensuel",
+          "conversionFactor": "12",
+          "periodComparison": "Taux annuel divisé par 12 = taux mensuel"
+        }
+      },
+      {
+        "title": "Conversion Mensuel vers Annuel",
+        "description": "Convertissez 0.5% taux mensuel vers équivalent annuel",
+        "input": {
+          "inputRate": 0.5,
+          "inputPeriod": "monthly",
+          "outputPeriod": "annual"
+        },
+        "output": {
+          "convertedRate": "6.00%",
+          "inputSummary": "0.50% Taux Mensuel",
+          "outputSummary": "6.00% Taux Annuel",
+          "conversionFactor": "12",
+          "periodComparison": "Taux mensuel multiplié par 12 = taux annuel"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Comprendre taux d'intérêt périodiques est essentiel pour calculs financiers précis. Taux d'intérêt peuvent être cotés pour différents périodes de temps (annuel, mensuel, trimestriel, etc.), et convertir entre eux est crucial pour comparaisons appropriées. Notre calculateur de taux d'intérêt périodique vous aide à convertir taux entre différents périodes de temps avec précision.",
+      "benefits": [
+        "Convertissez taux d'intérêt entre n'importe quelle période de temps",
+        "Comprenez comment taux changent entre différentes fréquences",
+        "Comparez taux cotés dans différents formats de temps",
+        "Calculez taux périodiques précis pour paiements prêt",
+        "Convertissez taux annuels vers équivalents mensuels ou trimestriels",
+        "Gérez toutes périodes communes de taux d'intérêt"
+      ],
+      "steps": [
+        "Entrez valeur taux d'intérêt que vous voulez convertir",
+        "Sélectionnez période de temps du taux entrée",
+        "Choisissez période de temps cible pour conversion",
+        "Examinez taux converti et détails de conversion",
+        "Utilisez résultats pour calculs financiers précis",
+        "Répétez conversions pour différents scénarios de taux"
+      ],
+      "inputsExplained": [
+        "Taux entrée est valeur taux d'intérêt que vous voulez convertir",
+        "Période entrée est période de temps à laquelle taux s'applique",
+        "Période sortie est période de temps vers laquelle vous voulez convertir",
+        "Le calculateur gère toutes périodes communes de taux d'intérêt"
+      ],
+      "formulaExplanation": "Le calculateur utilise conversions simples de période de temps. Pour convertir d'annuel vers périodiques: divisez par nombre de périodes par an. Pour convertir de périodiques vers annuels: multipliez par nombre de périodes par an. Cela fournit conversions précises entre différents périodes de temps.",
+      "examples": [
+        "Un taux annuel de 6% convertit vers taux mensuel de 0.5% (6% ÷ 12 = 0.5%)",
+        "Un taux mensuel de 0.5% convertit vers taux annuel de 6% (0.5% × 12 = 6%)"
+      ],
+      "resultsExplanation": [
+        "Taux converti montre taux équivalent dans période cible",
+        "Résumé entrée identifie ce que vous avez entré pour conversion",
+        "Résumé sortie montre taux converti avec sa période",
+        "Facteur conversion montre multiplicateur/diviseur utilisé",
+        "Comparaison période explique relation entre périodes",
+        "Tous résultats vous aident à comprendre conversions de taux avec précision"
+      ],
+      "whoItsFor": "Ce calculateur de taux d'intérêt périodique est précieux pour professionnels financiers, officiers prêt, investisseurs et quiconque a besoin de travailler avec taux d'intérêt cotés dans différents périodes de temps. Il est particulièrement utile pour calculs prêt, analyse investissement et planification financière où conversions période taux sont nécessaires.",
+      "disclaimer": "Ce calculateur effectue conversions mathématiques entre différents périodes de temps pour taux d'intérêt. Les conversions supposent relations simples de période et ne tiennent pas compte effets de capitalisation. Pour calculs intérêt composé, utilisez calculateurs intérêt composé appropriés.",
+      "relatedTools": [
+        "calculateur intérêt composé",
+        "calculateur taux effectif annuel",
+        "calculateur taux intérêt nominal",
+        "calculateur prêt",
+        "calculateur tableau taux intérêt"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un taux d'intérêt périodique?",
+          "answer": "Un taux d'intérêt périodique est taux d'intérêt appliqué pour période spécifique de temps, comme mensuel, trimestriel ou annuel. Il représente taux facturé ou gagné pour cette période particulière."
+        },
+        {
+          "question": "Comment convertir taux annuels vers mensuels?",
+          "answer": "Pour convertir un taux annuel vers mensuel, divisez taux annuel par 12. Par exemple, un taux annuel de 6% devient 0.5% mensuel (6% ÷ 12 = 0.5%)."
+        },
+        {
+          "question": "Comment convertir taux mensuels vers annuels?",
+          "answer": "Pour convertir un taux mensuel vers annuel, multipliez taux mensuel par 12. Par exemple, un taux mensuel de 0.5% devient 6% annuel (0.5% × 12 = 6%)."
+        },
+        {
+          "question": "¿Pourquoi périodes de taux d'intérêt importent-elles?",
+          "answer": "Périodes de taux d'intérêt importent car elles affectent comment intérêt est calculé et comparé. Taux pour différentes périodes ne peuvent pas être comparés directement sans conversion."
+        },
+        {
+          "question": "Ce calculateur peut-il gérer n'importe quelle période de temps?",
+          "answer": "Oui, le calculateur gère toutes périodes communes de taux d'intérêt incluant annuel, semi-annuel, trimestriel, mensuel, semi-mensuel, bi-hebdomadaire, hebdomadaire et quotidien."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,936 @@
+{
+  "en": {
+    "title": "Sales Tax Calculator",
+    "seoTitle": "Sales Tax Calculator - Calculate Tax Amount & Total Price",
+    "metaDescription": "Calculate sales tax on purchases and find the total amount including tax. Perfect for shopping, budgeting, and understanding tax implications on your purchases.",
+    "keywords": [
+      "sales tax calculator",
+      "tax calculator",
+      "sales tax rate",
+      "total price calculator",
+      "purchase tax"
+    ],
+    "slug": "sales-tax-calculator",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "sales tax",
+      "tax",
+      "purchase",
+      "shopping",
+      "budget",
+      "price"
+    ],
+    "description": "Calculate the sales tax amount and total price including tax for any purchase. Essential for budgeting, shopping, and understanding the true cost of items before taxes.",
+    "summary": "Calculate sales tax and total purchase price.",
+    "instructions": [
+      "Enter the pre-tax price of the item or service. This is the base price before any sales tax is added.",
+      "Enter the sales tax rate as a percentage. Sales tax rates vary by location and can range from 0% to over 15%.",
+      "Click 'Calculate' to see the tax amount and total price including tax.",
+      "Use the results to understand the true cost of your purchase and plan your budget accordingly."
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "price",
+          "label": "Pre-tax Price ($)",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "taxRate",
+          "label": "Sales Tax Rate (%)",
+          "type": "number",
+          "default": 8.5,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        }
+      ],
+      "formula": "Tax Amount = Price × (Tax Rate ÷ 100), Total Price = Price + Tax Amount",
+      "output": {
+        "label": "Tax Amount",
+        "default": "Enter price and tax rate above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Total Price",
+          "field": "totalPrice",
+          "format": "currency"
+        },
+        {
+          "label": "Tax Rate Applied",
+          "field": "taxRateDisplay",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "SalesTaxCalculator"
+    },
+    "examples": [
+      {
+        "title": "Electronics Purchase",
+        "input": {
+          "price": 899.99,
+          "taxRate": 8.5
+        },
+        "output": {
+          "taxAmount": 76.5,
+          "totalPrice": 976.49,
+          "taxRateDisplay": 8.5
+        },
+        "explanation": "A $899.99 laptop with 8.5% sales tax adds $76.50 in tax, making the total price $976.49."
+      },
+      {
+        "title": "Restaurant Meal",
+        "input": {
+          "price": 45.67,
+          "taxRate": 7.25
+        },
+        "output": {
+          "taxAmount": 3.31,
+          "totalPrice": 48.98,
+          "taxRateDisplay": 7.25
+        },
+        "explanation": "A $45.67 restaurant bill with 7.25% sales tax adds $3.31, totaling $48.98 before tip."
+      },
+      {
+        "title": "Clothing Purchase",
+        "input": {
+          "price": 129.95,
+          "taxRate": 6
+        },
+        "output": {
+          "taxAmount": 7.8,
+          "totalPrice": 137.75,
+          "taxRateDisplay": 6
+        },
+        "explanation": "A $129.95 clothing item with 6% sales tax adds $7.80, making the total $137.75."
+      }
+    ],
+    "comparisonTable": {
+      "title": "Sales Tax Rates by State (2024)",
+      "headers": [
+        "State",
+        "Sales Tax Rate",
+        "Example: $100 Item"
+      ],
+      "rows": [
+        [
+          "Delaware",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Montana",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Oregon",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "California",
+          "8.75%",
+          "$108.75"
+        ],
+        [
+          "New York",
+          "8.875%",
+          "$108.88"
+        ],
+        [
+          "Florida",
+          "7.0%",
+          "$107.00"
+        ],
+        [
+          "Texas",
+          "8.25%",
+          "$108.25"
+        ]
+      ]
+    },
+    "relatedCalculators": [
+      {
+        "name": "Tax Calculator",
+        "slug": "tax-calculator",
+        "description": "Calculate income tax liability"
+      },
+      {
+        "name": "Tip Calculator",
+        "slug": "tip-calculator",
+        "description": "Calculate restaurant tips"
+      }
+    ],
+    "seoContent": {
+      "introduction": "Never be surprised by the final price again with our accurate sales tax calculator that helps you understand the true cost of purchases. Sales tax varies widely by location and can significantly impact your budget, especially for big purchases. Our calculator instantly shows you exactly how much tax you'll pay and what the total price will be, helping you make informed shopping decisions and avoid budget surprises. Whether you're buying a car, furniture, electronics, or everyday items, knowing the tax amount upfront ensures you stay within your spending limits.",
+      "benefits": [
+        "Calculate exact sales tax amounts before making purchases",
+        "Understand the true total cost of items including all taxes",
+        "Compare prices across different locations with varying tax rates",
+        "Budget accurately for purchases and avoid overspending",
+        "Make informed decisions about where and when to shop",
+        "Plan for major purchases with realistic total cost estimates"
+      ],
+      "steps": [
+        "Enter the pre-tax price of the item or service",
+        "Input the applicable sales tax rate for your location",
+        "Click calculate to see the tax amount and total price",
+        "Use the results to compare prices and plan your budget",
+        "Factor in additional costs like shipping or installation if needed"
+      ],
+      "inputsExplained": [
+        "Pre-tax price is the base price before any sales tax is added - this is usually shown as the 'subtotal'",
+        "Sales tax rate varies by location and can range from 0% in some tax-free zones to over 15% in high-tax areas",
+        "Different categories of goods may have different tax rates (groceries often lower, luxury items higher)",
+        "Some locations have additional taxes like excise taxes on specific items"
+      ],
+      "formulaExplanation": "Sales tax calculation follows a simple but important formula: Tax Amount = Pre-tax Price × (Tax Rate ÷ 100). The total price is then calculated as: Total Price = Pre-tax Price + Tax Amount. This means if you have a $100 item and an 8% tax rate, you'll pay $8 in tax for a total of $108. Understanding this formula helps you quickly calculate taxes in your head and spot errors on receipts. Tax rates are expressed as percentages and converted to decimals for calculation (8% = 0.08).",
+      "examples": [
+        "A $499 laptop with 8.5% sales tax costs $42.42 in tax for a total of $541.42 - nearly $50 more than the sticker price.",
+        "Groceries costing $150 with 4% tax (typical reduced rate) add only $6 for a total of $156, while the same amount spent on electronics with 8.5% tax would add $12.75 for $162.75 total.",
+        "A $25,000 car purchase with 6% sales tax adds $1,500 in taxes, making the total cost $26,500 - significantly impacting the budget."
+      ],
+      "resultsExplanation": [
+        "Tax amount shows exactly how much sales tax you'll pay on the purchase",
+        "Total price displays the complete amount including tax that you'll actually pay",
+        "Tax rate applied confirms the percentage used in the calculation",
+        "Use these figures to compare true costs across different retailers or locations"
+      ],
+      "whoItsFor": "This sales tax calculator serves shoppers, budgeters, business owners, travelers, online shoppers, and anyone who wants to understand purchase costs. It's particularly valuable for big purchases, cross-border shopping, business expense tracking, price comparison shopping, and anyone dealing with varying tax rates. Students, families, and professionals all benefit from knowing the true cost before making purchases. The calculator is essential for anyone who wants to avoid budget surprises and make informed financial decisions.",
+      "disclaimer": "Sales tax rates vary by location, item type, and can change frequently. This calculator provides estimates based on the tax rate you enter and does not account for special tax situations, exemptions, or additional fees. Some areas have complex tax structures with multiple rates or special rules. Always verify final prices with retailers and check local tax authority websites for current rates. This tool is for informational purposes and does not constitute tax advice.",
+      "relatedTools": [
+        "Tip calculators for adding gratuity to restaurant bills",
+        "Budget calculators for incorporating taxes into overall spending plans",
+        "Tax calculators for understanding income tax obligations"
+      ],
+      "faqs": [
+        {
+          "question": "How do I find the correct sales tax rate for my location?",
+          "answer": "Check your local government's website or revenue department for current rates. Most states have official tax rate lookup tools. For online shopping, the tax rate depends on where you live, not where the retailer is located. Some areas have different rates for different types of goods - groceries often have lower rates than electronics. Use your zip code to find the exact rate for your area."
+        },
+        {
+          "question": "Why do sales tax rates vary so much?",
+          "answer": "Sales tax rates are set by state, county, and local governments to fund public services. Rates range from 0% (tax-free zones) to over 15% in high-tax areas. Five states have no sales tax, while others add local taxes on top of state rates. Different goods may have different rates - necessities like food and medicine often have lower rates, while luxury items have higher rates. Tourist areas sometimes have additional taxes."
+        },
+        {
+          "question": "How does sales tax affect online shopping?",
+          "answer": "Online purchases are taxed based on your shipping address, not the retailer's location. Most states now require online retailers to collect sales tax, but rates vary by state. Some retailers offer 'tax-free' shipping from certain states, but you'll still pay tax when it arrives. Use our calculator to compare true costs including tax before ordering. International purchases may have import duties and VAT instead of sales tax."
+        },
+        {
+          "question": "Can I get sales tax refunds on big purchases?",
+          "answer": "Some states offer sales tax holidays for specific items like school supplies or energy-efficient appliances. Tourists can sometimes get refunds on purchases if they live outside the taxing jurisdiction. For business purchases, you may be able to recover sales tax as a business expense. Large purchases might qualify for tax credits or special treatment. Check with your local tax authority for available exemptions and refund programs."
+        },
+        {
+          "question": "How do I calculate sales tax backwards from a total price?",
+          "answer": "To find the pre-tax price from a total: Pre-tax Price = Total Price ÷ (1 + Tax Rate/100). For example, if something costs $108 total with 8% tax: $108 ÷ 1.08 = $100 pre-tax. To find just the tax amount from a total: Tax Amount = Total Price - (Total Price ÷ (1 + Tax Rate/100)). This reverse calculation is useful when receipts only show the final price."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Impuestos de Ventas",
+    "seoTitle": "Calculadora de Impuestos de Ventas - Calcular Monto de Impuestos y Precio Total",
+    "metaDescription": "Calcula el impuesto de ventas en compras y encuentra el monto total incluyendo impuestos. Perfecto para compras, presupuestos y comprender las implicaciones fiscales en tus compras.",
+    "keywords": [
+      "calculadora impuestos ventas",
+      "calculadora impuestos",
+      "tasa impuestos ventas",
+      "calculadora precio total",
+      "impuestos compras"
+    ],
+    "slug": "calculadora-impuestos-ventas",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "impuestos ventas",
+      "impuestos",
+      "compras",
+      "presupuesto",
+      "precio"
+    ],
+    "description": "Calcula el monto del impuesto de ventas y el precio total incluyendo impuestos para cualquier compra. Esencial para presupuestos, compras y comprender el costo real de los artículos antes de impuestos.",
+    "instructions": [
+      "Ingresa el precio sin impuestos del artículo o servicio. Este es el precio base antes de agregar cualquier impuesto de ventas.",
+      "Ingresa la tasa del impuesto de ventas como porcentaje. Las tasas de impuesto de ventas varían por ubicación y pueden oscilar entre 0% y más del 15%.",
+      "Haz clic en 'Calcular' para ver el monto del impuesto y el precio total incluyendo impuestos.",
+      "Usa los resultados para comprender el costo real de tu compra y planificar tu presupuesto en consecuencia."
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "price",
+          "label": "Precio sin Impuestos ($)",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "taxRate",
+          "label": "Tasa de Impuestos de Ventas (%)",
+          "type": "number",
+          "default": 8.5,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        }
+      ],
+      "formula": "Monto de Impuestos = Precio × (Tasa de Impuestos ÷ 100), Precio Total = Precio + Monto de Impuestos",
+      "output": {
+        "label": "Monto de Impuestos",
+        "default": "Ingresa precio y tasa de impuestos arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Precio Total",
+          "field": "totalPrice",
+          "format": "currency"
+        },
+        {
+          "label": "Tasa de Impuestos Aplicada",
+          "field": "taxRateDisplay",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "SalesTaxCalculator"
+    },
+    "examples": [
+      {
+        "title": "Compra de Electrónicos",
+        "input": {
+          "price": 899.99,
+          "taxRate": 8.5
+        },
+        "output": {
+          "taxAmount": 76.5,
+          "totalPrice": 976.49,
+          "taxRateDisplay": 8.5
+        },
+        "explanation": "Una laptop de $899.99 con 8.5% de impuesto de ventas agrega $76.50 en impuestos, haciendo el precio total $976.49."
+      },
+      {
+        "title": "Comida en Restaurante",
+        "input": {
+          "price": 45.67,
+          "taxRate": 7.25
+        },
+        "output": {
+          "taxAmount": 3.31,
+          "totalPrice": 48.98,
+          "taxRateDisplay": 7.25
+        },
+        "explanation": "Una cuenta de restaurante de $45.67 con 7.25% de impuesto de ventas agrega $3.31, totalizando $48.98 antes de propina."
+      },
+      {
+        "title": "Compra de Ropa",
+        "input": {
+          "price": 129.95,
+          "taxRate": 6
+        },
+        "output": {
+          "taxAmount": 7.8,
+          "totalPrice": 137.75,
+          "taxRateDisplay": 6
+        },
+        "explanation": "Un artículo de ropa de $129.95 con 6% de impuesto de ventas agrega $7.80, haciendo el total $137.75."
+      }
+    ],
+    "comparisonTable": {
+      "title": "Tasas de Impuestos de Ventas por Estado (2024)",
+      "headers": [
+        "Estado",
+        "Tasa de Impuestos",
+        "Ejemplo: Artículo de $100"
+      ],
+      "rows": [
+        [
+          "Delaware",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Montana",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Oregon",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "California",
+          "8.75%",
+          "$108.75"
+        ],
+        [
+          "Nueva York",
+          "8.875%",
+          "$108.88"
+        ],
+        [
+          "Florida",
+          "7.0%",
+          "$107.00"
+        ],
+        [
+          "Texas",
+          "8.25%",
+          "$108.25"
+        ]
+      ]
+    },
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Impuestos",
+        "slug": "calculadora-impuestos",
+        "description": "Calcula responsabilidad fiscal de ingresos"
+      },
+      {
+        "name": "Calculadora de Propinas",
+        "slug": "calculadora-propinas",
+        "description": "Calcula propinas de restaurantes"
+      }
+    ],
+    "seoContent": {
+      "introduction": "Nunca te sorprendas con el precio final nuevamente con nuestra calculadora precisa de impuestos de ventas que te ayuda a entender el verdadero costo de las compras. Los impuestos de ventas varían ampliamente por ubicación y pueden impactar significativamente tu presupuesto, especialmente en compras grandes. Nuestra calculadora muestra instantáneamente exactamente cuánto impuesto pagarás y cuál será el precio total, ayudándote a tomar decisiones informadas de compra y evitar sorpresas presupuestarias. Ya sea que compres un auto, muebles, electrónicos o artículos cotidianos, conocer el monto del impuesto por adelantado asegura que te mantengas dentro de tus límites de gasto.",
+      "benefits": [
+        "Calcula montos exactos de impuestos de ventas antes de hacer compras",
+        "Entiende el verdadero costo total de artículos incluyendo todos los impuestos",
+        "Compara precios a través de diferentes ubicaciones con tasas variables de impuestos",
+        "Presupuesta con precisión para compras y evita gastar de más",
+        "Toma decisiones informadas sobre dónde y cuándo comprar",
+        "Planea compras mayores con estimaciones realistas de costo total"
+      ],
+      "steps": [
+        "Ingresa el precio pre-impuestos del artículo o servicio",
+        "Ingresa la tasa aplicable de impuestos de ventas para tu ubicación",
+        "Haz clic en calcular para ver el monto del impuesto y precio total",
+        "Usa los resultados para comparar precios y planear tu presupuesto",
+        "Considera costos adicionales como envío o instalación si es necesario"
+      ],
+      "inputsExplained": [
+        "El precio pre-impuestos es el precio base antes de que se agregue cualquier impuesto de ventas - usualmente se muestra como 'subtotal'",
+        "La tasa de impuestos de ventas varía por ubicación y puede ir desde 0% en algunas zonas libres de impuestos hasta más del 15% en áreas de altos impuestos",
+        "Diferentes categorías de bienes pueden tener diferentes tasas de impuestos (alimentos a menudo más bajos, artículos de lujo más altos)",
+        "Algunas ubicaciones tienen impuestos adicionales como impuestos especiales sobre artículos específicos"
+      ],
+      "formulaExplanation": "El cálculo de impuestos de ventas sigue una fórmula simple pero importante: Monto del Impuesto = Precio Pre-impuestos × (Tasa del Impuesto ÷ 100). El precio total se calcula entonces como: Precio Total = Precio Pre-impuestos + Monto del Impuesto. Esto significa que si tienes un artículo de $100 y una tasa de impuesto del 8%, pagarás $8 en impuestos por un total de $108. Entender esta fórmula te ayuda a calcular impuestos rápidamente en tu cabeza y detectar errores en recibos. Las tasas de impuestos se expresan como porcentajes y se convierten a decimales para cálculo (8% = 0.08).",
+      "examples": [
+        "Una laptop de $499 con impuesto de ventas del 8.5% cuesta $42.42 en impuestos por un total de $541.42 - casi $50 más que el precio de etiqueta.",
+        "Abarrotes costando $150 con impuesto del 4% (tasa reducida típica) agregan solo $6 por un total de $156, mientras que la misma cantidad gastada en electrónicos con impuesto del 8.5% agregaría $12.75 por $162.75 total.",
+        "Una compra de auto de $25,000 con impuesto de ventas del 6% agrega $1,500 en impuestos, haciendo el costo total $26,500 - impactando significativamente el presupuesto."
+      ],
+      "resultsExplanation": [
+        "El monto del impuesto muestra exactamente cuánto impuesto de ventas pagarás en la compra",
+        "El precio total muestra el monto completo incluyendo impuestos que realmente pagarás",
+        "La tasa de impuesto aplicada confirma el porcentaje usado en el cálculo",
+        "Usa estas cifras para comparar costos reales a través de diferentes minoristas o ubicaciones"
+      ],
+      "whoItsFor": "Esta calculadora de impuestos de ventas sirve a compradores, presupuestadores, dueños de negocios, viajeros, compradores en línea, y cualquiera que quiera entender costos de compra. Es particularmente valiosa para compras grandes, compras transfronterizas, seguimiento de gastos comerciales, comparación de precios de compras, y cualquiera tratando con tasas variables de impuestos. Estudiantes, familias, y profesionales todos se benefician de conocer el costo verdadero antes de hacer compras. La calculadora es esencial para cualquiera que quiera evitar sorpresas presupuestarias y tomar decisiones financieras informadas.",
+      "disclaimer": "Las tasas de impuestos de ventas varían por ubicación, tipo de artículo, y pueden cambiar frecuentemente. Esta calculadora proporciona estimaciones basadas en la tasa de impuesto que ingresas y no considera situaciones fiscales especiales, exenciones, o tarifas adicionales. Algunas áreas tienen estructuras fiscales complejas con múltiples tasas o reglas especiales. Siempre verifica precios finales con minoristas y verifica sitios web de autoridades fiscales locales por tasas actuales. Esta herramienta es para propósitos informativos y no constituye consejo fiscal.",
+      "relatedTools": [
+        "Calculadoras de propinas para agregar gratuidad a cuentas de restaurantes",
+        "Calculadoras de presupuesto para incorporar impuestos en planes de gasto generales",
+        "Calculadoras de impuestos para entender obligaciones fiscales de ingresos"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo encuentro la tasa correcta de impuestos de ventas para mi ubicación?",
+          "answer": "Verifica el sitio web de tu gobierno local o departamento de ingresos por tasas actuales. La mayoría de estados tienen herramientas oficiales de búsqueda de tasas de impuestos. Para compras en línea, la tasa de impuesto depende de dónde vives, no dónde está el minorista. Algunas áreas tienen diferentes tasas para diferentes tipos de bienes - alimentos a menudo tienen tasas más bajas que electrónicos. Usa tu código postal para encontrar la tasa exacta para tu área."
+        },
+        {
+          "question": "¿Por qué varían tanto las tasas de impuestos de ventas?",
+          "answer": "Las tasas de impuestos de ventas son establecidas por gobiernos estatales, del condado, y locales para financiar servicios públicos. Las tasas van desde 0% (zonas libres de impuestos) hasta más del 15% en áreas de altos impuestos. Cinco estados no tienen impuesto de ventas, mientras otros agregan impuestos locales además de tasas estatales. Diferentes bienes pueden tener diferentes tasas - necesidades como comida y medicina a menudo tienen tasas más bajas, mientras artículos de lujo tienen tasas más altas. Áreas turísticas a veces tienen impuestos adicionales."
+        },
+        {
+          "question": "¿Cómo afectan los impuestos de ventas a las compras en línea?",
+          "answer": "Las compras en línea son gravadas basadas en tu dirección de envío, no la ubicación del minorista. La mayoría de estados ahora requieren que minoristas en línea cobren impuesto de ventas, pero las tasas varían por estado. Algunos minoristas ofrecen 'envío libre de impuestos' desde ciertos estados, pero aún pagarás impuesto cuando llegue. Usa nuestra calculadora para comparar costos reales incluyendo impuestos antes de ordenar. Compras internacionales pueden tener aranceles de importación e IVA en lugar de impuesto de ventas."
+        },
+        {
+          "question": "¿Puedo obtener reembolsos de impuestos de ventas en compras grandes?",
+          "answer": "Algunos estados ofrecen vacaciones de impuestos de ventas para artículos específicos como útiles escolares o aparatos energéticamente eficientes. Turistas a veces pueden obtener reembolsos en compras si viven fuera de la jurisdicción gravable. Para compras comerciales, puedes recuperar impuesto de ventas como gasto comercial. Compras grandes podrían calificar para créditos fiscales o tratamiento especial. Verifica con tu autoridad fiscal local por exenciones disponibles y programas de reembolso."
+        },
+        {
+          "question": "¿Cómo calculo impuestos de ventas al revés desde un precio total?",
+          "answer": "Para encontrar el precio pre-impuestos desde un total: Precio Pre-impuestos = Precio Total ÷ (1 + Tasa del Impuesto/100). Por ejemplo, si algo cuesta $108 total con impuesto del 8%: $108 ÷ 1.08 = $100 pre-impuestos. Para encontrar solo el monto del impuesto desde un total: Monto del Impuesto = Precio Total - (Precio Total ÷ (1 + Tasa del Impuesto/100)). Este cálculo inverso es útil cuando recibos solo muestran el precio final."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Imposto sobre Vendas",
+    "seoTitle": "Calculadora de Imposto sobre Vendas - Calcular Valor do Imposto e Preço Total",
+    "metaDescription": "Calcule o imposto sobre vendas em compras e encontre o valor total incluindo impostos. Perfeito para compras, orçamentos e compreensão das implicações fiscais em suas compras.",
+    "keywords": [
+      "calculadora imposto vendas",
+      "calculadora imposto",
+      "taxa imposto vendas",
+      "calculadora preço total",
+      "imposto compras"
+    ],
+    "slug": "calculadora-imposto-vendas",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "imposto vendas",
+      "imposto",
+      "compras",
+      "orçamento",
+      "preço"
+    ],
+    "description": "Calcule o valor do imposto sobre vendas e o preço total incluindo impostos para qualquer compra. Essencial para orçamentos, compras e compreensão do custo real dos itens antes dos impostos.",
+    "instructions": [
+      "Digite o preço sem impostos do item ou serviço. Este é o preço base antes de qualquer imposto sobre vendas ser adicionado.",
+      "Digite a taxa do imposto sobre vendas como porcentagem. As taxas de imposto sobre vendas variam por localização e podem variar de 0% a mais de 15%.",
+      "Clique em 'Calcular' para ver o valor do imposto e o preço total incluindo impostos.",
+      "Use os resultados para compreender o custo real de sua compra e planejar seu orçamento adequadamente."
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "price",
+          "label": "Preço sem Impostos ($)",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "taxRate",
+          "label": "Taxa de Imposto sobre Vendas (%)",
+          "type": "number",
+          "default": 8.5,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        }
+      ],
+      "formula": "Valor do Imposto = Preço × (Taxa de Imposto ÷ 100), Preço Total = Preço + Valor do Imposto",
+      "output": {
+        "label": "Valor do Imposto",
+        "default": "Digite preço e taxa de imposto acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Preço Total",
+          "field": "totalPrice",
+          "format": "currency"
+        },
+        {
+          "label": "Taxa de Imposto Aplicada",
+          "field": "taxRateDisplay",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "SalesTaxCalculator"
+    },
+    "examples": [
+      {
+        "title": "Compra de Eletrônicos",
+        "input": {
+          "price": 899.99,
+          "taxRate": 8.5
+        },
+        "output": {
+          "taxAmount": 76.5,
+          "totalPrice": 976.49,
+          "taxRateDisplay": 8.5
+        },
+        "explanation": "Um laptop de $899.99 com 8.5% de imposto sobre vendas adiciona $76.50 em impostos, tornando o preço total $976.49."
+      },
+      {
+        "title": "Refeição em Restaurante",
+        "input": {
+          "price": 45.67,
+          "taxRate": 7.25
+        },
+        "output": {
+          "taxAmount": 3.31,
+          "totalPrice": 48.98,
+          "taxRateDisplay": 7.25
+        },
+        "explanation": "Uma conta de restaurante de $45.67 com 7.25% de imposto sobre vendas adiciona $3.31, totalizando $48.98 antes da gorjeta."
+      },
+      {
+        "title": "Compra de Roupas",
+        "input": {
+          "price": 129.95,
+          "taxRate": 6
+        },
+        "output": {
+          "taxAmount": 7.8,
+          "totalPrice": 137.75,
+          "taxRateDisplay": 6
+        },
+        "explanation": "Um item de roupa de $129.95 com 6% de imposto sobre vendas adiciona $7.80, tornando o total $137.75."
+      }
+    ],
+    "comparisonTable": {
+      "title": "Taxas de Imposto sobre Vendas por Estado (2024)",
+      "headers": [
+        "Estado",
+        "Taxa de Imposto",
+        "Exemplo: Item de $100"
+      ],
+      "rows": [
+        [
+          "Delaware",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Montana",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Oregon",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Califórnia",
+          "8.75%",
+          "$108.75"
+        ],
+        [
+          "Nova York",
+          "8.875%",
+          "$108.88"
+        ],
+        [
+          "Flórida",
+          "7.0%",
+          "$107.00"
+        ],
+        [
+          "Texas",
+          "8.25%",
+          "$108.25"
+        ]
+      ]
+    },
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Impostos",
+        "slug": "calculadora-impostos",
+        "description": "Calcule responsabilidade fiscal de renda"
+      },
+      {
+        "name": "Calculadora de Gorjetas",
+        "slug": "calculadora-gorjetas",
+        "description": "Calcule gorjetas de restaurantes"
+      }
+    ],
+    "seoContent": {
+      "introduction": "Nunca se surpreenda com o preço final novamente com nossa calculadora precisa de imposto sobre vendas que ajuda você a entender o verdadeiro custo de compras. O imposto sobre vendas varia amplamente por localização e pode impactar significativamente seu orçamento, especialmente em compras grandes. Nossa calculadora mostra instantaneamente exatamente quanto imposto você pagará e qual será o preço total, ajudando você a tomar decisões informadas de compra e evitar surpresas orçamentárias. Seja comprando um carro, móveis, eletrônicos ou itens cotidianos, conhecer o valor do imposto antecipadamente garante que você se mantenha dentro de seus limites de gastos.",
+      "benefits": [
+        "Calcule valores exatos de imposto sobre vendas antes de fazer compras",
+        "Entenda o verdadeiro custo total de itens incluindo todos os impostos",
+        "Compare preços através de diferentes locais com taxas variáveis de impostos",
+        "Faça orçamento com precisão para compras e evite gastar demais",
+        "Tome decisões informadas sobre onde e quando comprar",
+        "Planeje compras maiores com estimativas realistas de custo total"
+      ],
+      "steps": [
+        "Digite o preço pré-imposto do item ou serviço",
+        "Insira a taxa aplicável de imposto sobre vendas para sua localização",
+        "Clique calcular para ver o valor do imposto e preço total",
+        "Use os resultados para comparar preços e planejar seu orçamento",
+        "Considere custos adicionais como frete ou instalação se necessário"
+      ],
+      "inputsExplained": [
+        "Preço pré-imposto é o preço base antes de qualquer imposto sobre vendas ser adicionado - isso geralmente é mostrado como 'subtotal'",
+        "Taxa de imposto sobre vendas varia por localização e pode ir de 0% em algumas zonas livres de impostos para mais de 15% em áreas de altos impostos",
+        "Diferentes categorias de bens podem ter diferentes taxas de impostos (mantimentos frequentemente menores, itens de luxo maiores)",
+        "Algumas localizações têm impostos adicionais como impostos especiais sobre itens específicos"
+      ],
+      "formulaExplanation": "Cálculo de imposto sobre vendas segue uma fórmula simples mas importante: Valor do Imposto = Preço Pré-imposto × (Taxa do Imposto ÷ 100). O preço total é então calculado como: Preço Total = Preço Pré-imposto + Valor do Imposto. Isso significa que se você tem um item de $100 e uma taxa de imposto de 8%, você pagará $8 em imposto por um total de $108. Entender esta fórmula ajuda você a calcular impostos rapidamente em sua cabeça e detectar erros em recibos. Taxas de impostos são expressas como porcentagens e convertidas para decimais para cálculo (8% = 0.08).",
+      "examples": [
+        "Um laptop de $499 com imposto sobre vendas de 8.5% custa $42.42 em imposto por um total de $541.42 - quase $50 a mais que o preço da etiqueta.",
+        "Mantimentos custando $150 com imposto de 4% (taxa reduzida típica) adicionam apenas $6 por um total de $156, enquanto a mesma quantia gasta em eletrônicos com imposto de 8.5% adicionaria $12.75 por $162.75 total.",
+        "Uma compra de carro de $25,000 com imposto sobre vendas de 6% adiciona $1,500 em impostos, fazendo o custo total $26,500 - impactando significativamente o orçamento."
+      ],
+      "resultsExplanation": [
+        "Valor do imposto mostra exatamente quanto imposto sobre vendas você pagará na compra",
+        "Preço total mostra o valor completo incluindo imposto que você realmente pagará",
+        "Taxa de imposto aplicada confirma a porcentagem usada no cálculo",
+        "Use estas figuras para comparar custos reais através de diferentes varejistas ou localizações"
+      ],
+      "whoItsFor": "Esta calculadora de imposto sobre vendas serve compradores, orçamentistas, donos de negócios, viajantes, compradores online, e qualquer pessoa que queira entender custos de compra. É particularmente valiosa para compras grandes, compras transfronteiriças, rastreamento de despesas comerciais, comparação de preços de compras, e qualquer pessoa lidando com taxas variáveis de impostos. Estudantes, famílias e profissionais todos se beneficiam de conhecer o custo verdadeiro antes de fazer compras. A calculadora é essencial para qualquer pessoa que queira evitar surpresas orçamentárias e tomar decisões financeiras informadas.",
+      "disclaimer": "Taxas de imposto sobre vendas variam por localização, tipo de item e podem mudar frequentemente. Esta calculadora fornece estimativas baseadas na taxa de imposto que você insere e não considera situações fiscais especiais, isenções ou taxas adicionais. Algumas áreas têm estruturas fiscais complexas com múltiplas taxas ou regras especiais. Sempre verifique preços finais com varejistas e verifique sites de autoridade fiscal local para taxas atuais. Esta ferramenta é para propósitos informativos e não constitui conselho fiscal.",
+      "relatedTools": [
+        "Calculadoras de gorjetas para adicionar gorjeta a contas de restaurantes",
+        "Calculadoras de orçamento para incorporar impostos em planos gerais de gastos",
+        "Calculadoras de impostos para entender obrigações fiscais de renda"
+      ],
+      "faqs": [
+        {
+          "question": "Como encontro a taxa correta de imposto sobre vendas para minha localização?",
+          "answer": "Verifique o site do governo local ou departamento de receita para taxas atuais. A maioria dos estados tem ferramentas oficiais de busca de taxas de impostos. Para compras online, a taxa de imposto depende de onde você mora, não onde o varejista está localizado. Algumas áreas têm diferentes taxas para diferentes tipos de bens - mantimentos frequentemente têm taxas menores que eletrônicos. Use seu CEP para encontrar a taxa exata para sua área."
+        },
+        {
+          "question": "Por que taxas de imposto sobre vendas variam tanto?",
+          "answer": "Taxas de imposto sobre vendas são definidas por governos estaduais, do condado e locais para financiar serviços públicos. Taxas vão de 0% (zonas livres de impostos) para mais de 15% em áreas de altos impostos. Cinco estados não têm imposto sobre vendas, enquanto outros adicionam impostos locais além de taxas estaduais. Diferentes bens podem ter diferentes taxas - necessidades como comida e medicina frequentemente têm taxas menores, enquanto itens de luxo têm taxas maiores. Áreas turísticas às vezes têm impostos adicionais."
+        },
+        {
+          "question": "Como imposto sobre vendas afeta compras online?",
+          "answer": "Compras online são taxadas baseadas em seu endereço de entrega, não a localização do varejista. A maioria dos estados agora exige que varejistas online coletem imposto sobre vendas, mas taxas variam por estado. Alguns varejistas oferecem 'frete livre de impostos' de certos estados, mas você ainda pagará imposto quando chegar. Use nossa calculadora para comparar custos reais incluindo imposto antes de encomendar. Compras internacionais podem ter taxas de importação e IVA ao invés de imposto sobre vendas."
+        },
+        {
+          "question": "¿Posso obter reembolsos de imposto sobre vendas em compras grandes?",
+          "answer": "Alguns estados oferecem feriados de imposto sobre vendas para itens específicos como suprimentos escolares ou aparelhos energeticamente eficientes. Turistas às vezes podem obter reembolsos em compras se morarem fora da jurisdição tributária. Para compras comerciais, você pode recuperar imposto sobre vendas como despesa comercial. Compras grandes podem qualificar para créditos fiscais ou tratamento especial. Verifique com sua autoridade fiscal local para isenções disponíveis e programas de reembolso."
+        },
+        {
+          "question": "Como calculo imposto sobre vendas ao contrário de um preço total?",
+          "answer": "Para encontrar o preço pré-imposto de um total: Preço Pré-imposto = Preço Total ÷ (1 + Taxa do Imposto/100). Por exemplo, se algo custa $108 total com imposto de 8%: $108 ÷ 1.08 = $100 pré-imposto. Para encontrar apenas o valor do imposto de um total: Valor do Imposto = Preço Total - (Preço Total ÷ (1 + Taxa do Imposto/100)). Este cálculo reverso é útil quando recibos mostram apenas o preço final."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculatrice de Taxe de Vente",
+    "seoTitle": "Calculatrice de Taxe de Vente - Calculer le Montant de Taxe et Prix Total",
+    "metaDescription": "Calculez la taxe de vente sur les achats et trouvez le montant total incluant les taxes. Parfait pour les achats, les budgets et la compréhension des implications fiscales sur vos achats.",
+    "keywords": [
+      "calculatrice taxe vente",
+      "calculatrice taxe",
+      "taux taxe vente",
+      "calculatrice prix total",
+      "taxe achat"
+    ],
+    "slug": "calculatrice-taxe-ventes",
+    "category": "Financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "taxe vente",
+      "taxe",
+      "achat",
+      "budget",
+      "prix"
+    ],
+    "description": "Calculez le montant de la taxe de vente et le prix total incluant les taxes pour tout achat. Essentiel pour les budgets, les achats et la compréhension du coût réel des articles avant les taxes.",
+    "instructions": [
+      "Entrez le prix hors taxes de l'article ou du service. C'est le prix de base avant l'ajout de toute taxe de vente.",
+      "Entrez le taux de taxe de vente en pourcentage. Les taux de taxe de vente varient selon l'emplacement et peuvent aller de 0% à plus de 15%.",
+      "Cliquez sur 'Calculer' pour voir le montant de la taxe et le prix total incluant les taxes.",
+      "Utilisez les résultats pour comprendre le coût réel de votre achat et planifier votre budget en conséquence."
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "price",
+          "label": "Prix Hors Taxes ($)",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "taxRate",
+          "label": "Taux de Taxe de Vente (%)",
+          "type": "number",
+          "default": 8.5,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        }
+      ],
+      "formula": "Montant de Taxe = Prix × (Taux de Taxe ÷ 100), Prix Total = Prix + Montant de Taxe",
+      "output": {
+        "label": "Montant de Taxe",
+        "default": "Entrez le prix et le taux de taxe ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Prix Total",
+          "field": "totalPrice",
+          "format": "currency"
+        },
+        {
+          "label": "Taux de Taxe Appliqué",
+          "field": "taxRateDisplay",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "SalesTaxCalculator"
+    },
+    "examples": [
+      {
+        "title": "Achat d'Électronique",
+        "input": {
+          "price": 899.99,
+          "taxRate": 8.5
+        },
+        "output": {
+          "taxAmount": 76.5,
+          "totalPrice": 976.49,
+          "taxRateDisplay": 8.5
+        },
+        "explanation": "Un ordinateur portable de $899.99 avec 8.5% de taxe de vente ajoute $76.50 de taxes, faisant un prix total de $976.49."
+      },
+      {
+        "title": "Repas au Restaurant",
+        "input": {
+          "price": 45.67,
+          "taxRate": 7.25
+        },
+        "output": {
+          "taxAmount": 3.31,
+          "totalPrice": 48.98,
+          "taxRateDisplay": 7.25
+        },
+        "explanation": "Une addition de restaurant de $45.67 avec 7.25% de taxe de vente ajoute $3.31, totalisant $48.98 avant pourboire."
+      },
+      {
+        "title": "Achat de Vêtements",
+        "input": {
+          "price": 129.95,
+          "taxRate": 6
+        },
+        "output": {
+          "taxAmount": 7.8,
+          "totalPrice": 137.75,
+          "taxRateDisplay": 6
+        },
+        "explanation": "Un article vestimentaire de $129.95 avec 6% de taxe de vente ajoute $7.80, faisant un total de $137.75."
+      }
+    ],
+    "comparisonTable": {
+      "title": "Taux de Taxe de Vente par État (2024)",
+      "headers": [
+        "État",
+        "Taux de Taxe",
+        "Exemple: Article de $100"
+      ],
+      "rows": [
+        [
+          "Delaware",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Montana",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Oregon",
+          "0%",
+          "$100.00"
+        ],
+        [
+          "Californie",
+          "8.75%",
+          "$108.75"
+        ],
+        [
+          "New York",
+          "8.875%",
+          "$108.88"
+        ],
+        [
+          "Floride",
+          "7.0%",
+          "$107.00"
+        ],
+        [
+          "Texas",
+          "8.25%",
+          "$108.25"
+        ]
+      ]
+    },
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice d'Impôts",
+        "slug": "calculatrice-impots",
+        "description": "Calculez la responsabilité fiscale des revenus"
+      },
+      {
+        "name": "Calculatrice de Pourboires",
+        "slug": "calculatrice-pourboires",
+        "description": "Calculez les pourboires de restaurants"
+      }
+    ],
+    "seoContent": {
+      "introduction": "Ne soyez plus jamais surpris par le prix final grâce à notre calculatrice précise de taxe de vente qui vous aide à comprendre le véritable coût des achats. La taxe de vente varie considérablement selon l'emplacement et peut avoir un impact significatif sur votre budget, particulièrement pour les gros achats. Notre calculatrice montre instantanément exactement combien de taxe vous paierez et quel sera le prix total, vous aidant à prendre des décisions d'achat éclairées et à éviter les surprises budgétaires. Que vous achetiez une voiture, des meubles, des appareils électroniques ou des articles quotidiens, connaître le montant de la taxe à l'avance garantit que vous restez dans vos limites de dépenses.",
+      "benefits": [
+        "Calculez les montants exacts de taxe de vente avant de faire des achats",
+        "Comprenez le véritable coût total des articles incluant toutes les taxes",
+        "Comparez les prix dans différentes localisations avec des taux de taxe variables",
+        "Budgétisez avec précision pour les achats et évitez les dépenses excessives",
+        "Prenez des décisions éclairées sur où et quand magasiner",
+        "Planifiez les achats majeurs avec des estimations réalistes du coût total"
+      ],
+      "steps": [
+        "Entrez le prix hors taxe de l'article ou du service",
+        "Saisissez le taux de taxe de vente applicable pour votre emplacement",
+        "Cliquez sur calculer pour voir le montant de la taxe et le prix total",
+        "Utilisez les résultats pour comparer les prix et planifier votre budget",
+        "Tenez compte des coûts supplémentaires comme la livraison ou l'installation si nécessaire"
+      ],
+      "inputsExplained": [
+        "Le prix hors taxe est le prix de base avant qu'une taxe de vente soit ajoutée - cela est généralement affiché comme 'sous-total'",
+        "Le taux de taxe de vente varie selon l'emplacement et peut aller de 0% dans certaines zones exonérées de taxe à plus de 15% dans les zones à forte taxation",
+        "Différentes catégories de biens peuvent avoir des taux de taxe différents (les produits d'épicerie souvent plus bas, les articles de luxe plus élevés)",
+        "Certaines localisations ont des taxes supplémentaires comme des taxes d'accise sur des articles spécifiques"
+      ],
+      "formulaExplanation": "Le calcul de la taxe de vente suit une formule simple mais importante : Montant de Taxe = Prix Hors Taxe × (Taux de Taxe ÷ 100). Le prix total est alors calculé comme : Prix Total = Prix Hors Taxe + Montant de Taxe. Cela signifie que si vous avez un article de 100 $ et un taux de taxe de 8 %, vous paierez 8 $ de taxe pour un total de 108 $. Comprendre cette formule vous aide à calculer rapidement les taxes dans votre tête et à détecter les erreurs sur les reçus. Les taux de taxe sont exprimés en pourcentages et convertis en décimales pour le calcul (8 % = 0,08).",
+      "examples": [
+        "Un ordinateur portable de 499 $ avec 8,5 % de taxe de vente coûte 42,42 $ de taxe pour un total de 541,42 $ - près de 50 $ de plus que le prix affiché.",
+        "Les produits d'épicerie coûtant 150 $ avec 4 % de taxe (taux réduit typique) ajoutent seulement 6 $ pour un total de 156 $, tandis que le même montant dépensé en appareils électroniques avec 8,5 % de taxe ajouterait 12,75 $ pour 162,75 $ total.",
+        "Un achat de voiture de 25 000 $ avec 6 % de taxe de vente ajoute 1 500 $ de taxes, faisant le coût total 26 500 $ - impactant considérablement le budget."
+      ],
+      "resultsExplanation": [
+        "Le montant de taxe montre exactement combien de taxe de vente vous paierez sur l'achat",
+        "Le prix total affiche le montant complet incluant la taxe que vous paierez réellement",
+        "Le taux de taxe appliqué confirme le pourcentage utilisé dans le calcul",
+        "Utilisez ces chiffres pour comparer les vrais coûts dans différents détaillants ou emplacements"
+      ],
+      "whoItsFor": "Cette calculatrice de taxe de vente sert les acheteurs, les budgétiseurs, les propriétaires d'entreprises, les voyageurs, les acheteurs en ligne et quiconque souhaite comprendre les coûts d'achat. Elle est particulièrement précieuse pour les gros achats, les achats transfrontaliers, le suivi des dépenses commerciales, les comparaisons de prix d'achat et quiconque traitant avec des taux de taxe variables. Les étudiants, les familles et les professionnels bénéficient tous de connaître le vrai coût avant de faire des achats. La calculatrice est essentielle pour quiconque souhaite éviter les surprises budgétaires et prendre des décisions financières éclairées.",
+      "disclaimer": "Les taux de taxe de vente varient selon l'emplacement, le type d'article et peuvent changer fréquemment. Cette calculatrice fournit des estimations basées sur le taux de taxe que vous entrez et ne tient pas compte des situations fiscales spéciales, exemptions ou frais supplémentaires. Certaines zones ont des structures fiscales complexes avec plusieurs taux ou règles spéciales. Vérifiez toujours les prix finaux avec les détaillants et consultez les sites Web des autorités fiscales locales pour les taux actuels. Cet outil est à des fins informatives et ne constitue pas un conseil fiscal.",
+      "relatedTools": [
+        "Calculatrices de pourboires pour ajouter des pourboires aux additions de restaurants",
+        "Calculatrices de budget pour incorporer les taxes dans les plans de dépenses globaux",
+        "Calculatrices d'impôts pour comprendre les obligations fiscales sur le revenu"
+      ],
+      "faqs": [
+        {
+          "question": "Comment trouver le taux de taxe de vente correct pour mon emplacement ?",
+          "answer": "Vérifiez le site Web de votre gouvernement local ou département des revenus pour les taux actuels. La plupart des états ont des outils officiels de recherche de taux de taxe. Pour les achats en ligne, le taux de taxe dépend de votre lieu de résidence, pas de l'emplacement du détaillant. Certaines zones ont des taux différents pour différents types de biens - les produits d'épicerie ont souvent des taux plus bas que les appareils électroniques. Utilisez votre code postal pour trouver le taux exact pour votre zone."
+        },
+        {
+          "question": "Pourquoi les taux de taxe de vente varient-ils autant ?",
+          "answer": "Les taux de taxe de vente sont fixés par les gouvernements étatiques, de comté et locaux pour financer les services publics. Les taux vont de 0 % (zones exonérées de taxe) à plus de 15 % dans les zones à forte taxation. Cinq états n'ont pas de taxe de vente, tandis que d'autres ajoutent des taxes locales en plus des taux étatiques. Différents biens peuvent avoir des taux différents - les nécessités comme la nourriture et les médicaments ont souvent des taux plus bas, tandis que les articles de luxe ont des taux plus élevés. Les zones touristiques ont parfois des taxes supplémentaires."
+        },
+        {
+          "question": "Comment la taxe de vente affecte-t-elle les achats en ligne ?",
+          "answer": "Les achats en ligne sont taxés selon votre adresse de livraison, pas l'emplacement du détaillant. La plupart des états exigent maintenant que les détaillants en ligne collectent la taxe de vente, mais les taux varient selon l'état. Certains détaillants offrent une 'livraison exonérée de taxe' depuis certains états, mais vous paierez toujours la taxe à l'arrivée. Utilisez notre calculatrice pour comparer les vrais coûts incluant la taxe avant de commander. Les achats internationaux peuvent avoir des droits d'importation et TVA au lieu de la taxe de vente."
+        },
+        {
+          "question": "Puis-je obtenir des remboursements de taxe de vente sur les gros achats ?",
+          "answer": "Certains états offrent des journées de congé de taxe de vente pour des articles spécifiques comme les fournitures scolaires ou les appareils écoénergétiques. Les touristes peuvent parfois obtenir des remboursements sur les achats s'ils vivent en dehors de la juridiction taxable. Pour les achats commerciaux, vous pouvez récupérer la taxe de vente comme dépense d'affaires. Les gros achats peuvent qualifier pour des crédits fiscaux ou un traitement spécial. Vérifiez auprès de votre autorité fiscale locale pour les exemptions disponibles et les programmes de remboursement."
+        },
+        {
+          "question": "Comment calculer la taxe de vente à rebours à partir d'un prix total ?",
+          "answer": "Pour trouver le prix hors taxe à partir d'un total : Prix Hors Taxe = Prix Total ÷ (1 + Taux de Taxe/100). Par exemple, si quelque chose coûte 108 $ total avec 8 % de taxe : 108 $ ÷ 1,08 = 100 $ hors taxe. Pour trouver seulement le montant de taxe à partir d'un total : Montant de Taxe = Prix Total - (Prix Total ÷ (1 + Taux de Taxe/100)). Ce calcul inverse est utile lorsque les reçus montrent seulement le prix final."
+        }
+      ]
+    }
+  }
+}

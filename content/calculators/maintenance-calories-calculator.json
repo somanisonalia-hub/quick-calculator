@@ -1,0 +1,1310 @@
+{
+  "en": {
+    "title": "Maintenance Calories Calculator",
+    "seoTitle": "Maintenance Calories Calculator - Calculate Daily Calorie Needs to Maintain Weight",
+    "metaDescription": "Calculate your daily maintenance calories using BMR and TDEE formulas. Free calorie calculator for weight maintenance, fitness goals, and nutrition planning.",
+    "keywords": [
+      "maintenance calories calculator",
+      "daily calorie calculator",
+      "BMR calculator",
+      "TDEE calculator",
+      "calorie needs calculator",
+      "maintenance calories",
+      "basal metabolic rate calculator",
+      "total daily energy expenditure",
+      "calorie calculator for weight maintenance",
+      "how many calories do I need daily",
+      "calorie requirements calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate maintenance calories",
+      "what is my daily calorie requirement",
+      "maintenance calories calculator based on weight",
+      "BMR and TDEE calculator",
+      "how many calories to maintain weight",
+      "daily calorie needs calculator",
+      "calorie calculator with activity level",
+      "maintenance calories for weight loss",
+      "BMR calculator with height and weight",
+      "TDEE calculator for athletes",
+      "calorie calculator for men",
+      "calorie calculator for women"
+    ],
+    "slug": "maintenance-calories-calculator",
+    "category": "Health",
+    "calculatorComponent": "MaintenanceCaloriesCalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "maintenance calories",
+      "BMR calculator",
+      "TDEE calculator",
+      "daily calories",
+      "weight maintenance",
+      "calorie needs",
+      "metabolic rate",
+      "energy expenditure"
+    ],
+    "summary": "Calculate your daily maintenance calories using BMR and TDEE formulas to understand your caloric needs for weight maintenance.",
+    "description": "Professional maintenance calories calculator that determines your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) using scientifically validated formulas. Essential for weight management, fitness planning, and understanding your daily caloric requirements based on activity level and body composition.",
+    "instructions": [
+      "Enter your weight in kilograms or pounds",
+      "Enter your height in centimeters or inches",
+      "Select your gender",
+      "Enter your age",
+      "Choose your activity level",
+      "Select BMR calculation method (optional body fat % for Katch-McArdle)",
+      "If using Katch-McArdle, enter your body fat percentage",
+      "View your BMR, TDEE, and maintenance calories"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Body Weight",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Weight Unit",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "height",
+        "label": "Height",
+        "type": "number",
+        "default": 170,
+        "min": 100,
+        "max": 250,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "heightUnit",
+        "label": "Height Unit",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Gender",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Age",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "years"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Activity Level",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "bmrMethod",
+        "label": "BMR Calculation Method",
+        "type": "select",
+        "default": "mifflin",
+        "options": ["harris", "mifflin", "katch"]
+      },
+      {
+        "name": "bodyFat",
+        "label": "Body Fat Percentage",
+        "type": "number",
+        "default": 15,
+        "min": 3,
+        "max": 50,
+        "step": 0.1,
+        "unit": "%",
+        "conditional": "bmrMethod=katch"
+      }
+    ],
+    "formula": "Harris-Benedict: BMR = 88.362 + (13.397 × weight) + (4.799 × height) - (5.677 × age) for men\nMifflin-St Jeor: BMR = (10 × weight) + (6.25 × height) - (5 × age) + 5 for men\nKatch-McArdle: BMR = 370 + (21.6 × Lean Body Mass)\nTDEE = BMR × Activity Multiplier",
+    "output": {
+      "label": "Maintenance Calories",
+      "default": "0 calories",
+      "format": "number",
+      "unit": "calories"
+    },
+    "additionalOutputs": [
+      {
+        "name": "bmr",
+        "label": "Basal Metabolic Rate (BMR)",
+        "default": "0 calories",
+        "format": "number",
+        "unit": "calories"
+      },
+      {
+        "name": "tdee",
+        "label": "Total Daily Energy Expenditure (TDEE)",
+        "default": "0 calories",
+        "format": "number",
+        "unit": "calories"
+      },
+      {
+        "name": "proteinGrams",
+        "label": "Protein (grams)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grams"
+      },
+      {
+        "name": "carbGrams",
+        "label": "Carbohydrates (grams)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grams"
+      },
+      {
+        "name": "fatGrams",
+        "label": "Fat (grams)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grams"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Moderately Active Male, Mifflin Method",
+        "inputs": {
+          "weight": 75,
+          "weightUnit": "kg",
+          "height": 175,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 30,
+          "activityLevel": "moderately_active",
+          "bmrMethod": "mifflin",
+          "bodyFat": 15
+        },
+        "outputs": {
+          "maintenanceCalories": 2650,
+          "bmr": 1676,
+          "tdee": 2650,
+          "proteinGrams": 165,
+          "carbGrams": 331,
+          "fatGrams": 88
+        }
+      },
+      {
+        "title": "Sedentary Female, Harris-Benedict Method",
+        "inputs": {
+          "weight": 60,
+          "weightUnit": "kg",
+          "height": 160,
+          "heightUnit": "cm",
+          "gender": "female",
+          "age": 25,
+          "activityLevel": "sedentary",
+          "bmrMethod": "harris",
+          "bodyFat": 20
+        },
+        "outputs": {
+          "maintenanceCalories": 1817,
+          "bmr": 1369,
+          "tdee": 1817,
+          "proteinGrams": 102,
+          "carbGrams": 227,
+          "fatGrams": 60
+        }
+      },
+      {
+        "title": "Very Active Athlete, Katch-McArdle Method",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "height": 180,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 28,
+          "activityLevel": "very_active",
+          "bmrMethod": "katch",
+          "bodyFat": 12
+        },
+        "outputs": {
+          "maintenanceCalories": 3147,
+          "bmr": 1908,
+          "tdee": 3147,
+          "proteinGrams": 197,
+          "carbGrams": 393,
+          "fatGrams": 105
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "protein-intake-calculator",
+      "water-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate your maintenance calories with our comprehensive Maintenance Calories Calculator. Understanding your daily caloric needs is crucial for weight management, fitness goals, and overall health. Our calculator uses scientifically validated BMR and TDEE formulas to provide accurate maintenance calorie calculations.",
+      "benefits": [
+        "Calculate accurate maintenance calories for weight maintenance",
+        "Understand your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE)",
+        "Choose from multiple scientifically validated calculation methods",
+        "Account for activity level and body composition",
+        "Get macronutrient breakdown recommendations",
+        "Make informed decisions about calorie intake and expenditure",
+        "Support weight loss or muscle gain goals with proper caloric foundation",
+        "Track metabolic health and energy needs"
+      ],
+      "howToUse": [
+        "Enter your current body weight in kilograms or pounds",
+        "Enter your height in centimeters or inches",
+        "Select your gender for accurate metabolic calculations",
+        "Enter your age for age-appropriate adjustments",
+        "Choose your activity level from sedentary to extremely active",
+        "Select your preferred BMR calculation method",
+        "For Katch-McArdle method, enter your body fat percentage",
+        "Review your BMR, TDEE, and daily maintenance calories"
+      ],
+      "formulaExplanation": "Maintenance calories are calculated using BMR (Basal Metabolic Rate) multiplied by activity level to get TDEE (Total Daily Energy Expenditure). BMR represents calories needed at rest, while TDEE includes all daily activities. Harris-Benedict and Mifflin-St Jeor use weight, height, age, and gender. Katch-McArdle uses lean body mass for higher accuracy. Activity multipliers range from 1.2 (sedentary) to 2.0+ (extremely active).",
+      "examples": [
+        "A 30-year-old moderately active man weighing 75kg and 175cm tall needs approximately 2,650 maintenance calories daily using Mifflin-St Jeor method, with 1,676 BMR calories burned at rest",
+        "A 25-year-old sedentary woman weighing 60kg and 160cm tall needs approximately 1,817 maintenance calories daily, with significant room for weight loss if desired",
+        "A 28-year-old very active male athlete weighing 80kg with 12% body fat needs approximately 3,147 maintenance calories daily using Katch-McArdle method for highest accuracy"
+      ],
+      "whoShouldUse": "Fitness enthusiasts tracking calorie intake, individuals managing weight, athletes calculating energy needs, bodybuilders during cutting/bulking cycles, dietitians and nutritionists, people with metabolic concerns, those starting weight loss programs, and anyone wanting to understand their daily energy requirements.",
+      "importantNotes": "These calculations provide estimates based on established formulas. Individual metabolic rates can vary by 10-15% due to genetics, thyroid function, and other factors. Track actual weight changes over 2-4 weeks and adjust calories accordingly. For weight loss, subtract 250-500 calories daily; for weight gain, add 250-500 calories. Consult healthcare providers for medical conditions or extreme caloric needs.",
+      "relatedTools": [
+        "BMI Calculator - Assess body composition",
+        "BMR Calculator - Calculate basal metabolic needs",
+        "Protein Intake Calculator - Calculate protein requirements",
+        "Water Intake Calculator - Calculate hydration needs",
+        "Ideal Weight Calculator - Find healthy weight ranges"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between BMR and TDEE?",
+          "answer": "BMR (Basal Metabolic Rate) is the number of calories your body burns at rest to maintain basic physiological functions. TDEE (Total Daily Energy Expenditure) includes BMR plus calories burned through all daily activities, exercise, and digestion. TDEE represents your total maintenance calories."
+        },
+        {
+          "question": "Which BMR calculation method is most accurate?",
+          "answer": "Katch-McArdle is generally most accurate if you know your body fat percentage, followed by Mifflin-St Jeor (most commonly used), then Harris-Benedict (older formula). Accuracy depends on having correct input measurements. All methods provide reasonable estimates for most people."
+        },
+        {
+          "question": "How do I use maintenance calories for weight loss?",
+          "answer": "For sustainable weight loss, subtract 250-500 calories from your maintenance level daily. This creates a moderate deficit that allows 0.5-1 lb weekly loss while preserving muscle mass. Combine with resistance training and adequate protein intake. Avoid larger deficits which can slow metabolism."
+        },
+        {
+          "question": "Why do athletes need more calories?",
+          "answer": "Athletes have higher TDEE due to increased muscle mass, training volume, and recovery needs. Very active individuals may need 2,500-4,000+ calories daily depending on sport and training intensity. Endurance athletes often need additional carbohydrates for glycogen storage."
+        },
+        {
+          "question": "Does metabolism slow down with age?",
+          "answer": "Yes, BMR naturally decreases about 1-2% per decade after age 20 due to muscle loss and hormonal changes. Regular resistance training and maintaining lean mass can help preserve metabolic rate. Older adults may need fewer maintenance calories but should focus on nutrient density."
+        },
+        {
+          "question": "Can I eat below my BMR for weight loss?",
+          "answer": "Eating below BMR (starvation dieting) is not recommended as it can slow metabolism, cause muscle loss, and lead to rebound weight gain. Aim for moderate deficits (250-500 calories below TDEE) for sustainable results. Focus on nutrient-dense foods and resistance training to preserve muscle."
+        },
+        {
+          "question": "How does body composition affect calorie needs?",
+          "answer": "Muscle tissue burns more calories than fat tissue, so individuals with higher muscle mass have higher BMR. That's why athletes and those who resistance train have higher maintenance calories. Body fat percentage also affects which calculation method is most accurate."
+        },
+        {
+          "question": "Should I adjust calories based on actual results?",
+          "answer": "Yes, always! Use calculator results as starting points, then track weight changes over 2-4 weeks. If losing slower than expected, reduce calories by another 100-200. If losing too fast or feeling fatigued, increase calories. Individual responses vary based on metabolism and activity level."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Calorías de Mantenimiento",
+    "seoTitle": "Calculadora de Calorías de Mantenimiento - Calcula Necesidades Diarias de Calorías para Mantener Peso",
+    "metaDescription": "Calcula tus calorías diarias de mantenimiento usando fórmulas BMR y TDEE. Calculadora gratuita de calorías para mantenimiento de peso, objetivos fitness y planificación nutricional.",
+    "keywords": [
+      "calculadora calorías mantenimiento",
+      "calculadora calorías diarias",
+      "calculadora BMR",
+      "calculadora TDEE",
+      "calculadora necesidades calorías",
+      "calorías mantenimiento",
+      "calculadora tasa metabólica basal",
+      "gasto energético total diario",
+      "calculadora calorías mantenimiento peso",
+      "cuántas calorías necesito diariamente",
+      "calculadora requerimientos calorías"
+    ],
+    "longTailKeywords": [
+      "cómo calcular calorías mantenimiento",
+      "cuál es mi requerimiento calórico diario",
+      "calculadora calorías mantenimiento basada en peso",
+      "BMR y TDEE calculadora",
+      "cuántas calorías mantener peso",
+      "calculadora necesidades calóricas diarias",
+      "calculadora calorías con nivel actividad",
+      "calorías mantenimiento para pérdida peso",
+      "calculadora BMR con altura y peso",
+      "calculadora TDEE para atletas",
+      "calculadora calorías para hombres",
+      "calculadora calorías para mujeres"
+    ],
+    "slug": "maintenance-calories-calculator",
+    "category": "Health",
+    "calculatorComponent": "MaintenanceCaloriesCalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "calorías mantenimiento",
+      "calculadora BMR",
+      "calculadora TDEE",
+      "calorías diarias",
+      "mantenimiento peso",
+      "necesidades calorías",
+      "tasa metabólica",
+      "gasto energético"
+    ],
+    "summary": "Calcula tus calorías diarias de mantenimiento usando fórmulas BMR y TDEE para entender tus necesidades calóricas para mantenimiento de peso.",
+    "description": "Calculadora profesional de calorías de mantenimiento que determina tu Tasa Metabólica Basal (BMR) y Gasto Energético Total Diario (TDEE) usando fórmulas científicamente validadas. Esencial para manejo de peso, planificación fitness y entendimiento de tus requerimientos calóricos diarios basados en nivel de actividad y composición corporal.",
+    "instructions": [
+      "Ingresa tu peso corporal en kilogramos o libras",
+      "Ingresa tu altura en centímetros o pulgadas",
+      "Selecciona tu género",
+      "Ingresa tu edad",
+      "Elige tu nivel de actividad",
+      "Selecciona método de cálculo BMR (opcional % grasa corporal para Katch-McArdle)",
+      "Si usas Katch-McArdle, ingresa tu porcentaje de grasa corporal",
+      "Ve tu BMR, TDEE y calorías de mantenimiento"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Peso Corporal",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unidad de Peso",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "height",
+        "label": "Altura",
+        "type": "number",
+        "default": 170,
+        "min": 100,
+        "max": 250,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "heightUnit",
+        "label": "Unidad de Altura",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Género",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Edad",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "años"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Nivel de Actividad",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "bmrMethod",
+        "label": "Método de Cálculo BMR",
+        "type": "select",
+        "default": "mifflin",
+        "options": ["harris", "mifflin", "katch"]
+      },
+      {
+        "name": "bodyFat",
+        "label": "Porcentaje de Grasa Corporal",
+        "type": "number",
+        "default": 15,
+        "min": 3,
+        "max": 50,
+        "step": 0.1,
+        "unit": "%",
+        "conditional": "bmrMethod=katch"
+      }
+    ],
+    "formula": "Harris-Benedict: BMR = 88.362 + (13.397 × peso) + (4.799 × altura) - (5.677 × edad) para hombres\nMifflin-St Jeor: BMR = (10 × peso) + (6.25 × altura) - (5 × edad) + 5 para hombres\nKatch-McArdle: BMR = 370 + (21.6 × Masa Corporal Magra)\nTDEE = BMR × Multiplicador Actividad",
+    "output": {
+      "label": "Calorías de Mantenimiento",
+      "default": "0 calorías",
+      "format": "number",
+      "unit": "calorías"
+    },
+    "additionalOutputs": [
+      {
+        "name": "bmr",
+        "label": "Tasa Metabólica Basal (BMR)",
+        "default": "0 calorías",
+        "format": "number",
+        "unit": "calorías"
+      },
+      {
+        "name": "tdee",
+        "label": "Gasto Energético Total Diario (TDEE)",
+        "default": "0 calorías",
+        "format": "number",
+        "unit": "calorías"
+      },
+      {
+        "name": "proteinGrams",
+        "label": "Proteína (gramos)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramos"
+      },
+      {
+        "name": "carbGrams",
+        "label": "Carbohidratos (gramos)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramos"
+      },
+      {
+        "name": "fatGrams",
+        "label": "Grasa (gramos)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramos"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Hombre Moderadamente Activo, Método Mifflin",
+        "inputs": {
+          "weight": 75,
+          "weightUnit": "kg",
+          "height": 175,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 30,
+          "activityLevel": "moderately_active",
+          "bmrMethod": "mifflin",
+          "bodyFat": 15
+        },
+        "outputs": {
+          "maintenanceCalories": 2650,
+          "bmr": 1676,
+          "tdee": 2650,
+          "proteinGrams": 165,
+          "carbGrams": 331,
+          "fatGrams": 88
+        }
+      },
+      {
+        "title": "Mujer Sedentaria, Método Harris-Benedict",
+        "inputs": {
+          "weight": 60,
+          "weightUnit": "kg",
+          "height": 160,
+          "heightUnit": "cm",
+          "gender": "female",
+          "age": 25,
+          "activityLevel": "sedentary",
+          "bmrMethod": "harris",
+          "bodyFat": 20
+        },
+        "outputs": {
+          "maintenanceCalories": 1817,
+          "bmr": 1369,
+          "tdee": 1817,
+          "proteinGrams": 102,
+          "carbGrams": 227,
+          "fatGrams": 60
+        }
+      },
+      {
+        "title": "Atleta Muy Activo, Método Katch-McArdle",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "height": 180,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 28,
+          "activityLevel": "very_active",
+          "bmrMethod": "katch",
+          "bodyFat": 12
+        },
+        "outputs": {
+          "maintenanceCalories": 3147,
+          "bmr": 1908,
+          "tdee": 3147,
+          "proteinGrams": 197,
+          "carbGrams": 393,
+          "fatGrams": 105
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "protein-intake-calculator",
+      "water-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcula tus calorías de mantenimiento con nuestra completa Calculadora de Calorías de Mantenimiento. Entender tus necesidades calóricas diarias es crucial para manejo de peso, objetivos fitness y salud general. Nuestra calculadora usa fórmulas BMR y TDEE científicamente validadas para proporcionar cálculos precisos de calorías de mantenimiento.",
+      "benefits": [
+        "Calcula calorías de mantenimiento precisas para mantenimiento de peso",
+        "Entiende tu Tasa Metabólica Basal (BMR) y Gasto Energético Total Diario (TDEE)",
+        "Elige entre múltiples métodos de cálculo científicamente validados",
+        "Considera nivel de actividad y composición corporal",
+        "Obtén recomendaciones de desglose de macronutrientes",
+        "Toma decisiones informadas sobre ingesta y gasto calórico",
+        "Apoya objetivos de pérdida o ganancia de peso con base calórica apropiada",
+        "Rastrea salud metabólica y necesidades energéticas"
+      ],
+      "howToUse": [
+        "Ingresa tu peso corporal actual en kilogramos o libras",
+        "Ingresa tu altura en centímetros o pulgadas",
+        "Selecciona tu género para cálculos metabólicos precisos",
+        "Ingresa tu edad para ajustes apropiados por edad",
+        "Elige tu nivel de actividad desde sedentario hasta extremadamente activo",
+        "Selecciona tu método de cálculo BMR preferido",
+        "Para método Katch-McArdle, ingresa tu porcentaje de grasa corporal",
+        "Revisa tu BMR, TDEE y calorías diarias de mantenimiento"
+      ],
+      "formulaExplanation": "Las calorías de mantenimiento se calculan usando BMR (Tasa Metabólica Basal) multiplicado por nivel de actividad para obtener TDEE (Gasto Energético Total Diario). BMR representa calorías necesarias en reposo, mientras TDEE incluye todas actividades diarias. Harris-Benedict y Mifflin-St Jeor usan peso, altura, edad y género. Katch-McArdle usa masa corporal magra para mayor precisión. Los multiplicadores de actividad van de 1.2 (sedentario) a 2.0+ (extremadamente activo).",
+      "examples": [
+        "Un hombre de 30 años moderadamente activo pesando 75kg y 175cm de altura necesita aproximadamente 2,650 calorías de mantenimiento diarias usando método Mifflin-St Jeor, con 1,676 calorías BMR quemadas en reposo",
+        "Una mujer de 25 años sedentaria pesando 60kg y 160cm de altura necesita aproximadamente 1,817 calorías de mantenimiento diarias, con espacio significativo para pérdida de peso si deseado",
+        "Un atleta hombre de 28 años muy activo pesando 80kg con 12% de grasa corporal necesita aproximadamente 3,147 calorías de mantenimiento diarias usando método Katch-McArdle para mayor precisión"
+      ],
+      "whoShouldUse": "Entusiastas del fitness rastreando ingesta calórica, individuos manejando peso, atletas calculando necesidades energéticas, fisiculturistas durante ciclos de definición/masa, dietistas y nutricionistas, personas con preocupaciones metabólicas, aquellos comenzando programas de pérdida de peso, y cualquiera queriendo entender sus requerimientos energéticos diarios.",
+      "importantNotes": "Estos cálculos proporcionan estimaciones basadas en fórmulas establecidas. Las tasas metabólicas individuales pueden variar 10-15% debido a genética, función tiroidea y otros factores. Rastrea cambios reales de peso sobre 2-4 semanas y ajusta calorías en consecuencia. Para pérdida de peso, resta 250-500 calorías diarias; para ganancia de peso, agrega 250-500 calorías. Consulta proveedores de atención médica para condiciones médicas o necesidades calóricas extremas.",
+      "relatedTools": [
+        "Calculadora IMC - Evalúa composición corporal",
+        "Calculadora TMB - Calcula necesidades metabólicas basales",
+        "Calculadora Ingesta Proteína - Calcula requerimientos de proteína",
+        "Calculadora Ingesta Agua - Calcula necesidades de hidratación",
+        "Calculadora Peso Ideal - Encuentra rangos saludables de peso"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre BMR y TDEE?",
+          "answer": "BMR (Tasa Metabólica Basal) es el número de calorías que tu cuerpo quema en reposo para mantener funciones fisiológicas básicas. TDEE (Gasto Energético Total Diario) incluye BMR más calorías quemadas a través de todas actividades diarias, ejercicio y digestión. TDEE representa tus calorías totales de mantenimiento."
+        },
+        {
+          "question": "¿Qué método de cálculo BMR es más preciso?",
+          "answer": "Katch-McArdle es generalmente más preciso si conoces tu porcentaje de grasa corporal, seguido por Mifflin-St Jeor (más comúnmente usado), luego Harris-Benedict (fórmula más antigua). La precisión depende de tener medidas de entrada correctas. Todos métodos proporcionan estimaciones razonables para la mayoría de personas."
+        },
+        {
+          "question": "¿Cómo uso calorías de mantenimiento para pérdida de peso?",
+          "answer": "Para pérdida de peso sostenible, resta 250-500 calorías de tu nivel de mantenimiento diariamente. Esto crea un déficit moderado que permite pérdida de 0.5-1 lb semanalmente mientras preserva masa muscular. Combina con entrenamiento de resistencia e ingesta adecuada de proteína. Evita déficits más grandes que pueden ralentizar metabolismo."
+        },
+        {
+          "question": "¿Por qué atletas necesitan más calorías?",
+          "answer": "Los atletas tienen TDEE más alto debido a masa muscular aumentada, volumen de entrenamiento y necesidades de recuperación. Individuos muy activos pueden necesitar 2,500-4,000+ calorías diarias dependiendo de deporte e intensidad de entrenamiento. Atletas de resistencia a menudo necesitan carbohidratos adicionales para almacenamiento de glucógeno."
+        },
+        {
+          "question": "¿Se ralentiza el metabolismo con la edad?",
+          "answer": "Sí, BMR disminuye naturalmente cerca de 1-2% por década después de los 20 debido a pérdida muscular y cambios hormonales. Entrenamiento de resistencia regular y mantener masa magra puede ayudar preservar tasa metabólica. Adultos mayores pueden necesitar menos calorías de mantenimiento pero deberían enfocarse en densidad nutricional."
+        },
+        {
+          "question": "¿Puedo comer por debajo de mi BMR para pérdida de peso?",
+          "answer": "Comer por debajo de BMR (dieta de inanición) no es recomendado ya que puede ralentizar metabolismo, causar pérdida muscular y conducir a recuperación de peso. Apunta a déficits moderados (250-500 calorías por debajo de TDEE) para resultados sostenibles. Enfócate en alimentos densos en nutrientes y entrenamiento de resistencia para preservar músculo."
+        },
+        {
+          "question": "¿Cómo afecta composición corporal las necesidades calóricas?",
+          "answer": "El tejido muscular quema más calorías que tejido graso, así que individuos con masa muscular más alta tienen BMR más alto. Es por eso que atletas y quienes entrenan resistencia tienen calorías de mantenimiento más altas. El porcentaje de grasa corporal también afecta qué método de cálculo es más preciso."
+        },
+        {
+          "question": "¿Debería ajustar calorías basadas en resultados reales?",
+          "answer": "¡Sí, siempre! Usa resultados de calculadora como puntos de partida, luego rastrea cambios de peso sobre 2-4 semanas. Si pierdes más lento de lo esperado, reduce calorías en otros 100-200. Si pierdes demasiado rápido o te sientes fatigado, aumenta calorías. Las respuestas individuales varían basadas en metabolismo y nivel de actividad."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Calorias de Manutenção",
+    "seoTitle": "Calculadora de Calorias de Manutenção - Calcule Necessidades Diárias de Calorias para Manter Peso",
+    "metaDescription": "Calcule suas calorias diárias de manutenção usando fórmulas BMR e TDEE. Calculadora gratuita de calorias para manutenção de peso, objetivos fitness e planejamento nutricional.",
+    "keywords": [
+      "calculadora calorias manutenção",
+      "calculadora calorias diárias",
+      "calculadora BMR",
+      "calculadora TDEE",
+      "calculadora necessidades calorias",
+      "calorias manutenção",
+      "calculadora taxa metabólica basal",
+      "gasto energético total diário",
+      "calculadora calorias manutenção peso",
+      "quantas calorias preciso diariamente",
+      "calculadora requerimentos calorias"
+    ],
+    "longTailKeywords": [
+      "como calcular calorias manutenção",
+      "qual é meu requerimento calórico diário",
+      "calculadora calorias manutenção baseada em peso",
+      "BMR e TDEE calculadora",
+      "quantas calorias manter peso",
+      "calculadora necessidades calóricas diárias",
+      "calculadora calorias com nível atividade",
+      "calorias manutenção para perda peso",
+      "calculadora BMR com altura e peso",
+      "calculadora TDEE para atletas",
+      "calculadora calorias para homens",
+      "calculadora calorias para mulheres"
+    ],
+    "slug": "maintenance-calories-calculator",
+    "category": "Health",
+    "calculatorComponent": "MaintenanceCaloriesCalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "calorias manutenção",
+      "calculadora BMR",
+      "calculadora TDEE",
+      "calorias diárias",
+      "manutenção peso",
+      "necessidades calorias",
+      "taxa metabólica",
+      "gasto energético"
+    ],
+    "summary": "Calcule suas calorias diárias de manutenção usando fórmulas BMR e TDEE para entender suas necessidades calóricas para manutenção de peso.",
+    "description": "Calculadora profissional de calorias de manutenção que determina sua Taxa Metabólica Basal (BMR) e Gasto Energético Total Diário (TDEE) usando fórmulas cientificamente validadas. Essencial para gerenciamento de peso, planejamento fitness e entendimento de seus requerimentos calóricos diários baseados em nível de atividade e composição corporal.",
+    "instructions": [
+      "Digite seu peso corporal em quilogramas ou libras",
+      "Digite sua altura em centímetros ou polegadas",
+      "Selecione seu gênero",
+      "Digite sua idade",
+      "Escolha seu nível de atividade",
+      "Selecione método de cálculo BMR (opcional % gordura corporal para Katch-McArdle)",
+      "Se usando Katch-McArdle, digite sua porcentagem de gordura corporal",
+      "Veja seu BMR, TDEE e calorias de manutenção"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Peso Corporal",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unidade de Peso",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "height",
+        "label": "Altura",
+        "type": "number",
+        "default": 170,
+        "min": 100,
+        "max": 250,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "heightUnit",
+        "label": "Unidade de Altura",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Gênero",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Idade",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "anos"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Nível de Atividade",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "bmrMethod",
+        "label": "Método de Cálculo BMR",
+        "type": "select",
+        "default": "mifflin",
+        "options": ["harris", "mifflin", "katch"]
+      },
+      {
+        "name": "bodyFat",
+        "label": "Porcentagem de Gordura Corporal",
+        "type": "number",
+        "default": 15,
+        "min": 3,
+        "max": 50,
+        "step": 0.1,
+        "unit": "%",
+        "conditional": "bmrMethod=katch"
+      }
+    ],
+    "formula": "Harris-Benedict: BMR = 88.362 + (13.397 × peso) + (4.799 × altura) - (5.677 × idade) para homens\nMifflin-St Jeor: BMR = (10 × peso) + (6.25 × altura) - (5 × idade) + 5 para homens\nKatch-McArdle: BMR = 370 + (21.6 × Massa Corporal Magra)\nTDEE = BMR × Multiplicador Atividade",
+    "output": {
+      "label": "Calorias de Manutenção",
+      "default": "0 calorias",
+      "format": "number",
+      "unit": "calorias"
+    },
+    "additionalOutputs": [
+      {
+        "name": "bmr",
+        "label": "Taxa Metabólica Basal (BMR)",
+        "default": "0 calorias",
+        "format": "number",
+        "unit": "calorias"
+      },
+      {
+        "name": "tdee",
+        "label": "Gasto Energético Total Diário (TDEE)",
+        "default": "0 calorias",
+        "format": "number",
+        "unit": "calorias"
+      },
+      {
+        "name": "proteinGrams",
+        "label": "Proteína (gramas)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramas"
+      },
+      {
+        "name": "carbGrams",
+        "label": "Carboidratos (gramas)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramas"
+      },
+      {
+        "name": "fatGrams",
+        "label": "Gordura (gramas)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramas"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Homem Moderadamente Ativo, Método Mifflin",
+        "inputs": {
+          "weight": 75,
+          "weightUnit": "kg",
+          "height": 175,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 30,
+          "activityLevel": "moderately_active",
+          "bmrMethod": "mifflin",
+          "bodyFat": 15
+        },
+        "outputs": {
+          "maintenanceCalories": 2650,
+          "bmr": 1676,
+          "tdee": 2650,
+          "proteinGrams": 165,
+          "carbGrams": 331,
+          "fatGrams": 88
+        }
+      },
+      {
+        "title": "Mulher Sedentária, Método Harris-Benedict",
+        "inputs": {
+          "weight": 60,
+          "weightUnit": "kg",
+          "height": 160,
+          "heightUnit": "cm",
+          "gender": "female",
+          "age": 25,
+          "activityLevel": "sedentary",
+          "bmrMethod": "harris",
+          "bodyFat": 20
+        },
+        "outputs": {
+          "maintenanceCalories": 1817,
+          "bmr": 1369,
+          "tdee": 1817,
+          "proteinGrams": 102,
+          "carbGrams": 227,
+          "fatGrams": 60
+        }
+      },
+      {
+        "title": "Atleta Muito Ativo, Método Katch-McArdle",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "height": 180,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 28,
+          "activityLevel": "very_active",
+          "bmrMethod": "katch",
+          "bodyFat": 12
+        },
+        "outputs": {
+          "maintenanceCalories": 3147,
+          "bmr": 1908,
+          "tdee": 3147,
+          "proteinGrams": 197,
+          "carbGrams": 393,
+          "fatGrams": 105
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "protein-intake-calculator",
+      "water-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule suas calorias de manutenção com nossa completa Calculadora de Calorias de Manutenção. Entender suas necessidades calóricas diárias é crucial para gerenciamento de peso, objetivos fitness e saúde geral. Nossa calculadora usa fórmulas BMR e TDEE cientificamente validadas para fornecer cálculos precisos de calorias de manutenção.",
+      "benefits": [
+        "Calcule calorias de manutenção precisas para manutenção de peso",
+        "Entenda sua Taxa Metabólica Basal (BMR) e Gasto Energético Total Diário (TDEE)",
+        "Escolha entre múltiplos métodos de cálculo cientificamente validados",
+        "Considere nível de atividade e composição corporal",
+        "Obtenha recomendações de quebra de macronutrientes",
+        "Tome decisões informadas sobre ingestão e gasto calórico",
+        "Apoie objetivos de perda ou ganho de peso com base calórica apropriada",
+        "Acompanhe saúde metabólica e necessidades energéticas"
+      ],
+      "howToUse": [
+        "Digite seu peso corporal atual em quilogramas ou libras",
+        "Digite sua altura em centímetros ou polegadas",
+        "Selecione seu gênero para cálculos metabólicos precisos",
+        "Digite sua idade para ajustes apropriados por idade",
+        "Escolha seu nível de atividade de sedentário para extremamente ativo",
+        "Selecione seu método de cálculo BMR preferido",
+        "Para método Katch-McArdle, digite sua porcentagem de gordura corporal",
+        "Revise seu BMR, TDEE e calorias diárias de manutenção"
+      ],
+      "formulaExplanation": "Calorias de manutenção são calculadas usando BMR (Taxa Metabólica Basal) multiplicado por nível de atividade para obter TDEE (Gasto Energético Total Diário). BMR representa calorias necessárias em repouso, enquanto TDEE inclui todas atividades diárias. Harris-Benedict e Mifflin-St Jeor usam peso, altura, idade e gênero. Katch-McArdle usa massa corporal magra para maior precisão. Multiplicadores de atividade vão de 1.2 (sedentário) a 2.0+ (extremamente ativo).",
+      "examples": [
+        "Um homem de 30 anos moderadamente ativo pesando 75kg e 175cm de altura precisa aproximadamente 2,650 calorias de manutenção diárias usando método Mifflin-St Jeor, com 1,676 calorias BMR queimadas em repouso",
+        "Uma mulher de 25 anos sedentária pesando 60kg e 160cm de altura precisa aproximadamente 1,817 calorias de manutenção diárias, com espaço significativo para perda de peso se desejado",
+        "Um atleta homem de 28 anos muito ativo pesando 80kg com 12% gordura corporal precisa aproximadamente 3,147 calorias de manutenção diárias usando método Katch-McArdle para maior precisão"
+      ],
+      "whoShouldUse": "Entusiastas do fitness acompanhando ingestão calórica, indivíduos gerenciando peso, atletas calculando necessidades energéticas, fisiculturistas durante ciclos de definição/massa, nutricionistas e dietistas, pessoas com preocupações metabólicas, aqueles começando programas de perda de peso, e qualquer pessoa querendo entender seus requerimentos energéticos diários.",
+      "importantNotes": "Estes cálculos fornecem estimativas baseadas em fórmulas estabelecidas. Taxas metabólicas individuais podem variar 10-15% devido a genética, função tireoide e outros fatores. Acompanhe mudanças reais de peso sobre 2-4 semanas e ajuste calorias em conformidade. Para perda de peso, subtraia 250-500 calorias diárias; para ganho de peso, adicione 250-500 calorias. Consulte provedores de cuidados de saúde para condições médicas ou necessidades calóricas extremas.",
+      "relatedTools": [
+        "Calculadora IMC - Avalie composição corporal",
+        "Calculadora TMB - Calcule necessidades metabólicas basais",
+        "Calculadora Ingestão Proteína - Calcule requerimentos de proteína",
+        "Calculadora Ingestão Água - Calcule necessidades de hidratação",
+        "Calculadora Peso Ideal - Encontre faixas saudáveis de peso"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre BMR e TDEE?",
+          "answer": "BMR (Taxa Metabólica Basal) é o número de calorias seu corpo queima em repouso para manter funções fisiológicas básicas. TDEE (Gasto Energético Total Diário) inclui BMR mais calorias queimadas através de todas atividades diárias, exercício e digestão. TDEE representa suas calorias totais de manutenção."
+        },
+        {
+          "question": "Qual método de cálculo BMR é mais preciso?",
+          "answer": "Katch-McArdle é geralmente mais preciso se você conhece sua porcentagem de gordura corporal, seguido por Mifflin-St Jeor (mais comumente usado), então Harris-Benedict (fórmula mais antiga). Precisão depende de ter medidas de entrada corretas. Todos métodos fornecem estimativas razoáveis para a maioria das pessoas."
+        },
+        {
+          "question": "¿Como usar calorias de manutenção para perda de peso?",
+          "answer": "Para perda de peso sustentável, subtraia 250-500 calorias de seu nível de manutenção diariamente. Isso cria um déficit moderado que permite perda de 0.5-1 lb semanalmente enquanto preserva massa muscular. Combine com treinamento de resistência e ingestão adequada de proteína. Evite déficits maiores que podem desacelerar metabolismo."
+        },
+        {
+          "question": "Por que atletas precisam de mais calorias?",
+          "answer": "Atletas têm TDEE mais alto devido a massa muscular aumentada, volume de treinamento e necessidades de recuperação. Indivíduos muito ativos podem precisar 2,500-4,000+ calorias diárias dependendo de esporte e intensidade de treinamento. Atletas de resistência frequentemente precisam carboidratos adicionais para armazenamento de glicogênio."
+        },
+        {
+          "question": "Metabolismo desacelera com a idade?",
+          "answer": "Sim, BMR diminui naturalmente cerca de 1-2% por década após idade 20 devido a perda muscular e mudanças hormonais. Treinamento de resistência regular e manter massa magra pode ajudar preservar taxa metabólica. Adultos mais velhos podem precisar menos calorias de manutenção mas deveriam focar em densidade nutricional."
+        },
+        {
+          "question": "Posso comer abaixo do meu BMR para perda de peso?",
+          "answer": "Comer abaixo do BMR (dieta de fome) não é recomendado pois pode desacelerar metabolismo, causar perda muscular e levar a recuperação de peso. Mire déficits moderados (250-500 calorias abaixo do TDEE) para resultados sustentáveis. Foque em alimentos densos em nutrientes e treinamento de resistência para preservar músculo."
+        },
+        {
+          "question": "¿Como composição corporal afeta necessidades calóricas?",
+          "answer": "Tecido muscular queima mais calorias que tecido gorduroso, então indivíduos com massa muscular mais alta têm BMR mais alto. É por isso que atletas e aqueles que treinam resistência têm calorias de manutenção mais altas. Porcentagem de gordura corporal também afeta qual método de cálculo é mais preciso."
+        },
+        {
+          "question": "Devo ajustar calorias baseadas em resultados reais?",
+          "answer": "Sim, sempre! Use resultados de calculadora como pontos de partida, então acompanhe mudanças de peso sobre 2-4 semanas. Se perdendo mais devagar do que esperado, reduza calorias em outros 100-200. Se perdendo muito rápido ou se sentindo fatigado, aumente calorias. Respostas individuais variam baseadas em metabolismo e nível de atividade."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Calories de Maintenance",
+    "seoTitle": "Calculateur de Calories de Maintenance - Calculez Besoins Quotidiens en Calories pour Maintenir Poids",
+    "metaDescription": "Calculez vos calories quotidiennes de maintenance en utilisant formules BMR et TDEE. Calculateur gratuit de calories pour maintenance poids, objectifs fitness et planification nutritionnelle.",
+    "keywords": [
+      "calculateur calories maintenance",
+      "calculateur calories quotidiennes",
+      "calculateur BMR",
+      "calculateur TDEE",
+      "calculateur besoins calories",
+      "calories maintenance",
+      "calculateur taux métabolique basal",
+      "dépense énergétique totale quotidienne",
+      "calculateur calories maintenance poids",
+      "combien calories besoin quotidiennement",
+      "calculateur exigences calories"
+    ],
+    "longTailKeywords": [
+      "comment calculer calories maintenance",
+      "quel est mon besoin calorique quotidien",
+      "calculateur calories maintenance basé sur poids",
+      "BMR et TDEE calculateur",
+      "combien calories maintenir poids",
+      "calculateur besoins caloriques quotidiens",
+      "calculateur calories avec niveau activité",
+      "calories maintenance pour perte poids",
+      "calculateur BMR avec taille et poids",
+      "calculateur TDEE pour athlètes",
+      "calculateur calories pour hommes",
+      "calculateur calories pour femmes"
+    ],
+    "slug": "maintenance-calories-calculator",
+    "category": "Health",
+    "calculatorComponent": "MaintenanceCaloriesCalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "calories maintenance",
+      "calculateur BMR",
+      "calculateur TDEE",
+      "calories quotidiennes",
+      "maintenance poids",
+      "besoins calories",
+      "taux métabolique",
+      "dépense énergétique"
+    ],
+    "summary": "Calculez vos calories quotidiennes de maintenance en utilisant formules BMR et TDEE pour comprendre vos besoins caloriques pour maintenance poids.",
+    "description": "Calculateur professionnel de calories de maintenance qui détermine votre Taux Métabolique Basal (BMR) et Dépense Énergétique Totale Quotidienne (TDEE) en utilisant formules scientifiquement validées. Essentiel pour gestion poids, planification fitness et compréhension de vos exigences caloriques quotidiennes basées sur niveau d'activité et composition corporelle.",
+    "instructions": [
+      "Entrez votre poids corporel en kilogrammes ou livres",
+      "Entrez votre taille en centimètres ou pouces",
+      "Sélectionnez votre genre",
+      "Entrez votre âge",
+      "Choisissez votre niveau d'activité",
+      "Sélectionnez méthode de calcul BMR (optionnel % graisse corporelle pour Katch-McArdle)",
+      "Si utilisant Katch-McArdle, entrez votre pourcentage de graisse corporelle",
+      "Consultez votre BMR, TDEE et calories de maintenance"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Poids Corporel",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unité de Poids",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "height",
+        "label": "Taille",
+        "type": "number",
+        "default": 170,
+        "min": 100,
+        "max": 250,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "heightUnit",
+        "label": "Unité de Taille",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Genre",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Âge",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "ans"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Niveau d'Activité",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "bmrMethod",
+        "label": "Méthode de Calcul BMR",
+        "type": "select",
+        "default": "mifflin",
+        "options": ["harris", "mifflin", "katch"]
+      },
+      {
+        "name": "bodyFat",
+        "label": "Pourcentage de Graisse Corporelle",
+        "type": "number",
+        "default": 15,
+        "min": 3,
+        "max": 50,
+        "step": 0.1,
+        "unit": "%",
+        "conditional": "bmrMethod=katch"
+      }
+    ],
+    "formula": "Harris-Benedict: BMR = 88.362 + (13.397 × poids) + (4.799 × taille) - (5.677 × âge) pour hommes\nMifflin-St Jeor: BMR = (10 × poids) + (6.25 × taille) - (5 × âge) + 5 pour hommes\nKatch-McArdle: BMR = 370 + (21.6 × Masse Corporelle Maigre)\nTDEE = BMR × Multiplicateur Activité",
+    "output": {
+      "label": "Calories de Maintenance",
+      "default": "0 calories",
+      "format": "number",
+      "unit": "calories"
+    },
+    "additionalOutputs": [
+      {
+        "name": "bmr",
+        "label": "Taux Métabolique Basal (BMR)",
+        "default": "0 calories",
+        "format": "number",
+        "unit": "calories"
+      },
+      {
+        "name": "tdee",
+        "label": "Dépense Énergétique Totale Quotidienne (TDEE)",
+        "default": "0 calories",
+        "format": "number",
+        "unit": "calories"
+      },
+      {
+        "name": "proteinGrams",
+        "label": "Protéines (grammes)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grammes"
+      },
+      {
+        "name": "carbGrams",
+        "label": "Glucides (grammes)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grammes"
+      },
+      {
+        "name": "fatGrams",
+        "label": "Lipides (grammes)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grammes"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Homme Modérément Actif, Méthode Mifflin",
+        "inputs": {
+          "weight": 75,
+          "weightUnit": "kg",
+          "height": 175,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 30,
+          "activityLevel": "moderately_active",
+          "bmrMethod": "mifflin",
+          "bodyFat": 15
+        },
+        "outputs": {
+          "maintenanceCalories": 2650,
+          "bmr": 1676,
+          "tdee": 2650,
+          "proteinGrams": 165,
+          "carbGrams": 331,
+          "fatGrams": 88
+        }
+      },
+      {
+        "title": "Femme Sédentaire, Méthode Harris-Benedict",
+        "inputs": {
+          "weight": 60,
+          "weightUnit": "kg",
+          "height": 160,
+          "heightUnit": "cm",
+          "gender": "female",
+          "age": 25,
+          "activityLevel": "sedentary",
+          "bmrMethod": "harris",
+          "bodyFat": 20
+        },
+        "outputs": {
+          "maintenanceCalories": 1817,
+          "bmr": 1369,
+          "tdee": 1817,
+          "proteinGrams": 102,
+          "carbGrams": 227,
+          "fatGrams": 60
+        }
+      },
+      {
+        "title": "Athlète Très Actif, Méthode Katch-McArdle",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "height": 180,
+          "heightUnit": "cm",
+          "gender": "male",
+          "age": 28,
+          "activityLevel": "very_active",
+          "bmrMethod": "katch",
+          "bodyFat": 12
+        },
+        "outputs": {
+          "maintenanceCalories": 3147,
+          "bmr": 1908,
+          "tdee": 3147,
+          "proteinGrams": 197,
+          "carbGrams": 393,
+          "fatGrams": 105
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "protein-intake-calculator",
+      "water-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez vos calories de maintenance avec notre Calculateur de Calories de Maintenance complet. Comprendre vos besoins caloriques quotidiens est crucial pour gestion poids, objectifs fitness et santé générale. Notre calculateur utilise formules BMR et TDEE scientifiquement validées pour fournir calculs précis de calories de maintenance.",
+      "benefits": [
+        "Calculez calories de maintenance précises pour maintenance poids",
+        "Comprenez votre Taux Métabolique Basal (BMR) et Dépense Énergétique Totale Quotidienne (TDEE)",
+        "Choisissez parmi multiples méthodes de calcul scientifiquement validées",
+        "Considérez niveau d'activité et composition corporelle",
+        "Obtenez recommandations de répartition macronutriments",
+        "Prenez décisions éclairées sur apport et dépense calorique",
+        "Soutenez objectifs perte ou gain de poids avec base calorique appropriée",
+        "Suivez santé métabolique et besoins énergétiques"
+      ],
+      "howToUse": [
+        "Entrez votre poids corporel actuel en kilogrammes ou livres",
+        "Entrez votre taille en centimètres ou pouces",
+        "Sélectionnez votre genre pour calculs métaboliques précis",
+        "Entrez votre âge pour ajustements appropriés par âge",
+        "Choisissez votre niveau d'activité de sédentaire à extrêmement actif",
+        "Sélectionnez votre méthode de calcul BMR préférée",
+        "Pour méthode Katch-McArdle, entrez votre pourcentage de graisse corporelle",
+        "Consultez votre BMR, TDEE et calories quotidiennes de maintenance"
+      ],
+      "formulaExplanation": "Calories de maintenance sont calculées en utilisant BMR (Taux Métabolique Basal) multiplié par niveau d'activité pour obtenir TDEE (Dépense Énergétique Totale Quotidienne). BMR représente calories nécessaires au repos, tandis que TDEE inclut toutes activités quotidiennes. Harris-Benedict et Mifflin-St Jeor utilisent poids, taille, âge et genre. Katch-McArdle utilise masse corporelle maigre pour précision supérieure. Multiplicateurs d'activité vont de 1.2 (sédentaire) à 2.0+ (extrêmement actif).",
+      "examples": [
+        "Un homme de 30 ans modérément actif pesant 75kg et mesurant 175cm a besoin environ 2,650 calories de maintenance quotidiennes utilisant méthode Mifflin-St Jeor, avec 1,676 calories BMR brûlées au repos",
+        "Une femme de 25 ans sédentaire pesant 60kg et mesurant 160cm a besoin environ 1,817 calories de maintenance quotidiennes, avec espace significatif pour perte de poids si souhaité",
+        "Un athlète homme de 28 ans très actif pesant 80kg avec 12% graisse corporelle a besoin environ 3,147 calories de maintenance quotidiennes utilisant méthode Katch-McArdle pour précision supérieure"
+      ],
+      "whoShouldUse": "Passionnés de fitness suivant apport calorique, individus gérant poids, athlètes calculant besoins énergétiques, bodybuilders pendant cycles sèche/masse, diététiciens et nutritionnistes, personnes avec préoccupations métaboliques, ceux commençant programmes perte de poids, et quiconque souhaitant comprendre ses exigences énergétiques quotidiennes.",
+      "importantNotes": "Ces calculs fournissent estimations basées sur formules établies. Taux métaboliques individuels peuvent varier de 10-15% dû à génétique, fonction thyroïdienne et autres facteurs. Suivez changements poids réels sur 2-4 semaines et ajustez calories en conséquence. Pour perte de poids, soustrayez 250-500 calories quotidiennes ; pour gain de poids, ajoutez 250-500 calories. Consultez fournisseurs de soins de santé pour conditions médicales ou besoins caloriques extrêmes.",
+      "relatedTools": [
+        "Calculateur IMC - Évaluez composition corporelle",
+        "Calculateur TMB - Calculez besoins métaboliques basaux",
+        "Calculateur Apport Protéines - Calculez besoins en protéines",
+        "Calculateur Apport Eau - Calculez besoins en hydratation",
+        "Calculateur Poids Idéal - Trouvez plages saines de poids"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre BMR et TDEE ?",
+          "answer": "BMR (Taux Métabolique Basal) est le nombre de calories votre corps brûle au repos pour maintenir fonctions physiologiques de base. TDEE (Dépense Énergétique Totale Quotidienne) inclut BMR plus calories brûlées à travers toutes activités quotidiennes, exercice et digestion. TDEE représente vos calories totales de maintenance."
+        },
+        {
+          "question": "Quelle méthode de calcul BMR est la plus précise ?",
+          "answer": "Katch-McArdle est généralement plus précise si vous connaissez votre pourcentage de graisse corporelle, suivie par Mifflin-St Jeor (plus couramment utilisée), puis Harris-Benedict (formule plus ancienne). Précision dépend d'avoir mesures d'entrée correctes. Toutes méthodes fournissent estimations raisonnables pour plupart des gens."
+        },
+        {
+          "question": "¿Comment utiliser calories de maintenance pour perte de poids ?",
+          "answer": "Pour perte de poids durable, soustrayez 250-500 calories de votre niveau de maintenance quotidiennement. Cela crée déficit modéré permettant perte de 0.5-1 lb hebdomadairement tout en préservant masse musculaire. Combinez avec entraînement résistance et apport protéique adéquat. Évitez déficits plus grands pouvant ralentir métabolisme."
+        },
+        {
+          "question": "Pourquoi athlètes ont-ils besoin de plus de calories ?",
+          "answer": "Athlètes ont TDEE plus élevé dû à masse musculaire augmentée, volume d'entraînement et besoins de récupération. Individus très actifs peuvent avoir besoin 2,500-4,000+ calories quotidiennes selon sport et intensité d'entraînement. Athlètes d'endurance ont souvent besoin glucides additionnels pour stockage glycogène."
+        },
+        {
+          "question": "Métabolisme ralentit-il avec l'âge ?",
+          "answer": "Oui, BMR diminue naturellement environ 1-2% par décennie après âge 20 dû à perte musculaire et changements hormonaux. Entraînement résistance régulier et maintenir masse maigre peut aider préserver taux métabolique. Adultes plus âgés peuvent avoir besoin moins calories de maintenance mais devraient se concentrer sur densité nutritionnelle."
+        },
+        {
+          "question": "Puis-je manger en dessous de mon BMR pour perte de poids ?",
+          "answer": "Manger en dessous de BMR (diète famine) n'est pas recommandé car cela peut ralentir métabolisme, causer perte musculaire et mener à récupération poids. Visez déficits modérés (250-500 calories en dessous de TDEE) pour résultats durables. Concentrez-vous sur aliments denses en nutriments et entraînement résistance pour préserver muscle."
+        },
+        {
+          "question": "¿Comment composition corporelle affecte-t-elle besoins caloriques ?",
+          "answer": "Tissu musculaire brûle plus de calories que tissu adipeux, donc individus avec masse musculaire plus élevée ont BMR plus élevé. C'est pourquoi athlètes et ceux faisant entraînement résistance ont calories de maintenance plus élevées. Pourcentage de graisse corporelle affecte aussi quelle méthode de calcul est plus précise."
+        },
+        {
+          "question": "Dois-je ajuster calories basées sur résultats réels ?",
+          "answer": "Oui, toujours ! Utilisez résultats calculateur comme points de départ, puis suivez changements poids sur 2-4 semaines. Si perdant plus lentement qu'attendu, réduisez calories de 100-200 supplémentaires. Si perdant trop rapidement ou vous sentant fatigué, augmentez calories. Réponses individuelles varient basées sur métabolisme et niveau d'activité."
+        }
+      ]
+    }
+  }
+}

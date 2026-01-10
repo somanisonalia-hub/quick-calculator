@@ -1,0 +1,482 @@
+{
+  "en": {
+    "title": "Car Insurance Calculator",
+    "seoTitle": "Car Insurance Calculator - Calculate Auto Insurance Quotes and Coverage Costs",
+    "metaDescription": "Free car insurance calculator. Get personalized auto insurance quotes, calculate coverage costs, and compare rates. Essential for finding affordable car insurance.",
+    "keywords": ["car insurance calculator", "auto insurance quote calculator", "car insurance cost calculator", "vehicle insurance calculator", "auto coverage calculator"],
+    "longTailKeywords": ["how much does car insurance cost calculator", "car insurance quote calculator", "auto insurance premium calculator", "vehicle insurance cost calculator", "car insurance rate calculator"],
+    "slug": "car-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["car insurance", "auto insurance", "insurance quotes", "vehicle coverage", "premium calculator"],
+    "summary": "Calculate personalized car insurance quotes, compare coverage options, and find the best rates for your vehicle.",
+    "description": "Our comprehensive car insurance calculator helps you estimate auto insurance premiums based on your driving record, vehicle type, coverage options, and location. Compare full coverage vs liability-only, calculate the impact of deductibles, and understand what factors affect your car insurance rates. Perfect for shopping for affordable auto insurance.",
+    "instructions": [
+      "Enter your zip code and driving information",
+      "Select your vehicle details and coverage type",
+      "Choose deductible amounts and additional coverage",
+      "Get personalized insurance quotes and rate comparisons"
+    ],
+    "calculatorComponent": {
+      "componentName": "CarInsuranceCalculator",
+      "inputs": [
+        { "name": "age", "label": "Driver Age", "type": "number", "default": 30, "min": 16, "max": 80, "step": 1 },
+        { "name": "vehicleValue", "label": "Vehicle Value ($)", "type": "number", "default": 25000, "min": 1000, "max": 100000, "step": 1000 },
+        { "name": "coverageType", "label": "Coverage Type", "type": "select", "default": "full", "options": ["liability", "full", "minimum"] },
+        { "name": "deductible", "label": "Deductible ($)", "type": "number", "default": 500, "min": 0, "max": 5000, "step": 100 },
+        { "name": "annualMileage", "label": "Annual Mileage", "type": "number", "default": 12000, "min": 1000, "max": 50000, "step": 1000 },
+        { "name": "drivingRecord", "label": "Driving Record", "type": "select", "default": "clean", "options": ["clean", "minor", "major", "suspended"] }
+      ],
+      "formula": "Base premium × Age factor × Coverage factor × Vehicle factor × Record factor",
+      "output": { "label": "Estimated Annual Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" },
+        { "label": "Coverage Level", "field": "coverageLevel", "format": "text" },
+        { "label": "Risk Assessment", "field": "riskAssessment", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Full Coverage Quote",
+        "input": "25-year-old driver, Honda Civic, full coverage, $500 deductible",
+        "output": "Estimated Annual Premium: $1,200-$1,800, Monthly: $100-$150"
+      },
+      {
+        "title": "Minimum Liability",
+        "input": "35-year-old driver, clean record, Toyota Camry, liability only",
+        "output": "Estimated Annual Premium: $600-$900, Monthly: $50-$75"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "expense-calculator", "loan-calculator"],
+    "seoContent": {
+      "introduction": "Navigate the complex world of auto insurance with confidence using our comprehensive car insurance calculator that provides personalized quotes based on your unique driving profile. Car insurance costs vary dramatically based on age, driving record, vehicle type, coverage levels, and location. Whether you're shopping for your first policy, comparing rates, or understanding how different factors affect your premiums, our calculator demystifies the car insurance marketplace. Make informed decisions about coverage levels, deductibles, and insurance choices that balance protection with affordability. Understanding car insurance pricing helps you avoid overpaying while ensuring adequate protection for your vehicle and financial security.",
+      "benefits": [
+        "Get personalized car insurance quotes based on your driving profile and vehicle details",
+        "Compare full coverage vs liability-only options and their cost differences",
+        "Understand how age, driving record, and location affect insurance rates",
+        "Calculate the impact of different deductibles on monthly premiums",
+        "See how vehicle value and type influence coverage costs",
+        "Evaluate risk factors that increase or decrease insurance premiums",
+        "Make informed decisions about coverage levels for your budget and needs",
+        "Find the optimal balance between comprehensive protection and cost"
+      ],
+      "steps": [
+        "Enter your age, location, and driving information",
+        "Provide vehicle details including make, model, and value",
+        "Select coverage type (liability, full, or minimum)",
+        "Choose deductible amounts and additional coverage options",
+        "Review personalized quotes and compare rate options",
+        "Analyze coverage recommendations based on your risk profile"
+      ],
+      "inputsExplained": [
+        "Driver age is the biggest factor - younger drivers pay much higher rates",
+        "Vehicle value determines comprehensive and collision coverage costs",
+        "Coverage type affects premium levels and protection scope",
+        "Deductible amount inversely affects premium costs",
+        "Annual mileage reflects usage and risk exposure",
+        "Driving record is critical for rate determination"
+      ],
+      "formulaExplanation": "Car insurance premiums are calculated using actuarial data considering multiple risk factors. Base premium × Age factor (young drivers pay 2-3x more) × Coverage multiplier (full coverage costs 2-3x liability) × Vehicle factor (luxury/sports cars cost more) × Record factor (clean records save 20-40%) × Location factor (urban areas cost more). The calculator shows how these factors compound to determine your final rate. Understanding premium calculations helps you see why safe driving, higher deductibles, and appropriate coverage levels save money while maintaining protection.",
+      "examples": [
+        "25-year-old driver with Honda Civic and full coverage pays $1,200-1,800 annually due to young age factor increasing base rate by 150%.",
+        "35-year-old with clean record and Toyota Camry on liability-only pays $600-900 annually, benefiting from mature age and minimal coverage.",
+        "45-year-old with minor accident history pays 30% more than clean record equivalent, showing how driving record impacts rates."
+      ],
+      "resultsExplanation": [
+        "Estimated annual premium shows your yearly insurance cost",
+        "Monthly payment breaks down annual cost for budgeting",
+        "Coverage level indicates protection scope and limits",
+        "Risk assessment explains rating factors and potential savings"
+      ],
+      "whoItsFor": "This car insurance calculator serves new drivers shopping for first policies, experienced drivers comparing rates, parents adding teens to policies, recent accident victims, vehicle owners changing coverage, insurance shoppers during open enrollment, financial planners budgeting for clients, and anyone wanting to understand auto insurance costs. It's particularly valuable for those moving to new states, buying new vehicles, comparing insurance companies, and making deductible decisions. The calculator works for all driver ages, vehicle types, coverage levels, and risk profiles.",
+      "disclaimer": "This car insurance calculator provides estimates based on industry averages and typical rating factors. Actual premiums vary by insurance company underwriting guidelines, claims history, credit score, and local regulations. Quotes shown are approximations and do not constitute official insurance offers. This tool does not replace professional insurance advice or guarantee coverage availability. Premiums are subject to change based on driving behavior, claims, and market conditions. Consult licensed insurance agents for personalized quotes and coverage recommendations. Rates may differ based on specific policy terms and discounts.",
+      "relatedTools": [
+        "Budget calculators for incorporating insurance costs into financial planning",
+        "Expense calculators for tracking insurance and maintenance costs",
+        "Loan calculators for vehicle financing and insurance budgeting"
+      ],
+      "faqs": [
+        {
+          "question": "How much does car insurance cost on average?",
+          "answer": "Average U.S. car insurance costs $1,674 annually or $140 monthly, but varies dramatically by location, age, and coverage. Full coverage averages $1,800-2,500 annually, liability-only $500-800. Costs range from $800 in rural Maine to $3,000+ in urban Florida. Your personal cost depends on age (teenagers pay 2-3x adult rates), driving record, vehicle type, and coverage level. Use our calculator for personalized estimates based on your specific situation."
+        },
+        {
+          "question": "What's the difference between full coverage and liability-only?",
+          "answer": "Full coverage includes liability (covers others' damages) plus collision (your car damage) and comprehensive (theft/vandalism/weather). Liability-only covers others' damages but not your own vehicle. Full coverage costs 2-3x more but protects your investment. Liability-only is cheaper but leaves you responsible for your car's repair costs. State minimums require liability, but full coverage is recommended for financed or newer vehicles. Consider your car's value and ability to afford repairs when choosing."
+        },
+        {
+          "question": "How does age affect car insurance rates?",
+          "answer": "Age is the biggest factor in car insurance pricing. Teen drivers (16-19) pay highest rates due to inexperience and risk. Rates drop significantly at age 20-25 as experience increases. Adults 25+ enjoy stable, lower rates. Senior discounts begin around 50-55. Young drivers pay 150-300% more than 40-year-olds for same coverage. Rates decrease gradually until age 30, then stabilize. Safe driving record and vehicle choice can mitigate high young driver rates."
+        },
+        {
+          "question": "What factors increase car insurance costs?",
+          "answer": "High-risk factors include young age, poor driving record, high-performance vehicles, low credit score, urban location, high mileage, low deductibles, and comprehensive coverage. Each at-fault accident increases rates 30-60% for 3-5 years. Speeding tickets add 20-40%. Sports cars cost 20-50% more than sedans. Urban drivers pay more due to higher claim frequency. Married drivers often get discounts. Understanding these factors helps you control costs through safe driving and smart coverage choices."
+        },
+        {
+          "question": "How can I lower my car insurance rates?",
+          "answer": "Maintain clean driving record, increase deductibles ($500-$1,000 saves 15-25%), choose safer vehicles, bundle policies, take defensive driving courses, maintain good credit, consider usage-based insurance, shop annually, ask about discounts (safe driver, multi-policy, low mileage). Safe driving saves $500+ annually. Higher deductibles reduce premiums but increase out-of-pocket costs. Compare rates every 6-12 months as costs change. Loyalty discounts may not be best value - shop around."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Seguro de Auto",
+    "seoTitle": "Calculadora de Seguro de Auto - Calcula Cotizaciones de Seguro Automóvil y Costos de Cobertura",
+    "metaDescription": "Calculadora gratuita de seguro de auto. Obtén cotizaciones personalizadas de seguro automóvil, calcula costos de cobertura y compara tarifas. Esencial para encontrar seguro de auto asequible.",
+    "keywords": ["calculadora seguro auto", "calculadora cotización seguro automóvil", "calculadora costo seguro auto", "calculadora seguro vehículo", "calculadora cobertura auto"],
+    "longTailKeywords": ["cuánto cuesta seguro auto calculadora", "calculadora cotización seguro auto", "calculadora prima seguro automóvil", "calculadora costo seguro vehículo", "calculadora tarifa seguro auto"],
+    "slug": "car-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["seguro auto", "seguro automóvil", "cotizaciones seguro", "cobertura vehículo", "calculadora prima"],
+    "summary": "Calcula cotizaciones personalizadas de seguro de auto, compara opciones de cobertura y encuentra las mejores tarifas para tu vehículo.",
+    "description": "Nuestra completa calculadora de seguro de auto te ayuda a estimar primas de seguro automóvil basadas en tu historial de conducción, tipo de vehículo, opciones de cobertura y ubicación. Compara cobertura completa vs responsabilidad civil únicamente, calcula el impacto de deducibles y entiende qué factores afectan tus tarifas de seguro de auto. Perfecta para buscar seguro de auto asequible.",
+    "instructions": [
+      "Ingresa tu código postal e información de conducción",
+      "Selecciona detalles de tu vehículo y tipo de cobertura",
+      "Elige montos de deducible y cobertura adicional",
+      "Obtén cotizaciones personalizadas de seguro y comparaciones de tarifas"
+    ],
+    "calculatorComponent": {
+      "componentName": "CarInsuranceCalculator",
+      "inputs": [
+        { "name": "age", "label": "Driver Age", "type": "number", "default": 30, "min": 16, "max": 80, "step": 1 },
+        { "name": "vehicleValue", "label": "Vehicle Value ($)", "type": "number", "default": 25000, "min": 1000, "max": 100000, "step": 1000 },
+        { "name": "coverageType", "label": "Coverage Type", "type": "select", "default": "full", "options": ["liability", "full", "minimum"] },
+        { "name": "deductible", "label": "Deductible ($)", "type": "number", "default": 500, "min": 0, "max": 5000, "step": 100 },
+        { "name": "annualMileage", "label": "Annual Mileage", "type": "number", "default": 12000, "min": 1000, "max": 50000, "step": 1000 },
+        { "name": "drivingRecord", "label": "Driving Record", "type": "select", "default": "clean", "options": ["clean", "minor", "major", "suspended"] }
+      ],
+      "formula": "Base premium × Age factor × Coverage factor × Vehicle factor × Record factor",
+      "output": { "label": "Estimated Annual Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" },
+        { "label": "Coverage Level", "field": "coverageLevel", "format": "text" },
+        { "label": "Risk Assessment", "field": "riskAssessment", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Cotización Cobertura Completa",
+        "input": "Conductor de 25 años, Honda Civic, cobertura completa, deducible $500",
+        "output": "Prima Anual Estimada: $1,200-$1,800, Mensual: $100-$150"
+      },
+      {
+        "title": "Responsabilidad Civil Mínima",
+        "input": "Conductor de 35 años, historial limpio, Toyota Camry, responsabilidad únicamente",
+        "output": "Prima Anual Estimada: $600-$900, Mensual: $50-$75"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "expense-calculator", "loan-calculator"],
+    "seoContent": {
+      "introduction": "Navega el complejo mundo del seguro de auto con confianza usando nuestra calculadora integral de seguro de auto que proporciona cotizaciones personalizadas basadas en tu perfil único de conducción. Los costos de seguro de auto varían dramáticamente basado en edad, historial de conducción, tipo de vehículo, niveles de cobertura, y ubicación. Ya sea que busques tu primera póliza, compares tarifas, o entiendas cómo diferentes factores afectan tus primas, nuestra calculadora desmistifica el mercado de seguros de auto. Toma decisiones informadas sobre niveles de cobertura, deducibles, y elecciones de seguro que balancean protección con asequibilidad. Entender precios de seguro de auto te ayuda a evitar pagar de más mientras aseguras protección adecuada para tu vehículo y seguridad financiera.",
+      "benefits": [
+        "Obtén cotizaciones personalizadas de seguro de auto basado en tu perfil de conducción y detalles de vehículo",
+        "Compara opciones de cobertura completa vs responsabilidad civil únicamente y sus diferencias de costo",
+        "Entiende cómo edad, historial de conducción, y ubicación afectan tarifas de seguro",
+        "Calcula el impacto de diferentes deducibles en primas mensuales",
+        "Ve cómo valor de vehículo y tipo influyen costos de cobertura",
+        "Evalúa factores de riesgo que aumentan o disminuyen primas de seguro",
+        "Toma decisiones informadas sobre niveles de cobertura para tu presupuesto y necesidades",
+        "Encuentra el balance óptimo entre protección comprehensiva y costo"
+      ],
+      "steps": [
+        "Ingresa tu edad, ubicación, e información de conducción",
+        "Proporciona detalles de vehículo incluyendo marca, modelo, y valor",
+        "Selecciona tipo de cobertura (responsabilidad, completa, o mínima)",
+        "Elige montos de deducible y opciones de cobertura adicionales",
+        "Revisa cotizaciones personalizadas y compara opciones de tarifa",
+        "Analiza recomendaciones de cobertura basado en tu perfil de riesgo"
+      ],
+      "inputsExplained": [
+        "Edad del conductor es el factor más grande - conductores más jóvenes pagan tarifas mucho más altas",
+        "Valor del vehículo determina costos de cobertura comprehensiva y colisión",
+        "Tipo de cobertura afecta niveles de prima y alcance de protección",
+        "Monto de deducible afecta inversamente costos de prima",
+        "Kilometraje anual refleja uso y exposición de riesgo",
+        "Historial de conducción es crítico para determinación de tarifa"
+      ],
+      "formulaExplanation": "Las primas de seguro de auto se calculan usando datos actuariales considerando múltiples factores de riesgo. Prima base × Factor edad (conductores jóvenes pagan 2-3x más) × Multiplicador cobertura (cobertura completa cuesta 2-3x responsabilidad) × Factor vehículo (autos lujo/deportivo cuestan más) × Factor historial (historiales limpios ahorran 20-40%) × Factor ubicación (áreas urbanas cuestan más). La calculadora muestra cómo estos factores se combinan para determinar tu tarifa final. Entender cálculos de prima te ayuda a ver por qué conducción segura, deducibles más altos, y niveles de cobertura apropiados ahorran dinero mientras mantienen protección.",
+      "examples": [
+        "Conductor de 25 años con Honda Civic y cobertura completa paga $1,200-1,800 anualmente debido a factor edad joven aumentando tarifa base en 150%.",
+        "Conductor de 35 años con historial limpio y Toyota Camry en responsabilidad únicamente paga $600-900 anualmente, beneficiándose de edad madura y cobertura mínima.",
+        "Conductor de 45 años con historial accidente menor paga 30% más que equivalente historial limpio, mostrando cómo historial de conducción impacta tarifas."
+      ],
+      "resultsExplanation": [
+        "Prima anual estimada muestra tu costo anual de seguro",
+        "Pago mensual desglosa costo anual para presupuesto",
+        "Nivel de cobertura indica alcance de protección y límites",
+        "Evaluación de riesgo explica factores de calificación y ahorros potenciales"
+      ],
+      "whoItsFor": "Esta calculadora de seguro de auto sirve a nuevos conductores buscando primeras pólizas, conductores experimentados comparando tarifas, padres agregando adolescentes a pólizas, víctimas recientes de accidentes, dueños de vehículos cambiando cobertura, compradores de seguro durante período abierto de inscripción, planificadores financieros presupuestando para clientes, y cualquiera queriendo entender costos de seguro auto. Es particularmente valiosa para aquellos mudándose a nuevos estados, comprando vehículos nuevos, comparando compañías de seguro, y tomando decisiones de deducible. La calculadora funciona para todas las edades de conductor, tipos de vehículo, niveles de cobertura, y perfiles de riesgo.",
+      "disclaimer": "Esta calculadora de seguro de auto proporciona estimaciones basadas en promedios de industria y factores típicos de calificación. Las primas reales varían por guías de suscripción de compañía de seguros, historial de reclamos, calificación crediticia, y regulaciones locales. Las cotizaciones mostradas son aproximaciones y no constituyen ofertas oficiales de seguro. Esta herramienta no reemplaza consejo profesional de seguros o garantiza disponibilidad de cobertura. Las primas están sujetas a cambio basado en comportamiento de conducción, reclamos, y condiciones de mercado. Consulta agentes de seguros licenciados para cotizaciones personalizadas y recomendaciones de cobertura. Las tarifas pueden diferir basado en términos específicos de póliza y descuentos.",
+      "relatedTools": [
+        "Calculadoras de presupuesto para incorporar costos de seguro en planificación financiera",
+        "Calculadoras de gastos para rastrear costos de seguro y mantenimiento",
+        "Calculadoras de préstamo para financiamiento de vehículo y presupuesto de seguro"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánto cuesta el seguro de auto en promedio?",
+          "answer": "El seguro de auto promedio en EE.UU. cuesta $1,674 anualmente o $140 mensuales, pero varía dramáticamente por ubicación, edad, y cobertura. Cobertura completa promedia $1,800-2,500 anualmente, responsabilidad únicamente $500-800. Los costos van de $800 en Maine rural a $3,000+ en Florida urbana. Tu costo personal depende de edad (adolescentes pagan 2-3x tarifas adultas), historial de conducción, tipo de vehículo, y nivel de cobertura. Usa nuestra calculadora para estimaciones personalizadas basadas en tu situación específica."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre cobertura completa y responsabilidad únicamente?",
+          "answer": "Cobertura completa incluye responsabilidad (cubre daños de otros) más colisión (daños a tu auto) y comprehensiva (robo/vandalismo/clima). Responsabilidad únicamente cubre daños de otros pero no tu propio vehículo. Cobertura completa cuesta 2-3x más pero protege tu inversión. Responsabilidad únicamente es más barato pero te deja responsable por costos de reparación de tu auto. Mínimos estatales requieren responsabilidad, pero cobertura completa se recomienda para vehículos financiados o más nuevos. Considera valor de tu auto y habilidad para permitir reparaciones al elegir."
+        },
+        {
+          "question": "¿Cómo afecta la edad a las tarifas de seguro de auto?",
+          "answer": "La edad es el factor más grande en precios de seguro de auto. Conductores adolescentes (16-19) pagan tarifas más altas debido a inexperiencia y riesgo. Las tarifas bajan significativamente a edades 20-25 conforme experiencia aumenta. Adultos 25+ disfrutan tarifas estables, más bajas. Descuentos para seniors comienzan alrededor de 50-55. Conductores jóvenes pagan 150-300% más que personas de 40 años por misma cobertura. Historial conducción segura y elección de vehículo pueden mitigar altas tarifas de conductores jóvenes."
+        },
+        {
+          "question": "¿Qué factores aumentan costos de seguro de auto?",
+          "answer": "Factores de alto riesgo incluyen edad joven, pobre historial de conducción, vehículos de alto rendimiento, bajo puntaje crediticio, ubicación urbana, kilometraje alto, deducibles bajos, y cobertura comprehensiva. Cada accidente por culpa aumenta tarifas 30-60% por 3-5 años. Multas por exceso de velocidad agregan 20-40%. Autos deportivos cuestan 20-50% más que sedanes. Conductores urbanos pagan más debido a frecuencia más alta de reclamos. Conductores casados a menudo obtienen descuentos. Entender estos factores te ayuda a controlar costos a través de conducción segura y elecciones inteligentes de cobertura."
+        },
+        {
+          "question": "¿Cómo puedo bajar mis tarifas de seguro de auto?",
+          "answer": "Mantén historial de conducción limpio, aumenta deducibles ($500-$1,000 ahorra 15-25%), elige vehículos más seguros, agrupa pólizas, toma cursos de conducción defensiva, mantiene buen crédito, considera seguro basado en uso, compra anualmente, pregunta por descuentos (conductor seguro, multi-póliza, kilometraje bajo). Conducción segura ahorra $500+ anualmente. Deducibles más altos reducen primas pero aumentan costos fuera de bolsillo. Compara tarifas cada 6-12 meses conforme costos cambian. Descuentos de lealtad pueden no ser mejor valor - compara alrededor."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Seguro de Carro",
+    "seoTitle": "Calculadora de Seguro de Carro - Calcule Cotações de Seguro Automóvel e Custos de Cobertura",
+    "metaDescription": "Calculadora gratuita de seguro de carro. Obtenha cotações personalizadas de seguro automóvel, calcule custos de cobertura e compare tarifas. Essencial para encontrar seguro de carro acessível.",
+    "keywords": ["calculadora seguro carro", "calculadora cotação seguro automóvel", "calculadora custo seguro carro", "calculadora seguro veículo", "calculadora cobertura carro"],
+    "longTailKeywords": ["quanto custa seguro carro calculadora", "calculadora cotação seguro carro", "calculadora prêmio seguro automóvel", "calculadora custo seguro veículo", "calculadora tarifa seguro carro"],
+    "slug": "car-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["seguro carro", "seguro automóvel", "cotações seguro", "cobertura veículo", "calculadora prêmio"],
+    "summary": "Calcule cotações personalizadas de seguro de carro, compare opções de cobertura e encontre as melhores tarifas para seu veículo.",
+    "description": "Nossa calculadora completa de seguro de carro ajuda você a estimar prêmios de seguro automóvel baseados em seu histórico de direção, tipo de veículo, opções de cobertura e localização. Compare cobertura completa vs responsabilidade civil apenas, calcule o impacto de franquias e entenda quais fatores afetam suas tarifas de seguro de carro. Perfeita para buscar seguro de carro acessível.",
+    "instructions": [
+      "Digite seu CEP e informações de direção",
+      "Selecione detalhes do seu veículo e tipo de cobertura",
+      "Escolha valores de franquia e cobertura adicional",
+      "Obtenha cotações personalizadas de seguro e comparações de tarifas"
+    ],
+    "calculatorComponent": {
+      "componentName": "CarInsuranceCalculator",
+      "inputs": [
+        { "name": "age", "label": "Driver Age", "type": "number", "default": 30, "min": 16, "max": 80, "step": 1 },
+        { "name": "vehicleValue", "label": "Vehicle Value ($)", "type": "number", "default": 25000, "min": 1000, "max": 100000, "step": 1000 },
+        { "name": "coverageType", "label": "Coverage Type", "type": "select", "default": "full", "options": ["liability", "full", "minimum"] },
+        { "name": "deductible", "label": "Deductible ($)", "type": "number", "default": 500, "min": 0, "max": 5000, "step": 100 },
+        { "name": "annualMileage", "label": "Annual Mileage", "type": "number", "default": 12000, "min": 1000, "max": 50000, "step": 1000 },
+        { "name": "drivingRecord", "label": "Driving Record", "type": "select", "default": "clean", "options": ["clean", "minor", "major", "suspended"] }
+      ],
+      "formula": "Base premium × Age factor × Coverage factor × Vehicle factor × Record factor",
+      "output": { "label": "Estimated Annual Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" },
+        { "label": "Coverage Level", "field": "coverageLevel", "format": "text" },
+        { "label": "Risk Assessment", "field": "riskAssessment", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Cotação Cobertura Completa",
+        "input": "Motorista de 25 anos, Honda Civic, cobertura completa, franquia $500",
+        "output": "Prêmio Anual Estimado: $1,200-$1,800, Mensal: $100-$150"
+      },
+      {
+        "title": "Responsabilidade Civil Mínima",
+        "input": "Motorista de 35 anos, histórico limpo, Toyota Camry, responsabilidade apenas",
+        "output": "Prêmio Anual Estimado: $600-$900, Mensal: $50-$75"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "expense-calculator", "loan-calculator"],
+    "seoContent": {
+      "introduction": "Navegue o complexo mundo do seguro auto com confiança usando nossa calculadora abrangente de seguro de carro que fornece cotações personalizadas baseadas em seu perfil único de direção. Custos de seguro de carro variam dramaticamente baseado em idade, histórico de direção, tipo de veículo, níveis de cobertura, e localização. Seja comprando sua primeira apólice, comparando taxas, ou entendendo como diferentes fatores afetam seus prêmios, nossa calculadora desmistifica o mercado de seguros de carro. Tome decisões informadas sobre níveis de cobertura, franquias, e escolhas de seguro que balanceiam proteção com acessibilidade. Entender preços de seguro de carro ajuda você a evitar pagar demais enquanto garantindo proteção adequada para seu veículo e segurança financeira.",
+      "benefits": [
+        "Obtenha cotações personalizadas de seguro de carro baseadas em seu perfil de direção e detalhes de veículo",
+        "Compare opções de cobertura completa vs responsabilidade civil apenas e suas diferenças de custo",
+        "Entenda como idade, histórico de direção, e localização afetam taxas de seguro",
+        "Calcule o impacto de diferentes franquias em prêmios mensais",
+        "Veja como valor de veículo e tipo influenciam custos de cobertura",
+        "Avalie fatores de risco que aumentam ou diminuem prêmios de seguro",
+        "Tome decisões informadas sobre níveis de cobertura para seu orçamento e necessidades",
+        "Encontre o balance ótimo entre proteção abrangente e custo"
+      ],
+      "steps": [
+        "Digite sua idade, localização, e informação de direção",
+        "Forneça detalhes de veículo incluindo marca, modelo, e valor",
+        "Selecione tipo de cobertura (responsabilidade, completa, ou mínima)",
+        "Escolha valores de franquia e opções de cobertura adicionais",
+        "Revise cotações personalizadas e compare opções de taxa",
+        "Analise recomendações de cobertura baseadas em seu perfil de risco"
+      ],
+      "inputsExplained": [
+        "Idade do motorista é o maior fator - motoristas mais jovens pagam taxas muito mais altas",
+        "Valor do veículo determina custos de cobertura abrangente e colisão",
+        "Tipo de cobertura afeta níveis de prêmio e alcance de proteção",
+        "Valor de franquia afeta inversamente custos de prêmio",
+        "Quilometragem anual reflete uso e exposição de risco",
+        "Histórico de direção é crítico para determinação de taxa"
+      ],
+      "formulaExplanation": "Prêmios de seguro de carro são calculados usando dados atuariais considerando múltiplos fatores de risco. Prêmio base × Fator idade (motoristas jovens pagam 2-3x mais) × Multiplicador cobertura (cobertura completa custa 2-3x responsabilidade) × Fator veículo (carros luxo/esportivos custam mais) × Fator histórico (históricos limpos economizam 20-40%) × Fator localização (áreas urbanas custam mais). A calculadora mostra como estes fatores se combinam para determinar sua taxa final. Entender cálculos de prêmio ajuda você a ver por que direção segura, franquias mais altas, e níveis de cobertura apropriados economizam dinheiro enquanto mantêm proteção.",
+      "examples": [
+        "Motorista de 25 anos com Honda Civic e cobertura completa paga $1,200-1,800 anualmente devido a fator idade jovem aumentando taxa base em 150%.",
+        "Motorista de 35 anos com histórico limpo e Toyota Camry em responsabilidade apenas paga $600-900 anualmente, beneficiando-se de idade madura e cobertura mínima.",
+        "Motorista de 45 anos com histórico acidente menor paga 30% mais que equivalente histórico limpo, mostrando como histórico de direção impacta taxas."
+      ],
+      "resultsExplanation": [
+        "Prêmio anual estimado mostra seu custo anual de seguro",
+        "Pagamento mensal quebra custo anual para orçamento",
+        "Nível de cobertura indica alcance de proteção e limites",
+        "Avaliação de risco explica fatores de classificação e economias potenciais"
+      ],
+      "whoItsFor": "Esta calculadora de seguro de carro serve novos motoristas comprando primeiras apólices, motoristas experientes comparando taxas, pais adicionando adolescentes a apólices, vítimas recentes de acidentes, donos de veículos mudando cobertura, compradores de seguro durante período aberto de inscrição, planejadores financeiros orçando para clientes, e qualquer pessoa querendo entender custos de seguro auto. É particularmente valiosa para aqueles mudando para novos estados, comprando veículos novos, comparando companhias de seguro, e tomando decisões de franquia. A calculadora funciona para todas as idades de motorista, tipos de veículo, níveis de cobertura, e perfis de risco.",
+      "disclaimer": "Esta calculadora de seguro de carro fornece estimativas baseadas em médias da indústria e fatores típicos de classificação. Prêmios reais variam por diretrizes de subscrição de companhia de seguros, histórico de sinistros, pontuação de crédito, e regulações locais. Cotações mostradas são aproximações e não constituem ofertas oficiais de seguro. Esta ferramenta não substitui conselho profissional de seguros ou garante disponibilidade de cobertura. Prêmios estão sujeitos a mudança baseado em comportamento de direção, sinistros, e condições de mercado. Consulte agentes de seguros licenciados para cotações personalizadas e recomendações de cobertura. Taxas podem diferir baseado em termos específicos de apólice e descontos.",
+      "relatedTools": [
+        "Calculadoras de orçamento para incorporar custos de seguro em planejamento financeiro",
+        "Calculadoras de gastos para rastrear custos de seguro e manutenção",
+        "Calculadoras de empréstimo para financiamento de veículo e orçamento de seguro"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto custa seguro de carro em média?",
+          "answer": "Seguro de carro médio nos EUA custa $1,674 anualmente ou $140 mensais, mas varia dramaticamente por localização, idade, e cobertura. Cobertura completa média $1,800-2,500 anualmente, responsabilidade apenas $500-800. Custos vão de $800 no Maine rural para $3,000+ na Flórida urbana. Seu custo pessoal depende de idade (adolescentes pagam 2-3x taxas adultas), histórico de direção, tipo de veículo, e nível de cobertura. Use nossa calculadora para estimativas personalizadas baseadas em sua situação específica."
+        },
+        {
+          "question": "Qual é a diferença entre cobertura completa e responsabilidade apenas?",
+          "answer": "Cobertura completa inclui responsabilidade (cobre danos de outros) mais colisão (danos ao seu carro) e abrangente (roubo/vandalismo/tempo). Responsabilidade apenas cobre danos de outros mas não seu próprio veículo. Cobertura completa custa 2-3x mais mas protege seu investimento. Responsabilidade apenas é mais barato mas deixa você responsável por custos de reparo de seu carro. Mínimos estaduais requerem responsabilidade, mas cobertura completa é recomendada para veículos financiados ou mais novos. Considere valor de seu carro e habilidade para arcar com reparos ao escolher."
+        },
+        {
+          "question": "Como idade afeta taxas de seguro de carro?",
+          "answer": "Idade é o maior fator em preços de seguro de carro. Motoristas adolescentes (16-19) pagam taxas mais altas devido a inexperiência e risco. Taxas baixam significativamente aos 20-25 conforme experiência aumenta. Adultos 25+ desfrutam taxas estáveis, menores. Descontos para seniores começam por volta de 50-55. Motoristas jovens pagam 150-300% mais que pessoas de 40 anos pela mesma cobertura. Histórico direção segura e escolha de veículo podem mitigar altas taxas de motoristas jovens."
+        },
+        {
+          "question": "Quais fatores aumentam custos de seguro de carro?",
+          "answer": "Fatores de alto risco incluem idade jovem, pobre histórico de direção, veículos de alto desempenho, baixa pontuação de crédito, localização urbana, quilometragem alta, franquias baixas, e cobertura abrangente. Cada acidente por culpa aumenta taxas 30-60% por 3-5 anos. Multas por excesso de velocidade adicionam 20-40%. Carros esportivos custam 20-50% mais que sedãs. Motoristas urbanos pagam mais devido a frequência mais alta de sinistros. Motoristas casados frequentemente obtêm descontos. Entender estes fatores ajuda você a controlar custos através de direção segura e escolhas inteligentes de cobertura."
+        },
+        {
+          "question": "Como posso baixar minhas taxas de seguro de carro?",
+          "answer": "Mantenha histórico de direção limpo, aumente franquias ($500-$1,000 economiza 15-25%), escolha veículos mais seguros, agrupe apólices, tome cursos de direção defensiva, mantenha bom crédito, considere seguro baseado em uso, compre anualmente, pergunte por descontos (motorista seguro, multi-apólice, quilometragem baixa). Direção segura economiza $500+ anualmente. Franquias mais altas reduzem prêmios mas aumentam custos fora de bolso. Compare taxas a cada 6-12 meses conforme custos mudam. Descontos de lealdade podem não ser melhor valor - compre ao redor."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Assurance Auto",
+    "seoTitle": "Calculateur d'Assurance Auto - Calculez les Devis d'Assurance Automobile et Coûts de Couverture",
+    "metaDescription": "Calculateur gratuit d'assurance auto. Obtenez des devis personnalisés d'assurance automobile, calculez les coûts de couverture et comparez les tarifs. Essentiel pour trouver une assurance auto abordable.",
+    "keywords": ["calculateur assurance auto", "calculateur devis assurance automobile", "calculateur coût assurance auto", "calculateur assurance véhicule", "calculateur couverture auto"],
+    "longTailKeywords": ["combien coûte assurance auto calculateur", "calculateur devis assurance auto", "calculateur prime assurance automobile", "calculateur coût assurance véhicule", "calculateur tarif assurance auto"],
+    "slug": "car-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["assurance auto", "assurance automobile", "devis assurance", "couverture véhicule", "calculateur prime"],
+    "summary": "Calculez des devis personnalisés d'assurance auto, comparez les options de couverture et trouvez les meilleurs tarifs pour votre véhicule.",
+    "description": "Notre calculateur complet d'assurance auto vous aide à estimer les primes d'assurance automobile basées sur votre historique de conduite, type de véhicule, options de couverture et localisation. Comparez l'assurance tous risques vs responsabilité civile uniquement, calculez l'impact des franchises et comprenez quels facteurs affectent vos tarifs d'assurance auto. Parfait pour rechercher une assurance auto abordable.",
+    "instructions": [
+      "Entrez votre code postal et informations de conduite",
+      "Sélectionnez les détails de votre véhicule et type de couverture",
+      "Choisissez les montants de franchise et couverture supplémentaire",
+      "Obtenez des devis personnalisés d'assurance et comparaisons de tarifs"
+    ],
+    "calculatorComponent": {
+      "componentName": "CarInsuranceCalculator",
+      "inputs": [
+        { "name": "age", "label": "Driver Age", "type": "number", "default": 30, "min": 16, "max": 80, "step": 1 },
+        { "name": "vehicleValue", "label": "Vehicle Value ($)", "type": "number", "default": 25000, "min": 1000, "max": 100000, "step": 1000 },
+        { "name": "coverageType", "label": "Coverage Type", "type": "select", "default": "full", "options": ["liability", "full", "minimum"] },
+        { "name": "deductible", "label": "Deductible ($)", "type": "number", "default": 500, "min": 0, "max": 5000, "step": 100 },
+        { "name": "annualMileage", "label": "Annual Mileage", "type": "number", "default": 12000, "min": 1000, "max": 50000, "step": 1000 },
+        { "name": "drivingRecord", "label": "Driving Record", "type": "select", "default": "clean", "options": ["clean", "minor", "major", "suspended"] }
+      ],
+      "formula": "Base premium × Age factor × Coverage factor × Vehicle factor × Record factor",
+      "output": { "label": "Estimated Annual Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" },
+        { "label": "Coverage Level", "field": "coverageLevel", "format": "text" },
+        { "label": "Risk Assessment", "field": "riskAssessment", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Devis Tous Risques",
+        "input": "Conducteur de 25 ans, Honda Civic, tous risques, franchise 500€",
+        "output": "Prime Annuelle Estimée: 1 200-1 800€, Mensuelle: 100-150€"
+      },
+      {
+        "title": "Responsabilité Civile Minimale",
+        "input": "Conducteur de 35 ans, dossier propre, Toyota Camry, responsabilité uniquement",
+        "output": "Prime Annuelle Estimée: 600-900€, Mensuelle: 50-75€"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "expense-calculator", "loan-calculator"],
+    "seoContent": {
+      "introduction": "Naviguez le monde complexe de l'assurance auto avec confiance en utilisant notre calculatrice complète d'assurance auto qui fournit des devis personnalisés basés sur votre profil de conduite unique. Les coûts d'assurance auto varient considérablement selon l'âge, le dossier de conduite, le type de véhicule, les niveaux de couverture et l'emplacement. Que vous achetiez votre première police, compariez les tarifs ou compreniez comment différents facteurs affectent vos primes, notre calculatrice démystifie le marché de l'assurance auto. Prenez des décisions éclairées concernant les niveaux de couverture, les franchises et les choix d'assurance qui équilibrent protection et abordabilité. Comprendre les prix d'assurance auto vous aide à éviter de trop payer tout en assurant une protection adéquate pour votre véhicule et sécurité financière.",
+      "benefits": [
+        "Obtenez des devis d'assurance auto personnalisés basés sur votre profil de conduite et détails véhicule",
+        "Comparez options couverture complète vs responsabilité civile seulement et leurs différences de coût",
+        "Comprenez comment âge, dossier de conduite et localisation affectent taux assurance",
+        "Calculez impact différentes franchises sur primes mensuelles",
+        "Voyez comment valeur véhicule et type influencent coûts couverture",
+        "Évaluez facteurs risque qui augmentent ou diminuent primes assurance",
+        "Prenez décisions éclairées concernant niveaux couverture pour votre budget et besoins",
+        "Trouvez équilibre optimal entre protection complète et coût"
+      ],
+      "steps": [
+        "Entrez votre âge, localisation et information conduite",
+        "Fournissez détails véhicule incluant marque, modèle et valeur",
+        "Sélectionnez type couverture (responsabilité, complète ou minimum)",
+        "Choisissez montants franchise et options couverture supplémentaires",
+        "Examinez devis personnalisés et comparez options tarif",
+        "Analysez recommandations couverture basées sur votre profil risque"
+      ],
+      "inputsExplained": [
+        "Âge conducteur est plus grand facteur - jeunes conducteurs paient taux beaucoup plus élevés",
+        "Valeur véhicule détermine coûts couverture collision et complète",
+        "Type couverture affecte niveaux prime et portée protection",
+        "Montant franchise affecte inversement coûts prime",
+        "Kilométrage annuel reflète utilisation et exposition risque",
+        "Dossier conduite est critique pour détermination tarif"
+      ],
+      "formulaExplanation": "Primes assurance auto sont calculées utilisant données actuarielles considérant multiples facteurs risque. Prime base × Facteur âge (jeunes conducteurs paient 2-3x plus) × Multiplicateur couverture (couverture complète coûte 2-3x responsabilité) × Facteur véhicule (voitures luxe/sport coûtent plus) × Facteur dossier (dossiers propres économisent 20-40%) × Facteur localisation (zones urbaines coûtent plus). La calculatrice montre comment ces facteurs se combinent pour déterminer votre tarif final. Comprendre calculs prime vous aide voir pourquoi conduite sûre, franchises plus élevées et niveaux couverture appropriés économisent argent tout maintenant protection.",
+      "examples": [
+        "Conducteur 25 ans avec Honda Civic et couverture complète paie $1,200-1,800 annuellement dû facteur âge jeune augmentant tarif base de 150%.",
+        "Conducteur 35 ans avec dossier propre et Toyota Camry sur responsabilité seulement paie $600-900 annuellement, bénéficiant âge mûr et couverture minimale.",
+        "Conducteur 45 ans avec historique accident mineur paie 30% plus qu'équivalent dossier propre, montrant comment dossier conduite impacte taux."
+      ],
+      "resultsExplanation": [
+        "Prime annuelle estimée montre votre coût annuel assurance",
+        "Paiement mensuel décompose coût annuel pour budgétisation",
+        "Niveau couverture indique portée protection et limites",
+        "Évaluation risque explique facteurs notation et économies potentielles"
+      ],
+      "whoItsFor": "Cette calculatrice assurance auto sert nouveaux conducteurs achetant premières polices, conducteurs expérimentés comparant tarifs, parents ajoutant adolescents à polices, victimes récentes accidents, propriétaires véhicules changeant couverture, acheteurs assurance pendant période ouverte inscription, planificateurs financiers budgétisant pour clients, et quiconque souhaitant comprendre coûts assurance auto. Elle est particulièrement précieuse pour ceux déménageant vers nouveaux états, achetant véhicules neufs, comparant compagnies assurance, et prenant décisions franchise. La calculatrice fonctionne pour tous âges conducteur, types véhicule, niveaux couverture et profils risque.",
+      "disclaimer": "Cette calculatrice assurance auto fournit estimations basées sur moyennes industrie et facteurs notation typiques. Primes réelles varient par directives souscription compagnie assurance, historique réclamations, score crédit et réglementations locales. Devis affichés sont approximations et ne constituent pas offres assurance officielles. Cet outil ne remplace pas conseil assurance professionnel ou garantit disponibilité couverture. Primes sont sujettes changement basé sur comportement conduite, réclamations et conditions marché. Consultez agents assurance licenciés pour devis personnalisés et recommandations couverture. Taux peuvent différer basé sur termes spécifiques police et remises.",
+      "relatedTools": [
+        "Calculateurs budget pour incorporer coûts assurance dans planification financière",
+        "Calculateurs dépenses pour suivre coûts assurance et maintenance",
+        "Calculateurs prêt pour financement véhicule et budgétisation assurance"
+      ],
+      "faqs": [
+        {
+          "question": "Combien coûte assurance auto en moyenne ?",
+          "answer": "Assurance auto moyenne aux États-Unis coûte $1,674 annuellement ou $140 mensuellement, mais varie considérablement par localisation, âge et couverture. Couverture complète moyenne $1,800-2,500 annuellement, responsabilité seulement $500-800. Coûts vont de $800 dans Maine rural à $3,000+ en Floride urbaine. Votre coût personnel dépend âge (adolescents paient 2-3x taux adultes), dossier conduite, type véhicule et niveau couverture. Utilisez notre calculatrice pour estimations personnalisées basées sur votre situation spécifique."
+        },
+        {
+          "question": "Quelle est différence entre couverture complète et responsabilité seulement ?",
+          "answer": "Couverture complète inclut responsabilité (couvre dommages autres) plus collision (dommages votre voiture) et complète (vol/vandalisme/intempéries). Responsabilité seulement couvre dommages autres mais pas votre propre véhicule. Couverture complète coûte 2-3x plus mais protège votre investissement. Responsabilité seulement est moins cher mais vous laisse responsable coûts réparation votre voiture. Minimums étatiques requièrent responsabilité, mais couverture complète est recommandée pour véhicules financés ou plus récents. Considérez valeur votre voiture et capacité payer réparations quand choisissant."
+        },
+        {
+          "question": "Comment âge affecte-t-il taux assurance auto ?",
+          "answer": "Âge est plus grand facteur dans prix assurance auto. Jeunes conducteurs (16-19) paient taux plus élevés dû inexpérience et risque. Taux baissent considérablement à âges 20-25 comme expérience augmente. Adultes 25+ profitent taux stables, plus bas. Remises seniors commencent autour 50-55. Jeunes conducteurs paient 150-300% plus que personnes 40 ans pour même couverture. Dossier conduite sûr et choix véhicule peuvent atténuer taux élevés jeunes conducteurs."
+        },
+        {
+          "question": "Quels facteurs augmentent coûts assurance auto ?",
+          "answer": "Facteurs haut risque incluent jeune âge, pauvre dossier conduite, véhicules haute performance, faible score crédit, localisation urbaine, kilométrage élevé, franchises basses et couverture complète. Chaque accident responsable augmente taux 30-60% pour 3-5 ans. Contraventions vitesse ajoutent 20-40%. Voitures sport coûtent 20-50% plus que berlines. Conducteurs urbains paient plus dû fréquence réclamations plus élevée. Conducteurs mariés obtiennent souvent remises. Comprendre ces facteurs vous aide contrôler coûts par conduite sûre et choix couverture intelligents."
+        },
+        {
+          "question": "Comment puis-je baisser mes taux assurance auto ?",
+          "answer": "Maintenez dossier conduite propre, augmentez franchises ($500-$1,000 économise 15-25%), choisissez véhicules plus sûrs, regroupez polices, prenez cours conduite défensive, maintenez bon crédit, considérez assurance basée utilisation, magasinez annuellement, demandez remises (conducteur sûr, multi-police, faible kilométrage). Conduite sûre économise $500+ annuellement. Franchises plus élevées réduisent primes mais augmentent coûts hors poche. Comparez taux tous 6-12 mois comme coûts changent. Remises fidélité peuvent ne pas être meilleure valeur - magasinez."
+        }
+      ]
+    }
+  }
+}

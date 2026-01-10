@@ -1,0 +1,482 @@
+{
+  "en": {
+    "title": "Expense Calculator",
+    "seoTitle": "Expense Calculator - Track and Calculate Monthly Expenses and Budget",
+    "metaDescription": "Free expense calculator. Track monthly expenses, calculate budget allocations, and analyze spending patterns. Perfect for personal finance management and budget planning.",
+    "keywords": ["expense calculator", "budget calculator", "monthly expense tracker", "spending calculator", "personal finance calculator"],
+    "longTailKeywords": ["how to calculate monthly expenses", "expense tracking calculator", "budget expense calculator", "monthly spending calculator", "personal finance expense tracker"],
+    "slug": "expense-calculator",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": ["budget", "expenses", "personal finance", "tracking", "spending"],
+    "summary": "Track monthly expenses, calculate budget allocations, and analyze your spending patterns for better financial management.",
+    "description": "Our comprehensive expense calculator helps you track and categorize monthly expenses, set budget goals, and analyze spending patterns. Perfect for individuals and families looking to understand where their money goes and create more effective budgets. Includes expense categories, percentage breakdowns, and savings recommendations.",
+    "instructions": [
+      "Enter your monthly income and expense categories",
+      "Input amounts for housing, food, transportation, entertainment, etc.",
+      "Set savings goals and budget percentages",
+      "Get detailed expense analysis and budget recommendations"
+    ],
+    "calculatorComponent": {
+      "componentName": "ExpenseCalculator",
+      "inputs": [
+        { "name": "monthlyIncome", "label": "Monthly Income ($)", "type": "number", "default": 5000, "min": 1000, "max": 50000, "step": 100 },
+        { "name": "housing", "label": "Housing/Rent ($)", "type": "number", "default": 1500, "min": 0, "max": 10000, "step": 50 },
+        { "name": "utilities", "label": "Utilities ($)", "type": "number", "default": 200, "min": 0, "max": 1000, "step": 10 },
+        { "name": "groceries", "label": "Groceries ($)", "type": "number", "default": 400, "min": 0, "max": 2000, "step": 25 },
+        { "name": "transportation", "label": "Transportation ($)", "type": "number", "default": 300, "min": 0, "max": 2000, "step": 25 },
+        { "name": "entertainment", "label": "Entertainment ($)", "type": "number", "default": 150, "min": 0, "max": 1000, "step": 25 },
+        { "name": "otherExpenses", "label": "Other Expenses ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 50 }
+      ],
+      "formula": "Total Expenses = Sum of all expense categories; Net Income = Income - Total Expenses",
+      "output": { "label": "Monthly Net Income", "default": "Enter your income and expenses", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Total Expenses", "field": "totalExpenses", "format": "currency" },
+        { "label": "Expense Ratio", "field": "expenseRatio", "format": "percentage" },
+        { "label": "Savings Potential", "field": "savingsPotential", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Monthly Budget Analysis",
+        "input": "Income: $5,000, Expenses: Housing $1,500, Food $600, Transport $400",
+        "output": "Total Expenses: $3,200 (64%), Savings: $1,800 (36%), Housing: 47% of expenses"
+      },
+      {
+        "title": "Expense Optimization",
+        "input": "Monthly expenses totaling $4,200 on $6,000 income",
+        "output": "Expense Ratio: 70%, Recommended Savings: 20%, Potential Monthly Savings: $600"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "savings-calculator", "tax-calculator"],
+    "seoContent": {
+      "introduction": "Take control of your spending and understand exactly where your money goes with our comprehensive expense calculator. This essential personal finance tool helps you track monthly expenses across all categories, analyze spending patterns, and identify opportunities to save more. Whether you're living paycheck to paycheck, trying to build savings, or just want to understand your financial habits better, knowing your expense breakdown is the foundation of effective money management and wealth building.",
+      "benefits": [
+        "Track and categorize all monthly expenses in one comprehensive view",
+        "Calculate expense-to-income ratios to understand financial health",
+        "Identify spending patterns and areas for potential savings",
+        "Set realistic budget goals based on actual expense data",
+        "Monitor progress toward financial objectives month over month",
+        "Make informed decisions about spending, saving, and lifestyle choices"
+      ],
+      "steps": [
+        "Enter your total monthly income from all sources",
+        "Input expenses for each category: housing, utilities, groceries, transportation, entertainment, and other",
+        "Review the calculated totals and expense ratios",
+        "Analyze the breakdown to identify spending optimization opportunities",
+        "Set savings goals and track progress over time",
+        "Use insights to create more effective monthly budgets"
+      ],
+      "inputsExplained": [
+        "Monthly income is your total take-home pay from all sources",
+        "Housing includes rent/mortgage payments and related costs",
+        "Utilities cover electricity, water, internet, and other household services",
+        "Groceries include food shopping and meal planning expenses",
+        "Transportation covers car payments, gas, insurance, and commuting costs",
+        "Entertainment includes dining out, movies, hobbies, and discretionary spending",
+        "Other expenses cover miscellaneous items like clothing, personal care, and unexpected costs"
+      ],
+      "formulaExplanation": "The expense calculator uses straightforward personal finance formulas: Total Expenses = Sum of all category expenses, Net Income = Monthly Income - Total Expenses, Expense Ratio = (Total Expenses ÷ Monthly Income) × 100. This reveals what percentage of your income goes to expenses and how much remains for savings and investments. The 50/30/20 rule suggests allocating 50% to needs (housing, food, utilities), 30% to wants (entertainment, dining), and 20% to savings/debt. Understanding these ratios helps you identify if you're living within your means.",
+      "examples": [
+        "A family earning $6,000 monthly with $3,200 in expenses (housing $1,500, food $600, transportation $400, utilities $300, entertainment $200, other $200) has a 53% expense ratio, leaving $2,800 for savings and debt reduction.",
+        "A single professional with $4,500 income and $3,150 expenses (housing $1,200, food $450, transportation $350, utilities $150, entertainment $300, other $700) has a 70% expense ratio, indicating overspending with only $1,350 available for savings.",
+        "A student with $2,200 income and $1,800 expenses achieves a healthy 82% expense ratio, with $400 available for savings despite modest income."
+      ],
+      "resultsExplanation": [
+        "Monthly net income shows money remaining after all expenses are paid",
+        "Total expenses displays the sum of all spending categories",
+        "Expense ratio indicates what percentage of income goes to expenses",
+        "Savings potential reveals how much could be saved with expense optimization"
+      ],
+      "whoItsFor": "This expense calculator serves anyone wanting to understand their spending habits including individuals tracking personal finances, couples managing household budgets, families planning for children, students learning financial responsibility, freelancers with variable income, and anyone preparing for major life changes. It's particularly valuable for those experiencing financial stress, planning to buy a home, saving for retirement, or wanting to eliminate debt. The calculator works for any income level and helps identify personalized strategies for better money management.",
+      "disclaimer": "This expense calculator provides general guidance based on the information you enter. Actual expenses may vary based on location, lifestyle, and personal circumstances. The calculator does not account for taxes, irregular expenses, or emergency situations. Results are estimates for educational purposes only. For comprehensive financial planning, consult a certified financial advisor. Regular expense tracking and adjustment is recommended for accurate budgeting. This tool is not a substitute for professional financial advice.",
+      "relatedTools": [
+        "Budget calculators for creating comprehensive financial plans",
+        "Savings calculators for projecting long-term wealth accumulation",
+        "Tax calculators for understanding take-home pay calculations"
+      ],
+      "faqs": [
+        {
+          "question": "What percentage of income should go to expenses?",
+          "answer": "The 50/30/20 rule is a good guideline: 50% for needs (housing, food, utilities, transportation), 30% for wants (entertainment, dining, shopping), and 20% for savings/debt. However, this varies by circumstances. High earners might allocate more to savings, while low-income households may need more for essentials. Aim for 60-70% expense ratio maximum to ensure adequate savings. Your specific ratio depends on income, location, family size, and financial goals."
+        },
+        {
+          "question": "How do I categorize expenses effectively?",
+          "answer": "Use these standard categories: Fixed expenses (rent, insurance, loan payments that don't change), Variable expenses (groceries, utilities that fluctuate), and Discretionary spending (entertainment, dining out). Track for 1-2 months to establish baselines. Use budgeting apps for automatic categorization. Review bank/credit card statements weekly. Consider seasonal variations in expenses. Group small expenses into 'miscellaneous' but track them individually when possible."
+        },
+        {
+          "question": "What's considered a good expense-to-income ratio?",
+          "answer": "Ratios below 60% are excellent (leaving plenty for savings), 60-70% are good but could be optimized, 70-80% indicate potential overspending, and above 80% suggest serious budgeting issues. However, this varies by life stage. Students might have higher ratios due to low income, while empty nesters might have lower ratios. Compare your ratio to similar households and aim to improve gradually. Focus on increasing income and reducing variable expenses."
+        },
+        {
+          "question": "How can I reduce expenses without sacrificing quality of life?",
+          "answer": "Start with small changes: cook at home instead of eating out, use public transportation or carpool, shop with coupons and sales, cancel unused subscriptions, reduce energy usage, buy generic brands, and wait for sales on big purchases. Track expenses for 30 days to identify leaks. Set spending limits per category. Use cash instead of cards for discretionary spending. Consider lifestyle changes like downsizing or moving to reduce fixed costs. Small reductions add up significantly."
+        },
+        {
+          "question": "Should I track expenses daily, weekly, or monthly?",
+          "answer": "Daily tracking provides the most control and catches overspending early, but can be time-consuming. Weekly reviews work well for most people and allow course correction mid-month. Monthly tracking is easiest but may miss patterns. Use budgeting apps for automatic tracking. Start with your preferred frequency, then adjust based on needs. Daily tracking is recommended when first starting or during spending diets. Weekly reviews work well for ongoing management."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Gastos",
+    "seoTitle": "Calculadora de Gastos - Rastrea y Calcula Gastos Mensuales y Presupuesto",
+    "metaDescription": "Calculadora gratuita de gastos. Rastrea gastos mensuales, calcula asignaciones presupuestarias y analiza patrones de gasto. Perfecta para gestión financiera personal y planificación presupuestaria.",
+    "keywords": ["calculadora gastos", "calculadora presupuesto", "rastreador gastos mensuales", "calculadora gasto", "calculadora finanzas personales"],
+    "longTailKeywords": ["cómo calcular gastos mensuales", "calculadora rastreo gastos", "calculadora gastos presupuesto", "calculadora gasto mensual", "rastreador gastos finanzas personales"],
+    "slug": "expense-calculator",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": ["presupuesto", "gastos", "finanzas personales", "rastreo", "gasto"],
+    "summary": "Rastrea gastos mensuales, calcula asignaciones presupuestarias y analiza tus patrones de gasto para mejor gestión financiera.",
+    "description": "Nuestra completa calculadora de gastos te ayuda a rastrear y categorizar gastos mensuales, establecer metas presupuestarias y analizar patrones de gasto. Perfecta para individuos y familias que buscan entender a dónde va su dinero y crear presupuestos más efectivos. Incluye categorías de gastos, desgloses porcentuales y recomendaciones de ahorro.",
+    "instructions": [
+      "Ingresa tus ingresos mensuales y categorías de gastos",
+      "Ingresa montos para vivienda, comida, transporte, entretenimiento, etc.",
+      "Establece metas de ahorro y porcentajes presupuestarios",
+      "Obtén análisis detallado de gastos y recomendaciones presupuestarias"
+    ],
+    "calculatorComponent": {
+      "componentName": "ExpenseCalculator",
+      "inputs": [
+        { "name": "monthlyIncome", "label": "Monthly Income ($)", "type": "number", "default": 5000, "min": 1000, "max": 50000, "step": 100 },
+        { "name": "housing", "label": "Housing/Rent ($)", "type": "number", "default": 1500, "min": 0, "max": 10000, "step": 50 },
+        { "name": "utilities", "label": "Utilities ($)", "type": "number", "default": 200, "min": 0, "max": 1000, "step": 10 },
+        { "name": "groceries", "label": "Groceries ($)", "type": "number", "default": 400, "min": 0, "max": 2000, "step": 25 },
+        { "name": "transportation", "label": "Transportation ($)", "type": "number", "default": 300, "min": 0, "max": 2000, "step": 25 },
+        { "name": "entertainment", "label": "Entertainment ($)", "type": "number", "default": 150, "min": 0, "max": 1000, "step": 25 },
+        { "name": "otherExpenses", "label": "Other Expenses ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 50 }
+      ],
+      "formula": "Total Expenses = Sum of all expense categories; Net Income = Income - Total Expenses",
+      "output": { "label": "Monthly Net Income", "default": "Enter your income and expenses", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Total Expenses", "field": "totalExpenses", "format": "currency" },
+        { "label": "Expense Ratio", "field": "expenseRatio", "format": "percentage" },
+        { "label": "Savings Potential", "field": "savingsPotential", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Análisis Presupuestario Mensual",
+        "input": "Ingresos: $5,000, Gastos: Vivienda $1,500, Comida $600, Transporte $400",
+        "output": "Gastos Totales: $3,200 (64%), Ahorros: $1,800 (36%), Vivienda: 47% de gastos"
+      },
+      {
+        "title": "Optimización de Gastos",
+        "input": "Gastos mensuales totalizando $4,200 en ingresos de $6,000",
+        "output": "Ratio de Gastos: 70%, Ahorros Recomendados: 20%, Ahorros Mensuales Potenciales: $600"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "savings-calculator", "tax-calculator"],
+    "seoContent": {
+      "introduction": "Toma el control de tus gastos y entiende exactamente adónde va tu dinero con nuestra calculadora integral de gastos. Esta herramienta esencial de finanzas personales te ayuda a rastrear gastos mensuales a través de todas las categorías, analizar patrones de gasto, e identificar oportunidades para ahorrar más. Ya sea que vivas de cheque en cheque, trates de construir ahorros, o solo quieras entender mejor tus hábitos financieros, conocer tu desglose de gastos es la base de una gestión efectiva del dinero y construcción de riqueza.",
+      "benefits": [
+        "Rastrea y categoriza todos los gastos mensuales en una vista integral",
+        "Calcula ratios gasto-ingreso para entender salud financiera",
+        "Identifica patrones de gasto y áreas para ahorros potenciales",
+        "Establece metas realistas de presupuesto basadas en datos reales de gastos",
+        "Monitorea progreso hacia objetivos financieros mes a mes",
+        "Toma decisiones informadas sobre gastos, ahorro, y elecciones de estilo de vida"
+      ],
+      "steps": [
+        "Ingresa tu ingreso mensual total de todas las fuentes",
+        "Ingresa gastos para cada categoría: vivienda, servicios públicos, abarrotes, transporte, entretenimiento, y otros",
+        "Revisa los totales calculados y ratios de gastos",
+        "Analiza el desglose para identificar oportunidades de optimización de gastos",
+        "Establece metas de ahorro y rastrea progreso con el tiempo",
+        "Usa conocimientos para crear presupuestos mensuales más efectivos"
+      ],
+      "inputsExplained": [
+        "Ingreso mensual es tu pago total neto de todas las fuentes",
+        "Vivienda incluye pagos de renta/hipoteca y costos relacionados",
+        "Servicios públicos cubren electricidad, agua, internet, y otros servicios domésticos",
+        "Abarrotes incluyen compras de comida y gastos de planificación de comidas",
+        "Transporte cubre pagos de auto, gasolina, seguro, y costos de transporte",
+        "Entretenimiento incluye comer fuera, películas, hobbies, y gastos discrecionales",
+        "Otros gastos cubren artículos misceláneos como ropa, cuidado personal, y costos inesperados"
+      ],
+      "formulaExplanation": "La calculadora de gastos usa fórmulas directas de finanzas personales: Gastos Totales = Suma de todas las categorías de gastos, Ingreso Neto = Ingreso Mensual - Gastos Totales, Ratio de Gastos = (Gastos Totales ÷ Ingreso Mensual) × 100. Esto revela qué porcentaje de tu ingreso va a gastos y cuánto queda para ahorros e inversiones. La regla 50/30/20 sugiere asignar 50% a necesidades (vivienda, comida, servicios), 30% a deseos (entretenimiento, comer fuera), y 20% a ahorro/deuda. Entender estos ratios te ayuda a identificar si estás viviendo dentro de tus medios.",
+      "examples": [
+        "Una familia ganando $6,000 mensualmente con $3,200 en gastos (vivienda $1,500, comida $600, transporte $400, servicios $300, entretenimiento $200, otros $200) tiene un ratio de gastos del 53%, dejando $2,800 para ahorro y reducción de deuda.",
+        "Un profesional soltero con $4,500 ingreso y $3,150 gastos (vivienda $1,200, comida $450, transporte $350, servicios $150, entretenimiento $300, otros $700) tiene un ratio de gastos del 70%, indicando gastos excesivos con solo $1,350 disponible para ahorro.",
+        "Un estudiante con $2,200 ingreso y $1,800 gastos logra un ratio saludable de gastos del 82%, con $400 disponible para ahorro a pesar de ingreso modesto."
+      ],
+      "resultsExplanation": [
+        "Ingreso neto mensual muestra dinero restante después de pagar todos los gastos",
+        "Gastos totales muestra la suma de todas las categorías de gasto",
+        "Ratio de gastos indica qué porcentaje del ingreso va a gastos",
+        "Potencial de ahorro revela cuánto podría ahorrarse con optimización de gastos"
+      ],
+      "whoItsFor": "Esta calculadora de gastos sirve a cualquiera queriendo entender sus hábitos de gasto incluyendo individuos rastreando finanzas personales, parejas manejando presupuestos domésticos, familias planeando para hijos, estudiantes aprendiendo responsabilidad financiera, freelancers con ingresos variables, y cualquiera preparándose para cambios mayores de vida. Es particularmente valiosa para aquellos experimentando estrés financiero, planeando comprar una casa, ahorrando para jubilación, o queriendo eliminar deuda. La calculadora funciona para cualquier nivel de ingreso y ayuda a identificar estrategias personalizadas para mejor gestión del dinero.",
+      "disclaimer": "Esta calculadora de gastos proporciona guía general basada en la información que ingresa. Los gastos reales pueden variar basados en ubicación, estilo de vida, y circunstancias personales. La calculadora no considera impuestos, gastos irregulares, o situaciones de emergencia. Los resultados son estimaciones solo para propósitos educativos. Para planificación financiera integral, consulta a un asesor financiero certificado. Se recomienda rastreo regular de gastos y ajuste para presupuesto preciso. Esta herramienta no es un sustituto para consejo financiero profesional.",
+      "relatedTools": [
+        "Calculadoras de presupuesto para crear planes financieros integrales",
+        "Calculadoras de ahorro para proyectar acumulación de riqueza a largo plazo",
+        "Calculadoras de impuestos para entender cálculos de pago neto"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué porcentaje del ingreso debería ir a gastos?",
+          "answer": "La regla 50/30/20 es una buena guía: 50% para necesidades (vivienda, comida, servicios, transporte), 30% para deseos (entretenimiento, comer fuera, compras), y 20% para ahorro/deuda. Sin embargo, esto varía por circunstancias. Ganadores altos podrían asignar más a ahorro, mientras hogares de bajos ingresos pueden necesitar más para esenciales. Apunta a ratio máximo de gastos de 60-70% para asegurar ahorro adecuado. Tu ratio específico depende de ingreso, ubicación, tamaño familiar, y metas financieras."
+        },
+        {
+          "question": "¿Cómo categorizo gastos efectivamente?",
+          "answer": "Usa estas categorías estándar: Gastos fijos (renta, seguro, pagos de préstamos que no cambian), Gastos variables (abarrotes, servicios que fluctúan), y Gastos discrecionales (entretenimiento, comer fuera). Rastrea por 1-2 meses para establecer bases. Usa apps de presupuesto para categorización automática. Revisa estados bancarios/tarjetas semanalmente. Considera variaciones estacionales en gastos. Agrupa gastos pequeños en 'misceláneos' pero rástréalos individualmente cuando posible."
+        },
+        {
+          "question": "¿Qué se considera un buen ratio gasto-ingreso?",
+          "answer": "Ratios bajo 60% son excelentes (dejando mucho para ahorro), 60-70% son buenos pero podrían optimizarse, 70-80% indican gastos potenciales excesivos, y sobre 80% sugieren problemas serios de presupuesto. Sin embargo, esto varía por etapa de vida. Estudiantes podrían tener ratios más altos debido a bajo ingreso, mientras nidos vacíos podrían tener ratios menores. Compara tu ratio con hogares similares y apunta a mejorar gradualmente. Enfócate en aumentar ingreso y reducir gastos variables."
+        },
+        {
+          "question": "¿Cómo puedo reducir gastos sin sacrificar calidad de vida?",
+          "answer": "Comienza con cambios pequeños: cocina en casa en lugar de comer fuera, usa transporte público o comparte auto, compra con cupones y ofertas, cancela suscripciones no usadas, reduce uso de energía, compra marcas genéricas, y espera ofertas en compras grandes. Rastrea gastos por 30 días para identificar fugas. Establece límites de gasto por categoría. Usa efectivo en lugar de tarjetas para gastos discrecionales. Considera cambios de estilo de vida como reducir tamaño o mudarte para reducir costos fijos. Reducciones pequeñas se suman significativamente."
+        },
+        {
+          "question": "¿Debo rastrear gastos diariamente, semanalmente, o mensualmente?",
+          "answer": "Rastreo diario proporciona el mayor control y detecta gastos excesivos temprano, pero puede ser consumidor de tiempo. Revisiones semanales funcionan bien para la mayoría de personas y permiten corrección de curso a mediados de mes. Rastreo mensual es más fácil pero puede perder patrones. Usa apps de presupuesto para rastreo automático. Comienza con tu frecuencia preferida, luego ajusta basado en necesidades. Rastreo diario se recomienda cuando comenzando por primera vez o durante dietas de gasto. Revisiones semanales funcionan bien para gestión continua."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Despesas",
+    "seoTitle": "Calculadora de Despesas - Acompanhe e Calcule Despesas Mensais e Orçamento",
+    "metaDescription": "Calculadora gratuita de despesas. Acompanhe despesas mensais, calcule alocações orçamentárias e analise padrões de gastos. Perfeita para gestão financeira pessoal e planejamento orçamentário.",
+    "keywords": ["calculadora despesas", "calculadora orçamento", "rastreador despesas mensais", "calculadora gastos", "calculadora finanças pessoais"],
+    "longTailKeywords": ["como calcular despesas mensais", "calculadora rastreamento despesas", "calculadora despesas orçamento", "calculadora gastos mensal", "rastreador despesas finanças pessoais"],
+    "slug": "expense-calculator",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": ["orçamento", "despesas", "finanças pessoais", "rastreamento", "gastos"],
+    "summary": "Acompanhe despesas mensais, calcule alocações orçamentárias e analise seus padrões de gastos para melhor gestão financeira.",
+    "description": "Nossa calculadora completa de despesas ajuda você a acompanhar e categorizar despesas mensais, estabelecer metas orçamentárias e analisar padrões de gastos. Perfeita para indivíduos e famílias que buscam entender para onde vai seu dinheiro e criar orçamentos mais efetivos. Inclui categorias de despesas, detalhamentos percentuais e recomendações de economia.",
+    "instructions": [
+      "Digite seus rendimentos mensais e categorias de despesas",
+      "Digite valores para moradia, alimentação, transporte, entretenimento, etc.",
+      "Estabeleça metas de economia e percentuais orçamentários",
+      "Obtenha análise detalhada de despesas e recomendações orçamentárias"
+    ],
+    "calculatorComponent": {
+      "componentName": "ExpenseCalculator",
+      "inputs": [
+        { "name": "monthlyIncome", "label": "Monthly Income ($)", "type": "number", "default": 5000, "min": 1000, "max": 50000, "step": 100 },
+        { "name": "housing", "label": "Housing/Rent ($)", "type": "number", "default": 1500, "min": 0, "max": 10000, "step": 50 },
+        { "name": "utilities", "label": "Utilities ($)", "type": "number", "default": 200, "min": 0, "max": 1000, "step": 10 },
+        { "name": "groceries", "label": "Groceries ($)", "type": "number", "default": 400, "min": 0, "max": 2000, "step": 25 },
+        { "name": "transportation", "label": "Transportation ($)", "type": "number", "default": 300, "min": 0, "max": 2000, "step": 25 },
+        { "name": "entertainment", "label": "Entertainment ($)", "type": "number", "default": 150, "min": 0, "max": 1000, "step": 25 },
+        { "name": "otherExpenses", "label": "Other Expenses ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 50 }
+      ],
+      "formula": "Total Expenses = Sum of all expense categories; Net Income = Income - Total Expenses",
+      "output": { "label": "Monthly Net Income", "default": "Enter your income and expenses", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Total Expenses", "field": "totalExpenses", "format": "currency" },
+        { "label": "Expense Ratio", "field": "expenseRatio", "format": "percentage" },
+        { "label": "Savings Potential", "field": "savingsPotential", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Análise Orçamentária Mensal",
+        "input": "Rendimentos: $5,000, Despesas: Moradia $1,500, Alimentação $600, Transporte $400",
+        "output": "Despesas Totais: $3,200 (64%), Economias: $1,800 (36%), Moradia: 47% das despesas"
+      },
+      {
+        "title": "Otimização de Despesas",
+        "input": "Despesas mensais totalizando $4,200 em rendimentos de $6,000",
+        "output": "Razão de Despesas: 70%, Economias Recomendadas: 20%, Economias Mensais Potenciais: $600"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "savings-calculator", "tax-calculator"],
+    "seoContent": {
+      "introduction": "Tome controle de seus gastos e entenda exatamente para onde vai seu dinheiro com nossa calculadora abrangente de despesas. Esta ferramenta essencial de finanças pessoais ajuda você a rastrear despesas mensais através de todas as categorias, analisar padrões de gastos, e identificar oportunidades para economizar mais. Seja você vivendo de salário em salário, tentando construir economias, ou apenas querendo entender melhor seus hábitos financeiros, conhecer sua quebra de despesas é a base de gestão efetiva de dinheiro e construção de riqueza.",
+      "benefits": [
+        "Rastreie e categorize todas as despesas mensais em uma visão abrangente",
+        "Calcule razões despesa-renda para entender saúde financeira",
+        "Identifique padrões de gastos e áreas para economias potenciais",
+        "Defina metas realistas de orçamento baseadas em dados reais de despesas",
+        "Monitore progresso rumo a objetivos financeiros mês a mês",
+        "Tome decisões informadas sobre gastos, economia, e escolhas de estilo de vida"
+      ],
+      "steps": [
+        "Digite sua renda mensal total de todas as fontes",
+        "Insira despesas para cada categoria: moradia, utilitários, mantimentos, transporte, entretenimento, e outros",
+        "Revise os totais calculados e razões de despesas",
+        "Analise a quebra para identificar oportunidades de otimização de despesas",
+        "Defina metas de economia e rastreie progresso ao longo do tempo",
+        "Use insights para criar orçamentos mensais mais efetivos"
+      ],
+      "inputsExplained": [
+        "Renda mensal é seu pagamento total líquido de todas as fontes",
+        "Moradia inclui pagamentos de aluguel/hipoteca e custos relacionados",
+        "Utilitários cobrem eletricidade, água, internet, e outros serviços domésticos",
+        "Mantimentos incluem compras de comida e despesas de planejamento de refeições",
+        "Transporte cobre pagamentos de carro, gasolina, seguro, e custos de deslocamento",
+        "Entretenimento inclui comer fora, filmes, hobbies, e gastos discricionários",
+        "Outras despesas cobrem itens diversos como roupa, cuidados pessoais, e custos inesperados"
+      ],
+      "formulaExplanation": "A calculadora de despesas usa fórmulas diretas de finanças pessoais: Despesas Totais = Soma de todas as categorias de despesa, Renda Líquida = Renda Mensal - Despesas Totais, Razão de Despesas = (Despesas Totais ÷ Renda Mensal) × 100. Isso revela que porcentagem de sua renda vai para despesas e quanto resta para economias e investimentos. A regra 50/30/20 sugere alocar 50% para necessidades (moradia, comida, utilitários), 30% para desejos (entretenimento, comer fora), e 20% para economia/dívida. Entender estas razões ajuda você a identificar se está vivendo dentro de seus meios.",
+      "examples": [
+        "Uma família ganhando $6,000 mensalmente com $3,200 em despesas (moradia $1,500, comida $600, transporte $400, utilitários $300, entretenimento $200, outros $200) tem uma razão de despesas de 53%, deixando $2,800 para economia e redução de dívida.",
+        "Um profissional solteiro com $4,500 renda e $3,150 despesas (moradia $1,200, comida $450, transporte $350, utilitários $150, entretenimento $300, outros $700) tem uma razão de despesas de 70%, indicando gastos excessivos com apenas $1,350 disponível para economia.",
+        "Um estudante com $2,200 renda e $1,800 despesas alcança uma razão saudável de despesas de 82%, com $400 disponível para economia apesar de renda modesta."
+      ],
+      "resultsExplanation": [
+        "Renda líquida mensal mostra dinheiro restante após todos os gastos serem pagos",
+        "Despesas totais mostra a soma de todas as categorias de gastos",
+        "Razão de despesas indica que porcentagem da renda vai para despesas",
+        "Potencial de economia revela quanto poderia ser economizado com otimização de despesas"
+      ],
+      "whoItsFor": "Esta calculadora de despesas serve qualquer pessoa querendo entender seus hábitos de gastos incluindo indivíduos rastreando finanças pessoais, casais gerenciando orçamentos domésticos, famílias planejando para filhos, estudantes aprendendo responsabilidade financeira, freelancers com rendas variáveis, e qualquer pessoa se preparando para mudanças maiores de vida. É particularmente valiosa para aqueles experimentando estresse financeiro, planejando comprar uma casa, economizando para aposentadoria, ou querendo eliminar dívida. A calculadora funciona para qualquer nível de renda e ajuda a identificar estratégias personalizadas para melhor gestão de dinheiro.",
+      "disclaimer": "Esta calculadora de despesas fornece orientação geral baseada na informação que você insere. Despesas reais podem variar baseadas em localização, estilo de vida, e circunstâncias pessoais. A calculadora não considera impostos, despesas irregulares, ou situações de emergência. Resultados são estimativas apenas para propósitos educacionais. Para planejamento financeiro abrangente, consulte um consultor financeiro certificado. Rastreamento regular de despesas e ajuste é recomendado para orçamento preciso. Esta ferramenta não é um substituto para conselho financeiro profissional.",
+      "relatedTools": [
+        "Calculadoras de orçamento para criar planos financeiros abrangentes",
+        "Calculadoras de poupança para projetar acumulação de riqueza de longo prazo",
+        "Calculadoras de impostos para entender cálculos de pagamento líquido"
+      ],
+      "faqs": [
+        {
+          "question": "Que porcentagem da renda deveria ir para despesas?",
+          "answer": "A regra 50/30/20 é uma boa diretriz: 50% para necessidades (moradia, comida, utilitários, transporte), 30% para desejos (entretenimento, comer fora, compras), e 20% para economia/dívida. No entanto, isso varia por circunstâncias. Ganhadores altos podem alocar mais para economia, enquanto lares de baixa renda podem precisar mais para essenciais. Mire razão máxima de despesas de 60-70% para garantir economia adequada. Sua porcentagem específica depende de renda, localização, tamanho familiar, e metas financeiras."
+        },
+        {
+          "question": "Como categorizar despesas efetivamente?",
+          "answer": "Use estas categorias padrão: Despesas fixas (aluguel, seguro, pagamentos de empréstimos que não mudam), Despesas variáveis (mantimentos, utilitários que flutuam), e Gastos discricionários (entretenimento, comer fora). Rastreie por 1-2 meses para estabelecer bases. Use apps de orçamento para categorização automática. Revise extratos bancários/cartões semanalmente. Considere variações sazonais em despesas. Agrupe despesas pequenas em 'diversos' mas rastreie-as individualmente quando possível."
+        },
+        {
+          "question": "O que é considerado uma boa razão despesa-renda?",
+          "answer": "Razões abaixo de 60% são excelentes (deixando muito para economia), 60-70% são boas mas poderiam ser otimizadas, 70-80% indicam gastos potencialmente excessivos, e acima de 80% sugerem problemas sérios de orçamento. No entanto, isso varia por estágio de vida. Estudantes podem ter razões mais altas devido a baixa renda, enquanto ninhos vazios podem ter razões menores. Compare sua razão com lares similares e mire melhorar gradualmente. Foque em aumentar renda e reduzir despesas variáveis."
+        },
+        {
+          "question": "¿Como posso reduzir despesas sem sacrificar qualidade de vida?",
+          "answer": "Comece com mudanças pequenas: cozinhe em casa ao invés de comer fora, use transporte público ou carona, compre com cupons e vendas, cancele assinaturas não usadas, reduza uso de energia, compre marcas genéricas, e espere vendas em compras grandes. Rastreie despesas por 30 dias para identificar vazamentos. Defina limites de gastos por categoria. Use dinheiro ao invés de cartões para gastos discricionários. Considere mudanças de estilo de vida como reduzir tamanho ou mudar para reduzir custos fixos. Reduções pequenas se somam significativamente."
+        },
+        {
+          "question": "Devo rastrear despesas diariamente, semanalmente, ou mensalmente?",
+          "answer": "Rastreamento diário fornece o maior controle e detecta gastos excessivos cedo, mas pode ser consumidor de tempo. Revisões semanais funcionam bem para a maioria das pessoas e permitem correção de curso no meio do mês. Rastreamento mensal é mais fácil mas pode perder padrões. Use apps de orçamento para rastreamento automático. Comece com sua frequência preferida, então ajuste baseado em necessidades. Rastreamento diário é recomendado quando começando pela primeira vez ou durante dietas de gastos. Revisões semanais funcionam bem para gestão contínua."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Dépenses",
+    "seoTitle": "Calculateur de Dépenses - Suivez et Calculez les Dépenses Mensuelles et Budget",
+    "metaDescription": "Calculateur gratuit de dépenses. Suivez les dépenses mensuelles, calculez les allocations budgétaires et analysez les habitudes de dépenses. Parfait pour la gestion financière personnelle et planification budgétaire.",
+    "keywords": ["calculateur dépenses", "calculateur budget", "suiveur dépenses mensuelles", "calculateur dépenses", "calculateur finances personnelles"],
+    "longTailKeywords": ["comment calculer dépenses mensuelles", "calculateur suivi dépenses", "calculateur dépenses budget", "calculateur dépenses mensuelles", "suiveur dépenses finances personnelles"],
+    "slug": "expense-calculator",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": ["budget", "dépenses", "finances personnelles", "suivi", "dépenses"],
+    "summary": "Suivez les dépenses mensuelles, calculez les allocations budgétaires et analysez vos habitudes de dépenses pour une meilleure gestion financière.",
+    "description": "Notre calculateur complet de dépenses vous aide à suivre et catégoriser les dépenses mensuelles, établir des objectifs budgétaires et analyser les habitudes de dépenses. Parfait pour les individus et familles cherchant à comprendre où va leur argent et créer des budgets plus efficaces. Inclut les catégories de dépenses, ventilations en pourcentage et recommandations d'épargne.",
+    "instructions": [
+      "Entrez vos revenus mensuels et catégories de dépenses",
+      "Saisissez les montants pour logement, nourriture, transport, divertissement, etc.",
+      "Définissez les objectifs d'épargne et pourcentages budgétaires",
+      "Obtenez une analyse détaillée des dépenses et recommandations budgétaires"
+    ],
+    "calculatorComponent": {
+      "componentName": "ExpenseCalculator",
+      "inputs": [
+        { "name": "monthlyIncome", "label": "Monthly Income ($)", "type": "number", "default": 5000, "min": 1000, "max": 50000, "step": 100 },
+        { "name": "housing", "label": "Housing/Rent ($)", "type": "number", "default": 1500, "min": 0, "max": 10000, "step": 50 },
+        { "name": "utilities", "label": "Utilities ($)", "type": "number", "default": 200, "min": 0, "max": 1000, "step": 10 },
+        { "name": "groceries", "label": "Groceries ($)", "type": "number", "default": 400, "min": 0, "max": 2000, "step": 25 },
+        { "name": "transportation", "label": "Transportation ($)", "type": "number", "default": 300, "min": 0, "max": 2000, "step": 25 },
+        { "name": "entertainment", "label": "Entertainment ($)", "type": "number", "default": 150, "min": 0, "max": 1000, "step": 25 },
+        { "name": "otherExpenses", "label": "Other Expenses ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 50 }
+      ],
+      "formula": "Total Expenses = Sum of all expense categories; Net Income = Income - Total Expenses",
+      "output": { "label": "Monthly Net Income", "default": "Enter your income and expenses", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Total Expenses", "field": "totalExpenses", "format": "currency" },
+        { "label": "Expense Ratio", "field": "expenseRatio", "format": "percentage" },
+        { "label": "Savings Potential", "field": "savingsPotential", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Analyse Budgétaire Mensuelle",
+        "input": "Revenus: $5,000, Dépenses: Logement $1,500, Nourriture $600, Transport $400",
+        "output": "Dépenses Totales: $3,200 (64%), Épargnes: $1,800 (36%), Logement: 47% des dépenses"
+      },
+      {
+        "title": "Optimisation des Dépenses",
+        "input": "Dépenses mensuelles totalisant $4,200 sur $6,000 de revenus",
+        "output": "Ratio de Dépenses: 70%, Épargnes Recommandées: 20%, Épargnes Mensuelles Potentielles: $600"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "savings-calculator", "tax-calculator"],
+    "seoContent": {
+      "introduction": "Prenez le contrôle de vos dépenses et comprenez exactement où va votre argent avec notre calculatrice complète de dépenses. Cet outil essentiel de finances personnelles vous aide à suivre les dépenses mensuelles à travers toutes les catégories, analyser les habitudes de dépenses, et identifier les opportunités d'économiser plus. Que vous viviez de chèque en chèque, essayiez de construire des économies, ou souhaitiez simplement mieux comprendre vos habitudes financières, connaître votre ventilation des dépenses est la base d'une gestion efficace de l'argent et de la construction de richesse.",
+      "benefits": [
+        "Suivez et catégorisez toutes les dépenses mensuelles dans une vue d'ensemble",
+        "Calculez les ratios dépenses-revenus pour comprendre la santé financière",
+        "Identifiez les habitudes de dépenses et zones pour économies potentielles",
+        "Définissez des objectifs budgétaires réalistes basés sur des données réelles de dépenses",
+        "Surveillez les progrès vers objectifs financiers mois après mois",
+        "Prenez des décisions éclairées concernant dépenses, épargne, et choix de style de vie"
+      ],
+      "steps": [
+        "Entrez votre revenu mensuel total de toutes les sources",
+        "Saisissez les dépenses pour chaque catégorie: logement, services publics, épicerie, transport, divertissement, et autres",
+        "Examinez les totaux calculés et ratios de dépenses",
+        "Analysez la ventilation pour identifier les opportunités d'optimisation des dépenses",
+        "Définissez des objectifs d'épargne et suivez les progrès au fil du temps",
+        "Utilisez les insights pour créer des budgets mensuels plus efficaces"
+      ],
+      "inputsExplained": [
+        "Revenu mensuel est votre salaire total net de toutes les sources",
+        "Logement inclut paiements loyer/prêt immobilier et coûts connexes",
+        "Services publics couvrent électricité, eau, internet, et autres services ménagers",
+        "Épicerie inclut achats alimentaires et dépenses de planification de repas",
+        "Transport couvre paiements auto, essence, assurance, et coûts de déplacement",
+        "Divertissement inclut restauration, films, loisirs, et dépenses discrétionnaires",
+        "Autres dépenses couvrent articles divers comme vêtements, soins personnels, et coûts inattendus"
+      ],
+      "formulaExplanation": "La calculatrice de dépenses utilise des formules directes de finances personnelles: Dépenses Totales = Somme de toutes catégories de dépenses, Revenu Net = Revenu Mensuel - Dépenses Totales, Ratio de Dépenses = (Dépenses Totales ÷ Revenu Mensuel) × 100. Cela révèle quel pourcentage de votre revenu va aux dépenses et combien reste pour épargne et investissements. La règle 50/30/20 suggère d'allouer 50% aux besoins (logement, nourriture, services), 30% aux envies (divertissement, restauration), et 20% à l'épargne/dette. Comprendre ces ratios vous aide à identifier si vous vivez selon vos moyens.",
+      "examples": [
+        "Une famille gagnant 6 000 $ mensuellement avec 3 200 $ en dépenses (logement 1 500 $, nourriture 600 $, transport 400 $, services 300 $, divertissement 200 $, autres 200 $) a un ratio de dépenses de 53%, laissant 2 800 $ pour épargne et réduction de dette.",
+        "Un professionnel célibataire avec 4 500 $ revenu et 3 150 $ dépenses (logement 1 200 $, nourriture 450 $, transport 350 $, services 150 $, divertissement 300 $, autres 700 $) a un ratio de dépenses de 70%, indiquant dépenses excessives avec seulement 1 350 $ disponible pour épargne.",
+        "Un étudiant avec 2 200 $ revenu et 1 800 $ dépenses atteint un ratio sain de dépenses de 82%, avec 400 $ disponible pour épargne malgré revenu modeste."
+      ],
+      "resultsExplanation": [
+        "Revenu net mensuel montre argent restant après paiement de toutes dépenses",
+        "Dépenses totales affiche la somme de toutes catégories de dépenses",
+        "Ratio de dépenses indique quel pourcentage du revenu va aux dépenses",
+        "Potentiel d'épargne révèle combien pourrait être épargné avec optimisation des dépenses"
+      ],
+      "whoItsFor": "Cette calculatrice de dépenses sert toute personne souhaitant comprendre ses habitudes de dépenses incluant individus suivant finances personnelles, couples gérant budgets ménagers, familles planifiant pour enfants, étudiants apprenant responsabilité financière, freelances avec revenus variables, et quiconque se préparant à changements majeurs de vie. Elle est particulièrement précieuse pour ceux expérimentant stress financier, planifiant achat maison, épargnant pour retraite, ou souhaitant éliminer dette. La calculatrice fonctionne pour tout niveau de revenu et aide identifier stratégies personnalisées pour meilleure gestion de l'argent.",
+      "disclaimer": "Cette calculatrice de dépenses fournit guidance générale basée sur information que vous entrez. Dépenses réelles peuvent varier basées sur localisation, style de vie, et circonstances personnelles. La calculatrice ne tient pas compte impôts, dépenses irrégulières, ou situations d'urgence. Résultats sont estimations uniquement à des fins éducatives. Pour planification financière complète, consultez conseiller financier certifié. Suivi régulier des dépenses et ajustement recommandé pour budget précis. Cet outil n'est pas un substitut à conseils financiers professionnels.",
+      "relatedTools": [
+        "Calculatrices de budget pour créer plans financiers complets",
+        "Calculatrices d'épargne pour projeter accumulation de richesse à long terme",
+        "Calculatrices d'impôts pour comprendre calculs de salaire net"
+      ],
+      "faqs": [
+        {
+          "question": "Quel pourcentage du revenu devrait aller aux dépenses ?",
+          "answer": "La règle 50/30/20 est une bonne directive: 50% pour besoins (logement, nourriture, services, transport), 30% pour envies (divertissement, restauration, achats), et 20% pour épargne/dette. Cependant, cela varie selon circonstances. Gagneurs élevés pourraient allouer plus à épargne, tandis que ménages faibles revenus peuvent avoir besoin plus pour essentiels. Visez ratio maximum dépenses de 60-70% pour assurer épargne adéquate. Votre ratio spécifique dépend de revenu, localisation, taille familiale, et objectifs financiers."
+        },
+        {
+          "question": "Comment catégoriser les dépenses efficacement ?",
+          "answer": "Utilisez ces catégories standard: Dépenses fixes (loyer, assurance, paiements emprunt qui ne changent pas), Dépenses variables (épicerie, services qui fluctuent), et Dépenses discrétionnaires (divertissement, restauration). Suivez pendant 1-2 mois pour établir bases. Utilisez apps budgétaires pour catégorisation automatique. Examinez relevés bancaires/cartes hebdomadairement. Considérez variations saisonnières en dépenses. Regroupez petites dépenses en 'divers' mais suivez-les individuellement quand possible."
+        },
+        {
+          "question": "Qu'est-ce considéré comme un bon ratio dépenses-revenus ?",
+          "answer": "Ratios en dessous 60% sont excellents (laissant beaucoup pour épargne), 60-70% sont bons mais pourraient être optimisés, 70-80% indiquent dépenses potentiellement excessives, et au-dessus 80% suggèrent problèmes budgétaires sérieux. Cependant, cela varie selon étape de vie. Étudiants pourraient avoir ratios plus élevés dû revenu faible, tandis que nids vides pourraient avoir ratios inférieurs. Comparez votre ratio à ménages similaires et visez améliorer graduellement. Concentrez-vous sur augmenter revenu et réduire dépenses variables."
+        },
+        {
+          "question": "Comment puis-je réduire les dépenses sans sacrifier qualité de vie ?",
+          "answer": "Commencez avec changements petits: cuisinez à la maison au lieu manger dehors, utilisez transport public ou covoiturage, achetez avec coupons et ventes, annulez abonnements inutilisés, réduisez usage énergie, achetez marques génériques, et attendez ventes pour achats importants. Suivez dépenses pendant 30 jours pour identifier fuites. Définissez limites de dépenses par catégorie. Utilisez espèces au lieu cartes pour dépenses discrétionnaires. Considérez changements de style de vie comme réduire taille ou déménager pour réduire coûts fixes. Réductions petites s'ajoutent significativement."
+        },
+        {
+          "question": "Dois-je suivre les dépenses quotidiennement, hebdomadairement, ou mensuellement ?",
+          "answer": "Suivi quotidien fournit le plus grand contrôle et détecte dépenses excessives tôt, mais peut être consommateur de temps. Révisions hebdomadaires fonctionnent bien pour la plupart des gens et permettent correction de cours milieu-mois. Suivi mensuel est plus facile mais peut manquer schémas. Utilisez apps budgétaires pour suivi automatique. Commencez avec votre fréquence préférée, puis ajustez basé sur besoins. Suivi quotidien recommandé quand commençant première fois ou pendant régimes dépenses. Révisions hebdomadaires fonctionnent bien pour gestion continue."
+        }
+      ]
+    }
+  }
+}

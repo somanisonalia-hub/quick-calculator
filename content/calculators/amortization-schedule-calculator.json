@@ -1,0 +1,622 @@
+{
+  "en": {
+    "title": "Amortization Schedule Calculator",
+    "seoTitle": "Amortization Schedule Calculator - Loan Payment Breakdown",
+    "metaDescription": "Create detailed amortization schedules showing principal and interest breakdown for loans. Free calculator with year-by-year and month-by-month payment analysis.",
+    "keywords": [
+      "amortization schedule calculator",
+      "loan amortization calculator",
+      "mortgage amortization schedule",
+      "principal and interest calculator",
+      "loan payment breakdown",
+      "amortization table calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate amortization schedule",
+      "amortization schedule with extra payments",
+      "mortgage amortization calculator online",
+      "loan amortization schedule excel",
+      "principal and interest payment calculator",
+      "how does loan amortization work",
+      "amortization schedule template",
+      "calculate loan amortization schedule",
+      "mortgage amortization schedule calculator",
+      "loan payment amortization breakdown"
+    ],
+    "slug": "amortization-schedule-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "amortization",
+      "loan schedule",
+      "principal interest",
+      "payment breakdown",
+      "mortgage calculator",
+      "loan analysis"
+    ],
+    "description": "Generate detailed amortization schedules for any loan, showing exactly how each payment is split between principal and interest over time. Perfect for understanding loan repayment, mortgage analysis, and financial planning. View year-by-year summaries or detailed month-by-month breakdowns.",
+    "summary": "Generate detailed amortization schedules showing principal and interest breakdown",
+    "instructions": [
+      "Enter the loan amount (principal)",
+      "Input the annual interest rate",
+      "Specify the loan term in years",
+      "Choose to view year-by-year summary or month-by-month details",
+      "Click 'Generate Schedule' to see the complete amortization table",
+      "Use the export feature to save or print your amortization schedule"
+    ],
+    "calculatorComponent": "AmortizationScheduleCalculator",
+    "examples": [
+      {
+        "title": "30-Year Mortgage Analysis",
+        "description": "Analyzing a $200,000 mortgage at 6.5% over 30 years",
+        "input": {
+          "loanAmount": 200000,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "viewMode": "yearly"
+        },
+        "output": {
+          "monthlyPayment": 1264.14,
+          "totalPayments": 455090.40,
+          "totalInterest": 255090.40,
+          "payoffDate": "2054-01-01",
+          "interestToPrincipalRatio": 127.5
+        }
+      },
+      {
+        "title": "15-Year Mortgage Comparison",
+        "description": "Same loan amount with shorter 15-year term",
+        "input": {
+          "loanAmount": 200000,
+          "interestRate": 6.5,
+          "loanTerm": 15,
+          "viewMode": "yearly"
+        },
+        "output": {
+          "monthlyPayment": 1706.97,
+          "totalPayments": 307254.60,
+          "totalInterest": 107254.60,
+          "payoffDate": "2039-01-01",
+          "interestToPrincipalRatio": 53.6
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Understanding how your loan payments work is crucial for financial planning, and our comprehensive amortization schedule calculator makes it easy to see exactly how your payments are allocated. This powerful tool generates detailed amortization schedules that break down every payment, showing you how much goes toward interest versus principal reduction. Whether you're planning a mortgage, auto loan, or personal loan, this calculator helps you understand the true cost of borrowing and how your equity builds over time.",
+      "benefits": [
+        "See exactly how each loan payment is split between interest and principal",
+        "Understand how your loan balance decreases over time",
+        "Plan extra payments to reduce interest and payoff time",
+        "Compare different loan terms and interest rates",
+        "Track equity building for mortgages and investment properties",
+        "Make informed decisions about loan refinancing opportunities"
+      ],
+      "steps": [
+        "Enter your loan amount (the principal you want to borrow)",
+        "Input the annual interest rate for your loan",
+        "Specify the loan term in years",
+        "Optionally set a loan start date to see specific payment dates",
+        "Choose between year-by-year summary or detailed month-by-month view",
+        "Click 'Generate Schedule' to create your amortization table",
+        "Review the payment breakdown and export if needed"
+      ],
+      "inputsExplained": [
+        "Loan amount is the total principal you want to borrow",
+        "Interest rate affects how much interest you pay and payment distribution",
+        "Loan term determines the number of payments and total interest paid",
+        "Start date helps you see specific payment dates in your schedule",
+        "View mode lets you choose between summary or detailed breakdown"
+      ],
+      "formulaExplanation": "The calculator uses the standard loan payment formula to determine your monthly payment, then creates an amortization schedule by applying each payment to interest first, then principal. Early payments consist mostly of interest, while later payments are mostly principal. This shows why paying down principal early through extra payments can save significant interest.",
+      "examples": [
+        "A $200,000 mortgage at 6.5% over 30 years shows that in year 1, $12,800 goes to interest and only $2,700 to principal, while in year 30, only $100 goes to interest and $12,400 to principal",
+        "The same loan with a 15-year term shows much faster equity building - in year 5, $8,200 goes to principal compared to just $4,800 in the 30-year loan"
+      ],
+      "resultsExplanation": [
+        "Monthly payment shows your total payment amount including principal and interest",
+        "Total payments include all payments made over the life of the loan",
+        "Total interest shows how much extra you pay beyond the loan amount",
+        "Payoff date shows exactly when your loan will be paid off",
+        "Interest to principal ratio shows total interest as a percentage of the loan amount",
+        "The amortization table shows how each payment breaks down over time"
+      ],
+      "whoItsFor": "This amortization schedule calculator is essential for homeowners, prospective homebuyers, car buyers, small business owners, and anyone taking out installment loans. It's particularly valuable for understanding mortgage payments, comparing loan options, and planning extra payment strategies to save on interest costs.",
+      "disclaimer": "This calculator provides amortization schedules based on standard loan formulas. Actual payment amounts and schedules may vary based on your specific loan terms, lender fees, and payment timing. Consult with your lender for official amortization schedules.",
+      "relatedTools": [
+        "mortgage calculator",
+        "loan calculator",
+        "extra payment calculator",
+        "loan affordability calculator",
+        "debt consolidation calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is an amortization schedule?",
+          "answer": "An amortization schedule is a table that shows how each loan payment is split between interest and principal, and how your loan balance decreases over time. It helps you understand exactly how your loan is being paid off."
+        },
+        {
+          "question": "Why do early loan payments have more interest?",
+          "answer": "In the early years of a loan, most of your payment goes toward interest because you're paying interest on the full loan balance. As you pay down the principal, less interest accrues, so more of each payment goes toward principal."
+        },
+        {
+          "question": "How can I use an amortization schedule to save money?",
+          "answer": "You can use the schedule to plan extra payments toward principal, which reduces the loan balance faster and saves interest. The schedule shows exactly how much extra principal payment would affect your payoff date and total interest."
+        },
+        {
+          "question": "What's the difference between amortizing and non-amortizing loans?",
+          "answer": "Amortizing loans have fixed payments that include both principal and interest, with the proportion changing over time. Non-amortizing loans (like interest-only loans) only require interest payments initially, with a large principal payment due at the end."
+        },
+        {
+          "question": "Can I modify the amortization schedule?",
+          "answer": "While the calculator shows the standard schedule, you can modify your actual payments by making extra principal payments. Use the schedule to see how additional payments reduce your total interest and payoff time."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Tabla de Amortización",
+    "seoTitle": "Calculadora de Tabla de Amortización - Desglose de Pagos de Préstamo",
+    "metaDescription": "Crea tablas de amortización detalladas mostrando el desglose de principal e intereses para préstamos. Calculadora gratuita con análisis de pagos año por año y mes por mes.",
+    "keywords": [
+      "calculadora tabla amortización",
+      "calculadora amortización préstamo",
+      "tabla amortización hipoteca",
+      "calculadora principal intereses",
+      "desglose pagos préstamo",
+      "calculadora tabla amortización"
+    ],
+    "longTailKeywords": [
+      "cómo calcular tabla amortización",
+      "tabla amortización con pagos extra",
+      "calculadora amortización hipoteca online",
+      "tabla amortización préstamo excel",
+      "calculadora pago principal intereses",
+      "cómo funciona amortización préstamo",
+      "plantilla tabla amortización",
+      "calcular tabla amortización préstamo",
+      "calculadora tabla amortización hipoteca",
+      "desglose amortización pagos préstamo"
+    ],
+    "slug": "amortization-schedule-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "amortización",
+      "programa préstamo",
+      "principal intereses",
+      "desglose pagos",
+      "calculadora hipoteca",
+      "análisis préstamo"
+    ],
+    "description": "Genera tablas de amortización detalladas para cualquier préstamo, mostrando exactamente cómo se divide cada pago entre principal e intereses con el tiempo. Perfecto para entender el reembolso de préstamos, análisis de hipotecas y planificación financiera. Ve resúmenes año por año o desgloses detallados mes por mes.",
+    "summary": "Genera tablas de amortización detalladas mostrando desglose de principal e intereses",
+    "instructions": [
+      "Ingresa el monto del préstamo (principal)",
+      "Ingresa la tasa de interés anual",
+      "Especifica el plazo del préstamo en años",
+      "Elige ver resumen año por año o detalles mes por mes",
+      "Haz clic en 'Generar Tabla' para ver la tabla completa de amortización",
+      "Usa la función de exportación para guardar o imprimir tu tabla de amortización"
+    ],
+    "calculatorComponent": "AmortizationScheduleCalculator",
+    "examples": [
+      {
+        "title": "Análisis de Hipoteca de 30 Años",
+        "description": "Analizando una hipoteca de $200,000 al 6.5% durante 30 años",
+        "input": {
+          "loanAmount": 200000,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "viewMode": "yearly"
+        },
+        "output": {
+          "monthlyPayment": 1264.14,
+          "totalPayments": 455090.40,
+          "totalInterest": 255090.40,
+          "payoffDate": "2054-01-01",
+          "interestToPrincipalRatio": 127.5
+        }
+      },
+      {
+        "title": "Comparación de Hipoteca de 15 Años",
+        "description": "Mismo monto de préstamo con plazo más corto de 15 años",
+        "input": {
+          "loanAmount": 200000,
+          "interestRate": 6.5,
+          "loanTerm": 15,
+          "viewMode": "yearly"
+        },
+        "output": {
+          "monthlyPayment": 1706.97,
+          "totalPayments": 307254.60,
+          "totalInterest": 107254.60,
+          "payoffDate": "2039-01-01",
+          "interestToPrincipalRatio": 53.6
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender cómo funcionan tus pagos de préstamo es crucial para la planificación financiera, y nuestra calculadora completa de tabla de amortización hace fácil ver exactamente cómo se asigna cada pago. Esta herramienta poderosa genera tablas de amortización detalladas que desglosan cada pago, mostrándote cuánto va hacia intereses versus reducción de principal con el tiempo. Ya sea que estés planeando una hipoteca, préstamo de auto o préstamo personal, esta calculadora te ayuda a entender el verdadero costo de pedir prestado y cómo se construye tu capital con el tiempo.",
+      "benefits": [
+        "Ve exactamente cómo se divide cada pago de préstamo entre intereses y principal",
+        "Entiende cómo disminuye tu saldo de préstamo con el tiempo",
+        "Planeja pagos extra para reducir intereses y tiempo de liquidación",
+        "Compara diferentes plazos de préstamo y tasas de interés",
+        "Rastrea construcción de capital para hipotecas y propiedades de inversión",
+        "Toma decisiones informadas sobre oportunidades de refinanciamiento de préstamo"
+      ],
+      "steps": [
+        "Ingresa tu monto de préstamo (el principal que quieres pedir prestado)",
+        "Ingresa la tasa de interés anual para tu préstamo",
+        "Especifica el plazo del préstamo en años",
+        "Opcionalmente establece una fecha de inicio de préstamo para ver fechas específicas de pago",
+        "Elige entre resumen año por año o vista detallada mes por mes",
+        "Haz clic en 'Generar Tabla' para crear tu tabla de amortización",
+        "Revisa el desglose de pagos y exporta si es necesario"
+      ],
+      "inputsExplained": [
+        "El monto del préstamo es el principal total que quieres pedir prestado",
+        "La tasa de interés afecta cuánto pagas en intereses y distribución de pagos",
+        "El plazo del préstamo determina el número de pagos y intereses totales pagados",
+        "La fecha de inicio te ayuda a ver fechas específicas de pago en tu programa",
+        "El modo de vista te permite elegir entre resumen o desglose detallado"
+      ],
+      "formulaExplanation": "La calculadora usa la fórmula estándar de pago de préstamo para determinar tu pago mensual, luego crea una tabla de amortización aplicando cada pago a intereses primero, luego principal. Los pagos tempranos consisten mayormente en intereses, mientras que los pagos posteriores son mayormente principal. Esto muestra por qué pagar principal temprano a través de pagos extra puede ahorrar interés significativo.",
+      "examples": [
+        "Una hipoteca de $200,000 al 6.5% durante 30 años muestra que en el año 1, $12,800 van a intereses y solo $2,700 a principal, mientras que en el año 30, solo $100 van a intereses y $12,400 a principal",
+        "El mismo préstamo con un plazo de 15 años muestra construcción de capital mucho más rápida - en el año 5, $8,200 van a principal comparado con solo $4,800 en el préstamo de 30 años"
+      ],
+      "resultsExplanation": [
+        "El pago mensual muestra tu monto total de pago incluyendo principal e intereses",
+        "Los pagos totales incluyen todos los pagos realizados durante la vida del préstamo",
+        "Los intereses totales muestran cuánto extra pagas más allá del monto del préstamo",
+        "La fecha de liquidación muestra exactamente cuándo se pagará tu préstamo",
+        "La relación intereses a principal muestra intereses totales como porcentaje del monto del préstamo",
+        "La tabla de amortización muestra cómo se desglosa cada pago con el tiempo"
+      ],
+      "whoItsFor": "Esta calculadora de tabla de amortización es esencial para propietarios de vivienda, compradores potenciales de vivienda, compradores de auto, propietarios de pequeños negocios y cualquiera que tome préstamos a plazos. Es particularmente valiosa para entender pagos de hipoteca, comparar opciones de préstamo y planificar estrategias de pagos extra para ahorrar en costos de interés.",
+      "disclaimer": "Esta calculadora proporciona tablas de amortización basadas en fórmulas estándar de préstamo. Los montos reales de pago y programas pueden variar basado en tus términos específicos de préstamo, tarifas del prestamista y sincronización de pagos. Consulta con tu prestamista para programas oficiales de amortización.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora préstamo",
+        "calculadora pagos extra",
+        "calculadora capacidad préstamo",
+        "calculadora consolidación deuda"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es una tabla de amortización?",
+          "answer": "Una tabla de amortización es una tabla que muestra cómo se divide cada pago de préstamo entre intereses y principal, y cómo disminuye tu saldo de préstamo con el tiempo. Te ayuda a entender exactamente cómo se está pagando tu préstamo."
+        },
+        {
+          "question": "¿Por qué los pagos tempranos de préstamo tienen más intereses?",
+          "answer": "En los primeros años de un préstamo, la mayor parte de tu pago va hacia intereses porque estás pagando intereses sobre el saldo completo del préstamo. A medida que reduces el principal, se acumulan menos intereses, por lo que más de cada pago va hacia principal."
+        },
+        {
+          "question": "¿Cómo puedo usar una tabla de amortización para ahorrar dinero?",
+          "answer": "Puedes usar la tabla para planificar pagos extra hacia principal, lo que reduce el saldo del préstamo más rápido y ahorra intereses. La tabla muestra exactamente cuánto pago extra de principal afectaría tu fecha de liquidación y intereses totales."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre préstamos amortizantes y no amortizantes?",
+          "answer": "Los préstamos amortizantes tienen pagos fijos que incluyen tanto principal como intereses, con la proporción cambiando con el tiempo. Los préstamos no amortizantes (como préstamos solo de intereses) solo requieren pagos de intereses inicialmente, con un pago grande de principal debido al final."
+        },
+        {
+          "question": "¿Puedo modificar la tabla de amortización?",
+          "answer": "Mientras la calculadora muestra el programa estándar, puedes modificar tus pagos reales haciendo pagos extra. Usa la tabla para ver cómo pagos adicionales reducen tu interés total y tiempo de liquidación."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Tabela de Amortização",
+    "seoTitle": "Calculadora de Tabela de Amortização - Desglose de Pagamentos de Empréstimo",
+    "metaDescription": "Crie tabelas de amortização detalhadas mostrando desglose de principal e juros para empréstimos. Calculadora gratuita com análise de pagamentos ano a ano e mês a mês.",
+    "keywords": [
+      "calculadora tabela amortização",
+      "calculadora amortização empréstimo",
+      "tabela amortização hipoteca",
+      "calculadora principal juros",
+      "desglose pagamentos empréstimo",
+      "calculadora tabela amortização"
+    ],
+    "longTailKeywords": [
+      "como calcular tabela amortização",
+      "tabela amortização com pagamentos extra",
+      "calculadora amortização hipoteca online",
+      "tabela amortização empréstimo excel",
+      "calculadora pagamento principal juros",
+      "como funciona amortização empréstimo",
+      "modelo tabela amortização",
+      "calcular tabela amortização empréstimo",
+      "calculadora tabela amortização hipoteca",
+      "desglose amortização pagamentos empréstimo"
+    ],
+    "slug": "amortization-schedule-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "amortização",
+      "programa empréstimo",
+      "principal juros",
+      "desglose pagamentos",
+      "calculadora hipoteca",
+      "análise empréstimo"
+    ],
+    "description": "Gere tabelas de amortização detalhadas para qualquer empréstimo, mostrando exatamente como cada pagamento é dividido entre principal e juros ao longo do tempo. Perfeito para entender reembolso de empréstimo, análise de hipoteca e planejamento financeiro. Veja resumos ano a ano ou desgloses detalhados mês a mês.",
+    "summary": "Gere tabelas de amortização detalhadas mostrando desglose de principal e juros",
+    "instructions": [
+      "Digite o valor do empréstimo (principal)",
+      "Digite a taxa de juros anual",
+      "Especifique o prazo do empréstimo em anos",
+      "Escolha ver resumo ano a ano ou detalhes mês a mês",
+      "Clique em 'Gerar Tabela' para ver a tabela completa de amortização",
+      "Use o recurso de exportação para salvar ou imprimir sua tabela de amortização"
+    ],
+    "calculatorComponent": "AmortizationScheduleCalculator",
+    "examples": [
+      {
+        "title": "Análise de Hipoteca de 30 Anos",
+        "description": "Analisando uma hipoteca de R$ 200.000 a 6.5% por 30 anos",
+        "input": {
+          "loanAmount": 200000,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "viewMode": "yearly"
+        },
+        "output": {
+          "monthlyPayment": 1264.14,
+          "totalPayments": 455090.40,
+          "totalInterest": 255090.40,
+          "payoffDate": "2054-01-01",
+          "interestToPrincipalRatio": 127.5
+        }
+      },
+      {
+        "title": "Comparação de Hipoteca de 15 Anos",
+        "description": "Mesmo valor de empréstimo com prazo mais curto de 15 anos",
+        "input": {
+          "loanAmount": 200000,
+          "interestRate": 6.5,
+          "loanTerm": 15,
+          "viewMode": "yearly"
+        },
+        "output": {
+          "monthlyPayment": 1706.97,
+          "totalPayments": 307254.60,
+          "totalInterest": 107254.60,
+          "payoffDate": "2039-01-01",
+          "interestToPrincipalRatio": 53.6
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender como seus pagamentos de empréstimo funcionam é crucial para o planejamento financeiro, e nossa calculadora abrangente de tabela de amortização torna fácil ver exatamente como seus pagamentos são alocados. Esta ferramenta poderosa gera tabelas de amortização detalhadas que dividem cada pagamento, mostrando quanto vai para juros versus redução de principal ao longo do tempo. Seja planejando uma hipoteca, empréstimo de carro ou empréstimo pessoal, esta calculadora ajuda você a entender o verdadeiro custo de emprestar e como seu patrimônio se constrói ao longo do tempo.",
+      "benefits": [
+        "Veja exatamente como cada pagamento de empréstimo é dividido entre juros e principal",
+        "Entenda como seu saldo de empréstimo diminui ao longo do tempo",
+        "Planeje pagamentos extras para reduzir juros e tempo de liquidação",
+        "Compare diferentes prazos de empréstimo e taxas de juros",
+        "Acompanhe construção de patrimônio para hipotecas e propriedades de investimento",
+        "Tome decisões informadas sobre oportunidades de refinanciamento de empréstimo"
+      ],
+      "steps": [
+        "Digite seu valor de empréstimo (o principal que você quer emprestar)",
+        "Digite a taxa de juros anual para seu empréstimo",
+        "Especifique o prazo do empréstimo em anos",
+        "Opcionalmente defina uma data de início de empréstimo para ver datas específicas de pagamento",
+        "Escolha entre resumo ano a ano ou visão detalhada mês a mês",
+        "Clique em 'Gerar Tabela' para criar sua tabela de amortização",
+        "Revise o desglose de pagamentos e exporte se necessário"
+      ],
+      "inputsExplained": [
+        "O valor do empréstimo é o principal total que você quer emprestar",
+        "A taxa de juros afeta quanto juros você paga e distribuição de pagamentos",
+        "O prazo do empréstimo determina o número de pagamentos e juros totais pagos",
+        "A data de início ajuda você a ver datas específicas de pagamento em seu programa",
+        "O modo de visualização permite escolher entre resumo ou desglose detalhado"
+      ],
+      "formulaExplanation": "A calculadora usa a fórmula padrão de pagamento de empréstimo para determinar seu pagamento mensal, então cria uma tabela de amortização aplicando cada pagamento a juros primeiro, depois principal. Pagamentos iniciais consistem principalmente em juros, enquanto pagamentos posteriores são principalmente principal. Isso mostra por que pagar principal cedo através de pagamentos extras pode economizar juros significativos.",
+      "examples": [
+        "Uma hipoteca de R$ 200.000 a 6.5% por 30 anos mostra que no ano 1, R$ 12.800 vão para juros e apenas R$ 2.700 para principal, enquanto no ano 30, apenas R$ 100 vão para juros e R$ 12.400 para principal",
+        "O mesmo empréstimo com um prazo de 15 anos mostra construção de patrimônio muito mais rápida - no ano 5, R$ 8.200 vão para principal comparado com apenas R$ 4.800 no empréstimo de 30 anos"
+      ],
+      "resultsExplanation": [
+        "O pagamento mensal mostra seu valor total de pagamento incluindo principal e juros",
+        "Os pagamentos totais incluem todos os pagamentos feitos ao longo da vida do empréstimo",
+        "Os juros totais mostram quanto extra você paga além do valor do empréstimo",
+        "A data de liquidação mostra exatamente quando seu empréstimo será pago",
+        "A relação juros a principal mostra juros totais como porcentagem do valor do empréstimo",
+        "A tabela de amortização mostra como cada pagamento se divide ao longo do tempo"
+      ],
+      "whoItsFor": "Esta calculadora de tabela de amortização é essencial para proprietários de imóveis, compradores potenciais de imóveis, compradores de carros, proprietários de pequenos negócios e qualquer pessoa tomando empréstimos parcelados. É particularmente valiosa para entender pagamentos de hipoteca, comparar opções de empréstimo e planejar estratégias de pagamentos extras para economizar em custos de juros.",
+      "disclaimer": "Esta calculadora fornece tabelas de amortização baseadas em fórmulas padrão de empréstimo. Valores reais de pagamento e programas podem variar baseado em seus termos específicos de empréstimo, taxas do credor e sincronização de pagamentos. Consulte com seu credor para programas oficiais de amortização.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora empréstimo",
+        "calculadora pagamentos extra",
+        "calculadora capacidade empréstimo",
+        "calculadora consolidação dívida"
+      ],
+      "faqs": [
+        {
+          "question": "O que é uma tabela de amortização?",
+          "answer": "Uma tabela de amortização é uma tabela que mostra como cada pagamento de empréstimo é dividido entre juros e principal, e como seu saldo de empréstimo diminui ao longo do tempo. Ela ajuda você a entender exatamente como seu empréstimo está sendo pago."
+        },
+        {
+          "question": "Por que os pagamentos iniciais de empréstimo têm mais juros?",
+          "answer": "Nos primeiros anos de um empréstimo, a maior parte do seu pagamento vai para juros porque você está pagando juros sobre o saldo completo do empréstimo. À medida que você reduz o principal, menos juros se acumulam, então mais de cada pagamento vai para principal."
+        },
+        {
+          "question": "Como posso usar uma tabela de amortização para economizar dinheiro?",
+          "answer": "Você pode usar a tabela para planejar pagamentos extras para principal, o que reduz o saldo do empréstimo mais rápido e economiza juros. A tabela mostra exatamente quanto pagamento extra de principal afetaria sua data de liquidação e juros totais."
+        },
+        {
+          "question": "Qual é a diferença entre empréstimos amortizantes e não amortizantes?",
+          "answer": "Empréstimos amortizantes têm pagamentos fixos que incluem tanto principal quanto juros, com a proporção mudando ao longo do tempo. Empréstimos não amortizantes (como empréstimos apenas de juros) apenas requerem pagamentos de juros inicialmente, com um pagamento grande de principal devido no final."
+        },
+        {
+          "question": "Posso modificar a tabela de amortização?",
+          "answer": "Enquanto a calculadora mostra o programa padrão, você pode modificar seus pagamentos reais fazendo pagamentos extras. Use a tabela para ver como pagamentos adicionais reduzem seu juros total e tempo de liquidação."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Tableau d'Amortissement",
+    "seoTitle": "Calculateur de Tableau d'Amortissement - Ventilation des Paiements d'Emprunt",
+    "metaDescription": "Créez des tableaux d'amortissement détaillés montrant la ventilation principal et intérêts pour les emprunts. Calculateur gratuit avec analyse des paiements année par année et mois par mois.",
+    "keywords": [
+      "calculateur tableau amortissement",
+      "calculateur amortissement emprunt",
+      "tableau amortissement hypothèque",
+      "calculateur principal intérêts",
+      "ventilation paiements emprunt",
+      "calculateur tableau amortissement"
+    ],
+    "longTailKeywords": [
+      "comment calculer tableau amortissement",
+      "tableau amortissement avec paiements supplémentaires",
+      "calculateur amortissement hypothèque en ligne",
+      "tableau amortissement emprunt excel",
+      "calculateur paiement principal intérêts",
+      "comment fonctionne amortissement emprunt",
+      "modèle tableau amortissement",
+      "calculer tableau amortissement emprunt",
+      "calculateur tableau amortissement hypothèque",
+      "ventilation amortissement paiements emprunt"
+    ],
+    "slug": "amortization-schedule-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "amortissement",
+      "programme emprunt",
+      "principal intérêts",
+      "ventilation paiements",
+      "calculateur hypothèque",
+      "analyse emprunt"
+    ],
+    "description": "Générez des tableaux d'amortissement détaillés pour tout emprunt, montrant exactement comment chaque paiement est divisé entre principal et intérêts au fil du temps. Parfait pour comprendre le remboursement d'emprunt, analyse d'hypothèque et planification financière. Voyez des résumés année par année ou des ventilations détaillées mois par mois.",
+    "summary": "Générez des tableaux d'amortissement détaillés montrant ventilation principal et intérêts",
+    "instructions": [
+      "Entrez le montant de l'emprunt (principal)",
+      "Saisissez le taux d'intérêt annuel",
+      "Spécifiez la durée d'emprunt en années",
+      "Choisissez de voir résumé année par année ou détails mois par mois",
+      "Cliquez sur 'Générer Tableau' pour voir le tableau complet d'amortissement",
+      "Utilisez la fonction d'exportation pour enregistrer ou imprimer votre tableau d'amortissement"
+    ],
+    "calculatorComponent": "AmortizationScheduleCalculator",
+    "examples": [
+      {
+        "title": "Analyse d'Hypothèque de 30 Ans",
+        "description": "Analysant une hypothèque de 200 000 € à 6.5% sur 30 ans",
+        "input": {
+          "loanAmount": 200000,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "viewMode": "yearly"
+        },
+        "output": {
+          "monthlyPayment": 1264.14,
+          "totalPayments": 455090.40,
+          "totalInterest": 255090.40,
+          "payoffDate": "2054-01-01",
+          "interestToPrincipalRatio": 127.5
+        }
+      },
+      {
+        "title": "Comparaison d'Hypothèque de 15 Ans",
+        "description": "Même montant d'emprunt avec durée plus courte de 15 ans",
+        "input": {
+          "loanAmount": 200000,
+          "interestRate": 6.5,
+          "loanTerm": 15,
+          "viewMode": "yearly"
+        },
+        "output": {
+          "monthlyPayment": 1706.97,
+          "totalPayments": 307254.60,
+          "totalInterest": 107254.60,
+          "payoffDate": "2039-01-01",
+          "interestToPrincipalRatio": 53.6
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Comprendre comment vos paiements d'emprunt fonctionnent est crucial pour la planification financière, et notre calculateur complet de tableau d'amortissement rend facile de voir exactement comment vos paiements sont alloués. Cet outil puissant génère des tableaux d'amortissement détaillés qui ventilent chaque paiement, vous montrant combien va aux intérêts versus réduction de principal au fil du temps. Que vous planifiiez une hypothèque, emprunt auto ou emprunt personnel, cette calculatrice vous aide à comprendre le véritable coût d'emprunter et comment votre capitaux propres se construit au fil du temps.",
+      "benefits": [
+        "Voyez exactement comment chaque paiement d'emprunt est divisé entre intérêts et principal",
+        "Comprenez comment votre solde d'emprunt diminue au fil du temps",
+        "Planifiez des paiements supplémentaires pour réduire les intérêts et durée de remboursement",
+        "Comparez différentes durées d'emprunt et taux d'intérêt",
+        "Suivez la construction de capitaux propres pour hypothèques et propriétés d'investissement",
+        "Prenez des décisions éclairées concernant les opportunités de refinancement d'emprunt"
+      ],
+      "steps": [
+        "Entrez votre montant d'emprunt (le principal que vous voulez emprunter)",
+        "Saisissez le taux d'intérêt annuel pour votre emprunt",
+        "Spécifiez la durée d'emprunt en années",
+        "Définissez optionnellement une date de début d'emprunt pour voir des dates de paiement spécifiques",
+        "Choisissez entre résumé année par année ou vue détaillée mois par mois",
+        "Cliquez sur 'Générer Tableau' pour créer votre tableau d'amortissement",
+        "Examinez la ventilation des paiements et exportez si nécessaire"
+      ],
+      "inputsExplained": [
+        "Le montant d'emprunt est le principal total que vous voulez emprunter",
+        "Le taux d'intérêt affecte combien d'intérêts vous payez et distribution des paiements",
+        "La durée d'emprunt détermine le nombre de paiements et intérêts totaux payés",
+        "La date de début vous aide à voir des dates de paiement spécifiques dans votre programme",
+        "Le mode de vue vous permet de choisir entre résumé ou ventilation détaillée"
+      ],
+      "formulaExplanation": "Le calculateur utilise la formule de paiement d'emprunt standard pour déterminer votre paiement mensuel, puis crée un tableau d'amortissement en appliquant chaque paiement aux intérêts d'abord, puis au principal. Les paiements précoces consistent principalement en intérêts, tandis que les paiements ultérieurs sont principalement principal. Cela montre pourquoi payer le principal tôt par le biais de paiements supplémentaires peut économiser des intérêts significatifs.",
+      "examples": [
+        "Une hypothèque de 200 000 € à 6.5% sur 30 ans montre que dans l'année 1, 12 800 € vont aux intérêts et seulement 2 700 € au principal, tandis que dans l'année 30, seulement 100 € vont aux intérêts et 12 400 € au principal",
+        "Le même emprunt avec une durée de 15 ans montre une construction de capitaux propres beaucoup plus rapide - dans l'année 5, 8 200 € vont au principal comparé à seulement 4 800 € dans l'emprunt de 30 ans"
+      ],
+      "resultsExplanation": [
+        "Le paiement mensuel montre votre montant total de paiement incluant principal et intérêts",
+        "Les paiements totaux incluent tous les paiements effectués pendant la durée de vie de l'emprunt",
+        "Les intérêts totaux montrent combien d'extra vous payez au-delà du montant d'emprunt",
+        "La date de remboursement montre exactement quand votre emprunt sera remboursé",
+        "Le ratio intérêts à principal montre les intérêts totaux en pourcentage du montant d'emprunt",
+        "Le tableau d'amortissement montre comment chaque paiement se divise au fil du temps"
+      ],
+      "whoItsFor": "Ce calculateur de tableau d'amortissement est essentiel pour propriétaires immobiliers, acheteurs immobiliers potentiels, acheteurs d'auto, propriétaires de petites entreprises et quiconque prenant des emprunts échelonnés. Il est particulièrement précieux pour comprendre les paiements d'hypothèque, comparer les options d'emprunt et planifier des stratégies de paiements supplémentaires pour économiser sur les coûts d'intérêt.",
+      "disclaimer": "Ce calculateur fournit des tableaux d'amortissement basés sur des formules d'emprunt standard. Les montants de paiement réels et programmes peuvent varier selon vos termes d'emprunt spécifiques, frais de prêteur et synchronisation des paiements. Consultez votre prêteur pour des programmes d'amortissement officiels.",
+      "relatedTools": [
+        "calculateur hypothèque",
+        "calculateur emprunt",
+        "calculateur paiements supplémentaires",
+        "calculateur capacité emprunt",
+        "calculateur consolidation dette"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un tableau d'amortissement?",
+          "answer": "Un tableau d'amortissement est une table qui montre comment chaque paiement d'emprunt est divisé entre intérêts et principal, et comment votre solde d'emprunt diminue au fil du temps. Il vous aide à comprendre exactement comment votre emprunt est remboursé."
+        },
+        {
+          "question": "Pourquoi les paiements d'emprunt précoces ont-ils plus d'intérêts?",
+          "answer": "Au cours des premières années d'un emprunt, la plupart de votre paiement va aux intérêts parce que vous payez des intérêts sur le solde d'emprunt complet. À mesure que vous réduisez le principal, moins d'intérêts s'accumulent, donc plus de chaque paiement va au principal."
+        },
+        {
+          "question": "Comment puis-je utiliser un tableau d'amortissement pour économiser de l'argent?",
+          "answer": "Vous pouvez utiliser le tableau pour planifier des paiements supplémentaires vers le principal, ce qui réduit le solde d'emprunt plus rapidement et économise des intérêts. Le tableau montre exactement combien de paiement supplémentaire de principal affecterait votre date de remboursement et intérêts totaux."
+        },
+        {
+          "question": "Quelle est la différence entre emprunts amortissants et non amortissants?",
+          "answer": "Les emprunts amortissants ont des paiements fixes qui incluent à la fois principal et intérêts, avec la proportion changeant au fil du temps. Les emprunts non amortissants (comme les emprunts intérêts seulement) ne nécessitent que des paiements d'intérêts initialement, avec un paiement important de principal dû à la fin."
+        },
+        {
+          "question": "Puis-je modifier le tableau d'amortissement?",
+          "answer": "Alors que le calculateur montre le programme standard, vous pouvez modifier vos paiements réels en effectuant des paiements supplémentaires. Utilisez le tableau pour voir comment les paiements supplémentaires réduisent vos intérêts totaux et durée de remboursement."
+        }
+      ]
+    }
+  }
+}

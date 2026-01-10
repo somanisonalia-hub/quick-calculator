@@ -1,0 +1,958 @@
+{
+  "en": {
+    "title": "Waist-to-Hip Ratio Calculator",
+    "seoTitle": "Waist to Hip Ratio Calculator - Health Risk Assessment Tool",
+    "metaDescription": "Calculate your waist-to-hip ratio and assess health risks associated with body fat distribution. Free WHR calculator for cardiovascular health and body shape analysis.",
+    "keywords": [
+      "waist to hip ratio calculator",
+      "whr calculator",
+      "body fat distribution calculator",
+      "health risk assessment calculator",
+      "apple shape pear shape calculator",
+      "cardiovascular risk calculator",
+      "body shape calculator",
+      "waist hip ratio health",
+      "fat distribution calculator",
+      "body shape analysis calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate waist to hip ratio",
+      "what is my waist to hip ratio",
+      "waist to hip ratio health risks",
+      "apple shape vs pear shape",
+      "waist hip ratio calculator for women",
+      "waist hip ratio calculator for men",
+      "body fat distribution and health",
+      "waist to hip ratio normal range",
+      "cardiovascular risk assessment",
+      "body shape health implications"
+    ],
+    "slug": "waist-to-hip-ratio-calculator",
+    "category": "Health",
+    "calculatorComponent": "WaistToHipRatioCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "waist to hip ratio",
+      "body fat distribution",
+      "health risk assessment",
+      "cardiovascular health",
+      "body shape analysis",
+      "apple shape",
+      "pear shape"
+    ],
+    "summary": "Calculate your waist-to-hip ratio and assess health risks associated with body fat distribution patterns.",
+    "description": "Professional waist-to-hip ratio calculator that evaluates your body fat distribution and associated health risks. Essential for understanding cardiovascular health risks, body shape classification, and preventive health measures based on scientific guidelines.",
+    "instructions": [
+      "Enter your waist circumference at the narrowest point",
+      "Enter your hip circumference at the widest point",
+      "Select your gender",
+      "Choose measurement units (centimeters or inches)",
+      "View your WHR, health risk category, and body shape analysis"
+    ],
+    "inputs": [
+      {
+        "name": "waist",
+        "label": "Waist Circumference",
+        "type": "number",
+        "default": 80,
+        "min": 50,
+        "max": 200,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "hip",
+        "label": "Hip Circumference",
+        "type": "number",
+        "default": 95,
+        "min": 60,
+        "max": 200,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "measurementUnit",
+        "label": "Measurement Unit",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Gender",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      }
+    ],
+    "formula": "WHR = Waist Circumference ÷ Hip Circumference\nHealth Risk Categories:\nWomen: Low (<0.80), Moderate (0.80-0.84), High (≥0.85)\nMen: Low (<0.90), Moderate (0.90-0.99), High (≥1.00)\nBody Shape: Apple (>0.85 W, >0.90 M), Pear (<0.80 W, <0.90 M)",
+    "output": {
+      "label": "Waist-to-Hip Ratio",
+      "default": "0.00",
+      "format": "decimal",
+      "unit": ""
+    },
+    "additionalOutputs": [
+      {
+        "name": "healthRisk",
+        "label": "Health Risk Category",
+        "default": "Low Risk",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "bodyShape",
+        "label": "Body Shape",
+        "default": "Pear Shape",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "riskLevel",
+        "label": "Risk Level",
+        "default": "Low",
+        "format": "text",
+        "unit": ""
+      }
+    ],
+    "examples": [
+      {
+        "title": "Healthy Female (Pear Shape)",
+        "inputs": {
+          "waist": 70,
+          "hip": 95,
+          "measurementUnit": "cm",
+          "gender": "female"
+        },
+        "outputs": {
+          "waistToHipRatio": 0.74,
+          "healthRisk": "Low Risk",
+          "bodyShape": "Pear Shape",
+          "riskLevel": "Low"
+        }
+      },
+      {
+        "title": "High Risk Male (Apple Shape)",
+        "inputs": {
+          "waist": 100,
+          "hip": 95,
+          "measurementUnit": "cm",
+          "gender": "male"
+        },
+        "outputs": {
+          "waistToHipRatio": 1.05,
+          "healthRisk": "High Risk",
+          "bodyShape": "Apple Shape",
+          "riskLevel": "High"
+        }
+      },
+      {
+        "title": "Moderate Risk Female",
+        "inputs": {
+          "waist": 82,
+          "hip": 98,
+          "measurementUnit": "cm",
+          "gender": "female"
+        },
+        "outputs": {
+          "waistToHipRatio": 0.84,
+          "healthRisk": "Moderate Risk",
+          "bodyShape": "Hourglass",
+          "riskLevel": "Moderate"
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "body-fat-calculator",
+      "ideal-weight-calculator",
+      "lean-body-mass-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate your waist-to-hip ratio (WHR) with our comprehensive health assessment tool. Understanding your body fat distribution is crucial for assessing cardiovascular health risks, metabolic health, and overall wellness. Our calculator provides instant analysis of your health risk category and body shape classification.",
+      "benefits": [
+        "Assess cardiovascular disease risk based on fat distribution",
+        "Understand body shape implications for health",
+        "Identify apple vs pear body fat patterns",
+        "Get personalized health risk categorization",
+        "Learn about metabolic health indicators",
+        "Make informed decisions about lifestyle and health",
+        "Track changes in body composition over time",
+        "Understand gender-specific risk thresholds"
+      ],
+      "howToUse": [
+        "Measure your waist at the narrowest point (usually just above belly button)",
+        "Measure your hips at the widest point (usually at fullest part of buttocks)",
+        "Ensure measurements are taken on bare skin with a flexible tape measure",
+        "Stand straight with relaxed muscles and normal breathing",
+        "Enter measurements and select your gender",
+        "Review your WHR, health risk category, and body shape analysis"
+      ],
+      "formulaExplanation": "Waist-to-hip ratio is calculated by dividing waist circumference by hip circumference. The ratio indicates fat distribution patterns: lower ratios (pear shape) suggest fat storage in hips/thighs, while higher ratios (apple shape) indicate abdominal fat storage. Health risk categories are based on WHO guidelines and epidemiological studies linking WHR to cardiovascular disease, diabetes, and metabolic syndrome risk.",
+      "examples": [
+        "A woman with 70cm waist and 95cm hips has a WHR of 0.74, falling in the low risk category with pear-shaped fat distribution, indicating lower cardiovascular risk",
+        "A man with 100cm waist and 95cm hips has a WHR of 1.05, classified as high risk with apple-shaped fat distribution, suggesting increased cardiovascular concerns",
+        "A woman with 82cm waist and 98cm hips has a WHR of 0.84, in the moderate risk category with hourglass shape, requiring attention to abdominal fat reduction"
+      ],
+      "whoShouldUse": "Health-conscious individuals monitoring cardiovascular risk, medical professionals assessing patient health, individuals with family history of heart disease or diabetes, fitness enthusiasts tracking body composition changes, people undergoing weight management programs, and anyone interested in preventive health measures based on body fat distribution patterns.",
+      "importantNotes": "WHR is a valuable health indicator but should be used alongside other measures like BMI, blood pressure, and blood lipid profiles for comprehensive health assessment. Risk categories are based on population studies and individual results may vary. Always consult healthcare providers for personalized medical advice. WHR tends to increase with age and may be less reliable in very muscular individuals or those with certain medical conditions.",
+      "relatedTools": [
+        "BMI Calculator - Assess overall body weight status",
+        "Body Fat Calculator - Estimate total body fat percentage",
+        "Ideal Weight Calculator - Find healthy weight ranges",
+        "Lean Body Mass Calculator - Calculate muscle mass and body composition"
+      ],
+      "faqs": [
+        {
+          "question": "What is waist-to-hip ratio and why is it important?",
+          "answer": "Waist-to-hip ratio (WHR) measures the distribution of body fat between abdomen and hips. It's important because abdominal fat (apple shape) is associated with higher cardiovascular disease, diabetes, and metabolic syndrome risk compared to hip/thigh fat (pear shape). WHR is a better predictor of health risks than BMI alone."
+        },
+        {
+          "question": "How do I measure my waist and hips correctly?",
+          "answer": "For waist: Find the narrowest part between ribs and hips, usually just above the belly button. Measure at normal breathing level. For hips: Measure at the widest part of the buttocks. Use a flexible tape measure, keep it level, and measure on bare skin. Stand straight with relaxed muscles."
+        },
+        {
+          "question": "What are healthy WHR ranges?",
+          "answer": "Healthy ranges vary by gender: Women should aim for <0.80 (low risk), 0.80-0.84 (moderate), >0.85 (high). Men should aim for <0.90 (low risk), 0.90-0.99 (moderate), >1.00 (high). These thresholds are based on WHO guidelines and large epidemiological studies."
+        },
+        {
+          "question": "What's the difference between apple and pear shapes?",
+          "answer": "Apple shape (higher WHR) has more abdominal fat storage, associated with higher cardiovascular and metabolic disease risk. Pear shape (lower WHR) has more hip and thigh fat storage, generally associated with lower health risks. However, all body shapes benefit from healthy lifestyle habits."
+        },
+        {
+          "question": "Can WHR change over time?",
+          "answer": "Yes, WHR can improve with targeted fat loss from the abdominal area through diet, exercise, and lifestyle changes. Spot reduction isn't possible, but overall fat loss combined with muscle building can improve WHR. Regular monitoring helps track progress toward healthier fat distribution patterns."
+        },
+        {
+          "question": "Is WHR more important than BMI?",
+          "answer": "Both are valuable but measure different things. BMI assesses overall weight status, while WHR evaluates fat distribution patterns. WHR is often a better predictor of cardiovascular disease risk than BMI, especially in normal-weight individuals with abdominal fat. Use both for comprehensive health assessment."
+        },
+        {
+          "question": "What if my WHR is in the high-risk category?",
+          "answer": "High WHR indicates increased health risks but is modifiable through lifestyle changes. Focus on reducing abdominal fat through balanced diet, regular cardio and strength training, stress management, and adequate sleep. Consult healthcare providers for personalized assessment and guidance."
+        },
+        {
+          "question": "Does WHR apply to athletes and very muscular people?",
+          "answer": "WHR may be less reliable in athletes and bodybuilders due to high muscle mass. Very muscular individuals may have higher WHR without increased health risks. In these cases, combine WHR with other measures like body fat percentage, BMI, and overall health markers for accurate assessment."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Relación Cintura-Cadera",
+    "seoTitle": "Calculadora de Relación Cintura Cadera - Herramienta de Evaluación de Riesgos de Salud",
+    "metaDescription": "Calcula tu relación cintura-cadera y evalúa riesgos de salud asociados con distribución de grasa corporal. Calculadora gratuita de RCC para salud cardiovascular y análisis de forma corporal.",
+    "keywords": [
+      "calculadora relación cintura cadera",
+      "calculadora rcc",
+      "calculadora distribución grasa corporal",
+      "calculadora evaluación riesgo salud",
+      "calculadora forma manzana pera",
+      "calculadora riesgo cardiovascular",
+      "calculadora forma corporal",
+      "relación cintura cadera salud",
+      "calculadora distribución grasa",
+      "calculadora análisis forma corporal"
+    ],
+    "longTailKeywords": [
+      "cómo calcular relación cintura cadera",
+      "cuál es mi relación cintura cadera",
+      "relación cintura cadera riesgos salud",
+      "forma manzana vs forma pera",
+      "calculadora relación cintura cadera mujeres",
+      "calculadora relación cintura cadera hombres",
+      "distribución grasa corporal y salud",
+      "relación cintura cadera rango normal",
+      "evaluación riesgo cardiovascular",
+      "implicaciones salud forma corporal"
+    ],
+    "slug": "waist-to-hip-ratio-calculator",
+    "category": "Health",
+    "calculatorComponent": "WaistToHipRatioCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "relación cintura cadera",
+      "distribución grasa corporal",
+      "evaluación riesgo salud",
+      "salud cardiovascular",
+      "análisis forma corporal",
+      "forma manzana",
+      "forma pera"
+    ],
+    "summary": "Calcula tu relación cintura-cadera y evalúa riesgos de salud asociados con patrones de distribución de grasa corporal.",
+    "description": "Calculadora profesional de relación cintura-cadera que evalúa tu distribución de grasa corporal y riesgos de salud asociados. Esencial para entender riesgos de salud cardiovascular, clasificación de forma corporal y medidas preventivas de salud basadas en guías científicas.",
+    "instructions": [
+      "Ingresa tu circunferencia de cintura en el punto más estrecho",
+      "Ingresa tu circunferencia de cadera en el punto más ancho",
+      "Selecciona tu género",
+      "Elige unidades de medición (centímetros o pulgadas)",
+      "Ve tu RCC, categoría de riesgo de salud y análisis de forma corporal"
+    ],
+    "inputs": [
+      {
+        "name": "waist",
+        "label": "Circunferencia de Cintura",
+        "type": "number",
+        "default": 80,
+        "min": 50,
+        "max": 200,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "hip",
+        "label": "Circunferencia de Cadera",
+        "type": "number",
+        "default": 95,
+        "min": 60,
+        "max": 200,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "measurementUnit",
+        "label": "Unidad de Medición",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Género",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      }
+    ],
+    "formula": "RCC = Circunferencia Cintura ÷ Circunferencia Cadera\nCategorías Riesgo Salud:\nMujeres: Bajo (<0.80), Moderado (0.80-0.84), Alto (≥0.85)\nHombres: Bajo (<0.90), Moderado (0.90-0.99), Alto (≥1.00)\nForma Corporal: Manzana (>0.85 M, >0.90 H), Pera (<0.80 M, <0.90 H)",
+    "output": {
+      "label": "Relación Cintura-Cadera",
+      "default": "0.00",
+      "format": "decimal",
+      "unit": ""
+    },
+    "additionalOutputs": [
+      {
+        "name": "healthRisk",
+        "label": "Categoría de Riesgo de Salud",
+        "default": "Riesgo Bajo",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "bodyShape",
+        "label": "Forma Corporal",
+        "default": "Forma Pera",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "riskLevel",
+        "label": "Nivel de Riesgo",
+        "default": "Bajo",
+        "format": "text",
+        "unit": ""
+      }
+    ],
+    "examples": [
+      {
+        "title": "Mujer Saludable (Forma Pera)",
+        "inputs": {
+          "waist": 70,
+          "hip": 95,
+          "measurementUnit": "cm",
+          "gender": "female"
+        },
+        "outputs": {
+          "waistToHipRatio": 0.74,
+          "healthRisk": "Riesgo Bajo",
+          "bodyShape": "Forma Pera",
+          "riskLevel": "Bajo"
+        }
+      },
+      {
+        "title": "Hombre Alto Riesgo (Forma Manzana)",
+        "inputs": {
+          "waist": 100,
+          "hip": 95,
+          "measurementUnit": "cm",
+          "gender": "male"
+        },
+        "outputs": {
+          "waistToHipRatio": 1.05,
+          "healthRisk": "Riesgo Alto",
+          "bodyShape": "Forma Manzana",
+          "riskLevel": "Alto"
+        }
+      },
+      {
+        "title": "Mujer Riesgo Moderado",
+        "inputs": {
+          "waist": 82,
+          "hip": 98,
+          "measurementUnit": "cm",
+          "gender": "female"
+        },
+        "outputs": {
+          "waistToHipRatio": 0.84,
+          "healthRisk": "Riesgo Moderado",
+          "bodyShape": "Reloj de Arena",
+          "riskLevel": "Moderado"
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "body-fat-calculator",
+      "ideal-weight-calculator",
+      "lean-body-mass-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcula tu relación cintura-cadera (RCC) con nuestra completa herramienta de evaluación de salud. Entender tu distribución de grasa corporal es crucial para evaluar riesgos de salud cardiovascular, salud metabólica y bienestar general. Nuestra calculadora proporciona análisis instantáneo de tu categoría de riesgo de salud y clasificación de forma corporal.",
+      "benefits": [
+        "Evalúa riesgo de enfermedad cardiovascular basado en distribución de grasa",
+        "Entiende implicaciones de forma corporal para salud",
+        "Identifica patrones de grasa manzana vs pera",
+        "Obtén categorización de riesgo de salud personalizada",
+        "Aprende sobre indicadores de salud metabólica",
+        "Toma decisiones informadas sobre estilo de vida y salud",
+        "Rastrea cambios en composición corporal con el tiempo",
+        "Entiende umbrales de riesgo específicos por género"
+      ],
+      "howToUse": [
+        "Mide tu cintura en el punto más estrecho (usualmente justo arriba del ombligo)",
+        "Mide tus caderas en el punto más ancho (usualmente en la parte más llena de glúteos)",
+        "Asegúrate que mediciones se tomen en piel desnuda con cinta métrica flexible",
+        "Párate derecho con músculos relajados y respiración normal",
+        "Ingresa mediciones y selecciona tu género",
+        "Revisa tu RCC, categoría de riesgo de salud y análisis de forma corporal"
+      ],
+      "formulaExplanation": "La relación cintura-cadera se calcula dividiendo circunferencia de cintura por circunferencia de cadera. La proporción indica patrones de distribución de grasa: proporciones más bajas (forma pera) sugieren almacenamiento de grasa en caderas/muslos, mientras proporciones más altas (forma manzana) indican almacenamiento de grasa abdominal. Categorías de riesgo de salud se basan en guías OMS y estudios epidemiológicos vinculando RCC con riesgo de enfermedad cardiovascular, diabetes y síndrome metabólico.",
+      "examples": [
+        "Una mujer con 70cm cintura y 95cm caderas tiene RCC de 0.74, cayendo en categoría de riesgo bajo con distribución de grasa en forma pera, indicando menor riesgo cardiovascular",
+        "Un hombre con 100cm cintura y 95cm caderas tiene RCC de 1.05, clasificado como riesgo alto con distribución de grasa en forma manzana, sugiriendo preocupaciones cardiovasculares aumentadas",
+        "Una mujer con 82cm cintura y 98cm caderas tiene RCC de 0.84, en categoría de riesgo moderado con forma reloj de arena, requiriendo atención a reducción de grasa abdominal"
+      ],
+      "whoShouldUse": "Individuos conscientes de salud monitoreando riesgo cardiovascular, profesionales médicos evaluando salud de pacientes, individuos con historial familiar de enfermedad cardíaca o diabetes, entusiastas del fitness rastreando cambios de composición corporal, personas bajo programas de manejo de peso, y cualquiera interesado en medidas preventivas de salud basadas en patrones de distribución de grasa corporal.",
+      "importantNotes": "RCC es un indicador valioso de salud pero debería usarse junto con otras medidas como IMC, presión arterial y perfiles lipídicos sanguíneos para evaluación de salud comprehensiva. Categorías de riesgo se basan en estudios poblacionales y resultados individuales pueden variar. Siempre consulta proveedores de atención médica para consejo médico personalizado. RCC tiende a aumentar con edad y puede ser menos confiable en individuos muy musculosos o aquellos con ciertas condiciones médicas.",
+      "relatedTools": [
+        "Calculadora IMC - Evalúa estado de peso corporal general",
+        "Calculadora Grasa Corporal - Estima porcentaje total de grasa corporal",
+        "Calculadora Peso Ideal - Encuentra rangos saludables de peso",
+        "Calculadora Masa Corporal Magra - Calcula masa muscular y composición corporal"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es relación cintura-cadera y por qué es importante?",
+          "answer": "Relación cintura-cadera (RCC) mide la distribución de grasa corporal entre abdomen y caderas. Es importante porque grasa abdominal (forma manzana) está asociada con mayor riesgo de enfermedad cardiovascular, diabetes y síndrome metabólico comparado con grasa de cadera/muslo (forma pera). RCC es mejor predictor de riesgos de salud que IMC solo."
+        },
+        {
+          "question": "¿Cómo mido mi cintura y caderas correctamente?",
+          "answer": "Para cintura: Encuentra la parte más estrecha entre costillas y caderas, usualmente justo arriba del ombligo. Mide a nivel de respiración normal. Para caderas: Mide en la parte más ancha de glúteos. Usa cinta métrica flexible, mantén nivelada, y mide en piel desnuda. Párate derecho con músculos relajados."
+        },
+        {
+          "question": "¿Cuáles son rangos saludables de RCC?",
+          "answer": "Rangos saludables varían por género: Mujeres deberían apuntar a <0.80 (riesgo bajo), 0.80-0.84 (moderado), >0.85 (alto). Hombres deberían apuntar a <0.90 (riesgo bajo), 0.90-0.99 (moderado), >1.00 (alto). Estos umbrales se basan en guías OMS y grandes estudios epidemiológicos."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre formas manzana y pera?",
+          "answer": "Forma manzana (RCC más alto) tiene más almacenamiento de grasa abdominal, asociado con mayor riesgo de enfermedad cardiovascular y metabólica. Forma pera (RCC más bajo) tiene más almacenamiento de grasa de cadera y muslo, generalmente asociado con menores riesgos de salud. Sin embargo, todas formas corporales benefician de hábitos de estilo de vida saludable."
+        },
+        {
+          "question": "¿Puede RCC cambiar con el tiempo?",
+          "answer": "Sí, RCC puede mejorar con pérdida de grasa abdominal dirigida a través de dieta, ejercicio y cambios de estilo de vida. Reducción localizada no es posible, pero pérdida de grasa general combinada con construcción muscular puede mejorar RCC. Monitoreo regular ayuda rastrear progreso hacia patrones más saludables de distribución de grasa."
+        },
+        {
+          "question": "¿Es RCC más importante que IMC?",
+          "answer": "Ambos son valiosos pero miden cosas diferentes. IMC evalúa estado de peso general, mientras RCC evalúa patrones de distribución de grasa. RCC es a menudo mejor predictor de riesgo de enfermedad cardiovascular que IMC, especialmente en individuos de peso normal con grasa abdominal. Usa ambos para evaluación de salud comprehensiva."
+        },
+        {
+          "question": "¿Qué si mi RCC está en categoría de alto riesgo?",
+          "answer": "RCC alto indica riesgos de salud aumentados pero es modificable a través de cambios de estilo de vida. Enfócate en reducir grasa abdominal a través de dieta balanceada, cardio regular y entrenamiento de fuerza, manejo de estrés y sueño adecuado. Consulta proveedores de atención médica para evaluación y guía personalizada."
+        },
+        {
+          "question": "¿Aplica RCC a atletas y personas muy musculosas?",
+          "answer": "RCC puede ser menos confiable en atletas y fisiculturistas debido a alta masa muscular. Individuos muy musculosos pueden tener RCC más alto sin riesgos de salud aumentados. En estos casos, combina RCC con otras medidas como porcentaje de grasa corporal, IMC y marcadores generales de salud para evaluación precisa."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Relação Cintura-Quadril",
+    "seoTitle": "Calculadora de Relação Cintura Quadril - Ferramenta de Avaliação de Riscos de Saúde",
+    "metaDescription": "Calcule sua relação cintura-quadril e avalie riscos de saúde associados com distribuição de gordura corporal. Calculadora gratuita de RCQ para saúde cardiovascular e análise de forma corporal.",
+    "keywords": [
+      "calculadora relação cintura quadril",
+      "calculadora rcq",
+      "calculadora distribuição gordura corporal",
+      "calculadora avaliação risco saúde",
+      "calculadora forma maçã pera",
+      "calculadora risco cardiovascular",
+      "calculadora forma corporal",
+      "relação cintura quadril saúde",
+      "calculadora distribuição gordura",
+      "calculadora análise forma corporal"
+    ],
+    "longTailKeywords": [
+      "como calcular relação cintura quadril",
+      "qual é minha relação cintura quadril",
+      "relação cintura quadril riscos saúde",
+      "forma maçã vs forma pera",
+      "calculadora relação cintura quadril mulheres",
+      "calculadora relação cintura quadril homens",
+      "distribuição gordura corporal e saúde",
+      "relação cintura quadril faixa normal",
+      "avaliação risco cardiovascular",
+      "implicações saúde forma corporal"
+    ],
+    "slug": "waist-to-hip-ratio-calculator",
+    "category": "Health",
+    "calculatorComponent": "WaistToHipRatioCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "relação cintura quadril",
+      "distribuição gordura corporal",
+      "avaliação risco saúde",
+      "saúde cardiovascular",
+      "análise forma corporal",
+      "forma maçã",
+      "forma pera"
+    ],
+    "summary": "Calcule sua relação cintura-quadril e avalie riscos de saúde associados com padrões de distribuição de gordura corporal.",
+    "description": "Calculadora profissional de relação cintura-quadril que avalia sua distribuição de gordura corporal e riscos de saúde associados. Essencial para entender riscos de saúde cardiovascular, classificação de forma corporal e medidas preventivas de saúde baseadas em diretrizes científicas.",
+    "instructions": [
+      "Digite sua circunferência de cintura no ponto mais estreito",
+      "Digite sua circunferência de quadril no ponto mais largo",
+      "Selecione seu gênero",
+      "Escolha unidades de medição (centímetros ou polegadas)",
+      "Veja sua RCQ, categoria de risco de saúde e análise de forma corporal"
+    ],
+    "inputs": [
+      {
+        "name": "waist",
+        "label": "Circunferência da Cintura",
+        "type": "number",
+        "default": 80,
+        "min": 50,
+        "max": 200,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "hip",
+        "label": "Circunferência do Quadril",
+        "type": "number",
+        "default": 95,
+        "min": 60,
+        "max": 200,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "measurementUnit",
+        "label": "Unidade de Medição",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Gênero",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      }
+    ],
+    "formula": "RCQ = Circunferência Cintura ÷ Circunferência Quadril\nCategorias Risco Saúde:\nMulheres: Baixo (<0.80), Moderado (0.80-0.84), Alto (≥0.85)\nHomens: Baixo (<0.90), Moderado (0.90-0.99), Alto (≥1.00)\nForma Corporal: Maçã (>0.85 M, >0.90 H), Pera (<0.80 M, <0.90 H)",
+    "output": {
+      "label": "Relação Cintura-Quadril",
+      "default": "0.00",
+      "format": "decimal",
+      "unit": ""
+    },
+    "additionalOutputs": [
+      {
+        "name": "healthRisk",
+        "label": "Categoria de Risco de Saúde",
+        "default": "Risco Baixo",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "bodyShape",
+        "label": "Forma Corporal",
+        "default": "Forma Pera",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "riskLevel",
+        "label": "Nível de Risco",
+        "default": "Baixo",
+        "format": "text",
+        "unit": ""
+      }
+    ],
+    "examples": [
+      {
+        "title": "Mulher Saudável (Forma Pera)",
+        "inputs": {
+          "waist": 70,
+          "hip": 95,
+          "measurementUnit": "cm",
+          "gender": "female"
+        },
+        "outputs": {
+          "waistToHipRatio": 0.74,
+          "healthRisk": "Risco Baixo",
+          "bodyShape": "Forma Pera",
+          "riskLevel": "Baixo"
+        }
+      },
+      {
+        "title": "Homem Alto Risco (Forma Maçã)",
+        "inputs": {
+          "waist": 100,
+          "hip": 95,
+          "measurementUnit": "cm",
+          "gender": "male"
+        },
+        "outputs": {
+          "waistToHipRatio": 1.05,
+          "healthRisk": "Risco Alto",
+          "bodyShape": "Forma Maçã",
+          "riskLevel": "Alto"
+        }
+      },
+      {
+        "title": "Mulher Risco Moderado",
+        "inputs": {
+          "waist": 82,
+          "hip": 98,
+          "measurementUnit": "cm",
+          "gender": "female"
+        },
+        "outputs": {
+          "waistToHipRatio": 0.84,
+          "healthRisk": "Risco Moderado",
+          "bodyShape": "Ampulheta",
+          "riskLevel": "Moderado"
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "body-fat-calculator",
+      "ideal-weight-calculator",
+      "lean-body-mass-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule sua relação cintura-quadril (RCQ) com nossa completa ferramenta de avaliação de saúde. Entender sua distribuição de gordura corporal é crucial para avaliar riscos de saúde cardiovascular, saúde metabólica e bem-estar geral. Nossa calculadora fornece análise instantânea de sua categoria de risco de saúde e classificação de forma corporal.",
+      "benefits": [
+        "Avalie risco de doença cardiovascular baseado em distribuição de gordura",
+        "Entenda implicações de forma corporal para saúde",
+        "Identifique padrões de gordura maçã vs pera",
+        "Obtenha categorização de risco de saúde personalizada",
+        "Aprenda sobre indicadores de saúde metabólica",
+        "Tome decisões informadas sobre estilo de vida e saúde",
+        "Acompanhe mudanças em composição corporal ao longo do tempo",
+        "Entenda limites de risco específicos por gênero"
+      ],
+      "howToUse": [
+        "Meça sua cintura no ponto mais estreito (geralmente logo acima do umbigo)",
+        "Meça seus quadris no ponto mais largo (geralmente na parte mais cheia dos glúteos)",
+        "Certifique-se de que medições sejam tomadas em pele nua com fita métrica flexível",
+        "Fique em pé reto com músculos relaxados e respiração normal",
+        "Digite medições e selecione seu gênero",
+        "Revise sua RCQ, categoria de risco de saúde e análise de forma corporal"
+      ],
+      "formulaExplanation": "Relação cintura-quadril é calculada dividindo circunferência da cintura por circunferência do quadril. A proporção indica padrões de distribuição de gordura: proporções mais baixas (forma pera) sugerem armazenamento de gordura em quadris/coxas, enquanto proporções mais altas (forma maçã) indicam armazenamento de gordura abdominal. Categorias de risco de saúde são baseadas em diretrizes OMS e estudos epidemiológicos vinculando RCQ com risco de doença cardiovascular, diabetes e síndrome metabólica.",
+      "examples": [
+        "Uma mulher com 70cm cintura e 95cm quadris tem RCQ de 0.74, caindo na categoria de risco baixo com distribuição de gordura em forma pera, indicando menor risco cardiovascular",
+        "Um homem com 100cm cintura e 95cm quadris tem RCQ de 1.05, classificado como risco alto com distribuição de gordura em forma maçã, sugerindo preocupações cardiovasculares aumentadas",
+        "Uma mulher com 82cm cintura e 98cm quadris tem RCQ de 0.84, na categoria de risco moderado com forma ampulheta, requerendo atenção para redução de gordura abdominal"
+      ],
+      "whoShouldUse": "Indivíduos conscientes da saúde monitorando risco cardiovascular, profissionais médicos avaliando saúde de pacientes, indivíduos com histórico familiar de doença cardíaca ou diabetes, entusiastas do fitness acompanhando mudanças de composição corporal, pessoas sob programas de gerenciamento de peso, e qualquer pessoa interessada em medidas preventivas de saúde baseadas em padrões de distribuição de gordura corporal.",
+      "importantNotes": "RCQ é um indicador valioso de saúde mas deveria ser usado junto com outras medidas como IMC, pressão arterial e perfis lipídicos sanguíneos para avaliação de saúde abrangente. Categorias de risco são baseadas em estudos populacionais e resultados individuais podem variar. Sempre consulte provedores de cuidados de saúde para conselho médico personalizado. RCQ tende a aumentar com idade e pode ser menos confiável em indivíduos muito musculosos ou aqueles com certas condições médicas.",
+      "relatedTools": [
+        "Calculadora IMC - Avalie status geral de peso corporal",
+        "Calculadora Gordura Corporal - Estime porcentagem total de gordura corporal",
+        "Calculadora Peso Ideal - Encontre faixas saudáveis de peso",
+        "Calculadora Massa Corporal Magra - Calcule massa muscular e composição corporal"
+      ],
+      "faqs": [
+        {
+          "question": "O que é relação cintura-quadril e por que é importante?",
+          "answer": "Relação cintura-quadril (RCQ) mede a distribuição de gordura corporal entre abdômen e quadris. É importante porque gordura abdominal (forma maçã) está associada com maior risco de doença cardiovascular, diabetes e síndrome metabólica comparado com gordura de quadril/coxa (forma pera). RCQ é melhor preditor de riscos de saúde que IMC sozinho."
+        },
+        {
+          "question": "¿Como medir minha cintura e quadris corretamente?",
+          "answer": "Para cintura: Encontre a parte mais estreita entre costelas e quadris, geralmente logo acima do umbigo. Meça em nível de respiração normal. Para quadris: Meça na parte mais larga dos glúteos. Use fita métrica flexível, mantenha nivelada, e meça em pele nua. Fique em pé reto com músculos relaxados."
+        },
+        {
+          "question": "Quais são faixas saudáveis de RCQ?",
+          "answer": "Faixas saudáveis variam por gênero: Mulheres deveriam visar <0.80 (risco baixo), 0.80-0.84 (moderado), >0.85 (alto). Homens deveriam visar <0.90 (risco baixo), 0.90-0.99 (moderado), >1.00 (alto). Estes limites são baseados em diretrizes OMS e grandes estudos epidemiológicos."
+        },
+        {
+          "question": "Qual é a diferença entre formas maçã e pera?",
+          "answer": "Forma maçã (RCQ mais alto) tem mais armazenamento de gordura abdominal, associado com maior risco de doença cardiovascular e metabólica. Forma pera (RCQ mais baixo) tem mais armazenamento de gordura de quadril e coxa, geralmente associado com menores riscos de saúde. No entanto, todas formas corporais se beneficiam de hábitos de estilo de vida saudável."
+        },
+        {
+          "question": "¿Pode RCQ mudar ao longo do tempo?",
+          "answer": "Sim, RCQ pode melhorar com perda de gordura abdominal direcionada através de dieta, exercício e mudanças de estilo de vida. Redução localizada não é possível, mas perda de gordura geral combinada com construção muscular pode melhorar RCQ. Monitoramento regular ajuda acompanhar progresso rumo a padrões mais saudáveis de distribuição de gordura."
+        },
+        {
+          "question": "¿É RCQ mais importante que IMC?",
+          "answer": "Ambos são valiosos mas medem coisas diferentes. IMC avalia status geral de peso, enquanto RCQ avalia padrões de distribuição de gordura. RCQ é frequentemente melhor preditor de risco de doença cardiovascular que IMC, especialmente em indivíduos de peso normal com gordura abdominal. Use ambos para avaliação de saúde abrangente."
+        },
+        {
+          "question": "¿E se meu RCQ estiver na categoria de alto risco?",
+          "answer": "RCQ alto indica riscos de saúde aumentados mas é modificável através de mudanças de estilo de vida. Foque em reduzir gordura abdominal através de dieta balanceada, cardio regular e treinamento de força, gerenciamento de estresse e sono adequado. Consulte provedores de cuidados de saúde para avaliação e orientação personalizada."
+        },
+        {
+          "question": "¿RCQ se aplica a atletas e pessoas muito musculosas?",
+          "answer": "RCQ pode ser menos confiável em atletas e fisiculturistas devido a alta massa muscular. Indivíduos muito musculosos podem ter RCQ mais alto sem riscos de saúde aumentados. Nestes casos, combine RCQ com outras medidas como porcentagem de gordura corporal, IMC e marcadores gerais de saúde para avaliação precisa."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Rapport Taille-Hanches",
+    "seoTitle": "Calculateur de Rapport Taille Hanches - Outil d'Évaluation des Risques de Santé",
+    "metaDescription": "Calculez votre rapport taille-hanches et évaluez les risques de santé associés avec distribution de graisse corporelle. Calculateur gratuit de RTH pour santé cardiovasculaire et analyse de forme corporelle.",
+    "keywords": [
+      "calculateur rapport taille hanches",
+      "calculateur rth",
+      "calculateur distribution graisse corporelle",
+      "calculateur évaluation risque santé",
+      "calculateur forme pomme poire",
+      "calculateur risque cardiovasculaire",
+      "calculateur forme corporelle",
+      "rapport taille hanches santé",
+      "calculateur distribution graisse",
+      "calculateur analyse forme corporelle"
+    ],
+    "longTailKeywords": [
+      "comment calculer rapport taille hanches",
+      "quel est mon rapport taille hanches",
+      "rapport taille hanches risques santé",
+      "forme pomme vs forme poire",
+      "calculateur rapport taille hanches femmes",
+      "calculateur rapport taille hanches hommes",
+      "distribution graisse corporelle et santé",
+      "rapport taille hanches plage normale",
+      "évaluation risque cardiovasculaire",
+      "implications santé forme corporelle"
+    ],
+    "slug": "waist-to-hip-ratio-calculator",
+    "category": "Health",
+    "calculatorComponent": "WaistToHipRatioCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "rapport taille hanches",
+      "distribution graisse corporelle",
+      "évaluation risque santé",
+      "santé cardiovasculaire",
+      "analyse forme corporelle",
+      "forme pomme",
+      "forme poire"
+    ],
+    "summary": "Calculez votre rapport taille-hanches et évaluez les risques de santé associés avec les schémas de distribution de graisse corporelle.",
+    "description": "Calculateur professionnel de rapport taille-hanches qui évalue votre distribution de graisse corporelle et risques de santé associés. Essentiel pour comprendre les risques de santé cardiovasculaire, classification de forme corporelle et mesures préventives de santé basées sur directives scientifiques.",
+    "instructions": [
+      "Entrez votre circonférence de taille au point le plus étroit",
+      "Entrez votre circonférence de hanches au point le plus large",
+      "Sélectionnez votre genre",
+      "Choisissez unités de mesure (centimètres ou pouces)",
+      "Consultez votre RTH, catégorie de risque de santé et analyse de forme corporelle"
+    ],
+    "inputs": [
+      {
+        "name": "waist",
+        "label": "Circonférence de Taille",
+        "type": "number",
+        "default": 80,
+        "min": 50,
+        "max": 200,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "hip",
+        "label": "Circonférence de Hanches",
+        "type": "number",
+        "default": 95,
+        "min": 60,
+        "max": 200,
+        "step": 0.1,
+        "unit": "cm"
+      },
+      {
+        "name": "measurementUnit",
+        "label": "Unité de Mesure",
+        "type": "select",
+        "default": "cm",
+        "options": ["cm", "inches"]
+      },
+      {
+        "name": "gender",
+        "label": "Genre",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      }
+    ],
+    "formula": "RTH = Circonférence Taille ÷ Circonférence Hanches\nCatégories Risque Santé:\nFemmes: Faible (<0.80), Modéré (0.80-0.84), Élevé (≥0.85)\nHommes: Faible (<0.90), Modéré (0.90-0.99), Élevé (≥1.00)\nForme Corporelle: Pomme (>0.85 F, >0.90 H), Poire (<0.80 F, <0.90 H)",
+    "output": {
+      "label": "Rapport Taille-Hanches",
+      "default": "0.00",
+      "format": "decimal",
+      "unit": ""
+    },
+    "additionalOutputs": [
+      {
+        "name": "healthRisk",
+        "label": "Catégorie de Risque de Santé",
+        "default": "Risque Faible",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "bodyShape",
+        "label": "Forme Corporelle",
+        "default": "Forme Poire",
+        "format": "text",
+        "unit": ""
+      },
+      {
+        "name": "riskLevel",
+        "label": "Niveau de Risque",
+        "default": "Faible",
+        "format": "text",
+        "unit": ""
+      }
+    ],
+    "examples": [
+      {
+        "title": "Femme Saine (Forme Poire)",
+        "inputs": {
+          "waist": 70,
+          "hip": 95,
+          "measurementUnit": "cm",
+          "gender": "female"
+        },
+        "outputs": {
+          "waistToHipRatio": 0.74,
+          "healthRisk": "Risque Faible",
+          "bodyShape": "Forme Poire",
+          "riskLevel": "Faible"
+        }
+      },
+      {
+        "title": "Homme Haut Risque (Forme Pomme)",
+        "inputs": {
+          "waist": 100,
+          "hip": 95,
+          "measurementUnit": "cm",
+          "gender": "male"
+        },
+        "outputs": {
+          "waistToHipRatio": 1.05,
+          "healthRisk": "Risque Élevé",
+          "bodyShape": "Forme Pomme",
+          "riskLevel": "Élevé"
+        }
+      },
+      {
+        "title": "Femme Risque Modéré",
+        "inputs": {
+          "waist": 82,
+          "hip": 98,
+          "measurementUnit": "cm",
+          "gender": "female"
+        },
+        "outputs": {
+          "waistToHipRatio": 0.84,
+          "healthRisk": "Risque Modéré",
+          "bodyShape": "Sablier",
+          "riskLevel": "Modéré"
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "body-fat-calculator",
+      "ideal-weight-calculator",
+      "lean-body-mass-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez votre rapport taille-hanches (RTH) avec notre outil complet d'évaluation de santé. Comprendre votre distribution de graisse corporelle est crucial pour évaluer les risques de santé cardiovasculaire, santé métabolique et bien-être général. Notre calculateur fournit analyse instantanée de votre catégorie de risque de santé et classification de forme corporelle.",
+      "benefits": [
+        "Évaluez risque de maladie cardiovasculaire basé sur distribution de graisse",
+        "Comprenez implications de forme corporelle pour santé",
+        "Identifiez schémas de graisse pomme vs poire",
+        "Obtenez catégorisation de risque de santé personnalisée",
+        "Apprenez sur indicateurs de santé métabolique",
+        "Prenez décisions éclairées sur style de vie et santé",
+        "Suivez changements en composition corporelle au fil du temps",
+        "Comprenez seuils de risque spécifiques par genre"
+      ],
+      "howToUse": [
+        "Mesurez votre taille au point le plus étroit (généralement juste au-dessus du nombril)",
+        "Mesurez vos hanches au point le plus large (généralement à la partie la plus pleine des fesses)",
+        "Assurez-vous que mesures soient prises sur peau nue avec ruban à mesurer flexible",
+        "Tenez-vous droit avec muscles relâchés et respiration normale",
+        "Entrez mesures et sélectionnez votre genre",
+        "Consultez votre RTH, catégorie de risque de santé et analyse de forme corporelle"
+      ],
+      "formulaExplanation": "Rapport taille-hanches est calculé en divisant circonférence de taille par circonférence de hanches. Le rapport indique schémas de distribution de graisse : rapports plus bas (forme poire) suggèrent stockage de graisse en hanches/cuisses, tandis que rapports plus élevés (forme pomme) indiquent stockage de graisse abdominale. Catégories de risque de santé sont basées sur directives OMS et études épidémiologiques liant RTH avec risque de maladie cardiovasculaire, diabète et syndrome métabolique.",
+      "examples": [
+        "Une femme avec 70cm taille et 95cm hanches a RTH de 0.74, tombant dans catégorie de risque faible avec distribution de graisse en forme poire, indiquant moindre risque cardiovasculaire",
+        "Un homme avec 100cm taille et 95cm hanches a RTH de 1.05, classé comme risque élevé avec distribution de graisse en forme pomme, suggérant préoccupations cardiovasculaires augmentées",
+        "Une femme avec 82cm taille et 98cm hanches a RTH de 0.84, dans catégorie de risque modéré avec forme sablier, nécessitant attention à réduction de graisse abdominale"
+      ],
+      "whoShouldUse": "Individus soucieux de santé surveillant risque cardiovasculaire, professionnels médicaux évaluant santé de patients, individus avec antécédents familiaux de maladie cardiaque ou diabète, passionnés de fitness suivant changements de composition corporelle, personnes sous programmes de gestion de poids, et quiconque intéressé par mesures préventives de santé basées sur schémas de distribution de graisse corporelle.",
+      "importantNotes": "RTH est un indicateur de santé valable mais devrait être utilisé avec d'autres mesures comme IMC, tension artérielle et profils lipidiques sanguins pour évaluation de santé complète. Catégories de risque sont basées sur études populationnelles et résultats individuels peuvent varier. Consultez toujours fournisseurs de soins de santé pour conseil médical personnalisé. RTH tend à augmenter avec âge et peut être moins fiable chez individus très musclés ou ceux avec certaines conditions médicales.",
+      "relatedTools": [
+        "Calculateur IMC - Évaluez statut général de poids corporel",
+        "Calculateur Graisse Corporelle - Estimez pourcentage total de graisse corporelle",
+        "Calculateur Poids Idéal - Trouvez plages poids saines",
+        "Calculateur Masse Corporelle Maigre - Calculez masse musculaire et composition corporelle"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce que rapport taille-hanches et pourquoi est-il important ?",
+          "answer": "Rapport taille-hanches (RTH) mesure la distribution de graisse corporelle entre abdomen et hanches. Il est important parce que graisse abdominale (forme pomme) est associée avec plus haut risque de maladie cardiovasculaire, diabète et syndrome métabolique comparé à graisse hanche/cuisse (forme poire). RTH est meilleur prédicteur de risques de santé qu'IMC seul."
+        },
+        {
+          "question": "¿Comment mesurer ma taille et hanches correctement ?",
+          "answer": "Pour taille : Trouvez la partie la plus étroite entre côtes et hanches, généralement juste au-dessus du nombril. Mesurez à niveau de respiration normale. Pour hanches : Mesurez à la partie la plus large des fesses. Utilisez ruban à mesurer flexible, gardez de niveau, et mesurez sur peau nue. Tenez-vous droit avec muscles relâchés."
+        },
+        {
+          "question": "Quelles sont plages saines de RTH ?",
+          "answer": "Plages saines varient par genre : Femmes devraient viser <0.80 (risque faible), 0.80-0.84 (modéré), >0.85 (élevé). Hommes devraient viser <0.90 (risque faible), 0.90-0.99 (modéré), >1.00 (élevé). Ces seuils sont basés sur directives OMS et grandes études épidémiologiques."
+        },
+        {
+          "question": "Quelle est la différence entre formes pomme et poire ?",
+          "answer": "Forme pomme (RTH plus élevé) a plus de stockage de graisse abdominale, associé avec plus haut risque de maladie cardiovasculaire et métabolique. Forme poire (RTH plus bas) a plus de stockage de graisse hanche/cuisse, généralement associé avec moindres risques de santé. Cependant, toutes formes corporelles bénéficient d'habitudes de style de vie sain."
+        },
+        {
+          "question": "¿RTH peut-il changer au fil du temps ?",
+          "answer": "Oui, RTH peut s'améliorer avec perte de graisse abdominale ciblée à travers régime, exercice et changements de style de vie. Réduction localisée n'est pas possible, mais perte de graisse générale combinée avec construction musculaire peut améliorer RTH. Surveillance régulière aide suivre progrès vers schémas plus sains de distribution de graisse."
+        },
+        {
+          "question": "¿RTH est-il plus important qu'IMC ?",
+          "answer": "Les deux sont valables mais mesurent des choses différentes. IMC évalue statut général de poids, tandis que RTH évalue schémas de distribution de graisse. RTH est souvent meilleur prédicteur de risque de maladie cardiovasculaire qu'IMC, spécialement chez individus de poids normal avec graisse abdominale. Utilisez les deux pour évaluation de santé complète."
+        },
+        {
+          "question": "¿Que faire si mon RTH est dans catégorie de haut risque ?",
+          "answer": "RTH élevé indique risques de santé augmentés mais est modifiable à travers changements de style de vie. Concentrez-vous sur réduire graisse abdominale à travers régime équilibré, cardio régulier et entraînement de force, gestion de stress et sommeil adéquat. Consultez fournisseurs de soins de santé pour évaluation et guidance personnalisée."
+        },
+        {
+          "question": "¿RTH s'applique-t-il à athlètes et personnes très musclées ?",
+          "answer": "RTH peut être moins fiable chez athlètes et bodybuilders dû à haute masse musculaire. Individus très musclés peuvent avoir RTH plus élevé sans risques de santé augmentés. Dans ces cas, combinez RTH avec d'autres mesures comme pourcentage de graisse corporelle, IMC et marqueurs généraux de santé pour évaluation précise."
+        }
+      ]
+    }
+  }
+}

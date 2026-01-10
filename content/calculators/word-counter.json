@@ -1,0 +1,462 @@
+{
+  "en": {
+    "title": "Word Counter",
+    "seoTitle": "Word Counter - Count Words, Characters, and Reading Time",
+    "metaDescription": "Free online word counter. Count words, characters, sentences, and paragraphs. Calculate reading time and writing metrics. Perfect for writers, students, and content creators.",
+    "keywords": ["word counter", "character counter", "reading time calculator", "text analyzer", "writing tool"],
+    "longTailKeywords": ["how to count words online", "character counter with spaces", "reading time calculator", "text statistics tool", "writing metrics calculator"],
+    "slug": "word-counter-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["writing", "text analysis", "word count", "content creation", "education"],
+    "summary": "Count words, characters, sentences, and paragraphs while calculating estimated reading time for your text.",
+    "description": "Our comprehensive word counter provides detailed text analysis including word count, character count (with and without spaces), sentence count, paragraph count, and estimated reading time. Essential tool for writers, students, bloggers, and content creators who need to meet word count requirements or analyze text metrics.",
+    "instructions": [
+      "Paste or type your text in the input area",
+      "Get instant word count, character count, and text statistics",
+      "View estimated reading time based on average reading speed",
+      "See breakdown of sentences, paragraphs, and other metrics"
+    ],
+    "calculatorComponent": {
+      "componentName": "WordCounter",
+      "inputs": [
+        { "name": "text", "label": "Enter your text here", "type": "textarea", "default": "", "placeholder": "Paste or type your text here to count words, characters, and more..." }
+      ],
+      "formula": "Word count = number of words, Character count = total characters, Reading time = (words ÷ 200) × 60 seconds",
+      "output": { "label": "Word Count", "default": "Enter text above to see statistics", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Character Count (with spaces)", "field": "charactersWithSpaces", "format": "number" },
+        { "label": "Character Count (no spaces)", "field": "charactersNoSpaces", "format": "number" },
+        { "label": "Sentence Count", "field": "sentences", "format": "number" },
+        { "label": "Paragraph Count", "field": "paragraphs", "format": "number" },
+        { "label": "Estimated Reading Time", "field": "readingTime", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Blog Post",
+        "input": "Sample text with 50 words...",
+        "output": "Words: 50, Characters: 285, Sentences: 4, Reading Time: 15 seconds"
+      },
+      {
+        "title": "Academic Essay",
+        "input": "Essay content with 800 words...",
+        "output": "Words: 800, Characters: 4,320, Sentences: 45, Reading Time: 4 minutes"
+      }
+    ],
+    "relatedCalculators": ["percent-calculator", "mean-median-mode-calculator", "gpa-calculator"],
+    "seoContent": {
+      "introduction": "Master text analysis with our comprehensive word counter that provides detailed metrics for writers, students, and content creators. Whether you're writing essays, blog posts, social media content, or professional documents, understanding your text statistics is crucial for meeting requirements and optimizing readability. Our advanced word counter goes beyond basic counting to analyze reading time, sentence structure, and text complexity, helping you create more effective written content. From academic papers to marketing copy, this tool provides the insights you need to improve your writing and meet editorial standards.",
+      "benefits": [
+        "Count words, characters (with/without spaces), and text elements instantly",
+        "Calculate estimated reading time based on average reading speeds",
+        "Analyze sentence and paragraph structure for better readability",
+        "Meet word count requirements for assignments, articles, and submissions",
+        "Optimize content length for different platforms and audiences",
+        "Improve writing quality by understanding text statistics",
+        "Track writing progress and productivity metrics",
+        "Ensure compliance with editorial guidelines and requirements"
+      ],
+      "steps": [
+        "Paste or type your text into the input area",
+        "Get instant word count and character statistics",
+        "Review sentence and paragraph counts",
+        "Check estimated reading time for your audience",
+        "Analyze text metrics to improve your writing"
+      ],
+      "inputsExplained": [
+        "Text input accepts any written content from short phrases to long documents",
+        "Supports various formats including plain text, copied content, and typed input",
+        "Handles different languages and special characters",
+        "Processes text in real-time as you type or paste"
+      ],
+      "formulaExplanation": "Word counting identifies spaces and punctuation to count words accurately. Character count includes/excludes spaces based on specification. Sentence count uses punctuation marks (periods, question marks, exclamation points). Paragraph count uses line breaks or double spaces. Reading time calculation: Words ÷ 200 × 60 seconds (average reading speed of 200 words per minute). These metrics help writers understand content length, complexity, and audience engagement potential.",
+      "examples": [
+        "Blog post of 500 words takes approximately 2.5 minutes to read, with 45 sentences and 8 paragraphs for optimal online engagement.",
+        "Academic essay of 2,000 words provides 10 minutes reading time, with 120 sentences and 15 paragraphs for comprehensive analysis.",
+        "Social media post of 150 words delivers 45 seconds reading time, with 8 sentences for quick consumption and maximum engagement."
+      ],
+      "resultsExplanation": [
+        "Word count shows total words in your text",
+        "Character counts (with/without spaces) for different formatting needs",
+        "Sentence and paragraph counts indicate text structure",
+        "Reading time estimates help plan content consumption",
+        "All metrics update in real-time as you edit text"
+      ],
+      "whoItsFor": "This word counter serves students meeting assignment requirements, writers tracking manuscript progress, bloggers optimizing post length, content marketers analyzing engagement metrics, journalists adhering to editorial standards, academics preparing research papers, social media managers planning content strategy, and educators teaching writing skills. It's particularly valuable for those working with word limits, optimizing content for SEO, improving readability scores, and understanding audience engagement patterns. The tool works for any writing project from short social posts to lengthy academic theses.",
+      "disclaimer": "This word counter provides statistical analysis based on standard text processing algorithms. Reading time estimates are approximations based on average reading speeds (200 words per minute) and may vary by individual reader, content complexity, and language. Word and character counts follow common conventions but may differ slightly from other tools due to punctuation and formatting considerations. This tool is designed for informational purposes and should not replace professional editing or publishing standards.",
+      "relatedTools": [
+        "Percentage calculators for analyzing text composition",
+        "Statistical calculators for analyzing writing patterns",
+        "Grade calculators for academic writing requirements"
+      ],
+      "faqs": [
+        {
+          "question": "How accurate is the word count compared to Microsoft Word or Google Docs?",
+          "answer": "Our word counter uses industry-standard algorithms and should match word processing software within 1-2% for most text. Differences can occur with complex formatting, footnotes, or special characters. For critical documents, always verify with your target platform. Our counter is designed for quick analysis and general writing guidance, not as a substitute for official word processing tools."
+        },
+        {
+          "question": "What's considered a good reading time for different types of content?",
+          "answer": "Blog posts: 3-5 minutes (600-1,000 words), Articles: 5-8 minutes (1,000-1,600 words), Academic papers: 10-15 minutes (2,000-3,000 words), Social posts: 15-30 seconds (50-100 words), Emails: 1-2 minutes (200-400 words). Reading time depends on content complexity, but these guidelines help optimize engagement. Use our calculator to hit your target reading time."
+        },
+        {
+          "question": "How does the reading time calculation work?",
+          "answer": "Reading time = (Word count ÷ 200) × 60 seconds. This assumes average reading speed of 200 words per minute (common for adults reading English). Actual reading time varies by content complexity, reader familiarity, and individual reading speed. Complex technical content may take 30-50% longer. Consider your audience when planning content length."
+        },
+        {
+          "question": "Why do character counts differ with and without spaces?",
+          "answer": "Character count with spaces includes all characters including spaces between words. Character count without spaces excludes spaces, showing only letters, numbers, and punctuation. Some platforms (like Twitter) count with spaces, while others (like SMS) may not. Database fields often specify character limits with or without spaces. Choose the appropriate count for your specific use case."
+        },
+        {
+          "question": "How can I improve my writing using word count statistics?",
+          "answer": "Use average sentence length (words ÷ sentences) to check readability - aim for 15-20 words per sentence. Paragraph count indicates content structure - 3-5 sentences per paragraph works well. Reading time helps ensure content isn't too long or short. Character density (characters ÷ words) shows writing style. Track these metrics over time to improve your writing efficiency and effectiveness."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Contador de Palabras",
+    "seoTitle": "Contador de Palabras - Cuenta Palabras, Caracteres y Tiempo de Lectura",
+    "metaDescription": "Contador de palabras gratuito en línea. Cuenta palabras, caracteres, oraciones y párrafos. Calcula tiempo de lectura y métricas de escritura. Perfecto para escritores, estudiantes y creadores de contenido.",
+    "keywords": ["contador palabras", "contador caracteres", "calculadora tiempo lectura", "analizador texto", "herramienta escritura"],
+    "longTailKeywords": ["cómo contar palabras online", "contador caracteres con espacios", "calculadora tiempo lectura", "herramienta estadísticas texto", "calculadora métricas escritura"],
+    "slug": "word-counter-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["escritura", "análisis texto", "conteo palabras", "creación contenido", "educación"],
+    "summary": "Cuenta palabras, caracteres, oraciones y párrafos mientras calcula tiempo estimado de lectura para tu texto.",
+    "description": "Nuestro completo contador de palabras proporciona análisis detallado de texto incluyendo conteo de palabras, conteo de caracteres (con y sin espacios), conteo de oraciones, conteo de párrafos y tiempo estimado de lectura. Herramienta esencial para escritores, estudiantes, bloggers y creadores de contenido que necesitan cumplir con requisitos de conteo de palabras o analizar métricas de texto.",
+    "instructions": [
+      "Pega o escribe tu texto en el área de entrada",
+      "Obtén conteo instantáneo de palabras, caracteres y estadísticas de texto",
+      "Ve tiempo estimado de lectura basado en velocidad de lectura promedio",
+      "Ve desglose de oraciones, párrafos y otras métricas"
+    ],
+    "calculatorComponent": {
+      "componentName": "WordCounter",
+      "inputs": [
+        { "name": "text", "label": "Enter your text here", "type": "textarea", "default": "", "placeholder": "Paste or type your text here to count words, characters, and more..." }
+      ],
+      "formula": "Word count = number of words, Character count = total characters, Reading time = (words ÷ 200) × 60 seconds",
+      "output": { "label": "Word Count", "default": "Enter text above to see statistics", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Character Count (with spaces)", "field": "charactersWithSpaces", "format": "number" },
+        { "label": "Character Count (no spaces)", "field": "charactersNoSpaces", "format": "number" },
+        { "label": "Sentence Count", "field": "sentences", "format": "number" },
+        { "label": "Paragraph Count", "field": "paragraphs", "format": "number" },
+        { "label": "Estimated Reading Time", "field": "readingTime", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Publicación de Blog",
+        "input": "Texto de muestra con 50 palabras...",
+        "output": "Palabras: 50, Caracteres: 285, Oraciones: 4, Tiempo Lectura: 15 segundos"
+      },
+      {
+        "title": "Ensayo Académico",
+        "input": "Contenido de ensayo con 800 palabras...",
+        "output": "Palabras: 800, Caracteres: 4,320, Oraciones: 45, Tiempo Lectura: 4 minutos"
+      }
+    ],
+    "relatedCalculators": ["percent-calculator", "mean-median-mode-calculator", "gpa-calculator"],
+    "seoContent": {
+      "introduction": "Domina análisis de texto con nuestra calculadora integral de palabras que proporciona métricas detalladas para escritores, estudiantes, y creadores de contenido. Ya sea que escribas ensayos, publicaciones de blog, contenido de redes sociales, o documentos profesionales, entender tus estadísticas de texto es crucial para cumplir requerimientos y optimizar legibilidad. Nuestra calculadora avanzada de palabras va más allá del conteo básico para analizar tiempo de lectura, estructura de oraciones, y complejidad de texto, ayudándote a crear contenido escrito más efectivo. Desde trabajos académicos hasta copias de marketing, esta herramienta proporciona las perspectivas que necesitas para mejorar tu escritura y cumplir estándares editoriales.",
+      "benefits": [
+        "Cuenta palabras, caracteres (con/sin espacios), y elementos de texto instantáneamente",
+        "Calcula tiempo estimado de lectura basado en velocidades promedio de lectura",
+        "Analiza estructura de oraciones y párrafos para mejor legibilidad",
+        "Cumple requerimientos de conteo de palabras para tareas, artículos, y envíos",
+        "Optimiza longitud de contenido para diferentes plataformas y audiencias",
+        "Mejora calidad de escritura entendiendo estadísticas de texto",
+        "Rastrea progreso de escritura y métricas de productividad",
+        "Asegura cumplimiento con guías editoriales y requerimientos"
+      ],
+      "steps": [
+        "Pega o escribe tu texto en el área de entrada",
+        "Obtén conteo instantáneo de palabras y estadísticas de caracteres",
+        "Revisa conteos de oraciones y párrafos",
+        "Verifica tiempo estimado de lectura para tu audiencia",
+        "Analiza métricas de texto para mejorar tu escritura"
+      ],
+      "inputsExplained": [
+        "Entrada de texto acepta cualquier contenido escrito desde frases cortas hasta documentos largos",
+        "Soporta varios formatos incluyendo texto plano, contenido copiado, y entrada tecleada",
+        "Maneja diferentes idiomas y caracteres especiales",
+        "Procesa texto en tiempo real mientras escribes o pegas"
+      ],
+      "formulaExplanation": "Conteo de palabras identifica espacios y puntuación para contar palabras con precisión. Conteo de caracteres incluye/excluye espacios basado en especificación. Conteo de oraciones usa signos de puntuación (puntos, signos de interrogación, signos de exclamación). Conteo de párrafos usa saltos de línea o espacios dobles. Cálculo de tiempo de lectura: Palabras ÷ 200 × 60 segundos (velocidad promedio de lectura de 200 palabras por minuto). Estas métricas ayudan a escritores entender longitud de contenido, complejidad, y potencial de engagement de audiencia.",
+      "examples": [
+        "Publicación de blog de 500 palabras toma aproximadamente 2.5 minutos leer, con 45 oraciones y 8 párrafos para engagement óptimo online.",
+        "Ensayo académico de 2,000 palabras proporciona 10 minutos de tiempo de lectura, con 120 oraciones y 15 párrafos para análisis comprehensivo.",
+        "Publicación de redes sociales de 150 palabras entrega 45 segundos de tiempo de lectura, con 8 oraciones para consumo rápido y máximo engagement."
+      ],
+      "resultsExplanation": [
+        "Conteo de palabras muestra palabras totales en tu texto",
+        "Conteos de caracteres (con/sin espacios) para diferentes necesidades de formato",
+        "Conteos de oraciones y párrafos indican estructura de texto",
+        "Estimaciones de tiempo de lectura ayudan planear consumo de contenido",
+        "Todas métricas se actualizan en tiempo real mientras editas texto"
+      ],
+      "whoItsFor": "Esta calculadora de palabras sirve a estudiantes cumpliendo requerimientos de tareas, escritores rastreando progreso de manuscritos, bloggers optimizando longitud de publicaciones, creadores de contenido analizando métricas de engagement, periodistas adhiriéndose a estándares editoriales, académicos preparando trabajos de investigación, gerentes de redes sociales planeando estrategia de contenido, y educadores enseñando habilidades de escritura. Es particularmente valiosa para aquellos trabajando con límites de palabras, optimizando contenido para SEO, mejorando puntajes de legibilidad, y entendiendo patrones de engagement de audiencia. La herramienta funciona para cualquier proyecto de escritura desde publicaciones sociales cortas hasta tesis académicas largas.",
+      "disclaimer": "Esta calculadora de palabras proporciona análisis estadístico basado en algoritmos estándar de procesamiento de texto. Estimaciones de tiempo de lectura son aproximaciones basadas en velocidades promedio de lectura (200 palabras por minuto) y pueden variar por lector individual, complejidad de contenido, e idioma. Conteos de palabras y caracteres siguen convenciones comunes pero pueden diferir ligeramente de otras herramientas debido a consideraciones de puntuación y formato. Esta herramienta está diseñada para propósitos informativos y no debería reemplazar edición profesional o estándares de publicación.",
+      "relatedTools": [
+        "Calculadoras de porcentaje para analizar composición de texto",
+        "Calculadoras estadísticas para analizar patrones de escritura",
+        "Calculadoras de calificaciones para requerimientos de escritura académica"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué tan preciso es el conteo de palabras comparado con Microsoft Word o Google Docs?",
+          "answer": "Nuestra calculadora de palabras usa algoritmos estándar de industria y debería coincidir con software de procesamiento de palabras dentro de 1-2% para la mayoría del texto. Diferencias pueden ocurrir con formato complejo, notas al pie, o caracteres especiales. Para documentos críticos, siempre verifica con tu plataforma objetivo. Nuestra calculadora está diseñada para análisis rápido y guía general de escritura, no como sustituto para herramientas oficiales de procesamiento de palabras."
+        },
+        {
+          "question": "¿Qué se considera un buen tiempo de lectura para diferentes tipos de contenido?",
+          "answer": "Publicaciones de blog: 3-5 minutos (600-1,000 palabras), Artículos: 5-8 minutos (1,000-1,600 palabras), Trabajos académicos: 10-15 minutos (2,000-3,000 palabras), Publicaciones sociales: 15-30 segundos (50-100 palabras), Emails: 1-2 minutos (200-400 palabras). Tiempo de lectura depende de complejidad de contenido, pero estas guías ayudan optimizar engagement. Usa nuestra calculadora para alcanzar tu tiempo de lectura objetivo."
+        },
+        {
+          "question": "¿Cómo funciona el cálculo de tiempo de lectura?",
+          "answer": "Tiempo de lectura = (Conteo de palabras ÷ 200) × 60 segundos. Esto asume velocidad promedio de lectura de 200 palabras por minuto (común para adultos leyendo inglés). Tiempo real de lectura varía por complejidad de contenido, familiaridad del lector, y velocidad individual de lectura. Contenido técnico complejo puede tomar 30-50% más tiempo. Considera tu audiencia al planear longitud de contenido."
+        },
+        {
+          "question": "¿Por qué difieren conteos de caracteres con y sin espacios?",
+          "answer": "Conteo de caracteres con espacios incluye todos los caracteres incluyendo espacios entre palabras. Conteo de caracteres sin espacios excluye espacios, mostrando solo letras, números, y puntuación. Algunas plataformas (como Twitter) cuentan con espacios, mientras otras (como SMS) pueden no hacerlo. Campos de base de datos a menudo especifican límites de caracteres con o sin espacios. Elige el conteo apropiado para tu caso de uso específico."
+        },
+        {
+          "question": "¿Cómo puedo mejorar mi escritura usando estadísticas de conteo de palabras?",
+          "answer": "Usa longitud promedio de oración (palabras ÷ oraciones) para verificar legibilidad - apunta a 15-20 palabras por oración. Conteo de párrafos indica estructura de contenido - 3-5 oraciones por párrafo funcionan bien. Tiempo de lectura ayuda asegurar contenido no es demasiado largo o corto. Densidad de caracteres (caracteres ÷ palabras) muestra estilo de escritura. Rastrea estas métricas con el tiempo para mejorar tu eficiencia y efectividad de escritura."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Contador de Palavras",
+    "seoTitle": "Contador de Palavras - Conte Palavras, Caracteres e Tempo de Leitura",
+    "metaDescription": "Contador de palavras gratuito online. Conte palavras, caracteres, sentenças e parágrafos. Calcule tempo de leitura e métricas de escrita. Perfeito para escritores, estudantes e criadores de conteúdo.",
+    "keywords": ["contador palavras", "contador caracteres", "calculadora tempo leitura", "analisador texto", "ferramenta escrita"],
+    "longTailKeywords": ["como contar palavras online", "contador caracteres com espaços", "calculadora tempo leitura", "ferramenta estatísticas texto", "calculadora métricas escrita"],
+    "slug": "word-counter-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["escrita", "análise texto", "contagem palavras", "criação conteúdo", "educação"],
+    "summary": "Conte palavras, caracteres, sentenças e parágrafos enquanto calcula tempo estimado de leitura para seu texto.",
+    "description": "Nosso contador completo de palavras fornece análise detalhada de texto incluindo contagem de palavras, contagem de caracteres (com e sem espaços), contagem de sentenças, contagem de parágrafos e tempo estimado de leitura. Ferramenta essencial para escritores, estudantes, bloggers e criadores de conteúdo que precisam atender requisitos de contagem de palavras ou analisar métricas de texto.",
+    "instructions": [
+      "Cole ou digite seu texto na área de entrada",
+      "Obtenha contagem instantânea de palavras, caracteres e estatísticas de texto",
+      "Veja tempo estimado de leitura baseado em velocidade de leitura média",
+      "Veja detalhamento de sentenças, parágrafos e outras métricas"
+    ],
+    "calculatorComponent": {
+      "componentName": "WordCounter",
+      "inputs": [
+        { "name": "text", "label": "Enter your text here", "type": "textarea", "default": "", "placeholder": "Paste or type your text here to count words, characters, and more..." }
+      ],
+      "formula": "Word count = number of words, Character count = total characters, Reading time = (words ÷ 200) × 60 seconds",
+      "output": { "label": "Word Count", "default": "Enter text above to see statistics", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Character Count (with spaces)", "field": "charactersWithSpaces", "format": "number" },
+        { "label": "Character Count (no spaces)", "field": "charactersNoSpaces", "format": "number" },
+        { "label": "Sentence Count", "field": "sentences", "format": "number" },
+        { "label": "Paragraph Count", "field": "paragraphs", "format": "number" },
+        { "label": "Estimated Reading Time", "field": "readingTime", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Publicação de Blog",
+        "input": "Texto de amostra com 50 palavras...",
+        "output": "Palavras: 50, Caracteres: 285, Sentenças: 4, Tempo Leitura: 15 segundos"
+      },
+      {
+        "title": "Ensaio Acadêmico",
+        "input": "Conteúdo de ensaio com 800 palavras...",
+        "output": "Palavras: 800, Caracteres: 4,320, Sentenças: 45, Tempo Leitura: 4 minutos"
+      }
+    ],
+    "relatedCalculators": ["percent-calculator", "mean-median-mode-calculator", "gpa-calculator"],
+    "seoContent": {
+      "introduction": "Domine análise de texto com nossa calculadora abrangente de palavras que fornece métricas detalhadas para escritores, estudantes, e criadores de conteúdo. Seja escrevendo ensaios, publicações de blog, conteúdo de mídias sociais, ou documentos profissionais, entender suas estatísticas de texto é crucial para cumprir requerimentos e otimizar legibilidade. Nossa calculadora avançada de palavras vai além de contagem básica para analisar tempo de leitura, estrutura de sentenças, e complexidade de texto, ajudando você a criar conteúdo escrito mais efetivo. De trabalhos acadêmicos a cópias de marketing, esta ferramenta fornece as perspectivas que você precisa para melhorar sua escrita e cumprir padrões editoriais.",
+      "benefits": [
+        "Conte palavras, caracteres (com/sem espaços), e elementos de texto instantaneamente",
+        "Calcule tempo estimado de leitura baseado em velocidades médias de leitura",
+        "Analise estrutura de sentenças e parágrafos para melhor legibilidade",
+        "Cumpra requerimentos de contagem de palavras para tarefas, artigos, e submissões",
+        "Otimize comprimento de conteúdo para diferentes plataformas e audiências",
+        "Melhore qualidade de escrita entendendo estatísticas de texto",
+        "Rastreie progresso de escrita e métricas de produtividade",
+        "Garanta conformidade com diretrizes editoriais e requerimentos"
+      ],
+      "steps": [
+        "Cole ou digite seu texto na área de entrada",
+        "Obtenha contagem instantânea de palavras e estatísticas de caracteres",
+        "Revise contagens de sentenças e parágrafos",
+        "Verifique tempo estimado de leitura para sua audiência",
+        "Analise métricas de texto para melhorar sua escrita"
+      ],
+      "inputsExplained": [
+        "Entrada de texto aceita qualquer conteúdo escrito de frases curtas a documentos longos",
+        "Suporta vários formatos incluindo texto plano, conteúdo copiado, e entrada digitada",
+        "Lida com diferentes idiomas e caracteres especiais",
+        "Processa texto em tempo real enquanto você digita ou cola"
+      ],
+      "formulaExplanation": "Contagem de palavras identifica espaços e pontuação para contar palavras com precisão. Contagem de caracteres inclui/exclui espaços baseado em especificação. Contagem de sentenças usa sinais de pontuação (pontos, pontos de interrogação, pontos de exclamação). Contagem de parágrafos usa quebras de linha ou espaços duplos. Cálculo de tempo de leitura: Palavras ÷ 200 × 60 segundos (velocidade média de leitura de 200 palavras por minuto). Estas métricas ajudam escritores entender comprimento de conteúdo, complexidade, e potencial de engajamento de audiência.",
+      "examples": [
+        "Publicação de blog de 500 palavras leva aproximadamente 2.5 minutos para ler, com 45 sentenças e 8 parágrafos para engajamento ótimo online.",
+        "Ensaio acadêmico de 2,000 palavras fornece 10 minutos de tempo de leitura, com 120 sentenças e 15 parágrafos para análise abrangente.",
+        "Publicação de mídias sociais de 150 palavras entrega 45 segundos de tempo de leitura, com 8 sentenças para consumo rápido e máximo engajamento."
+      ],
+      "resultsExplanation": [
+        "Contagem de palavras mostra palavras totais em seu texto",
+        "Contagens de caracteres (com/sem espaços) para diferentes necessidades de formatação",
+        "Contagens de sentenças e parágrafos indicam estrutura de texto",
+        "Estimativas de tempo de leitura ajudam planejar consumo de conteúdo",
+        "Todas métricas se atualizam em tempo real enquanto você edita texto"
+      ],
+      "whoItsFor": "Esta calculadora de palavras serve estudantes cumprindo requerimentos de tarefas, escritores rastreando progresso de manuscritos, bloggers otimizando comprimento de publicações, criadores de conteúdo analisando métricas de engajamento, jornalistas aderindo a padrões editoriais, acadêmicos preparando trabalhos de pesquisa, gerentes de mídias sociais planejando estratégia de conteúdo, e educadores ensinando habilidades de escrita. É particularmente valiosa para aqueles trabalhando com limites de palavras, otimizando conteúdo para SEO, melhorando pontuações de legibilidade, e entendendo padrões de engajamento de audiência. A ferramenta funciona para qualquer projeto de escrita de publicações sociais curtas a teses acadêmicas longas.",
+      "disclaimer": "Esta calculadora de palavras fornece análise estatística baseada em algoritmos padrão de processamento de texto. Estimativas de tempo de leitura são aproximações baseadas em velocidades médias de leitura (200 palavras por minuto) e podem variar por leitor individual, complexidade de conteúdo, e idioma. Contagens de palavras e caracteres seguem convenções comuns mas podem diferir ligeiramente de outras ferramentas devido a considerações de pontuação e formatação. Esta ferramenta é projetada para propósitos informativos e não deveria substituir edição profissional ou padrões de publicação.",
+      "relatedTools": [
+        "Calculadoras de porcentagem para analisar composição de texto",
+        "Calculadoras estatísticas para analisar padrões de escrita",
+        "Calculadoras de notas para requerimentos de escrita acadêmica"
+      ],
+      "faqs": [
+        {
+          "question": "Quão preciso é a contagem de palavras comparada com Microsoft Word ou Google Docs?",
+          "answer": "Nossa calculadora de palavras usa algoritmos padrão da indústria e deveria coincidir com software de processamento de palavras dentro de 1-2% para a maioria do texto. Diferenças podem ocorrer com formatação complexa, notas de rodapé, ou caracteres especiais. Para documentos críticos, sempre verifique com sua plataforma alvo. Nossa calculadora é projetada para análise rápida e guia geral de escrita, não como substituto para ferramentas oficiais de processamento de palavras."
+        },
+        {
+          "question": "O que é considerado um bom tempo de leitura para diferentes tipos de conteúdo?",
+          "answer": "Publicações de blog: 3-5 minutos (600-1,000 palavras), Artigos: 5-8 minutos (1,000-1,600 palavras), Trabalhos acadêmicos: 10-15 minutos (2,000-3,000 palavras), Publicações sociais: 15-30 segundos (50-100 palavras), Emails: 1-2 minutos (200-400 palavras). Tempo de leitura depende de complexidade de conteúdo, mas estas diretrizes ajudam otimizar engajamento. Use nossa calculadora para alcançar seu tempo de leitura alvo."
+        },
+        {
+          "question": "Como funciona o cálculo de tempo de leitura?",
+          "answer": "Tempo de leitura = (Contagem de palavras ÷ 200) × 60 segundos. Isso assume velocidade média de leitura de 200 palavras por minuto (comum para adultos lendo português). Tempo real de leitura varia por complexidade de conteúdo, familiaridade do leitor, e velocidade individual de leitura. Conteúdo técnico complexo pode levar 30-50% mais tempo. Considere sua audiência ao planejar comprimento de conteúdo."
+        },
+        {
+          "question": "Por que contagens de caracteres diferem com e sem espaços?",
+          "answer": "Contagem de caracteres com espaços inclui todos os caracteres incluindo espaços entre palavras. Contagem de caracteres sem espaços exclui espaços, mostrando apenas letras, números, e pontuação. Algumas plataformas (como Twitter) contam com espaços, enquanto outras (como SMS) podem não contar. Campos de banco de dados frequentemente especificam limites de caracteres com ou sem espaços. Escolha a contagem apropriada para seu caso de uso específico."
+        },
+        {
+          "question": "¿Como posso melhorar minha escrita usando estatísticas de contagem de palavras?",
+          "answer": "Use comprimento médio de sentença (palavras ÷ sentenças) para verificar legibilidade - mire em 15-20 palavras por sentença. Contagem de parágrafos indica estrutura de conteúdo - 3-5 sentenças por parágrafo funcionam bem. Tempo de leitura ajuda garantir conteúdo não é longo demais ou curto demais. Densidade de caracteres (caracteres ÷ palavras) mostra estilo de escrita. Rastreie estas métricas com o tempo para melhorar sua eficiência e efetividade de escrita."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Compteur de Mots",
+    "seoTitle": "Compteur de Mots - Comptez les Mots, Caractères et Temps de Lecture",
+    "metaDescription": "Compteur de mots gratuit en ligne. Comptez les mots, caractères, phrases et paragraphes. Calculez le temps de lecture et les métriques d'écriture. Parfait pour les écrivains, étudiants et créateurs de contenu.",
+    "keywords": ["compteur mots", "compteur caractères", "calculateur temps lecture", "analyseur texte", "outil écriture"],
+    "longTailKeywords": ["comment compter mots en ligne", "compteur caractères avec espaces", "calculateur temps lecture", "outil statistiques texte", "calculateur métriques écriture"],
+    "slug": "word-counter-calculator",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["écriture", "analyse texte", "compte mots", "création contenu", "éducation"],
+    "summary": "Comptez les mots, caractères, phrases et paragraphes tout en calculant le temps de lecture estimé pour votre texte.",
+    "description": "Notre compteur de mots complet fournit une analyse détaillée du texte incluant le compte de mots, le compte de caractères (avec et sans espaces), le compte de phrases, le compte de paragraphes et le temps de lecture estimé. Outil essentiel pour les écrivains, étudiants, blogueurs et créateurs de contenu qui doivent respecter les exigences de compte de mots ou analyser les métriques de texte.",
+    "instructions": [
+      "Collez ou tapez votre texte dans la zone de saisie",
+      "Obtenez un compte instantané de mots, caractères et statistiques de texte",
+      "Consultez le temps de lecture estimé basé sur la vitesse de lecture moyenne",
+      "Consultez la ventilation des phrases, paragraphes et autres métriques"
+    ],
+    "calculatorComponent": {
+      "componentName": "WordCounter",
+      "inputs": [
+        { "name": "text", "label": "Enter your text here", "type": "textarea", "default": "", "placeholder": "Paste or type your text here to count words, characters, and more..." }
+      ],
+      "formula": "Word count = number of words, Character count = total characters, Reading time = (words ÷ 200) × 60 seconds",
+      "output": { "label": "Word Count", "default": "Enter text above to see statistics", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Character Count (with spaces)", "field": "charactersWithSpaces", "format": "number" },
+        { "label": "Character Count (no spaces)", "field": "charactersNoSpaces", "format": "number" },
+        { "label": "Sentence Count", "field": "sentences", "format": "number" },
+        { "label": "Paragraph Count", "field": "paragraphs", "format": "number" },
+        { "label": "Estimated Reading Time", "field": "readingTime", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Article de Blog",
+        "input": "Texte d'exemple avec 50 mots...",
+        "output": "Mots: 50, Caractères: 285, Phrases: 4, Temps Lecture: 15 secondes"
+      },
+      {
+        "title": "Essai Académique",
+        "input": "Contenu d'essai avec 800 mots...",
+        "output": "Mots: 800, Caractères: 4,320, Phrases: 45, Temps Lecture: 4 minutes"
+      }
+    ],
+    "relatedCalculators": ["percent-calculator", "mean-median-mode-calculator", "gpa-calculator"],
+    "seoContent": {
+      "introduction": "Maîtrisez analyse texte avec notre calculatrice complète de mots qui fournit métriques détaillées pour écrivains, étudiants, et créateurs de contenu. Que vous écriviez essais, publications blog, contenu médias sociaux, ou documents professionnels, comprendre vos statistiques texte est crucial pour rencontrer exigences et optimiser lisibilité. Notre calculatrice avancée de mots va au-delà comptage de base pour analyser temps lecture, structure phrases, et complexité texte, vous aidant créer contenu écrit plus efficace. De travaux académiques à copies marketing, cet outil fournit les perspectives dont vous avez besoin pour améliorer votre écriture et rencontrer standards éditoriaux.",
+      "benefits": [
+        "Comptez mots, caractères (avec/sans espaces), et éléments texte instantanément",
+        "Calculez temps lecture estimé basé sur vitesses lecture moyennes",
+        "Analysez structure phrases et paragraphes pour meilleure lisibilité",
+        "Rencontrez exigences comptage mots pour devoirs, articles, et soumissions",
+        "Optimisez longueur contenu pour différentes plateformes et audiences",
+        "Améliorez qualité écriture en comprenant statistiques texte",
+        "Suivez progrès écriture et métriques productivité",
+        "Assurez conformité avec directives éditoriales et exigences"
+      ],
+      "steps": [
+        "Collez ou tapez votre texte dans zone entrée",
+        "Obtenez comptage mots instantané et statistiques caractères",
+        "Examinez comptages phrases et paragraphes",
+        "Vérifiez temps lecture estimé pour votre audience",
+        "Analysez métriques texte pour améliorer votre écriture"
+      ],
+      "inputsExplained": [
+        "Entrée texte accepte tout contenu écrit de phrases courtes à documents longs",
+        "Supporte divers formats incluant texte brut, contenu copié, et entrée tapée",
+        "Gère différentes langues et caractères spéciaux",
+        "Traite texte en temps réel pendant que vous tapez ou collez"
+      ],
+      "formulaExplanation": "Comptage mots identifie espaces et ponctuation pour compter mots avec précision. Comptage caractères inclut/exclut espaces basé sur spécification. Comptage phrases utilise signes ponctuation (points, points interrogation, points exclamation). Comptage paragraphes utilise sauts ligne ou espaces doubles. Calcul temps lecture : Mots ÷ 200 × 60 secondes (vitesse lecture moyenne de 200 mots par minute). Ces métriques aident écrivains comprendre longueur contenu, complexité, et potentiel engagement audience.",
+      "examples": [
+        "Publication blog de 500 mots prend approximativement 2.5 minutes lire, avec 45 phrases et 8 paragraphes pour engagement optimal en ligne.",
+        "Essai académique de 2,000 mots fournit 10 minutes temps lecture, avec 120 phrases et 15 paragraphes pour analyse complète.",
+        "Publication médias sociaux de 150 mots livre 45 secondes temps lecture, avec 8 phrases pour consommation rapide et engagement maximal."
+      ],
+      "resultsExplanation": [
+        "Comptage mots montre mots totaux dans votre texte",
+        "Comptages caractères (avec/sans espaces) pour différents besoins formatage",
+        "Comptages phrases et paragraphes indiquent structure texte",
+        "Estimations temps lecture aident planifier consommation contenu",
+        "Toutes métriques se mettent à jour en temps réel pendant que vous éditez texte"
+      ],
+      "whoItsFor": "Cette calculatrice mots sert étudiants rencontrant exigences devoirs, écrivains suivant progrès manuscrits, blogueurs optimisant longueur publications, créateurs contenu analysant métriques engagement, journalistes adhérant standards éditoriaux, universitaires préparant travaux recherche, gestionnaires médias sociaux planifiant stratégie contenu, et éducateurs enseignant compétences écriture. Elle est particulièrement précieuse pour ceux travaillant avec limites mots, optimisant contenu pour SEO, améliorant scores lisibilité, et comprenant patterns engagement audience. L'outil fonctionne pour tout projet écrit de publications sociales courtes à thèses académiques longues.",
+      "disclaimer": "Cette calculatrice mots fournit analyse statistique basé sur algorithmes traitement texte standard. Estimations temps lecture sont approximations basées sur vitesses lecture moyennes (200 mots par minute) et peuvent varier par lecteur individuel, complexité contenu, et langue. Comptages mots et caractères suivent conventions communes mais peuvent différer légèrement d'autres outils dû considérations ponctuation et formatage. Cet outil est conçu pour fins informationnelles et ne devrait pas remplacer édition professionnelle ou standards publication.",
+      "relatedTools": [
+        "Calculateurs pourcentage pour analyser composition texte",
+        "Calculateurs statistiques pour analyser patterns écriture",
+        "Calculateurs notes pour exigences écriture académique"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est précision comptage mots comparé à Microsoft Word ou Google Docs ?",
+          "answer": "Notre calculatrice mots utilise algorithmes standard industrie et devrait correspondre logiciels traitement texte dans 1-2% pour plupart texte. Différences peuvent survenir avec formatage complexe, notes bas page, ou caractères spéciaux. Pour documents critiques, vérifiez toujours avec votre plateforme cible. Notre calculatrice est conçue pour analyse rapide et guide écriture général, pas comme substitut pour outils traitement texte officiels."
+        },
+        {
+          "question": "Qu'est-ce considéré bon temps lecture pour différents types contenu ?",
+          "answer": "Publications blog : 3-5 minutes (600-1,000 mots), Articles : 5-8 minutes (1,000-1,600 mots), Travaux académiques : 10-15 minutes (2,000-3,000 mots), Publications sociales : 15-30 secondes (50-100 mots), Emails : 1-2 minutes (200-400 mots). Temps lecture dépend complexité contenu, mais ces directives aident optimiser engagement. Utilisez notre calculatrice pour atteindre votre temps lecture cible."
+        },
+        {
+          "question": "Comment fonctionne calcul temps lecture ?",
+          "answer": "Temps lecture = (Comptage mots ÷ 200) × 60 secondes. Cela assume vitesse lecture moyenne de 200 mots par minute (commun pour adultes lisant français). Temps lecture réel varie par complexité contenu, familiarité lecteur, et vitesse lecture individuelle. Contenu technique complexe peut prendre 30-50% plus temps. Considérez votre audience en planifiant longueur contenu."
+        },
+        {
+          "question": "Pourquoi comptages caractères diffèrent-ils avec et sans espaces ?",
+          "answer": "Comptage caractères avec espaces inclut tous caractères incluant espaces entre mots. Comptage caractères sans espaces exclut espaces, montrant seulement lettres, nombres, et ponctuation. Certaines plateformes (comme Twitter) comptent avec espaces, tandis que d'autres (comme SMS) peuvent ne pas compter. Champs base données spécifient souvent limites caractères avec ou sans espaces. Choisissez comptage approprié pour votre cas usage spécifique."
+        },
+        {
+          "question": "Comment puis-je améliorer mon écriture utilisant statistiques comptage mots ?",
+          "answer": "Utilisez longueur phrase moyenne (mots ÷ phrases) pour vérifier lisibilité - visez 15-20 mots par phrase. Comptage paragraphes indique structure contenu - 3-5 phrases par paragraphe fonctionnent bien. Temps lecture aide assurer contenu n'est pas trop long ou court. Densité caractères (caractères ÷ mots) montre style écriture. Suivez ces métriques dans temps pour améliorer votre efficacité et effectivité écriture."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,614 @@
+{
+  "en": {
+    "title": "Loan Payment Table Generator",
+    "seoTitle": "Loan Payment Table Generator - Compare Loan Scenarios",
+    "metaDescription": "Generate comparison tables for loan payments with varying interest rates, terms, and amounts. Free loan payment table generator for financial planning.",
+    "keywords": [
+      "loan payment table generator",
+      "loan comparison calculator",
+      "loan payment comparison",
+      "mortgage payment table",
+      "loan scenario comparison",
+      "payment comparison table"
+    ],
+    "longTailKeywords": [
+      "loan payment comparison table generator",
+      "compare loan payments with different rates",
+      "mortgage payment comparison calculator",
+      "loan term comparison table",
+      "interest rate comparison for loans",
+      "loan payment scenario analysis",
+      "generate loan payment comparison table",
+      "compare different loan amounts payments",
+      "loan payment table with different terms",
+      "mortgage rate comparison table"
+    ],
+    "slug": "loan-payment-table-generator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "loan comparison",
+      "payment table",
+      "scenario analysis",
+      "financial planning",
+      "interest rates",
+      "loan terms"
+    ],
+    "description": "Generate comprehensive comparison tables for loan payments. Compare how different interest rates, loan terms, and loan amounts affect your monthly payments. Perfect for mortgage shopping, car loan comparisons, and financial planning with easy-to-read payment tables.",
+    "summary": "Generate comparison tables for loan payments across different scenarios",
+    "instructions": [
+      "Choose the table type you want to generate (interest rate, loan term, or loan amount comparison)",
+      "Enter the base loan parameters",
+      "Specify the range of values to compare",
+      "Click 'Generate Table' to create the comparison table",
+      "Use the export feature to save or print your payment comparison table"
+    ],
+    "calculatorComponent": "LoanPaymentTableGenerator",
+    "examples": [
+      {
+        "title": "Mortgage Rate Comparison",
+        "description": "Comparing mortgage payments at different interest rates",
+        "input": {
+          "tableType": "interest_rate",
+          "baseLoanAmount": 300000,
+          "baseInterestRate": 6.5,
+          "baseLoanTerm": 30,
+          "comparisonValues": "5.5,6.0,6.5,7.0,7.5"
+        },
+        "output": {
+          "tableSummary": "5-rate mortgage comparison showing $238 monthly payment difference",
+          "bestRate": "5.5% rate saves $1,425 monthly",
+          "paymentRange": "$1,419 - $1,844 monthly",
+          "interestRange": "$211,000 - $363,000 total interest"
+        }
+      },
+      {
+        "title": "Loan Term Comparison",
+        "description": "Comparing payments for different loan terms",
+        "input": {
+          "tableType": "loan_term",
+          "baseLoanAmount": 250000,
+          "baseInterestRate": 6.5,
+          "baseLoanTerm": 30,
+          "comparisonValues": "15,20,25,30"
+        },
+        "output": {
+          "tableSummary": "4-term comparison showing impact of loan duration",
+          "bestRate": "15-year term saves $475 monthly",
+          "paymentRange": "$1,975 - $2,450 monthly",
+          "interestRange": "$106,000 - $430,000 total interest"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Make informed loan decisions with our comprehensive loan payment table generator. This powerful financial tool allows you to compare loan payments across different scenarios, helping you understand how interest rates, loan terms, and loan amounts affect your monthly payments and total borrowing costs. Whether you're mortgage shopping, comparing car loan offers, or planning any major purchase, this calculator provides clear, actionable insights through easy-to-read comparison tables.",
+      "benefits": [
+        "Compare loan payments across multiple scenarios simultaneously",
+        "Understand the true cost impact of different interest rates",
+        "See how loan term affects both monthly payments and total interest",
+        "Make data-driven decisions when shopping for loans",
+        "Save time by generating professional comparison tables instantly",
+        "Plan your budget with accurate payment projections"
+      ],
+      "steps": [
+        "Select the type of comparison you want to make (interest rates, loan terms, or loan amounts)",
+        "Enter your base loan parameters (amount, rate, term)",
+        "Specify the range of values you want to compare",
+        "Click 'Generate Table' to create your comparison",
+        "Review the payment differences and total cost implications",
+        "Export the table for use in presentations or financial planning"
+      ],
+      "inputsExplained": [
+        "Table type determines which parameter will vary in the comparison",
+        "Base loan amount is the principal amount for comparison calculations",
+        "Base interest rate provides the reference point for rate comparisons",
+        "Base loan term sets the repayment period for term comparisons",
+        "Comparison values are the different rates/terms/amounts to compare against the base"
+      ],
+      "formulaExplanation": "The calculator uses the standard loan payment formula to generate monthly payments for each scenario. When comparing interest rates, the loan amount and term remain constant while rates vary. For term comparisons, amount and rate stay the same while repayment periods change. This allows you to see exactly how each variable affects your monthly payments and total loan costs.",
+      "examples": [
+        "A $300,000 mortgage comparison shows that dropping from 7.5% to 5.5% interest rate saves $425 monthly and $153,000 in total interest over 30 years",
+        "Comparing loan terms for $250,000 at 6.5% shows a 15-year loan costs $1,975 monthly but saves $324,000 in interest compared to 30 years"
+      ],
+      "resultsExplanation": [
+        "Payment comparison table shows monthly payments for each scenario",
+        "Table summary highlights key differences and savings opportunities",
+        "Best rate identifies the most cost-effective option in your comparison",
+        "Payment range shows the spread between highest and lowest monthly payments",
+        "Interest range displays total interest cost differences across scenarios",
+        "Each row represents a different loan scenario with all key metrics"
+      ],
+      "whoItsFor": "This loan payment table generator is essential for homebuyers comparing mortgage offers, car buyers evaluating loan terms, small business owners analyzing financing options, and anyone making major purchasing decisions. It's particularly valuable for financial planners, real estate agents, and loan officers who need to present clear payment comparisons to clients.",
+      "disclaimer": "This calculator provides payment comparisons based on standard loan formulas. Actual loan terms may vary based on credit score, lender requirements, and specific loan conditions. The comparisons are for illustrative purposes and do not constitute loan approval or final terms.",
+      "relatedTools": [
+        "mortgage calculator",
+        "loan calculator",
+        "car loan calculator",
+        "amortization schedule calculator",
+        "loan affordability calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is a loan payment comparison table?",
+          "answer": "A loan payment comparison table shows how monthly payments and total costs change when you vary key loan parameters like interest rates, loan terms, or loan amounts. It helps you understand the financial impact of different loan scenarios."
+        },
+        {
+          "question": "How do I use this for mortgage shopping?",
+          "answer": "Enter your loan amount and desired term, then compare different interest rates you're being quoted. The table will show exactly how much you save or pay extra with each rate, helping you choose the best mortgage offer."
+        },
+        {
+          "question": "What loan parameters can I compare?",
+          "answer": "You can compare interest rates (keeping amount and term constant), loan terms (keeping amount and rate constant), or loan amounts (keeping rate and term constant). Each comparison type helps you understand different aspects of loan pricing."
+        },
+        {
+          "question": "How accurate are these payment comparisons?",
+          "answer": "The calculations use standard loan payment formulas that are highly accurate for most fixed-rate loans. However, actual payments may include additional fees, taxes, or insurance that aren't included in basic loan calculations."
+        },
+        {
+          "question": "Can I export these comparison tables?",
+          "answer": "Yes, the calculator includes export functionality to save your comparison tables as CSV files for use in spreadsheets, presentations, or financial planning documents."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Generador de Tabla de Pagos de Préstamo",
+    "seoTitle": "Generador de Tabla de Pagos de Préstamo - Comparar Escenarios de Préstamo",
+    "metaDescription": "Genera tablas de comparación para pagos de préstamo con diferentes tasas de interés, plazos y montos. Generador gratuito de tablas de pagos de préstamo para planificación financiera.",
+    "keywords": [
+      "generador tabla pagos préstamo",
+      "calculadora comparación préstamo",
+      "comparación pagos préstamo",
+      "tabla pagos hipoteca",
+      "comparación escenarios préstamo",
+      "tabla comparación pagos"
+    ],
+    "longTailKeywords": [
+      "generador tabla comparación pagos préstamo",
+      "comparar pagos préstamo con diferentes tasas",
+      "calculadora comparación pagos hipoteca",
+      "tabla comparación plazos préstamo",
+      "comparación tasas interés para préstamos",
+      "análisis escenarios pagos préstamo",
+      "generar tabla comparación pagos préstamo",
+      "comparar diferentes montos pagos préstamo",
+      "tabla pagos préstamo con diferentes plazos",
+      "tabla comparación tasas hipoteca"
+    ],
+    "slug": "loan-payment-table-generator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "comparación préstamo",
+      "tabla pagos",
+      "análisis escenarios",
+      "planificación financiera",
+      "tasas interés",
+      "plazos préstamo"
+    ],
+    "description": "Genera tablas completas de comparación para pagos de préstamo. Compara cómo diferentes tasas de interés, plazos de préstamo y montos de préstamo afectan tus pagos mensuales. Perfecto para compras de hipoteca, comparaciones de préstamos para auto y planificación financiera con tablas de pagos fáciles de leer.",
+    "summary": "Genera tablas de comparación para pagos de préstamo en diferentes escenarios",
+    "instructions": [
+      "Elige el tipo de tabla que quieres generar (comparación de tasas de interés, plazos de préstamo o montos de préstamo)",
+      "Ingresa los parámetros base del préstamo",
+      "Especifica el rango de valores a comparar",
+      "Haz clic en 'Generar Tabla' para crear la tabla de comparación",
+      "Usa la función de exportación para guardar o imprimir tu tabla de comparación de pagos"
+    ],
+    "calculatorComponent": "LoanPaymentTableGenerator",
+    "examples": [
+      {
+        "title": "Comparación de Tasas de Hipoteca",
+        "description": "Comparando pagos de hipoteca a diferentes tasas de interés",
+        "input": {
+          "tableType": "interest_rate",
+          "baseLoanAmount": 300000,
+          "baseInterestRate": 6.5,
+          "baseLoanTerm": 30,
+          "comparisonValues": "5.5,6.0,6.5,7.0,7.5"
+        },
+        "output": {
+          "tableSummary": "Comparación de 5 tasas mostrando diferencia de $238 en pago mensual",
+          "bestRate": "Tasa del 5.5% ahorra $1,425 mensuales",
+          "paymentRange": "$1,419 - $1,844 mensuales",
+          "interestRange": "$211,000 - $363,000 intereses totales"
+        }
+      },
+      {
+        "title": "Comparación de Plazos de Préstamo",
+        "description": "Comparando pagos para diferentes plazos de préstamo",
+        "input": {
+          "tableType": "loan_term",
+          "baseLoanAmount": 250000,
+          "baseInterestRate": 6.5,
+          "baseLoanTerm": 30,
+          "comparisonValues": "15,20,25,30"
+        },
+        "output": {
+          "tableSummary": "Comparación de 4 plazos mostrando impacto de duración del préstamo",
+          "bestRate": "Plazo de 15 años ahorra $475 mensuales",
+          "paymentRange": "$1,975 - $2,450 mensuales",
+          "interestRange": "$106,000 - $430,000 intereses totales"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Toma decisiones informadas sobre préstamos con nuestro completo generador de tablas de pagos de préstamo. Esta poderosa herramienta financiera te permite comparar pagos de préstamo en diferentes escenarios, ayudándote a entender cómo las tasas de interés, plazos de préstamo y montos de préstamo afectan tus pagos mensuales y costos totales de endeudamiento. Ya sea que estés comprando hipoteca, comparando ofertas de préstamos para auto o planeando cualquier compra importante, esta calculadora proporciona insights claros y accionables a través de tablas de comparación fáciles de leer.",
+      "benefits": [
+        "Compara pagos de préstamo en múltiples escenarios simultáneamente",
+        "Entiende el impacto real en costo de diferentes tasas de interés",
+        "Ve cómo el plazo del préstamo afecta pagos mensuales e intereses totales",
+        "Toma decisiones basadas en datos al comprar préstamos",
+        "Ahorra tiempo generando tablas de comparación profesionales al instante",
+        "Planeja tu presupuesto con proyecciones precisas de pagos"
+      ],
+      "steps": [
+        "Selecciona el tipo de comparación que quieres hacer (tasas de interés, plazos de préstamo o montos de préstamo)",
+        "Ingresa tus parámetros base de préstamo (monto, tasa, plazo)",
+        "Especifica el rango de valores que quieres comparar",
+        "Haz clic en 'Generar Tabla' para crear tu comparación",
+        "Revisa las diferencias de pagos e implicaciones de costo total",
+        "Exporta la tabla para usar en presentaciones o planificación financiera"
+      ],
+      "inputsExplained": [
+        "El tipo de tabla determina qué parámetro variará en la comparación",
+        "El monto base del préstamo es el principal para cálculos de comparación",
+        "La tasa base de interés proporciona el punto de referencia para comparaciones de tasa",
+        "El plazo base del préstamo establece el período de reembolso para comparaciones de plazo",
+        "Los valores de comparación son las diferentes tasas/plazos/montos a comparar contra la base"
+      ],
+      "formulaExplanation": "La calculadora usa la fórmula estándar de pago de préstamo para generar pagos mensuales para cada escenario. Al comparar tasas de interés, el monto y plazo del préstamo permanecen constantes mientras las tasas varían. Para comparaciones de plazo, el monto y tasa permanecen iguales mientras los períodos de reembolso cambian. Esto te permite ver exactamente cómo cada variable afecta tus pagos mensuales y costos totales del préstamo.",
+      "examples": [
+        "Una comparación de hipoteca de $300,000 muestra que bajar de 7.5% a 5.5% de tasa de interés ahorra $425 mensuales y $153,000 en intereses totales durante 30 años",
+        "Comparando plazos de préstamo para $250,000 al 6.5% muestra que un préstamo de 15 años cuesta $1,975 mensuales pero ahorra $324,000 en intereses comparado con 30 años"
+      ],
+      "resultsExplanation": [
+        "La tabla de comparación de pagos muestra pagos mensuales para cada escenario",
+        "El resumen de tabla destaca diferencias clave y oportunidades de ahorro",
+        "La mejor tasa identifica la opción más rentable en tu comparación",
+        "El rango de pagos muestra la diferencia entre pagos mensuales más altos y más bajos",
+        "El rango de intereses muestra diferencias de costo total de intereses en escenarios",
+        "Cada fila representa un escenario diferente de préstamo con todas las métricas clave"
+      ],
+      "whoItsFor": "Este generador de tablas de pagos de préstamo es esencial para compradores de vivienda comparando ofertas de hipoteca, compradores de auto evaluando términos de préstamo, propietarios de pequeños negocios analizando opciones de financiamiento y cualquiera tomando decisiones de compra importantes. Es particularmente valioso para planificadores financieros, agentes inmobiliarios y oficiales de préstamo que necesitan presentar comparaciones claras de pagos a clientes.",
+      "disclaimer": "Esta calculadora proporciona comparaciones de pagos basadas en fórmulas estándar de préstamo. Los términos reales de préstamo pueden variar basado en puntaje de crédito, requisitos del prestamista y condiciones específicas del préstamo. Las comparaciones son para propósitos ilustrativos y no constituyen aprobación de préstamo o términos finales.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora préstamo",
+        "calculadora préstamo auto",
+        "calculadora tabla amortización",
+        "calculadora capacidad préstamo"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es una tabla de comparación de pagos de préstamo?",
+          "answer": "Una tabla de comparación de pagos de préstamo muestra cómo cambian los pagos mensuales y costos totales cuando varías parámetros clave de préstamo como tasas de interés, plazos de préstamo o montos de préstamo. Te ayuda a entender el impacto financiero de diferentes escenarios de préstamo."
+        },
+        {
+          "question": "¿Cómo uso esto para compras de hipoteca?",
+          "answer": "Ingresa tu monto y plazo de préstamo deseado, luego compara diferentes tasas de interés que te están cotizando. La tabla mostrará exactamente cuánto ahorras o pagas extra con cada tasa, ayudándote a elegir la mejor oferta de hipoteca."
+        },
+        {
+          "question": "¿Qué parámetros de préstamo puedo comparar?",
+          "answer": "Puedes comparar tasas de interés (manteniendo monto y plazo constantes), plazos de préstamo (manteniendo monto y tasa constantes), o montos de préstamo (manteniendo tasa y plazo constantes). Cada tipo de comparación te ayuda a entender diferentes aspectos del precio de préstamo."
+        },
+        {
+          "question": "¿Qué tan precisas son estas comparaciones de pagos?",
+          "answer": "Los cálculos usan fórmulas estándar de pago de préstamo que son altamente precisas para la mayoría de préstamos de tasa fija. Sin embargo, los pagos reales pueden incluir tarifas adicionales, impuestos o seguro que no están incluidos en cálculos básicos de préstamo."
+        },
+        {
+          "question": "¿Puedo exportar estas tablas de comparación?",
+          "answer": "Sí, la calculadora incluye funcionalidad de exportación para guardar tus tablas de comparación como archivos CSV para usar en hojas de cálculo, presentaciones o documentos de planificación financiera."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Gerador de Tabela de Pagamentos de Empréstimo",
+    "seoTitle": "Gerador de Tabela de Pagamentos de Empréstimo - Comparar Cenários de Empréstimo",
+    "metaDescription": "Gere tabelas de comparação para pagamentos de empréstimo com diferentes taxas de juros, prazos e valores. Gerador gratuito de tabelas de pagamentos de empréstimo para planejamento financeiro.",
+    "keywords": [
+      "gerador tabela pagamentos empréstimo",
+      "calculadora comparação empréstimo",
+      "comparação pagamentos empréstimo",
+      "tabela pagamentos hipoteca",
+      "comparação cenários empréstimo",
+      "tabela comparação pagamentos"
+    ],
+    "longTailKeywords": [
+      "gerador tabela comparação pagamentos empréstimo",
+      "comparar pagamentos empréstimo com diferentes taxas",
+      "calculadora comparação pagamentos hipoteca",
+      "tabela comparação prazos empréstimo",
+      "comparação taxas juros para empréstimos",
+      "análise cenários pagamentos empréstimo",
+      "gerar tabela comparação pagamentos empréstimo",
+      "comparar diferentes valores pagamentos empréstimo",
+      "tabela pagamentos empréstimo com diferentes prazos",
+      "tabela comparação taxas hipoteca"
+    ],
+    "slug": "loan-payment-table-generator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "comparação empréstimo",
+      "tabela pagamentos",
+      "análise cenários",
+      "planejamento financeiro",
+      "taxas juros",
+      "prazos empréstimo"
+    ],
+    "description": "Gere tabelas completas de comparação para pagamentos de empréstimo. Compare como diferentes taxas de juros, prazos de empréstimo e valores de empréstimo afetam seus pagamentos mensais. Perfeito para compras de hipoteca, comparações de empréstimo de carro e planejamento financeiro com tabelas de pagamentos fáceis de ler.",
+    "summary": "Gere tabelas de comparação para pagamentos de empréstimo em diferentes cenários",
+    "instructions": [
+      "Escolha o tipo de tabela que você quer gerar (comparação de taxas de juros, prazos de empréstimo ou valores de empréstimo)",
+      "Digite os parâmetros base do empréstimo",
+      "Especifique o intervalo de valores para comparar",
+      "Clique em 'Gerar Tabela' para criar a tabela de comparação",
+      "Use o recurso de exportação para salvar ou imprimir sua tabela de comparação de pagamentos"
+    ],
+    "calculatorComponent": "LoanPaymentTableGenerator",
+    "examples": [
+      {
+        "title": "Comparação de Taxas de Hipoteca",
+        "description": "Comparando pagamentos de hipoteca em diferentes taxas de juros",
+        "input": {
+          "tableType": "interest_rate",
+          "baseLoanAmount": 300000,
+          "baseInterestRate": 6.5,
+          "baseLoanTerm": 30,
+          "comparisonValues": "5.5,6.0,6.5,7.0,7.5"
+        },
+        "output": {
+          "tableSummary": "Comparação de 5 taxas mostrando diferença de $238 no pagamento mensal",
+          "bestRate": "Taxa de 5.5% economiza $1,425 mensais",
+          "paymentRange": "$1,419 - $1,844 mensais",
+          "interestRange": "$211,000 - $363,000 juros totais"
+        }
+      },
+      {
+        "title": "Comparação de Prazos de Empréstimo",
+        "description": "Comparando pagamentos para diferentes prazos de empréstimo",
+        "input": {
+          "tableType": "loan_term",
+          "baseLoanAmount": 250000,
+          "baseInterestRate": 6.5,
+          "baseLoanTerm": 30,
+          "comparisonValues": "15,20,25,30"
+        },
+        "output": {
+          "tableSummary": "Comparação de 4 prazos mostrando impacto da duração do empréstimo",
+          "bestRate": "Prazo de 15 anos economiza $475 mensais",
+          "paymentRange": "$1,975 - $2,450 mensais",
+          "interestRange": "$106,000 - $430,000 juros totais"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Tome decisões informadas sobre empréstimo com nosso completo gerador de tabelas de pagamentos de empréstimo. Esta poderosa ferramenta financeira permite comparar pagamentos de empréstimo em diferentes cenários, ajudando você a entender como taxas de juros, prazos de empréstimo e valores de empréstimo afetam seus pagamentos mensais e custos totais de empréstimo. Seja você comprando hipoteca, comparando ofertas de empréstimo de carro ou planejando qualquer compra importante, esta calculadora fornece insights claros e acionáveis através de tabelas de comparação fáceis de ler.",
+      "benefits": [
+        "Compare pagamentos de empréstimo em múltiplos cenários simultaneamente",
+        "Entenda o impacto real no custo de diferentes taxas de juros",
+        "Veja como o prazo do empréstimo afeta pagamentos mensais e juros totais",
+        "Tome decisões baseadas em dados ao comprar empréstimos",
+        "Economize tempo gerando tabelas de comparação profissionais instantaneamente",
+        "Planeje seu orçamento com projeções precisas de pagamentos"
+      ],
+      "steps": [
+        "Selecione o tipo de comparação que você quer fazer (taxas de juros, prazos de empréstimo ou valores de empréstimo)",
+        "Digite seus parâmetros base de empréstimo (valor, taxa, prazo)",
+        "Especifique o intervalo de valores que você quer comparar",
+        "Clique em 'Gerar Tabela' para criar sua comparação",
+        "Revise as diferenças de pagamentos e implicações de custo total",
+        "Exporte a tabela para uso em apresentações ou planejamento financeiro"
+      ],
+      "inputsExplained": [
+        "O tipo de tabela determina qual parâmetro variará na comparação",
+        "O valor base do empréstimo é o principal para cálculos de comparação",
+        "A taxa base de juros fornece o ponto de referência para comparações de taxa",
+        "O prazo base do empréstimo define o período de reembolso para comparações de prazo",
+        "Os valores de comparação são as diferentes taxas/prazos/valores para comparar contra a base"
+      ],
+      "formulaExplanation": "A calculadora usa a fórmula padrão de pagamento de empréstimo para gerar pagamentos mensais para cada cenário. Ao comparar taxas de juros, o valor e prazo do empréstimo permanecem constantes enquanto as taxas variam. Para comparações de prazo, valor e taxa permanecem os mesmos enquanto os períodos de reembolso mudam. Isso permite ver exatamente como cada variável afeta seus pagamentos mensais e custos totais do empréstimo.",
+      "examples": [
+        "Uma comparação de hipoteca de R$ 300.000 mostra que cair de 7.5% para 5.5% de taxa de juros economiza R$ 425 mensais e R$ 153.000 em juros totais durante 30 anos",
+        "Comparando prazos de empréstimo para R$ 250.000 a 6.5% mostra que um empréstimo de 15 anos custa R$ 1,975 mensais mas economiza R$ 324.000 em juros comparado a 30 anos"
+      ],
+      "resultsExplanation": [
+        "A tabela de comparação de pagamentos mostra pagamentos mensais para cada cenário",
+        "O resumo da tabela destaca diferenças chave e oportunidades de economia",
+        "A melhor taxa identifica a opção mais econômica em sua comparação",
+        "O intervalo de pagamentos mostra a diferença entre pagamentos mensais mais altos e mais baixos",
+        "O intervalo de juros mostra diferenças de custo total de juros em cenários",
+        "Cada linha representa um cenário diferente de empréstimo com todas as métricas chave"
+      ],
+      "whoItsFor": "Este gerador de tabelas de pagamentos de empréstimo é essencial para compradores de imóvel comparando ofertas de hipoteca, compradores de carro avaliando termos de empréstimo, proprietários de pequenos negócios analisando opções de financiamento e qualquer pessoa tomando decisões importantes de compra. É particularmente valioso para planejadores financeiros, corretores imobiliários e oficiais de empréstimo que precisam apresentar comparações claras de pagamentos para clientes.",
+      "disclaimer": "Esta calculadora fornece comparações de pagamentos baseadas em fórmulas padrão de empréstimo. Termos reais de empréstimo podem variar baseado no score de crédito, requisitos do credor e condições específicas do empréstimo. As comparações são para propósitos ilustrativos e não constituem aprovação de empréstimo ou termos finais.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora empréstimo",
+        "calculadora empréstimo carro",
+        "calculadora tabela amortização",
+        "calculadora capacidade empréstimo"
+      ],
+      "faqs": [
+        {
+          "question": "O que é uma tabela de comparação de pagamentos de empréstimo?",
+          "answer": "Uma tabela de comparação de pagamentos de empréstimo mostra como pagamentos mensais e custos totais mudam quando você varia parâmetros chave de empréstimo como taxas de juros, prazos de empréstimo ou valores de empréstimo. Ela ajuda você a entender o impacto financeiro de diferentes cenários de empréstimo."
+        },
+        {
+          "question": "Como usar isso para compras de hipoteca?",
+          "answer": "Digite seu valor e prazo de empréstimo desejado, então compare diferentes taxas de juros que você está sendo cotado. A tabela mostrará exatamente quanto você economiza ou paga a mais com cada taxa, ajudando escolher a melhor oferta de hipoteca."
+        },
+        {
+          "question": "Que parâmetros de empréstimo posso comparar?",
+          "answer": "Você pode comparar taxas de juros (mantendo valor e prazo constantes), prazos de empréstimo (mantendo valor e taxa constantes), ou valores de empréstimo (mantendo taxa e prazo constantes). Cada tipo de comparação ajuda entender diferentes aspectos de precificação de empréstimo."
+        },
+        {
+          "question": "Quão precisas são essas comparações de pagamentos?",
+          "answer": "Os cálculos usam fórmulas padrão de pagamento de empréstimo que são altamente precisas para a maioria dos empréstimos de taxa fixa. No entanto, pagamentos reais podem incluir taxas adicionais, impostos ou seguro que não estão incluídos em cálculos básicos de empréstimo."
+        },
+        {
+          "question": "Posso exportar essas tabelas de comparação?",
+          "answer": "Sim, a calculadora inclui funcionalidade de exportação para salvar suas tabelas de comparação como arquivos CSV para uso em planilhas, apresentações ou documentos de planejamento financeiro."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Générateur de Tableau de Paiements d'Emprunt",
+    "seoTitle": "Générateur de Tableau de Paiements d'Emprunt - Comparer Scénarios d'Emprunt",
+    "metaDescription": "Générez des tableaux de comparaison pour paiements d'emprunt avec différents taux d'intérêt, durées et montants. Générateur gratuit de tableaux de paiements d'emprunt pour planification financière.",
+    "keywords": [
+      "générateur tableau paiements emprunt",
+      "calculateur comparaison emprunt",
+      "comparaison paiements emprunt",
+      "tableau paiements hypothèque",
+      "comparaison scénarios emprunt",
+      "tableau comparaison paiements"
+    ],
+    "longTailKeywords": [
+      "générateur tableau comparaison paiements emprunt",
+      "comparer paiements emprunt avec différents taux",
+      "calculateur comparaison paiements hypothèque",
+      "tableau comparaison durées emprunt",
+      "comparaison taux intérêt pour emprunts",
+      "analyse scénarios paiements emprunt",
+      "générer tableau comparaison paiements emprunt",
+      "comparer différents montants paiements emprunt",
+      "tableau paiements emprunt avec différentes durées",
+      "tableau comparaison taux hypothèque"
+    ],
+    "slug": "loan-payment-table-generator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "comparaison emprunt",
+      "tableau paiements",
+      "analyse scénarios",
+      "planification financière",
+      "taux intérêt",
+      "durées emprunt"
+    ],
+    "description": "Générez des tableaux complets de comparaison pour paiements d'emprunt. Comparez comment différents taux d'intérêt, durées d'emprunt et montants d'emprunt affectent vos paiements mensuels. Parfait pour achats d'hypothèque, comparaisons d'emprunt auto et planification financière avec tableaux de paiements faciles à lire.",
+    "summary": "Générez des tableaux de comparaison pour paiements d'emprunt dans différents scénarios",
+    "instructions": [
+      "Choisissez le type de tableau que vous voulez générer (comparaison de taux d'intérêt, durées d'emprunt ou montants d'emprunt)",
+      "Entrez les paramètres de base d'emprunt",
+      "Spécifiez la plage de valeurs à comparer",
+      "Cliquez sur 'Générer Tableau' pour créer le tableau de comparaison",
+      "Utilisez la fonction d'exportation pour enregistrer ou imprimer votre tableau de comparaison de paiements"
+    ],
+    "calculatorComponent": "LoanPaymentTableGenerator",
+    "examples": [
+      {
+        "title": "Comparaison de Taux d'Hypothèque",
+        "description": "Comparant paiements d'hypothèque à différents taux d'intérêt",
+        "input": {
+          "tableType": "interest_rate",
+          "baseLoanAmount": 300000,
+          "baseInterestRate": 6.5,
+          "baseLoanTerm": 30,
+          "comparisonValues": "5.5,6.0,6.5,7.0,7.5"
+        },
+        "output": {
+          "tableSummary": "Comparaison de 5 taux montrant différence de $238 dans paiement mensuel",
+          "bestRate": "Taux de 5.5% économise $1,425 mensuels",
+          "paymentRange": "$1,419 - $1,844 mensuels",
+          "interestRange": "$211,000 - $363,000 intérêts totaux"
+        }
+      },
+      {
+        "title": "Comparaison de Durées d'Emprunt",
+        "description": "Comparant paiements pour différentes durées d'emprunt",
+        "input": {
+          "tableType": "loan_term",
+          "baseLoanAmount": 250000,
+          "baseInterestRate": 6.5,
+          "baseLoanTerm": 30,
+          "comparisonValues": "15,20,25,30"
+        },
+        "output": {
+          "tableSummary": "Comparaison de 4 durées montrant impact de durée d'emprunt",
+          "bestRate": "Durée de 15 ans économise $475 mensuels",
+          "paymentRange": "$1,975 - $2,450 mensuels",
+          "interestRange": "$106,000 - $430,000 intérêts totaux"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Prenez des décisions éclairées sur emprunt avec notre générateur complet de tableaux de paiements d'emprunt. Cet outil financier puissant vous permet de comparer paiements d'emprunt dans différents scénarios, vous aidant à comprendre comment taux d'intérêt, durées d'emprunt et montants d'emprunt affectent vos paiements mensuels et coûts totaux d'emprunt. Que vous achetiez une hypothèque, compariez offres d'emprunt auto ou planifiiez tout achat important, cette calculatrice fournit des insights clairs et actionnables à travers tableaux de comparaison faciles à lire.",
+      "benefits": [
+        "Comparez paiements d'emprunt dans multiples scénarios simultanément",
+        "Comprenez l'impact réel sur coût de différents taux d'intérêt",
+        "Voyez comment durée d'emprunt affecte paiements mensuels et intérêts totaux",
+        "Prenez des décisions basées sur données en achetant emprunts",
+        "Économisez temps en générant tableaux de comparaison professionnels instantanément",
+        "Planifiez votre budget avec projections précises de paiements"
+      ],
+      "steps": [
+        "Sélectionnez le type de comparaison que vous voulez faire (taux d'intérêt, durées d'emprunt ou montants d'emprunt)",
+        "Entrez vos paramètres de base d'emprunt (montant, taux, durée)",
+        "Spécifiez la plage de valeurs que vous voulez comparer",
+        "Cliquez sur 'Générer Tableau' pour créer votre comparaison",
+        "Examinez les différences de paiements et implications de coût total",
+        "Exportez le tableau pour utilisation dans présentations ou planification financière"
+      ],
+      "inputsExplained": [
+        "Le type de tableau détermine quel paramètre variera dans la comparaison",
+        "Le montant de base d'emprunt est le principal pour calculs de comparaison",
+        "Le taux de base d'intérêt fournit le point de référence pour comparaisons de taux",
+        "La durée de base d'emprunt établit la période de remboursement pour comparaisons de durée",
+        "Les valeurs de comparaison sont les différents taux/durées/montants à comparer contre la base"
+      ],
+      "formulaExplanation": "Le calculateur utilise la formule de paiement d'emprunt standard pour générer paiements mensuels pour chaque scénario. En comparant taux d'intérêt, montant et durée d'emprunt restent constants tandis que taux varient. Pour comparaisons de durée, montant et taux restent les mêmes tandis que périodes de remboursement changent. Cela vous permet de voir exactement comment chaque variable affecte vos paiements mensuels et coûts totaux d'emprunt.",
+      "examples": [
+        "Une comparaison d'hypothèque de 300 000 € montre que tomber de 7.5% à 5.5% de taux d'intérêt économise 425 € mensuels et 153 000 € en intérêts totaux sur 30 ans",
+        "Comparant durées d'emprunt pour 250 000 € à 6.5% montre qu'un emprunt de 15 ans coûte 1 975 € mensuels mais économise 324 000 € en intérêts comparé à 30 ans"
+      ],
+      "resultsExplanation": [
+        "Le tableau de comparaison de paiements montre paiements mensuels pour chaque scénario",
+        "Le résumé du tableau met en évidence différences clés et opportunités d'économie",
+        "Le meilleur taux identifie l'option la plus rentable dans votre comparaison",
+        "La plage de paiements montre l'écart entre paiements mensuels les plus élevés et plus bas",
+        "La plage d'intérêts montre différences de coût total d'intérêts dans scénarios",
+        "Chaque ligne représente un scénario différent d'emprunt avec toutes les métriques clés"
+      ],
+      "whoItsFor": "Ce générateur de tableaux de paiements d'emprunt est essentiel pour acheteurs immobiliers comparant offres d'hypothèque, acheteurs d'auto évaluant termes d'emprunt, propriétaires de petites entreprises analysant options de financement et quiconque prenant décisions importantes d'achat. Il est particulièrement précieux pour planificateurs financiers, agents immobiliers et officiers d'emprunt qui ont besoin de présenter comparaisons claires de paiements à clients.",
+      "disclaimer": "Ce calculateur fournit comparaisons de paiements basées sur formules d'emprunt standard. Termes réels d'emprunt peuvent varier selon score de crédit, exigences de prêteur et conditions spécifiques d'emprunt. Les comparaisons sont pour fins illustratives et ne constituent pas approbation d'emprunt ou termes finaux.",
+      "relatedTools": [
+        "calculateur hypothèque",
+        "calculateur emprunt",
+        "calculateur emprunt auto",
+        "calculateur tableau amortissement",
+        "calculateur capacité emprunt"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un tableau de comparaison de paiements d'emprunt?",
+          "answer": "Un tableau de comparaison de paiements d'emprunt montre comment paiements mensuels et coûts totaux changent lorsque vous variez paramètres clés d'emprunt comme taux d'intérêt, durées d'emprunt ou montants d'emprunt. Il vous aide à comprendre l'impact financier de différents scénarios d'emprunt."
+        },
+        {
+          "question": "Comment utiliser cela pour achats d'hypothèque?",
+          "answer": "Entrez votre montant et durée d'emprunt souhaités, puis comparez différents taux d'intérêt que vous êtes cités. Le tableau montrera exactement combien vous économisez ou payez en plus avec chaque taux, vous aidant à choisir la meilleure offre d'hypothèque."
+        },
+        {
+          "question": "Quels paramètres d'emprunt puis-je comparer?",
+          "answer": "Vous pouvez comparer taux d'intérêt (gardant montant et durée constants), durées d'emprunt (gardant montant et taux constants), ou montants d'emprunt (gardant taux et durée constants). Chaque type de comparaison vous aide à comprendre différents aspects de tarification d'emprunt."
+        },
+        {
+          "question": "À quel point ces comparaisons de paiements sont-elles précises?",
+          "answer": "Les calculs utilisent formules de paiement d'emprunt standard qui sont hautement précises pour la plupart des emprunts à taux fixe. Cependant, paiements réels peuvent inclure frais supplémentaires, impôts ou assurance qui ne sont pas inclus dans calculs de base d'emprunt."
+        },
+        {
+          "question": "Puis-je exporter ces tableaux de comparaison?",
+          "answer": "Oui, le calculateur inclut fonctionnalité d'exportation pour enregistrer vos tableaux de comparaison comme fichiers CSV pour utilisation dans feuilles de calcul, présentations ou documents de planification financière."
+        }
+      ]
+    }
+  }
+}

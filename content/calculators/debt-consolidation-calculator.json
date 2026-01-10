@@ -1,0 +1,470 @@
+{
+  "en": {
+    "title": "Debt Consolidation Calculator",
+    "seoTitle": "Debt Consolidation Calculator - Calculate Consolidation Savings and Payoff Plans",
+    "metaDescription": "Free debt consolidation calculator. Calculate savings from consolidating debt, compare consolidation options, and create payoff plans. Essential for debt management and financial relief.",
+    "keywords": ["debt consolidation calculator", "debt payoff calculator", "consolidation savings calculator", "debt management calculator", "consolidation loan calculator"],
+    "longTailKeywords": ["how much can I save with debt consolidation calculator", "debt consolidation loan calculator", "consolidate debt calculator", "debt payoff plan calculator", "debt consolidation savings calculator"],
+    "slug": "debt-consolidation-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["debt consolidation", "debt payoff", "debt management", "financial relief", "loan consolidation"],
+    "summary": "Calculate debt consolidation savings, compare consolidation options, and create personalized debt payoff plans.",
+    "description": "Our comprehensive debt consolidation calculator helps you understand the benefits of consolidating multiple debts into a single payment. Compare interest rate savings, calculate total interest paid over time, and create customized payoff plans. Perfect for managing credit card debt, personal loans, and other high-interest obligations to achieve financial freedom faster.",
+    "instructions": [
+      "Enter all your current debts (amounts and interest rates)",
+      "Input consolidation loan terms and rate",
+      "Choose payoff strategy (debt avalanche or snowball)",
+      "Get detailed savings analysis and payoff timeline"
+    ],
+    "calculatorComponent": {
+      "componentName": "DebtConsolidationCalculator",
+      "inputs": [
+        { "name": "totalDebt", "label": "Total Debt Amount ($)", "type": "number", "default": 25000, "min": 1000, "max": 500000, "step": 500 },
+        { "name": "currentInterestRate", "label": "Current Average Interest Rate (%)", "type": "number", "default": 18, "min": 5, "max": 35, "step": 0.5 },
+        { "name": "consolidationRate", "label": "Consolidation Interest Rate (%)", "type": "number", "default": 12, "min": 3, "max": 25, "step": 0.5 },
+        { "name": "monthlyPayment", "label": "Current Monthly Payment ($)", "type": "number", "default": 600, "min": 50, "max": 5000, "step": 25 },
+        { "name": "loanTerm", "label": "New Loan Term (years)", "type": "number", "default": 5, "min": 1, "max": 15, "step": 1 }
+      ],
+      "formula": "New Monthly Payment = Total Debt × (r × (1+r)^n) / ((1+r)^n - 1); Savings = Old Payment - New Payment",
+      "output": { "label": "New Monthly Payment", "default": "Enter debt details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Monthly Savings", "field": "monthlySavings", "format": "currency" },
+        { "label": "Total Interest Saved", "field": "totalInterestSaved", "format": "currency" },
+        { "label": "Payoff Time Saved", "field": "payoffTimeSaved", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Credit Card Consolidation",
+        "input": "3 credit cards: $5,000 at 22%, $3,000 at 19%, $2,000 at 25%",
+        "output": "Consolidation Loan: $10,000 at 12%, Monthly Savings: $180, Total Interest Saved: $8,400"
+      },
+      {
+        "title": "Multiple Loan Consolidation",
+        "input": "Personal loan $8,000 at 15%, payday loan $2,000 at 35%, medical debt $4,000 at 8%",
+        "output": "Consolidation Loan: $14,000 at 10%, Monthly Payment: $350, Payoff Time: 42 months"
+      }
+    ],
+    "relatedCalculators": ["loan-calculator", "budget-calculator", "expense-calculator"],
+    "seoContent": {
+      "introduction": "Take control of overwhelming debt with our comprehensive debt consolidation calculator that shows you exactly how much you can save by combining multiple high-interest debts into a single manageable payment. Debt consolidation is one of the most powerful strategies for achieving financial freedom, but only when done correctly. Our calculator analyzes your current debt situation, compares consolidation options, and creates personalized payoff plans to help you escape the debt trap faster. Whether you're drowning in credit card debt, managing multiple personal loans, or struggling with high-interest obligations, this tool provides the clarity you need to make smart consolidation decisions.",
+      "benefits": [
+        "Calculate exact monthly savings from debt consolidation",
+        "Understand total interest savings over the life of your debt",
+        "Compare different consolidation loan options and rates",
+        "Create personalized debt payoff plans with timelines",
+        "See how consolidation affects your debt-free date",
+        "Evaluate the true cost of keeping multiple debts separate",
+        "Make informed decisions about when consolidation makes sense",
+        "Track progress toward becoming debt-free faster"
+      ],
+      "steps": [
+        "Enter your total debt amount and current average interest rate",
+        "Input your consolidation loan terms and interest rate",
+        "Specify your current monthly payment amount",
+        "Review savings analysis and new payoff timeline",
+        "Compare options to find the best consolidation strategy"
+      ],
+      "inputsExplained": [
+        "Total debt amount is the sum of all debts you're considering consolidating",
+        "Current average interest rate represents your weighted average across all debts",
+        "Consolidation rate is the interest rate offered on your new consolidation loan",
+        "Monthly payment reflects what you're currently paying across all debts",
+        "Loan term determines how long you'll have to pay off the consolidated debt"
+      ],
+      "formulaExplanation": "Debt consolidation savings are calculated using standard loan amortization formulas. Your new monthly payment = Total Debt × (r × (1+r)^n) / ((1+r)^n - 1), where r is monthly interest rate and n is number of payments. Monthly savings = Current Payment - New Payment. Total interest savings depend on the interest rate differential and loan term. The calculator shows how lower rates and longer terms can save money while potentially extending payoff time. Understanding these calculations helps you see why consolidation works for high-interest debt.",
+      "examples": [
+        "$25,000 in credit card debt at 18% average costs $600 monthly but consolidates to $450 monthly at 12%, saving $150 monthly and $7,200 in interest.",
+        "Multiple debts totaling $15,000 at varying rates (22%, 19%, 15%) consolidate to single $320 monthly payment at 10%, reducing payments by $180 monthly.",
+        "$35,000 debt consolidation reduces monthly payments from $850 to $650 while maintaining same payoff timeline, providing immediate cash flow relief."
+      ],
+      "resultsExplanation": [
+        "New monthly payment shows your consolidated payment amount",
+        "Monthly savings displays the difference from your current payments",
+        "Total interest saved reveals long-term cost reduction",
+        "Payoff time saved shows how much faster you become debt-free"
+      ],
+      "whoItsFor": "This debt consolidation calculator serves anyone overwhelmed by multiple debts, credit card users paying high interest, individuals with payday loans and high-interest debt, people considering balance transfers, financial advisors helping clients, recent graduates managing student loans, homeowners facing medical debt, and anyone wanting to simplify debt payments. It's particularly valuable for those with good credit seeking better rates, individuals wanting debt payoff acceleration, people needing immediate payment relief, and anyone comparing consolidation vs. current debt management strategies.",
+      "disclaimer": "This calculator provides estimates for educational purposes and should not replace professional financial advice. Consolidation may extend loan terms and potentially increase total interest paid in some scenarios. Credit requirements and approval rates vary by lender. Additional fees may apply to consolidation loans. This tool does not constitute loan approval or financial planning advice. Consider consulting a certified financial advisor or credit counselor before making consolidation decisions. Debt consolidation is not appropriate for all debt situations.",
+      "relatedTools": [
+        "Loan calculators for comparing consolidation loan options",
+        "Budget calculators for managing consolidated payments",
+        "Expense calculators for tracking debt reduction progress"
+      ],
+      "faqs": [
+        {
+          "question": "How much can I save with debt consolidation?",
+          "answer": "Savings depend on interest rate differential and debt amount. With $20,000 debt at 18% vs. 12% consolidation, you might save $100-200 monthly while potentially paying similar total interest if terms extend. The biggest savings come from high-interest debt like credit cards (15-25% APR) consolidated to personal loans (8-15% APR). Calculate your specific situation - monthly payment reduction provides immediate relief while interest savings build over time."
+        },
+        {
+          "question": "Should I consolidate all my debts or just high-interest ones?",
+          "answer": "Focus on debts with rates above 10-12% first, as these provide the most savings. Credit card debt (15-25%), payday loans (300%+), and unsecured personal loans (15-20%) are prime consolidation candidates. Don't consolidate low-interest debts like mortgages (3-4%) or student loans (4-7%). Consider debt avalanche method: consolidate high-interest debts while paying minimums on others, then tackle remaining debts systematically."
+        },
+        {
+          "question": "Does debt consolidation hurt my credit score?",
+          "answer": "Hard inquiry from loan application may temporarily lower score 5-10 points. Closing old accounts reduces credit utilization and available credit, potentially hurting scores. However, on-time consolidation payments improve payment history and lower utilization. Overall impact depends on credit profile - good credit sees minimal damage, poor credit may benefit from lower payments preventing missed payments. Credit scores typically recover within 6-12 months with consistent payments."
+        },
+        {
+          "question": "What's the difference between debt consolidation and balance transfer?",
+          "answer": "Balance transfers move existing credit card debt to a new card with 0% introductory APR, usually for 12-21 months. Consolidation loans combine multiple debts into one personal loan. Balance transfers work for credit card debt only, while consolidation handles any debt type. Balance transfers have lower limits but no new loan approval needed. Consolidation provides longer terms and potentially lower ongoing rates, but requires credit approval and may have origination fees."
+        },
+        {
+          "question": "When should I avoid debt consolidation?",
+          "answer": "Avoid if you have low-interest debts (under 8%), poor credit preventing good rates, or history of accumulating new debt. Don't consolidate if you need short-term debt payoff - longer loan terms may increase total interest. Skip consolidation if you can't commit to disciplined spending and saving habits. Consider debt management plans or bankruptcy alternatives if consolidation isn't feasible. Always calculate the true cost including fees and extended terms."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Consolidación de Deudas",
+    "seoTitle": "Calculadora de Consolidación de Deudas - Calcula Ahorros de Consolidación y Planes de Pago",
+    "metaDescription": "Calculadora gratuita de consolidación de deudas. Calcula ahorros de consolidar deudas, compara opciones de consolidación y crea planes de pago. Esencial para gestión de deudas y alivio financiero.",
+    "keywords": ["calculadora consolidación deudas", "calculadora pago deudas", "calculadora ahorros consolidación", "calculadora gestión deudas", "calculadora préstamo consolidación"],
+    "longTailKeywords": ["cuánto puedo ahorrar con consolidación deudas calculadora", "calculadora préstamo consolidación deudas", "consolidar deudas calculadora", "calculadora plan pago deudas", "calculadora ahorros consolidación deudas"],
+    "slug": "debt-consolidation-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["consolidación deudas", "pago deudas", "gestión deudas", "alivio financiero", "consolidación préstamos"],
+    "summary": "Calcula ahorros de consolidación de deudas, compara opciones de consolidación y crea planes personalizados de pago de deudas.",
+    "description": "Nuestra completa calculadora de consolidación de deudas te ayuda a entender los beneficios de consolidar múltiples deudas en un solo pago. Compara ahorros en tasas de interés, calcula interés total pagado con el tiempo y crea planes personalizados de pago. Perfecta para gestionar deuda de tarjetas de crédito, préstamos personales y otras obligaciones de alto interés para lograr libertad financiera más rápido.",
+    "instructions": [
+      "Ingresa todas tus deudas actuales (montos y tasas de interés)",
+      "Ingresa términos y tasa del préstamo de consolidación",
+      "Elige estrategia de pago (avalancha de deudas o bola de nieve)",
+      "Obtén análisis detallado de ahorros y cronograma de pago"
+    ],
+    "calculatorComponent": {
+      "componentName": "DebtConsolidationCalculator",
+      "inputs": [
+        { "name": "totalDebt", "label": "Total Debt Amount ($)", "type": "number", "default": 25000, "min": 1000, "max": 500000, "step": 500 },
+        { "name": "currentInterestRate", "label": "Current Average Interest Rate (%)", "type": "number", "default": 18, "min": 5, "max": 35, "step": 0.5 },
+        { "name": "consolidationRate", "label": "Consolidation Interest Rate (%)", "type": "number", "default": 12, "min": 3, "max": 25, "step": 0.5 },
+        { "name": "monthlyPayment", "label": "Current Monthly Payment ($)", "type": "number", "default": 600, "min": 50, "max": 5000, "step": 25 },
+        { "name": "loanTerm", "label": "New Loan Term (years)", "type": "number", "default": 5, "min": 1, "max": 15, "step": 1 }
+      ],
+      "formula": "New Monthly Payment = Total Debt × (r × (1+r)^n) / ((1+r)^n - 1); Savings = Old Payment - New Payment",
+      "output": { "label": "New Monthly Payment", "default": "Enter debt details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Monthly Savings", "field": "monthlySavings", "format": "currency" },
+        { "label": "Total Interest Saved", "field": "totalInterestSaved", "format": "currency" },
+        { "label": "Payoff Time Saved", "field": "payoffTimeSaved", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Consolidación Tarjetas de Crédito",
+        "input": "3 tarjetas: $5,000 al 22%, $3,000 al 19%, $2,000 al 25%",
+        "output": "Préstamo Consolidación: $10,000 al 12%, Ahorro Mensual: $180, Interés Total Ahorrado: $8,400"
+      },
+      {
+        "title": "Consolidación Múltiples Préstamos",
+        "input": "Préstamo personal $8,000 al 15%, préstamo día de pago $2,000 al 35%, deuda médica $4,000 al 8%",
+        "output": "Préstamo Consolidación: $14,000 al 10%, Pago Mensual: $350, Tiempo de Pago: 42 meses"
+      }
+    ],
+    "relatedCalculators": ["loan-calculator", "budget-calculator", "expense-calculator"],
+    "seoContent": {
+      "introduction": "Toma control de deudas abrumadoras con nuestra calculadora integral de consolidación de deudas que te muestra exactamente cuánto puedes ahorrar combinando múltiples deudas de alto interés en un solo pago manejable. La consolidación de deudas es una de las estrategias más poderosas para lograr libertad financiera, pero solo cuando se hace correctamente. Nuestra calculadora analiza tu situación actual de deudas, compara opciones de consolidación, y crea planes personalizados de pago para ayudarte a escapar de la trampa de deudas más rápido. Ya sea que estés ahogándote en deudas de tarjetas de crédito, manejando múltiples préstamos personales, o luchando con obligaciones de alto interés, esta herramienta proporciona la claridad que necesitas para tomar decisiones inteligentes de consolidación.",
+      "benefits": [
+        "Calcula ahorros mensuales exactos de consolidación de deudas",
+        "Entiende ahorros totales de interés durante la vida de tu deuda",
+        "Compara diferentes opciones de préstamo de consolidación y tasas",
+        "Crea planes personalizados de pago de deudas con cronogramas",
+        "Ve cómo afecta la consolidación a tu fecha libre de deudas",
+        "Evalúa el costo real de mantener deudas múltiples separadas",
+        "Toma decisiones informadas sobre cuándo la consolidación tiene sentido",
+        "Rastrea progreso hacia ser libre de deudas más rápido"
+      ],
+      "steps": [
+        "Ingresa tu monto total de deuda y tasa de interés promedio actual",
+        "Ingresa términos de préstamo de consolidación y tasa de interés",
+        "Especifica tu monto de pago mensual actual",
+        "Revisa análisis de ahorros y nuevo cronograma de pago",
+        "Compara opciones para encontrar la mejor estrategia de consolidación"
+      ],
+      "inputsExplained": [
+        "Monto total de deuda es la suma de todas las deudas que estás considerando consolidar",
+        "Tasa de interés promedio actual representa tu promedio ponderado a través de todas las deudas",
+        "Tasa de consolidación es la tasa de interés ofrecida en tu nuevo préstamo de consolidación",
+        "Pago mensual refleja lo que actualmente estás pagando a través de todas las deudas",
+        "Plazo de préstamo determina cuánto tiempo tendrás que pagar la deuda consolidada"
+      ],
+      "formulaExplanation": "Los ahorros de consolidación de deudas se calculan usando fórmulas estándar de amortización de préstamo. Tu nuevo pago mensual = Monto Total Deuda × (r × (1+r)^n) / ((1+r)^n - 1), donde r es tasa mensual de interés y n es número de pagos. Ahorros mensuales = Pago Actual - Nuevo Pago. Los ahorros totales de interés dependen de la diferencial de tasa de interés y plazo de préstamo. La calculadora muestra cómo tasas más bajas y plazos más largos pueden ahorrar dinero mientras potencialmente extienden tiempo de pago. Entender estos cálculos te ayuda a ver por qué la consolidación funciona para deudas de alto interés.",
+      "examples": [
+        "$25,000 en deuda de tarjetas de crédito al 18% promedio cuesta $600 mensuales pero consolida a $450 mensuales al 12%, ahorrando $150 mensuales y $7,200 en interés.",
+        "Múltiples deudas totalizando $15,000 a tasas variables (22%, 19%, 15%) consolidan a pago único mensual de $320 al 10%, reduciendo pagos en $180 mensuales.",
+        "Consolidación de deuda de $35,000 reduce pagos mensuales de $850 a $650 mientras mantiene mismo cronograma de pago, proporcionando alivio inmediato de flujo de caja."
+      ],
+      "resultsExplanation": [
+        "Nuevo pago mensual muestra tu monto de pago consolidado",
+        "Ahorros mensuales muestra la diferencia de tus pagos actuales",
+        "Interés total ahorrado revela reducción de costo a largo plazo",
+        "Tiempo de pago ahorrado muestra cuánto más rápido te vuelves libre de deudas"
+      ],
+      "whoItsFor": "Esta calculadora de consolidación de deudas sirve a cualquiera abrumado por deudas múltiples, usuarios de tarjetas de crédito pagando interés alto, individuos con préstamos de día de pago y deudas de alto interés, personas considerando transferencias de saldo, asesores financieros ayudando clientes, graduados recientes manejando préstamos estudiantiles, propietarios enfrentando deudas médicas, y cualquiera queriendo simplificar pagos de deudas. Es particularmente valiosa para aquellos con buen crédito buscando mejores tasas, individuos queriendo aceleración de pago de deudas, personas necesitando alivio inmediato de pagos, y cualquiera comparando consolidación vs. estrategias actuales de manejo de deudas.",
+      "disclaimer": "Esta calculadora proporciona estimaciones para propósitos educativos y no debe reemplazar consejo financiero profesional. La consolidación puede extender plazos de préstamo y potencialmente aumentar interés total pagado en algunos escenarios. Los requerimientos de crédito y tasas de aprobación varían por prestamista. Tarifas adicionales pueden aplicarse a préstamos de consolidación. Esta herramienta no constituye aprobación de préstamo o consejo de planificación financiera. Considera consultar asesor financiero certificado o consejero de crédito antes de tomar decisiones de consolidación. La consolidación de deudas no es apropiada para todas las situaciones de deuda.",
+      "relatedTools": [
+        "Calculadoras de préstamo para comparar opciones de préstamo de consolidación",
+        "Calculadoras de presupuesto para manejar pagos consolidados",
+        "Calculadoras de gastos para rastrear progreso de reducción de deudas"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánto puedo ahorrar con consolidación de deudas?",
+          "answer": "Los ahorros dependen de diferencial de tasa de interés y monto de deuda. Con $20,000 de deuda al 18% vs. 12% de consolidación, podrías ahorrar $100-200 mensuales mientras potencialmente pagando interés total similar si términos se extienden. Los ahorros más grandes vienen de deuda de alto interés como tarjetas de crédito (15-25% APR) consolidadas a préstamos personales (8-15% APR). Calcula tu situación específica - reducción de pago mensual proporciona alivio inmediato mientras ahorros de interés se acumulan con el tiempo."
+        },
+        {
+          "question": "¿Debo consolidar todas mis deudas o solo las de alto interés?",
+          "answer": "Enfócate en deudas con tasas arriba de 10-12% primero, ya que estas proporcionan los ahorros más. Deuda de tarjetas de crédito (15-25%), préstamos de día de pago (300%+), y préstamos personales no garantizados (15-20%) son candidatos principales de consolidación. No consolides deudas de bajo interés como hipotecas (3-4%) o préstamos estudiantiles (4-7%). Considera método avalancha de deuda: consolida deudas de alto interés mientras pagas mínimos en otras, luego ataca deudas restantes sistemáticamente."
+        },
+        {
+          "question": "¿La consolidación de deudas daña mi calificación crediticia?",
+          "answer": "Consulta difícil de aplicación de préstamo puede bajar calificación temporalmente 5-10 puntos. Cerrar cuentas antiguas reduce utilización de crédito y crédito disponible, potencialmente dañando calificaciones. Sin embargo, pagos puntuales de consolidación mejoran historial de pago y bajan utilización. Impacto general depende de perfil de crédito - buen crédito ve daño mínimo, crédito pobre puede beneficiarse de pagos más bajos previniendo pagos perdidos. Las calificaciones de crédito típicamente se recuperan dentro de 6-12 meses con pagos consistentes."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre consolidación de deudas y transferencia de saldo?",
+          "answer": "Transferencias de saldo mueven deuda existente de tarjetas de crédito a nueva tarjeta con APR introductorio 0%, usualmente por 12-21 meses. Consolidación combina múltiples deudas en un préstamo personal. Transferencias de saldo funcionan solo para deuda de tarjetas de crédito, mientras consolidación maneja cualquier tipo de deuda. Transferencias de saldo tienen límites más bajos pero no necesitan aprobación de nuevo préstamo. Consolidación proporciona términos más largos y potencialmente tasas menores continuas, pero requiere aprobación de crédito y puede tener tarifas de originación."
+        },
+        {
+          "question": "¿Cuándo debo evitar consolidación de deudas?",
+          "answer": "Evita si tienes deudas de bajo interés (bajo 8%), crédito pobre previniendo buenas tasas, o historial de acumular nueva deuda. No consolides si necesitas pago de deuda a corto plazo - términos de préstamo más largos pueden aumentar interés total. Omite consolidación si no puedes comprometerte a hábitos disciplinados de gasto y ahorro. Considera planes de manejo de deuda o alternativas de bancarrota si consolidación no es factible. Siempre calcula el costo real incluyendo tarifas y términos extendidos."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Consolidação de Dívidas",
+    "seoTitle": "Calculadora de Consolidação de Dívidas - Calcule Economias de Consolidação e Planos de Quitação",
+    "metaDescription": "Calculadora gratuita de consolidação de dívidas. Calcule economias de consolidar dívidas, compare opções de consolidação e crie planos de quitação. Essencial para gestão de dívidas e alívio financeiro.",
+    "keywords": ["calculadora consolidação dívidas", "calculadora quitação dívidas", "calculadora economias consolidação", "calculadora gestão dívidas", "calculadora empréstimo consolidação"],
+    "longTailKeywords": ["quanto posso economizar com consolidação dívidas calculadora", "calculadora empréstimo consolidação dívidas", "consolidar dívidas calculadora", "calculadora plano quitação dívidas", "calculadora economias consolidação dívidas"],
+    "slug": "debt-consolidation-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["consolidação dívidas", "quitação dívidas", "gestão dívidas", "alívio financeiro", "consolidação empréstimos"],
+    "summary": "Calcule economias de consolidação de dívidas, compare opções de consolidação e crie planos personalizados de quitação de dívidas.",
+    "description": "Nossa calculadora completa de consolidação de dívidas ajuda você a entender os benefícios de consolidar múltiplas dívidas em um único pagamento. Compare economias em taxas de juros, calcule juros totais pagos ao longo do tempo e crie planos personalizados de quitação. Perfeita para gerenciar dívida de cartões de crédito, empréstimos pessoais e outras obrigações de alto juros para alcançar liberdade financeira mais rápido.",
+    "instructions": [
+      "Digite todas as suas dívidas atuais (valores e taxas de juros)",
+      "Digite termos e taxa do empréstimo de consolidação",
+      "Escolha estratégia de quitação (avalanche de dívidas ou bola de neve)",
+      "Obtenha análise detalhada de economias e cronograma de quitação"
+    ],
+    "calculatorComponent": {
+      "componentName": "DebtConsolidationCalculator",
+      "inputs": [
+        { "name": "totalDebt", "label": "Total Debt Amount ($)", "type": "number", "default": 25000, "min": 1000, "max": 500000, "step": 500 },
+        { "name": "currentInterestRate", "label": "Current Average Interest Rate (%)", "type": "number", "default": 18, "min": 5, "max": 35, "step": 0.5 },
+        { "name": "consolidationRate", "label": "Consolidation Interest Rate (%)", "type": "number", "default": 12, "min": 3, "max": 25, "step": 0.5 },
+        { "name": "monthlyPayment", "label": "Current Monthly Payment ($)", "type": "number", "default": 600, "min": 50, "max": 5000, "step": 25 },
+        { "name": "loanTerm", "label": "New Loan Term (years)", "type": "number", "default": 5, "min": 1, "max": 15, "step": 1 }
+      ],
+      "formula": "New Monthly Payment = Total Debt × (r × (1+r)^n) / ((1+r)^n - 1); Savings = Old Payment - New Payment",
+      "output": { "label": "New Monthly Payment", "default": "Enter debt details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Monthly Savings", "field": "monthlySavings", "format": "currency" },
+        { "label": "Total Interest Saved", "field": "totalInterestSaved", "format": "currency" },
+        { "label": "Payoff Time Saved", "field": "payoffTimeSaved", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Consolidação Cartões de Crédito",
+        "input": "3 cartões: $5,000 a 22%, $3,000 a 19%, $2,000 a 25%",
+        "output": "Empréstimo Consolidação: $10,000 a 12%, Economia Mensal: $180, Juros Totais Economizados: $8,400"
+      },
+      {
+        "title": "Consolidação Múltiplos Empréstimos",
+        "input": "Empréstimo pessoal $8,000 a 15%, empréstimo dia de pagamento $2,000 a 35%, dívida médica $4,000 a 8%",
+        "output": "Empréstimo Consolidação: $14,000 a 10%, Pagamento Mensal: $350, Tempo de Quitação: 42 meses"
+      }
+    ],
+    "relatedCalculators": ["loan-calculator", "budget-calculator", "expense-calculator"],
+    "seoContent": {
+      "introduction": "Tome controle de dívidas esmagadoras com nossa calculadora abrangente de consolidação de dívidas que mostra exatamente quanto você pode economizar combinando múltiplas dívidas de alto juros em um único pagamento manejável. Consolidação de dívidas é uma das estratégias mais poderosas para alcançar liberdade financeira, mas apenas quando feita corretamente. Nossa calculadora analisa sua situação atual de dívidas, compara opções de consolidação, e cria planos personalizados de quitação para ajudar você a escapar da armadilha de dívidas mais rápido. Seja afogando em dívidas de cartão de crédito, gerenciando múltiplos empréstimos pessoais, ou lutando com obrigações de alto juros, esta ferramenta fornece a clareza que você precisa para tomar decisões inteligentes de consolidação.",
+      "benefits": [
+        "Calcule economias mensais exatas de consolidação de dívidas",
+        "Entenda economias totais de juros durante a vida de sua dívida",
+        "Compare diferentes opções de empréstimo de consolidação e taxas",
+        "Crie planos personalizados de quitação de dívidas com cronogramas",
+        "Veja como consolidação afeta sua data livre de dívidas",
+        "Avalie o custo real de manter múltiplas dívidas separadas",
+        "Tome decisões informadas sobre quando consolidação faz sentido",
+        "Rastreie progresso para se tornar livre de dívidas mais rápido"
+      ],
+      "steps": [
+        "Digite seu valor total de dívida e taxa média de juros atual",
+        "Insira termos de empréstimo de consolidação e taxa de juros",
+        "Especifique seu valor de pagamento mensal atual",
+        "Revise análise de economias e novo cronograma de quitação",
+        "Compare opções para encontrar a melhor estratégia de consolidação"
+      ],
+      "inputsExplained": [
+        "Valor total de dívida é a soma de todas as dívidas que você está considerando consolidar",
+        "Taxa média de juros atual representa sua média ponderada através de todas as dívidas",
+        "Taxa de consolidação é a taxa de juros oferecida em seu novo empréstimo de consolidação",
+        "Pagamento mensal reflete o que você está pagando atualmente através de todas as dívidas",
+        "Prazo de empréstimo determina quanto tempo você terá para quitar a dívida consolidada"
+      ],
+      "formulaExplanation": "Economias de consolidação de dívidas são calculadas usando fórmulas padrão de amortização de empréstimo. Seu novo pagamento mensal = Valor Total Dívida × (r × (1+r)^n) / ((1+r)^n - 1), onde r é taxa mensal de juros e n é número de pagamentos. Economias mensais = Pagamento Atual - Novo Pagamento. Economias totais de juros dependem da diferencial de taxa de juros e prazo de empréstimo. A calculadora mostra como taxas menores e prazos mais longos podem economizar dinheiro enquanto potencialmente estendendo tempo de quitação. Entender estes cálculos ajuda você a ver por que consolidação funciona para dívidas de alto juros.",
+      "examples": [
+        "$25,000 em dívida de cartão de crédito a 18% média custa $600 mensais mas consolida para $450 mensais a 12%, economizando $150 mensais e $7,200 em juros.",
+        "Múltiplas dívidas totalizando $15,000 a taxas variáveis (22%, 19%, 15%) consolidam para pagamento único mensal de $320 a 10%, reduzindo pagamentos em $180 mensais.",
+        "Consolidação de dívida de $35,000 reduz pagamentos mensais de $850 para $650 enquanto mantendo mesmo cronograma de quitação, fornecendo alívio imediato de fluxo de caixa."
+      ],
+      "resultsExplanation": [
+        "Novo pagamento mensal mostra seu valor de pagamento consolidado",
+        "Economias mensais mostra a diferença de seus pagamentos atuais",
+        "Juros totais economizados revela redução de custo de longo prazo",
+        "Tempo de quitação economizado mostra quanto mais rápido você se torna livre de dívidas"
+      ],
+      "whoItsFor": "Esta calculadora de consolidação de dívidas serve qualquer pessoa sobrecarregada por múltiplas dívidas, usuários de cartão de crédito pagando juros altos, indivíduos com empréstimos de dia de pagamento e dívidas de alto juros, pessoas considerando transferências de saldo, consultores financeiros ajudando clientes, graduados recentes gerenciando empréstimos estudantis, proprietários enfrentando dívidas médicas, e qualquer pessoa querendo simplificar pagamentos de dívidas. É particularmente valiosa para aqueles com bom crédito buscando melhores taxas, indivíduos querendo aceleração de quitação de dívidas, pessoas precisando de alívio imediato de pagamentos, e qualquer pessoa comparando consolidação vs. estratégias atuais de gerenciamento de dívidas.",
+      "disclaimer": "Esta calculadora fornece estimativas para propósitos educacionais e não deve substituir conselho financeiro profissional. Consolidação pode estender prazos de empréstimo e potencialmente aumentar juros totais pagos em alguns cenários. Requisitos de crédito e taxas de aprovação variam por credor. Taxas adicionais podem aplicar a empréstimos de consolidação. Esta ferramenta não constitui aprovação de empréstimo ou conselho de planejamento financeiro. Considere consultar consultor financeiro certificado ou conselheiro de crédito antes de tomar decisões de consolidação. Consolidação de dívidas não é apropriada para todas as situações de dívida.",
+      "relatedTools": [
+        "Calculadoras de empréstimo para comparar opções de empréstimo de consolidação",
+        "Calculadoras de orçamento para gerenciar pagamentos consolidados",
+        "Calculadoras de gastos para rastrear progresso de redução de dívidas"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto posso economizar com consolidação de dívidas?",
+          "answer": "Economias dependem da diferencial de taxa de juros e valor de dívida. Com $20,000 dívida a 18% vs. 12% consolidação, você pode economizar $100-200 mensais enquanto potencialmente pagando juros totais similares se termos se estenderem. As maiores economias vêm de dívidas de alto juros como cartões de crédito (15-25% APR) consolidadas para empréstimos pessoais (8-15% APR). Calcule sua situação específica - redução de pagamento mensal fornece alívio imediato enquanto economias de juros se acumulam com o tempo."
+        },
+        {
+          "question": "¿Devo consolidar todas as minhas dívidas ou apenas as de alto juros?",
+          "answer": "Foque em dívidas com taxas acima de 10-12% primeiro, pois estas fornecem as maiores economias. Dívidas de cartão de crédito (15-25%), empréstimos de dia de pagamento (300%+), e empréstimos pessoais não garantidos (15-20%) são candidatos principais de consolidação. Não consolide dívidas de baixo juros como hipotecas (3-4%) ou empréstimos estudantis (4-7%). Considere método avalanche de dívida: consolide dívidas de alto juros enquanto paga mínimos em outras, então ataque dívidas restantes sistematicamente."
+        },
+        {
+          "question": "Consolidação de dívidas prejudica minha pontuação de crédito?",
+          "answer": "Consulta difícil de aplicação de empréstimo pode baixar pontuação temporariamente 5-10 pontos. Fechar contas antigas reduz utilização de crédito e crédito disponível, potencialmente prejudicando pontuações. No entanto, pagamentos pontuais de consolidação melhoram histórico de pagamento e baixam utilização. Impacto geral depende de perfil de crédito - bom crédito vê dano mínimo, crédito pobre pode se beneficiar de pagamentos menores previnindo pagamentos perdidos. Pontuações de crédito tipicamente se recuperam dentro de 6-12 meses com pagamentos consistentes."
+        },
+        {
+          "question": "Qual é a diferença entre consolidação de dívidas e transferência de saldo?",
+          "answer": "Transferências de saldo movem dívida existente de cartão de crédito para novo cartão com APR introdutório 0%, usualmente por 12-21 meses. Consolidação combina múltiplas dívidas em um empréstimo pessoal. Transferências de saldo funcionam para dívida de cartão de crédito apenas, enquanto consolidação lida com qualquer tipo de dívida. Transferências de saldo têm limites menores mas não precisam de aprovação de novo empréstimo. Consolidação fornece termos mais longos e potencialmente taxas menores contínuas, mas requer aprovação de crédito e pode ter taxas de origem."
+        },
+        {
+          "question": "¿Quando devo evitar consolidação de dívidas?",
+          "answer": "Evite se você tem dívidas de baixo juros (abaixo de 8%), crédito pobre previnindo boas taxas, ou histórico de acumular nova dívida. Não consolide se você precisa de quitação de dívida de curto prazo - prazos de empréstimo mais longos podem aumentar juros totais. Pule consolidação se você não pode se comprometer a hábitos disciplinados de gasto e economia. Considere planos de gerenciamento de dívida ou alternativas de falência se consolidação não for factível. Sempre calcule o custo real incluindo taxas e termos estendidos."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Consolidation de Dettes",
+    "seoTitle": "Calculateur de Consolidation de Dettes - Calculez les Économies de Consolidation et Plans de Remboursement",
+    "metaDescription": "Calculateur gratuit de consolidation de dettes. Calculez les économies de consolidation de dettes, comparez les options de consolidation et créez des plans de remboursement. Essentiel pour la gestion des dettes et soulagement financier.",
+    "keywords": ["calculateur consolidation dettes", "calculateur remboursement dettes", "calculateur économies consolidation", "calculateur gestion dettes", "calculateur prêt consolidation"],
+    "longTailKeywords": ["combien économiser avec consolidation dettes calculateur", "calculateur prêt consolidation dettes", "consolider dettes calculateur", "calculateur plan remboursement dettes", "calculateur économies consolidation dettes"],
+    "slug": "debt-consolidation-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["consolidation dettes", "remboursement dettes", "gestion dettes", "soulagement financier", "consolidation prêts"],
+    "summary": "Calculez les économies de consolidation de dettes, comparez les options de consolidation et créez des plans personnalisés de remboursement de dettes.",
+    "description": "Notre calculateur complet de consolidation de dettes vous aide à comprendre les avantages de consolider plusieurs dettes en un seul paiement. Comparez les économies sur les taux d'intérêt, calculez les intérêts totaux payés au fil du temps et créez des plans de remboursement personnalisés. Parfait pour gérer les dettes de cartes de crédit, prêts personnels et autres obligations à haut intérêt pour atteindre la liberté financière plus rapidement.",
+    "instructions": [
+      "Entrez toutes vos dettes actuelles (montants et taux d'intérêt)",
+      "Saisissez les termes et taux du prêt de consolidation",
+      "Choisissez la stratégie de remboursement (avalanche de dettes ou boule de neige)",
+      "Obtenez une analyse détaillée des économies et calendrier de remboursement"
+    ],
+    "calculatorComponent": {
+      "componentName": "DebtConsolidationCalculator",
+      "inputs": [
+        { "name": "totalDebt", "label": "Total Debt Amount ($)", "type": "number", "default": 25000, "min": 1000, "max": 500000, "step": 500 },
+        { "name": "currentInterestRate", "label": "Current Average Interest Rate (%)", "type": "number", "default": 18, "min": 5, "max": 35, "step": 0.5 },
+        { "name": "consolidationRate", "label": "Consolidation Interest Rate (%)", "type": "number", "default": 12, "min": 3, "max": 25, "step": 0.5 },
+        { "name": "monthlyPayment", "label": "Current Monthly Payment ($)", "type": "number", "default": 600, "min": 50, "max": 5000, "step": 25 },
+        { "name": "loanTerm", "label": "New Loan Term (years)", "type": "number", "default": 5, "min": 1, "max": 15, "step": 1 }
+      ],
+      "formula": "New Monthly Payment = Total Debt × (r × (1+r)^n) / ((1+r)^n - 1); Savings = Old Payment - New Payment",
+      "output": { "label": "New Monthly Payment", "default": "Enter debt details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Monthly Savings", "field": "monthlySavings", "format": "currency" },
+        { "label": "Total Interest Saved", "field": "totalInterestSaved", "format": "currency" },
+        { "label": "Payoff Time Saved", "field": "payoffTimeSaved", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Consolidation Cartes de Crédit",
+        "input": "3 cartes: $5,000 à 22%, $3,000 à 19%, $2,000 à 25%",
+        "output": "Prêt Consolidation: $10,000 à 12%, Économie Mensuelle: $180, Intérêts Totaux Économisés: $8,400"
+      },
+      {
+        "title": "Consolidation Prêts Multiples",
+        "input": "Prêt personnel $8,000 à 15%, prêt jour de paie $2,000 à 35%, dette médicale $4,000 à 8%",
+        "output": "Prêt Consolidation: $14,000 à 10%, Paiement Mensuel: $350, Temps de Remboursement: 42 mois"
+      }
+    ],
+    "relatedCalculators": ["loan-calculator", "budget-calculator", "expense-calculator"],
+    "seoContent": {
+      "introduction": "Prenez contrôle de dettes accablantes avec notre calculatrice complète de consolidation de dettes qui vous montre exactement combien vous pouvez économiser en combinant multiples dettes à haut intérêt en un seul paiement gérable. La consolidation de dettes est l'une des stratégies les plus puissantes pour atteindre liberté financière, mais seulement quand faite correctement. Notre calculatrice analyse votre situation actuelle de dettes, compare les options de consolidation, et crée des plans personnalisés de remboursement pour vous aider à échapper au piège de dettes plus rapidement. Que vous soyez noyé dans dettes cartes de crédit, gérant multiples prêts personnels, ou luttant avec obligations à haut intérêt, cet outil fournit la clarté dont vous avez besoin pour prendre des décisions intelligentes de consolidation.",
+      "benefits": [
+        "Calculez économies mensuelles exactes de consolidation de dettes",
+        "Comprenez économies totales intérêts pendant la vie de votre dette",
+        "Comparez différentes options prêt consolidation et taux",
+        "Créez plans personnalisés remboursement dettes avec chronologies",
+        "Voyez comment consolidation affecte votre date sans dette",
+        "Évaluez le coût réel de garder multiples dettes séparées",
+        "Prenez décisions éclairées sur quand consolidation a du sens",
+        "Suivez progrès vers devenir sans dette plus rapidement"
+      ],
+      "steps": [
+        "Entrez votre montant total dette et taux intérêt moyen actuel",
+        "Saisissez termes prêt consolidation et taux intérêt",
+        "Spécifiez votre montant paiement mensuel actuel",
+        "Examinez analyse économies et nouvelle chronologie remboursement",
+        "Comparez options pour trouver meilleure stratégie consolidation"
+      ],
+      "inputsExplained": [
+        "Montant total dette est la somme de toutes dettes vous considérez consolider",
+        "Taux intérêt moyen actuel représente votre moyenne pondérée à travers toutes dettes",
+        "Taux consolidation est le taux intérêt offert sur votre nouveau prêt consolidation",
+        "Paiement mensuel reflète ce que vous payez actuellement à travers toutes dettes",
+        "Terme prêt détermine combien de temps vous aurez pour rembourser dette consolidée"
+      ],
+      "formulaExplanation": "Économies consolidation dettes sont calculées utilisant formules amortissement prêt standard. Votre nouveau paiement mensuel = Montant Total Dette × (r × (1+r)^n) / ((1+r)^n - 1), où r est taux intérêt mensuel et n est nombre paiements. Économies mensuelles = Paiement Actuel - Nouveau Paiement. Économies totales intérêts dépendent de la différentielle taux intérêt et terme prêt. La calculatrice montre comment taux plus bas et termes plus longs peuvent économiser argent tout potentiellement étendant temps remboursement. Comprendre ces calculs vous aide voir pourquoi consolidation fonctionne pour dettes à haut intérêt.",
+      "examples": [
+        "$25,000 en dette cartes crédit à 18% moyenne coûte $600 mensuels mais consolide à $450 mensuels à 12%, économisant $150 mensuels et $7,200 en intérêts.",
+        "Multiples dettes totalisant $15,000 à taux variables (22%, 19%, 15%) consolident à paiement unique mensuel de $320 à 10%, réduisant paiements de $180 mensuels.",
+        "Consolidation dette $35,000 réduit paiements mensuels de $850 à $650 tout maintenant même chronologie remboursement, fournissant soulagement immédiat flux trésorerie."
+      ],
+      "resultsExplanation": [
+        "Nouveau paiement mensuel montre votre montant paiement consolidé",
+        "Économies mensuelles affiche la différence de vos paiements actuels",
+        "Intérêts totaux économisés révèle réduction coût long terme",
+        "Temps remboursement économisé montre combien plus rapidement vous devenez sans dette"
+      ],
+      "whoItsFor": "Cette calculatrice consolidation dettes sert quiconque accablé par multiples dettes, utilisateurs cartes crédit payant haut intérêt, individus avec prêts jour de paie et dettes à haut intérêt, personnes considérant transferts solde, conseillers financiers aidant clients, diplômés récents gérant prêts étudiants, propriétaires faisant face dettes médicales, et quiconque souhaitant simplifier paiements dettes. Elle est particulièrement précieuse pour ceux avec bon crédit cherchant meilleurs taux, individus voulant accélération remboursement dettes, personnes ayant besoin soulagement immédiat paiements, et quiconque comparant consolidation vs. stratégies actuelles gestion dettes.",
+      "disclaimer": "Cette calculatrice fournit estimations à fins éducatives et ne devrait pas remplacer conseil financier professionnel. Consolidation peut étendre termes prêt et potentiellement augmenter intérêts totaux payés dans certains scénarios. Exigences crédit et taux approbation varient par prêteur. Frais supplémentaires peuvent appliquer à prêts consolidation. Cet outil ne constitue pas approbation prêt ou conseil planification financière. Considérez consulter conseiller financier certifié ou conseiller crédit avant prendre décisions consolidation. Consolidation dettes n'est pas appropriée pour toutes situations dette.",
+      "relatedTools": [
+        "Calculateurs prêt pour comparer options prêt consolidation",
+        "Calculateurs budget pour gérer paiements consolidés",
+        "Calculateurs dépenses pour suivre progrès réduction dettes"
+      ],
+      "faqs": [
+        {
+          "question": "Combien puis-je économiser avec consolidation dettes ?",
+          "answer": "Économies dépendent de différentielle taux intérêt et montant dette. Avec $20,000 dette à 18% vs. 12% consolidation, vous pourriez économiser $100-200 mensuels tout potentiellement payant intérêts totaux similaires si termes s'étendent. Les plus grandes économies viennent de dettes à haut intérêt comme cartes crédit (15-25% APR) consolidées à prêts personnels (8-15% APR). Calculez votre situation spécifique - réduction paiement mensuel fournit soulagement immédiat tandis que économies intérêts s'accumulent avec temps."
+        },
+        {
+          "question": "¿Dois-je consolider toutes mes dettes ou seulement celles à haut intérêt ?",
+          "answer": "Concentrez-vous sur dettes avec taux au-dessus de 10-12% d'abord, car celles-ci fournissent les économies les plus. Dettes cartes crédit (15-25%), prêts jour de paie (300%+), et prêts personnels non garantis (15-20%) sont candidats principaux consolidation. Ne consolidez pas dettes faible intérêt comme hypothèques (3-4%) ou prêts étudiants (4-7%). Considérez méthode avalanche dette : consolidez dettes à haut intérêt tout payant minimums sur autres, puis attaquez dettes restantes systématiquement."
+        },
+        {
+          "question": "Consolidation dettes blesse-t-elle mon score crédit ?",
+          "answer": "Demande difficile d'application prêt peut baisser score temporairement 5-10 points. Fermer anciens comptes réduit utilisation crédit et crédit disponible, potentiellement blessant scores. Cependant, paiements ponctuels consolidation améliorent historique paiement et baissent utilisation. Impact général dépend de profil crédit - bon crédit voit dommage minimal, crédit pauvre peut bénéficier de paiements plus bas prévenant paiements manqués. Scores crédit typiquement se récupèrent dans 6-12 mois avec paiements consistants."
+        },
+        {
+          "question": "Quelle est différence entre consolidation dettes et transfert solde ?",
+          "answer": "Transferts solde déplacent dette cartes crédit existante à nouvelle carte avec APR introductoire 0%, habituellement pour 12-21 mois. Consolidation combine multiples dettes en un prêt personnel. Transferts solde fonctionnent pour dette cartes crédit seulement, tandis que consolidation gère tout type dette. Transferts solde ont limites plus basses mais n'ont pas besoin approbation nouveau prêt. Consolidation fournit termes plus longs et potentiellement taux plus bas continus, mais requiert approbation crédit et peut avoir frais origination."
+        },
+        {
+          "question": "¿Quand devrais-je éviter consolidation dettes ?",
+          "answer": "Évitez si vous avez dettes faible intérêt (sous 8%), crédit pauvre prévenant bons taux, ou historique d'accumuler nouvelle dette. Ne consolidez pas si vous avez besoin remboursement dette court terme - termes prêt plus longs peuvent augmenter intérêts totaux. Sautez consolidation si vous ne pouvez pas vous engager à habitudes disciplinées dépense et économie. Considérez plans gestion dette ou alternatives faillite si consolidation n'est pas faisable. Calculez toujours le coût réel incluant frais et termes étendus."
+        }
+      ]
+    }
+  }
+}

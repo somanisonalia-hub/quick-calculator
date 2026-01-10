@@ -1,0 +1,590 @@
+{
+  "en": {
+    "title": "Fraction Calculator",
+    "seoTitle": "Fraction Calculator - Add, Subtract, Multiply, Divide Fractions Online",
+    "metaDescription": "Free fraction calculator. Add, subtract, multiply, and divide fractions with step-by-step solutions. Convert between mixed numbers and improper fractions.",
+    "keywords": ["fraction calculator", "add fractions", "subtract fractions", "multiply fractions", "divide fractions"],
+    "longTailKeywords": ["fraction calculator with steps", "adding fractions calculator", "subtracting fractions calculator", "multiplying fractions calculator", "dividing fractions calculator"],
+    "slug": "fraction-calculator",
+    "category": "math",
+    "difficulty": "intermediate",
+    "tags": ["fractions", "math", "addition", "subtraction", "multiplication", "division"],
+    "summary": "Complete fraction calculator with addition, subtraction, multiplication, division, and simplification.",
+    "description": "Our comprehensive fraction calculator handles all basic fraction operations including addition, subtraction, multiplication, and division. It automatically finds common denominators, simplifies fractions, and provides step-by-step solutions. Perfect for students learning fractions, teachers demonstrating concepts, and anyone working with fractional calculations.",
+    "instructions": [
+      "Select the operation you want to perform (add, subtract, multiply, divide)",
+      "Enter the fractions using whole numbers, numerators, and denominators",
+      "Choose whether to show mixed numbers or improper fractions",
+      "Get instant results with step-by-step calculations",
+      "Use the simplify function to reduce fractions to lowest terms"
+    ],
+    "calculatorComponent": {
+      "componentName": "FractionCalculator",
+      "inputs": [
+        { "name": "operation", "label": "Operation", "type": "select", "default": "add", "options": ["add", "subtract", "multiply", "divide"] },
+        { "name": "fraction1", "label": "First Fraction", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 2 }, "fields": [
+          { "name": "whole", "label": "Whole", "type": "number", "default": 0, "min": 0 },
+          { "name": "numerator", "label": "Numerator", "type": "number", "default": 1, "min": 0 },
+          { "name": "denominator", "label": "Denominator", "type": "number", "default": 2, "min": 1 }
+        ]},
+        { "name": "fraction2", "label": "Second Fraction", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 3 }, "fields": [
+          { "name": "whole", "label": "Whole", "type": "number", "default": 0, "min": 0 },
+          { "name": "numerator", "label": "Numerator", "type": "number", "default": 1, "min": 0 },
+          { "name": "denominator", "label": "Denominator", "type": "number", "default": 3, "min": 1 }
+        ]},
+        { "name": "outputFormat", "label": "Output Format", "type": "select", "default": "mixed", "options": ["mixed", "improper"] }
+      ],
+      "formula": "Addition: a/b + c/d = (ad + bc)/bd; Subtraction: a/b - c/d = (ad - bc)/bd; Multiplication: a/b × c/d = ac/bd; Division: a/b ÷ c/d = ad/bc",
+      "output": { "label": "Result", "default": "Enter fractions above", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Step-by-Step Solution", "field": "steps", "format": "text" },
+        { "label": "Simplified Result", "field": "simplified", "format": "text" },
+        { "label": "Decimal Equivalent", "field": "decimal", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Adding Fractions",
+        "input": "1/2 + 1/3",
+        "output": "5/6 (or 0.833...)"
+      },
+      {
+        "title": "Subtracting Fractions",
+        "input": "3/4 - 1/2",
+        "output": "1/4 (or 0.25)"
+      },
+      {
+        "title": "Multiplying Fractions",
+        "input": "2/3 × 3/4",
+        "output": "1/2 (or 0.5)"
+      },
+      {
+        "title": "Dividing Fractions",
+        "input": "1/2 ÷ 1/4",
+        "output": "2/1 = 2 (or 2.0)"
+      },
+      {
+        "title": "Mixed Numbers",
+        "input": "1 1/2 + 2 1/3",
+        "output": "3 5/6 (or 3.833...)"
+      }
+    ],
+    "relatedCalculators": ["percentage-calculator", "scientific-calculator", "unit-converter"],
+    "seoContent": {
+      "introduction": "Master fraction calculations with our comprehensive online fraction calculator that handles all basic fraction operations with step-by-step solutions. Whether you're adding fractions, subtracting fractions, multiplying fractions, or dividing fractions, this calculator automatically finds common denominators, simplifies results, and provides detailed explanations perfect for students learning fractions. Access mixed number and improper fraction conversions, automatic simplification to lowest terms, and decimal equivalents for complete fraction understanding. Perfect for elementary and middle school students mastering fraction concepts, teachers demonstrating mathematical operations, and anyone working with fractional calculations in cooking, construction, engineering, or financial applications. Handle complex fraction problems with confidence using our educational tool that shows every step of the mathematical process.",
+      "benefits": [
+        "Perform all four basic fraction operations with automatic common denominator calculation",
+        "Get step-by-step solutions showing the mathematical process for learning and verification",
+        "Automatically simplify fractions to lowest terms for clean, reduced results",
+        "Convert between mixed numbers and improper fractions with ease",
+        "Handle complex fraction problems involving multiple operations and conversions",
+        "Understand fraction concepts through clear, educational explanations and examples",
+        "Access decimal equivalents for practical applications and comparisons",
+        "Support mixed number arithmetic with automatic conversion to improper fractions"
+      ],
+      "steps": [
+        "Select the fraction operation you want to perform from the dropdown menu",
+        "Enter the first fraction using whole number, numerator, and denominator fields",
+        "Enter the second fraction with the same input method",
+        "Choose your preferred output format (mixed number or improper fraction)",
+        "Review the instant calculation result with automatic simplification",
+        "Study the detailed step-by-step solution to understand the mathematical process",
+        "Use the decimal equivalent for practical applications and verification"
+      ],
+      "inputsExplained": [
+        "Whole number field accepts integer values for mixed number fractions",
+        "Numerator field accepts the top number of the fraction",
+        "Denominator field accepts the bottom number (cannot be zero)",
+        "Operation selector determines whether to add, subtract, multiply, or divide fractions",
+        "Output format choice controls whether results display as mixed numbers or improper fractions"
+      ],
+      "formulaExplanation": "Fraction addition requires finding a common denominator using the least common multiple (LCM) of both denominators, then adding numerators over the common denominator. Fraction subtraction uses the same common denominator approach but subtracts numerators. Fraction multiplication involves multiplying numerators together and denominators together. Fraction division requires multiplying by the reciprocal of the second fraction. All results are automatically simplified by dividing numerator and denominator by their greatest common divisor (GCD). Mixed numbers are converted to improper fractions for calculation, then converted back to mixed numbers if requested. These fundamental operations form the basis of fractional arithmetic used throughout mathematics and practical applications.",
+      "examples": [
+        "Addition example: 1/2 + 1/3 requires finding common denominator 6, giving 3/6 + 2/6 = 5/6",
+        "Subtraction example: 3/4 - 1/2 uses common denominator 4, giving 3/4 - 2/4 = 1/4",
+        "Multiplication example: 2/3 × 3/4 = (2×3)/(3×4) = 6/12 = 1/2 after simplification",
+        "Division example: 1/2 ÷ 1/4 = 1/2 × 4/1 = 4/2 = 2 after multiplying by reciprocal",
+        "Mixed number example: 1 1/2 + 2 1/3 = 3/2 + 7/3 = 9/6 + 14/6 = 23/6 = 3 5/6",
+        "Simplification example: 8/12 automatically reduces to 2/3 by dividing numerator and denominator by 4"
+      ],
+      "resultsExplanation": [
+        "Main result displays the calculated fraction in your chosen format",
+        "Step-by-step solution shows each mathematical operation and conversion",
+        "Simplified result provides the fraction in its lowest terms",
+        "Decimal equivalent gives the numerical value for practical use",
+        "All results include proper formatting for fractions and mixed numbers",
+        "Error messages appear for invalid operations like division by zero"
+      ],
+      "whoItsFor": "This fraction calculator serves elementary and middle school students learning basic fraction operations in mathematics classes. Teachers use it to demonstrate fraction concepts and verify homework answers. Parents help children understand fraction arithmetic for school assignments. Chefs and bakers work with recipe fractions and ingredient measurements. Construction workers calculate material fractions and measurements. Engineers handle fractional dimensions and specifications. Financial professionals compute fractional interest rates and investment portions. Anyone working with proportional calculations, measurements, or divisions will find this calculator an essential tool for accurate fraction mathematics.",
+      "disclaimer": "This calculator provides fraction calculations based on standard mathematical principles and algorithms. While designed for high accuracy, users should verify critical calculations through alternative methods when precision is essential. Division by zero is not permitted and will result in an error message. Mixed numbers and improper fractions are handled according to mathematical conventions. Decimal equivalents are provided for convenience but may involve rounding in certain cases. The tool is intended for educational, domestic, and general-purpose calculations, not for mission-critical applications requiring guaranteed precision.",
+      "relatedTools": [
+        "Percentage calculators for converting between fractions and percentages",
+        "Scientific calculators for advanced mathematical operations with fractions",
+        "Unit converters for fractional measurements and dimensional analysis"
+      ],
+      "faqs": [
+        {
+          "question": "How do I add or subtract fractions with different denominators?",
+          "answer": "To add or subtract fractions with different denominators, first find a common denominator by calculating the least common multiple (LCM) of both denominators. Convert both fractions to equivalent fractions with this common denominator, then add or subtract the numerators while keeping the denominator the same. Finally, simplify the result if possible. For example, 1/2 + 1/3 = 3/6 + 2/6 = 5/6."
+        },
+        {
+          "question": "What's the difference between mixed numbers and improper fractions?",
+          "answer": "A mixed number consists of a whole number and a proper fraction (like 2 1/2), while an improper fraction has a numerator larger than or equal to its denominator (like 5/2). Mixed numbers are often easier to understand and work with in practical situations, while improper fractions are better for mathematical calculations. You can convert between them: to convert mixed to improper, multiply the whole number by denominator and add numerator; to convert improper to mixed, divide numerator by denominator."
+        },
+        {
+          "question": "How do I multiply and divide fractions?",
+          "answer": "To multiply fractions, simply multiply the numerators together and multiply the denominators together, then simplify. For example, 2/3 × 3/4 = (2×3)/(3×4) = 6/12 = 1/2. To divide fractions, multiply the first fraction by the reciprocal (flip) of the second fraction. For example, 1/2 ÷ 1/4 = 1/2 × 4/1 = 4/2 = 2. Remember to simplify your final answer."
+        },
+        {
+          "question": "Why do fractions need to be simplified?",
+          "answer": "Simplifying fractions reduces them to their lowest terms by dividing both numerator and denominator by their greatest common divisor (GCD). This makes fractions easier to understand, compare, and use in further calculations. For example, 8/12 can be simplified to 2/3 by dividing both numbers by 4. Simplified fractions are the standard form and are easier to work with in most mathematical contexts."
+        },
+        {
+          "question": "Can this calculator handle complex fraction problems?",
+          "answer": "Yes, the calculator can handle various complex fraction scenarios including mixed number arithmetic, multiple operations, and fractions with large numbers. It automatically manages common denominator calculations for addition and subtraction, handles reciprocal operations for division, and provides step-by-step solutions for all operations. The calculator also supports decimal conversion for practical applications and can handle both positive and negative fraction values."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Fracciones",
+    "seoTitle": "Calculadora de Fracciones - Suma, Resta, Multiplica, Divide Fracciones Online",
+    "metaDescription": "Calculadora gratuita de fracciones. Suma, resta, multiplica y divide fracciones con soluciones paso a paso. Convierte entre números mixtos y fracciones impropias.",
+    "keywords": ["calculadora fracciones", "sumar fracciones", "restar fracciones", "multiplicar fracciones", "dividir fracciones"],
+    "longTailKeywords": ["calculadora fracciones con pasos", "sumando fracciones calculadora", "restando fracciones calculadora", "multiplicando fracciones calculadora", "dividiendo fracciones calculadora"],
+    "slug": "fraction-calculator",
+    "category": "math",
+    "difficulty": "intermediate",
+    "tags": ["fracciones", "matemáticas", "suma", "resta", "multiplicación", "división"],
+    "summary": "Calculadora completa de fracciones con suma, resta, multiplicación, división y simplificación.",
+    "description": "Nuestra calculadora integral de fracciones maneja todas operaciones básicas fracciones incluyendo suma, resta, multiplicación y división. Encuentra automáticamente denominadores comunes, simplifica fracciones, y proporciona soluciones paso a paso. Perfecta para estudiantes aprendiendo fracciones, maestros demostrando conceptos, y cualquiera trabajando con cálculos fraccionarios.",
+    "instructions": [
+      "Selecciona operación que quieres realizar (sumar, restar, multiplicar, dividir)",
+      "Ingresa fracciones usando números enteros, numeradores y denominadores",
+      "Elige si mostrar números mixtos o fracciones impropias",
+      "Obtén resultados instantáneos con cálculos paso a paso",
+      "Usa función simplificar para reducir fracciones a términos más bajos"
+    ],
+    "calculatorComponent": {
+      "componentName": "FractionCalculator",
+      "inputs": [
+        { "name": "operation", "label": "Operación", "type": "select", "default": "add", "options": ["add", "subtract", "multiply", "divide"] },
+        { "name": "fraction1", "label": "Primera Fracción", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 2 }, "fields": [
+          { "name": "whole", "label": "Entero", "type": "number", "default": 0, "min": 0 },
+          { "name": "numerator", "label": "Numerador", "type": "number", "default": 1, "min": 0 },
+          { "name": "denominator", "label": "Denominador", "type": "number", "default": 2, "min": 1 }
+        ]},
+        { "name": "fraction2", "label": "Segunda Fracción", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 3 }, "fields": [
+          { "name": "whole", "label": "Entero", "type": "number", "default": 0, "min": 0 },
+          { "name": "numerator", "label": "Numerador", "type": "number", "default": 1, "min": 0 },
+          { "name": "denominator", "label": "Denominador", "type": "number", "default": 3, "min": 1 }
+        ]},
+        { "name": "outputFormat", "label": "Formato Salida", "type": "select", "default": "mixed", "options": ["mixed", "improper"] }
+      ],
+      "formula": "Suma: a/b + c/d = (ad + bc)/bd; Resta: a/b - c/d = (ad - bc)/bd; Multiplicación: a/b × c/d = ac/bd; División: a/b ÷ c/d = ad/bc",
+      "output": { "label": "Resultado", "default": "Ingresa fracciones arriba", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Solución Paso a Paso", "field": "steps", "format": "text" },
+        { "label": "Resultado Simplificado", "field": "simplified", "format": "text" },
+        { "label": "Equivalente Decimal", "field": "decimal", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Sumando Fracciones",
+        "input": "1/2 + 1/3",
+        "output": "5/6 (o 0.833...)"
+      },
+      {
+        "title": "Restando Fracciones",
+        "input": "3/4 - 1/2",
+        "output": "1/4 (o 0.25)"
+      },
+      {
+        "title": "Multiplicando Fracciones",
+        "input": "2/3 × 3/4",
+        "output": "1/2 (o 0.5)"
+      },
+      {
+        "title": "Dividiendo Fracciones",
+        "input": "1/2 ÷ 1/4",
+        "output": "2/1 = 2 (o 2.0)"
+      },
+      {
+        "title": "Números Mixtos",
+        "input": "1 1/2 + 2 1/3",
+        "output": "3 5/6 (o 3.833...)"
+      }
+    ],
+    "relatedCalculators": ["percentage-calculator", "scientific-calculator", "unit-converter"],
+    "seoContent": {
+      "introduction": "Domine cálculos fraccionarios con nuestra calculadora fraccionaria integral en línea que maneja todas operaciones básicas fracciones con soluciones paso a paso. Ya sea sumando fracciones, restando fracciones, multiplicando fracciones o dividiendo fracciones, esta calculadora encuentra automáticamente denominadores comunes, simplifica resultados, y proporciona explicaciones detalladas perfectas para estudiantes aprendiendo fracciones. Acceda conversiones números mixtos y fracciones impropias, simplificación automática a términos más bajos, y equivalentes decimales para comprensión fraccionaria completa. Perfecta para estudiantes primaria y secundaria dominando conceptos fraccionarios, maestros demostrando operaciones matemáticas, y cualquiera trabajando con cálculos fraccionarios en cocina, construcción, ingeniería, o aplicaciones financieras. Maneje problemas fraccionarios complejos con confianza usando nuestra herramienta educativa que muestra cada paso proceso matemático.",
+      "benefits": [
+        "Realice todas cuatro operaciones básicas fracciones con cálculo automático denominador común",
+        "Obtenga soluciones paso a paso mostrando proceso matemático para aprendizaje y verificación",
+        "Simplifique automáticamente fracciones a términos más bajos para resultados limpios y reducidos",
+        "Convierta entre números mixtos y fracciones impropias con facilidad",
+        "Maneje problemas fraccionarios complejos involucrando múltiples operaciones y conversiones",
+        "Entienda conceptos fraccionarios través explicaciones claras y educativas",
+        "Acceda equivalentes decimales para aplicaciones prácticas y comparaciones",
+        "Soporte aritmética números mixtos con conversión automática a fracciones impropias"
+      ],
+      "steps": [
+        "Seleccione operación fraccionaria que quiere realizar del menú desplegable",
+        "Ingrese primera fracción usando campos número entero, numerador y denominador",
+        "Ingrese segunda fracción con mismo método entrada",
+        "Elija formato salida preferido (número mixto o fracción impropia)",
+        "Revise resultado cálculo instantáneo con simplificación automática",
+        "Estudie solución detallada paso a paso para entender proceso matemático",
+        "Use equivalente decimal para aplicaciones prácticas y verificación"
+      ],
+      "inputsExplained": [
+        "Campo número entero acepta valores enteros para fracciones números mixtos",
+        "Campo numerador acepta número superior fracción",
+        "Campo denominador acepta número inferior (no puede ser cero)",
+        "Selector operación determina si sumar, restar, multiplicar o dividir fracciones",
+        "Elección formato salida controla si resultados muestran como números mixtos o fracciones impropias"
+      ],
+      "formulaExplanation": "Suma fracciones requiere encontrar denominador común usando mínimo común múltiplo (MCM) ambos denominadores, luego sumar numeradores sobre denominador común. Resta fracciones usa mismo enfoque denominador común pero resta numeradores. Multiplicación fracciones involucra multiplicar numeradores juntos y denominadores juntos. División fracciones requiere multiplicar por recíproco segunda fracción. Todos resultados son automáticamente simplificados dividiendo numerador y denominador por su máximo común divisor (MCD). Números mixtos son convertidos a fracciones impropias para cálculo, luego convertidos de vuelta a números mixtos si solicitado. Estas operaciones fundamentales forman base aritmética fraccionaria usada a través matemáticas y aplicaciones prácticas.",
+      "examples": [
+        "Ejemplo suma: 1/2 + 1/3 requiere encontrar denominador común 6, dando 3/6 + 2/6 = 5/6",
+        "Ejemplo resta: 3/4 - 1/2 usa denominador común 4, dando 3/4 - 2/4 = 1/4",
+        "Ejemplo multiplicación: 2/3 × 3/4 = (2×3)/(3×4) = 6/12 = 1/2 después simplificación",
+        "Ejemplo división: 1/2 ÷ 1/4 = 1/2 × 4/1 = 4/2 = 2 después multiplicar por recíproco",
+        "Ejemplo número mixto: 1 1/2 + 2 1/3 = 3/2 + 7/3 = 9/6 + 14/6 = 23/6 = 3 5/6",
+        "Ejemplo simplificación: 8/12 automáticamente reduce a 2/3 dividiendo numerador y denominador por 4"
+      ],
+      "resultsExplanation": [
+        "Resultado principal muestra fracción calculada en formato elegido",
+        "Solución paso a paso muestra cada operación matemática y conversión",
+        "Resultado simplificado proporciona fracción en sus términos más bajos",
+        "Equivalente decimal da valor numérico para uso práctico",
+        "Todos resultados incluyen formato apropiado para fracciones y números mixtos",
+        "Mensajes error aparecen para operaciones inválidas como división por cero"
+      ],
+      "whoItsFor": "Esta calculadora fracciones sirve estudiantes primaria y secundaria aprendiendo operaciones básicas fracciones en clases matemáticas. Maestros la usan para demostrar conceptos fraccionarios y verificar respuestas tarea. Padres ayudan hijos entender aritmética fraccionaria para tareas escolares. Chefs y panaderos trabajan con fracciones recetas y medidas ingredientes. Trabajadores construcción calculan fracciones materiales y medidas. Ingenieros manejan dimensiones fraccionarias y especificaciones. Profesionales financieros computan tasas interés fraccionarias y porciones inversión. Cualquiera trabajando con cálculos proporcionales, medidas, o divisiones encontrará esta calculadora herramienta esencial para matemáticas fraccionarias precisas.",
+      "disclaimer": "Esta calculadora proporciona cálculos fraccionarios basados en principios y algoritmos matemáticos estándar. Mientras diseñada para alta exactitud, usuarios deberían verificar cálculos críticos través métodos alternativos cuando precisión es esencial. División por cero no es permitida y resultará en mensaje error. Números mixtos y fracciones impropias son manejados de acuerdo a convenciones matemáticas. Equivalentes decimales son proporcionados por conveniencia pero pueden involucrar redondeo en ciertos casos. La herramienta es destinada a cálculos educativos, domésticos, y propósito general, no para aplicaciones críticas misión requiriendo precisión garantizada.",
+      "relatedTools": [
+        "Calculadoras porcentajes para convertir entre fracciones y porcentajes",
+        "Calculadoras científicas para operaciones matemáticas avanzadas con fracciones",
+        "Convertidores unidades para medidas fraccionarias y análisis dimensional"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo sumo o resto fracciones con denominadores diferentes?",
+          "answer": "Para sumar o restar fracciones con denominadores diferentes, primero encuentre denominador común calculando mínimo común múltiplo (MCM) ambos denominadores. Convierta ambas fracciones a fracciones equivalentes con este denominador común, luego sume o reste numeradores mientras mantiene denominador mismo. Finalmente, simplifique resultado si posible. Por ejemplo, 1/2 + 1/3 = 3/6 + 2/6 = 5/6."
+        },
+        {
+          "question": "¿Cuál es diferencia entre números mixtos y fracciones impropias?",
+          "answer": "Un número mixto consiste de número entero y fracción propia (como 2 1/2), mientras fracción impropia tiene numerador mayor o igual a su denominador (como 5/2). Números mixtos son frecuentemente más fáciles entender y trabajar en situaciones prácticas, mientras fracciones impropias son mejores para cálculos matemáticos. Puede convertir entre ellos: para convertir mixto a impropio, multiplique número entero por denominador y sume numerador; para convertir impropio a mixto, divida numerador por denominador."
+        },
+        {
+          "question": "¿Cómo multiplico y divido fracciones?",
+          "answer": "Para multiplicar fracciones, simplemente multiplique numeradores juntos y multiplique denominadores juntos, luego simplifique. Por ejemplo, 2/3 × 3/4 = (2×3)/(3×4) = 6/12 = 1/2. Para dividir fracciones, multiplique primera fracción por recíproco (voltee) segunda fracción. Por ejemplo, 1/2 ÷ 1/4 = 1/2 × 4/1 = 4/2 = 2. Recuerde simplificar respuesta final."
+        },
+        {
+          "question": "¿Por qué fracciones necesitan ser simplificadas?",
+          "answer": "Simplificar fracciones las reduce a sus términos más bajos dividiendo numerador y denominador por su máximo común divisor (MCD). Esto hace fracciones más fáciles entender, comparar, y usar en cálculos adicionales. Por ejemplo, 8/12 puede ser simplificado a 2/3 dividiendo ambos números por 4. Fracciones simplificadas son forma estándar y son más fáciles trabajar en mayoría contextos matemáticos."
+        },
+        {
+          "question": "¿Esta calculadora puede manejar problemas fraccionarios complejos?",
+          "answer": "Sí, la calculadora puede manejar varios escenarios fraccionarios complejos incluyendo aritmética números mixtos, múltiples operaciones, y fracciones con números grandes. Maneja automáticamente cálculos denominador común para suma y resta, maneja operaciones recíprocas para división, y proporciona soluciones paso a paso para todas operaciones. La calculadora también soporta conversión decimal para aplicaciones prácticas y puede manejar valores fraccionarios positivos y negativos."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Frações",
+    "seoTitle": "Calculadora de Frações - Soma, Subtrai, Multiplica, Divide Frações Online",
+    "metaDescription": "Calculadora gratuita de frações. Soma, subtrai, multiplica e divide frações com soluções passo a passo. Converte entre números mistos e frações impróprias.",
+    "keywords": ["calculadora frações", "somar frações", "subtrair frações", "multiplicar frações", "dividir frações"],
+    "longTailKeywords": ["calculadora frações com passos", "somando frações calculadora", "subtraindo frações calculadora", "multiplicando frações calculadora", "dividindo frações calculadora"],
+    "slug": "fraction-calculator",
+    "category": "math",
+    "difficulty": "intermediate",
+    "tags": ["frações", "matemática", "soma", "subtração", "multiplicação", "divisão"],
+    "summary": "Calculadora completa de frações com soma, subtração, multiplicação, divisão e simplificação.",
+    "description": "Nossa calculadora abrangente de frações lida com todas operações básicas frações incluindo soma, subtração, multiplicação e divisão. Encontra automaticamente denominadores comuns, simplifica frações, e fornece soluções passo a passo. Perfeita para estudantes aprendendo frações, professores demonstrando conceitos, e qualquer um trabalhando com cálculos fracionários.",
+    "instructions": [
+      "Selecione operação que quer realizar (somar, subtrair, multiplicar, dividir)",
+      "Digite frações usando números inteiros, numeradores e denominadores",
+      "Escolha se mostrar números mistos ou frações impróprias",
+      "Obtenha resultados instantâneos com cálculos passo a passo",
+      "Use função simplificar para reduzir frações a termos mais baixos"
+    ],
+    "calculatorComponent": {
+      "componentName": "FractionCalculator",
+      "inputs": [
+        { "name": "operation", "label": "Operação", "type": "select", "default": "add", "options": ["add", "subtract", "multiply", "divide"] },
+        { "name": "fraction1", "label": "Primeira Fração", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 2 }, "fields": [
+          { "name": "whole", "label": "Inteiro", "type": "number", "default": 0, "min": 0 },
+          { "name": "numerator", "label": "Numerador", "type": "number", "default": 1, "min": 0 },
+          { "name": "denominator", "label": "Denominador", "type": "number", "default": 2, "min": 1 }
+        ]},
+        { "name": "fraction2", "label": "Segunda Fração", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 3 }, "fields": [
+          { "name": "whole", "label": "Inteiro", "type": "number", "default": 0, "min": 0 },
+          { "name": "numerator", "label": "Numerador", "type": "number", "default": 1, "min": 0 },
+          { "name": "denominator", "label": "Denominador", "type": "number", "default": 3, "min": 1 }
+        ]},
+        { "name": "outputFormat", "label": "Formato Saída", "type": "select", "default": "mixed", "options": ["mixed", "improper"] }
+      ],
+      "formula": "Soma: a/b + c/d = (ad + bc)/bd; Subtração: a/b - c/d = (ad - bc)/bd; Multiplicação: a/b × c/d = ac/bd; Divisão: a/b ÷ c/d = ad/bc",
+      "output": { "label": "Resultado", "default": "Digite frações acima", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Solução Passo a Passo", "field": "steps", "format": "text" },
+        { "label": "Resultado Simplificado", "field": "simplified", "format": "text" },
+        { "label": "Equivalente Decimal", "field": "decimal", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Somando Frações",
+        "input": "1/2 + 1/3",
+        "output": "5/6 (ou 0.833...)"
+      },
+      {
+        "title": "Subtraindo Frações",
+        "input": "3/4 - 1/2",
+        "output": "1/4 (ou 0.25)"
+      },
+      {
+        "title": "Multiplicando Frações",
+        "input": "2/3 × 3/4",
+        "output": "1/2 (ou 0.5)"
+      },
+      {
+        "title": "Dividindo Frações",
+        "input": "1/2 ÷ 1/4",
+        "output": "2/1 = 2 (ou 2.0)"
+      },
+      {
+        "title": "Números Mistos",
+        "input": "1 1/2 + 2 1/3",
+        "output": "3 5/6 (ou 3.833...)"
+      }
+    ],
+    "relatedCalculators": ["percentage-calculator", "scientific-calculator", "unit-converter"],
+    "seoContent": {
+      "introduction": "Domine cálculos fração com nossa calculadora fração abrangente online que lida com todas operações básicas frações com soluções passo a passo. Seja somando frações, subtraindo frações, multiplicando frações ou dividindo frações, esta calculadora encontra automaticamente denominadores comuns, simplifica resultados, e fornece explicações detalhadas perfeitas para estudantes aprendendo frações. Acesse conversões números mistos e frações impróprias, simplificação automática a termos mais baixos, e equivalentes decimais para compreensão fração completa. Perfeita para estudantes fundamental e médio dominando conceitos fracionários, professores demonstrando operações matemáticas, e qualquer um trabalhando com cálculos fracionários em cozinha, construção, engenharia, ou aplicações financeiras. Lide com problemas fração complexos com confiança usando nossa ferramenta educativa que mostra cada passo processo matemático.",
+      "benefits": [
+        "Realize todas quatro operações básicas frações com cálculo automático denominador comum",
+        "Obtenha soluções passo a passo mostrando processo matemático para aprendizado e verificação",
+        "Simplifique automaticamente frações a termos mais baixos para resultados limpos e reduzidos",
+        "Converta entre números mistos e frações impróprias com facilidade",
+        "Lide com problemas fração complexos envolvendo múltiplas operações e conversões",
+        "Entenda conceitos fração através explicações claras e educativas",
+        "Acesse equivalentes decimais para aplicações práticas e comparações",
+        "Suporte aritmética números mistos com conversão automática a frações impróprias"
+      ],
+      "steps": [
+        "Selecione operação fração que quer realizar do menu dropdown",
+        "Digite primeira fração usando campos número inteiro, numerador e denominador",
+        "Digite segunda fração com mesmo método entrada",
+        "Escolha formato saída preferido (número misto ou fração imprópria)",
+        "Revise resultado cálculo instantâneo com simplificação automática",
+        "Estude solução detalhada passo a passo para entender processo matemático",
+        "Use equivalente decimal para aplicações práticas e verificação"
+      ],
+      "inputsExplained": [
+        "Campo número inteiro aceita valores inteiros para frações números mistos",
+        "Campo numerador aceita número superior fração",
+        "Campo denominador aceita número inferior (não pode ser zero)",
+        "Seletor operação determina se somar, subtrair, multiplicar ou dividir frações",
+        "Escolha formato saída controla se resultados mostram como números mistos ou frações impróprias"
+      ],
+      "formulaExplanation": "Soma frações requer encontrar denominador comum usando mínimo comum múltiplo (MCM) ambos denominadores, então somar numeradores sobre denominador comum. Subtração frações usa mesma abordagem denominador comum mas subtrai numeradores. Multiplicação frações envolve multiplicar numeradores juntos e denominadores juntos. Divisão frações requer multiplicar por recíproco segunda fração. Todos resultados são automaticamente simplificados dividindo numerador e denominador por seu máximo comum divisor (MCD). Números mistos são convertidos a frações impróprias para cálculo, então convertidos de volta a números mistos se solicitado. Estas operações fundamentais formam base aritmética fracionária usada através matemática e aplicações práticas.",
+      "examples": [
+        "Exemplo soma: 1/2 + 1/3 requer encontrar denominador comum 6, dando 3/6 + 2/6 = 5/6",
+        "Exemplo subtração: 3/4 - 1/2 usa denominador comum 4, dando 3/4 - 2/4 = 1/4",
+        "Exemplo multiplicação: 2/3 × 3/4 = (2×3)/(3×4) = 6/12 = 1/2 após simplificação",
+        "Exemplo divisão: 1/2 ÷ 1/4 = 1/2 × 4/1 = 4/2 = 2 após multiplicar por recíproco",
+        "Exemplo número misto: 1 1/2 + 2 1/3 = 3/2 + 7/3 = 9/6 + 14/6 = 23/6 = 3 5/6",
+        "Exemplo simplificação: 8/12 automaticamente reduz a 2/3 dividindo numerador e denominador por 4"
+      ],
+      "resultsExplanation": [
+        "Resultado principal mostra fração calculada em formato escolhido",
+        "Solução passo a passo mostra cada operação matemática e conversão",
+        "Resultado simplificado fornece fração em seus termos mais baixos",
+        "Equivalente decimal dá valor numérico para uso prático",
+        "Todos resultados incluem formatação apropriada para frações e números mistos",
+        "Mensagens erro aparecem para operações inválidas como divisão por zero"
+      ],
+      "whoItsFor": "Esta calculadora frações serve estudantes fundamental e médio aprendendo operações básicas frações em aulas matemática. Professores a usam para demonstrar conceitos fracionários e verificar respostas tarefa. Pais ajudam filhos entender aritmética fracionária para tarefas escolares. Chefs e padeiros trabalham com frações receitas e medidas ingredientes. Trabalhadores construção calculam frações materiais e medidas. Engenheiros lidam com dimensões fracionárias e especificações. Profissionais financeiros computam taxas juros fracionárias e porções investimento. Qualquer um trabalhando com cálculos proporcionais, medidas, ou divisões encontrará esta calculadora ferramenta essencial para matemática fração precisa.",
+      "disclaimer": "Esta calculadora fornece cálculos fração baseados em princípios e algoritmos matemáticos padrão. Embora projetada para alta exatidão, usuários deveriam verificar cálculos críticos através métodos alternativos quando precisão é essencial. Divisão por zero não é permitida e resultará em mensagem erro. Números mistos e frações impróprias são lidados de acordo com convenções matemáticas. Equivalentes decimais são fornecidos por conveniência mas podem envolver arredondamento em certos casos. A ferramenta é destinada a cálculos educacionais, domésticos, e propósito geral, não para aplicações críticas missão requerendo precisão garantida.",
+      "relatedTools": [
+        "Calculadoras porcentagem para converter entre frações e porcentagens",
+        "Calculadoras científicas para operações matemáticas avançadas com frações",
+        "Conversores unidade para medidas fracionárias e análise dimensional"
+      ],
+      "faqs": [
+        {
+          "question": "Como somo ou subtraio frações com denominadores diferentes?",
+          "answer": "Para somar ou subtrair frações com denominadores diferentes, primeiro encontre denominador comum calculando mínimo comum múltiplo (MCM) ambos denominadores. Converta ambas frações a frações equivalentes com este denominador comum, então some ou subtraia numeradores enquanto mantém denominador mesmo. Finalmente, simplifique resultado se possível. Por exemplo, 1/2 + 1/3 = 3/6 + 2/6 = 5/6."
+        },
+        {
+          "question": "Qual é diferença entre números mistos e frações impróprias?",
+          "answer": "Um número misto consiste de número inteiro e fração própria (como 2 1/2), enquanto fração imprópria tem numerador maior ou igual a seu denominador (como 5/2). Números mistos são frequentemente mais fáceis entender e trabalhar em situações práticas, enquanto frações impróprias são melhores para cálculos matemáticos. Você pode converter entre eles: para converter misto a impróprio, multiplique número inteiro por denominador e some numerador; para converter impróprio a misto, divida numerador por denominador."
+        },
+        {
+          "question": "Como multiplico e divido frações?",
+          "answer": "Para multiplicar frações, simplesmente multiplique numeradores juntos e multiplique denominadores juntos, então simplifique. Por exemplo, 2/3 × 3/4 = (2×3)/(3×4) = 6/12 = 1/2. Para dividir frações, multiplique primeira fração por recíproco (inverta) segunda fração. Por exemplo, 1/2 ÷ 1/4 = 1/2 × 4/1 = 4/2 = 2. Lembre simplificar resposta final."
+        },
+        {
+          "question": "Por que frações precisam ser simplificadas?",
+          "answer": "Simplificar frações as reduz a seus termos mais baixos dividindo numerador e denominador por seu máximo comum divisor (MCD). Isso faz frações mais fáceis entender, comparar, e usar em cálculos adicionais. Por exemplo, 8/12 pode ser simplificado a 2/3 dividindo ambos números por 4. Frações simplificadas são forma padrão e são mais fáceis trabalhar na maioria contextos matemáticos."
+        },
+        {
+          "question": "Esta calculadora pode lidar com problemas fração complexos?",
+          "answer": "Sim, a calculadora pode lidar com vários cenários fração complexos incluindo aritmética números mistos, múltiplas operações, e frações com números grandes. Lida automaticamente com cálculos denominador comum para soma e subtração, maneja operações recíprocas para divisão, e fornece soluções passo a passo para todas operações. A calculadora também suporta conversão decimal para aplicações práticas e pode lidar com valores fração positivos e negativos."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Fractions",
+    "seoTitle": "Calculateur de Fractions - Addition, Soustraction, Multiplication, Division de Fractions en Ligne",
+    "metaDescription": "Calculateur gratuit de fractions. Addition, soustraction, multiplication et division de fractions avec solutions étape par étape. Conversion entre nombres mixtes et fractions impropres.",
+    "keywords": ["calculateur fractions", "addition fractions", "soustraction fractions", "multiplication fractions", "division fractions"],
+    "longTailKeywords": ["calculateur fractions avec étapes", "addition fractions calculateur", "soustraction fractions calculateur", "multiplication fractions calculateur", "division fractions calculateur"],
+    "slug": "fraction-calculator",
+    "category": "math",
+    "difficulty": "intermediate",
+    "tags": ["fractions", "mathématiques", "addition", "soustraction", "multiplication", "division"],
+    "summary": "Calculateur complet de fractions avec addition, soustraction, multiplication, division et simplification.",
+    "description": "Notre calculateur complet de fractions gère toutes opérations de base fractions incluant addition, soustraction, multiplication et division. Il trouve automatiquement dénominateurs communs, simplifie fractions, et fournit solutions étape par étape. Parfait pour étudiants apprenant fractions, enseignants démontrant concepts, et quiconque travaillant avec calculs fractionnaires.",
+    "instructions": [
+      "Sélectionnez opération que vous voulez réaliser (addition, soustraction, multiplication, division)",
+      "Entrez fractions utilisant nombres entiers, numérateurs et dénominateurs",
+      "Choisissez si afficher nombres mixtes ou fractions impropres",
+      "Obtenez résultats instantanés avec calculs étape par étape",
+      "Utilisez fonction simplifier pour réduire fractions à termes plus bas"
+    ],
+    "calculatorComponent": {
+      "componentName": "FractionCalculator",
+      "inputs": [
+        { "name": "operation", "label": "Opération", "type": "select", "default": "add", "options": ["add", "subtract", "multiply", "divide"] },
+        { "name": "fraction1", "label": "Première Fraction", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 2 }, "fields": [
+          { "name": "whole", "label": "Entier", "type": "number", "default": 0, "min": 0 },
+          { "name": "numerator", "label": "Numérateur", "type": "number", "default": 1, "min": 0 },
+          { "name": "denominator", "label": "Dénominateur", "type": "number", "default": 2, "min": 1 }
+        ]},
+        { "name": "fraction2", "label": "Deuxième Fraction", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 3 }, "fields": [
+          { "name": "whole", "label": "Entier", "type": "number", "default": 0, "min": 0 },
+          { "name": "numerator", "label": "Numérateur", "type": "number", "default": 1, "min": 0 },
+          { "name": "denominator", "label": "Dénominateur", "type": "number", "default": 3, "min": 1 }
+        ]},
+        { "name": "outputFormat", "label": "Format Sortie", "type": "select", "default": "mixed", "options": ["mixed", "improper"] }
+      ],
+      "formula": "Addition: a/b + c/d = (ad + bc)/bd; Soustraction: a/b - c/d = (ad - bc)/bd; Multiplication: a/b × c/d = ac/bd; Division: a/b ÷ c/d = ad/bc",
+      "output": { "label": "Résultat", "default": "Entrez fractions ci-dessus", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Solution Étape par Étape", "field": "steps", "format": "text" },
+        { "label": "Résultat Simplifié", "field": "simplified", "format": "text" },
+        { "label": "Équivalent Décimal", "field": "decimal", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Addition Fractions",
+        "input": "1/2 + 1/3",
+        "output": "5/6 (ou 0.833...)"
+      },
+      {
+        "title": "Soustraction Fractions",
+        "input": "3/4 - 1/2",
+        "output": "1/4 (ou 0.25)"
+      },
+      {
+        "title": "Multiplication Fractions",
+        "input": "2/3 × 3/4",
+        "output": "1/2 (ou 0.5)"
+      },
+      {
+        "title": "Division Fractions",
+        "input": "1/2 ÷ 1/4",
+        "output": "2/1 = 2 (ou 2.0)"
+      },
+      {
+        "title": "Nombres Mixtes",
+        "input": "1 1/2 + 2 1/3",
+        "output": "3 5/6 (ou 3.833...)"
+      }
+    ],
+    "relatedCalculators": ["percentage-calculator", "scientific-calculator", "unit-converter"],
+    "seoContent": {
+      "introduction": "Maîtrisez calculs fraction avec notre calculatrice fraction complète en ligne qui gère toutes opérations de base fractions avec solutions étape par étape. Que vous ajoutiez fractions, soustrayiez fractions, multipliiez fractions ou divisiiez fractions, cette calculatrice trouve automatiquement dénominateurs communs, simplifie résultats, et fournit explications détaillées parfaites pour étudiants apprenant fractions. Accédez conversions nombres mixtes et fractions impropres, simplification automatique à termes plus bas, et équivalents décimaux pour compréhension fraction complète. Parfaite pour étudiants primaire et collège maîtrisant concepts fractionnaires, enseignants démontrant opérations mathématiques, et quiconque travaillant avec calculs fractionnaires en cuisine, construction, ingénierie, ou applications financières. Gérez problèmes fraction complexes avec confiance utilisant notre outil éducatif qui montre chaque étape processus mathématique.",
+      "benefits": [
+        "Réalisez toutes quatre opérations de base fractions avec calcul automatique dénominateur commun",
+        "Obtenez solutions étape par étape montrant processus mathématique pour apprentissage et vérification",
+        "Simplifiez automatiquement fractions à termes plus bas pour résultats propres et réduits",
+        "Convertissez entre nombres mixtes et fractions impropres avec facilité",
+        "Gérez problèmes fraction complexes impliquant multiples opérations et conversions",
+        "Comprenez concepts fraction à travers explications claires et éducatives",
+        "Accédez équivalents décimaux pour applications pratiques et comparaisons",
+        "Supportez arithmétique nombres mixtes avec conversion automatique à fractions impropres"
+      ],
+      "steps": [
+        "Sélectionnez opération fraction que vous voulez réaliser du menu déroulant",
+        "Entrez première fraction utilisant champs nombre entier, numérateur et dénominateur",
+        "Entrez deuxième fraction avec même méthode entrée",
+        "Choisissez format sortie préféré (nombre mixte ou fraction impropre)",
+        "Examinez résultat calcul instantané avec simplification automatique",
+        "Étudiez solution détaillée étape par étape pour comprendre processus mathématique",
+        "Utilisez équivalent décimal pour applications pratiques et vérification"
+      ],
+      "inputsExplained": [
+        "Champ nombre entier accepte valeurs entières pour fractions nombres mixtes",
+        "Champ numérateur accepte nombre supérieur fraction",
+        "Champ dénominateur accepte nombre inférieur (ne peut être zéro)",
+        "Sélecteur opération détermine si ajouter, soustraire, multiplier ou diviser fractions",
+        "Choix format sortie contrôle si résultats affichent comme nombres mixtes ou fractions impropres"
+      ],
+      "formulaExplanation": "Addition fractions nécessite trouver dénominateur commun utilisant plus petit commun multiple (PPCM) deux dénominateurs, puis ajouter numérateurs sur dénominateur commun. Soustraction fractions utilise même approche dénominateur commun mais soustrait numérateurs. Multiplication fractions implique multiplier numérateurs ensemble et dénominateurs ensemble. Division fractions nécessite multiplier par réciproque seconde fraction. Tous résultats sont automatiquement simplifiés en divisant numérateur et dénominateur par leur plus grand commun diviseur (PGCD). Nombres mixtes sont convertis à fractions impropres pour calcul, puis reconvertis à nombres mixtes si demandé. Ces opérations fondamentales forment base arithmétique fractionnaire utilisée à travers mathématiques et applications pratiques.",
+      "examples": [
+        "Exemple addition: 1/2 + 1/3 nécessite trouver dénominateur commun 6, donnant 3/6 + 2/6 = 5/6",
+        "Exemple soustraction: 3/4 - 1/2 utilise dénominateur commun 4, donnant 3/4 - 2/4 = 1/4",
+        "Exemple multiplication: 2/3 × 3/4 = (2×3)/(3×4) = 6/12 = 1/2 après simplification",
+        "Exemple division: 1/2 ÷ 1/4 = 1/2 × 4/1 = 4/2 = 2 après multiplication par réciproque",
+        "Exemple nombre mixte: 1 1/2 + 2 1/3 = 3/2 + 7/3 = 9/6 + 14/6 = 23/6 = 3 5/6",
+        "Exemple simplification: 8/12 réduit automatiquement à 2/3 en divisant numérateur et dénominateur par 4"
+      ],
+      "resultsExplanation": [
+        "Résultat principal affiche fraction calculée dans format choisi",
+        "Solution étape par étape montre chaque opération mathématique et conversion",
+        "Résultat simplifié fournit fraction dans ses termes plus bas",
+        "Équivalent décimal donne valeur numérique pour utilisation pratique",
+        "Tous résultats incluent formatage approprié pour fractions et nombres mixtes",
+        "Messages erreur apparaissent pour opérations invalides comme division par zéro"
+      ],
+      "whoItsFor": "Cette calculatrice fractions sert étudiants primaire et collège apprenant opérations de base fractions en classes mathématiques. Enseignants l'utilisent pour démontrer concepts fractionnaires et vérifier réponses devoirs. Parents aident enfants comprendre arithmétique fractionnaire pour devoirs scolaires. Chefs et boulangers travaillent avec fractions recettes et mesures ingrédients. Travailleurs construction calculent fractions matériaux et mesures. Ingénieurs gèrent dimensions fractionnaires et spécifications. Professionnels financiers computent taux intérêt fractionnaires et portions investissement. Quiconque travaillant avec calculs proportionnels, mesures, ou divisions trouvera cette calculatrice outil essentiel pour mathématiques fraction précises.",
+      "disclaimer": "Cette calculatrice fournit calculs fraction basés sur principes et algorithmes mathématiques standard. Bien que conçue pour haute exactitude, utilisateurs devraient vérifier calculs critiques par méthodes alternatives quand précision est essentielle. Division par zéro n'est pas permise et résultera en message erreur. Nombres mixtes et fractions impropres sont gérés selon conventions mathématiques. Équivalents décimaux sont fournis pour convenance mais peuvent impliquer arrondi dans certains cas. L'outil est destiné à calculs éducatifs, domestiques, et usage général, pas pour applications critiques mission nécessitant précision garantie.",
+      "relatedTools": [
+        "Calculateurs pourcentage pour convertir entre fractions et pourcentages",
+        "Calculateurs scientifiques pour opérations mathématiques avancées avec fractions",
+        "Convertisseurs unités pour mesures fractionnaires et analyse dimensionnelle"
+      ],
+      "faqs": [
+        {
+          "question": "Comment ajouter ou soustraire fractions avec dénominateurs différents?",
+          "answer": "Pour ajouter ou soustraire fractions avec dénominateurs différents, trouvez d'abord dénominateur commun en calculant plus petit commun multiple (PPCM) deux dénominateurs. Convertissez deux fractions à fractions équivalentes avec ce dénominateur commun, puis ajoutez ou soustrayez numérateurs tout gardant dénominateur même. Enfin, simplifiez résultat si possible. Par exemple, 1/2 + 1/3 = 3/6 + 2/6 = 5/6."
+        },
+        {
+          "question": "Quelle est différence entre nombres mixtes et fractions impropres?",
+          "answer": "Un nombre mixte consiste en nombre entier et fraction propre (comme 2 1/2), tandis fraction impropre a numérateur plus grand ou égal à son dénominateur (comme 5/2). Nombres mixtes sont souvent plus faciles comprendre et travailler dans situations pratiques, tandis fractions impropres sont meilleures pour calculs mathématiques. Vous pouvez convertir entre eux: pour convertir mixte à impropre, multipliez nombre entier par dénominateur et ajoutez numérateur; pour convertir impropre à mixte, divisez numérateur par dénominateur."
+        },
+        {
+          "question": "Comment multiplier et diviser fractions?",
+          "answer": "Pour multiplier fractions, multipliez simplement numérateurs ensemble et multipliez dénominateurs ensemble, puis simplifiez. Par exemple, 2/3 × 3/4 = (2×3)/(3×4) = 6/12 = 1/2. Pour diviser fractions, multipliez première fraction par réciproque (inversez) seconde fraction. Par exemple, 1/2 ÷ 1/4 = 1/2 × 4/1 = 4/2 = 2. Souvenez-vous simplifier réponse finale."
+        },
+        {
+          "question": "Pourquoi fractions doivent-elles être simplifiées?",
+          "answer": "Simplifier fractions les réduit à leurs termes plus bas en divisant numérateur et dénominateur par leur plus grand commun diviseur (PGCD). Cela rend fractions plus faciles comprendre, comparer, et utiliser dans calculs additionnels. Par exemple, 8/12 peut être simplifié à 2/3 en divisant deux nombres par 4. Fractions simplifiées sont forme standard et plus faciles travailler dans plupart contextes mathématiques."
+        },
+        {
+          "question": "Cette calculatrice peut-elle gérer problèmes fraction complexes?",
+          "answer": "Oui, la calculatrice peut gérer divers scénarios fraction complexes incluant arithmétique nombres mixtes, multiples opérations, et fractions avec grands nombres. Elle gère automatiquement calculs dénominateur commun pour addition et soustraction, gère opérations réciproques pour division, et fournit solutions étape par étape pour toutes opérations. La calculatrice supporte aussi conversion décimale pour applications pratiques et peut gérer valeurs fraction positives et négatives."
+        }
+      ]
+    }
+  }
+}

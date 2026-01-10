@@ -1,0 +1,634 @@
+{
+  "en": {
+    "title": "Loan Affordability Calculator - How Much Loan Can I Afford?",
+    "seoTitle": "Loan Affordability Calculator - How Much Loan Can I Afford?",
+    "metaDescription": "Calculate how much loan you can afford based on your income, existing debt, and financial situation. Free loan affordability calculator with debt-to-income ratio analysis.",
+    "keywords": [
+      "loan affordability calculator",
+      "how much loan can i afford",
+      "loan amount calculator",
+      "debt to income ratio calculator",
+      "personal loan affordability",
+      "maximum loan amount calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate loan affordability",
+      "loan affordability calculator with dti",
+      "what loan amount can i afford",
+      "calculate maximum loan amount",
+      "debt to income ratio for loans",
+      "loan amount based on income",
+      "personal loan calculator with affordability",
+      "maximum affordable loan calculator",
+      "loan amount i can afford calculator",
+      "how much personal loan can i get"
+    ],
+    "slug": "loan-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "loan affordability",
+      "personal loan",
+      "financial planning",
+      "debt ratio",
+      "income based lending",
+      "loan amount",
+      "affordability calculator"
+    ],
+    "description": "Calculate how much loan you can afford based on your income, existing debt payments, down payment available, and desired loan terms. Our loan affordability calculator uses industry-standard debt-to-income ratio guidelines to help you determine a realistic loan amount that fits your budget. Perfect for personal loans, consolidation loans, and other installment loans.",
+    "summary": "Calculate maximum affordable loan amount based on income and debt.",
+    "instructions": [
+      "Enter your gross monthly income",
+      "Enter your monthly debt payments (excluding housing)",
+      "Specify the interest rate and loan term",
+      "Enter any down payment or cash available",
+      "Click 'Calculate' to see your maximum affordable loan amount",
+      "Review the debt-to-income ratio analysis for lending guidelines"
+    ],
+    "calculatorComponent": "LoanAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Middle Income Borrower",
+        "description": "A person earning $5,000 monthly with $800 in existing debt payments",
+        "input": {
+          "monthlyIncome": 5000,
+          "monthlyDebt": 800,
+          "interestRate": 10,
+          "loanTerm": 5,
+          "downPayment": 1000
+        },
+        "output": {
+          "loanAmount": 25000,
+          "monthlyPayment": 550,
+          "dtiRatio": 27,
+          "maxDtiAmount": 1800,
+          "totalCost": 33300,
+          "totalInterest": 8300
+        }
+      },
+      {
+        "title": "High Income with High Debt",
+        "description": "High earner with significant existing monthly obligations",
+        "input": {
+          "monthlyIncome": 12000,
+          "monthlyDebt": 2500,
+          "interestRate": 8,
+          "loanTerm": 7,
+          "downPayment": 5000
+        },
+        "output": {
+          "loanAmount": 50000,
+          "monthlyPayment": 850,
+          "dtiRatio": 31,
+          "maxDtiAmount": 4300,
+          "totalCost": 71400,
+          "totalInterest": 21400
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calculate how much loan you can afford with our comprehensive loan affordability calculator. This powerful financial tool helps you determine the maximum loan amount that fits your budget based on your income, existing debt obligations, and standard lending guidelines. Whether you're considering a personal loan, debt consolidation, or other installment loans, understanding your borrowing capacity is crucial for making smart financial decisions.",
+      "benefits": [
+        "Determine realistic loan amounts based on your actual income and expenses",
+        "Understand debt-to-income ratio and how lenders evaluate your application",
+        "Avoid over-borrowing that could strain your monthly budget",
+        "Compare different loan terms to find the most affordable option",
+        "Plan your finances before applying for loans to improve approval chances",
+        "Make informed decisions about down payments and loan amounts"
+      ],
+      "steps": [
+        "Enter your gross monthly income from all sources",
+        "Input your current monthly debt payments (car loans, credit cards, etc.)",
+        "Specify the interest rate you're likely to qualify for",
+        "Choose your desired loan term in years",
+        "Enter any down payment or cash you have available",
+        "Review your maximum affordable loan amount and monthly payment"
+      ],
+      "inputsExplained": [
+        "Monthly gross income represents your total earnings before taxes and deductions",
+        "Monthly debt payments include minimum payments for credit cards, car loans, student loans, and other obligations",
+        "Interest rate affects both your monthly payment and total borrowing capacity",
+        "Loan term impacts monthly payment amounts and total interest paid over time",
+        "Down payment reduces the amount you need to borrow and can improve loan terms"
+      ],
+      "formulaExplanation": "The calculator uses the debt-to-income (DTI) ratio method, which lenders commonly use. Your DTI ratio is calculated as (monthly debt payments + new loan payment) ÷ monthly gross income. Most lenders allow a maximum DTI ratio of 36% for total debt. The formula determines the maximum monthly payment you can afford, then calculates backward to find the loan amount that produces that payment.",
+      "examples": [
+        "A person earning $4,000 monthly with $600 in existing debt could afford a $15,000 loan at 12% interest over 4 years, resulting in $430 monthly payments and a 26% DTI ratio",
+        "Someone making $8,000 monthly with $1,200 in current debt payments could afford a $35,000 loan at 8% interest over 6 years, with $650 monthly payments and a 23% DTI ratio"
+      ],
+      "resultsExplanation": [
+        "Maximum affordable loan amount shows the largest loan you can reasonably handle",
+        "Monthly payment displays what your loan payment would be for the calculated amount",
+        "Debt-to-income ratio indicates how your new loan affects your overall debt load",
+        "Total loan cost includes principal plus all interest payments over the loan term",
+        "Total interest paid shows the cost of borrowing beyond the principal amount"
+      ],
+      "whoItsFor": "This loan affordability calculator is perfect for individuals considering personal loans, debt consolidation, home improvement loans, or other installment loans. It's especially valuable for first-time borrowers, those with multiple debt obligations, or anyone wanting to ensure they borrow responsibly within their means.",
+      "disclaimer": "This calculator provides estimates based on standard lending guidelines and debt-to-income ratios. Actual loan amounts may vary based on your credit score, lender requirements, and specific loan terms. Always consult with a financial advisor or lender for personalized advice.",
+      "relatedTools": [
+        "personal loan calculator",
+        "debt consolidation calculator",
+        "debt to income ratio calculator",
+        "loan payment calculator",
+        "budget calculator"
+      ],
+      "faqs": [
+        {
+          "question": "How do lenders determine how much I can borrow?",
+          "answer": "Lenders primarily use your debt-to-income ratio (DTI), credit score, employment stability, and income verification. The DTI ratio compares your monthly debt payments to your gross monthly income, with most lenders allowing up to 36% total DTI."
+        },
+        {
+          "question": "What is a good debt-to-income ratio for loans?",
+          "answer": "A DTI ratio below 36% is generally considered good for most loan types. Ratios above 43% may make it difficult to get approved for new loans. Lower ratios (below 30%) often qualify for better interest rates."
+        },
+        {
+          "question": "Does my credit score affect loan affordability?",
+          "answer": "Yes, your credit score significantly impacts both how much you can borrow and the interest rate you'll pay. Higher credit scores typically qualify for larger loan amounts and lower interest rates, reducing monthly payments."
+        },
+        {
+          "question": "How much house payment can I afford?",
+          "answer": "For mortgages, lenders typically allow up to 28% of your gross monthly income for housing costs (principal, interest, taxes, and insurance). This is separate from the general loan guidelines and requires a mortgage-specific calculator."
+        },
+        {
+          "question": "Can I include my down payment in affordability calculations?",
+          "answer": "Yes, down payments reduce the amount you need to borrow, which lowers your monthly payments and improves your debt-to-income ratio. Larger down payments often qualify you for better loan terms and lower interest rates."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Capacidad de Préstamo - ¿Cuánto Préstamo Puedo Permitirme?",
+    "seoTitle": "Calculadora de Capacidad de Préstamo - ¿Cuánto Préstamo Puedo Permitirme?",
+    "metaDescription": "Calcula cuánto préstamo puedes permitirte basado en tus ingresos, deudas existentes y situación financiera. Calculadora gratuita de capacidad de préstamo con análisis de relación deuda-ingreso.",
+    "keywords": [
+      "calculadora capacidad préstamo",
+      "cuánto préstamo puedo permitirme",
+      "calculadora monto préstamo",
+      "calculadora relación deuda ingreso",
+      "capacidad préstamo personal",
+      "calculadora monto máximo préstamo"
+    ],
+    "longTailKeywords": [
+      "cómo calcular capacidad préstamo",
+      "calculadora capacidad préstamo con dti",
+      "qué monto préstamo puedo permitirme",
+      "calcular monto máximo préstamo",
+      "relación deuda ingreso para préstamos",
+      "monto préstamo basado en ingresos",
+      "calculadora préstamo personal con capacidad",
+      "calculadora préstamo máximo asequible",
+      "calculadora monto préstamo que puedo permitirme",
+      "cuánto préstamo personal puedo obtener"
+    ],
+    "slug": "loan-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "capacidad préstamo",
+      "préstamo personal",
+      "planificación financiera",
+      "relación deuda",
+      "préstamo basado en ingresos",
+      "monto préstamo",
+      "calculadora capacidad"
+    ],
+    "description": "Calcula cuánto préstamo puedes permitirte basado en tus ingresos, pagos de deudas existentes, pago inicial disponible y términos del préstamo deseados. Nuestra calculadora de capacidad de préstamo utiliza pautas estándar de relación deuda-ingreso para ayudarte a determinar un monto de préstamo realista que quepa en tu presupuesto. Perfecta para préstamos personales, consolidación de deudas y otros préstamos a plazos.",
+    "summary": "Calcula el monto máximo de préstamo asequible basado en ingresos y deudas.",
+    "instructions": [
+      "Ingresa tus ingresos brutos mensuales",
+      "Ingresa tus pagos de deudas mensuales (excluyendo vivienda)",
+      "Especifica la tasa de interés y plazo del préstamo",
+      "Ingresa cualquier pago inicial o efectivo disponible",
+      "Haz clic en 'Calcular' para ver el monto máximo de préstamo asequible",
+      "Revisa el análisis de relación deuda-ingreso para pautas de préstamo"
+    ],
+    "calculatorComponent": "LoanAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Prestatario de Ingresos Medios",
+        "description": "Una persona que gana $5,000 mensuales con $800 en pagos de deudas existentes",
+        "input": {
+          "monthlyIncome": 5000,
+          "monthlyDebt": 800,
+          "interestRate": 10,
+          "loanTerm": 5,
+          "downPayment": 1000
+        },
+        "output": {
+          "loanAmount": 25000,
+          "monthlyPayment": 550,
+          "dtiRatio": 27,
+          "maxDtiAmount": 1800,
+          "totalCost": 33300,
+          "totalInterest": 8300
+        }
+      },
+      {
+        "title": "Ingresos Altos con Deudas Altas",
+        "description": "Persona de altos ingresos con obligaciones mensuales significativas",
+        "input": {
+          "monthlyIncome": 12000,
+          "monthlyDebt": 2500,
+          "interestRate": 8,
+          "loanTerm": 7,
+          "downPayment": 5000
+        },
+        "output": {
+          "loanAmount": 50000,
+          "monthlyPayment": 850,
+          "dtiRatio": 31,
+          "maxDtiAmount": 4300,
+          "totalCost": 71400,
+          "totalInterest": 21400
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calcula cuánto préstamo puedes permitirte con nuestra completa calculadora de capacidad de préstamo. Esta poderosa herramienta financiera te ayuda a determinar el monto máximo de préstamo que cabe en tu presupuesto basado en tus ingresos, obligaciones de deuda existentes y pautas estándar de préstamo. Ya sea que estés considerando un préstamo personal, consolidación de deudas u otros préstamos a plazos, entender tu capacidad de endeudamiento es crucial para tomar decisiones financieras inteligentes.",
+      "benefits": [
+        "Determina montos de préstamo realistas basados en tus ingresos y gastos reales",
+        "Entiende la relación deuda-ingreso y cómo los prestamistas evalúan tu solicitud",
+        "Evita endeudarte en exceso que podría tensionar tu presupuesto mensual",
+        "Compara diferentes términos de préstamo para encontrar la opción más asequible",
+        "Planifica tus finanzas antes de solicitar préstamos para mejorar las chances de aprobación",
+        "Toma decisiones informadas sobre pagos iniciales y montos de préstamo"
+      ],
+      "steps": [
+        "Ingresa tus ingresos brutos mensuales de todas las fuentes",
+        "Ingresa tus pagos de deudas actuales (préstamos de auto, tarjetas de crédito, etc.)",
+        "Especifica la tasa de interés para la que probablemente califiques",
+        "Elige el plazo deseado del préstamo en años",
+        "Ingresa cualquier pago inicial o efectivo que tengas disponible",
+        "Revisa tu monto máximo de préstamo asequible y pago mensual"
+      ],
+      "inputsExplained": [
+        "Los ingresos brutos mensuales representan tus ganancias totales antes de impuestos y deducciones",
+        "Los pagos de deudas mensuales incluyen pagos mínimos para tarjetas de crédito, préstamos de auto, préstamos estudiantiles y otras obligaciones",
+        "La tasa de interés afecta tanto tu pago mensual como tu capacidad total de endeudamiento",
+        "El plazo del préstamo impacta los montos de pago mensual y el interés total pagado con el tiempo",
+        "El pago inicial reduce el monto que necesitas pedir prestado y puede mejorar los términos del préstamo"
+      ],
+      "formulaExplanation": "La calculadora utiliza el método de relación deuda-ingreso (DTI), que los prestamistas usan comúnmente. Tu relación DTI se calcula como (pagos de deudas mensuales + nuevo pago de préstamo) ÷ ingresos brutos mensuales. La mayoría de los prestamistas permiten un máximo de 36% de relación DTI para deuda total. La fórmula determina el pago mensual máximo que puedes permitirte, luego calcula hacia atrás para encontrar el monto del préstamo que produce ese pago.",
+      "examples": [
+        "Una persona que gana $4,000 mensuales con $600 en deudas existentes podría permitirse un préstamo de $15,000 al 12% de interés durante 4 años, resultando en pagos mensuales de $430 y una relación DTI del 26%",
+        "Alguien que gana $8,000 mensuales con $1,200 en pagos de deudas actuales podría permitirse un préstamo de $35,000 al 8% de interés durante 6 años, con pagos mensuales de $650 y una relación DTI del 23%"
+      ],
+      "resultsExplanation": [
+        "El monto máximo de préstamo asequible muestra el préstamo más grande que puedes manejar razonablemente",
+        "El pago mensual muestra cuál sería tu pago de préstamo para el monto calculado",
+        "La relación deuda-ingreso indica cómo tu nuevo préstamo afecta tu carga total de deuda",
+        "El costo total del préstamo incluye el principal más todos los pagos de intereses durante el plazo del préstamo",
+        "El total de intereses pagados muestra el costo de pedir prestado más allá del monto principal"
+      ],
+      "whoItsFor": "Esta calculadora de capacidad de préstamo es perfecta para personas considerando préstamos personales, consolidación de deudas, préstamos para mejoras del hogar u otros préstamos a plazos. Es especialmente valiosa para prestatarios primerizos, aquellos con múltiples obligaciones de deuda, o cualquiera que quiera asegurar que pide prestado responsablemente dentro de sus posibilidades.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en pautas estándar de préstamo y relaciones deuda-ingreso. Los montos reales de préstamo pueden variar basado en tu puntaje de crédito, requisitos del prestamista y términos específicos del préstamo. Siempre consulta con un asesor financiero o prestamista para consejos personalizados.",
+      "relatedTools": [
+        "calculadora préstamo personal",
+        "calculadora consolidación deuda",
+        "calculadora relación deuda ingreso",
+        "calculadora pago préstamo",
+        "calculadora presupuesto"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo determinan los prestamistas cuánto puedo pedir prestado?",
+          "answer": "Los prestamistas usan principalmente tu relación deuda-ingreso (DTI), puntaje de crédito, estabilidad laboral y verificación de ingresos. La relación DTI compara tus pagos de deudas mensuales con tus ingresos brutos mensuales, con la mayoría de prestamistas permitiendo hasta 36% de DTI total."
+        },
+        {
+          "question": "¿Cuál es una buena relación deuda-ingreso para préstamos?",
+          "answer": "Una relación DTI por debajo del 36% se considera generalmente buena para la mayoría de tipos de préstamo. Relaciones por encima del 43% pueden hacer difícil obtener aprobación para nuevos préstamos. Relaciones más bajas (por debajo del 30%) a menudo califican para mejores tasas de interés."
+        },
+        {
+          "question": "¿Afecta mi puntaje de crédito la capacidad de préstamo?",
+          "answer": "Sí, tu puntaje de crédito impacta significativamente tanto cuánto puedes pedir prestado como la tasa de interés que pagarás. Puntajes de crédito más altos típicamente califican para montos de préstamo más grandes y tasas de interés más bajas, reduciendo los pagos mensuales."
+        },
+        {
+          "question": "¿Cuánto pago de casa puedo permitirme?",
+          "answer": "Para hipotecas, los prestamistas típicamente permiten hasta el 28% de tus ingresos brutos mensuales para costos de vivienda (principal, intereses, impuestos y seguro). Esto es separado de las pautas generales de préstamo y requiere una calculadora específica para hipotecas."
+        },
+        {
+          "question": "¿Puedo incluir mi pago inicial en cálculos de capacidad?",
+          "answer": "Sí, los pagos iniciales reducen el monto que necesitas pedir prestado, lo que baja tus pagos mensuales y mejora tu relación deuda-ingreso. Pagos iniciales más grandes a menudo te califican para mejores términos de préstamo y tasas de interés más bajas."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Capacidade de Empréstimo - Quanto Empréstimo Posso Permitir?",
+    "seoTitle": "Calculadora de Capacidade de Empréstimo - Quanto Empréstimo Posso Permitir?",
+    "metaDescription": "Calcule quanto empréstimo você pode permitir baseado em sua renda, dívidas existentes e situação financeira. Calculadora gratuita de capacidade de empréstimo com análise de relação dívida-renda.",
+    "keywords": [
+      "calculadora capacidade empréstimo",
+      "quanto empréstimo posso permitir",
+      "calculadora valor empréstimo",
+      "calculadora relação dívida renda",
+      "capacidade empréstimo pessoal",
+      "calculadora valor máximo empréstimo"
+    ],
+    "longTailKeywords": [
+      "como calcular capacidade empréstimo",
+      "calculadora capacidade empréstimo com dti",
+      "que valor empréstimo posso permitir",
+      "calcular valor máximo empréstimo",
+      "relação dívida renda para empréstimos",
+      "valor empréstimo baseado na renda",
+      "calculadora empréstimo pessoal com capacidade",
+      "calculadora empréstimo máximo acessível",
+      "calculadora valor empréstimo que posso permitir",
+      "quanto empréstimo pessoal posso conseguir"
+    ],
+    "slug": "loan-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "capacidade empréstimo",
+      "empréstimo pessoal",
+      "planejamento financeiro",
+      "relação dívida",
+      "empréstimo baseado na renda",
+      "valor empréstimo",
+      "calculadora capacidade"
+    ],
+    "description": "Calcule quanto empréstimo você pode permitir baseado em sua renda, pagamentos de dívidas existentes, entrada disponível e termos do empréstimo desejados. Nossa calculadora de capacidade de empréstimo usa diretrizes padrão de relação dívida-renda para ajudá-lo a determinar um valor de empréstimo realista que caiba no seu orçamento. Perfeita para empréstimos pessoais, consolidação de dívidas e outros empréstimos parcelados.",
+    "summary": "Calcule valor máximo de empréstimo acessível baseado na renda e dívidas.",
+    "instructions": [
+      "Digite sua renda bruta mensal",
+      "Digite seus pagamentos mensais de dívidas (excluindo moradia)",
+      "Especifique a taxa de juros e prazo do empréstimo",
+      "Digite qualquer entrada ou dinheiro disponível",
+      "Clique em 'Calcular' para ver o valor máximo de empréstimo acessível",
+      "Revise a análise de relação dívida-renda para diretrizes de empréstimo"
+    ],
+    "calculatorComponent": "LoanAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Tomador de Renda Média",
+        "description": "Uma pessoa ganhando R$ 5.000 mensais com R$ 800 em pagamentos de dívidas existentes",
+        "input": {
+          "monthlyIncome": 5000,
+          "monthlyDebt": 800,
+          "interestRate": 10,
+          "loanTerm": 5,
+          "downPayment": 1000
+        },
+        "output": {
+          "loanAmount": 25000,
+          "monthlyPayment": 550,
+          "dtiRatio": 27,
+          "maxDtiAmount": 1800,
+          "totalCost": 33300,
+          "totalInterest": 8300
+        }
+      },
+      {
+        "title": "Renda Alta com Dívidas Altas",
+        "description": "Pessoa de alta renda com obrigações mensais significativas",
+        "input": {
+          "monthlyIncome": 12000,
+          "monthlyDebt": 2500,
+          "interestRate": 8,
+          "loanTerm": 7,
+          "downPayment": 5000
+        },
+        "output": {
+          "loanAmount": 50000,
+          "monthlyPayment": 850,
+          "dtiRatio": 31,
+          "maxDtiAmount": 4300,
+          "totalCost": 71400,
+          "totalInterest": 21400
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calcule quanto empréstimo você pode permitir com nossa completa calculadora de capacidade de empréstimo. Esta poderosa ferramenta financeira ajuda você a determinar o valor máximo de empréstimo que cabe no seu orçamento baseado na sua renda, obrigações de dívida existentes e diretrizes padrão de empréstimo. Seja você considerando um empréstimo pessoal, consolidação de dívidas ou outros empréstimos parcelados, entender sua capacidade de empréstimo é crucial para tomar decisões financeiras inteligentes.",
+      "benefits": [
+        "Determine valores realistas de empréstimo baseado na sua renda e despesas reais",
+        "Entenda a relação dívida-renda e como os credores avaliam sua aplicação",
+        "Evite empréstimos excessivos que podem tensionar seu orçamento mensal",
+        "Compare diferentes termos de empréstimo para encontrar a opção mais acessível",
+        "Planeje suas finanças antes de solicitar empréstimos para melhorar as chances de aprovação",
+        "Tome decisões informadas sobre entradas e valores de empréstimo"
+      ],
+      "steps": [
+        "Digite sua renda bruta mensal de todas as fontes",
+        "Insira seus pagamentos atuais de dívidas (empréstimos de carro, cartões de crédito, etc.)",
+        "Especifique a taxa de juros para a qual você provavelmente se qualifica",
+        "Escolha o prazo desejado do empréstimo em anos",
+        "Digite qualquer entrada ou dinheiro disponível que você tenha",
+        "Revise seu valor máximo de empréstimo acessível e pagamento mensal"
+      ],
+      "inputsExplained": [
+        "A renda bruta mensal representa seus ganhos totais antes de impostos e deduções",
+        "Os pagamentos mensais de dívidas incluem pagamentos mínimos para cartões de crédito, empréstimos de carro, empréstimos estudantis e outras obrigações",
+        "A taxa de juros afeta tanto seu pagamento mensal quanto sua capacidade total de empréstimo",
+        "O prazo do empréstimo impacta os valores de pagamento mensal e juros totais pagos ao longo do tempo",
+        "A entrada reduz o valor que você precisa emprestar e pode melhorar os termos do empréstimo"
+      ],
+      "formulaExplanation": "A calculadora usa o método de relação dívida-renda (DTI), que os credores comumente usam. Sua relação DTI é calculada como (pagamentos mensais de dívidas + novo pagamento de empréstimo) ÷ renda bruta mensal. A maioria dos credores permite um máximo de 36% de relação DTI para dívida total. A fórmula determina o pagamento mensal máximo que você pode arcar, então calcula para trás para encontrar o valor do empréstimo que produz esse pagamento.",
+      "examples": [
+        "Uma pessoa ganhando R$ 4.000 mensais com R$ 600 em dívidas existentes poderia arcar com um empréstimo de R$ 15.000 a 12% de juros por 4 anos, resultando em pagamentos mensais de R$ 430 e uma relação DTI de 26%",
+        "Alguém ganhando R$ 8.000 mensais com R$ 1.200 em pagamentos atuais de dívidas poderia arcar com um empréstimo de R$ 35.000 a 8% de juros por 6 anos, com pagamentos mensais de R$ 650 e uma relação DTI de 23%"
+      ],
+      "resultsExplanation": [
+        "O valor máximo de empréstimo acessível mostra o maior empréstimo que você pode manejar razoavelmente",
+        "O pagamento mensal mostra qual seria seu pagamento de empréstimo para o valor calculado",
+        "A relação dívida-renda indica como seu novo empréstimo afeta sua carga total de dívida",
+        "O custo total do empréstimo inclui o principal mais todos os pagamentos de juros durante o prazo do empréstimo",
+        "O total de juros pagos mostra o custo de emprestar além do valor principal"
+      ],
+      "whoItsFor": "Esta calculadora de capacidade de empréstimo é perfeita para pessoas considerando empréstimos pessoais, consolidação de dívidas, empréstimos para melhoria da casa ou outros empréstimos parcelados. É especialmente valiosa para tomadores de empréstimo pela primeira vez, aqueles com múltiplas obrigações de dívida ou qualquer pessoa querendo garantir que empresta de forma responsável dentro de suas possibilidades.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em diretrizes padrão de empréstimo e relações dívida-renda. Os valores reais de empréstimo podem variar baseado no seu score de crédito, requisitos do credor e termos específicos do empréstimo. Sempre consulte com um consultor financeiro ou credor para conselhos personalizados.",
+      "relatedTools": [
+        "calculadora empréstimo pessoal",
+        "calculadora consolidação dívida",
+        "calculadora relação dívida renda",
+        "calculadora pagamento empréstimo",
+        "calculadora orçamento"
+      ],
+      "faqs": [
+        {
+          "question": "Como os credores determinam quanto eu posso emprestar?",
+          "answer": "Os credores usam principalmente sua relação dívida-renda (DTI), score de crédito, estabilidade de emprego e verificação de renda. A relação DTI compara seus pagamentos mensais de dívidas com sua renda bruta mensal, com a maioria dos credores permitindo até 36% de DTI total."
+        },
+        {
+          "question": "Qual é uma boa relação dívida-renda para empréstimos?",
+          "answer": "Uma relação DTI abaixo de 36% é geralmente considerada boa para a maioria dos tipos de empréstimo. Relações acima de 43% podem tornar difícil obter aprovação para novos empréstimos. Relações mais baixas (abaixo de 30%) frequentemente se qualificam para melhores taxas de juros."
+        },
+        {
+          "question": "Meu score de crédito afeta a capacidade de empréstimo?",
+          "answer": "Sim, seu score de crédito impacta significativamente tanto quanto você pode emprestar quanto a taxa de juros que você pagará. Scores de crédito mais altos tipicamente se qualificam para valores maiores de empréstimo e taxas de juros mais baixas, reduzindo os pagamentos mensais."
+        },
+        {
+          "question": "Quanto pagamento de casa eu posso arcar?",
+          "answer": "Para hipotecas, os credores tipicamente permitem até 28% da sua renda bruta mensal para custos de moradia (principal, juros, impostos e seguro). Isso é separado das diretrizes gerais de empréstimo e requer uma calculadora específica para hipotecas."
+        },
+        {
+          "question": "Posso incluir minha entrada nos cálculos de capacidade?",
+          "answer": "Sim, as entradas reduzem o valor que você precisa emprestar, o que baixa seus pagamentos mensuais e melhora sua relação dívida-renda. Entradas maiores frequentemente qualificam você para melhores termos de empréstimo e taxas de juros mais baixas."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Capacité d'Emprunt - Combien de Prêt Puis-Je Me Permettre?",
+    "seoTitle": "Calculateur de Capacité d'Emprunt - Combien de Prêt Puis-Je Me Permettre?",
+    "metaDescription": "Calculez combien de prêt vous pouvez vous permettre basé sur vos revenus, dettes existantes et situation financière. Calculateur gratuit de capacité d'emprunt avec analyse du ratio dette-revenus.",
+    "keywords": [
+      "calculateur capacité emprunt",
+      "combien prêt puis-je me permettre",
+      "calculateur montant emprunt",
+      "calculateur ratio dette revenus",
+      "capacité emprunt personnel",
+      "calculateur montant maximum emprunt"
+    ],
+    "longTailKeywords": [
+      "comment calculer capacité emprunt",
+      "calculateur capacité emprunt avec dti",
+      "quel montant emprunt puis-je me permettre",
+      "calculer montant maximum emprunt",
+      "ratio dette revenus pour emprunts",
+      "montant emprunt basé sur revenus",
+      "calculateur emprunt personnel avec capacité",
+      "calculateur emprunt maximum abordable",
+      "calculateur montant emprunt que je peux me permettre",
+      "combien emprunt personnel puis-je obtenir"
+    ],
+    "slug": "loan-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "capacité emprunt",
+      "emprunt personnel",
+      "planification financière",
+      "ratio dette",
+      "emprunt basé sur revenus",
+      "montant emprunt",
+      "calculateur capacité"
+    ],
+    "description": "Calculez combien de prêt vous pouvez vous permettre basé sur vos revenus, paiements de dettes existants, acompte disponible et termes d'emprunt souhaités. Notre calculateur de capacité d'emprunt utilise les directives standard du ratio dette-revenus pour vous aider à déterminer un montant d'emprunt réaliste qui rentre dans votre budget. Parfait pour les emprunts personnels, consolidation de dettes et autres emprunts échelonnés.",
+    "summary": "Calculez le montant maximum d'emprunt abordable basé sur les revenus et dettes.",
+    "instructions": [
+      "Entrez vos revenus bruts mensuels",
+      "Entrez vos paiements mensuels de dettes (hors logement)",
+      "Spécifiez le taux d'intérêt et la durée d'emprunt",
+      "Entrez tout acompte ou argent disponible",
+      "Cliquez sur 'Calculer' pour voir le montant maximum d'emprunt abordable",
+      "Examinez l'analyse du ratio dette-revenus pour les directives d'emprunt"
+    ],
+    "calculatorComponent": "LoanAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Emprunteur à Revenus Moyens",
+        "description": "Une personne gagnant 5 000 € mensuels avec 800 € en paiements de dettes existants",
+        "input": {
+          "monthlyIncome": 5000,
+          "monthlyDebt": 800,
+          "interestRate": 10,
+          "loanTerm": 5,
+          "downPayment": 1000
+        },
+        "output": {
+          "loanAmount": 25000,
+          "monthlyPayment": 550,
+          "dtiRatio": 27,
+          "maxDtiAmount": 1800,
+          "totalCost": 33300,
+          "totalInterest": 8300
+        }
+      },
+      {
+        "title": "Revenus Élevés avec Dettes Élevées",
+        "description": "Personne à hauts revenus avec des obligations mensuelles significatives",
+        "input": {
+          "monthlyIncome": 12000,
+          "monthlyDebt": 2500,
+          "interestRate": 8,
+          "loanTerm": 7,
+          "downPayment": 5000
+        },
+        "output": {
+          "loanAmount": 50000,
+          "monthlyPayment": 850,
+          "dtiRatio": 31,
+          "maxDtiAmount": 4300,
+          "totalCost": 71400,
+          "totalInterest": 21400
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calculez combien de prêt vous pouvez vous permettre avec notre calculateur complet de capacité d'emprunt. Cet outil financier puissant vous aide à déterminer le montant maximum d'emprunt qui rentre dans votre budget basé sur vos revenus, obligations de dette existantes et directives standard d'emprunt. Que vous envisagiez un emprunt personnel, une consolidation de dettes ou d'autres emprunts échelonnés, comprendre votre capacité d'emprunt est crucial pour prendre des décisions financières intelligentes.",
+      "benefits": [
+        "Déterminez des montants d'emprunt réalistes basés sur vos revenus et dépenses réels",
+        "Comprenez le ratio dette-revenus et comment les prêteurs évaluent votre demande",
+        "Évitez l'emprunt excessif qui pourrait tendre votre budget mensuel",
+        "Comparez différents termes d'emprunt pour trouver l'option la plus abordable",
+        "Planifiez vos finances avant de demander des emprunts pour améliorer les chances d'approbation",
+        "Prenez des décisions éclairées concernant les acomptes et montants d'emprunt"
+      ],
+      "steps": [
+        "Entrez vos revenus bruts mensuels de toutes les sources",
+        "Saisissez vos paiements actuels de dettes (emprunts auto, cartes de crédit, etc.)",
+        "Spécifiez le taux d'intérêt pour lequel vous vous qualifiez probablement",
+        "Choisissez la durée souhaitée d'emprunt en années",
+        "Entrez tout acompte ou argent disponible que vous avez",
+        "Examinez votre montant maximum d'emprunt abordable et paiement mensuel"
+      ],
+      "inputsExplained": [
+        "Les revenus bruts mensuels représentent vos gains totaux avant impôts et déductions",
+        "Les paiements mensuels de dettes incluent les paiements minimums pour cartes de crédit, emprunts auto, emprunts étudiants et autres obligations",
+        "Le taux d'intérêt affecte à la fois votre paiement mensuel et votre capacité totale d'emprunt",
+        "La durée d'emprunt impacte les montants de paiement mensuel et les intérêts totaux payés au fil du temps",
+        "L'acompte réduit le montant que vous devez emprunter et peut améliorer les termes d'emprunt"
+      ],
+      "formulaExplanation": "Le calculateur utilise la méthode du ratio dette-revenus (DTI), que les prêteurs utilisent couramment. Votre ratio DTI est calculé comme (paiements mensuels de dettes + nouveau paiement d'emprunt) ÷ revenus bruts mensuels. La plupart des prêteurs permettent un maximum de 36% de ratio DTI pour la dette totale. La formule détermine le paiement mensuel maximum que vous pouvez vous permettre, puis calcule à rebours pour trouver le montant d'emprunt qui produit ce paiement.",
+      "examples": [
+        "Une personne gagnant 4 000 € mensuels avec 600 € en dettes existantes pourrait se permettre un emprunt de 15 000 € à 12% d'intérêt sur 4 ans, aboutissant à des paiements mensuels de 430 € et un ratio DTI de 26%",
+        "Quelqu'un gagnant 8 000 € mensuels avec 1 200 € en paiements actuels de dettes pourrait se permettre un emprunt de 35 000 € à 8% d'intérêt sur 6 ans, avec des paiements mensuels de 650 € et un ratio DTI de 23%"
+      ],
+      "resultsExplanation": [
+        "Le montant maximum d'emprunt abordable montre le plus gros emprunt que vous pouvez gérer raisonnablement",
+        "Le paiement mensuel montre quel serait votre paiement d'emprunt pour le montant calculé",
+        "Le ratio dette-revenus indique comment votre nouvel emprunt affecte votre charge totale de dette",
+        "Le coût total d'emprunt inclut le principal plus tous les paiements d'intérêts pendant la durée d'emprunt",
+        "Le total d'intérêts payés montre le coût d'emprunter au-delà du montant principal"
+      ],
+      "whoItsFor": "Ce calculateur de capacité d'emprunt est parfait pour les personnes envisageant des emprunts personnels, une consolidation de dettes, des emprunts d'amélioration de l'habitat ou d'autres emprunts échelonnés. Il est particulièrement précieux pour les emprunteurs débutants, ceux avec de multiples obligations de dette, ou quiconque souhaitant s'assurer d'emprunter de manière responsable dans ses moyens.",
+      "disclaimer": "Ce calculateur fournit des estimations basées sur les directives standard d'emprunt et les ratios dette-revenus. Les montants réels d'emprunt peuvent varier selon votre score de crédit, les exigences du prêteur et les termes spécifiques d'emprunt. Consultez toujours un conseiller financier ou un prêteur pour des conseils personnalisés.",
+      "relatedTools": [
+        "calculateur emprunt personnel",
+        "calculateur consolidation dette",
+        "calculateur ratio dette revenus",
+        "calculateur paiement emprunt",
+        "calculateur budget"
+      ],
+      "faqs": [
+        {
+          "question": "Comment les prêteurs déterminent-ils combien je peux emprunter?",
+          "answer": "Les prêteurs utilisent principalement votre ratio dette-revenus (DTI), score de crédit, stabilité d'emploi et vérification des revenus. Le ratio DTI compare vos paiements mensuels de dettes à vos revenus bruts mensuels, la plupart des prêteurs permettant jusqu'à 36% de DTI total."
+        },
+        {
+          "question": "Quel est un bon ratio dette-revenus pour les emprunts?",
+          "answer": "Un ratio DTI en dessous de 36% est généralement considéré comme bon pour la plupart des types d'emprunt. Les ratios au-dessus de 43% peuvent rendre difficile l'obtention d'approbation pour de nouveaux emprunts. Les ratios plus bas (en dessous de 30%) se qualifient souvent pour de meilleurs taux d'intérêt."
+        },
+        {
+          "question": "Mon score de crédit affecte-t-il la capacité d'emprunt?",
+          "answer": "Oui, votre score de crédit impacte considérablement à la fois combien vous pouvez emprunter et le taux d'intérêt que vous paierez. Les scores de crédit plus élevés se qualifient typiquement pour des montants d'emprunt plus importants et des taux d'intérêt plus bas, réduisant les paiements mensuels."
+        },
+        {
+          "question": "Quel paiement de maison puis-je me permettre?",
+          "answer": "Pour les hypothèques, les prêteurs permettent typiquement jusqu'à 28% de vos revenus bruts mensuels pour les coûts de logement (principal, intérêts, impôts et assurance). Ceci est séparé des directives générales d'emprunt et nécessite un calculateur spécifique pour hypothèques."
+        },
+        {
+          "question": "Puis-je inclure mon acompte dans les calculs de capacité?",
+          "answer": "Oui, les acomptes réduisent le montant que vous devez emprunter, ce qui abaisse vos paiements mensuels et améliore votre ratio dette-revenus. Les acomptes plus importants vous qualifient souvent pour de meilleurs termes d'emprunt et des taux d'intérêt plus bas."
+        }
+      ]
+    }
+  }
+}

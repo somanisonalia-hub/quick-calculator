@@ -1,0 +1,346 @@
+{
+  "en": {
+    "title": "Average Calculator",
+    "seoTitle": "Average Calculator - Calculate Arithmetic Mean Online",
+    "metaDescription": "Free average calculator to calculate the arithmetic mean of numbers. Enter multiple values to find their average. Perfect for students and quick calculations.",
+    "keywords": [
+      "average calculator",
+      "arithmetic mean calculator",
+      "mean calculator",
+      "calculate average",
+      "average finder"
+    ],
+    "longTailKeywords": [
+      "how to calculate average of numbers",
+      "online average calculator",
+      "arithmetic mean calculator",
+      "find average of data set",
+      "calculate mean value"
+    ],
+    "slug": "average-calculator",
+    "category": "math",
+    "calculatorComponent": "AverageCalculator",
+    "difficulty": "basic",
+    "tags": ["average", "mean", "arithmetic", "statistics"],
+    "summary": "Calculate the arithmetic mean (average) of a list of numbers quickly and easily.",
+    "description": "Use our average calculator to find the arithmetic mean of any set of numbers. Simply enter your values and get the average instantly. Perfect for students, teachers, and anyone needing to calculate averages.",
+    "instructions": [
+      "Enter each number in the input field, one per line",
+      "Or enter comma-separated values in a single line",
+      "Click the 'Calculate Average' button",
+      "View your result and the count of numbers entered"
+    ],
+    "examples": [
+      "Calculate the average grade: 85, 92, 78, 95, 88",
+      "Find average monthly expenses: 1200, 1350, 1100, 1280, 1420",
+      "Average test scores: 87, 91, 84, 96, 89, 93"
+    ],
+    "relatedCalculators": ["mean-median-mode-calculator", "percentage-calculator", "grade-calculator"],
+    "seoContent": {
+      "introduction": "Our average calculator makes it easy to find the arithmetic mean of any set of numbers. Whether you're calculating grades, expenses, test scores, or any other numerical data, this tool provides instant results with clear explanations.",
+      "benefits": [
+        "Calculate averages instantly without manual math",
+        "Handle multiple numbers at once",
+        "Perfect for students and educators",
+        "Free and easy to use",
+        "Works on any device"
+      ],
+      "steps": [
+        "Enter your numbers in the input field",
+        "Separate values with commas or new lines",
+        "Click the calculate button",
+        "Review your average and total count"
+      ],
+      "inputsExplained": [
+        "Numbers Input: Enter each number on a new line or separate with commas",
+        "The calculator accepts decimal numbers and negative values",
+        "Empty lines and invalid entries are automatically ignored"
+      ],
+      "formulaExplanation": "Average (Arithmetic Mean) = Sum of all numbers ÷ Number of values. For example: (85 + 92 + 78 + 95 + 88) ÷ 5 = 87.6",
+      "examples": [
+        "Class grades: (85, 92, 78, 95, 88) = 87.6 average",
+        "Monthly expenses: (1200, 1350, 1100, 1280, 1420) = 1270 average",
+        "Test scores: (87, 91, 84, 96, 89, 93) = 90 average"
+      ],
+      "resultsExplanation": [
+        "Average: The arithmetic mean of all entered numbers",
+        "Count: Total number of valid numbers processed",
+        "The result is rounded to 2 decimal places for readability"
+      ],
+      "whoItsFor": "Students calculating grade averages, teachers computing class scores, business professionals analyzing data, and anyone who needs to find the mean of numerical values.",
+      "disclaimer": "This calculator provides the arithmetic mean (average) of entered numbers. Results are rounded to 2 decimal places. Ensure your data is entered correctly for accurate results.",
+      "faqs": [
+        {
+          "question": "What is the difference between average and mean?",
+          "answer": "Average and mean are the same thing - they both refer to the arithmetic mean, which is calculated by adding up all values and dividing by the number of values."
+        },
+        {
+          "question": "How do I calculate a weighted average?",
+          "answer": "For weighted averages, you'll need a more advanced calculator. This tool calculates simple arithmetic means where each value has equal weight."
+        },
+        {
+          "question": "Can I enter decimal numbers?",
+          "answer": "Yes, the calculator accepts decimal numbers. For example, you can enter 85.5, 92.3, 78.8, etc."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Promedio",
+    "seoTitle": "Calculadora de Promedio - Calcula la Media Aritmética Online",
+    "metaDescription": "Calculadora de promedio gratuita para calcular la media aritmética de números. Ingresa múltiples valores para encontrar su promedio.",
+    "keywords": [
+      "calculadora promedio",
+      "calculadora media aritmética",
+      "calculadora media",
+      "calcular promedio",
+      "buscador promedio"
+    ],
+    "longTailKeywords": [
+      "como calcular promedio de números",
+      "calculadora promedio online",
+      "calculadora media aritmética",
+      "encontrar promedio de conjunto de datos",
+      "calcular valor medio"
+    ],
+    "slug": "average-calculator",
+    "category": "math",
+    "calculatorComponent": "AverageCalculator",
+    "difficulty": "basic",
+    "tags": ["promedio", "media", "aritmética", "estadística"],
+    "summary": "Calcula la media aritmética (promedio) de una lista de números de forma rápida y sencilla.",
+    "description": "Usa nuestra calculadora de promedio para encontrar la media aritmética de cualquier conjunto de números. Simplemente ingresa tus valores y obtén el promedio al instante.",
+    "instructions": [
+      "Ingresa cada número en el campo de entrada, uno por línea",
+      "O ingresa valores separados por comas en una sola línea",
+      "Haz clic en el botón 'Calcular Promedio'",
+      "Ve tu resultado y el conteo de números ingresados"
+    ],
+    "examples": [
+      "Calcular el promedio de calificaciones: 85, 92, 78, 95, 88",
+      "Encontrar promedio de gastos mensuales: 1200, 1350, 1100, 1280, 1420",
+      "Promedio de puntajes de exámenes: 87, 91, 84, 96, 89, 93"
+    ],
+    "relatedCalculators": ["mean-median-mode-calculator", "percentage-calculator", "grade-calculator"],
+    "seoContent": {
+      "introduction": "Nuestra calculadora de promedio facilita encontrar la media aritmética de cualquier conjunto de números. Ya sea calculando calificaciones, gastos, puntajes de exámenes o cualquier otro dato numérico, esta herramienta proporciona resultados instantáneos con explicaciones claras.",
+      "benefits": [
+        "Calcula promedios al instante sin matemáticas manuales",
+        "Maneja múltiples números a la vez",
+        "Perfecto para estudiantes y educadores",
+        "Gratis y fácil de usar",
+        "Funciona en cualquier dispositivo"
+      ],
+      "steps": [
+        "Ingresa tus números en el campo de entrada",
+        "Separa valores con comas o líneas nuevas",
+        "Haz clic en el botón calcular",
+        "Revisa tu promedio y conteo total"
+      ],
+      "inputsExplained": [
+        "Entrada de Números: Ingresa cada número en una nueva línea o sepáralos con comas",
+        "La calculadora acepta números decimales y valores negativos",
+        "Las líneas vacías y entradas inválidas se ignoran automáticamente"
+      ],
+      "formulaExplanation": "Promedio (Media Aritmética) = Suma de todos los números ÷ Número de valores. Por ejemplo: (85 + 92 + 78 + 95 + 88) ÷ 5 = 87.6",
+      "examples": [
+        "Calificaciones de clase: (85, 92, 78, 95, 88) = promedio 87.6",
+        "Gastos mensuales: (1200, 1350, 1100, 1280, 1420) = promedio 1270",
+        "Puntajes de exámenes: (87, 91, 84, 96, 89, 93) = promedio 90"
+      ],
+      "resultsExplanation": [
+        "Promedio: La media aritmética de todos los números ingresados",
+        "Conteo: Número total de números válidos procesados",
+        "El resultado se redondea a 2 decimales para mayor legibilidad"
+      ],
+      "whoItsFor": "Estudiantes calculando promedios de calificaciones, profesores calculando puntajes de clase, profesionales de negocios analizando datos, y cualquier persona que necesite encontrar la media de valores numéricos.",
+      "disclaimer": "Esta calculadora proporciona la media aritmética (promedio) de los números ingresados. Los resultados se redondean a 2 decimales. Asegúrate de que tus datos estén ingresados correctamente para obtener resultados precisos.",
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre promedio y media?",
+          "answer": "Promedio y media son lo mismo - ambos se refieren a la media aritmética, que se calcula sumando todos los valores y dividiendo por el número de valores."
+        },
+        {
+          "question": "¿Cómo calculo un promedio ponderado?",
+          "answer": "Para promedios ponderados, necesitarás una calculadora más avanzada. Esta herramienta calcula medias aritméticas simples donde cada valor tiene el mismo peso."
+        },
+        {
+          "question": "¿Puedo ingresar números decimales?",
+          "answer": "Sí, la calculadora acepta números decimales. Por ejemplo, puedes ingresar 85.5, 92.3, 78.8, etc."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Média",
+    "seoTitle": "Calculadora de Média - Calcula a Média Aritmética Online",
+    "metaDescription": "Calculadora de média gratuita para calcular a média aritmética de números. Digite múltiplos valores para encontrar sua média.",
+    "keywords": [
+      "calculadora média",
+      "calculadora média aritmética",
+      "calculadora média",
+      "calcular média",
+      "buscador média"
+    ],
+    "longTailKeywords": [
+      "como calcular média de números",
+      "calculadora média online",
+      "calculadora média aritmética",
+      "encontrar média de conjunto de dados",
+      "calcular valor médio"
+    ],
+    "slug": "average-calculator",
+    "category": "math",
+    "calculatorComponent": "AverageCalculator",
+    "difficulty": "basic",
+    "tags": ["média", "média", "aritmética", "estatística"],
+    "summary": "Calcule a média aritmética (média) de uma lista de números de forma rápida e fácil.",
+    "description": "Use nossa calculadora de média para encontrar a média aritmética de qualquer conjunto de números. Simplesmente digite seus valores e obtenha a média instantaneamente.",
+    "instructions": [
+      "Digite cada número no campo de entrada, um por linha",
+      "Ou digite valores separados por vírgulas em uma única linha",
+      "Clique no botão 'Calcular Média'",
+      "Veja seu resultado e a contagem de números digitados"
+    ],
+    "examples": [
+      "Calcular a média das notas: 85, 92, 78, 95, 88",
+      "Encontrar média de despesas mensais: 1200, 1350, 1100, 1280, 1420",
+      "Média das pontuações dos testes: 87, 91, 84, 96, 89, 93"
+    ],
+    "relatedCalculators": ["mean-median-mode-calculator", "percentage-calculator", "grade-calculator"],
+    "seoContent": {
+      "introduction": "Nossa calculadora de média facilita encontrar a média aritmética de qualquer conjunto de números. Seja calculando notas, despesas, pontuações de testes ou qualquer outro dado numérico, esta ferramenta fornece resultados instantâneos com explicações claras.",
+      "benefits": [
+        "Calcule médias instantaneamente sem matemática manual",
+        "Manipule múltiplos números de uma só vez",
+        "Perfeito para estudantes e educadores",
+        "Grátis e fácil de usar",
+        "Funciona em qualquer dispositivo"
+      ],
+      "steps": [
+        "Digite seus números no campo de entrada",
+        "Separe valores com vírgulas ou novas linhas",
+        "Clique no botão calcular",
+        "Revise sua média e contagem total"
+      ],
+      "inputsExplained": [
+        "Entrada de Números: Digite cada número em uma nova linha ou separe com vírgulas",
+        "A calculadora aceita números decimais e valores negativos",
+        "Linhas vazias e entradas inválidas são automaticamente ignoradas"
+      ],
+      "formulaExplanation": "Média (Média Aritmética) = Soma de todos os números ÷ Número de valores. Por exemplo: (85 + 92 + 78 + 95 + 88) ÷ 5 = 87.6",
+      "examples": [
+        "Notas da classe: (85, 92, 78, 95, 88) = média 87.6",
+        "Despesas mensais: (1200, 1350, 1100, 1280, 1420) = média 1270",
+        "Pontuações dos testes: (87, 91, 84, 96, 89, 93) = média 90"
+      ],
+      "resultsExplanation": [
+        "Média: A média aritmética de todos os números digitados",
+        "Contagem: Número total de números válidos processados",
+        "O resultado é arredondado para 2 casas decimais para legibilidade"
+      ],
+      "whoItsFor": "Estudantes calculando médias de notas, professores calculando pontuações de classe, profissionais de negócios analisando dados e qualquer pessoa que precisa encontrar a média de valores numéricos.",
+      "disclaimer": "Esta calculadora fornece a média aritmética (média) dos números digitados. Os resultados são arredondados para 2 casas decimais. Certifique-se de que seus dados estejam digitados corretamente para obter resultados precisos.",
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre média e média?",
+          "answer": "Média e média são a mesma coisa - ambas se referem à média aritmética, que é calculada somando todos os valores e dividindo pelo número de valores."
+        },
+        {
+          "question": "Como calculo uma média ponderada?",
+          "answer": "Para médias ponderadas, você precisará de uma calculadora mais avançada. Esta ferramenta calcula médias aritméticas simples onde cada valor tem peso igual."
+        },
+        {
+          "question": "Posso digitar números decimais?",
+          "answer": "Sim, a calculadora aceita números decimais. Por exemplo, você pode digitar 85.5, 92.3, 78.8, etc."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Moyenne",
+    "seoTitle": "Calculateur de Moyenne - Calculez la Moyenne Arithmétique en Ligne",
+    "metaDescription": "Calculateur de moyenne gratuit pour calculer la moyenne arithmétique des nombres. Saisissez plusieurs valeurs pour trouver leur moyenne.",
+    "keywords": [
+      "calculateur moyenne",
+      "calculateur moyenne arithmétique",
+      "calculateur moyenne",
+      "calculer moyenne",
+      "chercheur moyenne"
+    ],
+    "longTailKeywords": [
+      "comment calculer moyenne de nombres",
+      "calculateur moyenne en ligne",
+      "calculateur moyenne arithmétique",
+      "trouver moyenne d'ensemble de données",
+      "calculer valeur moyenne"
+    ],
+    "slug": "average-calculator",
+    "category": "math",
+    "calculatorComponent": "AverageCalculator",
+    "difficulty": "basic",
+    "tags": ["moyenne", "moyenne", "arithmétique", "statistiques"],
+    "summary": "Calculez la moyenne arithmétique (moyenne) d'une liste de nombres rapidement et facilement.",
+    "description": "Utilisez notre calculateur de moyenne pour trouver la moyenne arithmétique de n'importe quel ensemble de nombres. Saisissez simplement vos valeurs et obtenez la moyenne instantanément.",
+    "instructions": [
+      "Saisissez chaque nombre dans le champ de saisie, un par ligne",
+      "Ou saisissez des valeurs séparées par des virgules sur une seule ligne",
+      "Cliquez sur le bouton 'Calculer la Moyenne'",
+      "Consultez votre résultat et le nombre de valeurs saisies"
+    ],
+    "examples": [
+      "Calculer la moyenne des notes: 85, 92, 78, 95, 88",
+      "Trouver la moyenne des dépenses mensuelles: 1200, 1350, 1100, 1280, 1420",
+      "Moyenne des scores de test: 87, 91, 84, 96, 89, 93"
+    ],
+    "relatedCalculators": ["mean-median-mode-calculator", "percentage-calculator", "grade-calculator"],
+    "seoContent": {
+      "introduction": "Notre calculateur de moyenne facilite la recherche de la moyenne arithmétique de n'importe quel ensemble de nombres. Que vous calculiez des notes, des dépenses, des scores de test ou toute autre donnée numérique, cet outil fournit des résultats instantanés avec des explications claires.",
+      "benefits": [
+        "Calculez les moyennes instantanément sans calculs mathématiques manuels",
+        "Gérez plusieurs nombres à la fois",
+        "Parfait pour les étudiants et les éducateurs",
+        "Gratuit et facile à utiliser",
+        "Fonctionne sur n'importe quel appareil"
+      ],
+      "steps": [
+        "Saisissez vos nombres dans le champ de saisie",
+        "Séparez les valeurs par des virgules ou des nouvelles lignes",
+        "Cliquez sur le bouton calculer",
+        "Consultez votre moyenne et le nombre total"
+      ],
+      "inputsExplained": [
+        "Saisie de Nombres: Saisissez chaque nombre sur une nouvelle ligne ou séparez-les par des virgules",
+        "La calculatrice accepte les nombres décimaux et les valeurs négatives",
+        "Les lignes vides et les entrées invalides sont automatiquement ignorées"
+      ],
+      "formulaExplanation": "Moyenne (Moyenne Arithmétique) = Somme de tous les nombres ÷ Nombre de valeurs. Par exemple: (85 + 92 + 78 + 95 + 88) ÷ 5 = 87.6",
+      "examples": [
+        "Notes de classe: (85, 92, 78, 95, 88) = moyenne 87.6",
+        "Dépenses mensuelles: (1200, 1350, 1100, 1280, 1420) = moyenne 1270",
+        "Scores de test: (87, 91, 84, 96, 89, 93) = moyenne 90"
+      ],
+      "resultsExplanation": [
+        "Moyenne: La moyenne arithmétique de tous les nombres saisis",
+        "Nombre: Nombre total de nombres valides traités",
+        "Le résultat est arrondi à 2 décimales pour une meilleure lisibilité"
+      ],
+      "whoItsFor": "Étudiants calculant des moyennes de notes, enseignants calculant des scores de classe, professionnels d'affaires analysant des données et toute personne ayant besoin de trouver la moyenne de valeurs numériques.",
+      "disclaimer": "Cette calculatrice fournit la moyenne arithmétique (moyenne) des nombres saisis. Les résultats sont arrondis à 2 décimales. Assurez-vous que vos données sont saisies correctement pour obtenir des résultats précis.",
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre moyenne et moyenne?",
+          "answer": "Moyenne et moyenne sont la même chose - les deux se réfèrent à la moyenne arithmétique, qui est calculée en additionnant toutes les valeurs et en divisant par le nombre de valeurs."
+        },
+        {
+          "question": "Comment calculer une moyenne pondérée?",
+          "answer": "Pour les moyennes pondérées, vous aurez besoin d'une calculatrice plus avancée. Cet outil calcule des moyennes arithmétiques simples où chaque valeur a un poids égal."
+        },
+        {
+          "question": "Puis-je saisir des nombres décimaux?",
+          "answer": "Oui, la calculatrice accepte les nombres décimaux. Par exemple, vous pouvez saisir 85.5, 92.3, 78.8, etc."
+        }
+      ]
+    }
+  }
+}

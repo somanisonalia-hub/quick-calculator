@@ -1,0 +1,218 @@
+{
+  "en": {
+    "title": "Pythagorean Theorem Calculator",
+    "seoTitle": "Pythagorean Theorem Calculator - Calculate Right Triangle Sides Online",
+    "metaDescription": "Free Pythagorean theorem calculator. Calculate the missing side of a right triangle using a² + b² = c². Step-by-step solutions for geometry problems.",
+    "keywords": ["pythagorean theorem calculator", "right triangle calculator", "a squared plus b squared equals c squared", "triangle sides calculator"],
+    "longTailKeywords": ["how to use pythagorean theorem", "pythagorean theorem formula", "calculate hypotenuse", "find missing side of right triangle", "geometry pythagorean theorem"],
+    "slug": "pythagorean-theorem-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["pythagorean", "theorem", "right triangle", "hypotenuse", "geometry", "triangle"],
+    "summary": "Calculate missing sides of right triangles using the Pythagorean theorem with step-by-step explanations.",
+    "description": "Our Pythagorean theorem calculator helps you find the missing side of a right triangle using the famous a² + b² = c² formula. Perfect for geometry students, architects, engineers, and anyone working with right triangles.",
+    "instructions": [
+      "Select which side you want to calculate (a, b, or c)",
+      "Enter the known side lengths",
+      "Get instant calculation with the Pythagorean theorem",
+      "View step-by-step solution for learning"
+    ],
+    "calculatorComponent": {
+      "componentName": "PythagoreanTheoremCalculator",
+      "inputs": [
+        { "name": "calculateSide", "label": "Calculate", "type": "select", "default": "c", "options": ["a", "b", "c"] },
+        { "name": "sideA", "label": "Side a", "type": "number", "default": 3, "min": 0, "step": 0.01 },
+        { "name": "sideB", "label": "Side b", "type": "number", "default": 4, "min": 0, "step": 0.01 },
+        { "name": "sideC", "label": "Side c (hypotenuse)", "type": "number", "default": 0, "min": 0, "step": 0.01 }
+      ],
+      "formula": "a² + b² = c² (where c is the hypotenuse)",
+      "output": { "label": "Calculated Side", "default": "Enter values above", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Formula Used", "field": "formula", "format": "text" },
+        { "label": "Step-by-Step Solution", "field": "steps", "format": "text" },
+        { "label": "Triangle Type", "field": "triangleType", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Find Hypotenuse",
+        "input": "Side a = 3, Side b = 4",
+        "output": "Hypotenuse c = 5"
+      },
+      {
+        "title": "Find Leg Length",
+        "input": "Side a = 5, Hypotenuse c = 13",
+        "output": "Side b = 12"
+      },
+      {
+        "title": "Verify Right Triangle",
+        "input": "Sides: 6, 8, 10",
+        "output": "Valid right triangle (6² + 8² = 10²)"
+      }
+    ],
+    "relatedCalculators": ["triangle-area-calculator", "circle-area-calculator", "scientific-calculator"]
+  },
+  "es": {
+    "title": "Calculadora del Teorema de Pitágoras",
+    "seoTitle": "Calculadora del Teorema de Pitágoras - Calcula Lados de Triángulos Rectángulos Online",
+    "metaDescription": "Calculadora gratuita del teorema de Pitágoras. Calcula el lado faltante de un triángulo rectángulo usando a² + b² = c². Soluciones paso a paso para problemas de geometría.",
+    "keywords": ["calculadora teorema pitágoras", "calculadora triángulo rectángulo", "a al cuadrado mas b al cuadrado igual c al cuadrado", "calculadora lados triángulo"],
+    "longTailKeywords": ["como usar teorema de pitágoras", "fórmula teorema de pitágoras", "calcular hipotenusa", "encontrar lado faltante triángulo rectángulo", "geometría teorema pitágoras"],
+    "slug": "pythagorean-theorem-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["pitágoras", "teorema", "triángulo rectángulo", "hipotenusa", "geometría", "triángulo"],
+    "summary": "Calcula lados faltantes de triángulos rectángulos usando el teorema de Pitágoras con explicaciones paso a paso.",
+    "description": "Nuestra calculadora del teorema de Pitágoras te ayuda a encontrar el lado faltante de un triángulo rectángulo usando la famosa fórmula a² + b² = c². Perfecta para estudiantes de geometría, arquitectos, ingenieros, y cualquiera trabajando con triángulos rectángulos.",
+    "instructions": [
+      "Selecciona qué lado quieres calcular (a, b, o c)",
+      "Ingresa las longitudes de lados conocidos",
+      "Obtén cálculo instantáneo con el teorema de Pitágoras",
+      "Ve solución paso a paso para aprender"
+    ],
+    "calculatorComponent": {
+      "componentName": "PythagoreanTheoremCalculator",
+      "inputs": [
+        { "name": "calculateSide", "label": "Calcular", "type": "select", "default": "c", "options": ["a", "b", "c"] },
+        { "name": "sideA", "label": "Lado a", "type": "number", "default": 3, "min": 0, "step": 0.01 },
+        { "name": "sideB", "label": "Lado b", "type": "number", "default": 4, "min": 0, "step": 0.01 },
+        { "name": "sideC", "label": "Lado c (hipotenusa)", "type": "number", "default": 0, "min": 0, "step": 0.01 }
+      ],
+      "formula": "a² + b² = c² (donde c es la hipotenusa)",
+      "output": { "label": "Lado Calculado", "default": "Ingresa valores arriba", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Fórmula Usada", "field": "formula", "format": "text" },
+        { "label": "Solución Paso a Paso", "field": "steps", "format": "text" },
+        { "label": "Tipo de Triángulo", "field": "triangleType", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Encontrar Hipotenusa",
+        "input": "Lado a = 3, Lado b = 4",
+        "output": "Hipotenusa c = 5"
+      },
+      {
+        "title": "Encontrar Longitud de Cateto",
+        "input": "Lado a = 5, Hipotenusa c = 13",
+        "output": "Lado b = 12"
+      },
+      {
+        "title": "Verificar Triángulo Rectángulo",
+        "input": "Lados: 6, 8, 10",
+        "output": "Triángulo rectángulo válido (6² + 8² = 10²)"
+      }
+    ],
+    "relatedCalculators": ["triangle-area-calculator", "circle-area-calculator", "scientific-calculator"]
+  },
+  "pt": {
+    "title": "Calculadora do Teorema de Pitágoras",
+    "seoTitle": "Calculadora do Teorema de Pitágoras - Calcule Lados de Triângulos Retângulos Online",
+    "metaDescription": "Calculadora gratuita do teorema de Pitágoras. Calcule o lado faltante de um triângulo retângulo usando a² + b² = c². Soluções passo a passo para problemas de geometria.",
+    "keywords": ["calculadora teorema pitágoras", "calculadora triângulo retângulo", "a ao quadrado mais b ao quadrado igual c ao quadrado", "calculadora lados triângulo"],
+    "longTailKeywords": ["como usar teorema de pitágoras", "fórmula teorema de pitágoras", "calcular hipotenusa", "encontrar lado faltante triângulo retângulo", "geometria teorema pitágoras"],
+    "slug": "pythagorean-theorem-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["pitágoras", "teorema", "triângulo retângulo", "hipotenusa", "geometria", "triângulo"],
+    "summary": "Calcule lados faltantes de triângulos retângulos usando o teorema de Pitágoras com explicações passo a passo.",
+    "description": "Nossa calculadora do teorema de Pitágoras ajuda você a encontrar o lado faltante de um triângulo retângulo usando a famosa fórmula a² + b² = c². Perfeita para estudantes de geometria, arquitetos, engenheiros, e qualquer um trabalhando com triângulos retângulos.",
+    "instructions": [
+      "Selecione qual lado quer calcular (a, b, ou c)",
+      "Digite os comprimentos de lados conhecidos",
+      "Obtenha cálculo instantâneo com o teorema de Pitágoras",
+      "Veja solução passo a passo para aprender"
+    ],
+    "calculatorComponent": {
+      "componentName": "PythagoreanTheoremCalculator",
+      "inputs": [
+        { "name": "calculateSide", "label": "Calcular", "type": "select", "default": "c", "options": ["a", "b", "c"] },
+        { "name": "sideA", "label": "Lado a", "type": "number", "default": 3, "min": 0, "step": 0.01 },
+        { "name": "sideB", "label": "Lado b", "type": "number", "default": 4, "min": 0, "step": 0.01 },
+        { "name": "sideC", "label": "Lado c (hipotenusa)", "type": "number", "default": 0, "min": 0, "step": 0.01 }
+      ],
+      "formula": "a² + b² = c² (onde c é a hipotenusa)",
+      "output": { "label": "Lado Calculado", "default": "Digite valores acima", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Fórmula Usada", "field": "formula", "format": "text" },
+        { "label": "Solução Passo a Passo", "field": "steps", "format": "text" },
+        { "label": "Tipo de Triângulo", "field": "triangleType", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Encontrar Hipotenusa",
+        "input": "Lado a = 3, Lado b = 4",
+        "output": "Hipotenusa c = 5"
+      },
+      {
+        "title": "Encontrar Comprimento de Cateto",
+        "input": "Lado a = 5, Hipotenusa c = 13",
+        "output": "Lado b = 12"
+      },
+      {
+        "title": "Verificar Triângulo Retângulo",
+        "input": "Lados: 6, 8, 10",
+        "output": "Triângulo retângulo válido (6² + 8² = 10²)"
+      }
+    ],
+    "relatedCalculators": ["triangle-area-calculator", "circle-area-calculator", "scientific-calculator"]
+  },
+  "fr": {
+    "title": "Calculateur du Théorème de Pythagore",
+    "seoTitle": "Calculateur du Théorème de Pythagore - Calculez Côtés de Triangles Rectangles en Ligne",
+    "metaDescription": "Calculateur gratuit du théorème de Pythagore. Calculez le côté manquant d'un triangle rectangle en utilisant a² + b² = c². Solutions étape par étape pour problèmes de géométrie.",
+    "keywords": ["calculateur théorème pythagore", "calculateur triangle rectangle", "a au carré plus b au carré égal c au carré", "calculateur côtés triangle"],
+    "longTailKeywords": ["comment utiliser théorème de pythagore", "formule théorème de pythagore", "calculer hypoténuse", "trouver côté manquant triangle rectangle", "géométrie théorème pythagore"],
+    "slug": "pythagorean-theorem-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["pythagore", "théorème", "triangle rectangle", "hypoténuse", "géométrie", "triangle"],
+    "summary": "Calculez côtés manquants de triangles rectangles utilisant le théorème de Pythagore avec explications étape par étape.",
+    "description": "Notre calculateur du théorème de Pythagore vous aide à trouver le côté manquant d'un triangle rectangle utilisant la célèbre formule a² + b² = c². Parfait pour étudiants de géométrie, architectes, ingénieurs, et quiconque travaillant avec triangles rectangles.",
+    "instructions": [
+      "Sélectionnez quel côté vous voulez calculer (a, b, ou c)",
+      "Entrez longueurs côtés connus",
+      "Obtenez calcul instantané avec théorème de Pythagore",
+      "Visualisez solution étape par étape pour apprendre"
+    ],
+    "calculatorComponent": {
+      "componentName": "PythagoreanTheoremCalculator",
+      "inputs": [
+        { "name": "calculateSide", "label": "Calculer", "type": "select", "default": "c", "options": ["a", "b", "c"] },
+        { "name": "sideA", "label": "Côté a", "type": "number", "default": 3, "min": 0, "step": 0.01 },
+        { "name": "sideB", "label": "Côté b", "type": "number", "default": 4, "min": 0, "step": 0.01 },
+        { "name": "sideC", "label": "Côté c (hypoténuse)", "type": "number", "default": 0, "min": 0, "step": 0.01 }
+      ],
+      "formula": "a² + b² = c² (où c est l'hypoténuse)",
+      "output": { "label": "Côté Calculé", "default": "Entrez valeurs ci-dessus", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Formule Utilisée", "field": "formula", "format": "text" },
+        { "label": "Solution Étape par Étape", "field": "steps", "format": "text" },
+        { "label": "Type de Triangle", "field": "triangleType", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Trouver Hypoténuse",
+        "input": "Côté a = 3, Côté b = 4",
+        "output": "Hypoténuse c = 5"
+      },
+      {
+        "title": "Trouver Longueur Côté",
+        "input": "Côté a = 5, Hypoténuse c = 13",
+        "output": "Côté b = 12"
+      },
+      {
+        "title": "Vérifier Triangle Rectangle",
+        "input": "Côtés: 6, 8, 10",
+        "output": "Triangle rectangle valide (6² + 8² = 10²)"
+      }
+    ],
+    "relatedCalculators": ["triangle-area-calculator", "circle-area-calculator", "scientific-calculator"]
+  }
+}

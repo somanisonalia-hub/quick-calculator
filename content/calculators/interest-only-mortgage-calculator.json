@@ -1,0 +1,474 @@
+{
+  "en": {
+    "title": "Interest-Only Mortgage Calculator",
+    "seoTitle": "Interest-Only Mortgage Calculator - Calculate Interest-Only Payments and Principal Payoff",
+    "metaDescription": "Free interest-only mortgage calculator. Calculate interest-only payments, principal payoff amounts, and compare with traditional mortgages. Essential for investment properties and short-term ownership.",
+    "keywords": ["interest-only mortgage calculator", "interest-only loan calculator", "mortgage payoff calculator", "investment property calculator", "mortgage comparison calculator"],
+    "longTailKeywords": ["how does interest-only mortgage work calculator", "interest-only mortgage payment calculator", "mortgage principal payoff calculator", "investment property mortgage calculator", "interest-only vs traditional mortgage calculator"],
+    "slug": "interest-only-mortgage-calculator",
+    "category": "financial",
+    "difficulty": "advanced",
+    "tags": ["interest-only mortgage", "investment property", "mortgage payments", "principal payoff", "mortgage comparison"],
+    "summary": "Calculate interest-only mortgage payments, principal payoff requirements, and compare with traditional mortgages for informed home financing decisions.",
+    "description": "Our specialized interest-only mortgage calculator helps you understand interest-only loan structures common in investment properties and short-term ownership scenarios. Calculate monthly interest payments, principal payoff amounts at loan end, and compare total costs with traditional amortizing mortgages. Essential for real estate investors and those planning short-term home ownership.",
+    "instructions": [
+      "Enter loan amount, interest rate, and interest-only period",
+      "Specify principal payoff terms at loan end",
+      "Compare with traditional mortgage payments",
+      "Analyze total cost and cash flow implications"
+    ],
+    "calculatorComponent": {
+      "componentName": "InterestOnlyMortgageCalculator",
+      "inputs": [
+        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 300000, "min": 50000, "max": 2000000, "step": 10000 },
+        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 5.5, "min": 2, "max": 15, "step": 0.125 },
+        { "name": "interestOnlyPeriod", "label": "Interest-Only Period (years)", "type": "number", "default": 5, "min": 1, "max": 10, "step": 1 },
+        { "name": "amortizationPeriod", "label": "Amortization Period (years)", "type": "number", "default": 25, "min": 15, "max": 40, "step": 1 },
+        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 6000, "min": 0, "max": 30000, "step": 100 },
+        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1500, "min": 0, "max": 5000, "step": 50 }
+      ],
+      "formula": "Interest-Only Payment = Loan Amount × Interest Rate / 12; Principal Payment = Loan Amount / (Amortization Period × 12)",
+      "output": { "label": "Current Monthly Payment", "default": "Enter mortgage details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Interest-Only Payment", "field": "interestOnlyPayment", "format": "currency" },
+        { "label": "Full Payment (After)", "field": "fullPayment", "format": "currency" },
+        { "label": "Payment Increase", "field": "paymentIncrease", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Investment Property",
+        "input": "$400,000 loan, 5% interest, 5-year interest-only, 20-year amortization payoff",
+        "output": "Monthly Interest Payment: $1,667, Principal Payoff: $1,674, Total Interest: $100,000"
+      },
+      {
+        "title": "Short-term Ownership",
+        "input": "$300,000 loan, 4.5% interest, 3-year interest-only, balloon payment",
+        "output": "Monthly Interest Payment: $1,125, Balloon Payment: $300,000, Total Interest Paid: $40,500"
+      }
+    ],
+    "relatedCalculators": ["mortgage-calculator", "loan-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Master the complexities of interest-only mortgages with our specialized calculator designed specifically for investment properties and strategic home financing. Interest-only loans offer unique advantages for real estate investors and those planning short-term ownership, but they require careful planning and understanding of the payment shock when principal payments begin. Our calculator helps you navigate these sophisticated loan structures, comparing interest-only payments with traditional mortgages while calculating the total cost implications and cash flow requirements. Whether you're considering an investment property purchase or planning your exit strategy, this tool provides the clarity needed to make informed mortgage decisions in competitive real estate markets.",
+      "benefits": [
+        "Calculate precise interest-only payment amounts for any loan structure",
+        "Understand the payment shock when transitioning to principal-plus-interest payments",
+        "Compare total costs between interest-only and traditional amortizing mortgages",
+        "Plan cash flow for investment properties with predictable payment periods",
+        "Analyze balloon payment requirements at loan end",
+        "Evaluate short-term ownership strategies with lower initial payments",
+        "Make informed decisions about loan terms for investment properties",
+        "Understand the complete financial implications of interest-only financing"
+      ],
+      "steps": [
+        "Enter your loan amount, interest rate, and interest-only period",
+        "Specify the amortization period for principal payoff calculations",
+        "Include property taxes and insurance for complete payment picture",
+        "Review interest-only payments vs. full amortization payments",
+        "Analyze total interest costs and payment increase implications"
+      ],
+      "inputsExplained": [
+        "Loan amount is the principal borrowed for your property purchase",
+        "Interest rate determines your monthly interest-only payment",
+        "Interest-only period is how long you pay only interest (typically 5-10 years)",
+        "Amortization period affects the balloon payment or principal-plus-interest amount",
+        "Property taxes and insurance add to your total monthly housing cost"
+      ],
+      "formulaExplanation": "Interest-only mortgages calculate monthly payments as: Interest Payment = Loan Amount × (Interest Rate ÷ 12). After the interest-only period, payments switch to full amortization: Full Payment = Loan Amount × [r(1+r)^n] / [(1+r)^n - 1], where r is monthly rate and n is remaining payments. The payment increase can be substantial - a $400,000 loan might jump from $1,667 monthly to $2,341 monthly. Understanding this 'payment shock' is crucial for budgeting. Total interest costs are higher than traditional mortgages due to deferred principal payments.",
+      "examples": [
+        "$400,000 investment property loan at 5% with 5-year interest-only period requires $1,667 monthly interest payments, then jumps to $2,341 monthly with principal payments for total interest of $367,000 over 25 years.",
+        "$300,000 short-term ownership loan at 4.5% with 3-year interest-only period costs $1,125 monthly, then requires $300,000 balloon payment at year 3, paying $40,500 total interest.",
+        "$500,000 commercial property financing at 6% with 7-year interest-only period provides $2,500 monthly payments, then transitions to $3,021 monthly payments for total interest of $590,000 over 30 years."
+      ],
+      "resultsExplanation": [
+        "Current monthly payment shows your interest-only amount during that period",
+        "Interest-only payment displays the monthly cost during interest-only phase",
+        "Full payment reveals the higher amount after interest-only period ends",
+        "Payment increase shows the dollar amount your monthly cost will rise"
+      ],
+      "whoItsFor": "This interest-only mortgage calculator serves real estate investors planning property purchases, homeowners anticipating short-term ownership, commercial property owners, developers with construction financing needs, financial advisors counseling investment clients, mortgage brokers offering specialized products, property managers budgeting for investors, and anyone considering sophisticated loan structures. It's particularly valuable for those planning investment strategies, understanding payment shock implications, comparing loan options for commercial properties, and making strategic real estate financing decisions. The calculator works for residential investment properties, commercial real estate, development projects, and any scenario requiring interest-only financing.",
+      "disclaimer": "This interest-only mortgage calculator provides estimates based on standard loan formulas and the information entered. Interest-only mortgages carry significant risks including payment shock, negative amortization potential, and higher total interest costs. These loans are typically for sophisticated borrowers and investment properties only. Rates and terms vary by lender and credit profile. Balloon payments can be substantial and refinancing may not be available. This tool is for educational purposes and does not constitute loan approval or financial advice. Consult licensed mortgage professionals and consider your complete financial situation before pursuing interest-only financing.",
+      "relatedTools": [
+        "Mortgage calculators for traditional loan comparisons",
+        "Loan calculators for general financing analysis",
+        "Investment calculators for property investment returns"
+      ],
+      "faqs": [
+        {
+          "question": "How does an interest-only mortgage work?",
+          "answer": "During the interest-only period (typically 5-10 years), you pay only the interest on the loan amount, resulting in lower monthly payments. After this period, payments switch to principal-plus-interest (amortizing) payments, causing a significant payment increase called 'payment shock.' At loan end, you may have a balloon payment of remaining principal. These loans are common for investment properties where cash flow is prioritized over building equity."
+        },
+        {
+          "question": "What are the advantages of interest-only mortgages?",
+          "answer": "Lower initial payments preserve cash flow for investors and short-term owners. Payments can be 30-50% lower during interest-only period, making more properties affordable. Useful for flipping houses, development projects, or when expecting property value appreciation. Allows investment of saved money elsewhere for potentially higher returns. Can qualify for larger loan amounts due to lower payment requirements."
+        },
+        {
+          "question": "What are the risks of interest-only mortgages?",
+          "answer": "Payment shock can be financially devastating when payments increase 50-100%. Higher total interest costs over loan life. No equity building during interest-only period. Balloon payments can be unaffordable. Refinancing may not be possible if property values decline or credit changes. Risk of negative equity if property values decrease. Not suitable for long-term primary residences."
+        },
+        {
+          "question": "Who should consider interest-only mortgages?",
+          "answer": "Real estate investors with multiple properties and strong cash flow. Short-term homeowners planning to sell within interest-only period. Commercial property owners prioritizing cash flow over equity. High-income borrowers who can handle payment increases. Those expecting significant property appreciation. Developers and builders with construction timelines. Not recommended for first-time buyers or those planning long-term ownership."
+        },
+        {
+          "question": "How do I prepare for the payment increase?",
+          "answer": "Calculate the exact payment increase using our calculator. Build emergency savings equal to 6-12 months of new payment amount. Plan property sale or refinance before interest-only period ends. Consider extra payments during interest-only period to reduce principal. Budget for worst-case scenarios including rate increases. Have contingency plans for job loss or income changes. Consult financial advisors about timing and risk tolerance."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Hipoteca Solo Intereses",
+    "seoTitle": "Calculadora de Hipoteca Solo Intereses - Calcula Pagos Solo Intereses y Pago de Capital",
+    "metaDescription": "Calculadora gratuita de hipoteca solo intereses. Calcula pagos solo intereses, montos de pago de capital y compara con hipotecas tradicionales. Esencial para propiedades de inversión y propiedad a corto plazo.",
+    "keywords": ["calculadora hipoteca solo intereses", "calculadora préstamo solo intereses", "calculadora pago hipoteca", "calculadora propiedad inversión", "calculadora comparación hipoteca"],
+    "longTailKeywords": ["cómo funciona hipoteca solo intereses calculadora", "calculadora pago hipoteca solo intereses", "calculadora pago capital hipoteca", "calculadora hipoteca propiedad inversión", "calculadora hipoteca solo intereses vs tradicional"],
+    "slug": "interest-only-mortgage-calculator",
+    "category": "financial",
+    "difficulty": "advanced",
+    "tags": ["hipoteca solo intereses", "propiedad inversión", "pagos hipoteca", "pago capital", "comparación hipoteca"],
+    "summary": "Calcula pagos de hipoteca solo intereses, requisitos de pago de capital y compara con hipotecas tradicionales para decisiones informadas de financiamiento de vivienda.",
+    "description": "Nuestra calculadora especializada de hipoteca solo intereses te ayuda a entender estructuras de préstamos solo intereses comunes en propiedades de inversión y escenarios de propiedad a corto plazo. Calcula pagos mensuales de intereses, montos de pago de capital al final del préstamo y compara costos totales con hipotecas tradicionales amortizantes. Esencial para inversionistas inmobiliarios y aquellos planificando propiedad de vivienda a corto plazo.",
+    "instructions": [
+      "Ingresa monto del préstamo, tasa de interés y período solo intereses",
+      "Especifica términos de pago de capital al final del préstamo",
+      "Compara con pagos de hipoteca tradicional",
+      "Analiza implicaciones de costo total y flujo de efectivo"
+    ],
+    "calculatorComponent": {
+      "componentName": "InterestOnlyMortgageCalculator",
+      "inputs": [
+        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 300000, "min": 50000, "max": 2000000, "step": 10000 },
+        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 5.5, "min": 2, "max": 15, "step": 0.125 },
+        { "name": "interestOnlyPeriod", "label": "Interest-Only Period (years)", "type": "number", "default": 5, "min": 1, "max": 10, "step": 1 },
+        { "name": "amortizationPeriod", "label": "Amortization Period (years)", "type": "number", "default": 25, "min": 15, "max": 40, "step": 1 },
+        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 6000, "min": 0, "max": 30000, "step": 100 },
+        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1500, "min": 0, "max": 5000, "step": 50 }
+      ],
+      "formula": "Interest-Only Payment = Loan Amount × Interest Rate / 12; Principal Payment = Loan Amount / (Amortization Period × 12)",
+      "output": { "label": "Current Monthly Payment", "default": "Enter mortgage details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Interest-Only Payment", "field": "interestOnlyPayment", "format": "currency" },
+        { "label": "Full Payment (After)", "field": "fullPayment", "format": "currency" },
+        { "label": "Payment Increase", "field": "paymentIncrease", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Propiedad de Inversión",
+        "input": "Préstamo $400,000, 5% interés, 5 años solo intereses, amortización 20 años pago",
+        "output": "Pago Mensual Intereses: $1,667, Pago Capital: $1,674, Interés Total: $100,000"
+      },
+      {
+        "title": "Propiedad a Corto Plazo",
+        "input": "Préstamo $300,000, 4.5% interés, 3 años solo intereses, pago globo",
+        "output": "Pago Mensual Intereses: $1,125, Pago Globo: $300,000, Interés Total Pagado: $40,500"
+      }
+    ],
+    "relatedCalculators": ["mortgage-calculator", "loan-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Domina las complejidades de las hipotecas solo intereses con nuestra calculadora especializada diseñada específicamente para propiedades de inversión y financiamiento estratégico de vivienda. Los préstamos solo intereses ofrecen ventajas únicas para inversionistas inmobiliarios y aquellos planeando propiedad a corto plazo, pero requieren planificación cuidadosa y entendimiento del shock de pago cuando comienzan los pagos de capital. Nuestra calculadora te ayuda a navegar estas estructuras sofisticadas de préstamo, comparando pagos solo intereses con hipotecas tradicionales mientras calculas las implicaciones de costo total y requerimientos de flujo de caja. Ya sea que consideres compra de propiedad de inversión o planeando tu estrategia de salida, esta herramienta proporciona la claridad necesaria para tomar decisiones informadas de hipoteca en mercados inmobiliarios competitivos.",
+      "benefits": [
+        "Calcula montos precisos de pago solo intereses para cualquier estructura de préstamo",
+        "Entiende el shock de pago cuando transicionando a pagos capital-más-intereses",
+        "Compara costos totales entre hipotecas solo intereses y amortizantes tradicionales",
+        "Planea flujo de caja para propiedades de inversión con períodos de pago predecibles",
+        "Analiza requerimientos de pago globo al final del préstamo",
+        "Evalúa estrategias de propiedad a corto plazo con pagos iniciales más bajos",
+        "Toma decisiones informadas sobre términos de préstamo para propiedades de inversión",
+        "Entiende las implicaciones financieras completas del financiamiento solo intereses"
+      ],
+      "steps": [
+        "Ingresa monto de préstamo, tasa de interés, y período solo intereses",
+        "Especifica período de amortización para cálculos de pago de capital",
+        "Incluye impuestos de propiedad y seguro para imagen completa de pago",
+        "Revisa pagos solo intereses vs. pagos completos de amortización",
+        "Analiza costos totales de interés e implicaciones de aumento de pago"
+      ],
+      "inputsExplained": [
+        "Monto de préstamo es el capital pedido prestado para tu compra de propiedad",
+        "Tasa de interés determina tu pago mensual solo intereses",
+        "Período solo intereses es cuánto tiempo pagas solo intereses (típicamente 5-10 años)",
+        "Período de amortización afecta el pago globo o monto capital-más-intereses",
+        "Impuestos de propiedad y seguro agregan a tu costo mensual total de vivienda"
+      ],
+      "formulaExplanation": "Las hipotecas solo intereses calculan pagos mensuales como: Pago Intereses = Monto Préstamo × (Tasa Interés ÷ 12). Después del período solo intereses, pagos cambian a amortización completa: Pago Completo = Monto Préstamo × [r(1+r)^n] / [(1+r)^n - 1], donde r es tasa mensual y n es pagos restantes. El aumento de pago puede ser sustancial - un préstamo de $400,000 podría saltar de $1,667 mensuales a $2,341 mensuales. Entender este 'shock de pago' es crucial para presupuesto. Costos totales de interés son más altos que hipotecas tradicionales debido a pagos de capital diferidos.",
+      "examples": [
+        "Préstamo propiedad inversión $400,000 al 5% con período solo intereses 5 años requiere pagos intereses mensuales $1,667, luego salta a $2,341 mensuales con pagos capital por interés total $367,000 sobre 25 años.",
+        "Préstamo propiedad a corto plazo $300,000 al 4.5% con período solo intereses 3 años cuesta $1,125 mensuales, luego requiere pago globo $300,000 al año 3, pagando interés total $40,500.",
+        "Financiamiento propiedad comercial $500,000 al 6% con período solo intereses 7 años proporciona pagos mensuales $2,500, luego transiciona a pagos mensuales $3,021 por interés total $590,000 sobre 30 años."
+      ],
+      "resultsExplanation": [
+        "Pago mensual actual muestra tu monto solo intereses durante ese período",
+        "Pago solo intereses muestra el costo mensual durante fase solo intereses",
+        "Pago completo revela el monto más alto después que período solo intereses termina",
+        "Aumento de pago muestra el monto en dólares que tu costo mensual aumentará"
+      ],
+      "whoItsFor": "Esta calculadora hipoteca solo intereses sirve inversionistas inmobiliarios planeando compras de propiedad, propietarios anticipando propiedad a corto plazo, dueños de propiedad comercial, desarrolladores con necesidades de financiamiento de construcción, asesores financieros asesorando clientes de inversión, corredores hipotecarios ofreciendo productos especializados, administradores de propiedad presupuestando para inversionistas, y cualquiera considerando estructuras sofisticadas de préstamo. Es particularmente valiosa para aquellos planeando estrategias de inversión, entendiendo implicaciones de shock de pago, comparando opciones de préstamo para propiedades comerciales, y tomando decisiones estratégicas de financiamiento inmobiliario. La calculadora funciona para propiedades residenciales de inversión, bienes raíces comerciales, proyectos de desarrollo, y cualquier escenario requiriendo financiamiento solo intereses.",
+      "disclaimer": "Esta calculadora hipoteca solo intereses proporciona estimaciones basadas en fórmulas estándar de préstamo y la información ingresada. Las hipotecas solo intereses llevan riesgos significativos incluyendo shock de pago, potencial amortización negativa, y costos totales de interés más altos. Estos préstamos son típicamente para prestatarios sofisticados y propiedades de inversión únicamente. Tasas y términos varían por prestamista y perfil de crédito. Los pagos globo pueden ser sustanciales y refinanciamiento puede no estar disponible. Esta herramienta es para propósitos educativos y no constituye aprobación de préstamo o consejo financiero. Consulta profesionales hipotecarios licenciados y considera tu situación financiera completa antes de perseguir financiamiento solo intereses.",
+      "relatedTools": [
+        "Calculadoras hipotecarias para comparaciones de préstamo tradicionales",
+        "Calculadoras de préstamo para análisis general de financiamiento",
+        "Calculadoras de inversión para retornos de inversión en propiedad"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo funciona una hipoteca solo intereses?",
+          "answer": "Durante el período solo intereses (típicamente 5-10 años), pagas solo los intereses en el monto del préstamo, resultando en pagos mensuales más bajos. Después de este período, pagos cambian a pagos capital-más-intereses (amortizantes), causando un aumento significativo de pago llamado 'shock de pago.' Al final del préstamo, puedes tener un pago globo de capital restante. Estos préstamos son comunes para propiedades de inversión donde flujo de caja es priorizado sobre construcción de capital."
+        },
+        {
+          "question": "¿Cuáles son las ventajas de hipotecas solo intereses?",
+          "answer": "Pagos iniciales más bajos preservan flujo de caja para inversionistas y dueños a corto plazo. Pagos pueden ser 30-50% más bajos durante período solo intereses, haciendo más propiedades accesibles. Útil para voltear casas, proyectos de desarrollo, o cuando esperando apreciación significativa de propiedad. Permite inversión de dinero ahorrado en otro lugar para retornos potencialmente más altos. Puede calificar para montos de préstamo más grandes debido a requerimientos de pago más bajos."
+        },
+        {
+          "question": "¿Cuáles son los riesgos de hipotecas solo intereses?",
+          "answer": "Shock de pago puede ser financieramente devastador cuando pagos aumentan 50-100%. Costos totales de interés más altos durante vida del préstamo. Sin construcción de capital durante período solo intereses. Pagos globo pueden ser inasequibles. Refinanciamiento puede no ser posible si valores de propiedad declinan o crédito cambia. Riesgo de capital negativo si valores de propiedad disminuyen. No adecuado para residencias primarias a largo plazo."
+        },
+        {
+          "question": "¿Quién debería considerar hipotecas solo intereses?",
+          "answer": "Inversionistas inmobiliarios con múltiples propiedades y flujo de caja fuerte. Dueños a corto plazo planeando vender dentro del período solo intereses. Dueños de propiedad comercial priorizando flujo de caja sobre capital. Prestatarios de altos ingresos que pueden manejar aumentos de pago. Aquellos esperando apreciación significativa de propiedad. Desarrolladores y constructores con cronogramas de construcción. No recomendado para compradores primerizos o aquellos planeando propiedad a largo plazo."
+        },
+        {
+          "question": "¿Cómo prepararme para el aumento de pago?",
+          "answer": "Calcula el aumento exacto de pago usando nuestra calculadora. Construye ahorros de emergencia igual a 6-12 meses de nuevo monto de pago. Plane a venta de propiedad o refinanciamiento antes que período solo intereses termine. Considera pagos extra durante período solo intereses para reducir capital. Presupuesta para peores escenarios incluyendo aumentos de tasa. Ten planes de contingencia para pérdida de trabajo o cambios de ingreso. Consulta asesores financieros sobre timing y tolerancia de riesgo."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Hipoteca Apenas Juros",
+    "seoTitle": "Calculadora de Hipoteca Apenas Juros - Calcule Pagamentos Apenas Juros e Quitação de Capital",
+    "metaDescription": "Calculadora gratuita de hipoteca apenas juros. Calcule pagamentos apenas juros, valores de quitação de capital e compare com hipotecas tradicionais. Essencial para propriedades de investimento e propriedade a curto prazo.",
+    "keywords": ["calculadora hipoteca apenas juros", "calculadora empréstimo apenas juros", "calculadora quitação hipoteca", "calculadora propriedade investimento", "calculadora comparação hipoteca"],
+    "longTailKeywords": ["como funciona hipoteca apenas juros calculadora", "calculadora pagamento hipoteca apenas juros", "calculadora quitação capital hipoteca", "calculadora hipoteca propriedade investimento", "calculadora hipoteca apenas juros vs tradicional"],
+    "slug": "interest-only-mortgage-calculator",
+    "category": "financial",
+    "difficulty": "advanced",
+    "tags": ["hipoteca apenas juros", "propriedade investimento", "pagamentos hipoteca", "quitação capital", "comparação hipoteca"],
+    "summary": "Calcule pagamentos de hipoteca apenas juros, requisitos de quitação de capital e compare com hipotecas tradicionais para decisões informadas de financiamento imobiliário.",
+    "description": "Nossa calculadora especializada de hipoteca apenas juros ajuda você a entender estruturas de empréstimos apenas juros comuns em propriedades de investimento e cenários de propriedade a curto prazo. Calcule pagamentos mensais de juros, valores de quitação de capital no final do empréstimo e compare custos totais com hipotecas tradicionais amortizantes. Essencial para investidores imobiliários e aqueles planejando propriedade residencial a curto prazo.",
+    "instructions": [
+      "Digite valor do empréstimo, taxa de juros e período apenas juros",
+      "Especifique termos de quitação de capital no final do empréstimo",
+      "Compare com pagamentos de hipoteca tradicional",
+      "Analise implicações de custo total e fluxo de caixa"
+    ],
+    "calculatorComponent": {
+      "componentName": "InterestOnlyMortgageCalculator",
+      "inputs": [
+        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 300000, "min": 50000, "max": 2000000, "step": 10000 },
+        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 5.5, "min": 2, "max": 15, "step": 0.125 },
+        { "name": "interestOnlyPeriod", "label": "Interest-Only Period (years)", "type": "number", "default": 5, "min": 1, "max": 10, "step": 1 },
+        { "name": "amortizationPeriod", "label": "Amortization Period (years)", "type": "number", "default": 25, "min": 15, "max": 40, "step": 1 },
+        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 6000, "min": 0, "max": 30000, "step": 100 },
+        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1500, "min": 0, "max": 5000, "step": 50 }
+      ],
+      "formula": "Interest-Only Payment = Loan Amount × Interest Rate / 12; Principal Payment = Loan Amount / (Amortization Period × 12)",
+      "output": { "label": "Current Monthly Payment", "default": "Enter mortgage details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Interest-Only Payment", "field": "interestOnlyPayment", "format": "currency" },
+        { "label": "Full Payment (After)", "field": "fullPayment", "format": "currency" },
+        { "label": "Payment Increase", "field": "paymentIncrease", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Propriedade de Investimento",
+        "input": "Empréstimo $400,000, 5% juros, 5 anos apenas juros, amortização 20 anos quitação",
+        "output": "Pagamento Mensal Juros: $1,667, Quitação Capital: $1,674, Juros Totais: $100,000"
+      },
+      {
+        "title": "Propriedade a Curto Prazo",
+        "input": "Empréstimo $300,000, 4.5% juros, 3 anos apenas juros, pagamento balão",
+        "output": "Pagamento Mensal Juros: $1,125, Pagamento Balão: $300,000, Juros Totais Pagos: $40,500"
+      }
+    ],
+    "relatedCalculators": ["mortgage-calculator", "loan-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Domine as complexidades de hipotecas apenas juros com nossa calculadora especializada projetada especificamente para propriedades de investimento e financiamento estratégico imobiliário. Empréstimos apenas juros oferecem vantagens únicas para investidores imobiliários e aqueles planejando propriedade a curto prazo, mas requerem planejamento cuidadoso e entendimento do choque de pagamento quando pagamentos de capital começam. Nossa calculadora ajuda você a navegar estas estruturas sofisticadas de empréstimo, comparando pagamentos apenas juros com hipotecas tradicionais enquanto calcula as implicações de custo total e requerimentos de fluxo de caixa. Seja considerando compra de propriedade de investimento ou planejando sua estratégia de saída, esta ferramenta fornece a clareza necessária para tomar decisões informadas de hipoteca em mercados imobiliários competitivos.",
+      "benefits": [
+        "Calcule valores precisos de pagamento apenas juros para qualquer estrutura de empréstimo",
+        "Entenda o choque de pagamento quando transicionando para pagamentos capital-mais-juros",
+        "Compare custos totais entre hipotecas apenas juros e amortizantes tradicionais",
+        "Planeje fluxo de caixa para propriedades de investimento com períodos de pagamento previsíveis",
+        "Analise requerimentos de pagamento balão no final do empréstimo",
+        "Avalie estratégias de propriedade a curto prazo com pagamentos iniciais menores",
+        "Tome decisões informadas sobre termos de empréstimo para propriedades de investimento",
+        "Entenda as implicações financeiras completas de financiamento apenas juros"
+      ],
+      "steps": [
+        "Digite seu valor de empréstimo, taxa de juros, e período apenas juros",
+        "Especifique período de amortização para cálculos de quitação de capital",
+        "Inclua impostos de propriedade e seguro para imagem completa de pagamento",
+        "Revise pagamentos apenas juros vs. pagamentos completos de amortização",
+        "Analise custos totais de juros e implicações de aumento de pagamento"
+      ],
+      "inputsExplained": [
+        "Valor do empréstimo é o capital emprestado para sua compra de propriedade",
+        "Taxa de juros determina seu pagamento mensal apenas juros",
+        "Período apenas juros é quanto tempo você paga apenas juros (tipicamente 5-10 anos)",
+        "Período de amortização afeta o pagamento balão ou valor capital-mais-juros",
+        "Impostos de propriedade e seguro adicionam ao seu custo mensal total de moradia"
+      ],
+      "formulaExplanation": "Hipotecas apenas juros calculam pagamentos mensais como: Pagamento Juros = Valor Empréstimo × (Taxa Juros ÷ 12). Após período apenas juros, pagamentos mudam para amortização completa: Pagamento Completo = Valor Empréstimo × [r(1+r)^n] / [(1+r)^n - 1], onde r é taxa mensal e n é pagamentos restantes. O aumento de pagamento pode ser substancial - um empréstimo de $400,000 pode saltar de $1,667 mensais para $2,341 mensais. Entender este 'choque de pagamento' é crucial para orçamento. Custos totais de juros são mais altos que hipotecas tradicionais devido a pagamentos de capital diferidos.",
+      "examples": [
+        "Empréstimo propriedade investimento $400,000 a 5% com período apenas juros 5 anos requer pagamentos juros mensais $1,667, então salta para $2,341 mensais com pagamentos capital por juros total $367,000 sobre 25 anos.",
+        "Empréstimo propriedade a curto prazo $300,000 a 4.5% com período apenas juros 3 anos custa $1,125 mensais, então requer pagamento balão $300,000 no ano 3, pagando juros total $40,500.",
+        "Financiamento propriedade comercial $500,000 a 6% com período apenas juros 7 anos fornece pagamentos mensais $2,500, então transiciona para pagamentos mensais $3,021 por juros total $590,000 sobre 30 anos."
+      ],
+      "resultsExplanation": [
+        "Pagamento mensal atual mostra seu valor apenas juros durante aquele período",
+        "Pagamento apenas juros mostra o custo mensal durante fase apenas juros",
+        "Pagamento completo revela o valor mais alto após período apenas juros terminar",
+        "Aumento de pagamento mostra o valor em dólar que seu custo mensal aumentará"
+      ],
+      "whoItsFor": "Esta calculadora hipoteca apenas juros serve investidores imobiliários planejando compras de propriedade, proprietários antecipando propriedade a curto prazo, donos de propriedade comercial, desenvolvedores com necessidades de financiamento de construção, consultores financeiros aconselhando clientes de investimento, corretores hipotecários oferecendo produtos especializados, gestores de propriedade orçando para investidores, e qualquer pessoa considerando estruturas sofisticadas de empréstimo. É particularmente valiosa para aqueles planejando estratégias de investimento, entendendo implicações de choque de pagamento, comparando opções de empréstimo para propriedades comerciais, e tomando decisões estratégicas de financiamento imobiliário. A calculadora funciona para propriedades residenciais de investimento, imóveis comerciais, projetos de desenvolvimento, e qualquer cenário requerendo financiamento apenas juros.",
+      "disclaimer": "Esta calculadora hipoteca apenas juros fornece estimativas baseadas em fórmulas padrão de empréstimo e a informação inserida. Hipotecas apenas juros carregam riscos significativos incluindo choque de pagamento, potencial amortização negativa, e custos totais de juros mais altos. Estes empréstimos são tipicamente para tomadores sofisticados e propriedades de investimento apenas. Taxas e termos variam por credor e perfil de crédito. Pagamentos balão podem ser substanciais e refinanciamento pode não estar disponível. Esta ferramenta é para propósitos educacionais e não constitui aprovação de empréstimo ou conselho financeiro. Consulte profissionais hipotecários licenciados e considere sua situação financeira completa antes de perseguir financiamento apenas juros.",
+      "relatedTools": [
+        "Calculadoras hipotecárias para comparações de empréstimo tradicionais",
+        "Calculadoras de empréstimo para análise geral de financiamento",
+        "Calculadoras de investimento para retornos de investimento em propriedade"
+      ],
+      "faqs": [
+        {
+          "question": "Como funciona uma hipoteca apenas juros?",
+          "answer": "Durante o período apenas juros (tipicamente 5-10 anos), você paga apenas os juros no valor do empréstimo, resultando em pagamentos mensais menores. Após este período, pagamentos mudam para capital-mais-juros (amortizantes), causando um aumento significativo de pagamento chamado 'choque de pagamento.' No final do empréstimo, você pode ter um pagamento balão de capital restante. Estes empréstimos são comuns para propriedades de investimento onde fluxo de caixa é priorizado sobre construção de patrimônio."
+        },
+        {
+          "question": "Quais são as vantagens de hipotecas apenas juros?",
+          "answer": "Pagamentos iniciais menores preservam fluxo de caixa para investidores e donos a curto prazo. Pagamentos podem ser 30-50% menores durante período apenas juros, tornando mais propriedades acessíveis. Útil para virar casas, projetos de desenvolvimento, ou quando esperando apreciação significativa de propriedade. Permite investimento de dinheiro economizado em outro lugar para retornos potencialmente mais altos. Pode qualificar para valores de empréstimo maiores devido a requerimentos de pagamento menores."
+        },
+        {
+          "question": "Quais são os riscos de hipotecas apenas juros?",
+          "answer": "Choque de pagamento pode ser financeiramente devastador quando pagamentos aumentam 50-100%. Custos totais de juros mais altos durante vida do empréstimo. Sem construção de patrimônio durante período apenas juros. Pagamentos balão podem ser inasequíveis. Refinanciamento pode não ser possível se valores de propriedade declinam ou crédito muda. Risco de patrimônio negativo se valores de propriedade diminuem. Não adequado para residências primárias de longo prazo."
+        },
+        {
+          "question": "Quem deveria considerar hipotecas apenas juros?",
+          "answer": "Investidores imobiliários com múltiplas propriedades e fluxo de caixa forte. Donos a curto prazo planejando vender dentro do período apenas juros. Donos de propriedade comercial priorizando fluxo de caixa sobre patrimônio. Tomadores de alta renda que podem lidar com aumentos de pagamento. Aqueles esperando apreciação significativa de propriedade. Desenvolvedores e construtores com cronogramas de construção. Não recomendado para compradores iniciantes ou aqueles planejando propriedade de longo prazo."
+        },
+        {
+          "question": "Como me preparar para o aumento de pagamento?",
+          "answer": "Calcule o aumento exato de pagamento usando nossa calculadora. Construa economias de emergência igual a 6-12 meses de novo valor de pagamento. Planeje venda de propriedade ou refinanciamento antes do período apenas juros terminar. Considere pagamentos extra durante período apenas juros para reduzir capital. Orce para piores cenários incluindo aumentos de taxa. Tenha planos de contingência para perda de trabalho ou mudanças de renda. Consulte consultores financeiros sobre timing e tolerância de risco."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Hypothèque Intérêts Seulement",
+    "seoTitle": "Calculateur d'Hypothèque Intérêts Seulement - Calculez les Paiements Intérêts Seulement et Remboursement Principal",
+    "metaDescription": "Calculateur gratuit d'hypothèque intérêts seulement. Calculez les paiements intérêts seulement, montants de remboursement principal et comparez avec les hypothèques traditionnelles. Essentiel pour les propriétés d'investissement et propriété à court terme.",
+    "keywords": ["calculateur hypothèque intérêts seulement", "calculateur prêt intérêts seulement", "calculateur remboursement hypothèque", "calculateur propriété investissement", "calculateur comparaison hypothèque"],
+    "longTailKeywords": ["comment fonctionne hypothèque intérêts seulement calculateur", "calculateur paiement hypothèque intérêts seulement", "calculateur remboursement principal hypothèque", "calculateur hypothèque propriété investissement", "calculateur hypothèque intérêts seulement vs traditionnel"],
+    "slug": "interest-only-mortgage-calculator",
+    "category": "financial",
+    "difficulty": "advanced",
+    "tags": ["hypothèque intérêts seulement", "propriété investissement", "paiements hypothèque", "remboursement principal", "comparaison hypothèque"],
+    "summary": "Calculez les paiements d'hypothèque intérêts seulement, exigences de remboursement principal et comparez avec les hypothèques traditionnelles pour des décisions de financement immobilier éclairées.",
+    "description": "Notre calculateur spécialisé d'hypothèque intérêts seulement vous aide à comprendre les structures de prêt intérêts seulement courantes dans les propriétés d'investissement et scénarios de propriété à court terme. Calculez les paiements mensuels d'intérêts, montants de remboursement principal à la fin du prêt et comparez les coûts totaux avec les hypothèques traditionnelles amortissantes. Essentiel pour les investisseurs immobiliers et ceux planifiant une propriété résidentielle à court terme.",
+    "instructions": [
+      "Entrez le montant du prêt, taux d'intérêt et période intérêts seulement",
+      "Spécifiez les termes de remboursement principal à la fin du prêt",
+      "Comparez avec les paiements d'hypothèque traditionnelle",
+      "Analysez les implications de coût total et flux de trésorerie"
+    ],
+    "calculatorComponent": {
+      "componentName": "InterestOnlyMortgageCalculator",
+      "inputs": [
+        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 300000, "min": 50000, "max": 2000000, "step": 10000 },
+        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 5.5, "min": 2, "max": 15, "step": 0.125 },
+        { "name": "interestOnlyPeriod", "label": "Interest-Only Period (years)", "type": "number", "default": 5, "min": 1, "max": 10, "step": 1 },
+        { "name": "amortizationPeriod", "label": "Amortization Period (years)", "type": "number", "default": 25, "min": 15, "max": 40, "step": 1 },
+        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 6000, "min": 0, "max": 30000, "step": 100 },
+        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1500, "min": 0, "max": 5000, "step": 50 }
+      ],
+      "formula": "Interest-Only Payment = Loan Amount × Interest Rate / 12; Principal Payment = Loan Amount / (Amortization Period × 12)",
+      "output": { "label": "Current Monthly Payment", "default": "Enter mortgage details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Interest-Only Payment", "field": "interestOnlyPayment", "format": "currency" },
+        { "label": "Full Payment (After)", "field": "fullPayment", "format": "currency" },
+        { "label": "Payment Increase", "field": "paymentIncrease", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Propriété d'Investissement",
+        "input": "Prêt $400,000, 5% intérêt, 5 ans intérêts seulement, amortissement 20 ans remboursement",
+        "output": "Paiement Mensuel Intérêts: $1,667, Remboursement Principal: $1,674, Intérêts Totaux: $100,000"
+      },
+      {
+        "title": "Propriété à Court Terme",
+        "input": "Prêt $300,000, 4.5% intérêt, 3 ans intérêts seulement, paiement ballon",
+        "output": "Paiement Mensuel Intérêts: $1,125, Paiement Ballon: $300,000, Intérêts Totaux Payés: $40,500"
+      }
+    ],
+    "relatedCalculators": ["mortgage-calculator", "loan-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Maîtrisez les complexités des hypothèques intérêts seulement avec notre calculatrice spécialisée conçue spécifiquement pour propriétés d'investissement et financement immobilier stratégique. Les prêts intérêts seulement offrent avantages uniques pour investisseurs immobiliers et ceux planifiant propriété à court terme, mais requièrent planification soigneuse et compréhension du choc de paiement quand paiements principal commencent. Notre calculatrice vous aide naviguer ces structures sophistiquées de prêt, comparant paiements intérêts seulement avec hypothèques traditionnelles tout calculant implications coût total et exigences flux trésorerie. Que vous considériez achat propriété d'investissement ou planifiant votre stratégie de sortie, cet outil fournit la clarté nécessaire pour prendre décisions éclairées d'hypothèque dans marchés immobiliers compétitifs.",
+      "benefits": [
+        "Calculez montants précis paiement intérêts seulement pour toute structure prêt",
+        "Comprenez choc paiement quand transitionnant vers paiements principal-plus-intérêts",
+        "Comparez coûts totaux entre hypothèques intérêts seulement et amortissantes traditionnelles",
+        "Planifiez flux trésorerie pour propriétés d'investissement avec périodes paiement prévisibles",
+        "Analysez exigences paiement ballon à fin prêt",
+        "Évaluez stratégies propriété à court terme avec paiements initiaux plus bas",
+        "Prenez décisions éclairées concernant termes prêt pour propriétés d'investissement",
+        "Comprenez implications financières complètes financement intérêts seulement"
+      ],
+      "steps": [
+        "Entrez montant prêt, taux intérêt, et période intérêts seulement",
+        "Spécifiez période amortissement pour calculs remboursement principal",
+        "Incluez taxes propriété et assurance pour image complète paiement",
+        "Examinez paiements intérêts seulement vs. paiements complets amortissement",
+        "Analysez coûts totaux intérêts et implications augmentation paiement"
+      ],
+      "inputsExplained": [
+        "Montant prêt est principal emprunté pour votre achat propriété",
+        "Taux intérêt détermine votre paiement mensuel intérêts seulement",
+        "Période intérêts seulement est combien temps vous payez seulement intérêts (typiquement 5-10 ans)",
+        "Période amortissement affecte paiement ballon ou montant principal-plus-intérêts",
+        "Taxes propriété et assurance ajoutent à votre coût mensuel total logement"
+      ],
+      "formulaExplanation": "Hypothèques intérêts seulement calculent paiements mensuels comme : Paiement Intérêts = Montant Prêt × (Taux Intérêt ÷ 12). Après période intérêts seulement, paiements basculent vers amortissement complet : Paiement Complet = Montant Prêt × [r(1+r)^n] / [(1+r)^n - 1], où r est taux mensuel et n est paiements restants. Augmentation paiement peut être substantielle - prêt $400,000 pourrait sauter de $1,667 mensuels à $2,341 mensuels. Comprendre ce 'choc paiement' est crucial pour budgétisation. Coûts totaux intérêts sont plus élevés qu'hypothèques traditionnelles dû paiements principal différés.",
+      "examples": [
+        "Prêt propriété investissement $400,000 à 5% avec période intérêts seulement 5 ans nécessite paiements intérêts mensuels $1,667, puis saute à $2,341 mensuels avec paiements principal pour intérêts total $367,000 sur 25 ans.",
+        "Prêt propriété à court terme $300,000 à 4.5% avec période intérêts seulement 3 ans coûte $1,125 mensuels, puis nécessite paiement ballon $300,000 à année 3, payant intérêts total $40,500.",
+        "Financement propriété commerciale $500,000 à 6% avec période intérêts seulement 7 ans fournit paiements mensuels $2,500, puis transitionne vers paiements mensuels $3,021 pour intérêts total $590,000 sur 30 ans."
+      ],
+      "resultsExplanation": [
+        "Paiement mensuel actuel montre votre montant intérêts seulement pendant cette période",
+        "Paiement intérêts seulement affiche coût mensuel pendant phase intérêts seulement",
+        "Paiement complet révèle montant plus élevé après période intérêts seulement finit",
+        "Augmentation paiement montre montant dollar votre coût mensuel augmentera"
+      ],
+      "whoItsFor": "Cette calculatrice hypothèque intérêts seulement sert investisseurs immobiliers planifiant achats propriété, propriétaires anticipant propriété à court terme, propriétaires propriété commerciale, développeurs avec besoins financement construction, conseillers financiers conseillant clients investissement, courtiers hypothèque offrant produits spécialisés, gestionnaires propriété budgétisant pour investisseurs, et quiconque considérant structures sophistiquées prêt. Elle est particulièrement précieuse pour ceux planifiant stratégies investissement, comprenant implications choc paiement, comparant options prêt pour propriétés commerciales, et prenant décisions stratégiques financement immobilier. La calculatrice fonctionne pour propriétés résidentielles d'investissement, immobilier commercial, projets développement, et tout scénario nécessitant financement intérêts seulement.",
+      "disclaimer": "Cette calculatrice hypothèque intérêts seulement fournit estimations basées sur formules prêt standard et information saisie. Hypothèques intérêts seulement portent risques significatifs incluant choc paiement, potentiel amortissement négatif, et coûts totaux intérêts plus élevés. Ces prêts sont typiquement pour emprunteurs sophistiqués et propriétés d'investissement seulement. Taux et termes varient par prêteur et profil crédit. Paiements ballon peuvent être substantiels et refinancement peut ne pas être disponible. Cet outil est pour fins éducatives et ne constitue pas approbation prêt ou conseil financier. Consultez professionnels hypothèque licenciés et considérez votre situation financière complète avant poursuivre financement intérêts seulement.",
+      "relatedTools": [
+        "Calculateurs hypothèque pour comparaisons prêt traditionnelles",
+        "Calculateurs prêt pour analyse générale financement",
+        "Calculateurs investissement pour rendements investissement propriété"
+      ],
+      "faqs": [
+        {
+          "question": "Comment fonctionne une hypothèque intérêts seulement ?",
+          "answer": "Pendant période intérêts seulement (typiquement 5-10 ans), vous payez seulement intérêts sur montant prêt, résultant paiements mensuels plus bas. Après cette période, paiements basculent vers paiements principal-plus-intérêts (amortissants), causant augmentation paiement significative appelée 'choc paiement.' À fin prêt, vous pourriez avoir paiement ballon de principal restant. Ces prêts sont communs pour propriétés d'investissement où flux trésorerie est priorisé sur construction equity."
+        },
+        {
+          "question": "Quels sont avantages hypothèques intérêts seulement ?",
+          "answer": "Paiements initiaux plus bas préservent flux trésorerie pour investisseurs et propriétaires à court terme. Paiements peuvent être 30-50% plus bas pendant période intérêts seulement, rendant plus propriétés abordables. Utile pour retourner maisons, projets développement, ou quand attendant appréciation propriété significative. Permet investissement argent économisé ailleurs pour retours potentiellement plus élevés. Peut qualifier pour montants prêt plus grands dû exigences paiement plus basses."
+        },
+        {
+          "question": "Quels sont risques hypothèques intérêts seulement ?",
+          "answer": "Choc paiement peut être financièrement dévastateur quand paiements augmentent 50-100%. Coûts totaux intérêts plus élevés pendant vie prêt. Pas construction equity pendant période intérêts seulement. Paiements ballon peuvent être inabordables. Refinancement peut ne pas être possible si valeurs propriété déclinent ou crédit change. Risque equity négatif si valeurs propriété diminuent. Pas approprié pour résidences primaires long terme."
+        },
+        {
+          "question": "Qui devrait considérer hypothèques intérêts seulement ?",
+          "answer": "Investisseurs immobiliers avec propriétés multiples et flux trésorerie fort. Propriétaires court terme planifiant vendre pendant période intérêts seulement. Propriétaires propriété commerciale priorisant flux trésorerie sur equity. Emprunteurs haut revenu qui peuvent gérer augmentations paiement. Ceux attendant appréciation propriété significative. Développeurs et constructeurs avec chronologies construction. Pas recommandé pour acheteurs première fois ou ceux planifiant propriété long terme."
+        },
+        {
+          "question": "Comment se préparer pour augmentation paiement ?",
+          "answer": "Calculez augmentation paiement exacte utilisant notre calculatrice. Construisez économies urgence égal à 6-12 mois nouveau montant paiement. Planifiez vente propriété ou refinancement avant période intérêts seulement finit. Considérez paiements supplémentaires pendant période intérêts seulement pour réduire principal. Budgétez pour pires scénarios incluant augmentations taux. Ayez plans contingence pour perte emploi ou changements revenu. Consultez conseillers financiers concernant timing et tolérance risque."
+        }
+      ]
+    }
+  }
+}

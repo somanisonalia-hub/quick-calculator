@@ -1,0 +1,466 @@
+{
+  "en": {
+    "title": "Health Insurance Calculator",
+    "seoTitle": "Health Insurance Calculator - Calculate Healthcare Costs and Plan Premiums",
+    "metaDescription": "Free health insurance calculator. Calculate healthcare costs, compare insurance plans, and estimate premium payments. Essential for ACA marketplace and health planning.",
+    "keywords": ["health insurance calculator", "healthcare cost calculator", "insurance premium calculator", "ACA calculator", "health plan calculator"],
+    "longTailKeywords": ["how much does health insurance cost calculator", "ACA health insurance calculator", "health insurance premium calculator", "healthcare cost estimator", "insurance plan comparison calculator"],
+    "slug": "health-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["health insurance", "healthcare costs", "insurance premiums", "ACA marketplace", "medical coverage"],
+    "summary": "Calculate health insurance premiums, compare plan options, and estimate healthcare costs for informed decision making.",
+    "description": "Our comprehensive health insurance calculator helps you estimate healthcare costs and insurance premiums for individual and family plans. Compare different metal tiers (Bronze, Silver, Gold, Platinum), calculate subsidies and tax credits, and understand out-of-pocket expenses. Perfect for ACA marketplace shopping and annual health insurance planning.",
+    "instructions": [
+      "Enter your household size and income information",
+      "Select coverage type and plan preferences",
+      "Get premium estimates and subsidy calculations"
+    ],
+    "calculatorComponent": {
+      "componentName": "HealthInsuranceCalculator",
+      "inputs": [
+        { "name": "annualIncome", "label": "Annual Household Income ($)", "type": "number", "default": 50000, "min": 10000, "max": 200000, "step": 1000 },
+        { "name": "householdSize", "label": "Household Size", "type": "number", "default": 1, "min": 1, "max": 10, "step": 1 },
+        { "name": "planType", "label": "Plan Type", "type": "select", "default": "silver", "options": ["bronze", "silver", "gold", "platinum"] },
+        { "name": "location", "label": "Location Type", "type": "select", "default": "urban", "options": ["urban", "suburban", "rural"] },
+        { "name": "age", "label": "Primary Applicant Age", "type": "number", "default": 35, "min": 18, "max": 65, "step": 1 }
+      ],
+      "formula": "Premium = Base rate × Plan multiplier × Age factor × Location factor; Subsidy = Income-based ACA subsidy",
+      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
+        { "label": "ACA Subsidy", "field": "subsidy", "format": "currency" },
+        { "label": "Net Monthly Cost", "field": "netMonthly", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Individual Silver Plan",
+        "input": "Single person, $35,000 income, Silver plan, urban area",
+        "output": "Monthly Premium: $280, Annual Subsidy: $2,100, Net Cost: $880/year"
+      },
+      {
+        "title": "Family Gold Plan",
+        "input": "Family of 4, $75,000 income, Gold plan, suburban area",
+        "output": "Monthly Premium: $1,050, Annual Subsidy: $4,200, Net Cost: $8,400/year"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "expense-calculator", "tax-calculator"],
+    "seoContent": {
+      "introduction": "Navigate the complex world of health insurance with confidence using our comprehensive health insurance calculator that shows you exactly how much coverage costs and what you'll pay after subsidies. Healthcare costs are one of the largest expenses in American life, but understanding insurance options can save thousands annually. Our calculator analyzes your household income, size, location, and coverage preferences to estimate premiums for different metal tiers (Bronze, Silver, Gold, Platinum), calculate ACA subsidies, and help you find the best plan for your healthcare needs. Whether you're shopping for individual coverage, family plans, or understanding subsidy eligibility, this tool demystifies health insurance costs.",
+      "benefits": [
+        "Calculate exact health insurance premiums for different plan types and metal tiers",
+        "Understand ACA subsidy amounts and income-based tax credits you qualify for",
+        "Compare Bronze, Silver, Gold, and Platinum plan costs and coverage levels",
+        "See how household size, income, and location affect your premium costs",
+        "Make informed decisions about coverage levels vs. out-of-pocket costs",
+        "Plan your healthcare budget with accurate premium and subsidy estimates",
+        "Find the most cost-effective coverage for your healthcare needs",
+        "Understand how age and location impact health insurance pricing"
+      ],
+      "steps": [
+        "Enter your household income and number of people covered",
+        "Select the metal tier plan you're considering (Bronze, Silver, Gold, Platinum)",
+        "Choose your location type and primary applicant's age",
+        "Review premium estimates and subsidy calculations",
+        "Compare different plan options to find your best coverage choice"
+      ],
+      "inputsExplained": [
+        "Household income determines ACA subsidy eligibility and amounts",
+        "Household size affects premium costs for family vs. individual coverage",
+        "Plan type (metal tier) determines premium costs and cost-sharing levels",
+        "Location affects pricing based on local healthcare costs and provider rates",
+        "Age is a major factor in health insurance pricing and risk assessment"
+      ],
+      "formulaExplanation": "Health insurance premiums are calculated using actuarial data considering age, location, household size, and plan type. Base premiums are adjusted by metal tier multipliers (Bronze ~1.0x, Silver ~1.2x, Gold ~1.4x, Platinum ~1.6x base rate). ACA subsidies reduce premiums for households earning 100-400% FPL. The formula shows how premiums increase with age and family size while subsidies decrease premiums based on income level. Understanding these factors helps you see why Silver plans often provide the best value with subsidies, and how income level dramatically affects total costs.",
+      "examples": [
+        "Single person earning $35,000 annually qualifies for $2,100 ACA subsidy, reducing $280 Silver plan monthly premium to $70 net cost.",
+        "Family of 4 earning $75,000 gets $4,200 annual subsidy, dropping $1,050 Gold plan monthly premium to $700 after assistance.",
+        "High-income household ($150,000) pays full $420 monthly Silver premium with no subsidy, but gets richer benefits and lower deductibles."
+      ],
+      "resultsExplanation": [
+        "Monthly premium shows your base insurance cost before subsidies",
+        "Annual premium displays yearly total for budget planning",
+        "ACA subsidy reveals government assistance amount you're eligible for",
+        "Net monthly cost shows what you'll actually pay after all assistance"
+      ],
+      "whoItsFor": "This health insurance calculator serves individuals shopping for ACA marketplace coverage, families comparing plan options, self-employed people without employer coverage, retirees on Medicare, low-to-middle income households seeking subsidies, employers helping employees understand costs, financial advisors counseling clients, and anyone wanting to understand healthcare costs. It's particularly valuable for those eligible for ACA subsidies, comparing metal tier options, understanding income-based pricing, and making informed healthcare purchasing decisions. The calculator works for any household size, income level, or coverage need.",
+      "disclaimer": "This calculator provides premium estimates based on 2024 ACA marketplace data and typical pricing patterns. Actual premiums vary by insurance company, specific plan details, and annual rate changes. Subsidy amounts are estimates based on current ACA guidelines and may vary based on final tax filing and state-specific programs. This tool does not constitute insurance advice or guarantee coverage availability. Premiums shown are averages and actual costs may differ. Consult licensed insurance agents or brokers for personalized quotes and coverage recommendations. Healthcare.gov provides official subsidy calculations for final determinations.",
+      "relatedTools": [
+        "Budget calculators for incorporating healthcare costs into financial planning",
+        "Expense calculators for tracking medical costs and insurance payments",
+        "Tax calculators for understanding healthcare-related tax implications"
+      ],
+      "faqs": [
+        {
+          "question": "How much does health insurance cost without subsidies?",
+          "answer": "Average 2024 ACA marketplace premiums range from $350-450 monthly for individual Silver plans, $500-700 for Gold plans. Family coverage costs $1,000-1,500 monthly. Costs vary by age, location, and plan type. Without subsidies, premiums can consume 8-12% of moderate income. High-deductible Bronze plans cost less ($250-350 monthly) but have higher out-of-pocket expenses. Platinum plans provide richest coverage but cost $600-900 monthly. Location matters - urban areas cost 20-30% more than rural areas."
+        },
+        {
+          "question": "How do ACA subsidies work and who qualifies?",
+          "answer": "ACA subsidies reduce premiums for households earning 100-400% Federal Poverty Level ($12,880-$51,520 for individual in 2024). Maximum subsidy applies at 150% FPL ($19,320 individual), decreasing as income rises to 400% FPL. Silver plan premiums are benchmark for subsidy calculations. For $35,000 individual income, subsidy covers 75-85% of Silver plan premium. Subsidies are advance payments reducing monthly premiums. You must file taxes to reconcile final subsidy amounts. Some states offer additional subsidies beyond federal amounts."
+        },
+        {
+          "question": "Which metal tier is best for me?",
+          "answer": "Silver (70/30 cost-sharing) provides best subsidy value and balances premiums vs. out-of-pocket costs. Bronze (60/40) costs least but has highest deductibles ($8,000+). Gold (80/20) offers better coverage but higher premiums. Platinum (90/10) provides richest benefits but costs most. With subsidies, Silver often costs similar to Bronze but provides much better coverage. Consider your health needs - healthy people may prefer Bronze, those with chronic conditions choose Gold/Platinum. Annual healthcare spending helps determine optimal tier."
+        },
+        {
+          "question": "How much does health insurance cost for families?",
+          "answer": "Family coverage costs 2.5-3x individual rates. Average 2024 ACA family Silver plan premiums range $1,200-1,800 monthly before subsidies. With subsidies, costs drop significantly for moderate-income families. Family size dramatically affects pricing - adding children increases costs 30-50% each. Location matters more for families - urban families pay 25-40% more than rural families. Family plans cover all children to age 26. Consider family vs. individual plans based on subsidy amounts and coverage needs."
+        },
+        {
+          "question": "What factors affect health insurance premiums?",
+          "answer": "Age is biggest factor - premiums increase steadily after age 30, jumping significantly after 50. Location affects costs based on local healthcare prices. Household size increases premiums for family coverage. Plan type (metal tier) determines base premium level. Tobacco use can increase premiums 50%+. Pre-existing conditions no longer affect premiums post-ACA. Gender can influence rates slightly. Income determines subsidy eligibility. Plan design (HMO vs. PPO) affects pricing. Annual rate changes reflect healthcare cost inflation."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Seguro Médico",
+    "seoTitle": "Calculadora de Seguro Médico - Calcula Costos de Atención Médica y Primas de Planes",
+    "metaDescription": "Calculadora gratuita de seguro médico. Calcula costos de atención médica, compara planes de seguro y estima pagos de primas. Esencial para mercado ACA y planificación de salud.",
+    "keywords": ["calculadora seguro médico", "calculadora costos atención médica", "calculadora prima seguro", "calculadora ACA", "calculadora plan salud"],
+    "longTailKeywords": ["cuánto cuesta seguro médico calculadora", "calculadora seguro médico ACA", "calculadora prima seguro médico", "estimador costos atención médica", "calculadora comparación planes seguro"],
+    "slug": "health-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["seguro médico", "costos atención médica", "primas seguro", "mercado ACA", "cobertura médica"],
+    "summary": "Calcula primas de seguro médico, compara opciones de planes y estima costos de atención médica para toma de decisiones informada.",
+    "description": "Nuestra completa calculadora de seguro médico te ayuda a estimar costos de atención médica y primas de seguro para planes individuales y familiares. Compara diferentes niveles metálicos (Bronce, Plata, Oro, Platino), calcula subsidios y créditos fiscales, y entiende gastos de bolsillo. Perfecta para compras en el mercado ACA y planificación anual de seguro médico.",
+    "instructions": [
+      "Ingresa tamaño de tu hogar e información de ingresos",
+      "Selecciona tipo de cobertura y preferencias de plan",
+      "Obtén estimaciones de primas y cálculos de subsidios"
+    ],
+    "calculatorComponent": {
+      "componentName": "HealthInsuranceCalculator",
+      "inputs": [
+        { "name": "annualIncome", "label": "Annual Household Income ($)", "type": "number", "default": 50000, "min": 10000, "max": 200000, "step": 1000 },
+        { "name": "householdSize", "label": "Household Size", "type": "number", "default": 1, "min": 1, "max": 10, "step": 1 },
+        { "name": "planType", "label": "Plan Type", "type": "select", "default": "silver", "options": ["bronze", "silver", "gold", "platinum"] },
+        { "name": "location", "label": "Location Type", "type": "select", "default": "urban", "options": ["urban", "suburban", "rural"] },
+        { "name": "age", "label": "Primary Applicant Age", "type": "number", "default": 35, "min": 18, "max": 65, "step": 1 }
+      ],
+      "formula": "Premium = Base rate × Plan multiplier × Age factor × Location factor; Subsidy = Income-based ACA subsidy",
+      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
+        { "label": "ACA Subsidy", "field": "subsidy", "format": "currency" },
+        { "label": "Net Monthly Cost", "field": "netMonthly", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Plan Plata Individual",
+        "input": "Persona soltera, ingresos $35,000, plan Plata, área urbana",
+        "output": "Prima Mensual: $280, Subsidio Anual: $2,100, Costo Neto: $880/año"
+      },
+      {
+        "title": "Plan Oro Familiar",
+        "input": "Familia de 4, ingresos $75,000, plan Oro, área suburbana",
+        "output": "Prima Mensual: $1,050, Subsidio Anual: $4,200, Costo Neto: $8,400/año"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "expense-calculator", "tax-calculator"],
+    "seoContent": {
+      "introduction": "Navega el complejo mundo del seguro médico con confianza usando nuestra calculadora integral de seguro de salud que te muestra exactamente cuánto cuesta la cobertura y cuánto pagarás después de subsidios. Los costos de atención médica son uno de los gastos más grandes en la vida estadounidense, pero entender las opciones de seguro puede ahorrar miles anualmente. Nuestra calculadora analiza tus ingresos del hogar, tamaño, ubicación, y preferencias de cobertura para estimar primas para diferentes niveles metálicos (Bronce, Plata, Oro, Platino), calcular subsidios ACA, y ayudarte a encontrar el mejor plan para tus necesidades de atención médica. Ya sea que busques cobertura individual, planes familiares, o entendiendo elegibilidad de subsidio, esta herramienta desmistifica los costos de seguro de salud.",
+      "benefits": [
+        "Calcula primas exactas de seguro de salud para diferentes tipos de plan y niveles metálicos",
+        "Entiende montos de subsidio ACA y créditos fiscales basados en ingresos para los que calificas",
+        "Compara costos y niveles de cobertura de planes Bronce, Plata, Oro, y Platino",
+        "Ve cómo tamaño del hogar, ingresos, y ubicación afectan tus costos de prima",
+        "Toma decisiones informadas sobre niveles de cobertura vs. costos fuera de bolsillo",
+        "Planea tu presupuesto de atención médica con estimaciones precisas de prima y subsidio",
+        "Encuentra la cobertura más costo-efectiva para tus necesidades de atención médica",
+        "Entiende cómo edad y ubicación impactan precios de seguro de salud"
+      ],
+      "steps": [
+        "Ingresa tus ingresos del hogar y número de personas cubiertas",
+        "Selecciona el nivel metálico de plan que consideras (Bronce, Plata, Oro, Platino)",
+        "Elige tu tipo de ubicación y edad del solicitante principal",
+        "Revisa estimaciones de prima y cálculos de subsidio",
+        "Compara diferentes opciones de plan para encontrar tu mejor elección de cobertura"
+      ],
+      "inputsExplained": [
+        "Ingresos del hogar determinan elegibilidad de subsidio ACA y montos",
+        "Tamaño del hogar afecta costos de prima para cobertura familiar vs. individual",
+        "Tipo de plan (nivel metálico) determina costos de prima y niveles de compartir costos",
+        "Ubicación afecta precios basado en costos locales de atención médica y tasas de proveedor",
+        "Edad es un factor mayor en precios de seguro de salud y evaluación de riesgo"
+      ],
+      "formulaExplanation": "Las primas de seguro de salud se calculan usando datos actuariales considerando edad, ubicación, tamaño del hogar, y tipo de plan. Las primas base se ajustan por multiplicadores de nivel metálico (Bronce ~1.0x, Plata ~1.2x, Oro ~1.4x, Platino ~1.6x tasa base). Los subsidios ACA reducen primas para hogares ganando 100-400% LPF. La fórmula muestra cómo primas aumentan con edad y tamaño familiar mientras subsidios disminuyen primas basado en nivel de ingresos. Entender estos factores te ayuda a ver por qué planes Plata a menudo proporcionan el mejor valor con subsidios, y cómo nivel de ingresos afecta dramáticamente costos totales.",
+      "examples": [
+        "Persona soltera ganando $35,000 anualmente califica para subsidio ACA de $2,100, reduciendo prima mensual de plan Plata de $280 a costo neto de $70.",
+        "Familia de 4 ganando $75,000 obtiene subsidio anual de $4,200, bajando prima mensual de plan Oro de $1,050 a $700 después de asistencia.",
+        "Hogar de altos ingresos ($150,000) paga prima completa mensual de Plata de $420 sin subsidio, pero obtiene beneficios más ricos y deducibles más bajos."
+      ],
+      "resultsExplanation": [
+        "Prima mensual muestra tu costo base de seguro antes de subsidios",
+        "Prima anual muestra total anual para planificación de presupuesto",
+        "Subsidio ACA revela monto de asistencia gubernamental para el que eres elegible",
+        "Costo mensual neto muestra cuánto realmente pagarás después de toda asistencia"
+      ],
+      "whoItsFor": "Esta calculadora de seguro de salud sirve a individuos comprando cobertura de mercado ACA, familias comparando opciones de plan, personas autoempleadas sin cobertura de empleador, jubilados en Medicare, hogares de ingresos bajos a medios buscando subsidios, empleadores ayudando empleados a entender costos, asesores financieros asesorando clientes, y cualquiera queriendo entender costos de atención médica. Es particularmente valiosa para aquellos elegibles para subsidios ACA, comparando opciones de nivel metálico, entendiendo precios basados en ingresos, y tomando decisiones informadas de compra de atención médica. La calculadora funciona para cualquier tamaño de hogar, nivel de ingresos, o necesidad de cobertura.",
+      "disclaimer": "Esta calculadora proporciona estimaciones de prima basadas en datos de mercado ACA 2024 y patrones de precios típicos. Las primas reales varían por compañía de seguros, detalles específicos del plan, y cambios anuales de tasa. Los montos de subsidio son estimaciones basadas en guías ACA actuales y pueden variar basado en declaración final de impuestos y programas específicos estatales. Esta herramienta no constituye consejo de seguros o garantía de disponibilidad de cobertura. Las primas mostradas son promedios y costos reales pueden diferir. Consulta agentes o corredores de seguros licenciados para cotizaciones personalizadas y recomendaciones de cobertura. Healthcare.gov proporciona cálculos oficiales de subsidio para determinaciones finales.",
+      "relatedTools": [
+        "Calculadoras de presupuesto para incorporar costos de atención médica en planificación financiera",
+        "Calculadoras de gastos para rastrear costos médicos y pagos de seguro",
+        "Calculadoras fiscales para entender implicaciones fiscales relacionadas con atención médica"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánto cuesta el seguro de salud sin subsidios?",
+          "answer": "Las primas promedio de mercado ACA 2024 van de $350-450 mensuales para planes Plata individuales, $500-700 para planes Oro. La cobertura familiar cuesta $1,000-1,500 mensuales. Los costos varían por edad, ubicación, y tipo de plan. Sin subsidios, las primas pueden consumir 8-12% de ingreso moderado. Los planes Bronce de deducible alto cuestan menos ($250-350 mensuales) pero tienen gastos más altos fuera de bolsillo. Los planes Platino proporcionan cobertura más rica pero cuestan $600-900 mensuales. La ubicación importa - áreas urbanas cuestan 20-30% más que áreas rurales."
+        },
+        {
+          "question": "¿Cómo funcionan los subsidios ACA y quién califica?",
+          "answer": "Los subsidios ACA reducen primas para hogares ganando 100-400% Nivel Federal de Pobreza ($12,880-$51,520 para individuo en 2024). El subsidio máximo aplica en 150% LPF ($19,320 individuo), disminuyendo conforme ingresos aumentan a 400% LPF. Las primas de plan Plata son punto de referencia para cálculos de subsidio. Para ingresos individuales de $35,000, subsidio cubre 75-85% de prima de plan Plata. Los subsidios son pagos anticipados reduciendo primas mensuales. Debes declarar impuestos para reconciliar montos finales de subsidio. Algunos estados ofrecen subsidios adicionales más allá de montos federales."
+        },
+        {
+          "question": "¿Qué nivel metálico es mejor para mí?",
+          "answer": "Plata (70/30 compartir costos) proporciona mejor valor de subsidio y balancea primas vs. costos fuera de bolsillo. Bronce (60/40) cuesta menos pero tiene deducibles más altos ($8,000+). Oro (80/20) ofrece mejor cobertura pero primas más altas. Platino (90/10) proporciona beneficios más ricos pero cuesta más. Con subsidios, Plata a menudo cuesta similar a Bronce pero proporciona cobertura mucho mejor. Considera tus necesidades de salud - personas saludables pueden preferir Bronce, aquellos con condiciones crónicas eligen Oro/Platino. El gasto anual de atención médica ayuda determinar nivel óptimo."
+        },
+        {
+          "question": "¿Cuánto cuesta el seguro de salud para familias?",
+          "answer": "La cobertura familiar cuesta 2.5-3x tasas individuales. Las primas promedio de plan Plata familiar ACA 2024 van de $1,200-1,800 mensuales antes de subsidios. Con subsidios, costos bajan significativamente para familias de ingresos moderados. El tamaño familiar afecta dramáticamente precios - agregar hijos aumenta costos 30-50% cada uno. La ubicación importa más para familias - familias urbanas pagan 25-40% más que familias rurales. Los planes familiares cubren todos hijos hasta edad 26. Considera planes familiares vs. individuales basado en montos de subsidio y necesidades de cobertura."
+        },
+        {
+          "question": "¿Qué factores afectan primas de seguro de salud?",
+          "answer": "La edad es el factor más grande - primas aumentan constantemente después de edad 30, saltando significativamente después de 50. La ubicación afecta costos basado en precios locales de atención médica. El tamaño del hogar aumenta primas para cobertura familiar. El tipo de plan (nivel metálico) determina nivel de prima base. El uso de tabaco puede aumentar primas 50%+. Las condiciones preexistentes ya no afectan primas post-ACA. El género puede influir tasas ligeramente. Los ingresos determinan elegibilidad de subsidio. El diseño del plan (HMO vs. PPO) afecta precios. Los cambios anuales de tasa reflejan inflación de costos de atención médica."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Seguro Saúde",
+    "seoTitle": "Calculadora de Seguro Saúde - Calcule Custos de Saúde e Prêmios de Planos",
+    "metaDescription": "Calculadora gratuita de seguro saúde. Calcule custos de saúde, compare planos de seguro e estime pagamentos de prêmios. Essencial para marketplace ACA e planejamento de saúde.",
+    "keywords": ["calculadora seguro saúde", "calculadora custos saúde", "calculadora prêmio seguro", "calculadora ACA", "calculadora plano saúde"],
+    "longTailKeywords": ["quanto custa seguro saúde calculadora", "calculadora seguro saúde ACA", "calculadora prêmio seguro saúde", "estimador custos saúde", "calculadora comparação planos seguro"],
+    "slug": "health-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["seguro saúde", "custos saúde", "prêmios seguro", "marketplace ACA", "cobertura médica"],
+    "summary": "Calcule prêmios de seguro saúde, compare opções de planos e estime custos de saúde para tomada de decisões informada.",
+    "description": "Nossa calculadora completa de seguro saúde ajuda você a estimar custos de saúde e prêmios de seguro para planos individuais e familiares. Compare diferentes níveis metálicos (Bronze, Prata, Ouro, Platina), calcule subsídios e créditos fiscais, e entenda despesas de bolso. Perfeita para compras no marketplace ACA e planejamento anual de seguro saúde.",
+    "instructions": [
+      "Digite tamanho de sua casa e informações de renda",
+      "Selecione tipo de cobertura e preferências de plano",
+      "Obtenha estimativas de prêmios e cálculos de subsídios"
+    ],
+    "calculatorComponent": {
+      "componentName": "HealthInsuranceCalculator",
+      "inputs": [
+        { "name": "annualIncome", "label": "Annual Household Income ($)", "type": "number", "default": 50000, "min": 10000, "max": 200000, "step": 1000 },
+        { "name": "householdSize", "label": "Household Size", "type": "number", "default": 1, "min": 1, "max": 10, "step": 1 },
+        { "name": "planType", "label": "Plan Type", "type": "select", "default": "silver", "options": ["bronze", "silver", "gold", "platinum"] },
+        { "name": "location", "label": "Location Type", "type": "select", "default": "urban", "options": ["urban", "suburban", "rural"] },
+        { "name": "age", "label": "Primary Applicant Age", "type": "number", "default": 35, "min": 18, "max": 65, "step": 1 }
+      ],
+      "formula": "Premium = Base rate × Plan multiplier × Age factor × Location factor; Subsidy = Income-based ACA subsidy",
+      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
+        { "label": "ACA Subsidy", "field": "subsidy", "format": "currency" },
+        { "label": "Net Monthly Cost", "field": "netMonthly", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Plano Prata Individual",
+        "input": "Pessoa solteira, renda $35,000, plano Prata, área urbana",
+        "output": "Prêmio Mensal: $280, Subsídio Anual: $2,100, Custo Líquido: $880/ano"
+      },
+      {
+        "title": "Plano Ouro Familiar",
+        "input": "Família de 4, renda $75,000, plano Ouro, área suburbana",
+        "output": "Prêmio Mensal: $1,050, Subsídio Anual: $4,200, Custo Líquido: $8,400/ano"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "expense-calculator", "tax-calculator"],
+    "seoContent": {
+      "introduction": "Navegue o complexo mundo do seguro saúde com confiança usando nossa calculadora abrangente de seguro saúde que mostra exatamente quanto cobertura custa e quanto você pagará após subsídios. Custos de saúde são uma das maiores despesas na vida americana, mas entender opções de seguro pode economizar milhares anualmente. Nossa calculadora analisa renda de sua casa, tamanho, localização, e preferências de cobertura para estimar prêmios para diferentes níveis metálicos (Bronze, Prata, Ouro, Platina), calcular subsídios ACA, e ajudar você a encontrar o melhor plano para suas necessidades de saúde. Seja comprando cobertura individual, planos familiares, ou entendendo elegibilidade de subsídio, esta ferramenta desmistifica custos de seguro saúde.",
+      "benefits": [
+        "Calcule prêmios exatos de seguro saúde para diferentes tipos de plano e níveis metálicos",
+        "Entenda valores de subsídio ACA e créditos fiscais baseados em renda para os quais você qualifica",
+        "Compare custos e níveis de cobertura de planos Bronze, Prata, Ouro, e Platina",
+        "Veja como tamanho de casa, renda, e localização afetam seus custos de prêmio",
+        "Tome decisões informadas sobre níveis de cobertura vs. custos fora de bolso",
+        "Planeje seu orçamento de saúde com estimativas precisas de prêmio e subsídio",
+        "Encontre cobertura mais custo-efetiva para suas necessidades de saúde",
+        "Entenda como idade e localização impactam preços de seguro saúde"
+      ],
+      "steps": [
+        "Digite renda de sua casa e número de pessoas cobertas",
+        "Selecione nível metálico de plano que você está considerando (Bronze, Prata, Ouro, Platina)",
+        "Escolha seu tipo de localização e idade do solicitante principal",
+        "Revise estimativas de prêmio e cálculos de subsídio",
+        "Compare diferentes opções de plano para encontrar sua melhor escolha de cobertura"
+      ],
+      "inputsExplained": [
+        "Renda de casa determina elegibilidade de subsídio ACA e valores",
+        "Tamanho de casa afeta custos de prêmio para cobertura familiar vs. individual",
+        "Tipo de plano (nível metálico) determina custos de prêmio e níveis de compartilhamento de custos",
+        "Localização afeta preços baseado em custos locais de saúde e taxas de provedor",
+        "Idade é fator maior em preços de seguro saúde e avaliação de risco"
+      ],
+      "formulaExplanation": "Prêmios de seguro saúde são calculados usando dados atuariais considerando idade, localização, tamanho de casa, e tipo de plano. Prêmios base são ajustados por multiplicadores de nível metálico (Bronze ~1.0x, Prata ~1.2x, Ouro ~1.4x, Platina ~1.6x taxa base). Subsídios ACA reduzem prêmios para casas ganhando 100-400% LPF. A fórmula mostra como prêmios aumentam com idade e tamanho familiar enquanto subsídios diminuem prêmios baseado em nível de renda. Entender estes fatores ajuda você a ver por que planos Prata frequentemente fornecem melhor valor com subsídios, e como nível de renda afeta dramaticamente custos totais.",
+      "examples": [
+        "Pessoa solteira ganhando $35,000 anualmente qualifica para subsídio ACA de $2,100, reduzindo prêmio mensal de plano Prata de $280 para custo líquido de $70.",
+        "Família de 4 ganhando $75,000 obtém subsídio anual de $4,200, baixando prêmio mensal de plano Ouro de $1,050 para $700 após assistência.",
+        "Casa de alta renda ($150,000) paga prêmio mensal completo Prata de $420 sem subsídio, mas obtém benefícios mais ricos e dedutíveis menores."
+      ],
+      "resultsExplanation": [
+        "Prêmio mensal mostra seu custo base de seguro antes de subsídios",
+        "Prêmio anual mostra total anual para planejamento de orçamento",
+        "Subsídio ACA revela valor de assistência governamental para o qual você é elegível",
+        "Custo mensal líquido mostra quanto você realmente pagará após toda assistência"
+      ],
+      "whoItsFor": "Esta calculadora de seguro saúde serve indivíduos comprando cobertura de marketplace ACA, famílias comparando opções de plano, pessoas auto-empregadas sem cobertura de empregador, aposentados em Medicare, casas de renda baixa a média buscando subsídios, empregadores ajudando empregados a entender custos, consultores financeiros aconselhando clientes, e qualquer pessoa querendo entender custos de saúde. É particularmente valiosa para aqueles elegíveis para subsídios ACA, comparando opções de nível metálico, entendendo preços baseados em renda, e tomando decisões informadas de compra de saúde. A calculadora funciona para qualquer tamanho de casa, nível de renda, ou necessidade de cobertura.",
+      "disclaimer": "Esta calculadora fornece estimativas de prêmio baseadas em dados de marketplace ACA 2024 e padrões de preços típicos. Prêmios reais variam por companhia de seguros, detalhes específicos do plano, e mudanças anuais de taxa. Valores de subsídio são estimativas baseadas em diretrizes ACA atuais e podem variar baseado em declaração final de impostos e programas específicos estaduais. Esta ferramenta não constitui conselho de seguros ou garantia de disponibilidade de cobertura. Prêmios mostrados são médias e custos reais podem diferir. Consulte agentes ou corretores de seguros licenciados para cotações personalizadas e recomendações de cobertura. Healthcare.gov fornece cálculos oficiais de subsídio para determinações finais.",
+      "relatedTools": [
+        "Calculadoras de orçamento para incorporar custos de saúde em planejamento financeiro",
+        "Calculadoras de gastos para rastrear custos médicos e pagamentos de seguro",
+        "Calculadoras fiscais para entender implicações fiscais relacionadas com saúde"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto custa seguro saúde sem subsídios?",
+          "answer": "Prêmios médios de marketplace ACA 2024 vão de $350-450 mensais para planos Prata individuais, $500-700 para planos Ouro. Cobertura familiar custa $1,000-1,500 mensais. Custos variam por idade, localização, e tipo de plano. Sem subsídios, prêmios podem consumir 8-12% de renda moderada. Planos Bronze de dedutível alto custam menos ($250-350 mensais) mas têm despesas mais altas fora de bolso. Planos Platina fornecem cobertura mais rica mas custam $600-900 mensais. Localização importa - áreas urbanas custam 20-30% mais que áreas rurais."
+        },
+        {
+          "question": "Como subsídios ACA funcionam e quem qualifica?",
+          "answer": "Subsídios ACA reduzem prêmios para casas ganhando 100-400% Nível Federal de Pobreza ($12,880-$51,520 para indivíduo em 2024). Subsídio máximo aplica em 150% LPF ($19,320 indivíduo), diminuindo conforme renda aumenta para 400% LPF. Prêmios de plano Prata são ponto de referência para cálculos de subsídio. Para renda individual de $35,000, subsídio cobre 75-85% de prêmio de plano Prata. Subsídios são pagamentos antecipados reduzindo prêmios mensais. Você deve declarar impostos para reconciliar valores finais de subsídio. Alguns estados oferecem subsídios adicionais além de valores federais."
+        },
+        {
+          "question": "Qual nível metálico é melhor para mim?",
+          "answer": "Prata (70/30 compartilhamento de custos) fornece melhor valor de subsídio e balanceia prêmios vs. custos fora de bolso. Bronze (60/40) custa menos mas tem dedutíveis mais altos ($8,000+). Ouro (80/20) oferece melhor cobertura mas prêmios mais altos. Platina (90/10) fornece benefícios mais ricos mas custa mais. Com subsídios, Prata frequentemente custa similar a Bronze mas fornece cobertura muito melhor. Considere suas necessidades de saúde - pessoas saudáveis podem preferir Bronze, aquelas com condições crônicas escolhem Ouro/Platina. Gasto anual de saúde ajuda determinar nível ótimo."
+        },
+        {
+          "question": "Quanto custa seguro saúde para famílias?",
+          "answer": "Cobertura familiar custa 2.5-3x taxas individuais. Prêmios médios de plano Prata familiar ACA 2024 vão de $1,200-1,800 mensais antes de subsídios. Com subsídios, custos baixam significativamente para famílias de renda moderada. Tamanho familiar afeta dramaticamente preços - adicionar filhos aumenta custos 30-50% cada. Localização importa mais para famílias - famílias urbanas pagam 25-40% mais que famílias rurais. Planos familiares cobrem todas crianças até idade 26. Considere planos familiares vs. individuais baseado em valores de subsídio e necessidades de cobertura."
+        },
+        {
+          "question": "¿Quais fatores afetam prêmios de seguro saúde?",
+          "answer": "Idade é maior fator - prêmios aumentam constantemente após idade 30, saltando significativamente após 50. Localização afeta custos baseado em preços locais de saúde. Tamanho de casa aumenta prêmios para cobertura familiar. Tipo de plano (nível metálico) determina nível de prêmio base. Uso de tabaco pode aumentar prêmios 50%+. Condições pré-existentes não afetam mais prêmios pós-ACA. Gênero pode influenciar taxas ligeiramente. Renda determina elegibilidade de subsídio. Design de plano (HMO vs. PPO) afeta preços. Mudanças anuais de taxa refletem inflação de custos de saúde."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Assurance Santé",
+    "seoTitle": "Calculateur d'Assurance Santé - Calculez les Coûts de Soins et Primes de Plans",
+    "metaDescription": "Calculateur gratuit d'assurance santé. Calculez les coûts de soins de santé, comparez les plans d'assurance et estimez les paiements de primes. Essentiel pour le marché ACA et la planification de santé.",
+    "keywords": ["calculateur assurance santé", "calculateur coûts soins santé", "calculateur prime assurance", "calculateur ACA", "calculateur plan santé"],
+    "longTailKeywords": ["combien coûte assurance santé calculateur", "calculateur assurance santé ACA", "calculateur prime assurance santé", "estimateur coûts soins santé", "calculateur comparaison plans assurance"],
+    "slug": "health-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["assurance santé", "coûts soins santé", "primes assurance", "marché ACA", "couverture médicale"],
+    "summary": "Calculez les primes d'assurance santé, comparez les options de plans et estimez les coûts de soins de santé pour une prise de décision éclairée.",
+    "description": "Notre calculateur complet d'assurance santé vous aide à estimer les coûts de soins de santé et les primes d'assurance pour les plans individuels et familiaux. Comparez les différents niveaux métalliques (Bronze, Argent, Or, Platine), calculez les subventions et crédits d'impôt, et comprenez les dépenses à votre charge. Parfait pour les achats sur le marché ACA et la planification annuelle d'assurance santé.",
+    "instructions": [
+      "Entrez la taille de votre ménage et informations de revenu",
+      "Sélectionnez le type de couverture et préférences de plan",
+      "Obtenez des estimations de primes et calculs de subventions"
+    ],
+    "calculatorComponent": {
+      "componentName": "HealthInsuranceCalculator",
+      "inputs": [
+        { "name": "annualIncome", "label": "Annual Household Income ($)", "type": "number", "default": 50000, "min": 10000, "max": 200000, "step": 1000 },
+        { "name": "householdSize", "label": "Household Size", "type": "number", "default": 1, "min": 1, "max": 10, "step": 1 },
+        { "name": "planType", "label": "Plan Type", "type": "select", "default": "silver", "options": ["bronze", "silver", "gold", "platinum"] },
+        { "name": "location", "label": "Location Type", "type": "select", "default": "urban", "options": ["urban", "suburban", "rural"] },
+        { "name": "age", "label": "Primary Applicant Age", "type": "number", "default": 35, "min": 18, "max": 65, "step": 1 }
+      ],
+      "formula": "Premium = Base rate × Plan multiplier × Age factor × Location factor; Subsidy = Income-based ACA subsidy",
+      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
+        { "label": "ACA Subsidy", "field": "subsidy", "format": "currency" },
+        { "label": "Net Monthly Cost", "field": "netMonthly", "format": "currency" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Plan Argent Individuel",
+        "input": "Personne célibataire, revenu 35 000 $, plan Argent, zone urbaine",
+        "output": "Prime Mensuelle: 280 $, Subvention Annuelle: 2 100 $, Coût Net: 880 $/an"
+      },
+      {
+        "title": "Plan Or Familial",
+        "input": "Famille de 4, revenu 75 000 $, plan Or, zone suburbaine",
+        "output": "Prime Mensuelle: 1 050 $, Subvention Annuelle: 4 200 $, Coût Net: 8 400 $/an"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "expense-calculator", "tax-calculator"],
+    "seoContent": {
+      "introduction": "Naviguez le monde complexe de l'assurance santé avec confiance en utilisant notre calculatrice complète d'assurance santé qui vous montre exactement combien la couverture coûte et ce que vous paierez après subventions. Les coûts de soins de santé sont l'une des plus grandes dépenses dans la vie américaine, mais comprendre les options d'assurance peut sauver des milliers annuellement. Notre calculatrice analyse le revenu de votre foyer, taille, localisation, et préférences de couverture pour estimer les primes pour différents niveaux métalliques (Bronze, Argent, Or, Platine), calculer les subventions ACA, et vous aider à trouver le meilleur plan pour vos besoins de soins de santé. Que vous achetiez une couverture individuelle, des plans familiaux, ou compreniez l'éligibilité aux subventions, cet outil démystifie les coûts d'assurance santé.",
+      "benefits": [
+        "Calculez les primes exactes d'assurance santé pour différents types de plan et niveaux métalliques",
+        "Comprenez montants de subvention ACA et crédits d'impôt basés sur revenu pour lesquels vous qualifiez",
+        "Comparez coûts et niveaux de couverture des plans Bronze, Argent, Or, et Platine",
+        "Voyez comment taille foyer, revenu, et localisation affectent vos coûts de prime",
+        "Prenez décisions éclairées sur niveaux de couverture vs. coûts hors poche",
+        "Planifiez votre budget de soins de santé avec estimations précises de prime et subvention",
+        "Trouvez couverture la plus rentable pour vos besoins de soins de santé",
+        "Comprenez comment âge et localisation impactent prix assurance santé"
+      ],
+      "steps": [
+        "Entrez revenu de votre foyer et nombre de personnes couvertes",
+        "Sélectionnez niveau métallique de plan vous considérez (Bronze, Argent, Or, Platine)",
+        "Choisissez votre type de localisation et âge demandeur principal",
+        "Examinez estimations prime et calculs subvention",
+        "Comparez différentes options de plan pour trouver votre meilleur choix de couverture"
+      ],
+      "inputsExplained": [
+        "Revenu foyer détermine éligibilité subvention ACA et montants",
+        "Taille foyer affecte coûts prime pour couverture familiale vs. individuelle",
+        "Type plan (niveau métallique) détermine coûts prime et niveaux partage coûts",
+        "Localisation affecte prix basé sur coûts locaux soins de santé et taux fournisseur",
+        "Âge est facteur majeur dans prix assurance santé et évaluation risque"
+      ],
+      "formulaExplanation": "Primes assurance santé sont calculées utilisant données actuarielles considérant âge, localisation, taille foyer, et type plan. Primes base sont ajustées par multiplicateurs niveau métallique (Bronze ~1.0x, Argent ~1.2x, Or ~1.4x, Platine ~1.6x taux base). Subventions ACA réduisent primes pour foyers gagnant 100-400% LPF. La formule montre comment primes augmentent avec âge et taille familiale tandis que subventions diminuent primes basé sur niveau revenu. Comprendre ces facteurs vous aide voir pourquoi plans Argent fournissent souvent meilleure valeur avec subventions, et comment niveau revenu affecte considérablement coûts totaux.",
+      "examples": [
+        "Personne seule gagnant $35,000 annuellement qualifie pour subvention ACA $2,100, réduisant prime mensuelle plan Argent $280 à coût net $70.",
+        "Famille de 4 gagnant $75,000 obtient subvention annuelle $4,200, baissant prime mensuelle plan Or $1,050 à $700 après assistance.",
+        "Foyer haut revenu ($150,000) paie prime mensuelle complète Argent $420 sans subvention, mais obtient avantages plus riches et déductibles plus bas."
+      ],
+      "resultsExplanation": [
+        "Prime mensuelle montre votre coût base assurance avant subventions",
+        "Prime annuelle affiche total annuel pour planification budget",
+        "Subvention ACA révèle montant assistance gouvernementale pour laquelle vous êtes éligible",
+        "Coût mensuel net montre ce que vous paierez réellement après toute assistance"
+      ],
+      "whoItsFor": "Cette calculatrice assurance santé sert individus achetant couverture marché ACA, familles comparant options plan, personnes auto-employées sans couverture employeur, retraités sur Medicare, foyers revenus faibles à moyens cherchant subventions, employeurs aidant employés comprendre coûts, conseillers financiers conseillant clients, et quiconque souhaitant comprendre coûts soins de santé. Elle est particulièrement précieuse pour ceux éligibles subventions ACA, comparant options niveau métallique, comprenant prix basé revenu, et prenant décisions éclairées achat soins de santé. La calculatrice fonctionne pour toute taille foyer, niveau revenu, ou besoin couverture.",
+      "disclaimer": "Cette calculatrice fournit estimations prime basées sur données marché ACA 2024 et patterns prix typiques. Primes réelles varient par compagnie assurance, détails spécifiques plan, et changements taux annuels. Montants subvention sont estimations basées sur directives ACA actuelles et peuvent varier basé sur déclaration finale impôts et programmes spécifiques étatiques. Cet outil ne constitue pas conseil assurance ou garantie disponibilité couverture. Primes affichées sont moyennes et coûts réels peuvent différer. Consultez agents ou courtiers assurance licenciés pour devis personnalisés et recommandations couverture. Healthcare.gov fournit calculs officiels subvention pour déterminations finales.",
+      "relatedTools": [
+        "Calculateurs budget pour incorporer coûts soins de santé dans planification financière",
+        "Calculateurs dépenses pour suivre coûts médicaux et paiements assurance",
+        "Calculateurs fiscaux pour comprendre implications fiscales liées soins de santé"
+      ],
+      "faqs": [
+        {
+          "question": "Combien coûte assurance santé sans subventions ?",
+          "answer": "Primes moyennes marché ACA 2024 vont de $350-450 mensuels pour plans Argent individuels, $500-700 pour plans Or. Couverture familiale coûte $1,000-1,500 mensuels. Coûts varient par âge, localisation, et type plan. Sans subventions, primes peuvent consommer 8-12% revenu modéré. Plans Bronze déductible élevé coûtent moins ($250-350 mensuels) mais ont dépenses plus élevées hors poche. Plans Platine fournissent couverture plus riche mais coûtent $600-900 mensuels. Localisation importe - zones urbaines coûtent 20-30% plus que zones rurales."
+        },
+        {
+          "question": "Comment subventions ACA fonctionnent-elles et qui qualifie ?",
+          "answer": "Subventions ACA réduisent primes pour foyers gagnant 100-400% Niveau Fédéral Pauvreté ($12,880-$51,520 pour individu en 2024). Subvention maximum applique à 150% LPF ($19,320 individu), diminuant comme revenu augmente à 400% LPF. Primes plan Argent sont référence pour calculs subvention. Pour revenu individuel $35,000, subvention couvre 75-85% prime plan Argent. Subventions sont paiements anticipés réduisant primes mensuelles. Vous devez déclarer impôts pour réconcilier montants subvention finaux. Certains états offrent subventions supplémentaires au-delà montants fédéraux."
+        },
+        {
+          "question": "Quel niveau métallique est meilleur pour moi ?",
+          "answer": "Argent (70/30 partage coûts) fournit meilleure valeur subvention et équilibre primes vs. coûts hors poche. Bronze (60/40) coûte moins mais a déductibles plus élevés ($8,000+). Or (80/20) offre meilleure couverture mais primes plus élevées. Platine (90/10) fournit avantages plus riches mais coûte plus. Avec subventions, Argent coûte souvent similaire à Bronze mais fournit couverture beaucoup meilleure. Considérez vos besoins santé - personnes en bonne santé peuvent préférer Bronze, ceux avec conditions chroniques choisissent Or/Platine. Dépenses annuelles soins de santé aident déterminer niveau optimal."
+        },
+        {
+          "question": "Combien assurance santé coûte-t-elle pour familles ?",
+          "answer": "Couverture familiale coûte 2.5-3x taux individuels. Primes moyennes plan Argent familial ACA 2024 vont de $1,200-1,800 mensuels avant subventions. Avec subventions, coûts baissent considérablement pour familles revenus modérés. Taille familiale affecte considérablement prix - ajouter enfants augmente coûts 30-50% chacun. Localisation importe plus pour familles - familles urbaines paient 25-40% plus que familles rurales. Plans familiaux couvrent tous enfants jusqu'à âge 26. Considérez plans familiaux vs. individuels basé sur montants subvention et besoins couverture."
+        },
+        {
+          "question": "¿Quels facteurs affectent primes assurance santé ?",
+          "answer": "Âge est plus grand facteur - primes augmentent constamment après âge 30, sautant considérablement après 50. Localisation affecte coûts basé sur prix locaux soins de santé. Taille foyer augmente primes pour couverture familiale. Type plan (niveau métallique) détermine niveau prime base. Usage tabac peut augmenter primes 50%+. Conditions pré-existantes n'affectent plus primes post-ACA. Genre peut influencer taux légèrement. Revenu détermine éligibilité subvention. Design plan (HMO vs. PPO) affecte prix. Changements taux annuels reflètent inflation coûts soins de santé."
+        }
+      ]
+    }
+  }
+}

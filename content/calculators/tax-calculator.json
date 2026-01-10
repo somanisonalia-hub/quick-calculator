@@ -1,0 +1,1007 @@
+{
+  "en": {
+    "title": "Tax Calculator",
+    "seoTitle": "Tax Calculator - Calculate Income Tax & Take-Home Pay",
+    "metaDescription": "Calculate your income tax, take-home pay, and tax liability. Estimate federal and state taxes for accurate salary planning and tax preparation.",
+    "keywords": [
+      "tax calculator",
+      "income tax calculator",
+      "take home pay calculator",
+      "tax liability calculator",
+      "salary tax calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate take home pay after taxes",
+      "income tax calculator for salaried employees",
+      "what is my net pay after taxes",
+      "tax calculator with deductions and exemptions",
+      "how much taxes will I pay on my salary",
+      "federal and state tax calculator",
+      "salary to hourly converter with taxes",
+      "how to calculate payroll taxes",
+      "tax refund calculator for next year",
+      "what percentage of my salary goes to taxes"
+    ],
+    "slug": "tax-calculator",
+    "category": "Financial",
+    "difficulty": "Advanced",
+    "tags": [
+      "taxes",
+      "income",
+      "salary",
+      "federal tax",
+      "state tax",
+      "take-home pay",
+      "tax planning"
+    ],
+    "description": "Calculate your income tax liability and take-home pay with our comprehensive tax calculator. This tool helps you estimate federal income taxes, state taxes, and Social Security/Medicare contributions to determine your net pay after taxes. Perfect for salary planning, tax preparation, and understanding your overall tax burden.",
+    "summary": "Estimate income tax liability and take-home pay.",
+    "instructions": [
+      "Select your tax filing status (Single, Married Filing Jointly, etc.)",
+      "Enter your gross annual income or hourly wage",
+      "Enter the number of pay periods per year if calculating take-home pay",
+      "Enter any pre-tax deductions (401k contributions, health insurance, etc.)",
+      "The calculator will estimate your federal tax, state tax (if applicable), and take-home pay"
+    ],
+    "calculatorComponent": {
+      "componentName": "TaxCalculator",
+      "inputs": [
+        {
+          "name": "filingStatus",
+          "label": "Filing Status",
+          "type": "select",
+          "options": [
+            {
+              "value": "single",
+              "label": "Single"
+            },
+            {
+              "value": "married-joint",
+              "label": "Married Filing Jointly"
+            },
+            {
+              "value": "married-separate",
+              "label": "Married Filing Separately"
+            },
+            {
+              "value": "head-household",
+              "label": "Head of Household"
+            }
+          ],
+          "default": "single"
+        },
+        {
+          "name": "annualIncome",
+          "label": "Annual Income ($)",
+          "type": "number",
+          "default": 75000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "dependents",
+          "label": "Number of Dependents",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "state",
+          "label": "State (Optional)",
+          "type": "select",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "No State Tax"
+            },
+            {
+              "value": "california",
+              "label": "California (13.3%)"
+            },
+            {
+              "value": "new-york",
+              "label": "New York (8.82%)"
+            },
+            {
+              "value": "texas",
+              "label": "Texas (No State Income Tax)"
+            },
+            {
+              "value": "florida",
+              "label": "Florida (No State Income Tax)"
+            }
+          ]
+        },
+        {
+          "name": "payPeriods",
+          "label": "Pay Periods per Year",
+          "type": "select",
+          "options": [
+            {
+              "value": "52",
+              "label": "Weekly (52)"
+            },
+            {
+              "value": "26",
+              "label": "Bi-weekly (26)"
+            },
+            {
+              "value": "24",
+              "label": "Semi-monthly (24)"
+            },
+            {
+              "value": "12",
+              "label": "Monthly (12)"
+            }
+          ],
+          "default": "26"
+        },
+        {
+          "name": "pretaxDeductions",
+          "label": "Pre-tax Deductions ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 50
+        }
+      ],
+      "formula": "Federal Tax = (Taxable Income × Tax Rate) - Standard Deduction; State Tax = Federal Tax × State Rate; Take-Home Pay = Gross Pay - Federal Tax - State Tax - FICA",
+      "output": {
+        "label": "Annual Take-Home Pay",
+        "default": "Enter income details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Federal Income Tax",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "State Income Tax",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "FICA Taxes (SS + Medicare)",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "Net Pay per Pay Period",
+          "field": "netPerPeriod",
+          "format": "currency"
+        },
+        {
+          "label": "Effective Tax Rate",
+          "field": "effectiveRate",
+          "format": "percentage"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Single Professional Annual Salary",
+        "input": {
+          "filingStatus": "single",
+          "annualIncome": 75000,
+          "state": "california",
+          "payPeriods": "26",
+          "pretaxDeductions": 6000
+        },
+        "output": {
+          "federalTax": 11250,
+          "stateTax": 1496,
+          "ficaTax": 5738,
+          "netPerPeriod": 1833,
+          "effectiveRate": 24.8
+        },
+        "explanation": "A single professional earning $75,000 annually with California state tax and bi-weekly pay periods would have a take-home pay of about $1,833 per pay period after all taxes and deductions."
+      },
+      {
+        "title": "Married Couple Monthly Income",
+        "input": {
+          "filingStatus": "married-joint",
+          "annualIncome": 95000,
+          "state": "new-york",
+          "payPeriods": "12",
+          "pretaxDeductions": 8000
+        },
+        "output": {
+          "federalTax": 12750,
+          "stateTax": 1123,
+          "ficaTax": 7283,
+          "netPerPeriod": 6025,
+          "effectiveRate": 23.1
+        },
+        "explanation": "A married couple with $95,000 annual income in New York would have approximately $6,025 in monthly take-home pay, representing an effective tax rate of 23.1%."
+      },
+      {
+        "title": "Texas Resident (No State Income Tax)",
+        "input": {
+          "filingStatus": "single",
+          "annualIncome": 55000,
+          "state": "texas",
+          "payPeriods": "24",
+          "pretaxDeductions": 3000
+        },
+        "output": {
+          "federalTax": 6750,
+          "stateTax": 0,
+          "ficaTax": 4218,
+          "netPerPeriod": 1815,
+          "effectiveRate": 19.8
+        },
+        "explanation": "Texas has no state income tax, so this single earner keeps more take-home pay. With $55,000 annual income and semi-monthly pay periods, net pay is about $1,815 per period."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Paycheck Calculator",
+        "slug": "paycheck-calculator",
+        "description": "Calculate net pay after withholdings."
+      },
+      {
+        "name": "Savings Calculator",
+        "slug": "savings-calculator",
+        "description": "Plan your savings and investments."
+      },
+      {
+        "name": "Retirement Calculator",
+        "slug": "retirement-calculator",
+        "description": "Plan for retirement savings."
+      }
+    ]
+  },
+  "es": {
+    "title": "Calculadora de Impuestos",
+    "seoTitle": "Calculadora de Impuestos - Calcular Impuestos sobre la Renta y Salario Neto",
+    "metaDescription": "Calcula tus impuestos sobre la renta, salario neto y responsabilidad fiscal. Estima impuestos federales y estatales para una planificación salarial precisa.",
+    "keywords": [
+      "calculadora impuestos",
+      "calculadora impuestos renta",
+      "calculadora salario neto",
+      "calculadora responsabilidad fiscal",
+      "calculadora impuestos salario"
+    ],
+    "longTailKeywords": [
+      "como calcular salario neto después de impuestos",
+      "calculadora de impuestos para empleados asalariados",
+      "cuál es mi pago neto después de impuestos",
+      "calculadora de impuestos con deducciones y exenciones",
+      "cuántos impuestos pagaré en mi salario",
+      "calculadora de impuestos federales y estatales",
+      "conversor de salario a hora con impuestos",
+      "como calcular impuestos de nómina",
+      "calculadora de reembolso de impuestos para el próximo año",
+      "qué porcentaje de mi salario va a impuestos"
+    ],
+    "slug": "tax-calculator",
+    "category": "Financial",
+    "difficulty": "Advanced",
+    "tags": [
+      "impuestos",
+      "renta",
+      "salario",
+      "impuestos federales",
+      "impuestos estatales",
+      "salario neto",
+      "planificación fiscal"
+    ],
+    "description": "Calcula tu responsabilidad fiscal sobre la renta y salario neto con nuestra calculadora integral de impuestos. Esta herramienta te ayuda a estimar impuestos federales sobre la renta, impuestos estatales y contribuciones al Seguro Social/Medicare para determinar tu pago neto después de impuestos. Perfecto para planificación salarial, preparación de impuestos y comprensión de tu carga fiscal general.",
+    "summary": "Estima responsabilidad fiscal sobre la renta y salario neto.",
+    "instructions": [
+      "Selecciona tu estado civil para declaración de impuestos (Soltero, Casado Presentando Conjuntamente, etc.)",
+      "Ingresa tu ingreso bruto anual o salario por hora",
+      "Ingresa el número de períodos de pago por año si calculas salario neto",
+      "Ingresa cualquier deducción antes de impuestos (contribuciones 401k, seguro médico, etc.)",
+      "La calculadora estimará tu impuesto federal, impuesto estatal (si aplica) y salario neto"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "filingStatus",
+          "label": "Estado Civil para Declaración",
+          "type": "select",
+          "options": [
+            {
+              "value": "single",
+              "label": "Soltero"
+            },
+            {
+              "value": "married-joint",
+              "label": "Casado Presentando Conjuntamente"
+            },
+            {
+              "value": "married-separate",
+              "label": "Casado Presentando Separadamente"
+            },
+            {
+              "value": "head-household",
+              "label": "Cabeza de Hogar"
+            }
+          ],
+          "default": "single"
+        },
+        {
+          "name": "annualIncome",
+          "label": "Ingreso Bruto Anual ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "state",
+          "label": "Estado (Opcional)",
+          "type": "select",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "Sin Impuesto Estatal"
+            },
+            {
+              "value": "california",
+              "label": "California (13.3%)"
+            },
+            {
+              "value": "new-york",
+              "label": "Nueva York (8.82%)"
+            },
+            {
+              "value": "texas",
+              "label": "Texas (Sin Impuesto Estatal)"
+            },
+            {
+              "value": "florida",
+              "label": "Florida (Sin Impuesto Estatal)"
+            }
+          ]
+        },
+        {
+          "name": "payPeriods",
+          "label": "Períodos de Pago por Año",
+          "type": "select",
+          "options": [
+            {
+              "value": "52",
+              "label": "Semanal (52)"
+            },
+            {
+              "value": "26",
+              "label": "Quincenal (26)"
+            },
+            {
+              "value": "24",
+              "label": "Semi-mensual (24)"
+            },
+            {
+              "value": "12",
+              "label": "Mensual (12)"
+            }
+          ],
+          "default": "26"
+        },
+        {
+          "name": "pretaxDeductions",
+          "label": "Deducciones Antes de Impuestos ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 50
+        }
+      ],
+      "formula": "Impuesto Federal = (Ingreso Gravable × Tasa de Impuesto) - Deducción Estándar; Impuesto Estatal = Impuesto Federal × Tasa Estatal; Salario Neto = Salario Bruto - Impuesto Federal - Impuesto Estatal - FICA",
+      "output": {
+        "label": "Salario Neto Anual",
+        "default": "Ingresa detalles de ingreso arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Impuesto Federal sobre la Renta",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impuesto Estatal sobre la Renta",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impuestos FICA (SS + Medicare)",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "Pago Neto por Período",
+          "field": "netPerPeriod",
+          "format": "currency"
+        },
+        {
+          "label": "Tasa de Impuesto Efectiva",
+          "field": "effectiveRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "TaxCalculator"
+    },
+    "examples": [
+      {
+        "title": "Profesional Soltero Salario Anual",
+        "input": {
+          "filingStatus": "single",
+          "annualIncome": 75000,
+          "state": "california",
+          "payPeriods": "26",
+          "pretaxDeductions": 6000
+        },
+        "output": {
+          "federalTax": 11250,
+          "stateTax": 1496,
+          "ficaTax": 5738,
+          "netPerPeriod": 1833,
+          "effectiveRate": 24.8
+        },
+        "explanation": "Un profesional soltero ganando $75,000 anualmente con impuesto estatal de California y períodos de pago quincenales tendría un salario neto de aproximadamente $1,833 por período de pago después de todos los impuestos y deducciones."
+      },
+      {
+        "title": "Pareja Casada Ingreso Mensual",
+        "input": {
+          "filingStatus": "married-joint",
+          "annualIncome": 95000,
+          "state": "new-york",
+          "payPeriods": "12",
+          "pretaxDeductions": 8000
+        },
+        "output": {
+          "federalTax": 12750,
+          "stateTax": 1123,
+          "ficaTax": 7283,
+          "netPerPeriod": 6025,
+          "effectiveRate": 23.1
+        },
+        "explanation": "Una pareja casada con $95,000 de ingreso anual en Nueva York tendría aproximadamente $6,025 en salario neto mensual, representando una tasa de impuesto efectiva del 23.1%."
+      },
+      {
+        "title": "Residente de Texas (Sin Impuesto Estatal)",
+        "input": {
+          "filingStatus": "single",
+          "annualIncome": 55000,
+          "state": "texas",
+          "payPeriods": "24",
+          "pretaxDeductions": 3000
+        },
+        "output": {
+          "federalTax": 6750,
+          "stateTax": 0,
+          "ficaTax": 4218,
+          "netPerPeriod": 1815,
+          "effectiveRate": 19.8
+        },
+        "explanation": "Texas no tiene impuesto estatal sobre la renta, por lo que este trabajador soltero retiene más salario neto. Con $55,000 de ingreso anual y períodos de pago semi-mensuales, el pago neto es de aproximadamente $1,815 por período."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Nómina",
+        "slug": "paycheck-calculator",
+        "description": "Calcula el pago neto después de retenciones."
+      },
+      {
+        "name": "Calculadora de Ahorros",
+        "slug": "savings-calculator",
+        "description": "Planea tus ahorros e inversiones."
+      },
+      {
+        "name": "Calculadora de Jubilación",
+        "slug": "retirement-calculator",
+        "description": "Planea tus ahorros para jubilación."
+      }
+    ]
+  },
+  "pt": {
+    "title": "Calculadora de Imposto",
+    "seoTitle": "Calculadora de Imposto - Calcular Imposto de Renda e Salário Líquido",
+    "metaDescription": "Calcule seu imposto de renda, salário líquido e responsabilidade fiscal. Estime impostos federais e estaduais para planejamento salarial preciso.",
+    "keywords": [
+      "calculadora imposto",
+      "calculadora imposto renda",
+      "calculadora salario liquido",
+      "calculadora responsabilidade fiscal",
+      "calculadora imposto salario"
+    ],
+    "longTailKeywords": [
+      "como calcular salario liquido após impostos",
+      "calculadora de impostos para funcionários assalariados",
+      "qual é meu pagamento líquido após impostos",
+      "calculadora de impostos com deduções e isenções",
+      "quantos impostos vou pagar no meu salário",
+      "calculadora de impostos federais e estaduais",
+      "conversor de salário para hora com impostos",
+      "como calcular impostos de folha de pagamento",
+      "calculadora de reembolso de impostos para o próximo ano",
+      "que porcentagem do meu salário vai para impostos"
+    ],
+    "slug": "tax-calculator",
+    "category": "Financial",
+    "difficulty": "Advanced",
+    "tags": [
+      "impostos",
+      "renda",
+      "salario",
+      "imposto federal",
+      "imposto estadual",
+      "salario liquido",
+      "planejamento fiscal"
+    ],
+    "description": "Calcule sua responsabilidade fiscal de renda e salário líquido com nossa calculadora abrangente de impostos. Esta ferramenta ajuda a estimar impostos federais de renda, impostos estaduais e contribuições para Previdência Social/Medicare para determinar seu pagamento líquido após impostos. Perfeito para planejamento salarial, preparação fiscal e compreensão de sua carga fiscal geral.",
+    "summary": "Estime responsabilidade fiscal de renda e salário líquido.",
+    "instructions": [
+      "Selecione seu status de declaração fiscal (Solteiro, Casado Declarando em Conjunto, etc.)",
+      "Digite sua renda bruta anual ou salário por hora",
+      "Digite o número de períodos de pagamento por ano se calcular salário líquido",
+      "Digite qualquer dedução pré-imposto (contribuições 401k, seguro saúde, etc.)",
+      "A calculadora estimará seu imposto federal, imposto estadual (se aplicável) e salário líquido"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "filingStatus",
+          "label": "Status de Declaração",
+          "type": "select",
+          "options": [
+            {
+              "value": "single",
+              "label": "Solteiro"
+            },
+            {
+              "value": "married-joint",
+              "label": "Casado Declarando em Conjunto"
+            },
+            {
+              "value": "married-separate",
+              "label": "Casado Declarando Separadamente"
+            },
+            {
+              "value": "head-household",
+              "label": "Chefe de Família"
+            }
+          ],
+          "default": "single"
+        },
+        {
+          "name": "annualIncome",
+          "label": "Renda Bruta Anual (R$)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "state",
+          "label": "Estado (Opcional)",
+          "type": "select",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "Sem Imposto Estadual"
+            },
+            {
+              "value": "california",
+              "label": "Califórnia (13.3%)"
+            },
+            {
+              "value": "new-york",
+              "label": "Nova York (8.82%)"
+            },
+            {
+              "value": "texas",
+              "label": "Texas (Sem Imposto de Renda)"
+            },
+            {
+              "value": "florida",
+              "label": "Flórida (Sem Imposto de Renda)"
+            }
+          ]
+        },
+        {
+          "name": "payPeriods",
+          "label": "Períodos de Pagamento por Ano",
+          "type": "select",
+          "options": [
+            {
+              "value": "52",
+              "label": "Semanal (52)"
+            },
+            {
+              "value": "26",
+              "label": "Quinzenal (26)"
+            },
+            {
+              "value": "24",
+              "label": "Semi-mensal (24)"
+            },
+            {
+              "value": "12",
+              "label": "Mensal (12)"
+            }
+          ],
+          "default": "26"
+        },
+        {
+          "name": "pretaxDeductions",
+          "label": "Deduções Pré-Imposto (R$)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 50
+        }
+      ],
+      "formula": "Imposto Federal = (Renda Tributável × Taxa de Imposto) - Dedução Padrão; Imposto Estadual = Imposto Federal × Taxa Estadual; Salário Líquido = Salário Bruto - Imposto Federal - Imposto Estadual - FICA",
+      "output": {
+        "label": "Salário Líquido Anual",
+        "default": "Digite detalhes de renda acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Imposto Federal de Renda",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "Imposto Estadual de Renda",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impostos FICA (SS + Medicare)",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "Pagamento Líquido por Período",
+          "field": "netPerPeriod",
+          "format": "currency"
+        },
+        {
+          "label": "Taxa de Imposto Efetiva",
+          "field": "effectiveRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "TaxCalculator"
+    },
+    "examples": [
+      {
+        "title": "Profissional Solteiro Salário Anual",
+        "input": {
+          "filingStatus": "single",
+          "annualIncome": 75000,
+          "state": "california",
+          "payPeriods": "26",
+          "pretaxDeductions": 6000
+        },
+        "output": {
+          "federalTax": 11250,
+          "stateTax": 1496,
+          "ficaTax": 5738,
+          "netPerPeriod": 1833,
+          "effectiveRate": 24.8
+        },
+        "explanation": "Um profissional solteiro ganhando R$75.000 anualmente com imposto estadual da Califórnia e períodos de pagamento quinzenais teria um salário líquido de aproximadamente R$1.833 por período de pagamento após todos os impostos e deduções."
+      },
+      {
+        "title": "Casal Casado Renda Mensal",
+        "input": {
+          "filingStatus": "married-joint",
+          "annualIncome": 95000,
+          "state": "new-york",
+          "payPeriods": "12",
+          "pretaxDeductions": 8000
+        },
+        "output": {
+          "federalTax": 12750,
+          "stateTax": 1123,
+          "ficaTax": 7283,
+          "netPerPeriod": 6025,
+          "effectiveRate": 23.1
+        },
+        "explanation": "Um casal casado com R$95.000 de renda anual em Nova York teria aproximadamente R$6.025 em salário líquido mensal, representando uma taxa de imposto efetiva de 23.1%."
+      },
+      {
+        "title": "Residente do Texas (Sem Imposto Estadual)",
+        "input": {
+          "filingStatus": "single",
+          "annualIncome": 55000,
+          "state": "texas",
+          "payPeriods": "24",
+          "pretaxDeductions": 3000
+        },
+        "output": {
+          "federalTax": 6750,
+          "stateTax": 0,
+          "ficaTax": 4218,
+          "netPerPeriod": 1815,
+          "effectiveRate": 19.8
+        },
+        "explanation": "O Texas não tem imposto estadual de renda, então este trabalhador solteiro mantém mais salário líquido. Com R$55.000 de renda anual e períodos de pagamento semi-mensais, o pagamento líquido é de aproximadamente R$1.815 por período."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Contra-Cheque",
+        "slug": "paycheck-calculator",
+        "description": "Calcule o pagamento líquido após retenções."
+      },
+      {
+        "name": "Calculadora de Poupança",
+        "slug": "savings-calculator",
+        "description": "Planeje suas economias e investimentos."
+      },
+      {
+        "name": "Calculadora de Aposentadoria",
+        "slug": "retirement-calculator",
+        "description": "Planeje suas economias para aposentadoria."
+      }
+    ]
+  },
+  "fr": {
+    "title": "Calculatrice d'Impôt",
+    "seoTitle": "Calculatrice d'Impôt - Calculer l'Impôt sur le Revenu et Salaire Net",
+    "metaDescription": "Calculez votre impôt sur le revenu, salaire net et responsabilité fiscale. Estimez les impôts fédéraux et étatiques pour une planification salariale précise.",
+    "keywords": [
+      "calculatrice impôt",
+      "calculatrice impôt revenu",
+      "calculatrice salaire net",
+      "calculatrice responsabilité fiscale",
+      "calculatrice impôt salaire"
+    ],
+    "longTailKeywords": [
+      "comment calculer le salaire net après impôts",
+      "calculatrice d'impôt pour employés salariés",
+      "quel est mon paiement net après impôts",
+      "calculatrice d'impôt avec déductions et exemptions",
+      "combien d'impôts paierai-je sur mon salaire",
+      "calculatrice d'impôts fédéraux et étatiques",
+      "convertisseur salaire horaire avec impôts",
+      "comment calculer les impôts de paie",
+      "calculatrice de remboursement d'impôt pour l'année prochaine",
+      "quel pourcentage de mon salaire va aux impôts"
+    ],
+    "slug": "tax-calculator",
+    "category": "Financial",
+    "difficulty": "Advanced",
+    "tags": [
+      "impôts",
+      "revenu",
+      "salaire",
+      "impôt fédéral",
+      "impôt étatique",
+      "salaire net",
+      "planification fiscale"
+    ],
+    "description": "Calculez votre responsabilité fiscale sur le revenu et salaire net avec notre calculatrice complète d'impôts. Cet outil vous aide à estimer les impôts fédéraux sur le revenu, les impôts étatiques et les contributions à la Sécurité Sociale/Medicare pour déterminer votre paiement net après impôts. Parfait pour la planification salariale, la préparation fiscale et la compréhension de votre charge fiscale générale.",
+    "summary": "Estimez la responsabilité fiscale sur le revenu et salaire net.",
+    "instructions": [
+      "Sélectionnez votre statut de déclaration fiscale (Célibataire, Marié Déclarant Conjointement, etc.)",
+      "Entrez votre revenu brut annuel ou salaire horaire",
+      "Entrez le nombre de périodes de paiement par an si vous calculez le salaire net",
+      "Entrez toute déduction pré-impôt (contributions 401k, assurance santé, etc.)",
+      "La calculatrice estimera votre impôt fédéral, impôt étatique (le cas échéant) et salaire net"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "filingStatus",
+          "label": "Statut de Déclaration",
+          "type": "select",
+          "options": [
+            {
+              "value": "single",
+              "label": "Célibataire"
+            },
+            {
+              "value": "married-joint",
+              "label": "Marié Déclarant Conjointement"
+            },
+            {
+              "value": "married-separate",
+              "label": "Marié Déclarant Séparément"
+            },
+            {
+              "value": "head-household",
+              "label": "Chef de Famille"
+            }
+          ],
+          "default": "single"
+        },
+        {
+          "name": "annualIncome",
+          "label": "Revenu Brut Annuel ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "state",
+          "label": "État (Optionnel)",
+          "type": "select",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "Aucun Impôt État"
+            },
+            {
+              "value": "california",
+              "label": "Californie (13.3%)"
+            },
+            {
+              "value": "new-york",
+              "label": "New York (8.82%)"
+            },
+            {
+              "value": "texas",
+              "label": "Texas (Aucun Impôt sur le Revenu)"
+            },
+            {
+              "value": "florida",
+              "label": "Floride (Aucun Impôt sur le Revenu)"
+            }
+          ]
+        },
+        {
+          "name": "payPeriods",
+          "label": "Périodes de Paiement par An",
+          "type": "select",
+          "options": [
+            {
+              "value": "52",
+              "label": "Hebdomadaire (52)"
+            },
+            {
+              "value": "26",
+              "label": "Bi-hebdomadaire (26)"
+            },
+            {
+              "value": "24",
+              "label": "Semi-mensuel (24)"
+            },
+            {
+              "value": "12",
+              "label": "Mensuel (12)"
+            }
+          ],
+          "default": "26"
+        },
+        {
+          "name": "pretaxDeductions",
+          "label": "Déductions Pré-Impot ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 50
+        }
+      ],
+      "formula": "Impôt Fédéral = (Revenu Imposable × Taux d'Imposition) - Déduction Standard; Impôt État = Impôt Fédéral × Taux État; Salaire Net = Salaire Brut - Impôt Fédéral - Impôt État - FICA",
+      "output": {
+        "label": "Salaire Net Annuel",
+        "default": "Entrez les détails de revenu ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Impôt Fédéral sur le Revenu",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impôt État sur le Revenu",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impôts FICA (SS + Medicare)",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "Paiement Net par Période",
+          "field": "netPerPeriod",
+          "format": "currency"
+        },
+        {
+          "label": "Taux d'Imposition Effectif",
+          "field": "effectiveRate",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "TaxCalculator"
+    },
+    "examples": [
+      {
+        "title": "Professionnel Célibataire Salaire Annuel",
+        "input": {
+          "filingStatus": "single",
+          "annualIncome": 75000,
+          "state": "california",
+          "payPeriods": "26",
+          "pretaxDeductions": 6000
+        },
+        "output": {
+          "federalTax": 11250,
+          "stateTax": 1496,
+          "ficaTax": 5738,
+          "netPerPeriod": 1833,
+          "effectiveRate": 24.8
+        },
+        "explanation": "Un professionnel célibataire gagnant 75 000 $ annuellement avec l'impôt étatique de Californie et des périodes de paiement bi-hebdomadaires aurait un salaire net d'environ 1 833 $ par période de paiement après tous les impôts et déductions."
+      },
+      {
+        "title": "Couple Marié Revenu Mensuel",
+        "input": {
+          "filingStatus": "married-joint",
+          "annualIncome": 95000,
+          "state": "new-york",
+          "payPeriods": "12",
+          "pretaxDeductions": 8000
+        },
+        "output": {
+          "federalTax": 12750,
+          "stateTax": 1123,
+          "ficaTax": 7283,
+          "netPerPeriod": 6025,
+          "effectiveRate": 23.1
+        },
+        "explanation": "Un couple marié avec 95 000 $ de revenu annuel à New York aurait environ 6 025 $ de salaire net mensuel, représentant un taux d'imposition effectif de 23.1 %."
+      },
+      {
+        "title": "Résident du Texas (Aucun Impôt État)",
+        "input": {
+          "filingStatus": "single",
+          "annualIncome": 55000,
+          "state": "texas",
+          "payPeriods": "24",
+          "pretaxDeductions": 3000
+        },
+        "output": {
+          "federalTax": 6750,
+          "stateTax": 0,
+          "ficaTax": 4218,
+          "netPerPeriod": 1815,
+          "effectiveRate": 19.8
+        },
+        "explanation": "Le Texas n'a pas d'impôt sur le revenu étatique, donc ce travailleur célibataire garde plus de salaire net. Avec 55 000 $ de revenu annuel et des périodes de paiement semi-mensuelles, le paiement net est d'environ 1 815 $ par période."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice de Paie",
+        "slug": "paycheck-calculator",
+        "description": "Calculez le paiement net après retenues."
+      },
+      {
+        "name": "Calculatrice d'Épargne",
+        "slug": "savings-calculator",
+        "description": "Planifiez vos épargnes et investissements."
+      },
+      {
+        "name": "Calculatrice de Retraite",
+        "slug": "retirement-calculator",
+        "description": "Planifiez vos épargnes-retraite."
+      }
+    ]
+  }
+}

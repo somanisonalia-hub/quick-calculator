@@ -1,0 +1,938 @@
+{
+  "en": {
+    "title": "Net Income Calculator",
+    "seoTitle": "Net Income Calculator - Calculate Take Home Pay After Taxes",
+    "metaDescription": "Calculate your net income and take-home pay after federal, state, and FICA taxes. Free annual income calculator for tax planning and salary analysis.",
+    "keywords": [
+      "net income calculator",
+      "take home pay calculator",
+      "after tax income calculator",
+      "annual net income",
+      "tax calculator net pay",
+      "income after taxes calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate net income from gross income",
+      "what is my net income after taxes",
+      "net income calculator with federal and state taxes",
+      "calculate take home pay from annual salary",
+      "annual income tax calculator",
+      "how much taxes do I pay on my income",
+      "net income after federal state and social security taxes",
+      "effective tax rate calculator",
+      "how to calculate taxable income",
+      "gross to net income conversion"
+    ],
+    "slug": "net-income-calculator",
+    "category": "Financial",
+    "calculatorComponent": "NetIncomeCalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "net income",
+      "take home pay",
+      "taxes",
+      "annual income",
+      "federal tax",
+      "state tax",
+      "FICA",
+      "tax planning"
+    ],
+    "summary": "Calculate your net income after all taxes and deductions from gross annual income.",
+    "description": "Comprehensive net income calculator that determines your take-home pay after federal income tax, state income tax, Social Security, Medicare, and other deductions. Perfect for salary planning, tax estimation, and understanding your true earning power.",
+    "instructions": [
+      "Enter your gross annual income",
+      "Select your filing status (single, married, etc.)",
+      "Enter number of dependents",
+      "Choose your state for accurate state tax calculations",
+      "Select tax year for current tax brackets",
+      "View your detailed tax breakdown and net income"
+    ],
+    "inputs": [
+      {
+        "name": "grossIncome",
+        "label": "Gross Annual Income ($)",
+        "type": "number",
+        "default": 75000,
+        "min": 0,
+        "max": 10000000,
+        "step": 1000,
+        "unit": "$"
+      },
+      {
+        "name": "filingStatus",
+        "label": "Filing Status",
+        "type": "select",
+        "default": "single",
+        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+      },
+      {
+        "name": "dependents",
+        "label": "Number of Dependents",
+        "type": "number",
+        "default": 0,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "dependents"
+      },
+      {
+        "name": "state",
+        "label": "State",
+        "type": "select",
+        "default": "CA",
+        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+      },
+      {
+        "name": "taxYear",
+        "label": "Tax Year",
+        "type": "select",
+        "default": "2024",
+        "options": ["2024", "2023", "2022"]
+      }
+    ],
+    "formula": "Taxable Income = Gross Income - Standard Deduction - (Dependents × Dependent Exemption)\nFederal Tax = Calculate using tax brackets for filing status\nFICA Tax = (Social Security 6.2% + Medicare 1.45%) × Gross Income\nState Tax = State-specific tax calculation\nNet Income = Gross Income - Federal Tax - State Tax - FICA Tax",
+    "output": {
+      "label": "Net Annual Income",
+      "default": "$0.00",
+      "format": "currency",
+      "unit": "$"
+    },
+    "additionalOutputs": [
+      {
+        "name": "federalTax",
+        "label": "Federal Income Tax",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "stateTax",
+        "label": "State Income Tax",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "ficaTax",
+        "label": "FICA Taxes (Social Security + Medicare)",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "effectiveTaxRate",
+        "label": "Effective Tax Rate",
+        "default": "0.00%",
+        "format": "percentage",
+        "unit": "%"
+      },
+      {
+        "name": "taxableIncome",
+        "label": "Taxable Income",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Single Filer, California",
+        "inputs": {
+          "grossIncome": 75000,
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "CA",
+          "taxYear": "2024"
+        },
+        "outputs": {
+          "netIncome": 54825,
+          "federalTax": 10250,
+          "stateTax": 4875,
+          "ficaTax": 5550,
+          "effectiveTaxRate": 26.8,
+          "taxableIncome": 61550
+        }
+      },
+      {
+        "title": "Married Filing Jointly, Texas",
+        "inputs": {
+          "grossIncome": 120000,
+          "filingStatus": "married_filing_jointly",
+          "dependents": 2,
+          "state": "TX",
+          "taxYear": "2024"
+        },
+        "outputs": {
+          "netIncome": 89700,
+          "federalTax": 16200,
+          "stateTax": 0,
+          "ficaTax": 8880,
+          "effectiveTaxRate": 20.2,
+          "taxableIncome": 94600
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "paycheck-calculator",
+      "tax-calculator",
+      "salary-calculator",
+      "hourly-to-salary-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate your net income and take-home pay with our comprehensive Net Income Calculator. Understanding your true earnings after taxes is crucial for financial planning, salary negotiations, and retirement planning. Our calculator provides detailed breakdowns of federal, state, and payroll taxes to give you a complete picture of your after-tax income.",
+      "benefits": [
+        "Calculate accurate net income from gross annual salary",
+        "Understand your complete tax burden including federal, state, and FICA taxes",
+        "Compare different filing statuses and states",
+        "Plan your finances with realistic take-home pay estimates",
+        "Make informed decisions about salary offers and tax planning",
+        "See the impact of dependents and deductions on your taxes"
+      ],
+      "howToUse": [
+        "Enter your gross annual income before any deductions",
+        "Select your tax filing status (single, married filing jointly, etc.)",
+        "Enter the number of dependents you claim",
+        "Choose your state of residence for accurate state tax calculations",
+        "Select the tax year to use current tax brackets and rates",
+        "Review your complete tax breakdown and net income results"
+      ],
+      "formulaExplanation": "Net income calculation follows standard US tax procedures: First, calculate taxable income by subtracting standard deductions and dependent exemptions from gross income. Then apply federal tax brackets based on filing status, calculate FICA taxes (Social Security at 6.2% + Medicare at 1.45%), and apply state-specific tax rates. The final net income is gross income minus all taxes and deductions.",
+      "examples": [
+        "A single filer in California earning $75,000 annually would pay approximately $10,250 in federal tax, $4,875 in state tax, and $5,550 in FICA taxes, leaving $54,825 in net income",
+        "A married couple filing jointly in Texas with $120,000 income and 2 dependents would pay $16,200 in federal tax, $0 in state tax (Texas has no state income tax), and $8,880 in FICA taxes, resulting in $89,700 net income"
+      ],
+      "whoShouldUse": "Employees evaluating salary offers, freelancers calculating their true earnings, small business owners understanding employee compensation costs, tax professionals, financial advisors, and anyone wanting to understand their complete tax situation and take-home pay.",
+      "importantNotes": "This calculator provides estimates based on 2024 tax brackets and standard deductions. Actual taxes may vary based on additional income, deductions, credits, and local tax laws. Consult a tax professional for personalized tax advice. FICA taxes have income caps for Social Security ($168,600 in 2024).",
+      "relatedTools": [
+        "Paycheck Calculator - Calculate take-home pay from a single paycheck",
+        "Tax Calculator - Estimate detailed tax liability and brackets",
+        "Salary Calculator - Calculate total compensation packages",
+        "Hourly to Salary Calculator - Convert hourly wages to annual salary"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between gross income and net income?",
+          "answer": "Gross income is your total earnings before any taxes or deductions are taken out. Net income (take-home pay) is what you actually receive after federal income tax, state income tax, Social Security, Medicare, and other deductions are subtracted."
+        },
+        {
+          "question": "What is taxable income?",
+          "answer": "Taxable income is your gross income minus deductions and exemptions. For most people, this includes the standard deduction ($14,600 for single filers in 2024) and dependent exemptions. Only the taxable income amount is subject to federal and state income taxes."
+        },
+        {
+          "question": "What are FICA taxes?",
+          "answer": "FICA (Federal Insurance Contributions Act) taxes include Social Security tax (6.2%) and Medicare tax (1.45%), for a total of 7.65%. These are payroll taxes that fund Social Security retirement benefits and Medicare healthcare. Social Security tax applies only up to an income cap ($168,600 in 2024)."
+        },
+        {
+          "question": "How do dependents affect my taxes?",
+          "answer": "Dependents can reduce your taxable income through exemptions or credits. In 2024, each dependent exemption reduces your taxable income by $4,700. The Child Tax Credit provides up to $2,000 per qualifying child, and there are additional credits for education and other dependents."
+        },
+        {
+          "question": "Why do states have different tax rates?",
+          "answer": "Eight states have no state income tax (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Other states have progressive tax systems with rates ranging from about 3% to 13.3%, depending on income level and state-specific tax structures."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Ingreso Neto",
+    "seoTitle": "Calculadora de Ingreso Neto - Calcula Ingreso Después de Impuestos",
+    "metaDescription": "Calcula tu ingreso neto y salario después de impuestos federales, estatales y FICA. Calculadora gratuita de ingresos anuales para planificación fiscal y análisis salarial.",
+    "keywords": [
+      "calculadora ingreso neto",
+      "calculadora salario después impuestos",
+      "calculadora ingreso después impuestos",
+      "ingreso neto anual",
+      "calculadora impuestos ingreso neto",
+      "ingreso después impuestos calculadora"
+    ],
+    "longTailKeywords": [
+      "cómo calcular ingreso neto desde ingreso bruto",
+      "cuál es mi ingreso neto después de impuestos",
+      "calculadora ingreso neto con impuestos federales y estatales",
+      "calcular salario después impuestos desde salario anual",
+      "calculadora impuesto ingreso anual",
+      "cuántos impuestos pago en mi ingreso",
+      "ingreso neto después de impuestos federales estatales y seguridad social",
+      "calculadora tasa efectiva impuestos",
+      "cómo calcular ingreso gravable",
+      "conversión ingreso bruto a neto"
+    ],
+    "slug": "net-income-calculator",
+    "category": "Financial",
+    "calculatorComponent": "NetIncomeCalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "ingreso neto",
+      "salario después impuestos",
+      "impuestos",
+      "ingreso anual",
+      "impuesto federal",
+      "impuesto estatal",
+      "FICA",
+      "planificación fiscal"
+    ],
+    "summary": "Calcula tu ingreso neto después de todos los impuestos y deducciones desde ingreso bruto anual.",
+    "description": "Calculadora completa de ingreso neto que determina tu salario después de impuesto federal a la renta, impuesto estatal a la renta, Seguro Social, Medicare y otras deducciones. Perfecta para planificación salarial, estimación de impuestos y entender tu verdadero poder adquisitivo.",
+    "instructions": [
+      "Ingresa tu ingreso bruto anual",
+      "Selecciona tu estado civil (soltero, casado, etc.)",
+      "Ingresa número de dependientes",
+      "Elige tu estado para cálculos precisos de impuesto estatal",
+      "Selecciona año fiscal para categorías de impuestos actuales",
+      "Ve tu desglose detallado de impuestos e ingreso neto"
+    ],
+    "inputs": [
+      {
+        "name": "grossIncome",
+        "label": "Ingreso Bruto Anual ($)",
+        "type": "number",
+        "default": 75000,
+        "min": 0,
+        "max": 10000000,
+        "step": 1000,
+        "unit": "$"
+      },
+      {
+        "name": "filingStatus",
+        "label": "Estado Civil",
+        "type": "select",
+        "default": "single",
+        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+      },
+      {
+        "name": "dependents",
+        "label": "Número de Dependientes",
+        "type": "number",
+        "default": 0,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "dependientes"
+      },
+      {
+        "name": "state",
+        "label": "Estado",
+        "type": "select",
+        "default": "CA",
+        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+      },
+      {
+        "name": "taxYear",
+        "label": "Año Fiscal",
+        "type": "select",
+        "default": "2024",
+        "options": ["2024", "2023", "2022"]
+      }
+    ],
+    "formula": "Ingreso Gravable = Ingreso Bruto - Deducción Estándar - (Dependientes × Exención Dependiente)\nImpuesto Federal = Calcular usando categorías de impuestos para estado civil\nImpuesto FICA = (Seguro Social 6.2% + Medicare 1.45%) × Ingreso Bruto\nImpuesto Estatal = Cálculo específico del estado\nIngreso Neto = Ingreso Bruto - Impuesto Federal - Impuesto Estatal - Impuesto FICA",
+    "output": {
+      "label": "Ingreso Neto Anual",
+      "default": "$0.00",
+      "format": "currency",
+      "unit": "$"
+    },
+    "additionalOutputs": [
+      {
+        "name": "federalTax",
+        "label": "Impuesto Federal a la Renta",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "stateTax",
+        "label": "Impuesto Estatal a la Renta",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "ficaTax",
+        "label": "Impuestos FICA (Seguro Social + Medicare)",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      },
+      {
+        "name": "effectiveTaxRate",
+        "label": "Tasa Efectiva de Impuestos",
+        "default": "0.00%",
+        "format": "percentage",
+        "unit": "%"
+      },
+      {
+        "name": "taxableIncome",
+        "label": "Ingreso Gravable",
+        "default": "$0.00",
+        "format": "currency",
+        "unit": "$"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Soltero, California",
+        "inputs": {
+          "grossIncome": 75000,
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "CA",
+          "taxYear": "2024"
+        },
+        "outputs": {
+          "netIncome": 54825,
+          "federalTax": 10250,
+          "stateTax": 4875,
+          "ficaTax": 5550,
+          "effectiveTaxRate": 26.8,
+          "taxableIncome": 61550
+        }
+      },
+      {
+        "title": "Casados Declarando Conjuntamente, Texas",
+        "inputs": {
+          "grossIncome": 120000,
+          "filingStatus": "married_filing_jointly",
+          "dependents": 2,
+          "state": "TX",
+          "taxYear": "2024"
+        },
+        "outputs": {
+          "netIncome": 89700,
+          "federalTax": 16200,
+          "stateTax": 0,
+          "ficaTax": 8880,
+          "effectiveTaxRate": 20.2,
+          "taxableIncome": 94600
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "paycheck-calculator",
+      "tax-calculator",
+      "salary-calculator",
+      "hourly-to-salary-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcula tu ingreso neto y salario después de impuestos con nuestra completa Calculadora de Ingreso Neto. Entender tus verdaderas ganancias después de impuestos es crucial para planificación financiera, negociaciones salariales y planificación de jubilación. Nuestra calculadora proporciona desgloses detallados de impuestos federales, estatales y de nómina para darte un panorama completo de tu ingreso después de impuestos.",
+      "benefits": [
+        "Calcula ingreso neto preciso desde salario bruto anual",
+        "Entiende tu carga completa de impuestos incluyendo federales, estatales y FICA",
+        "Compara diferentes estados civiles y estados",
+        "Planea tus finanzas con estimaciones realistas de salario después de impuestos",
+        "Toma decisiones informadas sobre ofertas salariales y planificación fiscal",
+        "Ve el impacto de dependientes y deducciones en tus impuestos"
+      ],
+      "howToUse": [
+        "Ingresa tu ingreso bruto anual antes de cualquier deducción",
+        "Selecciona tu estado civil (soltero, casado declarando conjuntamente, etc.)",
+        "Ingresa el número de dependientes que reclamas",
+        "Elige tu estado de residencia para cálculos precisos de impuesto estatal",
+        "Selecciona el año fiscal para usar categorías y tasas de impuestos actuales",
+        "Revisa tu desglose completo de impuestos y resultados de ingreso neto"
+      ],
+      "formulaExplanation": "El cálculo de ingreso neto sigue procedimientos fiscales estándar de EE.UU.: Primero, calcula ingreso gravable restando deducciones estándar y exenciones dependientes del ingreso bruto. Luego aplica categorías de impuesto federal basado en estado civil, calcula impuestos FICA (Seguro Social al 6.2% + Medicare al 1.45%), y aplica tasas específicas del estado. El ingreso neto final es ingreso bruto menos todos los impuestos y deducciones.",
+      "examples": [
+        "Un soltero en California ganando $75,000 anualmente pagaría aproximadamente $10,250 en impuesto federal, $4,875 en impuesto estatal, y $5,550 en impuestos FICA, dejando $54,825 en ingreso neto",
+        "Una pareja casada declarando conjuntamente en Texas con ingreso de $120,000 y 2 dependientes pagaría $16,200 en impuesto federal, $0 en impuesto estatal (Texas no tiene impuesto estatal a la renta), y $8,880 en impuestos FICA, resultando en $89,700 de ingreso neto"
+      ],
+      "whoShouldUse": "Empleados evaluando ofertas salariales, freelancers calculando sus verdaderas ganancias, dueños de pequeños negocios entendiendo costos de compensación de empleados, profesionales fiscales, asesores financieros, y cualquiera queriendo entender su situación fiscal completa y salario después de impuestos.",
+      "importantNotes": "Esta calculadora proporciona estimaciones basadas en categorías de impuestos de 2024 y deducciones estándar. Los impuestos reales pueden variar basado en ingreso adicional, deducciones, créditos, y leyes fiscales locales. Consulta un profesional fiscal para consejo fiscal personalizado. Los impuestos FICA tienen límites de ingreso para Seguro Social ($168,600 en 2024).",
+      "relatedTools": [
+        "Calculadora de Nómina - Calcula salario después de impuestos de un solo pago",
+        "Calculadora de Impuestos - Estima responsabilidad fiscal detallada y categorías",
+        "Calculadora de Salario - Calcula paquetes de compensación total",
+        "Calculadora de Horas a Salario - Convierte salarios por hora a anual"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre ingreso bruto e ingreso neto?",
+          "answer": "El ingreso bruto es tus ganancias totales antes de que cualquier impuesto o deducción sea retirado. El ingreso neto (salario después de impuestos) es lo que realmente recibes después de que impuesto federal a la renta, impuesto estatal a la renta, Seguro Social, Medicare, y otras deducciones son sustraídas."
+        },
+        {
+          "question": "¿Qué es el ingreso gravable?",
+          "answer": "El ingreso gravable es tu ingreso bruto menos deducciones y exenciones. Para la mayoría de personas, esto incluye la deducción estándar ($14,600 para solteros en 2024) y exenciones dependientes. Solo el monto de ingreso gravable está sujeto a impuestos federales y estatales a la renta."
+        },
+        {
+          "question": "¿Qué son los impuestos FICA?",
+          "answer": "FICA (Federal Insurance Contributions Act) incluye impuesto de Seguro Social (6.2%) e impuesto de Medicare (1.45%), para un total del 7.65%. Estos son impuestos de nómina que financian beneficios de jubilación de Seguro Social y atención médica Medicare. El impuesto de Seguro Social aplica solo hasta un límite de ingreso ($168,600 en 2024)."
+        },
+        {
+          "question": "¿Cómo afectan los dependientes a mis impuestos?",
+          "answer": "Los dependientes pueden reducir tu ingreso gravable a través de exenciones o créditos. En 2024, cada exención dependiente reduce tu ingreso gravable en $4,700. El Crédito Fiscal por Hijos proporciona hasta $2,000 por hijo calificado, y hay créditos adicionales para educación y otros dependientes."
+        },
+        {
+          "question": "¿Por qué los estados tienen diferentes tasas de impuestos?",
+          "answer": "Ocho estados no tienen impuesto estatal a la renta (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Otros estados tienen sistemas progresivos con tasas que van aproximadamente del 3% al 13.3%, dependiendo del nivel de ingreso y estructuras fiscales específicas del estado."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Renda Líquida",
+    "seoTitle": "Calculadora de Renda Líquida - Calcula Renda Após Impostos",
+    "metaDescription": "Calcule sua renda líquida e salário após impostos federais, estaduais e FICA. Calculadora gratuita de renda anual para planejamento fiscal e análise salarial.",
+    "keywords": [
+      "calculadora renda líquida",
+      "calculadora salário após impostos",
+      "calculadora renda após impostos",
+      "renda líquida anual",
+      "calculadora impostos renda líquida",
+      "renda após impostos calculadora"
+    ],
+    "longTailKeywords": [
+      "como calcular renda líquida a partir da renda bruta",
+      "qual é minha renda líquida após impostos",
+      "calculadora renda líquida com impostos federais e estaduais",
+      "calcular salário após impostos a partir do salário anual",
+      "calculadora imposto renda anual",
+      "quantos impostos pago na minha renda",
+      "renda líquida após impostos federais estaduais e previdência social",
+      "calculadora taxa efetiva impostos",
+      "como calcular renda tributável",
+      "conversão renda bruta para líquida"
+    ],
+    "slug": "net-income-calculator",
+    "category": "Financial",
+    "calculatorComponent": "NetIncomeCalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "renda líquida",
+      "salário após impostos",
+      "impostos",
+      "renda anual",
+      "imposto federal",
+      "imposto estadual",
+      "FICA",
+      "planejamento fiscal"
+    ],
+    "summary": "Calcule sua renda líquida após todos os impostos e deduções da renda bruta anual.",
+    "description": "Calculadora completa de renda líquida que determina seu salário após imposto federal de renda, imposto estadual de renda, Previdência Social, Medicare e outras deduções. Perfeita para planejamento salarial, estimativa de impostos e entender seu verdadeiro poder aquisitivo.",
+    "instructions": [
+      "Digite sua renda bruta anual",
+      "Selecione seu estado civil (solteiro, casado, etc.)",
+      "Digite número de dependentes",
+      "Escolha seu estado para cálculos precisos de imposto estadual",
+      "Selecione ano fiscal para faixas de impostos atuais",
+      "Veja sua detalhada quebra de impostos e renda líquida"
+    ],
+    "inputs": [
+      {
+        "name": "grossIncome",
+        "label": "Renda Bruta Anual (R$)",
+        "type": "number",
+        "default": 75000,
+        "min": 0,
+        "max": 10000000,
+        "step": 1000,
+        "unit": "R$"
+      },
+      {
+        "name": "filingStatus",
+        "label": "Estado Civil",
+        "type": "select",
+        "default": "single",
+        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+      },
+      {
+        "name": "dependents",
+        "label": "Número de Dependentes",
+        "type": "number",
+        "default": 0,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "dependentes"
+      },
+      {
+        "name": "state",
+        "label": "Estado",
+        "type": "select",
+        "default": "CA",
+        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+      },
+      {
+        "name": "taxYear",
+        "label": "Ano Fiscal",
+        "type": "select",
+        "default": "2024",
+        "options": ["2024", "2023", "2022"]
+      }
+    ],
+    "formula": "Renda Tributável = Renda Bruta - Dedução Padrão - (Dependentes × Isenção Dependente)\nImposto Federal = Calcular usando faixas de impostos para estado civil\nImposto FICA = (Previdência Social 6.2% + Medicare 1.45%) × Renda Bruta\nImposto Estadual = Cálculo específico do estado\nRenda Líquida = Renda Bruta - Impuesto Federal - Impuesto Estadual - Impuesto FICA",
+    "output": {
+      "label": "Renda Líquida Anual",
+      "default": "R$0.00",
+      "format": "currency",
+      "unit": "R$"
+    },
+    "additionalOutputs": [
+      {
+        "name": "federalTax",
+        "label": "Imposto Federal de Renda",
+        "default": "R$0.00",
+        "format": "currency",
+        "unit": "R$"
+      },
+      {
+        "name": "stateTax",
+        "label": "Imposto Estadual de Renda",
+        "default": "R$0.00",
+        "format": "currency",
+        "unit": "R$"
+      },
+      {
+        "name": "ficaTax",
+        "label": "Impostos FICA (Previdência Social + Medicare)",
+        "default": "R$0.00",
+        "format": "currency",
+        "unit": "R$"
+      },
+      {
+        "name": "effectiveTaxRate",
+        "label": "Taxa Efetiva de Impostos",
+        "default": "0.00%",
+        "format": "percentage",
+        "unit": "%"
+      },
+      {
+        "name": "taxableIncome",
+        "label": "Renda Tributável",
+        "default": "R$0.00",
+        "format": "currency",
+        "unit": "R$"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Solteiro, California",
+        "inputs": {
+          "grossIncome": 75000,
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "CA",
+          "taxYear": "2024"
+        },
+        "outputs": {
+          "netIncome": 54825,
+          "federalTax": 10250,
+          "stateTax": 4875,
+          "ficaTax": 5550,
+          "effectiveTaxRate": 26.8,
+          "taxableIncome": 61550
+        }
+      },
+      {
+        "title": "Casados Declarando em Conjunto, Texas",
+        "inputs": {
+          "grossIncome": 120000,
+          "filingStatus": "married_filing_jointly",
+          "dependents": 2,
+          "state": "TX",
+          "taxYear": "2024"
+        },
+        "outputs": {
+          "netIncome": 89700,
+          "federalTax": 16200,
+          "stateTax": 0,
+          "ficaTax": 8880,
+          "effectiveTaxRate": 20.2,
+          "taxableIncome": 94600
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "paycheck-calculator",
+      "tax-calculator",
+      "salary-calculator",
+      "hourly-to-salary-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule sua renda líquida e salário após impostos com nossa completa Calculadora de Renda Líquida. Entender suas verdadeiras ganhos após impostos é crucial para planejamento financeiro, negociações salariais e planejamento de aposentadoria. Nossa calculadora fornece detalhamentos de impostos federais, estaduais e de folha de pagamento para dar a você um panorama completo de sua renda após impostos.",
+      "benefits": [
+        "Calcule renda líquida precisa a partir do salário bruto anual",
+        "Entenda sua carga completa de impostos incluindo federais, estaduais e FICA",
+        "Compare diferentes estados civis e estados",
+        "Planeje suas finanças com estimativas realistas de salário após impostos",
+        "Tome decisões informadas sobre ofertas salariais e planejamento fiscal",
+        "Veja o impacto de dependentes e deduções em seus impostos"
+      ],
+      "howToUse": [
+        "Digite sua renda bruta anual antes de qualquer dedução",
+        "Selecione seu estado civil (solteiro, casado declarando em conjunto, etc.)",
+        "Digite o número de dependentes que você reclama",
+        "Escolha seu estado de residência para cálculos precisos de imposto estadual",
+        "Selecione o ano fiscal para usar faixas e taxas de impostos atuais",
+        "Revise sua quebra completa de impostos e resultados de renda líquida"
+      ],
+      "formulaExplanation": "Cálculo de renda líquida segue procedimentos fiscais padrão dos EUA: Primeiro, calcula renda tributável subtraindo deduções padrão e isenções dependentes da renda bruta. Então aplica faixas de imposto federal baseado em estado civil, calcula impostos FICA (Previdência Social a 6.2% + Medicare a 1.45%), e aplica taxas específicas do estado. A renda líquida final é renda bruta menos todos os impostos e deduções.",
+      "examples": [
+        "Um solteiro na Califórnia ganhando R$75.000 anualmente pagaria aproximadamente R$10.250 em imposto federal, R$4.875 em imposto estadual, e R$5.550 em impostos FICA, deixando R$54.825 em renda líquida",
+        "Um casal casado declarando em conjunto no Texas com renda de R$120.000 e 2 dependentes pagaria R$16.200 em imposto federal, R$0 em imposto estadual (Texas não tem imposto estadual de renda), e R$8.880 em impostos FICA, resultando em R$89.700 de renda líquida"
+      ],
+      "whoShouldUse": "Funcionários avaliando ofertas salariais, freelancers calculando suas verdadeiras ganhos, donos de pequenos negócios entendendo custos de compensação de funcionários, profissionais fiscais, consultores financeiros, e qualquer pessoa querendo entender sua situação fiscal completa e salário após impostos.",
+      "importantNotes": "Esta calculadora fornece estimativas baseadas em faixas de impostos de 2024 e deduções padrão. Impostos reais podem variar baseado em renda adicional, deduções, créditos, e leis fiscais locais. Consulte um profissional fiscal para conselho fiscal personalizado. Impostos FICA têm limites de renda para Previdência Social (R$168.600 em 2024).",
+      "relatedTools": [
+        "Calculadora de Contracheque - Calcule salário após impostos de um único pagamento",
+        "Calculadora de Impostos - Estime responsabilidade fiscal detalhada e faixas",
+        "Calculadora de Salário - Calcule pacotes de compensação total",
+        "Calculadora de Horas para Salário - Converta salários por hora para anual"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre renda bruta e renda líquida?",
+          "answer": "Renda bruta é seus ganhos totais antes de quaisquer impostos ou deduções serem retirados. Renda líquida (salário após impostos) é o que você realmente recebe após imposto federal de renda, imposto estadual de renda, Previdência Social, Medicare, e outras deduções serem subtraídas."
+        },
+        {
+          "question": "O que é renda tributável?",
+          "answer": "Renda tributável é sua renda bruta menos deduções e isenções. Para a maioria das pessoas, isso inclui a dedução padrão (R$14.600 para solteiros em 2024) e isenções dependentes. Apenas o valor da renda tributável está sujeito a impostos federais e estaduais de renda."
+        },
+        {
+          "question": "O que são impostos FICA?",
+          "answer": "FICA (Federal Insurance Contributions Act) inclui imposto de Previdência Social (6.2%) e imposto de Medicare (1.45%), para um total de 7.65%. Estes são impostos de folha de pagamento que financiam benefícios de aposentadoria da Previdência Social e assistência médica Medicare. Imposto de Previdência Social aplica apenas até um limite de renda (R$168.600 em 2024)."
+        },
+        {
+          "question": "Como dependentes afetam meus impostos?",
+          "answer": "Dependentes podem reduzir sua renda tributável através de isenções ou créditos. Em 2024, cada isenção dependente reduz sua renda tributável em R$4.700. O Crédito Fiscal por Filho fornece até R$2.000 por filho qualificado, e há créditos adicionais para educação e outros dependentes."
+        },
+        {
+          "question": "Por que estados têm diferentes taxas de impostos?",
+          "answer": "Oito estados não têm imposto estadual de renda (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Outros estados têm sistemas progressivos com taxas variando de cerca de 3% a 13.3%, dependendo do nível de renda e estruturas fiscais específicas do estado."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Revenu Net",
+    "seoTitle": "Calculateur de Revenu Net - Calcule le Revenu Après Impôts",
+    "metaDescription": "Calculez votre revenu net et salaire après impôts fédéraux, étatiques et FICA. Calculateur gratuit de revenus annuels pour planification fiscale et analyse salariale.",
+    "keywords": [
+      "calculateur revenu net",
+      "calculateur salaire après impôts",
+      "calculateur revenu après impôts",
+      "revenu net annuel",
+      "calculateur impôts revenu net",
+      "revenu après impôts calculateur"
+    ],
+    "longTailKeywords": [
+      "comment calculer revenu net à partir du revenu brut",
+      "quel est mon revenu net après impôts",
+      "calculateur revenu net avec impôts fédéraux et étatiques",
+      "calculer salaire après impôts à partir du salaire annuel",
+      "calculateur impôt revenu annuel",
+      "combien d'impôts je paie sur mon revenu",
+      "revenu net après impôts fédéraux étatiques et sécurité sociale",
+      "calculateur taux effectif impôts",
+      "comment calculer revenu imposable",
+      "conversion revenu brut en net"
+    ],
+    "slug": "net-income-calculator",
+    "category": "Financial",
+    "calculatorComponent": "NetIncomeCalculator",
+    "difficulty": "Intermediate",
+    "tags": [
+      "revenu net",
+      "salaire après impôts",
+      "impôts",
+      "revenu annuel",
+      "impôt fédéral",
+      "impôt étatique",
+      "FICA",
+      "planification fiscale"
+    ],
+    "summary": "Calculez votre revenu net après tous les impôts et déductions du revenu brut annuel.",
+    "description": "Calculateur complet de revenu net qui détermine votre salaire après impôt fédéral sur le revenu, impôt étatique sur le revenu, Sécurité Sociale, Medicare et autres déductions. Parfait pour planification salariale, estimation d'impôts et comprendre votre véritable pouvoir d'achat.",
+    "instructions": [
+      "Entrez votre revenu brut annuel",
+      "Sélectionnez votre statut matrimonial (célibataire, marié, etc.)",
+      "Entrez nombre de personnes à charge",
+      "Choisissez votre état pour calculs précis d'impôt étatique",
+      "Sélectionnez l'année fiscale pour utiliser les tranches d'impôt actuelles",
+      "Consultez votre ventilation détaillée d'impôts et revenu net"
+    ],
+    "inputs": [
+      {
+        "name": "grossIncome",
+        "label": "Revenu Brut Annuel (€)",
+        "type": "number",
+        "default": 75000,
+        "min": 0,
+        "max": 10000000,
+        "step": 1000,
+        "unit": "€"
+      },
+      {
+        "name": "filingStatus",
+        "label": "Statut Matrimonial",
+        "type": "select",
+        "default": "single",
+        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+      },
+      {
+        "name": "dependents",
+        "label": "Nombre de Personnes à Charge",
+        "type": "number",
+        "default": 0,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "personnes à charge"
+      },
+      {
+        "name": "state",
+        "label": "État",
+        "type": "select",
+        "default": "CA",
+        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+      },
+      {
+        "name": "taxYear",
+        "label": "Année Fiscale",
+        "type": "select",
+        "default": "2024",
+        "options": ["2024", "2023", "2022"]
+      }
+    ],
+    "formula": "Revenu Imposable = Revenu Brut - Déduction Standard - (Personnes à Charge × Exemption Personne à Charge)\nImpôt Fédéral = Calculer en utilisant tranches d'impôt pour statut matrimonial\nImpôt FICA = (Sécurité Sociale 6.2% + Medicare 1.45%) × Revenu Brut\nImpôt État = Calcul spécifique de l'état\nRevenu Net = Revenu Brut - Impôt Fédéral - Impôt État - Impôt FICA",
+    "output": {
+      "label": "Revenu Net Annuel",
+      "default": "€0.00",
+      "format": "currency",
+      "unit": "€"
+    },
+    "additionalOutputs": [
+      {
+        "name": "federalTax",
+        "label": "Impôt Fédéral sur le Revenu",
+        "default": "€0.00",
+        "format": "currency",
+        "unit": "€"
+      },
+      {
+        "name": "stateTax",
+        "label": "Impôt État sur le Revenu",
+        "default": "€0.00",
+        "format": "currency",
+        "unit": "€"
+      },
+      {
+        "name": "ficaTax",
+        "label": "Impôts FICA (Sécurité Sociale + Medicare)",
+        "default": "€0.00",
+        "format": "currency",
+        "unit": "€"
+      },
+      {
+        "name": "effectiveTaxRate",
+        "label": "Taux Effectif d'Impôts",
+        "default": "0.00%",
+        "format": "percentage",
+        "unit": "%"
+      },
+      {
+        "name": "taxableIncome",
+        "label": "Revenu Imposable",
+        "default": "€0.00",
+        "format": "currency",
+        "unit": "€"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Célibataire, Californie",
+        "inputs": {
+          "grossIncome": 75000,
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "CA",
+          "taxYear": "2024"
+        },
+        "outputs": {
+          "netIncome": 54825,
+          "federalTax": 10250,
+          "stateTax": 4875,
+          "ficaTax": 5550,
+          "effectiveTaxRate": 26.8,
+          "taxableIncome": 61550
+        }
+      },
+      {
+        "title": "Mariés Déclarant Conjointement, Texas",
+        "inputs": {
+          "grossIncome": 120000,
+          "filingStatus": "married_filing_jointly",
+          "dependents": 2,
+          "state": "TX",
+          "taxYear": "2024"
+        },
+        "outputs": {
+          "netIncome": 89700,
+          "federalTax": 16200,
+          "stateTax": 0,
+          "ficaTax": 8880,
+          "effectiveTaxRate": 20.2,
+          "taxableIncome": 94600
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "paycheck-calculator",
+      "tax-calculator",
+      "salary-calculator",
+      "hourly-to-salary-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez votre revenu net et salaire après impôts avec notre Calculateur de Revenu Net complet. Comprendre vos véritables gains après impôts est crucial pour planification financière, négociations salariales et planification retraite. Notre calculateur fournit des ventilations détaillées d'impôts fédéraux, étatiques et de paie pour vous donner un panorama complet de votre revenu après impôts.",
+      "benefits": [
+        "Calculez revenu net précis à partir du salaire brut annuel",
+        "Comprenez votre charge fiscale complète incluant impôts fédéraux, étatiques et FICA",
+        "Comparez différents statuts matrimoniaux et états",
+        "Planifiez vos finances avec estimations réalistes de salaire après impôts",
+        "Prenez des décisions éclairées sur offres salariales et planification fiscale",
+        "Voyez l'impact de personnes à charge et déductions sur vos impôts"
+      ],
+      "howToUse": [
+        "Entrez votre revenu brut annuel avant toute déduction",
+        "Sélectionnez votre statut matrimonial (célibataire, marié déclarant conjointement, etc.)",
+        "Entrez le nombre de personnes à charge que vous réclamez",
+        "Choisissez votre état de résidence pour calculs précis d'impôt étatique",
+        "Sélectionnez l'année fiscale pour utiliser tranches et taux d'impôt actuels",
+        "Consultez votre ventilation complète d'impôts et résultats de revenu net"
+      ],
+      "formulaExplanation": "Calcul de revenu net suit procédures fiscales standard des États-Unis : D'abord, calculez revenu imposable en soustrayant déductions standard et exemptions personnes à charge du revenu brut. Puis appliquez tranches d'impôt fédéral basé sur statut matrimonial, calculez impôts FICA (Sécurité Sociale à 6.2% + Medicare à 1.45%), et appliquez taux spécifiques de l'état. Le revenu net final est revenu brut moins tous impôts et déductions.",
+      "examples": [
+        "Un célibataire en Californie gagnant €75.000 annuellement paierait environ €10.250 en impôt fédéral, €4.875 en impôt étatique, et €5.550 en impôts FICA, laissant €54.825 en revenu net",
+        "Un couple marié déclarant conjointement au Texas avec revenu de €120.000 et 2 personnes à charge paierait €16.200 en impôt fédéral, €0 en impôt étatique (Texas n'a pas d'impôt étatique sur le revenu), et €8.880 en impôts FICA, résultant en €89.700 de revenu net"
+      ],
+      "whoShouldUse": "Employés évaluant offres salariales, freelances calculant leurs véritables gains, propriétaires de petites entreprises comprenant coûts de compensation employé, professionnels fiscaux, conseillers financiers, et quiconque souhaitant comprendre sa situation fiscale complète et salaire après impôts.",
+      "importantNotes": "Ce calculateur fournit des estimations basées sur tranches d'impôt de 2024 et déductions standard. Les impôts réels peuvent varier selon revenu additionnel, déductions, crédits, et lois fiscales locales. Consultez un professionnel fiscal pour conseils fiscaux personnalisés. Les impôts FICA ont des limites de revenu pour Sécurité Sociale (€168.600 en 2024).",
+      "relatedTools": [
+        "Calculateur de Paie - Calculez salaire après impôts d'un seul paiement",
+        "Calculateur d'Impôts - Estimez responsabilité fiscale détaillée et tranches",
+        "Calculateur de Salaire - Calculez packages de compensation totale",
+        "Calculateur d'Heures en Salaire - Convertissez salaires horaires en annuel"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre revenu brut et revenu net ?",
+          "answer": "Le revenu brut est vos gains totaux avant que tout impôt ou déduction soit retiré. Le revenu net (salaire après impôts) est ce que vous recevez réellement après impôt fédéral sur le revenu, impôt étatique sur le revenu, Sécurité Sociale, Medicare, et autres déductions sont soustraites."
+        },
+        {
+          "question": "Qu'est-ce que le revenu imposable ?",
+          "answer": "Le revenu imposable est votre revenu brut moins déductions et exemptions. Pour la plupart des gens, cela inclut la déduction standard (€14.600 pour célibataires en 2024) et exemptions personnes à charge. Seule la valeur de revenu imposable est soumise aux impôts fédéraux et étatiques sur le revenu."
+        },
+        {
+          "question": "Qu'est-ce que les impôts FICA ?",
+          "answer": "FICA (Federal Insurance Contributions Act) inclut impôt Sécurité Sociale (6.2%) et impôt Medicare (1.45%), pour un total de 7.65%. Ce sont des impôts de paie qui financent prestations retraite Sécurité Sociale et soins médicaux Medicare. L'impôt Sécurité Sociale s'applique seulement jusqu'à une limite de revenu (€168.600 en 2024)."
+        },
+        {
+          "question": "Comment les personnes à charge affectent-elles vos impôts ?",
+          "answer": "Les personnes à charge peuvent réduire votre revenu imposable à travers exemptions ou crédits. En 2024, chaque exemption personne à charge réduit votre revenu imposable de €4.700. Le Crédit Fiscal Enfant fournit jusqu'à €2.000 par enfant qualifié, et il y a des crédits additionnels pour éducation et autres personnes à charge."
+        },
+        {
+          "question": "Pourquoi les états ont-ils des taux d'impôt différents ?",
+          "answer": "Huit états n'ont pas d'impôt étatique sur le revenu (Texas, Floride, Nevada, Washington, Wyoming, Dakota du Sud, Alaska, Tennessee). D'autres états ont des systèmes progressifs avec des taux allant d'environ 3% à 13.3%, selon le niveau de revenu et structures fiscales spécifiques de l'état."
+        }
+      ]
+    }
+  }
+}

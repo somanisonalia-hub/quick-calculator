@@ -1,0 +1,1202 @@
+{
+  "en": {
+    "title": "Protein Intake Calculator",
+    "seoTitle": "Protein Intake Calculator - Daily Protein Requirements for Fitness & Health",
+    "metaDescription": "Calculate your daily protein intake requirements based on weight, activity level, and fitness goals. Free protein calculator for athletes, bodybuilders, and health-conscious individuals.",
+    "keywords": [
+      "protein intake calculator",
+      "daily protein calculator",
+      "protein requirements calculator",
+      "protein per kg calculator",
+      "protein for muscle gain",
+      "protein calculator for athletes",
+      "how much protein do I need daily",
+      "protein intake for weight loss",
+      "protein calculator grams per day",
+      "protein requirements for bodybuilding"
+    ],
+    "longTailKeywords": [
+      "how to calculate daily protein intake",
+      "what is my daily protein requirement",
+      "protein intake calculator based on weight",
+      "how much protein per kg body weight",
+      "protein calculator for muscle building",
+      "daily protein needs for athletes",
+      "protein requirements for weight training",
+      "protein intake calculator with activity level",
+      "how many grams of protein per day",
+      "protein calculator for fitness goals",
+      "protein requirements for women",
+      "protein calculator for men"
+    ],
+    "slug": "protein-intake-calculator",
+    "category": "Health",
+    "calculatorComponent": "ProteinIntakeCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "protein intake",
+      "daily protein",
+      "protein requirements",
+      "fitness nutrition",
+      "muscle gain",
+      "athletic performance",
+      "protein per kg",
+      "macronutrients"
+    ],
+    "summary": "Calculate your optimal daily protein intake based on weight, activity level, and fitness goals.",
+    "description": "Professional protein intake calculator that determines your daily protein requirements based on body weight, activity level, fitness goals, and training frequency. Essential for athletes, bodybuilders, fitness enthusiasts, and anyone focused on optimal nutrition and muscle development.",
+    "instructions": [
+      "Enter your weight in kilograms or pounds",
+      "Select your gender",
+      "Enter your age",
+      "Choose your activity level",
+      "Select your primary fitness goal",
+      "Enter your training frequency per week",
+      "View your personalized protein intake recommendations"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Body Weight (kg)",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Weight Unit",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "gender",
+        "label": "Gender",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Age",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "years"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Activity Level",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "fitnessGoal",
+        "label": "Fitness Goal",
+        "type": "select",
+        "default": "maintenance",
+        "options": ["maintenance", "weight_loss", "muscle_gain", "athletic_performance", "bodybuilding"]
+      },
+      {
+        "name": "trainingFrequency",
+        "label": "Training Days per Week",
+        "type": "number",
+        "default": 3,
+        "min": 0,
+        "max": 7,
+        "step": 1,
+        "unit": "days"
+      }
+    ],
+    "formula": "Base Protein (g/kg) = Activity Level × Goal Multiplier\nDaily Protein (grams) = Body Weight (kg) × Base Protein (g/kg)\nProtein per Meal = Daily Protein ÷ 4-6 meals\nProtein per Pound = Daily Protein ÷ Body Weight (lbs)",
+    "output": {
+      "label": "Daily Protein Intake",
+      "default": "0g",
+      "format": "number",
+      "unit": "grams"
+    },
+    "additionalOutputs": [
+      {
+        "name": "proteinPerKg",
+        "label": "Protein per kg Body Weight",
+        "default": "0.0g/kg",
+        "format": "decimal",
+        "unit": "g/kg"
+      },
+      {
+        "name": "proteinPerMeal",
+        "label": "Protein per Meal (4 meals)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grams"
+      },
+      {
+        "name": "proteinPerMeal6",
+        "label": "Protein per Meal (6 meals)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grams"
+      },
+      {
+        "name": "proteinPerPound",
+        "label": "Protein per lb Body Weight",
+        "default": "0.0g/lb",
+        "format": "decimal",
+        "unit": "g/lb"
+      },
+      {
+        "name": "caloriesFromProtein",
+        "label": "Calories from Protein",
+        "default": "0",
+        "format": "number",
+        "unit": "calories"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Sedentary Male, Maintenance",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "gender": "male",
+          "age": 35,
+          "activityLevel": "sedentary",
+          "fitnessGoal": "maintenance",
+          "trainingFrequency": 0
+        },
+        "outputs": {
+          "dailyProteinIntake": 80,
+          "proteinPerKg": 1.0,
+          "proteinPerMeal": 20,
+          "proteinPerMeal6": 13,
+          "proteinPerPound": 0.45,
+          "caloriesFromProtein": 320
+        }
+      },
+      {
+        "title": "Active Male Bodybuilder",
+        "inputs": {
+          "weight": 90,
+          "weightUnit": "kg",
+          "gender": "male",
+          "age": 28,
+          "activityLevel": "very_active",
+          "fitnessGoal": "bodybuilding",
+          "trainingFrequency": 6
+        },
+        "outputs": {
+          "dailyProteinIntake": 225,
+          "proteinPerKg": 2.5,
+          "proteinPerMeal": 56,
+          "proteinPerMeal6": 38,
+          "proteinPerPound": 1.13,
+          "caloriesFromProtein": 900
+        }
+      },
+      {
+        "title": "Moderately Active Female, Muscle Gain",
+        "inputs": {
+          "weight": 65,
+          "weightUnit": "kg",
+          "gender": "female",
+          "age": 32,
+          "activityLevel": "moderately_active",
+          "fitnessGoal": "muscle_gain",
+          "trainingFrequency": 4
+        },
+        "outputs": {
+          "dailyProteinIntake": 143,
+          "proteinPerKg": 2.2,
+          "proteinPerMeal": 36,
+          "proteinPerMeal6": 24,
+          "proteinPerPound": 1.0,
+          "caloriesFromProtein": 572
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "calorie-calculator",
+      "ideal-weight-calculator",
+      "body-fat-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate your optimal daily protein intake with our comprehensive Protein Intake Calculator. Understanding your protein requirements is crucial for muscle building, weight management, athletic performance, and overall health. Our calculator provides personalized recommendations based on your body weight, activity level, and fitness goals.",
+      "benefits": [
+        "Calculate personalized daily protein requirements",
+        "Understand protein needs for different fitness goals",
+        "Account for activity level and training frequency",
+        "Get protein intake in multiple formats (per kg, per lb, per meal)",
+        "Learn how protein contributes to your daily calorie intake",
+        "Make informed decisions about nutrition and supplementation",
+        "Optimize muscle recovery and growth",
+        "Support weight loss or maintenance goals"
+      ],
+      "howToUse": [
+        "Enter your current body weight in kilograms or pounds",
+        "Select your gender (affects minor metabolic calculations)",
+        "Enter your age for age-appropriate recommendations",
+        "Choose your activity level from sedentary to extremely active",
+        "Select your primary fitness goal (maintenance, weight loss, muscle gain, etc.)",
+        "Enter how many days per week you train or exercise intensely",
+        "Review your personalized protein intake recommendations"
+      ],
+      "formulaExplanation": "Protein requirements are calculated using evidence-based guidelines from sports nutrition research. Base protein intake starts at 0.8-1.0g per kg for sedentary adults. Activity level multipliers increase this (1.2-1.6g/kg for active individuals, 1.6-2.2g/kg for athletes). Fitness goals add further multipliers (muscle gain +20-50%, athletic performance +30-60%, bodybuilding +50-80%). Training frequency refines the calculation for optimal recovery. Each gram of protein provides 4 calories.",
+      "examples": [
+        "A sedentary 80kg male maintaining weight needs 80g protein daily (1.0g/kg), or about 20g per meal with 4 meals per day",
+        "A very active 90kg male bodybuilder training 6 days/week needs 225g protein daily (2.5g/kg), distributed across 6 meals for optimal absorption",
+        "A moderately active 65kg female building muscle needs 143g protein daily (2.2g/kg), supporting both muscle repair and growth goals"
+      ],
+      "whoShouldUse": "Fitness enthusiasts and athletes, bodybuilders and strength trainers, individuals on weight loss or muscle gain programs, endurance athletes and sports performers, older adults maintaining muscle mass, vegetarians and vegans tracking protein intake, dietitians and nutritionists, and anyone interested in optimizing their nutrition for health and performance.",
+      "importantNotes": "These recommendations are based on general sports nutrition guidelines. Individual needs may vary based on body composition, training intensity, metabolism, and health conditions. Protein quality matters - focus on complete proteins from animal sources or combinations of plant proteins. Consult a healthcare provider or registered dietitian for personalized nutrition advice, especially if you have kidney issues or other medical conditions.",
+      "relatedTools": [
+        "BMI Calculator - Assess body composition",
+        "BMR Calculator - Calculate basal metabolic rate",
+        "Calorie Calculator - Estimate daily calorie needs",
+        "Ideal Weight Calculator - Find healthy weight range",
+        "Body Fat Calculator - Estimate body fat percentage"
+      ],
+      "faqs": [
+        {
+          "question": "How much protein do I need per day?",
+          "answer": "Daily protein needs vary by individual: sedentary adults need 0.8-1.0g per kg body weight, active individuals need 1.2-1.6g/kg, athletes need 1.6-2.2g/kg, and bodybuilders may need 2.0-2.5g/kg. Use our calculator for personalized recommendations based on your weight, activity level, and goals."
+        },
+        {
+          "question": "What's the best way to distribute protein intake throughout the day?",
+          "answer": "Aim for 20-40g of high-quality protein every 3-4 hours to maximize muscle protein synthesis. Most people do well with 4-6 meals/snacks containing protein. Distribute your total daily protein across these meals for optimal absorption and utilization."
+        },
+        {
+          "question": "Does protein help with weight loss?",
+          "answer": "Yes, higher protein intake can support weight loss by increasing satiety, preserving muscle mass during calorie restriction, and boosting metabolism slightly. Studies show 1.6-2.2g protein per kg body weight helps maintain muscle while losing fat."
+        },
+        {
+          "question": "Can you get enough protein on a vegetarian or vegan diet?",
+          "answer": "Yes, with proper planning. Vegetarians can get protein from dairy, eggs, and plant foods. Vegans need to combine different plant proteins (rice + beans, hummus + pita) throughout the day to get all essential amino acids. Some may need slightly higher intake (1.8-2.5g/kg) to compensate for lower digestibility."
+        },
+        {
+          "question": "Is too much protein harmful?",
+          "answer": "Excessive protein intake (over 3g/kg for extended periods) may strain kidneys in susceptible individuals and can be expensive. Most healthy people tolerate 2.0-2.5g/kg well. Focus on quality protein sources and adequate hydration. Consult a healthcare provider if you have kidney concerns."
+        },
+        {
+          "question": "What are complete vs incomplete proteins?",
+          "answer": "Complete proteins contain all essential amino acids (animal sources like meat, fish, eggs, dairy). Incomplete proteins lack some amino acids (most plant sources). Combine incomplete proteins (beans + rice, peanut butter + bread) to create complete proteins."
+        },
+        {
+          "question": "How does age affect protein needs?",
+          "answer": "Older adults (over 65) may need slightly more protein (1.2-1.6g/kg) to maintain muscle mass and prevent age-related muscle loss (sarcopenia). Resistance training combined with adequate protein intake is particularly important for older adults."
+        },
+        {
+          "question": "Can I get all my protein from supplements?",
+          "answer": "Protein supplements can help meet requirements but should supplement, not replace, whole food protein sources. Whole foods provide additional nutrients, fiber, and better satiety. Use supplements strategically when whole food intake is insufficient."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Ingesta de Proteína",
+    "seoTitle": "Calculadora de Ingesta de Proteína - Requerimientos Diarios de Proteína para Fitness y Salud",
+    "metaDescription": "Calcula tus requerimientos diarios de ingesta de proteína basados en peso, nivel de actividad y objetivos de fitness. Calculadora gratuita de proteína para atletas, culturistas e individuos conscientes de la salud.",
+    "keywords": [
+      "calculadora ingesta proteína",
+      "calculadora proteína diaria",
+      "calculadora requerimientos proteína",
+      "calculadora proteína por kg",
+      "proteína para ganancia muscular",
+      "calculadora proteína para atletas",
+      "cuánta proteína necesito diaria",
+      "ingesta proteína para pérdida peso",
+      "calculadora proteína gramos por día",
+      "requerimientos proteína culturismo"
+    ],
+    "longTailKeywords": [
+      "cómo calcular ingesta diaria de proteína",
+      "cuál es mi requerimiento diario de proteína",
+      "calculadora ingesta proteína basada en peso",
+      "cuánta proteína por kg peso corporal",
+      "calculadora proteína para construcción muscular",
+      "necesidades diarias proteína para atletas",
+      "requerimientos proteína para entrenamiento fuerza",
+      "calculadora ingesta proteína con nivel actividad",
+      "cuántos gramos proteína por día",
+      "calculadora proteína para objetivos fitness",
+      "requerimientos proteína para mujeres",
+      "calculadora proteína para hombres"
+    ],
+    "slug": "protein-intake-calculator",
+    "category": "Health",
+    "calculatorComponent": "ProteinIntakeCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "ingesta proteína",
+      "proteína diaria",
+      "requerimientos proteína",
+      "nutrición fitness",
+      "ganancia muscular",
+      "rendimiento atlético",
+      "proteína por kg",
+      "macronutrientes"
+    ],
+    "summary": "Calcula tu ingesta óptima diaria de proteína basada en peso, nivel de actividad y objetivos de fitness.",
+    "description": "Calculadora profesional de ingesta de proteína que determina tus requerimientos diarios de proteína basados en peso corporal, nivel de actividad, objetivos de fitness y frecuencia de entrenamiento. Esencial para atletas, culturistas, entusiastas del fitness y cualquiera enfocado en nutrición óptima y desarrollo muscular.",
+    "instructions": [
+      "Ingresa tu peso en kilogramos o libras",
+      "Selecciona tu género",
+      "Ingresa tu edad",
+      "Elige tu nivel de actividad",
+      "Selecciona tu objetivo principal de fitness",
+      "Ingresa tu frecuencia de entrenamiento por semana",
+      "Ve tus recomendaciones personalizadas de ingesta de proteína"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Peso Corporal (kg)",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unidad de Peso",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "gender",
+        "label": "Género",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Edad",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "años"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Nivel de Actividad",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "fitnessGoal",
+        "label": "Objetivo de Fitness",
+        "type": "select",
+        "default": "maintenance",
+        "options": ["maintenance", "weight_loss", "muscle_gain", "athletic_performance", "bodybuilding"]
+      },
+      {
+        "name": "trainingFrequency",
+        "label": "Días de Entrenamiento por Semana",
+        "type": "number",
+        "default": 3,
+        "min": 0,
+        "max": 7,
+        "step": 1,
+        "unit": "días"
+      }
+    ],
+    "formula": "Proteína Base (g/kg) = Nivel Actividad × Multiplicador Objetivo\nProteína Diaria (gramos) = Peso Corporal (kg) × Proteína Base (g/kg)\nProteína por Comida = Proteína Diaria ÷ 4-6 comidas\nProteína por Libra = Proteína Diaria ÷ Peso Corporal (lbs)",
+    "output": {
+      "label": "Ingesta Diaria de Proteína",
+      "default": "0g",
+      "format": "number",
+      "unit": "gramos"
+    },
+    "additionalOutputs": [
+      {
+        "name": "proteinPerKg",
+        "label": "Proteína por kg Peso Corporal",
+        "default": "0.0g/kg",
+        "format": "decimal",
+        "unit": "g/kg"
+      },
+      {
+        "name": "proteinPerMeal",
+        "label": "Proteína por Comida (4 comidas)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramos"
+      },
+      {
+        "name": "proteinPerMeal6",
+        "label": "Proteína por Comida (6 comidas)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramos"
+      },
+      {
+        "name": "proteinPerPound",
+        "label": "Proteína por lb Peso Corporal",
+        "default": "0.0g/lb",
+        "format": "decimal",
+        "unit": "g/lb"
+      },
+      {
+        "name": "caloriesFromProtein",
+        "label": "Calorías de Proteína",
+        "default": "0",
+        "format": "number",
+        "unit": "calorías"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Hombre Sedentario, Mantenimiento",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "gender": "male",
+          "age": 35,
+          "activityLevel": "sedentary",
+          "fitnessGoal": "maintenance",
+          "trainingFrequency": 0
+        },
+        "outputs": {
+          "dailyProteinIntake": 80,
+          "proteinPerKg": 1.0,
+          "proteinPerMeal": 20,
+          "proteinPerMeal6": 13,
+          "proteinPerPound": 0.45,
+          "caloriesFromProtein": 320
+        }
+      },
+      {
+        "title": "Hombre Activo Culturista",
+        "inputs": {
+          "weight": 90,
+          "weightUnit": "kg",
+          "gender": "male",
+          "age": 28,
+          "activityLevel": "very_active",
+          "fitnessGoal": "bodybuilding",
+          "trainingFrequency": 6
+        },
+        "outputs": {
+          "dailyProteinIntake": 225,
+          "proteinPerKg": 2.5,
+          "proteinPerMeal": 56,
+          "proteinPerMeal6": 38,
+          "proteinPerPound": 1.13,
+          "caloriesFromProtein": 900
+        }
+      },
+      {
+        "title": "Mujer Moderadamente Activa, Ganancia Muscular",
+        "inputs": {
+          "weight": 65,
+          "weightUnit": "kg",
+          "gender": "female",
+          "age": 32,
+          "activityLevel": "moderately_active",
+          "fitnessGoal": "muscle_gain",
+          "trainingFrequency": 4
+        },
+        "outputs": {
+          "dailyProteinIntake": 143,
+          "proteinPerKg": 2.2,
+          "proteinPerMeal": 36,
+          "proteinPerMeal6": 24,
+          "proteinPerPound": 1.0,
+          "caloriesFromProtein": 572
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "calorie-calculator",
+      "ideal-weight-calculator",
+      "body-fat-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcula tu ingesta óptima diaria de proteína con nuestra completa Calculadora de Ingesta de Proteína. Entender tus requerimientos de proteína es crucial para construcción muscular, manejo de peso, rendimiento atlético y salud general. Nuestra calculadora proporciona recomendaciones personalizadas basadas en tu peso corporal, nivel de actividad y objetivos de fitness.",
+      "benefits": [
+        "Calcula requerimientos diarios personalizados de proteína",
+        "Entiende necesidades de proteína para diferentes objetivos de fitness",
+        "Considera nivel de actividad y frecuencia de entrenamiento",
+        "Obtén ingesta de proteína en múltiples formatos (por kg, por lb, por comida)",
+        "Aprende cómo la proteína contribuye a tu ingesta diaria de calorías",
+        "Toma decisiones informadas sobre nutrición y suplementación",
+        "Optimiza recuperación y crecimiento muscular",
+        "Apoya objetivos de pérdida o mantenimiento de peso"
+      ],
+      "howToUse": [
+        "Ingresa tu peso corporal actual en kilogramos o libras",
+        "Selecciona tu género (afecta cálculos metabólicos menores)",
+        "Ingresa tu edad para recomendaciones apropiadas por edad",
+        "Elige tu nivel de actividad desde sedentario hasta extremadamente activo",
+        "Selecciona tu objetivo principal de fitness (mantenimiento, pérdida peso, ganancia muscular, etc.)",
+        "Ingresa cuántos días por semana entrenas o ejercitas intensamente",
+        "Revisa tus recomendaciones personalizadas de ingesta de proteína"
+      ],
+      "formulaExplanation": "Los requerimientos de proteína se calculan usando guías basadas en evidencia de investigación de nutrición deportiva. La ingesta base de proteína comienza en 0.8-1.0g por kg para adultos sedentarios. Los multiplicadores de nivel de actividad aumentan esto (1.2-1.6g/kg para individuos activos, 1.6-2.2g/kg para atletas). Los objetivos de fitness agregan multiplicadores adicionales (ganancia muscular +20-50%, rendimiento atlético +30-60%, culturismo +50-80%). La frecuencia de entrenamiento refina el cálculo para recuperación óptima. Cada gramo de proteína proporciona 4 calorías.",
+      "examples": [
+        "Un hombre sedentario de 80kg manteniendo peso necesita 80g proteína diaria (1.0g/kg), o cerca de 20g por comida con 4 comidas por día",
+        "Un hombre muy activo de 90kg culturista entrenando 6 días/semana necesita 225g proteína diaria (2.5g/kg), distribuido a través de 6 comidas para absorción óptima",
+        "Una mujer moderadamente activa de 65kg construyendo músculo necesita 143g proteína diaria (2.2g/kg), apoyando tanto reparación como crecimiento muscular"
+      ],
+      "whoShouldUse": "Entusiastas del fitness y atletas, culturistas y entrenadores de fuerza, individuos en programas de pérdida o ganancia de peso, atletas de resistencia y deportistas, adultos mayores manteniendo masa muscular, vegetarianos y veganos rastreando ingesta de proteína, dietistas y nutricionistas, y cualquiera interesado en optimizar su nutrición para salud y rendimiento.",
+      "importantNotes": "Estas recomendaciones se basan en guías generales de nutrición deportiva. Las necesidades individuales pueden variar basadas en composición corporal, intensidad de entrenamiento, metabolismo y condiciones de salud. La calidad de proteína importa - enfócate en proteínas completas de fuentes animales o combinaciones de proteínas vegetales. Consulta un proveedor de atención médica o dietista registrado para consejo nutricional personalizado, especialmente si tienes problemas renales u otras condiciones médicas.",
+      "relatedTools": [
+        "Calculadora IMC - Evalúa composición corporal",
+        "Calculadora TMB - Calcula tasa metabólica basal",
+        "Calculadora Calorías - Estima necesidades diarias de calorías",
+        "Calculadora Peso Ideal - Encuentra rango saludable de peso",
+        "Calculadora Grasa Corporal - Estima porcentaje de grasa corporal"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánta proteína necesito por día?",
+          "answer": "Las necesidades diarias de proteína varían por individuo: adultos sedentarios necesitan 0.8-1.0g por kg peso corporal, individuos activos necesitan 1.2-1.6g/kg, atletas necesitan 1.6-2.2g/kg, y culturistas pueden necesitar 2.0-2.5g/kg. Usa nuestra calculadora para recomendaciones personalizadas basadas en tu peso, nivel de actividad y objetivos."
+        },
+        {
+          "question": "¿Cuál es la mejor manera de distribuir la ingesta de proteína a través del día?",
+          "answer": "Apunta a 20-40g de proteína de alta calidad cada 3-4 horas para maximizar síntesis proteica muscular. La mayoría de personas se desempeñan bien con 4-6 comidas/meriendas conteniendo proteína. Distribuye tu proteína diaria total a través de estas comidas para absorción y utilización óptimas."
+        },
+        {
+          "question": "¿La proteína ayuda con pérdida de peso?",
+          "answer": "Sí, una ingesta más alta de proteína puede apoyar pérdida de peso aumentando saciedad, preservando masa muscular durante restricción calórica, y aumentando metabolismo ligeramente. Estudios muestran 1.6-2.2g proteína por kg peso corporal ayuda mantener músculo mientras pierde grasa."
+        },
+        {
+          "question": "¿Puedes obtener suficiente proteína en una dieta vegetariana o vegana?",
+          "answer": "Sí, con planificación apropiada. Vegetarianos pueden obtener proteína de lácteos, huevos y alimentos vegetales. Veganos necesitan combinar diferentes proteínas vegetales (arroz + frijoles, hummus + pita) a través del día para obtener todos los aminoácidos esenciales. Algunos pueden necesitar ingesta ligeramente más alta (1.8-2.5g/kg) para compensar menor digestibilidad."
+        },
+        {
+          "question": "¿Es dañina demasiada proteína?",
+          "answer": "Ingesta excesiva de proteína (sobre 3g/kg por períodos extendidos) puede sobrecargar riñones en individuos susceptibles y puede ser costosa. La mayoría de personas saludables toleran 2.0-2.5g/kg bien. Enfócate en fuentes de proteína de calidad e hidratación adecuada. Consulta un proveedor de atención médica si tienes preocupaciones renales."
+        },
+        {
+          "question": "¿Qué son proteínas completas vs incompletas?",
+          "answer": "Proteínas completas contienen todos los aminoácidos esenciales (fuentes animales como carne, pescado, huevos, lácteos). Proteínas incompletas carecen de algunos aminoácidos (la mayoría de fuentes vegetales). Combina proteínas incompletas (frijoles + arroz, mantequilla maní + pan) para crear proteínas completas."
+        },
+        {
+          "question": "¿Cómo afecta la edad a las necesidades de proteína?",
+          "answer": "Adultos mayores (sobre 65) pueden necesitar ligeramente más proteína (1.2-1.6g/kg) para mantener masa muscular y prevenir pérdida muscular relacionada con edad (sarcopenia). Entrenamiento de resistencia combinado con ingesta adecuada de proteína es particularmente importante para adultos mayores."
+        },
+        {
+          "question": "¿Puedo obtener toda mi proteína de suplementos?",
+          "answer": "Los suplementos de proteína pueden ayudar cumplir requerimientos pero deberían suplementar, no reemplazar, fuentes de proteína de alimentos completos. Alimentos completos proporcionan nutrientes adicionales, fibra y mejor saciedad. Usa suplementos estratégicamente cuando la ingesta de alimentos completos es insuficiente."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Ingestão de Proteína",
+    "seoTitle": "Calculadora de Ingestão de Proteína - Requerimentos Diários de Proteína para Fitness e Saúde",
+    "metaDescription": "Calcule seus requerimentos diários de ingestão de proteína baseados em peso, nível de atividade e objetivos de fitness. Calculadora gratuita de proteína para atletas, fisiculturistas e indivíduos conscientes da saúde.",
+    "keywords": [
+      "calculadora ingestão proteína",
+      "calculadora proteína diária",
+      "calculadora requerimentos proteína",
+      "calculadora proteína por kg",
+      "proteína para ganho muscular",
+      "calculadora proteína para atletas",
+      "quanto proteína preciso diariamente",
+      "ingestão proteína para perda peso",
+      "calculadora proteína gramas por dia",
+      "requerimentos proteína fisiculturismo"
+    ],
+    "longTailKeywords": [
+      "como calcular ingestão diária de proteína",
+      "qual é meu requerimento diário de proteína",
+      "calculadora ingestão proteína baseada em peso",
+      "quanto proteína por kg peso corporal",
+      "calculadora proteína para construção muscular",
+      "necessidades diárias proteína para atletas",
+      "requerimentos proteína para treinamento força",
+      "calculadora ingestão proteína com nível atividade",
+      "quantos gramas proteína por dia",
+      "calculadora proteína para objetivos fitness",
+      "requerimentos proteína para mulheres",
+      "calculadora proteína para homens"
+    ],
+    "slug": "protein-intake-calculator",
+    "category": "Health",
+    "calculatorComponent": "ProteinIntakeCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "ingestão proteína",
+      "proteína diária",
+      "requerimentos proteína",
+      "nutrição fitness",
+      "ganho muscular",
+      "performance atlética",
+      "proteína por kg",
+      "macronutrientes"
+    ],
+    "summary": "Calcule sua ingestão ótima diária de proteína baseada em peso, nível de atividade e objetivos de fitness.",
+    "description": "Calculadora profissional de ingestão de proteína que determina seus requerimentos diários de proteína baseados em peso corporal, nível de atividade, objetivos de fitness e frequência de treinamento. Essencial para atletas, fisiculturistas, entusiastas do fitness e qualquer pessoa focada em nutrição ótima e desenvolvimento muscular.",
+    "instructions": [
+      "Digite seu peso em quilogramas ou libras",
+      "Selecione seu gênero",
+      "Digite sua idade",
+      "Escolha seu nível de atividade",
+      "Selecione seu objetivo principal de fitness",
+      "Digite sua frequência de treinamento por semana",
+      "Veja suas recomendações personalizadas de ingestão de proteína"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Peso Corporal (kg)",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unidade de Peso",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "gender",
+        "label": "Gênero",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Idade",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "anos"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Nível de Atividade",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "fitnessGoal",
+        "label": "Objetivo de Fitness",
+        "type": "select",
+        "default": "maintenance",
+        "options": ["maintenance", "weight_loss", "muscle_gain", "athletic_performance", "bodybuilding"]
+      },
+      {
+        "name": "trainingFrequency",
+        "label": "Dias de Treinamento por Semana",
+        "type": "number",
+        "default": 3,
+        "min": 0,
+        "max": 7,
+        "step": 1,
+        "unit": "dias"
+      }
+    ],
+    "formula": "Proteína Base (g/kg) = Nível Atividade × Multiplicador Objetivo\nProteína Diária (gramas) = Peso Corporal (kg) × Proteína Base (g/kg)\nProteína por Refeição = Proteína Diária ÷ 4-6 refeições\nProteína por Libra = Proteína Diária ÷ Peso Corporal (lbs)",
+    "output": {
+      "label": "Ingestão Diária de Proteína",
+      "default": "0g",
+      "format": "number",
+      "unit": "gramas"
+    },
+    "additionalOutputs": [
+      {
+        "name": "proteinPerKg",
+        "label": "Proteína por kg Peso Corporal",
+        "default": "0.0g/kg",
+        "format": "decimal",
+        "unit": "g/kg"
+      },
+      {
+        "name": "proteinPerMeal",
+        "label": "Proteína por Refeição (4 refeições)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramas"
+      },
+      {
+        "name": "proteinPerMeal6",
+        "label": "Proteína por Refeição (6 refeições)",
+        "default": "0g",
+        "format": "number",
+        "unit": "gramas"
+      },
+      {
+        "name": "proteinPerPound",
+        "label": "Proteína por lb Peso Corporal",
+        "default": "0.0g/lb",
+        "format": "decimal",
+        "unit": "g/lb"
+      },
+      {
+        "name": "caloriesFromProtein",
+        "label": "Calorias da Proteína",
+        "default": "0",
+        "format": "number",
+        "unit": "calorias"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Homem Sedentário, Manutenção",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "gender": "male",
+          "age": 35,
+          "activityLevel": "sedentary",
+          "fitnessGoal": "maintenance",
+          "trainingFrequency": 0
+        },
+        "outputs": {
+          "dailyProteinIntake": 80,
+          "proteinPerKg": 1.0,
+          "proteinPerMeal": 20,
+          "proteinPerMeal6": 13,
+          "proteinPerPound": 0.45,
+          "caloriesFromProtein": 320
+        }
+      },
+      {
+        "title": "Homem Ativo Fisiculturista",
+        "inputs": {
+          "weight": 90,
+          "weightUnit": "kg",
+          "gender": "male",
+          "age": 28,
+          "activityLevel": "very_active",
+          "fitnessGoal": "bodybuilding",
+          "trainingFrequency": 6
+        },
+        "outputs": {
+          "dailyProteinIntake": 225,
+          "proteinPerKg": 2.5,
+          "proteinPerMeal": 56,
+          "proteinPerMeal6": 38,
+          "proteinPerPound": 1.13,
+          "caloriesFromProtein": 900
+        }
+      },
+      {
+        "title": "Mulher Moderadamente Ativa, Ganho Muscular",
+        "inputs": {
+          "weight": 65,
+          "weightUnit": "kg",
+          "gender": "female",
+          "age": 32,
+          "activityLevel": "moderately_active",
+          "fitnessGoal": "muscle_gain",
+          "trainingFrequency": 4
+        },
+        "outputs": {
+          "dailyProteinIntake": 143,
+          "proteinPerKg": 2.2,
+          "proteinPerMeal": 36,
+          "proteinPerMeal6": 24,
+          "proteinPerPound": 1.0,
+          "caloriesFromProtein": 572
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "calorie-calculator",
+      "ideal-weight-calculator",
+      "body-fat-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule sua ingestão ótima diária de proteína com nossa completa Calculadora de Ingestão de Proteína. Entender seus requerimentos de proteína é crucial para construção muscular, gerenciamento de peso, performance atlética e saúde geral. Nossa calculadora fornece recomendações personalizadas baseadas em seu peso corporal, nível de atividade e objetivos de fitness.",
+      "benefits": [
+        "Calcule requerimentos diários personalizados de proteína",
+        "Entenda necessidades de proteína para diferentes objetivos de fitness",
+        "Considere nível de atividade e frequência de treinamento",
+        "Obtenha ingestão de proteína em múltiplos formatos (por kg, por lb, por refeição)",
+        "Aprenda como proteína contribui para sua ingestão diária de calorias",
+        "Tome decisões informadas sobre nutrição e suplementação",
+        "Otimize recuperação e crescimento muscular",
+        "Apoie objetivos de perda ou manutenção de peso"
+      ],
+      "howToUse": [
+        "Digite seu peso corporal atual em quilogramas ou libras",
+        "Selecione seu gênero (afeta cálculos metabólicos menores)",
+        "Digite sua idade para recomendações apropriadas por idade",
+        "Escolha seu nível de atividade de sedentário para extremamente ativo",
+        "Selecione seu objetivo principal de fitness (manutenção, perda peso, ganho muscular, etc.)",
+        "Digite quantos dias por semana você treina ou exerce intensamente",
+        "Revise suas recomendações personalizadas de ingestão de proteína"
+      ],
+      "formulaExplanation": "Requerimentos de proteína são calculados usando diretrizes baseadas em evidência de pesquisa de nutrição esportiva. Ingestão base de proteína começa em 0.8-1.0g por kg para adultos sedentários. Multiplicadores de nível de atividade aumentam isso (1.2-1.6g/kg para indivíduos ativos, 1.6-2.2g/kg para atletas). Objetivos de fitness adicionam multiplicadores adicionais (ganho muscular +20-50%, performance atlética +30-60%, fisiculturismo +50-80%). Frequência de treinamento refina o cálculo para recuperação ótima. Cada grama de proteína fornece 4 calorias.",
+      "examples": [
+        "Um homem sedentário de 80kg mantendo peso precisa 80g proteína diária (1.0g/kg), ou cerca de 20g por refeição com 4 refeições por dia",
+        "Um homem muito ativo de 90kg fisiculturista treinando 6 dias/semana precisa 225g proteína diária (2.5g/kg), distribuído através de 6 refeições para absorção ótima",
+        "Uma mulher moderadamente ativa de 65kg construindo músculo precisa 143g proteína diária (2.2g/kg), apoiando tanto reparo quanto crescimento muscular"
+      ],
+      "whoShouldUse": "Entusiastas do fitness e atletas, fisiculturistas e treinadores de força, indivíduos em programas de perda ou ganho de peso, atletas de resistência e performers esportivos, adultos mais velhos mantendo massa muscular, vegetarianos e veganos rastreando ingestão de proteína, nutricionistas e dietistas, e qualquer pessoa interessada em otimizar sua nutrição para saúde e performance.",
+      "importantNotes": "Estas recomendações são baseadas em diretrizes gerais de nutrição esportiva. Necessidades individuais podem variar baseadas em composição corporal, intensidade de treinamento, metabolismo e condições de saúde. Qualidade de proteína importa - foque em proteínas completas de fontes animais ou combinações de proteínas vegetais. Consulte um provedor de cuidados de saúde ou dietista registrado para conselho nutricional personalizado, especialmente se você tem problemas renais ou outras condições médicas.",
+      "relatedTools": [
+        "Calculadora IMC - Avalie composição corporal",
+        "Calculadora TMB - Calcule taxa metabólica basal",
+        "Calculadora Calorias - Estime necessidades diárias de calorias",
+        "Calculadora Peso Ideal - Encontre faixa saudável de peso",
+        "Calculadora Gordura Corporal - Estime porcentagem de gordura corporal"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto proteína preciso por dia?",
+          "answer": "Necessidades diárias de proteína variam por indivíduo: adultos sedentários precisam 0.8-1.0g por kg peso corporal, indivíduos ativos precisam 1.2-1.6g/kg, atletas precisam 1.6-2.2g/kg, e fisiculturistas podem precisar 2.0-2.5g/kg. Use nossa calculadora para recomendações personalizadas baseadas em seu peso, nível de atividade e objetivos."
+        },
+        {
+          "question": "Qual é a melhor maneira de distribuir ingestão de proteína ao longo do dia?",
+          "answer": "Mire em 20-40g de proteína de alta qualidade a cada 3-4 horas para maximizar síntese proteica muscular. A maioria das pessoas se sai bem com 4-6 refeições/lanches contendo proteína. Distribua sua proteína diária total através destas refeições para absorção e utilização ótimas."
+        },
+        {
+          "question": "Proteína ajuda com perda de peso?",
+          "answer": "Sim, ingestão mais alta de proteína pode apoiar perda de peso aumentando saciedade, preservando massa muscular durante restrição calórica, e aumentando metabolismo ligeiramente. Estudos mostram 1.6-2.2g proteína por kg peso corporal ajuda manter músculo enquanto perde gordura."
+        },
+        {
+          "question": "Pode obter proteína suficiente em dieta vegetariana ou vegana?",
+          "answer": "Sim, com planejamento apropriado. Vegetarianos podem obter proteína de laticínios, ovos e alimentos vegetais. Veganos precisam combinar diferentes proteínas vegetais (arroz + feijão, homus + pão) ao longo do dia para obter todos aminoácidos essenciais. Alguns podem precisar ingestão ligeiramente mais alta (1.8-2.5g/kg) para compensar menor digestibilidade."
+        },
+        {
+          "question": "Muita proteína é prejudicial?",
+          "answer": "Ingestão excessiva de proteína (sobre 3g/kg por períodos extendidos) pode sobrecarregar rins em indivíduos suscetíveis e pode ser cara. A maioria das pessoas saudáveis tolera 2.0-2.5g/kg bem. Foque em fontes de proteína de qualidade e hidratação adequada. Consulte um provedor de cuidados de saúde se você tem preocupações renais."
+        },
+        {
+          "question": "O que são proteínas completas vs incompletas?",
+          "answer": "Proteínas completas contêm todos aminoácidos essenciais (fontes animais como carne, peixe, ovos, laticínios). Proteínas incompletas faltam alguns aminoácidos (maioria das fontes vegetais). Combine proteínas incompletas (feijão + arroz, manteiga amendoim + pão) para criar proteínas completas."
+        },
+        {
+          "question": "Como idade afeta necessidades de proteína?",
+          "answer": "Adultos mais velhos (sobre 65) podem precisar ligeiramente mais proteína (1.2-1.6g/kg) para manter massa muscular e prevenir perda muscular relacionada com idade (sarcopenia). Treinamento de resistência combinado com ingestão adequada de proteína é particularmente importante para adultos mais velhos."
+        },
+        {
+          "question": "Posso obter toda minha proteína de suplementos?",
+          "answer": "Suplementos de proteína podem ajudar cumprir requerimentos mas deveriam suplementar, não substituir, fontes de proteína de alimentos integrais. Alimentos integrais fornecem nutrientes adicionais, fibra e melhor saciedade. Use suplementos estrategicamente quando ingestão de alimentos integrais é insuficiente."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Apport en Protéines",
+    "seoTitle": "Calculateur d'Apport en Protéines - Besoins Quotidiens en Protéines pour Fitness et Santé",
+    "metaDescription": "Calculez vos besoins quotidiens en apport protéique basés sur poids, niveau d'activité et objectifs fitness. Calculateur gratuit de protéines pour athlètes, bodybuilders et individus soucieux de santé.",
+    "keywords": [
+      "calculateur apport protéines",
+      "calculateur protéines quotidiennes",
+      "calculateur besoins protéines",
+      "calculateur protéines par kg",
+      "protéines pour gain musculaire",
+      "calculateur protéines pour athlètes",
+      "combien protéines besoin quotidien",
+      "apport protéines pour perte poids",
+      "calculateur protéines grammes par jour",
+      "besoins protéines musculation"
+    ],
+    "longTailKeywords": [
+      "comment calculer apport quotidien protéines",
+      "quel est mon besoin quotidien protéines",
+      "calculateur apport protéines basé sur poids",
+      "combien protéines par kg poids corporel",
+      "calculateur protéines pour construction musculaire",
+      "besoins quotidiens protéines pour athlètes",
+      "besoins protéines pour entraînement force",
+      "calculateur apport protéines avec niveau activité",
+      "combien grammes protéines par jour",
+      "calculateur protéines pour objectifs fitness",
+      "besoins protéines pour femmes",
+      "calculateur protéines pour hommes"
+    ],
+    "slug": "protein-intake-calculator",
+    "category": "Health",
+    "calculatorComponent": "ProteinIntakeCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "apport protéines",
+      "protéines quotidiennes",
+      "besoins protéines",
+      "nutrition fitness",
+      "gain musculaire",
+      "performance athlétique",
+      "protéines par kg",
+      "macronutriments"
+    ],
+    "summary": "Calculez votre apport optimal quotidien en protéines basé sur poids, niveau d'activité et objectifs fitness.",
+    "description": "Calculateur professionnel d'apport en protéines qui détermine vos besoins quotidiens en protéines basés sur poids corporel, niveau d'activité, objectifs fitness et fréquence d'entraînement. Essentiel pour athlètes, bodybuilders, passionnés de fitness et quiconque focalisé sur nutrition optimale et développement musculaire.",
+    "instructions": [
+      "Entrez votre poids en kilogrammes ou livres",
+      "Sélectionnez votre genre",
+      "Entrez votre âge",
+      "Choisissez votre niveau d'activité",
+      "Sélectionnez votre objectif principal fitness",
+      "Entrez votre fréquence d'entraînement par semaine",
+      "Consultez vos recommandations personnalisées d'apport en protéines"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Poids Corporel (kg)",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unité de Poids",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "gender",
+        "label": "Genre",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      },
+      {
+        "name": "age",
+        "label": "Âge",
+        "type": "number",
+        "default": 30,
+        "min": 15,
+        "max": 100,
+        "step": 1,
+        "unit": "ans"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Niveau d'Activité",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "fitnessGoal",
+        "label": "Objectif Fitness",
+        "type": "select",
+        "default": "maintenance",
+        "options": ["maintenance", "weight_loss", "muscle_gain", "athletic_performance", "bodybuilding"]
+      },
+      {
+        "name": "trainingFrequency",
+        "label": "Jours d'Entraînement par Semaine",
+        "type": "number",
+        "default": 3,
+        "min": 0,
+        "max": 7,
+        "step": 1,
+        "unit": "jours"
+      }
+    ],
+    "formula": "Protéines Base (g/kg) = Niveau Activité × Multiplicateur Objectif\nProtéines Quotidiennes (grammes) = Poids Corporel (kg) × Protéines Base (g/kg)\nProtéines par Repas = Protéines Quotidiennes ÷ 4-6 repas\nProtéines par Livre = Protéines Quotidiennes ÷ Poids Corporel (lbs)",
+    "output": {
+      "label": "Apport Quotidien en Protéines",
+      "default": "0g",
+      "format": "number",
+      "unit": "grammes"
+    },
+    "additionalOutputs": [
+      {
+        "name": "proteinPerKg",
+        "label": "Protéines par kg Poids Corporel",
+        "default": "0.0g/kg",
+        "format": "decimal",
+        "unit": "g/kg"
+      },
+      {
+        "name": "proteinPerMeal",
+        "label": "Protéines par Repas (4 repas)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grammes"
+      },
+      {
+        "name": "proteinPerMeal6",
+        "label": "Protéines par Repas (6 repas)",
+        "default": "0g",
+        "format": "number",
+        "unit": "grammes"
+      },
+      {
+        "name": "proteinPerPound",
+        "label": "Protéines par lb Poids Corporel",
+        "default": "0.0g/lb",
+        "format": "decimal",
+        "unit": "g/lb"
+      },
+      {
+        "name": "caloriesFromProtein",
+        "label": "Calories des Protéines",
+        "default": "0",
+        "format": "number",
+        "unit": "calories"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Homme Sédentaire, Maintenance",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "gender": "male",
+          "age": 35,
+          "activityLevel": "sedentary",
+          "fitnessGoal": "maintenance",
+          "trainingFrequency": 0
+        },
+        "outputs": {
+          "dailyProteinIntake": 80,
+          "proteinPerKg": 1.0,
+          "proteinPerMeal": 20,
+          "proteinPerMeal6": 13,
+          "proteinPerPound": 0.45,
+          "caloriesFromProtein": 320
+        }
+      },
+      {
+        "title": "Homme Très Actif Bodybuilder",
+        "inputs": {
+          "weight": 90,
+          "weightUnit": "kg",
+          "gender": "male",
+          "age": 28,
+          "activityLevel": "very_active",
+          "fitnessGoal": "bodybuilding",
+          "trainingFrequency": 6
+        },
+        "outputs": {
+          "dailyProteinIntake": 225,
+          "proteinPerKg": 2.5,
+          "proteinPerMeal": 56,
+          "proteinPerMeal6": 38,
+          "proteinPerPound": 1.13,
+          "caloriesFromProtein": 900
+        }
+      },
+      {
+        "title": "Femme Modérément Active, Gain Musculaire",
+        "inputs": {
+          "weight": 65,
+          "weightUnit": "kg",
+          "gender": "female",
+          "age": 32,
+          "activityLevel": "moderately_active",
+          "fitnessGoal": "muscle_gain",
+          "trainingFrequency": 4
+        },
+        "outputs": {
+          "dailyProteinIntake": 143,
+          "proteinPerKg": 2.2,
+          "proteinPerMeal": 36,
+          "proteinPerMeal6": 24,
+          "proteinPerPound": 1.0,
+          "caloriesFromProtein": 572
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "calorie-calculator",
+      "ideal-weight-calculator",
+      "body-fat-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez votre apport optimal quotidien en protéines avec notre Calculateur d'Apport en Protéines complet. Comprendre vos besoins en protéines est crucial pour construction musculaire, gestion du poids, performance athlétique et santé générale. Notre calculateur fournit des recommandations personnalisées basées sur votre poids corporel, niveau d'activité et objectifs fitness.",
+      "benefits": [
+        "Calculez besoins quotidiens personnalisés en protéines",
+        "Comprenez besoins en protéines pour différents objectifs fitness",
+        "Tenez compte niveau d'activité et fréquence d'entraînement",
+        "Obtenez apport en protéines en multiples formats (par kg, par lb, par repas)",
+        "Apprenez comment protéines contribuent à votre apport calorique quotidien",
+        "Prenez décisions éclairées sur nutrition et supplémentation",
+        "Optimisez récupération et croissance musculaire",
+        "Soutenez objectifs perte ou maintenance de poids"
+      ],
+      "howToUse": [
+        "Entrez votre poids corporel actuel en kilogrammes ou livres",
+        "Sélectionnez votre genre (affecte calculs métaboliques mineurs)",
+        "Entrez votre âge pour recommandations appropriées par âge",
+        "Choisissez votre niveau d'activité de sédentaire à extrêmement actif",
+        "Sélectionnez votre objectif principal fitness (maintenance, perte poids, gain musculaire, etc.)",
+        "Entrez combien jours par semaine vous entraînez ou exercez intensivement",
+        "Consultez vos recommandations personnalisées d'apport en protéines"
+      ],
+      "formulaExplanation": "Besoins en protéines sont calculés en utilisant directives basées sur évidence de recherche en nutrition sportive. Apport base en protéines commence à 0.8-1.0g par kg pour adultes sédentaires. Multiplicateurs niveau d'activité augmentent cela (1.2-1.6g/kg pour individus actifs, 1.6-2.2g/kg pour athlètes). Objectifs fitness ajoutent multiplicateurs additionnels (gain musculaire +20-50%, performance athlétique +30-60%, musculation +50-80%). Fréquence d'entraînement affine le calcul pour récupération optimale. Chaque gramme de protéines fournit 4 calories.",
+      "examples": [
+        "Un homme sédentaire de 80kg maintenant poids a besoin 80g protéines quotidiennes (1.0g/kg), ou environ 20g par repas avec 4 repas par jour",
+        "Un homme très actif de 90kg bodybuilder s'entraînant 6 jours/semaine a besoin 225g protéines quotidiennes (2.5g/kg), distribué à travers 6 repas pour absorption optimale",
+        "Une femme modérément active de 65kg construisant muscle a besoin 143g protéines quotidiennes (2.2g/kg), soutenant à la fois réparation et croissance musculaire"
+      ],
+      "whoShouldUse": "Passionnés de fitness et athlètes, bodybuilders et entraîneurs de force, individus sur programmes perte ou gain de poids, athlètes d'endurance et performers sportifs, adultes plus âgés maintenant masse musculaire, végétariens et végétaliens traçant apport en protéines, diététiciens et nutritionnistes, et quiconque intéressé à optimiser sa nutrition pour santé et performance.",
+      "importantNotes": "Ces recommandations sont basées sur directives générales de nutrition sportive. Besoins individuels peuvent varier basés sur composition corporelle, intensité d'entraînement, métabolisme et conditions de santé. Qualité des protéines importe - concentrez-vous sur protéines complètes de sources animales ou combinaisons de protéines végétales. Consultez un fournisseur de soins de santé ou diététicien enregistré pour conseils nutritionnels personnalisés, particulièrement si vous avez problèmes rénaux ou autres conditions médicales.",
+      "relatedTools": [
+        "Calculateur IMC - Évaluez composition corporelle",
+        "Calculateur TMB - Calculez taux métabolique basal",
+        "Calculateur Calories - Estimez besoins caloriques quotidiens",
+        "Calculateur Poids Idéal - Trouvez plage saine de poids",
+        "Calculateur Graisse Corporelle - Estimez pourcentage de graisse corporelle"
+      ],
+      "faqs": [
+        {
+          "question": "Combien de protéines ai-je besoin par jour ?",
+          "answer": "Besoins quotidiens en protéines varient par individu : adultes sédentaires ont besoin 0.8-1.0g par kg poids corporel, individus actifs ont besoin 1.2-1.6g/kg, athlètes ont besoin 1.6-2.2g/kg, et bodybuilders peuvent avoir besoin 2.0-2.5g/kg. Utilisez notre calculateur pour recommandations personnalisées basées sur votre poids, niveau d'activité et objectifs."
+        },
+        {
+          "question": "Quelle est la meilleure façon de distribuer apport en protéines tout au long de la journée ?",
+          "answer": "Visez 20-40g de protéines de haute qualité toutes les 3-4 heures pour maximiser synthèse protéique musculaire. La plupart des gens se débrouillent bien avec 4-6 repas/colations contenant protéines. Distribuez vos protéines quotidiennes totales à travers ces repas pour absorption et utilisation optimales."
+        },
+        {
+          "question": "Les protéines aident-elles à perte de poids ?",
+          "answer": "Oui, apport plus élevé en protéines peut soutenir perte de poids en augmentant satiété, préservant masse musculaire pendant restriction calorique, et augmentant métabolisme légèrement. Études montrent 1.6-2.2g protéines par kg poids corporel aide maintenir muscle tout en perdant graisse."
+        },
+        {
+          "question": "Peut-on obtenir assez de protéines sur régime végétarien ou végétalien ?",
+          "answer": "Oui, avec planification appropriée. Végétariens peuvent obtenir protéines de produits laitiers, œufs et aliments végétaux. Végétaliens ont besoin combiner différentes protéines végétales (riz + haricots, houmous + pain) tout au long de la journée pour obtenir tous acides aminés essentiels. Certains peuvent avoir besoin apport légèrement plus élevé (1.8-2.5g/kg) pour compenser digestibilité moindre."
+        },
+        {
+          "question": "Trop de protéines est-il nuisible ?",
+          "answer": "Apport excessif en protéines (sur 3g/kg pour périodes étendues) peut surcharger reins chez individus sensibles et peut être coûteux. La plupart des gens sains tolèrent 2.0-2.5g/kg bien. Concentrez-vous sur sources protéines de qualité et hydratation adéquate. Consultez un fournisseur de soins de santé si vous avez préoccupations rénales."
+        },
+        {
+          "question": "Quelles sont protéines complètes vs incomplètes ?",
+          "answer": "Protéines complètes contiennent tous acides aminés essentiels (sources animales comme viande, poisson, œufs, produits laitiers). Protéines incomplètes manquent certains acides aminés (la plupart sources végétales). Combinez protéines incomplètes (haricots + riz, beurre d'arachide + pain) pour créer protéines complètes."
+        },
+        {
+          "question": "Comment âge affecte-t-il besoins en protéines ?",
+          "answer": "Adultes plus âgés (sur 65) peuvent avoir besoin légèrement plus protéines (1.2-1.6g/kg) pour maintenir masse musculaire et prévenir perte musculaire liée à âge (sarcopénie). Entraînement résistance combiné avec apport adéquat en protéines est particulièrement important pour adultes plus âgés."
+        },
+        {
+          "question": "Puis-je obtenir toutes mes protéines de suppléments ?",
+          "answer": "Suppléments de protéines peuvent aider rencontrer besoins mais devraient compléter, pas remplacer, sources protéines d'aliments entiers. Aliments entiers fournissent nutriments additionnels, fibre et meilleure satiété. Utilisez suppléments stratégiquement quand apport d'aliments entiers est insuffisant."
+        }
+      ]
+    }
+  }
+}

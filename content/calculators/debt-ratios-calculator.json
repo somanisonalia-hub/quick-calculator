@@ -1,0 +1,514 @@
+{
+  "en": {
+    "title": "Debt Ratios Calculator",
+    "seoTitle": "Debt Ratios Calculator - Analyze Financial Leverage & Risk Assessment",
+    "metaDescription": "Calculate debt-to-equity ratio, debt ratio, and other key financial leverage ratios. Assess borrowing risk and financial health with our comprehensive debt ratios calculator.",
+    "keywords": [
+      "debt ratios calculator",
+      "debt to equity ratio",
+      "debt ratio calculator",
+      "financial leverage ratios",
+      "debt analysis",
+      "financial risk assessment"
+    ],
+    "longTailKeywords": [
+      "how to calculate debt to equity ratio",
+      "what is a good debt ratio for a company",
+      "debt ratio vs debt to equity ratio",
+      "financial leverage analysis calculator",
+      "company debt analysis tool"
+    ],
+    "slug": "debt-ratios-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "debt",
+      "ratios",
+      "financial",
+      "leverage",
+      "analysis",
+      "equity",
+      "assets",
+      "liabilities"
+    ],
+    "description": "Analyze your financial leverage and risk with our comprehensive debt ratios calculator. Calculate debt-to-equity ratio, total debt ratio, long-term debt ratio, and debt-to-asset ratio to assess borrowing levels and financial health.",
+    "summary": "Calculate key debt ratios to assess financial leverage and risk.",
+    "instructions": [
+      "Enter your total assets value",
+      "Input total equity (shareholder's equity)",
+      "Specify short-term debt (current liabilities)",
+      "Enter long-term debt amounts",
+      "Click calculate to see all debt ratio analysis"
+    ],
+    "inputs": [
+      "Total Assets ($)",
+      "Total Equity ($)",
+      "Short-term Debt ($)",
+      "Long-term Debt ($)"
+    ],
+    "outputs": [
+      "Debt-to-Equity Ratio",
+      "Debt Ratio (%)",
+      "Long-term Debt Ratio (%)",
+      "Debt-to-Asset Ratio (%)"
+    ],
+    "examples": [
+      {
+        "title": "Manufacturing Company Analysis",
+        "input": "Total Assets: $2,500,000, Total Equity: $1,250,000, Short-term Debt: $300,000, Long-term Debt: $950,000",
+        "output": "Debt-to-Equity: 1.0, Debt Ratio: 50%, Long-term Debt Ratio: 38%"
+      },
+      {
+        "title": "Tech Startup Assessment",
+        "input": "Total Assets: $800,000, Total Equity: $600,000, Short-term Debt: $100,000, Long-term Debt: $100,000",
+        "output": "Debt-to-Equity: 0.33, Debt Ratio: 25%, Long-term Debt Ratio: 12.5%"
+      }
+    ],
+    "calculatorComponent": "DebtRatiosCalculator",
+    "seoContent": {
+      "introduction": "Understanding debt ratios is crucial for assessing a company's financial health and risk level. Our debt ratios calculator helps you analyze leverage through key metrics like debt-to-equity ratio and total debt ratio. These ratios provide insights into how much a company relies on borrowed funds versus equity financing, helping investors and managers make informed decisions about financial stability and growth potential.",
+      "benefits": [
+        "Assess financial leverage and borrowing risk",
+        "Compare debt levels across different companies",
+        "Monitor changes in financial structure over time",
+        "Make informed investment and lending decisions",
+        "Identify potential financial distress signals"
+      ],
+      "steps": [
+        "Gather financial statement information including balance sheet data",
+        "Enter total assets, equity, and debt figures",
+        "Calculate ratios using our automated tool",
+        "Interpret results based on industry benchmarks",
+        "Monitor ratios over time for trend analysis"
+      ],
+      "inputsExplained": [
+        "Total Assets: Complete value of all company resources and possessions",
+        "Total Equity: Shareholder ownership value after liabilities are subtracted",
+        "Short-term Debt: Obligations due within one year or operating cycle",
+        "Long-term Debt: Borrowings with maturities exceeding one year"
+      ],
+      "formulaExplanation": "Debt ratios are calculated using balance sheet information. Debt-to-equity ratio divides total debt by total equity, while debt ratio expresses total debt as a percentage of total assets. These metrics help assess financial leverage and risk tolerance.",
+      "examples": [
+        "A debt-to-equity ratio below 1.0 indicates conservative financing with more equity than debt",
+        "Ratios above 2.0 suggest high leverage and increased financial risk",
+        "Industry-specific benchmarks vary, with manufacturing companies typically showing higher ratios than service businesses"
+      ],
+      "resultsExplanation": [
+        "Debt-to-Equity Ratio: Measures financial leverage by comparing borrowed funds to equity",
+        "Debt Ratio: Shows percentage of assets financed through debt",
+        "Long-term Debt Ratio: Indicates reliance on long-term borrowing",
+        "Debt-to-Asset Ratio: Alternative measure of debt burden relative to total resources"
+      ],
+      "whoItsFor": "This calculator is essential for financial analysts, investors, creditors, business owners, and students learning corporate finance. Anyone involved in financial decision-making or analysis will benefit from understanding these key leverage ratios.",
+      "disclaimer": "Debt ratio analysis should be used as part of comprehensive financial assessment. Industry norms and company-specific factors should be considered. Consult financial professionals for investment or business decisions.",
+      "relatedTools": [
+        "liquidity-ratios-calculator",
+        
+        "financial-ratios-calculator",
+        "return-on-equity-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is a good debt-to-equity ratio?",
+          "answer": "A good debt-to-equity ratio depends on industry and company circumstances. Generally, ratios below 1.0 are considered conservative, 1.0-2.0 moderate, and above 2.0 high leverage. Financial services companies often have higher ratios than manufacturing firms."
+        },
+        {
+          "question": "How does debt ratio differ from debt-to-equity ratio?",
+          "answer": "Debt ratio expresses total debt as a percentage of total assets, while debt-to-equity ratio compares debt to shareholder equity. Both measure financial leverage but provide different perspectives on capital structure."
+        },
+        {
+          "question": "Why are debt ratios important for investors?",
+          "answer": "Debt ratios help investors assess financial risk, borrowing capacity, and management's capital structure decisions. High ratios may indicate increased risk but also potential for higher returns through leverage."
+        },
+        {
+          "question": "How often should debt ratios be monitored?",
+          "answer": "Debt ratios should be monitored quarterly or annually, especially during economic changes or significant business events. Regular monitoring helps identify trends and potential financial distress early."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Ratios de Deuda",
+    "seoTitle": "Calculadora de Ratios de Deuda - Análisis de Apalancamiento Financiero",
+    "metaDescription": "Calcula ratio deuda-capital, ratio de deuda y otros ratios clave de apalancamiento financiero. Evalúa el riesgo de endeudamiento y salud financiera.",
+    "keywords": [
+      "calculadora ratios deuda",
+      "ratio deuda capital",
+      "calculadora ratio deuda",
+      "ratios apalancamiento financiero",
+      "análisis deuda",
+      "evaluación riesgo financiero"
+    ],
+    "longTailKeywords": [
+      "cómo calcular ratio deuda capital",
+      "qué es un buen ratio de deuda para una empresa",
+      "ratio de deuda vs ratio deuda capital",
+      "calculadora análisis apalancamiento financiero",
+      "herramienta análisis deuda empresa"
+    ],
+    "slug": "debt-ratios-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "deuda",
+      "ratios",
+      "financiero",
+      "apalancamiento",
+      "análisis",
+      "capital",
+      "activos",
+      "pasivos"
+    ],
+    "description": "Analiza tu apalancamiento financiero y riesgo con nuestra calculadora completa de ratios de deuda. Calcula ratio deuda-capital, ratio total de deuda, ratio de deuda a largo plazo y ratio deuda-activos para evaluar niveles de endeudamiento y salud financiera.",
+    "summary": "Calcula ratios clave de deuda para evaluar apalancamiento financiero y riesgo.",
+    "instructions": [
+      "Ingresa el valor total de activos",
+      "Introduce el capital total (patrimonio)",
+      "Especifica deuda a corto plazo (pasivos corrientes)",
+      "Ingresa montos de deuda a largo plazo",
+      "Haz clic en calcular para ver todo el análisis de ratios de deuda"
+    ],
+    "inputs": [
+      "Activos Totales ($)",
+      "Capital Total ($)",
+      "Deuda a Corto Plazo ($)",
+      "Deuda a Largo Plazo ($)"
+    ],
+    "outputs": [
+      "Ratio Deuda-Capital",
+      "Ratio de Deuda (%)",
+      "Ratio Deuda Largo Plazo (%)",
+      "Ratio Deuda-Activos (%)"
+    ],
+    "examples": [
+      {
+        "title": "Análisis Empresa Manufacturera",
+        "input": "Activos Totales: $2,500,000, Capital Total: $1,250,000, Deuda Corto Plazo: $300,000, Deuda Largo Plazo: $950,000",
+        "output": "Deuda-Capital: 1.0, Ratio Deuda: 50%, Ratio Deuda Largo Plazo: 38%"
+      },
+      {
+        "title": "Evaluación Startup Tecnología",
+        "input": "Activos Totales: $800,000, Capital Total: $600,000, Deuda Corto Plazo: $100,000, Deuda Largo Plazo: $100,000",
+        "output": "Deuda-Capital: 0.33, Ratio Deuda: 25%, Ratio Deuda Largo Plazo: 12.5%"
+      }
+    ],
+    "calculatorComponent": "DebtRatiosCalculator",
+    "seoContent": {
+      "introduction": "Comprender los ratios de deuda es crucial para evaluar la salud financiera y nivel de riesgo de una empresa. Nuestra calculadora de ratios de deuda te ayuda a analizar el apalancamiento a través de métricas clave como el ratio deuda-capital y el ratio total de deuda. Estos ratios proporcionan información sobre cuánto depende una empresa de fondos prestados versus financiamiento propio, ayudando a inversores y gerentes a tomar decisiones informadas sobre estabilidad financiera y potencial de crecimiento.",
+      "benefits": [
+        "Evaluar apalancamiento financiero y riesgo de endeudamiento",
+        "Comparar niveles de deuda entre diferentes empresas",
+        "Monitorear cambios en estructura financiera con el tiempo",
+        "Tomar decisiones informadas de inversión y crédito",
+        "Identificar señales potenciales de distress financiero"
+      ],
+      "steps": [
+        "Reunir información de estados financieros incluyendo datos del balance",
+        "Ingresar activos totales, capital y cifras de deuda",
+        "Calcular ratios usando nuestra herramienta automatizada",
+        "Interpretar resultados basados en benchmarks de industria",
+        "Monitorear ratios con el tiempo para análisis de tendencias"
+      ],
+      "inputsExplained": [
+        "Activos Totales: Valor completo de todos los recursos y posesiones de la empresa",
+        "Capital Total: Valor de propiedad de accionistas después de restar pasivos",
+        "Deuda a Corto Plazo: Obligaciones vencidas dentro de un año o ciclo operativo",
+        "Deuda a Largo Plazo: Préstamos con vencimientos superiores a un año"
+      ],
+      "formulaExplanation": "Los ratios de deuda se calculan usando información del balance. El ratio deuda-capital divide la deuda total entre el capital total, mientras que el ratio de deuda expresa la deuda total como porcentaje de activos totales. Estas métricas ayudan a evaluar apalancamiento financiero y tolerancia al riesgo.",
+      "examples": [
+        "Un ratio deuda-capital por debajo de 1.0 indica financiamiento conservador con más capital que deuda",
+        "Ratios por encima de 2.0 sugieren alto apalancamiento y riesgo financiero aumentado",
+        "Los benchmarks específicos de industria varían, con empresas manufactureras mostrando típicamente ratios más altos que negocios de servicios"
+      ],
+      "resultsExplanation": [
+        "Ratio Deuda-Capital: Mide apalancamiento financiero comparando fondos prestados con capital",
+        "Ratio de Deuda: Muestra porcentaje de activos financiados a través de deuda",
+        "Ratio Deuda Largo Plazo: Indica dependencia de financiamiento a largo plazo",
+        "Ratio Deuda-Activos: Medida alternativa de carga de deuda relativa a recursos totales"
+      ],
+      "whoItsFor": "Esta calculadora es esencial para analistas financieros, inversores, acreedores, dueños de negocios y estudiantes aprendiendo finanzas corporativas. Cualquier persona involucrada en toma de decisiones o análisis financiero se beneficiará de entender estos ratios clave de apalancamiento.",
+      "disclaimer": "El análisis de ratios de deuda debe usarse como parte de evaluación financiera comprehensiva. Normas de industria y factores específicos de empresa deben considerarse. Consulta profesionales financieros para decisiones de inversión o negocio.",
+      "relatedTools": [
+        "liquidity-ratios-calculator",
+        
+        "financial-ratios-calculator",
+        "return-on-equity-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es un buen ratio deuda-capital?",
+          "answer": "Un buen ratio deuda-capital depende de industria y circunstancias de empresa. Generalmente, ratios por debajo de 1.0 se consideran conservadores, 1.0-2.0 moderados, y por encima de 2.0 alto apalancamiento. Empresas de servicios financieros a menudo tienen ratios más altos que firmas manufactureras."
+        },
+        {
+          "question": "¿Cómo difiere el ratio de deuda del ratio deuda-capital?",
+          "answer": "El ratio de deuda expresa deuda total como porcentaje de activos totales, mientras que el ratio deuda-capital compara deuda con capital de accionistas. Ambos miden apalancamiento financiero pero proporcionan diferentes perspectivas sobre estructura de capital."
+        },
+        {
+          "question": "¿Por qué son importantes los ratios de deuda para inversores?",
+          "answer": "Los ratios de deuda ayudan a inversores a evaluar riesgo financiero, capacidad de endeudamiento y decisiones de estructura de capital de gerencia. Ratios altos pueden indicar riesgo aumentado pero también potencial de mayores retornos a través de apalancamiento."
+        },
+        {
+          "question": "¿Con qué frecuencia deben monitorearse los ratios de deuda?",
+          "answer": "Los ratios de deuda deben monitorearse trimestralmente o anualmente, especialmente durante cambios económicos o eventos de negocio significativos. Monitoreo regular ayuda a identificar tendencias y distress financiero potencial temprano."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Índices de Dívida",
+    "seoTitle": "Calculadora de Índices de Dívida - Análise de Alavancagem Financeira",
+    "metaDescription": "Calcule índice dívida-capital, índice de dívida e outros índices-chave de alavancagem financeira. Avalie risco de empréstimo e saúde financeira.",
+    "keywords": [
+      "calculadora índices dívida",
+      "índice dívida capital",
+      "calculadora índice dívida",
+      "índices alavancagem financeira",
+      "análise dívida",
+      "avaliação risco financeiro"
+    ],
+    "longTailKeywords": [
+      "como calcular índice dívida capital",
+      "o que é um bom índice de dívida para uma empresa",
+      "índice de dívida vs índice dívida capital",
+      "calculadora análise alavancagem financeira",
+      "ferramenta análise dívida empresa"
+    ],
+    "slug": "debt-ratios-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "dívida",
+      "índices",
+      "financeiro",
+      "alavancagem",
+      "análise",
+      "capital",
+      "ativos",
+      "passivos"
+    ],
+    "description": "Analise sua alavancagem financeira e risco com nossa calculadora completa de índices de dívida. Calcule índice dívida-capital, índice total de dívida, índice de dívida de longo prazo e índice dívida-ativos para avaliar níveis de empréstimo e saúde financeira.",
+    "summary": "Calcule índices-chave de dívida para avaliar alavancagem financeira e risco.",
+    "instructions": [
+      "Insira o valor total de ativos",
+      "Digite capital total (patrimônio)",
+      "Especifique dívida de curto prazo (passivos correntes)",
+      "Insira valores de dívida de longo prazo",
+      "Clique em calcular para ver toda análise de índices de dívida"
+    ],
+    "inputs": [
+      "Ativos Totais (R$)",
+      "Capital Total (R$)",
+      "Dívida Curto Prazo (R$)",
+      "Dívida Longo Prazo (R$)"
+    ],
+    "outputs": [
+      "Índice Dívida-Capital",
+      "Índice de Dívida (%)",
+      "Índice Dívida Longo Prazo (%)",
+      "Índice Dívida-Ativos (%)"
+    ],
+    "examples": [
+      {
+        "title": "Análise Empresa Manufatureira",
+        "input": "Ativos Totais: R$ 2.500.000, Capital Total: R$ 1.250.000, Dívida Curto Prazo: R$ 300.000, Dívida Longo Prazo: R$ 950.000",
+        "output": "Dívida-Capital: 1.0, Índice Dívida: 50%, Índice Dívida Longo Prazo: 38%"
+      },
+      {
+        "title": "Avaliação Startup Tecnologia",
+        "input": "Ativos Totais: R$ 800.000, Capital Total: R$ 600.000, Dívida Curto Prazo: R$ 100.000, Dívida Longo Prazo: R$ 100.000",
+        "output": "Dívida-Capital: 0.33, Índice Dívida: 25%, Índice Dívida Longo Prazo: 12.5%"
+      }
+    ],
+    "calculatorComponent": "DebtRatiosCalculator",
+    "seoContent": {
+      "introduction": "Compreender índices de dívida é crucial para avaliar saúde financeira e nível de risco de uma empresa. Nossa calculadora de índices de dívida ajuda você a analisar alavancagem através de métricas-chave como índice dívida-capital e índice total de dívida. Estes índices fornecem insights sobre quanto uma empresa depende de fundos emprestados versus financiamento próprio, ajudando investidores e gerentes a tomarem decisões informadas sobre estabilidade financeira e potencial de crescimento.",
+      "benefits": [
+        "Avaliar alavancagem financeira e risco de empréstimo",
+        "Comparar níveis de dívida entre diferentes empresas",
+        "Monitorar mudanças em estrutura financeira ao longo do tempo",
+        "Tomar decisões informadas de investimento e empréstimo",
+        "Identificar sinais potenciais de distress financeiro"
+      ],
+      "steps": [
+        "Reunir informações de demonstrações financeiras incluindo dados do balanço",
+        "Inserir ativos totais, capital e valores de dívida",
+        "Calcular índices usando nossa ferramenta automatizada",
+        "Interpretar resultados baseados em benchmarks de indústria",
+        "Monitorar índices ao longo do tempo para análise de tendências"
+      ],
+      "inputsExplained": [
+        "Ativos Totais: Valor completo de todos recursos e posses da empresa",
+        "Capital Total: Valor de propriedade de acionistas após passivos serem subtraídos",
+        "Dívida Curto Prazo: Obrigações vencidas dentro de um ano ou ciclo operacional",
+        "Dívida Longo Prazo: Empréstimos com vencimentos superiores a um ano"
+      ],
+      "formulaExplanation": "Índices de dívida são calculados usando informações do balanço. Índice dívida-capital divide dívida total pelo capital total, enquanto índice de dívida expressa dívida total como porcentagem de ativos totais. Estas métricas ajudam a avaliar alavancagem financeira e tolerância ao risco.",
+      "examples": [
+        "Um índice dívida-capital abaixo de 1.0 indica financiamento conservador com mais capital que dívida",
+        "Índices acima de 2.0 sugerem alta alavancagem e risco financeiro aumentado",
+        "Benchmarks específicos de indústria variam, com empresas manufatureiras tipicamente mostrando índices mais altos que negócios de serviços"
+      ],
+      "resultsExplanation": [
+        "Índice Dívida-Capital: Mede alavancagem financeira comparando fundos emprestados com capital",
+        "Índice de Dívida: Mostra porcentagem de ativos financiados através de dívida",
+        "Índice Dívida Longo Prazo: Indica dependência de empréstimo de longo prazo",
+        "Índice Dívida-Ativos: Medida alternativa de carga de dívida relativa a recursos totais"
+      ],
+      "whoItsFor": "Esta calculadora é essencial para analistas financeiros, investidores, credores, donos de negócios e estudantes aprendendo finanças corporativas. Qualquer pessoa envolvida em tomada de decisões ou análise financeira se beneficiará de entender estes índices-chave de alavancagem.",
+      "disclaimer": "Análise de índices de dívida deve ser usada como parte de avaliação financeira comprehensiva. Normas de indústria e fatores específicos de empresa devem ser considerados. Consulte profissionais financeiros para decisões de investimento ou negócio.",
+      "relatedTools": [
+        "liquidity-ratios-calculator",
+        
+        "financial-ratios-calculator",
+        "return-on-equity-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "O que é um bom índice dívida-capital?",
+          "answer": "Um bom índice dívida-capital depende de indústria e circunstâncias de empresa. Geralmente, índices abaixo de 1.0 são considerados conservadores, 1.0-2.0 moderados, e acima de 2.0 alta alavancagem. Empresas de serviços financeiros frequentemente têm índices mais altos que firmas manufatureiras."
+        },
+        {
+          "question": "Como o índice de dívida difere do índice dívida-capital?",
+          "answer": "O índice de dívida expressa dívida total como porcentagem de ativos totais, enquanto índice dívida-capital compara dívida com capital de acionistas. Ambos medem alavancagem financeira mas fornecem diferentes perspectivas sobre estrutura de capital."
+        },
+        {
+          "question": "Por que os índices de dívida são importantes para investidores?",
+          "answer": "Índices de dívida ajudam investidores a avaliar risco financeiro, capacidade de empréstimo e decisões de estrutura de capital de gerência. Índices altos podem indicar risco aumentado mas também potencial de maiores retornos através de alavancagem."
+        },
+        {
+          "question": "Com que frequência os índices de dívida devem ser monitorados?",
+          "answer": "Índices de dívida devem ser monitorados trimestralmente ou anualmente, especialmente durante mudanças econômicas ou eventos de negócio significativos. Monitoramento regular ajuda a identificar tendências e distress financeiro potencial cedo."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Ratios d'Endettement",
+    "seoTitle": "Calculateur de Ratios d'Endettement - Analyse d'Effet de Levier Financier",
+    "metaDescription": "Calculez ratio dette-fonds propres, ratio d'endettement et autres ratios clés d'effet de levier financier. Évaluez risque d'emprunt et santé financière.",
+    "keywords": [
+      "calculateur ratios endettement",
+      "ratio dette fonds propres",
+      "calculateur ratio endettement",
+      "ratios effet levier financier",
+      "analyse endettement",
+      "évaluation risque financier"
+    ],
+    "longTailKeywords": [
+      "comment calculer ratio dette fonds propres",
+      "quel est un bon ratio d'endettement pour une entreprise",
+      "ratio d'endettement vs ratio dette fonds propres",
+      "calculateur analyse effet levier financier",
+      "outil analyse endettement entreprise"
+    ],
+    "slug": "debt-ratios-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "dette",
+      "ratios",
+      "financier",
+      "effet de levier",
+      "analyse",
+      "fonds propres",
+      "actifs",
+      "passifs"
+    ],
+    "description": "Analysez votre effet de levier financier et risque avec notre calculateur complet de ratios d'endettement. Calculez ratio dette-fonds propres, ratio total d'endettement, ratio d'endettement à long terme et ratio dette-actifs pour évaluer niveaux d'emprunt et santé financière.",
+    "summary": "Calculez ratios clés d'endettement pour évaluer effet de levier financier et risque.",
+    "instructions": [
+      "Entrez valeur totale d'actifs",
+      "Saisissez fonds propres totaux (capitaux propres)",
+      "Spécifiez dette à court terme (passifs courants)",
+      "Entrez montants dette à long terme",
+      "Cliquez calculer pour voir toute analyse de ratios d'endettement"
+    ],
+    "inputs": [
+      "Actifs Totaux (€)",
+      "Fonds Propres Totaux (€)",
+      "Dette Court Terme (€)",
+      "Dette Long Terme (€)"
+    ],
+    "outputs": [
+      "Ratio Dette-Fonds Propres",
+      "Ratio d'Endettement (%)",
+      "Ratio Endettement Long Terme (%)",
+      "Ratio Dette-Actifs (%)"
+    ],
+    "examples": [
+      {
+        "title": "Analyse Entreprise Manufacturière",
+        "input": "Actifs Totaux: €2,500,000, Fonds Propres Totaux: €1,250,000, Dette Court Terme: €300,000, Dette Long Terme: €950,000",
+        "output": "Dette-Fonds Propres: 1.0, Ratio Endettement: 50%, Ratio Endettement Long Terme: 38%"
+      },
+      {
+        "title": "Évaluation Startup Technologique",
+        "input": "Actifs Totaux: €800,000, Fonds Propres Totaux: €600,000, Dette Court Terme: €100,000, Dette Long Terme: €100,000",
+        "output": "Dette-Fonds Propres: 0.33, Ratio Endettement: 25%, Ratio Endettement Long Terme: 12.5%"
+      }
+    ],
+    "calculatorComponent": "DebtRatiosCalculator",
+    "seoContent": {
+      "introduction": "Comprendre les ratios d'endettement est crucial pour évaluer santé financière et niveau de risque d'une entreprise. Notre calculateur de ratios d'endettement vous aide à analyser l'effet de levier à travers des métriques clés comme le ratio dette-fonds propres et le ratio total d'endettement. Ces ratios fournissent des insights sur combien une entreprise dépend de fonds empruntés versus financement propre, aidant investisseurs et managers à prendre des décisions informées sur stabilité financière et potentiel de croissance.",
+      "benefits": [
+        "Évaluer effet de levier financier et risque d'emprunt",
+        "Comparer niveaux d'endettement entre différentes entreprises",
+        "Surveiller changements en structure financière au fil du temps",
+        "Prendre décisions informées d'investissement et prêt",
+        "Identifier signaux potentiels de détresse financière"
+      ],
+      "steps": [
+        "Rassembler informations d'états financiers incluant données du bilan",
+        "Entrer actifs totaux, fonds propres et chiffres d'endettement",
+        "Calculer ratios utilisant notre outil automatisé",
+        "Interpréter résultats basés sur benchmarks d'industrie",
+        "Surveiller ratios au fil du temps pour analyse de tendances"
+      ],
+      "inputsExplained": [
+        "Actifs Totaux: Valeur complète de toutes ressources et possessions de l'entreprise",
+        "Fonds Propres Totaux: Valeur de propriété d'actionnaires après soustraction passifs",
+        "Dette Court Terme: Obligations dues dans un an ou cycle opérationnel",
+        "Dette Long Terme: Emprunts avec échéances dépassant un an"
+      ],
+      "formulaExplanation": "Les ratios d'endettement sont calculés utilisant informations du bilan. Le ratio dette-fonds propres divise dette totale par fonds propres totaux, tandis que le ratio d'endettement exprime dette totale comme pourcentage d'actifs totaux. Ces métriques aident à évaluer effet de levier financier et tolérance au risque.",
+      "examples": [
+        "Un ratio dette-fonds propres en dessous de 1.0 indique financement conservateur avec plus de fonds propres que dette",
+        "Des ratios au-dessus de 2.0 suggèrent haut effet de levier et risque financier augmenté",
+        "Les benchmarks spécifiques d'industrie varient, avec entreprises manufacturières montrant typiquement des ratios plus élevés que sociétés de services"
+      ],
+      "resultsExplanation": [
+        "Ratio Dette-Fonds Propres: Mesure effet de levier financier en comparant fonds empruntés à fonds propres",
+        "Ratio d'Endettement: Montre pourcentage d'actifs financé par dette",
+        "Ratio Endettement Long Terme: Indique dépendance à emprunt à long terme",
+        "Ratio Dette-Actifs: Mesure alternative de charge d'endettement relative à ressources totales"
+      ],
+      "whoItsFor": "Ce calculateur est essentiel pour analystes financiers, investisseurs, créanciers, propriétaires d'entreprises et étudiants apprenant finance d'entreprise. Toute personne impliquée dans prise de décisions ou analyse financière bénéficiera de comprendre ces ratios clés d'effet de levier.",
+      "disclaimer": "L'analyse de ratios d'endettement devrait être utilisée comme partie d'évaluation financière complète. Normes d'industrie et facteurs spécifiques d'entreprise devraient être considérés. Consultez professionnels financiers pour décisions d'investissement ou d'affaires.",
+      "relatedTools": [
+        "liquidity-ratios-calculator",
+        
+        "financial-ratios-calculator",
+        "return-on-equity-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "Quel est un bon ratio dette-fonds propres?",
+          "answer": "Un bon ratio dette-fonds propres dépend d'industrie et circonstances d'entreprise. Généralement, ratios en dessous de 1.0 sont considérés conservateurs, 1.0-2.0 modérés, et au-dessus de 2.0 haut effet de levier. Sociétés de services financiers ont souvent des ratios plus élevés que firmes manufacturières."
+        },
+        {
+          "question": "Comment le ratio d'endettement diffère-t-il du ratio dette-fonds propres?",
+          "answer": "Le ratio d'endettement exprime dette totale comme pourcentage d'actifs totaux, tandis que le ratio dette-fonds propres compare dette à fonds propres d'actionnaires. Tous deux mesurent effet de levier financier mais fournissent différentes perspectives sur structure de capital."
+        },
+        {
+          "question": "Pourquoi les ratios d'endettement sont-ils importants pour investisseurs?",
+          "answer": "Les ratios d'endettement aident investisseurs à évaluer risque financier, capacité d'emprunt et décisions de structure de capital de direction. Ratios élevés peuvent indiquer risque augmenté mais aussi potentiel de rendements plus élevés par effet de levier."
+        },
+        {
+          "question": "À quelle fréquence les ratios d'endettement devraient-ils être surveillés?",
+          "answer": "Les ratios d'endettement devraient être surveillés trimestriellement ou annuellement, spécialement durant changements économiques ou événements d'affaires significatifs. Surveillance régulière aide à identifier tendances et détresse financière potentielle tôt."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "en": {
+    "title": "Mortgage Calculator",
+    "summary": "Calculate monthly mortgage payments and total interest.",
+    "description": "Use our mortgage calculator to estimate your monthly payments, total interest paid, and amortization schedule for home loans.",
+    "category": "financial",
+    "difficulty": "Beginner",
+    "slug": "mortgage-calculator",
+    "calculatorComponent": "MortgageCalculator",
+    "seoContent": {
+      "metaTitle": "Mortgage Calculator - Calculate Monthly Payments & Interest",
+      "metaDescription": "Free mortgage calculator to estimate monthly payments, total interest, and amortization schedule. Calculate home loan payments instantly.",
+      "keywords": ["mortgage calculator", "home loan calculator", "monthly payment calculator"],
+      "h1": "Mortgage Calculator",
+      "introduction": "Our mortgage calculator helps you estimate your monthly mortgage payments, total interest paid over the life of the loan, and create a complete amortization schedule.",
+      "benefits": [
+        "Calculate exact monthly mortgage payments",
+        "See total interest paid over the loan term",
+        "Generate detailed amortization schedules",
+        "Compare different loan scenarios",
+        "Plan your home buying budget effectively"
+      ],
+      "steps": [
+        "Enter your home loan amount (principal)",
+        "Input the annual interest rate",
+        "Specify the loan term in years",
+        "Optionally add property tax and insurance",
+        "Click calculate to see your results"
+      ],
+      "inputsExplained": [
+        "Loan Amount: The total amount you're borrowing",
+        "Interest Rate: Annual percentage rate for the loan",
+        "Loan Term: Number of years to repay the loan",
+        "Property Tax: Annual property tax amount (optional)",
+        "Home Insurance: Annual insurance premium (optional)"
+      ],
+      "formulaExplanation": "Monthly payment = P * [r(1+r)^n] / [(1+r)^n - 1] where P is principal, r is monthly interest rate, and n is number of payments.",
+      "examples": [
+        "30-year fixed mortgage at 6.5% interest on $300,000 loan",
+        "15-year fixed mortgage at 5.8% interest on $250,000 loan",
+        "Compare different down payment amounts"
+      ],
+      "resultsExplanation": [
+        "Monthly Payment: Your regular mortgage payment",
+        "Total Interest: Amount paid in interest over loan life",
+        "Total Cost: Total amount paid including principal and interest",
+        "Amortization Schedule: Month-by-month payment breakdown"
+      ],
+      "whoItsFor": "Home buyers, real estate professionals, financial planners, and anyone considering a mortgage loan.",
+      "disclaimer": "This calculator provides estimates only. Actual mortgage terms depend on lender requirements, credit score, and current market conditions. Consult with a mortgage professional for personalized advice.",
+      "relatedTools": ["loan-calculator", "home-affordability-calculator", "debt-ratios-calculator"],
+      "faqs": [
+        {
+          "question": "What is a mortgage calculator?",
+          "answer": "A mortgage calculator is a tool that helps you estimate your monthly mortgage payments based on loan amount, interest rate, and loan term. It can also show total interest paid and provide an amortization schedule."
+        },
+        {
+          "question": "How accurate are mortgage calculator results?",
+          "answer": "Mortgage calculators provide estimates based on the information you input. Actual payments may vary due to lender fees, escrow amounts, property taxes, insurance, and other closing costs. For precise quotes, consult a mortgage lender."
+        },
+        {
+          "question": "What is the difference between 15-year and 30-year mortgages?",
+          "answer": "A 15-year mortgage has higher monthly payments but lower total interest paid over the life of the loan. A 30-year mortgage has lower monthly payments but you'll pay more interest overall. The 15-year option builds equity faster."
+        },
+        {
+          "question": "How do interest rates affect my mortgage payments?",
+          "answer": "Higher interest rates increase your monthly payments and total interest paid. Even a small difference in rates (like 0.25%) can significantly impact your payments over 30 years. Shop around for the best rates."
+        },
+        {
+          "question": "What is included in my monthly mortgage payment?",
+          "answer": "Your monthly payment typically includes principal and interest (P&I). Many lenders also require an escrow account that includes property taxes and homeowners insurance. This is called PITI (Principal, Interest, Taxes, Insurance)."
+        },
+        {
+          "question": "Can I change my mortgage terms after closing?",
+          "answer": "You can refinance your mortgage to change terms, but it involves closing costs and may extend your loan term. Consider your long-term goals before refinancing. Rate-and-term refinances change your interest rate and/or loan length."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Hipoteca",
+    "summary": "Calcula pagos mensuales de hipoteca e intereses totales.",
+    "description": "Usa nuestra calculadora de hipoteca para estimar tus pagos mensuales, intereses totales pagados y calendario de amortización para préstamos hipotecarios.",
+    "category": "financial",
+    "difficulty": "Principiante",
+    "slug": "mortgage-calculator",
+    "calculatorComponent": "MortgageCalculator",
+    "seoContent": {
+      "metaTitle": "Calculadora de Hipoteca - Calcula Pagos Mensuales e Intereses",
+      "metaDescription": "Calculadora de hipoteca gratuita para estimar pagos mensuales, intereses totales y calendario de amortización.",
+      "keywords": ["calculadora hipoteca", "calculadora préstamo casa", "calculadora pago mensual"],
+      "h1": "Calculadora de Hipoteca",
+      "introduction": "Nuestra calculadora de hipoteca te ayuda a estimar tus pagos mensuales de hipoteca, intereses totales pagados durante la vida del préstamo y crear un calendario completo de amortización.",
+      "benefits": [
+        "Calcula pagos mensuales exactos de hipoteca",
+        "Ve el total de intereses pagados durante el plazo del préstamo",
+        "Genera calendarios detallados de amortización",
+        "Compara diferentes escenarios de préstamo",
+        "Planifica efectivamente tu presupuesto de compra de vivienda"
+      ],
+      "steps": [
+        "Ingresa el monto del préstamo hipotecario (principal)",
+        "Ingresa la tasa de interés anual",
+        "Especifica el plazo del préstamo en años",
+        "Opcionalmente agrega impuestos prediales y seguro",
+        "Haz clic en calcular para ver tus resultados"
+      ],
+      "inputsExplained": [
+        "Monto del Préstamo: El monto total que estás pidiendo prestado",
+        "Tasa de Interés: Tasa porcentual anual del préstamo",
+        "Plazo del Préstamo: Número de años para pagar el préstamo",
+        "Impuestos Prediales: Monto anual de impuestos prediales (opcional)",
+        "Seguro del Hogar: Prima anual del seguro (opcional)"
+      ],
+      "formulaExplanation": "Pago mensual = P * [r(1+r)^n] / [(1+r)^n - 1] donde P es el principal, r es la tasa de interés mensual, y n es el número de pagos.",
+      "examples": [
+        "Hipoteca fija a 30 años al 6.5% de interés sobre préstamo de $300,000",
+        "Hipoteca fija a 15 años al 5.8% de interés sobre préstamo de $250,000",
+        "Compara diferentes montos de enganche"
+      ],
+      "resultsExplanation": [
+        "Pago Mensual: Tu pago regular de hipoteca",
+        "Intereses Totales: Monto pagado en intereses durante la vida del préstamo",
+        "Costo Total: Monto total pagado incluyendo principal e intereses",
+        "Calendario de Amortización: Desglose mes a mes de pagos"
+      ],
+      "whoItsFor": "Compradores de vivienda, profesionales inmobiliarios, planificadores financieros y cualquier persona que considere un préstamo hipotecario.",
+      "disclaimer": "Esta calculadora proporciona estimaciones únicamente. Los términos hipotecarios reales dependen de los requisitos del prestamista, puntaje crediticio y condiciones actuales del mercado. Consulta con un profesional hipotecario para asesoramiento personalizado.",
+      "relatedTools": ["loan-calculator", "home-affordability-calculator", "debt-ratios-calculator"],
+      "faqs": [
+        {
+          "question": "¿Qué es una calculadora de hipoteca?",
+          "answer": "Una calculadora de hipoteca es una herramienta que te ayuda a estimar tus pagos mensuales de hipoteca basados en el monto del préstamo, tasa de interés y plazo del préstamo. También puede mostrar el interés total pagado y proporcionar un calendario de amortización."
+        },
+        {
+          "question": "¿Qué tan precisos son los resultados de la calculadora de hipoteca?",
+          "answer": "Las calculadoras de hipoteca proporcionan estimaciones basadas en la información que ingresa. Los pagos reales pueden variar debido a tarifas del prestamista, montos de depósito en garantía, impuestos prediales, seguro y otros costos de cierre. Para cotizaciones precisas, consulta con un prestamista hipotecario."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre hipotecas de 15 y 30 años?",
+          "answer": "Una hipoteca de 15 años tiene pagos mensuales más altos pero intereses totales más bajos durante la vida del préstamo. Una hipoteca de 30 años tiene pagos mensuales más bajos pero pagarás más intereses en total. La opción de 15 años acumula capital más rápido."
+        },
+        {
+          "question": "¿Cómo afectan las tasas de interés a mis pagos hipotecarios?",
+          "answer": "Las tasas de interés más altas aumentan tus pagos mensuales y el interés total pagado. Incluso una pequeña diferencia en las tasas (como 0.25%) puede impactar significativamente tus pagos durante 30 años. Compara para obtener las mejores tasas."
+        },
+        {
+          "question": "¿Qué se incluye en mi pago mensual de hipoteca?",
+          "answer": "Tu pago mensual típicamente incluye principal e intereses (P&I). Muchos prestamistas también requieren una cuenta de depósito en garantía que incluye impuestos prediales y seguro de hogar. Esto se llama PITI (Principal, Intereses, Impuestos, Seguro)."
+        },
+        {
+          "question": "¿Puedo cambiar los términos de mi hipoteca después del cierre?",
+          "answer": "Puedes refinanciar tu hipoteca para cambiar los términos, pero involucra costos de cierre y puede extender el plazo de tu préstamo. Considera tus metas a largo plazo antes de refinanciar. Los refinanciamientos de tasa y plazo cambian tu tasa de interés y/o longitud del préstamo."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Hipoteca",
+    "summary": "Calcule pagamentos mensais de hipoteca e juros totais.",
+    "description": "Use nossa calculadora de hipoteca para estimar seus pagamentos mensais, juros totais pagos e cronograma de amortização para empréstimos imobiliários.",
+    "category": "financial",
+    "difficulty": "Iniciante",
+    "slug": "mortgage-calculator",
+    "calculatorComponent": "MortgageCalculator",
+    "seoContent": {
+      "metaTitle": "Calculadora de Hipoteca - Calcule Pagamentos Mensais e Juros",
+      "metaDescription": "Calculadora de hipoteca gratuita para estimar pagamentos mensais, juros totais e cronograma de amortização.",
+      "keywords": ["calculadora hipoteca", "calculadora empréstimo casa", "calculadora pagamento mensal"],
+      "h1": "Calculadora de Hipoteca",
+      "introduction": "Nossa calculadora de hipoteca ajuda você a estimar seus pagamentos mensais de hipoteca, juros totais pagos durante a vida do empréstimo e criar um cronograma completo de amortização.",
+      "benefits": [
+        "Calcule pagamentos mensais exatos de hipoteca",
+        "Veja o total de juros pagos durante o prazo do empréstimo",
+        "Gere cronogramas detalhados de amortização",
+        "Compare diferentes cenários de empréstimo",
+        "Planeje efetivamente seu orçamento de compra da casa"
+      ],
+      "steps": [
+        "Digite o valor do empréstimo imobiliário (principal)",
+        "Insira a taxa de juros anual",
+        "Especifique o prazo do empréstimo em anos",
+        "Opcionalmente adicione impostos prediais e seguro",
+        "Clique em calcular para ver seus resultados"
+      ],
+      "inputsExplained": [
+        "Valor do Empréstimo: O valor total que você está emprestando",
+        "Taxa de Juros: Taxa percentual anual do empréstimo",
+        "Prazo do Empréstimo: Número de anos para pagar o empréstimo",
+        "Impostos Prediais: Valor anual de impostos prediais (opcional)",
+        "Seguro Residencial: Prêmio anual do seguro (opcional)"
+      ],
+      "formulaExplanation": "Pagamento mensal = P * [r(1+r)^n] / [(1+r)^n - 1] onde P é o principal, r é a taxa de juros mensal, e n é o número de pagamentos.",
+      "examples": [
+        "Hipoteca fixa de 30 anos a 6.5% de juros sobre empréstimo de R$ 300.000",
+        "Hipoteca fixa de 15 anos a 5.8% de juros sobre empréstimo de R$ 250.000",
+        "Compare diferentes valores de entrada"
+      ],
+      "resultsExplanation": [
+        "Pagamento Mensal: Seu pagamento regular de hipoteca",
+        "Juros Totais: Valor pago em juros durante a vida do empréstimo",
+        "Custo Total: Valor total pago incluindo principal e juros",
+        "Cronograma de Amortização: Detalhamento mês a mês dos pagamentos"
+      ],
+      "whoItsFor": "Compradores de imóveis, profissionais imobiliários, planejadores financeiros e qualquer pessoa considerando um empréstimo hipotecário.",
+      "disclaimer": "Esta calculadora fornece estimativas apenas. Os termos hipotecários reais dependem dos requisitos do credor, pontuação de crédito e condições atuais do mercado. Consulte um profissional hipotecário para aconselhamento personalizado.",
+      "relatedTools": ["loan-calculator", "home-affordability-calculator", "debt-ratios-calculator"],
+      "faqs": [
+        {
+          "question": "O que é uma calculadora de hipoteca?",
+          "answer": "Uma calculadora de hipoteca é uma ferramenta que ajuda você a estimar seus pagamentos mensais de hipoteca com base no valor do empréstimo, taxa de juros e prazo do empréstimo. Ela também pode mostrar o juros total pago e fornecer um cronograma de amortização."
+        },
+        {
+          "question": "Quão precisos são os resultados da calculadora de hipoteca?",
+          "answer": "As calculadoras de hipoteca fornecem estimativas com base nas informações que você insere. Os pagamentos reais podem variar devido a taxas do credor, valores de depósito em garantia, impostos prediais, seguro e outros custos de fechamento. Para cotações precisas, consulte um credor hipotecário."
+        },
+        {
+          "question": "Qual é a diferença entre hipotecas de 15 e 30 anos?",
+          "answer": "Uma hipoteca de 15 anos tem pagamentos mensais mais altos, mas juros totais mais baixos durante a vida do empréstimo. Uma hipoteca de 30 anos tem pagamentos mensais mais baixos, mas você pagará mais juros no total. A opção de 15 anos acumula patrimônio mais rapidamente."
+        },
+        {
+          "question": "Como as taxas de juros afetam meus pagamentos hipotecários?",
+          "answer": "Taxas de juros mais altas aumentam seus pagamentos mensais e juros totais pagos. Mesmo uma pequena diferença nas taxas (como 0.25%) pode impactar significativamente seus pagamentos durante 30 anos. Pesquise as melhores taxas."
+        },
+        {
+          "question": "O que está incluído no meu pagamento mensal de hipoteca?",
+          "answer": "Seu pagamento mensal normalmente inclui principal e juros (P&I). Muitos credores também exigem uma conta de depósito em garantia que inclui impostos prediais e seguro residencial. Isso é chamado de PITI (Principal, Juros, Impostos, Seguro)."
+        },
+        {
+          "question": "Posso alterar os termos da minha hipoteca após o fechamento?",
+          "answer": "Você pode refinanciar sua hipoteca para alterar os termos, mas envolve custos de fechamento e pode estender o prazo do seu empréstimo. Considere suas metas de longo prazo antes de refinanciar. Refinanciamentos de taxa e prazo alteram sua taxa de juros e/ou duração do empréstimo."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Hypothèque",
+    "summary": "Calculez les paiements mensuels d'hypothèque et les intérêts totaux.",
+    "description": "Utilisez notre calculateur d'hypothèque pour estimer vos paiements mensuels, intérêts totaux payés et calendrier d'amortissement pour les prêts immobiliers.",
+    "category": "financial",
+    "difficulty": "Débutant",
+    "slug": "mortgage-calculator",
+    "calculatorComponent": "MortgageCalculator",
+    "seoContent": {
+      "metaTitle": "Calculateur d'Hypothèque - Calculez les Paiements Mensuels et Intérêts",
+      "metaDescription": "Calculateur d'hypothèque gratuit pour estimer les paiements mensuels, intérêts totaux et calendrier d'amortissement.",
+      "keywords": ["calculateur hypothèque", "calculateur prêt immobilier", "calculateur paiement mensuel"],
+      "h1": "Calculateur d'Hypothèque",
+      "introduction": "Notre calculateur d'hypothèque vous aide à estimer vos paiements mensuels d'hypothèque, intérêts totaux payés pendant la durée du prêt et à créer un calendrier complet d'amortissement.",
+      "benefits": [
+        "Calculez les paiements mensuels exacts d'hypothèque",
+        "Voyez le total des intérêts payés pendant la durée du prêt",
+        "Générez des calendriers détaillés d'amortissement",
+        "Comparez différents scénarios de prêt",
+        "Planifiez efficacement votre budget d'achat immobilier"
+      ],
+      "steps": [
+        "Saisissez le montant du prêt immobilier (principal)",
+        "Entrez le taux d'intérêt annuel",
+        "Spécifiez la durée du prêt en années",
+        "Ajoutez éventuellement les taxes foncières et l'assurance",
+        "Cliquez sur calculer pour voir vos résultats"
+      ],
+      "inputsExplained": [
+        "Montant du Prêt: Le montant total que vous empruntez",
+        "Taux d'Intérêt: Taux annuel en pourcentage du prêt",
+        "Durée du Prêt: Nombre d'années pour rembourser le prêt",
+        "Taxes Foncières: Montant annuel des taxes foncières (optionnel)",
+        "Assurance Habitation: Prime annuelle d'assurance (optionnel)"
+      ],
+      "formulaExplanation": "Paiement mensuel = P * [r(1+r)^n] / [(1+r)^n - 1] où P est le principal, r est le taux d'intérêt mensuel, et n est le nombre de paiements.",
+      "examples": [
+        "Prêt hypothécaire fixe de 30 ans à 6.5% d'intérêt sur un prêt de 300 000 $",
+        "Prêt hypothécaire fixe de 15 ans à 5.8% d'intérêt sur un prêt de 250 000 $",
+        "Comparez différents montants d'acompte"
+      ],
+      "resultsExplanation": [
+        "Paiement Mensuel: Votre paiement régulier d'hypothèque",
+        "Intérêts Totaux: Montant payé en intérêts pendant la durée du prêt",
+        "Coût Total: Montant total payé incluant principal et intérêts",
+        "Calendrier d'Amortissement: Répartition mois par mois des paiements"
+      ],
+      "whoItsFor": "Acheteurs immobiliers, professionnels de l'immobilier, planificateurs financiers et toute personne envisageant un prêt hypothécaire.",
+      "disclaimer": "Ce calculateur fournit uniquement des estimations. Les conditions hypothécaires réelles dépendent des exigences du prêteur, du score de crédit et des conditions actuelles du marché. Consultez un professionnel hypothécaire pour des conseils personnalisés.",
+      "relatedTools": ["loan-calculator", "home-affordability-calculator", "debt-ratios-calculator"],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un calculateur d'hypothèque?",
+          "answer": "Un calculateur d'hypothèque est un outil qui vous aide à estimer vos paiements mensuels d'hypothèque en fonction du montant du prêt, du taux d'intérêt et de la durée du prêt. Il peut également afficher le total des intérêts payés et fournir un calendrier d'amortissement."
+        },
+        {
+          "question": "À quel point les résultats du calculateur d'hypothèque sont-ils précis?",
+          "answer": "Les calculateurs d'hypothèque fournissent des estimations basées sur les informations que vous saisissez. Les paiements réels peuvent varier en raison des frais du prêteur, des montants d'acompte, des taxes foncières, de l'assurance et d'autres frais de clôture. Pour des devis précis, consultez un prêteur hypothécaire."
+        },
+        {
+          "question": "Quelle est la différence entre les hypothèques de 15 et 30 ans?",
+          "answer": "Une hypothèque de 15 ans a des paiements mensuels plus élevés mais des intérêts totaux plus faibles pendant la durée du prêt. Une hypothèque de 30 ans a des paiements mensuels plus faibles mais vous paierez plus d'intérêts au total. L'option de 15 ans accumule de l'équité plus rapidement."
+        },
+        {
+          "question": "Comment les taux d'intérêt affectent-ils mes paiements hypothécaires?",
+          "answer": "Les taux d'intérêt plus élevés augmentent vos paiements mensuels et le total des intérêts payés. Même une petite différence de taux (comme 0,25%) peut considérablement affecter vos paiements sur 30 ans. Magasinez pour obtenir les meilleurs taux."
+        },
+        {
+          "question": "Qu'est-ce qui est inclus dans mon paiement mensuel d'hypothèque?",
+          "answer": "Votre paiement mensuel comprend généralement le principal et les intérêts (P&I). De nombreux prêteurs exigent également un compte d'acompte qui comprend les taxes foncières et l'assurance habitation. Cela s'appelle PITI (Principal, Intérêts, Taxes, Assurance)."
+        },
+        {
+          "question": "Puis-je changer les termes de mon hypothèque après la clôture?",
+          "answer": "Vous pouvez refinancer votre hypothèque pour changer les termes, mais cela implique des frais de clôture et peut prolonger la durée de votre prêt. Considérez vos objectifs à long terme avant de refinancer. Les refinancements de taux et de durée changent votre taux d'intérêt et/ou la durée du prêt."
+        }
+      ]
+    }
+  }
+}

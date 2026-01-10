@@ -1,0 +1,386 @@
+{
+  "en": {
+    "title": "Interest Calculator",
+    "seoTitle": "Interest Calculator - Calculate Simple & Compound Interest Online",
+    "metaDescription": "Free interest calculator to calculate simple and compound interest. Calculate interest earned on savings, investments, and loans with detailed breakdowns.",
+    "keywords": [
+      "interest calculator",
+      "simple interest calculator",
+      "compound interest calculator",
+      "calculate interest",
+      "interest rate calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate interest on savings",
+      "compound interest calculator online",
+      "simple vs compound interest calculator",
+      "calculate interest on loan",
+      "interest earned calculator"
+    ],
+    "slug": "interest-calculator",
+    "category": "financial",
+    "calculatorComponent": "InterestCalculator",
+    "difficulty": "basic",
+    "tags": ["interest", "compound", "simple", "investment", "savings"],
+    "summary": "Calculate simple and compound interest on investments, savings, and loans.",
+    "description": "Our comprehensive interest calculator helps you calculate both simple and compound interest. Perfect for understanding how your money grows over time with different interest types and compounding frequencies.",
+    "instructions": [
+      "Select the type of interest calculation (Simple or Compound)",
+      "Enter the principal amount",
+      "Input the interest rate (annual)",
+      "Specify the time period",
+      "Choose compounding frequency for compound interest",
+      "Click calculate to see your results"
+    ],
+    "examples": [
+      "Calculate interest on a $10,000 savings account at 3% interest for 5 years",
+      "Compare simple vs compound interest on a $5,000 investment at 4% for 10 years",
+      "Calculate monthly compound interest on a loan balance"
+    ],
+    "relatedCalculators": ["compound-interest-calculator", "simple-interest-calculator", "savings-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Our interest calculator provides comprehensive calculations for both simple and compound interest. Whether you're planning investments, understanding loan costs, or learning about how interest affects your money over time, this calculator offers clear insights into different interest calculation methods.",
+      "benefits": [
+        "Calculate both simple and compound interest in one tool",
+        "Compare different compounding frequencies",
+        "Understand how interest grows over time",
+        "Perfect for educational purposes and financial planning",
+        "Clear breakdowns of principal, interest, and total amounts"
+      ],
+      "steps": [
+        "Choose between Simple or Compound interest calculation",
+        "Enter your principal amount (initial investment or loan amount)",
+        "Input the annual interest rate as a percentage",
+        "Specify the time period in years",
+        "For compound interest, select compounding frequency",
+        "Review your calculation results and breakdowns"
+      ],
+      "inputsExplained": [
+        "Principal Amount: The initial amount of money you're calculating interest on",
+        "Interest Rate: Annual interest rate expressed as a percentage",
+        "Time Period: Number of years the money will earn interest",
+        "Compounding Frequency: How often interest is added to the principal (for compound interest)"
+      ],
+      "formulaExplanation": "Simple Interest = P × r × t where P is principal, r is rate, t is time. Compound Interest = P × (1 + r/n)^(n×t) - P where n is compounding frequency.",
+      "examples": [
+        "Simple interest: $1,000 at 5% for 3 years = $150 interest, total $1,150",
+        "Compound interest (quarterly): $1,000 at 5% for 3 years = $161.22 interest, total $1,161.22",
+        "Monthly compounding: Same investment = $161.67 interest, total $1,161.67"
+      ],
+      "resultsExplanation": [
+        "Interest Earned: Total interest accumulated over the time period",
+        "Future Value: Principal plus all accumulated interest",
+        "Annual Equivalent: Effective annual interest rate",
+        "Detailed breakdowns show how interest grows over time"
+      ],
+      "whoItsFor": "Students learning about interest calculations, investors planning portfolios, savers comparing accounts, borrowers understanding loan costs, and anyone interested in how money grows over time.",
+      "disclaimer": "This calculator provides mathematical calculations based on the formulas provided. Actual interest rates and compounding methods may vary by financial institution. Always verify with your bank or financial advisor for real-world applications.",
+      "faqs": [
+        {
+          "question": "What's the difference between simple and compound interest?",
+          "answer": "Simple interest is calculated only on the principal amount and doesn't compound. Compound interest is calculated on both the principal and previously earned interest, allowing your money to grow faster over time."
+        },
+        {
+          "question": "How often should interest compound?",
+          "answer": "More frequent compounding (daily, monthly, quarterly) results in higher returns than annual compounding. However, the difference becomes more significant over longer time periods."
+        },
+        {
+          "question": "Does this calculator work for loans?",
+          "answer": "Yes, the same interest calculation principles apply to loans. The calculator shows how much interest you'll pay over time, though loan payments also include principal repayment."
+        },
+        {
+          "question": "What's the rule of 72?",
+          "answer": "The rule of 72 is a quick way to estimate how long it takes for an investment to double. Divide 72 by the interest rate to get the approximate number of years."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Intereses",
+    "seoTitle": "Calculadora de Intereses - Calcula Interés Simple y Compuesto Online",
+    "metaDescription": "Calculadora de intereses gratuita para calcular interés simple y compuesto. Calcula intereses ganados en ahorros, inversiones y préstamos con desgloses detallados.",
+    "keywords": [
+      "calculadora intereses",
+      "calculadora interés simple",
+      "calculadora interés compuesto",
+      "calcular intereses",
+      "calculadora tasa interés"
+    ],
+    "longTailKeywords": [
+      "como calcular intereses en ahorros",
+      "calculadora interés compuesto online",
+      "calculadora interés simple vs compuesto",
+      "calcular intereses en préstamo",
+      "calculadora intereses ganados"
+    ],
+    "slug": "interest-calculator",
+    "category": "financial",
+    "calculatorComponent": "InterestCalculator",
+    "difficulty": "básico",
+    "tags": ["intereses", "compuesto", "simple", "inversión", "ahorros"],
+    "summary": "Calcula interés simple y compuesto en inversiones, ahorros y préstamos.",
+    "description": "Nuestra calculadora de intereses completa te ayuda a calcular tanto interés simple como compuesto. Perfecto para entender cómo crece tu dinero con diferentes tipos de interés y frecuencias de capitalización.",
+    "instructions": [
+      "Selecciona el tipo de cálculo de interés (Simple o Compuesto)",
+      "Ingresa el monto principal",
+      "Ingresa la tasa de interés (anual)",
+      "Especifica el período de tiempo",
+      "Elige la frecuencia de capitalización para interés compuesto",
+      "Haz clic en calcular para ver tus resultados"
+    ],
+    "examples": [
+      "Calcula interés en una cuenta de ahorros de $10,000 al 3% de interés por 5 años",
+      "Compara interés simple vs compuesto en una inversión de $5,000 al 4% por 10 años",
+      "Calcula interés compuesto mensual en un saldo de préstamo"
+    ],
+    "relatedCalculators": ["compound-interest-calculator", "simple-interest-calculator", "savings-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Nuestra calculadora de intereses proporciona cálculos completos tanto para interés simple como compuesto. Ya sea que estés planificando inversiones, entendiendo costos de préstamos, o aprendiendo sobre cómo el interés afecta tu dinero con el tiempo, esta calculadora ofrece conocimientos claros sobre diferentes métodos de cálculo de interés.",
+      "benefits": [
+        "Calcula tanto interés simple como compuesto en una herramienta",
+        "Compara diferentes frecuencias de capitalización",
+        "Entiende cómo crece el interés con el tiempo",
+        "Perfecto para propósitos educativos y planificación financiera",
+        "Desgloses claros de principal, interés y montos totales"
+      ],
+      "steps": [
+        "Elige entre cálculo de interés Simple o Compuesto",
+        "Ingresa tu monto principal (inversión inicial o monto de préstamo)",
+        "Ingresa la tasa de interés anual como porcentaje",
+        "Especifica el período de tiempo en años",
+        "Para interés compuesto, selecciona frecuencia de capitalización",
+        "Revisa tus resultados de cálculo y desgloses"
+      ],
+      "inputsExplained": [
+        "Monto Principal: El monto inicial de dinero sobre el que calculas interés",
+        "Tasa de Interés: Tasa de interés anual expresada como porcentaje",
+        "Período de Tiempo: Número de años que el dinero ganará interés",
+        "Frecuencia de Capitalización: Con qué frecuencia se añade el interés al principal (para interés compuesto)"
+      ],
+      "formulaExplanation": "Interés Simple = P × r × t donde P es principal, r es tasa, t es tiempo. Interés Compuesto = P × (1 + r/n)^(n×t) - P donde n es frecuencia de capitalización.",
+      "examples": [
+        "Interés simple: $1,000 al 5% por 3 años = $150 de interés, total $1,150",
+        "Interés compuesto (trimestral): $1,000 al 5% por 3 años = $161.22 de interés, total $1,161.22",
+        "Capitalización mensual: Misma inversión = $161.67 de interés, total $1,161.67"
+      ],
+      "resultsExplanation": [
+        "Interés Ganado: Interés total acumulado durante el período de tiempo",
+        "Valor Futuro: Principal más todo el interés acumulado",
+        "Equivalente Anual: Tasa efectiva de interés anual",
+        "Los desgloses detallados muestran cómo crece el interés con el tiempo"
+      ],
+      "whoItsFor": "Estudiantes aprendiendo sobre cálculos de interés, inversores planificando portafolios, ahorradores comparando cuentas, prestatarios entendiendo costos de préstamos, y cualquiera interesado en cómo crece el dinero con el tiempo.",
+      "disclaimer": "Esta calculadora proporciona cálculos matemáticos basados en las fórmulas proporcionadas. Las tasas de interés reales y métodos de capitalización pueden variar por institución financiera. Siempre verifica con tu banco o asesor financiero para aplicaciones del mundo real.",
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre interés simple y compuesto?",
+          "answer": "El interés simple se calcula solo sobre el monto principal y no se capitaliza. El interés compuesto se calcula sobre el principal y los intereses ganados previamente, permitiendo que tu dinero crezca más rápido con el tiempo."
+        },
+        {
+          "question": "¿Con qué frecuencia debería capitalizarse el interés?",
+          "answer": "La capitalización más frecuente (diaria, mensual, trimestral) resulta en retornos más altos que la capitalización anual. Sin embargo, la diferencia se vuelve más significativa en períodos de tiempo más largos."
+        },
+        {
+          "question": "¿Funciona esta calculadora para préstamos?",
+          "answer": "Sí, los mismos principios de cálculo de interés se aplican a los préstamos. La calculadora muestra cuánto interés pagarás con el tiempo, aunque los pagos de préstamos también incluyen reembolso de principal."
+        },
+        {
+          "question": "¿Cuál es la regla del 72?",
+          "answer": "La regla del 72 es una forma rápida de estimar cuánto tiempo toma para que una inversión se duplique. Divide 72 por la tasa de interés para obtener el número aproximado de años."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Juros",
+    "seoTitle": "Calculadora de Juros - Calcule Juros Simples e Compostos Online",
+    "metaDescription": "Calculadora de juros gratuita para calcular juros simples e compostos. Calcule juros ganhos em poupanças, investimentos e empréstimos com detalhamentos.",
+    "keywords": [
+      "calculadora juros",
+      "calculadora juros simples",
+      "calculadora juros compostos",
+      "calcular juros",
+      "calculadora taxa juros"
+    ],
+    "longTailKeywords": [
+      "como calcular juros em poupança",
+      "calculadora juros compostos online",
+      "calculadora juros simples vs compostos",
+      "calcular juros em empréstimo",
+      "calculadora juros ganhos"
+    ],
+    "slug": "interest-calculator",
+    "category": "financial",
+    "calculatorComponent": "InterestCalculator",
+    "difficulty": "básico",
+    "tags": ["juros", "compostos", "simples", "investimento", "poupança"],
+    "summary": "Calcule juros simples e compostos em investimentos, poupanças e empréstimos.",
+    "description": "Nossa calculadora de juros completa ajuda você a calcular tanto juros simples quanto compostos. Perfeito para entender como seu dinheiro cresce com diferentes tipos de juros e frequências de capitalização.",
+    "instructions": [
+      "Selecione o tipo de cálculo de juros (Simples ou Compostos)",
+      "Digite o valor principal",
+      "Digite a taxa de juros (anual)",
+      "Especifique o período de tempo",
+      "Escolha a frequência de capitalização para juros compostos",
+      "Clique em calcular para ver seus resultados"
+    ],
+    "examples": [
+      "Calcule juros em uma conta poupança de R$ 10.000 a 3% de juros por 5 anos",
+      "Compare juros simples vs compostos em um investimento de R$ 5.000 a 4% por 10 anos",
+      "Calcule juros compostos mensais em um saldo de empréstimo"
+    ],
+    "relatedCalculators": ["compound-interest-calculator", "simple-interest-calculator", "savings-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Nossa calculadora de juros fornece cálculos completos tanto para juros simples quanto compostos. Seja você planejando investimentos, entendendo custos de empréstimos, ou aprendendo sobre como os juros afetam seu dinheiro com o tempo, esta calculadora oferece insights claros sobre diferentes métodos de cálculo de juros.",
+      "benefits": [
+        "Calcule tanto juros simples quanto compostos em uma ferramenta",
+        "Compare diferentes frequências de capitalização",
+        "Entenda como os juros crescem com o tempo",
+        "Perfeito para propósitos educacionais e planejamento financeiro",
+        "Detalhamentos claros de principal, juros e valores totais"
+      ],
+      "steps": [
+        "Escolha entre cálculo de juros Simples ou Compostos",
+        "Digite seu valor principal (investimento inicial ou valor de empréstimo)",
+        "Digite a taxa de juros anual como porcentagem",
+        "Especifique o período de tempo em anos",
+        "Para juros compostos, selecione frequência de capitalização",
+        "Revise seus resultados de cálculo e detalhamentos"
+      ],
+      "inputsExplained": [
+        "Valor Principal: O valor inicial de dinheiro sobre o qual você calcula juros",
+        "Taxa de Juros: Taxa de juros anual expressa como porcentagem",
+        "Período de Tempo: Número de anos que o dinheiro ganhará juros",
+        "Frequência de Capitalização: Com que frequência os juros são adicionados ao principal (para juros compostos)"
+      ],
+      "formulaExplanation": "Juros Simples = P × r × t onde P é principal, r é taxa, t é tempo. Juros Compostos = P × (1 + r/n)^(n×t) - P onde n é frequência de capitalização.",
+      "examples": [
+        "Juros simples: R$ 1.000 a 5% por 3 anos = R$ 150 de juros, total R$ 1.150",
+        "Juros compostos (trimestrais): R$ 1.000 a 5% por 3 anos = R$ 161,22 de juros, total R$ 1.161,22",
+        "Capitalização mensal: Mesmo investimento = R$ 161,67 de juros, total R$ 1.161,67"
+      ],
+      "resultsExplanation": [
+        "Juros Ganhos: Juros totais acumulados durante o período de tempo",
+        "Valor Futuro: Principal mais todos os juros acumulados",
+        "Equivalente Anual: Taxa efetiva de juros anual",
+        "Detalhamentos mostram como os juros crescem com o tempo"
+      ],
+      "whoItsFor": "Estudantes aprendendo sobre cálculos de juros, investidores planejando portfólios, poupadores comparando contas, tomadores de empréstimo entendendo custos de empréstimos, e qualquer pessoa interessada em como o dinheiro cresce com o tempo.",
+      "disclaimer": "Esta calculadora fornece cálculos matemáticos baseados nas fórmulas fornecidas. Taxas de juros reais e métodos de capitalização podem variar por instituição financeira. Sempre verifique com seu banco ou consultor financeiro para aplicações do mundo real.",
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre juros simples e compostos?",
+          "answer": "Juros simples são calculados apenas sobre o valor principal e não se capitalizam. Juros compostos são calculados sobre o principal e juros ganhos anteriormente, permitindo que seu dinheiro cresça mais rápido com o tempo."
+        },
+        {
+          "question": "¿Com que frequência os juros deveriam ser capitalizados?",
+          "answer": "Capitalização mais frequente (diária, mensal, trimestral) resulta em retornos mais altos do que capitalização anual. No entanto, a diferença se torna mais significativa em períodos de tempo mais longos."
+        },
+        {
+          "question": "Esta calculadora funciona para empréstimos?",
+          "answer": "Sim, os mesmos princípios de cálculo de juros se aplicam a empréstimos. A calculadora mostra quanto juros você pagará com o tempo, embora pagamentos de empréstimos também incluam reembolso de principal."
+        },
+        {
+          "question": "Qual é a regra do 72?",
+          "answer": "A regra do 72 é uma forma rápida de estimar quanto tempo leva para um investimento dobrar. Divida 72 pela taxa de juros para obter o número aproximado de anos."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Intérêts",
+    "seoTitle": "Calculateur d'Intérêts - Calculez Intérêts Simples et Composés en Ligne",
+    "metaDescription": "Calculateur d'intérêts gratuit pour calculer intérêts simples et composés. Calculez intérêts gagnés sur épargnes, investissements et prêts avec décompositions détaillées.",
+    "keywords": [
+      "calculateur intérêts",
+      "calculateur intérêts simples",
+      "calculateur intérêts composés",
+      "calculer intérêts",
+      "calculateur taux intérêts"
+    ],
+    "longTailKeywords": [
+      "comment calculer intérêts sur épargne",
+      "calculateur intérêts composés en ligne",
+      "calculateur intérêts simples vs composés",
+      "calculer intérêts sur prêt",
+      "calculateur intérêts gagnés"
+    ],
+    "slug": "interest-calculator",
+    "category": "financial",
+    "calculatorComponent": "InterestCalculator",
+    "difficulty": "basique",
+    "tags": ["intérêts", "composés", "simples", "investissement", "épargne"],
+    "summary": "Calculez intérêts simples et composés sur investissements, épargnes et prêts.",
+    "description": "Notre calculateur d'intérêts complet vous aide à calculer à la fois intérêts simples et composés. Parfait pour comprendre comment votre argent croît avec différents types d'intérêts et fréquences de capitalisation.",
+    "instructions": [
+      "Sélectionnez le type de calcul d'intérêts (Simple ou Composé)",
+      "Entrez le montant principal",
+      "Saisissez le taux d'intérêt (annuel)",
+      "Spécifiez la période de temps",
+      "Choisissez la fréquence de capitalisation pour intérêts composés",
+      "Cliquez sur calculer pour voir vos résultats"
+    ],
+    "examples": [
+      "Calculez intérêts sur un compte épargne de 10 000 € à 3% d'intérêt pendant 5 ans",
+      "Comparez intérêts simples vs composés sur un investissement de 5 000 € à 4% pendant 10 ans",
+      "Calculez intérêts composés mensuels sur un solde de prêt"
+    ],
+    "relatedCalculators": ["compound-interest-calculator", "simple-interest-calculator", "savings-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Notre calculateur d'intérêts fournit des calculs complets pour les intérêts simples et composés. Que vous planifiez des investissements, compreniez les coûts de prêt, ou appreniez comment les intérêts affectent votre argent au fil du temps, cette calculatrice offre des insights clairs sur différentes méthodes de calcul d'intérêts.",
+      "benefits": [
+        "Calculez intérêts simples et composés dans un outil",
+        "Comparez différentes fréquences de capitalisation",
+        "Comprenez comment les intérêts croissent avec le temps",
+        "Parfait pour l'éducation et la planification financière",
+        "Décompositions claires de principal, intérêts et montants totaux"
+      ],
+      "steps": [
+        "Choisissez entre calcul d'intérêts Simple ou Composé",
+        "Entrez votre montant principal (investissement initial ou montant de prêt)",
+        "Saisissez le taux d'intérêt annuel en pourcentage",
+        "Spécifiez la période de temps en années",
+        "Pour intérêts composés, sélectionnez fréquence de capitalisation",
+        "Consultez vos résultats de calcul et décompositions"
+      ],
+      "inputsExplained": [
+        "Montant Principal: Le montant initial d'argent sur lequel vous calculez les intérêts",
+        "Taux d'Intérêt: Taux d'intérêt annuel exprimé en pourcentage",
+        "Période de Temps: Nombre d'années pendant lesquelles l'argent gagnera des intérêts",
+        "Fréquence de Capitalisation: À quelle fréquence les intérêts sont ajoutés au principal (pour intérêts composés)"
+      ],
+      "formulaExplanation": "Intérêts Simples = P × r × t où P est principal, r est taux, t est temps. Intérêts Composés = P × (1 + r/n)^(n×t) - P où n est fréquence de capitalisation.",
+      "examples": [
+        "Intérêts simples: 1 000 € à 5% pendant 3 ans = 150 € d'intérêts, total 1 150 €",
+        "Intérêts composés (trimestriels): 1 000 € à 5% pendant 3 ans = 161,22 € d'intérêts, total 1 161,22 €",
+        "Capitalisation mensuelle: Même investissement = 161,67 € d'intérêts, total 1 161,67 €"
+      ],
+      "resultsExplanation": [
+        "Intérêts Gagnés: Intérêts totaux accumulés pendant la période de temps",
+        "Valeur Future: Principal plus tous les intérêts accumulés",
+        "Équivalent Annuel: Taux effectif d'intérêt annuel",
+        "Les décompositions détaillées montrent comment les intérêts croissent avec le temps"
+      ],
+      "whoItsFor": "Étudiants apprenant les calculs d'intérêts, investisseurs planifiant portefeuilles, épargnants comparant comptes, emprunteurs comprenant coûts de prêt, et toute personne intéressée par la croissance de l'argent avec le temps.",
+      "disclaimer": "Cette calculatrice fournit des calculs mathématiques basés sur les formules fournies. Les taux d'intérêt réels et méthodes de capitalisation peuvent varier selon l'institution financière. Vérifiez toujours avec votre banque ou conseiller financier pour les applications du monde réel.",
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre intérêts simples et composés?",
+          "answer": "Les intérêts simples sont calculés uniquement sur le montant principal et ne se capitalisent pas. Les intérêts composés sont calculés sur le principal et les intérêts gagnés précédemment, permettant à votre argent de croître plus rapidement avec le temps."
+        },
+        {
+          "question": "À quelle fréquence les intérêts devraient-ils être capitalisés?",
+          "answer": "Une capitalisation plus fréquente (quotidienne, mensuelle, trimestrielle) donne des rendements plus élevés qu'une capitalisation annuelle. Cependant, la différence devient plus significative sur des périodes de temps plus longues."
+        },
+        {
+          "question": "Cette calculatrice fonctionne-t-elle pour les prêts?",
+          "answer": "Oui, les mêmes principes de calcul d'intérêts s'appliquent aux prêts. La calculatrice montre combien d'intérêts vous paierez avec le temps, bien que les paiements de prêt incluent également le remboursement du principal."
+        },
+        {
+          "question": "Quelle est la règle des 72?",
+          "answer": "La règle des 72 est un moyen rapide d'estimer combien de temps il faut pour qu'un investissement double. Divisez 72 par le taux d'intérêt pour obtenir le nombre approximatif d'années."
+        }
+      ]
+    }
+  }
+}

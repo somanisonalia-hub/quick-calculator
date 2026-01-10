@@ -1,0 +1,1329 @@
+{
+  "en": {
+    "title": "Budget Calculator",
+    "seoTitle": "Budget Calculator - Personal Finance Budget Planner",
+    "metaDescription": "Create a comprehensive personal budget with our budget calculator. Track income, expenses, savings goals, and financial planning for better money management.",
+    "keywords": [
+      "budget calculator",
+      "personal budget calculator",
+      "budget planner",
+      "expense calculator",
+      "financial budget",
+      "monthly budget calculator"
+    ],
+    "longTailKeywords": [
+      "how to create a personal budget calculator",
+      "monthly budget calculator with savings goals",
+      "budget calculator for families",
+      "personal expense tracker calculator",
+      "how to calculate monthly budget",
+      "budget calculator with debt payoff",
+      "financial planning budget calculator",
+      "budget calculator for college students",
+      "how to make a household budget calculator",
+      "budget calculator with emergency fund"
+    ],
+    "slug": "budget-calculator",
+    "category": "financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "budget",
+      "personal finance",
+      "expenses",
+      "income",
+      "savings",
+      "financial planning",
+      "money management"
+    ],
+    "description": "Take control of your finances with our comprehensive budget calculator. Track your income, categorize expenses, set savings goals, and create a sustainable financial plan. Perfect for individuals, families, and anyone looking to improve their financial health and build wealth over time.",
+    "summary": "Create and manage your personal budget effectively.",
+    "instructions": [
+      "Enter your total monthly income from all sources",
+      "Categorize your expenses into fixed (rent, utilities) and variable (groceries, entertainment)",
+      "Set savings goals for emergency fund and long-term goals",
+      "Include debt payments if applicable",
+      "The calculator will show your budget surplus/deficit and savings potential"
+    ],
+    "calculatorComponent": {
+      "componentName": "BudgetCalculator",
+      "inputs": [
+        {
+          "name": "monthlyIncome",
+          "label": "Monthly Income ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "housing",
+          "label": "Housing/Rent ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "step": 50
+        },
+        {
+          "name": "utilities",
+          "label": "Utilities ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "name": "groceries",
+          "label": "Groceries ($)",
+          "type": "number",
+          "default": 400,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "transportation",
+          "label": "Transportation ($)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "insurance",
+          "label": "Insurance ($)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "name": "debtPayments",
+          "label": "Debt Payments ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "entertainment",
+          "label": "Entertainment ($)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "savingsGoal",
+          "label": "Monthly Savings Goal ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "step": 50
+        },
+        {
+          "name": "miscellaneous",
+          "label": "Miscellaneous ($)",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 25
+        }
+      ],
+      "formula": "Total Expenses = Housing + Utilities + Groceries + Transportation + Insurance + Debt Payments + Entertainment + Miscellaneous; Budget Balance = Monthly Income - Total Expenses; Savings Potential = Budget Balance - Savings Goal",
+      "output": {
+        "label": "Monthly Budget Balance",
+        "default": "Enter your income and expenses above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Total Monthly Expenses",
+          "field": "totalExpenses",
+          "format": "currency"
+        },
+        {
+          "label": "Savings Achievement",
+          "field": "savingsProgress",
+          "format": "percentage"
+        },
+        {
+          "label": "Financial Health Score",
+          "field": "healthScore",
+          "format": "text"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Young Professional Budget",
+        "input": {
+          "monthlyIncome": 4500,
+          "housing": 1200,
+          "utilities": 150,
+          "groceries": 300,
+          "transportation": 250,
+          "insurance": 100,
+          "debtPayments": 150,
+          "entertainment": 200,
+          "savingsGoal": 400,
+          "miscellaneous": 100
+        },
+        "output": {
+          "monthlyBalance": 2050,
+          "totalExpenses": 2450,
+          "savingsProgress": 88.9
+        },
+        "explanation": "A young professional earning $4,500 monthly with disciplined spending can achieve 88.9% of their $400 savings goal, leaving $2,050 for additional savings or lifestyle improvements."
+      },
+      {
+        "title": "Family Budget",
+        "input": {
+          "monthlyIncome": 6500,
+          "housing": 1800,
+          "utilities": 300,
+          "groceries": 600,
+          "transportation": 400,
+          "insurance": 200,
+          "debtPayments": 300,
+          "entertainment": 250,
+          "savingsGoal": 600,
+          "miscellaneous": 150
+        },
+        "output": {
+          "monthlyBalance": 2500,
+          "totalExpenses": 4000,
+          "savingsProgress": 75
+        },
+        "explanation": "A family of four with $6,500 monthly income maintains a healthy balance of $2,500 after expenses, achieving 75% of their $600 savings goal while covering all family needs."
+      },
+      {
+        "title": "Student Budget",
+        "input": {
+          "monthlyIncome": 1800,
+          "housing": 800,
+          "utilities": 80,
+          "groceries": 200,
+          "transportation": 100,
+          "insurance": 50,
+          "debtPayments": 0,
+          "entertainment": 100,
+          "savingsGoal": 150,
+          "miscellaneous": 70
+        },
+        "output": {
+          "monthlyBalance": 400,
+          "totalExpenses": 1400,
+          "savingsProgress": 100
+        },
+        "explanation": "A college student with $1,800 monthly income (part-time job + financial aid) can meet their $150 savings goal while maintaining a comfortable lifestyle with $400 surplus."
+      },
+      {
+        "title": "Retirement Living Budget",
+        "input": {
+          "monthlyIncome": 3500,
+          "housing": 1000,
+          "utilities": 200,
+          "groceries": 350,
+          "transportation": 200,
+          "insurance": 150,
+          "debtPayments": 0,
+          "entertainment": 300,
+          "savingsGoal": 200,
+          "miscellaneous": 200
+        },
+        "output": {
+          "monthlyBalance": 1200,
+          "totalExpenses": 2300,
+          "savingsProgress": 100
+        },
+        "explanation": "A retiree with $3,500 monthly income comfortably covers all expenses with $1,200 surplus, exceeding their $200 savings goal for unexpected expenses."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Savings Calculator",
+        "slug": "savings-calculator",
+        "description": "Calculate compound interest growth."
+      },
+      {
+        "name": "Tax Calculator",
+        "slug": "tax-calculator",
+        "description": "Estimate taxes on your income."
+      },
+      {
+        "name": "Credit Card Calculator",
+        "slug": "credit-card-calculator",
+        "description": "Plan credit card debt payoff."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Take control of your personal finances with our comprehensive budget calculator designed to help you track income, manage expenses, and achieve your financial goals. Whether you're living paycheck to paycheck, saving for major purchases, or building wealth, creating and maintaining a realistic budget is the foundation of financial success. Our calculator provides a complete picture of your financial health, showing exactly where your money goes and how to optimize your spending for maximum savings and debt reduction.",
+      "benefits": [
+        "Create detailed monthly budgets tracking all income and expense categories",
+        "Identify overspending areas and find opportunities to cut costs",
+        "Set and track progress toward savings goals and debt reduction",
+        "Understand your complete financial picture in one comprehensive view",
+        "Make informed decisions about spending, saving, and financial priorities",
+        "Build healthy financial habits with regular budget monitoring and adjustments"
+      ],
+      "steps": [
+        "Enter your total monthly income from all sources (salary, side gigs, investments)",
+        "Input your housing costs (rent/mortgage, utilities, maintenance)",
+        "Add transportation expenses (car payment, gas, insurance, public transit)",
+        "Include food costs (groceries, dining out, coffee shops)",
+        "Enter insurance premiums and debt payments (loans, credit cards)",
+        "Set entertainment and miscellaneous spending limits",
+        "Define your monthly savings goal and review the budget analysis"
+      ],
+      "inputsExplained": [
+        "Monthly income represents all money coming in before taxes and deductions",
+        "Housing includes rent/mortgage payments and basic utilities (electricity, water, internet)",
+        "Transportation covers car payments, gas, insurance, maintenance, or public transit costs",
+        "Groceries and food expenses include both home cooking supplies and restaurant meals",
+        "Insurance encompasses health, auto, home, and life insurance premiums",
+        "Debt payments include minimum payments on credit cards, loans, and other obligations",
+        "Entertainment and miscellaneous cover discretionary spending and unexpected costs",
+        "Savings goal sets your target for building emergency funds and wealth accumulation"
+      ],
+      "formulaExplanation": "The budget calculator follows fundamental personal finance principles: Total Income - Total Expenses = Budget Balance. If balance is positive, you have surplus for savings. If negative, you're overspending. The 50/30/20 rule suggests allocating 50% to needs (housing, food, transportation), 30% to wants (entertainment, dining), and 20% to savings/debt. Financial health scores consider savings rate, debt-to-income ratio, and expense control. Emergency funds should equal 3-6 months of expenses for true financial security.",
+      "examples": [
+        "A family with $6,000 monthly income, $1,800 housing, $800 food, $400 transportation, and $300 entertainment has $2,700 surplus. With $800 savings goal, they achieve 29% savings rate and excellent financial health.",
+        "A single professional earning $4,500 monthly with $1,200 rent, $300 food, $250 transportation, and $600 debt payments shows $2,150 surplus. Setting $900 savings goal gives 42% savings rate and superior financial standing.",
+        "A student with $2,500 monthly income and $800 rent faces $1,700 deficit with current $600 food and entertainment spending. Reducing discretionary costs to $300 creates $200 surplus for savings."
+      ],
+      "resultsExplanation": [
+        "Budget balance shows surplus (positive) or deficit (negative) after all expenses",
+        "Total expenses breakdown reveals spending by category for optimization",
+        "Savings progress indicates percentage of savings goal achieved",
+        "Financial health score provides overall assessment of budgeting effectiveness"
+      ],
+      "whoItsFor": "This budget calculator serves everyone from young adults starting their financial journey, families managing household expenses, retirees living on fixed income, freelancers with variable earnings, students learning money management, and anyone seeking better control over their finances. It's particularly valuable for those experiencing financial stress, planning major life changes, or wanting to build wealth systematically. The calculator works for any income level and helps identify personalized strategies for financial success.",
+      "disclaimer": "This budget calculator provides general financial guidance based on standard budgeting principles and the information you provide. Actual financial situations vary based on location, lifestyle, inflation, and personal circumstances. The calculator does not constitute financial advice, tax guidance, or personalized recommendations. Results should be reviewed with a certified financial advisor. Emergency funds and debt reduction should be prioritized before aggressive savings goals. Monitor your budget regularly and adjust as life circumstances change.",
+      "relatedTools": [
+        "Savings calculators for projecting long-term wealth accumulation",
+        "Debt calculators for optimizing payoff strategies",
+        "Expense trackers for detailed spending analysis and categorization"
+      ],
+      "faqs": [
+        {
+          "question": "How much of my income should I save each month?",
+          "answer": "Aim for 20% of take-home pay as a minimum savings target, but save more if possible. The 50/30/20 rule allocates 50% to needs, 30% to wants, and 20% to savings/debt. High earners should target 25-30% savings. Build emergency funds (3-6 months expenses) first, then focus on retirement, investments, and debt reduction. Your specific percentage depends on income, expenses, and financial goals."
+        },
+        {
+          "question": "What's the best way to categorize expenses?",
+          "answer": "Use these essential categories: Housing (rent/mortgage, utilities), Transportation (car, gas, insurance), Food (groceries, dining), Insurance (health, auto, home), Debt (loans, credit cards), Entertainment (movies, hobbies), and Savings. Track fixed expenses (unchanging monthly) separately from variable ones. Review bank/credit card statements to ensure nothing is missed. Use budgeting apps for automatic categorization."
+        },
+        {
+          "question": "How do I create a realistic budget I can actually follow?",
+          "answer": "Start with your actual income and expenses from the past 3 months, not estimates. Use zero-based budgeting where every dollar is assigned a job. Include buffer categories for unexpected costs. Set savings goals first, then allocate remaining funds. Track spending for 30 days to identify leaks. Adjust gradually rather than making drastic cuts. Review monthly and celebrate small wins to stay motivated."
+        },
+        {
+          "question": "Should I pay off debt or save money first?",
+          "answer": "Build a $1,000 emergency fund first if you don't have one. Then follow this priority order: 1) High-interest debt (15%+ credit cards), 2) Emergency fund (3-6 months expenses), 3) Retirement accounts (401k/IRA), 4) Medium-interest debt (7-12% personal loans), 5) Low-interest debt (under 7% mortgages). Compare debt interest rates to potential savings returns. Consider debt consolidation for better rates."
+        },
+        {
+          "question": "How often should I review and update my budget?",
+          "answer": "Review weekly to catch overspending early and make mid-month adjustments. Do a full monthly review to analyze trends and plan for the next month. Update annually for inflation and life changes (new job, marriage, children). Major life events require immediate budget revisions. Use budgeting apps for real-time tracking and automatic alerts when approaching spending limits."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Presupuesto",
+    "seoTitle": "Calculadora de Presupuesto - Planificador de Presupuesto Financiero Personal",
+    "metaDescription": "Crea un presupuesto personal completo con nuestra calculadora de presupuesto. Rastrea ingresos, gastos, metas de ahorro y planificación financiera para mejor gestión del dinero.",
+    "keywords": [
+      "calculadora presupuesto",
+      "calculadora presupuesto personal",
+      "planificador presupuesto",
+      "calculadora gastos",
+      "presupuesto financiero",
+      "calculadora presupuesto mensual"
+    ],
+    "longTailKeywords": [
+      "como crear un presupuesto personal calculadora",
+      "calculadora de presupuesto mensual con metas de ahorro",
+      "calculadora de presupuesto para familias",
+      "calculadora rastreadora de gastos personales",
+      "como calcular presupuesto mensual",
+      "calculadora de presupuesto con pago de deudas",
+      "calculadora de presupuesto de planificación financiera",
+      "calculadora de presupuesto para estudiantes universitarios",
+      "como hacer un presupuesto doméstico calculadora",
+      "calculadora de presupuesto con fondo de emergencia"
+    ],
+    "slug": "budget-calculator",
+    "category": "financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "presupuesto",
+      "finanzas personales",
+      "gastos",
+      "ingresos",
+      "ahorros",
+      "planificación financiera",
+      "gestión del dinero"
+    ],
+    "description": "Toma control de tus finanzas con nuestra calculadora integral de presupuesto. Rastrea tus ingresos, categoriza gastos, establece metas de ahorro y crea un plan financiero sostenible. Perfecto para individuos, familias y cualquier persona que busque mejorar su salud financiera y construir riqueza con el tiempo.",
+    "summary": "Crea y gestiona tu presupuesto personal efectivamente.",
+    "instructions": [
+      "Ingresa tu ingreso mensual total de todas las fuentes",
+      "Categoriza tus gastos en fijos (renta, servicios) y variables (comestibles, entretenimiento)",
+      "Establece metas de ahorro para fondo de emergencia y metas a largo plazo",
+      "Incluye pagos de deudas si aplica",
+      "La calculadora mostrará tu superávit/déficit presupuestario y potencial de ahorro"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "monthlyIncome",
+          "label": "Ingreso Mensual ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "housing",
+          "label": "Vivienda/Renta ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "step": 50
+        },
+        {
+          "name": "utilities",
+          "label": "Servicios ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "name": "groceries",
+          "label": "Comestibles ($)",
+          "type": "number",
+          "default": 400,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "transportation",
+          "label": "Transporte ($)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "insurance",
+          "label": "Seguros ($)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "name": "debtPayments",
+          "label": "Pagos de Deudas ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "entertainment",
+          "label": "Entretenimiento ($)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "savingsGoal",
+          "label": "Meta de Ahorro Mensual ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "step": 50
+        },
+        {
+          "name": "miscellaneous",
+          "label": "Misceláneos ($)",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 25
+        }
+      ],
+      "formula": "Gastos Totales = Vivienda + Servicios + Comestibles + Transporte + Seguros + Pagos de Deudas + Entretenimiento + Misceláneos; Balance Presupuestario = Ingreso Mensual - Gastos Totales; Potencial de Ahorro = Balance Presupuestario - Meta de Ahorro",
+      "output": {
+        "label": "Balance Presupuestario Mensual",
+        "default": "Ingresa tu ingreso y gastos arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Gastos Mensuales Totales",
+          "field": "totalExpenses",
+          "format": "currency"
+        },
+        {
+          "label": "Logro de Ahorro",
+          "field": "savingsProgress",
+          "format": "percentage"
+        },
+        {
+          "label": "Desglose de Gastos",
+          "field": "expenseBreakdown",
+          "format": "text"
+        },
+        {
+          "label": "Puntuación de Salud Financiera",
+          "field": "healthScore",
+          "format": "text"
+        }
+      ],
+      "componentName": "BudgetCalculator"
+    },
+    "examples": [
+      {
+        "title": "Presupuesto de Profesional Joven",
+        "input": {
+          "monthlyIncome": 4500,
+          "housing": 1200,
+          "utilities": 150,
+          "groceries": 300,
+          "transportation": 250,
+          "insurance": 100,
+          "debtPayments": 150,
+          "entertainment": 200,
+          "savingsGoal": 400,
+          "miscellaneous": 100
+        },
+        "output": {
+          "monthlyBalance": 2050,
+          "totalExpenses": 2450,
+          "savingsProgress": 88.9
+        },
+        "explanation": "Un profesional joven ganando $4,500 mensuales con gastos disciplinados puede lograr el 88.9% de su meta de ahorro de $400, dejando $2,050 para ahorros adicionales o mejoras de estilo de vida."
+      },
+      {
+        "title": "Presupuesto Familiar",
+        "input": {
+          "monthlyIncome": 6500,
+          "housing": 1800,
+          "utilities": 300,
+          "groceries": 600,
+          "transportation": 400,
+          "insurance": 200,
+          "debtPayments": 300,
+          "entertainment": 250,
+          "savingsGoal": 600,
+          "miscellaneous": 150
+        },
+        "output": {
+          "monthlyBalance": 2500,
+          "totalExpenses": 4000,
+          "savingsProgress": 75
+        },
+        "explanation": "Una familia de cuatro con $6,500 de ingreso mensual mantiene un balance saludable de $2,500 después de gastos, logrando el 75% de su meta de ahorro de $600 mientras cubre todas las necesidades familiares."
+      },
+      {
+        "title": "Presupuesto Estudiantil",
+        "input": {
+          "monthlyIncome": 1800,
+          "housing": 800,
+          "utilities": 80,
+          "groceries": 200,
+          "transportation": 100,
+          "insurance": 50,
+          "debtPayments": 0,
+          "entertainment": 100,
+          "savingsGoal": 150,
+          "miscellaneous": 70
+        },
+        "output": {
+          "monthlyBalance": 400,
+          "totalExpenses": 1400,
+          "savingsProgress": 100
+        },
+        "explanation": "Un estudiante universitario con $1,800 de ingreso mensual (trabajo de medio tiempo + ayuda financiera) puede cumplir su meta de ahorro de $150 mientras mantiene un estilo de vida cómodo con $400 de superávit."
+      },
+      {
+        "title": "Presupuesto de Vida en Jubilación",
+        "input": {
+          "monthlyIncome": 3500,
+          "housing": 1000,
+          "utilities": 200,
+          "groceries": 350,
+          "transportation": 200,
+          "insurance": 150,
+          "debtPayments": 0,
+          "entertainment": 300,
+          "savingsGoal": 200,
+          "miscellaneous": 200
+        },
+        "output": {
+          "monthlyBalance": 1200,
+          "totalExpenses": 2300,
+          "savingsProgress": 100
+        },
+        "explanation": "Un jubilado con $3,500 de ingreso mensual cubre cómodamente todos los gastos con $1,200 de superávit, excediendo su meta de ahorro de $200 para gastos inesperados."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Ahorros",
+        "slug": "savings-calculator",
+        "description": "Calcula crecimiento de interés compuesto."
+      },
+      {
+        "name": "Calculadora de Impuestos",
+        "slug": "tax-calculator",
+        "description": "Estima impuestos en tus ingresos."
+      },
+      {
+        "name": "Calculadora de Tarjeta de Crédito",
+        "slug": "credit-card-calculator",
+        "description": "Planea pago de deuda de tarjeta de crédito."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Toma el control de tus finanzas personales con nuestra calculadora integral de presupuesto diseñada para ayudarte a rastrear ingresos, gestionar gastos y lograr tus metas financieras. Ya sea que vivas de cheque en cheque, ahorres para compras mayores, o construyas riqueza, crear y mantener un presupuesto realista es la base del éxito financiero. Nuestra calculadora proporciona una imagen completa de tu salud financiera, mostrando exactamente adónde va tu dinero y cómo optimizar tus gastos para máximo ahorro y reducción de deuda.",
+      "benefits": [
+        "Crea presupuestos mensuales detallados rastreando todas las categorías de ingresos y gastos",
+        "Identifica áreas de gastos excesivos y encuentra oportunidades para reducir costos",
+        "Establece y rastrea progreso hacia metas de ahorro y reducción de deuda",
+        "Entiende tu imagen financiera completa en una vista integral",
+        "Toma decisiones informadas sobre gastos, ahorro y prioridades financieras",
+        "Construye hábitos financieros saludables con monitoreo y ajustes regulares de presupuesto"
+      ],
+      "steps": [
+        "Ingresa tu ingreso mensual total de todas las fuentes (salario, trabajos extra, inversiones)",
+        "Ingresa tus costos de vivienda (renta/hipoteca, servicios públicos, mantenimiento)",
+        "Agrega gastos de transporte (pago de auto, gasolina, seguro, transporte público)",
+        "Incluye costos de comida (abarrotes, comer fuera, cafeterías)",
+        "Ingresa primas de seguro y pagos de deuda (préstamos, tarjetas de crédito)",
+        "Establece límites de entretenimiento y gastos varios",
+        "Define tu meta de ahorro mensual y revisa el análisis de presupuesto"
+      ],
+      "inputsExplained": [
+        "Ingreso mensual representa todo el dinero que entra antes de impuestos y deducciones",
+        "Vivienda incluye pagos de renta/hipoteca y servicios básicos (electricidad, agua, internet)",
+        "Transporte cubre pagos de auto, gasolina, seguro, mantenimiento, o costos de transporte público",
+        "Abarrotes y comida incluyen tanto suministros para cocinar en casa como comidas en restaurantes",
+        "Seguro abarca primas de seguro de salud, auto, casa y vida",
+        "Pagos de deuda incluyen pagos mínimos en tarjetas de crédito, préstamos y otras obligaciones",
+        "Entretenimiento y varios cubren gastos discrecionales y costos inesperados",
+        "Meta de ahorro establece tu objetivo para construir fondos de emergencia y acumulación de riqueza"
+      ],
+      "formulaExplanation": "La calculadora de presupuesto sigue principios fundamentales de finanzas personales: Ingreso Total - Gastos Totales = Balance de Presupuesto. Si el balance es positivo, tienes superávit para ahorro. Si negativo, estás gastando de más. La regla 50/30/20 sugiere asignar 50% a necesidades (vivienda, comida, transporte), 30% a deseos (entretenimiento, comer fuera), y 20% a ahorro/deuda. Las puntuaciones de salud financiera consideran tasa de ahorro, relación deuda-ingreso, y control de gastos. Los fondos de emergencia deben igualar 3-6 meses de gastos para verdadera seguridad financiera.",
+      "examples": [
+        "Una familia con $6,000 ingreso mensual, $1,800 vivienda, $800 comida, $400 transporte, y $300 entretenimiento tiene $2,700 superávit. Con $800 meta de ahorro, logran 29% tasa de ahorro y excelente salud financiera.",
+        "Un profesional soltero ganando $4,500 mensualmente con $1,200 renta, $300 comida, $250 transporte, y $600 pagos de deuda muestra $2,150 superávit. Estableciendo $900 meta de ahorro da 42% tasa de ahorro y posición financiera superior.",
+        "Un estudiante con $2,500 ingreso mensual y $800 renta enfrenta $1,700 déficit con $600 comida y gastos de entretenimiento actuales. Reduciendo costos discrecionales a $300 crea $200 superávit para ahorro."
+      ],
+      "resultsExplanation": [
+        "Balance de presupuesto muestra superávit (positivo) o déficit (negativo) después de todos los gastos",
+        "Desglose de gastos totales revela gastos por categoría para optimización",
+        "Progreso de ahorro indica porcentaje de meta de ahorro logrado",
+        "Puntuación de salud financiera proporciona evaluación general de efectividad de presupuesto"
+      ],
+      "whoItsFor": "Esta calculadora de presupuesto sirve a todos desde adultos jóvenes comenzando su viaje financiero, familias manejando gastos domésticos, jubilados viviendo con ingreso fijo, freelancers con ingresos variables, estudiantes aprendiendo gestión de dinero, y cualquiera buscando mejor control sobre sus finanzas. Es particularmente valiosa para aquellos experimentando estrés financiero, planeando cambios mayores de vida, o queriendo construir riqueza sistemáticamente. La calculadora funciona para cualquier nivel de ingreso y ayuda a identificar estrategias personalizadas para éxito financiero.",
+      "disclaimer": "Esta calculadora de presupuesto proporciona guía financiera general basada en principios estándar de presupuesto y la información que proporcionas. Las situaciones financieras reales varían basadas en ubicación, estilo de vida, inflación, y circunstancias personales. La calculadora no constituye consejo financiero, guía fiscal, o recomendaciones personalizadas. Los resultados deben ser revisados con un asesor financiero certificado. Los fondos de emergencia y reducción de deuda deben ser priorizados antes de metas agresivas de ahorro. Monitorea tu presupuesto regularmente y ajusta conforme cambien las circunstancias de vida.",
+      "relatedTools": [
+        "Calculadoras de ahorro para proyectar acumulación de riqueza a largo plazo",
+        "Calculadoras de deuda para optimizar estrategias de pago",
+        "Rastreadores de gastos para análisis detallado de gastos y categorización"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánto de mi ingreso debo ahorrar cada mes?",
+          "answer": "Apunta a 20% de pago neto como meta mínima de ahorro, pero ahorra más si es posible. La regla 50/30/20 asigna 50% a necesidades, 30% a deseos, y 20% a ahorro/deuda. Ganadores altos deben apuntar a 25-30% ahorro. Construye fondos de emergencia (3-6 meses gastos) primero, luego enfócate en jubilación, inversiones, y reducción de deuda. Tu porcentaje específico depende de ingreso, gastos, y metas financieras."
+        },
+        {
+          "question": "¿Cuál es la mejor manera de categorizar gastos?",
+          "answer": "Usa estas categorías esenciales: Vivienda (renta/hipoteca, servicios), Transporte (auto, gasolina, seguro, tránsito público), Comida (abarrotes, comer fuera), Seguro (salud, auto, casa), Deuda (préstamos, tarjetas), Entretenimiento (películas, hobbies), y Ahorro. Rastrea gastos fijos (sin cambios mensuales) separadamente de variables. Revisa estados bancarios/tarjetas para asegurar que nada esté perdido. Usa apps de presupuesto para categorización automática."
+        },
+        {
+          "question": "¿Cómo creo un presupuesto realista que realmente pueda seguir?",
+          "answer": "Comienza con tu ingreso y gastos reales de los últimos 3 meses, no estimaciones. Usa presupuesto basado en cero donde cada dólar tiene un trabajo asignado. Incluye categorías buffer para costos inesperados. Establece metas de ahorro primero, luego asigna fondos restantes. Rastrea gastos por 30 días para identificar fugas. Ajusta gradualmente en lugar de hacer cortes drásticos. Revisa mensualmente y celebra pequeñas victorias para mantener motivación."
+        },
+        {
+          "question": "¿Debo pagar deuda o ahorrar dinero primero?",
+          "answer": "Construye un fondo de emergencia de $1,000 primero si no tienes uno. Luego sigue este orden de prioridad: 1) Deuda de alto interés (15%+ tarjetas), 2) Fondo de emergencia (3-6 meses gastos), 3) Cuentas de jubilación (401k/IRA), 4) Deuda de interés medio (7-12% préstamos personales), 5) Deuda de bajo interés (bajo 7% hipotecas). Compara tasas de interés de deuda con retornos potenciales de ahorro. Considera consolidación de deuda para mejores tasas."
+        },
+        {
+          "question": "¿Con qué frecuencia debo revisar y actualizar mi presupuesto?",
+          "answer": "Revisa semanalmente para detectar gastos excesivos temprano y hacer ajustes de mediados de mes. Haz una revisión completa mensual para analizar tendencias y planificar el siguiente mes. Actualiza anualmente por inflación y cambios de vida (nuevo trabajo, matrimonio, hijos). Eventos mayores de vida requieren revisiones inmediatas de presupuesto. Usa apps de presupuesto para rastreo en tiempo real y alertas automáticas cuando te acerques a límites de gasto."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Orçamento",
+    "seoTitle": "Calculadora de Orçamento - Planejador de Orçamento Financeiro Pessoal",
+    "metaDescription": "Crie um orçamento pessoal completo com nossa calculadora de orçamento. Acompanhe renda, despesas, metas de poupança e planejamento financeiro para melhor gestão do dinheiro.",
+    "keywords": [
+      "calculadora orçamento",
+      "calculadora orçamento pessoal",
+      "planejador orçamento",
+      "calculadora despesas",
+      "orçamento financeiro",
+      "calculadora orçamento mensal"
+    ],
+    "longTailKeywords": [
+      "como criar um orçamento pessoal calculadora",
+      "calculadora de orçamento mensal com metas de poupança",
+      "calculadora de orçamento para famílias",
+      "calculadora rastreadora de despesas pessoais",
+      "como calcular orçamento mensal",
+      "calculadora de orçamento com quitação de dívidas",
+      "calculadora de orçamento de planejamento financeiro",
+      "calculadora de orçamento para estudantes universitários",
+      "como fazer um orçamento doméstico calculadora",
+      "calculadora de orçamento com fundo de emergência"
+    ],
+    "slug": "budget-calculator",
+    "category": "financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "orçamento",
+      "finanças pessoais",
+      "despesas",
+      "renda",
+      "poupanças",
+      "planejamento financeiro",
+      "gestão do dinheiro"
+    ],
+    "description": "Tome controle de suas finanças com nossa calculadora abrangente de orçamento. Acompanhe sua renda, categorize despesas, estabeleça metas de poupança e crie um plano financeiro sustentável. Perfeito para indivíduos, famílias e qualquer pessoa que busque melhorar sua saúde financeira e construir riqueza ao longo do tempo.",
+    "summary": "Crie e gerencie seu orçamento pessoal efetivamente.",
+    "instructions": [
+      "Digite sua renda mensal total de todas as fontes",
+      "Categorize suas despesas em fixas (aluguel, contas) e variáveis (supermercado, entretenimento)",
+      "Estabeleça metas de poupança para fundo de emergência e metas de longo prazo",
+      "Inclua pagamentos de dívidas se aplicável",
+      "A calculadora mostrará seu superávit/déficit orçamentário e potencial de poupança"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "monthlyIncome",
+          "label": "Renda Mensal (R$)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "housing",
+          "label": "Moradia/Aluguel (R$)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "step": 50
+        },
+        {
+          "name": "utilities",
+          "label": "Contas (R$)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "name": "groceries",
+          "label": "Supermercado (R$)",
+          "type": "number",
+          "default": 400,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "transportation",
+          "label": "Transporte (R$)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "insurance",
+          "label": "Seguros (R$)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "name": "debtPayments",
+          "label": "Pagamentos de Dívidas (R$)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "entertainment",
+          "label": "Entretenimento (R$)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "savingsGoal",
+          "label": "Meta de Poupança Mensal (R$)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "step": 50
+        },
+        {
+          "name": "miscellaneous",
+          "label": "Diversos (R$)",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 25
+        }
+      ],
+      "formula": "Despesas Totais = Moradia + Contas + Supermercado + Transporte + Seguros + Pagamentos de Dívidas + Entretenimento + Diversos; Balanço Orçamentário = Renda Mensal - Despesas Totais; Potencial de Poupança = Balanço Orçamentário - Meta de Poupança",
+      "output": {
+        "label": "Balanço Orçamentário Mensal",
+        "default": "Digite sua renda e despesas acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Despesas Mensais Totais",
+          "field": "totalExpenses",
+          "format": "currency"
+        },
+        {
+          "label": "Conquista de Poupança",
+          "field": "savingsProgress",
+          "format": "percentage"
+        },
+        {
+          "label": "Detalhamento de Despesas",
+          "field": "expenseBreakdown",
+          "format": "text"
+        },
+        {
+          "label": "Pontuação de Saúde Financeira",
+          "field": "healthScore",
+          "format": "text"
+        }
+      ],
+      "componentName": "BudgetCalculator"
+    },
+    "examples": [
+      {
+        "title": "Orçamento de Profissional Jovem",
+        "input": {
+          "monthlyIncome": 4500,
+          "housing": 1200,
+          "utilities": 150,
+          "groceries": 300,
+          "transportation": 250,
+          "insurance": 100,
+          "debtPayments": 150,
+          "entertainment": 200,
+          "savingsGoal": 400,
+          "miscellaneous": 100
+        },
+        "output": {
+          "monthlyBalance": 2050,
+          "totalExpenses": 2450,
+          "savingsProgress": 88.9
+        },
+        "explanation": "Um profissional jovem ganhando R$4,500 mensais com gastos disciplinados pode alcançar 88.9% de sua meta de poupança de R$400, deixando R$2,050 para poupanças adicionais ou melhorias no estilo de vida."
+      },
+      {
+        "title": "Orçamento Familiar",
+        "input": {
+          "monthlyIncome": 6500,
+          "housing": 1800,
+          "utilities": 300,
+          "groceries": 600,
+          "transportation": 400,
+          "insurance": 200,
+          "debtPayments": 300,
+          "entertainment": 250,
+          "savingsGoal": 600,
+          "miscellaneous": 150
+        },
+        "output": {
+          "monthlyBalance": 2500,
+          "totalExpenses": 4000,
+          "savingsProgress": 75
+        },
+        "explanation": "Uma família de quatro com R$6,500 de renda mensal mantém um balanço saudável de R$2,500 após despesas, alcançando 75% de sua meta de poupança de R$600 enquanto cobre todas as necessidades familiares."
+      },
+      {
+        "title": "Orçamento Estudantil",
+        "input": {
+          "monthlyIncome": 1800,
+          "housing": 800,
+          "utilities": 80,
+          "groceries": 200,
+          "transportation": 100,
+          "insurance": 50,
+          "debtPayments": 0,
+          "entertainment": 100,
+          "savingsGoal": 150,
+          "miscellaneous": 70
+        },
+        "output": {
+          "monthlyBalance": 400,
+          "totalExpenses": 1400,
+          "savingsProgress": 100
+        },
+        "explanation": "Um estudante universitário com R$1,800 de renda mensal (emprego de meio período + ajuda financeira) pode cumprir sua meta de poupança de R$150 enquanto mantém um estilo de vida confortável com R$400 de superávit."
+      },
+      {
+        "title": "Orçamento de Vida na Aposentadoria",
+        "input": {
+          "monthlyIncome": 3500,
+          "housing": 1000,
+          "utilities": 200,
+          "groceries": 350,
+          "transportation": 200,
+          "insurance": 150,
+          "debtPayments": 0,
+          "entertainment": 300,
+          "savingsGoal": 200,
+          "miscellaneous": 200
+        },
+        "output": {
+          "monthlyBalance": 1200,
+          "totalExpenses": 2300,
+          "savingsProgress": 100
+        },
+        "explanation": "Um aposentado com R$3,500 de renda mensal cobre confortavelmente todas as despesas com R$1,200 de superávit, excedendo sua meta de poupança de R$200 para despesas inesperadas."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Poupança",
+        "slug": "savings-calculator",
+        "description": "Calcule crescimento de juros compostos."
+      },
+      {
+        "name": "Calculadora de Imposto",
+        "slug": "tax-calculator",
+        "description": "Estime impostos em sua renda."
+      },
+      {
+        "name": "Calculadora de Cartão de Crédito",
+        "slug": "credit-card-calculator",
+        "description": "Planeje quitação de dívida de cartão de crédito."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Tome controle de suas finanças pessoais com nossa calculadora abrangente de orçamento projetada para ajudá-lo a rastrear renda, gerenciar despesas e alcançar suas metas financeiras. Seja você vivendo de salário em salário, economizando para compras maiores, ou construindo riqueza, criar e manter um orçamento realista é a base do sucesso financeiro. Nossa calculadora fornece uma imagem completa de sua saúde financeira, mostrando exatamente para onde vai seu dinheiro e como otimizar seus gastos para máximo economia e redução de dívida.",
+      "benefits": [
+        "Crie orçamentos mensais detalhados rastreando todas as categorias de renda e despesa",
+        "Identifique áreas de gastos excessivos e encontre oportunidades para cortar custos",
+        "Defina e rastreie progresso rumo a metas de economia e redução de dívida",
+        "Entenda sua imagem financeira completa em uma visão abrangente",
+        "Tome decisões informadas sobre gastos, economia e prioridades financeiras",
+        "Construa hábitos financeiros saudáveis com monitoramento e ajustes regulares de orçamento"
+      ],
+      "steps": [
+        "Digite sua renda mensal total de todas as fontes (salário, trabalhos extras, investimentos)",
+        "Insira seus custos de moradia (aluguel/hipoteca, utilitários, manutenção)",
+        "Adicione despesas de transporte (pagamento de carro, gasolina, seguro, transporte público)",
+        "Inclua custos de comida (mantimentos, comer fora, cafeterias)",
+        "Digite prêmios de seguro e pagamentos de dívida (empréstimos, cartões de crédito)",
+        "Defina limites de entretenimento e despesas diversas",
+        "Defina sua meta de economia mensal e revise a análise de orçamento"
+      ],
+      "inputsExplained": [
+        "Renda mensal representa todo dinheiro entrando antes de impostos e deduções",
+        "Moradia inclui pagamentos de aluguel/hipoteca e utilitários básicos (eletricidade, água, internet)",
+        "Transporte cobre pagamentos de carro, gasolina, seguro, manutenção, ou custos de transporte público",
+        "Mantimentos e comida incluem tanto suprimentos para cozinhar em casa quanto refeições em restaurantes",
+        "Seguro abrange prêmios de seguro saúde, auto, casa e vida",
+        "Pagamentos de dívida incluem pagamentos mínimos em cartões de crédito, empréstimos e outras obrigações",
+        "Entretenimento e diversos cobrem gastos discricionários e custos inesperados",
+        "Meta de economia define seu alvo para construir fundos de emergência e acumulação de riqueza"
+      ],
+      "formulaExplanation": "A calculadora de orçamento segue princípios fundamentais de finanças pessoais: Renda Total - Despesas Totais = Saldo de Orçamento. Se saldo for positivo, você tem superávit para economia. Se negativo, você está gastando demais. A regra 50/30/20 sugere alocar 50% para necessidades (moradia, comida, transporte), 30% para desejos (entretenimento, comer fora), e 20% para economia/dívida. Pontuações de saúde financeira consideram taxa de economia, relação dívida-renda, e controle de despesas. Fundos de emergência devem igualar 3-6 meses de despesas para verdadeira segurança financeira.",
+      "examples": [
+        "Uma família com $6,000 renda mensal, $1,800 moradia, $800 comida, $400 transporte, e $300 entretenimento tem $2,700 superávit. Com $800 meta de economia, eles alcançam 29% taxa de economia e excelente saúde financeira.",
+        "Um profissional solteiro ganhando $4,500 mensalmente com $1,200 aluguel, $300 comida, $250 transporte, e $600 pagamentos de dívida mostra $2,150 superávit. Definindo $900 meta de economia dá 42% taxa de economia e posição financeira superior.",
+        "Um estudante com $2,500 renda mensal e $800 aluguel enfrenta $1,700 déficit com $600 comida e gastos de entretenimento atuais. Reduzindo custos discricionários para $300 cria $200 superávit para economia."
+      ],
+      "resultsExplanation": [
+        "Saldo de orçamento mostra superávit (positivo) ou déficit (negativo) após todas as despesas",
+        "Quebra de despesas totais revela gastos por categoria para otimização",
+        "Progresso de economia indica porcentagem de meta de economia alcançada",
+        "Pontuação de saúde financeira fornece avaliação geral de efetividade de orçamento"
+      ],
+      "whoItsFor": "Esta calculadora de orçamento serve todos desde jovens adultos começando sua jornada financeira, famílias gerenciando despesas domésticas, aposentados vivendo com renda fixa, freelancers com ganhos variáveis, estudantes aprendendo gerenciamento de dinheiro, e qualquer pessoa buscando melhor controle sobre suas finanças. É particularmente valiosa para aqueles experimentando estresse financeiro, planejando mudanças maiores de vida, ou querendo construir riqueza sistematicamente. A calculadora funciona para qualquer nível de renda e ajuda a identificar estratégias personalizadas para sucesso financeiro.",
+      "disclaimer": "Esta calculadora de orçamento fornece orientação financeira geral baseada em princípios padrão de orçamento e a informação que você fornece. Situações financeiras reais variam baseadas em localização, estilo de vida, inflação, e circunstâncias pessoais. A calculadora não constitui conselho financeiro, orientação fiscal, ou recomendações personalizadas. Resultados devem ser revisados com um consultor financeiro certificado. Fundos de emergência e redução de dívida devem ser priorizados antes de metas agressivas de economia. Monitore seu orçamento regularmente e ajuste conforme mudem circunstâncias de vida.",
+      "relatedTools": [
+        "Calculadoras de poupança para projetar acumulação de riqueza de longo prazo",
+        "Calculadoras de dívida para otimizar estratégias de quitação",
+        "Rastreadores de despesas para análise detalhada de gastos e categorização"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto de minha renda devo economizar a cada mês?",
+          "answer": "Mire 20% de pagamento líquido como alvo mínimo de economia, mas economize mais se possível. A regra 50/30/20 aloca 50% para necessidades, 30% para desejos, e 20% para economia/dívida. Ganhadores altos devem mirar 25-30% economia. Construa fundos de emergência (3-6 meses despesas) primeiro, então foque em aposentadoria, investimentos, e redução de dívida. Sua porcentagem específica depende de renda, despesas, e metas financeiras."
+        },
+        {
+          "question": "Qual é a melhor maneira de categorizar despesas?",
+          "answer": "Use estas categorias essenciais: Moradia (aluguel/hipoteca, utilitários), Transporte (carro, gasolina, seguro, transporte público), Comida (mantimentos, comer fora), Seguro (saúde, auto, casa), Dívida (empréstimos, cartões), Entretenimento (filmes, hobbies), e Economia. Rastreie despesas fixas (sem mudança mensal) separadamente de variáveis. Revise extratos bancários/cartões para garantir que nada esteja perdido. Use apps de orçamento para categorização automática."
+        },
+        {
+          "question": "Como criar um orçamento realista que eu possa realmente seguir?",
+          "answer": "Comece com sua renda e despesas reais dos últimos 3 meses, não estimativas. Use orçamento baseado em zero onde cada dólar tem um trabalho atribuído. Inclua categorias buffer para custos inesperados. Defina metas de economia primeiro, então aloque fundos restantes. Rastreie gastos por 30 dias para identificar vazamentos. Ajuste gradualmente ao invés de fazer cortes drásticos. Revise mensalmente e celebre pequenas vitórias para manter motivação."
+        },
+        {
+          "question": "Devo pagar dívidas ou economizar dinheiro primeiro?",
+          "answer": "Construa um fundo de emergência de $1,000 primeiro se você não tiver um. Então siga esta ordem de prioridade: 1) Dívida de alto juros (15%+ cartões), 2) Fundo de emergência (3-6 meses despesas), 3) Contas de aposentadoria (401k/IRA), 4) Dívida de juros médios (7-12% empréstimos pessoais), 5) Dívida de baixo juros (abaixo 7% hipotecas). Compare taxas de juros de dívida com retornos potenciais de economia. Considere consolidação de dívida para melhores taxas."
+        },
+        {
+          "question": "Com que frequência devo revisar e atualizar meu orçamento?",
+          "answer": "Revise semanalmente para pegar gastos excessivos cedo e fazer ajustes de meio mês. Faça uma revisão completa mensal para analisar tendências e planejar o próximo mês. Atualize anualmente por inflação e mudanças de vida (novo trabalho, casamento, filhos). Eventos maiores de vida requerem revisões imediatas de orçamento. Use apps de orçamento para rastreamento em tempo real e alertas automáticos quando se aproximar de limites de gasto."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculatrice de Budget",
+    "seoTitle": "Calculatrice de Budget - Planificateur de Budget Financier Personnel",
+    "metaDescription": "Créez un budget personnel complet avec notre calculatrice de budget. Suivez les revenus, dépenses, objectifs d'épargne et planification financière pour une meilleure gestion de l'argent.",
+    "keywords": [
+      "calculatrice budget",
+      "calculatrice budget personnel",
+      "planificateur budget",
+      "calculatrice dépenses",
+      "budget financier",
+      "calculatrice budget mensuel"
+    ],
+    "longTailKeywords": [
+      "comment créer un budget personnel calculatrice",
+      "calculatrice de budget mensuel avec objectifs d'épargne",
+      "calculatrice de budget pour familles",
+      "calculatrice traqueuse de dépenses personnelles",
+      "comment calculer budget mensuel",
+      "calculatrice de budget avec remboursement de dettes",
+      "calculatrice de budget de planification financière",
+      "calculatrice de budget pour étudiants universitaires",
+      "comment faire un budget domestique calculatrice",
+      "calculatrice de budget avec fonds d'urgence"
+    ],
+    "slug": "budget-calculator",
+    "category": "financial",
+    "difficulty": "Beginner",
+    "tags": [
+      "budget",
+      "finances personnelles",
+      "dépenses",
+      "revenus",
+      "épargnes",
+      "planification financière",
+      "gestion de l'argent"
+    ],
+    "description": "Prenez le contrôle de vos finances avec notre calculatrice complète de budget. Suivez vos revenus, catégorisez les dépenses, fixez des objectifs d'épargne et créez un plan financier durable. Parfait pour les individus, familles et toute personne cherchant à améliorer sa santé financière et à construire la richesse au fil du temps.",
+    "summary": "Créez et gérez votre budget personnel efficacement.",
+    "instructions": [
+      "Entrez votre revenu mensuel total de toutes les sources",
+      "Catégorisez vos dépenses en fixes (loyer, services) et variables (épicerie, divertissement)",
+      "Fixez des objectifs d'épargne pour fonds d'urgence et objectifs à long terme",
+      "Incluez les paiements de dettes le cas échéant",
+      "La calculatrice affichera votre surplus/déficit budgétaire et potentiel d'épargne"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "monthlyIncome",
+          "label": "Revenu Mensuel (€)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "housing",
+          "label": "Logement/Loyer (€)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "step": 50
+        },
+        {
+          "name": "utilities",
+          "label": "Services (€)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "name": "groceries",
+          "label": "Épicerie (€)",
+          "type": "number",
+          "default": 400,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "transportation",
+          "label": "Transport (€)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "insurance",
+          "label": "Assurances (€)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "name": "debtPayments",
+          "label": "Paiements de Dettes (€)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "entertainment",
+          "label": "Divertissement (€)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "savingsGoal",
+          "label": "Objectif d'Épargne Mensuel (€)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "step": 50
+        },
+        {
+          "name": "miscellaneous",
+          "label": "Divers (€)",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 25
+        }
+      ],
+      "formula": "Dépenses Totales = Logement + Services + Épicerie + Transport + Assurances + Paiements de Dettes + Divertissement + Divers; Solde Budgétaire = Revenu Mensuel - Dépenses Totales; Potentiel d'Épargne = Solde Budgétaire - Objectif d'Épargne",
+      "output": {
+        "label": "Solde Budgétaire Mensuel",
+        "default": "Entrez vos revenus et dépenses ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Dépenses Mensuelles Totales",
+          "field": "totalExpenses",
+          "format": "currency"
+        },
+        {
+          "label": "Réussite d'Épargne",
+          "field": "savingsProgress",
+          "format": "percentage"
+        },
+        {
+          "label": "Répartition des Dépenses",
+          "field": "expenseBreakdown",
+          "format": "text"
+        },
+        {
+          "label": "Score de Santé Financière",
+          "field": "healthScore",
+          "format": "text"
+        }
+      ],
+      "componentName": "BudgetCalculator"
+    },
+    "examples": [
+      {
+        "title": "Budget de Jeune Professionnel",
+        "input": {
+          "monthlyIncome": 4500,
+          "housing": 1200,
+          "utilities": 150,
+          "groceries": 300,
+          "transportation": 250,
+          "insurance": 100,
+          "debtPayments": 150,
+          "entertainment": 200,
+          "savingsGoal": 400,
+          "miscellaneous": 100
+        },
+        "output": {
+          "monthlyBalance": 2050,
+          "totalExpenses": 2450,
+          "savingsProgress": 88.9
+        },
+        "explanation": "Un jeune professionnel gagnant 4 500€ mensuels avec des dépenses disciplinées peut atteindre 88.9% de son objectif d'épargne de 400€, laissant 2 050€ pour des épargnes supplémentaires ou améliorations du style de vie."
+      },
+      {
+        "title": "Budget Familial",
+        "input": {
+          "monthlyIncome": 6500,
+          "housing": 1800,
+          "utilities": 300,
+          "groceries": 600,
+          "transportation": 400,
+          "insurance": 200,
+          "debtPayments": 300,
+          "entertainment": 250,
+          "savingsGoal": 600,
+          "miscellaneous": 150
+        },
+        "output": {
+          "monthlyBalance": 2500,
+          "totalExpenses": 4000,
+          "savingsProgress": 75
+        },
+        "explanation": "Une famille de quatre avec 6 500€ de revenu mensuel maintient un solde sain de 2 500€ après dépenses, atteignant 75% de son objectif d'épargne de 600€ tout en couvrant tous les besoins familiaux."
+      },
+      {
+        "title": "Budget Étudiant",
+        "input": {
+          "monthlyIncome": 1800,
+          "housing": 800,
+          "utilities": 80,
+          "groceries": 200,
+          "transportation": 100,
+          "insurance": 50,
+          "debtPayments": 0,
+          "entertainment": 100,
+          "savingsGoal": 150,
+          "miscellaneous": 70
+        },
+        "output": {
+          "monthlyBalance": 400,
+          "totalExpenses": 1400,
+          "savingsProgress": 100
+        },
+        "explanation": "Un étudiant universitaire avec 1 800€ de revenu mensuel (emploi à temps partiel + aide financière) peut atteindre son objectif d'épargne de 150€ tout en maintenant un style de vie confortable avec 400€ de surplus."
+      },
+      {
+        "title": "Budget de Vie en Retraite",
+        "input": {
+          "monthlyIncome": 3500,
+          "housing": 1000,
+          "utilities": 200,
+          "groceries": 350,
+          "transportation": 200,
+          "insurance": 150,
+          "debtPayments": 0,
+          "entertainment": 300,
+          "savingsGoal": 200,
+          "miscellaneous": 200
+        },
+        "output": {
+          "monthlyBalance": 1200,
+          "totalExpenses": 2300,
+          "savingsProgress": 100
+        },
+        "explanation": "Un retraité avec 3 500€ de revenu mensuel couvre confortablement toutes les dépenses avec 1 200€ de surplus, dépassant son objectif d'épargne de 200€ pour les dépenses imprévues."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice d'Épargne",
+        "slug": "savings-calculator",
+        "description": "Calculez la croissance des intérêts composés."
+      },
+      {
+        "name": "Calculatrice d'Impôt",
+        "slug": "tax-calculator",
+        "description": "Estimez les impôts sur vos revenus."
+      },
+      {
+        "name": "Calculatrice de Carte de Crédit",
+        "slug": "credit-card-calculator",
+        "description": "Planifiez le remboursement de dette de carte de crédit."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Prenez le contrôle de vos finances personnelles avec notre calculatrice complète de budget conçue pour vous aider à suivre les revenus, gérer les dépenses et atteindre vos objectifs financiers. Que vous viviez de chèque en chèque, épargniez pour des achats majeurs, ou construisiez de la richesse, créer et maintenir un budget réaliste est la base du succès financier. Notre calculatrice fournit une image complète de votre santé financière, montrant exactement où va votre argent et comment optimiser vos dépenses pour un maximum d'épargne et de réduction de dette.",
+      "benefits": [
+        "Créez des budgets mensuels détaillés suivant toutes les catégories de revenus et dépenses",
+        "Identifiez les zones de dépenses excessives et trouvez des opportunités de réduire les coûts",
+        "Définissez et suivez les progrès vers les objectifs d'épargne et de réduction de dette",
+        "Comprenez votre image financière complète dans une vue d'ensemble",
+        "Prenez des décisions éclairées concernant les dépenses, l'épargne et les priorités financières",
+        "Construisez des habitudes financières saines avec surveillance et ajustements réguliers du budget"
+      ],
+      "steps": [
+        "Entrez votre revenu mensuel total de toutes les sources (salaire, petits boulots, investissements)",
+        "Saisissez vos coûts de logement (loyer/prêt immobilier, services publics, maintenance)",
+        "Ajoutez les dépenses de transport (paiement auto, essence, assurance, transports en commun)",
+        "Incluez les coûts alimentaires (épicerie, restauration, cafés)",
+        "Entrez les primes d'assurance et paiements de dette (prêts, cartes de crédit)",
+        "Définissez les limites de divertissement et dépenses diverses",
+        "Définissez votre objectif d'épargne mensuel et examinez l'analyse budgétaire"
+      ],
+      "inputsExplained": [
+        "Revenu mensuel représente tout argent entrant avant impôts et déductions",
+        "Logement inclut paiements de loyer/prêt immobilier et services de base (électricité, eau, internet)",
+        "Transport couvre paiements auto, essence, assurance, maintenance, ou coûts de transports en commun",
+        "Épicerie et nourriture incluent à la fois fournitures de cuisine à la maison et repas au restaurant",
+        "Assurance englobe primes d'assurance santé, auto, habitation et vie",
+        "Paiements de dette incluent paiements minimums sur cartes de crédit, prêts et autres obligations",
+        "Divertissement et divers couvrent dépenses discrétionnaires et coûts inattendus",
+        "Objectif d'épargne définit votre cible pour construire fonds d'urgence et accumulation de richesse"
+      ],
+      "formulaExplanation": "La calculatrice de budget suit les principes fondamentaux de finances personnelles : Revenu Total - Dépenses Totales = Solde Budgétaire. Si solde est positif, vous avez surplus pour épargne. Si négatif, vous dépensez trop. La règle 50/30/20 suggère d'allouer 50% aux besoins (logement, nourriture, transport), 30% aux envies (divertissement, restauration), et 20% à l'épargne/dette. Les scores de santé financière considèrent taux d'épargne, ratio dette-revenu, et contrôle des dépenses. Fonds d'urgence doivent égaler 3-6 mois de dépenses pour vraie sécurité financière.",
+      "examples": [
+        "Une famille avec 6 000 $ revenu mensuel, 1 800 $ logement, 800 $ nourriture, 400 $ transport, et 300 $ divertissement a 2 700 $ surplus. Avec 800 $ objectif d'épargne, ils atteignent 29% taux d'épargne et excellente santé financière.",
+        "Un professionnel célibataire gagnant 4 500 $ mensuellement avec 1 200 $ loyer, 300 $ nourriture, 250 $ transport, et 600 $ paiements de dette montre 2 150 $ surplus. Définissant 900 $ objectif d'épargne donne 42% taux d'épargne et position financière supérieure.",
+        "Un étudiant avec 2 500 $ revenu mensuel et 800 $ loyer fait face à 1 700 $ déficit avec 600 $ nourriture et dépenses de divertissement actuelles. Réduisant coûts discrétionnaires à 300 $ crée 200 $ surplus pour épargne."
+      ],
+      "resultsExplanation": [
+        "Solde budgétaire montre surplus (positif) ou déficit (négatif) après toutes dépenses",
+        "Ventilation dépenses totales révèle dépenses par catégorie pour optimisation",
+        "Progrès d'épargne indique pourcentage d'objectif d'épargne atteint",
+        "Score de santé financière fournit évaluation générale d'efficacité budgétaire"
+      ],
+      "whoItsFor": "Cette calculatrice de budget sert tout le monde depuis jeunes adultes commençant leur parcours financier, familles gérant dépenses ménagères, retraités vivant sur revenu fixe, freelances avec revenus variables, étudiants apprenant gestion d'argent, et quiconque cherchant meilleur contrôle sur finances. Elle est particulièrement précieuse pour ceux expérimentant stress financier, planifiant changements majeurs de vie, ou souhaitant construire richesse systématiquement. La calculatrice fonctionne pour tout niveau de revenu et aide identifier stratégies personnalisées pour succès financier.",
+      "disclaimer": "Cette calculatrice de budget fournit guidance financière générale basée sur principes budgétaires standard et information que vous fournissez. Situations financières réelles varient basées sur localisation, style de vie, inflation, et circonstances personnelles. La calculatrice ne constitue pas conseil financier, guidance fiscale, ou recommandations personnalisées. Résultats doivent être examinés avec conseiller financier certifié. Fonds d'urgence et réduction de dette doivent être priorisés avant objectifs d'épargne agressifs. Surveillez votre budget régulièrement et ajustez au fur et à mesure que circonstances de vie changent.",
+      "relatedTools": [
+        "Calculatrices d'épargne pour projeter accumulation de richesse à long terme",
+        "Calculatrices de dette pour optimiser stratégies de remboursement",
+        "Traqueurs de dépenses pour analyse détaillée des dépenses et catégorisation"
+      ],
+      "faqs": [
+        {
+          "question": "Combien de mon revenu devrais-je épargner chaque mois ?",
+          "answer": "Visez 20% de salaire net comme cible minimum d'épargne, mais épargnez plus si possible. La règle 50/30/20 alloue 50% aux besoins, 30% aux envies, et 20% à l'épargne/dette. Gagneurs élevés devraient cibler 25-30% épargne. Construisez fonds d'urgence (3-6 mois dépenses) d'abord, puis concentrez-vous sur retraite, investissements, et réduction de dette. Votre pourcentage spécifique dépend de revenu, dépenses, et objectifs financiers."
+        },
+        {
+          "question": "Quelle est la meilleure façon de catégoriser les dépenses ?",
+          "answer": "Utilisez ces catégories essentielles : Logement (loyer/prêt, services), Transport (auto, essence, assurance, transports en commun), Nourriture (épicerie, restauration), Assurance (santé, auto, habitation), Dette (prêts, cartes), Divertissement (films, loisirs), et Épargne. Suivez dépenses fixes (inchangées mensuellement) séparément des variables. Examinez relevés bancaires/cartes pour vous assurer que rien n'est manqué. Utilisez apps budgétaires pour catégorisation automatique."
+        },
+        {
+          "question": "Comment créer un budget réaliste que je peux réellement suivre ?",
+          "answer": "Commencez avec votre revenu et dépenses réels des 3 derniers mois, pas estimations. Utilisez budgétisation zéro où chaque dollar a un travail assigné. Incluez catégories tampon pour coûts inattendus. Définissez objectifs d'épargne d'abord, puis allouez fonds restants. Suivez dépenses pendant 30 jours pour identifier fuites. Ajustez progressivement plutôt que faire coupes drastiques. Examinez mensuellement et célébrez petites victoires pour rester motivé."
+        },
+        {
+          "question": "Dois-je rembourser dettes ou épargner de l'argent d'abord ?",
+          "answer": "Construisez fonds d'urgence de 1 000 $ d'abord si vous n'en avez pas. Puis suivez cet ordre de priorité : 1) Dette haut intérêt (15%+ cartes), 2) Fonds d'urgence (3-6 mois dépenses), 3) Comptes retraite (401k/IRA), 4) Dette intérêt moyen (7-12% prêts personnels), 5) Dette faible intérêt (sous 7% hypothèques). Comparez taux d'intérêt dette à rendements épargne potentiels. Considérez consolidation dette pour meilleurs taux."
+        },
+        {
+          "question": "À quelle fréquence dois-je examiner et mettre à jour mon budget ?",
+          "answer": "Examinez hebdomadairement pour attraper dépenses excessives tôt et faire ajustements milieu-mois. Faites examen complet mensuel pour analyser tendances et planifier mois suivant. Mettez à jour annuellement pour inflation et changements de vie (nouvel emploi, mariage, enfants). Événements majeurs de vie nécessitent révisions budgétaires immédiates. Utilisez apps budgétaires pour suivi temps réel et alertes automatiques quand approchant limites de dépenses."
+        }
+      ]
+    }
+  }
+}

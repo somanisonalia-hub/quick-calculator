@@ -1,0 +1,498 @@
+{
+  "en": {
+    "title": "Body Fat Calculator",
+    "seoTitle": "Body Fat Calculator - Calculate Body Fat Percentage Online",
+    "metaDescription": "Free body fat calculator. Calculate body fat percentage using Navy method, BMI method, and skinfold measurements. Get accurate body composition analysis.",
+    "keywords": ["body fat calculator", "body fat percentage calculator", "body composition calculator", "skin fold calculator", "navy body fat calculator"],
+    "longTailKeywords": ["how to calculate body fat percentage", "navy body fat calculator", "body fat calculator for men", "body fat calculator for women", "accurate body fat percentage"],
+    "slug": "body-fat-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["body fat", "fitness", "health", "body composition", "percentage"],
+    "summary": "Calculate your body fat percentage using multiple scientifically validated methods including Navy formula and skinfold measurements.",
+    "description": "Our comprehensive body fat calculator uses several scientifically validated methods to estimate your body fat percentage. Choose from Navy method, BMI-based calculations, or skinfold measurements for accurate body composition analysis.",
+    "instructions": [
+      "Select your preferred calculation method (Navy, BMI, or Skinfold)",
+      "Enter your measurements (waist, neck, height, weight, etc.)",
+      "Get your body fat percentage and lean body mass",
+      "Compare results with healthy body fat ranges"
+    ],
+    "calculatorComponent": {
+      "componentName": "BodyFatCalculator",
+      "inputs": [
+        { "name": "method", "label": "Calculation Method", "type": "select", "default": "navy", "options": ["navy", "bmi", "skinfold"] },
+        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "age", "label": "Age", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
+        { "name": "height", "label": "Height (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "weight", "label": "Weight (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
+        { "name": "waist", "label": "Waist Circumference (cm)", "type": "number", "default": 80, "min": 50, "max": 200, "step": 0.1 },
+        { "name": "neck", "label": "Neck Circumference (cm)", "type": "number", "default": 38, "min": 25, "max": 60, "step": 0.1 },
+        { "name": "hips", "label": "Hip Circumference (cm)", "type": "number", "default": 95, "min": 60, "max": 200, "step": 0.1 }
+      ],
+      "formula": "Navy Method (Men): BF% = 495 / (1.0324 - 0.19077×log(waist-neck) + 0.15456×log(height)) - 450; Navy Method (Women): BF% = 495 / (1.29579 - 0.35004×log(waist+hips-neck) + 0.22100×log(height)) - 450",
+      "output": { "label": "Body Fat Percentage", "default": "Enter measurements above", "format": "percentage" },
+      "additionalOutputs": [
+        { "label": "Lean Body Mass", "field": "leanMass", "format": "number", "unit": "kg" },
+        { "label": "Body Fat Mass", "field": "fatMass", "format": "number", "unit": "kg" },
+        { "label": "Fitness Category", "field": "category", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Male Navy Method",
+        "input": "Male, Age 30, Height 175cm, Weight 75kg, Waist 85cm, Neck 38cm",
+        "output": "Body Fat: 18.5%, Lean Mass: 61.1kg, Category: Average"
+      },
+      {
+        "title": "Female Navy Method",
+        "input": "Female, Age 25, Height 165cm, Weight 60kg, Waist 70cm, Neck 32cm, Hips 95cm",
+        "output": "Body Fat: 22.3%, Lean Mass: 46.6kg, Category: Athletic"
+      },
+      {
+        "title": "BMI Method",
+        "input": "Male, Age 35, Height 180cm, Weight 85kg",
+        "output": "Body Fat: 20.1% (estimated), Lean Mass: 67.9kg"
+      }
+    ],
+    "relatedCalculators": ["bmi-calculator", "bmr-calculator", "calorie-calculator"],
+    "seoContent": {
+      "introduction": "Calculate your body fat percentage with precision using our comprehensive body fat calculator. This essential fitness tool uses scientifically validated methods including the U.S. Navy formula, BMI-based calculations, and skinfold measurements to provide accurate body composition analysis. Understanding your body fat percentage is crucial for effective fitness planning, whether you're aiming to lose fat, build muscle, or track your health progress. Our calculator combines multiple proven methodologies to give you reliable results based on your measurements and personal data.",
+      "benefits": [
+        "Calculate body fat percentage using scientifically validated methods",
+        "Compare results across different calculation approaches for accuracy",
+        "Understand your fitness category and health status",
+        "Track changes in body composition over time",
+        "Get personalized insights into lean mass and fat mass distribution",
+        "Essential tool for fitness enthusiasts, athletes, and health-conscious individuals"
+      ],
+      "steps": [
+        "Select your preferred calculation method (Navy, BMI, or Skinfold)",
+        "Enter your gender, age, height, and weight measurements",
+        "Provide circumference measurements (waist, neck, hips as required)",
+        "Review your body fat percentage, lean mass, and fitness category"
+      ],
+      "inputsExplained": [
+        "Calculation method determines which scientific formula to use for estimation",
+        "Gender affects body fat distribution patterns and formula calculations",
+        "Age influences metabolic factors that impact body composition",
+        "Height and weight provide baseline body size measurements",
+        "Circumference measurements (waist, neck, hips) are used in Navy method calculations",
+        "All measurements work together to provide comprehensive body fat analysis"
+      ],
+      "formulaExplanation": "The U.S. Navy method uses circumference measurements and logarithmic calculations to estimate body density, then converts this to body fat percentage. The formula for men is: BF% = 495 / (1.0324 - 0.19077×log(waist-neck) + 0.15456×log(height)) - 450. For women it includes hip measurements: BF% = 495 / (1.29579 - 0.35004×log(waist+hips-neck) + 0.22100×log(height)) - 450. BMI-based methods use correlations between BMI values and typical body fat percentages for age and gender groups.",
+      "examples": [
+        "A 30-year-old man, 175cm tall, weighing 75kg with 85cm waist and 38cm neck calculates 18.5% body fat using Navy method, placing him in the 'Fitness' category with 61.1kg lean mass",
+        "A 25-year-old woman, 165cm tall, weighing 60kg with 70cm waist, 32cm neck, and 95cm hips calculates 22.3% body fat using Navy method, indicating athletic fitness level",
+        "A 35-year-old man using BMI method (180cm, 85kg) estimates 20.1% body fat, providing baseline comparison for other measurement methods"
+      ],
+      "resultsExplanation": [
+        "Body fat percentage shows proportion of body weight that is fat tissue",
+        "Lean body mass indicates muscle, bone, and organ weight",
+        "Body fat mass represents actual weight of fat tissue in kilograms",
+        "Fitness category provides health context based on standard ranges",
+        "Results vary by calculation method and should be interpreted accordingly"
+      ],
+      "whoItsFor": "This calculator serves fitness enthusiasts tracking body composition changes, athletes monitoring performance metrics, healthcare professionals assessing patient health, nutritionists planning dietary interventions, personal trainers setting client goals, and individuals pursuing weight loss or muscle gain objectives. It's particularly valuable for those following structured fitness programs, monitoring health changes, or seeking to understand their body composition beyond simple weight measurements.",
+      "disclaimer": "Body fat calculations provide estimates based on population averages and measurement correlations. Individual results may vary based on factors like muscle distribution, hydration levels, and body shape variations. For precise body composition analysis, consult healthcare professionals using methods like DEXA scans, hydrostatic weighing, or bioelectrical impedance. This tool is for educational purposes and should not replace professional medical assessment.",
+      "relatedTools": [
+        "BMI calculators for basic weight status assessment",
+        "BMR calculators for metabolic rate and calorie needs",
+        "Calorie tracking tools for nutrition management"
+      ],
+      "faqs": [
+        {
+          "question": "What's the most accurate method for calculating body fat percentage?",
+          "answer": "The U.S. Navy method is generally considered most accurate for home use, providing results within 3-4% of professional methods. However, for precise measurements, professional methods like DEXA scans, hydrostatic weighing, or bioelectrical impedance analysis are more accurate but require specialized equipment and professional administration."
+        },
+        {
+          "question": "How often should I measure my body fat percentage?",
+          "answer": "For tracking progress, measure every 4-6 weeks during fitness programs. More frequent measurements may show daily fluctuations due to hydration, digestion, and other factors. Use the same method and conditions each time for consistent, comparable results."
+        },
+        {
+          "question": "What are healthy body fat percentage ranges?",
+          "answer": "For men: Essential fat (2-5%), Athletes (6-13%), Fitness (14-17%), Average (18-24%), Obese (25%+). For women: Essential fat (10-13%), Athletes (14-20%), Fitness (21-24%), Average (25-31%), Obese (32%+). These ranges vary by age and individual health factors."
+        },
+        {
+          "question": "Why do men and women have different body fat calculations?",
+          "answer": "Men and women have different fat distribution patterns. Men typically carry more fat in the abdominal area, while women distribute fat more evenly including hips and thighs. Gender-specific formulas account for these differences to provide more accurate results."
+        },
+        {
+          "question": "Can body fat percentage be too low?",
+          "answer": "Yes, extremely low body fat percentages (below essential levels) can be unhealthy. Essential fat is necessary for hormone production, organ protection, and basic physiological functions. Men need at least 2-5% essential fat, women need 10-13%. Going below these levels can cause health issues including hormonal imbalances and weakened immune function."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Grasa Corporal",
+    "seoTitle": "Calculadora de Grasa Corporal - Calcula Porcentaje de Grasa Corporal Online",
+    "metaDescription": "Calculadora gratuita de grasa corporal. Calcula porcentaje de grasa corporal usando método Navy, método BMI y mediciones de pliegues cutáneos. Obtén análisis preciso de composición corporal.",
+    "keywords": ["calculadora grasa corporal", "calculadora porcentaje grasa corporal", "calculadora composición corporal", "calculadora pliegue cutáneo", "calculadora grasa corporal navy"],
+    "longTailKeywords": ["como calcular porcentaje grasa corporal", "calculadora grasa corporal navy", "calculadora grasa corporal para hombres", "calculadora grasa corporal para mujeres", "porcentaje grasa corporal preciso"],
+    "slug": "body-fat-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["grasa corporal", "fitness", "salud", "composición corporal", "porcentaje"],
+    "summary": "Calcula tu porcentaje de grasa corporal usando múltiples métodos científicamente validados incluyendo fórmula Navy y mediciones de pliegues cutáneos.",
+    "description": "Nuestra calculadora integral de grasa corporal usa varios métodos científicamente validados para estimar tu porcentaje de grasa corporal. Elige entre método Navy, cálculos basados en BMI, o mediciones de pliegues cutáneos para análisis preciso de composición corporal.",
+    "instructions": [
+      "Selecciona tu método de cálculo preferido (Navy, BMI, o Pliegue Cutáneo)",
+      "Ingresa tus mediciones (cintura, cuello, altura, peso, etc.)",
+      "Obtén tu porcentaje de grasa corporal y masa corporal magra",
+      "Compara resultados con rangos saludables de grasa corporal"
+    ],
+    "calculatorComponent": {
+      "componentName": "BodyFatCalculator",
+      "inputs": [
+        { "name": "method", "label": "Método de Cálculo", "type": "select", "default": "navy", "options": ["navy", "bmi", "skinfold"] },
+        { "name": "gender", "label": "Género", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "age", "label": "Edad", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
+        { "name": "height", "label": "Altura (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "weight", "label": "Peso (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
+        { "name": "waist", "label": "Circunferencia de Cintura (cm)", "type": "number", "default": 80, "min": 50, "max": 200, "step": 0.1 },
+        { "name": "neck", "label": "Circunferencia de Cuello (cm)", "type": "number", "default": 38, "min": 25, "max": 60, "step": 0.1 },
+        { "name": "hips", "label": "Circunferencia de Cadera (cm)", "type": "number", "default": 95, "min": 60, "max": 200, "step": 0.1 }
+      ],
+      "formula": "Método Navy (Hombres): BF% = 495 / (1.0324 - 0.19077×log(cintura-cuello) + 0.15456×log(altura)) - 450; Método Navy (Mujeres): BF% = 495 / (1.29579 - 0.35004×log(cintura+cadera-cuello) + 0.22100×log(altura)) - 450",
+      "output": { "label": "Porcentaje de Grasa Corporal", "default": "Ingresa mediciones arriba", "format": "percentage" },
+      "additionalOutputs": [
+        { "label": "Masa Corporal Magra", "field": "leanMass", "format": "number", "unit": "kg" },
+        { "label": "Masa de Grasa Corporal", "field": "fatMass", "format": "number", "unit": "kg" },
+        { "label": "Categoría de Fitness", "field": "category", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Método Navy Masculino",
+        "input": "Masculino, Edad 30, Altura 175cm, Peso 75kg, Cintura 85cm, Cuello 38cm",
+        "output": "Grasa Corporal: 18.5%, Masa Magra: 61.1kg, Categoría: Promedio"
+      },
+      {
+        "title": "Método Navy Femenino",
+        "input": "Femenino, Edad 25, Altura 165cm, Peso 60kg, Cintura 70cm, Cuello 32cm, Cadera 95cm",
+        "output": "Grasa Corporal: 22.3%, Masa Magra: 46.6kg, Categoría: Atlético"
+      },
+      {
+        "title": "Método BMI",
+        "input": "Masculino, Edad 35, Altura 180cm, Peso 85kg",
+        "output": "Grasa Corporal: 20.1% (estimado), Masa Magra: 67.9kg"
+      }
+    ],
+    "relatedCalculators": ["bmi-calculator", "bmr-calculator", "calorie-calculator"],
+    "seoContent": {
+      "introduction": "Calcula tu porcentaje de grasa corporal con precisión usando nuestra calculadora integral de grasa corporal. Esta herramienta esencial de fitness usa métodos científicamente validados incluyendo fórmula Navy de EE.UU., cálculos basados en BMI y mediciones de pliegues cutáneos para proporcionar análisis preciso de composición corporal. Comprender tu porcentaje de grasa corporal es crucial para planificación efectiva de fitness, ya sea que busques perder grasa, construir músculo o rastrear tu progreso de salud. Nuestra calculadora combina múltiples metodologías probadas para darte resultados confiables basados en tus mediciones y datos personales.",
+      "benefits": [
+        "Calcula porcentaje de grasa corporal usando métodos científicamente validados",
+        "Compara resultados a través de diferentes enfoques de cálculo para exactitud",
+        "Comprende tu categoría de fitness y estado de salud",
+        "Rastrea cambios en composición corporal a través del tiempo",
+        "Obtén insights personalizados en distribución de masa magra y grasa",
+        "Herramienta esencial para entusiastas de fitness, atletas e individuos conscientes de salud"
+      ],
+      "steps": [
+        "Selecciona tu método de cálculo preferido (Navy, BMI o Pliegue Cutáneo)",
+        "Ingresa tus mediciones de género, edad, altura y peso",
+        "Proporciona mediciones de circunferencia (cintura, cuello, cadera según requerido)",
+        "Revisa tu porcentaje de grasa corporal, masa magra y categoría de fitness"
+      ],
+      "inputsExplained": [
+        "Método de cálculo determina qué fórmula científica usar para estimación",
+        "Género afecta patrones de distribución de grasa corporal y cálculos de fórmula",
+        "Edad influye factores metabólicos que impactan composición corporal",
+        "Altura y peso proporcionan mediciones base de tamaño corporal",
+        "Mediciones de circunferencia (cintura, cuello, cadera) son usadas en cálculos de método Navy",
+        "Todas las mediciones trabajan juntas para proporcionar análisis integral de grasa corporal"
+      ],
+      "formulaExplanation": "El método Navy de EE.UU. usa mediciones de circunferencia y cálculos logarítmicos para estimar densidad corporal, luego convierte esto a porcentaje de grasa corporal. La fórmula para hombres es: BF% = 495 / (1.0324 - 0.19077×log(cintura-cuello) + 0.15456×log(altura)) - 450. Para mujeres incluye mediciones de cadera: BF% = 495 / (1.29579 - 0.35004×log(cintura+cadera-cuello) + 0.22100×log(altura)) - 450. Métodos basados en BMI usan correlaciones entre valores BMI y porcentajes típicos de grasa corporal para grupos de edad y género.",
+      "examples": [
+        "Un hombre de 30 años, 175cm de altura, pesando 75kg con cintura de 85cm y cuello de 38cm calcula 18.5% de grasa corporal usando método Navy, colocándolo en categoría 'Fitness' con 61.1kg de masa magra",
+        "Una mujer de 25 años, 165cm de altura, pesando 60kg con cintura de 70cm, cuello de 32cm y cadera de 95cm calcula 22.3% de grasa corporal usando método Navy, indicando nivel de fitness atlético",
+        "Un hombre de 35 años usando método BMI (180cm, 85kg) estima 20.1% de grasa corporal, proporcionando comparación base para otros métodos de medición"
+      ],
+      "resultsExplanation": [
+        "Porcentaje de grasa corporal muestra proporción de peso corporal que es tejido graso",
+        "Masa corporal magra indica peso de músculo, hueso y órganos",
+        "Masa de grasa corporal representa peso actual de tejido graso en kilogramos",
+        "Categoría de fitness proporciona contexto de salud basado en rangos estándar",
+        "Resultados varían por método de cálculo y deben interpretarse en consecuencia"
+      ],
+      "whoItsFor": "Esta calculadora sirve a entusiastas de fitness rastreando cambios de composición corporal, atletas monitoreando métricas de rendimiento, profesionales de la salud evaluando salud de pacientes, nutricionistas planificando intervenciones dietéticas, entrenadores personales estableciendo metas de clientes e individuos persiguiendo objetivos de pérdida de peso o ganancia muscular. Es particularmente valiosa para aquellos siguiendo programas estructurados de fitness, monitoreando cambios de salud o buscando comprender su composición corporal más allá de mediciones simples de peso.",
+      "disclaimer": "Cálculos de grasa corporal proporcionan estimaciones basadas en promedios poblacionales y correlaciones de medición. Resultados individuales pueden variar basados en factores como distribución muscular, niveles de hidratación y variaciones de forma corporal. Para análisis preciso de composición corporal, consulta profesionales de la salud usando métodos como escáneres DEXA, pesaje hidrostático o impedancia bioeléctrica. Esta herramienta es para propósitos educativos y no debe reemplazar evaluación médica profesional.",
+      "relatedTools": [
+        "Calculadoras de IMC para evaluación básica de estado de peso",
+        "Calculadoras de TMB para tasa metabólica y necesidades calóricas",
+        "Herramientas de rastreo de calorías para gestión nutricional"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es el método más preciso para calcular porcentaje de grasa corporal?",
+          "answer": "El método Navy de EE.UU. es generalmente considerado más preciso para uso doméstico, proporcionando resultados dentro de 3-4% de métodos profesionales. Sin embargo, para mediciones precisas, métodos profesionales como escáneres DEXA, pesaje hidrostático o análisis de impedancia bioeléctrica son más precisos pero requieren equipo especializado y administración profesional."
+        },
+        {
+          "question": "¿Con qué frecuencia debo medir mi porcentaje de grasa corporal?",
+          "answer": "Para rastrear progreso, mide cada 4-6 semanas durante programas de fitness. Mediciones más frecuentes pueden mostrar fluctuaciones diarias debido a hidratación, digestión y otros factores. Usa el mismo método y condiciones cada vez para resultados consistentes y comparables."
+        },
+        {
+          "question": "¿Cuáles son rangos saludables de porcentaje de grasa corporal?",
+          "answer": "Para hombres: Grasa esencial (2-5%), Atletas (6-13%), Fitness (14-17%), Promedio (18-24%), Obeso (25%+). Para mujeres: Grasa esencial (10-13%), Atletas (14-20%), Fitness (21-24%), Promedio (25-31%), Obeso (32%+). Estos rangos varían por edad y factores individuales de salud."
+        },
+        {
+          "question": "¿Por qué hombres y mujeres tienen diferentes cálculos de grasa corporal?",
+          "answer": "Hombres y mujeres tienen diferentes patrones de distribución de grasa. Hombres típicamente llevan más grasa en área abdominal, mientras mujeres distribuyen grasa más uniformemente incluyendo caderas y muslos. Fórmulas específicas de género consideran estas diferencias para proporcionar resultados más precisos."
+        },
+        {
+          "question": "¿Puede porcentaje de grasa corporal ser demasiado bajo?",
+          "answer": "Sí, porcentajes extremadamente bajos de grasa corporal (debajo de niveles esenciales) pueden ser poco saludables. Grasa esencial es necesaria para producción hormonal, protección de órganos y funciones fisiológicas básicas. Hombres necesitan al menos 2-5% de grasa esencial, mujeres necesitan 10-13%. Ir debajo de estos niveles puede causar problemas de salud incluyendo desbalances hormonales y función inmune debilitada."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Gordura Corporal",
+    "seoTitle": "Calculadora de Gordura Corporal - Calcule Porcentagem de Gordura Corporal Online",
+    "metaDescription": "Calculadora gratuita de gordura corporal. Calcule porcentagem de gordura corporal usando método Navy, método BMI e medições de dobras cutâneas. Obtenha análise precisa de composição corporal.",
+    "keywords": ["calculadora gordura corporal", "calculadora porcentagem gordura corporal", "calculadora composição corporal", "calculadora dobra cutânea", "calculadora gordura corporal navy"],
+    "longTailKeywords": ["como calcular porcentagem gordura corporal", "calculadora gordura corporal navy", "calculadora gordura corporal para homens", "calculadora gordura corporal para mulheres", "porcentagem gordura corporal precisa"],
+    "slug": "body-fat-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["gordura corporal", "fitness", "saúde", "composição corporal", "porcentagem"],
+    "summary": "Calcule sua porcentagem de gordura corporal usando múltiplos métodos cientificamente validados incluindo fórmula Navy e medições de dobras cutâneas.",
+    "description": "Nossa calculadora abrangente de gordura corporal usa vários métodos cientificamente validados para estimar sua porcentagem de gordura corporal. Escolha entre método Navy, cálculos baseados em BMI, ou medições de dobras cutâneas para análise precisa de composição corporal.",
+    "instructions": [
+      "Selecione seu método de cálculo preferido (Navy, BMI, ou Dobra Cutânea)",
+      "Digite suas medições (cintura, pescoço, altura, peso, etc.)",
+      "Obtenha sua porcentagem de gordura corporal e massa corporal magra",
+      "Compare resultados com faixas saudáveis de gordura corporal"
+    ],
+    "calculatorComponent": {
+      "componentName": "BodyFatCalculator",
+      "inputs": [
+        { "name": "method", "label": "Método de Cálculo", "type": "select", "default": "navy", "options": ["navy", "bmi", "skinfold"] },
+        { "name": "gender", "label": "Gênero", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "age", "label": "Idade", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
+        { "name": "height", "label": "Altura (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "weight", "label": "Peso (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
+        { "name": "waist", "label": "Circunferência da Cintura (cm)", "type": "number", "default": 80, "min": 50, "max": 200, "step": 0.1 },
+        { "name": "neck", "label": "Circunferência do Pescoço (cm)", "type": "number", "default": 38, "min": 25, "max": 60, "step": 0.1 },
+        { "name": "hips", "label": "Circunferência do Quadril (cm)", "type": "number", "default": 95, "min": 60, "max": 200, "step": 0.1 }
+      ],
+      "formula": "Método Navy (Homens): BF% = 495 / (1.0324 - 0.19077×log(cintura-pescoço) + 0.15456×log(altura)) - 450; Método Navy (Mulheres): BF% = 495 / (1.29579 - 0.35004×log(cintura+quadril-pescoço) + 0.22100×log(altura)) - 450",
+      "output": { "label": "Porcentagem de Gordura Corporal", "default": "Digite medições acima", "format": "percentage" },
+      "additionalOutputs": [
+        { "label": "Massa Corporal Magra", "field": "leanMass", "format": "number", "unit": "kg" },
+        { "label": "Massa de Gordura Corporal", "field": "fatMass", "format": "number", "unit": "kg" },
+        { "label": "Categoria de Fitness", "field": "category", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Método Navy Masculino",
+        "input": "Masculino, Idade 30, Altura 175cm, Peso 75kg, Cintura 85cm, Pescoço 38cm",
+        "output": "Gordura Corporal: 18.5%, Massa Magra: 61.1kg, Categoria: Média"
+      },
+      {
+        "title": "Método Navy Feminino",
+        "input": "Feminino, Idade 25, Altura 165cm, Peso 60kg, Cintura 70cm, Pescoço 32cm, Quadril 95cm",
+        "output": "Gordura Corporal: 22.3%, Massa Magra: 46.6kg, Categoria: Atlético"
+      },
+      {
+        "title": "Método BMI",
+        "input": "Masculino, Idade 35, Altura 180cm, Peso 85kg",
+        "output": "Gordura Corporal: 20.1% (estimado), Massa Magra: 67.9kg"
+      }
+    ],
+    "relatedCalculators": ["bmi-calculator", "bmr-calculator", "calorie-calculator"],
+    "seoContent": {
+      "introduction": "Calcule sua porcentagem de gordura corporal com precisão usando nossa calculadora abrangente de gordura corporal. Esta ferramenta essencial de fitness usa métodos cientificamente validados incluindo fórmula Navy dos EUA, cálculos baseados em BMI e medições de dobras cutâneas para fornecer análise precisa de composição corporal. Compreender sua porcentagem de gordura corporal é crucial para planejamento efetivo de fitness, seja você buscando perder gordura, construir músculo ou rastrear seu progresso de saúde. Nossa calculadora combina múltiplas metodologias comprovadas para dar a você resultados confiáveis baseados em suas medições e dados pessoais.",
+      "benefits": [
+        "Calcule porcentagem de gordura corporal usando métodos cientificamente validados",
+        "Compare resultados através de diferentes abordagens de cálculo para exatidão",
+        "Compreenda sua categoria de fitness e status de saúde",
+        "Rastreie mudanças em composição corporal ao longo do tempo",
+        "Obtenha insights personalizados em distribuição de massa magra e gordura",
+        "Ferramenta essencial para entusiastas de fitness, atletas e indivíduos conscientes de saúde"
+      ],
+      "steps": [
+        "Selecione seu método de cálculo preferido (Navy, BMI ou Dobra Cutânea)",
+        "Digite suas medições de gênero, idade, altura e peso",
+        "Forneça medições de circunferência (cintura, pescoço, quadril conforme requerido)",
+        "Revise sua porcentagem de gordura corporal, massa magra e categoria de fitness"
+      ],
+      "inputsExplained": [
+        "Método de cálculo determina qual fórmula científica usar para estimativa",
+        "Gênero afeta padrões de distribuição de gordura corporal e cálculos de fórmula",
+        "Idade influencia fatores metabólicos que impactam composição corporal",
+        "Altura e peso fornecem medições base de tamanho corporal",
+        "Medições de circunferência (cintura, pescoço, quadril) são usadas em cálculos do método Navy",
+        "Todas as medições trabalham juntas para fornecer análise abrangente de gordura corporal"
+      ],
+      "formulaExplanation": "O método Navy dos EUA usa medições de circunferência e cálculos logarítmicos para estimar densidade corporal, então converte isso para porcentagem de gordura corporal. A fórmula para homens é: BF% = 495 / (1.0324 - 0.19077×log(cintura-pescoço) + 0.15456×log(altura)) - 450. Para mulheres inclui medições de quadril: BF% = 495 / (1.29579 - 0.35004×log(cintura+quadril-pescoço) + 0.22100×log(altura)) - 450. Métodos baseados em BMI usam correlações entre valores BMI e porcentagens típicas de gordura corporal para grupos de idade e gênero.",
+      "examples": [
+        "Um homem de 30 anos, 175cm de altura, pesando 75kg com cintura de 85cm e pescoço de 38cm calcula 18.5% de gordura corporal usando método Navy, colocando-o na categoria 'Fitness' com 61.1kg de massa magra",
+        "Uma mulher de 25 anos, 165cm de altura, pesando 60kg com cintura de 70cm, pescoço de 32cm e quadril de 95cm calcula 22.3% de gordura corporal usando método Navy, indicando nível de fitness atlético",
+        "Um homem de 35 anos usando método BMI (180cm, 85kg) estima 20.1% de gordura corporal, fornecendo comparação base para outros métodos de medição"
+      ],
+      "resultsExplanation": [
+        "Porcentagem de gordura corporal mostra proporção de peso corporal que é tecido gorduroso",
+        "Massa corporal magra indica peso de músculo, osso e órgãos",
+        "Massa de gordura corporal representa peso atual de tecido gorduroso em quilogramas",
+        "Categoria de fitness fornece contexto de saúde baseado em faixas padrão",
+        "Resultados variam por método de cálculo e devem ser interpretados de acordo"
+      ],
+      "whoItsFor": "Esta calculadora serve entusiastas de fitness rastreando mudanças de composição corporal, atletas monitorando métricas de performance, profissionais de saúde avaliando saúde de pacientes, nutricionistas planejando intervenções dietéticas, treinadores pessoais estabelecendo metas de clientes e indivíduos perseguindo objetivos de perda de peso ou ganho muscular. É particularmente valiosa para aqueles seguindo programas estruturados de fitness, monitorando mudanças de saúde ou buscando compreender sua composição corporal além de medições simples de peso.",
+      "disclaimer": "Cálculos de gordura corporal fornecem estimativas baseadas em médias populacionais e correlações de medição. Resultados individuais podem variar baseados em fatores como distribuição muscular, níveis de hidratação e variações de forma corporal. Para análise precisa de composição corporal, consulte profissionais de saúde usando métodos como escâneres DEXA, pesagem hidrostática ou impedância bioelétrica. Esta ferramenta é para propósitos educacionais e não deve substituir avaliação médica profissional.",
+      "relatedTools": [
+        "Calculadoras de IMC para avaliação básica de status de peso",
+        "Calculadoras de TMB para taxa metabólica e necessidades calóricas",
+        "Ferramentas de rastreamento de calorias para gerenciamento nutricional"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é o método mais preciso para calcular porcentagem de gordura corporal?",
+          "answer": "O método Navy dos EUA é geralmente considerado mais preciso para uso doméstico, fornecendo resultados dentro de 3-4% de métodos profissionais. No entanto, para medições precisas, métodos profissionais como escâneres DEXA, pesagem hidrostática ou análise de impedância bioelétrica são mais precisos mas requerem equipamento especializado e administração profissional."
+        },
+        {
+          "question": "Com que frequência devo medir minha porcentagem de gordura corporal?",
+          "answer": "Para rastrear progresso, meça a cada 4-6 semanas durante programas de fitness. Medições mais frequentes podem mostrar flutuações diárias devido a hidratação, digestão e outros fatores. Use o mesmo método e condições cada vez para resultados consistentes e comparáveis."
+        },
+        {
+          "question": "Quais são faixas saudáveis de porcentagem de gordura corporal?",
+          "answer": "Para homens: Gordura essencial (2-5%), Atletas (6-13%), Fitness (14-17%), Média (18-24%), Obeso (25%+). Para mulheres: Gordura essencial (10-13%), Atletas (14-20%), Fitness (21-24%), Média (25-31%), Obeso (32%+). Estas faixas variam por idade e fatores individuais de saúde."
+        },
+        {
+          "question": "¿Por que homens e mulheres têm diferentes cálculos de gordura corporal?",
+          "answer": "Homens e mulheres têm diferentes padrões de distribuição de gordura. Homens tipicamente carregam mais gordura na área abdominal, enquanto mulheres distribuem gordura mais uniformemente incluindo quadris e coxas. Fórmulas específicas de gênero consideram estas diferenças para fornecer resultados mais precisos."
+        },
+        {
+          "question": "Porcentagem de gordura corporal pode ser muito baixa?",
+          "answer": "Sim, porcentagens extremamente baixas de gordura corporal (abaixo de níveis essenciais) podem ser pouco saudáveis. Gordura essencial é necessária para produção hormonal, proteção de órgãos e funções fisiológicas básicas. Homens precisam de pelo menos 2-5% de gordura essencial, mulheres precisam de 10-13%. Ir abaixo destes níveis pode causar problemas de saúde incluindo desbalances hormonais e função imune enfraquecida."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Graisse Corporelle",
+    "seoTitle": "Calculateur de Graisse Corporelle - Calculez Pourcentage de Graisse Corporelle en Ligne",
+    "metaDescription": "Calculateur gratuit de graisse corporelle. Calculez pourcentage de graisse corporelle utilisant méthode Navy, méthode BMI et mesures de plis cutanés. Obtenez analyse précise de composition corporelle.",
+    "keywords": ["calculateur graisse corporelle", "calculateur pourcentage graisse corporelle", "calculateur composition corporelle", "calculateur pli cutané", "calculateur graisse corporelle navy"],
+    "longTailKeywords": ["comment calculer pourcentage graisse corporelle", "calculateur graisse corporelle navy", "calculateur graisse corporelle pour hommes", "calculateur graisse corporelle pour femmes", "pourcentage graisse corporelle précis"],
+    "slug": "body-fat-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["graisse corporelle", "fitness", "santé", "composition corporelle", "pourcentage"],
+    "summary": "Calculez votre pourcentage de graisse corporelle utilisant multiples méthodes scientifiquement validées incluant formule Navy et mesures de plis cutanés.",
+    "description": "Notre calculateur complet de graisse corporelle utilise plusieurs méthodes scientifiquement validées pour estimer votre pourcentage de graisse corporelle. Choisissez entre méthode Navy, calculs basés sur BMI, ou mesures de plis cutanés pour analyse précise de composition corporelle.",
+    "instructions": [
+      "Sélectionnez votre méthode de calcul préférée (Navy, BMI, ou Pli Cutané)",
+      "Entrez vos mesures (taille, cou, hauteur, poids, etc.)",
+      "Obtenez votre pourcentage de graisse corporelle et masse corporelle maigre",
+      "Comparez résultats avec gammes saines de graisse corporelle"
+    ],
+    "calculatorComponent": {
+      "componentName": "BodyFatCalculator",
+      "inputs": [
+        { "name": "method", "label": "Méthode de Calcul", "type": "select", "default": "navy", "options": ["navy", "bmi", "skinfold"] },
+        { "name": "gender", "label": "Genre", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "age", "label": "Âge", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
+        { "name": "height", "label": "Taille (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "weight", "label": "Poids (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
+        { "name": "waist", "label": "Circonférence de Taille (cm)", "type": "number", "default": 80, "min": 50, "max": 200, "step": 0.1 },
+        { "name": "neck", "label": "Circonférence du Cou (cm)", "type": "number", "default": 38, "min": 25, "max": 60, "step": 0.1 },
+        { "name": "hips", "label": "Circonférence des Hanches (cm)", "type": "number", "default": 95, "min": 60, "max": 200, "step": 0.1 }
+      ],
+      "formula": "Méthode Navy (Hommes): BF% = 495 / (1.0324 - 0.19077×log(taille-cou) + 0.15456×log(hauteur)) - 450; Méthode Navy (Femmes): BF% = 495 / (1.29579 - 0.35004×log(taille+hanches-cou) + 0.22100×log(hauteur)) - 450",
+      "output": { "label": "Pourcentage de Graisse Corporelle", "default": "Entrez mesures ci-dessus", "format": "percentage" },
+      "additionalOutputs": [
+        { "label": "Masse Corporelle Maigre", "field": "leanMass", "format": "number", "unit": "kg" },
+        { "label": "Masse de Graisse Corporelle", "field": "fatMass", "format": "number", "unit": "kg" },
+        { "label": "Catégorie de Fitness", "field": "category", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Méthode Navy Masculine",
+        "input": "Masculin, Âge 30, Taille 175cm, Poids 75kg, Taille 85cm, Cou 38cm",
+        "output": "Graisse Corporelle: 18.5%, Masse Maigre: 61.1kg, Catégorie: Moyenne"
+      },
+      {
+        "title": "Méthode Navy Féminine",
+        "input": "Féminin, Âge 25, Taille 165cm, Poids 60kg, Taille 70cm, Cou 32cm, Hanches 95cm",
+        "output": "Graisse Corporelle: 22.3%, Masse Maigre: 46.6kg, Catégorie: Athlétique"
+      },
+      {
+        "title": "Méthode BMI",
+        "input": "Masculin, Âge 35, Taille 180cm, Poids 85kg",
+        "output": "Graisse Corporelle: 20.1% (estimé), Masse Maigre: 67.9kg"
+      }
+    ],
+    "relatedCalculators": ["bmi-calculator", "bmr-calculator", "calorie-calculator"],
+    "seoContent": {
+      "introduction": "Calculez votre pourcentage de graisse corporelle avec précision utilisant notre calculatrice complète de graisse corporelle. Cet outil essentiel de fitness utilise méthodes scientifiquement validées incluant formule Navy américaine, calculs basés sur BMI et mesures de plis cutanés pour fournir analyse précise de composition corporelle. Comprendre votre pourcentage de graisse corporelle est crucial pour planification fitness efficace, que vous cherchiez à perdre graisse, construire muscle ou suivre votre progrès santé. Notre calculatrice combine multiples méthodologies prouvées pour vous donner résultats fiables basés sur vos mesures et données personnelles.",
+      "benefits": [
+        "Calculez pourcentage de graisse corporelle utilisant méthodes scientifiquement validées",
+        "Comparez résultats à travers différentes approches de calcul pour exactitude",
+        "Comprenez votre catégorie fitness et statut santé",
+        "Suivez changements en composition corporelle au fil du temps",
+        "Obtenez insights personnalisés en distribution masse maigre et graisse",
+        "Outil essentiel pour enthousiastes fitness, athlètes et individus conscients santé"
+      ],
+      "steps": [
+        "Sélectionnez votre méthode de calcul préférée (Navy, BMI ou Pli Cutané)",
+        "Entrez vos mesures genre, âge, taille et poids",
+        "Fournissez mesures circonférence (taille, cou, hanches selon requis)",
+        "Examinez votre pourcentage graisse corporelle, masse maigre et catégorie fitness"
+      ],
+      "inputsExplained": [
+        "Méthode de calcul détermine quelle formule scientifique utiliser pour estimation",
+        "Genre affecte modèles distribution graisse corporelle et calculs formule",
+        "Âge influence facteurs métaboliques impactant composition corporelle",
+        "Taille et poids fournissent mesures base taille corporelle",
+        "Mesures circonférence (taille, cou, hanches) sont utilisées en calculs méthode Navy",
+        "Toutes mesures travaillent ensemble pour fournir analyse complète graisse corporelle"
+      ],
+      "formulaExplanation": "La méthode Navy américaine utilise mesures circonférence et calculs logarithmiques pour estimer densité corporelle, puis convertit ceci en pourcentage graisse corporelle. La formule pour hommes est: BF% = 495 / (1.0324 - 0.19077×log(taille-cou) + 0.15456×log(hauteur)) - 450. Pour femmes elle inclut mesures hanches: BF% = 495 / (1.29579 - 0.35004×log(taille+hanches-cou) + 0.22100×log(hauteur)) - 450. Méthodes basées sur BMI utilisent corrélations entre valeurs BMI et pourcentages typiques graisse corporelle pour groupes âge et genre.",
+      "examples": [
+        "Un homme de 30 ans, 175cm taille, pesant 75kg avec taille 85cm et cou 38cm calcule 18.5% graisse corporelle utilisant méthode Navy, le plaçant en catégorie 'Fitness' avec 61.1kg masse maigre",
+        "Une femme de 25 ans, 165cm taille, pesant 60kg avec taille 70cm, cou 32cm et hanches 95cm calcule 22.3% graisse corporelle utilisant méthode Navy, indiquant niveau fitness athlétique",
+        "Un homme de 35 ans utilisant méthode BMI (180cm, 85kg) estime 20.1% graisse corporelle, fournissant comparaison base pour autres méthodes mesure"
+      ],
+      "resultsExplanation": [
+        "Pourcentage graisse corporelle montre proportion poids corporel qui est tissu graisseux",
+        "Masse corporelle maigre indique poids muscle, os et organes",
+        "Masse graisse corporelle représente poids actuel tissu graisseux en kilogrammes",
+        "Catégorie fitness fournit contexte santé basé sur gammes standard",
+        "Résultats varient par méthode calcul et doivent être interprétés en conséquence"
+      ],
+      "whoItsFor": "Cette calculatrice sert enthousiastes fitness suivant changements composition corporelle, athlètes surveillant métriques performance, professionnels santé évaluant santé patients, nutritionnistes planifiant interventions diététiques, entraîneurs personnels établissant objectifs clients et individus poursuivant objectifs perte poids ou gain musculaire. Elle est particulièrement précieuse pour ceux suivant programmes fitness structurés, surveillant changements santé ou cherchant comprendre leur composition corporelle au-delà mesures poids simples.",
+      "disclaimer": "Calculs graisse corporelle fournissent estimations basées sur moyennes populationnelles et corrélations mesure. Résultats individuels peuvent varier basés sur facteurs comme distribution musculaire, niveaux hydratation et variations forme corporelle. Pour analyse précise composition corporelle, consultez professionnels santé utilisant méthodes comme scanners DEXA, pesée hydrostatique ou impédance bioélectrique. Cet outil est pour buts éducatifs et ne doit pas remplacer évaluation médicale professionnelle.",
+      "relatedTools": [
+        "Calculateurs IMC pour évaluation basique statut poids",
+        "Calculateurs TMB pour taux métabolique et besoins caloriques",
+        "Outils suivi calories pour gestion nutritionnelle"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la méthode la plus précise pour calculer pourcentage graisse corporelle?",
+          "answer": "La méthode Navy américaine est généralement considérée plus précise pour usage domestique, fournissant résultats dans 3-4% de méthodes professionnelles. Cependant, pour mesures précises, méthodes professionnelles comme scanners DEXA, pesée hydrostatique ou analyse impédance bioélectrique sont plus précises mais nécessitent équipement spécialisé et administration professionnelle."
+        },
+        {
+          "question": "À quelle fréquence devrais-je mesurer mon pourcentage graisse corporelle?",
+          "answer": "Pour suivre progrès, mesurez tous les 4-6 semaines pendant programmes fitness. Mesures plus fréquentes peuvent montrer fluctuations journalières dues à hydratation, digestion et autres facteurs. Utilisez même méthode et conditions chaque fois pour résultats consistants et comparables."
+        },
+        {
+          "question": "Quelles sont gammes saines pourcentage graisse corporelle?",
+          "answer": "Pour hommes: Graisse essentielle (2-5%), Athlètes (6-13%), Fitness (14-17%), Moyenne (18-24%), Obèse (25%+). Pour femmes: Graisse essentielle (10-13%), Athlètes (14-20%), Fitness (21-24%), Moyenne (25-31%), Obèse (32%+). Ces gammes varient par âge et facteurs santé individuels."
+        },
+        {
+          "question": "Pourquoi hommes et femmes ont-ils différents calculs graisse corporelle?",
+          "answer": "Hommes et femmes ont différents modèles distribution graisse. Hommes transportent typiquement plus graisse en zone abdominale, tandis femmes distribuent graisse plus uniformément incluant hanches et cuisses. Formules genre-spécifiques tiennent compte ces différences pour fournir résultats plus précis."
+        },
+        {
+          "question": "Le pourcentage graisse corporelle peut-il être trop bas?",
+          "answer": "Oui, pourcentages extrêmement bas graisse corporelle (en-dessous niveaux essentiels) peuvent être malsains. Graisse essentielle est nécessaire pour production hormonale, protection organes et fonctions physiologiques de base. Hommes ont besoin au moins 2-5% graisse essentielle, femmes ont besoin 10-13%. Aller en-dessous ces niveaux peut causer problèmes santé incluant déséquilibres hormonaux et fonction immune affaiblie."
+        }
+      ]
+    }
+  }
+}

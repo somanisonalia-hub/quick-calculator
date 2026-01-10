@@ -1,0 +1,1306 @@
+{
+  "en": {
+    "title": "Square Footage Calculator",
+    "seoTitle": "Square Footage Calculator - Calculate Area in Square Feet and Square Meters",
+    "metaDescription": "Calculate square footage for rooms, houses, and land. Free square footage calculator with multiple shapes and area conversion tools.",
+    "keywords": [
+      "square footage calculator",
+      "area calculator",
+      "square feet calculator",
+      "room area calculator",
+      "house square footage"
+    ],
+    "longTailKeywords": [
+      "how to calculate square footage of a room",
+      "square footage calculator for house",
+      "calculate square feet of rectangle",
+      "square footage calculator with inches",
+      "how many square feet in my house",
+      "square footage calculator for flooring",
+      "calculate area in square meters",
+      "square footage to square meters conversion",
+      "room square footage calculator online",
+      "calculate square footage of irregular shapes"
+    ],
+    "slug": "square-footage-calculator",
+    "category": "Utility",
+    "difficulty": "Beginner",
+    "tags": [
+      "area",
+      "square footage",
+      "measurement",
+      "real estate",
+      "construction",
+      "room",
+      "house",
+      "flooring"
+    ],
+    "description": "Calculate square footage for any space with our comprehensive area calculator. Support for rectangles, circles, triangles, and irregular shapes. Perfect for real estate, construction, flooring, painting, and home improvement projects. Convert between square feet, square meters, and other area units.",
+    "summary": "Calculate area in square feet and square meters for various shapes and spaces.",
+    "instructions": [
+      "Select the shape you want to calculate (rectangle, circle, triangle, etc.)",
+      "Enter the dimensions in feet, inches, or meters",
+      "Choose your preferred output unit (square feet, square meters, etc.)",
+      "For complex spaces, calculate each room separately and add them up",
+      "Use the area conversion tools to switch between different units"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "shape",
+          "label": "Shape",
+          "type": "select",
+          "options": [
+            "rectangle",
+            "circle",
+            "triangle",
+            "square",
+            "oval",
+            "irregular"
+          ],
+          "default": "rectangle"
+        },
+        {
+          "name": "length",
+          "label": "Length (ft)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape !== 'circle' && shape !== 'triangle'"
+        },
+        {
+          "name": "width",
+          "label": "Width (ft)",
+          "type": "number",
+          "default": 15,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape !== 'circle' && shape !== 'triangle'"
+        },
+        {
+          "name": "radius",
+          "label": "Radius (ft)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'circle'"
+        },
+        {
+          "name": "diameter",
+          "label": "Diameter (ft)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'circle'"
+        },
+        {
+          "name": "base",
+          "label": "Base (ft)",
+          "type": "number",
+          "default": 12,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'triangle'"
+        },
+        {
+          "name": "height",
+          "label": "Height (ft)",
+          "type": "number",
+          "default": 8,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'triangle'"
+        },
+        {
+          "name": "side",
+          "label": "Side Length (ft)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'square'"
+        },
+        {
+          "name": "length1",
+          "label": "Length 1 (ft)",
+          "type": "number",
+          "default": 15,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'oval'"
+        },
+        {
+          "name": "length2",
+          "label": "Length 2 (ft)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'oval'"
+        },
+        {
+          "name": "area1",
+          "label": "Area 1 (sq ft)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "step": 1,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "area2",
+          "label": "Area 2 (sq ft)",
+          "type": "number",
+          "default": 250,
+          "min": 0,
+          "step": 1,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "area3",
+          "label": "Area 3 (sq ft)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 1,
+          "optional": true,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "outputUnit",
+          "label": "Output Unit",
+          "type": "select",
+          "options": [
+            "sqft",
+            "sqm",
+            "sqyd"
+          ],
+          "default": "sqft"
+        }
+      ],
+      "formula": "Rectangle: Area = Length × Width; Circle: Area = π × Radius²; Triangle: Area = (Base × Height) ÷ 2; Square: Area = Side²; Oval: Area = π × Length1 × Length2 ÷ 4",
+      "output": {
+        "label": "Area",
+        "default": "Enter dimensions above",
+        "format": "area"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Area in Square Feet",
+          "field": "areaSqFt",
+          "format": "decimal"
+        },
+        {
+          "label": "Area in Square Meters",
+          "field": "areaSqM",
+          "format": "decimal"
+        },
+        {
+          "label": "Area in Square Yards",
+          "field": "areaSqYd",
+          "format": "decimal"
+        },
+        {
+          "label": "Perimeter",
+          "field": "perimeter",
+          "format": "decimal"
+        },
+        {
+          "label": "Shape Formula",
+          "field": "formulaUsed",
+          "format": "text"
+        }
+      ],
+      "componentName": "SquareFootageCalculator"
+    },
+    "examples": [
+      {
+        "title": "Living Room Area",
+        "input": {
+          "shape": "rectangle",
+          "length": 16,
+          "width": 12,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 192,
+          "areaSqM": 17.84,
+          "perimeter": 56
+        },
+        "explanation": "A standard living room measuring 16 feet by 12 feet has 192 square feet of floor area. This is approximately 17.84 square meters."
+      },
+      {
+        "title": "Circular Garden",
+        "input": {
+          "shape": "circle",
+          "radius": 8,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 201.06,
+          "areaSqM": 18.68,
+          "perimeter": 50.27
+        },
+        "explanation": "A circular garden with 8-foot radius covers 201 square feet. The circumference (perimeter) is about 50 feet."
+      },
+      {
+        "title": "Triangular Garden Bed",
+        "input": {
+          "shape": "triangle",
+          "base": 10,
+          "height": 6,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 30,
+          "areaSqM": 2.79,
+          "perimeter": 22
+        },
+        "explanation": "A triangular garden bed with 10-foot base and 6-foot height has 30 square feet of planting area."
+      },
+      {
+        "title": "Two-Car Garage",
+        "input": {
+          "shape": "rectangle",
+          "length": 24,
+          "width": 22,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 528,
+          "areaSqM": 49.05,
+          "perimeter": 92
+        },
+        "explanation": "A standard two-car garage measuring 24×22 feet has 528 square feet of floor space, enough for two cars plus storage."
+      },
+      {
+        "title": "Bathroom Renovation",
+        "input": {
+          "shape": "rectangle",
+          "length": 8,
+          "width": 6,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 48,
+          "areaSqM": 4.46,
+          "perimeter": 28
+        },
+        "explanation": "A small bathroom measuring 8×6 feet has 48 square feet. This helps calculate tile, flooring, or paint needed."
+      },
+      {
+        "title": "Oval Swimming Pool",
+        "input": {
+          "shape": "oval",
+          "length1": 30,
+          "length2": 15,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 353.43,
+          "areaSqM": 32.82,
+          "perimeter": 67.86
+        },
+        "explanation": "An oval swimming pool with lengths of 30×15 feet has a surface area of 353 square feet for water volume calculations."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Concrete Calculator",
+        "slug": "concrete-calculator",
+        "description": "Calculate concrete volume for construction."
+      },
+      {
+        "name": "Budget Calculator",
+        "slug": "budget-calculator",
+        "description": "Plan renovation budgets."
+      },
+      {
+        "name": "Percent Calculator",
+        "slug": "percent-calculator",
+        "description": "Calculate percentages and ratios."
+      }
+    ]
+  },
+  "es": {
+    "title": "Calculadora de Metros Cuadrados",
+    "seoTitle": "Calculadora de Metros Cuadrados - Calcular Área en Pies Cuadrados y Metros Cuadrados",
+    "metaDescription": "Calcula metros cuadrados para habitaciones, casas y terrenos. Calculadora gratuita de metros cuadrados con múltiples formas y herramientas de conversión de área.",
+    "keywords": [
+      "calculadora metros cuadrados",
+      "calculadora area",
+      "calculadora pies cuadrados",
+      "calculadora area habitacion",
+      "metros cuadrados casa"
+    ],
+    "longTailKeywords": [
+      "como calcular metros cuadrados de una habitacion",
+      "calculadora metros cuadrados para casa",
+      "calcular pies cuadrados de rectangulo",
+      "calculadora metros cuadrados con pulgadas",
+      "cuantos metros cuadrados tiene mi casa",
+      "calculadora metros cuadrados para piso",
+      "calcular area en metros cuadrados",
+      "metros cuadrados a metros cuadrados conversion",
+      "calculadora metros cuadrados habitacion online",
+      "calcular metros cuadrados de formas irregulares"
+    ],
+    "slug": "square-footage-calculator",
+    "category": "Utility",
+    "difficulty": "Beginner",
+    "tags": [
+      "area",
+      "metros cuadrados",
+      "medicion",
+      "bienes raices",
+      "construccion",
+      "habitacion",
+      "casa",
+      "piso"
+    ],
+    "description": "Calcula metros cuadrados para cualquier espacio con nuestra calculadora integral de área. Soporte para rectángulos, círculos, triángulos y formas irregulares. Perfecto para bienes raíces, construcción, pisos, pintura y proyectos de mejora del hogar. Convierte entre pies cuadrados, metros cuadrados y otras unidades de área.",
+    "summary": "Calcula área en pies cuadrados y metros cuadrados para diversas formas y espacios.",
+    "instructions": [
+      "Selecciona la forma que deseas calcular (rectángulo, círculo, triángulo, etc.)",
+      "Ingresa las dimensiones en pies, pulgadas o metros",
+      "Elige tu unidad de salida preferida (pies cuadrados, metros cuadrados, etc.)",
+      "Para espacios complejos, calcula cada habitación por separado y súmalos",
+      "Usa las herramientas de conversión de área para cambiar entre diferentes unidades"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "shape",
+          "label": "Forma",
+          "type": "select",
+          "options": [
+            "rectangle",
+            "circle",
+            "triangle",
+            "square",
+            "oval",
+            "irregular"
+          ],
+          "default": "rectangle"
+        },
+        {
+          "name": "length",
+          "label": "Longitud (pies)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape !== 'circle' && shape !== 'triangle'"
+        },
+        {
+          "name": "width",
+          "label": "Ancho (pies)",
+          "type": "number",
+          "default": 15,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape !== 'circle' && shape !== 'triangle'"
+        },
+        {
+          "name": "radius",
+          "label": "Radio (pies)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'circle'"
+        },
+        {
+          "name": "diameter",
+          "label": "Diámetro (pies)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'circle'"
+        },
+        {
+          "name": "base",
+          "label": "Base (pies)",
+          "type": "number",
+          "default": 12,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'triangle'"
+        },
+        {
+          "name": "height",
+          "label": "Altura (pies)",
+          "type": "number",
+          "default": 8,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'triangle'"
+        },
+        {
+          "name": "side",
+          "label": "Longitud del Lado (pies)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'square'"
+        },
+        {
+          "name": "length1",
+          "label": "Longitud 1 (pies)",
+          "type": "number",
+          "default": 15,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'oval'"
+        },
+        {
+          "name": "length2",
+          "label": "Longitud 2 (pies)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'oval'"
+        },
+        {
+          "name": "area1",
+          "label": "Área 1 (pies²)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "step": 1,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "area2",
+          "label": "Área 2 (pies²)",
+          "type": "number",
+          "default": 250,
+          "min": 0,
+          "step": 1,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "area3",
+          "label": "Área 3 (pies²)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 1,
+          "optional": true,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "outputUnit",
+          "label": "Unidad de Salida",
+          "type": "select",
+          "options": [
+            "sqft",
+            "sqm",
+            "sqyd"
+          ],
+          "default": "sqft"
+        }
+      ],
+      "formula": "Rectángulo: Área = Longitud × Ancho; Círculo: Área = π × Radio²; Triángulo: Área = (Base × Altura) ÷ 2; Cuadrado: Área = Lado²; Óvalo: Área = π × Longitud1 × Longitud2 ÷ 4",
+      "output": {
+        "label": "Área",
+        "default": "Ingresa dimensiones arriba",
+        "format": "area"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Área en Pies Cuadrados",
+          "field": "areaSqFt",
+          "format": "decimal"
+        },
+        {
+          "label": "Área en Metros Cuadrados",
+          "field": "areaSqM",
+          "format": "decimal"
+        },
+        {
+          "label": "Área en Yardas Cuadradas",
+          "field": "areaSqYd",
+          "format": "decimal"
+        },
+        {
+          "label": "Perímetro",
+          "field": "perimeter",
+          "format": "decimal"
+        },
+        {
+          "label": "Fórmula de Forma",
+          "field": "formulaUsed",
+          "format": "text"
+        }
+      ],
+      "componentName": "SquareFootageCalculator"
+    },
+    "examples": [
+      {
+        "title": "Área de Sala de Estar",
+        "input": {
+          "shape": "rectangle",
+          "length": 16,
+          "width": 12,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 192,
+          "areaSqM": 17.84,
+          "perimeter": 56
+        },
+        "explanation": "Una sala de estar estándar midiendo 16 pies por 12 pies tiene 192 pies cuadrados de área de piso. Esto es aproximadamente 17.84 metros cuadrados."
+      },
+      {
+        "title": "Jardín Circular",
+        "input": {
+          "shape": "circle",
+          "radius": 8,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 201.06,
+          "areaSqM": 18.68,
+          "perimeter": 50.27
+        },
+        "explanation": "Un jardín circular con radio de 8 pies cubre 201 pies cuadrados. La circunferencia (perímetro) es aproximadamente 50 pies."
+      },
+      {
+        "title": "Macizo de Jardín Triangular",
+        "input": {
+          "shape": "triangle",
+          "base": 10,
+          "height": 6,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 30,
+          "areaSqM": 2.79,
+          "perimeter": 22
+        },
+        "explanation": "Un macizo de jardín triangular con base de 10 pies y altura de 6 pies tiene 30 pies cuadrados de área de plantación."
+      },
+      {
+        "title": "Garaje para Dos Autos",
+        "input": {
+          "shape": "rectangle",
+          "length": 24,
+          "width": 22,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 528,
+          "areaSqM": 49.05,
+          "perimeter": 92
+        },
+        "explanation": "Un garaje estándar para dos autos midiendo 24×22 pies tiene 528 pies cuadrados de espacio en el piso, suficiente para dos autos más almacenamiento."
+      },
+      {
+        "title": "Renovación de Baño",
+        "input": {
+          "shape": "rectangle",
+          "length": 8,
+          "width": 6,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 48,
+          "areaSqM": 4.46,
+          "perimeter": 28
+        },
+        "explanation": "Un baño pequeño midiendo 8×6 pies tiene 48 pies cuadrados. Esto ayuda a calcular azulejos, pisos o pintura necesarios."
+      },
+      {
+        "title": "Piscina Ovalada",
+        "input": {
+          "shape": "oval",
+          "length1": 30,
+          "length2": 15,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 353.43,
+          "areaSqM": 32.82,
+          "perimeter": 67.86
+        },
+        "explanation": "Una piscina ovalada con longitudes de 30×15 pies tiene un área de superficie de 353 pies cuadrados para cálculos de volumen de agua."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Concreto",
+        "slug": "concrete-calculator",
+        "description": "Calcula volumen de concreto para construcción."
+      },
+      {
+        "name": "Calculadora de Presupuesto",
+        "slug": "budget-calculator",
+        "description": "Planea presupuestos de renovación."
+      },
+      {
+        "name": "Calculadora de Porcentajes",
+        "slug": "percent-calculator",
+        "description": "Calcula porcentajes y proporciones."
+      }
+    ]
+  },
+  "pt": {
+    "title": "Calculadora de Metros Quadrados",
+    "seoTitle": "Calculadora de Metros Quadrados - Calcular Área em Pés Quadrados e Metros Quadrados",
+    "metaDescription": "Calcule metros quadrados para quartos, casas e terrenos. Calculadora gratuita de metros quadrados com múltiplas formas e ferramentas de conversão de área.",
+    "keywords": [
+      "calculadora metros quadrados",
+      "calculadora area",
+      "calculadora pés quadrados",
+      "calculadora area quarto",
+      "metros quadrados casa"
+    ],
+    "longTailKeywords": [
+      "como calcular metros quadrados de um quarto",
+      "calculadora metros quadrados para casa",
+      "calcular pés quadrados de retângulo",
+      "calculadora metros quadrados com polegadas",
+      "quantos metros quadrados tem minha casa",
+      "calculadora metros quadrados para piso",
+      "calcular area em metros quadrados",
+      "metros quadrados para metros quadrados conversão",
+      "calculadora metros quadrados quarto online",
+      "calcular metros quadrados de formas irregulares"
+    ],
+    "slug": "square-footage-calculator",
+    "category": "Utility",
+    "difficulty": "Beginner",
+    "tags": [
+      "area",
+      "metros quadrados",
+      "medição",
+      "imóveis",
+      "construção",
+      "quarto",
+      "casa",
+      "piso"
+    ],
+    "description": "Calcule metros quadrados para qualquer espaço com nossa calculadora abrangente de área. Suporte para retângulos, círculos, triângulos e formas irregulares. Perfeito para imóveis, construção, pisos, pintura e projetos de melhoria da casa. Converta entre pés quadrados, metros quadrados e outras unidades de área.",
+    "summary": "Calcule área em pés quadrados e metros quadrados para diversas formas e espaços.",
+    "instructions": [
+      "Selecione a forma que deseja calcular (retângulo, círculo, triângulo, etc.)",
+      "Digite as dimensões em pés, polegadas ou metros",
+      "Escolha sua unidade de saída preferida (pés quadrados, metros quadrados, etc.)",
+      "Para espaços complexos, calcule cada quarto separadamente e some-os",
+      "Use as ferramentas de conversão de área para alternar entre diferentes unidades"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "shape",
+          "label": "Forma",
+          "type": "select",
+          "options": [
+            "rectangle",
+            "circle",
+            "triangle",
+            "square",
+            "oval",
+            "irregular"
+          ],
+          "default": "rectangle"
+        },
+        {
+          "name": "length",
+          "label": "Comprimento (pés)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape !== 'circle' && shape !== 'triangle'"
+        },
+        {
+          "name": "width",
+          "label": "Largura (pés)",
+          "type": "number",
+          "default": 15,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape !== 'circle' && shape !== 'triangle'"
+        },
+        {
+          "name": "radius",
+          "label": "Raio (pés)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'circle'"
+        },
+        {
+          "name": "diameter",
+          "label": "Diâmetro (pés)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'circle'"
+        },
+        {
+          "name": "base",
+          "label": "Base (pés)",
+          "type": "number",
+          "default": 12,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'triangle'"
+        },
+        {
+          "name": "height",
+          "label": "Altura (pés)",
+          "type": "number",
+          "default": 8,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'triangle'"
+        },
+        {
+          "name": "side",
+          "label": "Comprimento do Lado (pés)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'square'"
+        },
+        {
+          "name": "length1",
+          "label": "Comprimento 1 (pés)",
+          "type": "number",
+          "default": 15,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'oval'"
+        },
+        {
+          "name": "length2",
+          "label": "Comprimento 2 (pés)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'oval'"
+        },
+        {
+          "name": "area1",
+          "label": "Área 1 (pés²)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "step": 1,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "area2",
+          "label": "Área 2 (pés²)",
+          "type": "number",
+          "default": 250,
+          "min": 0,
+          "step": 1,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "area3",
+          "label": "Área 3 (pés²)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 1,
+          "optional": true,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "outputUnit",
+          "label": "Unidade de Saída",
+          "type": "select",
+          "options": [
+            "sqft",
+            "sqm",
+            "sqyd"
+          ],
+          "default": "sqft"
+        }
+      ],
+      "formula": "Retângulo: Área = Comprimento × Largura; Círculo: Área = π × Raio²; Triângulo: Área = (Base × Altura) ÷ 2; Quadrado: Área = Lado²; Oval: Área = π × Comprimento1 × Comprimento2 ÷ 4",
+      "output": {
+        "label": "Área",
+        "default": "Digite dimensões acima",
+        "format": "area"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Área em Pés Quadrados",
+          "field": "areaSqFt",
+          "format": "decimal"
+        },
+        {
+          "label": "Área em Metros Quadrados",
+          "field": "areaSqM",
+          "format": "decimal"
+        },
+        {
+          "label": "Área em Jardas Quadradas",
+          "field": "areaSqYd",
+          "format": "decimal"
+        },
+        {
+          "label": "Perímetro",
+          "field": "perimeter",
+          "format": "decimal"
+        },
+        {
+          "label": "Fórmula da Forma",
+          "field": "formulaUsed",
+          "format": "text"
+        }
+      ],
+      "componentName": "SquareFootageCalculator"
+    },
+    "examples": [
+      {
+        "title": "Área da Sala de Estar",
+        "input": {
+          "shape": "rectangle",
+          "length": 16,
+          "width": 12,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 192,
+          "areaSqM": 17.84,
+          "perimeter": 56
+        },
+        "explanation": "Uma sala de estar padrão medindo 16 pés por 12 pés tem 192 pés quadrados de área de piso. Isso é aproximadamente 17.84 metros quadrados."
+      },
+      {
+        "title": "Jardim Circular",
+        "input": {
+          "shape": "circle",
+          "radius": 8,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 201.06,
+          "areaSqM": 18.68,
+          "perimeter": 50.27
+        },
+        "explanation": "Um jardim circular com raio de 8 pés cobre 201 pés quadrados. A circunferência (perímetro) é cerca de 50 pés."
+      },
+      {
+        "title": "Canteiro de Jardim Triangular",
+        "input": {
+          "shape": "triangle",
+          "base": 10,
+          "height": 6,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 30,
+          "areaSqM": 2.79,
+          "perimeter": 22
+        },
+        "explanation": "Um canteiro de jardim triangular com base de 10 pés e altura de 6 pés tem 30 pés quadrados de área de plantio."
+      },
+      {
+        "title": "Garagem para Dois Carros",
+        "input": {
+          "shape": "rectangle",
+          "length": 24,
+          "width": 22,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 528,
+          "areaSqM": 49.05,
+          "perimeter": 92
+        },
+        "explanation": "Uma garagem padrão para dois carros medindo 24×22 pés tem 528 pés quadrados de espaço no piso, suficiente para dois carros mais armazenamento."
+      },
+      {
+        "title": "Reforma de Banheiro",
+        "input": {
+          "shape": "rectangle",
+          "length": 8,
+          "width": 6,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 48,
+          "areaSqM": 4.46,
+          "perimeter": 28
+        },
+        "explanation": "Um banheiro pequeno medindo 8×6 pés tem 48 pés quadrados. Isso ajuda a calcular azulejos, piso ou tinta necessários."
+      },
+      {
+        "title": "Piscina Oval",
+        "input": {
+          "shape": "oval",
+          "length1": 30,
+          "length2": 15,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 353.43,
+          "areaSqM": 32.82,
+          "perimeter": 67.86
+        },
+        "explanation": "Uma piscina oval com comprimentos de 30×15 pés tem uma área de superfície de 353 pés quadrados para cálculos de volume de água."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Concreto",
+        "slug": "concrete-calculator",
+        "description": "Calcule volume de concreto para construção."
+      },
+      {
+        "name": "Calculadora de Orçamento",
+        "slug": "budget-calculator",
+        "description": "Planeje orçamentos de reforma."
+      },
+      {
+        "name": "Calculadora de Porcentagem",
+        "slug": "percent-calculator",
+        "description": "Calcule porcentagens e proporções."
+      }
+    ]
+  },
+  "fr": {
+    "title": "Calculatrice de Superficie",
+    "seoTitle": "Calculatrice de Superficie - Calculer l'Aire en Pieds Carrés et Mètres Carrés",
+    "metaDescription": "Calculez la superficie pour pièces, maisons et terrains. Calculatrice gratuite de superficie avec multiples formes et outils de conversion d'aire.",
+    "keywords": [
+      "calculatrice superficie",
+      "calculatrice aire",
+      "calculatrice pieds carrés",
+      "calculatrice aire pièce",
+      "superficie maison"
+    ],
+    "longTailKeywords": [
+      "comment calculer superficie d'une pièce",
+      "calculatrice superficie pour maison",
+      "calculer pieds carrés de rectangle",
+      "calculatrice superficie avec pouces",
+      "combien de pieds carrés dans ma maison",
+      "calculatrice superficie pour plancher",
+      "calculer aire en mètres carrés",
+      "pieds carrés vers mètres carrés conversion",
+      "calculatrice superficie pièce en ligne",
+      "calculer superficie de formes irrégulières"
+    ],
+    "slug": "square-footage-calculator",
+    "category": "Utility",
+    "difficulty": "Beginner",
+    "tags": [
+      "aire",
+      "superficie",
+      "mesure",
+      "immobilier",
+      "construction",
+      "pièce",
+      "maison",
+      "plancher"
+    ],
+    "description": "Calculez la superficie pour n'importe quel espace avec notre calculatrice complète d'aire. Support pour rectangles, cercles, triangles et formes irrégulières. Parfait pour immobilier, construction, planchers, peinture et projets d'amélioration domiciliaire. Convertissez entre pieds carrés, mètres carrés et autres unités d'aire.",
+    "summary": "Calculez l'aire en pieds carrés et mètres carrés pour diverses formes et espaces.",
+    "instructions": [
+      "Sélectionnez la forme que vous souhaitez calculer (rectangle, cercle, triangle, etc.)",
+      "Entrez les dimensions en pieds, pouces ou mètres",
+      "Choisissez votre unité de sortie préférée (pieds carrés, mètres carrés, etc.)",
+      "Pour les espaces complexes, calculez chaque pièce séparément et additionnez-les",
+      "Utilisez les outils de conversion d'aire pour basculer entre différentes unités"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "shape",
+          "label": "Forme",
+          "type": "select",
+          "options": [
+            "rectangle",
+            "circle",
+            "triangle",
+            "square",
+            "oval",
+            "irregular"
+          ],
+          "default": "rectangle"
+        },
+        {
+          "name": "length",
+          "label": "Longueur (pieds)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape !== 'circle' && shape !== 'triangle'"
+        },
+        {
+          "name": "width",
+          "label": "Largeur (pieds)",
+          "type": "number",
+          "default": 15,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape !== 'circle' && shape !== 'triangle'"
+        },
+        {
+          "name": "radius",
+          "label": "Rayon (pieds)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'circle'"
+        },
+        {
+          "name": "diameter",
+          "label": "Diamètre (pieds)",
+          "type": "number",
+          "default": 20,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'circle'"
+        },
+        {
+          "name": "base",
+          "label": "Base (pieds)",
+          "type": "number",
+          "default": 12,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'triangle'"
+        },
+        {
+          "name": "height",
+          "label": "Hauteur (pieds)",
+          "type": "number",
+          "default": 8,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'triangle'"
+        },
+        {
+          "name": "side",
+          "label": "Longueur du Côté (pieds)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'square'"
+        },
+        {
+          "name": "length1",
+          "label": "Longueur 1 (pieds)",
+          "type": "number",
+          "default": 15,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'oval'"
+        },
+        {
+          "name": "length2",
+          "label": "Longueur 2 (pieds)",
+          "type": "number",
+          "default": 10,
+          "min": 0.1,
+          "step": 0.1,
+          "conditional": "shape === 'oval'"
+        },
+        {
+          "name": "area1",
+          "label": "Aire 1 (pieds²)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "step": 1,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "area2",
+          "label": "Aire 2 (pieds²)",
+          "type": "number",
+          "default": 250,
+          "min": 0,
+          "step": 1,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "area3",
+          "label": "Aire 3 (pieds²)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 1,
+          "optional": true,
+          "conditional": "shape === 'irregular'"
+        },
+        {
+          "name": "outputUnit",
+          "label": "Unité de Sortie",
+          "type": "select",
+          "options": [
+            "sqft",
+            "sqm",
+            "sqyd"
+          ],
+          "default": "sqft"
+        }
+      ],
+      "formula": "Rectangle : Aire = Longueur × Largeur ; Cercle : Aire = π × Rayon² ; Triangle : Aire = (Base × Hauteur) ÷ 2 ; Carré : Aire = Côté² ; Ovale : Aire = π × Longueur1 × Longueur2 ÷ 4",
+      "output": {
+        "label": "Aire",
+        "default": "Entrez les dimensions ci-dessus",
+        "format": "area"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Aire en Pieds Carrés",
+          "field": "areaSqFt",
+          "format": "decimal"
+        },
+        {
+          "label": "Aire en Mètres Carrés",
+          "field": "areaSqM",
+          "format": "decimal"
+        },
+        {
+          "label": "Aire en Verges Carrées",
+          "field": "areaSqYd",
+          "format": "decimal"
+        },
+        {
+          "label": "Périmètre",
+          "field": "perimeter",
+          "format": "decimal"
+        },
+        {
+          "label": "Formule de Forme",
+          "field": "formulaUsed",
+          "format": "text"
+        }
+      ],
+      "componentName": "SquareFootageCalculator"
+    },
+    "examples": [
+      {
+        "title": "Aire du Salon",
+        "input": {
+          "shape": "rectangle",
+          "length": 16,
+          "width": 12,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 192,
+          "areaSqM": 17.84,
+          "perimeter": 56
+        },
+        "explanation": "Un salon standard mesurant 16 pieds par 12 pieds a 192 pieds carrés d'aire de plancher. Cela équivaut approximativement à 17.84 mètres carrés."
+      },
+      {
+        "title": "Jardin Circulaire",
+        "input": {
+          "shape": "circle",
+          "radius": 8,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 201.06,
+          "areaSqM": 18.68,
+          "perimeter": 50.27
+        },
+        "explanation": "Un jardin circulaire avec un rayon de 8 pieds couvre 201 pieds carrés. La circonférence (périmètre) est d'environ 50 pieds."
+      },
+      {
+        "title": "Platebande Triangulaire",
+        "input": {
+          "shape": "triangle",
+          "base": 10,
+          "height": 6,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 30,
+          "areaSqM": 2.79,
+          "perimeter": 22
+        },
+        "explanation": "Une platebande triangulaire avec une base de 10 pieds et une hauteur de 6 pieds a 30 pieds carrés d'aire de plantation."
+      },
+      {
+        "title": "Garage Double",
+        "input": {
+          "shape": "rectangle",
+          "length": 24,
+          "width": 22,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 528,
+          "areaSqM": 49.05,
+          "perimeter": 92
+        },
+        "explanation": "Un garage standard double mesurant 24×22 pieds a 528 pieds carrés d'espace au sol, suffisant pour deux voitures plus du rangement."
+      },
+      {
+        "title": "Rénovation de Salle de Bain",
+        "input": {
+          "shape": "rectangle",
+          "length": 8,
+          "width": 6,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 48,
+          "areaSqM": 4.46,
+          "perimeter": 28
+        },
+        "explanation": "Une petite salle de bain mesurant 8×6 pieds a 48 pieds carrés. Cela aide à calculer les carreaux, le plancher ou la peinture nécessaires."
+      },
+      {
+        "title": "Piscine Ovale",
+        "input": {
+          "shape": "oval",
+          "length1": 30,
+          "length2": 15,
+          "outputUnit": "sqft"
+        },
+        "output": {
+          "areaSqFt": 353.43,
+          "areaSqM": 32.82,
+          "perimeter": 67.86
+        },
+        "explanation": "Une piscine ovale avec des longueurs de 30×15 pieds a une aire de surface de 353 pieds carrés pour les calculs de volume d'eau."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice de Béton",
+        "slug": "concrete-calculator",
+        "description": "Calculez le volume de béton pour la construction."
+      },
+      {
+        "name": "Calculatrice de Budget",
+        "slug": "budget-calculator",
+        "description": "Planifiez les budgets de rénovation."
+      },
+      {
+        "name": "Calculatrice de Pourcentage",
+        "slug": "percent-calculator",
+        "description": "Calculez les pourcentages et proportions."
+      }
+    ]
+  }
+}

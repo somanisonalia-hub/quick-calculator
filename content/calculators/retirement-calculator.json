@@ -1,0 +1,1086 @@
+{
+  "en": {
+    "title": "Retirement Calculator",
+    "seoTitle": "Retirement Calculator - Plan Your Retirement Savings & 401k",
+    "metaDescription": "Calculate your retirement savings goals, 401k contributions, and Social Security benefits. Plan for a secure retirement with compound interest projections.",
+    "keywords": [
+      "retirement calculator",
+      "401k calculator",
+      "retirement savings",
+      "retirement planning",
+      "social security calculator",
+      "pension calculator"
+    ],
+    "slug": "retirement-calculator",
+    "category": "Financial",
+    "difficulty": "Advanced",
+    "tags": [
+      "retirement",
+      "401k",
+      "savings",
+      "social security",
+      "pension",
+      "compound interest",
+      "retirement planning"
+    ],
+    "description": "Plan your retirement with confidence using our comprehensive retirement calculator. Calculate how much you need to save, project your 401k growth with compound interest, estimate Social Security benefits, and determine if you'll reach your retirement goals. This powerful tool helps you make informed decisions about your financial future.",
+    "summary": "Plan your retirement savings and calculate future needs.",
+    "instructions": [
+      "Enter your current age and desired retirement age to calculate years until retirement",
+      "Input your current retirement savings balance",
+      "Enter your annual contribution amount and expected annual return rate",
+      "Set your expected Social Security benefit amount (optional)",
+      "The calculator will show your projected savings at retirement and monthly income in retirement"
+    ],
+    "calculatorComponent": {
+      "componentName": "RetirementCalculator",
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Current Age",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Retirement Age",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Current Retirement Savings ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "annualContribution",
+          "label": "Annual Contribution ($)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 500000,
+          "step": 500
+        },
+        {
+          "name": "expectedReturn",
+          "label": "Expected Annual Return (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "socialSecurity",
+          "label": "Monthly Social Security Benefit ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 100
+        }
+      ],
+      "formula": "Future Value = Current Savings × (1 + r)^n + Annual Contribution × [(1 + r)^n - 1] / r; Monthly Income = (Future Value × Withdrawal Rate) / 12 + Social Security",
+      "output": {
+        "label": "Projected Retirement Savings",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Years Until Retirement",
+          "field": "yearsToRetirement",
+          "format": "number"
+        },
+        {
+          "label": "Total Contributions",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Interest Earned",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Monthly Retirement Income",
+          "field": "monthlyIncome",
+          "format": "currency"
+        },
+        {
+          "label": "Savings Goal Achievement",
+          "field": "goalProgress",
+          "format": "percentage"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Early Saver - Age 25 to 65",
+        "input": {
+          "currentAge": 25,
+          "retirementAge": 65,
+          "currentSavings": 10000,
+          "annualContribution": 6000,
+          "expectedReturn": 7,
+          "socialSecurity": 1800
+        },
+        "output": {
+          "projectedSavings": 1285000,
+          "yearsToRetirement": 40,
+          "totalContributions": 240000,
+          "totalInterest": 1045000,
+          "monthlyIncome": 5375,
+          "goalProgress": 128.5
+        },
+        "explanation": "Starting at age 25 with consistent $6,000 annual contributions at 7% return, this person could accumulate $1.285 million by age 65, providing $5,375 monthly income plus Social Security."
+      },
+      {
+        "title": "Mid-Career Saver - Age 40 to 67",
+        "input": {
+          "currentAge": 40,
+          "retirementAge": 67,
+          "currentSavings": 150000,
+          "annualContribution": 10000,
+          "expectedReturn": 6,
+          "socialSecurity": 2200
+        },
+        "output": {
+          "projectedSavings": 987000,
+          "yearsToRetirement": 27,
+          "totalContributions": 270000,
+          "totalInterest": 567000,
+          "monthlyIncome": 4940,
+          "goalProgress": 98.7
+        },
+        "explanation": "With 27 years until retirement and $10,000 annual contributions, this person can reach nearly $1 million in savings, providing $4,940 monthly plus Social Security benefits."
+      },
+      {
+        "title": "Late Starter - Age 50 to 70",
+        "input": {
+          "currentAge": 50,
+          "retirementAge": 70,
+          "currentSavings": 200000,
+          "annualContribution": 15000,
+          "expectedReturn": 5,
+          "socialSecurity": 2500
+        },
+        "output": {
+          "projectedSavings": 856000,
+          "yearsToRetirement": 20,
+          "totalContributions": 300000,
+          "totalInterest": 356000,
+          "monthlyIncome": 4790,
+          "goalProgress": 85.6
+        },
+        "explanation": "Even starting later, aggressive $15,000 annual contributions can still build a substantial nest egg of $856,000 over 20 years, providing $4,790 monthly income."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Savings Calculator",
+        "slug": "savings-calculator",
+        "description": "Calculate compound interest growth."
+      },
+      {
+        "name": "Tax Calculator",
+        "slug": "tax-calculator",
+        "description": "Estimate taxes on retirement income."
+      },
+      {
+        "name": "Loan Calculator",
+        "slug": "loan-calculator",
+        "description": "Calculate loan payments if needed."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Secure your financial future with our comprehensive retirement calculator that projects your savings growth and helps you plan for a comfortable retirement. This powerful planning tool combines compound interest calculations with Social Security benefits to show you exactly how much you'll have saved and what your monthly retirement income will look like. Whether you're just starting your career or approaching retirement age, understanding your retirement projections is essential for making informed decisions about 401k contributions, investment strategies, and lifestyle choices that will impact your golden years.",
+      "benefits": [
+        "Project your retirement savings growth with accurate compound interest calculations",
+        "Estimate monthly retirement income including Social Security benefits",
+        "Determine if you're on track to meet your retirement goals",
+        "Compare different contribution amounts and investment returns",
+        "Understand the impact of starting to save earlier vs. later",
+        "Plan for a sustainable withdrawal rate that lasts throughout retirement"
+      ],
+      "steps": [
+        "Enter your current age and desired retirement age to establish your timeline",
+        "Input your current retirement savings balance from 401k, IRA, and other accounts",
+        "Specify your annual contribution amount to retirement accounts",
+        "Set your expected annual investment return rate based on your risk tolerance",
+        "Include estimated monthly Social Security benefits if applicable",
+        "Review projections and adjust contributions or retirement age as needed"
+      ],
+      "inputsExplained": [
+        "Current and retirement age determine how many years your money has to grow",
+        "Current savings balance represents all retirement accounts combined",
+        "Annual contribution shows how much you plan to add to retirement accounts yearly",
+        "Expected return rate reflects your investment portfolio's projected growth",
+        "Social Security benefit estimates monthly government retirement payments"
+      ],
+      "formulaExplanation": "The retirement calculator uses compound interest formulas to project savings growth: Future Value = Current Balance × (1 + r)^n + Annual Contribution × [(1 + r)^n - 1] / r, where r is the annual return rate and n is years until retirement. Monthly retirement income combines investment withdrawals (typically 4% annually) with Social Security benefits. This comprehensive approach accounts for both accumulation during working years and sustainable withdrawal during retirement, ensuring your money lasts as long as you do.",
+      "examples": [
+        "A 30-year-old saving $6,000 annually with $50,000 current balance at 7% returns will have $1.2 million by age 65, providing $4,800 monthly ($48,000 annually) plus Social Security benefits.",
+        "Someone starting at age 45 with same contributions reaches only $680,000 by age 65, showing how delaying savings by 15 years costs over $500,000 in retirement security."
+      ],
+      "resultsExplanation": [
+        "Projected retirement savings shows total accumulated at retirement age",
+        "Monthly retirement income estimates sustainable withdrawal amount",
+        "Years to retirement displays timeline remaining",
+        "Total contributions reveals your cumulative investment amount"
+      ],
+      "whoItsFor": "This retirement calculator serves young professionals starting retirement planning, mid-career individuals assessing progress, pre-retirees evaluating readiness, financial advisors providing client projections, couples planning joint retirement income, and anyone wanting to understand retirement savings requirements. It's particularly valuable for those changing jobs, receiving windfalls, or experiencing life changes that affect retirement planning.",
+      "disclaimer": "This calculator provides estimates based on compound interest and Social Security benefit assumptions. Actual investment returns fluctuate with market conditions and cannot be guaranteed. Social Security benefits depend on earnings history and may change with legislation. Inflation, taxes, healthcare costs, and personal circumstances affect retirement needs. This tool is for educational purposes only and should not replace professional financial advice. Consult certified financial planners for personalized retirement strategies.",
+      "relatedTools": [
+        "Savings calculators for understanding compound interest growth rates",
+        "Investment calculators for comparing different portfolio returns",
+        "Social Security calculators for estimating government benefit amounts"
+      ],
+      "faqs": [
+        {
+          "question": "How much do I need to save for retirement?",
+          "answer": "Most financial experts recommend saving 15-20 times your pre-retirement annual income. For a $60,000 salary, you'd need $900,000-$1.2 million. This provides 4% annual withdrawal ($3,000-$4,800 monthly) plus Social Security. Use our calculator to determine your specific target based on desired retirement income and expected returns."
+        },
+        {
+          "question": "What's the best age to start saving for retirement?",
+          "answer": "The earlier, the better. Starting at age 25 with $300 monthly at 7% returns accumulates $1.2 million by age 65. Waiting until age 35 reduces this to $680,000 - losing over $500,000. Even small amounts early provide compound interest time to work, making retirement goals much more achievable."
+        },
+        {
+          "question": "How do I know what withdrawal rate is safe in retirement?",
+          "answer": "The 4% rule suggests withdrawing 4% annually (plus inflation adjustments) from retirement savings. For $500,000 saved, this provides $20,000 yearly initially. This rate historically sustained 30+ year retirements through market fluctuations. Conservative investors use 3%, aggressive investors might use 5%, but personal risk tolerance and life expectancy matter."
+        },
+        {
+          "question": "Should I max out my 401k or pay off debt first?",
+          "answer": "Compare interest rates: if mortgage is 4% but 401k earns 7% pre-tax, investing wins. But if credit card debt costs 18%, pay that first. Generally, prioritize emergency fund, then high-interest debt, then max tax-advantaged retirement accounts. Use the calculator to see how different contribution levels affect your retirement security."
+        },
+        {
+          "question": "How does Social Security factor into retirement planning?",
+          "answer": "Social Security replaces about 40% of pre-retirement income for average earners, but less for high earners. Full benefits start at age 67, with reduced benefits from age 62. Delaying benefits to age 70 increases payments by 8% annually. Include estimated benefits in planning, but don't rely solely on them - plan as if they'll be 20-30% lower than promised."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Jubilación",
+    "seoTitle": "Calculadora de Jubilación - Planifica tus Ahorros y 401k",
+    "metaDescription": "Calcula tus metas de ahorro para jubilación, contribuciones 401k y beneficios del Seguro Social. Planifica una jubilación segura con proyecciones de interés compuesto.",
+    "keywords": [
+      "calculadora jubilación",
+      "calculadora 401k",
+      "ahorros jubilación",
+      "planificación jubilación",
+      "calculadora seguro social",
+      "calculadora pensión"
+    ],
+    "slug": "retirement-calculator",
+    "category": "Financial",
+    "difficulty": "Advanced",
+    "tags": [
+      "jubilación",
+      "401k",
+      "ahorros",
+      "seguro social",
+      "pensión",
+      "interés compuesto",
+      "planificación jubilación"
+    ],
+    "description": "Planifica tu jubilación con confianza usando nuestra calculadora integral de jubilación. Calcula cuánto necesitas ahorrar, proyecta el crecimiento de tu 401k con interés compuesto, estima beneficios del Seguro Social y determina si alcanzarás tus metas de jubilación. Esta poderosa herramienta te ayuda a tomar decisiones informadas sobre tu futuro financiero.",
+    "summary": "Planifica tus ahorros para jubilación y calcula necesidades futuras.",
+    "instructions": [
+      "Ingresa tu edad actual y edad deseada de jubilación para calcular años hasta la jubilación",
+      "Ingresa tu saldo actual de ahorros para jubilación",
+      "Ingresa tu monto de contribución anual y tasa de retorno anual esperada",
+      "Establece tu monto esperado de beneficio del Seguro Social (opcional)",
+      "La calculadora mostrará tus ahorros proyectados al momento de jubilación e ingresos mensuales en jubilación"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Edad Actual",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Edad de Jubilación",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Ahorros Actuales de Jubilación ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "annualContribution",
+          "label": "Contribución Anual ($)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 500000,
+          "step": 500
+        },
+        {
+          "name": "expectedReturn",
+          "label": "Retorno Anual Esperado (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "socialSecurity",
+          "label": "Beneficio Mensual del Seguro Social ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 100
+        }
+      ],
+      "formula": "Valor Futuro = Ahorros Actuales × (1 + r)^n + Contribución Anual × [(1 + r)^n - 1] / r; Ingreso Mensual = (Valor Futuro × Tasa de Retiro) / 12 + Seguro Social",
+      "output": {
+        "label": "Ahorros Proyectados de Jubilación",
+        "default": "Ingresa tus detalles arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Años Hasta Jubilación",
+          "field": "yearsToRetirement",
+          "format": "number"
+        },
+        {
+          "label": "Contribuciones Totales",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Interés Ganado",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Ingreso Mensual de Jubilación",
+          "field": "monthlyIncome",
+          "format": "currency"
+        },
+        {
+          "label": "Logro de Meta de Ahorro",
+          "field": "goalProgress",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "RetirementCalculator"
+    },
+    "examples": [
+      {
+        "title": "Ahorrador Temprano - Edad 25 a 65",
+        "input": {
+          "currentAge": 25,
+          "retirementAge": 65,
+          "currentSavings": 10000,
+          "annualContribution": 6000,
+          "expectedReturn": 7,
+          "socialSecurity": 1800
+        },
+        "output": {
+          "projectedSavings": 1285000,
+          "yearsToRetirement": 40,
+          "totalContributions": 240000,
+          "totalInterest": 1045000,
+          "monthlyIncome": 5375,
+          "goalProgress": 128.5
+        },
+        "explanation": "Comenzando a los 25 años con contribuciones consistentes de $6,000 anuales al 7% de retorno, esta persona podría acumular $1.285 millón para los 65 años, proporcionando $5,375 mensuales más Seguro Social."
+      },
+      {
+        "title": "Ahorrador de Media Carrera - Edad 40 a 67",
+        "input": {
+          "currentAge": 40,
+          "retirementAge": 67,
+          "currentSavings": 150000,
+          "annualContribution": 10000,
+          "expectedReturn": 6,
+          "socialSecurity": 2200
+        },
+        "output": {
+          "projectedSavings": 987000,
+          "yearsToRetirement": 27,
+          "totalContributions": 270000,
+          "totalInterest": 567000,
+          "monthlyIncome": 4940,
+          "goalProgress": 98.7
+        },
+        "explanation": "Con 27 años hasta la jubilación y $10,000 contribuciones anuales, esta persona puede alcanzar casi $1 millón en ahorros, proporcionando $4,940 mensuales más beneficios del Seguro Social."
+      },
+      {
+        "title": "Comenzador Tardío - Edad 50 a 70",
+        "input": {
+          "currentAge": 50,
+          "retirementAge": 70,
+          "currentSavings": 200000,
+          "annualContribution": 15000,
+          "expectedReturn": 5,
+          "socialSecurity": 2500
+        },
+        "output": {
+          "projectedSavings": 856000,
+          "yearsToRetirement": 20,
+          "totalContributions": 300000,
+          "totalInterest": 356000,
+          "monthlyIncome": 4790,
+          "goalProgress": 85.6
+        },
+        "explanation": "Incluso comenzando tarde, contribuciones agresivas de $15,000 anuales aún pueden construir un nido sustancial de $856,000 en 20 años, proporcionando $4,790 ingreso mensual."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Ahorros",
+        "slug": "savings-calculator",
+        "description": "Calcula crecimiento de interés compuesto."
+      },
+      {
+        "name": "Calculadora de Impuestos",
+        "slug": "tax-calculator",
+        "description": "Estima impuestos en ingresos de jubilación."
+      },
+      {
+        "name": "Calculadora de Préstamos",
+        "slug": "loan-calculator",
+        "description": "Calcula pagos de préstamos si es necesario."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Asegura tu futuro financiero con nuestra calculadora integral de jubilación que proyecta el crecimiento de tus ahorros y te ayuda a planificar una jubilación cómoda. Esta poderosa herramienta de planificación combina cálculos de interés compuesto con beneficios del Seguro Social para mostrarte exactamente cuánto habrás ahorrado y cómo se verá tu ingreso mensual en jubilación. Ya sea que estés comenzando tu carrera o acercándote a la edad de jubilación, entender tus proyecciones de jubilación es esencial para tomar decisiones informadas sobre contribuciones 401k, estrategias de inversión y elecciones de estilo de vida que impactarán tus años dorados.",
+      "benefits": [
+        "Proyecta el crecimiento de tus ahorros de jubilación con cálculos precisos de interés compuesto",
+        "Estima ingreso mensual de jubilación incluyendo beneficios del Seguro Social",
+        "Determina si vas por buen camino para alcanzar tus metas de jubilación",
+        "Compara diferentes montos de contribución y rendimientos de inversión",
+        "Entiende el impacto de comenzar a ahorrar más temprano vs. más tarde",
+        "Planea una tasa de retiro sostenible que dure durante toda la jubilación"
+      ],
+      "steps": [
+        "Ingresa tu edad actual y edad deseada de jubilación para establecer tu timeline",
+        "Ingresa tu saldo actual de ahorros de jubilación desde 401k, IRA y otras cuentas",
+        "Especifica tu monto de contribución anual a cuentas de jubilación",
+        "Establece tu tasa esperada de rendimiento anual de inversión basada en tu tolerancia al riesgo",
+        "Incluye beneficios estimados mensuales del Seguro Social si aplica",
+        "Revisa proyecciones y ajusta contribuciones o edad de jubilación según sea necesario"
+      ],
+      "inputsExplained": [
+        "Edad actual y de jubilación determinan cuántos años tiene tu dinero para crecer",
+        "Saldo actual de ahorros representa todas las cuentas de jubilación combinadas",
+        "Contribución anual muestra cuánto planeas agregar a cuentas de jubilación anualmente",
+        "Tasa esperada de rendimiento refleja el crecimiento proyectado de tu portafolio de inversión",
+        "Beneficio del Seguro Social estima pagos mensuales gubernamentales de jubilación"
+      ],
+      "formulaExplanation": "La calculadora de jubilación usa fórmulas de interés compuesto para proyectar crecimiento de ahorros: Valor Futuro = Saldo Actual × (1 + r)^n + Contribución Anual × [(1 + r)^n - 1] / r, donde r es la tasa de rendimiento anual y n son años hasta jubilación. Ingreso mensual de jubilación combina retiros de inversión (típicamente 4% anualmente) con beneficios del Seguro Social. Este enfoque integral considera tanto acumulación durante años laborales como retiro sostenible durante jubilación, asegurando que tu dinero dure tanto como tú.",
+      "examples": [
+        "Alguien de 30 años ahorrando $6,000 anualmente con $50,000 saldo actual a rendimientos del 7% tendrá $1.2 millón para los 65 años, proporcionando $4,800 mensuales ($48,000 anualmente) más beneficios del Seguro Social.",
+        "Alguien comenzando a los 45 años con mismas contribuciones alcanza solo $680,000 para los 65 años, mostrando cómo retrasar ahorros por 15 años cuesta más de $500,000 en seguridad de jubilación."
+      ],
+      "resultsExplanation": [
+        "Ahorros proyectados de jubilación muestran total acumulado a edad de jubilación",
+        "Ingreso mensual de jubilación estima monto sostenible de retiro",
+        "Años para jubilación muestra timeline restante",
+        "Contribuciones totales revela tu monto acumulado de inversión"
+      ],
+      "whoItsFor": "Esta calculadora de jubilación sirve a jóvenes profesionales comenzando planificación de jubilación, individuos de mediana carrera evaluando progreso, pre-jubilados evaluando preparación, asesores financieros proporcionando proyecciones de cliente, parejas planeando ingreso conjunto de jubilación, y cualquiera queriendo entender requisitos de ahorros de jubilación. Es particularmente valiosa para aquellos cambiando empleos, recibiendo ganancias inesperadas, o experimentando cambios de vida que afectan planificación de jubilación.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en interés compuesto y suposiciones de beneficios del Seguro Social. Rendimientos reales de inversión fluctúan con condiciones de mercado y no pueden garantizarse. Beneficios del Seguro Social dependen de historial de ingresos y pueden cambiar con legislación. Inflación, impuestos, costos de salud, y circunstancias personales afectan necesidades de jubilación. Esta herramienta es solo para propósitos educativos y no debe reemplazar consejo financiero profesional. Consulta planificadores financieros certificados para estrategias personalizadas de jubilación.",
+      "relatedTools": [
+        "Calculadoras de ahorros para entender tasas de crecimiento de interés compuesto",
+        "Calculadoras de inversión para comparar diferentes rendimientos de portafolio",
+        "Calculadoras del Seguro Social para estimar montos de beneficios gubernamentales"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánto necesito ahorrar para jubilación?",
+          "answer": "La mayoría de expertos financieros recomiendan ahorrar 15-20 veces tu ingreso anual pre-jubilación. Para un salario de $60,000, necesitarías $900,000-$1.2 millón. Esto proporciona retiro anual del 4% ($3,000-$4,800 mensuales) más Seguro Social. Usa nuestra calculadora para determinar tu objetivo específico basado en ingreso deseado de jubilación y rendimientos esperados."
+        },
+        {
+          "question": "¿Cuál es la mejor edad para comenzar a ahorrar para jubilación?",
+          "answer": "Cuanto antes, mejor. Comenzando a los 25 años con $300 mensuales a rendimientos del 7% acumula $1.2 millón para los 65 años. Esperando hasta los 35 años reduce esto a $680,000 - perdiendo más de $500,000. Incluso montos pequeños temprano proporcionan tiempo de interés compuesto para trabajar, haciendo metas de jubilación mucho más alcanzables."
+        },
+        {
+          "question": "¿Cómo sé qué tasa de retiro es segura en jubilación?",
+          "answer": "La regla del 4% sugiere retirar 4% anualmente (más ajustes por inflación) de ahorros de jubilación. Para $500,000 ahorrados, esto proporciona $20,000 anualmente inicialmente. Esta tasa históricamente sostuvo jubilaciones de 30+ años a través de fluctuaciones de mercado. Inversores conservadores usan 3%, inversores agresivos podrían usar 5%, pero tolerancia personal al riesgo y esperanza de vida importan."
+        },
+        {
+          "question": "¿Debo maximizar mi 401k o pagar deuda primero?",
+          "answer": "Compara tasas de interés: si hipoteca es 4% pero 401k gana 7% pre-impuestos, invertir gana. Pero si deuda de tarjeta de crédito cuesta 18%, paga eso primero. Generalmente, prioriza fondo de emergencias, luego deuda de alto interés, luego maximiza cuentas de jubilación con ventajas fiscales. Usa la calculadora para ver cómo diferentes niveles de contribución afectan tu seguridad de jubilación."
+        },
+        {
+          "question": "¿Cómo factoriza el Seguro Social en planificación de jubilación?",
+          "answer": "El Seguro Social reemplaza alrededor del 40% del ingreso pre-jubilación para ganadores promedio, pero menos para ganadores altos. Beneficios completos comienzan a los 67 años, con beneficios reducidos desde los 62 años. Retrasando beneficios hasta los 70 años aumenta pagos en 8% anualmente. Incluye beneficios estimados en planificación, pero no confíes únicamente en ellos - planea como si fueran 20-30% menores que prometidos."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Aposentadoria",
+    "seoTitle": "Calculadora de Aposentadoria - Planeje seus Aforros e 401k",
+    "metaDescription": "Calcule suas metas de economia para aposentadoria, contribuições 401k e benefícios da Previdência Social. Planeje uma aposentadoria segura com projeções de juros compostos.",
+    "keywords": [
+      "calculadora aposentadoria",
+      "calculadora 401k",
+      "economias aposentadoria",
+      "planejamento aposentadoria",
+      "calculadora previdência social",
+      "calculadora pensão"
+    ],
+    "slug": "retirement-calculator",
+    "category": "Financial",
+    "difficulty": "Advanced",
+    "tags": [
+      "aposentadoria",
+      "401k",
+      "poupanças",
+      "previdência social",
+      "pensão",
+      "juros compostos",
+      "planejamento aposentadoria"
+    ],
+    "description": "Planeje sua aposentadoria com confiança usando nossa calculadora abrangente de aposentadoria. Calcule quanto você precisa economizar, projete o crescimento do seu 401k com juros compostos, estime benefícios da Previdência Social e determine se você alcançará suas metas de aposentadoria. Esta poderosa ferramenta ajuda você a tomar decisões informadas sobre seu futuro financeiro.",
+    "summary": "Planeje suas economias para aposentadoria e calcule necessidades futuras.",
+    "instructions": [
+      "Digite sua idade atual e idade desejada de aposentadoria para calcular anos até a aposentadoria",
+      "Digite seu saldo atual de economias para aposentadoria",
+      "Digite seu valor de contribuição anual e taxa de retorno anual esperada",
+      "Defina seu valor esperado de benefício da Previdência Social (opcional)",
+      "A calculadora mostrará suas economias projetadas no momento da aposentadoria e renda mensal na aposentadoria"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Idade Atual",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Idade de Aposentadoria",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Economias Atuais de Aposentadoria (R$)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "annualContribution",
+          "label": "Contribuição Anual (R$)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 500000,
+          "step": 500
+        },
+        {
+          "name": "expectedReturn",
+          "label": "Retorno Anual Esperado (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "socialSecurity",
+          "label": "Benefício Mensal da Previdência Social (R$)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 100
+        }
+      ],
+      "formula": "Valor Futuro = Economias Atuais × (1 + r)^n + Contribuição Anual × [(1 + r)^n - 1] / r; Renda Mensal = (Valor Futuro × Taxa de Retirada) / 12 + Previdência Social",
+      "output": {
+        "label": "Economias Projetadas de Aposentadoria",
+        "default": "Digite seus detalhes acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Anos Até Aposentadoria",
+          "field": "yearsToRetirement",
+          "format": "number"
+        },
+        {
+          "label": "Contribuições Totais",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Juros Ganhos",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Renda Mensal de Aposentadoria",
+          "field": "monthlyIncome",
+          "format": "currency"
+        },
+        {
+          "label": "Conquista de Meta de Economia",
+          "field": "goalProgress",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "RetirementCalculator"
+    },
+    "examples": [
+      {
+        "title": "Economista Cedo - Idade 25 a 65",
+        "input": {
+          "currentAge": 25,
+          "retirementAge": 65,
+          "currentSavings": 10000,
+          "annualContribution": 6000,
+          "expectedReturn": 7,
+          "socialSecurity": 1800
+        },
+        "output": {
+          "projectedSavings": 1285000,
+          "yearsToRetirement": 40,
+          "totalContributions": 240000,
+          "totalInterest": 1045000,
+          "monthlyIncome": 5375,
+          "goalProgress": 128.5
+        },
+        "explanation": "Começando aos 25 anos com contribuições consistentes de R$6.000 anuais a 7% de retorno, esta pessoa poderia acumular R$1.285 milhão aos 65 anos, proporcionando R$5.375 mensais mais Previdência Social."
+      },
+      {
+        "title": "Economista de Meia Carreira - Idade 40 a 67",
+        "input": {
+          "currentAge": 40,
+          "retirementAge": 67,
+          "currentSavings": 150000,
+          "annualContribution": 10000,
+          "expectedReturn": 6,
+          "socialSecurity": 2200
+        },
+        "output": {
+          "projectedSavings": 987000,
+          "yearsToRetirement": 27,
+          "totalContributions": 270000,
+          "totalInterest": 567000,
+          "monthlyIncome": 4940,
+          "goalProgress": 98.7
+        },
+        "explanation": "Com 27 anos até a aposentadoria e R$10.000 contribuições anuais, esta pessoa pode alcançar quase R$1 milhão em economias, proporcionando R$4.940 mensais mais benefícios da Previdência Social."
+      },
+      {
+        "title": "Começador Tardio - Idade 50 a 70",
+        "input": {
+          "currentAge": 50,
+          "retirementAge": 70,
+          "currentSavings": 200000,
+          "annualContribution": 15000,
+          "expectedReturn": 5,
+          "socialSecurity": 2500
+        },
+        "output": {
+          "projectedSavings": 856000,
+          "yearsToRetirement": 20,
+          "totalContributions": 300000,
+          "totalInterest": 356000,
+          "monthlyIncome": 4790,
+          "goalProgress": 85.6
+        },
+        "explanation": "Mesmo começando tarde, contribuições agressivas de R$15.000 anuais ainda podem construir um ninho substancial de R$856.000 em 20 anos, proporcionando R$4.790 renda mensal."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Poupança",
+        "slug": "savings-calculator",
+        "description": "Calcule crescimento de juros compostos."
+      },
+      {
+        "name": "Calculadora de Imposto",
+        "slug": "tax-calculator",
+        "description": "Estime impostos em renda de aposentadoria."
+      },
+      {
+        "name": "Calculadora de Empréstimo",
+        "slug": "loan-calculator",
+        "description": "Calcule pagamentos de empréstimos se necessário."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Assegure seu futuro financeiro com nossa calculadora abrangente de aposentadoria que projeta o crescimento de suas economias e ajuda você a planejar uma aposentadoria confortável. Esta poderosa ferramenta de planejamento combina cálculos de juros compostos com benefícios da Previdência Social para mostrar exatamente quanto você terá economizado e como será sua renda mensal na aposentadoria. Seja você começando sua carreira ou se aproximando da idade de aposentadoria, entender suas projeções de aposentadoria é essencial para tomar decisões informadas sobre contribuições 401k, estratégias de investimento e escolhas de estilo de vida que impactarão seus anos dourados.",
+      "benefits": [
+        "Projete o crescimento de suas economias de aposentadoria com cálculos precisos de juros compostos",
+        "Estime renda mensal de aposentadoria incluindo benefícios da Previdência Social",
+        "Determine se você está no caminho para alcançar suas metas de aposentadoria",
+        "Compare diferentes valores de contribuição e retornos de investimento",
+        "Entenda o impacto de começar a economizar mais cedo vs. mais tarde",
+        "Planeje uma taxa de retirada sustentável que dure durante toda a aposentadoria"
+      ],
+      "steps": [
+        "Digite sua idade atual e idade desejada de aposentadoria para estabelecer sua linha do tempo",
+        "Insira seu saldo atual de economias de aposentadoria de 401k, IRA e outras contas",
+        "Especifique seu valor de contribuição anual para contas de aposentadoria",
+        "Defina sua taxa esperada de retorno anual de investimento baseada em sua tolerância ao risco",
+        "Inclua benefícios mensais estimados da Previdência Social se aplicável",
+        "Revise projeções e ajuste contribuições ou idade de aposentadoria conforme necessário"
+      ],
+      "inputsExplained": [
+        "Idade atual e de aposentadoria determinam quantos anos seu dinheiro tem para crescer",
+        "Saldo atual de economias representa todas as contas de aposentadoria combinadas",
+        "Contribuição anual mostra quanto você planeja adicionar às contas de aposentadoria anualmente",
+        "Taxa esperada de retorno reflete o crescimento projetado de seu portfólio de investimento",
+        "Benefício da Previdência Social estima pagamentos mensais governamentais de aposentadoria"
+      ],
+      "formulaExplanation": "A calculadora de aposentadoria usa fórmulas de juros compostos para projetar crescimento de economias: Valor Futuro = Saldo Atual × (1 + r)^n + Contribuição Anual × [(1 + r)^n - 1] / r, onde r é a taxa de retorno anual e n são anos até aposentadoria. Renda mensal de aposentadoria combina retiradas de investimento (normalmente 4% anualmente) com benefícios da Previdência Social. Esta abordagem abrangente considera tanto acumulação durante anos de trabalho quanto retirada sustentável durante aposentadoria, garantindo que seu dinheiro dure tanto quanto você.",
+      "examples": [
+        "Alguém de 30 anos economizando $6,000 anualmente com $50,000 saldo atual a retornos de 7% terá $1.2 milhão aos 65 anos, fornecendo $4,800 mensais ($48,000 anualmente) mais benefícios da Previdência Social.",
+        "Alguém começando aos 45 anos com mesmas contribuições alcança apenas $680,000 aos 65 anos, mostrando como adiar economias por 15 anos custa mais de $500,000 em segurança de aposentadoria."
+      ],
+      "resultsExplanation": [
+        "Economias projetadas de aposentadoria mostra total acumulado na idade de aposentadoria",
+        "Renda mensal de aposentadoria estima valor sustentável de retirada",
+        "Anos para aposentadoria mostra linha do tempo restante",
+        "Contribuições totais revela seu valor acumulado de investimento"
+      ],
+      "whoItsFor": "Esta calculadora de aposentadoria serve jovens profissionais começando planejamento de aposentadoria, indivíduos de meia carreira avaliando progresso, pré-aposentados avaliando prontidão, consultores financeiros fornecendo projeções de cliente, casais planejando renda conjunta de aposentadoria, e qualquer pessoa querendo entender requisitos de economias de aposentadoria. É particularmente valiosa para aqueles mudando empregos, recebendo ganhos inesperados, ou experimentando mudanças de vida que afetam planejamento de aposentadoria.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em juros compostos e suposições de benefícios da Previdência Social. Retornos reais de investimento flutuam com condições de mercado e não podem ser garantidos. Benefícios da Previdência Social dependem de histórico de ganhos e podem mudar com legislação. Inflação, impostos, custos de saúde, e circunstâncias pessoais afetam necessidades de aposentadoria. Esta ferramenta é apenas para propósitos educacionais e não deve substituir conselho financeiro profissional. Consulte planejadores financeiros certificados para estratégias personalizadas de aposentadoria.",
+      "relatedTools": [
+        "Calculadoras de poupança para entender taxas de crescimento de juros compostos",
+        "Calculadoras de investimento para comparar diferentes retornos de portfólio",
+        "Calculadoras da Previdência Social para estimar valores de benefícios governamentais"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto preciso economizar para aposentadoria?",
+          "answer": "A maioria dos especialistas financeiros recomenda economizar 15-20 vezes sua renda anual pré-aposentadoria. Para um salário de $60,000, você precisaria $900,000-$1.2 milhão. Isso fornece retirada anual de 4% ($3,000-$4,800 mensais) mais Previdência Social. Use nossa calculadora para determinar seu alvo específico baseado em renda desejada de aposentadoria e retornos esperados."
+        },
+        {
+          "question": "Qual é a melhor idade para começar a economizar para aposentadoria?",
+          "answer": "Quanto antes, melhor. Começando aos 25 anos com $300 mensais a retornos de 7% acumula $1.2 milhão aos 65 anos. Esperando até os 35 anos reduz isso para $680,000 - perdendo mais de $500,000. Mesmo valores pequenos cedo fornecem tempo de juros compostos para trabalhar, tornando metas de aposentadoria muito mais alcançáveis."
+        },
+        {
+          "question": "Como sei qual taxa de retirada é segura na aposentadoria?",
+          "answer": "A regra dos 4% sugere retirar 4% anualmente (mais ajustes por inflação) de economias de aposentadoria. Para $500,000 economizados, isso fornece $20,000 anualmente inicialmente. Esta taxa historicamente sustentou aposentadorias de 30+ anos através de flutuações de mercado. Investidores conservadores usam 3%, investidores agressivos podem usar 5%, mas tolerância pessoal ao risco e expectativa de vida importam."
+        },
+        {
+          "question": "Devo maximizar meu 401k ou pagar dívidas primeiro?",
+          "answer": "Compare taxas de juros: se hipoteca é 4% mas 401k ganha 7% pré-impostos, investir vence. Mas se dívida de cartão de crédito custa 18%, pague isso primeiro. Geralmente, priorize fundo de emergência, então dívidas de alto juros, então maximize contas de aposentadoria com vantagens fiscais. Use a calculadora para ver como diferentes níveis de contribuição afetam sua segurança de aposentadoria."
+        },
+        {
+          "question": "Como a Previdência Social se encaixa no planejamento de aposentadoria?",
+          "answer": "A Previdência Social substitui cerca de 40% da renda pré-aposentadoria para ganhadores médios, mas menos para ganhadores altos. Benefícios completos começam aos 67 anos, com benefícios reduzidos a partir dos 62 anos. Adiando benefícios até os 70 anos aumenta pagamentos em 8% anualmente. Inclua benefícios estimados no planejamento, mas não confie apenas neles - planeje como se fossem 20-30% menores que prometidos."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculatrice de Retraite",
+    "seoTitle": "Calculatrice de Retraite - Planifiez vos Économies et 401k",
+    "metaDescription": "Calculez vos objectifs d'épargne-retraite, contributions 401k et prestations de Sécurité Sociale. Planifiez une retraite sécurisée avec projections d'intérêts composés.",
+    "keywords": [
+      "calculatrice retraite",
+      "calculatrice 401k",
+      "épargnes retraite",
+      "planification retraite",
+      "calculatrice sécurité sociale",
+      "calculatrice pension"
+    ],
+    "slug": "retirement-calculator",
+    "category": "Financial",
+    "difficulty": "Advanced",
+    "tags": [
+      "retraite",
+      "401k",
+      "épargnes",
+      "sécurité sociale",
+      "pension",
+      "intérêts composés",
+      "planification retraite"
+    ],
+    "description": "Planifiez votre retraite avec confiance en utilisant notre calculatrice complète de retraite. Calculez combien vous devez épargner, projetez la croissance de votre 401k avec intérêts composés, estimez les prestations de Sécurité Sociale et déterminez si vous atteindrez vos objectifs de retraite. Cet outil puissant vous aide à prendre des décisions éclairées sur votre avenir financier.",
+    "summary": "Planifiez vos épargnes-retraite et calculez les besoins futurs.",
+    "instructions": [
+      "Entrez votre âge actuel et âge souhaité de retraite pour calculer les années jusqu'à la retraite",
+      "Entrez votre solde actuel d'épargnes-retraite",
+      "Entrez votre montant de contribution annuel et taux de rendement annuel attendu",
+      "Définissez votre montant attendu de prestation de Sécurité Sociale (optionnel)",
+      "La calculatrice montrera vos épargnes projetées au moment de la retraite et revenu mensuel en retraite"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Âge Actuel",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Âge de Retraite",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Épargnes-Retraite Actuelles ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "annualContribution",
+          "label": "Contribution Annuelle ($)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 500000,
+          "step": 500
+        },
+        {
+          "name": "expectedReturn",
+          "label": "Rendement Annuel Attendu (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "socialSecurity",
+          "label": "Prestation Mensuelle Sécurité Sociale ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 100
+        }
+      ],
+      "formula": "Valeur Future = Épargnes Actuelles × (1 + r)^n + Contribution Annuelle × [(1 + r)^n - 1] / r; Revenu Mensuel = (Valeur Future × Taux de Retrait) / 12 + Sécurité Sociale",
+      "output": {
+        "label": "Épargnes Projetées de Retraite",
+        "default": "Entrez vos détails ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Années Jusqu'à la Retraite",
+          "field": "yearsToRetirement",
+          "format": "number"
+        },
+        {
+          "label": "Contributions Totales",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Intérêts Gagnés",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Revenu Mensuel de Retraite",
+          "field": "monthlyIncome",
+          "format": "currency"
+        },
+        {
+          "label": "Réussite d'Objectif d'Épargne",
+          "field": "goalProgress",
+          "format": "percentage"
+        }
+      ],
+      "componentName": "RetirementCalculator"
+    },
+    "examples": [
+      {
+        "title": "Épargnant Précoce - Âge 25 à 65",
+        "input": {
+          "currentAge": 25,
+          "retirementAge": 65,
+          "currentSavings": 10000,
+          "annualContribution": 6000,
+          "expectedReturn": 7,
+          "socialSecurity": 1800
+        },
+        "output": {
+          "projectedSavings": 1285000,
+          "yearsToRetirement": 40,
+          "totalContributions": 240000,
+          "totalInterest": 1045000,
+          "monthlyIncome": 5375,
+          "goalProgress": 128.5
+        },
+        "explanation": "Commençant à 25 ans avec des contributions constantes de 6 000 $ annuelles à 7% de rendement, cette personne pourrait accumuler 1,285 million $ à 65 ans, fournissant 5 375 $ mensuels plus Sécurité Sociale."
+      },
+      {
+        "title": "Épargnant Mi-Carrière - Âge 40 à 67",
+        "input": {
+          "currentAge": 40,
+          "retirementAge": 67,
+          "currentSavings": 150000,
+          "annualContribution": 10000,
+          "expectedReturn": 6,
+          "socialSecurity": 2200
+        },
+        "output": {
+          "projectedSavings": 987000,
+          "yearsToRetirement": 27,
+          "totalContributions": 270000,
+          "totalInterest": 567000,
+          "monthlyIncome": 4940,
+          "goalProgress": 98.7
+        },
+        "explanation": "Avec 27 ans jusqu'à la retraite et 10 000 $ contributions annuelles, cette personne peut atteindre près de 1 million $ d'épargnes, fournissant 4 940 $ mensuels plus prestations de Sécurité Sociale."
+      },
+      {
+        "title": "Débutant Tardif - Âge 50 à 70",
+        "input": {
+          "currentAge": 50,
+          "retirementAge": 70,
+          "currentSavings": 200000,
+          "annualContribution": 15000,
+          "expectedReturn": 5,
+          "socialSecurity": 2500
+        },
+        "output": {
+          "projectedSavings": 856000,
+          "yearsToRetirement": 20,
+          "totalContributions": 300000,
+          "totalInterest": 356000,
+          "monthlyIncome": 4790,
+          "goalProgress": 85.6
+        },
+        "explanation": "Même en commençant tard, des contributions agressives de 15 000 $ annuelles peuvent encore construire un nid substantiel de 856 000 $ en 20 ans, fournissant 4 790 $ revenu mensuel."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice d'Épargne",
+        "slug": "savings-calculator",
+        "description": "Calculez la croissance des intérêts composés."
+      },
+      {
+        "name": "Calculatrice d'Impôt",
+        "slug": "tax-calculator",
+        "description": "Estimez les impôts sur le revenu de retraite."
+      },
+      {
+        "name": "Calculatrice de Prêt",
+        "slug": "loan-calculator",
+        "description": "Calculez les paiements de prêt si nécessaire."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Sécurisez votre avenir financier avec notre calculatrice complète de retraite qui projette la croissance de vos économies et vous aide à planifier une retraite confortable. Cet outil puissant de planification combine des calculs d'intérêts composés avec des prestations de Sécurité Sociale pour vous montrer exactement combien vous aurez épargné et à quoi ressemblera votre revenu mensuel de retraite. Que vous commenciez votre carrière ou approchiez l'âge de la retraite, comprendre vos projections de retraite est essentiel pour prendre des décisions éclairées concernant les contributions 401k, les stratégies d'investissement et les choix de style de vie qui impacteront vos années dorées.",
+      "benefits": [
+        "Projetez la croissance de vos économies de retraite avec des calculs précis d'intérêts composés",
+        "Estimez le revenu mensuel de retraite incluant les prestations de Sécurité Sociale",
+        "Déterminez si vous êtes sur la bonne voie pour atteindre vos objectifs de retraite",
+        "Comparez différents montants de contribution et rendements d'investissement",
+        "Comprenez l'impact de commencer à épargner plus tôt vs. plus tard",
+        "Planifiez un taux de retrait durable qui dure tout au long de la retraite"
+      ],
+      "steps": [
+        "Entrez votre âge actuel et âge souhaité de retraite pour établir votre calendrier",
+        "Saisissez votre solde actuel d'épargne-retraite de 401k, IRA et autres comptes",
+        "Spécifiez votre montant de contribution annuel aux comptes de retraite",
+        "Définissez votre taux de rendement annuel d'investissement attendu basé sur votre tolérance au risque",
+        "Incluez les prestations mensuelles estimées de Sécurité Sociale si applicable",
+        "Examinez les projections et ajustez les contributions ou âge de retraite selon les besoins"
+      ],
+      "inputsExplained": [
+        "Âge actuel et de retraite déterminent combien d'années votre argent a pour grandir",
+        "Solde actuel d'épargne représente tous les comptes de retraite combinés",
+        "Contribution annuelle montre combien vous prévoyez ajouter aux comptes de retraite annuellement",
+        "Taux de rendement attendu reflète la croissance projetée de votre portefeuille d'investissement",
+        "Prestation de Sécurité Sociale estime les paiements mensuels gouvernementaux de retraite"
+      ],
+      "formulaExplanation": "La calculatrice de retraite utilise des formules d'intérêts composés pour projeter la croissance des économies: Valeur Future = Solde Actuel × (1 + r)^n + Contribution Annuelle × [(1 + r)^n - 1] / r, où r est le taux de rendement annuel et n sont années jusqu'à la retraite. Le revenu mensuel de retraite combine les retraits d'investissement (généralement 4% annuellement) avec les prestations de Sécurité Sociale. Cette approche complète tient compte à la fois de l'accumulation pendant les années de travail et du retrait durable pendant la retraite, assurant que votre argent dure aussi longtemps que vous.",
+      "examples": [
+        "Quelqu'un de 30 ans épargnant 6 000 $ annuellement avec 50 000 $ solde actuel à rendements de 7% aura 1,2 million $ à 65 ans, fournissant 4 800 $ mensuels (48 000 $ annuellement) plus prestations de Sécurité Sociale.",
+        "Quelqu'un commençant à 45 ans avec mêmes contributions atteint seulement 680 000 $ à 65 ans, montrant comment retarder l'épargne de 15 ans coûte plus de 500 000 $ en sécurité de retraite."
+      ],
+      "resultsExplanation": [
+        "Économies projetées de retraite montrent le total accumulé à l'âge de la retraite",
+        "Revenu mensuel de retraite estime le montant durable de retrait",
+        "Années jusqu'à la retraite affiche le calendrier restant",
+        "Contributions totales révèlent votre montant cumulatif d'investissement"
+      ],
+      "whoItsFor": "Cette calculatrice de retraite sert les jeunes professionnels commençant la planification de retraite, les individus en milieu de carrière évaluant le progrès, les pré-retraités évaluant la préparation, les conseillers financiers fournissant des projections client, les couples planifiant le revenu conjoint de retraite, et quiconque voulant comprendre les exigences d'épargne de retraite. Elle est particulièrement précieuse pour ceux changeant d'emplois, recevant des gains inattendus, ou expérimentant des changements de vie affectant la planification de retraite.",
+      "disclaimer": "Cette calculatrice fournit des estimations basées sur des intérêts composés et des hypothèses de prestations de Sécurité Sociale. Les rendements réels d'investissement fluctuent avec les conditions de marché et ne peuvent être garantis. Les prestations de Sécurité Sociale dépendent de l'historique des gains et peuvent changer avec la législation. L'inflation, les impôts, les coûts de santé et les circonstances personnelles affectent les besoins de retraite. Cet outil est uniquement à des fins éducatives et ne doit pas remplacer les conseils financiers professionnels. Consultez des planificateurs financiers certifiés pour des stratégies personnalisées de retraite.",
+      "relatedTools": [
+        "Calculatrices d'épargne pour comprendre les taux de croissance des intérêts composés",
+        "Calculatrices d'investissement pour comparer différents rendements de portefeuille",
+        "Calculatrices de Sécurité Sociale pour estimer les montants de prestations gouvernementales"
+      ],
+      "faqs": [
+        {
+          "question": "Combien dois-je épargner pour la retraite?",
+          "answer": "La plupart des experts financiers recommandent d'épargner 15-20 fois votre revenu annuel pré-retraite. Pour un salaire de 60 000 $, vous auriez besoin de 900 000 $-1,2 million $. Cela fournit un retrait annuel de 4% (3 000 $-4 800 $ mensuels) plus Sécurité Sociale. Utilisez notre calculatrice pour déterminer votre cible spécifique basée sur le revenu de retraite souhaité et les rendements attendus."
+        },
+        {
+          "question": "Quel est le meilleur âge pour commencer à épargner pour la retraite?",
+          "answer": "Le plus tôt possible. Commençant à 25 ans avec 300 $ mensuels à rendements de 7% accumule 1,2 million $ à 65 ans. Attendre jusqu'à 35 ans réduit cela à 680 000 $ - perdant plus de 500 000 $. Même de petits montants tôt fournissent du temps aux intérêts composés pour travailler, rendant les objectifs de retraite beaucoup plus réalisables."
+        },
+        {
+          "question": "Comment savoir quel taux de retrait est sûr en retraite?",
+          "answer": "La règle des 4% suggère de retirer 4% annuellement (plus ajustements d'inflation) des économies de retraite. Pour 500 000 $ épargnés, cela fournit 20 000 $ annuellement initialement. Ce taux a historiquement soutenu des retraites de 30+ ans à travers les fluctuations de marché. Les investisseurs conservateurs utilisent 3%, les investisseurs agressifs peuvent utiliser 5%, mais la tolérance personnelle au risque et l'espérance de vie comptent."
+        },
+        {
+          "question": "Dois-je maximiser mon 401k ou rembourser les dettes d'abord?",
+          "answer": "Comparez les taux d'intérêt: si l'hypothèque est de 4% mais le 401k gagne 7% pré-impôts, investir gagne. Mais si la dette de carte de crédit coûte 18%, remboursez cela d'abord. Généralement, priorisez le fonds d'urgence, puis les dettes à haut intérêt, puis maximisez les comptes de retraite fiscalement avantageux. Utilisez la calculatrice pour voir comment différents niveaux de contribution affectent votre sécurité de retraite."
+        },
+        {
+          "question": "Comment la Sécurité Sociale s'intègre-t-elle dans la planification de retraite?",
+          "answer": "La Sécurité Sociale remplace environ 40% du revenu pré-retraite pour les gagnants moyens, mais moins pour les gagnants élevés. Les prestations complètes commencent à 67 ans, avec prestations réduites à partir de 62 ans. Retarder les prestations jusqu'à 70 ans augmente les paiements de 8% annuellement. Incluez les prestations estimées dans la planification, mais ne comptez pas uniquement dessus - planifiez comme si elles étaient 20-30% inférieures à ce qui est promis."
+        }
+      ]
+    }
+  }
+}

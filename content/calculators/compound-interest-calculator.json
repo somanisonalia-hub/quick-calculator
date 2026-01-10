@@ -1,0 +1,1334 @@
+{
+  "en": {
+    "title": "Compound Interest Calculator",
+    "seoTitle": "Compound Interest Calculator - Calculate Investment Growth and Returns",
+    "metaDescription": "Calculate compound interest on investments, savings, and loans. Free compound interest calculator with monthly, quarterly, and annual compounding options.",
+    "keywords": [
+      "compound interest calculator",
+      "investment calculator",
+      "interest calculator",
+      "compound growth calculator",
+      "investment returns calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate compound interest",
+      "compound interest calculator with monthly deposits",
+      "what is compound interest formula",
+      "compound interest calculator for savings",
+      "how compound interest works calculator",
+      "compound interest vs simple interest calculator",
+      "investment growth calculator compound interest",
+      "compound interest calculator with different compounding frequencies",
+      "how to calculate compound interest on investments",
+      "compound interest calculator for retirement"
+    ],
+    "slug": "compound-interest-calculator",
+    "category": "Financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "compound interest",
+      "investment",
+      "savings",
+      "growth",
+      "returns",
+      "interest calculation",
+      "finance"
+    ],
+    "description": "Master the power of compound interest with our comprehensive calculator. Calculate investment growth, savings accumulation, and the difference between simple and compound interest. Perfect for investors, savers, and anyone planning for financial growth over time.",
+    "summary": "Calculate compound interest and investment growth over time.",
+    "instructions": [
+      "Enter your initial investment or principal amount",
+      "Input the annual interest rate (as a percentage)",
+      "Specify the number of years for the investment",
+      "Choose the compounding frequency (daily, monthly, quarterly, annually)",
+      "Optionally add regular contributions (monthly deposits/withdrawals)",
+      "Click 'Calculate' to see your total investment value and interest earned"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "annualRate",
+          "label": "Annual Interest Rate (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "years",
+          "label": "Investment Period (Years)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundingFrequency",
+          "label": "Compounding Frequency",
+          "type": "select",
+          "options": [
+            "annually",
+            "semiannually",
+            "quarterly",
+            "monthly",
+            "daily"
+          ],
+          "default": "annually"
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Monthly Contribution ($)",
+          "type": "number",
+          "default": 0,
+          "min": -10000,
+          "max": 10000,
+          "step": 50,
+          "optional": true
+        },
+        {
+          "name": "contributionTiming",
+          "label": "Contribution Timing",
+          "type": "select",
+          "options": [
+            "beginning",
+            "end"
+          ],
+          "default": "end",
+          "conditional": "monthlyContribution !== 0"
+        }
+      ],
+      "formula": "Future Value = P(1 + r/n)^(nt) + PMT × (((1 + r/n)^(nt) - 1) / (r/n)) where P = Principal, r = Annual Rate, n = Compounding Frequency, t = Years, PMT = Monthly Contribution",
+      "output": {
+        "label": "Future Value",
+        "default": "Enter investment details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Total Contributions",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Total Interest Earned",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Initial Investment",
+          "field": "initialInvestment",
+          "format": "currency"
+        },
+        {
+          "label": "Growth Breakdown",
+          "field": "growthBreakdown",
+          "format": "text"
+        },
+        {
+          "label": "Annual Growth Rate",
+          "field": "annualGrowthRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Final Amount vs Simple Interest",
+          "field": "vsSimpleInterest",
+          "format": "currency"
+        }
+      ],
+      "componentName": "CompoundInterestCalculator"
+    },
+    "examples": [
+      {
+        "title": "10-Year Investment Growth",
+        "input": {
+          "principal": 10000,
+          "annualRate": 7,
+          "years": 10,
+          "compoundingFrequency": "annually",
+          "monthlyContribution": 0
+        },
+        "output": {
+          "futureValue": 19671.51,
+          "totalContributions": 10000,
+          "totalInterest": 9671.51
+        },
+        "explanation": "A $10,000 investment at 7% annual interest compounded annually grows to $19,671.51 in 10 years, earning $9,671.51 in compound interest."
+      },
+      {
+        "title": "Monthly Compounding Savings",
+        "input": {
+          "principal": 5000,
+          "annualRate": 5,
+          "years": 5,
+          "compoundingFrequency": "monthly",
+          "monthlyContribution": 200
+        },
+        "output": {
+          "futureValue": 19482.92,
+          "totalContributions": 17000,
+          "totalInterest": 2482.92
+        },
+        "explanation": "Starting with $5,000 and adding $200 monthly at 5% interest compounded monthly results in $19,482.92 after 5 years. The power of frequent compounding and regular contributions is evident."
+      },
+      {
+        "title": "Retirement Savings with Contributions",
+        "input": {
+          "principal": 25000,
+          "annualRate": 8,
+          "years": 30,
+          "compoundingFrequency": "quarterly",
+          "monthlyContribution": 500
+        },
+        "output": {
+          "futureValue": 718961.25,
+          "totalContributions": 235000,
+          "totalInterest": 483961.25
+        },
+        "explanation": "A 30-year retirement plan with $25,000 initial investment and $500 monthly contributions at 8% interest grows to $718,961.25. Compound interest generates $483,961.25 of the total value."
+      },
+      {
+        "title": "College Fund Investment",
+        "input": {
+          "principal": 0,
+          "annualRate": 6,
+          "years": 18,
+          "compoundingFrequency": "monthly",
+          "monthlyContribution": 300
+        },
+        "output": {
+          "futureValue": 173766.89,
+          "totalContributions": 64800,
+          "totalInterest": 108966.89
+        },
+        "explanation": "Monthly contributions of $300 at 6% interest compounded monthly for 18 years accumulate $173,766.89 for college expenses. Compound interest adds $108,966.89 to the invested contributions."
+      },
+      {
+        "title": "Emergency Fund Growth",
+        "input": {
+          "principal": 2000,
+          "annualRate": 3,
+          "years": 3,
+          "compoundingFrequency": "quarterly",
+          "monthlyContribution": 100
+        },
+        "output": {
+          "futureValue": 4727.44,
+          "totalContributions": 4800,
+          "totalInterest": 127.44
+        },
+        "explanation": "Building an emergency fund with $2,000 initial amount and $100 monthly contributions at 3% interest reaches $4,727.44 in 3 years. While conservative, this approach ensures steady growth."
+      },
+      {
+        "title": "High-Yield Savings Comparison",
+        "input": {
+          "principal": 15000,
+          "annualRate": 4.5,
+          "years": 2,
+          "compoundingFrequency": "daily",
+          "monthlyContribution": 0
+        },
+        "output": {
+          "futureValue": 16356.46,
+          "totalContributions": 15000,
+          "totalInterest": 1356.46
+        },
+        "explanation": "A $15,000 investment in a high-yield savings account at 4.5% interest compounded daily grows to $16,356.46 in 2 years. Daily compounding maximizes the interest earned."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Investment Calculator",
+        "slug": "investment-calculator",
+        "description": "Calculate investment returns and growth."
+      },
+      {
+        "name": "Savings Calculator",
+        "slug": "savings-calculator",
+        "description": "Calculate savings growth with interest."
+      },
+      {
+        "name": "Loan Calculator",
+        "slug": "loan-calculator",
+        "description": "Calculate loan payments and interest."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Unlock the incredible power of compound interest with our comprehensive compound interest calculator that demonstrates how money grows exponentially over time. Compound interest is often called the eighth wonder of the world, and understanding it can transform your financial future. Whether you're saving for retirement, investing in stocks, or simply curious about how interest accumulates, this calculator shows you exactly how compounding turns small, consistent investments into substantial wealth. Discover the dramatic difference between simple and compound interest, and learn why starting early and being consistent are the keys to financial success.",
+      "benefits": [
+        "Calculate compound interest growth for any investment scenario",
+        "Compare simple vs. compound interest to see the difference",
+        "Understand how compounding frequency affects your returns",
+        "Project future value of investments with regular contributions",
+        "See the impact of starting early vs. starting late",
+        "Learn the mathematical principles behind wealth building",
+        "Make informed decisions about savings and investment strategies",
+        "Visualize the exponential growth potential of consistent investing"
+      ],
+      "steps": [
+        "Enter your initial investment or principal amount",
+        "Input the annual interest rate as a percentage",
+        "Specify the time period in years",
+        "Select compounding frequency (daily, monthly, quarterly, or annually)",
+        "Optionally add regular contributions for dollar-cost averaging",
+        "Click calculate to see future value and total interest earned"
+      ],
+      "inputsExplained": [
+        "Principal is the initial amount you're investing or saving",
+        "Annual interest rate is the percentage return you expect to earn",
+        "Time period determines how long your money will grow and compound",
+        "Compounding frequency shows how often interest is calculated and added",
+        "Regular contributions simulate consistent investing (like monthly deposits)"
+      ],
+      "formulaExplanation": "The compound interest formula is: Future Value = Principal × (1 + r/n)^(n×t) + PMT × [((1 + r/n)^(n×t) - 1) / (r/n)], where r is annual interest rate, n is compounding frequency, t is years, and PMT is regular payment. This formula reveals why compound interest creates exponential growth - each period's interest earns interest on itself. The more frequent the compounding (daily > monthly > quarterly > annual), the higher the final amount. Understanding this formula explains why small differences in rates or frequencies create large differences over time.",
+      "examples": [
+        "$10,000 invested at 7% annual return compounded monthly grows to $40,544 in 20 years - more than quadrupling your money.",
+        "Starting with $5,000 at age 25 vs. $5,000 at age 35 (both at 8% return) results in $86,000 vs. $46,000 by age 65 - showing the power of time.",
+        "$200 monthly contributions at 6% annual return grow to $144,000 in 30 years, while the same amount invested as one lump sum grows to only $107,000 - demonstrating consistent investing beats timing the market."
+      ],
+      "resultsExplanation": [
+        "Future value shows the total amount your investment will grow to",
+        "Total interest earned reveals how much of the growth comes from compounding",
+        "Growth breakdown shows the portion from principal vs. earned interest",
+        "Regular contribution impact demonstrates the power of consistent investing"
+      ],
+      "whoItsFor": "This compound interest calculator serves savers planning retirement accounts, investors learning about portfolio growth, students understanding financial principles, parents saving for children's education, entrepreneurs projecting business growth, financial advisors teaching clients, and anyone interested in wealth building. It's particularly valuable for those comparing savings accounts vs. investments, understanding loan costs, projecting retirement savings, and learning why consistent, long-term investing outperforms market timing. The calculator works for any financial scenario involving interest accumulation over time.",
+      "disclaimer": "This calculator provides estimates based on compound interest assumptions and does not account for taxes, fees, inflation, market volatility, or changing interest rates. Investment returns are not guaranteed and past performance doesn't predict future results. Actual results may vary significantly based on market conditions and individual circumstances. This tool is for educational purposes only and doesn't constitute investment advice. Consult qualified financial professionals for personalized investment recommendations. Remember that all investing involves risk, including potential loss of principal.",
+      "relatedTools": [
+        "Investment calculators for comparing different asset classes",
+        "Savings calculators for emergency fund planning",
+        "Loan calculators for understanding debt costs"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between simple interest and compound interest?",
+          "answer": "Simple interest earns interest only on the original principal amount. For example, $1,000 at 5% simple interest earns $50/year every year. Compound interest earns 'interest on interest' - the same $1,000 at 5% compounded annually earns $50 the first year, but $52.50 the second year ($50 on original + $2.50 on earned interest). Over time, this creates exponential growth. Compound interest is how wealth is built through investing and saving."
+        },
+        {
+          "question": "Why is compounding frequency important?",
+          "answer": "More frequent compounding accelerates growth because interest is calculated and added more often. $10,000 at 6% annual return grows to $17,908 in 10 years with annual compounding, but $18,174 with monthly compounding - a $266 difference. Daily compounding maximizes this effect. This explains why high-yield savings accounts and investment accounts with frequent compounding provide better returns than those compounded annually."
+        },
+        {
+          "question": "How much does starting early really matter?",
+          "answer": "Time is the most powerful factor in compound interest. $5,000 invested at age 25 growing at 8% annually becomes $86,000 by age 65. The same $5,000 invested at age 35 becomes only $46,000 by age 65 - less than half as much despite the same investment and return. Starting just 10 years earlier can double or triple your retirement savings due to the extra time for compounding to work."
+        },
+        {
+          "question": "Should I focus on higher returns or more frequent contributions?",
+          "answer": "Both are important, but consistency often matters more than chasing high returns. $300 monthly at 6% return grows to $144,000 in 30 years. $500 monthly at 8% return grows to $246,000 - showing higher contributions create more wealth than higher returns. However, the combination is ideal. Focus on maximizing contributions first, then optimize returns through smart investing. Small increases in contributions compound dramatically over time."
+        },
+        {
+          "question": "How do taxes affect compound interest calculations?",
+          "answer": "Taxes reduce compounding power by taking a portion of earnings each year. Pre-tax returns of 8% might become 5-6% after taxes depending on your tax bracket and account type. Tax-advantaged accounts (401k, IRA) allow pre-tax contributions and tax-deferred growth. Consider after-tax returns when comparing investments. The tax drag is why long-term investors often prefer tax-efficient investments and accounts designed for compounding without annual tax interruptions."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Interés Compuesto",
+    "seoTitle": "Calculadora de Interés Compuesto - Calcular Crecimiento de Inversiones y Rendimientos",
+    "metaDescription": "Calcula interés compuesto en inversiones, ahorros y préstamos. Calculadora gratuita de interés compuesto con opciones de capitalización mensual, trimestral y anual.",
+    "keywords": [
+      "calculadora interés compuesto",
+      "calculadora inversiones",
+      "calculadora interés",
+      "calculadora crecimiento compuesto",
+      "calculadora rendimientos inversiones"
+    ],
+    "longTailKeywords": [
+      "como calcular interés compuesto",
+      "calculadora de interés compuesto con depósitos mensuales",
+      "que es formula interés compuesto",
+      "calculadora de interés compuesto para ahorros",
+      "como funciona interés compuesto calculadora",
+      "interés compuesto vs interés simple calculadora",
+      "calculadora crecimiento inversiones interés compuesto",
+      "calculadora de interés compuesto con diferentes frecuencias capitalización",
+      "como calcular interés compuesto en inversiones",
+      "calculadora de interés compuesto para jubilación"
+    ],
+    "slug": "compound-interest-calculator",
+    "category": "Financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "interés compuesto",
+      "inversión",
+      "ahorros",
+      "crecimiento",
+      "rendimientos",
+      "cálculo interés",
+      "finanzas"
+    ],
+    "description": "Domina el poder del interés compuesto con nuestra calculadora integral. Calcula crecimiento de inversiones, acumulación de ahorros y la diferencia entre interés simple y compuesto. Perfecto para inversores, ahorradores y cualquier persona que planifique crecimiento financiero con el tiempo.",
+    "summary": "Calcula interés compuesto y crecimiento de inversiones con el tiempo.",
+    "instructions": [
+      "Ingresa tu inversión inicial o monto principal",
+      "Ingresa la tasa de interés anual (como porcentaje)",
+      "Especifica el número de años para la inversión",
+      "Elige la frecuencia de capitalización (diaria, mensual, trimestral, anual)",
+      "Opcionalmente agrega contribuciones regulares (depósitos/retiros mensuales)",
+      "Haz clic en 'Calcular' para ver el valor total de tu inversión y interés ganado"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Inversión Inicial ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "annualRate",
+          "label": "Tasa de Interés Anual (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "years",
+          "label": "Período de Inversión (Años)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundingFrequency",
+          "label": "Frecuencia de Capitalización",
+          "type": "select",
+          "options": [
+            "annually",
+            "semiannually",
+            "quarterly",
+            "monthly",
+            "daily"
+          ],
+          "default": "annually"
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Contribución Mensual ($)",
+          "type": "number",
+          "default": 0,
+          "min": -10000,
+          "max": 10000,
+          "step": 50,
+          "optional": true
+        },
+        {
+          "name": "contributionTiming",
+          "label": "Tiempo de Contribución",
+          "type": "select",
+          "options": [
+            "beginning",
+            "end"
+          ],
+          "default": "end",
+          "conditional": "monthlyContribution !== 0"
+        }
+      ],
+      "formula": "Valor Futuro = P(1 + r/n)^(nt) + PMT × (((1 + r/n)^(nt) - 1) / (r/n)) donde P = Principal, r = Tasa Anual, n = Frecuencia Capitalización, t = Años, PMT = Contribución Mensual",
+      "output": {
+        "label": "Valor Futuro",
+        "default": "Ingresa detalles de inversión arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Contribuciones Totales",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Interés Total Ganado",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Inversión Inicial",
+          "field": "initialInvestment",
+          "format": "currency"
+        },
+        {
+          "label": "Desglose de Crecimiento",
+          "field": "growthBreakdown",
+          "format": "text"
+        },
+        {
+          "label": "Tasa de Crecimiento Anual",
+          "field": "annualGrowthRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Monto Final vs Interés Simple",
+          "field": "vsSimpleInterest",
+          "format": "currency"
+        }
+      ],
+      "componentName": "CompoundInterestCalculator"
+    },
+    "examples": [
+      {
+        "title": "Crecimiento de Inversión a 10 Años",
+        "input": {
+          "principal": 10000,
+          "annualRate": 7,
+          "years": 10,
+          "compoundingFrequency": "annually",
+          "monthlyContribution": 0
+        },
+        "output": {
+          "futureValue": 19671.51,
+          "totalContributions": 10000,
+          "totalInterest": 9671.51
+        },
+        "explanation": "Una inversión de $10,000 al 7% de interés anual capitalizado anualmente crece a $19,671.51 en 10 años, ganando $9,671.51 en interés compuesto."
+      },
+      {
+        "title": "Ahorros con Capitalización Mensual",
+        "input": {
+          "principal": 5000,
+          "annualRate": 5,
+          "years": 5,
+          "compoundingFrequency": "monthly",
+          "monthlyContribution": 200
+        },
+        "output": {
+          "futureValue": 19482.92,
+          "totalContributions": 17000,
+          "totalInterest": 2482.92
+        },
+        "explanation": "Comenzando con $5,000 y agregando $200 mensualmente al 5% de interés capitalizado mensualmente resulta en $19,482.92 después de 5 años. El poder de la capitalización frecuente y contribuciones regulares es evidente."
+      },
+      {
+        "title": "Ahorros para Jubilación con Contribuciones",
+        "input": {
+          "principal": 25000,
+          "annualRate": 8,
+          "years": 30,
+          "compoundingFrequency": "quarterly",
+          "monthlyContribution": 500
+        },
+        "output": {
+          "futureValue": 718961.25,
+          "totalContributions": 235000,
+          "totalInterest": 483961.25
+        },
+        "explanation": "Un plan de jubilación de 30 años con $25,000 inversión inicial y $500 contribuciones mensuales al 8% de interés crece a $718,961.25. El interés compuesto genera $483,961.25 del valor total."
+      },
+      {
+        "title": "Fondo Universitario",
+        "input": {
+          "principal": 0,
+          "annualRate": 6,
+          "years": 18,
+          "compoundingFrequency": "monthly",
+          "monthlyContribution": 300
+        },
+        "output": {
+          "futureValue": 173766.89,
+          "totalContributions": 64800,
+          "totalInterest": 108966.89
+        },
+        "explanation": "Contribuciones mensuales de $300 al 6% de interés capitalizado mensualmente por 18 años acumulan $173,766.89 para gastos universitarios. El interés compuesto agrega $108,966.89 a las contribuciones invertidas."
+      },
+      {
+        "title": "Fondo de Emergencia",
+        "input": {
+          "principal": 2000,
+          "annualRate": 3,
+          "years": 3,
+          "compoundingFrequency": "quarterly",
+          "monthlyContribution": 100
+        },
+        "output": {
+          "futureValue": 4727.44,
+          "totalContributions": 4800,
+          "totalInterest": 127.44
+        },
+        "explanation": "Construyendo un fondo de emergencia con $2,000 monto inicial y $100 contribuciones mensuales al 3% de interés alcanza $4,727.44 en 3 años. Aunque conservador, este enfoque asegura crecimiento constante."
+      },
+      {
+        "title": "Comparación de Ahorros de Alto Rendimiento",
+        "input": {
+          "principal": 15000,
+          "annualRate": 4.5,
+          "years": 2,
+          "compoundingFrequency": "daily",
+          "monthlyContribution": 0
+        },
+        "output": {
+          "futureValue": 16356.46,
+          "totalContributions": 15000,
+          "totalInterest": 1356.46
+        },
+        "explanation": "Una inversión de $15,000 en una cuenta de ahorros de alto rendimiento al 4.5% de interés capitalizado diariamente crece a $16,356.46 en 2 años. La capitalización diaria maximiza el interés ganado."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Inversiones",
+        "slug": "investment-calculator",
+        "description": "Calcula rendimientos de inversiones y crecimiento."
+      },
+      {
+        "name": "Calculadora de Ahorros",
+        "slug": "savings-calculator",
+        "description": "Calcula crecimiento de ahorros con interés."
+      },
+      {
+        "name": "Calculadora de Préstamos",
+        "slug": "loan-calculator",
+        "description": "Calcula pagos de préstamos e interés."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Desbloquea el increíble poder del interés compuesto con nuestra calculadora integral de interés compuesto que demuestra cómo el dinero crece exponencialmente con el tiempo. El interés compuesto es a menudo llamado la octava maravilla del mundo, y entenderlo puede transformar tu futuro financiero. Ya sea que estés ahorrando para jubilación, invirtiendo en acciones, o simplemente curioso sobre cómo se acumula el interés, esta calculadora te muestra exactamente cómo el compuesto convierte inversiones pequeñas y consistentes en riqueza sustancial. Descubre la dramática diferencia entre interés simple y compuesto, y aprende por qué comenzar temprano y ser consistente son las claves para el éxito financiero.",
+      "benefits": [
+        "Calcula crecimiento de interés compuesto para cualquier escenario de inversión",
+        "Compara interés simple vs. compuesto para ver la diferencia",
+        "Entiende cómo la frecuencia de composición afecta tus retornos",
+        "Proyecta valor futuro de inversiones con contribuciones regulares",
+        "Ve el impacto de comenzar temprano vs. comenzar tarde",
+        "Aprende los principios matemáticos detrás de la construcción de riqueza",
+        "Toma decisiones informadas sobre estrategias de ahorro e inversión",
+        "Visualiza el potencial de crecimiento exponencial de invertir consistentemente"
+      ],
+      "steps": [
+        "Ingresa tu inversión inicial o monto principal",
+        "Ingresa la tasa de interés anual como porcentaje",
+        "Especifica el período de tiempo en años",
+        "Selecciona frecuencia de composición (diaria, mensual, trimestral, o anual)",
+        "Opcionalmente agrega contribuciones regulares para promedio de costo en dólares",
+        "Haz clic en calcular para ver valor futuro e interés total ganado"
+      ],
+      "inputsExplained": [
+        "Principal es el monto inicial que estás invirtiendo o ahorrando",
+        "Tasa de interés anual es el porcentaje de retorno que esperas ganar",
+        "Período de tiempo determina cuánto tiempo crecerá y se compondrá tu dinero",
+        "Frecuencia de composición muestra con qué frecuencia se calcula y agrega interés",
+        "Contribuciones regulares simulan invertir consistentemente (como depósitos mensuales)"
+      ],
+      "formulaExplanation": "La fórmula de interés compuesto es: Valor Futuro = Principal × (1 + r/n)^(n×t) + PMT × [((1 + r/n)^(n×t) - 1) / (r/n)], donde r es tasa de interés anual, n es frecuencia de composición, t son años, y PMT es pago regular. Esta fórmula revela por qué el interés compuesto crea crecimiento exponencial - el interés de cada período gana interés sobre sí mismo. Cuanto más frecuente la composición (diaria > mensual > trimestral > anual), más alto el monto final. Entender esta fórmula explica por qué pequeñas diferencias en tasas o frecuencias crean grandes diferencias con el tiempo.",
+      "examples": [
+        "$10,000 invertidos al 7% retorno anual compuesto mensualmente crecen a $40,544 en 20 años - más que cuadruplicando tu dinero.",
+        "Comenzando con $5,000 a los 25 vs. $5,000 a los 35 (ambos al 8% retorno) resulta en $86,000 vs. $46,000 a los 65 - mostrando el poder del tiempo.",
+        "$200 contribuciones mensuales al 6% retorno anual crecen a $144,000 en 30 años, mientras la misma cantidad invertida como suma global crece a solo $107,000 - demostrando invertir consistente vence cronometrar el mercado."
+      ],
+      "resultsExplanation": [
+        "Valor futuro muestra el monto total al que crecerá tu inversión",
+        "Interés total ganado revela cuánto del crecimiento viene de composición",
+        "Desglose de crecimiento muestra la porción de principal vs. interés ganado",
+        "Impacto de contribución regular demuestra el poder de invertir consistentemente"
+      ],
+      "whoItsFor": "Esta calculadora de interés compuesto sirve a ahorradores planeando cuentas de jubilación, inversionistas aprendiendo sobre crecimiento de portafolio, estudiantes entendiendo principios financieros, padres ahorrando para educación de hijos, emprendedores proyectando crecimiento comercial, asesores financieros enseñando clientes, y cualquiera interesado en construcción de riqueza. Es particularmente valiosa para aquellos comparando cuentas de ahorro vs. inversiones, entendiendo costos de préstamos, proyectando ahorros de jubilación, y aprendiendo por qué invertir consistente y a largo plazo supera cronometrar el mercado. La calculadora funciona para cualquier escenario financiero involucrando acumulación de interés con el tiempo.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en suposiciones de interés compuesto y no considera impuestos, tarifas, inflación, volatilidad de mercado, o tasas de interés cambiantes. Los retornos de inversión no están garantizados y rendimiento pasado no predice resultados futuros. Resultados reales pueden variar significativamente basados en condiciones de mercado y circunstancias individuales. Esta herramienta es solo para propósitos educativos y no constituye consejo de inversión. Consulta profesionales financieros calificados para recomendaciones personalizadas de inversión. Recuerda que toda inversión involucra riesgo, incluyendo potencial pérdida de principal.",
+      "relatedTools": [
+        "Calculadoras de inversión para comparar diferentes clases de activos",
+        "Calculadoras de ahorro para planificación de fondos de emergencia",
+        "Calculadoras de préstamos para entender costos de deuda"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre interés simple e interés compuesto?",
+          "answer": "El interés simple gana interés solo sobre el monto principal original. Por ejemplo, $1,000 al 5% interés simple gana $50/año cada año. El interés compuesto gana 'interés sobre interés' - los mismos $1,000 al 5% compuesto anualmente gana $50 el primer año, pero $52.50 el segundo año ($50 sobre original + $2.50 sobre interés ganado). Con el tiempo, esto crea crecimiento exponencial. El interés compuesto es cómo se construye riqueza a través de invertir y ahorrar."
+        },
+        {
+          "question": "¿Por qué es importante la frecuencia de composición?",
+          "answer": "Composición más frecuente acelera crecimiento porque el interés se calcula y agrega más a menudo. $10,000 al 6% retorno anual crecen a $17,908 en 10 años con composición anual, pero $18,174 con composición mensual - una diferencia de $266. Composición diaria maximiza este efecto. Esto explica por qué cuentas de ahorro de alto rendimiento y cuentas de inversión con composición frecuente proporcionan mejores retornos que aquellos compuestos anualmente."
+        },
+        {
+          "question": "¿Cuánto importa realmente comenzar temprano?",
+          "answer": "El tiempo es el factor más poderoso en interés compuesto. $5,000 invertidos a los 25 creciendo al 8% anualmente se convierten en $86,000 a los 65. Los mismos $5,000 invertidos a los 35 se convierten en solo $46,000 a los 65 - menos de la mitad a pesar de la misma inversión y retorno. Comenzar solo 10 años antes puede duplicar o triplicar tus ahorros de jubilación debido al tiempo extra para que funcione la composición."
+        },
+        {
+          "question": "¿Debo enfocarme en retornos más altos o contribuciones más frecuentes?",
+          "answer": "Ambos son importantes, pero consistencia a menudo importa más que perseguir retornos altos. $300 mensuales al 6% retorno crecen a $144,000 en 30 años. $500 mensuales al 8% retorno crecen a $246,000 - mostrando contribuciones más altas crean más riqueza que retornos más altos. Sin embargo, la combinación es ideal. Enfócate en maximizar contribuciones primero, luego optimiza retornos a través de invertir inteligentemente. Pequeños aumentos en contribuciones se componen dramáticamente con el tiempo."
+        },
+        {
+          "question": "¿Cómo afectan los impuestos a los cálculos de interés compuesto?",
+          "answer": "Los impuestos reducen poder de composición al tomar una porción de ganancias cada año. Retornos pre-impuestos del 8% podrían convertirse en 5-6% después de impuestos dependiendo de tu categoría fiscal y tipo de cuenta. Cuentas con ventajas fiscales (401k, IRA) permiten contribuciones pre-impuestos y crecimiento diferido de impuestos. Considera retornos después de impuestos cuando compares inversiones. El arrastre fiscal es por qué inversionistas a largo plazo a menudo prefieren inversiones eficientes fiscalmente y cuentas diseñadas para composición sin interrupciones fiscales anuales."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Juros Compostos",
+    "seoTitle": "Calculadora de Juros Compostos - Calcular Crescimento de Investimentos e Rendimentos",
+    "metaDescription": "Calcule juros compostos em investimentos, poupanças e empréstimos. Calculadora gratuita de juros compostos com opções de capitalização mensal, trimestral e anual.",
+    "keywords": [
+      "calculadora juros compostos",
+      "calculadora investimentos",
+      "calculadora juros",
+      "calculadora crescimento composto",
+      "calculadora rendimentos investimentos"
+    ],
+    "longTailKeywords": [
+      "como calcular juros compostos",
+      "calculadora de juros compostos com depósitos mensais",
+      "o que é fórmula juros compostos",
+      "calculadora de juros compostos para poupança",
+      "como funcionam juros compostos calculadora",
+      "juros compostos vs juros simples calculadora",
+      "calculadora crescimento investimentos juros compostos",
+      "calculadora de juros compostos com diferentes frequências capitalização",
+      "como calcular juros compostos em investimentos",
+      "calculadora de juros compostos para aposentadoria"
+    ],
+    "slug": "compound-interest-calculator",
+    "category": "Financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "juros compostos",
+      "investimento",
+      "poupanças",
+      "crescimento",
+      "rendimentos",
+      "cálculo juros",
+      "finanças"
+    ],
+    "description": "Domine o poder dos juros compostos com nossa calculadora abrangente. Calcule crescimento de investimentos, acumulação de poupanças e a diferença entre juros simples e compostos. Perfeito para investidores, poupadores e qualquer pessoa planejando crescimento financeiro ao longo do tempo.",
+    "summary": "Calcule juros compostos e crescimento de investimentos ao longo do tempo.",
+    "instructions": [
+      "Digite seu investimento inicial ou valor principal",
+      "Digite a taxa de juros anual (como porcentagem)",
+      "Especifique o número de anos para o investimento",
+      "Escolha a frequência de capitalização (diária, mensal, trimestral, anual)",
+      "Opcionalmente adicione contribuições regulares (depósitos/saques mensais)",
+      "Clique em 'Calcular' para ver o valor total do seu investimento e juros ganhos"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Investimento Inicial (R$)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "annualRate",
+          "label": "Taxa de Juros Anual (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "years",
+          "label": "Período de Investimento (Anos)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundingFrequency",
+          "label": "Frequência de Capitalização",
+          "type": "select",
+          "options": [
+            "annually",
+            "semiannually",
+            "quarterly",
+            "monthly",
+            "daily"
+          ],
+          "default": "annually"
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Contribuição Mensal (R$)",
+          "type": "number",
+          "default": 0,
+          "min": -10000,
+          "max": 10000,
+          "step": 50,
+          "optional": true
+        },
+        {
+          "name": "contributionTiming",
+          "label": "Tempo de Contribuição",
+          "type": "select",
+          "options": [
+            "beginning",
+            "end"
+          ],
+          "default": "end",
+          "conditional": "monthlyContribution !== 0"
+        }
+      ],
+      "formula": "Valor Futuro = P(1 + r/n)^(nt) + PMT × (((1 + r/n)^(nt) - 1) / (r/n)) onde P = Principal, r = Taxa Anual, n = Frequência Capitalização, t = Anos, PMT = Contribuição Mensal",
+      "output": {
+        "label": "Valor Futuro",
+        "default": "Digite detalhes do investimento acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Contribuições Totais",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Juros Totais Ganhos",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Investimento Inicial",
+          "field": "initialInvestment",
+          "format": "currency"
+        },
+        {
+          "label": "Detalhamento de Crescimento",
+          "field": "growthBreakdown",
+          "format": "text"
+        },
+        {
+          "label": "Taxa de Crescimento Anual",
+          "field": "annualGrowthRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Valor Final vs Juros Simples",
+          "field": "vsSimpleInterest",
+          "format": "currency"
+        }
+      ],
+      "componentName": "CompoundInterestCalculator"
+    },
+    "examples": [
+      {
+        "title": "Crescimento de Investimento a 10 Anos",
+        "input": {
+          "principal": 10000,
+          "annualRate": 7,
+          "years": 10,
+          "compoundingFrequency": "annually",
+          "monthlyContribution": 0
+        },
+        "output": {
+          "futureValue": 19671.51,
+          "totalContributions": 10000,
+          "totalInterest": 9671.51
+        },
+        "explanation": "Um investimento de R$10.000 a 7% de juros anuais capitalizados anualmente cresce para R$19.671,51 em 10 anos, ganhando R$9.671,51 em juros compostos."
+      },
+      {
+        "title": "Poupança com Capitalização Mensal",
+        "input": {
+          "principal": 5000,
+          "annualRate": 5,
+          "years": 5,
+          "compoundingFrequency": "monthly",
+          "monthlyContribution": 200
+        },
+        "output": {
+          "futureValue": 19482.92,
+          "totalContributions": 17000,
+          "totalInterest": 2482.92
+        },
+        "explanation": "Começando com R$5.000 e adicionando R$200 mensalmente a 5% de juros capitalizados mensalmente resulta em R$19.482,92 após 5 anos. O poder da capitalização frequente e contribuições regulares é evidente."
+      },
+      {
+        "title": "Poupança para Aposentadoria com Contribuições",
+        "input": {
+          "principal": 25000,
+          "annualRate": 8,
+          "years": 30,
+          "compoundingFrequency": "quarterly",
+          "monthlyContribution": 500
+        },
+        "output": {
+          "futureValue": 718961.25,
+          "totalContributions": 235000,
+          "totalInterest": 483961.25
+        },
+        "explanation": "Um plano de aposentadoria de 30 anos com R$25.000 investimento inicial e R$500 contribuições mensais a 8% de juros cresce para R$718.961,25. Os juros compostos geram R$483.961,25 do valor total."
+      },
+      {
+        "title": "Fundo Universitário",
+        "input": {
+          "principal": 0,
+          "annualRate": 6,
+          "years": 18,
+          "compoundingFrequency": "monthly",
+          "monthlyContribution": 300
+        },
+        "output": {
+          "futureValue": 173766.89,
+          "totalContributions": 64800,
+          "totalInterest": 108966.89
+        },
+        "explanation": "Contribuições mensais de R$300 a 6% de juros capitalizados mensalmente por 18 anos acumulam R$173.766,89 para despesas universitárias. Os juros compostos adicionam R$108.966,89 às contribuições investidas."
+      },
+      {
+        "title": "Fundo de Emergência",
+        "input": {
+          "principal": 2000,
+          "annualRate": 3,
+          "years": 3,
+          "compoundingFrequency": "quarterly",
+          "monthlyContribution": 100
+        },
+        "output": {
+          "futureValue": 4727.44,
+          "totalContributions": 4800,
+          "totalInterest": 127.44
+        },
+        "explanation": "Construindo um fundo de emergência com R$2.000 valor inicial e R$100 contribuições mensais a 3% de juros alcança R$4.727,44 em 3 anos. Embora conservador, esta abordagem garante crescimento constante."
+      },
+      {
+        "title": "Comparação de Poupança de Alto Rendimento",
+        "input": {
+          "principal": 15000,
+          "annualRate": 4.5,
+          "years": 2,
+          "compoundingFrequency": "daily",
+          "monthlyContribution": 0
+        },
+        "output": {
+          "futureValue": 16356.46,
+          "totalContributions": 15000,
+          "totalInterest": 1356.46
+        },
+        "explanation": "Um investimento de R$15.000 em uma conta poupança de alto rendimento a 4.5% de juros capitalizados diariamente cresce para R$16.356,46 em 2 anos. A capitalização diária maximiza os juros ganhos."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Investimentos",
+        "slug": "investment-calculator",
+        "description": "Calcule rendimentos de investimentos e crescimento."
+      },
+      {
+        "name": "Calculadora de Poupança",
+        "slug": "savings-calculator",
+        "description": "Calcule crescimento de poupança com juros."
+      },
+      {
+        "name": "Calculadora de Empréstimos",
+        "slug": "loan-calculator",
+        "description": "Calcule pagamentos de empréstimos e juros."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Desbloqueie o incrível poder dos juros compostos com nossa calculadora abrangente de juros compostos que demonstra como o dinheiro cresce exponencialmente ao longo do tempo. Os juros compostos são frequentemente chamados a oitava maravilha do mundo, e entendê-los pode transformar seu futuro financeiro. Seja você economizando para aposentadoria, investindo em ações, ou simplesmente curioso sobre como os juros se acumulam, esta calculadora mostra exatamente como os compostos transformam investimentos pequenos e consistentes em riqueza substancial. Descubra a dramática diferença entre juros simples e compostos, e aprenda por que começar cedo e ser consistente são as chaves para o sucesso financeiro.",
+      "benefits": [
+        "Calcule crescimento de juros compostos para qualquer cenário de investimento",
+        "Compare juros simples vs. compostos para ver a diferença",
+        "Entenda como frequência de composição afeta seus retornos",
+        "Projete valor futuro de investimentos com contribuições regulares",
+        "Veja o impacto de começar cedo vs. começar tarde",
+        "Aprenda os princípios matemáticos por trás da construção de riqueza",
+        "Tome decisões informadas sobre estratégias de economia e investimento",
+        "Visualize o potencial de crescimento exponencial de investir consistentemente"
+      ],
+      "steps": [
+        "Digite seu investimento inicial ou valor principal",
+        "Insira a taxa de juros anual como porcentagem",
+        "Especifique o período de tempo em anos",
+        "Selecione frequência de composição (diária, mensal, trimestral, ou anual)",
+        "Opcionalmente adicione contribuições regulares para média de custo em dólar",
+        "Clique calcular para ver valor futuro e juros totais ganhos"
+      ],
+      "inputsExplained": [
+        "Principal é o valor inicial que você está investindo ou economizando",
+        "Taxa de juros anual é a porcentagem de retorno que você espera ganhar",
+        "Período de tempo determina quanto tempo seu dinheiro crescerá e se comporá",
+        "Frequência de composição mostra com que frequência juros são calculados e adicionados",
+        "Contribuições regulares simulam investir consistentemente (como depósitos mensais)"
+      ],
+      "formulaExplanation": "A fórmula de juros compostos é: Valor Futuro = Principal × (1 + r/n)^(n×t) + PMT × [((1 + r/n)^(n×t) - 1) / (r/n)], onde r é taxa de juros anual, n é frequência de composição, t são anos, e PMT é pagamento regular. Esta fórmula revela por que juros compostos criam crescimento exponencial - os juros de cada período ganham juros sobre si mesmos. Quanto mais frequente a composição (diária > mensal > trimestral > anual), maior o valor final. Entender esta fórmula explica por que pequenas diferenças em taxas ou frequências criam grandes diferenças ao longo do tempo.",
+      "examples": [
+        "$10,000 investidos a 7% retorno anual composto mensalmente crescem para $40,544 em 20 anos - mais que quadruplicando seu dinheiro.",
+        "Começando com $5,000 aos 25 vs. $5,000 aos 35 (ambos a 8% retorno) resulta em $86,000 vs. $46,000 aos 65 - mostrando o poder do tempo.",
+        "$200 contribuições mensais a 6% retorno anual crescem para $144,000 em 30 anos, enquanto a mesma quantia investida como quantia única cresce para apenas $107,000 - demonstrando investir consistente vence cronometrar o mercado."
+      ],
+      "resultsExplanation": [
+        "Valor futuro mostra o valor total para o qual seu investimento crescerá",
+        "Juros totais ganhos revelam quanto do crescimento vem de composição",
+        "Quebra de crescimento mostra a porção de principal vs. juros ganhos",
+        "Impacto de contribuição regular demonstra o poder de investir consistentemente"
+      ],
+      "whoItsFor": "Esta calculadora de juros compostos serve economistas planejando contas de aposentadoria, investidores aprendendo sobre crescimento de portfólio, estudantes entendendo princípios financeiros, pais economizando para educação de filhos, empreendedores projetando crescimento comercial, consultores financeiros ensinando clientes, e qualquer pessoa interessada em construção de riqueza. É particularmente valiosa para aqueles comparando contas de poupança vs. investimentos, entendendo custos de empréstimos, projetando economias de aposentadoria, e aprendendo por que investir consistente e de longo prazo supera cronometrar o mercado. A calculadora funciona para qualquer cenário financeiro envolvendo acumulação de juros ao longo do tempo.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em suposições de juros compostos e não considera impostos, taxas, inflação, volatilidade de mercado, ou taxas de juros mudando. Retornos de investimento não são garantidos e performance passada não prevê resultados futuros. Resultados reais podem variar significativamente baseados em condições de mercado e circunstâncias individuais. Esta ferramenta é apenas para propósitos educacionais e não constitui conselho de investimento. Consulte profissionais financeiros qualificados para recomendações personalizadas de investimento. Lembre-se que todo investimento envolve risco, incluindo potencial perda de principal.",
+      "relatedTools": [
+        "Calculadoras de investimento para comparar diferentes classes de ativos",
+        "Calculadoras de poupança para planejamento de fundos de emergência",
+        "Calculadoras de empréstimo para entender custos de dívida"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre juros simples e juros compostos?",
+          "answer": "Juros simples ganham juros apenas sobre o valor principal original. Por exemplo, $1,000 a 5% juros simples ganha $50/ano todo ano. Juros compostos ganham 'juros sobre juros' - os mesmos $1,000 a 5% compostos anualmente ganham $50 o primeiro ano, mas $52.50 o segundo ano ($50 sobre original + $2.50 sobre juros ganhos). Ao longo do tempo, isso cria crescimento exponencial. Juros compostos é como riqueza é construída através de investir e economizar."
+        },
+        {
+          "question": "Por que frequência de composição é importante?",
+          "answer": "Composição mais frequente acelera crescimento porque juros são calculados e adicionados mais frequentemente. $10,000 a 6% retorno anual crescem para $17,908 em 10 anos com composição anual, mas $18,174 com composição mensal - uma diferença de $266. Composição diária maximiza este efeito. Isso explica por que contas de poupança de alto rendimento e contas de investimento com composição frequente fornecem melhores retornos que aquelas compostas anualmente."
+        },
+        {
+          "question": "Quanto começar cedo realmente importa?",
+          "answer": "Tempo é o fator mais poderoso em juros compostos. $5,000 investidos aos 25 crescendo a 8% anualmente se tornam $86,000 aos 65. Os mesmos $5,000 investidos aos 35 se tornam apenas $46,000 aos 65 - menos que a metade apesar do mesmo investimento e retorno. Começar apenas 10 anos antes pode dobrar ou triplicar suas economias de aposentadoria devido ao tempo extra para composição funcionar."
+        },
+        {
+          "question": "Devo focar em retornos mais altos ou contribuições mais frequentes?",
+          "answer": "Ambos são importantes, mas consistência frequentemente importa mais que perseguir retornos altos. $300 mensais a 6% retorno crescem para $144,000 em 30 anos. $500 mensais a 8% retorno crescem para $246,000 - mostrando contribuições mais altas criam mais riqueza que retornos mais altos. No entanto, a combinação é ideal. Foque em maximizar contribuições primeiro, então otimize retornos através de investir inteligentemente. Pequenos aumentos em contribuições se compõem dramaticamente ao longo do tempo."
+        },
+        {
+          "question": "Como impostos afetam cálculos de juros compostos?",
+          "answer": "Impostos reduzem poder de composição ao tomar uma porção de ganhos a cada ano. Retornos pré-impostos de 8% podem se tornar 5-6% após impostos dependendo de sua categoria fiscal e tipo de conta. Contas com vantagens fiscais (401k, IRA) permitem contribuições pré-impostos e crescimento diferido de impostos. Considere retornos após impostos quando comparar investimentos. O arrasto fiscal é por que investidores de longo prazo frequentemente preferem investimentos eficientes fiscalmente e contas projetadas para composição sem interrupções fiscais anuais."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculatrice d'Intérêts Composés",
+    "seoTitle": "Calculatrice d'Intérêts Composés - Calculer Croissance d'Investissement et Rendements",
+    "metaDescription": "Calculez les intérêts composés sur investissements, épargnes et prêts. Calculatrice gratuite d'intérêts composés avec options de capitalisation mensuelle, trimestrielle et annuelle.",
+    "keywords": [
+      "calculatrice intérêts composés",
+      "calculatrice investissement",
+      "calculatrice intérêt",
+      "calculatrice croissance composée",
+      "calculatrice rendements investissement"
+    ],
+    "longTailKeywords": [
+      "comment calculer intérêts composés",
+      "calculatrice d'intérêts composés avec dépôts mensuels",
+      "quelle est formule intérêts composés",
+      "calculatrice d'intérêts composés pour épargne",
+      "comment fonctionnent intérêts composés calculatrice",
+      "intérêts composés vs intérêts simples calculatrice",
+      "calculatrice croissance investissement intérêts composés",
+      "calculatrice d'intérêts composés avec différentes fréquences capitalisation",
+      "comment calculer intérêts composés sur investissements",
+      "calculatrice d'intérêts composés pour retraite"
+    ],
+    "slug": "compound-interest-calculator",
+    "category": "Financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "intérêts composés",
+      "investissement",
+      "épargnes",
+      "croissance",
+      "rendements",
+      "calcul intérêt",
+      "finance"
+    ],
+    "description": "Maîtrisez la puissance des intérêts composés avec notre calculatrice complète. Calculez la croissance d'investissement, l'accumulation d'épargne et la différence entre intérêts simples et composés. Parfait pour investisseurs, épargnants et toute personne planifiant la croissance financière au fil du temps.",
+    "summary": "Calculez les intérêts composés et la croissance d'investissement au fil du temps.",
+    "instructions": [
+      "Entrez votre investissement initial ou montant principal",
+      "Saisissez le taux d'intérêt annuel (en pourcentage)",
+      "Spécifiez le nombre d'années pour l'investissement",
+      "Choisissez la fréquence de capitalisation (quotidienne, mensuelle, trimestrielle, annuelle)",
+      "Ajoutez optionnellement des contributions régulières (dépôts/retraits mensuels)",
+      "Cliquez sur 'Calculer' pour voir la valeur totale de votre investissement et intérêts gagnés"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Investissement Initial (€)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "annualRate",
+          "label": "Taux d'Intérêt Annuel (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "years",
+          "label": "Période d'Investissement (Années)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundingFrequency",
+          "label": "Fréquence de Capitalisation",
+          "type": "select",
+          "options": [
+            "annually",
+            "semiannually",
+            "quarterly",
+            "monthly",
+            "daily"
+          ],
+          "default": "annually"
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Contribution Mensuelle (€)",
+          "type": "number",
+          "default": 0,
+          "min": -10000,
+          "max": 10000,
+          "step": 50,
+          "optional": true
+        },
+        {
+          "name": "contributionTiming",
+          "label": "Calendrier de Contribution",
+          "type": "select",
+          "options": [
+            "beginning",
+            "end"
+          ],
+          "default": "end",
+          "conditional": "monthlyContribution !== 0"
+        }
+      ],
+      "formula": "Valeur Future = P(1 + r/n)^(nt) + PMT × (((1 + r/n)^(nt) - 1) / (r/n)) où P = Principal, r = Taux Annuel, n = Fréquence Capitalisation, t = Années, PMT = Contribution Mensuelle",
+      "output": {
+        "label": "Valeur Future",
+        "default": "Entrez les détails d'investissement ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Contributions Totales",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Intérêts Totaux Gagnés",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Investissement Initial",
+          "field": "initialInvestment",
+          "format": "currency"
+        },
+        {
+          "label": "Répartition de Croissance",
+          "field": "growthBreakdown",
+          "format": "text"
+        },
+        {
+          "label": "Taux de Croissance Annuel",
+          "field": "annualGrowthRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Montant Final vs Intérêts Simples",
+          "field": "vsSimpleInterest",
+          "format": "currency"
+        }
+      ],
+      "componentName": "CompoundInterestCalculator"
+    },
+    "examples": [
+      {
+        "title": "Croissance d'Investissement sur 10 Ans",
+        "input": {
+          "principal": 10000,
+          "annualRate": 7,
+          "years": 10,
+          "compoundingFrequency": "annually",
+          "monthlyContribution": 0
+        },
+        "output": {
+          "futureValue": 19671.51,
+          "totalContributions": 10000,
+          "totalInterest": 9671.51
+        },
+        "explanation": "Un investissement de 10 000€ à 7% d'intérêt annuel capitalisé annuellement croît à 19 671,51€ en 10 ans, gagnant 9 671,51€ en intérêts composés."
+      },
+      {
+        "title": "Épargne avec Capitalisation Mensuelle",
+        "input": {
+          "principal": 5000,
+          "annualRate": 5,
+          "years": 5,
+          "compoundingFrequency": "monthly",
+          "monthlyContribution": 200
+        },
+        "output": {
+          "futureValue": 19482.92,
+          "totalContributions": 17000,
+          "totalInterest": 2482.92
+        },
+        "explanation": "Commençant avec 5 000€ et ajoutant 200€ mensuellement à 5% d'intérêt capitalisé mensuellement donne 19 482,92€ après 5 ans. La puissance de la capitalisation fréquente et des contributions régulières est évidente."
+      },
+      {
+        "title": "Épargne Retraite avec Contributions",
+        "input": {
+          "principal": 25000,
+          "annualRate": 8,
+          "years": 30,
+          "compoundingFrequency": "quarterly",
+          "monthlyContribution": 500
+        },
+        "output": {
+          "futureValue": 718961.25,
+          "totalContributions": 235000,
+          "totalInterest": 483961.25
+        },
+        "explanation": "Un plan retraite de 30 ans avec 25 000€ investissement initial et 500€ contributions mensuelles à 8% d'intérêt croît à 718 961,25€. Les intérêts composés génèrent 483 961,25€ de la valeur totale."
+      },
+      {
+        "title": "Fonds Étudiant",
+        "input": {
+          "principal": 0,
+          "annualRate": 6,
+          "years": 18,
+          "compoundingFrequency": "monthly",
+          "monthlyContribution": 300
+        },
+        "output": {
+          "futureValue": 173766.89,
+          "totalContributions": 64800,
+          "totalInterest": 108966.89
+        },
+        "explanation": "Contributions mensuelles de 300€ à 6% d'intérêt capitalisé mensuellement pendant 18 ans accumulent 173 766,89€ pour dépenses universitaires. Les intérêts composés ajoutent 108 966,89€ aux contributions investies."
+      },
+      {
+        "title": "Fonds d'Urgence",
+        "input": {
+          "principal": 2000,
+          "annualRate": 3,
+          "years": 3,
+          "compoundingFrequency": "quarterly",
+          "monthlyContribution": 100
+        },
+        "output": {
+          "futureValue": 4727.44,
+          "totalContributions": 4800,
+          "totalInterest": 127.44
+        },
+        "explanation": "Construisant un fonds d'urgence avec 2 000€ montant initial et 100€ contributions mensuelles à 3% d'intérêt atteint 4 727,44€ en 3 ans. Bien que conservateur, cette approche assure une croissance constante."
+      },
+      {
+        "title": "Comparaison Épargne Haut Rendement",
+        "input": {
+          "principal": 15000,
+          "annualRate": 4.5,
+          "years": 2,
+          "compoundingFrequency": "daily",
+          "monthlyContribution": 0
+        },
+        "output": {
+          "futureValue": 16356.46,
+          "totalContributions": 15000,
+          "totalInterest": 1356.46
+        },
+        "explanation": "Un investissement de 15 000€ dans un compte épargne haut rendement à 4.5% d'intérêt capitalisé quotidiennement croît à 16 356,46€ en 2 ans. La capitalisation quotidienne maximise les intérêts gagnés."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice d'Investissement",
+        "slug": "investment-calculator",
+        "description": "Calculez les rendements d'investissement et croissance."
+      },
+      {
+        "name": "Calculatrice d'Épargne",
+        "slug": "savings-calculator",
+        "description": "Calculez la croissance d'épargne avec intérêts."
+      },
+      {
+        "name": "Calculatrice de Prêt",
+        "slug": "loan-calculator",
+        "description": "Calculez les paiements de prêt et intérêts."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Débloquez l'incroyable puissance des intérêts composés avec notre calculatrice complète d'intérêts composés qui démontre comment l'argent croît exponentiellement au fil du temps. Les intérêts composés sont souvent appelés la huitième merveille du monde, et les comprendre peut transformer votre avenir financier. Que vous épargniez pour la retraite, investissiez en actions, ou soyez simplement curieux de savoir comment les intérêts s'accumulent, cette calculatrice vous montre exactement comment la composition transforme de petits investissements cohérents en richesse substantielle. Découvrez la différence dramatique entre intérêts simples et composés, et apprenez pourquoi commencer tôt et être cohérent sont les clés du succès financier.",
+      "benefits": [
+        "Calculez la croissance des intérêts composés pour tout scénario d'investissement",
+        "Comparez intérêts simples vs. composés pour voir la différence",
+        "Comprenez comment la fréquence de composition affecte vos rendements",
+        "Projetez la valeur future d'investissements avec contributions régulières",
+        "Voyez l'impact de commencer tôt vs. commencer tard",
+        "Apprenez les principes mathématiques derrière la construction de richesse",
+        "Prenez des décisions éclairées concernant stratégies d'épargne et d'investissement",
+        "Visualisez le potentiel de croissance exponentielle d'investir de manière cohérente"
+      ],
+      "steps": [
+        "Entrez votre investissement initial ou montant principal",
+        "Saisissez le taux d'intérêt annuel en pourcentage",
+        "Spécifiez la période de temps en années",
+        "Sélectionnez la fréquence de composition (quotidienne, mensuelle, trimestrielle, ou annuelle)",
+        "Ajoutez optionnellement des contributions régulières pour moyenne du coût en dollars",
+        "Cliquez calculer pour voir valeur future et intérêts totaux gagnés"
+      ],
+      "inputsExplained": [
+        "Principal est le montant initial que vous investissez ou épargnez",
+        "Taux d'intérêt annuel est le pourcentage de rendement que vous attendez gagner",
+        "Période de temps détermine combien de temps votre argent grandira et se composera",
+        "Fréquence de composition montre combien souvent les intérêts sont calculés et ajoutés",
+        "Contributions régulières simulent investir de manière cohérente (comme dépôts mensuels)"
+      ],
+      "formulaExplanation": "La formule d'intérêts composés est : Valeur Future = Principal × (1 + r/n)^(n×t) + PMT × [((1 + r/n)^(n×t) - 1) / (r/n)], où r est taux d'intérêt annuel, n est fréquence de composition, t sont années, et PMT est paiement régulier. Cette formule révèle pourquoi les intérêts composés créent une croissance exponentielle - les intérêts de chaque période gagnent des intérêts sur eux-mêmes. Plus fréquente la composition (quotidienne > mensuelle > trimestrielle > annuelle), plus élevé le montant final. Comprendre cette formule explique pourquoi de petites différences en taux ou fréquences créent de grandes différences au fil du temps.",
+      "examples": [
+        "10 000 $ investis à 7 % rendement annuel composé mensuellement croissent à 40 544 $ en 20 ans - plus que quadruplant votre argent.",
+        "Commencer avec 5 000 $ à 25 ans vs. 5 000 $ à 35 ans (les deux à 8 % rendement) résulte en 86 000 $ vs. 46 000 $ à 65 ans - montrant la puissance du temps.",
+        "200 $ contributions mensuelles à 6 % rendement annuel croissent à 144 000 $ en 30 ans, tandis que le même montant investi comme somme globale croît à seulement 107 000 $ - démontrant investir cohérent bat chronométrer le marché."
+      ],
+      "resultsExplanation": [
+        "Valeur future montre le montant total auquel votre investissement grandira",
+        "Intérêts totaux gagnés révèlent combien de la croissance vient de composition",
+        "Ventilation de croissance montre la portion principal vs. intérêts gagnés",
+        "Impact de contribution régulière démontre la puissance d'investir de manière cohérente"
+      ],
+      "whoItsFor": "Cette calculatrice d'intérêts composés sert épargnants planifiant comptes retraite, investisseurs apprenant croissance portefeuille, étudiants comprenant principes financiers, parents épargnant pour éducation enfants, entrepreneurs projetant croissance commerciale, conseillers financiers enseignant clients, et quiconque intéressé par construction de richesse. Elle est particulièrement précieuse pour ceux comparant comptes épargne vs. investissements, comprenant coûts prêt, projetant épargnes retraite, et apprenant pourquoi investir cohérent et long terme surpasse chronométrer marché. La calculatrice fonctionne pour tout scénario financier impliquant accumulation d'intérêts au fil du temps.",
+      "disclaimer": "Cette calculatrice fournit des estimations basées sur hypothèses d'intérêts composés et ne tient pas compte impôts, frais, inflation, volatilité marché, ou taux d'intérêt changeants. Rendements d'investissement ne sont pas garantis et performance passée ne prédit pas résultats futurs. Résultats réels peuvent varier significativement basés sur conditions marché et circonstances individuelles. Cet outil est uniquement à des fins éducatives et ne constitue pas conseil d'investissement. Consultez professionnels financiers qualifiés pour recommandations d'investissement personnalisées. Souvenez-vous que tout investissement implique risque, incluant perte potentielle de principal.",
+      "relatedTools": [
+        "Calculatrices d'investissement pour comparer différentes classes d'actifs",
+        "Calculatrices d'épargne pour planification fonds urgence",
+        "Calculatrices de prêt pour comprendre coûts dette"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre intérêts simples et intérêts composés ?",
+          "answer": "Les intérêts simples gagnent des intérêts uniquement sur le montant principal original. Par exemple, 1 000 $ à 5 % intérêts simples gagnent 50 $/an chaque année. Les intérêts composés gagnent 'intérêts sur intérêts' - les mêmes 1 000 $ à 5 % composés annuellement gagnent 50 $ la première année, mais 52,50 $ la deuxième année (50 $ sur original + 2,50 $ sur intérêts gagnés). Avec le temps, cela crée une croissance exponentielle. Les intérêts composés sont comment la richesse est construite à travers investir et épargner."
+        },
+        {
+          "question": "Pourquoi la fréquence de composition est-elle importante ?",
+          "answer": "Composition plus fréquente accélère la croissance car les intérêts sont calculés et ajoutés plus souvent. 10 000 $ à 6 % rendement annuel croissent à 17 908 $ en 10 ans avec composition annuelle, mais 18 174 $ avec composition mensuelle - une différence de 266 $. Composition quotidienne maximise cet effet. Cela explique pourquoi comptes épargne haut rendement et comptes investissement avec composition fréquente fournissent de meilleurs rendements que ceux composés annuellement."
+        },
+        {
+          "question": "Combien commencer tôt importe-t-il vraiment ?",
+          "answer": "Le temps est le facteur le plus puissant dans les intérêts composés. 5 000 $ investis à 25 ans croissant à 8 % annuellement deviennent 86 000 $ à 65 ans. Les mêmes 5 000 $ investis à 35 ans deviennent seulement 46 000 $ à 65 ans - moins de la moitié malgré le même investissement et rendement. Commencer juste 10 ans plus tôt peut doubler ou tripler vos épargnes retraite en raison du temps supplémentaire pour que la composition fonctionne."
+        },
+        {
+          "question": "Dois-je me concentrer sur des rendements plus élevés ou des contributions plus fréquentes ?",
+          "answer": "Les deux sont importants, mais la cohérence importe souvent plus que poursuivre des rendements élevés. 300 $ mensuels à 6 % rendement croissent à 144 000 $ en 30 ans. 500 $ mensuels à 8 % rendement croissent à 246 000 $ - montrant contributions plus élevées créent plus de richesse que rendements plus élevés. Cependant, la combinaison est idéale. Concentrez-vous sur maximiser contributions d'abord, puis optimisez rendements à travers investir intelligemment. Petits augmentations en contributions se composent dramatiquement au fil du temps."
+        },
+        {
+          "question": "¿Comment les taxes affectent-elles les calculs d'intérêts composés ?",
+          "answer": "Les taxes réduisent la puissance de composition en prenant une portion de gains chaque année. Rendements pré-taxes de 8 % pourraient devenir 5-6 % après taxes selon votre tranche fiscale et type de compte. Comptes fiscalement avantageux (401k, IRA) permettent contributions pré-taxes et croissance différée fiscalement. Considérez rendements après taxes quand comparer investissements. Le frein fiscal est pourquoi investisseurs long terme préfèrent souvent investissements fiscalement efficaces et comptes conçus pour composition sans interruptions fiscales annuelles."
+        }
+      ]
+    }
+  }
+}

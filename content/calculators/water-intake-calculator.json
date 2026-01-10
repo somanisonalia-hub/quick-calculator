@@ -1,0 +1,1142 @@
+{
+  "en": {
+    "title": "Water Intake Calculator",
+    "seoTitle": "Water Intake Calculator - Daily Hydration Requirements Calculator",
+    "metaDescription": "Calculate your daily water intake requirements based on weight, activity level, and climate. Free hydration calculator for optimal health and performance.",
+    "keywords": [
+      "water intake calculator",
+      "daily water calculator",
+      "hydration calculator",
+      "how much water should I drink",
+      "water requirements calculator",
+      "daily hydration calculator",
+      "water intake by weight",
+      "hydration needs calculator",
+      "drink water calculator",
+      "water consumption calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate daily water intake",
+      "what is my daily water requirement",
+      "water intake calculator based on weight",
+      "how much water per day for my weight",
+      "hydration calculator for athletes",
+      "daily water needs calculator",
+      "water intake during exercise",
+      "how much water should I drink daily",
+      "water consumption calculator by age",
+      "hydration requirements for women",
+      "water intake calculator for men"
+    ],
+    "slug": "water-intake-calculator",
+    "category": "Health",
+    "calculatorComponent": "WaterIntakeCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "water intake",
+      "hydration",
+      "daily water",
+      "health calculator",
+      "fitness hydration",
+      "water requirements",
+      "hydration calculator"
+    ],
+    "summary": "Calculate your optimal daily water intake based on weight, activity level, and environmental factors.",
+    "description": "Professional water intake calculator that determines your daily hydration requirements based on body weight, activity level, climate conditions, and health factors. Essential for maintaining optimal health, athletic performance, and preventing dehydration.",
+    "instructions": [
+      "Enter your body weight in kilograms or pounds",
+      "Select your activity level",
+      "Choose your climate conditions",
+      "Select any relevant health conditions",
+      "Enter your age for age-appropriate recommendations",
+      "Choose your gender",
+      "View your personalized daily water intake recommendations"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Body Weight",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Weight Unit",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "activityLevel",
+        "label": "Activity Level",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "climate",
+        "label": "Climate Conditions",
+        "type": "select",
+        "default": "normal",
+        "options": ["normal", "hot_dry", "cold_dry", "humid"]
+      },
+      {
+        "name": "healthCondition",
+        "label": "Health Conditions",
+        "type": "select",
+        "default": "normal",
+        "options": ["normal", "pregnancy", "breastfeeding", "illness", "elderly"]
+      },
+      {
+        "name": "age",
+        "label": "Age",
+        "type": "number",
+        "default": 30,
+        "min": 1,
+        "max": 120,
+        "step": 1,
+        "unit": "years"
+      },
+      {
+        "name": "gender",
+        "label": "Gender",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      }
+    ],
+    "formula": "Base Water Intake = 30-35ml × Body Weight (kg)\nActivity Adjustment = Base × Activity Multiplier (1.0-2.0)\nClimate Adjustment = Base × Climate Multiplier (1.0-1.5)\nHealth Adjustment = Base × Health Multiplier (1.0-2.0)\nDaily Water Intake = Adjusted Base + Adjustments",
+    "output": {
+      "label": "Daily Water Intake",
+      "default": "0ml",
+      "format": "number",
+      "unit": "ml"
+    },
+    "additionalOutputs": [
+      {
+        "name": "waterLiters",
+        "label": "Daily Water (Liters)",
+        "default": "0.0L",
+        "format": "decimal",
+        "unit": "liters"
+      },
+      {
+        "name": "waterOunces",
+        "label": "Daily Water (Ounces)",
+        "default": "0oz",
+        "format": "number",
+        "unit": "ounces"
+      },
+      {
+        "name": "waterCups",
+        "label": "Daily Water (Cups)",
+        "default": "0cups",
+        "format": "decimal",
+        "unit": "cups"
+      },
+      {
+        "name": "hydrationSchedule",
+        "label": "Suggested Schedule",
+        "default": "Drink throughout the day",
+        "format": "text",
+        "unit": ""
+      }
+    ],
+    "examples": [
+      {
+        "title": "Moderately Active Adult, Normal Climate",
+        "inputs": {
+          "weight": 70,
+          "weightUnit": "kg",
+          "activityLevel": "moderately_active",
+          "climate": "normal",
+          "healthCondition": "normal",
+          "age": 30,
+          "gender": "male"
+        },
+        "outputs": {
+          "dailyWaterIntake": 2450,
+          "waterLiters": 2.5,
+          "waterOunces": 83,
+          "waterCups": 10.4,
+          "hydrationSchedule": "8 glasses throughout the day"
+        }
+      },
+      {
+        "title": "Very Active Athlete, Hot Climate",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "activityLevel": "very_active",
+          "climate": "hot_dry",
+          "healthCondition": "normal",
+          "age": 25,
+          "gender": "male"
+        },
+        "outputs": {
+          "dailyWaterIntake": 4000,
+          "waterLiters": 4.0,
+          "waterOunces": 135,
+          "waterCups": 16.9,
+          "hydrationSchedule": "Drink before, during, and after exercise"
+        }
+      },
+      {
+        "title": "Pregnant Woman, Normal Conditions",
+        "inputs": {
+          "weight": 65,
+          "weightUnit": "kg",
+          "activityLevel": "lightly_active",
+          "climate": "normal",
+          "healthCondition": "pregnancy",
+          "age": 28,
+          "gender": "female"
+        },
+        "outputs": {
+          "dailyWaterIntake": 2600,
+          "waterLiters": 2.6,
+          "waterOunces": 88,
+          "waterCups": 11.0,
+          "hydrationSchedule": "Small sips throughout the day"
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "calorie-calculator",
+      "protein-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate your optimal daily water intake with our comprehensive Water Intake Calculator. Proper hydration is essential for health, athletic performance, and preventing dehydration. Our calculator provides personalized recommendations based on your body weight, activity level, climate, and health conditions.",
+      "benefits": [
+        "Calculate personalized daily water requirements",
+        "Account for activity level and environmental factors",
+        "Consider health conditions and special circumstances",
+        "Get recommendations in multiple units (ml, liters, ounces, cups)",
+        "Learn proper hydration timing and scheduling",
+        "Optimize athletic performance and recovery",
+        "Support overall health and wellness goals",
+        "Prevent dehydration and related health issues"
+      ],
+      "howToUse": [
+        "Enter your current body weight in kilograms or pounds",
+        "Select your activity level from sedentary to extremely active",
+        "Choose your climate conditions (normal, hot/dry, cold/dry, humid)",
+        "Select any relevant health conditions or special circumstances",
+        "Enter your age for age-appropriate recommendations",
+        "Choose your gender for personalized calculations",
+        "Review your daily water intake recommendations in multiple formats"
+      ],
+      "formulaExplanation": "Water intake calculations are based on established health guidelines. The base formula uses 30-35ml of water per kg of body weight. Activity level adds 20-100% more water (athletes and very active people need significantly more). Climate conditions add 10-50% more in hot/dry or humid environments. Health conditions like pregnancy or illness can increase needs by 20-100%. Age and gender have minor effects on total requirements.",
+      "examples": [
+        "A 70kg moderately active adult in normal climate needs about 2.5 liters (10 cups) of water daily, or about 8 glasses throughout the day",
+        "An 80kg very active athlete in hot/dry climate needs about 4 liters (17 cups) of water daily, with special attention to pre/during/post exercise hydration",
+        "A 65kg pregnant woman with light activity needs about 2.6 liters (11 cups) of water daily, sipped throughout the day for optimal fetal health"
+      ],
+      "whoShouldUse": "Health-conscious individuals, athletes and fitness enthusiasts, pregnant women and nursing mothers, elderly people, people living in hot climates, individuals with medical conditions, travelers, and anyone wanting to optimize their hydration for health and performance.",
+      "importantNotes": "These recommendations are general guidelines based on established health research. Individual needs may vary based on sweat rate, urine color, thirst, medications, caffeine/alcohol intake, and specific health conditions. The calculator provides estimates - monitor your urine color (pale yellow is ideal) and adjust intake based on your body's signals. Consult a healthcare provider for specific medical conditions or extreme circumstances.",
+      "relatedTools": [
+        "BMI Calculator - Assess overall body composition",
+        "BMR Calculator - Calculate basal metabolic needs",
+        "Calorie Calculator - Estimate daily energy requirements",
+        "Protein Intake Calculator - Calculate protein needs",
+        "Ideal Weight Calculator - Find healthy weight range"
+      ],
+      "faqs": [
+        {
+          "question": "How much water should I drink per day?",
+          "answer": "Daily water needs vary by individual: generally 3.7 liters for men and 2.7 liters for women from all sources (food provides about 20%). Factors like activity level, climate, and health conditions can increase requirements significantly. Use our calculator for personalized recommendations."
+        },
+        {
+          "question": "Does coffee and tea count toward daily water intake?",
+          "answer": "Yes, but in moderation. Caffeinated beverages have a mild diuretic effect, so they contribute to hydration but aren't as effective as plain water. Alcohol has a dehydrating effect and doesn't count toward daily water intake. For every caffeinated or alcoholic drink, you may need an extra glass of water."
+        },
+        {
+          "question": "How do I know if I'm drinking enough water?",
+          "answer": "Monitor urine color - pale yellow or clear indicates good hydration, dark yellow suggests you need more water. Other signs of adequate hydration include regular urination, moist mouth and lips, and absence of thirst. Dehydration signs include dry mouth, fatigue, dizziness, and dark urine."
+        },
+        {
+          "question": "Should I drink more water when exercising?",
+          "answer": "Yes, significantly more. Drink 16-32 ounces (475-950ml) of water 2-3 hours before exercise, 6-12 ounces (175-350ml) every 15-20 minutes during exercise, and 16-24 ounces (475-710ml) for every pound (0.45kg) of body weight lost after exercise. In hot weather, increase by 50%."
+        },
+        {
+          "question": "Does drinking more water help with weight loss?",
+          "answer": "Water can support weight loss in several ways: it helps control hunger by filling the stomach, boosts metabolism slightly, helps the body burn fat more efficiently, and can replace high-calorie drinks. Drinking water before meals may reduce calorie intake. However, water alone won't cause weight loss without a calorie deficit."
+        },
+        {
+          "question": "Can I drink too much water?",
+          "answer": "Yes, though rare, overhydration (hyponatremia) can occur, especially during endurance events with excessive water intake without electrolyte replacement. Symptoms include nausea, headache, confusion, and in severe cases, seizures. Stick to recommended amounts and listen to your body's thirst signals."
+        },
+        {
+          "question": "Does food provide water intake?",
+          "answer": "Yes, about 20-30% of daily water comes from food. Water-rich foods like fruits and vegetables (cucumbers, watermelon, oranges) contribute significantly. Soups, broths, and foods with high water content help meet daily hydration needs."
+        },
+        {
+          "question": "How does climate affect water needs?",
+          "answer": "Hot and dry climates increase water loss through sweat and respiration, requiring 50-100% more water intake. Cold climates can also increase needs due to dry air and indoor heating. Humid climates may require more water for cooling the body. High altitude can increase water needs due to faster breathing."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Ingesta de Agua",
+    "seoTitle": "Calculadora de Ingesta de Agua - Calculadora de Requerimientos Diarios de Hidratación",
+    "metaDescription": "Calcula tus requerimientos diarios de ingesta de agua basados en peso, nivel de actividad y clima. Calculadora gratuita de hidratación para salud y rendimiento óptimos.",
+    "keywords": [
+      "calculadora ingesta agua",
+      "calculadora agua diaria",
+      "calculadora hidratación",
+      "cuánta agua debo beber",
+      "calculadora requerimientos agua",
+      "calculadora hidratación diaria",
+      "ingesta agua por peso",
+      "calculadora necesidades hidratación",
+      "calculadora beber agua",
+      "calculadora consumo agua"
+    ],
+    "longTailKeywords": [
+      "cómo calcular ingesta diaria de agua",
+      "cuál es mi requerimiento diario de agua",
+      "calculadora ingesta agua basada en peso",
+      "cuánta agua por día para mi peso",
+      "calculadora hidratación para atletas",
+      "calculadora necesidades diarias agua",
+      "ingesta agua durante ejercicio",
+      "cuánta agua debo beber diariamente",
+      "calculadora consumo agua por edad",
+      "requerimientos hidratación para mujeres",
+      "calculadora ingesta agua para hombres"
+    ],
+    "slug": "water-intake-calculator",
+    "category": "Health",
+    "calculatorComponent": "WaterIntakeCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "ingesta agua",
+      "hidratación",
+      "agua diaria",
+      "calculadora salud",
+      "hidratación fitness",
+      "requerimientos agua",
+      "calculadora hidratación"
+    ],
+    "summary": "Calcula tu ingesta óptima diaria de agua basada en peso, nivel de actividad y factores ambientales.",
+    "description": "Calculadora profesional de ingesta de agua que determina tus requerimientos diarios de hidratación basados en peso corporal, nivel de actividad, condiciones climáticas y factores de salud. Esencial para mantener salud óptima, rendimiento atlético y prevenir deshidratación.",
+    "instructions": [
+      "Ingresa tu peso corporal en kilogramos o libras",
+      "Selecciona tu nivel de actividad",
+      "Elige tus condiciones climáticas",
+      "Selecciona cualquier condición de salud relevante",
+      "Ingresa tu edad para recomendaciones apropiadas por edad",
+      "Elige tu género",
+      "Ve tus recomendaciones personalizadas de ingesta diaria de agua"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Peso Corporal",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unidad de Peso",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "activityLevel",
+        "label": "Nivel de Actividad",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "climate",
+        "label": "Condiciones Climáticas",
+        "type": "select",
+        "default": "normal",
+        "options": ["normal", "hot_dry", "cold_dry", "humid"]
+      },
+      {
+        "name": "healthCondition",
+        "label": "Condiciones de Salud",
+        "type": "select",
+        "default": "normal",
+        "options": ["normal", "pregnancy", "breastfeeding", "illness", "elderly"]
+      },
+      {
+        "name": "age",
+        "label": "Edad",
+        "type": "number",
+        "default": 30,
+        "min": 1,
+        "max": 120,
+        "step": 1,
+        "unit": "años"
+      },
+      {
+        "name": "gender",
+        "label": "Género",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      }
+    ],
+    "formula": "Ingesta Base Agua = 30-35ml × Peso Corporal (kg)\nAjuste Actividad = Base × Multiplicador Actividad (1.0-2.0)\nAjuste Clima = Base × Multiplicador Clima (1.0-1.5)\nAjuste Salud = Base × Multiplicador Salud (1.0-2.0)\nIngesta Diaria Agua = Base Ajustada + Ajustes",
+    "output": {
+      "label": "Ingesta Diaria de Agua",
+      "default": "0ml",
+      "format": "number",
+      "unit": "ml"
+    },
+    "additionalOutputs": [
+      {
+        "name": "waterLiters",
+        "label": "Agua Diaria (Litros)",
+        "default": "0.0L",
+        "format": "decimal",
+        "unit": "litros"
+      },
+      {
+        "name": "waterOunces",
+        "label": "Agua Diaria (Onzas)",
+        "default": "0oz",
+        "format": "number",
+        "unit": "onzas"
+      },
+      {
+        "name": "waterCups",
+        "label": "Agua Diaria (Tazas)",
+        "default": "0tazas",
+        "format": "decimal",
+        "unit": "tazas"
+      },
+      {
+        "name": "hydrationSchedule",
+        "label": "Horario Sugerido",
+        "default": "Bebe a lo largo del día",
+        "format": "text",
+        "unit": ""
+      }
+    ],
+    "examples": [
+      {
+        "title": "Adulto Moderadamente Activo, Clima Normal",
+        "inputs": {
+          "weight": 70,
+          "weightUnit": "kg",
+          "activityLevel": "moderately_active",
+          "climate": "normal",
+          "healthCondition": "normal",
+          "age": 30,
+          "gender": "male"
+        },
+        "outputs": {
+          "dailyWaterIntake": 2450,
+          "waterLiters": 2.5,
+          "waterOunces": 83,
+          "waterCups": 10.4,
+          "hydrationSchedule": "8 vasos a lo largo del día"
+        }
+      },
+      {
+        "title": "Atleta Muy Activo, Clima Caliente",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "activityLevel": "very_active",
+          "climate": "hot_dry",
+          "healthCondition": "normal",
+          "age": 25,
+          "gender": "male"
+        },
+        "outputs": {
+          "dailyWaterIntake": 4000,
+          "waterLiters": 4.0,
+          "waterOunces": 135,
+          "waterCups": 16.9,
+          "hydrationSchedule": "Bebe antes, durante y después del ejercicio"
+        }
+      },
+      {
+        "title": "Mujer Embarazada, Condiciones Normales",
+        "inputs": {
+          "weight": 65,
+          "weightUnit": "kg",
+          "activityLevel": "lightly_active",
+          "climate": "normal",
+          "healthCondition": "pregnancy",
+          "age": 28,
+          "gender": "female"
+        },
+        "outputs": {
+          "dailyWaterIntake": 2600,
+          "waterLiters": 2.6,
+          "waterOunces": 88,
+          "waterCups": 11.0,
+          "hydrationSchedule": "Pequeños sorbos a lo largo del día"
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "calorie-calculator",
+      "protein-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcula tu ingesta óptima diaria de agua con nuestra completa Calculadora de Ingesta de Agua. La hidratación adecuada es esencial para la salud, rendimiento atlético y prevención de deshidratación. Nuestra calculadora proporciona recomendaciones personalizadas basadas en tu peso corporal, nivel de actividad, clima y condiciones de salud.",
+      "benefits": [
+        "Calcula requerimientos diarios personalizados de agua",
+        "Considera nivel de actividad y factores ambientales",
+        "Cuenta condiciones de salud y circunstancias especiales",
+        "Obtén recomendaciones en múltiples unidades (ml, litros, onzas, tazas)",
+        "Aprende timing y programación apropiados de hidratación",
+        "Optimiza rendimiento atlético y recuperación",
+        "Apoya objetivos generales de salud y bienestar",
+        "Previene deshidratación y problemas relacionados con la salud"
+      ],
+      "howToUse": [
+        "Ingresa tu peso corporal actual en kilogramos o libras",
+        "Selecciona tu nivel de actividad desde sedentario hasta extremadamente activo",
+        "Elige tus condiciones climáticas (normal, caliente/seco, frío/seco, húmedo)",
+        "Selecciona cualquier condición de salud relevante o circunstancia especial",
+        "Ingresa tu edad para recomendaciones apropiadas por edad",
+        "Elige tu género para cálculos personalizados",
+        "Revisa tus recomendaciones de ingesta diaria de agua en múltiples formatos"
+      ],
+      "formulaExplanation": "Los cálculos de ingesta de agua se basan en guías de salud establecidas. La fórmula base usa 30-35ml de agua por kg de peso corporal. El nivel de actividad agrega 20-100% más agua (atletas y personas muy activas necesitan significativamente más). Las condiciones climáticas agregan 10-50% más en ambientes calientes/secos o húmedos. Las condiciones de salud como embarazo o enfermedad pueden aumentar necesidades en 20-100%. La edad y género tienen efectos menores en requerimientos totales.",
+      "examples": [
+        "Un adulto de 70kg moderadamente activo en clima normal necesita cerca de 2.5 litros (10 tazas) de agua diariamente, o cerca de 8 vasos a lo largo del día",
+        "Un atleta de 80kg muy activo en clima caliente/seco necesita cerca de 4 litros (17 tazas) de agua diariamente, con atención especial a hidratación pre/durante/post ejercicio",
+        "Una mujer embarazada de 65kg con actividad ligera necesita cerca de 2.6 litros (11 tazas) de agua diariamente, sorbida a lo largo del día para salud fetal óptima"
+      ],
+      "whoShouldUse": "Individuos conscientes de la salud, atletas y entusiastas del fitness, mujeres embarazadas y lactantes, personas mayores, personas viviendo en climas calientes, individuos con condiciones médicas, viajeros, y cualquiera queriendo optimizar su hidratación para salud y rendimiento.",
+      "importantNotes": "Estas recomendaciones son guías generales basadas en investigación de salud establecida. Las necesidades individuales pueden variar basadas en tasa de sudor, color de orina, sed, medicamentos, ingesta de cafeína/alcohol y condiciones de salud específicas. La calculadora proporciona estimaciones - monitorea el color de tu orina (amarillo pálido es ideal) y ajusta ingesta basándote en señales de tu cuerpo. Consulta un proveedor de atención médica para condiciones médicas específicas o circunstancias extremas.",
+      "relatedTools": [
+        "Calculadora IMC - Evalúa composición corporal general",
+        "Calculadora TMB - Calcula necesidades metabólicas basales",
+        "Calculadora Calorías - Estima requerimientos diarios de energía",
+        "Calculadora Ingesta Proteína - Calcula necesidades de proteína",
+        "Calculadora Peso Ideal - Encuentra rango saludable de peso"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánta agua debo beber por día?",
+          "answer": "Las necesidades diarias de agua varían por individuo: generalmente 3.7 litros para hombres y 2.7 litros para mujeres de todas las fuentes (comida proporciona cerca de 20%). Factores como nivel de actividad, clima y condiciones de salud pueden aumentar requerimientos significativamente. Usa nuestra calculadora para recomendaciones personalizadas."
+        },
+        {
+          "question": "¿Cuenta el café y té hacia la ingesta diaria de agua?",
+          "answer": "Sí, pero en moderación. Las bebidas cafeinadas tienen un efecto diurético leve, así que contribuyen a hidratación pero no son tan efectivas como agua simple. El alcohol tiene un efecto deshidratante y no cuenta hacia ingesta diaria de agua. Por cada bebida cafeinada o alcohólica, puedes necesitar un vaso extra de agua."
+        },
+        {
+          "question": "¿Cómo sé si estoy bebiendo suficiente agua?",
+          "answer": "Monitorea color de orina - amarillo pálido o claro indica buena hidratación, amarillo oscuro sugiere necesitas más agua. Otros signos de hidratación adecuada incluyen micción regular, boca y labios húmedos, y ausencia de sed. Signos de deshidratación incluyen boca seca, fatiga, mareo y orina oscura."
+        },
+        {
+          "question": "¿Debo beber más agua cuando hago ejercicio?",
+          "answer": "Sí, significativamente más. Bebe 16-32 onzas (475-950ml) de agua 2-3 horas antes del ejercicio, 6-12 onzas (175-350ml) cada 15-20 minutos durante ejercicio, y 16-24 onzas (475-710ml) por cada libra (0.45kg) de peso corporal perdido después del ejercicio. En clima caliente, aumenta en 50%."
+        },
+        {
+          "question": "¿Beber más agua ayuda con pérdida de peso?",
+          "answer": "El agua puede apoyar pérdida de peso de varias maneras: ayuda controlar hambre llenando el estómago, aumenta metabolismo ligeramente, ayuda el cuerpo quemar grasa más eficientemente, y puede reemplazar bebidas altas en calorías. Beber agua antes de comidas puede reducir ingesta calórica. Sin embargo, agua sola no causará pérdida de peso sin déficit calórico."
+        },
+        {
+          "question": "¿Puedo beber demasiada agua?",
+          "answer": "Sí, aunque raro, sobrehidratación (hiponatremia) puede ocurrir, especialmente durante eventos de resistencia con ingesta excesiva de agua sin reemplazo de electrolitos. Síntomas incluyen náusea, dolor de cabeza, confusión, y en casos severos, convulsiones. Mantente en cantidades recomendadas y escucha señales de sed de tu cuerpo."
+        },
+        {
+          "question": "¿La comida proporciona ingesta de agua?",
+          "answer": "Sí, cerca de 20-30% de agua diaria viene de comida. Alimentos ricos en agua como frutas y vegetales (pepinos, sandía, naranjas) contribuyen significativamente. Sopas, caldos y alimentos con alto contenido de agua ayudan cumplir necesidades diarias de hidratación."
+        },
+        {
+          "question": "¿Cómo afecta el clima las necesidades de agua?",
+          "answer": "Climas calientes y secos aumentan pérdida de agua a través de sudor y respiración, requiriendo 50-100% más ingesta de agua. Climas fríos también pueden aumentar necesidades debido a aire seco y calefacción indoor. Climas húmedos pueden requerir más agua para enfriar el cuerpo. Altitud alta puede aumentar necesidades de agua debido a respiración más rápida."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Ingestão de Água",
+    "seoTitle": "Calculadora de Ingestão de Água - Calculadora de Requerimentos Diários de Hidratação",
+    "metaDescription": "Calcule seus requerimentos diários de ingestão de água baseados em peso, nível de atividade e clima. Calculadora gratuita de hidratação para saúde e performance ótimas.",
+    "keywords": [
+      "calculadora ingestão água",
+      "calculadora água diária",
+      "calculadora hidratação",
+      "quanto água devo beber",
+      "calculadora requerimentos água",
+      "calculadora hidratação diária",
+      "ingestão água por peso",
+      "calculadora necessidades hidratação",
+      "calculadora beber água",
+      "calculadora consumo água"
+    ],
+    "longTailKeywords": [
+      "como calcular ingestão diária de água",
+      "qual é meu requerimento diário de água",
+      "calculadora ingestão água baseada em peso",
+      "quanto água por dia para meu peso",
+      "calculadora hidratação para atletas",
+      "calculadora necessidades diárias água",
+      "ingestão água durante exercício",
+      "quanto água devo beber diariamente",
+      "calculadora consumo água por idade",
+      "requerimentos hidratação para mulheres",
+      "calculadora ingestão água para homens"
+    ],
+    "slug": "water-intake-calculator",
+    "category": "Health",
+    "calculatorComponent": "WaterIntakeCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "ingestão água",
+      "hidratação",
+      "água diária",
+      "calculadora saúde",
+      "hidratação fitness",
+      "requerimentos água",
+      "calculadora hidratação"
+    ],
+    "summary": "Calcule sua ingestão ótima diária de água baseada em peso, nível de atividade e fatores ambientais.",
+    "description": "Calculadora profissional de ingestão de água que determina seus requerimentos diários de hidratação baseados em peso corporal, nível de atividade, condições climáticas e fatores de saúde. Essencial para manter saúde ótima, performance atlética e prevenir desidratação.",
+    "instructions": [
+      "Digite seu peso corporal em quilogramas ou libras",
+      "Selecione seu nível de atividade",
+      "Escolha suas condições climáticas",
+      "Selecione qualquer condição de saúde relevante",
+      "Digite sua idade para recomendações apropriadas por idade",
+      "Escolha seu gênero",
+      "Veja suas recomendações personalizadas de ingestão diária de água"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Peso Corporal",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unidade de Peso",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "activityLevel",
+        "label": "Nível de Atividade",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "climate",
+        "label": "Condições Climáticas",
+        "type": "select",
+        "default": "normal",
+        "options": ["normal", "hot_dry", "cold_dry", "humid"]
+      },
+      {
+        "name": "healthCondition",
+        "label": "Condições de Saúde",
+        "type": "select",
+        "default": "normal",
+        "options": ["normal", "pregnancy", "breastfeeding", "illness", "elderly"]
+      },
+      {
+        "name": "age",
+        "label": "Idade",
+        "type": "number",
+        "default": 30,
+        "min": 1,
+        "max": 120,
+        "step": 1,
+        "unit": "anos"
+      },
+      {
+        "name": "gender",
+        "label": "Gênero",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      }
+    ],
+    "formula": "Ingestão Base Água = 30-35ml × Peso Corporal (kg)\nAjuste Atividade = Base × Multiplicador Atividade (1.0-2.0)\nAjuste Clima = Base × Multiplicador Clima (1.0-1.5)\nAjuste Saúde = Base × Multiplicador Saúde (1.0-2.0)\nIngestão Diária Água = Base Ajustada + Ajustes",
+    "output": {
+      "label": "Ingestão Diária de Água",
+      "default": "0ml",
+      "format": "number",
+      "unit": "ml"
+    },
+    "additionalOutputs": [
+      {
+        "name": "waterLiters",
+        "label": "Água Diária (Litros)",
+        "default": "0.0L",
+        "format": "decimal",
+        "unit": "litros"
+      },
+      {
+        "name": "waterOunces",
+        "label": "Água Diária (Onças)",
+        "default": "0onças",
+        "format": "number",
+        "unit": "onças"
+      },
+      {
+        "name": "waterCups",
+        "label": "Água Diária (Xícaras)",
+        "default": "0xícaras",
+        "format": "decimal",
+        "unit": "xícaras"
+      },
+      {
+        "name": "hydrationSchedule",
+        "label": "Horário Sugerido",
+        "default": "Beba ao longo do dia",
+        "format": "text",
+        "unit": ""
+      }
+    ],
+    "examples": [
+      {
+        "title": "Adulto Moderadamente Ativo, Clima Normal",
+        "inputs": {
+          "weight": 70,
+          "weightUnit": "kg",
+          "activityLevel": "moderately_active",
+          "climate": "normal",
+          "healthCondition": "normal",
+          "age": 30,
+          "gender": "male"
+        },
+        "outputs": {
+          "dailyWaterIntake": 2450,
+          "waterLiters": 2.5,
+          "waterOunces": 83,
+          "waterCups": 10.4,
+          "hydrationSchedule": "8 copos ao longo do dia"
+        }
+      },
+      {
+        "title": "Atleta Muito Ativo, Clima Quente",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "activityLevel": "very_active",
+          "climate": "hot_dry",
+          "healthCondition": "normal",
+          "age": 25,
+          "gender": "male"
+        },
+        "outputs": {
+          "dailyWaterIntake": 4000,
+          "waterLiters": 4.0,
+          "waterOunces": 135,
+          "waterCups": 16.9,
+          "hydrationSchedule": "Beba antes, durante e após exercício"
+        }
+      },
+      {
+        "title": "Mulher Grávida, Condições Normais",
+        "inputs": {
+          "weight": 65,
+          "weightUnit": "kg",
+          "activityLevel": "lightly_active",
+          "climate": "normal",
+          "healthCondition": "pregnancy",
+          "age": 28,
+          "gender": "female"
+        },
+        "outputs": {
+          "dailyWaterIntake": 2600,
+          "waterLiters": 2.6,
+          "waterOunces": 88,
+          "waterCups": 11.0,
+          "hydrationSchedule": "Pequenos goles ao longo do dia"
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "calorie-calculator",
+      "protein-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule sua ingestão ótima diária de água com nossa completa Calculadora de Ingestão de Água. Hidratação adequada é essencial para saúde, performance atlética e prevenção de desidratação. Nossa calculadora fornece recomendações personalizadas baseadas em seu peso corporal, nível de atividade, clima e condições de saúde.",
+      "benefits": [
+        "Calcule requerimentos diários personalizados de água",
+        "Considere nível de atividade e fatores ambientais",
+        "Conte condições de saúde e circunstâncias especiais",
+        "Obtenha recomendações em múltiplas unidades (ml, litros, onças, xícaras)",
+        "Aprenda timing e programação apropriados de hidratação",
+        "Otimize performance atlética e recuperação",
+        "Apoie objetivos gerais de saúde e bem-estar",
+        "Previna desidratação e problemas relacionados à saúde"
+      ],
+      "howToUse": [
+        "Digite seu peso corporal atual em quilogramas ou libras",
+        "Selecione seu nível de atividade de sedentário para extremamente ativo",
+        "Escolha suas condições climáticas (normal, quente/seco, frio/seco, úmido)",
+        "Selecione qualquer condição de saúde relevante ou circunstância especial",
+        "Digite sua idade para recomendações apropriadas por idade",
+        "Escolha seu gênero para cálculos personalizados",
+        "Revise suas recomendações de ingestão diária de água em múltiplos formatos"
+      ],
+      "formulaExplanation": "Cálculos de ingestão de água são baseados em diretrizes de saúde estabelecidas. A fórmula base usa 30-35ml de água por kg de peso corporal. Nível de atividade adiciona 20-100% mais água (atletas e pessoas muito ativas precisam significativamente mais). Condições climáticas adicionam 10-50% mais em ambientes quentes/secos ou úmidos. Condições de saúde como gravidez ou doença podem aumentar necessidades em 20-100%. Idade e gênero têm efeitos menores em requerimentos totais.",
+      "examples": [
+        "Um adulto de 70kg moderadamente ativo em clima normal precisa cerca de 2.5 litros (10 xícaras) de água diariamente, ou cerca de 8 copos ao longo do dia",
+        "Um atleta de 80kg muito ativo em clima quente/seco precisa cerca de 4 litros (17 xícaras) de água diariamente, com atenção especial a hidratação pré/durante/pós exercício",
+        "Uma mulher grávida de 65kg com atividade leve precisa cerca de 2.6 litros (11 xícaras) de água diariamente, sorvida ao longo do dia para saúde fetal ótima"
+      ],
+      "whoShouldUse": "Indivíduos conscientes da saúde, atletas e entusiastas do fitness, mulheres grávidas e lactantes, pessoas idosas, pessoas vivendo em climas quentes, indivíduos com condições médicas, viajantes, e qualquer pessoa querendo otimizar sua hidratação para saúde e performance.",
+      "importantNotes": "Estas recomendações são diretrizes gerais baseadas em pesquisa de saúde estabelecida. Necessidades individuais podem variar baseadas em taxa de suor, cor da urina, sede, medicamentos, ingestão de cafeína/álcool e condições de saúde específicas. A calculadora fornece estimativas - monitore a cor da sua urina (amarelo claro é ideal) e ajuste ingestão baseando-se nos sinais do seu corpo. Consulte um provedor de cuidados de saúde para condições médicas específicas ou circunstâncias extremas.",
+      "relatedTools": [
+        "Calculadora IMC - Avalie composição corporal geral",
+        "Calculadora TMB - Calcule necessidades metabólicas basais",
+        "Calculadora Calorias - Estime requerimentos diários de energia",
+        "Calculadora Ingestão Proteína - Calcule necessidades de proteína",
+        "Calculadora Peso Ideal - Encontre faixa saudável de peso"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto água devo beber por dia?",
+          "answer": "Necessidades diárias de água variam por indivíduo: geralmente 3.7 litros para homens e 2.7 litros para mulheres de todas as fontes (comida fornece cerca de 20%). Fatores como nível de atividade, clima e condições de saúde podem aumentar requerimentos significativamente. Use nossa calculadora para recomendações personalizadas."
+        },
+        {
+          "question": "¿Café e chá contam para ingestão diária de água?",
+          "answer": "Sim, mas em moderação. Bebidas cafeinadas têm um efeito diurético leve, então contribuem para hidratação mas não são tão efetivas quanto água pura. Álcool tem um efeito desidratante e não conta para ingestão diária de água. Para cada bebida cafeinada ou alcoólica, você pode precisar de um copo extra de água."
+        },
+        {
+          "question": "Como sei se estou bebendo água suficiente?",
+          "answer": "Monitore cor da urina - amarelo claro ou claro indica boa hidratação, amarelo escuro sugere você precisa mais água. Outros sinais de hidratação adequada incluem micção regular, boca e lábios úmidos, e ausência de sede. Sinais de desidratação incluem boca seca, fadiga, tontura e urina escura."
+        },
+        {
+          "question": "Devo beber mais água quando faço exercício?",
+          "answer": "Sim, significativamente mais. Beba 16-32 onças (475-950ml) de água 2-3 horas antes do exercício, 6-12 onças (175-350ml) a cada 15-20 minutos durante exercício, e 16-24 onças (475-710ml) por cada libra (0.45kg) de peso corporal perdido após exercício. Em clima quente, aumente em 50%."
+        },
+        {
+          "question": "Beber mais água ajuda com perda de peso?",
+          "answer": "Água pode apoiar perda de peso de várias maneiras: ajuda controlar fome preenchendo o estômago, aumenta metabolismo ligeiramente, ajuda o corpo queimar gordura mais eficientemente, e pode substituir bebidas altas em calorias. Beber água antes de refeições pode reduzir ingestão calórica. No entanto, água sozinha não causará perda de peso sem déficit calórico."
+        },
+        {
+          "question": "Posso beber água demais?",
+          "answer": "Sim, embora raro, superhidratação (hiponatremia) pode ocorrer, especialmente durante eventos de resistência com ingestão excessiva de água sem reposição de eletrólitos. Sintomas incluem náusea, dor de cabeça, confusão, e em casos severos, convulsões. Mantenha-se em quantidades recomendadas e ouça sinais de sede do seu corpo."
+        },
+        {
+          "question": "¿Comida fornece ingestão de água?",
+          "answer": "Sim, cerca de 20-30% de água diária vem da comida. Alimentos ricos em água como frutas e vegetais (pepinos, melancia, laranjas) contribuem significativamente. Sopas, caldos e alimentos com alto conteúdo de água ajudam cumprir necessidades diárias de hidratação."
+        },
+        {
+          "question": "Como clima afeta necessidades de água?",
+          "answer": "Climas quentes e secos aumentam perda de água através de suor e respiração, requerendo 50-100% mais ingestão de água. Climas frios também podem aumentar necessidades devido a ar seco e aquecimento interno. Climas úmidos podem requerer mais água para resfriar o corpo. Altitude alta pode aumentar necessidades de água devido a respiração mais rápida."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Apport en Eau",
+    "seoTitle": "Calculateur d'Apport en Eau - Calculateur de Besoins Quotidiens en Hydratation",
+    "metaDescription": "Calculez vos besoins quotidiens en apport d'eau basés sur poids, niveau d'activité et climat. Calculateur gratuit d'hydratation pour santé et performance optimales.",
+    "keywords": [
+      "calculateur apport eau",
+      "calculateur eau quotidienne",
+      "calculateur hydratation",
+      "combien eau boire par jour",
+      "calculateur besoins eau",
+      "calculateur hydratation quotidienne",
+      "apport eau par poids",
+      "calculateur besoins hydratation",
+      "calculateur boire eau",
+      "calculateur consommation eau"
+    ],
+    "longTailKeywords": [
+      "comment calculer apport quotidien eau",
+      "quel est mon besoin quotidien eau",
+      "calculateur apport eau basé sur poids",
+      "combien eau par jour pour mon poids",
+      "calculateur hydratation pour athlètes",
+      "calculateur besoins quotidiens eau",
+      "apport eau pendant exercice",
+      "combien eau dois-je boire quotidiennement",
+      "calculateur consommation eau par âge",
+      "besoins hydratation pour femmes",
+      "calculateur apport eau pour hommes"
+    ],
+    "slug": "water-intake-calculator",
+    "category": "Health",
+    "calculatorComponent": "WaterIntakeCalculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "apport eau",
+      "hydratation",
+      "eau quotidienne",
+      "calculateur santé",
+      "hydratation fitness",
+      "besoins eau",
+      "calculateur hydratation"
+    ],
+    "summary": "Calculez votre apport optimal quotidien en eau basé sur poids, niveau d'activité et facteurs environnementaux.",
+    "description": "Calculateur professionnel d'apport en eau qui détermine vos besoins quotidiens en hydratation basés sur poids corporel, niveau d'activité, conditions climatiques et facteurs de santé. Essentiel pour maintenir santé optimale, performance athlétique et prévenir déshydratation.",
+    "instructions": [
+      "Entrez votre poids corporel en kilogrammes ou livres",
+      "Sélectionnez votre niveau d'activité",
+      "Choisissez vos conditions climatiques",
+      "Sélectionnez toute condition de santé pertinente",
+      "Entrez votre âge pour recommandations appropriées par âge",
+      "Choisissez votre genre",
+      "Consultez vos recommandations personnalisées d'apport quotidien en eau"
+    ],
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Poids Corporel",
+        "type": "number",
+        "default": 70,
+        "min": 30,
+        "max": 300,
+        "step": 0.1,
+        "unit": "kg"
+      },
+      {
+        "name": "weightUnit",
+        "label": "Unité de Poids",
+        "type": "select",
+        "default": "kg",
+        "options": ["kg", "lbs"]
+      },
+      {
+        "name": "activityLevel",
+        "label": "Niveau d'Activité",
+        "type": "select",
+        "default": "moderately_active",
+        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+      },
+      {
+        "name": "climate",
+        "label": "Conditions Climatiques",
+        "type": "select",
+        "default": "normal",
+        "options": ["normal", "hot_dry", "cold_dry", "humid"]
+      },
+      {
+        "name": "healthCondition",
+        "label": "Conditions de Santé",
+        "type": "select",
+        "default": "normal",
+        "options": ["normal", "pregnancy", "breastfeeding", "illness", "elderly"]
+      },
+      {
+        "name": "age",
+        "label": "Âge",
+        "type": "number",
+        "default": 30,
+        "min": 1,
+        "max": 120,
+        "step": 1,
+        "unit": "ans"
+      },
+      {
+        "name": "gender",
+        "label": "Genre",
+        "type": "select",
+        "default": "male",
+        "options": ["male", "female"]
+      }
+    ],
+    "formula": "Apport Base Eau = 30-35ml × Poids Corporel (kg)\nAjustement Activité = Base × Multiplicateur Activité (1.0-2.0)\nAjustement Climat = Base × Multiplicateur Climat (1.0-1.5)\nAjustement Santé = Base × Multiplicateur Santé (1.0-2.0)\nApport Quotidien Eau = Base Ajustée + Ajustements",
+    "output": {
+      "label": "Apport Quotidien en Eau",
+      "default": "0ml",
+      "format": "number",
+      "unit": "ml"
+    },
+    "additionalOutputs": [
+      {
+        "name": "waterLiters",
+        "label": "Eau Quotidienne (Litres)",
+        "default": "0.0L",
+        "format": "decimal",
+        "unit": "litres"
+      },
+      {
+        "name": "waterOunces",
+        "label": "Eau Quotidienne (Onces)",
+        "default": "0onces",
+        "format": "number",
+        "unit": "onces"
+      },
+      {
+        "name": "waterCups",
+        "label": "Eau Quotidienne (Tasses)",
+        "default": "0tasses",
+        "format": "decimal",
+        "unit": "tasses"
+      },
+      {
+        "name": "hydrationSchedule",
+        "label": "Horaire Suggéré",
+        "default": "Buvez tout au long de la journée",
+        "format": "text",
+        "unit": ""
+      }
+    ],
+    "examples": [
+      {
+        "title": "Adulte Modérément Actif, Climat Normal",
+        "inputs": {
+          "weight": 70,
+          "weightUnit": "kg",
+          "activityLevel": "moderately_active",
+          "climate": "normal",
+          "healthCondition": "normal",
+          "age": 30,
+          "gender": "male"
+        },
+        "outputs": {
+          "dailyWaterIntake": 2450,
+          "waterLiters": 2.5,
+          "waterOunces": 83,
+          "waterCups": 10.4,
+          "hydrationSchedule": "8 verres tout au long de la journée"
+        }
+      },
+      {
+        "title": "Athlète Très Actif, Climat Chaud",
+        "inputs": {
+          "weight": 80,
+          "weightUnit": "kg",
+          "activityLevel": "very_active",
+          "climate": "hot_dry",
+          "healthCondition": "normal",
+          "age": 25,
+          "gender": "male"
+        },
+        "outputs": {
+          "dailyWaterIntake": 4000,
+          "waterLiters": 4.0,
+          "waterOunces": 135,
+          "waterCups": 16.9,
+          "hydrationSchedule": "Buvez avant, pendant et après l'exercice"
+        }
+      },
+      {
+        "title": "Femme Enceinte, Conditions Normales",
+        "inputs": {
+          "weight": 65,
+          "weightUnit": "kg",
+          "activityLevel": "lightly_active",
+          "climate": "normal",
+          "healthCondition": "pregnancy",
+          "age": 28,
+          "gender": "female"
+        },
+        "outputs": {
+          "dailyWaterIntake": 2600,
+          "waterLiters": 2.6,
+          "waterOunces": 88,
+          "waterCups": 11.0,
+          "hydrationSchedule": "Petites gorgées tout au long de la journée"
+        }
+      }
+    ],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "bmr-calculator",
+      "calorie-calculator",
+      "protein-intake-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez votre apport optimal quotidien en eau avec notre Calculateur d'Apport en Eau complet. L'hydratation adéquate est essentielle pour santé, performance athlétique et prévention déshydratation. Notre calculateur fournit des recommandations personnalisées basées sur votre poids corporel, niveau d'activité, climat et conditions de santé.",
+      "benefits": [
+        "Calculez besoins quotidiens personnalisés en eau",
+        "Tenez compte niveau d'activité et facteurs environnementaux",
+        "Considérez conditions de santé et circonstances spéciales",
+        "Obtenez recommandations en multiples unités (ml, litres, onces, tasses)",
+        "Apprenez timing et programmation appropriés d'hydratation",
+        "Optimisez performance athlétique et récupération",
+        "Soutenez objectifs généraux de santé et bien-être",
+        "Préveniez déshydratation et problèmes de santé connexes"
+      ],
+      "howToUse": [
+        "Entrez votre poids corporel actuel en kilogrammes ou livres",
+        "Sélectionnez votre niveau d'activité de sédentaire à extrêmement actif",
+        "Choisissez vos conditions climatiques (normal, chaud/sec, froid/sec, humide)",
+        "Sélectionnez toute condition de santé pertinente ou circonstance spéciale",
+        "Entrez votre âge pour recommandations appropriées par âge",
+        "Choisissez votre genre pour calculs personnalisés",
+        "Consultez vos recommandations d'apport quotidien en eau en multiples formats"
+      ],
+      "formulaExplanation": "Calculs d'apport en eau sont basés sur directives de santé établies. La formule de base utilise 30-35ml d'eau par kg de poids corporel. Niveau d'activité ajoute 20-100% plus d'eau (athlètes et personnes très actives ont besoin significativement plus). Conditions climatiques ajoutent 10-50% plus dans environnements chauds/secs ou humides. Conditions de santé comme grossesse ou maladie peuvent augmenter besoins de 20-100%. Âge et genre ont effets mineurs sur besoins totaux.",
+      "examples": [
+        "Un adulte de 70kg modérément actif en climat normal a besoin environ 2.5 litres (10 tasses) d'eau quotidiennement, ou environ 8 verres tout au long de la journée",
+        "Un athlète de 80kg très actif en climat chaud/sec a besoin environ 4 litres (17 tasses) d'eau quotidiennement, avec attention spéciale à hydratation pré/pendant/post exercice",
+        "Une femme enceinte de 65kg avec activité légère a besoin environ 2.6 litres (11 tasses) d'eau quotidiennement, siroté tout au long de la journée pour santé fœtale optimale"
+      ],
+      "whoShouldUse": "Individus soucieux de santé, athlètes et passionnés de fitness, femmes enceintes et allaitantes, personnes âgées, personnes vivant dans climats chauds, individus avec conditions médicales, voyageurs, et quiconque souhaitant optimiser son hydratation pour santé et performance.",
+      "importantNotes": "Ces recommandations sont directives générales basées sur recherche de santé établie. Besoins individuels peuvent varier basés sur taux de sueur, couleur d'urine, soif, médicaments, apport caféine/alcool et conditions de santé spécifiques. Le calculateur fournit estimations - surveillez couleur de votre urine (jaune pâle est idéale) et ajustez apport basé sur signaux de votre corps. Consultez fournisseur de soins de santé pour conditions médicales spécifiques ou circonstances extrêmes.",
+      "relatedTools": [
+        "Calculateur IMC - Évaluez composition corporelle générale",
+        "Calculateur TMB - Calculez besoins métaboliques basaux",
+        "Calculateur Calories - Estimez besoins énergétiques quotidiens",
+        "Calculateur Apport Protéines - Calculez besoins en protéines",
+        "Calculateur Poids Idéal - Trouvez plage saine de poids"
+      ],
+      "faqs": [
+        {
+          "question": "Combien d'eau dois-je boire par jour ?",
+          "answer": "Besoins quotidiens en eau varient par individu : généralement 3.7 litres pour hommes et 2.7 litres pour femmes de toutes sources (nourriture fournit environ 20%). Facteurs comme niveau d'activité, climat et conditions de santé peuvent augmenter besoins significativement. Utilisez notre calculateur pour recommandations personnalisées."
+        },
+        {
+          "question": "Café et thé comptent-ils vers apport quotidien en eau ?",
+          "answer": "Oui, mais en modération. Boissons caféinées ont effet diurétique léger, donc elles contribuent à hydratation mais ne sont pas aussi efficaces que eau pure. Alcool a effet déshydratant et ne compte pas vers apport quotidien en eau. Pour chaque boisson caféinée ou alcoolisée, vous pouvez avoir besoin d'un verre d'eau supplémentaire."
+        },
+        {
+          "question": "Comment sais-je si je bois assez d'eau ?",
+          "answer": "Surveillez couleur d'urine - jaune pâle ou clair indique bonne hydratation, jaune foncé suggère vous avez besoin plus d'eau. Autres signes d'hydratation adéquate incluent miction régulière, bouche et lèvres humides, et absence de soif. Signes de déshydratation incluent bouche sèche, fatigue, étourdissements et urine foncée."
+        },
+        {
+          "question": "Dois-je boire plus d'eau pendant l'exercice ?",
+          "answer": "Oui, significativement plus. Buvez 16-32 onces (475-950ml) d'eau 2-3 heures avant exercice, 6-12 onces (175-350ml) toutes les 15-20 minutes pendant exercice, et 16-24 onces (475-710ml) pour chaque livre (0.45kg) de poids corporel perdue après exercice. En climat chaud, augmentez de 50%."
+        },
+        {
+          "question": "Boire plus d'eau aide-t-il à perte de poids ?",
+          "answer": "Eau peut soutenir perte de poids de plusieurs manières : elle aide contrôler faim en remplissant estomac, augmente métabolisme légèrement, aide corps brûler graisse plus efficacement, et peut remplacer boissons riches en calories. Boire eau avant repas peut réduire apport calorique. Cependant, eau seule ne causera pas perte de poids sans déficit calorique."
+        },
+        {
+          "question": "Puis-je boire trop d'eau ?",
+          "answer": "Oui, bien que rare, surhydratation (hyponatrémie) peut survenir, particulièrement pendant événements d'endurance avec apport excessif d'eau sans remplacement électrolytes. Symptômes incluent nausée, mal de tête, confusion, et dans cas sévères, convulsions. Restez dans quantités recommandées et écoutez signaux de soif de votre corps."
+        },
+        {
+          "question": "Nourriture fournit-elle apport en eau ?",
+          "answer": "Oui, environ 20-30% d'eau quotidienne vient nourriture. Aliments riches en eau comme fruits et légumes (concombres, pastèque, oranges) contribuent significativement. Soupes, bouillons et aliments avec haute teneur en eau aident satisfaire besoins quotidiens en hydratation."
+        },
+        {
+          "question": "Comment climat affecte-t-il besoins en eau ?",
+          "answer": "Climats chauds et secs augmentent perte d'eau à travers sueur et respiration, requérant 50-100% plus apport en eau. Climats froids peuvent également augmenter besoins dû air sec et chauffage intérieur. Climats humides peuvent nécessiter plus d'eau pour refroidir corps. Haute altitude peut augmenter besoins en eau dû respiration plus rapide."
+        }
+      ]
+    }
+  }
+}

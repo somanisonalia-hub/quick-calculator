@@ -1,0 +1,606 @@
+{
+  "en": {
+    "title": "Interest Rate Table Calculator",
+    "seoTitle": "Interest Rate Table Calculator - Compare Multiple Interest Rates",
+    "metaDescription": "Generate comparison tables for different interest rates. Free interest rate table calculator showing payments and totals for loans and investments with multiple rate scenarios.",
+    "keywords": [
+      "interest rate table calculator",
+      "rate comparison table",
+      "loan rate comparison",
+      "interest rate table generator",
+      "mortgage rate table",
+      "investment rate comparison"
+    ],
+    "longTailKeywords": [
+      "interest rate table calculator online",
+      "generate interest rate comparison table",
+      "loan payment table with different rates",
+      "mortgage interest rate comparison table",
+      "investment return comparison table",
+      "interest rate table for loans",
+      "rate comparison calculator table",
+      "multiple interest rate comparison",
+      "loan rate table generator",
+      "interest rate scenario table"
+    ],
+    "slug": "interest-rate-table-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "interest rate",
+      "comparison table",
+      "rate table",
+      "loan comparison",
+      "investment comparison",
+      "table generator"
+    ],
+    "description": "Generate comprehensive comparison tables for different interest rates. Compare loan payments, investment returns, and total costs across multiple interest rate scenarios in an easy-to-read table format.",
+    "summary": "Generate comparison tables for multiple interest rates",
+    "instructions": [
+      "Enter the principal amount or loan balance",
+      "Specify the loan term or investment period in years",
+      "Enter multiple interest rates separated by commas",
+      "Choose whether it's a loan or investment calculation",
+      "Click 'Generate Table' to create the comparison table",
+      "Review the payment/return differences across rates"
+    ],
+    "calculatorComponent": "InterestRateTableCalculator",
+    "examples": [
+      {
+        "title": "Mortgage Rate Shopping",
+        "description": "Compare monthly payments for different mortgage rates on a $300,000 loan",
+        "input": {
+          "principal": 300000,
+          "term": 30,
+          "rates": "6.0,6.25,6.5,6.75,7.0",
+          "calculationType": "loan"
+        },
+        "output": {
+          "rateRange": "6.00% - 7.00%",
+          "paymentRange": "$1,799 - $1,995 monthly",
+          "bestRate": "6.00% rate saves $196 monthly",
+          "rateImpact": "0.25% rate increase costs $49 more per month"
+        }
+      },
+      {
+        "title": "Investment Rate Comparison",
+        "description": "Compare returns for different investment rates on $50,000 over 20 years",
+        "input": {
+          "principal": 50000,
+          "term": 20,
+          "rates": "4.0,5.0,6.0,7.0,8.0",
+          "calculationType": "investment"
+        },
+        "output": {
+          "rateRange": "4.00% - 8.00%",
+          "paymentRange": "$109,357 - $233,048 final value",
+          "bestRate": "8.00% rate returns $123,691 more",
+          "rateImpact": "1% rate increase adds $26,000 to final value"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Making informed financial decisions requires comparing multiple interest rate scenarios. Our interest rate table calculator generates comprehensive comparison tables showing how different interest rates affect loan payments or investment returns. Whether you're shopping for loans, comparing investment options, or planning your financial future, this calculator provides clear, actionable insights in an easy-to-read table format.",
+      "benefits": [
+        "Generate detailed comparison tables for multiple interest rates",
+        "Compare loan payments or investment returns side-by-side",
+        "Understand the financial impact of rate differences",
+        "Make data-driven decisions when rate shopping",
+        "Save time by automating rate comparison calculations",
+        "Export tables for use in financial planning or presentations"
+      ],
+      "steps": [
+        "Enter your principal amount (loan balance or investment amount)",
+        "Specify the time period in years",
+        "List the interest rates you want to compare (comma-separated)",
+        "Choose between loan payment or investment return comparison",
+        "Click 'Generate Table' to create your comparison",
+        "Review the differences and choose the best rate for your situation"
+      ],
+      "inputsExplained": [
+        "Principal amount is the loan balance or initial investment amount",
+        "Term is the number of years for the loan or investment period",
+        "Interest rates should be entered as percentages separated by commas",
+        "Calculation type determines whether you're comparing loan payments or investment returns"
+      ],
+      "formulaExplanation": "For loan comparisons, the calculator uses the standard loan payment formula to show monthly payments. For investment comparisons, it uses compound interest formulas to show future values. The table displays results for each interest rate, making it easy to see how small rate differences can have significant financial impacts.",
+      "examples": [
+        "A mortgage comparison shows that a 6.75% rate costs $149 more per month than a 6.5% rate on a $250,000 loan",
+        "An investment comparison shows that an 8% return rate generates $46,000 more than a 6% rate on a $100,000 investment over 25 years"
+      ],
+      "resultsExplanation": [
+        "Comparison table shows payments or returns for each interest rate",
+        "Rate range displays the spread between lowest and highest rates compared",
+        "Payment/return range shows the financial impact across all rates",
+        "Best rate highlights the most favorable option in your comparison",
+        "Rate impact explains how rate changes affect your financial results",
+        "All results help you understand the cost or benefit of different rates"
+      ],
+      "whoItsFor": "This interest rate table calculator is essential for home buyers comparing mortgage rates, investors evaluating different return rates, financial planners creating client presentations, and anyone who needs to compare multiple interest rate scenarios. It's particularly valuable for rate shopping and financial decision-making.",
+      "disclaimer": "This calculator provides mathematical comparisons based on the entered parameters. Actual loan terms, investment returns, and interest rates may vary based on credit conditions, market conditions, and specific product terms. The comparisons are for educational purposes and do not constitute financial advice or rate quotes.",
+      "relatedTools": [
+        "mortgage calculator",
+        "compound interest calculator",
+        "loan calculator",
+        "investment calculator",
+        "apr calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What does an interest rate comparison table show?",
+          "answer": "An interest rate comparison table shows how loan payments or investment returns change at different interest rates, helping you understand the financial impact of rate differences."
+        },
+        {
+          "question": "How do I use this for mortgage rate shopping?",
+          "answer": "Enter your loan amount and term, then list the mortgage rates you're considering. The table will show exactly how much you save or pay extra with each rate option."
+        },
+        {
+          "question": "Can I compare investment returns?",
+          "answer": "Yes, switch to 'Investment Return Comparison' mode to see how different interest rates affect the future value of your investments over time."
+        },
+        {
+          "question": "How many rates can I compare?",
+          "answer": "You can compare as many rates as you want by entering them as a comma-separated list. The table will display results for each rate you include."
+        },
+        {
+          "question": "What loan terms can I compare?",
+          "answer": "You can compare rates for loan terms from 1 to 50 years, covering everything from personal loans to long-term mortgages."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Tabla de Tasas de Interés",
+    "seoTitle": "Calculadora de Tabla de Tasas de Interés - Comparar Múltiples Tasas de Interés",
+    "metaDescription": "Genera tablas de comparación para diferentes tasas de interés. Calculadora gratuita de tabla de tasas de interés mostrando pagos y totales para préstamos e inversiones con múltiples escenarios de tasa.",
+    "keywords": [
+      "calculadora tabla tasas interés",
+      "tabla comparación tasas",
+      "comparación tasas préstamo",
+      "generador tabla tasas interés",
+      "tabla tasas hipoteca",
+      "comparación tasas inversión"
+    ],
+    "longTailKeywords": [
+      "calculadora tabla tasas interés online",
+      "generar tabla comparación tasas interés",
+      "tabla pagos préstamo con diferentes tasas",
+      "tabla comparación tasas hipoteca",
+      "tabla comparación retornos inversión",
+      "tabla tasas interés para préstamos",
+      "calculadora tabla comparación tasas",
+      "comparación múltiples tasas interés",
+      "generador tabla tasas préstamo",
+      "tabla escenarios tasa interés"
+    ],
+    "slug": "interest-rate-table-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "tasa interés",
+      "tabla comparación",
+      "tabla tasas",
+      "comparación préstamo",
+      "comparación inversión",
+      "generador tabla"
+    ],
+    "description": "Genera tablas completas de comparación para diferentes tasas de interés. Compara pagos de préstamo, retornos de inversión y costos totales en múltiples escenarios de tasa de interés en formato de tabla fácil de leer.",
+    "summary": "Genera tablas de comparación para múltiples tasas de interés",
+    "instructions": [
+      "Ingresa el monto principal o saldo del préstamo",
+      "Especifica el plazo del préstamo o período de inversión en años",
+      "Ingresa múltiples tasas de interés separadas por comas",
+      "Elige si es cálculo de préstamo o inversión",
+      "Haz clic en 'Generar Tabla' para crear la tabla de comparación",
+      "Revisa las diferencias de pago/retorno entre tasas"
+    ],
+    "calculatorComponent": "InterestRateTableCalculator",
+    "examples": [
+      {
+        "title": "Compra Tasas Hipoteca",
+        "description": "Compara pagos mensuales para diferentes tasas hipoteca en préstamo de $300,000",
+        "input": {
+          "principal": 300000,
+          "term": 30,
+          "rates": "6.0,6.25,6.5,6.75,7.0",
+          "calculationType": "loan"
+        },
+        "output": {
+          "rateRange": "6.00% - 7.00%",
+          "paymentRange": "$1,799 - $1,995 mensuales",
+          "bestRate": "Tasa 6.00% ahorra $196 mensuales",
+          "rateImpact": "Aumento tasa 0.25% cuesta $49 más por mes"
+        }
+      },
+      {
+        "title": "Comparación Tasas Inversión",
+        "description": "Compara retornos para diferentes tasas inversión en $50,000 durante 20 años",
+        "input": {
+          "principal": 50000,
+          "term": 20,
+          "rates": "4.0,5.0,6.0,7.0,8.0",
+          "calculationType": "investment"
+        },
+        "output": {
+          "rateRange": "4.00% - 8.00%",
+          "paymentRange": "$109,357 - $233,048 valor final",
+          "bestRate": "Tasa 8.00% retorna $123,691 más",
+          "rateImpact": "Aumento tasa 1% añade $26,000 al valor final"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Tomar decisiones financieras informadas requiere comparar múltiples escenarios de tasa de interés. Nuestra calculadora de tabla de tasas de interés genera tablas completas de comparación mostrando cómo diferentes tasas de interés afectan pagos de préstamo o retornos de inversión. Ya sea que compres préstamos, compares opciones de inversión o planees tu futuro financiero, esta calculadora proporciona insights claros y accionables en formato de tabla fácil de leer.",
+      "benefits": [
+        "Genera tablas detalladas de comparación para múltiples tasas de interés",
+        "Compara pagos de préstamo o retornos de inversión lado a lado",
+        "Entiende el impacto financiero de diferencias de tasa",
+        "Toma decisiones basadas en datos al comprar tasas",
+        "Ahorra tiempo automatizando cálculos de comparación de tasa",
+        "Exporta tablas para uso en planificación financiera o presentaciones"
+      ],
+      "steps": [
+        "Ingresa tu monto principal (saldo préstamo o monto inversión inicial)",
+        "Especifica el período de tiempo en años",
+        "Lista las tasas de interés que quieres comparar (separadas por coma)",
+        "Elige entre comparación pago préstamo o retorno inversión",
+        "Haz clic en 'Generar Tabla' para crear tu comparación",
+        "Revisa las diferencias y elige la mejor tasa para tu situación"
+      ],
+      "inputsExplained": [
+        "Monto principal es el saldo del préstamo o monto inversión inicial",
+        "Plazo es el número de años para el préstamo o período inversión",
+        "Las tasas de interés deben ingresarse como porcentajes separados por comas",
+        "Tipo de cálculo determina si comparas pagos préstamo o retornos inversión"
+      ],
+      "formulaExplanation": "Para comparaciones préstamo, la calculadora usa la fórmula estándar de pago préstamo para mostrar pagos mensuales. Para comparaciones inversión, usa fórmulas de interés compuesto para mostrar valores futuros. La tabla muestra resultados para cada tasa de interés, facilitando ver cómo pequeñas diferencias de tasa pueden tener impactos financieros significativos.",
+      "examples": [
+        "Una comparación hipoteca muestra que una tasa 6.75% cuesta $149 más por mes que una tasa 6.5% en préstamo de $250,000",
+        "Una comparación inversión muestra que una tasa retorno 8% genera $46,000 más que una tasa 6% en inversión de $100,000 durante 25 años"
+      ],
+      "resultsExplanation": [
+        "Tabla comparación muestra pagos o retornos para cada tasa de interés",
+        "Rango tasas muestra la diferencia entre tasas más bajas y altas comparadas",
+        "Rango pago/retorno muestra el impacto financiero entre todas las tasas",
+        "Mejor tasa destaca la opción más favorable en tu comparación",
+        "Impacto tasa explica cómo cambios de tasa afectan tus resultados financieros",
+        "Todos los resultados te ayudan a entender el costo o beneficio de diferentes tasas"
+      ],
+      "whoItsFor": "Esta calculadora de tabla de tasas de interés es esencial para compradores vivienda comparando tasas hipoteca, inversores evaluando diferentes tasas retorno, planificadores financieros creando presentaciones cliente, y cualquiera que necesite comparar múltiples escenarios de tasa de interés. Es particularmente valiosa para compra de tasas y toma de decisiones financieras.",
+      "disclaimer": "Esta calculadora proporciona comparaciones matemáticas basadas en parámetros ingresados. Los términos préstamo reales, retornos inversión y tasas de interés pueden variar basado en condiciones crédito, condiciones mercado y términos producto específicos. Las comparaciones son para propósitos educativos y no constituyen consejo financiero o cotizaciones de tasa.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora interés compuesto",
+        "calculadora préstamo",
+        "calculadora inversión",
+        "calculadora TAE"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué muestra una tabla de comparación de tasas de interés?",
+          "answer": "Una tabla de comparación de tasas de interés muestra cómo cambian pagos préstamo o retornos inversión a diferentes tasas de interés, ayudándote a entender el impacto financiero de diferencias de tasa."
+        },
+        {
+          "question": "¿Cómo uso esto para compra de tasas hipoteca?",
+          "answer": "Ingresa tu monto préstamo y plazo, luego lista las tasas hipoteca que consideras. La tabla mostrará exactamente cuánto ahorras o pagas extra con cada opción de tasa."
+        },
+        {
+          "question": "¿Puedo comparar retornos inversión?",
+          "answer": "Sí, cambia al modo 'Comparación Retorno Inversión' para ver cómo diferentes tasas de interés afectan el valor futuro de tus inversiones con el tiempo."
+        },
+        {
+          "question": "¿Cuántas tasas puedo comparar?",
+          "answer": "Puedes comparar tantas tasas como quieras ingresándolas como lista separada por comas. La tabla mostrará resultados para cada tasa que incluyas."
+        },
+        {
+          "question": "¿Qué plazos préstamo puedo comparar?",
+          "answer": "Puedes comparar tasas para plazos préstamo de 1 a 50 años, cubriendo desde préstamos personales hasta hipotecas a largo plazo."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Tabela de Taxas de Juros",
+    "seoTitle": "Calculadora de Tabela de Taxas de Juros - Comparar Múltiplas Taxas de Juros",
+    "metaDescription": "Gere tabelas de comparação para diferentes taxas de juros. Calculadora gratuita de tabela de taxas de juros mostrando pagamentos e totais para empréstimos e investimentos com múltiplos cenários de taxa.",
+    "keywords": [
+      "calculadora tabela taxas juros",
+      "tabela comparação taxas",
+      "comparação taxas empréstimo",
+      "gerador tabela taxas juros",
+      "tabela taxas hipoteca",
+      "comparação taxas investimento"
+    ],
+    "longTailKeywords": [
+      "calculadora tabela taxas juros online",
+      "gerar tabela comparação taxas juros",
+      "tabela pagamentos empréstimo com diferentes taxas",
+      "tabela comparação taxas hipoteca",
+      "tabela comparação retornos investimento",
+      "tabela taxas juros para empréstimos",
+      "calculadora tabela comparação taxas",
+      "comparação múltiplas taxas juros",
+      "gerador tabela taxas empréstimo",
+      "tabela cenários taxa juros"
+    ],
+    "slug": "interest-rate-table-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "taxa juros",
+      "tabela comparação",
+      "tabela taxas",
+      "comparação empréstimo",
+      "comparação investimento",
+      "gerador tabela"
+    ],
+    "description": "Gere tabelas completas de comparação para diferentes taxas de juros. Compare pagamentos empréstimo, retornos investimento e custos totais em múltiplos cenários de taxa de juros em formato de tabela fácil de ler.",
+    "summary": "Gere tabelas de comparação para múltiplas taxas de juros",
+    "instructions": [
+      "Digite o valor principal ou saldo do empréstimo",
+      "Especifique o prazo do empréstimo ou período de investimento em anos",
+      "Digite múltiplas taxas de juros separadas por vírgulas",
+      "Escolha se é cálculo de empréstimo ou investimento",
+      "Clique em 'Gerar Tabela' para criar a tabela de comparação",
+      "Revise as diferenças de pagamento/retorno entre taxas"
+    ],
+    "calculatorComponent": "InterestRateTableCalculator",
+    "examples": [
+      {
+        "title": "Compra Taxas Hipoteca",
+        "description": "Compare pagamentos mensais para diferentes taxas hipoteca em empréstimo de R$ 300.000",
+        "input": {
+          "principal": 300000,
+          "term": 30,
+          "rates": "6.0,6.25,6.5,6.75,7.0",
+          "calculationType": "loan"
+        },
+        "output": {
+          "rateRange": "6.00% - 7.00%",
+          "paymentRange": "R$ 1,799 - R$ 1,995 mensais",
+          "bestRate": "Taxa 6.00% economiza R$ 196 mensais",
+          "rateImpact": "Aumento taxa 0.25% custa R$ 49 mais por mês"
+        }
+      },
+      {
+        "title": "Comparação Taxas Investimento",
+        "description": "Compare retornos para diferentes taxas investimento em R$ 50.000 durante 20 anos",
+        "input": {
+          "principal": 50000,
+          "term": 20,
+          "rates": "4.0,5.0,6.0,7.0,8.0",
+          "calculationType": "investment"
+        },
+        "output": {
+          "rateRange": "4.00% - 8.00%",
+          "paymentRange": "R$ 109,357 - R$ 233,048 valor final",
+          "bestRate": "Taxa 8.00% retorna R$ 123,691 mais",
+          "rateImpact": "Aumento taxa 1% adiciona R$ 26,000 ao valor final"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Tomar decisões financeiras informadas requer comparar múltiplos cenários de taxa de juros. Nossa calculadora de tabela de taxas de juros gera tabelas completas de comparação mostrando como diferentes taxas de juros afetam pagamentos empréstimo ou retornos investimento. Seja você comprando empréstimos, comparando opções investimento ou planejando seu futuro financeiro, esta calculadora fornece insights claros e acionáveis em formato de tabela fácil de ler.",
+      "benefits": [
+        "Gere tabelas detalhadas de comparação para múltiplas taxas de juros",
+        "Compare pagamentos empréstimo ou retornos investimento lado a lado",
+        "Entenda o impacto financeiro de diferenças de taxa",
+        "Tome decisões baseadas em dados ao comprar taxas",
+        "Economize tempo automatizando cálculos de comparação de taxa",
+        "Exporte tabelas para uso em planejamento financeiro ou apresentações"
+      ],
+      "steps": [
+        "Digite seu valor principal (saldo empréstimo ou valor investimento inicial)",
+        "Especifique o período de tempo em anos",
+        "Liste as taxas de juros que você quer comparar (separadas por vírgula)",
+        "Escolha entre comparação pagamento empréstimo ou retorno investimento",
+        "Clique em 'Gerar Tabela' para criar sua comparação",
+        "Revise as diferenças e escolha a melhor taxa para sua situação"
+      ],
+      "inputsExplained": [
+        "Valor principal é o saldo do empréstimo ou valor investimento inicial",
+        "Prazo é o número de anos para o empréstimo ou período investimento",
+        "Taxas de juros devem ser digitadas como porcentagens separadas por vírgulas",
+        "Tipo de cálculo determina se você está comparando pagamentos empréstimo ou retornos investimento"
+      ],
+      "formulaExplanation": "Para comparações empréstimo, a calculadora usa a fórmula padrão de pagamento empréstimo para mostrar pagamentos mensais. Para comparações investimento, usa fórmulas de juros compostos para mostrar valores futuros. A tabela mostra resultados para cada taxa de juros, facilitando ver como pequenas diferenças de taxa podem ter impactos financeiros significativos.",
+      "examples": [
+        "Uma comparação hipoteca mostra que uma taxa 6.75% custa R$ 149 mais por mês que uma taxa 6.5% em empréstimo de R$ 250.000",
+        "Uma comparação investimento mostra que uma taxa retorno 8% gera R$ 46.000 mais que uma taxa 6% em investimento de R$ 100.000 durante 25 anos"
+      ],
+      "resultsExplanation": [
+        "Tabela comparação mostra pagamentos ou retornos para cada taxa de juros",
+        "Intervalo taxas mostra a diferença entre taxas mais baixas e altas comparadas",
+        "Intervalo pagamento/retorno mostra o impacto financeiro entre todas as taxas",
+        "Melhor taxa destaca a opção mais favorável em sua comparação",
+        "Impacto taxa explica como mudanças de taxa afetam seus resultados financeiros",
+        "Todos os resultados ajudam você a entender o custo ou benefício de diferentes taxas"
+      ],
+      "whoItsFor": "Esta calculadora de tabela de taxas de juros é essencial para compradores imóvel comparando taxas hipoteca, investidores avaliando diferentes taxas retorno, planejadores financeiros criando apresentações cliente, e qualquer pessoa que precise comparar múltiplos cenários de taxa de juros. É particularmente valiosa para compra de taxas e tomada de decisões financeiras.",
+      "disclaimer": "Esta calculadora fornece comparações matemáticas baseadas nos parâmetros digitados. Termos empréstimo reais, retornos investimento e taxas de juros podem variar baseado em condições crédito, condições mercado e termos produto específicos. As comparações são para propósitos educacionais e não constituem conselho financeiro ou cotações de taxa.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora juros compostos",
+        "calculadora empréstimo",
+        "calculadora investimento",
+        "calculadora CET"
+      ],
+      "faqs": [
+        {
+          "question": "O que uma tabela de comparação de taxas de juros mostra?",
+          "answer": "Uma tabela de comparação de taxas de juros mostra como pagamentos empréstimo ou retornos investimento mudam a diferentes taxas de juros, ajudando você a entender o impacto financeiro de diferenças de taxa."
+        },
+        {
+          "question": "Como usar isso para compra de taxas hipoteca?",
+          "answer": "Digite seu valor empréstimo e prazo, então liste as taxas hipoteca que você está considerando. A tabela mostrará exatamente quanto você economiza ou paga a mais com cada opção de taxa."
+        },
+        {
+          "question": "¿Posso comparar retornos investimento?",
+          "answer": "Sim, mude para modo 'Comparação Retorno Investimento' para ver como diferentes taxas de juros afetam o valor futuro de seus investimentos ao longo do tempo."
+        },
+        {
+          "question": "Quantas taxas posso comparar?",
+          "answer": "Você pode comparar tantas taxas quanto quiser digitando-as como lista separada por vírgulas. A tabela mostrará resultados para cada taxa que você incluir."
+        },
+        {
+          "question": "Que prazos empréstimo posso comparar?",
+          "answer": "Você pode comparar taxas para prazos empréstimo de 1 a 50 anos, cobrindo desde empréstimos pessoais até hipotecas de longo prazo."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Tableau de Taux d'Intérêt",
+    "seoTitle": "Calculateur de Tableau de Taux d'Intérêt - Comparer Plusieurs Taux d'Intérêt",
+    "metaDescription": "Générez des tableaux de comparaison pour différents taux d'intérêt. Calculateur gratuit de tableau de taux d'intérêt montrant paiements et totaux pour prêts et investissements avec multiples scénarios de taux.",
+    "keywords": [
+      "calculateur tableau taux intérêt",
+      "tableau comparaison taux",
+      "comparaison taux prêt",
+      "générateur tableau taux intérêt",
+      "tableau taux hypothèque",
+      "comparaison taux investissement"
+    ],
+    "longTailKeywords": [
+      "calculateur tableau taux intérêt en ligne",
+      "générer tableau comparaison taux intérêt",
+      "tableau paiements prêt avec différents taux",
+      "tableau comparaison taux hypothèque",
+      "tableau comparaison retours investissement",
+      "tableau taux intérêt pour prêts",
+      "calculateur tableau comparaison taux",
+      "comparaison multiples taux intérêt",
+      "générateur tableau taux prêt",
+      "tableau scénarios taux intérêt"
+    ],
+    "slug": "interest-rate-table-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Intermediate",
+    "tags": [
+      "taux intérêt",
+      "tableau comparaison",
+      "tableau taux",
+      "comparaison prêt",
+      "comparaison investissement",
+      "générateur tableau"
+    ],
+    "description": "Générez des tableaux complets de comparaison pour différents taux d'intérêt. Comparez paiements prêt, retours investissement et coûts totaux dans multiples scénarios de taux d'intérêt dans format tableau facile à lire.",
+    "summary": "Générez des tableaux de comparaison pour plusieurs taux d'intérêt",
+    "instructions": [
+      "Entrez le montant principal ou solde prêt",
+      "Spécifiez la durée prêt ou période investissement en années",
+      "Entrez plusieurs taux d'intérêt séparés par virgules",
+      "Choisissez s'il s'agit calcul prêt ou investissement",
+      "Cliquez sur 'Générer Tableau' pour créer le tableau de comparaison",
+      "Examinez les différences paiement/retour entre taux"
+    ],
+    "calculatorComponent": "InterestRateTableCalculator",
+    "examples": [
+      {
+        "title": "Achat Taux Hypothèque",
+        "description": "Comparez paiements mensuels pour différents taux hypothèque sur prêt de 300 000 €",
+        "input": {
+          "principal": 300000,
+          "term": 30,
+          "rates": "6.0,6.25,6.5,6.75,7.0",
+          "calculationType": "loan"
+        },
+        "output": {
+          "rateRange": "6.00% - 7.00%",
+          "paymentRange": "1 799 € - 1 995 € mensuels",
+          "bestRate": "Taux 6.00% économise 196 € mensuels",
+          "rateImpact": "Augmentation taux 0.25% coûte 49 € de plus par mois"
+        }
+      },
+      {
+        "title": "Comparaison Taux Investissement",
+        "description": "Comparez retours pour différents taux investissement sur 50 000 € pendant 20 ans",
+        "input": {
+          "principal": 50000,
+          "term": 20,
+          "rates": "4.0,5.0,6.0,7.0,8.0",
+          "calculationType": "investment"
+        },
+        "output": {
+          "rateRange": "4.00% - 8.00%",
+          "paymentRange": "109 357 € - 233 048 € valeur finale",
+          "bestRate": "Taux 8.00% retourne 123 691 € de plus",
+          "rateImpact": "Augmentation taux 1% ajoute 26 000 € à valeur finale"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Prendre des décisions financières éclairées nécessite comparer multiples scénarios de taux d'intérêt. Notre calculateur de tableau de taux d'intérêt génère des tableaux complets de comparaison montrant comment différents taux d'intérêt affectent paiements prêt ou retours investissement. Que vous achetiez prêts, compariez options investissement ou planifiiez votre avenir financier, cette calculatrice fournit des insights clairs et actionnables dans format tableau facile à lire.",
+      "benefits": [
+        "Générez des tableaux détaillés de comparaison pour plusieurs taux d'intérêt",
+        "Comparez paiements prêt ou retours investissement côte à côte",
+        "Comprenez l'impact financier de différences de taux",
+        "Prenez des décisions basées sur données lors d'achat de taux",
+        "Économisez temps en automatisant calculs de comparaison de taux",
+        "Exportez tableaux pour utilisation en planification financière ou présentations"
+      ],
+      "steps": [
+        "Entrez votre montant principal (solde prêt ou montant investissement initial)",
+        "Spécifiez la période de temps en années",
+        "Listez les taux d'intérêt que vous voulez comparer (séparés par virgule)",
+        "Choisissez entre comparaison paiement prêt ou retour investissement",
+        "Cliquez sur 'Générer Tableau' pour créer votre comparaison",
+        "Examinez les différences et choisissez le meilleur taux pour votre situation"
+      ],
+      "inputsExplained": [
+        "Montant principal est le solde prêt ou montant investissement initial",
+        "Durée est le nombre d'années pour le prêt ou période investissement",
+        "Taux d'intérêt doivent être entrés comme pourcentages séparés par virgules",
+        "Type de calcul détermine si vous comparez paiements prêt ou retours investissement"
+      ],
+      "formulaExplanation": "Pour comparaisons prêt, le calculateur utilise la formule de paiement prêt standard pour montrer paiements mensuels. Pour comparaisons investissement, il utilise formules intérêt composé pour montrer valeurs futures. Le tableau affiche résultats pour chaque taux d'intérêt, facilitant voir comment petites différences de taux peuvent avoir impacts financiers significatifs.",
+      "examples": [
+        "Une comparaison hypothèque montre qu'un taux 6.75% coûte 149 € de plus par mois qu'un taux 6.5% sur prêt de 250 000 €",
+        "Une comparaison investissement montre qu'un taux retour 8% génère 46 000 € de plus qu'un taux 6% sur investissement de 100 000 € sur 25 ans"
+      ],
+      "resultsExplanation": [
+        "Tableau comparaison montre paiements ou retours pour chaque taux d'intérêt",
+        "Plage taux affiche l'écart entre taux les plus bas et élevés comparés",
+        "Plage paiement/retour montre l'impact financier entre tous taux",
+        "Meilleur taux met en évidence l'option la plus favorable dans votre comparaison",
+        "Impact taux explique comment changements de taux affectent vos résultats financiers",
+        "Tous résultats vous aident à comprendre coût ou bénéfice de différents taux"
+      ],
+      "whoItsFor": "Ce calculateur de tableau de taux d'intérêt est essentiel pour acheteurs immobiliers comparant taux hypothèque, investisseurs évaluant différents taux retour, planificateurs financiers créant présentations client, et quiconque a besoin de comparer multiples scénarios de taux d'intérêt. Il est particulièrement précieux pour achat de taux et prise de décisions financières.",
+      "disclaimer": "Ce calculateur fournit comparaisons mathématiques basées sur paramètres entrés. Termes prêt réels, retours investissement et taux d'intérêt peuvent varier selon conditions crédit, conditions marché et termes produit spécifiques. Les comparaisons sont pour fins éducatives et ne constituent pas conseil financier ou devis de taux.",
+      "relatedTools": [
+        "calculateur hypothèque",
+        "calculateur intérêt composé",
+        "calculateur prêt",
+        "calculateur investissement",
+        "calculateur TAEG"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un tableau de comparaison de taux d'intérêt montre?",
+          "answer": "Un tableau de comparaison de taux d'intérêt montre comment paiements prêt ou retours investissement changent à différents taux d'intérêt, vous aidant à comprendre l'impact financier de différences de taux."
+        },
+        {
+          "question": "Comment utiliser cela pour achat de taux hypothèque?",
+          "answer": "Entrez votre montant prêt et durée, puis listez les taux hypothèque que vous considérez. Le tableau montrera exactement combien vous économisez ou payez en plus avec chaque option de taux."
+        },
+        {
+          "question": "¿Puis-je comparer retours investissement?",
+          "answer": "Oui, basculez vers mode 'Comparaison Retour Investissement' pour voir comment différents taux d'intérêt affectent valeur future de vos investissements au fil du temps."
+        },
+        {
+          "question": "Combien de taux puis-je comparer?",
+          "answer": "Vous pouvez comparer autant de taux que vous voulez en les entrant comme liste séparée par virgules. Le tableau affichera résultats pour chaque taux que vous incluez."
+        },
+        {
+          "question": "Quelles durées prêt puis-je comparer?",
+          "answer": "Vous pouvez comparer taux pour durées prêt de 1 à 50 ans, couvrant tout depuis prêts personnels jusqu'aux hypothèques à long terme."
+        }
+      ]
+    }
+  }
+}

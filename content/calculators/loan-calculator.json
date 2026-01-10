@@ -1,0 +1,234 @@
+{
+  "en": {
+    "title": "Loan Calculator",
+    "summary": "Calculate loan payments, interest, and repayment schedules.",
+    "description": "Use our loan calculator to determine monthly payments, total interest paid, and create a complete repayment schedule for any type of loan.",
+    "category": "financial",
+    "difficulty": "Beginner",
+    "slug": "loan-calculator",
+    "calculatorComponent": "LoanCalculator",
+    "seoContent": {
+      "introduction": "Our loan calculator helps you determine monthly loan payments, total interest paid, and create a complete repayment schedule for any type of loan including personal, auto, student, and business loans.",
+      "benefits": [
+        "Calculate exact monthly loan payments",
+        "See total interest paid over the loan term",
+        "Understand your complete repayment schedule",
+        "Compare different loan amounts and terms",
+        "Plan your loan repayment strategy effectively"
+      ],
+      "steps": [
+        "Enter the loan amount you want to borrow",
+        "Input the annual interest rate",
+        "Specify the loan term in years",
+        "Click calculate to see your results"
+      ],
+      "inputsExplained": [
+        "Loan Amount: The total amount you're borrowing",
+        "Interest Rate: Annual percentage rate for the loan",
+        "Loan Term: Number of years to repay the loan"
+      ],
+      "formulaExplanation": "Monthly payment = P * [r(1+r)^n] / [(1+r)^n - 1] where P is principal, r is monthly interest rate, and n is number of payments.",
+      "examples": [
+        "Personal loan of $10,000 at 8% interest for 5 years",
+        "Auto loan of $25,000 at 5.5% interest for 6 years",
+        "Business loan of $50,000 at 7% interest for 10 years"
+      ],
+      "resultsExplanation": [
+        "Monthly Payment: Your regular loan payment amount",
+        "Total Interest: Amount paid in interest over loan life",
+        "Total Amount: Total amount paid including principal and interest"
+      ],
+      "whoItsFor": "Borrowers, financial planners, small business owners, and anyone considering taking out a loan.",
+      "disclaimer": "This calculator provides estimates only. Actual loan terms depend on lender requirements, credit score, and current market conditions. Consult with a financial advisor for personalized advice.",
+      "relatedTools": ["mortgage-calculator", "savings-calculator", "debt-consolidation-calculator"],
+      "faqs": [
+        {
+          "question": "How is loan interest calculated?",
+          "answer": "Loan interest is typically calculated using the compound interest formula. The calculator uses the standard amortization formula to determine monthly payments and total interest."
+        },
+        {
+          "question": "What's the difference between simple and compound interest?",
+          "answer": "Simple interest is calculated only on the principal amount, while compound interest is calculated on both principal and previously earned interest. Most loans use compound interest."
+        },
+        {
+          "question": "Can I pay off my loan early?",
+          "answer": "Yes, most loans allow early repayment. However, some loans may have prepayment penalties. Check your loan agreement for specific terms."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Préstamos",
+    "summary": "Calcula pagos de préstamos, intereses y cronogramas de pago.",
+    "description": "Usa nuestra calculadora de préstamos para determinar pagos mensuales, intereses totales pagados y crear un cronograma completo de pago para cualquier tipo de préstamo.",
+    "category": "financial",
+    "difficulty": "Principiante",
+    "slug": "loan-calculator",
+    "calculatorComponent": "LoanCalculator",
+    "seoContent": {
+      "introduction": "Nuestra calculadora de préstamos te ayuda a determinar los pagos mensuales de préstamos, el interés total pagado y crear un cronograma completo de pago para cualquier tipo de préstamo incluyendo personales, automotrices, estudiantiles y comerciales.",
+      "benefits": [
+        "Calcula pagos mensuales exactos de préstamos",
+        "Ve el interés total pagado durante el plazo del préstamo",
+        "Entiende tu cronograma completo de pago",
+        "Compara diferentes montos y plazos de préstamos",
+        "Planifica efectivamente tu estrategia de pago de préstamos"
+      ],
+      "steps": [
+        "Ingresa el monto del préstamo que deseas solicitar",
+        "Ingresa la tasa de interés anual",
+        "Especifica el plazo del préstamo en años",
+        "Haz clic en calcular para ver tus resultados"
+      ],
+      "inputsExplained": [
+        "Monto del Préstamo: El monto total que estás pidiendo prestado",
+        "Tasa de Interés: Tasa porcentual anual del préstamo",
+        "Plazo del Préstamo: Número de años para pagar el préstamo"
+      ],
+      "formulaExplanation": "Pago mensual = P * [r(1+r)^n] / [(1+r)^n - 1] donde P es el principal, r es la tasa de interés mensual, y n es el número de pagos.",
+      "examples": [
+        "Préstamo personal de $10,000 al 8% de interés por 5 años",
+        "Préstamo automotriz de $25,000 al 5.5% de interés por 6 años",
+        "Préstamo comercial de $50,000 al 7% de interés por 10 años"
+      ],
+      "resultsExplanation": [
+        "Pago Mensual: El monto de tu pago regular de préstamo",
+        "Interés Total: Monto pagado en intereses durante la vida del préstamo",
+        "Monto Total: Monto total pagado incluyendo principal e intereses"
+      ],
+      "whoItsFor": "Prestatarios, planificadores financieros, propietarios de pequeños negocios y cualquier persona que considere solicitar un préstamo.",
+      "disclaimer": "Esta calculadora proporciona estimaciones únicamente. Los términos reales del préstamo dependen de los requisitos del prestamista, el puntaje crediticio y las condiciones actuales del mercado. Consulta con un asesor financiero para consejos personalizados.",
+      "relatedTools": ["mortgage-calculator", "savings-calculator", "debt-consolidation-calculator"],
+      "faqs": [
+        {
+          "question": "¿Cómo se calcula el interés de los préstamos?",
+          "answer": "El interés de los préstamos generalmente se calcula usando la fórmula de interés compuesto. La calculadora usa la fórmula de amortización estándar para determinar los pagos mensuales y el interés total."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre interés simple y compuesto?",
+          "answer": "El interés simple se calcula solo sobre el monto principal, mientras que el interés compuesto se calcula sobre el principal y los intereses ganados previamente. La mayoría de los préstamos usan interés compuesto."
+        },
+        {
+          "question": "¿Puedo pagar mi préstamo antes de tiempo?",
+          "answer": "Sí, la mayoría de los préstamos permiten el pago anticipado. Sin embargo, algunos préstamos pueden tener penalizaciones por pago anticipado. Verifica tu contrato de préstamo para términos específicos."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Empréstimos",
+    "summary": "Calcule pagamentos de empréstimos, juros e cronogramas de pagamento.",
+    "description": "Use nossa calculadora de empréstimos para determinar pagamentos mensais, juros totais pagos e criar um cronograma completo de pagamento para qualquer tipo de empréstimo.",
+    "category": "financial",
+    "difficulty": "Iniciante",
+    "slug": "loan-calculator",
+    "calculatorComponent": "LoanCalculator",
+    "seoContent": {
+      "introduction": "Nossa calculadora de empréstimos ajuda você a determinar os pagamentos mensais de empréstimos, o juros total pago e criar um cronograma completo de pagamento para qualquer tipo de empréstimo incluindo pessoais, automotivos, estudantis e comerciais.",
+      "benefits": [
+        "Calcule pagamentos mensais exatos de empréstimos",
+        "Veja o juros total pago durante o prazo do empréstimo",
+        "Entenda seu cronograma completo de pagamento",
+        "Compare diferentes valores e prazos de empréstimos",
+        "Planeje efetivamente sua estratégia de pagamento de empréstimos"
+      ],
+      "steps": [
+        "Digite o valor do empréstimo que deseja contratar",
+        "Digite a taxa de juros anual",
+        "Especifique o prazo do empréstimo em anos",
+        "Clique em calcular para ver seus resultados"
+      ],
+      "inputsExplained": [
+        "Valor do Empréstimo: O valor total que você está pegando emprestado",
+        "Taxa de Juros: Taxa percentual anual do empréstimo",
+        "Prazo do Empréstimo: Número de anos para pagar o empréstimo"
+      ],
+      "formulaExplanation": "Pagamento mensal = P * [r(1+r)^n] / [(1+r)^n - 1] onde P é o principal, r é a taxa de juros mensal, e n é o número de pagamentos.",
+      "examples": [
+        "Empréstimo pessoal de R$ 10.000 a 8% de juros por 5 anos",
+        "Empréstimo automotivo de R$ 25.000 a 5.5% de juros por 6 anos",
+        "Empréstimo comercial de R$ 50.000 a 7% de juros por 10 anos"
+      ],
+      "resultsExplanation": [
+        "Pagamento Mensal: O valor do seu pagamento regular de empréstimo",
+        "Juros Total: Valor pago em juros durante a vida do empréstimo",
+        "Valor Total: Valor total pago incluindo principal e juros"
+      ],
+      "whoItsFor": "Tomadores de empréstimo, planejadores financeiros, proprietários de pequenos negócios e qualquer pessoa que considere contratar um empréstimo.",
+      "disclaimer": "Esta calculadora fornece estimativas apenas. Os termos reais do empréstimo dependem dos requisitos do credor, pontuação de crédito e condições atuais do mercado. Consulte um consultor financeiro para conselhos personalizados.",
+      "relatedTools": ["mortgage-calculator", "savings-calculator", "debt-consolidation-calculator"],
+      "faqs": [
+        {
+          "question": "Como é calculado o juros dos empréstimos?",
+          "answer": "O juros dos empréstimos geralmente é calculado usando a fórmula de juros compostos. A calculadora usa a fórmula de amortização padrão para determinar os pagamentos mensais e juros total."
+        },
+        {
+          "question": "Qual é a diferença entre juros simples e composto?",
+          "answer": "Juros simples é calculado apenas sobre o valor principal, enquanto juros composto é calculado sobre o principal e juros ganhos anteriormente. A maioria dos empréstimos usa juros composto."
+        },
+        {
+          "question": "Posso quitar meu empréstimo antes do prazo?",
+          "answer": "Sim, a maioria dos empréstimos permite quitação antecipada. No entanto, alguns empréstimos podem ter penalidades por quitação antecipada. Verifique seu contrato de empréstimo para termos específicos."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Prêt",
+    "summary": "Calculez les paiements de prêt, intérêts et échéanciers.",
+    "description": "Utilisez notre calculateur de prêt pour déterminer les paiements mensuels, intérêts totaux payés et créer un échéancier complet pour tout type de prêt.",
+    "category": "financial",
+    "difficulty": "Débutant",
+    "slug": "loan-calculator",
+    "calculatorComponent": "LoanCalculator",
+    "seoContent": {
+      "introduction": "Notre calculateur de prêt vous aide à déterminer les paiements mensuels de prêt, les intérêts totaux payés et créer un échéancier complet pour tout type de prêt incluant personnels, automobiles, étudiants et commerciaux.",
+      "benefits": [
+        "Calculez les paiements mensuels exacts de prêt",
+        "Voyez les intérêts totaux payés pendant la durée du prêt",
+        "Comprenez votre échéancier complet de paiement",
+        "Comparez différents montants et durées de prêt",
+        "Planifiez efficacement votre stratégie de remboursement de prêt"
+      ],
+      "steps": [
+        "Entrez le montant du prêt que vous souhaitez emprunter",
+        "Saisissez le taux d'intérêt annuel",
+        "Spécifiez la durée du prêt en années",
+        "Cliquez sur calculer pour voir vos résultats"
+      ],
+      "inputsExplained": [
+        "Montant du Prêt: Le montant total que vous empruntez",
+        "Taux d'Intérêt: Taux de pourcentage annuel du prêt",
+        "Durée du Prêt: Nombre d'années pour rembourser le prêt"
+      ],
+      "formulaExplanation": "Paiement mensuel = P * [r(1+r)^n] / [(1+r)^n - 1] où P est le principal, r est le taux d'intérêt mensuel, et n est le nombre de paiements.",
+      "examples": [
+        "Prêt personnel de 10 000 € à 8% d'intérêt sur 5 ans",
+        "Prêt automobile de 25 000 € à 5.5% d'intérêt sur 6 ans",
+        "Prêt commercial de 50 000 € à 7% d'intérêt sur 10 ans"
+      ],
+      "resultsExplanation": [
+        "Paiement Mensuel: Le montant de votre paiement régulier de prêt",
+        "Intérêts Totaux: Montant payé en intérêts pendant la durée du prêt",
+        "Montant Total: Montant total payé incluant le principal et les intérêts"
+      ],
+      "whoItsFor": "Emprunteurs, planificateurs financiers, propriétaires de petites entreprises et toute personne envisageant de contracter un prêt.",
+      "disclaimer": "Ce calculateur fournit des estimations uniquement. Les conditions réelles du prêt dépendent des exigences du prêteur, du score de crédit et des conditions actuelles du marché. Consultez un conseiller financier pour des conseils personnalisés.",
+      "relatedTools": ["mortgage-calculator", "savings-calculator", "debt-consolidation-calculator"],
+      "faqs": [
+        {
+          "question": "Comment les intérêts de prêt sont-ils calculés?",
+          "answer": "Les intérêts de prêt sont généralement calculés en utilisant la formule d'intérêt composé. La calculatrice utilise la formule d'amortissement standard pour déterminer les paiements mensuels et les intérêts totaux."
+        },
+        {
+          "question": "Quelle est la différence entre intérêt simple et composé?",
+          "answer": "L'intérêt simple est calculé uniquement sur le montant principal, tandis que l'intérêt composé est calculé sur le principal et les intérêts gagnés précédemment. La plupart des prêts utilisent l'intérêt composé."
+        },
+        {
+          "question": "Puis-je rembourser mon prêt par anticipation?",
+          "answer": "Oui, la plupart des prêts permettent le remboursement anticipé. Cependant, certains prêts peuvent avoir des pénalités de remboursement anticipé. Vérifiez votre contrat de prêt pour les termes spécifiques."
+        }
+      ]
+    }
+  }
+}

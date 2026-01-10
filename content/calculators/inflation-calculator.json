@@ -1,0 +1,494 @@
+{
+  "en": {
+    "title": "Inflation Calculator",
+    "seoTitle": "Inflation Calculator - Calculate Purchasing Power and Inflation Impact",
+    "metaDescription": "Free inflation calculator. Calculate the impact of inflation on purchasing power over time. Compare past and future values with real inflation rates. Perfect for financial planning and investment analysis.",
+    "keywords": [
+      "inflation calculator",
+      "purchasing power calculator",
+      "inflation impact calculator",
+      "cost of living calculator",
+      "inflation rate calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate inflation impact",
+      "purchasing power calculator online",
+      "inflation calculator for money value",
+      "calculate inflation effect on savings",
+      "future value inflation calculator"
+    ],
+    "slug": "inflation-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "inflation",
+      "purchasing power",
+      "economics",
+      "financial planning",
+      "investment"
+    ],
+    "summary": "Calculate how inflation affects purchasing power and compare the real value of money over time.",
+    "description": "Our comprehensive inflation calculator helps you understand the real impact of inflation on your money's purchasing power. Calculate how much a dollar from the past is worth today, or how much you'll need in the future to maintain the same purchasing power. Essential for retirement planning, investment analysis, and understanding economic trends.",
+    "instructions": [
+      "Enter the original amount and year",
+      "Enter the target year or inflation rate",
+      "Choose between using historical data or custom inflation rate",
+      "Get detailed breakdown of purchasing power changes"
+    ],
+    "calculatorComponent": "InflationCalculator",
+    "examples": [
+      {
+        "title": "Historical Value",
+        "input": "$1,000 in 2000",
+        "output": "2024 value: $1,819 (81.9% increase due to inflation)"
+      },
+      {
+        "title": "Future Purchasing Power",
+        "input": "$50,000 needed in 10 years at 3% inflation",
+        "output": "Current value needed: $37,121 to maintain same purchasing power"
+      }
+    ],
+    "relatedCalculators": [
+      "investment-calculator",
+      "retirement-calculator",
+      "budget-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Understand the silent thief that erodes your wealth with our comprehensive inflation calculator that reveals the true impact of rising prices on your money's purchasing power. Inflation is the hidden force that diminishes the value of your savings, investments, and future earnings, but understanding it empowers you to make better financial decisions. Whether you're planning for retirement, saving for major purchases, or analyzing investment returns, our calculator shows you exactly how inflation affects the real value of money over time. Master the mathematics of inflation and protect your financial future from its erosive effects.",
+      "benefits": [
+        "Calculate the real purchasing power of money across different time periods",
+        "Understand how inflation erodes the value of savings and investments",
+        "Compare historical purchasing power to see the impact of price changes",
+        "Plan for future expenses by accounting for expected inflation rates",
+        "Make informed decisions about investment returns vs. inflation rates",
+        "Calculate retirement savings needed in today's dollars",
+        "Understand the real cost of living changes over decades",
+        "Evaluate whether investments are keeping pace with inflation"
+      ],
+      "steps": [
+        "Enter the original amount and the year it was worth that value",
+        "Specify the target year to calculate future or past value",
+        "Choose between historical inflation data or custom inflation rate",
+        "Review the inflation-adjusted value and purchasing power changes",
+        "Compare different scenarios to understand inflation's impact"
+      ],
+      "inputsExplained": [
+        "Original amount is the dollar value you want to adjust for inflation",
+        "Original year establishes the baseline purchasing power",
+        "Target year determines the inflation period to calculate",
+        "Inflation rate can use historical averages or custom projections",
+        "Calculation method determines whether using historical or projected rates"
+      ],
+      "formulaExplanation": "Inflation calculations use compound interest formulas: Future Value = Present Value × (1 + Inflation Rate)^Years. For historical calculations, we use actual CPI (Consumer Price Index) data to show real purchasing power changes. The formula reveals how $1 today becomes worth less than $1 tomorrow due to rising prices. Understanding this helps you see why long-term financial planning must account for inflation's compounding effect. Real returns = Nominal returns - Inflation rate. This shows why 7% investment returns might only be 3% real returns in a 4% inflation environment.",
+      "examples": [
+        "$100,000 saved in 2000 would need $181,900 in 2024 to maintain same purchasing power, showing 81.9% inflation impact.",
+        "$50,000 needed for retirement in 10 years at 3% inflation requires only $37,121 in today's dollars to maintain purchasing power.",
+        "$1,000 monthly salary in 1980 equals $3,200 in 2024 purchasing power, illustrating massive inflation impact over decades."
+      ],
+      "resultsExplanation": [
+        "Inflation-adjusted value shows the equivalent purchasing power in today's dollars",
+        "Percentage change indicates how much prices have increased over time",
+        "Annual inflation rate shows the average yearly price increase",
+        "Real purchasing power demonstrates the actual buying power remaining"
+      ],
+      "whoItsFor": "This inflation calculator serves retirees planning withdrawals, investors calculating real returns, savers understanding purchasing power erosion, financial planners advising clients, business owners forecasting costs, students planning education expenses, homeowners budgeting for future needs, and anyone wanting to understand economic trends. It's particularly valuable for retirement planning, investment analysis, salary negotiations, cost-of-living comparisons, and understanding the real impact of economic policies. The calculator works for any time period, inflation rate, or dollar amount.",
+      "disclaimer": "This inflation calculator uses historical CPI data from the Bureau of Labor Statistics and projections based on current economic indicators. Actual future inflation rates are unpredictable and may vary significantly from projections. Historical calculations are accurate based on available data, but future projections are estimates only. Inflation rates can be affected by economic conditions, government policies, and unforeseen events. This tool provides educational information and should not be used as the sole basis for financial decisions. Consult financial advisors for personalized planning.",
+      "relatedTools": [
+        "Investment calculators for calculating real investment returns",
+        "Retirement calculators for inflation-adjusted retirement planning",
+        "Budget calculators for incorporating inflation into financial planning"
+      ],
+      "faqs": [
+        {
+          "question": "How does inflation affect my savings and investments?",
+          "answer": "Inflation erodes purchasing power at compound rates. $10,000 saved today might only buy $6,000 worth of goods in 10 years at 3% inflation. Investments must outpace inflation to grow real wealth. A 7% return in 3% inflation environment only provides 4% real growth. Understanding inflation helps set realistic savings goals and investment expectations. Without accounting for inflation, financial plans significantly underestimate future needs."
+        },
+        {
+          "question": "What's the difference between nominal and real returns?",
+          "answer": "Nominal returns show paper gains before inflation. Real returns show actual purchasing power growth. If stock returns 8% but inflation is 3%, real return is 5%. Real return = Nominal return - Inflation rate. This matters for retirement planning - you need real returns to maintain lifestyle. Many investors focus on nominal returns, underestimating inflation's impact on actual wealth growth."
+        },
+        {
+          "question": "How much inflation should I plan for in retirement?",
+          "answer": "Plan for 2-4% annual inflation, based on long-term historical averages. Social Security and pensions may have cost-of-living adjustments, but most investments don't automatically adjust. Retirement calculators often use 3% inflation assumption. Higher rates (4-5%) might occur during economic shocks. Plan conservatively - it's better to overestimate inflation than under-save. Consider inflation-protected investments like TIPS bonds for retirement portfolios."
+        },
+        {
+          "question": "How has inflation changed over time?",
+          "answer": "U.S. inflation varies dramatically: 13.5% peak in 1980, 3-4% in 1990s/2000s, 9% in 2022. Long-term average is 3.2% since 1913. High inflation occurred during wars, oil crises, and loose monetary policy. Low inflation during economic stability. Recent trends show higher volatility. Understanding historical patterns helps predict future inflation but economic conditions constantly change."
+        },
+        {
+          "question": "Should I invest in inflation-protected assets?",
+          "answer": "Consider inflation-protected assets if concerned about rising prices. TIPS bonds guarantee principal protection. Real estate and commodities historically perform well during inflation. Stocks provide some inflation hedge through earnings growth. Gold and cryptocurrencies often seen as inflation protection but volatile. Balance inflation protection with risk tolerance and time horizon. Most portfolios benefit from some inflation-hedging assets, especially for long-term goals."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Inflación",
+    "seoTitle": "Calculadora de Inflación - Calcula Poder Adquisitivo e Impacto de la Inflación",
+    "metaDescription": "Calculadora gratuita de inflación. Calcula el impacto de la inflación en el poder adquisitivo a lo largo del tiempo. Compara valores pasados y futuros con tasas reales de inflación. Perfecta para planificación financiera y análisis de inversiones.",
+    "keywords": [
+      "calculadora inflación",
+      "calculadora poder adquisitivo",
+      "calculadora impacto inflación",
+      "calculadora costo vida",
+      "calculadora tasa inflación"
+    ],
+    "longTailKeywords": [
+      "cómo calcular impacto inflación",
+      "calculadora poder adquisitivo online",
+      "calculadora inflación para valor dinero",
+      "calcular efecto inflación en ahorros",
+      "calculadora valor futuro inflación"
+    ],
+    "slug": "inflation-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "inflación",
+      "poder adquisitivo",
+      "economía",
+      "planificación financiera",
+      "inversión"
+    ],
+    "summary": "Calcula cómo la inflación afecta el poder adquisitivo y compara el valor real del dinero a lo largo del tiempo.",
+    "description": "Nuestra completa calculadora de inflación te ayuda a comprender el impacto real de la inflación en el poder adquisitivo de tu dinero. Calcula cuánto vale un dólar del pasado hoy, o cuánto necesitarás en el futuro para mantener el mismo poder adquisitivo. Esencial para planificación de jubilación, análisis de inversiones y comprensión de tendencias económicas.",
+    "instructions": [
+      "Ingresa el monto original y año",
+      "Ingresa el año objetivo o tasa de inflación",
+      "Elige entre usar datos históricos o tasa de inflación personalizada",
+      "Obtén desglose detallado de cambios en poder adquisitivo"
+    ],
+    "calculatorComponent": "InflationCalculator",
+    "examples": [
+      {
+        "title": "Valor Histórico",
+        "input": "$1,000 en 2000",
+        "output": "Valor 2024: $1,819 (81.9% aumento debido a inflación)"
+      },
+      {
+        "title": "Poder Adquisitivo Futuro",
+        "input": "$50,000 necesarios en 10 años a 3% inflación",
+        "output": "Valor actual necesario: $37,121 para mantener mismo poder adquisitivo"
+      }
+    ],
+    "relatedCalculators": [
+      "investment-calculator",
+      "retirement-calculator",
+      "budget-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Entienda el ladrón silencioso que erosiona su riqueza con nuestra calculadora integral de inflación que revela el verdadero impacto de precios crecientes en el poder adquisitivo de su dinero. La inflación es la fuerza oculta que disminuye el valor de sus ahorros, inversiones, y ganancias futuras, pero entenderla le empodera para tomar mejores decisiones financieras. Ya sea que planee jubilación, ahorre para compras mayores, o analice rendimientos de inversión, nuestra calculadora le muestra exactamente cómo la inflación afecta el valor real del dinero con el tiempo. Domine las matemáticas de la inflación y proteja su futuro financiero de sus efectos erosivos.",
+      "benefits": [
+        "Calcule el poder adquisitivo real del dinero a través de diferentes períodos de tiempo",
+        "Entienda cómo la inflación erosiona el valor de ahorros e inversiones",
+        "Compare poder adquisitivo histórico para ver el impacto de cambios de precios",
+        "Planee gastos futuros considerando tasas esperadas de inflación",
+        "Tome decisiones informadas sobre rendimientos de inversión vs. tasas de inflación",
+        "Calcule ahorros de jubilación necesarios en dólares de hoy",
+        "Entienda el costo real de cambios de vida a través de décadas",
+        "Evalúe si inversiones mantienen el ritmo de la inflación"
+      ],
+      "steps": [
+        "Ingresa el monto original y el año en que valía ese valor",
+        "Especifica el año objetivo para calcular valor futuro o pasado",
+        "Elige entre usar datos históricos de inflación o tasa personalizada de inflación",
+        "Revisa el valor ajustado por inflación y cambios de poder adquisitivo",
+        "Compara diferentes escenarios para entender el impacto de la inflación"
+      ],
+      "inputsExplained": [
+        "Monto original es el valor en dólares que quiere ajustar por inflación",
+        "Año original establece la línea base de poder adquisitivo",
+        "Año objetivo determina el período de inflación para calcular",
+        "Tasa de inflación puede usar promedios históricos o proyecciones personalizadas",
+        "Método de cálculo determina si usando tasas históricas o proyectadas"
+      ],
+      "formulaExplanation": "Los cálculos de inflación usan fórmulas de interés compuesto: Valor Futuro = Valor Presente × (1 + Tasa Inflación)^Años. Para cálculos históricos, usamos datos reales CPI (Índice de Precios al Consumidor) para mostrar cambios reales de poder adquisitivo. La fórmula revela cómo $1 hoy vale menos que $1 mañana debido a precios crecientes. Entender esto le ayuda a ver por qué la planificación financiera a largo plazo debe considerar el efecto compuesto de la inflación. Rendimientos reales = Rendimientos nominales - Tasa inflación. Esto muestra por qué rendimientos de inversión del 7% podrían ser solo 3% rendimientos reales en un ambiente de inflación del 4%.",
+      "examples": [
+        "$100,000 ahorrados en 2000 necesitarían $181,900 en 2024 para mantener mismo poder adquisitivo, mostrando impacto de inflación del 81.9%.",
+        "$50,000 necesarios para jubilación en 10 años a 3% inflación requiere solo $37,121 en dólares de hoy para mantener poder adquisitivo.",
+        "$1,000 salario mensual en 1980 iguala $3,200 en poder adquisitivo 2024, ilustrando impacto masivo de inflación a través de décadas."
+      ],
+      "resultsExplanation": [
+        "Valor ajustado por inflación muestra el poder adquisitivo equivalente en dólares de hoy",
+        "Cambio porcentual indica cuánto han aumentado precios con el tiempo",
+        "Tasa anual de inflación muestra el aumento promedio anual de precios",
+        "Poder adquisitivo real demuestra el poder de compra real restante"
+      ],
+      "whoItsFor": "Esta calculadora de inflación sirve a jubilados planeando retiros, inversionistas calculando rendimientos reales, ahorradores entendiendo erosión de poder adquisitivo, planificadores financieros asesorando clientes, dueños de negocio proyectando costos, estudiantes planeando gastos educativos, propietarios presupuestando necesidades futuras, y cualquiera queriendo entender tendencias económicas. Es particularmente valiosa para planificación de jubilación, análisis de inversión, negociaciones salariales, comparaciones de costo de vida, y entendiendo el impacto real de políticas económicas. La calculadora funciona para cualquier período de tiempo, tasa de inflación, o monto en dólares.",
+      "disclaimer": "Esta calculadora de inflación usa datos históricos CPI de la Oficina de Estadísticas Laborales y proyecciones basadas en indicadores económicos actuales. Las tasas reales futuras de inflación son impredecibles y pueden variar significativamente de proyecciones. Los cálculos históricos son precisos basados en datos disponibles, pero proyecciones futuras son solo estimaciones. Las tasas de inflación pueden ser afectadas por condiciones económicas, políticas gubernamentales, y eventos imprevistos. Esta herramienta proporciona información educativa y no debería usarse como la única base para decisiones financieras. Consulte asesores financieros para planificación personalizada.",
+      "relatedTools": [
+        "Calculadoras de inversión para calcular rendimientos reales de inversión",
+        "Calculadoras de jubilación para planificación de jubilación ajustada por inflación",
+        "Calculadoras de presupuesto para incorporar inflación en planificación financiera"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo afecta la inflación a mis ahorros e inversiones?",
+          "answer": "La inflación erosiona poder adquisitivo a tasas compuestas. $10,000 ahorrados hoy podrían comprar solo $6,000 de bienes en 10 años a 3% inflación. Las inversiones deben superar la inflación para crecer riqueza real. Un rendimiento del 7% en ambiente de inflación del 3% solo proporciona crecimiento real del 4%. Entender la inflación ayuda a establecer metas realistas de ahorro y expectativas de inversión. Sin considerar inflación, planes financieros subestiman significativamente necesidades futuras."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre rendimientos nominales y reales?",
+          "answer": "Rendimientos nominales muestran ganancias en papel antes de inflación. Rendimientos reales muestran crecimiento real de poder adquisitivo. Si acciones retornan 8% pero inflación es 3%, rendimiento real es 5%. Rendimiento real = Rendimiento nominal - Tasa inflación. Esto importa para planificación de jubilación - necesita rendimientos reales para mantener estilo de vida. Muchos inversionistas se enfocan en rendimientos nominales, subestimando impacto de inflación en crecimiento real de riqueza."
+        },
+        {
+          "question": "¿Cuánta inflación debería planear en jubilación?",
+          "answer": "Planee 2-4% inflación anual, basado en promedios históricos a largo plazo. Seguro Social y pensiones pueden tener ajustes de costo de vida, pero la mayoría inversiones no ajustan automáticamente. Calculadoras de jubilación a menudo usan supuesto de inflación del 3%. Tasas más altas (4-5%) podrían ocurrir durante choques económicos. Planee conservativamente - es mejor sobreestimar inflación que ahorrar de menos. Considere inversiones protegidas de inflación como bonos TIPS para portafolios de jubilación."
+        },
+        {
+          "question": "¿Cómo ha cambiado la inflación con el tiempo?",
+          "answer": "La inflación estadounidense varía dramáticamente: pico del 13.5% en 1980, 3-4% en 1990s/2000s, 9% en 2022. Promedio a largo plazo es 3.2% desde 1913. Inflación alta ocurrió durante guerras, crisis petroleras, y política monetaria laxa. Inflación baja durante estabilidad económica. Tendencias recientes muestran mayor volatilidad. Entender patrones históricos ayuda predecir inflación futura pero condiciones económicas cambian constantemente."
+        },
+        {
+          "question": "¿Debería invertir en activos protegidos de inflación?",
+          "answer": "Considere activos protegidos de inflación si preocupado por precios crecientes. Bonos TIPS garantizan protección de capital. Bienes raíces y commodities históricamente funcionan bien durante inflación. Acciones proporcionan algo de protección de inflación a través de crecimiento de ganancias. Oro y criptomonedas a menudo vistas como protección de inflación pero volátiles. Balancee protección de inflación con tolerancia de riesgo y horizonte temporal. La mayoría portafolios se benefician de algunos activos de protección de inflación, especialmente para metas a largo plazo."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Inflação",
+    "seoTitle": "Calculadora de Inflação - Calcule Poder de Compra e Impacto da Inflação",
+    "metaDescription": "Calculadora gratuita de inflação. Calcule o impacto da inflação no poder de compra ao longo do tempo. Compare valores passados e futuros com taxas reais de inflação. Perfeita para planejamento financeiro e análise de investimentos.",
+    "keywords": [
+      "calculadora inflação",
+      "calculadora poder compra",
+      "calculadora impacto inflação",
+      "calculadora custo vida",
+      "calculadora taxa inflação"
+    ],
+    "longTailKeywords": [
+      "como calcular impacto inflação",
+      "calculadora poder compra online",
+      "calculadora inflação para valor dinheiro",
+      "calcular efeito inflação em poupanças",
+      "calculadora valor futuro inflação"
+    ],
+    "slug": "inflation-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "inflação",
+      "poder compra",
+      "economia",
+      "planejamento financeiro",
+      "investimento"
+    ],
+    "summary": "Calcule como a inflação afeta o poder de compra e compare o valor real do dinheiro ao longo do tempo.",
+    "description": "Nossa calculadora completa de inflação ajuda você a compreender o impacto real da inflação no poder de compra do seu dinheiro. Calcule quanto vale um dólar do passado hoje, ou quanto você precisará no futuro para manter o mesmo poder de compra. Essencial para planejamento de aposentadoria, análise de investimentos e compreensão de tendências econômicas.",
+    "instructions": [
+      "Digite o valor original e ano",
+      "Digite o ano alvo ou taxa de inflação",
+      "Escolha entre usar dados históricos ou taxa de inflação personalizada",
+      "Obtenha detalhamento dos mudanças no poder de compra"
+    ],
+    "calculatorComponent": "InflationCalculator",
+    "examples": [
+      {
+        "title": "Valor Histórico",
+        "input": "$1,000 em 2000",
+        "output": "Valor 2024: $1,819 (81.9% aumento devido à inflação)"
+      },
+      {
+        "title": "Poder de Compra Futuro",
+        "input": "$50,000 necessários em 10 anos a 3% inflação",
+        "output": "Valor atual necessário: $37,121 para manter mesmo poder de compra"
+      }
+    ],
+    "relatedCalculators": [
+      "investment-calculator",
+      "retirement-calculator",
+      "budget-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Entenda o ladrão silencioso que erosiona sua riqueza com nossa calculadora abrangente de inflação que revela o verdadeiro impacto de preços crescentes no poder de compra de seu dinheiro. Inflação é a força oculta que diminui o valor de suas economias, investimentos, e ganhos futuros, mas entendê-la o empodera para tomar melhores decisões financeiras. Seja planejando aposentadoria, economizando para compras maiores, ou analisando retornos de investimento, nossa calculadora mostra exatamente como inflação afeta o valor real de dinheiro com o tempo. Domine as matemáticas de inflação e proteja seu futuro financeiro de seus efeitos erosivos.",
+      "benefits": [
+        "Calcule o poder de compra real de dinheiro através de diferentes períodos de tempo",
+        "Entenda como inflação erosiona o valor de economias e investimentos",
+        "Compare poder de compra histórico para ver o impacto de mudanças de preços",
+        "Planeje gastos futuros considerando taxas esperadas de inflação",
+        "Tome decisões informadas sobre retornos de investimento vs. taxas de inflação",
+        "Calcule economias de aposentadoria necessárias em dólares de hoje",
+        "Entenda o custo real de mudanças de vida através de décadas",
+        "Avalie se investimentos estão mantendo ritmo com inflação"
+      ],
+      "steps": [
+        "Digite o valor original e o ano em que valia aquele valor",
+        "Especifique o ano alvo para calcular valor futuro ou passado",
+        "Escolha entre usar dados históricos de inflação ou taxa personalizada de inflação",
+        "Revise o valor ajustado por inflação e mudanças de poder de compra",
+        "Compare diferentes cenários para entender o impacto de inflação"
+      ],
+      "inputsExplained": [
+        "Valor original é o valor em dólar que você quer ajustar por inflação",
+        "Ano original estabelece a linha base de poder de compra",
+        "Ano alvo determina o período de inflação para calcular",
+        "Taxa de inflação pode usar médias históricas ou projeções personalizadas",
+        "Método de cálculo determina se usando taxas históricas ou projetadas"
+      ],
+      "formulaExplanation": "Cálculos de inflação usam fórmulas de juros compostos: Valor Futuro = Valor Presente × (1 + Taxa Inflação)^Anos. Para cálculos históricos, usamos dados reais IPC (Índice de Preços ao Consumidor) para mostrar mudanças reais de poder de compra. A fórmula revela como $1 hoje vale menos que $1 amanhã devido a preços crescentes. Entender isso ajuda você a ver por que planejamento financeiro de longo prazo deve considerar o efeito composto de inflação. Retornos reais = Retornos nominais - Taxa inflação. Isso mostra por que retornos de investimento de 7% podem ser apenas 3% retornos reais em ambiente de inflação de 4%.",
+      "examples": [
+        "$100,000 economizados em 2000 precisariam $181,900 em 2024 para manter mesmo poder de compra, mostrando impacto de inflação de 81.9%.",
+        "$50,000 necessários para aposentadoria em 10 anos a 3% inflação requer apenas $37,121 em dólares de hoje para manter poder de compra.",
+        "$1,000 salário mensal em 1980 iguala $3,200 em poder de compra 2024, ilustrando impacto massivo de inflação através de décadas."
+      ],
+      "resultsExplanation": [
+        "Valor ajustado por inflação mostra o poder de compra equivalente em dólares de hoje",
+        "Mudança porcentual indica quanto preços aumentaram com o tempo",
+        "Taxa anual de inflação mostra o aumento médio anual de preços",
+        "Poder de compra real demonstra o poder de compra real restante"
+      ],
+      "whoItsFor": "Esta calculadora de inflação serve aposentados planejando saques, investidores calculando retornos reais, economizadores entendendo erosão de poder de compra, planejadores financeiros aconselhando clientes, donos de negócio projetando custos, estudantes planejando gastos educacionais, proprietários orçando necessidades futuras, e qualquer pessoa querendo entender tendências econômicas. É particularmente valiosa para planejamento de aposentadoria, análise de investimento, negociações salariais, comparações de custo de vida, e entendendo o impacto real de políticas econômicas. A calculadora funciona para qualquer período de tempo, taxa de inflação, ou valor em dólar.",
+      "disclaimer": "Esta calculadora de inflação usa dados históricos IPC do Bureau of Labor Statistics e projeções baseadas em indicadores econômicos atuais. Taxas reais futuras de inflação são imprevisíveis e podem variar significativamente de projeções. Cálculos históricos são precisos baseados em dados disponíveis, mas projeções futuras são apenas estimativas. Taxas de inflação podem ser afetadas por condições econômicas, políticas governamentais, e eventos imprevistos. Esta ferramenta fornece informação educacional e não deveria ser usada como a única base para decisões financeiras. Consulte consultores financeiros para planejamento personalizado.",
+      "relatedTools": [
+        "Calculadoras de investimento para calcular retornos reais de investimento",
+        "Calculadoras de aposentadoria para planejamento de aposentadoria ajustado por inflação",
+        "Calculadoras de orçamento para incorporar inflação em planejamento financeiro"
+      ],
+      "faqs": [
+        {
+          "question": "Como inflação afeta minhas economias e investimentos?",
+          "answer": "Inflação erosiona poder de compra a taxas compostas. $10,000 economizados hoje podem comprar apenas $6,000 em bens em 10 anos a 3% inflação. Investimentos devem superar inflação para crescer riqueza real. Um retorno de 7% em ambiente de inflação de 3% fornece apenas crescimento real de 4%. Entender inflação ajuda estabelecer metas realistas de economia e expectativas de investimento. Sem considerar inflação, planos financeiros subestimam significativamente necessidades futuras."
+        },
+        {
+          "question": "Qual é a diferença entre retornos nominais e reais?",
+          "answer": "Retornos nominais mostram ganhos em papel antes de inflação. Retornos reais mostram crescimento real de poder de compra. Se ações retornam 8% mas inflação é 3%, retorno real é 5%. Retorno real = Retorno nominal - Taxa inflação. Isso importa para planejamento de aposentadoria - você precisa retornos reais para manter estilo de vida. Muitos investidores focam em retornos nominais, subestimando impacto de inflação em crescimento real de riqueza."
+        },
+        {
+          "question": "Quanto inflação devo planejar em aposentadoria?",
+          "answer": "Planeje 2-4% inflação anual, baseado em médias históricas de longo prazo. Previdência Social e pensões podem ter ajustes de custo de vida, mas a maioria investimentos não ajustam automaticamente. Calculadoras de aposentadoria frequentemente usam suposição de inflação de 3%. Taxas mais altas (4-5%) podem ocorrer durante choques econômicos. Planeje conservadoramente - é melhor superestimar inflação que economizar de menos. Considere investimentos protegidos de inflação como títulos TIPS para portfólios de aposentadoria."
+        },
+        {
+          "question": "¿Como inflação mudou com o tempo?",
+          "answer": "Inflação americana varia dramaticamente: pico de 13.5% em 1980, 3-4% em 1990s/2000s, 9% em 2022. Média de longo prazo é 3.2% desde 1913. Inflação alta ocorreu durante guerras, crises de petróleo, e política monetária frouxa. Inflação baixa durante estabilidade econômica. Tendências recentes mostram maior volatilidade. Entender padrões históricos ajuda predizer inflação futura mas condições econômicas mudam constantemente."
+        },
+        {
+          "question": "Devo investir em ativos protegidos de inflação?",
+          "answer": "Considere ativos protegidos de inflação se preocupado com preços crescentes. Títulos TIPS garantem proteção de capital. Imóveis e commodities historicamente funcionam bem durante inflação. Ações fornecem alguma proteção de inflação através de crescimento de ganhos. Ouro e criptomoedas frequentemente vistas como proteção de inflação mas voláteis. Balanceie proteção de inflação com tolerância de risco e horizonte temporal. A maioria portfólios se beneficia de alguns ativos de proteção de inflação, especialmente para metas de longo prazo."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Inflation",
+    "seoTitle": "Calculateur d'Inflation - Calculez le Pouvoir d'Achat et l'Impact de l'Inflation",
+    "metaDescription": "Calculateur gratuit d'inflation. Calculez l'impact de l'inflation sur le pouvoir d'achat au fil du temps. Comparez les valeurs passées et futures avec les taux d'inflation réels. Parfait pour la planification financière et l'analyse d'investissement.",
+    "keywords": [
+      "calculateur inflation",
+      "calculateur pouvoir achat",
+      "calculateur impact inflation",
+      "calculateur coût vie",
+      "calculateur taux inflation"
+    ],
+    "longTailKeywords": [
+      "comment calculer impact inflation",
+      "calculateur pouvoir achat en ligne",
+      "calculateur inflation pour valeur argent",
+      "calculer effet inflation sur épargnes",
+      "calculateur valeur future inflation"
+    ],
+    "slug": "inflation-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "inflation",
+      "pouvoir achat",
+      "économie",
+      "planification financière",
+      "investissement"
+    ],
+    "summary": "Calculez comment l'inflation affecte le pouvoir d'achat et comparez la valeur réelle de l'argent au fil du temps.",
+    "description": "Notre calculateur complet d'inflation vous aide à comprendre l'impact réel de l'inflation sur le pouvoir d'achat de votre argent. Calculez combien vaut un dollar du passé aujourd'hui, ou combien vous aurez besoin dans le futur pour maintenir le même pouvoir d'achat. Essentiel pour la planification de retraite, l'analyse d'investissement et la compréhension des tendances économiques.",
+    "instructions": [
+      "Entrez le montant original et l'année",
+      "Entrez l'année cible ou le taux d'inflation",
+      "Choisissez entre utiliser des données historiques ou un taux d'inflation personnalisé",
+      "Obtenez une ventilation détaillée des changements de pouvoir d'achat"
+    ],
+    "calculatorComponent": "InflationCalculator",
+    "examples": [
+      {
+        "title": "Valeur Historique",
+        "input": "$1,000 en 2000",
+        "output": "Valeur 2024: $1,819 (81.9% augmentation due à l'inflation)"
+      },
+      {
+        "title": "Pouvoir d'Achat Futur",
+        "input": "$50,000 nécessaires dans 10 ans à 3% inflation",
+        "output": "Valeur actuelle nécessaire: $37,121 pour maintenir même pouvoir d'achat"
+      }
+    ],
+    "relatedCalculators": [
+      "investment-calculator",
+      "retirement-calculator",
+      "budget-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Comprenez le voleur silencieux qui érode votre richesse avec notre calculatrice complète d'inflation qui révèle le vrai impact des prix croissants sur le pouvoir d'achat de votre argent. L'inflation est la force cachée qui diminue la valeur de vos économies, investissements, et gains futurs, mais la comprendre vous donne le pouvoir de prendre de meilleures décisions financières. Que vous planifiez retraite, épargnez pour achats majeurs, ou analysez rendements d'investissement, notre calculatrice vous montre exactement comment l'inflation affecte la vraie valeur de l'argent dans le temps. Maîtrisez les mathématiques de l'inflation et protégez votre avenir financier de ses effets érosifs.",
+      "benefits": [
+        "Calculez pouvoir d'achat réel argent à travers différentes périodes temps",
+        "Comprenez comment inflation érode valeur économies et investissements",
+        "Comparez pouvoir d'achat historique pour voir impact changements prix",
+        "Planifiez dépenses futures en tenant compte taux inflation attendus",
+        "Prenez décisions éclairées concernant rendements investissement vs. taux inflation",
+        "Calculez économies retraite nécessaires en dollars d'aujourd'hui",
+        "Comprenez coût réel changements vie à travers décennies",
+        "Évaluez si investissements gardent rythme avec inflation"
+      ],
+      "steps": [
+        "Entrez montant original et année où valait cette valeur",
+        "Spécifiez année cible pour calculer valeur future ou passée",
+        "Choisissez entre utiliser données inflation historique ou taux inflation personnalisé",
+        "Examinez valeur ajustée inflation et changements pouvoir d'achat",
+        "Comparez différents scénarios pour comprendre impact inflation"
+      ],
+      "inputsExplained": [
+        "Montant original est valeur dollar vous voulez ajuster pour inflation",
+        "Année originale établit ligne base pouvoir d'achat",
+        "Année cible détermine période inflation pour calculer",
+        "Taux inflation peut utiliser moyennes historiques ou projections personnalisées",
+        "Méthode calcul détermine si utilisant taux historiques ou projetés"
+      ],
+      "formulaExplanation": "Calculs inflation utilisent formules intérêt composé : Valeur Future = Valeur Présente × (1 + Taux Inflation)^Années. Pour calculs historiques, nous utilisons données réelles IPC (Indice Prix Consommateur) pour montrer changements réels pouvoir d'achat. Formule révèle comment $1 aujourd'hui vaut moins que $1 demain dû prix croissants. Comprendre cela vous aide voir pourquoi planification financière long terme doit tenir compte effet composé inflation. Rendements réels = Rendements nominaux - Taux inflation. Cela montre pourquoi rendements investissement 7% peuvent être seulement 3% rendements réels dans environnement inflation 4%.",
+      "examples": [
+        "$100,000 épargnés en 2000 auraient besoin $181,900 en 2024 pour maintenir même pouvoir d'achat, montrant impact inflation 81.9%.",
+        "$50,000 nécessaires retraite dans 10 ans à 3% inflation nécessite seulement $37,121 en dollars d'aujourd'hui pour maintenir pouvoir d'achat.",
+        "$1,000 salaire mensuel en 1980 égale $3,200 pouvoir d'achat 2024, illustrant impact massif inflation à travers décennies."
+      ],
+      "resultsExplanation": [
+        "Valeur ajustée inflation montre pouvoir d'achat équivalent en dollars d'aujourd'hui",
+        "Changement pourcentage indique combien prix ont augmenté dans le temps",
+        "Taux inflation annuel montre augmentation moyenne annuelle prix",
+        "Pouvoir d'achat réel démontre pouvoir achat réel restant"
+      ],
+      "whoItsFor": "Cette calculatrice inflation sert retraités planifiant retraits, investisseurs calculant rendements réels, épargnants comprenant érosion pouvoir d'achat, planificateurs financiers conseillant clients, propriétaires entreprise prévoyant coûts, étudiants planifiant dépenses éducation, propriétaires budgétisant besoins futurs, et quiconque souhaitant comprendre tendances économiques. Elle est particulièrement précieuse pour planification retraite, analyse investissement, négociations salaire, comparaisons coût vie, et comprenant impact réel politiques économiques. La calculatrice fonctionne pour toute période temps, taux inflation, ou montant dollar.",
+      "disclaimer": "Cette calculatrice inflation utilise données historiques IPC Bureau Statistiques Travail et projections basées indicateurs économiques actuels. Taux inflation réels futurs sont imprévisibles et peuvent varier considérablement projections. Calculs historiques sont précis basés données disponibles, mais projections futures sont seulement estimations. Taux inflation peuvent être affectés conditions économiques, politiques gouvernementales, et événements imprévus. Cet outil fournit information éducative et ne devrait pas être utilisé comme seule base décisions financières. Consultez conseillers financiers pour planification personnalisée.",
+      "relatedTools": [
+        "Calculateurs investissement pour calculer rendements réels investissement",
+        "Calculateurs retraite pour planification retraite ajustée inflation",
+        "Calculateurs budget pour incorporer inflation dans planification financière"
+      ],
+      "faqs": [
+        {
+          "question": "Comment inflation affecte-t-elle mes économies et investissements ?",
+          "answer": "Inflation érode pouvoir d'achat à taux composés. $10,000 épargnés aujourd'hui pourraient seulement acheter $6,000 biens dans 10 ans à 3% inflation. Investissements doivent surpasser inflation pour croître richesse réelle. Rendement 7% dans environnement inflation 3% fournit seulement croissance réelle 4%. Comprendre inflation aide établir objectifs épargne réalistes et attentes investissement. Sans tenir compte inflation, plans financiers sous-estiment considérablement besoins futurs."
+        },
+        {
+          "question": "Quelle est différence entre rendements nominaux et réels ?",
+          "answer": "Rendements nominaux montrent gains papier avant inflation. Rendements réels montrent croissance réelle pouvoir d'achat. Si actions retournent 8% mais inflation est 3%, rendement réel est 5%. Rendement réel = Rendement nominal - Taux inflation. Cela importe pour planification retraite - vous avez besoin rendements réels maintenir style vie. Beaucoup investisseurs se concentrent rendements nominaux, sous-estimant impact inflation sur croissance réelle richesse."
+        },
+        {
+          "question": "Combien inflation devrais-je planifier retraite ?",
+          "answer": "Planifiez 2-4% inflation annuelle, basé moyennes historiques long terme. Sécurité Sociale et pensions peuvent avoir ajustements coût vie, mais plupart investissements ne s'ajustent pas automatiquement. Calculateurs retraite utilisent souvent supposition inflation 3%. Taux plus élevés (4-5%) peuvent survenir pendant chocs économiques. Planifiez conservativement - il vaut mieux surestimer inflation qu'épargner trop peu. Considérez investissements protégés inflation comme obligations TIPS pour portefeuilles retraite."
+        },
+        {
+          "question": "Comment inflation a-t-elle changé dans le temps ?",
+          "answer": "Inflation américaine varie considérablement : pic 13.5% en 1980, 3-4% dans 1990s/2000s, 9% en 2022. Moyenne long terme est 3.2% depuis 1913. Inflation élevée survenue pendant guerres, crises pétrole, et politique monétaire lâche. Inflation basse pendant stabilité économique. Tendances récentes montrent volatilité plus élevée. Comprendre patterns historiques aide prédire inflation future mais conditions économiques changent constamment."
+        },
+        {
+          "question": "Devrais-je investir dans actifs protégés inflation ?",
+          "answer": "Considérez actifs protégés inflation si préoccupé prix croissants. Obligations TIPS garantissent protection principal. Immobilier et matières premières ont historiquement bien performé pendant inflation. Actions fournissent quelque protection inflation par croissance bénéfices. Or et cryptomonnaies souvent vues comme protection inflation mais volatiles. Équilibrez protection inflation avec tolérance risque et horizon temps. La plupart portefeuilles bénéficient quelques actifs couverture inflation, spécialement pour objectifs long terme."
+        }
+      ]
+    }
+  }
+}

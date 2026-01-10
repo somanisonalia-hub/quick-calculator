@@ -1,0 +1,594 @@
+{
+  "en": {
+    "title": "Basic APR Calculator",
+    "seoTitle": "Basic APR Calculator - Simple Annual Percentage Rate Calculator",
+    "metaDescription": "Calculate basic APR for loans and credit cards. Simple APR calculator showing the true cost of borrowing with straightforward calculations.",
+    "keywords": [
+      "basic APR calculator",
+      "simple APR calculator",
+      "loan APR calculator",
+      "basic annual percentage rate",
+      "simple finance calculator",
+      "basic borrowing cost calculator"
+    ],
+    "longTailKeywords": [
+      "basic APR calculator online free",
+      "simple APR calculation for loans",
+      "basic annual percentage rate calculator",
+      "simple finance charge calculator",
+      "basic borrowing cost calculator",
+      "easy APR calculator for beginners",
+      "simple loan APR calculation",
+      "basic credit card APR calculator",
+      "straightforward APR calculator",
+      "simple annual percentage rate formula"
+    ],
+    "slug": "basic-apr-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Beginner",
+    "tags": [
+      "basic APR",
+      "simple calculator",
+      "annual percentage rate",
+      "borrowing cost",
+      "finance charges",
+      "loan calculator"
+    ],
+    "description": "Calculate basic Annual Percentage Rate (APR) for loans and credit cards with simple, straightforward calculations. Perfect for understanding the true cost of borrowing without complex features.",
+    "summary": "Calculate basic APR for loans and credit cards",
+    "instructions": [
+      "Enter the loan amount or balance",
+      "Input the total interest or finance charges paid",
+      "Enter the number of years the loan will be paid",
+      "Click 'Calculate APR' to get the annual percentage rate",
+      "Use the result to compare different loan offers"
+    ],
+    "calculatorComponent": "BasicAPRCalculator",
+    "examples": [
+      {
+        "title": "Simple Loan APR",
+        "description": "Calculate APR for a $10,000 loan with $1,200 interest over 1 year",
+        "input": {
+          "loanAmount": 10000,
+          "totalInterest": 1200,
+          "loanYears": 1
+        },
+        "output": {
+          "apr": "12.00%",
+          "interestRate": "12.00%",
+          "totalAmount": "$11,200",
+          "costAnalysis": "$1,200 interest on $10,000 loan = 12% APR"
+        }
+      },
+      {
+        "title": "Credit Card APR",
+        "description": "Calculate APR for credit card charges of $500 on $5,000 balance over 6 months",
+        "input": {
+          "loanAmount": 5000,
+          "totalInterest": 500,
+          "loanYears": 0.5
+        },
+        "output": {
+          "apr": "20.00%",
+          "interestRate": "20.00%",
+          "totalAmount": "$5,500",
+          "costAnalysis": "$500 finance charges on $5,000 balance = 20% APR"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Understanding Annual Percentage Rate (APR) doesn't have to be complicated. Our basic APR calculator provides straightforward calculations to help you understand the true cost of borrowing for loans and credit cards. Perfect for beginners and anyone who wants simple, clear APR calculations without unnecessary complexity.",
+      "benefits": [
+        "Simple and easy-to-use APR calculations",
+        "Understand the true cost of borrowing quickly",
+        "Compare loan and credit card offers easily",
+        "Perfect for beginners learning about APR",
+        "Clear, straightforward results without confusion",
+        "Fast calculations for basic borrowing scenarios"
+      ],
+      "steps": [
+        "Enter your loan amount or credit balance",
+        "Input the total interest or finance charges",
+        "Specify how many years the loan will last",
+        "Get your APR result instantly",
+        "Use the result to compare different borrowing options",
+        "Repeat calculations for different scenarios"
+      ],
+      "inputsExplained": [
+        "Loan amount is the total money you're borrowing",
+        "Total interest includes all finance charges and fees",
+        "Loan years is the time period you're borrowing the money",
+        "All inputs are used to calculate the annualized percentage rate"
+      ],
+      "formulaExplanation": "The basic APR formula divides total interest by the loan amount, then divides by the number of years, and multiplies by 100 to get a percentage. This provides a simple annualized rate that represents the true cost of borrowing.",
+      "examples": [
+        "A $10,000 loan with $1,200 in interest over 1 year has a 12% APR, meaning you pay $1,200 annually for borrowing $10,000",
+        "A credit card with $500 in finance charges on a $5,000 balance over 6 months represents a 20% APR"
+      ],
+      "resultsExplanation": [
+        "APR shows the annualized cost of borrowing as a percentage",
+        "Interest rate displays the calculated rate from your inputs",
+        "Total amount shows the complete repayment amount",
+        "Cost analysis provides context for what the APR means",
+        "All results help you understand borrowing costs clearly",
+        "Use these results to compare different loan offers"
+      ],
+      "whoItsFor": "This basic APR calculator is perfect for students, beginners, and anyone new to personal finance who wants to understand borrowing costs without complex calculations. It's ideal for comparing simple loan offers, credit card terms, and basic borrowing scenarios.",
+      "disclaimer": "This basic APR calculator provides simplified calculations for straightforward borrowing scenarios. For complex loans with variable rates, fees, or irregular payments, consider consulting a financial professional. Actual APR may vary based on specific loan terms and conditions.",
+      "relatedTools": [
+        "apr calculator",
+        "simple interest calculator",
+        "loan calculator",
+        "credit card calculator",
+        "personal loan calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is a basic APR calculator?",
+          "answer": "A basic APR calculator performs simple calculations to determine the Annual Percentage Rate for loans and credit cards using straightforward inputs like loan amount, total interest, and loan term."
+        },
+        {
+          "question": "How is basic APR different from regular APR?",
+          "answer": "Basic APR uses simplified calculations for straightforward scenarios, while regular APR calculators may include more complex factors like compounding, fees, and payment schedules."
+        },
+        {
+          "question": "When should I use a basic APR calculator?",
+          "answer": "Use a basic APR calculator for simple loan comparisons, understanding credit card costs, or when you need quick APR calculations without complex variables."
+        },
+        {
+          "question": "Can basic APR calculations be used for mortgages?",
+          "answer": "Basic APR calculations can provide rough estimates for mortgages, but mortgage APR calculations typically include additional factors like points, closing costs, and payment schedules."
+        },
+        {
+          "question": "Why is APR important for borrowers?",
+          "answer": "APR helps borrowers understand the true cost of borrowing by showing the annualized rate including all costs, making it easier to compare different loan and credit offers."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora Básica de TAE",
+    "seoTitle": "Calculadora Básica de TAE - Calculadora Simple de Tasa Anual Equivalente",
+    "metaDescription": "Calcula TAE básica para préstamos y tarjetas de crédito. Calculadora simple de TAE mostrando el costo real del endeudamiento con cálculos directos.",
+    "keywords": [
+      "calculadora básica TAE",
+      "calculadora simple TAE",
+      "calculadora TAE préstamos",
+      "tasa anual equivalente básica",
+      "calculadora financiera simple",
+      "calculadora costo básico endeudamiento"
+    ],
+    "longTailKeywords": [
+      "calculadora básica TAE online gratis",
+      "cálculo simple TAE para préstamos",
+      "calculadora básica tasa anual equivalente",
+      "calculadora simple cargos financieros",
+      "calculadora costo básico endeudamiento",
+      "calculadora fácil TAE para principiantes",
+      "cálculo simple préstamo TAE",
+      "calculadora básica TAE tarjetas crédito",
+      "calculadora directa TAE",
+      "fórmula simple tasa anual equivalente"
+    ],
+    "slug": "basic-apr-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Beginner",
+    "tags": [
+      "TAE básica",
+      "calculadora simple",
+      "tasa anual equivalente",
+      "costo endeudamiento",
+      "cargos financieros",
+      "calculadora préstamo"
+    ],
+    "description": "Calcula Tasa Anual Equivalente (TAE) básica para préstamos y tarjetas de crédito con cálculos simples y directos. Perfecto para entender el costo real del endeudamiento sin características complejas.",
+    "summary": "Calcula TAE básica para préstamos y tarjetas de crédito",
+    "instructions": [
+      "Ingresa el monto del préstamo o saldo",
+      "Ingresa el total de intereses o cargos financieros pagados",
+      "Ingresa el número de años que durará el préstamo",
+      "Haz clic en 'Calcular TAE' para obtener la tasa anual equivalente",
+      "Usa el resultado para comparar diferentes ofertas de préstamo"
+    ],
+    "calculatorComponent": "BasicAPRCalculator",
+    "examples": [
+      {
+        "title": "TAE Simple de Préstamo",
+        "description": "Calcula TAE para un préstamo de $10,000 con $1,200 intereses durante 1 año",
+        "input": {
+          "loanAmount": 10000,
+          "totalInterest": 1200,
+          "loanYears": 1
+        },
+        "output": {
+          "apr": "12.00%",
+          "interestRate": "12.00%",
+          "totalAmount": "$11,200",
+          "costAnalysis": "$1,200 intereses en préstamo de $10,000 = 12% TAE"
+        }
+      },
+      {
+        "title": "TAE Tarjeta de Crédito",
+        "description": "Calcula TAE para cargos de tarjeta de crédito de $500 en saldo de $5,000 durante 6 meses",
+        "input": {
+          "loanAmount": 5000,
+          "totalInterest": 500,
+          "loanYears": 0.5
+        },
+        "output": {
+          "apr": "20.00%",
+          "interestRate": "20.00%",
+          "totalAmount": "$5,500",
+          "costAnalysis": "$500 cargos financieros en saldo de $5,000 = 20% TAE"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender la Tasa Anual Equivalente (TAE) no tiene que ser complicado. Nuestra calculadora básica de TAE proporciona cálculos directos para ayudarte a entender el costo real del endeudamiento para préstamos y tarjetas de crédito. Perfecta para principiantes y cualquiera que quiera cálculos simples y claros de TAE sin complejidad innecesaria.",
+      "benefits": [
+        "Cálculos simples y fáciles de usar de TAE",
+        "Entiende el costo real del endeudamiento rápidamente",
+        "Compara ofertas de préstamo y tarjetas de crédito fácilmente",
+        "Perfecta para principiantes aprendiendo sobre TAE",
+        "Resultados claros y directos sin confusión",
+        "Cálculos rápidos para escenarios básicos de endeudamiento"
+      ],
+      "steps": [
+        "Ingresa tu monto de préstamo o saldo de crédito",
+        "Ingresa el total de intereses o cargos financieros",
+        "Especifica cuántos años durará el préstamo",
+        "Obtén tu resultado de TAE al instante",
+        "Usa el resultado para comparar diferentes opciones de endeudamiento",
+        "Repite cálculos para diferentes escenarios"
+      ],
+      "inputsExplained": [
+        "Monto del préstamo es el total de dinero que estás pidiendo prestado",
+        "Total intereses incluye todos los cargos financieros y comisiones",
+        "Años del préstamo es el período de tiempo que estás pidiendo el dinero prestado",
+        "Todas las entradas se usan para calcular la tasa porcentual anualizada"
+      ],
+      "formulaExplanation": "La fórmula básica de TAE divide intereses totales por el monto del préstamo, luego divide por el número de años, y multiplica por 100 para obtener un porcentaje. Esto proporciona una tasa anualizada simple que representa el costo real del endeudamiento.",
+      "examples": [
+        "Un préstamo de $10,000 con $1,200 en intereses durante 1 año tiene una TAE del 12%, significando que pagas $1,200 anualmente por pedir prestado $10,000",
+        "Una tarjeta de crédito con $500 en cargos financieros en un saldo de $5,000 durante 6 meses representa una TAE del 20%"
+      ],
+      "resultsExplanation": [
+        "TAE muestra el costo anualizado del endeudamiento como porcentaje",
+        "Tasa de interés muestra la tasa calculada de tus entradas",
+        "Monto total muestra el monto completo de reembolso",
+        "Análisis de costo proporciona contexto para qué significa la TAE",
+        "Todos los resultados te ayudan a entender costos de endeudamiento claramente",
+        "Usa estos resultados para comparar diferentes ofertas de préstamo"
+      ],
+      "whoItsFor": "Esta calculadora básica de TAE es perfecta para estudiantes, principiantes, y cualquiera nuevo a las finanzas personales que quiere entender costos de endeudamiento sin cálculos complejos. Es ideal para comparar ofertas simples de préstamo, términos de tarjetas de crédito, y escenarios básicos de endeudamiento.",
+      "disclaimer": "Esta calculadora básica de TAE proporciona cálculos simplificados para escenarios directos de endeudamiento. Para préstamos complejos con tasas variables, comisiones, o pagos irregulares, considera consultar un profesional financiero. La TAE real puede variar basado en términos específicos del préstamo y condiciones.",
+      "relatedTools": [
+        "calculadora TAE",
+        "calculadora interés simple",
+        "calculadora préstamo",
+        "calculadora tarjeta crédito",
+        "calculadora préstamo personal"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es una calculadora básica de TAE?",
+          "answer": "Una calculadora básica de TAE realiza cálculos simples para determinar la Tasa Anual Equivalente para préstamos y tarjetas de crédito usando entradas directas como monto del préstamo, intereses totales, y plazo del préstamo."
+        },
+        {
+          "question": "¿Cómo difiere la TAE básica de la TAE regular?",
+          "answer": "La TAE básica usa cálculos simplificados para escenarios directos, mientras calculadoras regulares de TAE pueden incluir factores más complejos como capitalización, comisiones, y cronogramas de pago."
+        },
+        {
+          "question": "¿Cuándo debo usar una calculadora básica de TAE?",
+          "answer": "Usa una calculadora básica de TAE para comparaciones simples de préstamo, entender costos de tarjetas de crédito, o cuando necesitas cálculos rápidos de TAE sin variables complejas."
+        },
+        {
+          "question": "¿Pueden los cálculos básicos de TAE usarse para hipotecas?",
+          "answer": "Los cálculos básicos de TAE pueden proporcionar estimaciones aproximadas para hipotecas, pero cálculos de TAE de hipoteca típicamente incluyen factores adicionales como puntos, costos de cierre, y cronogramas de pago."
+        },
+        {
+          "question": "¿Por qué es importante la TAE para prestatarios?",
+          "answer": "La TAE ayuda a los prestatarios a entender el costo real del endeudamiento mostrando la tasa anualizada incluyendo todos los costos, facilitando comparar diferentes ofertas de préstamo y crédito."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora Básica de CET",
+    "seoTitle": "Calculadora Básica de CET - Calculadora Simples de Custo Efetivo Total",
+    "metaDescription": "Calcule CET básico para empréstimos e cartões de crédito. Calculadora simples de CET mostrando o custo real do empréstimo com cálculos diretos.",
+    "keywords": [
+      "calculadora básica CET",
+      "calculadora simples CET",
+      "calculadora CET empréstimos",
+      "custo efetivo total básico",
+      "calculadora financeira simples",
+      "calculadora custo básico empréstimo"
+    ],
+    "longTailKeywords": [
+      "calculadora básica CET online grátis",
+      "cálculo simples CET para empréstimos",
+      "calculadora básica custo efetivo total",
+      "calculadora simples encargos financeiros",
+      "calculadora custo básico empréstimo",
+      "calculadora fácil CET para iniciantes",
+      "cálculo simples empréstimo CET",
+      "calculadora básica CET cartões crédito",
+      "calculadora direta CET",
+      "fórmula simples custo efetivo total"
+    ],
+    "slug": "basic-apr-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Beginner",
+    "tags": [
+      "CET básico",
+      "calculadora simples",
+      "custo efetivo total",
+      "custo empréstimo",
+      "encargos financeiros",
+      "calculadora empréstimo"
+    ],
+    "description": "Calcule Custo Efetivo Total (CET) básico para empréstimos e cartões de crédito com cálculos simples e diretos. Perfeito para entender o custo real do empréstimo sem características complexas.",
+    "summary": "Calcule CET básico para empréstimos e cartões de crédito",
+    "instructions": [
+      "Digite o valor do empréstimo ou saldo",
+      "Digite o total de juros ou encargos financeiros pagos",
+      "Digite o número de anos que o empréstimo será pago",
+      "Clique em 'Calcular CET' para obter o custo efetivo total",
+      "Use o resultado para comparar diferentes ofertas de empréstimo"
+    ],
+    "calculatorComponent": "BasicAPRCalculator",
+    "examples": [
+      {
+        "title": "CET Simples de Empréstimo",
+        "description": "Calcule CET para um empréstimo de R$ 10.000 com R$ 1.200 juros durante 1 ano",
+        "input": {
+          "loanAmount": 10000,
+          "totalInterest": 1200,
+          "loanYears": 1
+        },
+        "output": {
+          "apr": "12.00%",
+          "interestRate": "12.00%",
+          "totalAmount": "R$ 11,200",
+          "costAnalysis": "R$ 1.200 juros em empréstimo de R$ 10.000 = 12% CET"
+        }
+      },
+      {
+        "title": "CET Cartão de Crédito",
+        "description": "Calcule CET para encargos de cartão de crédito de R$ 500 em saldo de R$ 5.000 durante 6 meses",
+        "input": {
+          "loanAmount": 5000,
+          "totalInterest": 500,
+          "loanYears": 0.5
+        },
+        "output": {
+          "apr": "20.00%",
+          "interestRate": "20.00%",
+          "totalAmount": "R$ 5,500",
+          "costAnalysis": "R$ 500 encargos financeiros em saldo de R$ 5.000 = 20% CET"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Entender Custo Efetivo Total (CET) não precisa ser complicado. Nossa calculadora básica de CET fornece cálculos diretos para ajudá-lo a entender o custo real do empréstimo para empréstimos e cartões de crédito. Perfeita para iniciantes e qualquer pessoa que queira cálculos simples e claros de CET sem complexidade desnecessária.",
+      "benefits": [
+        "Cálculos simples e fáceis de usar de CET",
+        "Entenda o custo real do empréstimo rapidamente",
+        "Compare ofertas de empréstimo e cartões de crédito facilmente",
+        "Perfeita para iniciantes aprendendo sobre CET",
+        "Resultados claros e diretos sem confusão",
+        "Cálculos rápidos para cenários básicos de empréstimo"
+      ],
+      "steps": [
+        "Digite seu valor de empréstimo ou saldo de crédito",
+        "Digite o total de juros ou encargos financeiros",
+        "Especifique quantos anos o empréstimo durará",
+        "Obtenha seu resultado de CET instantaneamente",
+        "Use o resultado para comparar diferentes opções de empréstimo",
+        "Repita cálculos para diferentes cenários"
+      ],
+      "inputsExplained": [
+        "Valor do empréstimo é o total de dinheiro que você está pegando emprestado",
+        "Total juros inclui todos os encargos financeiros e taxas",
+        "Anos do empréstimo é o período de tempo que você está pegando o dinheiro emprestado",
+        "Todas as entradas são usadas para calcular a taxa percentual anualizada"
+      ],
+      "formulaExplanation": "A fórmula básica de CET divide juros totais pelo valor do empréstimo, depois divide pelo número de anos, e multiplica por 100 para obter uma porcentagem. Isso fornece uma taxa anualizada simples que representa o custo real do empréstimo.",
+      "examples": [
+        "Um empréstimo de R$ 10.000 com R$ 1.200 em juros durante 1 ano tem um CET de 12%, significando que você paga R$ 1.200 anualmente por pegar emprestado R$ 10.000",
+        "Um cartão de crédito com R$ 500 em encargos financeiros em um saldo de R$ 5.000 durante 6 meses representa um CET de 20%"
+      ],
+      "resultsExplanation": [
+        "CET mostra o custo anualizado do empréstimo como porcentagem",
+        "Taxa de juros mostra a taxa calculada de suas entradas",
+        "Valor total mostra o valor completo de reembolso",
+        "Análise de custo fornece contexto para o que o CET significa",
+        "Todos os resultados ajudam você a entender custos de empréstimo claramente",
+        "Use estes resultados para comparar diferentes ofertas de empréstimo"
+      ],
+      "whoItsFor": "Esta calculadora básica de CET é perfeita para estudantes, iniciantes, e qualquer pessoa nova a finanças pessoais que quer entender custos de empréstimo sem cálculos complexos. É ideal para comparar ofertas simples de empréstimo, termos de cartões de crédito, e cenários básicos de empréstimo.",
+      "disclaimer": "Esta calculadora básica de CET fornece cálculos simplificados para cenários diretos de empréstimo. Para empréstimos complexos com taxas variáveis, taxas, ou pagamentos irregulares, considere consultar um profissional financeiro. O CET real pode variar baseado em termos específicos do empréstimo e condições.",
+      "relatedTools": [
+        "calculadora CET",
+        "calculadora juros simples",
+        "calculadora empréstimo",
+        "calculadora cartão crédito",
+        "calculadora empréstimo pessoal"
+      ],
+      "faqs": [
+        {
+          "question": "O que é uma calculadora básica de CET?",
+          "answer": "Uma calculadora básica de CET realiza cálculos simples para determinar o Custo Efetivo Total para empréstimos e cartões de crédito usando entradas diretas como valor do empréstimo, juros totais, e prazo do empréstimo."
+        },
+        {
+          "question": "¿Como o CET básico difere do CET regular?",
+          "answer": "O CET básico usa cálculos simplificados para cenários diretos, enquanto calculadoras regulares de CET podem incluir fatores mais complexos como capitalização, taxas, e cronogramas de pagamento."
+        },
+        {
+          "question": "Quando devo usar uma calculadora básica de CET?",
+          "answer": "Use uma calculadora básica de CET para comparações simples de empréstimo, entender custos de cartões de crédito, ou quando você precisa de cálculos rápidos de CET sem variáveis complexas."
+        },
+        {
+          "question": "Podem cálculos básicos de CET ser usados para hipotecas?",
+          "answer": "Cálculos básicos de CET podem fornecer estimativas aproximadas para hipotecas, mas cálculos de CET de hipoteca tipicamente incluem fatores adicionais como pontos, custos de fechamento, e cronogramas de pagamento."
+        },
+        {
+          "question": "Por que o CET é importante para tomadores?",
+          "answer": "O CET ajuda tomadores a entender o custo real do empréstimo mostrando a taxa anualizada incluindo todos os custos, facilitando comparar diferentes ofertas de empréstimo e crédito."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de TAEG Basique",
+    "seoTitle": "Calculateur de TAEG Basique - Calculateur Simple de Taux Annuel Effectif Global",
+    "metaDescription": "Calculez TAEG basique pour prêts et cartes de crédit. Calculateur simple de TAEG montrant le coût réel de l'emprunt avec calculs directs.",
+    "keywords": [
+      "calculateur basique TAEG",
+      "calculateur simple TAEG",
+      "calculateur TAEG prêts",
+      "taux annuel effectif global basique",
+      "calculateur financier simple",
+      "calculateur coût basique emprunt"
+    ],
+    "longTailKeywords": [
+      "calculateur basique TAEG en ligne gratuit",
+      "calcul simple TAEG pour prêts",
+      "calculateur basique taux annuel effectif global",
+      "calculateur simple frais financiers",
+      "calculateur coût basique emprunt",
+      "calculateur facile TAEG pour débutants",
+      "calcul simple prêt TAEG",
+      "calculateur basique TAEG cartes crédit",
+      "calculateur direct TAEG",
+      "formule simple taux annuel effectif global"
+    ],
+    "slug": "basic-apr-calculator",
+    "category": "Financial",
+    "subcategory": "Interest and APR Calculators",
+    "difficulty": "Beginner",
+    "tags": [
+      "TAEG basique",
+      "calculateur simple",
+      "taux annuel effectif global",
+      "coût emprunt",
+      "frais financiers",
+      "calculateur prêt"
+    ],
+    "description": "Calculez Taux Annuel Effectif Global (TAEG) basique pour prêts et cartes de crédit avec calculs simples et directs. Parfait pour comprendre le coût réel de l'emprunt sans caractéristiques complexes.",
+    "summary": "Calculez TAEG basique pour prêts et cartes de crédit",
+    "instructions": [
+      "Entrez le montant du prêt ou solde",
+      "Entrez le total intérêts ou frais financiers payés",
+      "Entrez le nombre d'années que le prêt sera payé",
+      "Cliquez sur 'Calculer TAEG' pour obtenir le taux annuel effectif global",
+      "Utilisez le résultat pour comparer différentes offres de prêt"
+    ],
+    "calculatorComponent": "BasicAPRCalculator",
+    "examples": [
+      {
+        "title": "TAEG Simple de Prêt",
+        "description": "Calculez TAEG pour un prêt de 10 000 € avec 1 200 € intérêts sur 1 an",
+        "input": {
+          "loanAmount": 10000,
+          "totalInterest": 1200,
+          "loanYears": 1
+        },
+        "output": {
+          "apr": "12.00%",
+          "interestRate": "12.00%",
+          "totalAmount": "11 200 €",
+          "costAnalysis": "1 200 € intérêts sur prêt de 10 000 € = 12% TAEG"
+        }
+      },
+      {
+        "title": "TAEG Carte de Crédit",
+        "description": "Calculez TAEG pour frais carte de crédit de 500 € sur solde de 5 000 € sur 6 mois",
+        "input": {
+          "loanAmount": 5000,
+          "totalInterest": 500,
+          "loanYears": 0.5
+        },
+        "output": {
+          "apr": "20.00%",
+          "interestRate": "20.00%",
+          "totalAmount": "5 500 €",
+          "costAnalysis": "500 € frais financiers sur solde de 5 000 € = 20% TAEG"
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Comprendre le Taux Annuel Effectif Global (TAEG) n'a pas à être compliqué. Notre calculateur basique de TAEG fournit des calculs directs pour vous aider à comprendre le coût réel de l'emprunt pour prêts et cartes de crédit. Parfait pour débutants et quiconque veut des calculs simples et clairs de TAEG sans complexité inutile.",
+      "benefits": [
+        "Calculs simples et faciles à utiliser de TAEG",
+        "Comprenez le coût réel de l'emprunt rapidement",
+        "Comparez offres de prêt et cartes de crédit facilement",
+        "Parfait pour débutants apprenant sur TAEG",
+        "Résultats clairs et directs sans confusion",
+        "Calculs rapides pour scénarios basiques d'emprunt"
+      ],
+      "steps": [
+        "Entrez votre montant de prêt ou solde de crédit",
+        "Entrez le total intérêts ou frais financiers",
+        "Spécifiez combien d'années le prêt durera",
+        "Obtenez votre résultat TAEG instantanément",
+        "Utilisez le résultat pour comparer différentes options d'emprunt",
+        "Répétez calculs pour différents scénarios"
+      ],
+      "inputsExplained": [
+        "Montant du prêt est le total d'argent que vous empruntez",
+        "Total intérêts inclut tous frais financiers et commissions",
+        "Années du prêt est la période de temps que vous empruntez l'argent",
+        "Toutes entrées sont utilisées pour calculer le taux pourcentage annualisé"
+      ],
+      "formulaExplanation": "La formule basique de TAEG divise intérêts totaux par le montant du prêt, puis divise par le nombre d'années, et multiplie par 100 pour obtenir un pourcentage. Cela fournit un taux annualisé simple qui représente le coût réel de l'emprunt.",
+      "examples": [
+        "Un prêt de 10 000 € avec 1 200 € en intérêts sur 1 an a un TAEG de 12%, signifiant vous payez 1 200 € annuellement pour emprunter 10 000 €",
+        "Une carte de crédit avec 500 € en frais financiers sur un solde de 5 000 € sur 6 mois représente un TAEG de 20%"
+      ],
+      "resultsExplanation": [
+        "TAEG montre le coût annualisé de l'emprunt en pourcentage",
+        "Taux d'intérêt affiche le taux calculé de vos entrées",
+        "Montant total montre le montant complet de remboursement",
+        "Analyse coût fournit contexte pour ce que le TAEG signifie",
+        "Tous résultats vous aident à comprendre coûts d'emprunt clairement",
+        "Utilisez ces résultats pour comparer différentes offres de prêt"
+      ],
+      "whoItsFor": "Ce calculateur basique de TAEG est parfait pour étudiants, débutants, et quiconque nouveau aux finances personnelles qui veut comprendre coûts d'emprunt sans calculs complexes. Il est idéal pour comparer offres simples de prêt, termes cartes de crédit, et scénarios basiques d'emprunt.",
+      "disclaimer": "Ce calculateur basique de TAEG fournit des calculs simplifiés pour scénarios directs d'emprunt. Pour prêts complexes avec taux variables, frais, ou paiements irréguliers, considérez consulter un professionnel financier. Le TAEG réel peut varier basé sur termes spécifiques du prêt et conditions.",
+      "relatedTools": [
+        "calculateur TAEG",
+        "calculateur intérêt simple",
+        "calculateur prêt",
+        "calculateur carte crédit",
+        "calculateur prêt personnel"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un calculateur basique de TAEG?",
+          "answer": "Un calculateur basique de TAEG effectue des calculs simples pour déterminer le Taux Annuel Effectif Global pour prêts et cartes de crédit utilisant entrées directes comme montant du prêt, intérêts totaux, et durée du prêt."
+        },
+        {
+          "question": "Comment le TAEG basique diffère-t-il du TAEG régulier?",
+          "answer": "Le TAEG basique utilise calculs simplifiés pour scénarios directs, tandis que calculateurs réguliers de TAEG peuvent inclure facteurs plus complexes comme capitalisation, frais, et échéanciers de paiement."
+        },
+        {
+          "question": "¿Quand utiliser un calculateur basique de TAEG?",
+          "answer": "Utilisez un calculateur basique de TAEG pour comparaisons simples de prêt, comprendre coûts cartes de crédit, ou quand vous avez besoin de calculs rapides de TAEG sans variables complexes."
+        },
+        {
+          "question": "Les calculs basiques de TAEG peuvent-ils être utilisés pour hypothèques?",
+          "answer": "Les calculs basiques de TAEG peuvent fournir estimations approximatives pour hypothèques, mais calculs TAEG d'hypothèque incluent typiquement facteurs additionnels comme points, coûts de clôture, et échéanciers de paiement."
+        },
+        {
+          "question": "Pourquoi le TAEG est-il important pour emprunteurs?",
+          "answer": "Le TAEG aide emprunteurs à comprendre le coût réel de l'emprunt en montrant le taux annualisé incluant tous coûts, facilitant comparer différentes offres de prêt et crédit."
+        }
+      ]
+    }
+  }
+}

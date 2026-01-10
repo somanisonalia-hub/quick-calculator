@@ -1,0 +1,762 @@
+{
+  "en": {
+    "title": "Percentage Change Calculator",
+    "seoTitle": "Percentage Change Calculator - Calculate Percent Increase and Decrease",
+    "metaDescription": "Calculate percentage change, increase, and decrease between two numbers. Free percentage change calculator with step-by-step solutions and real-world examples.",
+    "keywords": [
+      "percentage change calculator",
+      "percent increase calculator",
+      "percent decrease calculator",
+      "percentage difference calculator",
+      "calculate percentage change"
+    ],
+    "longTailKeywords": [
+      "how to calculate percentage change",
+      "percentage increase and decrease calculator",
+      "what is percentage change formula",
+      "calculate percent change between two numbers",
+      "percentage change calculator with steps",
+      "how to find percent increase",
+      "percentage decrease calculator",
+      "calculate percentage difference",
+      "percentage change from old to new",
+      "what percentage increase calculator"
+    ],
+    "slug": "percentage-change-calculator",
+    "category": "Math",
+    "difficulty": "Beginner",
+    "tags": [
+      "percentage change",
+      "percent increase",
+      "percent decrease",
+      "math",
+      "calculation",
+      "difference"
+    ],
+    "description": "Calculate percentage change, increase, and decrease between any two numbers with our easy-to-use percentage change calculator. Perfect for understanding price changes, growth rates, inflation, and comparing values. Includes step-by-step solutions and real-world examples.",
+    "summary": "Calculate percentage change, increase, and decrease between two values.",
+    "instructions": [
+      "Enter the original (old) value in the first field",
+      "Enter the new value in the second field",
+      "Click 'Calculate' to see the percentage change",
+      "The calculator shows whether it's an increase or decrease",
+      "Review the step-by-step calculation for learning"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "originalValue",
+          "label": "Original Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "newValue",
+          "label": "New Value",
+          "type": "number",
+          "default": 120,
+          "min": 0,
+          "step": 0.01
+        }
+      ],
+      "formula": "Percentage Change = ((New Value - Original Value) ÷ Original Value) × 100%; If positive = Increase; If negative = Decrease",
+      "output": {
+        "label": "Percentage Change",
+        "default": "Enter original and new values above",
+        "format": "percentage"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Change Type",
+          "field": "changeType",
+          "format": "text"
+        },
+        {
+          "label": "Absolute Change",
+          "field": "absoluteChange",
+          "format": "decimal"
+        },
+        {
+          "label": "New Value vs Original",
+          "field": "valueComparison",
+          "format": "text"
+        },
+        {
+          "label": "Step-by-Step Calculation",
+          "field": "stepByStep",
+          "format": "text"
+        }
+      ],
+      "componentName": "PercentageChangeCalculator"
+    },
+    "examples": [
+      {
+        "title": "Price Increase",
+        "input": {
+          "originalValue": 100,
+          "newValue": 120
+        },
+        "output": {
+          "percentageChange": 20,
+          "changeType": "Increase",
+          "absoluteChange": 20
+        },
+        "explanation": "A product that costs $100 now costs $120. This is a 20% increase in price."
+      },
+      {
+        "title": "Stock Price Decline",
+        "input": {
+          "originalValue": 50,
+          "newValue": 40
+        },
+        "output": {
+          "percentageChange": -20,
+          "changeType": "Decrease",
+          "absoluteChange": -10
+        },
+        "explanation": "A stock that traded at $50 now trades at $40. This represents a 20% decrease in value."
+      },
+      {
+        "title": "Salary Raise",
+        "input": {
+          "originalValue": 50000,
+          "newValue": 55000
+        },
+        "output": {
+          "percentageChange": 10,
+          "changeType": "Increase",
+          "absoluteChange": 5000
+        },
+        "explanation": "An annual salary increase from $50,000 to $55,000 represents a 10% raise."
+      },
+      {
+        "title": "Population Growth",
+        "input": {
+          "originalValue": 100000,
+          "newValue": 108000
+        },
+        "output": {
+          "percentageChange": 8,
+          "changeType": "Increase",
+          "absoluteChange": 8000
+        },
+        "explanation": "A city's population growing from 100,000 to 108,000 people represents an 8% increase."
+      },
+      {
+        "title": "Weight Loss",
+        "input": {
+          "originalValue": 200,
+          "newValue": 180
+        },
+        "output": {
+          "percentageChange": -10,
+          "changeType": "Decrease",
+          "absoluteChange": -20
+        },
+        "explanation": "Losing 20 pounds from a starting weight of 200 pounds represents a 10% decrease in body weight."
+      },
+      {
+        "title": "Investment Growth",
+        "input": {
+          "originalValue": 1000,
+          "newValue": 1250
+        },
+        "output": {
+          "percentageChange": 25,
+          "changeType": "Increase",
+          "absoluteChange": 250
+        },
+        "explanation": "An investment growing from $1,000 to $1,250 represents a 25% return on investment."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Percent Calculator",
+        "slug": "percent-calculator",
+        "description": "Calculate percentages of numbers."
+      },
+      {
+        "name": "Simple Interest Calculator",
+        "slug": "simple-interest-calculator",
+        "description": "Calculate simple interest."
+      },
+      {
+        "name": "Compound Interest Calculator",
+        "slug": "compound-interest-calculator",
+        "description": "Calculate compound interest growth."
+      }
+    ]
+  },
+  "es": {
+    "title": "Calculadora de Cambio Porcentual",
+    "seoTitle": "Calculadora de Cambio Porcentual - Calcular Aumento y Disminución Porcentual",
+    "metaDescription": "Calcula cambio porcentual, aumento y disminución entre dos números. Calculadora gratuita de cambio porcentual con soluciones paso a paso y ejemplos reales.",
+    "keywords": [
+      "calculadora cambio porcentual",
+      "calculadora aumento porcentual",
+      "calculadora disminución porcentual",
+      "calculadora diferencia porcentual",
+      "calcular cambio porcentual"
+    ],
+    "longTailKeywords": [
+      "como calcular cambio porcentual",
+      "calculadora aumento y disminución porcentual",
+      "que es formula cambio porcentual",
+      "calcular cambio porcentual entre dos numeros",
+      "calculadora cambio porcentual con pasos",
+      "como encontrar aumento porcentual",
+      "calculadora disminución porcentual",
+      "calcular diferencia porcentual",
+      "cambio porcentual de viejo a nuevo",
+      "que aumento porcentual calculadora"
+    ],
+    "slug": "percentage-change-calculator",
+    "category": "Math",
+    "difficulty": "Beginner",
+    "tags": [
+      "cambio porcentual",
+      "aumento porcentual",
+      "disminución porcentual",
+      "matematicas",
+      "calculo",
+      "diferencia"
+    ],
+    "description": "Calcula cambio porcentual, aumento y disminución entre dos números cualquiera con nuestra calculadora fácil de usar de cambio porcentual. Perfecto para entender cambios de precio, tasas de crecimiento, inflación y comparar valores. Incluye soluciones paso a paso y ejemplos del mundo real.",
+    "summary": "Calcula cambio porcentual, aumento y disminución entre dos valores.",
+    "instructions": [
+      "Ingresa el valor original (viejo) en el primer campo",
+      "Ingresa el nuevo valor en el segundo campo",
+      "Haz clic en 'Calcular' para ver el cambio porcentual",
+      "La calculadora muestra si es un aumento o disminución",
+      "Revisa el cálculo paso a paso para aprender"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "originalValue",
+          "label": "Valor Original",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "newValue",
+          "label": "Nuevo Valor",
+          "type": "number",
+          "default": 120,
+          "min": 0,
+          "step": 0.01
+        }
+      ],
+      "formula": "Cambio Porcentual = ((Nuevo Valor - Valor Original) ÷ Valor Original) × 100%; Si positivo = Aumento; Si negativo = Disminución",
+      "output": {
+        "label": "Cambio Porcentual",
+        "default": "Ingresa valores original y nuevo arriba",
+        "format": "percentage"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Tipo de Cambio",
+          "field": "changeType",
+          "format": "text"
+        },
+        {
+          "label": "Cambio Absoluto",
+          "field": "absoluteChange",
+          "format": "decimal"
+        },
+        {
+          "label": "Nuevo Valor vs Original",
+          "field": "valueComparison",
+          "format": "text"
+        },
+        {
+          "label": "Cálculo Paso a Paso",
+          "field": "stepByStep",
+          "format": "text"
+        }
+      ],
+      "componentName": "PercentageChangeCalculator"
+    },
+    "examples": [
+      {
+        "title": "Aumento de Precio",
+        "input": {
+          "originalValue": 100,
+          "newValue": 120
+        },
+        "output": {
+          "percentageChange": 20,
+          "changeType": "Aumento",
+          "absoluteChange": 20
+        },
+        "explanation": "Un producto que cuesta €100 ahora cuesta €120. Esto es un aumento del 20% en el precio."
+      },
+      {
+        "title": "Caída en Precio de Acción",
+        "input": {
+          "originalValue": 50,
+          "newValue": 40
+        },
+        "output": {
+          "percentageChange": -20,
+          "changeType": "Disminución",
+          "absoluteChange": -10
+        },
+        "explanation": "Una acción que cotizaba a €50 ahora cotiza a €40. Esto representa una disminución del 20% en el valor."
+      },
+      {
+        "title": "Aumento Salarial",
+        "input": {
+          "originalValue": 50000,
+          "newValue": 55000
+        },
+        "output": {
+          "percentageChange": 10,
+          "changeType": "Aumento",
+          "absoluteChange": 5000
+        },
+        "explanation": "Un aumento salarial anual de €50,000 a €55,000 representa un aumento del 10%."
+      },
+      {
+        "title": "Crecimiento Poblacional",
+        "input": {
+          "originalValue": 100000,
+          "newValue": 108000
+        },
+        "output": {
+          "percentageChange": 8,
+          "changeType": "Aumento",
+          "absoluteChange": 8000
+        },
+        "explanation": "El crecimiento poblacional de una ciudad de 100,000 a 108,000 personas representa un aumento del 8%."
+      },
+      {
+        "title": "Pérdida de Peso",
+        "input": {
+          "originalValue": 200,
+          "newValue": 180
+        },
+        "output": {
+          "percentageChange": -10,
+          "changeType": "Disminución",
+          "absoluteChange": -20
+        },
+        "explanation": "Perder 20 libras de un peso inicial de 200 libras representa una disminución del 10% en el peso corporal."
+      },
+      {
+        "title": "Crecimiento de Inversión",
+        "input": {
+          "originalValue": 1000,
+          "newValue": 1250
+        },
+        "output": {
+          "percentageChange": 25,
+          "changeType": "Aumento",
+          "absoluteChange": 250
+        },
+        "explanation": "Una inversión que crece de €1,000 a €1,250 representa un retorno del 25% sobre la inversión."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Porcentajes",
+        "slug": "percent-calculator",
+        "description": "Calcula porcentajes de números."
+      },
+      {
+        "name": "Calculadora de Interés Simple",
+        "slug": "simple-interest-calculator",
+        "description": "Calcula interés simple."
+      },
+      {
+        "name": "Calculadora de Interés Compuesto",
+        "slug": "compound-interest-calculator",
+        "description": "Calcula crecimiento de interés compuesto."
+      }
+    ]
+  },
+  "pt": {
+    "title": "Calculadora de Mudança Percentual",
+    "seoTitle": "Calculadora de Mudança Percentual - Calcular Aumento e Diminuição Percentual",
+    "metaDescription": "Calcule mudança percentual, aumento e diminuição entre dois números. Calculadora gratuita de mudança percentual com soluções passo a passo e exemplos reais.",
+    "keywords": [
+      "calculadora mudança percentual",
+      "calculadora aumento percentual",
+      "calculadora diminuição percentual",
+      "calculadora diferença percentual",
+      "calcular mudança percentual"
+    ],
+    "longTailKeywords": [
+      "como calcular mudança percentual",
+      "calculadora aumento e diminuição percentual",
+      "o que é fórmula mudança percentual",
+      "calcular mudança percentual entre dois numeros",
+      "calculadora mudança percentual com passos",
+      "como encontrar aumento percentual",
+      "calculadora diminuição percentual",
+      "calcular diferença percentual",
+      "mudança percentual de velho para novo",
+      "que aumento percentual calculadora"
+    ],
+    "slug": "percentage-change-calculator",
+    "category": "Math",
+    "difficulty": "Beginner",
+    "tags": [
+      "mudança percentual",
+      "aumento percentual",
+      "diminuição percentual",
+      "matemática",
+      "cálculo",
+      "diferença"
+    ],
+    "description": "Calcule mudança percentual, aumento e diminuição entre dois números quaisquer com nossa calculadora fácil de usar de mudança percentual. Perfeito para entender mudanças de preço, taxas de crescimento, inflação e comparar valores. Inclui soluções passo a passo e exemplos do mundo real.",
+    "summary": "Calcule mudança percentual, aumento e diminuição entre dois valores.",
+    "instructions": [
+      "Digite o valor original (velho) no primeiro campo",
+      "Digite o novo valor no segundo campo",
+      "Clique em 'Calcular' para ver a mudança percentual",
+      "A calculadora mostra se é um aumento ou diminuição",
+      "Revise o cálculo passo a passo para aprender"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "originalValue",
+          "label": "Valor Original",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "newValue",
+          "label": "Novo Valor",
+          "type": "number",
+          "default": 120,
+          "min": 0,
+          "step": 0.01
+        }
+      ],
+      "formula": "Mudança Percentual = ((Novo Valor - Valor Original) ÷ Valor Original) × 100%; Se positivo = Aumento; Se negativo = Diminuição",
+      "output": {
+        "label": "Mudança Percentual",
+        "default": "Digite valores original e novo acima",
+        "format": "percentage"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Tipo de Mudança",
+          "field": "changeType",
+          "format": "text"
+        },
+        {
+          "label": "Mudança Absoluta",
+          "field": "absoluteChange",
+          "format": "decimal"
+        },
+        {
+          "label": "Novo Valor vs Original",
+          "field": "valueComparison",
+          "format": "text"
+        },
+        {
+          "label": "Cálculo Passo a Passo",
+          "field": "stepByStep",
+          "format": "text"
+        }
+      ],
+      "componentName": "PercentageChangeCalculator"
+    },
+    "examples": [
+      {
+        "title": "Aumento de Preço",
+        "input": {
+          "originalValue": 100,
+          "newValue": 120
+        },
+        "output": {
+          "percentageChange": 20,
+          "changeType": "Aumento",
+          "absoluteChange": 20
+        },
+        "explanation": "Um produto que custa R$100 agora custa R$120. Isso é um aumento de 20% no preço."
+      },
+      {
+        "title": "Queda no Preço de Ação",
+        "input": {
+          "originalValue": 50,
+          "newValue": 40
+        },
+        "output": {
+          "percentageChange": -20,
+          "changeType": "Diminuição",
+          "absoluteChange": -10
+        },
+        "explanation": "Uma ação que negociava a R$50 agora negocia a R$40. Isso representa uma diminuição de 20% no valor."
+      },
+      {
+        "title": "Aumento Salarial",
+        "input": {
+          "originalValue": 50000,
+          "newValue": 55000
+        },
+        "output": {
+          "percentageChange": 10,
+          "changeType": "Aumento",
+          "absoluteChange": 5000
+        },
+        "explanation": "Um aumento salarial anual de R$50.000 para R$55.000 representa um aumento de 10%."
+      },
+      {
+        "title": "Crescimento Populacional",
+        "input": {
+          "originalValue": 100000,
+          "newValue": 108000
+        },
+        "output": {
+          "percentageChange": 8,
+          "changeType": "Aumento",
+          "absoluteChange": 8000
+        },
+        "explanation": "O crescimento populacional de uma cidade de 100.000 para 108.000 pessoas representa um aumento de 8%."
+      },
+      {
+        "title": "Perda de Peso",
+        "input": {
+          "originalValue": 200,
+          "newValue": 180
+        },
+        "output": {
+          "percentageChange": -10,
+          "changeType": "Diminuição",
+          "absoluteChange": -20
+        },
+        "explanation": "Perder 20 libras de um peso inicial de 200 libras representa uma diminuição de 10% no peso corporal."
+      },
+      {
+        "title": "Crescimento de Investimento",
+        "input": {
+          "originalValue": 1000,
+          "newValue": 1250
+        },
+        "output": {
+          "percentageChange": 25,
+          "changeType": "Aumento",
+          "absoluteChange": 250
+        },
+        "explanation": "Um investimento crescendo de R$1.000 para R$1.250 representa um retorno de 25% sobre o investimento."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Porcentagem",
+        "slug": "percent-calculator",
+        "description": "Calcule porcentagens de números."
+      },
+      {
+        "name": "Calculadora de Juros Simples",
+        "slug": "simple-interest-calculator",
+        "description": "Calcule juros simples."
+      },
+      {
+        "name": "Calculadora de Juros Compostos",
+        "slug": "compound-interest-calculator",
+        "description": "Calcule crescimento de juros compostos."
+      }
+    ]
+  },
+  "fr": {
+    "title": "Calculatrice de Changement Percentuel",
+    "seoTitle": "Calculatrice de Changement Percentuel - Calculer Augmentation et Diminution Percentuelle",
+    "metaDescription": "Calculez le changement percentuel, augmentation et diminution entre deux nombres. Calculatrice gratuite de changement percentuel avec solutions étape par étape et exemples réels.",
+    "keywords": [
+      "calculatrice changement percentuel",
+      "calculatrice augmentation percentuelle",
+      "calculatrice diminution percentuelle",
+      "calculatrice différence percentuelle",
+      "calculer changement percentuel"
+    ],
+    "longTailKeywords": [
+      "comment calculer changement percentuel",
+      "calculatrice augmentation et diminution percentuelle",
+      "quelle est formule changement percentuel",
+      "calculer changement percentuel entre deux nombres",
+      "calculatrice changement percentuel avec étapes",
+      "comment trouver augmentation percentuelle",
+      "calculatrice diminution percentuelle",
+      "calculer différence percentuelle",
+      "changement percentuel de ancien à nouveau",
+      "quelle augmentation percentuelle calculatrice"
+    ],
+    "slug": "percentage-change-calculator",
+    "category": "Math",
+    "difficulty": "Beginner",
+    "tags": [
+      "changement percentuel",
+      "augmentation percentuelle",
+      "diminution percentuelle",
+      "mathématiques",
+      "calcul",
+      "différence"
+    ],
+    "description": "Calculez le changement percentuel, augmentation et diminution entre deux nombres quelconques avec notre calculatrice facile d'utilisation de changement percentuel. Parfait pour comprendre les changements de prix, taux de croissance, inflation et comparer les valeurs. Inclut des solutions étape par étape et exemples du monde réel.",
+    "summary": "Calculez le changement percentuel, augmentation et diminution entre deux valeurs.",
+    "instructions": [
+      "Entrez la valeur originale (ancienne) dans le premier champ",
+      "Entrez la nouvelle valeur dans le deuxième champ",
+      "Cliquez sur 'Calculer' pour voir le changement percentuel",
+      "La calculatrice montre s'il s'agit d'une augmentation ou diminution",
+      "Examinez le calcul étape par étape pour apprendre"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "originalValue",
+          "label": "Valeur Originale",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "newValue",
+          "label": "Nouvelle Valeur",
+          "type": "number",
+          "default": 120,
+          "min": 0,
+          "step": 0.01
+        }
+      ],
+      "formula": "Changement Percentuel = ((Nouvelle Valeur - Valeur Originale) ÷ Valeur Originale) × 100 % ; Si positif = Augmentation ; Si négatif = Diminution",
+      "output": {
+        "label": "Changement Percentuel",
+        "default": "Entrez les valeurs originale et nouvelle ci-dessus",
+        "format": "percentage"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Type de Changement",
+          "field": "changeType",
+          "format": "text"
+        },
+        {
+          "label": "Changement Absolu",
+          "field": "absoluteChange",
+          "format": "decimal"
+        },
+        {
+          "label": "Nouvelle Valeur vs Originale",
+          "field": "valueComparison",
+          "format": "text"
+        },
+        {
+          "label": "Calcul Étape par Étape",
+          "field": "stepByStep",
+          "format": "text"
+        }
+      ],
+      "componentName": "PercentageChangeCalculator"
+    },
+    "examples": [
+      {
+        "title": "Augmentation de Prix",
+        "input": {
+          "originalValue": 100,
+          "newValue": 120
+        },
+        "output": {
+          "percentageChange": 20,
+          "changeType": "Augmentation",
+          "absoluteChange": 20
+        },
+        "explanation": "Un produit qui coûte 100€ coûte maintenant 120€. Il s'agit d'une augmentation de 20% du prix."
+      },
+      {
+        "title": "Chute du Prix d'Action",
+        "input": {
+          "originalValue": 50,
+          "newValue": 40
+        },
+        "output": {
+          "percentageChange": -20,
+          "changeType": "Diminution",
+          "absoluteChange": -10
+        },
+        "explanation": "Une action qui se négociait à 50€ se négocie maintenant à 40€. Cela représente une diminution de 20% de la valeur."
+      },
+      {
+        "title": "Augmentation Salariale",
+        "input": {
+          "originalValue": 50000,
+          "newValue": 55000
+        },
+        "output": {
+          "percentageChange": 10,
+          "changeType": "Augmentation",
+          "absoluteChange": 5000
+        },
+        "explanation": "Une augmentation salariale annuelle de 50 000€ à 55 000€ représente une augmentation de 10%."
+      },
+      {
+        "title": "Croissance Démographique",
+        "input": {
+          "originalValue": 100000,
+          "newValue": 108000
+        },
+        "output": {
+          "percentageChange": 8,
+          "changeType": "Augmentation",
+          "absoluteChange": 8000
+        },
+        "explanation": "La croissance démographique d'une ville de 100 000 à 108 000 personnes représente une augmentation de 8%."
+      },
+      {
+        "title": "Perte de Poids",
+        "input": {
+          "originalValue": 200,
+          "newValue": 180
+        },
+        "output": {
+          "percentageChange": -10,
+          "changeType": "Diminution",
+          "absoluteChange": -20
+        },
+        "explanation": "Perdre 20 livres d'un poids initial de 200 livres représente une diminution de 10% du poids corporel."
+      },
+      {
+        "title": "Croissance d'Investissement",
+        "input": {
+          "originalValue": 1000,
+          "newValue": 1250
+        },
+        "output": {
+          "percentageChange": 25,
+          "changeType": "Augmentation",
+          "absoluteChange": 250
+        },
+        "explanation": "Un investissement passant de 1 000€ à 1 250€ représente un retour sur investissement de 25%."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice de Pourcentage",
+        "slug": "percent-calculator",
+        "description": "Calculez les pourcentages de nombres."
+      },
+      {
+        "name": "Calculatrice d'Intérêts Simples",
+        "slug": "simple-interest-calculator",
+        "description": "Calculez les intérêts simples."
+      },
+      {
+        "name": "Calculatrice d'Intérêts Composés",
+        "slug": "compound-interest-calculator",
+        "description": "Calculez la croissance des intérêts composés."
+      }
+    ]
+  }
+}

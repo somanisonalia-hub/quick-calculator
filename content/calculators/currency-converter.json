@@ -1,0 +1,458 @@
+{
+  "en": {
+    "title": "Currency Converter",
+    "seoTitle": "Currency Converter - Convert Money Between Currencies Online",
+    "metaDescription": "Free online currency converter. Convert between all major world currencies with live exchange rates. Perfect for travel, business, and international transactions.",
+    "keywords": ["currency converter", "exchange rate calculator", "money converter", "forex converter", "currency exchange"],
+    "longTailKeywords": ["convert currency online", "live exchange rates", "foreign currency calculator", "international money converter", "currency conversion tool"],
+    "slug": "currency-converter",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": ["currency", "exchange rates", "international", "travel", "business"],
+    "summary": "Convert between all major world currencies with live exchange rates for accurate international money calculations.",
+    "description": "Our comprehensive currency converter provides real-time exchange rates for all major world currencies. Perfect for travelers, international business professionals, and anyone dealing with foreign currency. Get accurate conversions with historical rates and currency charts for better financial planning.",
+    "instructions": [
+      "Select the currencies you want to convert between",
+      "Enter the amount to convert",
+      "Get instant conversion with live exchange rates",
+      "View historical trends and currency charts"
+    ],
+    "calculatorComponent": {
+      "componentName": "CurrencyConverter",
+      "inputs": [
+        { "name": "amount", "label": "Amount", "type": "number", "default": 1000, "min": 0.01, "max": 10000000, "step": 0.01 },
+        { "name": "fromCurrency", "label": "From Currency", "type": "select", "default": "USD", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] },
+        { "name": "toCurrency", "label": "To Currency", "type": "select", "default": "EUR", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] }
+      ],
+      "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
+      "output": { "label": "Converted Amount", "default": "Enter amount and currencies above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Exchange Rate", "field": "exchangeRate", "format": "number" },
+        { "label": "Inverse Rate", "field": "inverseRate", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Travel Conversion",
+        "input": "1,000 USD to EUR",
+        "output": "Approximately 920 EUR (based on current rates)"
+      },
+      {
+        "title": "Business Transaction",
+        "input": "50,000 GBP to USD",
+        "output": "Approximately 63,500 USD (based on current rates)"
+      }
+    ],
+    "relatedCalculators": ["inflation-calculator", "budget-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Navigate the global economy with confidence using our comprehensive currency converter that provides accurate, real-time exchange rates for all major world currencies. Whether you're planning international travel, conducting business across borders, or simply curious about foreign money values, this essential financial tool ensures you always know the true value of your money in any currency. Stay informed about currency fluctuations and make smarter decisions for international transactions, travel budgets, and cross-border investments.",
+      "benefits": [
+        "Convert between all major world currencies instantly",
+        "Access real-time exchange rates updated regularly",
+        "Plan international travel budgets accurately",
+        "Make informed business decisions for global transactions",
+        "Understand currency fluctuations and market trends",
+        "Compare prices across different countries and currencies",
+        "Calculate foreign transaction fees and costs",
+        "Track currency strength for investment opportunities"
+      ],
+      "steps": [
+        "Select the currency you want to convert from (source currency)",
+        "Choose the currency you want to convert to (target currency)",
+        "Enter the amount you want to convert",
+        "View the instant conversion result with current exchange rate",
+        "Check the inverse rate for reverse calculations",
+        "Use the result for your financial planning or transaction"
+      ],
+      "inputsExplained": [
+        "Amount is the monetary value you want to convert - can be any positive number",
+        "From currency is the original currency you're converting from - choose from major global currencies",
+        "To currency is the target currency you want to convert to - select from the same list of major currencies",
+        "Exchange rates are updated regularly to reflect current market conditions"
+      ],
+      "formulaExplanation": "Currency conversion uses a simple but crucial formula: Converted Amount = Original Amount × Exchange Rate. The exchange rate represents how much of the target currency you get for one unit of the source currency. For example, if the USD to EUR rate is 0.85, then $100 USD = €85 EUR. Exchange rates fluctuate constantly based on economic factors, interest rates, political events, and market sentiment. Understanding these rates helps you avoid poor conversion timing and minimize foreign transaction costs.",
+      "examples": [
+        "A $2,000 vacation budget converts to approximately €1,840 at current rates, helping you set realistic spending limits while traveling in Europe.",
+        "Importing goods costing €50,000 would be approximately $55,500 USD at current exchange rates, affecting your business cost calculations.",
+        "A $10,000 investment in GBP would be worth about £7,800 at current rates, showing the impact of currency fluctuations on international investments.",
+        "Monthly remittances of $500 USD to family abroad convert to approximately ₱27,000 PHP, helping you budget for regular international transfers."
+      ],
+      "resultsExplanation": [
+        "Converted amount shows the exact value in the target currency",
+        "Exchange rate displays the current rate used for conversion",
+        "Inverse rate shows the reverse conversion rate for reference"
+      ],
+      "whoItsFor": "This currency converter serves travelers planning international trips, international business professionals, students studying abroad, families sending money overseas, online shoppers comparing prices globally, forex traders monitoring currency movements, and anyone dealing with international finances. It's particularly valuable for expatriates managing dual currencies, importers and exporters calculating costs, tourists avoiding ATM fees, and investors considering international opportunities. The tool works for anyone who needs accurate currency conversions for personal or business purposes.",
+      "disclaimer": "Exchange rates are subject to constant fluctuation and can change rapidly due to economic conditions, political events, and market forces. The rates shown are for informational purposes and may not reflect the exact rates available through banks, currency exchange services, or payment processors. Always check with your financial institution for current rates and fees. This tool does not account for transaction fees, commissions, or special rates that may apply to large transactions. For official exchange rates, consult central banks or authorized financial institutions.",
+      "relatedTools": [
+        "Inflation calculators for understanding currency purchasing power changes",
+        "Budget calculators for incorporating international expenses",
+        "Investment calculators for evaluating global investment opportunities"
+      ],
+      "faqs": [
+        {
+          "question": "How often are exchange rates updated?",
+          "answer": "Exchange rates are typically updated every few minutes to hourly, depending on market volatility and data source reliability. Major currency pairs update more frequently during active trading hours. However, for the most accurate rates for transactions, always check with your bank or currency exchange service at the time of conversion, as rates can change between updates. Weekend and holiday rates may be less current due to reduced market activity."
+        },
+        {
+          "question": "Why do exchange rates change so frequently?",
+          "answer": "Exchange rates fluctuate constantly due to economic factors like interest rates, inflation, GDP growth, and employment data. Political events, trade agreements, and geopolitical tensions also impact currency values. Market sentiment, investor confidence, and global events like elections or natural disasters can cause rapid rate changes. During major news events, rates can swing dramatically within minutes. Understanding these factors helps explain why yesterday's rate differs from today's."
+        },
+        {
+          "question": "What are the best times to convert currency for travel?",
+          "answer": "Convert currency when your home currency is strong relative to your destination currency. Monitor rates for 1-2 weeks before travel and convert when you get a favorable rate. Tuesday through Thursday often have better rates than Monday (post-weekend adjustments) or Friday (position squaring). Avoid converting at airports or hotels where rates are typically 5-10% worse. Use ATMs for local currency when abroad, but compare rates with currency exchange bureaus."
+        },
+        {
+          "question": "How do I avoid losing money on currency conversions?",
+          "answer": "Compare rates across multiple sources including banks, credit unions, online bureaus, and apps. Watch for hidden fees like commissions or poor rates disguised as 'no fee' services. Convert larger amounts at better rates rather than small amounts frequently. Use credit cards abroad for purchases (often better than cash rates) but check foreign transaction fees. Consider multi-currency accounts or travel cards for better rates. Time conversions when your currency is strong."
+        },
+        {
+          "question": "What's the difference between buying and selling rates?",
+          "answer": "Banks and exchange services offer different rates for buying (when you buy foreign currency) and selling (when you sell foreign currency back). The difference creates a 'spread' that represents their profit margin, typically 3-5% for retail customers. Buying rates are worse for you (you get less foreign currency for your money), while selling rates are better for you (you get more home currency when selling foreign currency). Always ask for both rates when comparing services."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Convertidor de Moneda",
+    "seoTitle": "Convertidor de Moneda - Convierte Dinero Entre Monedas en Línea",
+    "metaDescription": "Convertidor de moneda gratuito en línea. Convierte entre todas las monedas principales del mundo con tasas de cambio en vivo. Perfecto para viajes, negocios y transacciones internacionales.",
+    "keywords": ["convertidor moneda", "calculadora tasa cambio", "convertidor dinero", "convertidor forex", "cambio moneda"],
+    "longTailKeywords": ["convertir moneda online", "tasas cambio en vivo", "calculadora moneda extranjera", "convertidor dinero internacional", "herramienta conversión moneda"],
+    "slug": "currency-converter",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": ["moneda", "tasas cambio", "internacional", "viajes", "negocios"],
+    "summary": "Convierte entre todas las monedas principales del mundo con tasas de cambio en vivo para cálculos precisos de dinero internacional.",
+    "description": "Nuestro completo convertidor de moneda proporciona tasas de cambio en tiempo real para todas las monedas principales del mundo. Perfecto para viajeros, profesionales de negocios internacionales y cualquier persona que maneje moneda extranjera. Obtén conversiones precisas con tasas históricas y gráficos de moneda para una mejor planificación financiera.",
+    "instructions": [
+      "Selecciona las monedas entre las que quieres convertir",
+      "Ingresa el monto a convertir",
+      "Obtén conversión instantánea con tasas de cambio en vivo",
+      "Ve tendencias históricas y gráficos de moneda"
+    ],
+    "calculatorComponent": {
+      "componentName": "CurrencyConverter",
+      "inputs": [
+        { "name": "amount", "label": "Amount", "type": "number", "default": 1000, "min": 0.01, "max": 10000000, "step": 0.01 },
+        { "name": "fromCurrency", "label": "From Currency", "type": "select", "default": "USD", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] },
+        { "name": "toCurrency", "label": "To Currency", "type": "select", "default": "EUR", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] }
+      ],
+      "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
+      "output": { "label": "Converted Amount", "default": "Enter amount and currencies above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Exchange Rate", "field": "exchangeRate", "format": "number" },
+        { "label": "Inverse Rate", "field": "inverseRate", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Conversión de Viaje",
+        "input": "1,000 USD a EUR",
+        "output": "Aproximadamente 920 EUR (basado en tasas actuales)"
+      },
+      {
+        "title": "Transacción Empresarial",
+        "input": "50,000 GBP a USD",
+        "output": "Aproximadamente 63,500 USD (basado en tasas actuales)"
+      }
+    ],
+    "relatedCalculators": ["inflation-calculator", "budget-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Navega la economía global con confianza usando nuestro convertidor integral de moneda que proporciona tasas de cambio precisas y en tiempo real para todas las monedas principales del mundo. Ya sea que planees viajes internacionales, conduzcas negocios a través de fronteras, o simplemente tengas curiosidad sobre los valores de dinero extranjero, esta herramienta financiera esencial asegura que siempre sepas el verdadero valor de tu dinero en cualquier moneda. Mantente informado sobre fluctuaciones de moneda y toma decisiones más inteligentes para transacciones internacionales, presupuestos de viaje, e inversiones transfronterizas.",
+      "benefits": [
+        "Convierte entre todas las monedas principales del mundo al instante",
+        "Accede a tasas de cambio en tiempo real actualizadas regularmente",
+        "Planea presupuestos de viaje internacional con precisión",
+        "Toma decisiones comerciales informadas para transacciones globales",
+        "Entiende fluctuaciones de moneda y tendencias de mercado",
+        "Compara precios a través de diferentes países y monedas",
+        "Calcula tarifas de transacción extranjera y costos",
+        "Rastrea fuerza de moneda para oportunidades de inversión"
+      ],
+      "steps": [
+        "Selecciona la moneda de la que quieres convertir (moneda fuente)",
+        "Elige la moneda a la que quieres convertir (moneda objetivo)",
+        "Ingresa el monto que quieres convertir",
+        "Ve el resultado de conversión instantánea con tasa de cambio actual",
+        "Verifica la tasa inversa para cálculos inversos",
+        "Usa el resultado para tu planificación financiera o transacción"
+      ],
+      "inputsExplained": [
+        "Monto es el valor monetario que quieres convertir - puede ser cualquier número positivo",
+        "De moneda es la moneda original de la que conviertes - elige entre monedas globales principales",
+        "A moneda es la moneda objetivo a la que quieres convertir - selecciona de la misma lista de monedas principales",
+        "Las tasas de cambio se actualizan regularmente para reflejar condiciones de mercado actuales"
+      ],
+      "formulaExplanation": "La conversión de moneda usa una fórmula simple pero crucial: Monto Convertido = Monto Original × Tasa de Cambio. La tasa de cambio representa cuánto de la moneda objetivo obtienes por una unidad de la moneda fuente. Por ejemplo, si la tasa USD a EUR es 0.85, entonces $100 USD = €85 EUR. Las tasas de cambio fluctúan constantemente basadas en factores económicos, tasas de interés, eventos políticos, y sentimiento de mercado. Entender estas tasas te ayuda a evitar cronometraje pobre de conversión y minimizar costos de transacción extranjera.",
+      "examples": [
+        "Un presupuesto de viaje de $2,000 se convierte a aproximadamente €1,840 a tasas actuales, ayudándote a establecer límites realistas de gasto mientras viajas en Europa.",
+        "Importar bienes costando €50,000 sería aproximadamente $55,500 USD a tasas actuales, afectando tus cálculos de costo comercial.",
+        "Una inversión de $10,000 en GBP valdría aproximadamente £7,800 a tasas actuales, mostrando el impacto de fluctuaciones de moneda en inversiones internacionales.",
+        "Remesas mensuales de $500 USD a familia en el extranjero se convierten a aproximadamente ₱27,000 PHP, ayudándote a presupuestar para transferencias internacionales regulares."
+      ],
+      "resultsExplanation": [
+        "Monto convertido muestra el valor exacto en la moneda objetivo",
+        "Tasa de cambio muestra la tasa actual usada para conversión",
+        "Tasa inversa muestra la tasa de conversión inversa para referencia"
+      ],
+      "whoItsFor": "Este convertidor de moneda sirve a viajeros planeando viajes internacionales, profesionales comerciales internacionales, estudiantes estudiando en el extranjero, familias enviando dinero al extranjero, compradores online comparando precios globalmente, traders forex monitoreando movimientos de moneda, y cualquiera tratando con finanzas internacionales. Es particularmente valioso para expatriados manejando monedas duales, importadores y exportadores calculando costos, turistas evitando tarifas de ATM, e inversionistas considerando oportunidades internacionales. La herramienta funciona para cualquiera que necesite conversiones precisas de moneda para propósitos personales o comerciales.",
+      "disclaimer": "Las tasas de cambio están sujetas a fluctuación constante y pueden cambiar rápidamente debido a condiciones económicas, eventos políticos, y fuerzas de mercado. Las tasas mostradas son para propósitos informativos y pueden no reflejar las tasas exactas disponibles a través de bancos, servicios de cambio de moneda, o procesadores de pago. Siempre verifica con tu institución financiera por tasas y tarifas actuales. Esta herramienta no considera tarifas de transacción, comisiones, o tasas especiales que pueden aplicar a transacciones grandes. Para tasas de cambio oficiales, consulta bancos centrales o instituciones financieras autorizadas.",
+      "relatedTools": [
+        "Calculadoras de inflación para entender cambios en poder adquisitivo de moneda",
+        "Calculadoras de presupuesto para incorporar gastos internacionales",
+        "Calculadoras de inversión para evaluar oportunidades de inversión global"
+      ],
+      "faqs": [
+        {
+          "question": "¿Con qué frecuencia se actualizan las tasas de cambio?",
+          "answer": "Las tasas de cambio se actualizan típicamente cada pocos minutos a cada hora, dependiendo de volatilidad de mercado y confiabilidad de fuente de datos. Los pares de moneda principales se actualizan más frecuentemente durante horas activas de trading. Sin embargo, para las tasas más precisas para transacciones, siempre verifica con tu banco o servicio de cambio de moneda al momento de conversión, ya que las tasas pueden cambiar entre actualizaciones. Las tasas de fin de semana y feriados pueden ser menos actuales debido a actividad de mercado reducida."
+        },
+        {
+          "question": "¿Por qué cambian las tasas de cambio tan frecuentemente?",
+          "answer": "Las tasas de cambio fluctúan constantemente debido a factores económicos como tasas de interés, inflación, crecimiento del PIB, y datos de empleo. Eventos políticos, acuerdos comerciales, y tensiones geopolíticas también impactan valores de moneda. Sentimiento de mercado, confianza de inversionista, y eventos globales como elecciones o desastres naturales pueden causar cambios rápidos de tasa. Durante eventos de noticias mayores, las tasas pueden oscilar dramáticamente dentro de minutos. Entender estos factores ayuda a explicar por qué la tasa de ayer difiere de la de hoy."
+        },
+        {
+          "question": "¿Cuáles son los mejores momentos para convertir moneda para viaje?",
+          "answer": "Convierte moneda cuando tu moneda local es fuerte relativa a la moneda de destino. Monitorea tasas por 1-2 semanas antes de viaje y convierte cuando obtengas una tasa favorable. Martes a jueves a menudo tienen mejores tasas que lunes (ajustes post-fin de semana) o viernes (cuadratura de posiciones). Evita convertir en aeropuertos o hoteles donde las tasas son típicamente 5-10% peores. Usa ATMs para moneda local cuando estés en el extranjero, pero compara tasas con oficinas de cambio de moneda."
+        },
+        {
+          "question": "¿Cómo evito perder dinero en conversiones de moneda?",
+          "answer": "Compara tasas a través de múltiples fuentes incluyendo bancos, cooperativas de crédito, oficinas online, y apps. Vigila tarifas ocultas como comisiones o tasas pobres disfrazadas como servicios 'sin tarifa'. Convierte montos más grandes a mejores tasas en lugar de montos pequeños frecuentemente. Usa tarjetas de crédito en el extranjero para compras (a menudo mejores que tasas de efectivo) pero verifica tarifas de transacción extranjera. Considera cuentas multi-moneda o tarjetas de viaje para mejores tasas. Cronometra conversiones cuando tu moneda es fuerte."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre tasas de compra y venta?",
+          "answer": "Los bancos y servicios de cambio ofrecen diferentes tasas para compra (cuando compras moneda extranjera) y venta (cuando vendes moneda extranjera de vuelta). La diferencia crea un 'spread' que representa su margen de ganancia, típicamente 3-5% para clientes minoristas. Las tasas de compra son peores para ti (obtienes menos moneda extranjera por tu dinero), mientras las tasas de venta son mejores para ti (obtienes más moneda local cuando vendes moneda extranjera). Siempre pregunta por ambas tasas cuando compares servicios."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Conversor de Moeda",
+    "seoTitle": "Conversor de Moeda - Converta Dinheiro Entre Moedas Online",
+    "metaDescription": "Conversor de moeda gratuito online. Converta entre todas as moedas principais do mundo com taxas de câmbio ao vivo. Perfeito para viagens, negócios e transações internacionais.",
+    "keywords": ["conversor moeda", "calculadora taxa câmbio", "conversor dinheiro", "conversor forex", "câmbio moeda"],
+    "longTailKeywords": ["converter moeda online", "taxas câmbio ao vivo", "calculadora moeda estrangeira", "conversor dinheiro internacional", "ferramenta conversão moeda"],
+    "slug": "currency-converter",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": ["moeda", "taxas câmbio", "internacional", "viagens", "negócios"],
+    "summary": "Converta entre todas as moedas principais do mundo com taxas de câmbio ao vivo para cálculos precisos de dinheiro internacional.",
+    "description": "Nosso conversor completo de moeda fornece taxas de câmbio em tempo real para todas as moedas principais do mundo. Perfeito para viajantes, profissionais de negócios internacionais e qualquer pessoa que lide com moeda estrangeira. Obtenha conversões precisas com taxas históricas e gráficos de moeda para melhor planejamento financeiro.",
+    "instructions": [
+      "Selecione as moedas entre as quais deseja converter",
+      "Digite o valor a converter",
+      "Obtenha conversão instantânea com taxas de câmbio ao vivo",
+      "Veja tendências históricas e gráficos de moeda"
+    ],
+    "calculatorComponent": {
+      "componentName": "CurrencyConverter",
+      "inputs": [
+        { "name": "amount", "label": "Amount", "type": "number", "default": 1000, "min": 0.01, "max": 10000000, "step": 0.01 },
+        { "name": "fromCurrency", "label": "From Currency", "type": "select", "default": "USD", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] },
+        { "name": "toCurrency", "label": "To Currency", "type": "select", "default": "EUR", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] }
+      ],
+      "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
+      "output": { "label": "Converted Amount", "default": "Enter amount and currencies above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Exchange Rate", "field": "exchangeRate", "format": "number" },
+        { "label": "Inverse Rate", "field": "inverseRate", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Conversão de Viagem",
+        "input": "1,000 USD para EUR",
+        "output": "Aproximadamente 920 EUR (baseado em taxas atuais)"
+      },
+      {
+        "title": "Transação Empresarial",
+        "input": "50,000 GBP para USD",
+        "output": "Aproximadamente 63,500 USD (baseado em taxas atuais)"
+      }
+    ],
+    "relatedCalculators": ["inflation-calculator", "budget-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Navegue a economia global com confiança usando nosso conversor abrangente de moeda que fornece taxas de câmbio precisas e em tempo real para todas as moedas principais do mundo. Seja você planejando viagens internacionais, conduzindo negócios através de fronteiras, ou simplesmente curioso sobre valores de dinheiro estrangeiro, esta ferramenta financeira essencial garante que você sempre saiba o verdadeiro valor do seu dinheiro em qualquer moeda. Mantenha-se informado sobre flutuações de moeda e tome decisões mais inteligentes para transações internacionais, orçamentos de viagem, e investimentos transfronteiriços.",
+      "benefits": [
+        "Converta entre todas as moedas principais do mundo instantaneamente",
+        "Acesse taxas de câmbio em tempo real atualizadas regularmente",
+        "Planeje orçamentos de viagem internacional com precisão",
+        "Tome decisões comerciais informadas para transações globais",
+        "Entenda flutuações de moeda e tendências de mercado",
+        "Compare preços através de diferentes países e moedas",
+        "Calcule taxas de transação estrangeira e custos",
+        "Rastreie força de moeda para oportunidades de investimento"
+      ],
+      "steps": [
+        "Selecione a moeda da qual você quer converter (moeda fonte)",
+        "Escolha a moeda para a qual você quer converter (moeda alvo)",
+        "Digite o valor que você quer converter",
+        "Veja o resultado de conversão instantânea com taxa de câmbio atual",
+        "Verifique a taxa inversa para cálculos reversos",
+        "Use o resultado para seu planejamento financeiro ou transação"
+      ],
+      "inputsExplained": [
+        "Valor é o valor monetário que você quer converter - pode ser qualquer número positivo",
+        "De moeda é a moeda original da qual você converte - escolha entre moedas globais principais",
+        "Para moeda é a moeda alvo para a qual você quer converter - selecione da mesma lista de moedas principais",
+        "Taxas de câmbio são atualizadas regularmente para refletir condições de mercado atuais"
+      ],
+      "formulaExplanation": "Conversão de moeda usa uma fórmula simples mas crucial: Valor Convertido = Valor Original × Taxa de Câmbio. A taxa de câmbio representa quanto da moeda alvo você obtém por uma unidade da moeda fonte. Por exemplo, se a taxa USD para EUR é 0.85, então $100 USD = €85 EUR. Taxas de câmbio flutuam constantemente baseadas em fatores econômicos, taxas de juros, eventos políticos, e sentimento de mercado. Entender estas taxas ajuda você a evitar cronometragem pobre de conversão e minimizar custos de transação estrangeira.",
+      "examples": [
+        "Um orçamento de viagem de $2,000 converte para aproximadamente €1,840 a taxas atuais, ajudando você a definir limites realistas de gastos enquanto viaja na Europa.",
+        "Importar bens custando €50,000 seria aproximadamente $55,500 USD a taxas atuais, afetando seus cálculos de custo comercial.",
+        "Um investimento de $10,000 em GBP valeria aproximadamente £7,800 a taxas atuais, mostrando o impacto de flutuações de moeda em investimentos internacionais.",
+        "Remessas mensais de $500 USD para família no exterior convertem para aproximadamente ₱27,000 PHP, ajudando você a orçar para transferências internacionais regulares."
+      ],
+      "resultsExplanation": [
+        "Valor convertido mostra o valor exato na moeda alvo",
+        "Taxa de câmbio mostra a taxa atual usada para conversão",
+        "Taxa inversa mostra a taxa de conversão reversa para referência"
+      ],
+      "whoItsFor": "Este conversor de moeda serve viajantes planejando viagens internacionais, profissionais comerciais internacionais, estudantes estudando no exterior, famílias enviando dinheiro para o exterior, compradores online comparando preços globalmente, traders forex monitorando movimentos de moeda, e qualquer pessoa lidando com finanças internacionais. É particularmente valioso para expatriados gerenciando moedas duais, importadores e exportadores calculando custos, turistas evitando taxas de ATM, e investidores considerando oportunidades internacionais. A ferramenta funciona para qualquer pessoa que precise de conversões precisas de moeda para propósitos pessoais ou comerciais.",
+      "disclaimer": "Taxas de câmbio estão sujeitas a flutuação constante e podem mudar rapidamente devido a condições econômicas, eventos políticos, e forças de mercado. As taxas mostradas são para propósitos informativos e podem não refletir as taxas exatas disponíveis através de bancos, serviços de câmbio de moeda, ou processadores de pagamento. Sempre verifique com sua instituição financeira por taxas e taxas atuais. Esta ferramenta não considera taxas de transação, comissões, ou taxas especiais que podem aplicar a transações grandes. Para taxas de câmbio oficiais, consulte bancos centrais ou instituições financeiras autorizadas.",
+      "relatedTools": [
+        "Calculadoras de inflação para entender mudanças em poder aquisitivo de moeda",
+        "Calculadoras de orçamento para incorporar despesas internacionais",
+        "Calculadoras de investimento para avaliar oportunidades de investimento global"
+      ],
+      "faqs": [
+        {
+          "question": "Com que frequência as taxas de câmbio são atualizadas?",
+          "answer": "Taxas de câmbio são tipicamente atualizadas a cada poucos minutos para cada hora, dependendo de volatilidade de mercado e confiabilidade de fonte de dados. Pares de moeda principais atualizam mais frequentemente durante horas ativas de trading. No entanto, para as taxas mais precisas para transações, sempre verifique com seu banco ou serviço de câmbio de moeda no momento da conversão, pois taxas podem mudar entre atualizações. Taxas de fim de semana e feriados podem ser menos atuais devido a atividade de mercado reduzida."
+        },
+        {
+          "question": "¿Por que as taxas de câmbio mudam tão frequentemente?",
+          "answer": "Taxas de câmbio flutuam constantemente devido a fatores econômicos como taxas de juros, inflação, crescimento do PIB, e dados de emprego. Eventos políticos, acordos comerciais, e tensões geopolíticas também impactam valores de moeda. Sentimento de mercado, confiança de investidor, e eventos globais como eleições ou desastres naturais podem causar mudanças rápidas de taxa. Durante eventos de notícias maiores, taxas podem oscilar dramaticamente dentro de minutos. Entender estes fatores ajuda explicar por que a taxa de ontem difere da de hoje."
+        },
+        {
+          "question": "Quais são os melhores momentos para converter moeda para viagem?",
+          "answer": "Converta moeda quando sua moeda local é forte relativa à moeda de destino. Monitore taxas por 1-2 semanas antes de viagem e converta quando obter uma taxa favorável. Terça a quinta frequentemente têm melhores taxas que segunda (ajustes pós-fim de semana) ou sexta (equalização de posições). Evite converter em aeroportos ou hotéis onde taxas são tipicamente 5-10% piores. Use ATMs para moeda local quando estiver no exterior, mas compare taxas com escritórios de câmbio de moeda."
+        },
+        {
+          "question": "¿Como evito perder dinheiro em conversões de moeda?",
+          "answer": "Compare taxas através de múltiplas fontes incluindo bancos, cooperativas de crédito, escritórios online, e apps. Fique atento a taxas ocultas como comissões ou taxas pobres disfarçadas como serviços 'sem taxa'. Converta valores maiores a melhores taxas ao invés de valores pequenos frequentemente. Use cartões de crédito no exterior para compras (frequentemente melhores que taxas de dinheiro) mas verifique taxas de transação estrangeira. Considere contas multi-moeda ou cartões de viagem para melhores taxas. Cronometre conversões quando sua moeda é forte."
+        },
+        {
+          "question": "Qual é a diferença entre taxas de compra e venda?",
+          "answer": "Bancos e serviços de câmbio oferecem diferentes taxas para compra (quando você compra moeda estrangeira) e venda (quando você vende moeda estrangeira de volta). A diferença cria um 'spread' que representa sua margem de lucro, tipicamente 3-5% para clientes varejistas. Taxas de compra são piores para você (você obtém menos moeda estrangeira por seu dinheiro), enquanto taxas de venda são melhores para você (você obtém mais moeda local quando vende moeda estrangeira). Sempre pergunte por ambas as taxas quando comparar serviços."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Convertisseur de Devise",
+    "seoTitle": "Convertisseur de Devise - Convertissez de l'Argent Entre Devises en Ligne",
+    "metaDescription": "Convertisseur de devise gratuit en ligne. Convertissez entre toutes les principales devises mondiales avec des taux de change en direct. Parfait pour les voyages, les affaires et les transactions internationales.",
+    "keywords": ["convertisseur devise", "calculatrice taux change", "convertisseur argent", "convertisseur forex", "change devise"],
+    "longTailKeywords": ["convertir devise en ligne", "taux change en direct", "calculatrice devise étrangère", "convertisseur argent international", "outil conversion devise"],
+    "slug": "currency-converter",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": ["devise", "taux change", "international", "voyages", "affaires"],
+    "summary": "Convertissez entre toutes les principales devises mondiales avec des taux de change en direct pour des calculs précis d'argent international.",
+    "description": "Notre convertisseur complet de devise fournit des taux de change en temps réel pour toutes les principales devises mondiales. Parfait pour les voyageurs, les professionnels des affaires internationales et toute personne traitant avec des devises étrangères. Obtenez des conversions précises avec des taux historiques et des graphiques de devise pour une meilleure planification financière.",
+    "instructions": [
+      "Sélectionnez les devises entre lesquelles vous souhaitez convertir",
+      "Entrez le montant à convertir",
+      "Obtenez une conversion instantanée avec des taux de change en direct",
+      "Consultez les tendances historiques et les graphiques de devise"
+    ],
+    "calculatorComponent": {
+      "componentName": "CurrencyConverter",
+      "inputs": [
+        { "name": "amount", "label": "Amount", "type": "number", "default": 1000, "min": 0.01, "max": 10000000, "step": 0.01 },
+        { "name": "fromCurrency", "label": "From Currency", "type": "select", "default": "USD", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] },
+        { "name": "toCurrency", "label": "To Currency", "type": "select", "default": "EUR", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] }
+      ],
+      "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
+      "output": { "label": "Converted Amount", "default": "Enter amount and currencies above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Exchange Rate", "field": "exchangeRate", "format": "number" },
+        { "label": "Inverse Rate", "field": "inverseRate", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Conversion Voyage",
+        "input": "1,000 USD en EUR",
+        "output": "Environ 920 EUR (basé sur les taux actuels)"
+      },
+      {
+        "title": "Transaction Commerciale",
+        "input": "50,000 GBP en USD",
+        "output": "Environ 63,500 USD (basé sur les taux actuels)"
+      }
+    ],
+    "relatedCalculators": ["inflation-calculator", "budget-calculator", "investment-calculator"],
+    "seoContent": {
+      "introduction": "Naviguez l'économie mondiale en toute confiance en utilisant notre convertisseur complet de devise qui fournit des taux de change précis et en temps réel pour toutes les principales monnaies mondiales. Que vous planifiiez des voyages internationaux, meniez des affaires à travers les frontières, ou soyez simplement curieux des valeurs d'argent étranger, cet outil financier essentiel garantit que vous connaissez toujours la vraie valeur de votre argent dans n'importe quelle monnaie. Restez informé des fluctuations monétaires et prenez des décisions plus intelligentes pour les transactions internationales, les budgets de voyage, et les investissements transfrontaliers.",
+      "benefits": [
+        "Convertissez entre toutes les principales monnaies mondiales instantanément",
+        "Accédez à des taux de change en temps réel mis à jour régulièrement",
+        "Planifiez des budgets de voyage international avec précision",
+        "Prenez des décisions commerciales éclairées pour les transactions mondiales",
+        "Comprenez les fluctuations monétaires et les tendances du marché",
+        "Comparez les prix à travers différents pays et monnaies",
+        "Calculez les frais de transaction étrangère et les coûts",
+        "Suivez la force monétaire pour les opportunités d'investissement"
+      ],
+      "steps": [
+        "Sélectionnez la devise dont vous voulez convertir (devise source)",
+        "Choisissez la devise vers laquelle vous voulez convertir (devise cible)",
+        "Entrez le montant que vous voulez convertir",
+        "Visualisez le résultat de conversion instantanée avec le taux de change actuel",
+        "Vérifiez le taux inverse pour les calculs inverses",
+        "Utilisez le résultat pour votre planification financière ou transaction"
+      ],
+      "inputsExplained": [
+        "Montant est la valeur monétaire que vous voulez convertir - peut être n'importe quel nombre positif",
+        "De devise est la devise originale dont vous convertissez - choisissez parmi les principales devises mondiales",
+        "Vers devise est la devise cible vers laquelle vous voulez convertir - sélectionnez dans la même liste de principales devises",
+        "Les taux de change sont mis à jour régulièrement pour refléter les conditions actuelles du marché"
+      ],
+      "formulaExplanation": "La conversion de devise utilise une formule simple mais cruciale : Montant Convertit = Montant Original × Taux de Change. Le taux de change représente combien de la devise cible vous obtenez pour une unité de la devise source. Par exemple, si le taux USD vers EUR est 0.85, alors 100 $ USD = 85 € EUR. Les taux de change fluctuent constamment basés sur des facteurs économiques, des taux d'intérêt, des événements politiques, et le sentiment du marché. Comprendre ces taux vous aide à éviter un mauvais timing de conversion et à minimiser les coûts de transaction étrangère.",
+      "examples": [
+        "Un budget de voyage de 2 000 $ se convertit à environ 1 840 € aux taux actuels, vous aidant à définir des limites réalistes de dépenses en voyageant en Europe.",
+        "Importer des biens coûtant 50 000 € serait environ 55 500 $ USD aux taux actuels, affectant vos calculs de coût commercial.",
+        "Un investissement de 10 000 $ en GBP vaudrait environ 7 800 £ aux taux actuels, montrant l'impact des fluctuations monétaires sur les investissements internationaux.",
+        "Les envois mensuels de 500 $ USD à la famille à l'étranger se convertissent à environ 27 000 ₱ PHP, vous aidant à budgétiser pour les transferts internationaux réguliers."
+      ],
+      "resultsExplanation": [
+        "Montant converti montre la valeur exacte dans la devise cible",
+        "Taux de change affiche le taux actuel utilisé pour la conversion",
+        "Taux inverse montre le taux de conversion inverse pour référence"
+      ],
+      "whoItsFor": "Ce convertisseur de devise sert les voyageurs planifiant des voyages internationaux, les professionnels commerciaux internationaux, les étudiants étudiant à l'étranger, les familles envoyant de l'argent à l'étranger, les acheteurs en ligne comparant les prix mondialement, les traders forex surveillant les mouvements monétaires, et quiconque traitant avec les finances internationales. Il est particulièrement précieux pour les expatriés gérant des monnaies doubles, les importateurs et exportateurs calculant les coûts, les touristes évitant les frais ATM, et les investisseurs considérant des opportunités internationales. L'outil fonctionne pour quiconque ayant besoin de conversions précises de devise pour des fins personnelles ou commerciales.",
+      "disclaimer": "Les taux de change sont sujets à des fluctuations constantes et peuvent changer rapidement en raison des conditions économiques, des événements politiques, et des forces du marché. Les taux affichés sont à des fins informatives et peuvent ne pas refléter les taux exacts disponibles par l'intermédiaire des banques, des services de change de devise, ou des processeurs de paiement. Vérifiez toujours auprès de votre institution financière pour les taux et frais actuels. Cet outil ne tient pas compte des frais de transaction, commissions, ou taux spéciaux qui peuvent s'appliquer aux grandes transactions. Pour les taux de change officiels, consultez les banques centrales ou les institutions financières autorisées.",
+      "relatedTools": [
+        "Calculatrices d'inflation pour comprendre les changements de pouvoir d'achat monétaire",
+        "Calculatrices de budget pour incorporer les dépenses internationales",
+        "Calculatrices d'investissement pour évaluer les opportunités d'investissement mondiales"
+      ],
+      "faqs": [
+        {
+          "question": "À quelle fréquence les taux de change sont-ils mis à jour ?",
+          "answer": "Les taux de change sont généralement mis à jour toutes les quelques minutes à toutes les heures, selon la volatilité du marché et la fiabilité de la source de données. Les principales paires de devises se mettent à jour plus fréquemment pendant les heures de trading actives. Cependant, pour les taux les plus précis pour les transactions, vérifiez toujours auprès de votre banque ou service de change de devise au moment de la conversion, car les taux peuvent changer entre les mises à jour. Les taux de week-end et de jours fériés peuvent être moins actuels en raison d'une activité de marché réduite."
+        },
+        {
+          "question": "Pourquoi les taux de change changent-ils si fréquemment ?",
+          "answer": "Les taux de change fluctuent constamment en raison de facteurs économiques comme les taux d'intérêt, l'inflation, la croissance du PIB, et les données d'emploi. Les événements politiques, les accords commerciaux, et les tensions géopolitiques impactent également les valeurs monétaires. Le sentiment du marché, la confiance des investisseurs, et les événements mondiaux comme les élections ou les catastrophes naturelles peuvent causer des changements rapides de taux. Pendant les grands événements d'actualité, les taux peuvent osciller dramatiquement en quelques minutes. Comprendre ces facteurs aide à expliquer pourquoi le taux d'hier diffère de celui d'aujourd'hui."
+        },
+        {
+          "question": "Quels sont les meilleurs moments pour convertir de la monnaie pour les voyages ?",
+          "answer": "Convertissez la monnaie lorsque votre monnaie locale est forte par rapport à la monnaie de destination. Surveillez les taux pendant 1-2 semaines avant le voyage et convertissez lorsque vous obtenez un taux favorable. Mardi à jeudi ont souvent de meilleurs taux que lundi (ajustements post-week-end) ou vendredi (carré de positions). Évitez de convertir dans les aéroports ou hôtels où les taux sont généralement 5-10% pires. Utilisez les ATM pour la monnaie locale à l'étranger, mais comparez les taux avec les bureaux de change de devise."
+        },
+        {
+          "question": "Comment éviter de perdre de l'argent sur les conversions de devise ?",
+          "answer": "Comparez les taux à travers plusieurs sources incluant les banques, les coopératives de crédit, les bureaux en ligne, et les applications. Surveillez les frais cachés comme les commissions ou les mauvais taux déguisés en services 'sans frais'. Convertissez des montants plus importants à de meilleurs taux plutôt que des petits montants fréquemment. Utilisez les cartes de crédit à l'étranger pour les achats (souvent meilleurs que les taux de trésorerie) mais vérifiez les frais de transaction étrangère. Considérez les comptes multi-devises ou les cartes de voyage pour de meilleurs taux. Chronométrez les conversions lorsque votre monnaie est forte."
+        },
+        {
+          "question": "Quelle est la différence entre les taux d'achat et de vente ?",
+          "answer": "Les banques et services de change offrent différents taux pour l'achat (lorsque vous achetez de la devise étrangère) et la vente (lorsque vous vendez de la devise étrangère en retour). La différence crée un 'écart' qui représente leur marge bénéficiaire, généralement 3-5% pour les clients de détail. Les taux d'achat sont pires pour vous (vous obtenez moins de devise étrangère pour votre argent), tandis que les taux de vente sont meilleurs pour vous (vous obtenez plus de devise locale en vendant de la devise étrangère). Demandez toujours les deux taux lorsque vous comparez les services."
+        }
+      ]
+    }
+  }
+}

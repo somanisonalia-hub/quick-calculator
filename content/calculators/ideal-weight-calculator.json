@@ -1,0 +1,478 @@
+{
+  "en": {
+    "title": "Ideal Weight Calculator",
+    "seoTitle": "Ideal Weight Calculator - Calculate Your Healthy Weight Range Online",
+    "metaDescription": "Free ideal weight calculator. Calculate your healthy weight range using multiple formulas including BMI, Devine, Hamwi, and Healthy BMI methods. Find your target weight.",
+    "keywords": ["ideal weight calculator", "healthy weight calculator", "target weight calculator", "ideal body weight", "healthy weight range"],
+    "longTailKeywords": ["what is my ideal weight", "healthy weight calculator for women", "ideal weight calculator for men", "calculate healthy weight range", "target weight calculator"],
+    "slug": "ideal-weight-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["ideal weight", "healthy weight", "target weight", "body weight", "fitness"],
+    "summary": "Calculate your ideal weight range using scientifically validated formulas to determine healthy weight targets.",
+    "description": "Our comprehensive ideal weight calculator uses multiple scientifically validated methods including BMI-based calculations, Devine formula, Hamwi method, and Healthy BMI approach to provide personalized healthy weight ranges based on your height, gender, and body frame.",
+    "instructions": [
+      "Enter your gender, height, and body frame size",
+      "Choose your preferred calculation method",
+      "Get your ideal weight range and healthy target",
+      "Use the results to set realistic weight goals"
+    ],
+    "calculatorComponent": {
+      "componentName": "IdealWeightCalculator",
+      "inputs": [
+        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "height", "label": "Height (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "method", "label": "Calculation Method", "type": "select", "default": "healthy_bmi", "options": ["healthy_bmi", "devine", "hamwi", "miller", "robinson"] },
+        { "name": "bodyFrame", "label": "Body Frame Size", "type": "select", "default": "medium", "options": ["small", "medium", "large"] }
+      ],
+      "formula": "Healthy BMI: Weight = BMI × (Height(m))²; Devine: Male = 50 + 2.3×(Height(inches)-60); Female = 45.5 + 2.3×(Height(inches)-60)",
+      "output": { "label": "Ideal Weight Range", "default": "Enter your details above", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Minimum Healthy Weight", "field": "minWeight", "format": "number", "unit": "kg" },
+        { "label": "Maximum Healthy Weight", "field": "maxWeight", "format": "number", "unit": "kg" },
+        { "label": "BMI Category", "field": "bmiCategory", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Male Healthy BMI Method",
+        "input": "Male, 175cm height, Healthy BMI method",
+        "output": "Ideal weight range: 59.9 - 74.8 kg (BMI 18.5-23)"
+      },
+      {
+        "title": "Female Devine Formula",
+        "input": "Female, 165cm height, Devine formula",
+        "output": "Ideal weight: 58.7 kg"
+      },
+      {
+        "title": "Large Frame Adjustment",
+        "input": "Male, 180cm height, Large frame, Hamwi method",
+        "output": "Ideal weight: 79.8 kg (adjusted for large frame)"
+      }
+    ],
+    "relatedCalculators": ["bmi-calculator", "body-fat-calculator", "bmr-calculator"],
+    "seoContent": {
+      "introduction": "Calculate your ideal weight range with precision using our comprehensive health calculator. This essential tool uses multiple scientifically validated methods to determine healthy weight targets based on your height, gender, and body frame size. Understanding your ideal weight range is crucial for setting realistic health goals, whether you're aiming to lose weight, gain muscle, or maintain optimal health. Our calculator combines Devine formula, Hamwi method, Miller formula, and Robinson approach to provide personalized weight recommendations that account for individual differences in body composition and structure.",
+      "benefits": [
+        "Calculate ideal weight using multiple scientifically validated formulas",
+        "Get personalized weight ranges based on height, gender, and body frame",
+        "Compare results across different calculation methods for accuracy",
+        "Understand healthy weight targets for optimal health outcomes",
+        "Account for body frame size differences in weight calculations",
+        "Essential tool for setting realistic fitness and health goals"
+      ],
+      "steps": [
+        "Select your gender and enter your height in centimeters",
+        "Choose your preferred calculation method from available options",
+        "Select your body frame size if using Devine or Hamwi methods",
+        "Review your ideal weight range and healthy target recommendations"
+      ],
+      "inputsExplained": [
+        "Gender selection accounts for natural differences in body composition between men and women",
+        "Height measurement forms the foundation for all weight calculations",
+        "Calculation method determines which scientific formula to apply",
+        "Body frame size adjusts calculations for small, medium, or large bone structures",
+        "All inputs work together to provide personalized, accurate weight recommendations"
+      ],
+      "formulaExplanation": "The Devine formula calculates ideal body weight using the equation: For men = 50kg + 2.3kg per inch over 5 feet; For women = 45.5kg + 2.3kg per inch over 5 feet. The Hamwi method uses: For men = 48kg + 2.7kg per inch over 5 feet; For women = 45.5kg + 2.2kg per inch over 5 feet. BMI-based calculations determine weight ranges that maintain healthy BMI values (18.5-24.9). Body frame adjustments account for wrist circumference differences, with small frames reducing ideal weight by 10% and large frames increasing it by 10%.",
+      "examples": [
+        "A 175cm tall man using Devine formula with medium frame calculates ideal weight of 67.3kg, providing a healthy target range of 64-70.6kg",
+        "A 165cm tall woman using Hamwi method with small frame calculates ideal weight of 54.9kg, adjusted down to 49.4kg for her smaller bone structure",
+        "A 180cm tall man using healthy BMI approach calculates ideal weight range of 59.9-74.8kg to maintain BMI between 18.5-24.9"
+      ],
+      "resultsExplanation": [
+        "Ideal weight range shows healthy weight targets for your height and build",
+        "Minimum and maximum weights define safe weight boundaries",
+        "Body frame adjustments ensure calculations match your bone structure",
+        "Different methods provide comparison points for personalized recommendations",
+        "Results account for gender differences in body composition and weight distribution"
+      ],
+      "whoItsFor": "This calculator serves individuals seeking to establish healthy weight goals, healthcare professionals advising patients on weight targets, fitness enthusiasts planning body composition changes, nutritionists creating meal plans, athletes optimizing performance weight, and anyone interested in maintaining optimal health through appropriate weight ranges. It's particularly valuable for those with specific body types, medical conditions requiring weight management, or individuals following structured diet and exercise programs.",
+      "disclaimer": "Ideal weight calculations provide general guidance based on population averages and may not be suitable for all individuals. Athletes, bodybuilders, pregnant women, and those with certain medical conditions may have different ideal weight ranges. Body frame assessments should be professionally measured using wrist circumference. For comprehensive health assessment including body composition analysis, consult healthcare professionals who can consider your complete medical history and individual circumstances. This tool provides estimates for educational purposes only.",
+      "relatedTools": [
+        "BMI calculators for body mass index assessment and weight status",
+        "Body fat calculators for detailed body composition analysis",
+        "BMR calculators for understanding metabolic rate and calorie needs"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between ideal weight and healthy weight range?",
+          "answer": "Ideal weight typically refers to a single target weight, while healthy weight range provides a spectrum of weights that maintain good health. The range accounts for individual variations in body composition, muscle mass, and personal health goals. Most people aim to stay within their healthy weight range rather than targeting a single 'ideal' number."
+        },
+        {
+          "question": "How do I determine my body frame size?",
+          "answer": "Body frame size is determined by measuring wrist circumference. For women: small frame < 5.75 inches (14.6cm), medium frame 5.75-6.25 inches (14.6-15.9cm), large frame > 6.25 inches (15.9cm). For men: small frame < 6.5 inches (16.5cm), medium frame 6.5-7.5 inches (16.5-19cm), large frame > 7.5 inches (19cm). Professional measurement provides the most accurate assessment."
+        },
+        {
+          "question": "Which calculation method should I use?",
+          "answer": "The choice depends on your goals and body type. Healthy BMI method works well for general health maintenance. Devine and Hamwi formulas are good for medical settings. Try multiple methods and use the range that best fits your health goals and body composition. No single method is perfect for everyone."
+        },
+        {
+          "question": "Can ideal weight change with age?",
+          "answer": "While height remains constant, ideal weight can shift with age due to changes in muscle mass, metabolism, and body composition. Older adults may have slightly higher BMI ranges due to decreased muscle mass. Focus on maintaining healthy body composition rather than specific weight numbers as you age."
+        },
+        {
+          "question": "Is it better to be at the low end or high end of my ideal weight range?",
+          "answer": "The ideal position depends on your health status, body composition goals, and personal preferences. For general health, anywhere within the healthy range is acceptable. Athletes may prefer the higher end for muscle mass, while others may choose the lower end for different reasons. Consult healthcare providers for personalized recommendations."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Peso Ideal",
+    "seoTitle": "Calculadora de Peso Ideal - Calcula Tu Rango de Peso Saludable Online",
+    "metaDescription": "Calculadora gratuita de peso ideal. Calcula tu rango de peso saludable usando múltiples fórmulas incluyendo BMI, Devine, Hamwi y método BMI saludable. Encuentra tu peso objetivo.",
+    "keywords": ["calculadora peso ideal", "calculadora peso saludable", "calculadora peso objetivo", "peso corporal ideal", "rango peso saludable"],
+    "longTailKeywords": ["cuál es mi peso ideal", "calculadora peso saludable mujeres", "calculadora peso ideal hombres", "calcular rango peso saludable", "calculadora peso objetivo"],
+    "slug": "ideal-weight-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["peso ideal", "peso saludable", "peso objetivo", "peso corporal", "fitness"],
+    "summary": "Calcula tu rango de peso ideal usando fórmulas científicamente validadas para determinar objetivos de peso saludables.",
+    "description": "Nuestra calculadora integral de peso ideal usa múltiples métodos científicamente validados incluyendo cálculos basados en BMI, fórmula Devine, método Hamwi y enfoque BMI saludable para proporcionar rangos de peso saludable personalizados basados en tu altura, género y complexión corporal.",
+    "instructions": [
+      "Ingresa tu género, altura y tamaño de complexión corporal",
+      "Elige tu método de cálculo preferido",
+      "Obtén tu rango de peso ideal y objetivo saludable",
+      "Usa los resultados para establecer metas de peso realistas"
+    ],
+    "calculatorComponent": {
+      "componentName": "IdealWeightCalculator",
+      "inputs": [
+        { "name": "gender", "label": "Género", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "height", "label": "Altura (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "method", "label": "Método de Cálculo", "type": "select", "default": "healthy_bmi", "options": ["healthy_bmi", "devine", "hamwi", "miller", "robinson"] },
+        { "name": "bodyFrame", "label": "Tamaño de Complexión Corporal", "type": "select", "default": "medium", "options": ["small", "medium", "large"] }
+      ],
+      "formula": "BMI Saludable: Peso = IMC × (Altura(m))²; Devine: Masculino = 50 + 2.3×(Altura(pulgadas)-60); Femenino = 45.5 + 2.3×(Altura(pulgadas)-60)",
+      "output": { "label": "Rango de Peso Ideal", "default": "Ingresa tus datos arriba", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Peso Saludable Mínimo", "field": "minWeight", "format": "number", "unit": "kg" },
+        { "label": "Peso Saludable Máximo", "field": "maxWeight", "format": "number", "unit": "kg" },
+        { "label": "Categoría IMC", "field": "bmiCategory", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Método BMI Saludable Masculino",
+        "input": "Masculino, altura 175cm, método BMI saludable",
+        "output": "Rango peso ideal: 59.9 - 74.8 kg (IMC 18.5-23)"
+      },
+      {
+        "title": "Fórmula Devine Femenina",
+        "input": "Femenina, altura 165cm, fórmula Devine",
+        "output": "Peso ideal: 58.7 kg"
+      },
+      {
+        "title": "Ajuste Complexión Grande",
+        "input": "Masculino, altura 180cm, complexión grande, método Hamwi",
+        "output": "Peso ideal: 79.8 kg (ajustado para complexión grande)"
+      }
+    ],
+    "relatedCalculators": ["bmi-calculator", "body-fat-calculator", "bmr-calculator"],
+    "seoContent": {
+      "introduction": "Calcula tu rango de peso ideal con precisión usando nuestra calculadora integral de salud. Esta herramienta esencial usa múltiples métodos científicamente validados para determinar objetivos de peso saludable basados en tu altura, género y tamaño de complexión corporal. Comprender tu rango de peso ideal es crucial para establecer metas de salud realistas, ya sea que busques perder peso, ganar músculo o mantener salud óptima. Nuestra calculadora combina fórmula Devine, método Hamwi, fórmula Miller y enfoque Robinson para proporcionar recomendaciones de peso personalizadas que consideran diferencias individuales en composición y estructura corporal.",
+      "benefits": [
+        "Calcula peso ideal usando múltiples fórmulas científicamente validadas",
+        "Obtén rangos de peso personalizados basados en altura, género y complexión corporal",
+        "Compara resultados a través de diferentes métodos de cálculo para exactitud",
+        "Comprende objetivos de peso saludable para resultados óptimos de salud",
+        "Considera diferencias de tamaño de complexión corporal en cálculos de peso",
+        "Herramienta esencial para establecer metas realistas de fitness y salud"
+      ],
+      "steps": [
+        "Selecciona tu género e ingresa tu altura en centímetros",
+        "Elige tu método de cálculo preferido de las opciones disponibles",
+        "Selecciona tu tamaño de complexión corporal si usas métodos Devine o Hamwi",
+        "Revisa tu rango de peso ideal y recomendaciones de objetivos saludables"
+      ],
+      "inputsExplained": [
+        "Selección de género considera diferencias naturales en composición corporal entre hombres y mujeres",
+        "Medición de altura forma la base para todos los cálculos de peso",
+        "Método de cálculo determina qué fórmula científica aplicar",
+        "Tamaño de complexión corporal ajusta cálculos para estructuras óseas pequeñas, medianas o grandes",
+        "Todas las entradas trabajan juntas para proporcionar recomendaciones de peso precisas y personalizadas"
+      ],
+      "formulaExplanation": "La fórmula Devine calcula peso corporal ideal usando la ecuación: Para hombres = 50kg + 2.3kg por pulgada sobre 5 pies; Para mujeres = 45.5kg + 2.3kg por pulgada sobre 5 pies. El método Hamwi usa: Para hombres = 48kg + 2.7kg por pulgada sobre 5 pies; Para mujeres = 45.5kg + 2.2kg por pulgada sobre 5 pies. Los cálculos basados en BMI determinan rangos de peso que mantienen valores BMI saludables (18.5-24.9). Los ajustes de complexión corporal consideran diferencias de circunferencia de muñeca, con complexiones pequeñas reduciendo peso ideal en 10% y complexiones grandes aumentándolo en 10%.",
+      "examples": [
+        "Un hombre de 175cm de altura usando fórmula Devine con complexión mediana calcula peso ideal de 67.3kg, proporcionando rango objetivo saludable de 64-70.6kg",
+        "Una mujer de 165cm de altura usando método Hamwi con complexión pequeña calcula peso ideal de 54.9kg, ajustado hacia abajo a 49.4kg para su estructura ósea más pequeña",
+        "Un hombre de 180cm de altura usando enfoque BMI saludable calcula rango de peso ideal de 59.9-74.8kg para mantener BMI entre 18.5-24.9"
+      ],
+      "resultsExplanation": [
+        "Rango de peso ideal muestra objetivos de peso saludable para tu altura y complexión",
+        "Pesos mínimo y máximo definen límites seguros de peso",
+        "Ajustes de complexión corporal aseguran que cálculos coincidan con tu estructura ósea",
+        "Diferentes métodos proporcionan puntos de comparación para recomendaciones personalizadas",
+        "Resultados consideran diferencias de género en composición corporal y distribución de peso"
+      ],
+      "whoItsFor": "Esta calculadora sirve a individuos buscando establecer metas de peso saludable, profesionales de la salud asesorando pacientes sobre objetivos de peso, entusiastas del fitness planeando cambios de composición corporal, nutricionistas creando planes de comidas, atletas optimizando peso de rendimiento, y cualquiera interesado en mantener salud óptima a través de rangos apropiados de peso. Es particularmente valiosa para aquellos con tipos corporales específicos, condiciones médicas requiriendo manejo de peso, o individuos siguiendo programas estructurados de dieta y ejercicio.",
+      "disclaimer": "Los cálculos de peso ideal proporcionan guía general basada en promedios poblacionales y pueden no ser adecuados para todos los individuos. Atletas, fisiculturistas, mujeres embarazadas y aquellos con ciertas condiciones médicas pueden tener rangos diferentes de peso ideal. Las evaluaciones de complexión corporal deben ser medidas profesionalmente usando circunferencia de muñeca. Para evaluación completa de salud incluyendo análisis de composición corporal, consulta profesionales de la salud quienes pueden considerar tu historia médica completa y circunstancias individuales. Esta herramienta proporciona estimaciones para propósitos educativos únicamente.",
+      "relatedTools": [
+        "Calculadoras de IMC para evaluación de índice de masa corporal y estado de peso",
+        "Calculadoras de grasa corporal para análisis detallado de composición corporal",
+        "Calculadoras de TMB para comprensión de tasa metabólica y necesidades calóricas"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre peso ideal y rango de peso saludable?",
+          "answer": "Peso ideal típicamente se refiere a un objetivo de peso único, mientras rango de peso saludable proporciona un espectro de pesos que mantienen buena salud. El rango considera variaciones individuales en composición corporal, masa muscular y metas de salud personales. La mayoría de las personas apuntan a permanecer dentro de su rango de peso saludable en lugar de apuntar a un número 'ideal' único."
+        },
+        {
+          "question": "¿Cómo determino mi tamaño de complexión corporal?",
+          "answer": "El tamaño de complexión corporal se determina midiendo circunferencia de muñeca. Para mujeres: complexión pequeña < 5.75 pulgadas (14.6cm), mediana 5.75-6.25 pulgadas (14.6-15.9cm), grande > 6.25 pulgadas (15.9cm). Para hombres: pequeña < 6.5 pulgadas (16.5cm), mediana 6.5-7.5 pulgadas (16.5-19cm), grande > 7.5 pulgadas (19cm). La medición profesional proporciona evaluación más precisa."
+        },
+        {
+          "question": "¿Qué método de cálculo debería usar?",
+          "answer": "La elección depende de tus metas y tipo corporal. El método BMI saludable funciona bien para mantenimiento general de salud. Las fórmulas Devine y Hamwi son buenas para entornos médicos. Prueba múltiples métodos y usa el rango que mejor se ajuste a tus metas de salud y composición corporal. Ningún método único es perfecto para todos."
+        },
+        {
+          "question": "¿Puede el peso ideal cambiar con la edad?",
+          "answer": "Mientras la altura permanece constante, el peso ideal puede cambiar con la edad debido a cambios en masa muscular, metabolismo y composición corporal. Adultos mayores pueden tener rangos BMI ligeramente más altos debido a disminución de masa muscular. Enfócate en mantener composición corporal saludable en lugar de números específicos de peso a medida que envejeces."
+        },
+        {
+          "question": "¿Es mejor estar en el extremo bajo o alto de mi rango de peso ideal?",
+          "answer": "La posición ideal depende de tu estado de salud, metas de composición corporal y preferencias personales. Para salud general, cualquier lugar dentro del rango saludable es aceptable. Atletas pueden preferir el extremo más alto para masa muscular, mientras otros pueden elegir el extremo más bajo por diferentes razones. Consulta proveedores de salud para recomendaciones personalizadas."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Peso Ideal",
+    "seoTitle": "Calculadora de Peso Ideal - Calcule Sua Faixa de Peso Saudável Online",
+    "metaDescription": "Calculadora gratuita de peso ideal. Calcule sua faixa de peso saudável usando múltiplas fórmulas incluindo BMI, Devine, Hamwi e método BMI saudável. Encontre seu peso alvo.",
+    "keywords": ["calculadora peso ideal", "calculadora peso saudável", "calculadora peso alvo", "peso corporal ideal", "faixa peso saudável"],
+    "longTailKeywords": ["qual é meu peso ideal", "calculadora peso saudável mulheres", "calculadora peso ideal homens", "calcular faixa peso saudável", "calculadora peso alvo"],
+    "slug": "ideal-weight-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["peso ideal", "peso saudável", "peso alvo", "peso corporal", "fitness"],
+    "summary": "Calcule sua faixa de peso ideal usando fórmulas cientificamente validadas para determinar objetivos de peso saudáveis.",
+    "description": "Nossa calculadora abrangente de peso ideal usa múltiplos métodos cientificamente validados incluindo cálculos baseados em BMI, fórmula Devine, método Hamwi e abordagem BMI saudável para fornecer faixas de peso saudável personalizadas baseadas em sua altura, gênero e estrutura corporal.",
+    "instructions": [
+      "Digite seu gênero, altura e tamanho de estrutura corporal",
+      "Escolha seu método de cálculo preferido",
+      "Obtenha sua faixa de peso ideal e alvo saudável",
+      "Use os resultados para estabelecer metas de peso realistas"
+    ],
+    "calculatorComponent": {
+      "componentName": "IdealWeightCalculator",
+      "inputs": [
+        { "name": "gender", "label": "Gênero", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "height", "label": "Altura (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "method", "label": "Método de Cálculo", "type": "select", "default": "healthy_bmi", "options": ["healthy_bmi", "devine", "hamwi", "miller", "robinson"] },
+        { "name": "bodyFrame", "label": "Tamanho de Estrutura Corporal", "type": "select", "default": "medium", "options": ["small", "medium", "large"] }
+      ],
+      "formula": "BMI Saudável: Peso = IMC × (Altura(m))²; Devine: Masculino = 50 + 2.3×(Altura(polegadas)-60); Feminino = 45.5 + 2.3×(Altura(polegadas)-60)",
+      "output": { "label": "Faixa de Peso Ideal", "default": "Digite seus dados acima", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Peso Saudável Mínimo", "field": "minWeight", "format": "number", "unit": "kg" },
+        { "label": "Peso Saudável Máximo", "field": "maxWeight", "format": "number", "unit": "kg" },
+        { "label": "Categoria IMC", "field": "bmiCategory", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Método BMI Saudável Masculino",
+        "input": "Masculino, altura 175cm, método BMI saudável",
+        "output": "Faixa peso ideal: 59.9 - 74.8 kg (IMC 18.5-23)"
+      },
+      {
+        "title": "Fórmula Devine Feminina",
+        "input": "Feminina, altura 165cm, fórmula Devine",
+        "output": "Peso ideal: 58.7 kg"
+      },
+      {
+        "title": "Ajuste Estrutura Grande",
+        "input": "Masculino, altura 180cm, estrutura grande, método Hamwi",
+        "output": "Peso ideal: 79.8 kg (ajustado para estrutura grande)"
+      }
+    ],
+    "relatedCalculators": ["bmi-calculator", "body-fat-calculator", "bmr-calculator"],
+    "seoContent": {
+      "introduction": "Calcule sua faixa de peso ideal com precisão usando nossa calculadora abrangente de saúde. Esta ferramenta essencial usa múltiplos métodos cientificamente validados para determinar objetivos de peso saudável baseados em sua altura, gênero e tamanho de estrutura corporal. Compreender sua faixa de peso ideal é crucial para estabelecer metas de saúde realistas, seja você buscando perder peso, ganhar músculo ou manter saúde ótima. Nossa calculadora combina fórmula Devine, método Hamwi, fórmula Miller e abordagem Robinson para fornecer recomendações de peso personalizadas que consideram diferenças individuais em composição e estrutura corporal.",
+      "benefits": [
+        "Calcule peso ideal usando múltiplas fórmulas cientificamente validadas",
+        "Obtenha faixas de peso personalizadas baseadas em altura, gênero e estrutura corporal",
+        "Compare resultados através de diferentes métodos de cálculo para exatidão",
+        "Compreenda objetivos de peso saudável para resultados ótimos de saúde",
+        "Considere diferenças de tamanho de estrutura corporal em cálculos de peso",
+        "Ferramenta essencial para estabelecer metas realistas de fitness e saúde"
+      ],
+      "steps": [
+        "Selecione seu gênero e digite sua altura em centímetros",
+        "Escolha seu método de cálculo preferido das opções disponíveis",
+        "Selecione seu tamanho de estrutura corporal se usando métodos Devine ou Hamwi",
+        "Revise sua faixa de peso ideal e recomendações de objetivos saudáveis"
+      ],
+      "inputsExplained": [
+        "Seleção de gênero considera diferenças naturais em composição corporal entre homens e mulheres",
+        "Medição de altura forma a base para todos os cálculos de peso",
+        "Método de cálculo determina qual fórmula científica aplicar",
+        "Tamanho de estrutura corporal ajusta cálculos para estruturas ósseas pequenas, médias ou grandes",
+        "Todas as entradas trabalham juntas para fornecer recomendações de peso precisas e personalizadas"
+      ],
+      "formulaExplanation": "A fórmula Devine calcula peso corporal ideal usando a equação: Para homens = 50kg + 2.3kg por polegada sobre 5 pés; Para mulheres = 45.5kg + 2.3kg por polegada sobre 5 pés. O método Hamwi usa: Para homens = 48kg + 2.7kg por polegada sobre 5 pés; Para mulheres = 45.5kg + 2.2kg por polegada sobre 5 pés. Cálculos baseados em BMI determinam faixas de peso que mantêm valores BMI saudáveis (18.5-24.9). Ajustes de estrutura corporal consideram diferenças de circunferência de pulso, com estruturas pequenas reduzindo peso ideal em 10% e estruturas grandes aumentando-o em 10%.",
+      "examples": [
+        "Um homem de 175cm de altura usando fórmula Devine com estrutura média calcula peso ideal de 67.3kg, fornecendo faixa objetivo saudável de 64-70.6kg",
+        "Uma mulher de 165cm de altura usando método Hamwi com estrutura pequena calcula peso ideal de 54.9kg, ajustado para baixo a 49.4kg para sua estrutura óssea menor",
+        "Um homem de 180cm de altura usando abordagem BMI saudável calcula faixa de peso ideal de 59.9-74.8kg para manter BMI entre 18.5-24.9"
+      ],
+      "resultsExplanation": [
+        "Faixa de peso ideal mostra objetivos de peso saudável para sua altura e estrutura",
+        "Pesos mínimo e máximo definem limites seguros de peso",
+        "Ajustes de estrutura corporal garantem que cálculos correspondam à sua estrutura óssea",
+        "Diferentes métodos fornecem pontos de comparação para recomendações personalizadas",
+        "Resultados consideram diferenças de gênero em composição corporal e distribuição de peso"
+      ],
+      "whoItsFor": "Esta calculadora serve indivíduos buscando estabelecer metas de peso saudável, profissionais de saúde aconselhando pacientes sobre objetivos de peso, entusiastas de fitness planejando mudanças de composição corporal, nutricionistas criando planos de refeições, atletas otimizando peso de performance, e qualquer um interessado em manter saúde ótima através de faixas apropriadas de peso. É particularmente valiosa para aqueles com tipos corporais específicos, condições médicas requerendo gerenciamento de peso, ou indivíduos seguindo programas estruturados de dieta e exercício.",
+      "disclaimer": "Cálculos de peso ideal fornecem orientação geral baseados em médias populacionais e podem não ser adequados para todos os indivíduos. Atletas, fisiculturistas, mulheres grávidas e aqueles com certas condições médicas podem ter faixas diferentes de peso ideal. Avaliações de estrutura corporal devem ser medidas profissionalmente usando circunferência de pulso. Para avaliação abrangente de saúde incluindo análise de composição corporal, consulte profissionais de saúde que podem considerar sua história médica completa e circunstâncias individuais. Esta ferramenta fornece estimativas para propósitos educacionais apenas.",
+      "relatedTools": [
+        "Calculadoras de IMC para avaliação de índice de massa corporal e status de peso",
+        "Calculadoras de gordura corporal para análise detalhada de composição corporal",
+        "Calculadoras de TMB para compreensão de taxa metabólica e necessidades calóricas"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre peso ideal e faixa de peso saudável?",
+          "answer": "Peso ideal tipicamente se refere a um objetivo de peso único, enquanto faixa de peso saudável fornece um espectro de pesos que mantêm boa saúde. A faixa considera variações individuais em composição corporal, massa muscular e metas de saúde pessoais. A maioria das pessoas visa permanecer dentro de sua faixa de peso saudável em vez de mirar um número 'ideal' único."
+        },
+        {
+          "question": "Como determino meu tamanho de estrutura corporal?",
+          "answer": "Tamanho de estrutura corporal é determinado medindo circunferência de pulso. Para mulheres: estrutura pequena < 5.75 polegadas (14.6cm), média 5.75-6.25 polegadas (14.6-15.9cm), grande > 6.25 polegadas (15.9cm). Para homens: pequena < 6.5 polegadas (16.5cm), média 6.5-7.5 polegadas (16.5-19cm), grande > 7.5 polegadas (19cm). Medição profissional fornece avaliação mais precisa."
+        },
+        {
+          "question": "Qual método de cálculo devo usar?",
+          "answer": "A escolha depende de suas metas e tipo corporal. Método BMI saudável funciona bem para manutenção geral de saúde. Fórmulas Devine e Hamwi são boas para configurações médicas. Tente múltiplos métodos e use a faixa que melhor se ajusta às suas metas de saúde e composição corporal. Nenhum método único é perfeito para todos."
+        },
+        {
+          "question": "¿Peso ideal pode mudar com a idade?",
+          "answer": "Enquanto altura permanece constante, peso ideal pode mudar com idade devido a mudanças em massa muscular, metabolismo e composição corporal. Adultos mais velhos podem ter faixas BMI ligeiramente mais altas devido a diminuição de massa muscular. Foque em manter composição corporal saudável em vez de números específicos de peso à medida que envelhece."
+        },
+        {
+          "question": "É melhor estar no extremo baixo ou alto da minha faixa de peso ideal?",
+          "answer": "A posição ideal depende de seu status de saúde, metas de composição corporal e preferências pessoais. Para saúde geral, qualquer lugar dentro da faixa saudável é aceitável. Atletas podem preferir o extremo mais alto para massa muscular, enquanto outros podem escolher o extremo mais baixo por diferentes razões. Consulte provedores de saúde para recomendações personalizadas."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Poids Idéal",
+    "seoTitle": "Calculateur de Poids Idéal - Calculez Votre Gamme de Poids Sain en Ligne",
+    "metaDescription": "Calculateur gratuit de poids idéal. Calculez votre gamme de poids sain utilisant multiples formules incluant BMI, Devine, Hamwi et méthode BMI sain. Trouvez votre poids cible.",
+    "keywords": ["calculateur poids idéal", "calculateur poids sain", "calculateur poids cible", "poids corporel idéal", "gamme poids sain"],
+    "longTailKeywords": ["quel est mon poids idéal", "calculateur poids sain femmes", "calculateur poids idéal hommes", "calculer gamme poids sain", "calculateur poids cible"],
+    "slug": "ideal-weight-calculator",
+    "category": "health",
+    "difficulty": "basic",
+    "tags": ["poids idéal", "poids sain", "poids cible", "poids corporel", "fitness"],
+    "summary": "Calculez votre gamme de poids idéal utilisant formules scientifiquement validées pour déterminer objectifs poids sains.",
+    "description": "Notre calculateur complet de poids idéal utilise multiples méthodes scientifiquement validées incluant calculs basés sur BMI, formule Devine, méthode Hamwi et approche BMI sain pour fournir gammes poids sain personnalisées basées sur votre taille, genre et structure corporelle.",
+    "instructions": [
+      "Entrez votre genre, taille et taille structure corporelle",
+      "Choisissez votre méthode de calcul préférée",
+      "Obtenez votre gamme poids idéal et cible sain",
+      "Utilisez résultats pour établir objectifs poids réalistes"
+    ],
+    "calculatorComponent": {
+      "componentName": "IdealWeightCalculator",
+      "inputs": [
+        { "name": "gender", "label": "Genre", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "height", "label": "Taille (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
+        { "name": "method", "label": "Méthode de Calcul", "type": "select", "default": "healthy_bmi", "options": ["healthy_bmi", "devine", "hamwi", "miller", "robinson"] },
+        { "name": "bodyFrame", "label": "Taille Structure Corporelle", "type": "select", "default": "medium", "options": ["small", "medium", "large"] }
+      ],
+      "formula": "BMI Sain: Poids = IMC × (Taille(m))²; Devine: Masculin = 50 + 2.3×(Taille(pouces)-60); Féminin = 45.5 + 2.3×(Taille(pouces)-60)",
+      "output": { "label": "Gamme Poids Idéal", "default": "Entrez vos données ci-dessus", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Poids Sain Minimum", "field": "minWeight", "format": "number", "unit": "kg" },
+        { "label": "Poids Sain Maximum", "field": "maxWeight", "format": "number", "unit": "kg" },
+        { "label": "Catégorie IMC", "field": "bmiCategory", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Méthode BMI Sain Masculin",
+        "input": "Masculin, taille 175cm, méthode BMI sain",
+        "output": "Gamme poids idéal: 59.9 - 74.8 kg (IMC 18.5-23)"
+      },
+      {
+        "title": "Formule Devine Féminin",
+        "input": "Féminin, taille 165cm, formule Devine",
+        "output": "Poids idéal: 58.7 kg"
+      },
+      {
+        "title": "Ajustement Structure Grande",
+        "input": "Masculin, taille 180cm, structure grande, méthode Hamwi",
+        "output": "Poids idéal: 79.8 kg (ajusté pour structure grande)"
+      }
+    ],
+    "relatedCalculators": ["bmi-calculator", "body-fat-calculator", "bmr-calculator"],
+    "seoContent": {
+      "introduction": "Calculez votre gamme de poids idéal avec précision utilisant notre calculatrice santé complète. Cet outil essentiel utilise multiples méthodes scientifiquement validées pour déterminer objectifs poids sain basés sur votre taille, genre et taille structure corporelle. Comprendre votre gamme poids idéal est crucial pour établir objectifs santé réalistes, que vous cherchiez perdre poids, gagner muscle ou maintenir santé optimale. Notre calculatrice combine formule Devine, méthode Hamwi, formule Miller et approche Robinson pour fournir recommandations poids personnalisées considérant différences individuelles en composition et structure corporelle.",
+      "benefits": [
+        "Calculez poids idéal utilisant multiples formules scientifiquement validées",
+        "Obtenez gammes poids personnalisées basées sur taille, genre et structure corporelle",
+        "Comparez résultats à travers différents méthodes calcul pour exactitude",
+        "Comprenez objectifs poids sain pour résultats santé optimaux",
+        "Tenez compte différences taille structure corporelle en calculs poids",
+        "Outil essentiel pour établir objectifs réalistes fitness et santé"
+      ],
+      "steps": [
+        "Sélectionnez votre genre et entrez votre taille en centimètres",
+        "Choisissez votre méthode calcul préférée parmi options disponibles",
+        "Sélectionnez votre taille structure corporelle si utilisant méthodes Devine ou Hamwi",
+        "Examinez votre gamme poids idéal et recommandations objectifs sains"
+      ],
+      "inputsExplained": [
+        "Sélection genre tient compte différences naturelles en composition corporelle entre hommes et femmes",
+        "Mesure taille forme fondation pour tous calculs poids",
+        "Méthode calcul détermine quelle formule scientifique appliquer",
+        "Taille structure corporelle ajuste calculs pour structures osseuses petites, moyennes ou grandes",
+        "Toutes entrées travaillent ensemble pour fournir recommandations poids précises et personnalisées"
+      ],
+      "formulaExplanation": "La formule Devine calcule poids corporel idéal utilisant équation: Pour hommes = 50kg + 2.3kg par pouce au-dessus 5 pieds; Pour femmes = 45.5kg + 2.3kg par pouce au-dessus 5 pieds. La méthode Hamwi utilise: Pour hommes = 48kg + 2.7kg par pouce au-dessus 5 pieds; Pour femmes = 45.5kg + 2.2kg par pouce au-dessus 5 pieds. Calculs basés sur BMI déterminent gammes poids maintenant valeurs BMI saines (18.5-24.9). Ajustements structure corporelle tiennent compte différences circonférence poignet, avec structures petites réduisant poids idéal de 10% et structures grandes l'augmentant de 10%.",
+      "examples": [
+        "Un homme de 175cm taille utilisant formule Devine avec structure moyenne calcule poids idéal de 67.3kg, fournissant gamme objectif sain de 64-70.6kg",
+        "Une femme de 165cm taille utilisant méthode Hamwi avec structure petite calcule poids idéal de 54.9kg, ajusté vers bas à 49.4kg pour sa structure osseuse plus petite",
+        "Un homme de 180cm taille utilisant approche BMI sain calcule gamme poids idéal de 59.9-74.8kg pour maintenir BMI entre 18.5-24.9"
+      ],
+      "resultsExplanation": [
+        "Gamme poids idéal montre objectifs poids sain pour votre taille et structure",
+        "Poids minimum et maximum définissent limites poids sûres",
+        "Ajustements structure corporelle assurent calculs correspondent à votre structure osseuse",
+        "Différentes méthodes fournissent points comparaison pour recommandations personnalisées",
+        "Résultats tiennent compte différences genre en composition corporelle et distribution poids"
+      ],
+      "whoItsFor": "Cette calculatrice sert individus cherchant établir objectifs poids sain, professionnels santé conseillant patients sur objectifs poids, enthousiastes fitness planifiant changements composition corporelle, nutritionnistes créant plans repas, athlètes optimisant poids performance, et quiconque intéressé maintenir santé optimale à travers gammes poids appropriées. Elle est particulièrement précieuse pour ceux avec types corporels spécifiques, conditions médicales nécessitant gestion poids, ou individus suivant programmes structurés régime et exercice.",
+      "disclaimer": "Calculs poids idéal fournissent guidance générale basée sur moyennes populationnelles et peuvent ne pas convenir à tous individus. Athlètes, bodybuilders, femmes enceintes et ceux avec certaines conditions médicales peuvent avoir gammes poids idéal différentes. Évaluations structure corporelle devraient être mesurées professionnellement utilisant circonférence poignet. Pour évaluation santé complète incluant analyse composition corporelle, consultez professionnels santé pouvant considérer votre historique médical complet et circonstances individuelles. Cet outil fournit estimations pour buts éducatifs uniquement.",
+      "relatedTools": [
+        "Calculateurs IMC pour évaluation indice masse corporelle et statut poids",
+        "Calculateurs graisse corporelle pour analyse détaillée composition corporelle",
+        "Calculateurs TMB pour compréhension taux métabolique et besoins caloriques"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est différence entre poids idéal et gamme poids sain?",
+          "answer": "Poids idéal se réfère typiquement à objectif poids unique, tandis gamme poids sain fournit spectre poids maintenant bonne santé. La gamme tient compte variations individuelles en composition corporelle, masse musculaire et objectifs santé personnels. La plupart gens visent rester dans leur gamme poids sain plutôt que cibler nombre 'idéal' unique."
+        },
+        {
+          "question": "Comment déterminer ma taille structure corporelle?",
+          "answer": "Taille structure corporelle est déterminée en mesurant circonférence poignet. Pour femmes: structure petite < 5.75 pouces (14.6cm), moyenne 5.75-6.25 pouces (14.6-15.9cm), grande > 6.25 pouces (15.9cm). Pour hommes: petite < 6.5 pouces (16.5cm), moyenne 6.5-7.5 pouces (16.5-19cm), grande > 7.5 pouces (19cm). Mesure professionnelle fournit évaluation plus précise."
+        },
+        {
+          "question": "Quelle méthode calcul devrais-je utiliser?",
+          "answer": "Le choix dépend de vos objectifs et type corporel. Méthode BMI sain fonctionne bien pour maintenance santé général. Formules Devine et Hamwi sont bonnes pour environnements médicaux. Essayez multiples méthodes et utilisez gamme s'adaptant mieux à vos objectifs santé et composition corporelle. Aucune méthode unique n'est parfaite pour tout le monde."
+        },
+        {
+          "question": "Le poids idéal peut-il changer avec l'âge?",
+          "answer": "Tandis taille reste constante, poids idéal peut changer avec âge dû à changements en masse musculaire, métabolisme et composition corporelle. Adultes plus âgés peuvent avoir gammes BMI légèrement plus élevées dû à diminution masse musculaire. Concentrez-vous sur maintenir composition corporelle saine plutôt que nombres poids spécifiques au fur et à mesure que vous vieillissez."
+        },
+        {
+          "question": "Est-il mieux d'être à l'extrémité basse ou haute de ma gamme poids idéal?",
+          "answer": "La position idéale dépend de votre statut santé, objectifs composition corporelle et préférences personnelles. Pour santé général, n'importe où dans gamme sain est acceptable. Athlètes peuvent préférer extrémité plus élevée pour masse musculaire, tandis autres peuvent choisir extrémité plus basse pour différentes raisons. Consultez fournisseurs santé pour recommandations personnalisées."
+        }
+      ]
+    }
+  }
+}

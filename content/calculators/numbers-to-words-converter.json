@@ -1,0 +1,202 @@
+{
+  "en": {
+    "title": "Numbers to Words Converter",
+    "seoTitle": "Numbers to Words Converter - Convert Digits to Written Form",
+    "metaDescription": "Free numbers to words converter. Convert any number to its written English form. Perfect for checks, legal documents, and educational purposes.",
+    "keywords": ["numbers to words converter", "number to text converter", "write numbers as words", "number spelling converter", "digit to word converter"],
+    "longTailKeywords": ["how to write numbers in words", "convert numbers to text online", "number to word converter for checks", "spelling numbers in English", "write out numbers converter"],
+    "slug": "numbers-to-words-converter",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["education", "writing", "numbers", "converter", "text"],
+    "summary": "Convert any number into its written English word form instantly, perfect for checks, contracts, and formal documents.",
+    "description": "Our numbers to words converter transforms numerical digits into their written English equivalents. Essential for writing checks, legal documents, contracts, and formal correspondence. Supports large numbers up to trillions and handles decimals, currency, and ordinal numbers.",
+    "instructions": [
+      "Enter any number (whole numbers, decimals, or currency amounts)",
+      "Choose the output format (words, currency, or ordinal)",
+      "Get instant conversion to written English form",
+      "Copy the result for use in documents or checks"
+    ],
+    "calculatorComponent": {
+      "componentName": "NumbersToWordsConverter",
+      "inputs": [
+        { "name": "number", "label": "Enter a number", "type": "text", "default": "", "placeholder": "Enter any number (e.g., 1234, $567.89, 1st)" },
+        { "name": "language", "label": "Language", "type": "select", "default": "english", "options": ["english", "spanish"] }
+      ],
+      "formula": "Convert numerical digits to their written word equivalents",
+      "output": { "label": "Number in Words", "default": "Enter a number above", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Number Type", "field": "numberType", "format": "text" },
+        { "label": "Digit Count", "field": "digitCount", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Number",
+        "input": "1234",
+        "output": "One thousand two hundred thirty-four"
+      },
+      {
+        "title": "Currency",
+        "input": "$567.89",
+        "output": "Five hundred sixty-seven dollars and eighty-nine cents"
+      },
+      {
+        "title": "Ordinal",
+        "input": "1st",
+        "output": "First"
+      }
+    ],
+    "relatedCalculators": ["word-counter", "gpa-calculator", "percent-calculator"]
+  },
+  "es": {
+    "title": "Convertidor de Números a Palabras",
+    "seoTitle": "Convertidor de Números a Palabras - Convierte Dígitos a Forma Escrita",
+    "metaDescription": "Convertidor gratuito de números a palabras. Convierte cualquier número a su forma escrita en español. Perfecto para cheques, documentos legales y fines educativos.",
+    "keywords": ["convertidor números palabras", "convertidor número texto", "escribir números palabras", "convertidor deletreo números", "convertidor dígito palabra"],
+    "longTailKeywords": ["cómo escribir números en palabras", "convertir números a texto online", "convertidor número a palabra para cheques", "deletrear números en español", "escribir números convertidor"],
+    "slug": "numbers-to-words-converter",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["educación", "escritura", "números", "convertidor", "texto"],
+    "summary": "Convierte cualquier número a su forma escrita en español al instante, perfecto para cheques, contratos y documentos formales.",
+    "description": "Nuestro convertidor de números a palabras transforma dígitos numéricos en sus equivalentes escritos en español. Esencial para escribir cheques, documentos legales, contratos y correspondencia formal. Soporta números grandes hasta trillones y maneja decimales, moneda y números ordinales.",
+    "instructions": [
+      "Ingresa cualquier número (números enteros, decimales o montos en moneda)",
+      "Elige el formato de salida (palabras, moneda u ordinal)",
+      "Obtén conversión instantánea a forma escrita en español",
+      "Copia el resultado para usar en documentos o cheques"
+    ],
+    "calculatorComponent": {
+      "componentName": "NumbersToWordsConverter",
+      "inputs": [
+        { "name": "number", "label": "Enter a number", "type": "text", "default": "", "placeholder": "Enter any number (e.g., 1234, $567.89, 1st)" },
+        { "name": "language", "label": "Language", "type": "select", "default": "english", "options": ["english", "spanish"] }
+      ],
+      "formula": "Convert numerical digits to their written word equivalents",
+      "output": { "label": "Number in Words", "default": "Enter a number above", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Number Type", "field": "numberType", "format": "text" },
+        { "label": "Digit Count", "field": "digitCount", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Número Básico",
+        "input": "1234",
+        "output": "Mil doscientos treinta y cuatro"
+      },
+      {
+        "title": "Moneda",
+        "input": "$567.89",
+        "output": "Quinientos sesenta y siete dólares con ochenta y nueve centavos"
+      },
+      {
+        "title": "Ordinal",
+        "input": "1º",
+        "output": "Primero"
+      }
+    ],
+    "relatedCalculators": ["word-counter", "gpa-calculator", "percent-calculator"]
+  },
+  "pt": {
+    "title": "Conversor de Números para Palavras",
+    "seoTitle": "Conversor de Números para Palavras - Converte Dígitos para Forma Escrita",
+    "metaDescription": "Conversor gratuito de números para palavras. Converte qualquer número para sua forma escrita em português. Perfeito para cheques, documentos legais e fins educacionais.",
+    "keywords": ["conversor números palavras", "conversor número texto", "escrever números palavras", "conversor soletrar números", "conversor dígito palavra"],
+    "longTailKeywords": ["como escrever números por extenso", "converter números para texto online", "conversor número para palavra para cheques", "soletrar números em português", "escrever números conversor"],
+    "slug": "numbers-to-words-converter",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["educação", "escrita", "números", "conversor", "texto"],
+    "summary": "Converte qualquer número para sua forma escrita em português instantaneamente, perfeito para cheques, contratos e documentos formais.",
+    "description": "Nosso conversor de números para palavras transforma dígitos numéricos em seus equivalentes escritos em português. Essencial para escrever cheques, documentos legais, contratos e correspondência formal. Suporta números grandes até trilhões e lida com decimais, moeda e números ordinais.",
+    "instructions": [
+      "Digite qualquer número (números inteiros, decimais ou valores monetários)",
+      "Escolha o formato de saída (palavras, moeda ou ordinal)",
+      "Obtenha conversão instantânea para forma escrita em português",
+      "Copie o resultado para usar em documentos ou cheques"
+    ],
+    "calculatorComponent": {
+      "componentName": "NumbersToWordsConverter",
+      "inputs": [
+        { "name": "number", "label": "Enter a number", "type": "text", "default": "", "placeholder": "Enter any number (e.g., 1234, $567.89, 1st)" },
+        { "name": "language", "label": "Language", "type": "select", "default": "english", "options": ["english", "spanish"] }
+      ],
+      "formula": "Convert numerical digits to their written word equivalents",
+      "output": { "label": "Number in Words", "default": "Enter a number above", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Number Type", "field": "numberType", "format": "text" },
+        { "label": "Digit Count", "field": "digitCount", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Número Básico",
+        "input": "1234",
+        "output": "Mil duzentos e trinta e quatro"
+      },
+      {
+        "title": "Moeda",
+        "input": "R$ 567,89",
+        "output": "Quinhentos e sessenta e sete reais e oitenta e nove centavos"
+      },
+      {
+        "title": "Ordinal",
+        "input": "1º",
+        "output": "Primeiro"
+      }
+    ],
+    "relatedCalculators": ["word-counter", "gpa-calculator", "percent-calculator"]
+  },
+  "fr": {
+    "title": "Convertisseur Chiffres en Lettres",
+    "seoTitle": "Convertisseur Chiffres en Lettres - Convertit les Chiffres en Forme Écrite",
+    "metaDescription": "Convertisseur gratuit de chiffres en lettres. Convertit n'importe quel nombre en sa forme écrite en français. Parfait pour les chèques, documents légaux et usages éducatifs.",
+    "keywords": ["convertisseur chiffres lettres", "convertisseur nombre texte", "écrire nombres lettres", "convertisseur épeler nombres", "convertisseur chiffre mot"],
+    "longTailKeywords": ["comment écrire les nombres en lettres", "convertir nombres en texte en ligne", "convertisseur nombre en mot pour chèques", "épeler nombres en français", "écrire nombres convertisseur"],
+    "slug": "numbers-to-words-converter",
+    "category": "utility",
+    "difficulty": "basic",
+    "tags": ["éducation", "écriture", "nombres", "convertisseur", "texte"],
+    "summary": "Convertit n'importe quel nombre en sa forme écrite en français instantanément, parfait pour les chèques, contrats et documents formels.",
+    "description": "Notre convertisseur de chiffres en lettres transforme les chiffres numériques en leurs équivalents écrits en français. Essentiel pour rédiger des chèques, documents légaux, contrats et correspondance formelle. Supporte les grands nombres jusqu'aux trillions et gère les décimales, devises et nombres ordinaux.",
+    "instructions": [
+      "Entrez n'importe quel nombre (nombres entiers, décimaux ou montants monétaires)",
+      "Choisissez le format de sortie (lettres, devise ou ordinal)",
+      "Obtenez une conversion instantanée en forme écrite française",
+      "Copiez le résultat pour l'utiliser dans des documents ou chèques"
+    ],
+    "calculatorComponent": {
+      "componentName": "NumbersToWordsConverter",
+      "inputs": [
+        { "name": "number", "label": "Enter a number", "type": "text", "default": "", "placeholder": "Enter any number (e.g., 1234, $567.89, 1st)" },
+        { "name": "language", "label": "Language", "type": "select", "default": "english", "options": ["english", "spanish"] }
+      ],
+      "formula": "Convert numerical digits to their written word equivalents",
+      "output": { "label": "Number in Words", "default": "Enter a number above", "format": "text" },
+      "additionalOutputs": [
+        { "label": "Number Type", "field": "numberType", "format": "text" },
+        { "label": "Digit Count", "field": "digitCount", "format": "number" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Nombre de Base",
+        "input": "1234",
+        "output": "Mille deux cent trente-quatre"
+      },
+      {
+        "title": "Devise",
+        "input": "567,89 €",
+        "output": "Cinq cent soixante-sept euros et quatre-vingt-neuf centimes"
+      },
+      {
+        "title": "Ordinal",
+        "input": "1er",
+        "output": "Premier"
+      }
+    ],
+    "relatedCalculators": ["word-counter", "gpa-calculator", "percent-calculator"]
+  }
+}

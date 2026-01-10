@@ -1,0 +1,650 @@
+{
+  "en": {
+    "title": "Car Affordability Calculator - How Much Car Can I Afford?",
+    "seoTitle": "Car Affordability Calculator - How Much Car Can I Afford?",
+    "metaDescription": "Calculate how much car you can afford based on your income, current car payment, down payment, and trade-in value. Free car affordability calculator with transportation cost guidelines.",
+    "keywords": [
+      "car affordability calculator",
+      "how much car can i afford",
+      "car payment calculator",
+      "auto loan affordability",
+      "vehicle affordability calculator",
+      "car buying calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate car affordability",
+      "car affordability calculator with income",
+      "what car can i afford calculator",
+      "calculate affordable car payment",
+      "car affordability based on salary",
+      "how much car loan can i get",
+      "car payment affordability calculator",
+      "maximum car price i can afford",
+      "car affordability calculator with trade in",
+      "how much should i spend on a car"
+    ],
+    "slug": "car-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "car affordability",
+      "auto loan",
+      "vehicle purchase",
+      "transportation costs",
+      "car payment",
+      "affordability calculator"
+    ],
+    "description": "Calculate how much car you can afford based on your monthly income, current car payment, down payment available, trade-in value, and loan terms. Our car affordability calculator uses industry-standard transportation cost guidelines to help you determine a realistic car price that fits your budget. Perfect for car shopping and loan planning.",
+    "summary": "Calculate maximum affordable car price based on income and transportation costs.",
+    "instructions": [
+      "Enter your gross monthly income",
+      "Enter your current monthly car payment (if any)",
+      "Specify your down payment and trade-in value",
+      "Choose interest rate and loan term",
+      "Click 'Calculate' to see your maximum affordable car price",
+      "Review the transportation cost analysis for car buying guidelines"
+    ],
+    "calculatorComponent": "CarAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Middle Income Buyer",
+        "description": "A person earning $5,000 monthly with $400 current car payment",
+        "input": {
+          "monthlyIncome": 5000,
+          "currentCarPayment": 400,
+          "downPayment": 5000,
+          "tradeInValue": 3000,
+          "interestRate": 6,
+          "loanTerm": 5
+        },
+        "output": {
+          "carPrice": 32000,
+          "monthlyPayment": 450,
+          "loanAmount": 24000,
+          "transportationRatio": 12.5,
+          "totalCost": 37000,
+          "totalInterest": 5000
+        }
+      },
+      {
+        "title": "High Income with Trade-in",
+        "description": "High earner with significant trade-in value",
+        "input": {
+          "monthlyIncome": 8000,
+          "currentCarPayment": 600,
+          "downPayment": 8000,
+          "tradeInValue": 15000,
+          "interestRate": 5,
+          "loanTerm": 6
+        },
+        "output": {
+          "carPrice": 45000,
+          "monthlyPayment": 650,
+          "loanAmount": 22000,
+          "transportationRatio": 10.6,
+          "totalCost": 50700,
+          "totalInterest": 5700
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calculate how much car you can afford with our comprehensive car affordability calculator. This powerful financial tool helps you determine the maximum car price that fits your budget based on your income, current car payment, down payment, trade-in value, and transportation cost guidelines. Whether you're car shopping, trading in your current vehicle, or planning your auto financing, understanding your car buying capacity is crucial for making smart automotive purchasing decisions.",
+      "benefits": [
+        "Determine realistic car prices based on your actual income and transportation budget",
+        "Factor in trade-in value and down payments to maximize your purchasing power",
+        "Understand transportation cost ratios and how lenders evaluate car loan applications",
+        "Avoid over-buying that could strain your monthly budget with car payments",
+        "Compare different loan terms and interest rates for the most affordable car financing",
+        "Plan your car purchase with confidence using industry-standard affordability guidelines"
+      ],
+      "steps": [
+        "Enter your gross monthly income from all sources",
+        "Input your current monthly car payment (if you have one)",
+        "Enter your available down payment amount",
+        "Input the trade-in value of your current vehicle (if applicable)",
+        "Specify the interest rate you expect to qualify for",
+        "Choose your desired loan term in years",
+        "Review your maximum affordable car price and monthly payment"
+      ],
+      "inputsExplained": [
+        "Monthly gross income represents your total earnings before taxes and deductions",
+        "Current car payment includes your existing monthly auto loan payment",
+        "Down payment is the cash amount you'll pay upfront to reduce the loan amount",
+        "Trade-in value is the amount your current vehicle is worth toward the purchase",
+        "Interest rate affects both your monthly payment and total loan cost",
+        "Loan term impacts monthly payment amounts and total interest paid over time"
+      ],
+      "formulaExplanation": "The calculator uses transportation cost guidelines, which recommend that car payments should be 10-15% of your gross monthly income. The formula calculates your available transportation budget, subtracts your current car payment, then determines the maximum loan amount and car price (including down payment and trade-in value) that fits within your affordable payment range.",
+      "examples": [
+        "A person earning $5,000 monthly with $400 current car payment, $5,000 down payment, and $3,000 trade-in could afford a $32,000 car with $450 monthly payments",
+        "Someone making $8,000 monthly with $600 current payment, $8,000 down payment, and $15,000 trade-in could afford a $45,000 car with $650 monthly payments"
+      ],
+      "resultsExplanation": [
+        "Maximum affordable car price shows the highest price vehicle you can reasonably purchase",
+        "Monthly car payment displays what your auto loan payment would be",
+        "Loan amount shows how much you would need to borrow after down payment and trade-in",
+        "Transportation cost ratio indicates what percentage of your income goes to car costs",
+        "Total cost of ownership includes the car price plus all interest payments over the loan term",
+        "Total interest paid shows the cost of borrowing beyond the car's purchase price"
+      ],
+      "whoItsFor": "This car affordability calculator is perfect for car shoppers, current car owners considering a trade-in, and anyone planning to finance a vehicle purchase. It's especially valuable for first-time car buyers, those with existing auto loans, or anyone wanting to ensure they purchase a vehicle they can comfortably afford with their current income.",
+      "disclaimer": "This calculator provides estimates based on standard transportation cost guidelines and typical auto loan terms. Actual car prices and loan amounts may vary based on your credit score, lender requirements, vehicle type, and specific loan terms. Always consult with an auto dealer or lender for personalized financing options.",
+      "relatedTools": [
+        "car loan calculator",
+        "auto loan payment calculator",
+        "car payment calculator",
+        "loan affordability calculator",
+        "budget calculator"
+      ],
+      "faqs": [
+        {
+          "question": "How much car can I afford based on my income?",
+          "answer": "Most financial experts recommend that your total transportation costs (car payment, insurance, gas, maintenance) should be 10-15% of your gross monthly income. This calculator uses these guidelines to determine your maximum affordable car price."
+        },
+        {
+          "question": "What is a good car payment to income ratio?",
+          "answer": "A good rule of thumb is that your car payment should be no more than 10-15% of your gross monthly income. For example, if you earn $5,000 monthly, your car payment should ideally be $500-$750 per month."
+        },
+        {
+          "question": "Does my credit score affect how much car I can afford?",
+          "answer": "Yes, your credit score significantly impacts both the interest rate you'll receive and how much you can borrow. Higher credit scores typically qualify for lower interest rates, allowing you to afford more expensive vehicles with the same monthly payment."
+        },
+        {
+          "question": "How does trade-in value affect car affordability?",
+          "answer": "Trade-in value effectively acts as a down payment, reducing the amount you need to borrow. Higher trade-in values allow you to purchase more expensive vehicles while keeping monthly payments affordable."
+        },
+        {
+          "question": "What's the difference between car affordability and car loan amount?",
+          "answer": "Car affordability considers your total transportation budget and income, while loan amount is just the borrowed portion. Your affordable car price includes down payment, trade-in value, and the maximum loan amount that fits your budget."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Capacidad para Auto - ¿Cuánto Auto Puedo Permitirme?",
+    "seoTitle": "Calculadora de Capacidad para Auto - ¿Cuánto Auto Puedo Permitirme?",
+    "metaDescription": "Calcula cuánto auto puedes permitirte basado en tus ingresos, pago actual de auto, pago inicial y valor de intercambio. Calculadora gratuita de capacidad para auto con pautas de costos de transporte.",
+    "keywords": [
+      "calculadora capacidad auto",
+      "cuánto auto puedo permitirme",
+      "calculadora pago auto",
+      "capacidad préstamo auto",
+      "calculadora capacidad vehículo",
+      "calculadora compra auto"
+    ],
+    "longTailKeywords": [
+      "cómo calcular capacidad auto",
+      "calculadora capacidad auto con ingresos",
+      "qué auto puedo permitirme calculadora",
+      "calcular pago auto asequible",
+      "capacidad auto basado en salario",
+      "cuánto préstamo auto puedo conseguir",
+      "calculadora capacidad pago auto",
+      "precio máximo auto que puedo permitirme",
+      "calculadora capacidad auto con intercambio",
+      "cuánto debo gastar en un auto"
+    ],
+    "slug": "car-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "capacidad auto",
+      "préstamo auto",
+      "compra vehículo",
+      "costos transporte",
+      "pago auto",
+      "calculadora capacidad"
+    ],
+    "description": "Calcula cuánto auto puedes permitirte basado en tus ingresos mensuales, pago actual de auto, pago inicial disponible, valor de intercambio y términos del préstamo. Nuestra calculadora de capacidad para auto utiliza pautas estándar de costos de transporte para ayudarte a determinar un precio realista de auto que quepa en tu presupuesto. Perfecta para compras de auto y planificación de préstamos.",
+    "summary": "Calcula precio máximo de auto asequible basado en ingresos y costos de transporte.",
+    "instructions": [
+      "Ingresa tus ingresos brutos mensuales",
+      "Ingresa tu pago mensual actual de auto (si tienes)",
+      "Especifica tu pago inicial y valor de intercambio",
+      "Elige tasa de interés y plazo del préstamo",
+      "Haz clic en 'Calcular' para ver el precio máximo de auto asequible",
+      "Revisa el análisis de costos de transporte para pautas de compra de auto"
+    ],
+    "calculatorComponent": "CarAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Comprador de Ingresos Medios",
+        "description": "Una persona que gana $5,000 mensuales con $400 pago actual de auto",
+        "input": {
+          "monthlyIncome": 5000,
+          "currentCarPayment": 400,
+          "downPayment": 5000,
+          "tradeInValue": 3000,
+          "interestRate": 6,
+          "loanTerm": 5
+        },
+        "output": {
+          "carPrice": 32000,
+          "monthlyPayment": 450,
+          "loanAmount": 24000,
+          "transportationRatio": 12.5,
+          "totalCost": 37000,
+          "totalInterest": 5000
+        }
+      },
+      {
+        "title": "Ingresos Altos con Intercambio",
+        "description": "Persona de altos ingresos con valor significativo de intercambio",
+        "input": {
+          "monthlyIncome": 8000,
+          "currentCarPayment": 600,
+          "downPayment": 8000,
+          "tradeInValue": 15000,
+          "interestRate": 5,
+          "loanTerm": 6
+        },
+        "output": {
+          "carPrice": 45000,
+          "monthlyPayment": 650,
+          "loanAmount": 22000,
+          "transportationRatio": 10.6,
+          "totalCost": 50700,
+          "totalInterest": 5700
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calcula cuánto auto puedes permitirte con nuestra completa calculadora de capacidad para auto. Esta poderosa herramienta financiera te ayuda a determinar el precio máximo de auto que cabe en tu presupuesto basado en tus ingresos, pago actual de auto, pago inicial, valor de intercambio y pautas de costos de transporte. Ya sea que estés comprando auto, intercambiando tu vehículo actual o planificando tu financiamiento automotriz, entender tu capacidad de compra de auto es crucial para tomar decisiones inteligentes de compra automotriz.",
+      "benefits": [
+        "Determina precios realistas de auto basado en tus ingresos reales y presupuesto de transporte",
+        "Considera el valor de intercambio y pagos iniciales para maximizar tu poder de compra",
+        "Entiende las relaciones de costos de transporte y cómo los prestamistas evalúan las solicitudes de préstamos para auto",
+        "Evita comprar en exceso que podría tensionar tu presupuesto mensual con pagos de auto",
+        "Compara diferentes términos de préstamo y tasas de interés para el financiamiento de auto más asequible",
+        "Planifica tu compra de auto con confianza usando pautas estándar de capacidad"
+      ],
+      "steps": [
+        "Ingresa tus ingresos brutos mensuales de todas las fuentes",
+        "Ingresa tu pago mensual actual de auto (si tienes uno)",
+        "Ingresa tu monto disponible de pago inicial",
+        "Ingresa el valor de intercambio de tu vehículo actual (si aplica)",
+        "Especifica la tasa de interés para la que esperas calificar",
+        "Elige el plazo deseado del préstamo en años",
+        "Revisa tu precio máximo de auto asequible y pago mensual"
+      ],
+      "inputsExplained": [
+        "Los ingresos brutos mensuales representan tus ganancias totales antes de impuestos y deducciones",
+        "El pago actual de auto incluye tu pago mensual existente de préstamo para auto",
+        "El pago inicial es el monto en efectivo que pagarás por adelantado para reducir el monto del préstamo",
+        "El valor de intercambio es el monto que tu vehículo actual vale para la compra",
+        "La tasa de interés afecta tanto tu pago mensual como el costo total del préstamo",
+        "El plazo del préstamo impacta los montos de pago mensual y el interés total pagado con el tiempo"
+      ],
+      "formulaExplanation": "La calculadora utiliza pautas de costos de transporte, que recomiendan que los pagos de auto deberían ser 10-15% de tus ingresos brutos mensuales. La fórmula calcula tu presupuesto disponible de transporte, resta tu pago actual de auto, luego determina el monto máximo del préstamo y precio del auto (incluyendo pago inicial y valor de intercambio) que quepa dentro de tu rango de pago asequible.",
+      "examples": [
+        "Una persona que gana $5,000 mensuales con $400 pago actual de auto, $5,000 pago inicial y $3,000 intercambio podría permitirse un auto de $32,000 con pagos mensuales de $450",
+        "Alguien que gana $8,000 mensuales con $600 pago actual, $8,000 pago inicial y $15,000 intercambio podría permitirse un auto de $45,000 con pagos mensuales de $650"
+      ],
+      "resultsExplanation": [
+        "El precio máximo de auto asequible muestra el vehículo de precio más alto que puedes comprar razonablemente",
+        "El pago mensual de auto muestra cuál sería tu pago de préstamo para auto",
+        "El monto del préstamo muestra cuánto necesitarías pedir prestado después del pago inicial e intercambio",
+        "La relación de costos de transporte indica qué porcentaje de tus ingresos va a costos de auto",
+        "El costo total de propiedad incluye el precio del auto más todos los pagos de intereses durante el plazo del préstamo",
+        "El total de intereses pagados muestra el costo de pedir prestado más allá del precio de compra del auto"
+      ],
+      "whoItsFor": "Esta calculadora de capacidad para auto es perfecta para compradores de auto, dueños actuales considerando un intercambio, y cualquiera planificando financiar una compra de vehículo. Es especialmente valiosa para compradores primerizos de auto, aquellos con préstamos existentes para auto, o cualquiera que quiera asegurar que compre un vehículo que pueda permitirse cómodamente con sus ingresos actuales.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en pautas estándar de costos de transporte y términos típicos de préstamos para auto. Los precios reales de auto y montos de préstamo pueden variar basado en tu puntaje de crédito, requisitos del prestamista, tipo de vehículo y términos específicos del préstamo. Siempre consulta con un concesionario de autos o prestamista para opciones de financiamiento personalizadas.",
+      "relatedTools": [
+        "calculadora préstamo auto",
+        "calculadora pago préstamo auto",
+        "calculadora pago auto",
+        "calculadora capacidad préstamo",
+        "calculadora presupuesto"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánto auto puedo permitirme basado en mis ingresos?",
+          "answer": "La mayoría de expertos financieros recomiendan que tus costos totales de transporte (pago de auto, seguro, gasolina, mantenimiento) deberían ser 10-15% de tus ingresos brutos mensuales. Esta calculadora usa estas pautas para determinar tu precio máximo de auto asequible."
+        },
+        {
+          "question": "¿Cuál es un buen pago de auto en relación con ingresos?",
+          "answer": "Una buena regla general es que tu pago de auto no debería ser más de 10-15% de tus ingresos brutos mensuales. Por ejemplo, si ganas $5,000 mensuales, tu pago de auto debería idealmente ser $500-$750 por mes."
+        },
+        {
+          "question": "¿Afecta mi puntaje de crédito cuánto auto puedo permitirme?",
+          "answer": "Sí, tu puntaje de crédito impacta significativamente tanto la tasa de interés que recibirás como cuánto puedes pedir prestado. Puntajes de crédito más altos típicamente califican para tasas de interés más bajas, permitiéndote permitirte vehículos más caros con el mismo pago mensual."
+        },
+        {
+          "question": "¿Cómo afecta el valor de intercambio la capacidad para auto?",
+          "answer": "El valor de intercambio efectivamente actúa como un pago inicial, reduciendo el monto que necesitas pedir prestado. Valores más altos de intercambio te permiten comprar vehículos más caros mientras mantienes pagos mensuales asequibles."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre capacidad para auto y monto de préstamo para auto?",
+          "answer": "La capacidad para auto considera tu presupuesto total de transporte e ingresos, mientras que el monto del préstamo es solo la porción prestada. Tu precio de auto asequible incluye pago inicial, valor de intercambio y el monto máximo de préstamo que cabe en tu presupuesto."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Capacidade para Carro - Quanto Carro Posso Permitir?",
+    "seoTitle": "Calculadora de Capacidade para Carro - Quanto Carro Posso Permitir?",
+    "metaDescription": "Calcule quanto carro você pode permitir baseado em sua renda, pagamento atual de carro, entrada e valor de troca. Calculadora gratuita de capacidade para carro com diretrizes de custos de transporte.",
+    "keywords": [
+      "calculadora capacidade carro",
+      "quanto carro posso permitir",
+      "calculadora pagamento carro",
+      "capacidade empréstimo carro",
+      "calculadora capacidade veículo",
+      "calculadora compra carro"
+    ],
+    "longTailKeywords": [
+      "como calcular capacidade carro",
+      "calculadora capacidade carro com renda",
+      "que carro posso permitir calculadora",
+      "calcular pagamento carro acessível",
+      "capacidade carro baseado em salário",
+      "quanto empréstimo carro posso conseguir",
+      "calculadora capacidade pagamento carro",
+      "preço máximo carro que posso permitir",
+      "calculadora capacidade carro com troca",
+      "quanto devo gastar em um carro"
+    ],
+    "slug": "car-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "capacidade carro",
+      "empréstimo carro",
+      "compra veículo",
+      "custos transporte",
+      "pagamento carro",
+      "calculadora capacidade"
+    ],
+    "description": "Calcule quanto carro você pode permitir baseado em sua renda mensal, pagamento atual de carro, entrada disponível, valor de troca e termos do empréstimo. Nossa calculadora de capacidade para carro usa diretrizes padrão de custos de transporte para ajudá-lo a determinar um preço realista de carro que caiba no seu orçamento. Perfeita para compras de carro e planejamento de empréstimos.",
+    "summary": "Calcule preço máximo de carro acessível baseado na renda e custos de transporte.",
+    "instructions": [
+      "Digite sua renda bruta mensal",
+      "Digite seu pagamento mensal atual de carro (se tiver)",
+      "Especifique sua entrada e valor de troca",
+      "Escolha taxa de juros e prazo do empréstimo",
+      "Clique em 'Calcular' para ver o preço máximo de carro acessível",
+      "Revise a análise de custos de transporte para diretrizes de compra de carro"
+    ],
+    "calculatorComponent": "CarAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Comprador de Renda Média",
+        "description": "Uma pessoa ganhando R$ 5.000 mensais com R$ 400 pagamento atual de carro",
+        "input": {
+          "monthlyIncome": 5000,
+          "currentCarPayment": 400,
+          "downPayment": 5000,
+          "tradeInValue": 3000,
+          "interestRate": 6,
+          "loanTerm": 5
+        },
+        "output": {
+          "carPrice": 32000,
+          "monthlyPayment": 450,
+          "loanAmount": 24000,
+          "transportationRatio": 12.5,
+          "totalCost": 37000,
+          "totalInterest": 5000
+        }
+      },
+      {
+        "title": "Renda Alta com Troca",
+        "description": "Pessoa de alta renda com valor significativo de troca",
+        "input": {
+          "monthlyIncome": 8000,
+          "currentCarPayment": 600,
+          "downPayment": 8000,
+          "tradeInValue": 15000,
+          "interestRate": 5,
+          "loanTerm": 6
+        },
+        "output": {
+          "carPrice": 45000,
+          "monthlyPayment": 650,
+          "loanAmount": 22000,
+          "transportationRatio": 10.6,
+          "totalCost": 50700,
+          "totalInterest": 5700
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calcule quanto carro você pode permitir com nossa completa calculadora de capacidade para carro. Esta poderosa ferramenta financeira ajuda você a determinar o preço máximo de carro que cabe no seu orçamento baseado na sua renda, pagamento atual de carro, entrada, valor de troca e diretrizes de custos de transporte. Seja você comprando carro, trocando seu veículo atual ou planejando seu financiamento automotivo, entender sua capacidade de compra de carro é crucial para tomar decisões inteligentes de compra automotiva.",
+      "benefits": [
+        "Determine preços realistas de carro baseado na sua renda real e orçamento de transporte",
+        "Considere o valor de troca e entradas para maximizar seu poder de compra",
+        "Entenda as relações de custos de transporte e como os credores avaliam aplicações de empréstimo para carro",
+        "Evite comprar em excesso que pode tensionar seu orçamento mensal com pagamentos de carro",
+        "Compare diferentes termos de empréstimo e taxas de juros para o financiamento de carro mais acessível",
+        "Planeje sua compra de carro com confiança usando diretrizes padrão de capacidade"
+      ],
+      "steps": [
+        "Digite sua renda bruta mensal de todas as fontes",
+        "Insira seu pagamento mensal atual de carro (se você tiver um)",
+        "Digite seu valor disponível de entrada",
+        "Insira o valor de troca do seu veículo atual (se aplicável)",
+        "Especifique a taxa de juros para a qual você espera se qualificar",
+        "Escolha o prazo desejado do empréstimo em anos",
+        "Revise seu preço máximo de carro acessível e pagamento mensal"
+      ],
+      "inputsExplained": [
+        "A renda bruta mensal representa seus ganhos totais antes de impostos e deduções",
+        "O pagamento atual de carro inclui seu pagamento mensal existente de empréstimo para carro",
+        "A entrada é o valor em dinheiro que você pagará adiantado para reduzir o valor do empréstimo",
+        "O valor de troca é o valor que seu veículo atual vale para a compra",
+        "A taxa de juros afeta tanto seu pagamento mensal quanto o custo total do empréstimo",
+        "O prazo do empréstimo impacta os valores de pagamento mensal e juros totais pagos ao longo do tempo"
+      ],
+      "formulaExplanation": "A calculadora usa diretrizes de custos de transporte, que recomendam que os pagamentos de carro devem ser 10-15% da sua renda bruta mensal. A fórmula calcula seu orçamento disponível de transporte, subtrai seu pagamento atual de carro, então determina o valor máximo do empréstimo e preço do carro (incluindo entrada e valor de troca) que cabe dentro da sua faixa de pagamento acessível.",
+      "examples": [
+        "Uma pessoa ganhando R$ 5.000 mensais com R$ 400 pagamento atual de carro, R$ 5.000 entrada e R$ 3.000 troca poderia permitir um carro de R$ 32.000 com pagamentos mensais de R$ 450",
+        "Alguém ganhando R$ 8.000 mensais com R$ 600 pagamento atual, R$ 8.000 entrada e R$ 15.000 troca poderia permitir um carro de R$ 45.000 com pagamentos mensais de R$ 650"
+      ],
+      "resultsExplanation": [
+        "O preço máximo de carro acessível mostra o veículo de preço mais alto que você pode comprar razoavelmente",
+        "O pagamento mensal de carro mostra qual seria seu pagamento de empréstimo para carro",
+        "O valor do empréstimo mostra quanto você precisaria emprestar após entrada e troca",
+        "A relação de custos de transporte indica que porcentagem da sua renda vai para custos de carro",
+        "O custo total de propriedade inclui o preço do carro mais todos os pagamentos de juros durante o prazo do empréstimo",
+        "O total de juros pagos mostra o custo de emprestar além do preço de compra do carro"
+      ],
+      "whoItsFor": "Esta calculadora de capacidade para carro é perfeita para compradores de carro, donos atuais considerando uma troca, e qualquer pessoa planejando financiar uma compra de veículo. É especialmente valiosa para compradores de carro pela primeira vez, aqueles com empréstimos existentes para carro, ou qualquer pessoa querendo garantir que compre um veículo que possa confortavelmente permitir com sua renda atual.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em diretrizes padrão de custos de transporte e termos típicos de empréstimo para carro. Os preços reais de carro e valores de empréstimo podem variar baseado no seu score de crédito, requisitos do credor, tipo de veículo e termos específicos do empréstimo. Sempre consulte com um concessionário de carros ou credor para opções de financiamento personalizadas.",
+      "relatedTools": [
+        "calculadora empréstimo carro",
+        "calculadora pagamento empréstimo carro",
+        "calculadora pagamento carro",
+        "calculadora capacidade empréstimo",
+        "calculadora orçamento"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto carro posso permitir baseado na minha renda?",
+          "answer": "A maioria dos especialistas financeiros recomendam que seus custos totais de transporte (pagamento de carro, seguro, gasolina, manutenção) devem ser 10-15% da sua renda bruta mensal. Esta calculadora usa estas diretrizes para determinar seu preço máximo de carro acessível."
+        },
+        {
+          "question": "Qual é um bom pagamento de carro em relação à renda?",
+          "answer": "Uma boa regra geral é que seu pagamento de carro não deve ser mais que 10-15% da sua renda bruta mensal. Por exemplo, se você ganha R$ 5.000 mensais, seu pagamento de carro deveria idealmente ser R$ 500-R$ 750 por mês."
+        },
+        {
+          "question": "Meu score de crédito afeta quanto carro posso permitir?",
+          "answer": "Sim, seu score de crédito impacta significativamente tanto a taxa de juros que você receberá quanto quanto você pode emprestar. Scores de crédito mais altos tipicamente se qualificam para taxas de juros mais baixas, permitindo que você permita veículos mais caros com o mesmo pagamento mensal."
+        },
+        {
+          "question": "Como o valor de troca afeta a capacidade para carro?",
+          "answer": "O valor de troca efetivamente age como uma entrada, reduzindo o valor que você precisa emprestar. Valores mais altos de troca permitem que você compre veículos mais caros enquanto mantém pagamentos mensais acessíveis."
+        },
+        {
+          "question": "Qual é a diferença entre capacidade para carro e valor de empréstimo para carro?",
+          "answer": "A capacidade para carro considera seu orçamento total de transporte e renda, enquanto o valor do empréstimo é apenas a porção emprestada. Seu preço de carro acessível inclui entrada, valor de troca e o valor máximo de empréstimo que cabe no seu orçamento."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Capacité d'Achat Auto - Combien de Voiture Puis-Je Me Permettre?",
+    "seoTitle": "Calculateur de Capacité d'Achat Auto - Combien de Voiture Puis-Je Me Permettre?",
+    "metaDescription": "Calculez combien de voiture vous pouvez vous permettre basé sur vos revenus, paiement actuel de voiture, acompte et valeur de reprise. Calculateur gratuit de capacité d'achat auto avec directives des coûts de transport.",
+    "keywords": [
+      "calculateur capacité auto",
+      "combien voiture puis-je me permettre",
+      "calculateur paiement auto",
+      "capacité emprunt auto",
+      "calculateur capacité véhicule",
+      "calculateur achat auto"
+    ],
+    "longTailKeywords": [
+      "comment calculer capacité auto",
+      "calculateur capacité auto avec revenus",
+      "quelle voiture puis-je me permettre calculateur",
+      "calculer paiement auto abordable",
+      "capacité auto basé sur salaire",
+      "combien emprunt auto puis-je obtenir",
+      "calculateur capacité paiement auto",
+      "prix maximum auto que je peux me permettre",
+      "calculateur capacité auto avec reprise",
+      "combien dois-je dépenser dans une voiture"
+    ],
+    "slug": "car-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "capacité auto",
+      "emprunt auto",
+      "achat véhicule",
+      "coûts transport",
+      "paiement auto",
+      "calculateur capacité"
+    ],
+    "description": "Calculez combien de voiture vous pouvez vous permettre basé sur vos revenus mensuels, paiement actuel de voiture, acompte disponible, valeur de reprise et termes d'emprunt. Notre calculateur de capacité d'achat auto utilise les directives standard des coûts de transport pour vous aider à déterminer un prix réaliste de voiture qui rentre dans votre budget. Parfait pour achats de voiture et planification d'emprunts.",
+    "summary": "Calculez le prix maximum de voiture abordable basé sur les revenus et coûts de transport.",
+    "instructions": [
+      "Entrez vos revenus bruts mensuels",
+      "Entrez votre paiement mensuel actuel de voiture (si vous en avez)",
+      "Spécifiez votre acompte et valeur de reprise",
+      "Choisissez le taux d'intérêt et durée d'emprunt",
+      "Cliquez sur 'Calculer' pour voir le prix maximum de voiture abordable",
+      "Examinez l'analyse des coûts de transport pour les directives d'achat de voiture"
+    ],
+    "calculatorComponent": "CarAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Acheteur à Revenus Moyens",
+        "description": "Une personne gagnant 5 000 € mensuels avec 400 € paiement actuel de voiture",
+        "input": {
+          "monthlyIncome": 5000,
+          "currentCarPayment": 400,
+          "downPayment": 5000,
+          "tradeInValue": 3000,
+          "interestRate": 6,
+          "loanTerm": 5
+        },
+        "output": {
+          "carPrice": 32000,
+          "monthlyPayment": 450,
+          "loanAmount": 24000,
+          "transportationRatio": 12.5,
+          "totalCost": 37000,
+          "totalInterest": 5000
+        }
+      },
+      {
+        "title": "Revenus Élevés avec Reprise",
+        "description": "Personne à hauts revenus avec valeur de reprise significative",
+        "input": {
+          "monthlyIncome": 8000,
+          "currentCarPayment": 600,
+          "downPayment": 8000,
+          "tradeInValue": 15000,
+          "interestRate": 5,
+          "loanTerm": 6
+        },
+        "output": {
+          "carPrice": 45000,
+          "monthlyPayment": 650,
+          "loanAmount": 22000,
+          "transportationRatio": 10.6,
+          "totalCost": 50700,
+          "totalInterest": 5700
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calculez combien de voiture vous pouvez vous permettre avec notre calculateur complet de capacité d'achat auto. Cet outil financier puissant vous aide à déterminer le prix maximum de voiture qui rentre dans votre budget basé sur vos revenus, paiement actuel de voiture, acompte, valeur de reprise et directives des coûts de transport. Que vous achetiez une voiture, repreniez votre véhicule actuel ou planifiiez votre financement automobile, comprendre votre capacité d'achat de voiture est crucial pour prendre des décisions intelligentes d'achat automobile.",
+      "benefits": [
+        "Déterminez des prix réalistes de voiture basés sur vos revenus réels et budget de transport",
+        "Considérez la valeur de reprise et acomptes pour maximiser votre pouvoir d'achat",
+        "Comprenez les ratios des coûts de transport et comment les prêteurs évaluent les demandes d'emprunt auto",
+        "Évitez l'achat excessif qui pourrait tendre votre budget mensuel avec paiements de voiture",
+        "Comparez différents termes d'emprunt et taux d'intérêt pour le financement automobile le plus abordable",
+        "Planifiez votre achat de voiture avec confiance en utilisant les directives standard de capacité"
+      ],
+      "steps": [
+        "Entrez vos revenus bruts mensuels de toutes les sources",
+        "Saisissez votre paiement mensuel actuel de voiture (si vous en avez un)",
+        "Entrez votre montant d'acompte disponible",
+        "Saisissez la valeur de reprise de votre véhicule actuel (le cas échéant)",
+        "Spécifiez le taux d'intérêt pour lequel vous vous qualifiez probablement",
+        "Choisissez la durée souhaitée d'emprunt en années",
+        "Examinez votre prix maximum de voiture abordable et paiement mensuel"
+      ],
+      "inputsExplained": [
+        "Les revenus bruts mensuels représentent vos gains totaux avant impôts et déductions",
+        "Le paiement actuel de voiture inclut votre paiement mensuel d'emprunt automobile existant",
+        "L'acompte est le montant en espèces que vous paierez à l'avance pour réduire le montant d'emprunt",
+        "La valeur de reprise est le montant que votre véhicule actuel vaut pour l'achat",
+        "Le taux d'intérêt affecte à la fois votre paiement mensuel et le coût total d'emprunt",
+        "La durée d'emprunt impacte les montants de paiement mensuel et intérêts totaux payés au fil du temps"
+      ],
+      "formulaExplanation": "Le calculateur utilise les directives des coûts de transport, qui recommandent que les paiements de voiture devraient être 10-15% de vos revenus bruts mensuels. La formule calcule votre budget de transport disponible, soustrait votre paiement actuel de voiture, puis détermine le montant maximum d'emprunt et prix de voiture (incluant acompte et valeur de reprise) qui rentre dans votre fourchette de paiement abordable.",
+      "examples": [
+        "Une personne gagnant 5 000 € mensuels avec 400 € paiement actuel de voiture, 5 000 € acompte et 3 000 € reprise pourrait se permettre une voiture de 32 000 € avec paiements mensuels de 450 €",
+        "Quelqu'un gagnant 8 000 € mensuels avec 600 € paiement actuel, 8 000 € acompte et 15 000 € reprise pourrait se permettre une voiture de 45 000 € avec paiements mensuels de 650 €"
+      ],
+      "resultsExplanation": [
+        "Le prix maximum de voiture abordable montre le véhicule de prix le plus élevé que vous pouvez acheter raisonnablement",
+        "Le paiement mensuel de voiture montre quel serait votre paiement d'emprunt automobile",
+        "Le montant d'emprunt montre combien vous auriez besoin d'emprunter après acompte et reprise",
+        "Le ratio des coûts de transport indique quel pourcentage de vos revenus va aux coûts de voiture",
+        "Le coût total de propriété inclut le prix de voiture plus tous les paiements d'intérêts pendant la durée d'emprunt",
+        "Le total d'intérêts payés montre le coût d'emprunter au-delà du prix d'achat de voiture"
+      ],
+      "whoItsFor": "Ce calculateur de capacité d'achat auto est parfait pour acheteurs de voiture, propriétaires actuels envisageant une reprise, et quiconque planifiant de financer un achat de véhicule. Il est particulièrement précieux pour acheteurs de voiture débutants, ceux avec emprunts automobiles existants, ou quiconque souhaitant s'assurer d'acheter un véhicule qu'il peut confortablement se permettre avec ses revenus actuels.",
+      "disclaimer": "Ce calculateur fournit des estimations basées sur les directives standard des coûts de transport et termes typiques d'emprunt automobile. Les prix réels de voiture et montants d'emprunt peuvent varier selon votre score de crédit, exigences du prêteur, type de véhicule et termes spécifiques d'emprunt. Consultez toujours un concessionnaire automobile ou prêteur pour des options de financement personnalisées.",
+      "relatedTools": [
+        "calculateur emprunt auto",
+        "calculateur paiement emprunt auto",
+        "calculateur paiement auto",
+        "calculateur capacité emprunt",
+        "calculateur budget"
+      ],
+      "faqs": [
+        {
+          "question": "Combien de voiture puis-je me permettre basé sur mes revenus?",
+          "answer": "La plupart des experts financiers recommandent que vos coûts totaux de transport (paiement de voiture, assurance, essence, entretien) devraient être 10-15% de vos revenus bruts mensuels. Ce calculateur utilise ces directives pour déterminer votre prix maximum de voiture abordable."
+        },
+        {
+          "question": "Quel est un bon paiement de voiture par rapport aux revenus?",
+          "answer": "Une bonne règle générale est que votre paiement de voiture ne devrait pas être plus de 10-15% de vos revenus bruts mensuels. Par exemple, si vous gagnez 5 000 € mensuels, votre paiement de voiture devrait idéalement être 500-750 € par mois."
+        },
+        {
+          "question": "Mon score de crédit affecte-t-il combien de voiture je peux me permettre?",
+          "answer": "Oui, votre score de crédit impacte considérablement à la fois le taux d'intérêt que vous recevrez et combien vous pouvez emprunter. Les scores de crédit plus élevés se qualifient typiquement pour des taux d'intérêt plus bas, vous permettant de vous permettre des véhicules plus chers avec le même paiement mensuel."
+        },
+        {
+          "question": "Comment la valeur de reprise affecte-t-elle la capacité d'achat auto?",
+          "answer": "La valeur de reprise agit effectivement comme un acompte, réduisant le montant que vous devez emprunter. Des valeurs de reprise plus élevées vous permettent d'acheter des véhicules plus chers tout en gardant les paiements mensuels abordables."
+        },
+        {
+          "question": "Quelle est la différence entre capacité d'achat auto et montant d'emprunt auto?",
+          "answer": "La capacité d'achat auto considère votre budget total de transport et revenus, tandis que le montant d'emprunt est juste la portion empruntée. Votre prix de voiture abordable inclut acompte, valeur de reprise et le montant maximum d'emprunt qui rentre dans votre budget."
+        }
+      ]
+    }
+  }
+}

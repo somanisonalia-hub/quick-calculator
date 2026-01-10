@@ -1,0 +1,482 @@
+{
+  "en": {
+    "title": "Life Insurance Calculator",
+    "seoTitle": "Life Insurance Calculator - Calculate Coverage Needs and Premium Costs",
+    "metaDescription": "Free life insurance calculator. Calculate how much coverage you need and estimate premium costs. Essential for financial planning and family protection.",
+    "keywords": ["life insurance calculator", "insurance coverage calculator", "life insurance premium calculator", "term life calculator", "whole life calculator"],
+    "longTailKeywords": ["how much life insurance do I need calculator", "life insurance cost calculator", "calculate life insurance coverage", "term life insurance calculator", "life insurance needs calculator"],
+    "slug": "life-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["life insurance", "coverage", "premiums", "financial planning", "family protection"],
+    "summary": "Calculate your life insurance needs and estimate premium costs to ensure your family's financial security.",
+    "description": "Our comprehensive life insurance calculator helps you determine the right coverage amount based on your income, debts, and family needs. Compare term life vs whole life insurance options, estimate monthly premiums, and understand the true cost of protecting your family's financial future. Essential planning tool for breadwinners and parents.",
+    "instructions": [
+      "Enter your annual income and current debts",
+      "Specify family size and future financial needs",
+      "Choose coverage type (term or whole life)",
+      "Get personalized coverage recommendations and premium estimates"
+    ],
+    "calculatorComponent": {
+      "componentName": "LifeInsuranceCalculator",
+      "inputs": [
+        { "name": "age", "label": "Age", "type": "number", "default": 35, "min": 18, "max": 80, "step": 1 },
+        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "coverageAmount", "label": "Coverage Amount ($)", "type": "number", "default": 500000, "min": 50000, "max": 5000000, "step": 25000 },
+        { "name": "termLength", "label": "Term Length (years)", "type": "number", "default": 20, "min": 5, "max": 30, "step": 5 },
+        { "name": "healthRating", "label": "Health Rating", "type": "select", "default": "excellent", "options": ["excellent", "very-good", "good", "fair"] },
+        { "name": "smokingStatus", "label": "Smoking Status", "type": "select", "default": "non-smoker", "options": ["non-smoker", "smoker"] }
+      ],
+      "formula": "Monthly Premium = (Coverage × Rate per $1000) × Age factor × Gender factor × Health factor × Smoking factor",
+      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
+        { "label": "Total Coverage", "field": "coverageAmount", "format": "currency" },
+        { "label": "Risk Class", "field": "riskClass", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Family Provider",
+        "input": "$80,000 income, $200,000 debt, spouse + 2 children",
+        "output": "Recommended Coverage: $1.2M, Estimated Monthly Premium: $85-120"
+      },
+      {
+        "title": "Single Professional",
+        "input": "$120,000 income, $50,000 debt, no dependents",
+        "output": "Recommended Coverage: $600K, Estimated Monthly Premium: $45-65"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "tax-calculator", "retirement-calculator"],
+    "seoContent": {
+      "introduction": "Secure your family's financial future with confidence using our comprehensive life insurance calculator that helps you determine exactly how much coverage you need and what it will cost. Life insurance is one of the most important financial decisions you'll make, providing crucial protection for your loved ones in case of unexpected tragedy. Our calculator analyzes your income, debts, family situation, and lifestyle to recommend the right coverage amount, then shows you realistic premium costs for different policy types. Whether you're a breadwinner, parent, or simply want peace of mind, this tool ensures you're properly protected without overpaying.",
+      "benefits": [
+        "Calculate exactly how much life insurance coverage you need based on your unique situation",
+        "Compare term life vs. whole life insurance costs and benefits",
+        "Understand how age, health, and lifestyle affect premium rates",
+        "Get personalized coverage recommendations for your family size and financial obligations",
+        "See how different coverage amounts impact monthly budget and long-term protection",
+        "Make informed decisions between temporary and permanent life insurance",
+        "Avoid under-insurance that leaves family financially vulnerable",
+        "Find affordable coverage that fits your budget without sacrificing protection"
+      ],
+      "steps": [
+        "Enter your age and health information (smoking status, health rating)",
+        "Specify the coverage amount you're considering",
+        "Choose term length for term life policies",
+        "Select your gender and other personal factors",
+        "Review premium estimates and coverage recommendations",
+        "Compare different scenarios to find the best fit for your needs"
+      ],
+      "inputsExplained": [
+        "Age significantly impacts premium rates - younger applicants get lower rates",
+        "Gender affects pricing due to actuarial life expectancy differences",
+        "Coverage amount determines death benefit paid to beneficiaries",
+        "Term length sets duration of coverage for term life policies",
+        "Health rating reflects overall wellness and medical history",
+        "Smoking status is major factor - smokers pay 2-3x more than non-smokers"
+      ],
+      "formulaExplanation": "Life insurance premiums are calculated using actuarial tables that consider mortality rates, interest rates, and company expenses. The formula factors in: Base rate per $1,000 of coverage × Age multiplier × Gender factor × Health rating × Smoking factor × Term length adjustment. Term life insurance costs less initially but expires, while whole life builds cash value but costs more. Premiums increase with age, poor health, and smoking. Understanding these factors helps you see why early purchase, good health, and non-smoking status dramatically lower costs while maximizing protection.",
+      "examples": [
+        "35-year-old non-smoking male seeking $500,000 coverage pays $35-50 monthly for 20-year term, providing 20 years of protection at affordable cost.",
+        "45-year-old female with excellent health gets $750,000 coverage for $65-85 monthly, balancing higher age cost with good health rating.",
+        "55-year-old smoker seeking $300,000 coverage pays $150-200 monthly due to combined age and smoking factors affecting risk."
+      ],
+      "resultsExplanation": [
+        "Monthly premium shows your recurring cost for the coverage",
+        "Annual premium displays yearly total for budgeting purposes",
+        "Total coverage confirms death benefit amount",
+        "Risk class indicates your pricing category based on health and lifestyle factors"
+      ],
+      "whoItsFor": "This life insurance calculator serves parents protecting children's future education, breadwinners ensuring family financial security, business owners protecting company value, young professionals starting families, retirees concerned about legacy, financial advisors counseling clients, and anyone wanting to understand life insurance costs. It's particularly valuable for those comparing coverage amounts, evaluating term vs. whole life options, understanding premium factors, and making informed protection decisions. The calculator works for all ages, health conditions, and coverage needs.",
+      "disclaimer": "This calculator provides premium estimates for informational purposes only. Actual rates vary by insurance company underwriting, medical history, and current market conditions. Premiums are not guaranteed and may change. This tool does not constitute insurance advice or a quote. Life insurance needs are highly individual and should be evaluated with a licensed insurance professional. Consider consulting a financial advisor or insurance agent for personalized recommendations. Coverage amounts and costs should be reviewed periodically as life circumstances change.",
+      "relatedTools": [
+        "Budget calculators for incorporating insurance costs into financial planning",
+        "Tax calculators for understanding insurance-related tax implications",
+        "Retirement calculators for coordinating with estate planning"
+      ],
+      "faqs": [
+        {
+          "question": "How much life insurance do I actually need?",
+          "answer": "Most experts recommend 10-15 times your annual income as a starting point. Consider final expenses ($10,000-20,000), outstanding debts, children's education costs, spouse's income replacement (3-5 years), and future income needs. Parents with young children often need more coverage. Use our calculator to personalize based on your specific situation. Under-insurance leaves family vulnerable, while over-insurance wastes money on unnecessary premiums."
+        },
+        {
+          "question": "What's the difference between term and whole life insurance?",
+          "answer": "Term life provides temporary coverage (10-30 years) with low premiums but no cash value - expires if you outlive the term. Whole life offers permanent coverage with guaranteed premiums, builds cash value you can borrow against, and includes dividends in some policies. Term is cheaper for pure protection, whole life acts like forced savings. Most people buy term for income replacement, whole life for estate planning or business protection."
+        },
+        {
+          "question": "Why do premiums increase with age?",
+          "answer": "Insurance companies use actuarial tables showing death probability increases with age. A 25-year-old has very low risk, paying $20-30 monthly for $250,000 coverage. By age 50, risk has increased significantly, raising premiums to $100-150 for same coverage. This reflects statistical reality - older applicants are more likely to die during coverage period. Buying young locks in lower rates permanently for term policies."
+        },
+        {
+          "question": "How much do smoking and health affect premiums?",
+          "answer": "Smoking increases premiums 2-3x due to dramatically higher mortality risk from cancer, heart disease, and respiratory issues. Health rating differences can vary premiums 50-100% between excellent and fair health. Regular medical check-ups, exercise, and healthy lifestyle significantly lower rates. Quitting smoking can reduce premiums 30-50% within 1-2 years. Good health and non-smoking status are among the biggest factors influencing life insurance costs."
+        },
+        {
+          "question": "Should I buy life insurance through work or individually?",
+          "answer": "Group plans through employers are convenient and often cheaper initially, but coverage ends when you leave the job and premiums increase with age. Individual policies are portable, customizable, and can be more comprehensive. Compare both options - employer coverage might be sufficient for basic needs, but individual policies offer better long-term value for larger coverage amounts. Many people use employer coverage for supplemental protection while building individual policies for primary needs."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Seguro de Vida",
+    "seoTitle": "Calculadora de Seguro de Vida - Calcula Necesidades de Cobertura y Costos de Primas",
+    "metaDescription": "Calculadora gratuita de seguro de vida. Calcula cuánto cobertura necesitas y estima costos de primas. Esencial para planificación financiera y protección familiar.",
+    "keywords": ["calculadora seguro vida", "calculadora cobertura seguro", "calculadora prima seguro vida", "calculadora vida temporal", "calculadora vida entera"],
+    "longTailKeywords": ["cuánto seguro vida necesito calculadora", "calculadora costo seguro vida", "calcular cobertura seguro vida", "calculadora seguro vida temporal", "calculadora necesidades seguro vida"],
+    "slug": "life-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["seguro vida", "cobertura", "primas", "planificación financiera", "protección familiar"],
+    "summary": "Calcula tus necesidades de seguro de vida y estima costos de primas para asegurar la seguridad financiera de tu familia.",
+    "description": "Nuestra completa calculadora de seguro de vida te ayuda a determinar la cantidad correcta de cobertura basada en tus ingresos, deudas y necesidades familiares. Compara opciones de seguro de vida temporal vs vida entera, estima primas mensuales y entiende el verdadero costo de proteger el futuro financiero de tu familia. Herramienta esencial de planificación para sostenes de familia y padres.",
+    "instructions": [
+      "Ingresa tus ingresos anuales y deudas actuales",
+      "Especifica tamaño de familia y necesidades financieras futuras",
+      "Elige tipo de cobertura (temporal o vida entera)",
+      "Obtén recomendaciones personalizadas de cobertura y estimaciones de primas"
+    ],
+    "calculatorComponent": {
+      "componentName": "LifeInsuranceCalculator",
+      "inputs": [
+        { "name": "age", "label": "Age", "type": "number", "default": 35, "min": 18, "max": 80, "step": 1 },
+        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "coverageAmount", "label": "Coverage Amount ($)", "type": "number", "default": 500000, "min": 50000, "max": 5000000, "step": 25000 },
+        { "name": "termLength", "label": "Term Length (years)", "type": "number", "default": 20, "min": 5, "max": 30, "step": 5 },
+        { "name": "healthRating", "label": "Health Rating", "type": "select", "default": "excellent", "options": ["excellent", "very-good", "good", "fair"] },
+        { "name": "smokingStatus", "label": "Smoking Status", "type": "select", "default": "non-smoker", "options": ["non-smoker", "smoker"] }
+      ],
+      "formula": "Monthly Premium = (Coverage × Rate per $1000) × Age factor × Gender factor × Health factor × Smoking factor",
+      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
+        { "label": "Total Coverage", "field": "coverageAmount", "format": "currency" },
+        { "label": "Risk Class", "field": "riskClass", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Proveedor Familiar",
+        "input": "Ingresos $80,000, deudas $200,000, cónyuge + 2 hijos",
+        "output": "Cobertura Recomendada: $1.2M, Prima Mensual Estimada: $85-120"
+      },
+      {
+        "title": "Profesional Soltero",
+        "input": "Ingresos $120,000, deudas $50,000, sin dependientes",
+        "output": "Cobertura Recomendada: $600K, Prima Mensual Estimada: $45-65"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "tax-calculator", "retirement-calculator"],
+    "seoContent": {
+      "introduction": "Asegura el futuro financiero de tu familia con confianza usando nuestra calculadora integral de seguro de vida que te ayuda a determinar exactamente cuánto cobertura necesitas y cuánto costará. El seguro de vida es una de las decisiones financieras más importantes que tomarás, proporcionando protección crucial para tus seres queridos en caso de tragedia inesperada. Nuestra calculadora analiza tus ingresos, deudas, situación familiar, y estilo de vida para recomendar el monto correcto de cobertura, luego te muestra costos realistas de primas para diferentes tipos de póliza. Ya seas sostén de familia, padre, o simplemente quieras tranquilidad, esta herramienta asegura que estés debidamente protegido sin pagar de más.",
+      "benefits": [
+        "Calcula exactamente cuánto seguro de vida necesitas basado en tu situación única",
+        "Compara costos y beneficios de seguro de vida temporal vs. vida entera",
+        "Entiende cómo edad, salud, y estilo de vida afectan tasas de primas",
+        "Obtén recomendaciones personalizadas de cobertura para tamaño de familia y obligaciones financieras",
+        "Ve cómo diferentes montos de cobertura impactan presupuesto mensual y protección a largo plazo",
+        "Toma decisiones informadas entre seguro de vida temporal y permanente",
+        "Evita subaseguro que deja familia financieramente vulnerable",
+        "Encuentra cobertura asequible que quepa en tu presupuesto sin sacrificar protección"
+      ],
+      "steps": [
+        "Ingresa tu edad e información de salud (estatus de fumar, calificación de salud)",
+        "Especifica el monto de cobertura que estás considerando",
+        "Elige duración de término para pólizas de vida temporal",
+        "Selecciona tu género y otros factores personales",
+        "Revisa estimaciones de primas y recomendaciones de cobertura",
+        "Compara diferentes escenarios para encontrar el mejor ajuste para tus necesidades"
+      ],
+      "inputsExplained": [
+        "Edad impacta significativamente tasas de primas - solicitantes más jóvenes obtienen tasas más bajas",
+        "Género afecta precios debido a diferencias de expectativa de vida actuarial",
+        "Monto de cobertura determina beneficio por muerte pagado a beneficiarios",
+        "Duración de término establece período de cobertura para pólizas de vida temporal",
+        "Calificación de salud refleja bienestar general e historial médico",
+        "Estatus de fumar es factor mayor - fumadores pagan 2-3x más que no fumadores"
+      ],
+      "formulaExplanation": "Las primas de seguro de vida se calculan usando tablas actuariales que consideran tasas de mortalidad, tasas de interés, y gastos de compañía. La fórmula considera: Tasa base por $1,000 de cobertura × Multiplicador de edad × Factor de género × Factor de salud × Factor de fumar × Ajuste de duración de término. Seguro de vida temporal cuesta menos inicialmente pero expira, mientras vida entera construye valor en efectivo pero cuesta más. Las primas aumentan con edad, mala salud, y fumar. Entender estos factores te ayuda a ver por qué compra temprana, buena salud, y estatus no fumador bajan dramáticamente costos mientras maximizan protección.",
+      "examples": [
+        "Hombre de 35 años no fumador buscando cobertura de $500,000 paga $35-50 mensuales por término de 20 años, proporcionando 20 años de protección a costo asequible.",
+        "Mujer de 45 años con excelente salud obtiene cobertura de $750,000 por $65-85 mensuales, balanceando costo de edad más alta con buena calificación de salud.",
+        "Fumador de 55 años buscando cobertura de $300,000 paga $150-200 mensuales debido a factores combinados de edad y fumar afectando riesgo."
+      ],
+      "resultsExplanation": [
+        "Prima mensual muestra tu costo recurrente por la cobertura",
+        "Prima anual muestra total anual para propósitos de presupuesto",
+        "Cobertura total confirma monto de beneficio por muerte",
+        "Clase de riesgo indica tu categoría de precios basado en salud y factores de estilo de vida"
+      ],
+      "whoItsFor": "Esta calculadora de seguro de vida sirve a padres protegiendo educación futura de hijos, sostenes de familia asegurando seguridad financiera familiar, dueños de negocios protegiendo valor de compañía, profesionales jóvenes comenzando familias, jubilados preocupados por legado, asesores financieros asesorando clientes, y cualquiera queriendo entender costos de seguro de vida. Es particularmente valiosa para aquellos comparando montos de cobertura, evaluando opciones temporal vs. vida entera, entendiendo factores de primas, y tomando decisiones informadas de protección. La calculadora funciona para todas las edades, condiciones de salud, y necesidades de cobertura.",
+      "disclaimer": "Esta calculadora proporciona estimaciones de primas solo para propósitos informativos. Las tasas reales varían por suscripción de compañía de seguros, historial médico, y condiciones actuales de mercado. Las primas no están garantizadas y pueden cambiar. Esta herramienta no constituye consejo de seguros o cotización. Las necesidades de seguro de vida son altamente individuales y deberían evaluarse con profesional de seguros licenciado. Considera consultar asesor financiero o agente de seguros para recomendaciones personalizadas. Los montos de cobertura y costos deberían revisarse periódicamente conforme cambian circunstancias de vida.",
+      "relatedTools": [
+        "Calculadoras de presupuesto para incorporar costos de seguros en planificación financiera",
+        "Calculadoras de impuestos para entender implicaciones fiscales relacionadas con seguros",
+        "Calculadoras de jubilación para coordinar con planificación de patrimonio"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánto seguro de vida necesito realmente?",
+          "answer": "La mayoría de expertos recomiendan 10-15 veces tu ingreso anual como punto de partida. Considera gastos finales ($10,000-20,000), deudas pendientes, costos de educación de hijos, reemplazo de ingreso de cónyuge (3-5 años), y necesidades futuras de ingreso. Padres con hijos jóvenes a menudo necesitan más cobertura. Usa nuestra calculadora para personalizar basado en tu situación específica. Subaseguro deja familia vulnerable, mientras sobreaseguro desperdicia dinero en primas innecesarias."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre seguro de vida temporal y vida entera?",
+          "answer": "Vida temporal proporciona cobertura temporal (10-30 años) con primas bajas pero sin valor en efectivo - expira si sobrevives el término. Vida entera ofrece cobertura permanente con primas garantizadas, construye valor en efectivo que puedes pedir prestado, e incluye dividendos en algunas pólizas. Temporal es más barato para protección pura, vida entera actúa como ahorro forzado. La mayoría de personas compra temporal para reemplazo de ingreso, vida entera para planificación de patrimonio o protección comercial."
+        },
+        {
+          "question": "¿Por qué aumentan las primas con edad?",
+          "answer": "Las compañías de seguros usan tablas actuariales mostrando probabilidad de muerte aumenta con edad. Un solicitante de 25 años tiene riesgo muy bajo, pagando $20-30 mensuales por cobertura de $250,000. A los 50 años, riesgo ha aumentado significativamente, elevando primas a $100-150 por misma cobertura. Esto refleja realidad estadística - solicitantes mayores son más propensos a morir durante período de cobertura. Comprar joven bloquea tasas más bajas permanentemente para pólizas temporales."
+        },
+        {
+          "question": "¿Cuánto afectan fumar y salud a las primas?",
+          "answer": "Fumar aumenta primas 2-3x debido a riesgo de mortalidad dramáticamente más alto de cáncer, enfermedad cardíaca, y problemas respiratorios. Diferencias de calificación de salud pueden variar primas 50-100% entre excelente y regular. Chequeos médicos regulares, ejercicio, y estilo de vida saludable bajan significativamente tasas. Dejar de fumar puede reducir primas 30-50% dentro de 1-2 años. Buena salud y estatus no fumador están entre los factores más grandes influyendo costos de seguro de vida."
+        },
+        {
+          "question": "¿Debo comprar seguro de vida a través de trabajo o individualmente?",
+          "answer": "Planes grupales a través de empleadores son convenientes y a menudo más baratos inicialmente, pero cobertura termina cuando dejas el trabajo y primas aumentan con edad. Pólizas individuales son portátiles, personalizables, y pueden ser más comprehensivas. Compara ambas opciones - cobertura de empleador podría ser suficiente para necesidades básicas, pero pólizas individuales ofrecen mejor valor a largo plazo para montos de cobertura más grandes. Muchas personas usan cobertura de empleador para protección suplementaria mientras construyen pólizas individuales para necesidades primarias."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Seguro de Vida",
+    "seoTitle": "Calculadora de Seguro de Vida - Calcule Necessidades de Cobertura e Custos de Prêmios",
+    "metaDescription": "Calculadora gratuita de seguro de vida. Calcule quanto cobertura você precisa e estime custos de prêmios. Essencial para planejamento financeiro e proteção familiar.",
+    "keywords": ["calculadora seguro vida", "calculadora cobertura seguro", "calculadora prêmio seguro vida", "calculadora vida temporária", "calculadora vida inteira"],
+    "longTailKeywords": ["quanto seguro vida preciso calculadora", "calculadora custo seguro vida", "calcular cobertura seguro vida", "calculadora seguro vida temporário", "calculadora necessidades seguro vida"],
+    "slug": "life-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["seguro vida", "cobertura", "prêmios", "planejamento financeiro", "proteção familiar"],
+    "summary": "Calcule suas necessidades de seguro de vida e estime custos de prêmios para garantir a segurança financeira de sua família.",
+    "description": "Nossa calculadora completa de seguro de vida ajuda você a determinar a quantia correta de cobertura baseada em seus rendimentos, dívidas e necessidades familiares. Compare opções de seguro de vida temporário vs vida inteira, estime prêmios mensais e entenda o verdadeiro custo de proteger o futuro financeiro de sua família. Ferramenta essencial de planejamento para provedores e pais.",
+    "instructions": [
+      "Digite seus rendimentos anuais e dívidas atuais",
+      "Especifique tamanho da família e necessidades financeiras futuras",
+      "Escolha tipo de cobertura (temporário ou vida inteira)",
+      "Obtenha recomendações personalizadas de cobertura e estimativas de prêmios"
+    ],
+    "calculatorComponent": {
+      "componentName": "LifeInsuranceCalculator",
+      "inputs": [
+        { "name": "age", "label": "Age", "type": "number", "default": 35, "min": 18, "max": 80, "step": 1 },
+        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "coverageAmount", "label": "Coverage Amount ($)", "type": "number", "default": 500000, "min": 50000, "max": 5000000, "step": 25000 },
+        { "name": "termLength", "label": "Term Length (years)", "type": "number", "default": 20, "min": 5, "max": 30, "step": 5 },
+        { "name": "healthRating", "label": "Health Rating", "type": "select", "default": "excellent", "options": ["excellent", "very-good", "good", "fair"] },
+        { "name": "smokingStatus", "label": "Smoking Status", "type": "select", "default": "non-smoker", "options": ["non-smoker", "smoker"] }
+      ],
+      "formula": "Monthly Premium = (Coverage × Rate per $1000) × Age factor × Gender factor × Health factor × Smoking factor",
+      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
+        { "label": "Total Coverage", "field": "coverageAmount", "format": "currency" },
+        { "label": "Risk Class", "field": "riskClass", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Provedor Familiar",
+        "input": "Rendimentos $80,000, dívidas $200,000, cônjuge + 2 filhos",
+        "output": "Cobertura Recomendada: $1.2M, Prêmio Mensal Estimado: $85-120"
+      },
+      {
+        "title": "Profissional Solteiro",
+        "input": "Rendimentos $120,000, dívidas $50,000, sem dependentes",
+        "output": "Cobertura Recomendada: $600K, Prêmio Mensal Estimado: $45-65"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "tax-calculator", "retirement-calculator"],
+    "seoContent": {
+      "introduction": "Assegure o futuro financeiro de sua família com confiança usando nossa calculadora abrangente de seguro de vida que ajuda você a determinar exatamente quanto cobertura você precisa e quanto custará. Seguro de vida é uma das decisões financeiras mais importantes que você tomará, fornecendo proteção crucial para seus entes queridos em caso de tragédia inesperada. Nossa calculadora analisa sua renda, dívidas, situação familiar, e estilo de vida para recomendar o valor correto de cobertura, então mostra custos realistas de prêmios para diferentes tipos de apólice. Seja você provedor de família, pai, ou simplesmente querendo paz de espírito, esta ferramenta garante que você esteja devidamente protegido sem pagar demais.",
+      "benefits": [
+        "Calcule exatamente quanto seguro de vida você precisa baseado em sua situação única",
+        "Compare custos e benefícios de seguro de vida prazo vs. vida toda",
+        "Entenda como idade, saúde, e estilo de vida afetam taxas de prêmios",
+        "Obtenha recomendações personalizadas de cobertura para tamanho de família e obrigações financeiras",
+        "Veja como diferentes valores de cobertura impactam orçamento mensal e proteção de longo prazo",
+        "Tome decisões informadas entre seguro de vida temporário e permanente",
+        "Evite sub-seguro que deixa família financeiramente vulnerável",
+        "Encontre cobertura acessível que caiba em seu orçamento sem sacrificar proteção"
+      ],
+      "steps": [
+        "Digite sua idade e informação de saúde (status de fumar, classificação de saúde)",
+        "Especifique o valor de cobertura que você está considerando",
+        "Escolha duração de prazo para apólices de vida prazo",
+        "Selecione seu gênero e outros fatores pessoais",
+        "Revise estimativas de prêmios e recomendações de cobertura",
+        "Compare diferentes cenários para encontrar o melhor ajuste para suas necessidades"
+      ],
+      "inputsExplained": [
+        "Idade impacta significativamente taxas de prêmios - solicitantes mais jovens obtêm taxas menores",
+        "Gênero afeta preços devido a diferenças de expectativa de vida atuarial",
+        "Valor de cobertura determina benefício por morte pago a beneficiários",
+        "Duração de prazo define período de cobertura para apólices de vida prazo",
+        "Classificação de saúde reflete bem-estar geral e histórico médico",
+        "Status de fumar é fator maior - fumantes pagam 2-3x mais que não fumantes"
+      ],
+      "formulaExplanation": "Prêmios de seguro de vida são calculados usando tabelas atuariais que consideram taxas de mortalidade, taxas de juros, e despesas de companhia. A fórmula considera: Taxa base por $1,000 de cobertura × Multiplicador de idade × Fator de gênero × Fator de saúde × Fator de fumar × Ajuste de duração de prazo. Seguro de vida prazo custa menos inicialmente mas expira, enquanto vida toda constrói valor em dinheiro mas custa mais. Prêmios aumentam com idade, saúde ruim, e fumar. Entender estes fatores ajuda você a ver por que compra precoce, boa saúde, e status não fumante baixam dramaticamente custos enquanto maximizam proteção.",
+      "examples": [
+        "Homem de 35 anos não fumante buscando cobertura de $500,000 paga $35-50 mensais por prazo de 20 anos, fornecendo 20 anos de proteção a custo acessível.",
+        "Mulher de 45 anos com excelente saúde obtém cobertura de $750,000 por $65-85 mensais, balanceando custo de idade mais alta com boa classificação de saúde.",
+        "Fumante de 55 anos buscando cobertura de $300,000 paga $150-200 mensais devido a fatores combinados de idade e fumar afetando risco."
+      ],
+      "resultsExplanation": [
+        "Prêmio mensal mostra seu custo recorrente pela cobertura",
+        "Prêmio anual mostra total anual para propósitos de orçamento",
+        "Cobertura total confirma valor de benefício por morte",
+        "Classe de risco indica sua categoria de preços baseado em saúde e fatores de estilo de vida"
+      ],
+      "whoItsFor": "Esta calculadora de seguro de vida serve pais protegendo educação futura de filhos, provedores de família assegurando segurança financeira familiar, donos de negócios protegendo valor de companhia, profissionais jovens começando famílias, aposentados preocupados com legado, consultores financeiros aconselhando clientes, e qualquer pessoa querendo entender custos de seguro de vida. É particularmente valiosa para aqueles comparando valores de cobertura, avaliando opções prazo vs. vida toda, entendendo fatores de prêmios, e tomando decisões informadas de proteção. A calculadora funciona para todas as idades, condições de saúde, e necessidades de cobertura.",
+      "disclaimer": "Esta calculadora fornece estimativas de prêmios apenas para propósitos informativos. Taxas reais variam por subscrição de companhia de seguros, histórico médico, e condições atuais de mercado. Prêmios não são garantidos e podem mudar. Esta ferramenta não constitui conselho de seguros ou cotação. Necessidades de seguro de vida são altamente individuais e deveriam ser avaliadas com profissional de seguros licenciado. Considere consultar consultor financeiro ou agente de seguros para recomendações personalizadas. Valores de cobertura e custos deveriam ser revisados periodicamente conforme circunstâncias de vida mudam.",
+      "relatedTools": [
+        "Calculadoras de orçamento para incorporar custos de seguros em planejamento financeiro",
+        "Calculadoras de impostos para entender implicações fiscais relacionadas com seguros",
+        "Calculadoras de aposentadoria para coordenar com planejamento de patrimônio"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto seguro de vida eu realmente preciso?",
+          "answer": "A maioria dos especialistas recomenda 10-15 vezes sua renda anual como ponto de partida. Considere despesas finais ($10,000-20,000), dívidas pendentes, custos de educação de filhos, substituição de renda de cônjuge (3-5 anos), e necessidades futuras de renda. Pais com filhos jovens frequentemente precisam de mais cobertura. Use nossa calculadora para personalizar baseado em sua situação específica. Sub-seguro deixa família vulnerável, enquanto sobre-seguro desperdiça dinheiro em prêmios desnecessários."
+        },
+        {
+          "question": "Qual é a diferença entre seguro de vida prazo e vida toda?",
+          "answer": "Vida prazo fornece cobertura temporária (10-30 anos) com prêmios baixos mas sem valor em dinheiro - expira se você sobreviver o prazo. Vida toda oferece cobertura permanente com prêmios garantidos, constrói valor em dinheiro que você pode emprestar contra, e inclui dividendos em algumas apólices. Prazo é mais barato para proteção pura, vida toda age como economia forçada. A maioria das pessoas compra prazo para substituição de renda, vida toda para planejamento de patrimônio ou proteção comercial."
+        },
+        {
+          "question": "Por que prêmios aumentam com idade?",
+          "answer": "Companhias de seguros usam tabelas atuariais mostrando probabilidade de morte aumenta com idade. Um solicitante de 25 anos tem risco muito baixo, pagando $20-30 mensais por cobertura de $250,000. Aos 50 anos, risco aumentou significativamente, elevando prêmios para $100-150 pela mesma cobertura. Isso reflete realidade estatística - solicitantes mais velhos são mais propensos a morrer durante período de cobertura. Comprar jovem bloqueia taxas menores permanentemente para apólices prazo."
+        },
+        {
+          "question": "¿Quanto fumar e saúde afetam prêmios?",
+          "answer": "Fumar aumenta prêmios 2-3x devido a risco de mortalidade dramaticamente mais alto de câncer, doença cardíaca, e problemas respiratórios. Diferenças de classificação de saúde podem variar prêmios 50-100% entre excelente e regular. Check-ups médicos regulares, exercício, e estilo de vida saudável baixam significativamente taxas. Parar de fumar pode reduzir prêmios 30-50% dentro de 1-2 anos. Boa saúde e status não fumante estão entre os fatores maiores influenciando custos de seguro de vida."
+        },
+        {
+          "question": "Devo comprar seguro de vida através de trabalho ou individualmente?",
+          "answer": "Planos grupais através de empregadores são convenientes e frequentemente mais baratos inicialmente, mas cobertura termina quando você deixa o trabalho e prêmios aumentam com idade. Apólices individuais são portáteis, personalizáveis, e podem ser mais abrangentes. Compare ambas opções - cobertura de empregador pode ser suficiente para necessidades básicas, mas apólices individuais oferecem melhor valor de longo prazo para valores de cobertura maiores. Muitas pessoas usam cobertura de empregador para proteção suplementar enquanto constroem apólices individuais para necessidades primárias."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Assurance Vie",
+    "seoTitle": "Calculateur d'Assurance Vie - Calculez les Besoins de Couverture et Coûts de Primes",
+    "metaDescription": "Calculateur gratuit d'assurance vie. Calculez combien de couverture vous devez avoir et estimez les coûts de primes. Essentiel pour la planification financière et protection familiale.",
+    "keywords": ["calculateur assurance vie", "calculateur couverture assurance", "calculateur prime assurance vie", "calculateur vie temporaire", "calculateur vie entière"],
+    "longTailKeywords": ["combien assurance vie ai-je besoin calculateur", "calculateur coût assurance vie", "calculer couverture assurance vie", "calculateur assurance vie temporaire", "calculateur besoins assurance vie"],
+    "slug": "life-insurance-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": ["assurance vie", "couverture", "primes", "planification financière", "protection familiale"],
+    "summary": "Calculez vos besoins d'assurance vie et estimez les coûts de primes pour assurer la sécurité financière de votre famille.",
+    "description": "Notre calculateur complet d'assurance vie vous aide à déterminer le montant de couverture approprié basé sur vos revenus, dettes et besoins familiaux. Comparez les options d'assurance vie temporaire vs vie entière, estimez les primes mensuelles et comprenez le véritable coût de la protection de l'avenir financier de votre famille. Outil de planification essentiel pour les soutiens de famille et parents.",
+    "instructions": [
+      "Entrez vos revenus annuels et dettes actuelles",
+      "Spécifiez la taille de la famille et besoins financiers futurs",
+      "Choisissez le type de couverture (temporaire ou vie entière)",
+      "Obtenez des recommandations personnalisées de couverture et estimations de primes"
+    ],
+    "calculatorComponent": {
+      "componentName": "LifeInsuranceCalculator",
+      "inputs": [
+        { "name": "age", "label": "Age", "type": "number", "default": 35, "min": 18, "max": 80, "step": 1 },
+        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
+        { "name": "coverageAmount", "label": "Coverage Amount ($)", "type": "number", "default": 500000, "min": 50000, "max": 5000000, "step": 25000 },
+        { "name": "termLength", "label": "Term Length (years)", "type": "number", "default": 20, "min": 5, "max": 30, "step": 5 },
+        { "name": "healthRating", "label": "Health Rating", "type": "select", "default": "excellent", "options": ["excellent", "very-good", "good", "fair"] },
+        { "name": "smokingStatus", "label": "Smoking Status", "type": "select", "default": "non-smoker", "options": ["non-smoker", "smoker"] }
+      ],
+      "formula": "Monthly Premium = (Coverage × Rate per $1000) × Age factor × Gender factor × Health factor × Smoking factor",
+      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "additionalOutputs": [
+        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
+        { "label": "Total Coverage", "field": "coverageAmount", "format": "currency" },
+        { "label": "Risk Class", "field": "riskClass", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Fournisseur Familial",
+        "input": "Revenus $80,000, dettes $200,000, conjoint + 2 enfants",
+        "output": "Couverture Recommandée: $1.2M, Prime Mensuelle Estimée: $85-120"
+      },
+      {
+        "title": "Professionnel Célibataire",
+        "input": "Revenus $120,000, dettes $50,000, sans personnes à charge",
+        "output": "Couverture Recommandée: $600K, Prime Mensuelle Estimée: $45-65"
+      }
+    ],
+    "relatedCalculators": ["budget-calculator", "tax-calculator", "retirement-calculator"],
+    "seoContent": {
+      "introduction": "Sécurisez l'avenir financier de votre famille avec confiance en utilisant notre calculatrice complète d'assurance vie qui vous aide à déterminer exactement combien de couverture vous devez avoir et combien cela coûtera. L'assurance vie est l'une des décisions financières les plus importantes que vous prendrez, fournissant une protection cruciale pour vos proches en cas de tragédie inattendue. Notre calculatrice analyse vos revenus, dettes, situation familiale, et style de vie pour recommander le bon montant de couverture, puis vous montre des coûts réalistes de primes pour différents types de polices. Que vous soyez soutien de famille, parent, ou souhaitiez simplement la tranquillité d'esprit, cet outil garantit que vous êtes correctement protégé sans trop payer.",
+      "benefits": [
+        "Calculez exactement combien d'assurance vie vous devez avoir basée sur votre situation unique",
+        "Comparez coûts et avantages assurance vie temporaire vs. vie entière",
+        "Comprenez comment âge, santé, et style de vie affectent taux de primes",
+        "Obtenez recommandations personnalisées de couverture pour taille familiale et obligations financières",
+        "Voyez comment différents montants de couverture impactent budget mensuel et protection long terme",
+        "Prenez décisions éclairées entre assurance vie temporaire et permanente",
+        "Évitez sous-assurance qui laisse famille financièrement vulnérable",
+        "Trouvez couverture abordable qui rentre dans votre budget sans sacrifier protection"
+      ],
+      "steps": [
+        "Entrez votre âge et information santé (statut fumeur, évaluation santé)",
+        "Spécifiez montant couverture que vous considérez",
+        "Choisissez durée terme pour polices vie terme",
+        "Sélectionnez votre genre et autres facteurs personnels",
+        "Examinez estimations primes et recommandations couverture",
+        "Comparez différents scénarios pour trouver meilleur ajustement pour vos besoins"
+      ],
+      "inputsExplained": [
+        "Âge impacte significativement taux primes - demandeurs plus jeunes obtiennent taux plus bas",
+        "Genre affecte prix dû à différences espérance vie actuarielle",
+        "Montant couverture détermine bénéfice décès payé à bénéficiaires",
+        "Durée terme définit période couverture pour polices vie terme",
+        "Évaluation santé reflète bien-être général et historique médical",
+        "Statut fumeur est facteur majeur - fumeurs paient 2-3x plus que non-fumeurs"
+      ],
+      "formulaExplanation": "Primes assurance vie sont calculées utilisant tables actuarielles considérant taux mortalité, taux intérêt, et dépenses compagnie. Formule considère : Taux base par $1,000 couverture × Multiplicateur âge × Facteur genre × Facteur santé × Facteur fumeur × Ajustement durée terme. Assurance vie terme coûte moins initialement mais expire, tandis que vie entière construit valeur encaisse mais coûte plus. Primes augmentent avec âge, mauvaise santé, et fumeur. Comprendre ces facteurs vous aide voir pourquoi achat précoce, bonne santé, et statut non-fumeur baissent dramatiquement coûts tout maximisant protection.",
+      "examples": [
+        "Homme 35 ans non-fumeur cherchant couverture $500,000 paie $35-50 mensuels pour terme 20 ans, fournissant 20 ans protection à coût abordable.",
+        "Femme 45 ans avec excellente santé obtient couverture $750,000 pour $65-85 mensuels, équilibrant coût âge plus élevé avec bonne évaluation santé.",
+        "Fumeur 55 ans cherchant couverture $300,000 paie $150-200 mensuels dû à facteurs combinés âge et fumeur affectant risque."
+      ],
+      "resultsExplanation": [
+        "Prime mensuelle montre votre coût récurrent pour couverture",
+        "Prime annuelle affiche total annuel pour fins budgétaires",
+        "Couverture totale confirme montant bénéfice décès",
+        "Classe risque indique votre catégorie tarification basée sur santé et facteurs style vie"
+      ],
+      "whoItsFor": "Cette calculatrice assurance vie sert parents protégeant éducation future enfants, soutiens famille assurant sécurité financière familiale, propriétaires entreprises protégeant valeur compagnie, professionnels jeunes commençant familles, retraités préoccupés par legs, conseillers financiers conseillant clients, et quiconque souhaitant comprendre coûts assurance vie. Elle est particulièrement précieuse pour ceux comparant montants couverture, évaluant options terme vs. vie entière, comprenant facteurs primes, et prenant décisions protection éclairées. Calculatrice fonctionne pour tous âges, conditions santé, et besoins couverture.",
+      "disclaimer": "Cette calculatrice fournit estimations primes à fins informationnelles uniquement. Taux réels varient par souscription compagnie assurance, historique médical, et conditions marché actuelles. Primes ne sont pas garanties et peuvent changer. Cet outil ne constitue pas conseil assurance ou devis. Besoins assurance vie sont hautement individuels et devraient être évalués avec professionnel assurance licencié. Considérez consulter conseiller financier ou agent assurance pour recommandations personnalisées. Montants couverture et coûts devraient être révisés périodiquement comme circonstances vie changent.",
+      "relatedTools": [
+        "Calculatrices budget pour incorporer coûts assurance dans planification financière",
+        "Calculatrices impôt pour comprendre implications fiscales liées assurance",
+        "Calculatrices retraite pour coordonner avec planification succession"
+      ],
+      "faqs": [
+        {
+          "question": "Combien d'assurance vie ai-je réellement besoin ?",
+          "answer": "La plupart experts recommandent 10-15 fois vos revenus annuels comme point départ. Considérez dépenses finales ($10,000-20,000), dettes en souffrance, coûts éducation enfants, remplacement revenu conjoint (3-5 ans), et besoins revenus futurs. Parents avec jeunes enfants ont souvent besoin plus couverture. Utilisez notre calculatrice pour personnaliser basée sur votre situation spécifique. Sous-assurance laisse famille vulnérable, tandis que sur-assurance gaspille argent sur primes inutiles."
+        },
+        {
+          "question": "Quelle est différence entre assurance vie terme et vie entière ?",
+          "answer": "Vie terme fournit couverture temporaire (10-30 ans) avec primes basses mais pas valeur encaisse - expire si vous survivez terme. Vie entière offre couverture permanente avec primes garanties, construit valeur encaisse vous pouvez emprunter contre, et inclut dividendes dans certaines polices. Terme est moins cher pour protection pure, vie entière agit comme épargne forcée. La plupart gens achètent terme pour remplacement revenu, vie entière pour planification succession ou protection entreprise."
+        },
+        {
+          "question": "Pourquoi primes augmentent-elles avec âge ?",
+          "answer": "Compagnies assurance utilisent tables actuarielles montrant probabilité décès augmente avec âge. Demandeur 25 ans a risque très bas, payant $20-30 mensuels pour couverture $250,000. À 50 ans, risque a augmenté significativement, élevant primes à $100-150 pour même couverture. Cela reflète réalité statistique - demandeurs plus âgés sont plus susceptibles mourir pendant période couverture. Acheter jeune verrouille taux plus bas définitivement pour polices terme."
+        },
+        {
+          "question": "¿Combien fumer et santé affectent-ils primes ?",
+          "answer": "Fumer augmente primes 2-3x dû à risque mortalité dramatiquement plus élevé de cancer, maladie cœur, et problèmes respiratoires. Différences évaluation santé peuvent varier primes 50-100% entre excellente et régulière santé. Examens médicaux réguliers, exercice, et style vie sain baissent significativement taux. Arrêter fumer peut réduire primes 30-50% dans 1-2 ans. Bonne santé et statut non-fumeur sont parmi plus grands facteurs influençant coûts assurance vie."
+        },
+        {
+          "question": "Dois-je acheter assurance vie par travail ou individuellement ?",
+          "answer": "Plans groupe par employeurs sont pratiques et souvent moins chers initialement, mais couverture finit quand vous quittez emploi et primes augmentent avec âge. Polices individuelles sont portables, personnalisables, et peuvent être plus complètes. Comparez les deux options - couverture employeur pourrait être suffisante pour besoins basiques, mais polices individuelles offrent meilleure valeur long terme pour montants couverture plus grands. Beaucoup gens utilisent couverture employeur pour protection supplémentaire tout construisant polices individuelles pour besoins primaires."
+        }
+      ]
+    }
+  }
+}

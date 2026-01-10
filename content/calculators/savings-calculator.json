@@ -1,0 +1,330 @@
+{
+  "en": {
+    "title": "Savings Calculator",
+    "seoTitle": "Savings Calculator - Plan Your Savings Goals",
+    "metaDescription": "Free savings calculator to plan your savings goals, calculate compound interest, and project future value of your savings.",
+    "keywords": ["savings calculator", "savings goal calculator", "compound savings calculator"],
+    "longTailKeywords": ["how to calculate savings interest", "savings growth calculator", "compound interest savings"],
+    "slug": "savings-calculator",
+    "category": "financial",
+    "calculatorComponent": "SavingsCalculator",
+    "difficulty": "basic",
+    "tags": ["savings", "compound interest", "financial planning"],
+    "summary": "Plan your savings goals and calculate future value with compound interest.",
+    "description": "Use our savings calculator to plan your savings goals, calculate compound interest, and see how your money grows over time with regular contributions.",
+    "instructions": [
+      "Enter your initial savings amount (if any)",
+      "Input your regular monthly or annual contribution",
+      "Specify the expected annual interest rate",
+      "Set the time period for your savings goal",
+      "Choose compounding frequency (monthly, quarterly, annually)",
+      "Click calculate to see your savings growth projection"
+    ],
+    "examples": [
+      "Save $200/month for 10 years at 5% interest",
+      "Emergency fund goal of $10,000 in 2 years",
+      "Retirement savings with $500 monthly contributions"
+    ],
+    "relatedCalculators": ["investment-calculator", "retirement-calculator", "compound-interest-calculator"],
+    "seoContent": {
+      "introduction": "Our savings calculator helps you plan your financial future by calculating compound interest growth, projecting future savings value, and helping you reach your savings goals faster.",
+      "benefits": [
+        "Calculate compound interest growth on your savings",
+        "Project future value of regular savings contributions",
+        "Set and track savings goals with timeline projections",
+        "Compare different savings scenarios and interest rates",
+        "Plan for retirement, emergency funds, or major purchases"
+      ],
+      "steps": [
+        "Enter your initial savings amount (if any)",
+        "Input your regular monthly or annual contribution",
+        "Specify the expected annual interest rate",
+        "Set the time period for your savings goal",
+        "Choose compounding frequency (monthly, quarterly, annually)",
+        "Click calculate to see your savings growth projection"
+      ],
+      "inputsExplained": [
+        "Initial Amount: Current savings or starting balance",
+        "Monthly Contribution: Regular amount added to savings",
+        "Annual Interest Rate: Expected percentage return on savings",
+        "Time Period: Number of years to save",
+        "Compound Frequency: How often interest is calculated and added"
+      ],
+      "formulaExplanation": "Future Value = P * (1 + r/n)^(nt) + PMT * [(1 + r/n)^(nt) - 1] / (r/n) where P is principal, r is annual rate, n is compounds per year, t is years, PMT is payment.",
+      "examples": [
+        "Save $200/month for 10 years at 5% interest",
+        "Emergency fund goal of $10,000 in 2 years",
+        "Retirement savings with $500 monthly contributions",
+        "Compare high-yield savings vs. regular savings accounts"
+      ],
+      "resultsExplanation": [
+        "Future Value: Total amount your savings will grow to",
+        "Total Contributions: Sum of all money you contribute",
+        "Interest Earned: Amount earned from compound interest",
+        "Growth Chart: Visual representation of savings growth over time"
+      ],
+      "whoItsFor": "Anyone saving for short-term goals, retirement planning, building emergency funds, or wanting to see the power of compound interest in action.",
+      "disclaimer": "This calculator provides estimates based on consistent contributions and interest rates. Actual returns may vary based on market conditions, fees, and inflation. Past performance doesn't guarantee future results.",
+      "faqs": [
+        {
+          "question": "How does compound interest affect my savings?",
+          "answer": "Compound interest means you earn interest on both your original savings and the interest you've already earned. This creates exponential growth over time, making regular savings much more valuable."
+        },
+        {
+          "question": "What's the difference between monthly and annual compounding?",
+          "answer": "Monthly compounding calculates interest 12 times per year, leading to faster growth than annual compounding which calculates interest once per year. More frequent compounding generally means higher returns."
+        },
+        {
+          "question": "How much should I save for emergencies?",
+          "answer": "Financial experts recommend saving 3-6 months of living expenses for emergency funds. Use this calculator to determine how long it will take to reach your emergency fund goal."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Ahorros",
+    "seoTitle": "Calculadora de Ahorros - Planifica tus Metas de Ahorro",
+    "metaDescription": "Calculadora de ahorros gratuita para planificar metas de ahorro, calcular interés compuesto y proyectar valor futuro.",
+    "keywords": ["calculadora ahorros", "calculadora meta ahorro", "calculadora ahorro compuesto"],
+    "longTailKeywords": ["como calcular intereses de ahorros", "calculadora crecimiento ahorros", "interes compuesto ahorros"],
+    "slug": "savings-calculator",
+    "category": "financial",
+    "calculatorComponent": "SavingsCalculator",
+    "difficulty": "basic",
+    "tags": ["ahorros", "interes compuesto", "planificacion financiera"],
+    "summary": "Planifica tus metas de ahorro y calcula valor futuro con interés compuesto.",
+    "description": "Usa nuestra calculadora de ahorros para planificar tus metas de ahorro, calcular interés compuesto y ver cómo crece tu dinero con el tiempo con contribuciones regulares.",
+    "instructions": [
+      "Ingresa tu cantidad inicial de ahorros (si tienes)",
+      "Ingresa tu contribución regular mensual o anual",
+      "Especifica la tasa de interés anual esperada",
+      "Establece el período de tiempo para tu meta de ahorro",
+      "Elige la frecuencia de capitalización (mensual, trimestral, anual)",
+      "Haz clic en calcular para ver tu proyección de crecimiento de ahorros"
+    ],
+    "examples": [
+      "Ahorrar $200/mes durante 10 años al 5% de interés",
+      "Meta de fondo de emergencia de $10,000 en 2 años",
+      "Ahorros para jubilación con $500 de contribuciones mensuales"
+    ],
+    "relatedCalculators": ["investment-calculator", "retirement-calculator", "compound-interest-calculator"],
+    "seoContent": {
+      "introduction": "Nuestra calculadora de ahorros te ayuda a planificar tu futuro financiero calculando el crecimiento por interés compuesto, proyectando el valor futuro de tus ahorros y ayudándote a alcanzar tus metas de ahorro más rápido.",
+      "benefits": [
+        "Calcula el crecimiento por interés compuesto en tus ahorros",
+        "Proyecta el valor futuro de contribuciones regulares de ahorro",
+        "Establece y rastrea metas de ahorro con proyecciones de tiempo",
+        "Compara diferentes escenarios de ahorro y tasas de interés",
+        "Planifica para jubilación, fondos de emergencia o compras importantes"
+      ],
+      "steps": [
+        "Ingresa tu cantidad inicial de ahorros (si tienes)",
+        "Ingresa tu contribución regular mensual o anual",
+        "Especifica la tasa de interés anual esperada",
+        "Establece el período de tiempo para tu meta de ahorro",
+        "Elige la frecuencia de capitalización (mensual, trimestral, anual)",
+        "Haz clic en calcular para ver tu proyección de crecimiento de ahorros"
+      ],
+      "inputsExplained": [
+        "Cantidad Inicial: Ahorros actuales o saldo inicial",
+        "Contribución Mensual: Cantidad regular agregada a ahorros",
+        "Tasa de Interés Anual: Porcentaje esperado de retorno en ahorros",
+        "Período de Tiempo: Número de años para ahorrar",
+        "Frecuencia de Capitalización: Con qué frecuencia se calcula y agrega el interés"
+      ],
+      "formulaExplanation": "Valor Futuro = P * (1 + r/n)^(nt) + PMT * [(1 + r/n)^(nt) - 1] / (r/n) donde P es el principal, r es la tasa anual, n es capitalizaciones por año, t son años, PMT es el pago.",
+      "examples": [
+        "Ahorrar $200/mes durante 10 años al 5% de interés",
+        "Meta de fondo de emergencia de $10,000 en 2 años",
+        "Ahorros para jubilación con $500 de contribuciones mensuales",
+        "Comparar cuentas de ahorro de alto rendimiento vs. regulares"
+      ],
+      "resultsExplanation": [
+        "Valor Futuro: Cantidad total a la que crecerán tus ahorros",
+        "Contribuciones Totales: Suma de todo el dinero que contribuyes",
+        "Intereses Ganados: Cantidad ganada por interés compuesto",
+        "Gráfico de Crecimiento: Representación visual del crecimiento de ahorros con el tiempo"
+      ],
+      "whoItsFor": "Cualquier persona ahorrando para metas a corto plazo, planificación de jubilación, construcción de fondos de emergencia, o queriendo ver el poder del interés compuesto en acción.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en contribuciones consistentes y tasas de interés. Los retornos reales pueden variar según condiciones del mercado, tarifas e inflación. El rendimiento pasado no garantiza resultados futuros.",
+      "faqs": [
+        {
+          "question": "¿Cómo afecta el interés compuesto a mis ahorros?",
+          "answer": "El interés compuesto significa que ganas interés tanto sobre tus ahorros originales como sobre el interés que ya has ganado. Esto crea crecimiento exponencial con el tiempo, haciendo que los ahorros regulares sean mucho más valiosos."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre capitalización mensual y anual?",
+          "answer": "La capitalización mensual calcula el interés 12 veces al año, lo que lleva a un crecimiento más rápido que la capitalización anual que calcula el interés una vez al año. La capitalización más frecuente generalmente significa mayores rendimientos."
+        },
+        {
+          "question": "¿Cuánto debo ahorrar para emergencias?",
+          "answer": "Los expertos financieros recomiendan ahorrar 3-6 meses de gastos de vida para fondos de emergencia. Usa esta calculadora para determinar cuánto tiempo tomará alcanzar tu meta de fondo de emergencia."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Poupança",
+    "seoTitle": "Calculadora de Poupança - Planeje suas Metas de Poupança",
+    "metaDescription": "Calculadora de poupança gratuita para planejar metas de poupança, calcular juros compostos e projetar valor futuro.",
+    "keywords": ["calculadora poupança", "calculadora meta poupança", "calculadora poupança composta"],
+    "longTailKeywords": ["como calcular juros de poupança", "calculadora crescimento poupança", "juros compostos poupança"],
+    "slug": "savings-calculator",
+    "category": "financial",
+    "calculatorComponent": "SavingsCalculator",
+    "difficulty": "basic",
+    "tags": ["poupança", "juros compostos", "planejamento financeiro"],
+    "summary": "Planeje suas metas de poupança e calcule valor futuro com juros compostos.",
+    "description": "Use nossa calculadora de poupança para planejar suas metas de poupança, calcular juros compostos e ver como seu dinheiro cresce ao longo do tempo com contribuições regulares.",
+    "instructions": [
+      "Digite seu valor inicial de economias (se houver)",
+      "Insira sua contribuição regular mensal ou anual",
+      "Especifique a taxa de juros anual esperada",
+      "Defina o período de tempo para sua meta de poupança",
+      "Escolha a frequência de capitalização (mensal, trimestral, anual)",
+      "Clique em calcular para ver sua projeção de crescimento de economias"
+    ],
+    "examples": [
+      "Economizar R$ 200/mês durante 10 anos a 5% de juros",
+      "Meta de fundo de emergência de R$ 10.000 em 2 anos",
+      "Economias para aposentadoria com R$ 500 de contribuições mensais"
+    ],
+    "relatedCalculators": ["investment-calculator", "retirement-calculator", "compound-interest-calculator"],
+    "seoContent": {
+      "introduction": "Nossa calculadora de poupança ajuda você a planejar seu futuro financeiro calculando o crescimento por juros compostos, projetando o valor futuro de suas economias e ajudando você a alcançar suas metas de poupança mais rapidamente.",
+      "benefits": [
+        "Calcule o crescimento por juros compostos em suas economias",
+        "Projete o valor futuro de contribuições regulares de poupança",
+        "Defina e acompanhe metas de poupança com projeções de tempo",
+        "Compare diferentes cenários de poupança e taxas de juros",
+        "Planeje para aposentadoria, fundos de emergência ou compras importantes"
+      ],
+      "steps": [
+        "Digite seu valor inicial de economias (se houver)",
+        "Insira sua contribuição regular mensal ou anual",
+        "Especifique a taxa de juros anual esperada",
+        "Defina o período de tempo para sua meta de poupança",
+        "Escolha a frequência de capitalização (mensal, trimestral, anual)",
+        "Clique em calcular para ver sua projeção de crescimento de economias"
+      ],
+      "inputsExplained": [
+        "Valor Inicial: Economias atuais ou saldo inicial",
+        "Contribuição Mensal: Valor regular adicionado às economias",
+        "Taxa de Juros Anual: Porcentagem esperada de retorno nas economias",
+        "Período de Tempo: Número de anos para economizar",
+        "Frequência de Capitalização: Com que frequência os juros são calculados e adicionados"
+      ],
+      "formulaExplanation": "Valor Futuro = P * (1 + r/n)^(nt) + PMT * [(1 + r/n)^(nt) - 1] / (r/n) onde P é o principal, r é a taxa anual, n é capitalizações por ano, t são anos, PMT é o pagamento.",
+      "examples": [
+        "Economizar R$ 200/mês durante 10 anos a 5% de juros",
+        "Meta de fundo de emergência de R$ 10.000 em 2 anos",
+        "Economias para aposentadoria com R$ 500 de contribuições mensais",
+        "Comparar contas de poupança de alto rendimento vs. regulares"
+      ],
+      "resultsExplanation": [
+        "Valor Futuro: Valor total ao qual suas economias crescerão",
+        "Contribuições Totais: Soma de todo o dinheiro que você contribui",
+        "Juros Ganhos: Valor ganho por juros compostos",
+        "Gráfico de Crescimento: Representação visual do crescimento de economias ao longo do tempo"
+      ],
+      "whoItsFor": "Qualquer pessoa economizando para metas de curto prazo, planejamento de aposentadoria, construção de fundos de emergência, ou querendo ver o poder dos juros compostos em ação.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em contribuições consistentes e taxas de juros. Os retornos reais podem variar com base nas condições de mercado, taxas e inflação. O desempenho passado não garante resultados futuros.",
+      "faqs": [
+        {
+          "question": "Como os juros compostos afetam minhas economias?",
+          "answer": "Os juros compostos significam que você ganha juros tanto sobre suas economias originais quanto sobre os juros que você já ganhou. Isso cria crescimento exponencial ao longo do tempo, tornando as economias regulares muito mais valiosas."
+        },
+        {
+          "question": "Qual é a diferença entre capitalização mensal e anual?",
+          "answer": "A capitalização mensal calcula juros 12 vezes ao ano, levando a um crescimento mais rápido do que a capitalização anual que calcula juros uma vez ao ano. A capitalização mais frequente geralmente significa maiores rendimentos."
+        },
+        {
+          "question": "Quanto devo economizar para emergências?",
+          "answer": "Os especialistas financeiros recomendam economizar 3-6 meses de despesas de vida para fundos de emergência. Use esta calculadora para determinar quanto tempo levará para alcançar sua meta de fundo de emergência."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Épargne",
+    "seoTitle": "Calculateur d'Épargne - Planifiez vos Objectifs d'Épargne",
+    "metaDescription": "Calculateur d'épargne gratuit pour planifier les objectifs d'épargne, calculer les intérêts composés et projeter la valeur future.",
+    "keywords": ["calculateur épargne", "calculateur objectif épargne", "calculateur épargne composé"],
+    "longTailKeywords": ["comment calculer intérêts épargne", "calculateur croissance épargne", "intérêts composés épargne"],
+    "slug": "savings-calculator",
+    "category": "financial",
+    "calculatorComponent": "SavingsCalculator",
+    "difficulty": "basic",
+    "tags": ["épargne", "intérêts composés", "planification financière"],
+    "summary": "Planifiez vos objectifs d'épargne et calculez la valeur future avec intérêts composés.",
+    "description": "Utilisez notre calculateur d'épargne pour planifier vos objectifs d'épargne, calculer les intérêts composés et voir comment votre argent grandit au fil du temps avec contributions régulières.",
+    "instructions": [
+      "Saisissez votre montant d'épargne initial (le cas échéant)",
+      "Saisissez votre contribution régulière mensuelle ou annuelle",
+      "Spécifiez le taux d'intérêt annuel attendu",
+      "Définissez la période de temps pour votre objectif d'épargne",
+      "Choisissez la fréquence de capitalisation (mensuelle, trimestrielle, annuelle)",
+      "Cliquez sur calculer pour voir votre projection de croissance d'épargne"
+    ],
+    "examples": [
+      "Épargner 200 €/mois pendant 10 ans à 5% d'intérêt",
+      "Objectif de fonds d'urgence de 10 000 € en 2 ans",
+      "Épargne retraite avec 500 € de contributions mensuelles"
+    ],
+    "relatedCalculators": ["investment-calculator", "retirement-calculator", "compound-interest-calculator"],
+    "seoContent": {
+      "introduction": "Notre calculateur d'épargne vous aide à planifier votre avenir financier en calculant la croissance par intérêts composés, en projetant la valeur future de vos économies et en vous aidant à atteindre vos objectifs d'épargne plus rapidement.",
+      "benefits": [
+        "Calculez la croissance par intérêts composés sur vos économies",
+        "Projetez la valeur future des contributions régulières d'épargne",
+        "Définissez et suivez les objectifs d'épargne avec des projections temporelles",
+        "Comparez différents scénarios d'épargne et taux d'intérêt",
+        "Planifiez pour la retraite, les fonds d'urgence ou les achats importants"
+      ],
+      "steps": [
+        "Saisissez votre montant d'épargne initial (le cas échéant)",
+        "Saisissez votre contribution régulière mensuelle ou annuelle",
+        "Spécifiez le taux d'intérêt annuel attendu",
+        "Définissez la période de temps pour votre objectif d'épargne",
+        "Choisissez la fréquence de capitalisation (mensuelle, trimestrielle, annuelle)",
+        "Cliquez sur calculer pour voir votre projection de croissance d'épargne"
+      ],
+      "inputsExplained": [
+        "Montant Initial: Épargnes actuelles ou solde de départ",
+        "Contribution Mensuelle: Montant régulier ajouté aux épargnes",
+        "Taux d'Intérêt Annuel: Pourcentage attendu de rendement sur les épargnes",
+        "Période de Temps: Nombre d'années pour épargner",
+        "Fréquence de Capitalisation: À quelle fréquence les intérêts sont calculés et ajoutés"
+      ],
+      "formulaExplanation": "Valeur Future = P * (1 + r/n)^(nt) + PMT * [(1 + r/n)^(nt) - 1] / (r/n) où P est le principal, r est le taux annuel, n est les capitalisations par an, t sont les années, PMT est le paiement.",
+      "examples": [
+        "Épargner 200 €/mois pendant 10 ans à 5% d'intérêt",
+        "Objectif de fonds d'urgence de 10 000 € en 2 ans",
+        "Épargne retraite avec 500 € de contributions mensuelles",
+        "Comparer les comptes d'épargne à haut rendement vs. réguliers"
+      ],
+      "resultsExplanation": [
+        "Valeur Future: Montant total auquel vos épargnes atteindront",
+        "Contributions Totales: Somme de tout l'argent que vous contribuez",
+        "Intérêts Gagnés: Montant gagné par intérêts composés",
+        "Graphique de Croissance: Représentation visuelle de la croissance des épargnes au fil du temps"
+      ],
+      "whoItsFor": "Toute personne épargnant pour des objectifs à court terme, la planification de retraite, la constitution de fonds d'urgence, ou souhaitant voir la puissance des intérêts composés en action.",
+      "disclaimer": "Cette calculatrice fournit des estimations basées sur des contributions cohérentes et des taux d'intérêt. Les rendements réels peuvent varier en fonction des conditions de marché, des frais et de l'inflation. Les performances passées ne garantissent pas les résultats futurs.",
+      "faqs": [
+        {
+          "question": "Comment les intérêts composés affectent-ils mes épargnes?",
+          "answer": "Les intérêts composés signifient que vous gagnez des intérêts tant sur vos épargnes originales que sur les intérêts que vous avez déjà gagnés. Cela crée une croissance exponentielle au fil du temps, rendant les épargnes régulières beaucoup plus précieuses."
+        },
+        {
+          "question": "Quelle est la différence entre capitalisation mensuelle et annuelle?",
+          "answer": "La capitalisation mensuelle calcule les intérêts 12 fois par an, conduisant à une croissance plus rapide que la capitalisation annuelle qui calcule les intérêts une fois par an. Une capitalisation plus fréquente signifie généralement de meilleurs rendements."
+        },
+        {
+          "question": "Combien devrais-je épargner pour les urgences?",
+          "answer": "Les experts financiers recommandent d'épargner 3-6 mois de dépenses de vie pour les fonds d'urgence. Utilisez cette calculatrice pour déterminer combien de temps il faudra pour atteindre votre objectif de fonds d'urgence."
+        }
+      ]
+    }
+  }
+}

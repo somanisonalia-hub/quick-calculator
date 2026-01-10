@@ -1,0 +1,1662 @@
+{
+  "en": {
+    "title": "Paycheck Calculator",
+    "seoTitle": "Paycheck Calculator - Calculate Take Home Pay and Net Salary",
+    "metaDescription": "Calculate your take-home pay and net salary after taxes and deductions. Free paycheck calculator with federal, state, and local tax calculations.",
+    "keywords": [
+      "paycheck calculator",
+      "take home pay calculator",
+      "net salary calculator",
+      "salary calculator",
+      "tax calculator paycheck"
+    ],
+    "longTailKeywords": [
+      "how to calculate take home pay after taxes",
+      "paycheck calculator with federal and state taxes",
+      "what is my net pay after deductions",
+      "hourly to salary paycheck calculator",
+      "biweekly paycheck calculator with taxes",
+      "how much taxes are taken out of my paycheck",
+      "gross to net salary calculator",
+      "paycheck calculator for salaried employees",
+      "federal income tax calculator for paycheck",
+      "how to calculate paycheck deductions"
+    ],
+    "slug": "paycheck-calculator",
+    "category": "Financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "paycheck",
+      "salary",
+      "take home pay",
+      "net pay",
+      "tax deductions",
+      "gross pay",
+      "payroll taxes"
+    ],
+    "description": "Calculate your exact take-home pay and net salary after all taxes and deductions. Our comprehensive paycheck calculator includes federal income tax, Social Security, Medicare, state taxes, and other common deductions. Perfect for employees, freelancers, and anyone wanting to understand their paycheck breakdown.",
+    "summary": "Calculate take-home pay after taxes and deductions.",
+    "instructions": [
+      "Enter your gross annual salary or hourly wage with hours worked",
+      "Select your pay frequency (weekly, biweekly, semimonthly, monthly)",
+      "Enter your filing status and number of dependents",
+      "Choose your state for accurate state tax calculations",
+      "Add any additional deductions (health insurance, retirement contributions)",
+      "Click 'Calculate' to see your net paycheck amount and tax breakdown"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "payType",
+          "label": "Pay Type",
+          "type": "select",
+          "options": [
+            "salary",
+            "hourly"
+          ],
+          "default": "salary"
+        },
+        {
+          "name": "annualSalary",
+          "label": "Annual Salary ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "step": 1000,
+          "conditional": "payType === 'salary'"
+        },
+        {
+          "name": "hourlyRate",
+          "label": "Hourly Rate ($)",
+          "type": "number",
+          "default": 25,
+          "min": 0,
+          "step": 0.25,
+          "conditional": "payType === 'hourly'"
+        },
+        {
+          "name": "hoursPerWeek",
+          "label": "Hours per Week",
+          "type": "number",
+          "default": 40,
+          "min": 1,
+          "max": 80,
+          "step": 1,
+          "conditional": "payType === 'hourly'"
+        },
+        {
+          "name": "payFrequency",
+          "label": "Pay Frequency",
+          "type": "select",
+          "options": [
+            "weekly",
+            "biweekly",
+            "semimonthly",
+            "monthly"
+          ],
+          "default": "biweekly"
+        },
+        {
+          "name": "filingStatus",
+          "label": "Filing Status",
+          "type": "select",
+          "options": [
+            "single",
+            "marriedFilingJointly",
+            "marriedFilingSeparately",
+            "headOfHousehold"
+          ],
+          "default": "single"
+        },
+        {
+          "name": "dependents",
+          "label": "Number of Dependents",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "state",
+          "label": "State",
+          "type": "select",
+          "options": [
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"
+          ],
+          "default": "CA"
+        },
+        {
+          "name": "additionalDeductions",
+          "label": "Additional Deductions ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "retirementContribution",
+          "label": "Retirement Contribution (%)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 25,
+          "step": 0.5
+        }
+      ],
+      "formula": "Federal Income Tax = Based on tax brackets and filing status; FICA Taxes = 7.65% (Social Security 6.2% + Medicare 1.45%); State Tax = Varies by state; Net Pay = Gross Pay - All Taxes - Deductions",
+      "output": {
+        "label": "Net Paycheck Amount",
+        "default": "Enter your salary information above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Gross Pay",
+          "field": "grossPay",
+          "format": "currency"
+        },
+        {
+          "label": "Federal Income Tax",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "FICA Taxes",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "State Tax",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "Total Deductions",
+          "field": "totalDeductions",
+          "format": "currency"
+        },
+        {
+          "label": "Net Annual Salary",
+          "field": "netAnnual",
+          "format": "currency"
+        }
+      ],
+      "componentName": "PaycheckCalculator"
+    },
+    "examples": [
+      {
+        "title": "Software Engineer Annual Salary",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 120000,
+          "payFrequency": "biweekly",
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "CA",
+          "additionalDeductions": 200,
+          "retirementContribution": 6
+        },
+        "output": {
+          "netPaycheck": 3208.45,
+          "grossPay": 4615.38,
+          "federalTax": 745.23,
+          "ficaTax": 352.69,
+          "stateTax": 309.01,
+          "totalDeductions": 200
+        },
+        "explanation": "A software engineer earning $120,000 annually receives $3,208.45 biweekly after taxes and deductions in California. Federal income tax takes the largest share at $745.23."
+      },
+      {
+        "title": "Hourly Retail Worker",
+        "input": {
+          "payType": "hourly",
+          "hourlyRate": 18,
+          "hoursPerWeek": 32,
+          "payFrequency": "weekly",
+          "filingStatus": "single",
+          "dependents": 1,
+          "state": "TX",
+          "additionalDeductions": 50,
+          "retirementContribution": 0
+        },
+        "output": {
+          "netPaycheck": 483.92,
+          "grossPay": 576,
+          "federalTax": 54.72,
+          "ficaTax": 44.16,
+          "stateTax": 0,
+          "totalDeductions": 50
+        },
+        "explanation": "A part-time retail worker earning $18/hour working 32 hours/week gets $483.92 weekly after taxes. Texas has no state income tax, reducing overall deductions."
+      },
+      {
+        "title": "Married Teacher with Benefits",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 65000,
+          "payFrequency": "semimonthly",
+          "filingStatus": "marriedFilingJointly",
+          "dependents": 2,
+          "state": "NY",
+          "additionalDeductions": 150,
+          "retirementContribution": 5
+        },
+        "output": {
+          "netPaycheck": 1718.32,
+          "grossPay": 2708.33,
+          "federalTax": 285.41,
+          "ficaTax": 207,
+          "stateTax": 397.6,
+          "totalDeductions": 150
+        },
+        "explanation": "A married teacher earning $65,000 annually with 2 dependents receives $1,718.32 semimonthly. New York state tax is relatively high at $397.60 per paycheck."
+      },
+      {
+        "title": "Self-Employed Consultant",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 85000,
+          "payFrequency": "monthly",
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "FL",
+          "additionalDeductions": 300,
+          "retirementContribution": 10
+        },
+        "output": {
+          "netPaycheck": 4075.25,
+          "grossPay": 7083.33,
+          "federalTax": 1657.08,
+          "ficaTax": 541.67,
+          "stateTax": 0,
+          "totalDeductions": 300
+        },
+        "explanation": "A self-employed consultant earning $85,000 annually gets $4,075.25 monthly after self-employment tax. Florida has no state income tax, and self-employment tax includes both employee and employer portions."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Tax Calculator",
+        "slug": "tax-calculator",
+        "description": "Estimate income taxes."
+      },
+      {
+        "name": "Budget Calculator",
+        "slug": "budget-calculator",
+        "description": "Create a personal budget."
+      },
+      {
+        "name": "Savings Calculator",
+        "slug": "savings-calculator",
+        "description": "Calculate savings growth."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Take the mystery out of your paycheck with our comprehensive paycheck calculator that shows exactly how much you'll take home after all taxes and deductions. Understanding your net pay is crucial for budgeting, financial planning, and avoiding surprises when you open your paycheck. Our advanced calculator handles federal income tax, Social Security, Medicare, state taxes, and various deductions to give you an accurate picture of your actual take-home pay. Whether you're comparing job offers, negotiating salary, or simply wanting to understand where your money goes, this calculator provides the clarity you need.",
+      "benefits": [
+        "Calculate exact take-home pay after all taxes and deductions",
+        "Understand the impact of federal, state, and local taxes on your salary",
+        "Compare different pay frequencies and tax scenarios",
+        "See how deductions like health insurance and retirement contributions affect your paycheck",
+        "Plan your budget based on realistic net income figures",
+        "Make informed decisions about job offers and salary negotiations",
+        "Track how changes in income or tax status affect your take-home pay",
+        "Avoid surprises from tax withholdings and payroll deductions"
+      ],
+      "steps": [
+        "Select your pay type (salary or hourly) and enter your compensation details",
+        "Choose your pay frequency (weekly, biweekly, semimonthly, or monthly)",
+        "Enter your filing status and number of dependents for accurate tax calculations",
+        "Select your state for proper state income tax calculations",
+        "Add any additional deductions like health insurance or retirement contributions",
+        "Review your net paycheck amount and detailed tax breakdown"
+      ],
+      "inputsExplained": [
+        "Pay type determines whether you enter annual salary or hourly rate with hours worked",
+        "Annual salary is your gross yearly compensation for salaried positions",
+        "Hourly rate and hours per week calculate your gross annual earnings for hourly workers",
+        "Pay frequency affects how taxes are calculated and withheld (biweekly is most common)",
+        "Filing status (single, married, head of household) determines federal tax brackets",
+        "State selection ensures accurate state income tax calculations (varies significantly by state)"
+      ],
+      "formulaExplanation": "Paycheck calculations involve complex tax formulas: Federal income tax uses progressive brackets (10%, 12%, 22%, 24%, 32%, 35%, 37%) based on taxable income. FICA taxes (Social Security 6.2% + Medicare 1.45%) fund retirement and healthcare. State taxes vary from 0% (Texas, Florida, Nevada) to over 13% (California). The formula accounts for standard deductions, personal exemptions, and various withholdings. Understanding these calculations helps you optimize your W-4 form and avoid underpayment penalties or large tax refunds.",
+      "examples": [
+        "$60,000 annual salary (biweekly pay) results in $1,892 net paycheck after $608 in federal tax, $234 FICA, and $66 state tax - showing how taxes reduce gross pay by about 32%.",
+        "$25 hourly rate ($52,000 annually) working 40 hours/week yields $1,738 biweekly net pay, demonstrating how overtime or bonuses significantly impact take-home pay.",
+        "Married filing jointly with two dependents reduces federal tax liability, increasing net pay from $1,892 to $2,034 biweekly for the same $60,000 salary."
+      ],
+      "resultsExplanation": [
+        "Net paycheck shows your actual take-home amount after all deductions",
+        "Federal tax displays income tax withheld for federal government",
+        "FICA taxes include Social Security and Medicare contributions",
+        "State tax shows state income tax based on your location",
+        "Total deductions combine all taxes and voluntary withholdings",
+        "Tax breakdown helps you understand where each dollar goes"
+      ],
+      "whoItsFor": "This paycheck calculator serves employees comparing job offers, freelancers estimating quarterly taxes, recent graduates entering workforce, small business owners calculating payroll, tax professionals advising clients, and anyone wanting to understand their compensation package. It's particularly valuable for those changing jobs, getting raises, modifying withholding allowances, or planning budgets based on net income. The calculator works for all pay types and frequencies, providing insights for better financial decision-making.",
+      "disclaimer": "This paycheck calculator provides estimates based on current tax rates and standard deductions. Actual take-home pay may vary due to individual circumstances, additional income sources, special tax situations, or changes in tax laws. State tax calculations are approximations and may not include local taxes. This tool is for informational purposes only and does not constitute tax advice. Consult a tax professional or use official IRS withholding calculators for precise calculations. Tax rates and brackets are subject to annual changes.",
+      "relatedTools": [
+        "Tax calculators for comprehensive income tax planning",
+        "Budget calculators for managing expenses against net income",
+        "Savings calculators for planning based on take-home pay"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between gross pay and net pay?",
+          "answer": "Gross pay is your total earnings before any deductions - this is the amount your employer agrees to pay you. Net pay (take-home pay) is what you actually receive after taxes and deductions are subtracted. For example, $4,000 gross monthly pay might result in $3,000 net pay after federal tax ($600), FICA ($248), state tax ($152), and other deductions. Understanding this difference is crucial for budgeting and comparing job offers."
+        },
+        {
+          "question": "How do I calculate federal income tax withholding?",
+          "answer": "Federal income tax uses a progressive system with tax brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37%. Your taxable income (gross pay minus pre-tax deductions and standard deduction) determines your bracket. The IRS withholding tables consider your filing status, dependents, and pay frequency. You can adjust withholding using Form W-4 to avoid owing taxes or getting large refunds. Online withholding calculators help you optimize your W-4 for accurate withholding."
+        },
+        {
+          "question": "Why do states have different tax rates?",
+          "answer": "States set their own income tax rates to fund local services like education, infrastructure, and healthcare. Nine states have no income tax (Texas, Florida, Nevada, etc.), while others range from 2.9% (North Carolina) to 13.3% (California). States with no income tax often make up the difference through higher property taxes, sales taxes, or other fees. Your state's tax rate significantly impacts take-home pay - moving from California (13.3%) to Texas (0%) could increase your net pay by 10-15%."
+        },
+        {
+          "question": "How do pre-tax deductions affect my paycheck?",
+          "answer": "Pre-tax deductions (like health insurance premiums, retirement contributions, and commuter benefits) reduce your taxable income, lowering your federal and state tax liability. For example, $300 monthly health insurance premium reduces your taxable income, potentially saving you $60-90 in taxes monthly. This increases your take-home pay compared to paying these expenses with after-tax dollars. Understanding pre-tax benefits helps you maximize your net compensation package."
+        },
+        {
+          "question": "What's the best way to adjust my tax withholding?",
+          "answer": "Use the IRS Tax Withholding Estimator or similar tools to calculate optimal withholding. Consider life changes like marriage, children, or additional income. If you consistently owe taxes or get large refunds, adjust your W-4 allowances. Under-withholding leads to penalties and April surprises, while over-withholding means lending money interest-free to the government. The goal is to have minimal tax liability when filing your return."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Nómina",
+    "seoTitle": "Calculadora de Nómina - Calcular Salario Neto y Pago a Recibir",
+    "metaDescription": "Calcula tu salario neto y pago a recibir después de impuestos y deducciones. Calculadora gratuita de nómina con cálculos de impuestos federales, estatales y locales.",
+    "keywords": [
+      "calculadora nómina",
+      "calculadora salario neto",
+      "calculadora pago recibo",
+      "calculadora salario",
+      "calculadora impuestos nómina"
+    ],
+    "longTailKeywords": [
+      "como calcular salario neto después de impuestos",
+      "calculadora de nómina con impuestos federales y estatales",
+      "cuál es mi pago neto después de deducciones",
+      "hora a salario calculadora de nómina",
+      "calculadora de nómina quincenal con impuestos",
+      "cuántos impuestos se deducen de mi nómina",
+      "calculadora de bruto a neto",
+      "calculadora de nómina para empleados asalariados",
+      "calculadora de impuesto federal de nómina",
+      "como calcular deducciones de nómina"
+    ],
+    "slug": "paycheck-calculator",
+    "category": "Financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "nómina",
+      "salario",
+      "salario neto",
+      "pago neto",
+      "deducciones fiscales",
+      "salario bruto",
+      "impuestos nómina"
+    ],
+    "description": "Calcula tu salario neto exacto y pago a recibir después de todos los impuestos y deducciones. Nuestra calculadora integral de nómina incluye impuesto federal sobre la renta, Seguro Social, Medicare, impuestos estatales y otras deducciones comunes. Perfecto para empleados, freelancers y cualquier persona que quiera entender el desglose de su nómina.",
+    "summary": "Calcula el salario neto después de impuestos y deducciones.",
+    "instructions": [
+      "Ingresa tu salario bruto anual o tarifa por hora con horas trabajadas",
+      "Selecciona la frecuencia de pago (semanal, quincenal, semimensual, mensual)",
+      "Ingresa tu estado civil y número de dependientes",
+      "Elige tu estado para cálculos precisos de impuestos estatales",
+      "Agrega deducciones adicionales (seguro médico, contribuciones de jubilación)",
+      "Haz clic en 'Calcular' para ver tu monto neto de nómina y desglose de impuestos"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "payType",
+          "label": "Tipo de Pago",
+          "type": "select",
+          "options": [
+            "salary",
+            "hourly"
+          ],
+          "default": "salary"
+        },
+        {
+          "name": "annualSalary",
+          "label": "Salario Anual ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "step": 1000,
+          "conditional": "payType === 'salary'"
+        },
+        {
+          "name": "hourlyRate",
+          "label": "Tarifa por Hora ($)",
+          "type": "number",
+          "default": 25,
+          "min": 0,
+          "step": 0.25,
+          "conditional": "payType === 'hourly'"
+        },
+        {
+          "name": "hoursPerWeek",
+          "label": "Horas por Semana",
+          "type": "number",
+          "default": 40,
+          "min": 1,
+          "max": 80,
+          "step": 1,
+          "conditional": "payType === 'hourly'"
+        },
+        {
+          "name": "payFrequency",
+          "label": "Frecuencia de Pago",
+          "type": "select",
+          "options": [
+            "weekly",
+            "biweekly",
+            "semimonthly",
+            "monthly"
+          ],
+          "default": "biweekly"
+        },
+        {
+          "name": "filingStatus",
+          "label": "Estado Civil",
+          "type": "select",
+          "options": [
+            "single",
+            "marriedFilingJointly",
+            "marriedFilingSeparately",
+            "headOfHousehold"
+          ],
+          "default": "single"
+        },
+        {
+          "name": "dependents",
+          "label": "Número de Dependientes",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "state",
+          "label": "Estado",
+          "type": "select",
+          "options": [
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"
+          ],
+          "default": "CA"
+        },
+        {
+          "name": "additionalDeductions",
+          "label": "Deducciones Adicionales ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "retirementContribution",
+          "label": "Contribución de Jubilación (%)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 25,
+          "step": 0.5
+        }
+      ],
+      "formula": "Impuesto Federal sobre la Renta = Basado en brackets fiscales y estado civil; Impuestos FICA = 7.65% (Seguro Social 6.2% + Medicare 1.45%); Impuesto Estatal = Varía por estado; Pago Neto = Salario Bruto - Todos los Impuestos - Deducciones",
+      "output": {
+        "label": "Monto Neto de Nómina",
+        "default": "Ingresa tu información salarial arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Salario Bruto",
+          "field": "grossPay",
+          "format": "currency"
+        },
+        {
+          "label": "Impuesto Federal sobre la Renta",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impuestos FICA",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impuesto Estatal",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "Deducciones Totales",
+          "field": "totalDeductions",
+          "format": "currency"
+        },
+        {
+          "label": "Salario Neto Anual",
+          "field": "netAnnual",
+          "format": "currency"
+        }
+      ],
+      "componentName": "PaycheckCalculator"
+    },
+    "examples": [
+      {
+        "title": "Ingeniero de Software Salario Anual",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 120000,
+          "payFrequency": "biweekly",
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "CA",
+          "additionalDeductions": 200,
+          "retirementContribution": 6
+        },
+        "output": {
+          "netPaycheck": 3208.45,
+          "grossPay": 4615.38,
+          "federalTax": 745.23,
+          "ficaTax": 352.69,
+          "stateTax": 309.01,
+          "totalDeductions": 200
+        },
+        "explanation": "Un ingeniero de software ganando $120,000 anualmente recibe $3,208.45 quincenal después de impuestos y deducciones en California. El impuesto federal sobre la renta toma la mayor parte con $745.23."
+      },
+      {
+        "title": "Trabajador por Horas en Retail",
+        "input": {
+          "payType": "hourly",
+          "hourlyRate": 18,
+          "hoursPerWeek": 32,
+          "payFrequency": "weekly",
+          "filingStatus": "single",
+          "dependents": 1,
+          "state": "TX",
+          "additionalDeductions": 50,
+          "retirementContribution": 0
+        },
+        "output": {
+          "netPaycheck": 483.92,
+          "grossPay": 576,
+          "federalTax": 54.72,
+          "ficaTax": 44.16,
+          "stateTax": 0,
+          "totalDeductions": 50
+        },
+        "explanation": "Un trabajador de tiempo parcial en retail ganando $18/hora trabajando 32 horas/semana recibe $483.92 semanal después de impuestos. Texas no tiene impuesto estatal sobre la renta, reduciendo las deducciones generales."
+      },
+      {
+        "title": "Maestro Casado con Beneficios",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 65000,
+          "payFrequency": "semimonthly",
+          "filingStatus": "marriedFilingJointly",
+          "dependents": 2,
+          "state": "NY",
+          "additionalDeductions": 150,
+          "retirementContribution": 5
+        },
+        "output": {
+          "netPaycheck": 1718.32,
+          "grossPay": 2708.33,
+          "federalTax": 285.41,
+          "ficaTax": 207,
+          "stateTax": 397.6,
+          "totalDeductions": 150
+        },
+        "explanation": "Un maestro casado ganando $65,000 anualmente con 2 dependientes recibe $1,718.32 semimensual. El impuesto estatal de Nueva York es relativamente alto con $397.60 por nómina."
+      },
+      {
+        "title": "Consultor Independiente",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 85000,
+          "payFrequency": "monthly",
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "FL",
+          "additionalDeductions": 300,
+          "retirementContribution": 10
+        },
+        "output": {
+          "netPaycheck": 4075.25,
+          "grossPay": 7083.33,
+          "federalTax": 1657.08,
+          "ficaTax": 541.67,
+          "stateTax": 0,
+          "totalDeductions": 300
+        },
+        "explanation": "Un consultor independiente ganando $85,000 anualmente recibe $4,075.25 mensual después del impuesto de autoempleo. Florida no tiene impuesto estatal sobre la renta, y el impuesto de autoempleo incluye porciones tanto del empleado como del empleador."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Impuestos",
+        "slug": "tax-calculator",
+        "description": "Estima impuestos sobre la renta."
+      },
+      {
+        "name": "Calculadora de Presupuesto",
+        "slug": "budget-calculator",
+        "description": "Crea un presupuesto personal."
+      },
+      {
+        "name": "Calculadora de Ahorros",
+        "slug": "savings-calculator",
+        "description": "Calcula crecimiento de ahorros."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Quita el misterio de tu nómina con nuestra calculadora integral de nómina que muestra exactamente cuánto llevarás a casa después de todos los impuestos y deducciones. Entender tu salario neto es crucial para presupuestar, planificación financiera, y evitar sorpresas cuando abras tu nómina. Nuestra calculadora avanzada maneja impuesto federal sobre la renta, Seguro Social, Medicare, impuestos estatales, y varias deducciones para darte una imagen precisa de tu pago real a recibir. Ya sea comparando ofertas de trabajo, negociando salario, o simplemente queriendo entender adónde va tu dinero, esta calculadora proporciona la claridad que necesitas.",
+      "benefits": [
+        "Calcula pago exacto a recibir después de todos los impuestos y deducciones",
+        "Entiende el impacto de impuestos federales, estatales y locales en tu salario",
+        "Compara diferentes frecuencias de pago y escenarios fiscales",
+        "Ve cómo deducciones como seguro médico y contribuciones de jubilación afectan tu nómina",
+        "Planea tu presupuesto basado en cifras realistas de ingreso neto",
+        "Toma decisiones informadas sobre ofertas de trabajo y negociaciones salariales",
+        "Rastrea cómo cambios en ingreso o estatus fiscal afectan tu pago a recibir",
+        "Evita sorpresas de retenciones fiscales y deducciones de nómina"
+      ],
+      "steps": [
+        "Selecciona tu tipo de pago (salario o por hora) e ingresa detalles de compensación",
+        "Elige tu frecuencia de pago (semanal, quincenal, semi-mensual, o mensual)",
+        "Ingresa tu estatus de declaración y número de dependientes para cálculos precisos de impuestos",
+        "Selecciona tu estado para cálculos apropiados de impuesto estatal sobre la renta",
+        "Agrega cualquier deducción adicional como seguro médico o contribuciones de jubilación",
+        "Revisa tu monto de nómina neta y desglose detallado de impuestos"
+      ],
+      "inputsExplained": [
+        "Tipo de pago determina si ingresa salario anual o tarifa por hora con horas trabajadas",
+        "Salario anual es tu compensación bruta anual para posiciones asalariadas",
+        "Tarifa por hora y horas por semana calculan tus ganancias brutas anuales para trabajadores por hora",
+        "Frecuencia de pago afecta cómo se calculan y retienen impuestos (quincenal es más común)",
+        "Estatus de declaración (soltero, casado, cabeza de hogar) determina categorías fiscales federales",
+        "Selección de estado asegura cálculos precisos de impuesto estatal sobre la renta (varía significativamente por estado)"
+      ],
+      "formulaExplanation": "Los cálculos de nómina involucran fórmulas fiscales complejas: Impuesto federal sobre la renta usa categorías progresivas (10%, 12%, 22%, 24%, 32%, 35%, 37%) basado en ingreso gravable. Impuestos FICA (Seguro Social 6.2% + Medicare 1.45%) financian jubilación y atención médica. Impuestos estatales varían desde 0% (Texas, Florida, Nevada) hasta más del 13% (California). La fórmula considera deducciones estándar, exenciones personales, y varias retenciones. Entender estos cálculos te ayuda a optimizar tu formulario W-4 y evitar penalizaciones por pago insuficiente o reembolsos fiscales grandes.",
+      "examples": [
+        "$60,000 salario anual (pago quincenal) resulta en nómina neta de $1,892 después de $608 en impuesto federal, $234 FICA, y $66 impuesto estatal - mostrando cómo impuestos reducen pago bruto por aproximadamente 32%.",
+        "$25 tarifa por hora ($52,000 anualmente) trabajando 40 horas/semana produce $1,738 neto quincenal, demostrando cómo horas extra o bonos impactan significativamente pago a recibir.",
+        "Casado declarando conjuntamente con dos dependientes reduce responsabilidad fiscal federal, aumentando pago neto de $1,892 a $2,034 quincenal para el mismo salario de $60,000."
+      ],
+      "resultsExplanation": [
+        "Nómina neta muestra tu monto real a recibir después de todas las deducciones",
+        "Impuesto federal muestra impuesto sobre la renta retenido para gobierno federal",
+        "Impuestos FICA incluyen contribuciones de Seguro Social y Medicare",
+        "Impuesto estatal muestra impuesto estatal sobre la renta basado en tu ubicación",
+        "Deducciones totales combinan todos los impuestos y retenciones voluntarias",
+        "Desglose fiscal te ayuda a entender adónde va cada dólar"
+      ],
+      "whoItsFor": "Esta calculadora de nómina sirve a empleados comparando ofertas de trabajo, freelancers estimando impuestos trimestrales, graduados recientes entrando a la fuerza laboral, dueños de pequeños negocios calculando nómina, profesionales fiscales asesorando clientes, y cualquiera queriendo entender su paquete de compensación. Es particularmente valiosa para aquellos cambiando trabajos, obteniendo aumentos, modificando retenciones de nómina, o planeando presupuestos basado en ingreso neto. La calculadora funciona para todos los tipos de pago y frecuencias, proporcionando conocimientos para mejor toma de decisiones financieras.",
+      "disclaimer": "Esta calculadora de nómina proporciona estimaciones basadas en tasas fiscales actuales y deducciones estándar. El pago real a recibir puede variar debido a circunstancias individuales, fuentes adicionales de ingreso, situaciones fiscales especiales, o cambios en leyes fiscales. Los cálculos de impuesto estatal son aproximaciones y pueden no incluir impuestos locales. Esta herramienta es solo para propósitos informativos y no constituye consejo fiscal. Consulta un profesional fiscal o usa calculadoras oficiales de retención del IRS para cálculos precisos. Las tasas fiscales y categorías están sujetas a cambios anuales.",
+      "relatedTools": [
+        "Calculadoras de impuestos para planificación integral de impuesto sobre la renta",
+        "Calculadoras de presupuesto para manejar gastos contra ingreso neto",
+        "Calculadoras de ahorro para planificación basado en pago a recibir"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre pago bruto y pago neto?",
+          "answer": "Pago bruto es tus ganancias totales antes de cualquier deducción - este es el monto que tu empleador acuerda pagarte. Pago neto (pago a recibir) es lo que realmente recibes después de que impuestos y deducciones se sustraen. Por ejemplo, $4,000 bruto mensual podría resultar en $3,000 neto después de impuesto federal ($600), FICA ($248), impuesto estatal ($152), y otras deducciones. Entender esta diferencia es crucial para presupuestar y comparar ofertas de trabajo."
+        },
+        {
+          "question": "¿Cómo calculo retención de impuesto federal sobre la renta?",
+          "answer": "Impuesto federal sobre la renta usa un sistema progresivo con categorías fiscales: 10%, 12%, 22%, 24%, 32%, 35%, y 37%. Tu ingreso gravable (pago bruto menos deducciones pre-impuestos y deducción estándar) determina tu categoría. Las tablas de retención del IRS consideran tu estatus de declaración, dependientes, y frecuencia de pago. Puedes ajustar retención usando Formulario W-4 para evitar deber impuestos o obtener reembolsos fiscales grandes. Calculadoras de retención online te ayudan a optimizar tu W-4 para retención precisa."
+        },
+        {
+          "question": "¿Por qué estados tienen diferentes tasas fiscales?",
+          "answer": "Estados establecen sus propias tasas de impuesto sobre la renta para financiar servicios locales como educación, infraestructura, y atención médica. Nueve estados no tienen impuesto sobre la renta (Texas, Florida, Nevada, etc.), mientras otros van desde 2.9% (Carolina del Norte) hasta 13.3% (California). Estados sin impuesto sobre la renta a menudo compensan la diferencia a través de impuestos a la propiedad más altos, impuestos de venta, u otras tarifas. La tasa fiscal de tu estado impacta significativamente pago a recibir - mudarte de California (13.3%) a Texas (0%) podría aumentar tu pago neto por 10-15%."
+        },
+        {
+          "question": "¿Cómo deducciones pre-impuestos afectan mi nómina?",
+          "answer": "Deducciones pre-impuestos (como primas de seguro médico, contribuciones de jubilación, y beneficios de transporte) reducen tu ingreso gravable, bajando tu responsabilidad fiscal federal y estatal. Por ejemplo, prima mensual de seguro médico de $300 reduce tu ingreso gravable, potencialmente ahorrándote $60-90 en impuestos mensualmente. Esto aumenta tu pago a recibir comparado con pagar estos gastos con dólares después de impuestos. Entender beneficios pre-impuestos te ayuda a maximizar tu paquete de compensación neta."
+        },
+        {
+          "question": "¿Cuál es la mejor manera de ajustar mi retención fiscal?",
+          "answer": "Usa el Estimador de Retención Fiscal del IRS o herramientas similares para calcular retención óptima. Considera cambios de vida como matrimonio, hijos, o ingreso adicional. Si consistentemente debes impuestos u obtienes reembolsos fiscales grandes, ajusta tus retenciones del W-4. Retención insuficiente lleva a penalizaciones y sorpresas de abril, mientras retención excesiva significa prestar dinero sin interés al gobierno. La meta es tener responsabilidad fiscal mínima al declarar tu retorno."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Holerite",
+    "seoTitle": "Calculadora de Holerite - Calcular Salário Líquido e Valor a Receber",
+    "metaDescription": "Calcule seu salário líquido e valor a receber após impostos e deduções. Calculadora gratuita de holerite com cálculos de impostos federais, estaduais e locais.",
+    "keywords": [
+      "calculadora holerite",
+      "calculadora salário líquido",
+      "calculadora valor receber",
+      "calculadora salário",
+      "calculadora impostos holerite"
+    ],
+    "longTailKeywords": [
+      "como calcular salário líquido após impostos",
+      "calculadora de holerite com impostos federais e estaduais",
+      "qual é meu valor líquido após deduções",
+      "hora para salário calculadora de holerite",
+      "calculadora de holerite quinzenal com impostos",
+      "quantos impostos são descontados do meu holerite",
+      "calculadora de bruto para líquido",
+      "calculadora de holerite para funcionários assalariados",
+      "calculadora de imposto federal de holerite",
+      "como calcular deduções de holerite"
+    ],
+    "slug": "paycheck-calculator",
+    "category": "Financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "holerite",
+      "salário",
+      "salário líquido",
+      "valor líquido",
+      "deduções fiscais",
+      "salário bruto",
+      "impostos folha pagamento"
+    ],
+    "description": "Calcule seu salário líquido exato e valor a receber após todos os impostos e deduções. Nossa calculadora abrangente de holerite inclui imposto federal de renda, Previdência Social, Medicare, impostos estaduais e outras deduções comuns. Perfeito para funcionários, freelancers e qualquer pessoa que queira entender o detalhamento do seu holerite.",
+    "summary": "Calcule salário líquido após impostos e deduções.",
+    "instructions": [
+      "Digite seu salário bruto anual ou tarifa por hora com horas trabalhadas",
+      "Selecione a frequência de pagamento (semanal, quinzenal, semimensal, mensal)",
+      "Digite seu estado civil e número de dependentes",
+      "Escolha seu estado para cálculos precisos de impostos estaduais",
+      "Adicione deduções adicionais (seguro saúde, contribuições previdenciárias)",
+      "Clique em 'Calcular' para ver seu valor líquido de holerite e detalhamento de impostos"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "payType",
+          "label": "Tipo de Pagamento",
+          "type": "select",
+          "options": [
+            "salary",
+            "hourly"
+          ],
+          "default": "salary"
+        },
+        {
+          "name": "annualSalary",
+          "label": "Salário Anual (R$)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "step": 1000,
+          "conditional": "payType === 'salary'"
+        },
+        {
+          "name": "hourlyRate",
+          "label": "Tarifa por Hora (R$)",
+          "type": "number",
+          "default": 25,
+          "min": 0,
+          "step": 0.25,
+          "conditional": "payType === 'hourly'"
+        },
+        {
+          "name": "hoursPerWeek",
+          "label": "Horas por Semana",
+          "type": "number",
+          "default": 40,
+          "min": 1,
+          "max": 80,
+          "step": 1,
+          "conditional": "payType === 'hourly'"
+        },
+        {
+          "name": "payFrequency",
+          "label": "Frequência de Pagamento",
+          "type": "select",
+          "options": [
+            "weekly",
+            "biweekly",
+            "semimonthly",
+            "monthly"
+          ],
+          "default": "biweekly"
+        },
+        {
+          "name": "filingStatus",
+          "label": "Estado Civil",
+          "type": "select",
+          "options": [
+            "single",
+            "marriedFilingJointly",
+            "marriedFilingSeparately",
+            "headOfHousehold"
+          ],
+          "default": "single"
+        },
+        {
+          "name": "dependents",
+          "label": "Número de Dependentes",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "state",
+          "label": "Estado",
+          "type": "select",
+          "options": [
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"
+          ],
+          "default": "CA"
+        },
+        {
+          "name": "additionalDeductions",
+          "label": "Deduções Adicionais (R$)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "retirementContribution",
+          "label": "Contribuição Previdenciária (%)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 25,
+          "step": 0.5
+        }
+      ],
+      "formula": "Imposto Federal de Renda = Baseado em faixas de imposto e estado civil; Impostos FICA = 7.65% (Previdência Social 6.2% + Medicare 1.45%); Imposto Estadual = Varia por estado; Salário Líquido = Salário Bruto - Todos os Impostos - Deduções",
+      "output": {
+        "label": "Valor Líquido do Holerite",
+        "default": "Digite suas informações salariais acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Salário Bruto",
+          "field": "grossPay",
+          "format": "currency"
+        },
+        {
+          "label": "Imposto Federal de Renda",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impostos FICA",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "Imposto Estadual",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "Deduções Totais",
+          "field": "totalDeductions",
+          "format": "currency"
+        },
+        {
+          "label": "Salário Líquido Anual",
+          "field": "netAnnual",
+          "format": "currency"
+        }
+      ],
+      "componentName": "PaycheckCalculator"
+    },
+    "examples": [
+      {
+        "title": "Engenheiro de Software Salário Anual",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 120000,
+          "payFrequency": "biweekly",
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "CA",
+          "additionalDeductions": 200,
+          "retirementContribution": 6
+        },
+        "output": {
+          "netPaycheck": 3208.45,
+          "grossPay": 4615.38,
+          "federalTax": 745.23,
+          "ficaTax": 352.69,
+          "stateTax": 309.01,
+          "totalDeductions": 200
+        },
+        "explanation": "Um engenheiro de software ganhando R$120.000 anualmente recebe R$3.208,45 quinzenal após impostos e deduções na Califórnia. O imposto federal de renda toma a maior parte com R$745,23."
+      },
+      {
+        "title": "Trabalhador por Hora em Varejo",
+        "input": {
+          "payType": "hourly",
+          "hourlyRate": 18,
+          "hoursPerWeek": 32,
+          "payFrequency": "weekly",
+          "filingStatus": "single",
+          "dependents": 1,
+          "state": "TX",
+          "additionalDeductions": 50,
+          "retirementContribution": 0
+        },
+        "output": {
+          "netPaycheck": 483.92,
+          "grossPay": 576,
+          "federalTax": 54.72,
+          "ficaTax": 44.16,
+          "stateTax": 0,
+          "totalDeductions": 50
+        },
+        "explanation": "Um trabalhador de meio período em varejo ganhando R$18/hora trabalhando 32 horas/semana recebe R$483,92 semanal após impostos. Texas não tem imposto estadual de renda, reduzindo as deduções gerais."
+      },
+      {
+        "title": "Professor Casado com Benefícios",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 65000,
+          "payFrequency": "semimonthly",
+          "filingStatus": "marriedFilingJointly",
+          "dependents": 2,
+          "state": "NY",
+          "additionalDeductions": 150,
+          "retirementContribution": 5
+        },
+        "output": {
+          "netPaycheck": 1718.32,
+          "grossPay": 2708.33,
+          "federalTax": 285.41,
+          "ficaTax": 207,
+          "stateTax": 397.6,
+          "totalDeductions": 150
+        },
+        "explanation": "Um professor casado ganhando R$65.000 anualmente com 2 dependentes recebe R$1.718,32 semimensal. O imposto estadual de Nova York é relativamente alto com R$397,60 por holerite."
+      },
+      {
+        "title": "Consultor Autônomo",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 85000,
+          "payFrequency": "monthly",
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "FL",
+          "additionalDeductions": 300,
+          "retirementContribution": 10
+        },
+        "output": {
+          "netPaycheck": 4075.25,
+          "grossPay": 7083.33,
+          "federalTax": 1657.08,
+          "ficaTax": 541.67,
+          "stateTax": 0,
+          "totalDeductions": 300
+        },
+        "explanation": "Um consultor autônomo ganhando R$85.000 anualmente recebe R$4.075,25 mensal após imposto de autônomo. Florida não tem imposto estadual de renda, e o imposto de autônomo inclui porções tanto do empregado quanto do empregador."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Imposto",
+        "slug": "tax-calculator",
+        "description": "Estime impostos de renda."
+      },
+      {
+        "name": "Calculadora de Orçamento",
+        "slug": "budget-calculator",
+        "description": "Crie um orçamento pessoal."
+      },
+      {
+        "name": "Calculadora de Poupança",
+        "slug": "savings-calculator",
+        "description": "Calcule crescimento de poupança."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Tire o mistério do seu holerite com nossa calculadora abrangente de holerite que mostra exatamente quanto você levará para casa após todos os impostos e deduções. Entender seu salário líquido é crucial para orçar, planejamento financeiro, e evitar surpresas quando abrir seu holerite. Nossa calculadora avançada lida com imposto federal sobre renda, Previdência Social, Medicare, impostos estaduais, e várias deduções para dar a você uma imagem precisa do seu pagamento real a receber. Seja comparando ofertas de emprego, negociando salário, ou simplesmente querendo entender para onde vai seu dinheiro, esta calculadora fornece a clareza que você precisa.",
+      "benefits": [
+        "Calcule pagamento exato a receber após todos os impostos e deduções",
+        "Entenda o impacto de impostos federais, estaduais e locais em seu salário",
+        "Compare diferentes frequências de pagamento e cenários fiscais",
+        "Veja como deduções como seguro saúde e contribuições de aposentadoria afetam seu holerite",
+        "Planeje seu orçamento baseado em cifras realistas de renda líquida",
+        "Tome decisões informadas sobre ofertas de emprego e negociações salariais",
+        "Rastreie como mudanças em renda ou status fiscal afetam seu pagamento a receber",
+        "Evite surpresas de retenções fiscais e deduções de folha de pagamento"
+      ],
+      "steps": [
+        "Selecione seu tipo de pagamento (salário ou por hora) e digite detalhes de compensação",
+        "Escolha sua frequência de pagamento (semanal, quinzenal, semi-mensal, ou mensal)",
+        "Digite seu status de declaração e número de dependentes para cálculos precisos de impostos",
+        "Selecione seu estado para cálculos apropriados de imposto estadual sobre renda",
+        "Adicione quaisquer deduções adicionais como seguro saúde ou contribuições de aposentadoria",
+        "Revise seu valor de holerite líquido e quebra detalhada de impostos"
+      ],
+      "inputsExplained": [
+        "Tipo de pagamento determina se você digita salário anual ou taxa por hora com horas trabalhadas",
+        "Salário anual é sua compensação bruta anual para posições assalariadas",
+        "Taxa por hora e horas por semana calculam suas ganhos brutos anuais para trabalhadores por hora",
+        "Frequência de pagamento afeta como impostos são calculados e retidos (quinzenal é mais comum)",
+        "Status de declaração (solteiro, casado, cabeça de família) determina categorias fiscais federais",
+        "Seleção de estado garante cálculos precisos de imposto estadual sobre renda (varia significativamente por estado)"
+      ],
+      "formulaExplanation": "Cálculos de holerite envolvem fórmulas fiscais complexas: Imposto federal sobre renda usa categorias progressivas (10%, 12%, 22%, 24%, 32%, 35%, 37%) baseado em renda tributável. Impostos FICA (Previdência Social 6.2% + Medicare 1.45%) financiam aposentadoria e cuidados de saúde. Impostos estaduais variam de 0% (Texas, Florida, Nevada) para mais de 13% (California). A fórmula considera deduções padrão, isenções pessoais, e várias retenções. Entender estes cálculos ajuda você a otimizar seu formulário W-4 e evitar penalidades por pagamento insuficiente ou reembolsos fiscais grandes.",
+      "examples": [
+        "$60,000 salário anual (pagamento quinzenal) resulta em holerite líquido de $1,892 após $608 em imposto federal, $234 FICA, e $66 imposto estadual - mostrando como impostos reduzem pagamento bruto por aproximadamente 32%.",
+        "$25 taxa por hora ($52,000 anualmente) trabalhando 40 horas/semana produz $1,738 líquido quinzenal, demonstrando como horas extras ou bônus impactam significativamente pagamento a receber.",
+        "Casado declarando conjuntamente com dois dependentes reduz responsabilidade fiscal federal, aumentando pagamento líquido de $1,892 para $2,034 quinzenal para o mesmo salário de $60,000."
+      ],
+      "resultsExplanation": [
+        "Holerite líquido mostra seu valor real a receber após todas as deduções",
+        "Imposto federal mostra imposto sobre renda retido para governo federal",
+        "Impostos FICA incluem contribuições de Previdência Social e Medicare",
+        "Imposto estadual mostra imposto estadual sobre renda baseado em sua localização",
+        "Dedução total combina todos os impostos e retenções voluntárias",
+        "Quebra fiscal ajuda você a entender para onde vai cada real"
+      ],
+      "whoItsFor": "Esta calculadora de holerite serve empregados comparando ofertas de emprego, freelancers estimando impostos trimestrais, graduados recentes entrando na força de trabalho, donos de pequenos negócios calculando folha de pagamento, profissionais fiscais aconselhando clientes, e qualquer pessoa querendo entender seu pacote de compensação. É particularmente valiosa para aqueles mudando empregos, recebendo aumentos, modificando retenções de folha de pagamento, ou planejando orçamentos baseado em renda líquida. A calculadora funciona para todos os tipos de pagamento e frequências, fornecendo insights para melhor tomada de decisões financeiras.",
+      "disclaimer": "Esta calculadora de holerite fornece estimativas baseadas em taxas fiscais atuais e deduções padrão. Pagamento real a receber pode variar devido a circunstâncias individuais, fontes adicionais de renda, situações fiscais especiais, ou mudanças em leis fiscais. Cálculos de imposto estadual são aproximações e podem não incluir impostos locais. Esta ferramenta é apenas para propósitos informativos e não constitui conselho fiscal. Consulte um profissional fiscal ou use calculadoras oficiais de retenção do IRS para cálculos precisos. Taxas fiscais e categorias estão sujeitas a mudanças anuais.",
+      "relatedTools": [
+        "Calculadoras de impostos para planejamento abrangente de imposto sobre renda",
+        "Calculadoras de orçamento para gerenciar despesas contra renda líquida",
+        "Calculadoras de poupança para planejamento baseado em pagamento a receber"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre pagamento bruto e pagamento líquido?",
+          "answer": "Pagamento bruto é suas ganhos totais antes de quaisquer deduções - este é o valor que seu empregador concorda em pagar a você. Pagamento líquido (pagamento a receber) é o que você realmente recebe após impostos e deduções serem subtraídos. Por exemplo, $4,000 bruto mensal poderia resultar em $3,000 líquido após imposto federal ($600), FICA ($248), imposto estadual ($152), e outras deduções. Entender esta diferença é crucial para orçar e comparar ofertas de emprego."
+        },
+        {
+          "question": "Como calcular retenção de imposto federal sobre renda?",
+          "answer": "Imposto federal sobre renda usa um sistema progressivo com categorias fiscais: 10%, 12%, 22%, 24%, 32%, 35%, e 37%. Sua renda tributável (pagamento bruto menos deduções pré-impostos e dedução padrão) determina sua categoria. As tabelas de retenção do IRS consideram seu status de declaração, dependentes, e frequência de pagamento. Você pode ajustar retenção usando Formulário W-4 para evitar dever impostos ou obter reembolsos fiscais grandes. Calculadoras de retenção online ajudam você a otimizar seu W-4 para retenção precisa."
+        },
+        {
+          "question": "Por que estados têm diferentes taxas fiscais?",
+          "answer": "Estados definem suas próprias taxas de imposto sobre renda para financiar serviços locais como educação, infraestrutura, e cuidados de saúde. Nove estados não têm imposto sobre renda (Texas, Florida, Nevada, etc.), enquanto outros vão de 2.9% (Carolina do Norte) para 13.3% (California). Estados sem imposto sobre renda frequentemente compensam a diferença através de impostos à propriedade mais altos, impostos sobre vendas, ou outras taxas. A taxa fiscal do seu estado impacta significativamente pagamento a receber - mudar de California (13.3%) para Texas (0%) poderia aumentar seu pagamento líquido por 10-15%."
+        },
+        {
+          "question": "¿Como deduções pré-impostos afetam meu holerite?",
+          "answer": "Deduções pré-impostos (como prêmios de seguro saúde, contribuições de aposentadoria, e benefícios de transporte) reduzem sua renda tributável, baixando sua responsabilidade fiscal federal e estadual. Por exemplo, prêmio mensal de seguro saúde de $300 reduz sua renda tributável, potencialmente economizando $60-90 em impostos mensalmente. Isso aumenta seu pagamento a receber comparado com pagar estes gastos com reais após impostos. Entender benefícios pré-impostos ajuda você a maximizar seu pacote de compensação líquida."
+        },
+        {
+          "question": "Qual é a melhor maneira de ajustar minha retenção fiscal?",
+          "answer": "Use o Estimador de Retenção Fiscal do IRS ou ferramentas similares para calcular retenção ótima. Considere mudanças de vida como casamento, filhos, ou renda adicional. Se você consistentemente deve impostos ou obtém reembolsos fiscais grandes, ajuste suas retenções do W-4. Retenção insuficiente leva a penalidades e surpresas de abril, enquanto retenção excessiva significa emprestar dinheiro sem juros ao governo. A meta é ter responsabilidade fiscal mínima quando declarar seu retorno."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculatrice de Paie",
+    "seoTitle": "Calculatrice de Paie - Calculer le Salaire Net et le Montant à Recevoir",
+    "metaDescription": "Calculez votre salaire net et le montant à recevoir après impôts et déductions. Calculatrice gratuite de paie avec calculs d'impôts fédéraux, étatiques et locaux.",
+    "keywords": [
+      "calculatrice paie",
+      "calculatrice salaire net",
+      "calculatrice montant recevoir",
+      "calculatrice salaire",
+      "calculatrice impôts paie"
+    ],
+    "longTailKeywords": [
+      "comment calculer le salaire net après impôts",
+      "calculatrice de paie avec impôts fédéraux et étatiques",
+      "quel est mon montant net après déductions",
+      "heure à salaire calculatrice de paie",
+      "calculatrice de paie bihebdomadaire avec impôts",
+      "combien d'impôts sont prélevés sur ma paie",
+      "calculatrice de brut à net",
+      "calculatrice de paie pour employés salariés",
+      "calculatrice d'impôt fédéral de paie",
+      "comment calculer les déductions de paie"
+    ],
+    "slug": "paycheck-calculator",
+    "category": "Financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "paie",
+      "salaire",
+      "salaire net",
+      "montant net",
+      "déductions fiscales",
+      "salaire brut",
+      "impôts paie"
+    ],
+    "description": "Calculez votre salaire net exact et le montant à recevoir après tous les impôts et déductions. Notre calculatrice complète de paie comprend l'impôt fédéral sur le revenu, la Sécurité sociale, Medicare, les impôts étatiques et d'autres déductions courantes. Parfaite pour les employés, les freelances et toute personne souhaitant comprendre le détail de sa paie.",
+    "summary": "Calculez le salaire net après impôts et déductions.",
+    "instructions": [
+      "Entrez votre salaire brut annuel ou tarif horaire avec heures travaillées",
+      "Sélectionnez la fréquence de paiement (hebdomadaire, bihebdomadaire, semi-mensuelle, mensuelle)",
+      "Entrez votre statut matrimonial et nombre de personnes à charge",
+      "Choisissez votre état pour des calculs précis d'impôts étatiques",
+      "Ajoutez des déductions supplémentaires (assurance santé, contributions retraite)",
+      "Cliquez sur 'Calculer' pour voir votre montant net de paie et le détail des impôts"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "payType",
+          "label": "Type de Paiement",
+          "type": "select",
+          "options": [
+            "salary",
+            "hourly"
+          ],
+          "default": "salary"
+        },
+        {
+          "name": "annualSalary",
+          "label": "Salaire Annuel (€)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "step": 1000,
+          "conditional": "payType === 'salary'"
+        },
+        {
+          "name": "hourlyRate",
+          "label": "Tarif Horaire (€)",
+          "type": "number",
+          "default": 25,
+          "min": 0,
+          "step": 0.25,
+          "conditional": "payType === 'hourly'"
+        },
+        {
+          "name": "hoursPerWeek",
+          "label": "Heures par Semaine",
+          "type": "number",
+          "default": 40,
+          "min": 1,
+          "max": 80,
+          "step": 1,
+          "conditional": "payType === 'hourly'"
+        },
+        {
+          "name": "payFrequency",
+          "label": "Fréquence de Paiement",
+          "type": "select",
+          "options": [
+            "weekly",
+            "biweekly",
+            "semimonthly",
+            "monthly"
+          ],
+          "default": "biweekly"
+        },
+        {
+          "name": "filingStatus",
+          "label": "Statut Matrimonial",
+          "type": "select",
+          "options": [
+            "single",
+            "marriedFilingJointly",
+            "marriedFilingSeparately",
+            "headOfHousehold"
+          ],
+          "default": "single"
+        },
+        {
+          "name": "dependents",
+          "label": "Nombre de Personnes à Charge",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "state",
+          "label": "État",
+          "type": "select",
+          "options": [
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"
+          ],
+          "default": "CA"
+        },
+        {
+          "name": "additionalDeductions",
+          "label": "Déductions Supplémentaires (€)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 25
+        },
+        {
+          "name": "retirementContribution",
+          "label": "Contribution Retraite (%)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 25,
+          "step": 0.5
+        }
+      ],
+      "formula": "Impôt Fédéral sur le Revenu = Basé sur les tranches d'imposition et le statut matrimonial; Impôts FICA = 7.65% (Sécurité Sociale 6.2% + Medicare 1.45%); Impôt État = Varie par état; Salaire Net = Salaire Brut - Tous les Impôts - Déductions",
+      "output": {
+        "label": "Montant Net de Paie",
+        "default": "Entrez vos informations salariales ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Salaire Brut",
+          "field": "grossPay",
+          "format": "currency"
+        },
+        {
+          "label": "Impôt Fédéral sur le Revenu",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impôts FICA",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "Impôt État",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "Déductions Totales",
+          "field": "totalDeductions",
+          "format": "currency"
+        },
+        {
+          "label": "Salaire Net Annuel",
+          "field": "netAnnual",
+          "format": "currency"
+        }
+      ],
+      "componentName": "PaycheckCalculator"
+    },
+    "examples": [
+      {
+        "title": "Ingénieur Logiciel Salaire Annuel",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 120000,
+          "payFrequency": "biweekly",
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "CA",
+          "additionalDeductions": 200,
+          "retirementContribution": 6
+        },
+        "output": {
+          "netPaycheck": 3208.45,
+          "grossPay": 4615.38,
+          "federalTax": 745.23,
+          "ficaTax": 352.69,
+          "stateTax": 309.01,
+          "totalDeductions": 200
+        },
+        "explanation": "Un ingénieur logiciel gagnant 120 000€ annuellement reçoit 3 208,45€ bihebdomadaire après impôts et déductions en Californie. L'impôt fédéral sur le revenu prend la plus grande part avec 745,23€."
+      },
+      {
+        "title": "Travailleur Horaire en Vente au Détail",
+        "input": {
+          "payType": "hourly",
+          "hourlyRate": 18,
+          "hoursPerWeek": 32,
+          "payFrequency": "weekly",
+          "filingStatus": "single",
+          "dependents": 1,
+          "state": "TX",
+          "additionalDeductions": 50,
+          "retirementContribution": 0
+        },
+        "output": {
+          "netPaycheck": 483.92,
+          "grossPay": 576,
+          "federalTax": 54.72,
+          "ficaTax": 44.16,
+          "stateTax": 0,
+          "totalDeductions": 50
+        },
+        "explanation": "Un travailleur à temps partiel en vente au détail gagnant 18€/heure travaillant 32 heures/semaine reçoit 483,92€ hebdomadaire après impôts. Texas n'a pas d'impôt sur le revenu étatique, réduisant les déductions globales."
+      },
+      {
+        "title": "Enseignant Marié avec Avantages",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 65000,
+          "payFrequency": "semimonthly",
+          "filingStatus": "marriedFilingJointly",
+          "dependents": 2,
+          "state": "NY",
+          "additionalDeductions": 150,
+          "retirementContribution": 5
+        },
+        "output": {
+          "netPaycheck": 1718.32,
+          "grossPay": 2708.33,
+          "federalTax": 285.41,
+          "ficaTax": 207,
+          "stateTax": 397.6,
+          "totalDeductions": 150
+        },
+        "explanation": "Un enseignant marié gagnant 65 000€ annuellement avec 2 personnes à charge reçoit 1 718,32€ semi-mensuellement. L'impôt étatique de New York est relativement élevé avec 397,60€ par paie."
+      },
+      {
+        "title": "Consultant Indépendant",
+        "input": {
+          "payType": "salary",
+          "annualSalary": 85000,
+          "payFrequency": "monthly",
+          "filingStatus": "single",
+          "dependents": 0,
+          "state": "FL",
+          "additionalDeductions": 300,
+          "retirementContribution": 10
+        },
+        "output": {
+          "netPaycheck": 4075.25,
+          "grossPay": 7083.33,
+          "federalTax": 1657.08,
+          "ficaTax": 541.67,
+          "stateTax": 0,
+          "totalDeductions": 300
+        },
+        "explanation": "Un consultant indépendant gagnant 85 000€ annuellement reçoit 4 075,25€ mensuellement après impôt sur le revenu indépendant. La Floride n'a pas d'impôt sur le revenu étatique, et l'impôt sur le revenu indépendant comprend à la fois les portions employé et employeur."
+      }
+    ],
+    "relatedCalculators": [
+      {
+        "name": "Calculatrice d'Impôt",
+        "slug": "tax-calculator",
+        "description": "Estimez les impôts sur le revenu."
+      },
+      {
+        "name": "Calculatrice de Budget",
+        "slug": "budget-calculator",
+        "description": "Créez un budget personnel."
+      },
+      {
+        "name": "Calculatrice d'Épargne",
+        "slug": "savings-calculator",
+        "description": "Calculez la croissance de l'épargne."
+      }
+    ],
+    "seoContent": {
+      "introduction": "Retirez le mystère de votre paie avec notre calculatrice complète de paie qui montre exactement combien vous emporterez chez vous après tous les impôts et déductions. Comprendre votre salaire net est crucial pour budgétiser, planification financière, et éviter les surprises lorsque vous ouvrez votre paie. Notre calculatrice avancée gère l'impôt fédéral sur le revenu, la Sécurité Sociale, Medicare, les impôts d'État, et diverses déductions pour vous donner une image précise de votre paie réelle à recevoir. Que vous compariez des offres d'emploi, négociiez un salaire, ou souhaitiez simplement comprendre où va votre argent, cette calculatrice fournit la clarté dont vous avez besoin.",
+      "benefits": [
+        "Calculez la paie exacte à recevoir après tous les impôts et déductions",
+        "Comprenez l'impact des impôts fédéraux, d'État et locaux sur votre salaire",
+        "Comparez différentes fréquences de paie et scénarios fiscaux",
+        "Voyez comment les déductions comme l'assurance santé et les contributions retraite affectent votre paie",
+        "Planifiez votre budget basé sur des chiffres réalistes de revenu net",
+        "Prenez des décisions éclairées concernant offres d'emploi et négociations salariales",
+        "Suivez comment les changements de revenu ou statut fiscal affectent votre paie à recevoir",
+        "Évitez les surprises des retenues fiscales et déductions de paie"
+      ],
+      "steps": [
+        "Sélectionnez votre type de paie (salaire ou horaire) et entrez les détails de compensation",
+        "Choisissez votre fréquence de paie (hebdomadaire, bihebdomadaire, semi-mensuelle, ou mensuelle)",
+        "Entrez votre statut de déclaration et nombre de personnes à charge pour calculs fiscaux précis",
+        "Sélectionnez votre État pour calculs appropriés d'impôt sur le revenu d'État",
+        "Ajoutez toute déduction supplémentaire comme assurance santé ou contributions retraite",
+        "Examinez votre montant de paie nette et ventilation détaillée des impôts"
+      ],
+      "inputsExplained": [
+        "Type de paie détermine si vous entrez salaire annuel ou taux horaire avec heures travaillées",
+        "Salaire annuel est votre compensation brute annuelle pour positions salariées",
+        "Taux horaire et heures par semaine calculent vos gains bruts annuels pour travailleurs horaires",
+        "Fréquence de paie affecte comment les impôts sont calculés et retenus (bihebdomadaire est plus commun)",
+        "Statut de déclaration (célibataire, marié, chef de famille) détermine tranches fiscales fédérales",
+        "Sélection d'État assure calculs précis d'impôt sur le revenu d'État (varie considérablement par État)"
+      ],
+      "formulaExplanation": "Les calculs de paie impliquent des formules fiscales complexes : L'impôt fédéral sur le revenu utilise un système progressif avec tranches fiscales : 10%, 12%, 22%, 24%, 32%, 35%, et 37%. Votre revenu imposable (paie brute moins déductions pré-impôts et déduction standard) détermine votre tranche. Les impôts FICA (Sécurité Sociale 6.2% + Medicare 1.45%) financent retraite et soins de santé. Les impôts d'État varient de 0% (Texas, Floride, Nevada) à plus de 13% (Californie). La formule tient compte déductions standard, exemptions personnelles, et diverses retenues. Comprendre ces calculs vous aide à optimiser votre W-4 et éviter pénalités pour paiement insuffisant ou gros remboursements fiscaux.",
+      "examples": [
+        "Salaire annuel de 60 000 $ (paie bihebdomadaire) résulte en paie nette de 1 892 $ après 608 $ d'impôt fédéral, 234 $ FICA, et 66 $ d'impôt d'État - montrant comment les impôts réduisent paie brute d'environ 32%.",
+        "Taux horaire de 25 $ (52 000 $ annuellement) travaillant 40 heures/semaine produit 1 738 $ net bihebdomadaire, démontrant comment les heures supplémentaires ou bonus impactent significativement paie à recevoir.",
+        "Marié déclarant conjointement avec deux personnes à charge réduit responsabilité fiscale fédérale, augmentant paie nette de 1 892 $ à 2 034 $ bihebdomadaire pour le même salaire de 60 000 $."
+      ],
+      "resultsExplanation": [
+        "Paie nette montre votre montant réel à recevoir après toutes les déductions",
+        "Impôt fédéral affiche l'impôt sur le revenu retenu pour gouvernement fédéral",
+        "Impôts FICA incluent contributions Sécurité Sociale et Medicare",
+        "Impôt d'État montre l'impôt sur le revenu d'État basé sur votre localisation",
+        "Déductions totales combinent tous les impôts et retenues volontaires",
+        "Ventilation fiscale vous aide à comprendre où va chaque dollar"
+      ],
+      "whoItsFor": "Cette calculatrice de paie sert employés comparant offres d'emploi, freelances estimant impôts trimestriels, diplômés récents entrant sur le marché du travail, propriétaires de petites entreprises calculant paie, professionnels fiscaux conseillant clients, et quiconque souhaitant comprendre leur package de compensation. Elle est particulièrement précieuse pour ceux changeant d'emploi, recevant augmentations, modifiant retenues de paie, ou planifiant budgets basé sur revenu net. La calculatrice fonctionne pour tous types de paie et fréquences, fournissant insights pour meilleure prise de décision financière.",
+      "disclaimer": "Cette calculatrice de paie fournit des estimations basées sur taux fiscaux actuels et déductions standard. Paie réelle à recevoir peut varier en raison circonstances individuelles, sources de revenu supplémentaires, situations fiscales spéciales, ou changements dans lois fiscales. Calculs d'impôt d'État sont approximations et peuvent ne pas inclure impôts locaux. Cet outil est uniquement à des fins informatives et ne constitue pas conseil fiscal. Consultez professionnel fiscal ou utilisez calculatrices officielles de retenue IRS pour calculs précis. Taux fiscaux et tranches sont sujets à changements annuels.",
+      "relatedTools": [
+        "Calculatrices d'impôt pour planification complète d'impôt sur le revenu",
+        "Calculatrices de budget pour gérer dépenses contre revenu net",
+        "Calculatrices d'épargne pour planification basé sur paie à recevoir"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre paie brute et paie nette ?",
+          "answer": "Paie brute est vos gains totaux avant toute déduction - c'est le montant que votre employeur accepte de vous payer. Paie nette (paie à recevoir) est ce que vous recevez réellement après impôts et déductions sont soustraits. Par exemple, 4 000 $ brut mensuel pourrait résulter en 3 000 $ net après impôt fédéral (600 $), FICA (248 $), impôt d'État (152 $), et autres déductions. Comprendre cette différence est crucial pour budgétiser et comparer offres d'emploi."
+        },
+        {
+          "question": "Comment calculer la retenue d'impôt fédéral sur le revenu ?",
+          "answer": "L'impôt fédéral sur le revenu utilise un système progressif avec tranches fiscales : 10%, 12%, 22%, 24%, 32%, 35%, et 37%. Votre revenu imposable (paie brute moins déductions pré-impôts et déduction standard) détermine votre tranche. Les tables de retenue IRS considèrent votre statut de déclaration, personnes à charge, et fréquence de paie. Vous pouvez ajuster retenue utilisant Formulaire W-4 pour éviter devoir impôts ou obtenir gros remboursements fiscaux. Calculatrices de retenue en ligne vous aident à optimiser votre W-4 pour retenue précise."
+        },
+        {
+          "question": "Pourquoi les États ont-ils différents taux fiscaux ?",
+          "answer": "Les États fixent leurs propres taux d'impôt sur le revenu pour financer services locaux comme éducation, infrastructure, et soins de santé. Neuf États n'ont pas d'impôt sur le revenu (Texas, Floride, Nevada, etc.), tandis que d'autres vont de 2.9% (Caroline du Nord) à 13.3% (Californie). Les États sans impôt sur le revenu compensent souvent la différence par impôts fonciers plus élevés, taxes de vente, ou autres frais. Le taux fiscal de votre État impacte significativement paie à recevoir - déménager de Californie (13.3%) à Texas (0%) pourrait augmenter votre paie nette de 10-15%."
+        },
+        {
+          "question": "Comment les déductions pré-impôts affectent-elles votre paie ?",
+          "answer": "Les déductions pré-impôts (comme primes d'assurance santé, contributions retraite, et avantages de transport) réduisent votre revenu imposable, baissant votre responsabilité fiscale fédérale et d'État. Par exemple, prime mensuelle d'assurance santé de 300 $ réduit votre revenu imposable, potentiellement vous sauvant 60-90 $ d'impôts mensuellement. Cela augmente votre paie à recevoir comparé à payer ces dépenses avec dollars après impôts. Comprendre avantages pré-impôts vous aide à maximiser votre package de compensation nette."
+        },
+        {
+          "question": "Quelle est la meilleure façon d'ajuster votre retenue fiscale ?",
+          "answer": "Utilisez l'Estimateur de Retenue Fiscale IRS ou outils similaires pour calculer retenue optimale. Considérez changements de vie comme mariage, enfants, ou revenu supplémentaire. Si vous devez constamment impôts ou obtenez gros remboursements fiscaux, ajustez vos retenues W-4. Retenue insuffisante conduit à pénalités et surprises d'avril, tandis que retenue excessive signifie prêter argent sans intérêt au gouvernement. Le but est d'avoir responsabilité fiscale minimale lors de déclaration de votre retour."
+        }
+      ]
+    }
+  }
+}

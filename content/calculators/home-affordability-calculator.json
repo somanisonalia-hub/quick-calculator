@@ -1,0 +1,690 @@
+{
+  "en": {
+    "title": "Home Affordability Calculator - How Much House Can I Afford?",
+    "seoTitle": "Home Affordability Calculator - How Much House Can I Afford?",
+    "metaDescription": "Calculate how much house you can afford based on your income, down payment, credit score, and current debt. Free home affordability calculator with FHA guidelines.",
+    "keywords": [
+      "home affordability calculator",
+      "how much house can i afford",
+      "house affordability calculator",
+      "mortgage affordability calculator",
+      "home buying calculator",
+      "house payment calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate house affordability",
+      "home affordability calculator with income",
+      "what house can i afford calculator",
+      "calculate affordable house payment",
+      "house affordability based on salary",
+      "how much mortgage can i afford",
+      "home affordability calculator with taxes",
+      "maximum house price i can afford",
+      "house affordability calculator with insurance",
+      "how much house payment can i afford"
+    ],
+    "slug": "home-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "home affordability",
+      "mortgage calculator",
+      "house buying",
+      "FHA guidelines",
+      "property taxes",
+      "home insurance"
+    ],
+    "description": "Calculate how much house you can afford based on your monthly income, down payment available, current debt obligations, property tax rate, and homeowners insurance. Our home affordability calculator uses FHA and conventional lending guidelines to help you determine a realistic home price that fits your budget. Perfect for first-time homebuyers and those planning their home purchase.",
+    "summary": "Calculate maximum affordable home price based on income and FHA guidelines.",
+    "instructions": [
+      "Enter your gross monthly income",
+      "Enter your monthly debt payments (excluding housing)",
+      "Specify your down payment and credit score",
+      "Choose interest rate and loan term",
+      "Enter property tax rate and insurance cost",
+      "Click 'Calculate' to see your maximum affordable home price",
+      "Review the housing affordability analysis for lending guidelines"
+    ],
+    "calculatorComponent": "HomeAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "First-Time Homebuyer",
+        "description": "A buyer earning $6,000 monthly with $500 in existing debt",
+        "input": {
+          "monthlyIncome": 6000,
+          "monthlyDebt": 500,
+          "downPayment": 60000,
+          "creditScore": 720,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "propertyTaxRate": 1.2,
+          "homeInsurance": 1200
+        },
+        "output": {
+          "homePrice": 375000,
+          "monthlyPayment": 1680,
+          "loanAmount": 315000,
+          "housingRatio": 28,
+          "monthlyPropertyTax": 375,
+          "monthlyInsurance": 100,
+          "totalMonthlyCost": 2155
+        }
+      },
+      {
+        "title": "High-Income Buyer with Large Down Payment",
+        "description": "High earner with substantial down payment and low debt",
+        "input": {
+          "monthlyIncome": 15000,
+          "monthlyDebt": 800,
+          "downPayment": 200000,
+          "creditScore": 780,
+          "interestRate": 5.5,
+          "loanTerm": 30,
+          "propertyTaxRate": 1.5,
+          "homeInsurance": 2400
+        },
+        "output": {
+          "homePrice": 1100000,
+          "monthlyPayment": 3900,
+          "loanAmount": 900000,
+          "housingRatio": 26,
+          "monthlyPropertyTax": 1375,
+          "monthlyInsurance": 200,
+          "totalMonthlyCost": 5475
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calculate how much house you can afford with our comprehensive home affordability calculator. This essential financial tool helps you determine the maximum home price that fits your budget based on your income, down payment, credit score, existing debt, and local property costs. Whether you're a first-time homebuyer or looking to upgrade, understanding your home buying capacity is crucial for making realistic purchasing decisions in today's competitive housing market.",
+      "benefits": [
+        "Determine realistic home prices based on your actual income and financial situation",
+        "Factor in all housing costs including principal, interest, taxes, and insurance (PITI)",
+        "Understand FHA and conventional lending guidelines for housing affordability",
+        "Account for local property tax rates and insurance costs in your calculations",
+        "Avoid overextending yourself with a home purchase that strains your monthly budget",
+        "Make informed decisions about down payments and loan terms for maximum affordability"
+      ],
+      "steps": [
+        "Enter your gross monthly income from all sources",
+        "Input your current monthly debt payments (excluding housing costs)",
+        "Enter your available down payment amount",
+        "Provide your credit score for accurate interest rate estimation",
+        "Specify the interest rate and loan term you're likely to qualify for",
+        "Enter your local property tax rate as a percentage",
+        "Input your estimated annual homeowners insurance cost",
+        "Review your maximum affordable home price and monthly payment breakdown"
+      ],
+      "inputsExplained": [
+        "Monthly gross income represents your total earnings before taxes and deductions",
+        "Monthly debt payments include credit cards, car loans, student loans, and other obligations",
+        "Down payment reduces the loan amount needed and can improve your loan terms",
+        "Credit score affects your interest rate and loan approval chances",
+        "Interest rate and loan term determine your monthly mortgage payment",
+        "Property tax rate varies by location and affects your total housing costs",
+        "Home insurance cost depends on home value, location, and coverage amount"
+      ],
+      "formulaExplanation": "The calculator uses FHA lending guidelines which recommend that total housing costs should not exceed 28% of your gross monthly income. Housing costs include principal, interest, property taxes, and homeowners insurance (PITI). The formula calculates your maximum housing budget, then works backward to determine the home price that produces monthly payments within your affordable range, accounting for local tax and insurance costs.",
+      "examples": [
+        "A buyer earning $6,000 monthly with $500 in debt and $60,000 down payment could afford a $375,000 home with $2,155 in total monthly housing costs",
+        "Someone earning $15,000 monthly with $800 in debt and $200,000 down payment could afford a $1,100,000 home with $5,475 in monthly housing costs"
+      ],
+      "resultsExplanation": [
+        "Maximum affordable home price shows the highest priced home you can reasonably purchase",
+        "Monthly housing payment displays your total PITI (principal, interest, taxes, insurance) payment",
+        "Loan amount shows how much you would need to borrow after your down payment",
+        "Housing cost ratio indicates what percentage of your income goes to housing costs",
+        "Monthly property tax shows the estimated monthly cost based on your local tax rate",
+        "Monthly insurance displays your homeowners insurance cost divided by 12",
+        "Total monthly cost combines all housing expenses for a complete affordability picture"
+      ],
+      "whoItsFor": "This home affordability calculator is perfect for first-time homebuyers, current homeowners considering an upgrade, real estate investors, and anyone planning a home purchase. It's especially valuable for those who want to ensure they're buying within FHA and conventional lending guidelines while accounting for all the costs associated with homeownership.",
+      "disclaimer": "This calculator provides estimates based on FHA and conventional lending guidelines. Actual home prices and loan amounts may vary based on your specific credit profile, lender requirements, appraisal values, and local market conditions. Always consult with a mortgage lender, real estate agent, or financial advisor for personalized home buying advice.",
+      "relatedTools": [
+        "mortgage calculator",
+        "mortgage payment calculator",
+        "property tax calculator",
+        "home loan calculator",
+        "budget calculator"
+      ],
+      "faqs": [
+        {
+          "question": "How much house can I afford based on my income?",
+          "answer": "FHA guidelines recommend that your total housing costs (PITI - principal, interest, taxes, insurance) should not exceed 28% of your gross monthly income. Conventional loans often use similar guidelines. This calculator uses these standards to determine your maximum affordable home price."
+        },
+        {
+          "question": "What is PITI and why does it matter?",
+          "answer": "PITI stands for Principal, Interest, Taxes, and Insurance - the four main components of your monthly housing payment. Lenders use PITI to determine how much house you can afford because it represents your total housing cost, not just the mortgage payment."
+        },
+        {
+          "question": "Does my credit score affect how much house I can afford?",
+          "answer": "Yes, your credit score significantly affects both the interest rate you'll receive and the loan amount you can qualify for. Higher credit scores (740+) typically qualify for lower interest rates, allowing you to afford more expensive homes with the same monthly payment."
+        },
+        {
+          "question": "How do property taxes affect home affordability?",
+          "answer": "Property taxes vary widely by location and can significantly impact your housing costs. Higher tax rates reduce the home price you can afford since taxes are included in the PITI calculation. Always check local tax rates when house hunting."
+        },
+        {
+          "question": "What's the difference between FHA and conventional loan limits?",
+          "answer": "FHA loans are insured by the Federal Housing Administration and have more lenient qualification standards. Conventional loans follow Fannie Mae/Freddie Mac guidelines. FHA loans typically allow higher debt-to-income ratios but may have lower maximum loan amounts in high-cost areas."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Capacidad para Casa - ¿Cuánta Casa Puedo Permitirme?",
+    "seoTitle": "Calculadora de Capacidad para Casa - ¿Cuánta Casa Puedo Permitirme?",
+    "metaDescription": "Calcula cuánta casa puedes permitirte basado en tus ingresos, pago inicial, puntaje de crédito y deuda actual. Calculadora gratuita de capacidad para casa con pautas FHA.",
+    "keywords": [
+      "calculadora capacidad casa",
+      "cuánta casa puedo permitirme",
+      "calculadora capacidad casa",
+      "calculadora capacidad hipoteca",
+      "calculadora compra casa",
+      "calculadora pago casa"
+    ],
+    "longTailKeywords": [
+      "cómo calcular capacidad casa",
+      "calculadora capacidad casa con ingresos",
+      "qué casa puedo permitirme calculadora",
+      "calcular pago casa asequible",
+      "capacidad casa basado en salario",
+      "cuánta hipoteca puedo permitirme",
+      "calculadora capacidad casa con impuestos",
+      "precio máximo casa que puedo permitirme",
+      "calculadora capacidad casa con seguro",
+      "cuánto pago casa puedo permitirme"
+    ],
+    "slug": "home-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "capacidad casa",
+      "calculadora hipoteca",
+      "compra casa",
+      "pautas FHA",
+      "impuestos propiedad",
+      "seguro casa"
+    ],
+    "description": "Calcula cuánta casa puedes permitirte basado en tus ingresos mensuales, pago inicial disponible, obligaciones de deuda actuales, tasa de impuesto a la propiedad y seguro de propietarios. Nuestra calculadora de capacidad para casa utiliza pautas FHA y convencionales para ayudarte a determinar un precio realista de casa que quepa en tu presupuesto. Perfecta para compradores primerizos de casa y aquellos planificando su compra de vivienda.",
+    "summary": "Calcula precio máximo de casa asequible basado en ingresos y pautas FHA.",
+    "instructions": [
+      "Ingresa tus ingresos brutos mensuales",
+      "Ingresa tus pagos mensuales de deudas (excluyendo vivienda)",
+      "Especifica tu pago inicial y puntaje de crédito",
+      "Elige tasa de interés y plazo del préstamo",
+      "Ingresa tasa de impuesto a la propiedad y costo de seguro",
+      "Haz clic en 'Calcular' para ver el precio máximo de casa asequible",
+      "Revisa el análisis de capacidad de vivienda para pautas de préstamo"
+    ],
+    "calculatorComponent": "HomeAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Comprador Primerizo de Casa",
+        "description": "Un comprador ganando $6,000 mensuales con $500 en deuda existente",
+        "input": {
+          "monthlyIncome": 6000,
+          "monthlyDebt": 500,
+          "downPayment": 60000,
+          "creditScore": 720,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "propertyTaxRate": 1.2,
+          "homeInsurance": 1200
+        },
+        "output": {
+          "homePrice": 375000,
+          "monthlyPayment": 1680,
+          "loanAmount": 315000,
+          "housingRatio": 28,
+          "monthlyPropertyTax": 375,
+          "monthlyInsurance": 100,
+          "totalMonthlyCost": 2155
+        }
+      },
+      {
+        "title": "Comprador de Altos Ingresos con Gran Pago Inicial",
+        "description": "Persona de altos ingresos con pago inicial sustancial y deuda baja",
+        "input": {
+          "monthlyIncome": 15000,
+          "monthlyDebt": 800,
+          "downPayment": 200000,
+          "creditScore": 780,
+          "interestRate": 5.5,
+          "loanTerm": 30,
+          "propertyTaxRate": 1.5,
+          "homeInsurance": 2400
+        },
+        "output": {
+          "homePrice": 1100000,
+          "monthlyPayment": 3900,
+          "loanAmount": 900000,
+          "housingRatio": 26,
+          "monthlyPropertyTax": 1375,
+          "monthlyInsurance": 200,
+          "totalMonthlyCost": 5475
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calcula cuánta casa puedes permitirte con nuestra completa calculadora de capacidad para casa. Esta herramienta financiera esencial te ayuda a determinar el precio máximo de casa que cabe en tu presupuesto basado en tus ingresos, pago inicial, puntaje de crédito, deuda existente y costos locales de propiedad. Ya sea que seas un comprador primerizo de casa o busques actualizarte, entender tu capacidad de compra de vivienda es crucial para tomar decisiones realistas de compra en el competitivo mercado inmobiliario actual.",
+      "benefits": [
+        "Determina precios realistas de casa basado en tus ingresos reales y situación financiera",
+        "Considera todos los costos de vivienda incluyendo principal, intereses, impuestos y seguro (PITI)",
+        "Entiende las pautas FHA y convencionales para capacidad de vivienda",
+        "Cuenta con tasas locales de impuesto a la propiedad y costos de seguro en tus cálculos",
+        "Evita extenderte demasiado con una compra de casa que tensione tu presupuesto mensual",
+        "Toma decisiones informadas sobre pagos iniciales y términos de préstamo para máxima capacidad"
+      ],
+      "steps": [
+        "Ingresa tus ingresos brutos mensuales de todas las fuentes",
+        "Ingresa tus pagos actuales de deudas mensuales (excluyendo costos de vivienda)",
+        "Ingresa tu monto disponible de pago inicial",
+        "Proporciona tu puntaje de crédito para estimación precisa de tasa de interés",
+        "Especifica la tasa de interés y plazo del préstamo para los que probablemente califiques",
+        "Ingresa tu tasa local de impuesto a la propiedad como porcentaje",
+        "Ingresa tu costo estimado anual de seguro de propietarios",
+        "Revisa tu precio máximo de casa asequible y desglose de pago mensual"
+      ],
+      "inputsExplained": [
+        "Los ingresos brutos mensuales representan tus ganancias totales antes de impuestos y deducciones",
+        "Los pagos mensuales de deudas incluyen tarjetas de crédito, préstamos de auto, préstamos estudiantiles y otras obligaciones",
+        "El pago inicial reduce el monto del préstamo necesario y puede mejorar tus términos de préstamo",
+        "El puntaje de crédito afecta tu tasa de interés y chances de aprobación de préstamo",
+        "La tasa de interés y plazo del préstamo determinan tu pago mensual de hipoteca",
+        "La tasa de impuesto a la propiedad varía por ubicación y afecta tus costos totales de vivienda",
+        "El costo de seguro de casa depende del valor de la casa, ubicación y monto de cobertura"
+      ],
+      "formulaExplanation": "La calculadora utiliza pautas de préstamo FHA que recomiendan que los costos totales de vivienda no excedan el 28% de tus ingresos brutos mensuales. Los costos de vivienda incluyen principal, intereses, impuestos a la propiedad y seguro de propietarios (PITI). La fórmula calcula tu presupuesto máximo de vivienda, luego trabaja hacia atrás para determinar el precio de la casa que produce pagos mensuales dentro de tu rango asequible, contabilizando costos locales de impuestos y seguro.",
+      "examples": [
+        "Un comprador ganando $6,000 mensuales con $500 en deuda y $60,000 de pago inicial podría permitirse una casa de $375,000 con $2,155 en costos totales mensuales de vivienda",
+        "Alguien ganando $15,000 mensuales con $800 en deuda y $200,000 de pago inicial podría permitirse una casa de $1,100,000 con $5,475 en costos mensuales de vivienda"
+      ],
+      "resultsExplanation": [
+        "El precio máximo de casa asequible muestra la casa de precio más alto que puedes comprar razonablemente",
+        "El pago mensual de vivienda muestra tu pago total PITI (principal, intereses, impuestos, seguro)",
+        "El monto del préstamo muestra cuánto necesitarías pedir prestado después de tu pago inicial",
+        "La relación de costos de vivienda indica qué porcentaje de tus ingresos va a costos de vivienda",
+        "El impuesto mensual a la propiedad muestra el costo mensual estimado basado en tu tasa local de impuesto",
+        "El seguro mensual muestra tu costo de seguro de propietarios dividido por 12",
+        "El costo mensual total combina todos los gastos de vivienda para un panorama completo de capacidad"
+      ],
+      "whoItsFor": "Esta calculadora de capacidad para casa es perfecta para compradores primerizos de casa, propietarios actuales considerando una actualización, inversionistas inmobiliarios y cualquiera planificando una compra de vivienda. Es especialmente valiosa para aquellos que quieren asegurar que están comprando dentro de las pautas FHA y convencionales mientras contabilizan todos los costos asociados con la propiedad de vivienda.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en pautas FHA y convencionales. Los precios reales de casa y montos de préstamo pueden variar basado en tu perfil específico de crédito, requisitos del prestamista, valores de tasación y condiciones del mercado local. Siempre consulta con un prestamista hipotecario, agente inmobiliario o asesor financiero para consejos personalizados de compra de casa.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora pago hipoteca",
+        "calculadora impuesto propiedad",
+        "calculadora préstamo casa",
+        "calculadora presupuesto"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánta casa puedo permitirme basado en mis ingresos?",
+          "answer": "Las pautas FHA recomiendan que tus costos totales de vivienda (PITI - principal, intereses, impuestos, seguro) no excedan el 28% de tus ingresos brutos mensuales. Los préstamos convencionales a menudo usan pautas similares. Esta calculadora usa estos estándares para determinar tu precio máximo de casa asequible."
+        },
+        {
+          "question": "¿Qué es PITI y por qué importa?",
+          "answer": "PITI significa Principal, Intereses, Impuestos y Seguro - los cuatro componentes principales de tu pago mensual de vivienda. Los prestamistas usan PITI para determinar cuánta casa puedes permitirte porque representa tu costo total de vivienda, no solo el pago de hipoteca."
+        },
+        {
+          "question": "¿Afecta mi puntaje de crédito cuánta casa puedo permitirme?",
+          "answer": "Sí, tu puntaje de crédito afecta significativamente tanto la tasa de interés que recibirás como el monto del préstamo para el que puedes calificar. Puntajes de crédito más altos (740+) típicamente califican para tasas de interés más bajas, permitiéndote permitirte casas más caras con el mismo pago mensual."
+        },
+        {
+          "question": "¿Cómo afectan los impuestos a la propiedad la capacidad para casa?",
+          "answer": "Los impuestos a la propiedad varían ampliamente por ubicación y pueden impactar significativamente tus costos de vivienda. Tasas de impuesto más altas reducen el precio de casa que puedes permitirte ya que los impuestos están incluidos en el cálculo PITI. Siempre verifica las tasas de impuesto locales cuando busques casa."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre límites de préstamo FHA y convencional?",
+          "answer": "Los préstamos FHA están asegurados por la Administración Federal de Vivienda y tienen estándares de calificación más indulgentes. Los préstamos convencionales siguen las pautas Fannie Mae/Freddie Mac. Los préstamos FHA típicamente permiten relaciones deuda-ingreso más altas pero pueden tener montos máximos de préstamo más bajos en áreas de alto costo."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Capacidade para Casa - Quanto Casa Posso Permitir?",
+    "seoTitle": "Calculadora de Capacidade para Casa - Quanto Casa Posso Permitir?",
+    "metaDescription": "Calcule quanto casa você pode permitir baseado na sua renda, entrada, score de crédito e dívida atual. Calculadora gratuita de capacidade para casa com diretrizes FHA.",
+    "keywords": [
+      "calculadora capacidade casa",
+      "quanto casa posso permitir",
+      "calculadora capacidade casa",
+      "calculadora capacidade hipoteca",
+      "calculadora compra casa",
+      "calculadora pagamento casa"
+    ],
+    "longTailKeywords": [
+      "como calcular capacidade casa",
+      "calculadora capacidade casa com renda",
+      "que casa posso permitir calculadora",
+      "calcular pagamento casa acessível",
+      "capacidade casa baseado no salário",
+      "quanto hipoteca posso permitir",
+      "calculadora capacidade casa com impostos",
+      "preço máximo casa que posso permitir",
+      "calculadora capacidade casa com seguro",
+      "quanto pagamento casa posso permitir"
+    ],
+    "slug": "home-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "capacidade casa",
+      "calculadora hipoteca",
+      "compra casa",
+      "diretrizes FHA",
+      "impostos propriedade",
+      "seguro casa"
+    ],
+    "description": "Calcule quanto casa você pode permitir baseado na sua renda mensal, entrada disponível, obrigações de dívida atuais, taxa de imposto predial e seguro residencial. Nossa calculadora de capacidade para casa usa diretrizes FHA e convencionais para ajudá-lo a determinar um preço realista de casa que caiba no seu orçamento. Perfeita para compradores de casa pela primeira vez e aqueles planejando sua compra de imóvel.",
+    "summary": "Calcule preço máximo de casa acessível baseado na renda e diretrizes FHA.",
+    "instructions": [
+      "Digite sua renda bruta mensal",
+      "Digite seus pagamentos mensais de dívidas (excluindo moradia)",
+      "Especifique sua entrada e score de crédito",
+      "Escolha taxa de juros e prazo do empréstimo",
+      "Digite taxa de imposto predial e custo do seguro",
+      "Clique em 'Calcular' para ver o preço máximo de casa acessível",
+      "Revise a análise de capacidade de moradia para diretrizes de empréstimo"
+    ],
+    "calculatorComponent": "HomeAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Comprador de Casa Pela Primeira Vez",
+        "description": "Um comprador ganhando R$ 6.000 mensais com R$ 500 em dívida existente",
+        "input": {
+          "monthlyIncome": 6000,
+          "monthlyDebt": 500,
+          "downPayment": 60000,
+          "creditScore": 720,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "propertyTaxRate": 1.2,
+          "homeInsurance": 1200
+        },
+        "output": {
+          "homePrice": 375000,
+          "monthlyPayment": 1680,
+          "loanAmount": 315000,
+          "housingRatio": 28,
+          "monthlyPropertyTax": 375,
+          "monthlyInsurance": 100,
+          "totalMonthlyCost": 2155
+        }
+      },
+      {
+        "title": "Comprador de Alta Renda com Grande Entrada",
+        "description": "Pessoa de alta renda com entrada substancial e dívida baixa",
+        "input": {
+          "monthlyIncome": 15000,
+          "monthlyDebt": 800,
+          "downPayment": 200000,
+          "creditScore": 780,
+          "interestRate": 5.5,
+          "loanTerm": 30,
+          "propertyTaxRate": 1.5,
+          "homeInsurance": 2400
+        },
+        "output": {
+          "homePrice": 1100000,
+          "monthlyPayment": 3900,
+          "loanAmount": 900000,
+          "housingRatio": 26,
+          "monthlyPropertyTax": 1375,
+          "monthlyInsurance": 200,
+          "totalMonthlyCost": 5475
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calcule quanto casa você pode permitir com nossa completa calculadora de capacidade para casa. Esta ferramenta financeira essencial ajuda você a determinar o preço máximo de casa que cabe no seu orçamento baseado na sua renda, entrada, score de crédito, dívida existente e custos locais de propriedade. Seja você um comprador de casa pela primeira vez ou procurando atualizar, entender sua capacidade de compra de imóvel é crucial para tomar decisões realistas de compra no competitivo mercado imobiliário atual.",
+      "benefits": [
+        "Determine preços realistas de casa baseado na sua renda real e situação financeira",
+        "Considere todos os custos de moradia incluindo principal, juros, impostos e seguro (PITI)",
+        "Entenda as diretrizes FHA e convencionais para capacidade de moradia",
+        "Conte com taxas locais de imposto predial e custos de seguro em seus cálculos",
+        "Evite se estender demais com uma compra de casa que tensione seu orçamento mensal",
+        "Tome decisões informadas sobre entradas e termos de empréstimo para máxima capacidade"
+      ],
+      "steps": [
+        "Digite sua renda bruta mensal de todas as fontes",
+        "Insira seus pagamentos atuais de dívidas mensais (excluindo custos de moradia)",
+        "Digite seu valor disponível de entrada",
+        "Forneça seu score de crédito para estimativa precisa de taxa de juros",
+        "Especifique a taxa de juros e prazo do empréstimo para os quais você provavelmente se qualifica",
+        "Digite sua taxa local de imposto predial como porcentagem",
+        "Insira seu custo estimado anual de seguro residencial",
+        "Revise seu preço máximo de casa acessível e detalhamento de pagamento mensal"
+      ],
+      "inputsExplained": [
+        "A renda bruta mensal representa seus ganhos totais antes de impostos e deduções",
+        "Os pagamentos mensais de dívidas incluem cartões de crédito, empréstimos de carro, empréstimos estudantis e outras obrigações",
+        "A entrada reduz o valor do empréstimo necessário e pode melhorar seus termos de empréstimo",
+        "O score de crédito afeta sua taxa de juros e chances de aprovação de empréstimo",
+        "A taxa de juros e prazo do empréstimo determinam seu pagamento mensal de hipoteca",
+        "A taxa de imposto predial varia por localização e afeta seus custos totais de moradia",
+        "O custo de seguro residencial depende do valor da casa, localização e valor da cobertura"
+      ],
+      "formulaExplanation": "A calculadora usa diretrizes de empréstimo FHA que recomendam que os custos totais de moradia não excedam 28% da sua renda bruta mensal. Os custos de moradia incluem principal, juros, impostos prediais e seguro residencial (PITI). A fórmula calcula seu orçamento máximo de moradia, então trabalha para trás para determinar o preço da casa que produz pagamentos mensais dentro da sua faixa acessível, contabilizando custos locais de impostos e seguro.",
+      "examples": [
+        "Um comprador ganhando R$ 6.000 mensais com R$ 500 em dívida e R$ 60.000 de entrada poderia permitir uma casa de R$ 375.000 com R$ 2.155 em custos totais mensais de moradia",
+        "Alguém ganhando R$ 15.000 mensais com R$ 800 em dívida e R$ 200.000 de entrada poderia permitir uma casa de R$ 1.100.000 com R$ 5.475 em custos mensais de moradia"
+      ],
+      "resultsExplanation": [
+        "O preço máximo de casa acessível mostra a casa de preço mais alto que você pode comprar razoavelmente",
+        "O pagamento mensal de moradia mostra seu pagamento total PITI (principal, juros, impostos, seguro)",
+        "O valor do empréstimo mostra quanto você precisaria emprestar após sua entrada",
+        "A relação de custos de moradia indica que porcentagem da sua renda vai para custos de moradia",
+        "O imposto predial mensal mostra o custo mensal estimado baseado na sua taxa local de imposto",
+        "O seguro mensal mostra seu custo de seguro residencial dividido por 12",
+        "O custo mensal total combina todas as despesas de moradia para um panorama completo de capacidade"
+      ],
+      "whoItsFor": "Esta calculadora de capacidade para casa é perfeita para compradores de casa pela primeira vez, proprietários atuais considerando uma atualização, investidores imobiliários e qualquer pessoa planejando uma compra de imóvel. É especialmente valiosa para aqueles que querem garantir que estão comprando dentro das diretrizes FHA e convencionais enquanto contabilizam todos os custos associados com a propriedade de imóvel.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em diretrizes FHA e convencionais. Os preços reais de casa e valores de empréstimo podem variar baseado no seu perfil específico de crédito, requisitos do credor, valores de avaliação e condições do mercado local. Sempre consulte com um credor hipotecário, corretor imobiliário ou consultor financeiro para conselhos personalizados de compra de casa.",
+      "relatedTools": [
+        "calculadora hipoteca",
+        "calculadora pagamento hipoteca",
+        "calculadora imposto propriedade",
+        "calculadora empréstimo casa",
+        "calculadora orçamento"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto casa posso permitir baseado na minha renda?",
+          "answer": "As diretrizes FHA recomendam que seus custos totais de moradia (PITI - principal, juros, impostos, seguro) não excedam 28% da sua renda bruta mensal. Empréstimos convencionais frequentemente usam diretrizes similares. Esta calculadora usa estes padrões para determinar seu preço máximo de casa acessível."
+        },
+        {
+          "question": "O que é PITI e por que importa?",
+          "answer": "PITI significa Principal, Juros, Impostos e Seguro - os quatro componentes principais do seu pagamento mensal de moradia. Credores usam PITI para determinar quanto casa você pode permitir porque representa seu custo total de moradia, não apenas o pagamento de hipoteca."
+        },
+        {
+          "question": "Meu score de crédito afeta quanto casa posso permitir?",
+          "answer": "Sim, seu score de crédito afeta significativamente tanto a taxa de juros que você receberá quanto o valor do empréstimo para o qual você pode se qualificar. Scores de crédito mais altos (740+) tipicamente se qualificam para taxas de juros mais baixas, permitindo que você permita casas mais caras com o mesmo pagamento mensal."
+        },
+        {
+          "question": "Como os impostos prediais afetam a capacidade para casa?",
+          "answer": "Os impostos prediais variam amplamente por localização e podem impactar significativamente seus custos de moradia. Taxas de imposto mais altas reduzem o preço da casa que você pode permitir já que os impostos estão incluídos no cálculo PITI. Sempre verifique as taxas de imposto locais quando procurar casa."
+        },
+        {
+          "question": "Qual é a diferença entre limites de empréstimo FHA e convencional?",
+          "answer": "Empréstimos FHA são segurados pela Administração Federal de Habitação e têm padrões de qualificação mais lenientes. Empréstimos convencionais seguem as diretrizes Fannie Mae/Freddie Mac. Empréstimos FHA tipicamente permitem relações dívida-renda mais altas mas podem ter valores máximos de empréstimo mais baixos em áreas de alto custo."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Capacité d'Achat Immobilier - Combien de Maison Puis-Je Me Permettre?",
+    "seoTitle": "Calculateur de Capacité d'Achat Immobilier - Combien de Maison Puis-Je Me Permettre?",
+    "metaDescription": "Calculez combien de maison vous pouvez vous permettre basé sur vos revenus, acompte, score de crédit et dette actuelle. Calculateur gratuit de capacité d'achat immobilier avec directives FHA.",
+    "keywords": [
+      "calculateur capacité maison",
+      "combien maison puis-je me permettre",
+      "calculateur capacité maison",
+      "calculateur capacité hypothèque",
+      "calculateur achat maison",
+      "calculateur paiement maison"
+    ],
+    "longTailKeywords": [
+      "comment calculer capacité maison",
+      "calculateur capacité maison avec revenus",
+      "quelle maison puis-je me permettre calculateur",
+      "calculer paiement maison abordable",
+      "capacité maison basé sur salaire",
+      "combien hypothèque puis-je me permettre",
+      "calculateur capacité maison avec impôts",
+      "prix maximum maison que je peux me permettre",
+      "calculateur capacité maison avec assurance",
+      "combien paiement maison puis-je me permettre"
+    ],
+    "slug": "home-affordability-calculator",
+    "category": "Financial",
+    "subcategory": "Loan Calculator",
+    "difficulty": "Beginner",
+    "tags": [
+      "capacité maison",
+      "calculateur hypothèque",
+      "achat maison",
+      "directives FHA",
+      "impôts propriété",
+      "assurance maison"
+    ],
+    "description": "Calculez combien de maison vous pouvez vous permettre basé sur vos revenus mensuels, acompte disponible, obligations de dette actuelles, taux d'impôt foncier et assurance habitation. Notre calculateur de capacité d'achat immobilier utilise les directives FHA et conventionnelles pour vous aider à déterminer un prix réaliste de maison qui rentre dans votre budget. Parfait pour acheteurs immobiliers débutants et ceux planifiant leur achat immobilier.",
+    "summary": "Calculez le prix maximum de maison abordable basé sur les revenus et directives FHA.",
+    "instructions": [
+      "Entrez vos revenus bruts mensuels",
+      "Entrez vos paiements mensuels de dettes (hors logement)",
+      "Spécifiez votre acompte et score de crédit",
+      "Choisissez le taux d'intérêt et durée d'emprunt",
+      "Entrez le taux d'impôt foncier et coût d'assurance",
+      "Cliquez sur 'Calculer' pour voir le prix maximum de maison abordable",
+      "Examinez l'analyse de capacité d'habitation pour les directives d'emprunt"
+    ],
+    "calculatorComponent": "HomeAffordabilityCalculator",
+    "examples": [
+      {
+        "title": "Acheteur Immobilier Débutant",
+        "description": "Un acheteur gagnant 6 000 € mensuels avec 500 € en dette existante",
+        "input": {
+          "monthlyIncome": 6000,
+          "monthlyDebt": 500,
+          "downPayment": 60000,
+          "creditScore": 720,
+          "interestRate": 6.5,
+          "loanTerm": 30,
+          "propertyTaxRate": 1.2,
+          "homeInsurance": 1200
+        },
+        "output": {
+          "homePrice": 375000,
+          "monthlyPayment": 1680,
+          "loanAmount": 315000,
+          "housingRatio": 28,
+          "monthlyPropertyTax": 375,
+          "monthlyInsurance": 100,
+          "totalMonthlyCost": 2155
+        }
+      },
+      {
+        "title": "Acheteur à Haut Revenus avec Gros Acompte",
+        "description": "Personne à hauts revenus avec acompte substantiel et dette faible",
+        "input": {
+          "monthlyIncome": 15000,
+          "monthlyDebt": 800,
+          "downPayment": 200000,
+          "creditScore": 780,
+          "interestRate": 5.5,
+          "loanTerm": 30,
+          "propertyTaxRate": 1.5,
+          "homeInsurance": 2400
+        },
+        "output": {
+          "homePrice": 1100000,
+          "monthlyPayment": 3900,
+          "loanAmount": 900000,
+          "housingRatio": 26,
+          "monthlyPropertyTax": 1375,
+          "monthlyInsurance": 200,
+          "totalMonthlyCost": 5475
+        }
+      }
+    ],
+    "seoContent": {
+      "introduction": "Calculez combien de maison vous pouvez vous permettre avec notre calculateur complet de capacité d'achat immobilier. Cet outil financier essentiel vous aide à déterminer le prix maximum de maison qui rentre dans votre budget basé sur vos revenus, acompte, score de crédit, dette existante et coûts locaux de propriété. Que vous soyez acheteur immobilier débutant ou à la recherche d'une mise à niveau, comprendre votre capacité d'achat immobilier est crucial pour prendre des décisions réalistes d'achat dans le marché immobilier compétitif actuel.",
+      "benefits": [
+        "Déterminez des prix réalistes de maison basés sur vos revenus réels et situation financière",
+        "Considérez tous les coûts d'habitation incluant principal, intérêts, impôts et assurance (PITI)",
+        "Comprenez les directives FHA et conventionnelles pour la capacité d'habitation",
+        "Tenez compte des taux d'impôt foncier locaux et coûts d'assurance dans vos calculs",
+        "Évitez de trop vous étendre avec un achat immobilier qui tend votre budget mensuel",
+        "Prenez des décisions éclairées concernant les acomptes et termes d'emprunt pour une capacité maximale"
+      ],
+      "steps": [
+        "Entrez vos revenus bruts mensuels de toutes les sources",
+        "Saisissez vos paiements actuels de dettes mensuels (hors coûts d'habitation)",
+        "Entrez votre montant d'acompte disponible",
+        "Fournissez votre score de crédit pour une estimation précise du taux d'intérêt",
+        "Spécifiez le taux d'intérêt et durée d'emprunt pour lesquels vous vous qualifiez probablement",
+        "Entrez votre taux d'impôt foncier local en pourcentage",
+        "Saisissez votre coût estimé annuel d'assurance habitation",
+        "Examinez votre prix maximum de maison abordable et ventilation du paiement mensuel"
+      ],
+      "inputsExplained": [
+        "Les revenus bruts mensuels représentent vos gains totaux avant impôts et déductions",
+        "Les paiements mensuels de dettes incluent cartes de crédit, emprunts auto, emprunts étudiants et autres obligations",
+        "L'acompte réduit le montant d'emprunt nécessaire et peut améliorer vos termes d'emprunt",
+        "Le score de crédit affecte votre taux d'intérêt et chances d'approbation d'emprunt",
+        "Le taux d'intérêt et durée d'emprunt déterminent votre paiement mensuel d'hypothèque",
+        "Le taux d'impôt foncier varie par emplacement et affecte vos coûts totaux d'habitation",
+        "Le coût d'assurance habitation dépend de la valeur de la maison, emplacement et montant de couverture"
+      ],
+      "formulaExplanation": "Le calculateur utilise les directives d'emprunt FHA qui recommandent que les coûts totaux d'habitation n'excèdent pas 28% de vos revenus bruts mensuels. Les coûts d'habitation incluent principal, intérêts, impôts fonciers et assurance habitation (PITI). La formule calcule votre budget d'habitation maximum, puis travaille à rebours pour déterminer le prix de la maison qui produit des paiements mensuels dans votre fourchette abordable, en tenant compte des coûts locaux d'impôts et d'assurance.",
+      "examples": [
+        "Un acheteur gagnant 6 000 € mensuels avec 500 € en dette et 60 000 € d'acompte pourrait se permettre une maison de 375 000 € avec 2 155 € en coûts totaux mensuels d'habitation",
+        "Quelqu'un gagnant 15 000 € mensuels avec 800 € en dette et 200 000 € d'acompte pourrait se permettre une maison de 1 100 000 € avec 5 475 € en coûts mensuels d'habitation"
+      ],
+      "resultsExplanation": [
+        "Le prix maximum de maison abordable montre la maison au prix le plus élevé que vous pouvez raisonnablement acheter",
+        "Le paiement mensuel d'habitation montre votre paiement total PITI (principal, intérêts, impôts, assurance)",
+        "Le montant d'emprunt montre combien vous auriez besoin d'emprunter après votre acompte",
+        "Le ratio des coûts d'habitation indique quel pourcentage de vos revenus va aux coûts d'habitation",
+        "L'impôt foncier mensuel montre le coût mensuel estimé basé sur votre taux d'impôt local",
+        "L'assurance mensuelle montre votre coût d'assurance habitation divisé par 12",
+        "Le coût mensuel total combine toutes les dépenses d'habitation pour un panorama complet de capacité"
+      ],
+      "whoItsFor": "Ce calculateur de capacité d'achat immobilier est parfait pour acheteurs immobiliers débutants, propriétaires actuels envisageant une mise à niveau, investisseurs immobiliers et quiconque planifiant un achat immobilier. Il est particulièrement précieux pour ceux qui veulent s'assurer qu'ils achètent dans les directives FHA et conventionnelles tout en tenant compte de tous les coûts associés à la propriété immobilière.",
+      "disclaimer": "Ce calculateur fournit des estimations basées sur les directives FHA et conventionnelles. Les prix réels de maison et montants d'emprunt peuvent varier selon votre profil de crédit spécifique, exigences du prêteur, valeurs d'évaluation et conditions du marché local. Consultez toujours un prêteur hypothécaire, agent immobilier ou conseiller financier pour des conseils personnalisés d'achat immobilier.",
+      "relatedTools": [
+        "calculateur hypothèque",
+        "calculateur paiement hypothèque",
+        "calculateur impôt foncier",
+        "calculateur emprunt maison",
+        "calculateur budget"
+      ],
+      "faqs": [
+        {
+          "question": "Combien de maison puis-je me permettre basé sur mes revenus?",
+          "answer": "Les directives FHA recommandent que vos coûts totaux d'habitation (PITI - principal, intérêts, impôts, assurance) n'excèdent pas 28% de vos revenus bruts mensuels. Les emprunts conventionnels utilisent souvent des directives similaires. Ce calculateur utilise ces standards pour déterminer votre prix maximum de maison abordable."
+        },
+        {
+          "question": "Qu'est-ce que PITI et pourquoi est-ce important?",
+          "answer": "PITI signifie Principal, Intérêts, Impôts et Assurance - les quatre composants principaux de votre paiement mensuel d'habitation. Les prêteurs utilisent PITI pour déterminer combien de maison vous pouvez vous permettre car il représente votre coût total d'habitation, pas seulement le paiement d'hypothèque."
+        },
+        {
+          "question": "Mon score de crédit affecte-t-il combien de maison je peux me permettre?",
+          "answer": "Oui, votre score de crédit affecte considérablement à la fois le taux d'intérêt que vous recevrez et le montant d'emprunt pour lequel vous pouvez vous qualifier. Les scores de crédit plus élevés (740+) se qualifient typiquement pour des taux d'intérêt plus bas, vous permettant de vous permettre des maisons plus chères avec le même paiement mensuel."
+        },
+        {
+          "question": "Comment les impôts fonciers affectent-ils la capacité d'achat immobilier?",
+          "answer": "Les impôts fonciers varient largement par emplacement et peuvent considérablement impacter vos coûts d'habitation. Des taux d'impôt plus élevés réduisent le prix de maison que vous pouvez vous permettre car les impôts sont inclus dans le calcul PITI. Vérifiez toujours les taux d'impôt locaux lors de votre recherche de maison."
+        },
+        {
+          "question": "Quelle est la différence entre limites d'emprunt FHA et conventionnelles?",
+          "answer": "Les emprunts FHA sont assurés par l'Administration Fédérale du Logement et ont des standards de qualification plus indulgents. Les emprunts conventionnels suivent les directives Fannie Mae/Freddie Mac. Les emprunts FHA permettent typiquement des ratios dette-revenus plus élevés mais peuvent avoir des montants maximums d'emprunt plus bas dans les zones à coût élevé."
+        }
+      ]
+    }
+  }
+}

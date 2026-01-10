@@ -1,0 +1,798 @@
+{
+  "en": {
+    "title": "Future Value Calculator",
+    "seoTitle": "Future Value Calculator - Calculate Investment Growth Over Time",
+    "metaDescription": "Free future value calculator. Calculate how your investments will grow with compound interest. Perfect for retirement planning, savings goals, and investment analysis.",
+    "keywords": [
+      "future value calculator",
+      "compound interest calculator",
+      "investment growth calculator",
+      "retirement calculator",
+      "savings calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate future value",
+      "compound interest calculation",
+      "investment growth calculator",
+      "future value of money",
+      "compound return calculator"
+    ],
+    "slug": "future-value-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "future value",
+      "compound interest",
+      "investment",
+      "retirement",
+      "savings"
+    ],
+    "summary": "Calculate the future value of your investments with compound interest to plan for retirement and financial goals.",
+    "description": "Our advanced future value calculator shows how your money will grow over time with compound interest. Essential for retirement planning, investment analysis, and understanding the power of compounding. Calculate future value for both lump sums and regular contributions with customizable compounding frequencies.",
+    "instructions": [
+      "Enter your initial investment amount",
+      "Input expected annual interest rate",
+      "Specify investment time period in years",
+      "Choose compounding frequency (annual, monthly, daily)",
+      "Add regular contributions if applicable"
+    ],
+    "calculatorComponent": {
+      "componentName": "FutureValueCalculator",
+      "inputs": [
+        {
+          "name": "presentValue",
+          "label": "Present Value ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Monthly Contribution ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 100000,
+          "step": 50
+        },
+        {
+          "name": "annualRate",
+          "label": "Annual Interest Rate (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "timePeriod",
+          "label": "Time Period (years)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundFrequency",
+          "label": "Compound Frequency",
+          "type": "select",
+          "default": "monthly",
+          "options": [
+            "annually",
+            "quarterly",
+            "monthly"
+          ]
+        }
+      ],
+      "formula": "Future Value = PV × (1 + r)^n + PMT × [(1 + r)^n - 1] / r",
+      "output": {
+        "label": "Future Value",
+        "default": "Enter values above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Total Contributions",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Total Interest Earned",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Growth Multiple",
+          "field": "growthMultiple",
+          "format": "number"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Retirement Savings",
+        "input": "$10,000 initial, 7% annual return, 30 years",
+        "output": "Future Value: $76,123 (6.7x growth)"
+      },
+      {
+        "title": "Monthly Investments",
+        "input": "$500 monthly, 6% annual return, 25 years",
+        "output": "Future Value: $334,121 (includes $150,000 invested)"
+      }
+    ],
+    "relatedCalculators": [
+      "investment-calculator",
+      "retirement-calculator",
+      "savings-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Discover the incredible growth potential of your investments with our comprehensive future value calculator that shows exactly how your money will grow over time with the power of compound interest. Future value calculations are essential for retirement planning, investment analysis, and understanding how consistent saving and investing can build substantial wealth. Whether you're planning for retirement, saving for major goals, or analyzing investment opportunities, this calculator reveals the exponential growth potential of smart financial decisions and regular contributions.",
+      "benefits": [
+        "Calculate future value of any investment with compound interest",
+        "Understand how different compounding frequencies impact growth",
+        "Project retirement savings and investment portfolios",
+        "Compare lump sum vs. regular contribution strategies",
+        "See the long-term impact of starting early vs. delaying savings",
+        "Make informed decisions about investment timing and amounts",
+        "Visualize the exponential growth potential of consistent investing",
+        "Plan major financial goals with realistic projections"
+      ],
+      "steps": [
+        "Enter your initial investment or present value amount",
+        "Input the expected annual interest rate or return",
+        "Specify the time period in years for growth",
+        "Choose compounding frequency (monthly for most investments)",
+        "Add regular monthly contributions if applicable",
+        "Review future value projections and growth breakdowns"
+      ],
+      "inputsExplained": [
+        "Present value is your initial investment amount - the lump sum you're starting with today",
+        "Annual interest rate represents your expected return (7-10% for stocks, 3-5% for bonds, 1-3% for savings)",
+        "Time period determines how long your money will grow and compound - longer periods mean more growth",
+        "Monthly contribution allows you to model regular investing (like 401k contributions or monthly savings)",
+        "Compounding frequency shows how often returns are calculated and reinvested (monthly is most realistic)"
+      ],
+      "formulaExplanation": "Future value calculations use compound interest formulas: Future Value = Present Value × (1 + r)^n + Monthly Contribution × [(1 + r)^n - 1] / r. This formula reveals why consistent investing works so well - each period's growth earns interest on itself. The exponent (n) represents the power of time, while regular contributions harness dollar-cost averaging. Different compounding frequencies can add thousands to your final amount, especially over long time periods. Understanding this formula explains why starting early and being consistent are the keys to wealth building.",
+      "examples": [
+        "$10,000 invested at 7% annual return grows to $19,672 in 10 years - nearly doubling your money through compound interest alone.",
+        "$200 monthly contributions at 8% annual return for 30 years grow to $311,554, with $72,000 from contributions and $239,554 from investment growth.",
+        "$25,000 lump sum at 6% return grows to $44,259 in 15 years, while adding $300 monthly increases the total to $141,789 - showing the power of regular investing."
+      ],
+      "resultsExplanation": [
+        "Future value shows the total projected amount after all growth and compounding",
+        "Total contributions displays how much money you actually invested",
+        "Investment growth reveals the profit generated by compound interest",
+        "Breakdown shows the portion from principal vs. earned returns"
+      ],
+      "whoItsFor": "This future value calculator serves investors planning portfolios, retirees projecting nest eggs, young professionals starting retirement accounts, parents saving for children's education, business owners forecasting growth, financial advisors counseling clients, and anyone wanting to understand long-term investment potential. It's particularly valuable for those comparing investment strategies, planning major purchases, understanding retirement needs, and making informed saving decisions. The calculator works for any financial scenario involving compound growth over time.",
+      "disclaimer": "Future value calculations are projections based on assumed rates of return and do not guarantee actual investment results. Market volatility, economic conditions, fees, taxes, and inflation can significantly impact actual returns. Investment returns are not guaranteed and past performance doesn't predict future results. This calculator provides estimates for planning purposes only. Actual investment results may vary substantially. Consult qualified financial professionals for personalized investment advice and consider your risk tolerance and time horizon before investing.",
+      "relatedTools": [
+        "Investment calculators for comparing different asset classes and strategies",
+        "Retirement calculators for comprehensive retirement planning",
+        "Savings calculators for emergency fund and short-term goal planning"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between future value and present value?",
+          "answer": "Present value tells you what a future amount of money is worth today (discounted back). Future value tells you what today's money will be worth in the future (grown forward with interest). For example, $1,000 today at 5% annual return is worth $1,050 in one year (future value). Conversely, $1,050 received in one year is worth $1,000 today (present value). Future value shows growth potential, while present value helps compare investments of different timing."
+        },
+        {
+          "question": "Why is compound frequency important in future value calculations?",
+          "answer": "More frequent compounding accelerates growth because interest gets added and earns more interest sooner. $10,000 at 6% annual return grows to $17,908 in 10 years with annual compounding, but $18,194 with monthly compounding - a $286 difference. Daily compounding maximizes this effect. However, the difference is small for most personal investments. Monthly compounding (like in retirement accounts) provides realistic projections for most investors."
+        },
+        {
+          "question": "How much does starting early really impact future value?",
+          "answer": "Time is the most powerful factor in compound growth. $5,000 invested at age 25 growing at 7% annually becomes $27,675 by age 65. The same $5,000 invested at age 35 becomes only $14,774 by age 65 - less than half as much despite identical investment and return. Starting just 10 years earlier can double or triple your retirement savings. Even small amounts invested early compound dramatically over decades."
+        },
+        {
+          "question": "Should I invest lump sums or make regular contributions?",
+          "answer": "Both strategies work, but regular contributions often perform better due to dollar-cost averaging and reduced timing risk. Lump sums can benefit from immediate market gains but risk buying at peaks. Research shows consistent investing often outperforms trying to time markets. For most people, regular contributions through automatic investing (like 401k contributions) provide the best long-term results by removing emotion from investing and benefiting from market volatility."
+        },
+        {
+          "question": "How do I choose the right interest rate for future value calculations?",
+          "answer": "Use conservative, realistic rates based on your investment type: 7-10% for diversified stock portfolios (historical average), 3-5% for bonds, 1-3% for high-yield savings, 4-6% for balanced portfolios. Consider your risk tolerance and time horizon. Conservative estimates (like 4-6%) are better for retirement planning to avoid disappointment. Historical averages provide good starting points, but future returns may differ. Always use rates that match your actual expected returns rather than hoping for unrealistic gains."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Valor Futuro",
+    "seoTitle": "Calculadora de Valor Futuro - Calcula el Crecimiento de Inversiones con el Tiempo",
+    "metaDescription": "Calculadora gratuita de valor futuro. Calcula cómo crecerán tus inversiones con interés compuesto. Perfecta para planificación de jubilación, metas de ahorro y análisis de inversiones.",
+    "keywords": [
+      "calculadora valor futuro",
+      "calculadora interés compuesto",
+      "calculadora crecimiento inversión",
+      "calculadora jubilación",
+      "calculadora ahorros"
+    ],
+    "longTailKeywords": [
+      "cómo calcular valor futuro",
+      "cálculo interés compuesto",
+      "calculadora crecimiento inversión",
+      "valor futuro del dinero",
+      "calculadora retorno compuesto"
+    ],
+    "slug": "future-value-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "valor futuro",
+      "interés compuesto",
+      "inversión",
+      "jubilación",
+      "ahorros"
+    ],
+    "summary": "Calcula el valor futuro de tus inversiones con interés compuesto para planificar jubilación y metas financieras.",
+    "description": "Nuestra avanzada calculadora de valor futuro muestra cómo crecerá tu dinero con el tiempo con interés compuesto. Esencial para planificación de jubilación, análisis de inversiones y comprensión del poder del compounding. Calcula valor futuro tanto para sumas globales como contribuciones regulares con frecuencias de compounding personalizables.",
+    "instructions": [
+      "Ingresa tu monto de inversión inicial",
+      "Ingresa tasa de interés anual esperada",
+      "Especifica período de tiempo de inversión en años",
+      "Elige frecuencia de compounding (anual, mensual, diaria)",
+      "Agrega contribuciones regulares si aplica"
+    ],
+    "calculatorComponent": {
+      "componentName": "FutureValueCalculator",
+      "inputs": [
+        {
+          "name": "presentValue",
+          "label": "Valor Presente ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Contribución Mensual ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 100000,
+          "step": 50
+        },
+        {
+          "name": "annualRate",
+          "label": "Tasa de Interés Anual (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "timePeriod",
+          "label": "Período de Tiempo (años)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundFrequency",
+          "label": "Frecuencia de Capitalización",
+          "type": "select",
+          "default": "monthly",
+          "options": [
+            "annually",
+            "quarterly",
+            "monthly"
+          ]
+        }
+      ],
+      "formula": "Valor Futuro = VP × (1 + r)^n + PMT × [(1 + r)^n - 1] / r",
+      "output": {
+        "label": "Valor Futuro",
+        "default": "Ingresa valores arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Contribuciones Totales",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Interés Total Ganado",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Múltiplo de Crecimiento",
+          "field": "growthMultiple",
+          "format": "number"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Ahorros de Jubilación",
+        "input": "$10,000 inicial, 7% retorno anual, 30 años",
+        "output": "Valor Futuro: $76,123 (crecimiento 6.7x)"
+      },
+      {
+        "title": "Inversiones Mensuales",
+        "input": "$500 mensuales, 6% retorno anual, 25 años",
+        "output": "Valor Futuro: $334,121 (incluye $150,000 invertido)"
+      }
+    ],
+    "relatedCalculators": [
+      "investment-calculator",
+      "retirement-calculator",
+      "savings-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Descubre el increíble potencial de crecimiento de tus inversiones con nuestra calculadora integral de valor futuro que muestra exactamente cómo crecerá tu dinero con el tiempo con el poder del interés compuesto. Los cálculos de valor futuro son esenciales para la planificación de jubilación, análisis de inversiones, y entender el poder de la capitalización. Ya sea que planees para jubilación, ahorres para metas importantes, o analices oportunidades de inversión, esta calculadora revela el potencial de crecimiento exponencial de decisiones financieras inteligentes y contribuciones regulares.",
+      "benefits": [
+        "Calcula valor futuro de cualquier inversión con interés compuesto",
+        "Entiende cómo diferentes frecuencias de composición impactan el crecimiento",
+        "Proyecta ahorros de jubilación y portafolios de inversión",
+        "Compara estrategias de suma global vs. contribuciones regulares",
+        "Ve el impacto a largo plazo de comenzar temprano vs. retrasar ahorros",
+        "Toma decisiones informadas sobre timing y montos de inversión",
+        "Visualiza el potencial de crecimiento exponencial de invertir consistentemente",
+        "Planea metas financieras importantes con proyecciones realistas"
+      ],
+      "steps": [
+        "Ingresa tu inversión inicial o monto de valor presente",
+        "Ingresa la tasa de interés o retorno anual esperada",
+        "Especifica el período de tiempo en años para crecimiento",
+        "Elige frecuencia de composición (mensual para la mayoría de inversiones)",
+        "Agrega contribuciones mensuales regulares si aplicable",
+        "Revisa proyecciones de valor futuro y desgloses de crecimiento"
+      ],
+      "inputsExplained": [
+        "Valor presente es tu monto de inversión inicial - la suma global con la que comienzas hoy",
+        "Tasa de interés anual representa tu retorno esperado (7-10% para acciones, 3-5% para bonos, 1-3% para ahorros)",
+        "Período de tiempo determina cuánto tiempo crecerá y se compondrá tu dinero - períodos más largos significan más crecimiento",
+        "Contribución mensual te permite modelar invertir regularmente (como contribuciones de 401k o ahorros mensuales)",
+        "Frecuencia de composición muestra con qué frecuencia se calculan y reinvierten retornos (mensual es más realista)"
+      ],
+      "formulaExplanation": "Los cálculos de valor futuro usan fórmulas de interés compuesto: Valor Futuro = Valor Presente × (1 + r)^n + Contribución Mensual × [(1 + r)^n - 1] / r. Esta fórmula revela por qué invertir consistentemente funciona tan bien - el crecimiento de cada período gana interés sobre sí mismo. El exponente (n) representa el poder del tiempo, mientras contribuciones regulares aprovechan el promedio de costo en dólares. Diferentes frecuencias de composición pueden agregar miles a tu monto final, especialmente sobre períodos largos. Entender esta fórmula explica por qué comenzar temprano y ser consistente son las claves para construir riqueza.",
+      "examples": [
+        "$10,000 invertidos al 7% retorno anual crecen a $19,672 en 10 años - casi duplicando tu dinero solo a través del interés compuesto.",
+        "$200 contribuciones mensuales al 8% retorno anual por 30 años crecen a $311,554, con $72,000 de contribuciones y $239,554 de crecimiento de inversión.",
+        "$25,000 suma global al 6% retorno crecen a $44,259 en 15 años, mientras agregar $300 mensuales aumenta el total a $141,789 - mostrando el poder de invertir regularmente."
+      ],
+      "resultsExplanation": [
+        "Valor futuro muestra el monto total proyectado después de todo crecimiento y composición",
+        "Contribuciones totales muestra cuánto dinero realmente invertiste",
+        "Crecimiento de inversión revela la ganancia generada por interés compuesto",
+        "Desglose muestra la porción de principal vs. retornos ganados"
+      ],
+      "whoItsFor": "Esta calculadora de valor futuro sirve a inversionistas planeando portafolios, jubilados proyectando fondos de retiro, profesionales jóvenes comenzando cuentas de jubilación, padres ahorrando para educación de hijos, dueños de negocios pronosticando crecimiento, asesores financieros asesorando clientes, y cualquiera queriendo entender potencial de inversión a largo plazo. Es particularmente valiosa para aquellos comparando estrategias de inversión, planeando compras importantes, entendiendo necesidades de jubilación, y tomando decisiones de ahorro informadas. La calculadora funciona para cualquier escenario financiero involucrando crecimiento compuesto con el tiempo.",
+      "disclaimer": "Los cálculos de valor futuro son proyecciones basadas en tasas de retorno asumidas y no garantizan resultados de inversión reales. Volatilidad de mercado, condiciones económicas, tarifas, impuestos, e inflación pueden impactar significativamente retornos reales. Los retornos de inversión no están garantizados y rendimiento pasado no predice resultados futuros. Esta calculadora proporciona estimaciones para propósitos de planificación solo. Los resultados de inversión reales pueden variar sustancialmente. Consulta profesionales financieros calificados para consejo de inversión personalizado y considera tu tolerancia al riesgo y horizonte de tiempo antes de invertir.",
+      "relatedTools": [
+        "Calculadoras de inversión para comparar diferentes clases de activos y estrategias",
+        "Calculadoras de jubilación para planificación integral de jubilación",
+        "Calculadoras de ahorro para planificación de fondos de emergencia y metas a corto plazo"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre valor futuro y valor presente?",
+          "answer": "Valor presente te dice qué vale una cantidad futura de dinero hoy (descontada hacia atrás). Valor futuro te dice qué valdrá el dinero de hoy en el futuro (crecido hacia adelante con interés). Por ejemplo, $1,000 hoy al 5% retorno anual vale $1,050 en un año (valor futuro). Al contrario, $1,050 recibido en un año vale $1,000 hoy (valor presente). Valor futuro muestra potencial de crecimiento, mientras valor presente ayuda comparar inversiones de diferente timing."
+        },
+        {
+          "question": "¿Por qué es importante la frecuencia de composición en cálculos de valor futuro?",
+          "answer": "Composición más frecuente acelera crecimiento porque el interés se agrega y gana más interés más pronto. $10,000 al 6% retorno anual crecen a $17,908 en 10 años con composición anual, pero $18,194 con composición mensual - una diferencia de $286. Composición diaria maximiza este efecto. Sin embargo, la diferencia es pequeña para la mayoría de inversiones personales. Composición mensual (como en cuentas de jubilación) proporciona proyecciones realistas para la mayoría de inversionistas."
+        },
+        {
+          "question": "¿Cuánto impacta realmente comenzar temprano en valor futuro?",
+          "answer": "El tiempo es el factor más poderoso en crecimiento compuesto. $5,000 invertidos a los 25 creciendo al 7% anualmente se convierten en $27,675 a los 65. Los mismos $5,000 invertidos a los 35 se convierten en solo $14,774 a los 65 - menos de la mitad a pesar de inversión y retorno idénticos. Comenzar solo 10 años antes puede duplicar o triplicar tus ahorros de jubilación. Incluso montos pequeños invertidos temprano se componen dramáticamente sobre décadas."
+        },
+        {
+          "question": "¿Debo invertir sumas globales o hacer contribuciones regulares?",
+          "answer": "Ambas estrategias funcionan, pero contribuciones regulares a menudo funcionan mejor debido al promedio de costo en dólares y riesgo de timing reducido. Sumos globales pueden beneficiarse de ganancias de mercado inmediatas pero arriesgan comprar en picos. Investigación muestra invertir consistente a menudo supera intentar cronometrar mercados. Para la mayoría de personas, contribuciones regulares a través de invertir automático (como contribuciones de 401k) proporcionan los mejores resultados a largo plazo al remover emoción de invertir y beneficiarse de volatilidad de mercado."
+        },
+        {
+          "question": "¿Cómo elijo la tasa de interés correcta para cálculos de valor futuro?",
+          "answer": "Usa tasas conservadoras, realistas basadas en tu tipo de inversión: 7-10% para portafolios diversificados de acciones (promedio histórico), 3-5% para bonos, 1-3% para ahorros de alto rendimiento, 4-6% para portafolios balanceados. Considera tu tolerancia al riesgo y horizonte de tiempo. Estimaciones conservadoras (como 4-6%) son mejores para planificación de jubilación para evitar decepción. Promedios históricos proporcionan buenos puntos de partida, pero retornos futuros pueden diferir. Siempre usa tasas que coincidan con tus retornos esperados reales en lugar de esperar ganancias irreales."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Valor Futuro",
+    "seoTitle": "Calculadora de Valor Futuro - Calcule o Crescimento de Investimentos ao Longo do Tempo",
+    "metaDescription": "Calculadora gratuita de valor futuro. Calcule como seus investimentos crescerão com juros compostos. Perfeita para planejamento de aposentadoria, metas de poupança e análise de investimentos.",
+    "keywords": [
+      "calculadora valor futuro",
+      "calculadora juros compostos",
+      "calculadora crescimento investimento",
+      "calculadora aposentadoria",
+      "calculadora poupança"
+    ],
+    "longTailKeywords": [
+      "como calcular valor futuro",
+      "cálculo juros compostos",
+      "calculadora crescimento investimento",
+      "valor futuro do dinheiro",
+      "calculadora retorno composto"
+    ],
+    "slug": "future-value-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "valor futuro",
+      "juros compostos",
+      "investimento",
+      "aposentadoria",
+      "poupança"
+    ],
+    "summary": "Calcule o valor futuro de seus investimentos com juros compostos para planejar aposentadoria e metas financeiras.",
+    "description": "Nossa calculadora avançada de valor futuro mostra como seu dinheiro crescerá ao longo do tempo com juros compostos. Essencial para planejamento de aposentadoria, análise de investimentos e compreensão do poder dos juros compostos. Calcule valor futuro tanto para quantias únicas quanto contribuições regulares com frequências de composição personalizáveis.",
+    "instructions": [
+      "Digite seu valor de investimento inicial",
+      "Digite taxa de juros anual esperada",
+      "Especifique período de tempo de investimento em anos",
+      "Escolha frequência de composição (anual, mensal, diária)",
+      "Adicione contribuições regulares se aplicável"
+    ],
+    "calculatorComponent": {
+      "componentName": "FutureValueCalculator",
+      "inputs": [
+        {
+          "name": "presentValue",
+          "label": "Valor Presente ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Contribuição Mensal ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 100000,
+          "step": 50
+        },
+        {
+          "name": "annualRate",
+          "label": "Taxa de Juros Anual (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "timePeriod",
+          "label": "Período de Tempo (anos)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundFrequency",
+          "label": "Frequência de Capitalização",
+          "type": "select",
+          "default": "monthly",
+          "options": [
+            "annually",
+            "quarterly",
+            "monthly"
+          ]
+        }
+      ],
+      "formula": "Future Value = PV × (1 + r)^n + PMT × [(1 + r)^n - 1] / r",
+      "output": {
+        "label": "Valor Futuro",
+        "default": "Digite valores acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Contribuições Totais",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Juros Totais Ganhos",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Múltiplo de Crescimento",
+          "field": "growthMultiple",
+          "format": "number"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Poupança Aposentadoria",
+        "input": "$10,000 inicial, 7% retorno anual, 30 anos",
+        "output": "Valor Futuro: $76,123 (crescimento 6.7x)"
+      },
+      {
+        "title": "Investimentos Mensais",
+        "input": "$500 mensais, 6% retorno anual, 25 anos",
+        "output": "Valor Futuro: $334,121 (inclui $150,000 investido)"
+      }
+    ],
+    "relatedCalculators": [
+      "investment-calculator",
+      "retirement-calculator",
+      "savings-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Descubra o incrível potencial de crescimento de seus investimentos com nossa calculadora abrangente de valor futuro que mostra exatamente como seu dinheiro crescerá ao longo do tempo com o poder dos juros compostos. Cálculos de valor futuro são essenciais para planejamento de aposentadoria, análise de investimentos, e entender o poder da capitalização. Seja você planejando para aposentadoria, economizando para metas importantes, ou analisando oportunidades de investimento, esta calculadora revela o potencial de crescimento exponencial de decisões financeiras inteligentes e contribuições regulares.",
+      "benefits": [
+        "Calcule valor futuro de qualquer investimento com juros compostos",
+        "Entenda como diferentes frequências de composição impactam o crescimento",
+        "Projete economias de aposentadoria e portfólios de investimento",
+        "Compare estratégias de quantia única vs. contribuições regulares",
+        "Veja o impacto de longo prazo de começar cedo vs. atrasar economias",
+        "Tome decisões informadas sobre timing e valores de investimento",
+        "Visualize o potencial de crescimento exponencial de investir consistentemente",
+        "Planeje metas financeiras importantes com projeções realistas"
+      ],
+      "steps": [
+        "Digite seu investimento inicial ou valor presente",
+        "Insira a taxa de juros ou retorno anual esperada",
+        "Especifique o período de tempo em anos para crescimento",
+        "Escolha frequência de composição (mensal para a maioria dos investimentos)",
+        "Adicione contribuições mensais regulares se aplicável",
+        "Revise projeções de valor futuro e quebras de crescimento"
+      ],
+      "inputsExplained": [
+        "Valor presente é seu valor de investimento inicial - a quantia única com a qual você está começando hoje",
+        "Taxa de juros anual representa seu retorno esperado (7-10% para ações, 3-5% para títulos, 1-3% para poupança)",
+        "Período de tempo determina quanto tempo seu dinheiro crescerá e se comporá - períodos mais longos significam mais crescimento",
+        "Contribuição mensal permite modelar investir regularmente (como contribuições de 401k ou economia mensal)",
+        "Frequência de composição mostra com que frequência retornos são calculados e reinvestidos (mensal é mais realista)"
+      ],
+      "formulaExplanation": "Cálculos de valor futuro usam fórmulas de juros compostos: Valor Futuro = Valor Presente × (1 + r)^n + Contribuição Mensal × [(1 + r)^n - 1] / r. Esta fórmula revela por que investir consistentemente funciona tão bem - o crescimento de cada período ganha juros sobre si mesmo. O expoente (n) representa o poder do tempo, enquanto contribuições regulares aproveitam a média de custo em dólar. Diferentes frequências de composição podem adicionar milhares ao seu valor final, especialmente sobre longos períodos. Entender esta fórmula explica por que começar cedo e ser consistente são as chaves para construção de riqueza.",
+      "examples": [
+        "$10,000 investidos a 7% retorno anual crescem para $19,672 em 10 anos - quase dobrando seu dinheiro apenas através de juros compostos.",
+        "$200 contribuições mensais a 8% retorno anual por 30 anos crescem para $311,554, com $72,000 de contribuições e $239,554 de crescimento de investimento.",
+        "$25,000 quantia única a 6% retorno cresce para $44,259 em 15 anos, enquanto adicionar $300 mensais aumenta o total para $141,789 - mostrando o poder de investir regularmente."
+      ],
+      "resultsExplanation": [
+        "Valor futuro mostra o valor total projetado após todo crescimento e composição",
+        "Contribuições totais mostra quanto dinheiro você realmente investiu",
+        "Crescimento de investimento revela o lucro gerado por juros compostos",
+        "Quebra mostra a porção de principal vs. retornos ganhos"
+      ],
+      "whoItsFor": "Esta calculadora de valor futuro serve investidores planejando portfólios, aposentados projetando fundos de ninho, jovens profissionais começando contas de aposentadoria, pais economizando para educação de filhos, donos de negócios prevendo crescimento, consultores financeiros aconselhando clientes, e qualquer pessoa querendo entender potencial de investimento de longo prazo. É particularmente valiosa para aqueles comparando estratégias de investimento, planejando compras importantes, entendendo necessidades de aposentadoria, e tomando decisões de economia informadas. A calculadora funciona para qualquer cenário financeiro envolvendo crescimento composto ao longo do tempo.",
+      "disclaimer": "Cálculos de valor futuro são projeções baseadas em taxas de retorno assumidas e não garantem resultados de investimento reais. Volatilidade de mercado, condições econômicas, taxas, impostos, e inflação podem impactar significativamente retornos reais. Retornos de investimento não são garantidos e performance passada não prevê resultados futuros. Esta calculadora fornece estimativas para propósitos de planejamento apenas. Resultados de investimento reais podem variar substancialmente. Consulte profissionais financeiros qualificados para conselho de investimento personalizado e considere sua tolerância ao risco e horizonte de tempo antes de investir.",
+      "relatedTools": [
+        "Calculadoras de investimento para comparar diferentes classes de ativos e estratégias",
+        "Calculadoras de aposentadoria para planejamento abrangente de aposentadoria",
+        "Calculadoras de poupança para planejamento de fundos de emergência e metas de curto prazo"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre valor futuro e valor presente?",
+          "answer": "Valor presente diz o que uma quantia futura de dinheiro vale hoje (descontada de volta). Valor futuro diz o que o dinheiro de hoje valerá no futuro (crescido para frente com juros). Por exemplo, $1,000 hoje a 5% retorno anual vale $1,050 em um ano (valor futuro). Ao contrário, $1,050 recebido em um ano vale $1,000 hoje (valor presente). Valor futuro mostra potencial de crescimento, enquanto valor presente ajuda comparar investimentos de diferente timing."
+        },
+        {
+          "question": "Por que frequência de composição é importante em cálculos de valor futuro?",
+          "answer": "Composição mais frequente acelera crescimento porque juros são adicionados e ganham mais juros mais cedo. $10,000 a 6% retorno anual crescem para $17,908 em 10 anos com composição anual, mas $18,194 com composição mensal - uma diferença de $286. Composição diária maximiza este efeito. No entanto, a diferença é pequena para a maioria dos investimentos pessoais. Composição mensal (como em contas de aposentadoria) fornece projeções realistas para a maioria dos investidores."
+        },
+        {
+          "question": "Quanto começar cedo realmente impacta valor futuro?",
+          "answer": "Tempo é o fator mais poderoso em crescimento composto. $5,000 investidos aos 25 crescendo a 7% anualmente se tornam $27,675 aos 65. Os mesmos $5,000 investidos aos 35 se tornam apenas $14,774 aos 65 - menos que a metade apesar de investimento e retorno idênticos. Começar apenas 10 anos antes pode dobrar ou triplicar suas economias de aposentadoria. Mesmo valores pequenos investidos cedo se compõem dramaticamente sobre décadas."
+        },
+        {
+          "question": "Devo investir quantias únicas ou fazer contribuições regulares?",
+          "answer": "Ambas estratégias funcionam, mas contribuições regulares frequentemente funcionam melhor devido à média de custo em dólar e risco de timing reduzido. Quantias únicas podem beneficiar de ganhos de mercado imediatos mas arriscam comprar em picos. Pesquisa mostra investir consistente frequentemente supera tentar cronometrar mercados. Para a maioria das pessoas, contribuições regulares através de investir automático (como contribuições de 401k) fornecem os melhores resultados de longo prazo ao remover emoção de investir e beneficiar de volatilidade de mercado."
+        },
+        {
+          "question": "Como escolher a taxa de juros correta para cálculos de valor futuro?",
+          "answer": "Use taxas conservadoras, realistas baseadas em seu tipo de investimento: 7-10% para portfólios diversificados de ações (média histórica), 3-5% para títulos, 1-3% para poupança de alto rendimento, 4-6% para portfólios balanceados. Considere sua tolerância ao risco e horizonte de tempo. Estimativas conservadoras (como 4-6%) são melhores para planejamento de aposentadoria para evitar decepção. Médias históricas fornecem bons pontos de partida, mas retornos futuros podem diferir. Sempre use taxas que coincidam com seus retornos esperados reais ao invés de esperar ganhos irreais."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Valeur Future",
+    "seoTitle": "Calculateur de Valeur Future - Calculez la Croissance des Investissements dans le Temps",
+    "metaDescription": "Calculateur gratuit de valeur future. Calculez comment vos investissements croîtront avec les intérêts composés. Parfait pour la planification retraite, les objectifs d'épargne et l'analyse d'investissement.",
+    "keywords": [
+      "calculateur valeur future",
+      "calculateur intérêts composés",
+      "calculateur croissance investissement",
+      "calculateur retraite",
+      "calculateur épargne"
+    ],
+    "longTailKeywords": [
+      "comment calculer valeur future",
+      "calcul intérêts composés",
+      "calculateur croissance investissement",
+      "valeur future de l'argent",
+      "calculateur retour composé"
+    ],
+    "slug": "future-value-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "valeur future",
+      "intérêts composés",
+      "investissement",
+      "retraite",
+      "épargne"
+    ],
+    "summary": "Calculez la valeur future de vos investissements avec les intérêts composés pour planifier retraite et objectifs financiers.",
+    "description": "Notre calculateur avancé de valeur future montre comment votre argent croîtra au fil du temps avec les intérêts composés. Essentiel pour la planification retraite, l'analyse d'investissement et la compréhension du pouvoir des intérêts composés. Calculez la valeur future pour les sommes forfaitaires et contributions régulières avec fréquences de composition personnalisables.",
+    "instructions": [
+      "Entrez votre montant d'investissement initial",
+      "Saisissez le taux d'intérêt annuel attendu",
+      "Spécifiez la période d'investissement en années",
+      "Choisissez la fréquence de composition (annuelle, mensuelle, quotidienne)",
+      "Ajoutez des contributions régulières si applicable"
+    ],
+    "calculatorComponent": {
+      "componentName": "FutureValueCalculator",
+      "inputs": [
+        {
+          "name": "presentValue",
+          "label": "Valeur Présente ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Contribution Mensuelle ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 100000,
+          "step": 50
+        },
+        {
+          "name": "annualRate",
+          "label": "Taux d'Intérêt Annuel (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "timePeriod",
+          "label": "Période de Temps (années)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundFrequency",
+          "label": "Fréquence de Capitalisation",
+          "type": "select",
+          "default": "monthly",
+          "options": [
+            "annually",
+            "quarterly",
+            "monthly"
+          ]
+        }
+      ],
+      "formula": "Future Value = PV × (1 + r)^n + PMT × [(1 + r)^n - 1] / r",
+      "output": {
+        "label": "Valeur Future",
+        "default": "Entrez les valeurs ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Contributions Totales",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Intérêts Totaux Gagnés",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Multiple de Croissance",
+          "field": "growthMultiple",
+          "format": "number"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Épargne Retraite",
+        "input": "$10,000 initial, 7% rendement annuel, 30 ans",
+        "output": "Valeur Future: $76,123 (croissance 6.7x)"
+      },
+      {
+        "title": "Investissements Mensuels",
+        "input": "$500 mensuels, 6% rendement annuel, 25 ans",
+        "output": "Valeur Future: $334,121 (inclut $150,000 investi)"
+      }
+    ],
+    "relatedCalculators": [
+      "investment-calculator",
+      "retirement-calculator",
+      "savings-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Découvrez l'incroyable potentiel de croissance de vos investissements avec notre calculatrice complète de valeur future qui montre exactement comment votre argent grandira au fil du temps avec la puissance des intérêts composés. Les calculs de valeur future sont essentiels pour la planification retraite, l'analyse d'investissement, et comprendre le pouvoir de la composition. Que vous planifiiez pour la retraite, épargniez pour des objectifs majeurs, ou analysiez des opportunités d'investissement, cette calculatrice révèle le potentiel de croissance exponentielle des décisions financières intelligentes et des contributions régulières.",
+      "benefits": [
+        "Calculez la valeur future de tout investissement avec intérêts composés",
+        "Comprenez comment différentes fréquences de composition impactent la croissance",
+        "Projetez les épargnes retraite et portefeuilles d'investissement",
+        "Comparez stratégies de somme globale vs. contributions régulières",
+        "Voyez l'impact à long terme de commencer tôt vs. retarder les épargnes",
+        "Prenez des décisions éclairées concernant le timing et montants d'investissement",
+        "Visualisez le potentiel de croissance exponentielle d'investir de manière cohérente",
+        "Planifiez des objectifs financiers majeurs avec projections réalistes"
+      ],
+      "steps": [
+        "Entrez votre investissement initial ou montant de valeur actuelle",
+        "Saisissez le taux d'intérêt ou rendement annuel attendu",
+        "Spécifiez la période de temps en années pour la croissance",
+        "Choisissez la fréquence de composition (mensuelle pour la plupart des investissements)",
+        "Ajoutez des contributions mensuelles régulières si applicable",
+        "Examinez les projections de valeur future et ventilations de croissance"
+      ],
+      "inputsExplained": [
+        "Valeur actuelle est votre montant d'investissement initial - la somme globale avec laquelle vous commencez aujourd'hui",
+        "Taux d'intérêt annuel représente votre rendement attendu (7-10% pour actions, 3-5% pour obligations, 1-3% pour épargnes)",
+        "Période de temps détermine combien de temps votre argent grandira et se composera - périodes plus longues signifient plus de croissance",
+        "Contribution mensuelle vous permet de modéliser investir régulièrement (comme contributions 401k ou épargnes mensuelles)",
+        "Fréquence de composition montre combien souvent les rendements sont calculés et réinvestis (mensuelle est plus réaliste)"
+      ],
+      "formulaExplanation": "Les calculs de valeur future utilisent des formules d'intérêts composés : Valeur Future = Valeur Actuelle × (1 + r)^n + Contribution Mensuelle × [(1 + r)^n - 1] / r. Cette formule révèle pourquoi investir de manière cohérente fonctionne si bien - la croissance de chaque période gagne des intérêts sur elle-même. L'exposant (n) représente la puissance du temps, tandis que les contributions régulières exploitent la moyenne du coût en dollars. Différentes fréquences de composition peuvent ajouter des milliers à votre montant final, particulièrement sur de longues périodes. Comprendre cette formule explique pourquoi commencer tôt et être cohérent sont les clés de la construction de richesse.",
+      "examples": [
+        "10 000 $ investis à 7 % rendement annuel croissent à 19 672 $ en 10 ans - presque doublant votre argent uniquement grâce aux intérêts composés.",
+        "200 $ contributions mensuelles à 8 % rendement annuel pendant 30 ans croissent à 311 554 $, avec 72 000 $ de contributions et 239 554 $ de croissance d'investissement.",
+        "25 000 $ somme globale à 6 % rendement croît à 44 259 $ en 15 ans, tandis qu'ajouter 300 $ mensuels augmente le total à 141 789 $ - montrant la puissance d'investir régulièrement."
+      ],
+      "resultsExplanation": [
+        "Valeur future montre le montant total projeté après toute croissance et composition",
+        "Contributions totales affiche combien d'argent vous avez réellement investi",
+        "Croissance d'investissement révèle le profit généré par intérêts composés",
+        "Ventilation montre la portion principal vs. rendements gagnés"
+      ],
+      "whoItsFor": "Cette calculatrice de valeur future sert investisseurs planifiant portefeuilles, retraités projetant nids, jeunes professionnels commençant comptes retraite, parents épargnant pour éducation enfants, propriétaires d'entreprises prévoyant croissance, conseillers financiers conseillant clients, et quiconque souhaitant comprendre potentiel d'investissement à long terme. Elle est particulièrement précieuse pour ceux comparant stratégies d'investissement, planifiant achats majeurs, comprenant besoins retraite, et prenant décisions d'épargne éclairées. La calculatrice fonctionne pour tout scénario financier impliquant croissance composée au fil du temps.",
+      "disclaimer": "Les calculs de valeur future sont des projections basées sur des taux de rendement assumés et ne garantissent pas des résultats d'investissement réels. La volatilité du marché, conditions économiques, frais, taxes, et inflation peuvent considérablement impacter les rendements réels. Les rendements d'investissement ne sont pas garantis et les performances passées ne prédisent pas les résultats futurs. Cette calculatrice fournit des estimations à des fins de planification uniquement. Les résultats d'investissement réels peuvent varier considérablement. Consultez des professionnels financiers qualifiés pour des conseils d'investissement personnalisés et considérez votre tolérance au risque et horizon temporel avant d'investir.",
+      "relatedTools": [
+        "Calculatrices d'investissement pour comparer différentes classes d'actifs et stratégies",
+        "Calculatrices de retraite pour planification retraite complète",
+        "Calculatrices d'épargne pour planification fonds urgence et objectifs à court terme"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre valeur future et valeur actuelle ?",
+          "answer": "Valeur actuelle vous dit ce qu'une somme future d'argent vaut aujourd'hui (escomptée en arrière). Valeur future vous dit ce que l'argent d'aujourd'hui vaudra dans le futur (cru en avant avec intérêts). Par exemple, 1 000 $ aujourd'hui à 5 % rendement annuel vaut 1 050 $ dans un an (valeur future). Inversement, 1 050 $ reçus dans un an valent 1 000 $ aujourd'hui (valeur actuelle). Valeur future montre le potentiel de croissance, tandis que valeur actuelle aide comparer des investissements de différents timings."
+        },
+        {
+          "question": "Pourquoi la fréquence de composition est-elle importante dans les calculs de valeur future ?",
+          "answer": "Composition plus fréquente accélère la croissance car les intérêts sont ajoutés et gagnent plus d'intérêts plus tôt. 10 000 $ à 6 % rendement annuel croissent à 17 908 $ en 10 ans avec composition annuelle, mais 18 194 $ avec composition mensuelle - une différence de 286 $. Composition quotidienne maximise cet effet. Cependant, la différence est petite pour la plupart des investissements personnels. Composition mensuelle (comme dans comptes retraite) fournit des projections réalistes pour la plupart des investisseurs."
+        },
+        {
+          "question": "¿Combien commencer tôt impacte-t-il vraiment la valeur future ?",
+          "answer": "Le temps est le facteur le plus puissant dans la croissance composée. 5 000 $ investis à 25 ans croissant à 7 % annuellement deviennent 27 675 $ à 65 ans. Les mêmes 5 000 $ investis à 35 ans deviennent seulement 14 774 $ à 65 ans - moins de la moitié malgré investissement et rendement identiques. Commencer juste 10 ans plus tôt peut doubler ou tripler vos épargnes retraite. Même petits montants investis tôt se composent dramatiquement sur des décennies."
+        },
+        {
+          "question": "Dois-je investir des sommes globales ou faire des contributions régulières ?",
+          "answer": "Les deux stratégies fonctionnent, mais les contributions régulières fonctionnent souvent mieux grâce à la moyenne du coût en dollars et au risque de timing réduit. Les sommes globales peuvent bénéficier de gains de marché immédiats mais risquent d'acheter aux sommets. La recherche montre investir cohérent surpasse souvent essayer de chronométrer les marchés. Pour la plupart des gens, les contributions régulières à travers l'investissement automatique (comme contributions 401k) fournissent les meilleurs résultats à long terme en enlevant l'émotion de l'investissement et en bénéficiant de la volatilité du marché."
+        },
+        {
+          "question": "Comment choisir le bon taux d'intérêt pour les calculs de valeur future ?",
+          "answer": "Utilisez des taux conservateurs, réalistes basés sur votre type d'investissement : 7-10 % pour portefeuilles d'actions diversifiés (moyenne historique), 3-5 % pour obligations, 1-3 % pour épargnes à haut rendement, 4-6 % pour portefeuilles équilibrés. Considérez votre tolérance au risque et horizon temporel. Les estimations conservatrices (comme 4-6 %) sont meilleures pour la planification retraite pour éviter la déception. Les moyennes historiques fournissent de bons points de départ, mais les rendements futurs peuvent différer. Utilisez toujours des taux qui correspondent à vos rendements attendus réels plutôt qu'espérer des gains irréalistes."
+        }
+      ]
+    }
+  }
+}

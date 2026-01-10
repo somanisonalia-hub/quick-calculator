@@ -1,0 +1,230 @@
+{
+  "en": {
+    "title": "Triangle Area Calculator",
+    "seoTitle": "Triangle Area Calculator - Calculate Area of Triangles Online",
+    "metaDescription": "Free triangle area calculator. Calculate the area of triangles using base and height, three sides (Heron's formula), or two sides and angle. Step-by-step solutions.",
+    "keywords": ["triangle area calculator", "area of triangle", "triangle calculator", "geometry calculator"],
+    "longTailKeywords": ["how to calculate area of triangle", "triangle area formula", "area of triangle with base and height", "triangle area calculator online", "geometry triangle area"],
+    "slug": "triangle-area-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["triangle", "area", "geometry", "base", "height", "herons formula"],
+    "summary": "Calculate the area of triangles using multiple methods with step-by-step explanations.",
+    "description": "Our comprehensive triangle area calculator supports multiple calculation methods: base and height, three sides (Heron's formula), and two sides with included angle. Perfect for students learning geometry and professionals working with triangular shapes.",
+    "instructions": [
+      "Select the calculation method you want to use",
+      "Enter the required measurements for your chosen method",
+      "Get instant area calculation with formula explanation",
+      "View step-by-step solution for learning"
+    ],
+    "calculatorComponent": {
+      "componentName": "TriangleAreaCalculator",
+      "inputs": [
+        { "name": "method", "label": "Calculation Method", "type": "select", "default": "baseHeight", "options": ["baseHeight", "heronsFormula", "twoSidesAngle"] },
+        { "name": "base", "label": "Base", "type": "number", "default": 10, "min": 0, "step": 0.01 },
+        { "name": "height", "label": "Height", "type": "number", "default": 8, "min": 0, "step": 0.01 },
+        { "name": "sideA", "label": "Side A", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "sideB", "label": "Side B", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "sideC", "label": "Side C", "type": "number", "default": 6, "min": 0, "step": 0.01 },
+        { "name": "angle", "label": "Angle (degrees)", "type": "number", "default": 60, "min": 0, "max": 180, "step": 0.1 }
+      ],
+      "formula": "Base × Height ÷ 2; Heron's: √[s(s-a)(s-b)(s-c)] where s = (a+b+c)÷2; Two sides × sin(angle) ÷ 2",
+      "output": { "label": "Triangle Area", "default": "Enter measurements above", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Perimeter", "field": "perimeter", "format": "number" },
+        { "label": "Semiperimeter", "field": "semiperimeter", "format": "number" },
+        { "label": "Formula Used", "field": "formula", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Base and Height Method",
+        "input": "Base = 10 units, Height = 8 units",
+        "output": "Area = 40 square units"
+      },
+      {
+        "title": "Heron's Formula",
+        "input": "Sides: 5, 5, 6 units",
+        "output": "Area = 12 square units"
+      },
+      {
+        "title": "Two Sides and Angle",
+        "input": "Sides: 5, 5 units, Angle: 60°",
+        "output": "Area = 10.83 square units"
+      }
+    ],
+    "relatedCalculators": ["circle-area-calculator", "pythagorean-theorem-calculator", "volume-calculator"]
+  },
+  "es": {
+    "title": "Calculadora del Área del Triángulo",
+    "seoTitle": "Calculadora del Área del Triángulo - Calcula Área de Triángulos Online",
+    "metaDescription": "Calculadora gratuita del área del triángulo. Calcula el área de triángulos usando base y altura, tres lados (fórmula de Herón), o dos lados y ángulo. Soluciones paso a paso.",
+    "keywords": ["calculadora área triángulo", "área del triángulo", "calculadora triángulo", "calculadora geometría"],
+    "longTailKeywords": ["como calcular área del triángulo", "fórmula área triángulo", "área del triángulo con base y altura", "calculadora área triángulo online", "geometría área triángulo"],
+    "slug": "triangle-area-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["triángulo", "área", "geometría", "base", "altura", "fórmula herón"],
+    "summary": "Calcula el área de triángulos usando múltiples métodos con explicaciones paso a paso.",
+    "description": "Nuestra calculadora integral del área del triángulo soporta múltiples métodos de cálculo: base y altura, tres lados (fórmula de Herón), y dos lados con ángulo incluido. Perfecta para estudiantes aprendiendo geometría y profesionales trabajando con formas triangulares.",
+    "instructions": [
+      "Selecciona el método de cálculo que quieres usar",
+      "Ingresa las medidas requeridas para tu método elegido",
+      "Obtén cálculo instantáneo del área con explicación de fórmula",
+      "Ve solución paso a paso para aprender"
+    ],
+    "calculatorComponent": {
+      "componentName": "TriangleAreaCalculator",
+      "inputs": [
+        { "name": "method", "label": "Método de Cálculo", "type": "select", "default": "baseHeight", "options": ["baseHeight", "heronsFormula", "twoSidesAngle"] },
+        { "name": "base", "label": "Base", "type": "number", "default": 10, "min": 0, "step": 0.01 },
+        { "name": "height", "label": "Altura", "type": "number", "default": 8, "min": 0, "step": 0.01 },
+        { "name": "sideA", "label": "Lado A", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "sideB", "label": "Lado B", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "sideC", "label": "Lado C", "type": "number", "default": 6, "min": 0, "step": 0.01 },
+        { "name": "angle", "label": "Ángulo (grados)", "type": "number", "default": 60, "min": 0, "max": 180, "step": 0.1 }
+      ],
+      "formula": "Base × Altura ÷ 2; Herón: √[s(s-a)(s-b)(s-c)] donde s = (a+b+c)÷2; Dos lados × sen(ángulo) ÷ 2",
+      "output": { "label": "Área del Triángulo", "default": "Ingresa medidas arriba", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Perímetro", "field": "perimeter", "format": "number" },
+        { "label": "Semiperímetro", "field": "semiperimeter", "format": "number" },
+        { "label": "Fórmula Usada", "field": "formula", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Método Base y Altura",
+        "input": "Base = 10 unidades, Altura = 8 unidades",
+        "output": "Área = 40 unidades cuadradas"
+      },
+      {
+        "title": "Fórmula de Herón",
+        "input": "Lados: 5, 5, 6 unidades",
+        "output": "Área = 12 unidades cuadradas"
+      },
+      {
+        "title": "Dos Lados y Ángulo",
+        "input": "Lados: 5, 5 unidades, Ángulo: 60°",
+        "output": "Área = 10.83 unidades cuadradas"
+      }
+    ],
+    "relatedCalculators": ["circle-area-calculator", "pythagorean-theorem-calculator", "volume-calculator"]
+  },
+  "pt": {
+    "title": "Calculadora da Área do Triângulo",
+    "seoTitle": "Calculadora da Área do Triângulo - Calcule Área de Triângulos Online",
+    "metaDescription": "Calculadora gratuita da área do triângulo. Calcule a área de triângulos usando base e altura, três lados (fórmula de Heron), ou dois lados e ângulo. Soluções passo a passo.",
+    "keywords": ["calculadora área triângulo", "área do triângulo", "calculadora triângulo", "calculadora geometria"],
+    "longTailKeywords": ["como calcular área do triângulo", "fórmula área triângulo", "área do triângulo com base e altura", "calculadora área triângulo online", "geometria área triângulo"],
+    "slug": "triangle-area-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["triângulo", "área", "geometria", "base", "altura", "fórmula heron"],
+    "summary": "Calcule a área de triângulos usando múltiplos métodos com explicações passo a passo.",
+    "description": "Nossa calculadora abrangente da área do triângulo suporta múltiplos métodos de cálculo: base e altura, três lados (fórmula de Heron), e dois lados com ângulo incluído. Perfeita para estudantes aprendendo geometria e profissionais trabalhando com formas triangulares.",
+    "instructions": [
+      "Selecione o método de cálculo que quer usar",
+      "Digite as medidas necessárias para seu método escolhido",
+      "Obtenha cálculo instantâneo da área com explicação de fórmula",
+      "Veja solução passo a passo para aprender"
+    ],
+    "calculatorComponent": {
+      "componentName": "TriangleAreaCalculator",
+      "inputs": [
+        { "name": "method", "label": "Método de Cálculo", "type": "select", "default": "baseHeight", "options": ["baseHeight", "heronsFormula", "twoSidesAngle"] },
+        { "name": "base", "label": "Base", "type": "number", "default": 10, "min": 0, "step": 0.01 },
+        { "name": "height", "label": "Altura", "type": "number", "default": 8, "min": 0, "step": 0.01 },
+        { "name": "sideA", "label": "Lado A", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "sideB", "label": "Lado B", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "sideC", "label": "Lado C", "type": "number", "default": 6, "min": 0, "step": 0.01 },
+        { "name": "angle", "label": "Ângulo (graus)", "type": "number", "default": 60, "min": 0, "max": 180, "step": 0.1 }
+      ],
+      "formula": "Base × Altura ÷ 2; Heron: √[s(s-a)(s-b)(s-c)] onde s = (a+b+c)÷2; Dois lados × sen(ângulo) ÷ 2",
+      "output": { "label": "Área do Triângulo", "default": "Digite medidas acima", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Perímetro", "field": "perimeter", "format": "number" },
+        { "label": "Semiperímetro", "field": "semiperimeter", "format": "number" },
+        { "label": "Fórmula Usada", "field": "formula", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Método Base e Altura",
+        "input": "Base = 10 unidades, Altura = 8 unidades",
+        "output": "Área = 40 unidades quadradas"
+      },
+      {
+        "title": "Fórmula de Heron",
+        "input": "Lados: 5, 5, 6 unidades",
+        "output": "Área = 12 unidades quadradas"
+      },
+      {
+        "title": "Dois Lados e Ângulo",
+        "input": "Lados: 5, 5 unidades, Ângulo: 60°",
+        "output": "Área = 10.83 unidades quadradas"
+      }
+    ],
+    "relatedCalculators": ["circle-area-calculator", "pythagorean-theorem-calculator", "volume-calculator"]
+  },
+  "fr": {
+    "title": "Calculateur d'Aire de Triangle",
+    "seoTitle": "Calculateur d'Aire de Triangle - Calculez Aire de Triangles en Ligne",
+    "metaDescription": "Calculateur gratuit d'aire de triangle. Calculez l'aire de triangles en utilisant base et hauteur, trois côtés (formule de Heron), ou deux côtés et angle. Solutions étape par étape.",
+    "keywords": ["calculateur aire triangle", "aire du triangle", "calculateur triangle", "calculateur géométrie"],
+    "longTailKeywords": ["comment calculer aire du triangle", "formule aire triangle", "aire du triangle avec base et hauteur", "calculateur aire triangle en ligne", "géométrie aire triangle"],
+    "slug": "triangle-area-calculator",
+    "category": "math",
+    "subcategory": "geometry",
+    "difficulty": "intermediate",
+    "tags": ["triangle", "aire", "géométrie", "base", "hauteur", "formule heron"],
+    "summary": "Calculez l'aire de triangles utilisant multiples méthodes avec explications étape par étape.",
+    "description": "Notre calculateur complet d'aire de triangle supporte multiples méthodes de calcul: base et hauteur, trois côtés (formule de Heron), et deux côtés avec angle inclus. Parfait pour étudiants apprenant la géométrie et professionnels travaillant avec formes triangulaires.",
+    "instructions": [
+      "Sélectionnez méthode de calcul que vous voulez utiliser",
+      "Entrez mesures requises pour votre méthode choisie",
+      "Obtenez calcul instantané d'aire avec explication de formule",
+      "Visualisez solution étape par étape pour apprendre"
+    ],
+    "calculatorComponent": {
+      "componentName": "TriangleAreaCalculator",
+      "inputs": [
+        { "name": "method", "label": "Méthode de Calcul", "type": "select", "default": "baseHeight", "options": ["baseHeight", "heronsFormula", "twoSidesAngle"] },
+        { "name": "base", "label": "Base", "type": "number", "default": 10, "min": 0, "step": 0.01 },
+        { "name": "height", "label": "Hauteur", "type": "number", "default": 8, "min": 0, "step": 0.01 },
+        { "name": "sideA", "label": "Côté A", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "sideB", "label": "Côté B", "type": "number", "default": 5, "min": 0, "step": 0.01 },
+        { "name": "sideC", "label": "Côté C", "type": "number", "default": 6, "min": 0, "step": 0.01 },
+        { "name": "angle", "label": "Angle (degrés)", "type": "number", "default": 60, "min": 0, "max": 180, "step": 0.1 }
+      ],
+      "formula": "Base × Hauteur ÷ 2; Heron: √[s(s-a)(s-b)(s-c)] où s = (a+b+c)÷2; Deux côtés × sin(angle) ÷ 2",
+      "output": { "label": "Aire du Triangle", "default": "Entrez mesures ci-dessus", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Périmètre", "field": "perimeter", "format": "number" },
+        { "label": "Demi-périmètre", "field": "semiperimeter", "format": "number" },
+        { "label": "Formule Utilisée", "field": "formula", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Méthode Base et Hauteur",
+        "input": "Base = 10 unités, Hauteur = 8 unités",
+        "output": "Aire = 40 unités carrées"
+      },
+      {
+        "title": "Formule de Heron",
+        "input": "Côtés: 5, 5, 6 unités",
+        "output": "Aire = 12 unités carrées"
+      },
+      {
+        "title": "Deux Côtés et Angle",
+        "input": "Côtés: 5, 5 unités, Angle: 60°",
+        "output": "Aire = 10.83 unités carrées"
+      }
+    ],
+    "relatedCalculators": ["circle-area-calculator", "pythagorean-theorem-calculator", "volume-calculator"]
+  }
+}

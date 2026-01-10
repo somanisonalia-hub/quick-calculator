@@ -1,0 +1,451 @@
+{
+  "en": {
+    "title": "Unit Converter",
+    "seoTitle": "Unit Converter - Convert Length, Weight, Temperature, and More Online",
+    "metaDescription": "Free unit converter for length, weight, temperature, area, volume, and more. Convert between metric and imperial units instantly. Perfect for students, engineers, and professionals.",
+    "keywords": ["unit converter", "measurement converter", "metric converter", "imperial converter", "length converter"],
+    "longTailKeywords": ["convert meters to feet", "convert kilograms to pounds", "convert celsius to fahrenheit", "unit conversion calculator", "metric to imperial converter"],
+    "slug": "unit-conversion-calculator",
+    "category": "math",
+    "difficulty": "basic",
+    "tags": ["conversion", "measurement", "metric", "imperial", "engineering"],
+    "summary": "Convert between different units of measurement including length, weight, temperature, area, and volume.",
+    "description": "Our comprehensive unit converter supports conversions between metric and imperial systems for length, weight, temperature, area, volume, and more. Perfect for students, engineers, scientists, and anyone needing quick and accurate unit conversions.",
+    "instructions": [
+      "Select the type of conversion you need (length, weight, temperature, etc.)",
+      "Choose the units you want to convert from and to",
+      "Enter the value you want to convert",
+      "Get instant conversion results"
+    ],
+    "calculatorComponent": "UnitConverter",
+    "examples": [
+      {
+        "title": "Length Conversion",
+        "input": "Convert 100 meters to feet",
+        "output": "328.08 feet"
+      },
+      {
+        "title": "Weight Conversion",
+        "input": "Convert 5 kilograms to pounds",
+        "output": "11.02 pounds"
+      },
+      {
+        "title": "Temperature Conversion",
+        "input": "Convert 25°C to Fahrenheit",
+        "output": "77°F"
+      }
+    ],
+    "relatedCalculators": ["currency-converter", "percentage-calculator", "scientific-calculator"],
+    "seoContent": {
+      "introduction": "Convert between different units of measurement instantly with our comprehensive unit converter. This essential tool supports conversions for length, weight, temperature, area, volume, time, speed, and more between metric and imperial systems. Whether you're a student working on physics homework, an engineer designing products, a chef following international recipes, or a traveler understanding foreign measurements, this calculator provides accurate conversions using standard conversion factors. The tool supports both common and specialized units across multiple categories for complete measurement flexibility.",
+      "benefits": [
+        "Supports comprehensive unit conversions across multiple measurement categories",
+        "Provides instant, accurate results using precise conversion formulas",
+        "Handles both metric and imperial systems seamlessly",
+        "Includes specialized units for scientific, engineering, and culinary applications",
+        "Offers user-friendly interface suitable for all skill levels",
+        "Useful for educational, professional, and everyday conversion needs"
+      ],
+      "steps": [
+        "Select the category of measurement you want to convert (length, weight, temperature, etc.)",
+        "Choose your starting unit from the available options",
+        "Select the target unit you want to convert to",
+        "Enter the numerical value you want to convert",
+        "View the instant conversion result"
+      ],
+      "inputsExplained": [
+        "Conversion type determines which category of units you're working with, ensuring you see only relevant measurement options",
+        "From unit specifies your starting measurement system, whether metric, imperial, or specialized scientific units",
+        "To unit defines your target measurement system for the converted result",
+        "Value to convert is the numerical quantity you want to transform between different units"
+      ],
+      "formulaExplanation": "Unit conversion follows mathematical relationships established by international standards organizations. Each conversion uses a specific conversion factor that relates one unit to another within the same measurement category. For example, length conversions use factors like 1 meter = 3.28084 feet, while temperature conversions require different formulas like °F = (°C × 9/5) + 32. The calculator applies these precise mathematical relationships to ensure accuracy across all supported unit conversions.",
+      "examples": [
+        "Converting building dimensions: 25 meters × 3.28084 = 82.02 feet for construction planning",
+        "Recipe adaptation: 500 grams × 0.00220462 = 1.10 pounds for international cooking",
+        "Weather conversion: (20°C × 9/5) + 32 = 68°F for understanding foreign temperature reports",
+        "Area calculation: 100 square meters × 10.7639 = 1,076.39 square feet for property measurements"
+      ],
+      "resultsExplanation": [
+        "Converted value shows your input transformed to the target unit",
+        "All conversions use precise mathematical relationships for accuracy",
+        "Results include appropriate decimal places for the specific conversion type",
+        "The calculator maintains precision while avoiding unnecessary decimal places"
+      ],
+      "whoItsFor": "This calculator serves students learning measurement systems in science and math classes, engineers and architects working with international standards, chefs adapting recipes from different countries, travelers converting between metric and imperial systems, scientists conducting research with specialized units, and professionals in manufacturing, construction, and design fields who need accurate unit conversions.",
+      "disclaimer": "This calculator uses standard conversion factors established by international standards organizations. While highly accurate for general purposes, some specialized applications may require more precise conversion factors. For scientific research requiring extreme precision or legal measurements, consult official standards or certified conversion references.",
+      "relatedTools": [
+        "Currency converters for financial calculations and international transactions",
+        "Scientific calculators for complex mathematical computations",
+        "Percentage calculators for proportional calculations and ratios"
+      ],
+      "faqs": [
+        {
+          "question": "How accurate are the unit conversions?",
+          "answer": "The conversions use precise mathematical relationships and standard conversion factors established by international standards organizations like NIST and BIPM. The calculator maintains accuracy to appropriate decimal places for each measurement type, ensuring reliable results for both general and professional use."
+        },
+        {
+          "question": "Can I convert between any units within the same category?",
+          "answer": "Yes, you can convert between any supported units within the same measurement category. For example, within length conversions, you can convert between meters, feet, inches, centimeters, millimeters, and more. The calculator handles all common unit relationships automatically."
+        },
+        {
+          "question": "Does the calculator support scientific notation?",
+          "answer": "While the calculator works with decimal numbers, very large or small numbers are displayed in standard decimal format. For scientific calculations requiring exponential notation, consider using the scientific calculator alongside this unit converter for comprehensive measurement work."
+        },
+        {
+          "question": "Are the conversion factors updated regularly?",
+          "answer": "The calculator uses internationally recognized conversion factors that remain stable over time. Units like meters, kilograms, and seconds are defined by physical constants, while practical units like feet and pounds are defined by international agreement. These relationships don't change frequently."
+        },
+        {
+          "question": "Can I use this for cooking and recipe conversions?",
+          "answer": "Absolutely! The calculator includes common cooking measurements like cups, tablespoons, teaspoons, fluid ounces, and milliliters. This makes it perfect for adapting international recipes, converting between US customary and metric cooking measurements, and ensuring accurate ingredient proportions."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Conversor de Unidades",
+    "seoTitle": "Conversor de Unidades - Convierte Longitud, Peso, Temperatura y Más Online",
+    "metaDescription": "Conversor gratuito de unidades para longitud, peso, temperatura, área, volumen y más. Convierte entre unidades métricas e imperiales al instante. Perfecto para estudiantes, ingenieros y profesionales.",
+    "keywords": ["conversor unidades", "conversor medidas", "conversor métrico", "conversor imperial", "conversor longitud"],
+    "longTailKeywords": ["convertir metros a pies", "convertir kilogramos a libras", "convertir celsius a fahrenheit", "calculadora conversión unidades", "conversor métrico a imperial"],
+    "slug": "unit-conversion-calculator",
+    "category": "math",
+    "difficulty": "basic",
+    "tags": ["conversión", "medición", "métrico", "imperial", "ingeniería"],
+    "summary": "Convierte entre diferentes unidades de medición incluyendo longitud, peso, temperatura, área y volumen.",
+    "description": "Nuestro conversor integral de unidades soporta conversiones entre sistemas métricos e imperiales para longitud, peso, temperatura, área, volumen y más. Perfecto para estudiantes, ingenieros, científicos y cualquiera necesitando conversiones rápidas y precisas de unidades.",
+    "instructions": [
+      "Selecciona el tipo de conversión que necesitas (longitud, peso, temperatura, etc.)",
+      "Elige las unidades desde y hacia las que quieres convertir",
+      "Ingresa el valor que quieres convertir",
+      "Obtén resultados de conversión instantáneos"
+    ],
+    "calculatorComponent": {
+      "componentName": "UnitConverter",
+      "inputs": [
+        { "name": "conversionType", "label": "Tipo de Conversión", "type": "select", "default": "length", "options": ["length", "weight", "temperature", "area", "volume", "time", "speed"] },
+        { "name": "fromUnit", "label": "Unidad Desde", "type": "dynamic-select", "default": "meters", "dependsOn": "conversionType" },
+        { "name": "toUnit", "label": "Unidad Hasta", "type": "dynamic-select", "default": "feet", "dependsOn": "conversionType" },
+        { "name": "value", "label": "Valor a Convertir", "type": "number", "default": 1, "min": 0, "step": 0.01 }
+      ],
+      "formula": "Resultado = Valor de Entrada × Factor de Conversión",
+      "output": { "label": "Valor Convertido", "default": "Ingresa valor arriba", "format": "number" },
+      "additionalOutputs": []
+    },
+    "examples": [
+      {
+        "title": "Conversión de Longitud",
+        "input": "Convertir 100 metros a pies",
+        "output": "328.08 pies"
+      },
+      {
+        "title": "Conversión de Peso",
+        "input": "Convertir 5 kilogramos a libras",
+        "output": "11.02 libras"
+      },
+      {
+        "title": "Conversión de Temperatura",
+        "input": "Convertir 25°C a Fahrenheit",
+        "output": "77°F"
+      }
+    ],
+    "relatedCalculators": ["currency-converter", "percentage-calculator", "scientific-calculator"],
+    "seoContent": {
+      "introduction": "Convierte entre diferentes unidades de medición al instante con nuestro conversor integral de unidades. Esta herramienta esencial soporta conversiones para longitud, peso, temperatura, área, volumen, tiempo, velocidad y más entre sistemas métricos e imperiales. Ya sea que seas un estudiante trabajando en tarea de física, un ingeniero diseñando productos, un chef siguiendo recetas internacionales, o un viajero entendiendo mediciones extranjeras, esta calculadora proporciona conversiones precisas usando factores estándar de conversión. La herramienta soporta tanto unidades comunes como especializadas a través de múltiples categorías para completa flexibilidad de medición.",
+      "benefits": [
+        "Soporta conversiones integrales de unidades a través de múltiples categorías de medición",
+        "Proporciona resultados instantáneos y precisos usando fórmulas exactas de conversión",
+        "Maneja tanto sistemas métricos como imperiales sin problemas",
+        "Incluye unidades especializadas para aplicaciones científicas, de ingeniería y culinarias",
+        "Ofrece interfaz fácil de usar adecuada para todos los niveles de habilidad",
+        "Útil para necesidades educativas, profesionales y cotidianas de conversión"
+      ],
+      "steps": [
+        "Selecciona la categoría de medición que quieres convertir (longitud, peso, temperatura, etc.)",
+        "Elige tu unidad inicial de las opciones disponibles",
+        "Selecciona la unidad objetivo a la que quieres convertir",
+        "Ingresa el valor numérico que quieres transformar",
+        "Ve el resultado instantáneo de conversión"
+      ],
+      "inputsExplained": [
+        "Tipo de conversión determina qué categoría de unidades estás usando, asegurando que veas solo opciones relevantes de medición",
+        "Unidad desde especifica tu sistema de medición inicial, ya sea métrico, imperial o unidades científicas especializadas",
+        "Unidad hasta define tu sistema de medición objetivo para el resultado convertido",
+        "Valor a convertir es la cantidad numérica que quieres transformar entre diferentes unidades"
+      ],
+      "formulaExplanation": "La conversión de unidades sigue relaciones matemáticas establecidas por organizaciones internacionales de estándares. Cada conversión usa un factor específico de conversión que relaciona una unidad con otra dentro de la misma categoría de medición. Por ejemplo, conversiones de longitud usan factores como 1 metro = 3.28084 pies, mientras conversiones de temperatura requieren diferentes fórmulas como °F = (°C × 9/5) + 32. La calculadora aplica estas relaciones matemáticas precisas para asegurar exactitud a través de todas las conversiones de unidades soportadas.",
+      "examples": [
+        "Convirtiendo dimensiones de edificio: 25 metros × 3.28084 = 82.02 pies para planificación de construcción",
+        "Adaptación de receta: 500 gramos × 0.00220462 = 1.10 libras para cocina internacional",
+        "Conversión de clima: (20°C × 9/5) + 32 = 68°F para entender reportes de temperatura extranjeros",
+        "Cálculo de área: 100 metros cuadrados × 10.7639 = 1,076.39 pies cuadrados para mediciones de propiedad"
+      ],
+      "resultsExplanation": [
+        "Valor convertido muestra tu entrada transformada a la unidad objetivo",
+        "Todas las conversiones usan relaciones matemáticas precisas para exactitud",
+        "Los resultados incluyen lugares decimales apropiados para el tipo específico de conversión",
+        "La calculadora mantiene precisión mientras evita lugares decimales innecesarios"
+      ],
+      "whoItsFor": "Esta calculadora sirve a estudiantes aprendiendo sistemas de medición en clases de ciencia y matemáticas, ingenieros y arquitectos trabajando con estándares internacionales, chefs adaptando recetas de diferentes países, viajeros convirtiendo entre sistemas métricos e imperiales, científicos conduciendo investigación con unidades especializadas, y profesionales en campos de manufactura, construcción y diseño quienes necesitan conversiones precisas de unidades.",
+      "disclaimer": "Esta calculadora usa factores estándar de conversión establecidos por organizaciones internacionales de estándares. Mientras altamente precisa para propósitos generales, algunas aplicaciones especializadas pueden requerir factores más precisos de conversión. Para investigación científica requiriendo precisión extrema o mediciones legales, consulta estándares oficiales o referencias certificadas de conversión.",
+      "relatedTools": [
+        "Conversores de moneda para cálculos financieros y transacciones internacionales",
+        "Calculadoras científicas para cómputos matemáticos complejos",
+        "Calculadoras de porcentaje para cálculos proporcionales y ratios"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué tan precisas son las conversiones de unidades?",
+          "answer": "Las conversiones usan relaciones matemáticas precisas y factores estándar de conversión establecidos por organizaciones internacionales de estándares como NIST y BIPM. La calculadora mantiene exactitud a lugares decimales apropiados para cada tipo de medición, asegurando resultados confiables tanto para uso general como profesional."
+        },
+        {
+          "question": "¿Puedo convertir entre cualquier unidad dentro de la misma categoría?",
+          "answer": "Sí, puedes convertir entre cualquier unidad soportada dentro de la misma categoría de medición. Por ejemplo, dentro de conversiones de longitud, puedes convertir entre metros, pies, pulgadas, centímetros, milímetros y más. La calculadora maneja todas las relaciones comunes de unidades automáticamente."
+        },
+        {
+          "question": "¿La calculadora soporta notación científica?",
+          "answer": "Mientras la calculadora funciona con números decimales, números muy grandes o pequeños se muestran en formato decimal estándar. Para cálculos científicos requiriendo notación exponencial, considera usar la calculadora científica junto con este conversor de unidades para trabajo integral de medición."
+        },
+        {
+          "question": "¿Los factores de conversión se actualizan regularmente?",
+          "answer": "La calculadora usa factores de conversión reconocidos internacionalmente que permanecen estables a través del tiempo. Unidades como metros, kilogramos y segundos están definidas por constantes físicas, mientras unidades prácticas como pies y libras están definidas por acuerdo internacional. Estas relaciones no cambian frecuentemente."
+        },
+        {
+          "question": "¿Puedo usar esto para cocina y conversiones de recetas?",
+          "answer": "¡Absolutamente! La calculadora incluye mediciones comunes de cocina como tazas, cucharadas, cucharaditas, onzas fluidas y mililitros. Esto la hace perfecta para adaptar recetas internacionales, convertir entre mediciones culinarias customary de EE.UU. y métricas, y asegurar proporciones precisas de ingredientes."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Conversor de Unidades",
+    "seoTitle": "Conversor de Unidades - Converte Comprimento, Peso, Temperatura e Mais Online",
+    "metaDescription": "Conversor gratuito de unidades para comprimento, peso, temperatura, área, volume e mais. Converte entre unidades métricas e imperiais instantaneamente. Perfeito para estudantes, engenheiros e profissionais.",
+    "keywords": ["conversor unidades", "conversor medidas", "conversor métrico", "conversor imperial", "conversor comprimento"],
+    "longTailKeywords": ["converter metros para pés", "converter quilogramas para libras", "converter celsius para fahrenheit", "calculadora conversão unidades", "conversor métrico para imperial"],
+    "slug": "unit-conversion-calculator",
+    "category": "math",
+    "difficulty": "basic",
+    "tags": ["conversão", "medição", "métrico", "imperial", "engenharia"],
+    "summary": "Converte entre diferentes unidades de medição incluindo comprimento, peso, temperatura, área e volume.",
+    "description": "Nosso conversor abrangente de unidades suporta conversões entre sistemas métricos e imperiais para comprimento, peso, temperatura, área, volume e mais. Perfeito para estudantes, engenheiros, cientistas e qualquer um precisando de conversões rápidas e precisas de unidades.",
+    "instructions": [
+      "Selecione o tipo de conversão que você precisa (comprimento, peso, temperatura, etc.)",
+      "Escolha as unidades de e para as quais você quer converter",
+      "Digite o valor que você quer converter",
+      "Obtenha resultados instantâneos de conversão"
+    ],
+    "calculatorComponent": {
+      "componentName": "UnitConverter",
+      "inputs": [
+        { "name": "conversionType", "label": "Tipo de Conversão", "type": "select", "default": "length", "options": ["length", "weight", "temperature", "area", "volume", "time", "speed"] },
+        { "name": "fromUnit", "label": "Unidade De", "type": "dynamic-select", "default": "meters", "dependsOn": "conversionType" },
+        { "name": "toUnit", "label": "Unidade Para", "type": "dynamic-select", "default": "feet", "dependsOn": "conversionType" },
+        { "name": "value", "label": "Valor a Converter", "type": "number", "default": 1, "min": 0, "step": 0.01 }
+      ],
+      "formula": "Resultado = Valor de Entrada × Fator de Conversão",
+      "output": { "label": "Valor Convertido", "default": "Digite valor acima", "format": "number" },
+      "additionalOutputs": []
+    },
+    "examples": [
+      {
+        "title": "Conversão de Comprimento",
+        "input": "Converter 100 metros para pés",
+        "output": "328.08 pés"
+      },
+      {
+        "title": "Conversão de Peso",
+        "input": "Converter 5 quilogramas para libras",
+        "output": "11.02 libras"
+      },
+      {
+        "title": "Conversão de Temperatura",
+        "input": "Converter 25°C para Fahrenheit",
+        "output": "77°F"
+      }
+    ],
+    "relatedCalculators": ["currency-converter", "percentage-calculator", "scientific-calculator"],
+    "seoContent": {
+      "introduction": "Converte entre diferentes unidades de medição instantaneamente com nosso conversor abrangente de unidades. Esta ferramenta essencial suporta conversões para comprimento, peso, temperatura, área, volume, tempo, velocidade e mais entre sistemas métricos e imperiais. Seja você um estudante trabalhando em tarefa de física, um engenheiro projetando produtos, um chef seguindo receitas internacionais, ou um viajante entendendo medições estrangeiras, esta calculadora fornece conversões precisas usando fatores padrão de conversão. A ferramenta suporta tanto unidades comuns quanto especializadas através de múltiplas categorias para completa flexibilidade de medição.",
+      "benefits": [
+        "Suporta conversões abrangentes de unidades através de múltiplas categorias de medição",
+        "Fornece resultados instantâneos e precisos usando fórmulas exatas de conversão",
+        "Lida tanto com sistemas métricos quanto imperiais sem problemas",
+        "Inclui unidades especializadas para aplicações científicas, de engenharia e culinárias",
+        "Oferece interface amigável adequada para todos os níveis de habilidade",
+        "Útil para necessidades educacionais, profissionais e cotidianas de conversão"
+      ],
+      "steps": [
+        "Selecione a categoria de medição que você quer converter (comprimento, peso, temperatura, etc.)",
+        "Escolha sua unidade inicial das opções disponíveis",
+        "Selecione a unidade alvo para a qual você quer converter",
+        "Digite o valor numérico que você quer transformar",
+        "Veja o resultado instantâneo de conversão"
+      ],
+      "inputsExplained": [
+        "Tipo de conversão determina qual categoria de unidades você está trabalhando, garantindo que você veja apenas opções relevantes de medição",
+        "Unidade de especifica seu sistema de medição inicial, seja métrico, imperial ou unidades científicas especializadas",
+        "Unidade para define seu sistema de medição alvo para o resultado convertido",
+        "Valor a converter é a quantidade numérica que você quer transformar entre diferentes unidades"
+      ],
+      "formulaExplanation": "Conversão de unidade segue relacionamentos matemáticos estabelecidos por organizações internacionais de padrões. Cada conversão usa um fator específico de conversão que relaciona uma unidade à outra dentro da mesma categoria de medição. Por exemplo, conversões de comprimento usam fatores como 1 metro = 3.28084 pés, enquanto conversões de temperatura requerem diferentes fórmulas como °F = (°C × 9/5) + 32. A calculadora aplica estes relacionamentos matemáticos precisos para garantir exatidão através de todas as conversões de unidades suportadas.",
+      "examples": [
+        "Convertendo dimensões de prédio: 25 metros × 3.28084 = 82.02 pés para planejamento de construção",
+        "Adaptação de receita: 500 gramas × 0.00220462 = 1.10 libras para cozinha internacional",
+        "Conversão de clima: (20°C × 9/5) + 32 = 68°F para entender relatórios de temperatura estrangeiros",
+        "Cálculo de área: 100 metros quadrados × 10.7639 = 1,076.39 pés quadrados para medições de propriedade"
+      ],
+      "resultsExplanation": [
+        "Valor convertido mostra sua entrada transformada para a unidade alvo",
+        "Todas as conversões usam relacionamentos matemáticos precisos para exatidão",
+        "Resultados incluem casas decimais apropriadas para o tipo específico de conversão",
+        "A calculadora mantém precisão enquanto evita casas decimais desnecessárias"
+      ],
+      "whoItsFor": "Esta calculadora serve estudantes aprendendo sistemas de medição em aulas de ciência e matemática, engenheiros e arquitetos trabalhando com padrões internacionais, chefs adaptando receitas de diferentes países, viajantes convertendo entre sistemas métricos e imperiais, cientistas conduzindo pesquisa com unidades especializadas, e profissionais em campos de manufatura, construção e design que precisam de conversões precisas de unidades.",
+      "disclaimer": "Esta calculadora usa fatores padrão de conversão estabelecidos por organizações internacionais de padrões. Enquanto altamente precisa para propósitos gerais, algumas aplicações especializadas podem requerer fatores mais precisos de conversão. Para pesquisa científica requerendo precisão extrema ou medições legais, consulte padrões oficiais ou referências certificadas de conversão.",
+      "relatedTools": [
+        "Conversores de moeda para cálculos financeiros e transações internacionais",
+        "Calculadoras científicas para computações matemáticas complexas",
+        "Calculadoras de porcentagem para cálculos proporcionais e ratios"
+      ],
+      "faqs": [
+        {
+          "question": "Quão precisas são as conversões de unidades?",
+          "answer": "As conversões usam relacionamentos matemáticos precisos e fatores padrão de conversão estabelecidos por organizações internacionais de padrões como NIST e BIPM. A calculadora mantém exatidão para casas decimais apropriadas para cada tipo de medição, garantindo resultados confiáveis tanto para uso geral quanto profissional."
+        },
+        {
+          "question": "Posso converter entre qualquer unidade dentro da mesma categoria?",
+          "answer": "Sim, você pode converter entre qualquer unidade suportada dentro da mesma categoria de medição. Por exemplo, dentro de conversões de comprimento, você pode converter entre metros, pés, polegadas, centímetros, milímetros e mais. A calculadora lida com todos os relacionamentos comuns de unidades automaticamente."
+        },
+        {
+          "question": "A calculadora suporta notação científica?",
+          "answer": "Enquanto a calculadora funciona com números decimais, números muito grandes ou pequenos são exibidos em formato decimal padrão. Para cálculos científicos requerendo notação exponencial, considere usar a calculadora científica junto com este conversor de unidades para trabalho abrangente de medição."
+        },
+        {
+          "question": "Os fatores de conversão são atualizados regularmente?",
+          "answer": "A calculadora usa fatores de conversão reconhecidos internacionalmente que permanecem estáveis ao longo do tempo. Unidades como metros, quilogramas e segundos são definidas por constantes físicas, enquanto unidades práticas como pés e libras são definidas por acordo internacional. Estes relacionamentos não mudam frequentemente."
+        },
+        {
+          "question": "Posso usar isso para cozinha e conversões de receitas?",
+          "answer": "Absolutamente! A calculadora inclui medições comuns de cozinha como xícaras, colheres de sopa, colheres de chá, onças fluidas e mililitros. Isso a torna perfeita para adaptar receitas internacionais, converter entre medições culinárias customary dos EUA e métricas, e garantir proporções precisas de ingredientes."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Convertisseur d'Unités",
+    "seoTitle": "Convertisseur d'Unités - Convertissez Longueur, Poids, Température et Plus en Ligne",
+    "metaDescription": "Convertisseur gratuit d'unités pour longueur, poids, température, aire, volume et plus. Convertissez entre unités métriques et impériales instantanément. Parfait pour étudiants, ingénieurs et professionnels.",
+    "keywords": ["convertisseur unités", "convertisseur mesures", "convertisseur métrique", "convertisseur impérial", "convertisseur longueur"],
+    "longTailKeywords": ["convertir mètres en pieds", "convertir kilogrammes en livres", "convertir celsius en fahrenheit", "calculatrice conversion unités", "convertisseur métrique en impérial"],
+    "slug": "unit-conversion-calculator",
+    "category": "math",
+    "difficulty": "basic",
+    "tags": ["conversion", "mesure", "métrique", "impérial", "ingénierie"],
+    "summary": "Convertissez entre différentes unités de mesure incluant longueur, poids, température, aire et volume.",
+    "description": "Notre convertisseur complet d'unités supporte les conversions entre systèmes métriques et impériaux pour longueur, poids, température, aire, volume et plus. Parfait pour étudiants, ingénieurs, scientifiques et quiconque ayant besoin de conversions rapides et précises d'unités.",
+    "instructions": [
+      "Sélectionnez le type de conversion dont vous avez besoin (longueur, poids, température, etc.)",
+      "Choisissez les unités depuis et vers lesquelles vous voulez convertir",
+      "Entrez la valeur que vous voulez convertir",
+      "Obtenez des résultats de conversion instantanés"
+    ],
+    "calculatorComponent": {
+      "componentName": "UnitConverter",
+      "inputs": [
+        { "name": "conversionType", "label": "Type de Conversion", "type": "select", "default": "length", "options": ["length", "weight", "temperature", "area", "volume", "time", "speed"] },
+        { "name": "fromUnit", "label": "Unité Depuis", "type": "dynamic-select", "default": "meters", "dependsOn": "conversionType" },
+        { "name": "toUnit", "label": "Unité Vers", "type": "dynamic-select", "default": "feet", "dependsOn": "conversionType" },
+        { "name": "value", "label": "Valeur à Convertir", "type": "number", "default": 1, "min": 0, "step": 0.01 }
+      ],
+      "formula": "Résultat = Valeur d'Entrée × Facteur de Conversion",
+      "output": { "label": "Valeur Convertie", "default": "Entrez valeur ci-dessus", "format": "number" },
+      "additionalOutputs": []
+    },
+    "examples": [
+      {
+        "title": "Conversion de Longueur",
+        "input": "Convertir 100 mètres en pieds",
+        "output": "328.08 pieds"
+      },
+      {
+        "title": "Conversion de Poids",
+        "input": "Convertir 5 kilogrammes en livres",
+        "output": "11.02 livres"
+      },
+      {
+        "title": "Conversion de Température",
+        "input": "Convertir 25°C en Fahrenheit",
+        "output": "77°F"
+      }
+    ],
+    "relatedCalculators": ["currency-converter", "percentage-calculator", "scientific-calculator"],
+    "seoContent": {
+      "introduction": "Convertissez entre différentes unités de mesure instantanément avec notre convertisseur complet d'unités. Cet outil essentiel supporte les conversions pour longueur, poids, température, aire, volume, temps, vitesse et plus entre systèmes métriques et impériaux. Que vous soyez étudiant travaillant sur des devoirs de physique, ingénieur concevant des produits, chef suivant des recettes internationales, ou voyageur comprenant des mesures étrangères, cette calculatrice fournit des conversions précises utilisant des facteurs standard de conversion. L'outil supporte à la fois des unités communes et spécialisées à travers multiples catégories pour une flexibilité de mesure complète.",
+      "benefits": [
+        "Supporte des conversions complètes d'unités à travers multiples catégories de mesure",
+        "Fournit des résultats instantanés et précis utilisant des formules exactes de conversion",
+        "Gère à la fois systèmes métriques et impériaux sans problème",
+        "Inclut des unités spécialisées pour applications scientifiques, d'ingénierie et culinaires",
+        "Offre une interface conviviale adaptée à tous niveaux de compétence",
+        "Utile pour besoins éducatifs, professionnels et quotidiens de conversion"
+      ],
+      "steps": [
+        "Sélectionnez la catégorie de mesure que vous voulez convertir (longueur, poids, température, etc.)",
+        "Choisissez votre unité de départ parmi les options disponibles",
+        "Sélectionnez l'unité cible vers laquelle vous voulez convertir",
+        "Entrez la valeur numérique que vous voulez transformer",
+        "Affichez le résultat instantané de conversion"
+      ],
+      "inputsExplained": [
+        "Type de conversion détermine quelle catégorie d'unités vous utilisez, assurant que vous voyez seulement des options pertinentes de mesure",
+        "Unité depuis spécifie votre système de mesure de départ, que ce soit métrique, impérial ou unités scientifiques spécialisées",
+        "Unité vers définit votre système de mesure cible pour le résultat converti",
+        "Valeur à convertir est la quantité numérique que vous voulez transformer entre différentes unités"
+      ],
+      "formulaExplanation": "La conversion d'unité suit des relations mathématiques établies par des organisations internationales de standards. Chaque conversion utilise un facteur spécifique de conversion qui relie une unité à une autre dans la même catégorie de mesure. Par exemple, les conversions de longueur utilisent des facteurs comme 1 mètre = 3.28084 pieds, tandis que les conversions de température nécessitent des formules différentes comme °F = (°C × 9/5) + 32. La calculatrice applique ces relations mathématiques précises pour assurer l'exactitude à travers toutes les conversions d'unités supportées.",
+      "examples": [
+        "Convertissant dimensions de bâtiment: 25 mètres × 3.28084 = 82.02 pieds pour planification de construction",
+        "Adaptation de recette: 500 grammes × 0.00220462 = 1.10 livres pour cuisine internationale",
+        "Conversion météo: (20°C × 9/5) + 32 = 68°F pour comprendre rapports de température étrangers",
+        "Calcul d'aire: 100 mètres carrés × 10.7639 = 1,076.39 pieds carrés pour mesures de propriété"
+      ],
+      "resultsExplanation": [
+        "Valeur convertie montre votre entrée transformée vers l'unité cible",
+        "Toutes les conversions utilisent des relations mathématiques précises pour l'exactitude",
+        "Les résultats incluent des décimales appropriées pour le type spécifique de conversion",
+        "La calculatrice maintient la précision tout en évitant des décimales inutiles"
+      ],
+      "whoItsFor": "Cette calculatrice sert les étudiants apprenant les systèmes de mesure en classes de science et math, les ingénieurs et architectes travaillant avec des standards internationaux, les chefs adaptant des recettes de différents pays, les voyageurs convertissant entre systèmes métriques et impériaux, les scientifiques menant des recherches avec des unités spécialisées, et les professionnels dans les domaines de fabrication, construction et design qui ont besoin de conversions précises d'unités.",
+      "disclaimer": "Cette calculatrice utilise des facteurs standard de conversion établis par des organisations internationales de standards. Bien qu'hautement précise pour des buts généraux, certaines applications spécialisées peuvent nécessiter des facteurs plus précis de conversion. Pour la recherche scientifique nécessitant une précision extrême ou des mesures légales, consultez des standards officiels ou des références certifiées de conversion.",
+      "relatedTools": [
+        "Convertisseurs de devise pour calculs financiers et transactions internationales",
+        "Calculatrices scientifiques pour computations mathématiques complexes",
+        "Calculatrices de pourcentage pour calculs proportionnels et ratios"
+      ],
+      "faqs": [
+        {
+          "question": "À quel point les conversions d'unités sont-elles précises?",
+          "answer": "Les conversions utilisent des relations mathématiques précises et des facteurs standard de conversion établis par des organisations internationales de standards comme NIST et BIPM. La calculatrice maintient l'exactitude à des décimales appropriées pour chaque type de mesure, assurant des résultats fiables pour usage général et professionnel."
+        },
+        {
+          "question": "Puis-je convertir entre n'importe quelles unités dans la même catégorie?",
+          "answer": "Oui, vous pouvez convertir entre n'importe quelles unités supportées dans la même catégorie de mesure. Par exemple, dans les conversions de longueur, vous pouvez convertir entre mètres, pieds, pouces, centimètres, millimètres et plus. La calculatrice gère automatiquement toutes les relations d'unités communes."
+        },
+        {
+          "question": "La calculatrice supporte-t-elle la notation scientifique?",
+          "answer": "Bien que la calculatrice fonctionne avec des nombres décimaux, des nombres très grands ou petits sont affichés en format décimal standard. Pour des calculs scientifiques nécessitant une notation exponentielle, considérez utiliser la calculatrice scientifique avec ce convertisseur d'unités pour un travail de mesure complet."
+        },
+        {
+          "question": "Les facteurs de conversion sont-ils mis à jour régulièrement?",
+          "answer": "La calculatrice utilise des facteurs de conversion reconnus internationalement qui restent stables dans le temps. Des unités comme mètres, kilogrammes et secondes sont définies par des constantes physiques, tandis que des unités pratiques comme pieds et livres sont définies par accord international. Ces relations ne changent pas fréquemment."
+        },
+        {
+          "question": "Puis-je utiliser ceci pour la cuisine et les conversions de recettes?",
+          "answer": "Absolument! La calculatrice inclut des mesures communes de cuisine comme tasses, cuillères à soupe, cuillères à thé, onces liquides et millilitres. Cela la rend parfaite pour adapter des recettes internationales, convertir entre mesures culinaires customary des États-Unis et métriques, et assurer des proportions précises d'ingrédients."
+        }
+      ]
+    }
+  }
+}

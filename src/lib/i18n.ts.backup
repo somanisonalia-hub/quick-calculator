@@ -1,0 +1,399 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import Backend from 'i18next-http-backend';
+import { loadLabels } from './contentRegistry';
+
+// Initialize i18n with standard resource loading
+i18n
+  .use(Backend)
+  .use(initReactI18next)
+  .init({
+    fallbackLng: 'en',
+    debug: process.env.NODE_ENV === 'development',
+
+    interpolation: {
+      escapeValue: false,
+    },
+
+    defaultNS: 'common',
+    ns: ['common', 'labels'],
+
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
+    },
+
+    initImmediate: false,
+  });
+
+// Load initial translations for the default language
+const loadInitialTranslations = async () => {
+  try {
+    // Load labels (calculator content)
+    const labels = loadLabels('en');
+    i18n.addResourceBundle('en', 'labels', labels, true, true);
+
+    // Load common translations for all languages
+    const commonTranslations = {
+      en: {
+        "nav": {
+          "home": "Home",
+          "calculators": "Calculators",
+          "about": "About",
+          "contact": "Contact"
+        },
+        "categories": {
+          "math": "Math Calculators",
+          "financial": "Financial Calculators",
+          "health": "Health & Fitness Calculators",
+          "conversion": "Unit Converters",
+          "other": "Other Tools"
+        },
+        "homepage": {
+          "title": "Free Online Calculators",
+          "subtitle": "Calculate anything online with our fast, accurate tools",
+          "contact": "Contact"
+        },
+        "calculator": {
+          "sectionTitle": "Calculator",
+          "howToUse": "How to Use",
+          "examples": "Examples",
+          "input": "Input",
+          "output": "Output",
+          "relatedCalculators": "Related Calculators",
+          "calculatorDetails": "Calculator Details",
+          "category": "Category",
+          "difficulty": "Difficulty",
+          "tags": "Tags",
+          "wordCount": "Word Count",
+          "tryIt": "Try it →",
+          "loading": "Loading calculator...",
+          "notFound": "Calculator not found",
+          "backToHomepage": "← Back to homepage",
+          "notImplemented": "Calculator component not yet implemented.",
+          "component": "Component",
+          "loanDetails": "Loan Details",
+          "paymentSummary": "Payment Summary",
+          "monthlyPayment": "Monthly Payment",
+          "principalInterest": "Principal & Interest",
+          "taxesInsurance": "Taxes & Insurance",
+          "totalInterest": "Total Interest Paid",
+          "totalAmount": "Total Amount Paid",
+          "paymentBreakdown": "Payment Breakdown",
+          "totalMonthly": "Total Monthly",
+          "investmentSummary": "Investment Summary",
+          "initialInvestment": "Initial Investment",
+          "sharesOwned": "Shares Owned",
+          "priceChange": "Price Change",
+          "currentValue": "Current Value",
+          "conversionResult": "Conversion Result",
+          "supportedFormats": "Supported Formats",
+          "numbers": "Numbers",
+          "currency": "Currency",
+          "ordinals": "Ordinals",
+          "note": "Note",
+          "stockInvestmentsRisk": "Stock investments involve risk. Past performance doesn't guarantee future results.",
+          "enterLoanAmount": "Enter loan amount",
+          "enterInterestRate": "Enter interest rate",
+          "enterLoanTerm": "Enter loan term",
+          "emiCalculator": "EMI Calculator",
+          "emiDescription": "Calculate Equated Monthly Installments for loans",
+          "loanAmount": "Loan Amount ($)",
+          "annualInterestRate": "Annual Interest Rate (%)",
+          "loanTermYears": "Loan Term (Years)",
+          "emiBreakdown": "EMI Breakdown",
+          "monthlyEMI": "Monthly EMI",
+          "principalAmount": "Principal Amount",
+          "totalInterest": "Total Interest",
+          "totalAmountPaid": "Total Amount Paid"
+        },
+        "brand": {
+          "name": "Quick Calculator"
+        },
+        "footer": {
+          "description": "Free online calculators for math, finance, health, and more. All calculations are performed in your browser.",
+          "copyright": "© 2024 Quick Calculator. All rights reserved.",
+          "privacy": "Privacy Policy",
+          "terms": "Terms of Service"
+        },
+        "seo": {
+          "title": "Free Online Calculators - Math, Finance, Health & More",
+          "description": "Use our free online calculators for math, finance, health, conversions and more. All calculations performed instantly in your browser with detailed explanations.",
+          "keywords": "calculator, online calculator, math calculator, financial calculator, health calculator"
+        }
+      },
+      es: {
+        "nav": {
+          "home": "Inicio",
+          "calculators": "Calculadoras",
+          "about": "Acerca de",
+          "contact": "Contacto"
+        },
+        "categories": {
+          "math": "Calculadoras Matemáticas",
+          "financial": "Calculadoras Financieras",
+          "health": "Calculadoras de Salud y Fitness",
+          "conversion": "Convertidores de Unidades",
+          "other": "Otras Herramientas"
+        },
+        "homepage": {
+          "title": "Calculadoras en Línea Gratis",
+          "subtitle": "Calcule cualquier cosa en línea con nuestras herramientas rápidas y precisas",
+          "contact": "Contacto"
+        },
+        "calculator": {
+          "sectionTitle": "Calculadora",
+          "howToUse": "Cómo Usar",
+          "examples": "Ejemplos",
+          "input": "Entrada",
+          "output": "Salida",
+          "relatedCalculators": "Calculadoras Relacionadas",
+          "calculatorDetails": "Detalles de la Calculadora",
+          "category": "Categoría",
+          "difficulty": "Dificultad",
+          "tags": "Etiquetas",
+          "wordCount": "Conteo de Palabras",
+          "tryIt": "Pruébalo →",
+          "loading": "Cargando calculadora...",
+          "notFound": "Calculadora no encontrada",
+          "backToHomepage": "← Volver a la página principal",
+          "notImplemented": "El componente de calculadora aún no está implementado.",
+          "component": "Componente",
+          "loanDetails": "Detalles del Préstamo",
+          "paymentSummary": "Resumen de Pagos",
+          "monthlyPayment": "Pago Mensual",
+          "principalInterest": "Principal e Interés",
+          "taxesInsurance": "Impuestos y Seguro",
+          "totalInterest": "Interés Total Pagado",
+          "totalAmount": "Monto Total Pagado",
+          "paymentBreakdown": "Desglose de Pagos",
+          "totalMonthly": "Total Mensual",
+          "investmentSummary": "Resumen de Inversión",
+          "initialInvestment": "Inversión Inicial",
+          "sharesOwned": "Acciones Poseídas",
+          "priceChange": "Cambio de Precio",
+          "currentValue": "Valor Actual",
+          "conversionResult": "Resultado de Conversión",
+          "supportedFormats": "Formatos Soportados",
+          "numbers": "Números",
+          "currency": "Moneda",
+          "ordinals": "Ordinales",
+          "note": "Nota",
+          "stockInvestmentsRisk": "Las inversiones en acciones implican riesgo. El rendimiento pasado no garantiza resultados futuros.",
+          "enterLoanAmount": "Ingrese el monto del préstamo",
+          "enterInterestRate": "Ingrese la tasa de interés",
+          "enterLoanTerm": "Ingrese el plazo del préstamo",
+          "emiCalculator": "Calculadora de EMI",
+          "emiDescription": "Calcule Cuotas Mensuales Equivalentes para préstamos",
+          "loanAmount": "Monto del Préstamo ($)",
+          "annualInterestRate": "Tasa de Interés Anual (%)",
+          "loanTermYears": "Plazo del Préstamo (Años)",
+          "emiBreakdown": "Desglose de EMI",
+          "monthlyEMI": "EMI Mensual",
+          "principalAmount": "Monto Principal",
+          "totalInterest": "Interés Total",
+          "totalAmountPaid": "Monto Total Pagado"
+        },
+        "brand": {
+          "name": "Calculadora Rápida"
+        },
+        "footer": {
+          "description": "Calculadoras en línea gratuitas para matemáticas, finanzas, salud y más. Todos los cálculos se realizan en su navegador.",
+          "copyright": "© 2024 Calculadora Rápida. Todos los derechos reservados.",
+          "privacy": "Política de Privacidad",
+          "terms": "Términos de Servicio"
+        },
+        "seo": {
+          "title": "Calculadoras en Línea Gratuitas - Matemáticas, Finanzas, Salud y Más",
+          "description": "Utilice nuestras calculadoras en línea gratuitas para matemáticas, finanzas, salud, conversiones y más. Todos los cálculos se realizan al instante en su navegador con explicaciones detalladas.",
+          "keywords": "calculadora, calculadora en línea, calculadora matemática, calculadora financiera, calculadora de salud"
+        }
+      },
+      pt: {
+        "nav": {
+          "home": "Início",
+          "calculators": "Calculadoras",
+          "about": "Sobre",
+          "contact": "Contato"
+        },
+        "categories": {
+          "math": "Calculadoras Matemáticas",
+          "financial": "Calculadoras Financeiras",
+          "health": "Calculadoras de Saúde e Fitness",
+          "conversion": "Conversores de Unidades",
+          "other": "Outras Ferramentas"
+        },
+        "homepage": {
+          "title": "Calculadoras Online Gratuitas",
+          "subtitle": "Calcule qualquer coisa online com nossas ferramentas rápidas e precisas",
+          "contact": "Contato"
+        },
+        "calculator": {
+          "sectionTitle": "Calculadora",
+          "howToUse": "Como Usar",
+          "examples": "Exemplos",
+          "input": "Entrada",
+          "output": "Saída",
+          "relatedCalculators": "Calculadoras Relacionadas",
+          "calculatorDetails": "Detalhes da Calculadora",
+          "category": "Categoria",
+          "difficulty": "Dificuldade",
+          "tags": "Etiquetas",
+          "wordCount": "Contagem de Palavras",
+          "tryIt": "Experimente →",
+          "loading": "Carregando calculadora...",
+          "notFound": "Calculadora não encontrada",
+          "backToHomepage": "← Voltar à página inicial",
+          "notImplemented": "O componente da calculadora ainda não está implementado.",
+          "component": "Componente",
+          "loanDetails": "Detalhes do Empréstimo",
+          "paymentSummary": "Resumo de Pagamento",
+          "monthlyPayment": "Pagamento Mensal",
+          "principalInterest": "Principal e Juros",
+          "taxesInsurance": "Impostos e Seguro",
+          "totalInterest": "Juros Totais Pagos",
+          "totalAmount": "Valor Total Pago",
+          "paymentBreakdown": "Detalhamento de Pagamento",
+          "totalMonthly": "Total Mensal",
+          "investmentSummary": "Resumo de Investimento",
+          "initialInvestment": "Investimento Inicial",
+          "sharesOwned": "Ações Possuídas",
+          "priceChange": "Mudança de Preço",
+          "currentValue": "Valor Atual",
+          "conversionResult": "Resultado da Conversão",
+          "supportedFormats": "Formatos Suportados",
+          "numbers": "Números",
+          "currency": "Moeda",
+          "ordinals": "Ordinais",
+          "note": "Nota",
+          "stockInvestmentsRisk": "Investimentos em ações envolvem risco. O desempenho passado não garante resultados futuros.",
+          "enterLoanAmount": "Digite o valor do empréstimo",
+          "enterInterestRate": "Digite a taxa de juros",
+          "enterLoanTerm": "Digite o prazo do empréstimo",
+          "emiCalculator": "Calculadora de EMI",
+          "emiDescription": "Calcule Parcelas Mensais Equivalentes para empréstimos",
+          "loanAmount": "Valor do Empréstimo ($)",
+          "annualInterestRate": "Taxa de Juros Anual (%)",
+          "loanTermYears": "Prazo do Empréstimo (Anos)",
+          "emiBreakdown": "Detalhamento do EMI",
+          "monthlyEMI": "EMI Mensal",
+          "principalAmount": "Valor Principal",
+          "totalInterest": "Juros Totais",
+          "totalAmountPaid": "Valor Total Pago"
+        },
+        "brand": {
+          "name": "Calculadora Rápida"
+        },
+        "footer": {
+          "description": "Calculadoras online gratuitas para matemática, finanças, saúde e mais. Todos os cálculos são realizados no seu navegador.",
+          "copyright": "© 2024 Quick Calculator. Todos os direitos reservados.",
+          "privacy": "Política de Privacidade",
+          "terms": "Termos de Serviço"
+        },
+        "seo": {
+          "title": "Calculadoras Online Gratuitas - Matemática, Finanças, Saúde e Mais",
+          "description": "Use nossas calculadoras online gratuitas para matemática, finanças, saúde, conversões e mais. Todos os cálculos realizados instantaneamente no seu navegador com explicações detalhadas.",
+          "keywords": "calculadora, calculadora online, calculadora matemática, calculadora financeira, calculadora de saúde"
+        }
+      },
+      fr: {
+        "nav": {
+          "home": "Accueil",
+          "calculators": "Calculateurs",
+          "about": "À propos",
+          "contact": "Contact"
+        },
+        "categories": {
+          "math": "Calculateurs Mathématiques",
+          "financial": "Calculateurs Financiers",
+          "health": "Calculateurs Santé et Fitness",
+          "conversion": "Convertisseurs d'Unités",
+          "other": "Autres Outils"
+        },
+        "homepage": {
+          "title": "Calculateurs en Ligne Gratuits",
+          "subtitle": "Calculez tout en ligne avec nos outils rapides et précis",
+          "contact": "Contact"
+        },
+        "calculator": {
+          "sectionTitle": "Calculateur",
+          "howToUse": "Comment Utiliser",
+          "examples": "Exemples",
+          "input": "Entrée",
+          "output": "Sortie",
+          "relatedCalculators": "Calculateurs Connexes",
+          "calculatorDetails": "Détails du Calculateur",
+          "category": "Catégorie",
+          "difficulty": "Difficulté",
+          "tags": "Étiquettes",
+          "wordCount": "Nombre de Mots",
+          "tryIt": "Essayez →",
+          "loading": "Chargement du calculateur...",
+          "notFound": "Calculateur non trouvé",
+          "backToHomepage": "← Retour à la page d'accueil",
+          "notImplemented": "Le composant calculateur n'est pas encore implémenté.",
+          "component": "Composant",
+          "loanDetails": "Détails du Prêt",
+          "paymentSummary": "Résumé des Paiements",
+          "monthlyPayment": "Paiement Mensuel",
+          "principalInterest": "Principal et Intérêts",
+          "taxesInsurance": "Taxes et Assurance",
+          "totalInterest": "Intérêts Totaux Payés",
+          "totalAmount": "Montant Total Payé",
+          "paymentBreakdown": "Répartition des Paiements",
+          "totalMonthly": "Total Mensuel",
+          "investmentSummary": "Résumé d'Investissement",
+          "initialInvestment": "Investissement Initial",
+          "sharesOwned": "Actions Possédées",
+          "priceChange": "Changement de Prix",
+          "currentValue": "Valeur Actuelle",
+          "conversionResult": "Résultat de Conversion",
+          "supportedFormats": "Formats Supportés",
+          "numbers": "Nombres",
+          "currency": "Devise",
+          "ordinals": "Ordinaux",
+          "note": "Note",
+          "stockInvestmentsRisk": "Les investissements en actions comportent des risques. Les performances passées ne garantissent pas les résultats futurs.",
+          "enterLoanAmount": "Entrez le montant du prêt",
+          "enterInterestRate": "Entrez le taux d'intérêt",
+          "enterLoanTerm": "Entrez la durée du prêt",
+          "emiCalculator": "Calculateur d'EMI",
+          "emiDescription": "Calculez les Mensualités Équivalentes pour les prêts",
+          "loanAmount": "Montant du Prêt ($)",
+          "annualInterestRate": "Taux d'Intérêt Annuel (%)",
+          "loanTermYears": "Durée du Prêt (Années)",
+          "emiBreakdown": "Répartition des EMI",
+          "monthlyEMI": "EMI Mensuel",
+          "principalAmount": "Montant Principal",
+          "totalInterest": "Intérêts Totaux",
+          "totalAmountPaid": "Montant Total Payé"
+        },
+        "brand": {
+          "name": "Calculateur Rapide"
+        },
+        "footer": {
+          "description": "Calculateurs en ligne gratuits pour les mathématiques, finances, santé et plus. Tous les calculs sont effectués dans votre navigateur.",
+          "copyright": "© 2024 Calculateur Rapide. Tous droits réservés.",
+          "privacy": "Politique de Confidentialité",
+          "terms": "Conditions d'Utilisation"
+        },
+        "seo": {
+          "title": "Calculateurs en Ligne Gratuits - Mathématiques, Finances, Santé et Plus",
+          "description": "Utilisez nos calculateurs en ligne gratuits pour les mathématiques, finances, santé, conversions et plus. Tous les calculs effectués instantanément dans votre navigateur avec des explications détaillées.",
+          "keywords": "calculateur, calculateur en ligne, calculateur mathématique, calculateur financier, calculateur de santé"
+        }
+      }
+    };
+
+    // Load common translations for all languages
+    Object.keys(commonTranslations).forEach(lang => {
+      i18n.addResourceBundle(lang, 'common', commonTranslations[lang as keyof typeof commonTranslations], true, true);
+    });
+  } catch (error) {
+    console.error('Failed to load initial translations:', error);
+  }
+};
+
+// Load initial translations
+loadInitialTranslations();
+
+export default i18n;

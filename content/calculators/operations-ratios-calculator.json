@@ -1,0 +1,441 @@
+{
+  "en": {
+    "title": "Operations Ratios Calculator",
+    "seoTitle": "Operations Ratios Calculator - Inventory Turnover, Receivables Turnover & Asset Turnover Analysis",
+    "metaDescription": "Calculate inventory turnover ratio, receivables turnover ratio, and asset turnover ratio to assess operational efficiency and management effectiveness.",
+    "keywords": [
+      "operations ratios calculator",
+      "inventory turnover calculator",
+      "receivables turnover ratio",
+      "asset turnover calculator",
+      "operational efficiency ratios"
+    ],
+    "longTailKeywords": [
+      "how to calculate inventory turnover ratio",
+      "what is a good asset turnover ratio",
+      "days sales outstanding calculator",
+      "operational efficiency analysis"
+    ],
+    "slug": "operations-ratios-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "operations",
+      "efficiency",
+      "turnover",
+      "inventory",
+      "receivables",
+      "assets",
+      "management"
+    ],
+    "description": "Evaluate operational efficiency with our operations ratios calculator. Calculate inventory turnover, receivables turnover, asset turnover, and days sales outstanding to assess management effectiveness and operational performance.",
+    "summary": "Calculate operations ratios to assess management efficiency and operational performance.",
+    "instructions": [
+      "Enter sales revenue and cost of goods sold",
+      "Input average inventory and receivables values",
+      "Specify total assets for turnover calculations",
+      "Click calculate to see operational efficiency analysis"
+    ],
+    "inputs": [
+      "Sales Revenue ($)",
+      "Cost of Goods Sold ($)",
+      "Average Inventory ($)",
+      "Average Accounts Receivable ($)",
+      "Total Assets ($)"
+    ],
+    "outputs": [
+      "Inventory Turnover Ratio",
+      "Receivables Turnover Ratio",
+      "Asset Turnover Ratio",
+      "Days Sales Outstanding (days)"
+    ],
+    "examples": [
+      {
+        "title": "Retail Operations Analysis",
+        "input": "Sales: $1,000,000, COGS: $600,000, Avg Inventory: $150,000, Avg Receivables: $80,000, Total Assets: $800,000",
+        "output": "Inventory Turnover: 4.0, Receivables Turnover: 12.5, Asset Turnover: 1.25, DSO: 29 days"
+      }
+    ],
+    "calculatorComponent": "OperationsRatiosCalculator",
+    "seoContent": {
+      "introduction": "Operations ratios measure how effectively a company manages its assets and generates sales. Our operations ratios calculator helps analyze inventory turnover, receivables turnover, and asset turnover to assess operational efficiency and management performance.",
+      "benefits": [
+        "Assess inventory management effectiveness",
+        "Evaluate accounts receivable collection efficiency",
+        "Measure overall asset utilization",
+        "Identify operational inefficiencies",
+        "Compare performance across periods"
+      ],
+      "steps": [
+        "Gather operational and financial data",
+        "Enter sales, cost, and asset figures",
+        "Calculate turnover ratios",
+        "Analyze results against industry benchmarks",
+        "Identify areas for operational improvement"
+      ],
+      "inputsExplained": [
+        "Sales Revenue: Total revenue from operations",
+        "Cost of Goods Sold: Direct costs of producing goods",
+        "Average Inventory: Average inventory value during period",
+        "Average Accounts Receivable: Average receivables outstanding",
+        "Total Assets: Total company assets"
+      ],
+      "formulaExplanation": "Operations ratios measure asset utilization efficiency. Inventory turnover shows how quickly inventory is sold. Receivables turnover indicates collection speed. Asset turnover measures sales generation efficiency.",
+      "examples": [
+        "High inventory turnover indicates efficient inventory management",
+        "Low receivables turnover may signal collection problems",
+        "Asset turnover above 1.0 shows effective asset utilization"
+      ],
+      "resultsExplanation": [
+        "Inventory Turnover: Measures inventory management efficiency",
+        "Receivables Turnover: Assesses credit and collection policies",
+        "Asset Turnover: Indicates overall operational efficiency",
+        "Days Sales Outstanding: Average time to collect receivables"
+      ],
+      "whoItsFor": "Operations managers, financial analysts, business owners, and investors evaluating operational efficiency and management effectiveness.",
+      "disclaimer": "Operations ratios should be analyzed with industry context and company-specific factors. Seasonal variations may affect results.",
+      "relatedTools": [
+        "liquidity-ratios-calculator",
+        
+        "debt-ratios-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is a good inventory turnover ratio?",
+          "answer": "Depends on industry - retail typically 4-6 times, manufacturing 6-12 times. Higher turnover generally indicates better inventory management."
+        },
+        {
+          "question": "How is days sales outstanding calculated?",
+          "answer": "DSO = (Average Accounts Receivable / Daily Sales) where Daily Sales = Annual Sales / 365."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Ratios Operativos",
+    "seoTitle": "Calculadora de Ratios Operativos - Análisis de Rotación de Inventario y Eficiencia Operativa",
+    "metaDescription": "Calcula ratios de rotación de inventario, cuentas por cobrar y activos para evaluar eficiencia operativa y efectividad de gestión.",
+    "keywords": [
+      "calculadora ratios operativos",
+      "rotación inventario",
+      "rotación cuentas cobrar",
+      "eficiencia operativa"
+    ],
+    "longTailKeywords": [
+      "cómo calcular rotación inventario",
+      "qué es buen ratio rotación activos",
+      "días ventas pendientes calculadora"
+    ],
+    "slug": "operations-ratios-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "operativos",
+      "eficiencia",
+      "rotación",
+      "inventario",
+      "cuentas cobrar",
+      "activos"
+    ],
+    "description": "Evalúa eficiencia operativa con nuestra calculadora de ratios operativos. Calcula rotación de inventario, cuentas por cobrar, activos y días ventas pendientes para evaluar efectividad de gestión y rendimiento operativo.",
+    "summary": "Calcula ratios operativos para evaluar eficiencia de gestión y rendimiento operativo.",
+    "instructions": [
+      "Ingresa ingresos por ventas y costo de bienes vendidos",
+      "Introduce valores promedio de inventario y cuentas por cobrar",
+      "Especifica activos totales para cálculos de rotación",
+      "Haz clic en calcular para ver análisis de eficiencia operativa"
+    ],
+    "inputs": [
+      "Ingresos por Ventas ($)",
+      "Costo Bienes Vendidos ($)",
+      "Inventario Promedio ($)",
+      "Cuentas por Cobrar Promedio ($)",
+      "Activos Totales ($)"
+    ],
+    "outputs": [
+      "Ratio Rotación Inventario",
+      "Ratio Rotación Cuentas por Cobrar",
+      "Ratio Rotación Activos",
+      "Días Ventas Pendientes (días)"
+    ],
+    "examples": [
+      {
+        "title": "Análisis Operaciones Minorista",
+        "input": "Ventas: $1,000,000, COGS: $600,000, Inventario Prom: $150,000, Cuentas Cobrar Prom: $80,000, Activos Totales: $800,000",
+        "output": "Rotación Inventario: 4.0, Rotación Cuentas Cobrar: 12.5, Rotación Activos: 1.25, DSO: 29 días"
+      }
+    ],
+    "calculatorComponent": "OperationsRatiosCalculator",
+    "seoContent": {
+      "introduction": "Los ratios operativos miden qué tan efectivamente una empresa gestiona sus activos y genera ventas. Nuestra calculadora de ratios operativos ayuda a analizar rotación de inventario, cuentas por cobrar y activos para evaluar eficiencia operativa y rendimiento de gestión.",
+      "benefits": [
+        "Evaluar efectividad de gestión de inventario",
+        "Evaluar eficiencia de cobro de cuentas por cobrar",
+        "Medir utilización general de activos",
+        "Identificar ineficiencias operativas",
+        "Comparar rendimiento entre períodos"
+      ],
+      "steps": [
+        "Reunir datos operativos y financieros",
+        "Ingresar cifras de ventas, costo y activos",
+        "Calcular ratios de rotación",
+        "Analizar resultados contra benchmarks de industria",
+        "Identificar áreas de mejora operativa"
+      ],
+      "inputsExplained": [
+        "Ingresos por Ventas: Ingresos totales de operaciones",
+        "Costo Bienes Vendidos: Costos directos de producción",
+        "Inventario Promedio: Valor promedio de inventario durante período",
+        "Cuentas por Cobrar Promedio: Promedio cuentas por cobrar pendientes",
+        "Activos Totales: Activos totales de empresa"
+      ],
+      "formulaExplanation": "Los ratios operativos miden eficiencia de utilización de activos. Rotación de inventario muestra qué tan rápido se vende inventario. Rotación de cuentas por cobrar indica velocidad de cobro. Rotación de activos mide eficiencia de generación de ventas.",
+      "examples": [
+        "Alta rotación de inventario indica gestión eficiente de inventario",
+        "Baja rotación de cuentas por cobrar puede señalar problemas de cobro",
+        "Rotación de activos por encima de 1.0 muestra utilización efectiva de activos"
+      ],
+      "resultsExplanation": [
+        "Ratio Rotación Inventario: Mide eficiencia de gestión de inventario",
+        "Ratio Rotación Cuentas por Cobrar: Evalúa políticas de crédito y cobro",
+        "Ratio Rotación Activos: Indica eficiencia operativa general",
+        "Días Ventas Pendientes: Tiempo promedio para cobrar cuentas por cobrar"
+      ],
+      "whoItsFor": "Gerentes operativos, analistas financieros, dueños de negocios e inversores evaluando eficiencia operativa y efectividad de gestión.",
+      "disclaimer": "Los ratios operativos deben analizarse con contexto de industria y factores específicos de empresa. Variaciones estacionales pueden afectar resultados.",
+      "relatedTools": [
+        "liquidity-ratios-calculator",
+        
+        "debt-ratios-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es un buen ratio de rotación de inventario?",
+          "answer": "Depende de industria - retail típicamente 4-6 veces, manufactura 6-12 veces. Rotación más alta generalmente indica mejor gestión de inventario."
+        },
+        {
+          "question": "¿Cómo se calculan los días de ventas pendientes?",
+          "answer": "Días Ventas Pendientes = (Cuentas por Cobrar Promedio / Ventas Diarias) donde Ventas Diarias = Ventas Anuales / 365."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Índices Operacionais",
+    "seoTitle": "Calculadora de Índices Operacionais - Análise de Giro de Estoque e Eficiência Operacional",
+    "metaDescription": "Calcule índices de giro de estoque, contas a receber e ativos para avaliar eficiência operacional e efetividade de gestão.",
+    "keywords": [
+      "calculadora índices operacionais",
+      "giro estoque",
+      "giro contas receber",
+      "eficiência operacional"
+    ],
+    "longTailKeywords": [
+      "como calcular giro estoque",
+      "o que é bom índice giro ativos",
+      "dias vendas pendentes calculadora"
+    ],
+    "slug": "operations-ratios-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "operacionais",
+      "eficiência",
+      "giro",
+      "estoque",
+      "contas receber",
+      "ativos"
+    ],
+    "description": "Avalie eficiência operacional com nossa calculadora de índices operacionais. Calcule giro de estoque, contas a receber, ativos e dias vendas pendentes para avaliar efetividade de gestão e desempenho operacional.",
+    "summary": "Calcule índices operacionais para avaliar eficiência de gestão e desempenho operacional.",
+    "instructions": [
+      "Insira receita de vendas e custo dos produtos vendidos",
+      "Digite valores médios de estoque e contas a receber",
+      "Especifique ativos totais para cálculos de giro",
+      "Clique em calcular para ver análise de eficiência operacional"
+    ],
+    "inputs": [
+      "Receita de Vendas (R$)",
+      "Custo Produtos Vendidos (R$)",
+      "Estoque Médio (R$)",
+      "Contas a Receber Médias (R$)",
+      "Ativos Totais (R$)"
+    ],
+    "outputs": [
+      "Índice Giro Estoque",
+      "Índice Giro Contas a Receber",
+      "Índice Giro Ativos",
+      "Dias Vendas Pendentes (dias)"
+    ],
+    "examples": [
+      {
+        "title": "Análise Operações Varejo",
+        "input": "Vendas: R$ 1.000.000, COGS: R$ 600.000, Estoque Méd: R$ 150.000, Contas Receber Méd: R$ 80.000, Ativos Totais: R$ 800.000",
+        "output": "Giro Estoque: 4.0, Giro Contas Receber: 12.5, Giro Ativos: 1.25, DSO: 29 dias"
+      }
+    ],
+    "calculatorComponent": "OperationsRatiosCalculator",
+    "seoContent": {
+      "introduction": "Índices operacionais medem quão efetivamente uma empresa gerencia seus ativos e gera vendas. Nossa calculadora de índices operacionais ajuda a analisar giro de estoque, contas a receber e ativos para avaliar eficiência operacional e desempenho de gestão.",
+      "benefits": [
+        "Avaliar efetividade de gestão de estoque",
+        "Avaliar eficiência de cobrança de contas a receber",
+        "Medir utilização geral de ativos",
+        "Identificar ineficiências operacionais",
+        "Comparar desempenho entre períodos"
+      ],
+      "steps": [
+        "Reunir dados operacionais e financeiros",
+        "Inserir valores de vendas, custo e ativos",
+        "Calcular índices de giro",
+        "Analisar resultados contra benchmarks de indústria",
+        "Identificar áreas de melhoria operacional"
+      ],
+      "inputsExplained": [
+        "Receita de Vendas: Receita total de operações",
+        "Custo Produtos Vendidos: Custos diretos de produção",
+        "Estoque Médio: Valor médio de estoque durante período",
+        "Contas a Receber Médias: Média contas a receber pendentes",
+        "Ativos Totais: Ativos totais da empresa"
+      ],
+      "formulaExplanation": "Índices operacionais medem eficiência de utilização de ativos. Giro de estoque mostra quão rápido estoque é vendido. Giro de contas a receber indica velocidade de cobrança. Giro de ativos mede eficiência de geração de vendas.",
+      "examples": [
+        "Alto giro de estoque indica gestão eficiente de estoque",
+        "Baixo giro de contas a receber pode sinalizar problemas de cobrança",
+        "Giro de ativos acima de 1.0 mostra utilização efetiva de ativos"
+      ],
+      "resultsExplanation": [
+        "Índice Giro Estoque: Mede eficiência de gestão de estoque",
+        "Índice Giro Contas a Receber: Avalia políticas de crédito e cobrança",
+        "Índice Giro Ativos: Indica eficiência operacional geral",
+        "Dias Vendas Pendentes: Tempo médio para cobrar contas a receber"
+      ],
+      "whoItsFor": "Gerentes operacionais, analistas financeiros, donos de negócios e investidores avaliando eficiência operacional e efetividade de gestão.",
+      "disclaimer": "Índices operacionais devem ser analisados com contexto de indústria e fatores específicos de empresa. Variações sazonais podem afetar resultados.",
+      "relatedTools": [
+        "liquidity-ratios-calculator",
+        
+        "debt-ratios-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "O que é um bom índice de giro de estoque?",
+          "answer": "Depende de indústria - varejo tipicamente 4-6 vezes, manufatura 6-12 vezes. Giro mais alto geralmente indica melhor gestão de estoque."
+        },
+        {
+          "question": "Como são calculados os dias de vendas pendentes?",
+          "answer": "Dias Vendas Pendentes = (Contas a Receber Médias / Vendas Diárias) onde Vendas Diárias = Vendas Anuais / 365."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Ratios Opérationnels",
+    "seoTitle": "Calculateur de Ratios Opérationnels - Analyse de Rotation des Stocks et Efficacité Opérationnelle",
+    "metaDescription": "Calculez ratios de rotation des stocks, créances et actifs pour évaluer efficacité opérationnelle et effectivité de gestion.",
+    "keywords": [
+      "calculateur ratios opérationnels",
+      "rotation stocks",
+      "rotation créances",
+      "efficacité opérationnelle"
+    ],
+    "longTailKeywords": [
+      "comment calculer rotation stocks",
+      "quel est bon ratio rotation actifs",
+      "jours ventes en suspens calculateur"
+    ],
+    "slug": "operations-ratios-calculator",
+    "category": "financial",
+    "difficulty": "intermediate",
+    "tags": [
+      "opérationnels",
+      "efficacité",
+      "rotation",
+      "stocks",
+      "créances",
+      "actifs"
+    ],
+    "description": "Évaluez efficacité opérationnelle avec notre calculateur de ratios opérationnels. Calculez rotation des stocks, créances, actifs et jours ventes en suspens pour évaluer effectivité de gestion et performance opérationnelle.",
+    "summary": "Calculez ratios opérationnels pour évaluer efficacité de gestion et performance opérationnelle.",
+    "instructions": [
+      "Entrez revenus des ventes et coût des biens vendus",
+      "Saisissez valeurs moyennes de stock et créances",
+      "Spécifiez actifs totaux pour calculs de rotation",
+      "Cliquez calculer pour voir analyse d'efficacité opérationnelle"
+    ],
+    "inputs": [
+      "Revenus des Ventes (€)",
+      "Coût Biens Vendus (€)",
+      "Stock Moyen (€)",
+      "Créances Moyennes (€)",
+      "Actifs Totaux (€)"
+    ],
+    "outputs": [
+      "Ratio Rotation Stocks",
+      "Ratio Rotation Créances",
+      "Ratio Rotation Actifs",
+      "Jours Ventes en Suspens (jours)"
+    ],
+    "examples": [
+      {
+        "title": "Analyse Opérations Distribution",
+        "input": "Ventes: €1,000,000, COGS: €600,000, Stock Moy: €150,000, Créances Moy: €80,000, Actifs Totaux: €800,000",
+        "output": "Rotation Stocks: 4.0, Rotation Créances: 12.5, Rotation Actifs: 1.25, DSO: 29 jours"
+      }
+    ],
+    "calculatorComponent": "OperationsRatiosCalculator",
+    "seoContent": {
+      "introduction": "Les ratios opérationnels mesurent combien efficacement une entreprise gère ses actifs et génère des ventes. Notre calculateur de ratios opérationnels aide à analyser rotation des stocks, créances et actifs pour évaluer efficacité opérationnelle et performance de gestion.",
+      "benefits": [
+        "Évaluer effectivité de gestion des stocks",
+        "Évaluer efficacité de recouvrement des créances",
+        "Mesurer utilisation générale des actifs",
+        "Identifier inefficacités opérationnelles",
+        "Comparer performance entre périodes"
+      ],
+      "steps": [
+        "Rassembler données opérationnelles et financières",
+        "Entrer chiffres de ventes, coût et actifs",
+        "Calculer ratios de rotation",
+        "Analyser résultats contre benchmarks d'industrie",
+        "Identifier domaines d'amélioration opérationnelle"
+      ],
+      "inputsExplained": [
+        "Revenus des Ventes: Revenus totaux d'opérations",
+        "Coût Biens Vendus: Coûts directs de production",
+        "Stock Moyen: Valeur moyenne de stock durant période",
+        "Créances Moyennes: Moyenne créances en suspens",
+        "Actifs Totaux: Actifs totaux d'entreprise"
+      ],
+      "formulaExplanation": "Les ratios opérationnels mesurent efficacité d'utilisation d'actifs. Rotation des stocks montre combien rapidement stock est vendu. Rotation des créances indique vitesse de recouvrement. Rotation des actifs mesure efficacité de génération de ventes.",
+      "examples": [
+        "Haute rotation des stocks indique gestion efficace des stocks",
+        "Basse rotation des créances peut signaler problèmes de recouvrement",
+        "Rotation des actifs au-dessus de 1.0 montre utilisation effective des actifs"
+      ],
+      "resultsExplanation": [
+        "Ratio Rotation Stocks: Mesure efficacité de gestion des stocks",
+        "Ratio Rotation Créances: Évalue politiques de crédit et recouvrement",
+        "Ratio Rotation Actifs: Indique efficacité opérationnelle générale",
+        "Jours Ventes en Suspens: Temps moyen pour recouvrer créances"
+      ],
+      "whoItsFor": "Directeurs opérationnels, analystes financiers, propriétaires d'entreprises et investisseurs évaluant efficacité opérationnelle et effectivité de gestion.",
+      "disclaimer": "Les ratios opérationnels devraient être analysés avec contexte d'industrie et facteurs spécifiques d'entreprise. Variations saisonnières peuvent affecter résultats.",
+      "relatedTools": [
+        "liquidity-ratios-calculator",
+        
+        "debt-ratios-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "Quel est un bon ratio de rotation des stocks?",
+          "answer": "Dépend d'industrie - distribution typiquement 4-6 fois, fabrication 6-12 fois. Rotation plus élevée indique généralement meilleure gestion des stocks."
+        },
+        {
+          "question": "Comment sont calculés les jours de ventes en suspens?",
+          "answer": "Jours Ventes en Suspens = (Créances Moyennes / Ventes Quotidiennes) où Ventes Quotidiennes = Ventes Annuelles / 365."
+        }
+      ]
+    }
+  }
+}

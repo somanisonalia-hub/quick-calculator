@@ -1,0 +1,450 @@
+{
+  "en": {
+    "title": "GPA Calculator",
+    "seoTitle": "GPA Calculator - Calculate Grade Point Average Online",
+    "metaDescription": "Free GPA calculator for students. Calculate semester and cumulative GPA with different grading scales. Perfect for college and high school students tracking academic performance.",
+    "keywords": ["GPA calculator", "grade point average calculator", "academic calculator", "student calculator", "grade calculator"],
+    "longTailKeywords": ["how to calculate GPA", "college GPA calculator", "high school GPA calculator", "weighted GPA calculator", "cumulative GPA calculator"],
+    "slug": "gpa-calculator",
+    "category": "lifestyle",
+    "difficulty": "basic",
+    "tags": ["education", "grades", "academic", "students", "college"],
+    "summary": "Calculate your GPA instantly with support for different grading scales and weighted/unweighted calculations.",
+    "description": "Our comprehensive GPA calculator helps students calculate their Grade Point Average for individual semesters or cumulative academic performance. Supports multiple grading scales (4.0, 5.0, 12.0) and both weighted and unweighted calculations. Perfect for high school and college students planning their academic future.",
+    "instructions": [
+      "Select your grading scale (4.0, 5.0, or 12.0)",
+      "Choose weighted or unweighted calculation",
+      "Enter your course grades and credit hours",
+      "Get instant GPA calculation with detailed breakdown"
+    ],
+    "calculatorComponent": {
+      "componentName": "GPACalculator",
+      "inputs": [
+        { "name": "gradingScale", "label": "Grading Scale", "type": "select", "default": "4.0", "options": ["4.0", "5.0"] },
+        { "name": "grades", "label": "Add Course Grades", "type": "dynamic", "default": [], "fields": [
+          { "name": "grade", "label": "Grade", "type": "select", "options": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"] },
+          { "name": "credits", "label": "Credits", "type": "number", "min": 0.5, "max": 6, "step": 0.5 }
+        ]}
+      ],
+      "formula": "GPA = (Sum of grade points × credits) ÷ Total credits",
+      "output": { "label": "Your GPA", "default": "Add courses above to calculate GPA", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Total Credits", "field": "totalCredits", "format": "number" },
+        { "label": "Grade Classification", "field": "classification", "format": "text" },
+        { "label": "Letter Grade Equivalent", "field": "letterGrade", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "College GPA",
+        "input": "A (4 credits), B+ (3 credits), A- (4 credits), B (2 credits)",
+        "output": "GPA: 3.58 (4.0 scale)"
+      },
+      {
+        "title": "Weighted High School GPA",
+        "input": "A in AP Calculus (5 credits), B in Honors English (4 credits), A in Regular History (3 credits)",
+        "output": "Weighted GPA: 4.25 (5.0 scale)"
+      }
+    ],
+    "relatedCalculators": ["percent-calculator", "percentage-change-calculator", "mean-median-mode-calculator"],
+    "seoContent": {
+      "introduction": "Calculate your GPA instantly with support for different grading scales and weighted/unweighted calculations. This comprehensive tool helps students, educators, and academic professionals track and calculate grade point averages with precision and ease. Whether you're a high school student planning your college applications, a college student monitoring your academic progress, or an educator helping students understand their performance, this GPA calculator provides accurate calculations based on standard grading systems. The tool supports multiple grading scales and both weighted and unweighted calculations, making it suitable for different educational institutions and academic requirements.",
+      "benefits": [
+        "Provides precise GPA calculations using standard academic formulas",
+        "Supports multiple grading scales commonly used in educational institutions",
+        "Handles both weighted and unweighted calculations for different academic contexts",
+        "Offers instant results with detailed breakdowns of academic performance",
+        "Helps students track progress toward academic goals and graduation requirements",
+        "Enables educators to demonstrate GPA concepts through practical calculations"
+      ],
+      "steps": [
+        "Choose your grading scale (4.0, 5.0, or other standard scales)",
+        "Select whether you want weighted or unweighted GPA calculation",
+        "Enter each course grade and its corresponding credit hours",
+        "Review the calculated GPA and detailed breakdown of your academic performance"
+      ],
+      "inputsExplained": [
+        "Grading scale determines the maximum possible GPA and how letter grades convert to numeric values",
+        "Course grades represent your actual performance in each class, converted to grade points",
+        "Credit hours indicate the weight or importance of each course in your academic load",
+        "Calculation type affects how honors or advanced placement courses impact your final GPA"
+      ],
+      "formulaExplanation": "The GPA calculation follows a straightforward mathematical approach that considers both your performance in each course and the credit value of those courses. Grade points are assigned based on your letter grades (typically A=4, B=3, C=2, D=1, F=0), then multiplied by the credit hours for each course. These weighted grade points are summed and divided by the total credit hours attempted. Weighted calculations give additional points for honors or advanced courses, while unweighted calculations treat all courses equally. This method ensures that courses with higher credit values have more impact on your overall academic average.",
+      "examples": [
+        "A college student with courses: Calculus (A, 4 credits), English (B+, 3 credits), Biology (A-, 4 credits), and History (B, 2 credits) would calculate: (16 + 9.9 + 14.8 + 6) ÷ 13 = 3.58 GPA",
+        "A high school student in weighted courses: AP Physics (A, 5 credits), Honors Chemistry (B+, 4 credits), Regular Math (A, 3 credits) calculates: (20 + 13.2 + 12) ÷ 12 = 4.03 weighted GPA"
+      ],
+      "resultsExplanation": [
+        "GPA displays your overall academic average on the selected scale",
+        "Total credits shows the cumulative credit hours you've attempted",
+        "Grade classification indicates your academic standing based on standard ranges",
+        "Letter grade equivalent provides a simple translation of your numeric GPA"
+      ],
+      "whoItsFor": "This calculator is designed for high school and college students who need to track their academic performance, educators teaching GPA concepts, academic advisors helping students with course planning, and parents assisting their children with educational planning. It's particularly useful for students preparing for college applications, monitoring progress toward graduation requirements, or understanding how different courses impact their overall academic standing.",
+      "disclaimer": "This calculator provides estimates based on standard academic formulas and common grading practices. Actual GPA calculations may vary by institution due to specific grading policies, course weighting systems, or academic regulations. For official academic records, always consult your school's registrar or academic advisor. This tool is for educational purposes and should not replace official university calculations.",
+      "relatedTools": [
+        "Percentage calculators for grade conversions and academic planning",
+        "Average calculators for understanding statistical concepts in education",
+        "Grade tracking tools for comprehensive academic performance monitoring"
+      ],
+      "faqs": [
+        {
+          "question": "How do I calculate my GPA with different grading scales?",
+          "answer": "Select your grading scale (4.0, 5.0, or other standard scales) before entering grades. A 4.0 scale assigns A=4.0, B=3.0, C=2.0, D=1.0, F=0.0. A 5.0 weighted scale gives bonus points for honors courses (A in honors = 5.0). Plus/minus grades are supported (A-=3.7, B+=3.3). The calculator automatically converts letter grades to the appropriate numeric values for your selected scale."
+        },
+        {
+          "question": "What's the difference between weighted and unweighted GPA?",
+          "answer": "Unweighted GPA treats all courses equally on a 4.0 scale (A=4.0 regardless of course difficulty). Weighted GPA gives bonus points for honors or AP courses (A in AP Calculus = 5.0 instead of 4.0). Weighted calculations better reflect academic rigor, which is why colleges prefer weighted GPAs for admissions. Use weighted calculation for high school GPA and unweighted for most college applications."
+        },
+        {
+          "question": "How do credit hours affect my GPA calculation?",
+          "answer": "Credit hours determine each course's importance in your GPA. A 4-credit course (like Calculus) has twice the impact of a 2-credit course (like Art). Grade points are calculated by multiplying your grade value (A=4.0) by credit hours, then dividing the total grade points by total credit hours attempted. Higher credit courses have more influence on your final GPA."
+        },
+        {
+          "question": "Can I calculate semester GPA or just cumulative GPA?",
+          "answer": "You can calculate both! For semester GPA, enter only the courses from that specific semester. For cumulative GPA, enter all courses from all semesters completed. The calculator shows both individual course contributions and your overall GPA. Track semester-by-semester to monitor academic progress and identify areas for improvement."
+        },
+        {
+          "question": "How do I convert letter grades to GPA points?",
+          "answer": "The calculator handles conversion automatically: A/A+ = 4.0/4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0.0. For weighted scales, honors courses add 1.0 point (A in AP = 5.0). Just enter your letter grades - the calculator does the math for you."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de GPA",
+    "seoTitle": "Calculadora de GPA - Calcula el Promedio de Calificaciones en Línea",
+    "metaDescription": "Calculadora de GPA gratuita para estudiantes. Calcula GPA semestral y acumulado con diferentes escalas de calificación. Perfecta para estudiantes universitarios y de secundaria rastreando rendimiento académico.",
+    "keywords": ["calculadora GPA", "calculadora promedio calificaciones", "calculadora académica", "calculadora estudiante", "calculadora calificaciones"],
+    "longTailKeywords": ["cómo calcular GPA", "calculadora GPA universidad", "calculadora GPA secundaria", "calculadora GPA ponderado", "calculadora GPA acumulado"],
+    "slug": "gpa-calculator",
+    "category": "lifestyle",
+    "difficulty": "basic",
+    "tags": ["educación", "calificaciones", "académico", "estudiantes", "universidad"],
+    "summary": "Calcula tu GPA al instante con soporte para diferentes escalas de calificación y cálculos ponderados/no ponderados.",
+    "description": "Nuestra completa calculadora de GPA ayuda a los estudiantes a calcular su Promedio de Calificaciones para semestres individuales o rendimiento académico acumulado. Soporta múltiples escalas de calificación (4.0, 5.0, 12.0) y cálculos tanto ponderados como no ponderados. Perfecta para estudiantes de secundaria y universidad planificando su futuro académico.",
+    "instructions": [
+      "Selecciona tu escala de calificación (4.0, 5.0 o 12.0)",
+      "Elige cálculo ponderado o no ponderado",
+      "Ingresa las calificaciones de tus cursos y horas de crédito",
+      "Obtén cálculo instantáneo de GPA con desglose detallado"
+    ],
+    "calculatorComponent": {
+      "componentName": "GPACalculator",
+      "inputs": [
+        { "name": "gradingScale", "label": "Grading Scale", "type": "select", "default": "4.0", "options": ["4.0", "5.0"] },
+        { "name": "grades", "label": "Add Course Grades", "type": "dynamic", "default": [], "fields": [
+          { "name": "grade", "label": "Grade", "type": "select", "options": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"] },
+          { "name": "credits", "label": "Credits", "type": "number", "min": 0.5, "max": 6, "step": 0.5 }
+        ]}
+      ],
+      "formula": "GPA = (Sum of grade points × credits) ÷ Total credits",
+      "output": { "label": "Your GPA", "default": "Add courses above to calculate GPA", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Total Credits", "field": "totalCredits", "format": "number" },
+        { "label": "Grade Classification", "field": "classification", "format": "text" },
+        { "label": "Letter Grade Equivalent", "field": "letterGrade", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "GPA Universitario",
+        "input": "A (4 créditos), B+ (3 créditos), A- (4 créditos), B (2 créditos)",
+        "output": "GPA: 3.58 (escala 4.0)"
+      },
+      {
+        "title": "GPA Secundaria Ponderado",
+        "input": "A en Cálculo AP (5 créditos), B en Inglés Honors (4 créditos), A en Historia Regular (3 créditos)",
+        "output": "GPA Ponderado: 4.25 (escala 5.0)"
+      }
+    ],
+    "relatedCalculators": ["percent-calculator", "percentage-change-calculator", "mean-median-mode-calculator"],
+    "seoContent": {
+      "introduction": "Calcule su GPA al instante con soporte para diferentes escalas de calificación y cálculos ponderados/no ponderados. Nuestra completa calculadora de GPA ayuda a los estudiantes a calcular su Promedio de Calificaciones para semestres individuales o rendimiento académico acumulado. Soporta múltiples escalas de calificación (4.0, 5.0, 12.0) y cálculos tanto ponderados como no ponderados. Perfecta para estudiantes de secundaria y universidad planificando su futuro académico. Esta herramienta integral ayuda a estudiantes, educadores y profesionales académicos a rastrear y calcular promedios de calificaciones con precisión y facilidad. Ya sea que sea un estudiante de secundaria preparando solicitudes universitarias, un estudiante universitario monitoreando su progreso académico, o un educador ayudando a estudiantes a entender su rendimiento, esta calculadora de GPA proporciona cálculos precisos basados en sistemas de calificación estándar. La herramienta soporta múltiples escalas de calificación y cálculos tanto ponderados como no ponderados, haciéndola adecuada para diferentes instituciones educativas y requisitos académicos.",
+      "benefits": [
+        "Proporciona cálculos precisos de GPA usando fórmulas académicas estándar",
+        "Soporta múltiples escalas de calificación comúnmente usadas en instituciones educativas",
+        "Maneja tanto cálculos ponderados como no ponderados para diferentes contextos académicos",
+        "Ofrece resultados instantáneos con desgloses detallados del rendimiento académico",
+        "Ayuda a estudiantes a rastrear progreso hacia metas académicas y requisitos de graduación",
+        "Permite a educadores demostrar conceptos de GPA a través de cálculos prácticos"
+      ],
+      "steps": [
+        "Elija su escala de calificación (4.0, 5.0, u otras escalas estándar)",
+        "Seleccione si desea cálculo de GPA ponderado o no ponderado",
+        "Ingrese cada calificación de curso y sus correspondientes horas de crédito",
+        "Revise el GPA calculado y el desglose detallado de su rendimiento académico"
+      ],
+      "inputsExplained": [
+        "La escala de calificación determina el GPA máximo posible y cómo las letras se convierten a valores numéricos",
+        "Las calificaciones de curso representan su rendimiento real en cada clase, convertidas a puntos de calificación",
+        "Las horas de crédito indican el peso o importancia de cada curso en su carga académica",
+        "El tipo de cálculo afecta cómo los cursos de honores o colocación avanzada impactan su GPA final"
+      ],
+      "formulaExplanation": "El cálculo de GPA sigue un enfoque matemático directo que considera tanto su rendimiento en cada curso como el valor de crédito de esos cursos. Los puntos de calificación se asignan basados en sus letras de calificación (típicamente A=4, B=3, C=2, D=1, F=0), luego se multiplican por las horas de crédito para cada curso. Estos puntos de calificación ponderados se suman y se dividen por las horas de crédito totales intentadas. Los cálculos ponderados dan puntos adicionales para cursos de honores o avanzados, mientras que los cálculos no ponderados tratan todos los cursos por igual. Este método asegura que los cursos con valores de crédito más altos tengan más impacto en su promedio académico general.",
+      "examples": [
+        "Un estudiante universitario con cursos: Cálculo (A, 4 créditos), Inglés (B+, 3 créditos), Biología (A-, 4 créditos), e Historia (B, 2 créditos) calcularía: (16 + 9.9 + 14.8 + 6) ÷ 13 = 3.58 GPA",
+        "Un estudiante de secundaria en cursos ponderados: Física AP (A, 5 créditos), Química Honors (B+, 4 créditos), Matemáticas Regular (A, 3 créditos) calcula: (20 + 13.2 + 12) ÷ 12 = 4.03 GPA ponderado"
+      ],
+      "resultsExplanation": [
+        "GPA muestra su promedio académico general en la escala seleccionada",
+        "Créditos totales muestra las horas de crédito acumuladas que ha intentado",
+        "Clasificación de calificación indica su posición académica basada en rangos estándar",
+        "Equivalente de letra de calificación proporciona una traducción simple de su GPA numérico"
+      ],
+      "whoItsFor": "Esta calculadora está diseñada para estudiantes de secundaria y universidad que necesitan rastrear su rendimiento académico, educadores enseñando conceptos de GPA, asesores académicos ayudando a estudiantes con planificación de cursos, y padres asistiendo a sus hijos con planificación educativa. Es particularmente útil para estudiantes preparando solicitudes universitarias, monitoreando progreso hacia requisitos de graduación, o entendiendo cómo diferentes cursos impactan su posición académica general.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en fórmulas académicas estándar y prácticas de calificación comunes. Los cálculos reales de GPA pueden variar por institución debido a políticas específicas de calificación, sistemas de ponderación de cursos, o regulaciones académicas. Para registros académicos oficiales, siempre consulte al registrador de su escuela o asesor académico. Esta herramienta es para propósitos educativos y no debe reemplazar cálculos oficiales universitarios.",
+      "relatedTools": [
+        "Calculadoras de porcentaje para conversiones de calificaciones y planificación académica",
+        "Calculadoras de promedio para entender conceptos estadísticos en educación",
+        "Herramientas de seguimiento de calificaciones para monitoreo integral del rendimiento académico"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo calculo mi GPA con diferentes escalas de calificación?",
+          "answer": "Selecciona tu escala de calificación (4.0, 5.0 u otras escalas estándar) antes de ingresar calificaciones. Una escala de 4.0 asigna A=4.0, B=3.0, C=2.0, D=1.0, F=0.0. Una escala ponderada de 5.0 da puntos bonus por cursos de honores (A en honores = 5.0). Se soportan calificaciones con +/- (A-=3.7, B+=3.3). La calculadora automáticamente convierte letras de calificación a los valores numéricos apropiados para tu escala seleccionada."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre GPA ponderado y no ponderado?",
+          "answer": "El GPA no ponderado trata todos los cursos por igual en una escala de 4.0 (A=4.0 sin importar dificultad del curso). El GPA ponderado da puntos bonus por cursos de honores o AP (A en Cálculo AP = 5.0 en lugar de 4.0). Los cálculos ponderados reflejan mejor el rigor académico, por eso las universidades prefieren GPAs ponderados para admisiones. Usa cálculo ponderado para GPA de secundaria y no ponderado para la mayoría de aplicaciones universitarias."
+        },
+        {
+          "question": "¿Cómo afectan las horas de crédito a mi cálculo de GPA?",
+          "answer": "Las horas de crédito determinan la importancia de cada curso en tu GPA. Un curso de 4 créditos (como Cálculo) tiene el doble de impacto que un curso de 2 créditos (como Arte). Los puntos de calificación se calculan multiplicando tu valor de calificación (A=4.0) por horas de crédito, luego dividiendo los puntos totales de calificación por horas de crédito totales intentadas. Los cursos con más créditos tienen más influencia en tu GPA final."
+        },
+        {
+          "question": "¿Puedo calcular GPA semestral o solo GPA acumulado?",
+          "answer": "¡Puedes calcular ambos! Para GPA semestral, ingresa solo los cursos de ese semestre específico. Para GPA acumulado, ingresa todos los cursos de todos los semestres completados. La calculadora muestra tanto contribuciones individuales de cursos como tu GPA general. Rastrear semestre por semestre para monitorear progreso académico e identificar áreas de mejora."
+        },
+        {
+          "question": "¿Cómo convierto letras de calificación a puntos GPA?",
+          "answer": "La calculadora maneja la conversión automáticamente: A/A+ = 4.0/4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0.0. Para escalas ponderadas, los cursos de honores agregan 1.0 punto (A en AP = 5.0). Solo ingresa tus letras de calificación - la calculadora hace las matemáticas por ti."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de GPA",
+    "seoTitle": "Calculadora de GPA - Calcule a Média de Notas Online",
+    "metaDescription": "Calculadora de GPA gratuita para estudantes. Calcule GPA semestral e acumulado com diferentes escalas de notas. Perfeita para estudantes universitários e do ensino médio acompanhando desempenho acadêmico.",
+    "keywords": ["calculadora GPA", "calculadora média notas", "calculadora acadêmica", "calculadora estudante", "calculadora notas"],
+    "longTailKeywords": ["como calcular GPA", "calculadora GPA faculdade", "calculadora GPA ensino médio", "calculadora GPA ponderado", "calculadora GPA acumulado"],
+    "slug": "gpa-calculator",
+    "category": "lifestyle",
+    "difficulty": "basic",
+    "tags": ["educação", "notas", "acadêmico", "estudantes", "faculdade"],
+    "summary": "Calcule seu GPA instantaneamente com suporte para diferentes escalas de notas e cálculos ponderados/não ponderados.",
+    "description": "Nossa calculadora completa de GPA ajuda estudantes a calcular sua Média de Notas para semestres individuais ou desempenho acadêmico acumulado. Suporta múltiplas escalas de notas (4.0, 5.0, 12.0) e cálculos tanto ponderados quanto não ponderados. Perfeita para estudantes do ensino médio e faculdade planejando seu futuro acadêmico.",
+    "instructions": [
+      "Selecione sua escala de notas (4.0, 5.0 ou 12.0)",
+      "Escolha cálculo ponderado ou não ponderado",
+      "Digite as notas de seus cursos e horas de crédito",
+      "Obtenha cálculo instantâneo de GPA com detalhamento"
+    ],
+    "calculatorComponent": {
+      "componentName": "GPACalculator",
+      "inputs": [
+        { "name": "gradingScale", "label": "Grading Scale", "type": "select", "default": "4.0", "options": ["4.0", "5.0"] },
+        { "name": "grades", "label": "Add Course Grades", "type": "dynamic", "default": [], "fields": [
+          { "name": "grade", "label": "Grade", "type": "select", "options": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"] },
+          { "name": "credits", "label": "Credits", "type": "number", "min": 0.5, "max": 6, "step": 0.5 }
+        ]}
+      ],
+      "formula": "GPA = (Sum of grade points × credits) ÷ Total credits",
+      "output": { "label": "Your GPA", "default": "Add courses above to calculate GPA", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Total Credits", "field": "totalCredits", "format": "number" },
+        { "label": "Grade Classification", "field": "classification", "format": "text" },
+        { "label": "Letter Grade Equivalent", "field": "letterGrade", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "GPA Universitário",
+        "input": "A (4 créditos), B+ (3 créditos), A- (4 créditos), B (2 créditos)",
+        "output": "GPA: 3.58 (escala 4.0)"
+      },
+      {
+        "title": "GPA Ensino Médio Ponderado",
+        "input": "A em Cálculo AP (5 créditos), B em Inglês Honors (4 créditos), A em História Regular (3 créditos)",
+        "output": "GPA Ponderado: 4.25 (escala 5.0)"
+      }
+    ],
+    "relatedCalculators": ["percent-calculator", "percentage-change-calculator", "mean-median-mode-calculator"],
+    "seoContent": {
+      "introduction": "Calcule seu GPA instantaneamente com suporte para diferentes escalas de classificação e cálculos ponderados/não ponderados. Nossa completa calculadora de GPA ajuda estudantes a calcular sua Média de Pontos de Qualidade para semestres individuais ou desempenho acadêmico acumulado. Suporta múltiplas escalas de classificação (4.0, 5.0, 12.0) e cálculos tanto ponderados quanto não ponderados. Perfeita para estudantes do ensino médio e universitários planejando seu futuro acadêmico. Esta ferramenta abrangente ajuda estudantes, educadores e profissionais acadêmicos a rastrear e calcular médias de pontos de qualidade com precisão e facilidade. Seja você um estudante do ensino médio preparando aplicações universitárias, um estudante universitário monitorando seu progresso acadêmico, ou um educador ajudando estudantes a entender seu desempenho, esta calculadora de GPA fornece cálculos precisos baseados em sistemas de classificação padrão. A ferramenta suporta múltiplas escalas de classificação e cálculos tanto ponderados quanto não ponderados, tornando-a adequada para diferentes instituições educacionais e requisitos acadêmicos.",
+      "benefits": [
+        "Fornece cálculos precisos de GPA usando fórmulas acadêmicas padrão",
+        "Suporta múltiplas escalas de classificação comumente usadas em instituições educacionais",
+        "Lida tanto com cálculos ponderados quanto não ponderados para diferentes contextos acadêmicos",
+        "Oferece resultados instantâneos com detalhamentos do desempenho acadêmico",
+        "Ajuda estudantes a rastrear progresso rumo a metas acadêmicas e requisitos de graduação",
+        "Permite educadores demonstrar conceitos de GPA através de cálculos práticos"
+      ],
+      "steps": [
+        "Escolha sua escala de classificação (4.0, 5.0, ou outras escalas padrão)",
+        "Selecione se deseja cálculo de GPA ponderado ou não ponderado",
+        "Digite cada nota de curso e suas horas de crédito correspondentes",
+        "Revise o GPA calculado e detalhamento de seu desempenho acadêmico"
+      ],
+      "inputsExplained": [
+        "Escala de classificação determina o GPA máximo possível e como letras se convertem em valores numéricos",
+        "Notas de curso representam seu desempenho real em cada classe, convertidas em pontos de classificação",
+        "Horas de crédito indicam o peso ou importância de cada curso em sua carga acadêmica",
+        "Tipo de cálculo afeta como cursos de honras ou colocação avançada impactam seu GPA final"
+      ],
+      "formulaExplanation": "O cálculo de GPA segue uma abordagem matemática direta que considera tanto seu desempenho em cada curso quanto o valor de crédito desses cursos. Pontos de classificação são atribuídos baseados em suas letras de classificação (tipicamente A=4, B=3, C=2, D=1, F=0), então multiplicados pelas horas de crédito para cada curso. Estes pontos de classificação ponderados são somados e divididos pelas horas de crédito totais tentadas. Cálculos ponderados dão pontos adicionais para cursos de honras ou avançados, enquanto cálculos não ponderados tratam todos os cursos igualmente. Este método garante que cursos com valores de crédito mais altos tenham mais impacto em sua média acadêmica geral.",
+      "examples": [
+        "Um estudante universitário com cursos: Cálculo (A, 4 créditos), Inglês (B+, 3 créditos), Biologia (A-, 4 créditos), e História (B, 2 créditos) calcularia: (16 + 9.9 + 14.8 + 6) ÷ 13 = 3.58 GPA",
+        "Um estudante do ensino médio em cursos ponderados: Física AP (A, 5 créditos), Química Honors (B+, 4 créditos), Matemática Regular (A, 3 créditos) calcula: (20 + 13.2 + 12) ÷ 12 = 4.03 GPA ponderado"
+      ],
+      "resultsExplanation": [
+        "GPA exibe sua média acadêmica geral na escala selecionada",
+        "Créditos totais mostra as horas de crédito acumuladas que você tentou",
+        "Classificação de nota indica sua posição acadêmica baseada em intervalos padrão",
+        "Equivalente de letra de nota fornece uma tradução simples de seu GPA numérico"
+      ],
+      "whoItsFor": "Esta calculadora é projetada para estudantes do ensino médio e universitários que precisam rastrear seu desempenho acadêmico, educadores ensinando conceitos de GPA, conselheiros acadêmicos ajudando estudantes com planejamento de cursos, e pais assistindo seus filhos com planejamento educacional. É particularmente útil para estudantes preparando aplicações universitárias, monitorando progresso rumo a requisitos de graduação, ou entendendo como diferentes cursos impactam sua posição acadêmica geral.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em fórmulas acadêmicas padrão e práticas de classificação comuns. Cálculos reais de GPA podem variar por instituição devido a políticas específicas de classificação, sistemas de ponderação de cursos, ou regulações acadêmicas. Para registros acadêmicos oficiais, sempre consulte o registrador de sua escola ou conselheiro acadêmico. Esta ferramenta é para propósitos educacionais e não deve substituir cálculos oficiais universitários.",
+      "relatedTools": [
+        "Calculadoras de percentual para conversões de notas e planejamento acadêmico",
+        "Calculadoras de média para entender conceitos estatísticos em educação",
+        "Ferramentas de rastreamento de notas para monitoramento integral do desempenho acadêmico"
+      ],
+      "faqs": [
+        {
+          "question": "Como calculo meu GPA com diferentes escalas de classificação?",
+          "answer": "Selecione sua escala de classificação (4.0, 5.0 ou outras escalas padrão) antes de inserir notas. Uma escala de 4.0 atribui A=4.0, B=3.0, C=2.0, D=1.0, F=0.0. Uma escala ponderada de 5.0 dá pontos bônus para cursos de honras (A em honras = 5.0). Notas com +/- são suportadas (A-=3.7, B+=3.3). A calculadora automaticamente converte letras de nota para os valores numéricos apropriados para sua escala selecionada."
+        },
+        {
+          "question": "Qual é a diferença entre GPA ponderado e não ponderado?",
+          "answer": "O GPA não ponderado trata todos os cursos igualmente em uma escala de 4.0 (A=4.0 independente da dificuldade do curso). O GPA ponderado dá pontos bônus para cursos de honras ou AP (A em Cálculo AP = 5.0 ao invés de 4.0). Cálculos ponderados refletem melhor o rigor acadêmico, por isso universidades preferem GPAs ponderados para admissões. Use cálculo ponderado para GPA do ensino médio e não ponderado para a maioria das aplicações universitárias."
+        },
+        {
+          "question": "Como horas de crédito afetam meu cálculo de GPA?",
+          "answer": "Horas de crédito determinam a importância de cada curso em seu GPA. Um curso de 4 créditos (como Cálculo) tem o dobro do impacto de um curso de 2 créditos (como Arte). Pontos de nota são calculados multiplicando seu valor de nota (A=4.0) por horas de crédito, então dividindo os pontos totais de nota por horas de crédito totais tentadas. Cursos com mais créditos têm mais influência em seu GPA final."
+        },
+        {
+          "question": "Posso calcular GPA semestral ou apenas GPA acumulado?",
+          "answer": "Você pode calcular ambos! Para GPA semestral, insira apenas os cursos daquele semestre específico. Para GPA acumulado, insira todos os cursos de todos os semestres completados. A calculadora mostra tanto contribuições individuais de cursos quanto seu GPA geral. Rastreie semestre por semestre para monitorar progresso acadêmico e identificar áreas para melhoria."
+        },
+        {
+          "question": "¿Como converter letras de nota para pontos GPA?",
+          "answer": "A calculadora lida com conversão automaticamente: A/A+ = 4.0/4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0.0. Para escalas ponderadas, cursos de honras adicionam 1.0 ponto (A em AP = 5.0). Apenas insira suas letras de nota - a calculadora faz as contas para você."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de GPA",
+    "seoTitle": "Calculateur de GPA - Calculez la Moyenne Générale en Ligne",
+    "metaDescription": "Calculateur de GPA gratuit pour étudiants. Calculez le GPA semestriel et cumulé avec différentes échelles de notation. Parfait pour les étudiants du collège et lycée suivant leurs performances académiques.",
+    "keywords": ["calculateur GPA", "calculateur moyenne générale", "calculateur académique", "calculateur étudiant", "calculateur notes"],
+    "longTailKeywords": ["comment calculer GPA", "calculateur GPA université", "calculateur GPA lycée", "calculateur GPA pondéré", "calculateur GPA cumulé"],
+    "slug": "gpa-calculator",
+    "category": "lifestyle",
+    "difficulty": "basic",
+    "tags": ["éducation", "notes", "académique", "étudiants", "université"],
+    "summary": "Calculez votre GPA instantanément avec support pour différentes échelles de notation et calculs pondérés/non pondérés.",
+    "description": "Notre calculateur complet de GPA aide les étudiants à calculer leur Moyenne Générale pour des semestres individuels ou des performances académiques cumulées. Supporte plusieurs échelles de notation (4.0, 5.0, 12.0) et calculs pondérés et non pondérés. Parfait pour les étudiants du lycée et université planifiant leur avenir académique.",
+    "instructions": [
+      "Sélectionnez votre échelle de notation (4.0, 5.0 ou 12.0)",
+      "Choisissez calcul pondéré ou non pondéré",
+      "Entrez les notes de vos cours et heures de crédit",
+      "Obtenez calcul instantané de GPA avec ventilation détaillée"
+    ],
+    "calculatorComponent": {
+      "componentName": "GPACalculator",
+      "inputs": [
+        { "name": "gradingScale", "label": "Grading Scale", "type": "select", "default": "4.0", "options": ["4.0", "5.0"] },
+        { "name": "grades", "label": "Add Course Grades", "type": "dynamic", "default": [], "fields": [
+          { "name": "grade", "label": "Grade", "type": "select", "options": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"] },
+          { "name": "credits", "label": "Credits", "type": "number", "min": 0.5, "max": 6, "step": 0.5 }
+        ]}
+      ],
+      "formula": "GPA = (Sum of grade points × credits) ÷ Total credits",
+      "output": { "label": "Your GPA", "default": "Add courses above to calculate GPA", "format": "number" },
+      "additionalOutputs": [
+        { "label": "Total Credits", "field": "totalCredits", "format": "number" },
+        { "label": "Grade Classification", "field": "classification", "format": "text" },
+        { "label": "Letter Grade Equivalent", "field": "letterGrade", "format": "text" }
+      ]
+    },
+    "examples": [
+      {
+        "title": "GPA Universitaire",
+        "input": "A (4 crédits), B+ (3 crédits), A- (4 crédits), B (2 crédits)",
+        "output": "GPA: 3.58 (échelle 4.0)"
+      },
+      {
+        "title": "GPA Lycée Pondéré",
+        "input": "A en Calcul AP (5 crédits), B en Anglais Honors (4 crédits), A en Histoire Régulier (3 crédits)",
+        "output": "GPA Pondéré: 4.25 (échelle 5.0)"
+      }
+    ],
+    "relatedCalculators": ["percent-calculator", "percentage-change-calculator", "mean-median-mode-calculator"],
+    "seoContent": {
+      "introduction": "Calculez votre GPA instantanément avec support pour différentes échelles de notation et calculs pondérés/non pondérés. Notre complète calculatrice de GPA aide les étudiants à calculer leur Moyenne Générale pour des semestres individuels ou performance académique cumulée. Supporte multiples échelles de notation (4.0, 5.0, 12.0) et calculs tant pondérés que non pondérés. Parfaite pour les étudiants du lycée et université planifiant leur avenir académique. Cet outil complet aide les étudiants, éducateurs et professionnels académiques à suivre et calculer les moyennes générales avec précision et facilité. Que vous soyez un étudiant du lycée préparant des candidatures universitaires, un étudiant universitaire surveillant votre progrès académique, ou un éducateur aidant les étudiants à comprendre leur performance, cette calculatrice de GPA fournit des calculs précis basés sur des systèmes de notation standard. L'outil supporte multiples échelles de notation et calculs tant pondérés que non pondérés, le rendant adapté pour différentes institutions éducatives et exigences académiques.",
+      "benefits": [
+        "Fournit des calculs précis de GPA utilisant des formules académiques standard",
+        "Supporte multiples échelles de notation couramment utilisées dans les institutions éducatives",
+        "Gère tant les calculs pondérés que non pondérés pour différents contextes académiques",
+        "Offre des résultats instantanés avec des ventilations détaillées des performances académiques",
+        "Aide les étudiants à suivre les progrès vers les objectifs académiques et exigences de diplôme",
+        "Permet aux éducateurs de démontrer les concepts de GPA à travers des calculs pratiques"
+      ],
+      "steps": [
+        "Choisissez votre échelle de notation (4.0, 5.0, ou autres échelles standard)",
+        "Sélectionnez si vous voulez un calcul de GPA pondéré ou non pondéré",
+        "Entrez chaque note de cours et ses heures de crédit correspondantes",
+        "Examinez le GPA calculé et la ventilation détaillée de votre performance académique"
+      ],
+      "inputsExplained": [
+        "L'échelle de notation détermine le GPA maximum possible et comment les lettres se convertissent en valeurs numériques",
+        "Les notes de cours représentent votre performance réelle dans chaque classe, converties en points de notation",
+        "Les heures de crédit indiquent le poids ou l'importance de chaque cours dans votre charge académique",
+        "Le type de calcul affecte comment les cours d'honneurs ou de placement avancé impactent votre GPA final"
+      ],
+      "formulaExplanation": "Le calcul de GPA suit une approche mathématique directe qui considère tant votre performance dans chaque cours que la valeur de crédit de ces cours. Les points de notation sont attribués basés sur vos lettres de notation (typiquement A=4, B=3, C=2, D=1, F=0), puis multipliés par les heures de crédit pour chaque cours. Ces points de notation pondérés sont additionnés et divisés par les heures de crédit totales tentées. Les calculs pondérés donnent des points supplémentaires pour les cours d'honneurs ou avancés, tandis que les calculs non pondérés traitent tous les cours également. Cette méthode assure que les cours avec des valeurs de crédit plus élevées ont plus d'impact sur votre moyenne académique générale.",
+      "examples": [
+        "Un étudiant universitaire avec des cours: Calcul (A, 4 crédits), Anglais (B+, 3 crédits), Biologie (A-, 4 crédits), et Histoire (B, 2 crédits) calculerait: (16 + 9.9 + 14.8 + 6) ÷ 13 = 3.58 GPA",
+        "Un étudiant du lycée dans des cours pondérés: Physique AP (A, 5 crédits), Chimie Honors (B+, 4 crédits), Mathématiques Régulier (A, 3 crédits) calcule: (20 + 13.2 + 12) ÷ 12 = 4.03 GPA pondéré"
+      ],
+      "resultsExplanation": [
+        "GPA affiche votre moyenne académique générale sur l'échelle sélectionnée",
+        "Crédits totaux montre les heures de crédit cumulées que vous avez tentées",
+        "Classification de note indique votre position académique basée sur des plages standard",
+        "Équivalent de lettre de note fournit une traduction simple de votre GPA numérique"
+      ],
+      "whoItsFor": "Cette calculatrice est conçue pour les étudiants du lycée et universitaire qui ont besoin de suivre leurs performances académiques, éducateurs enseignant les concepts de GPA, conseillers académiques aidant les étudiants avec la planification de cours, et parents assistant leurs enfants avec la planification éducative. Elle est particulièrement utile pour les étudiants préparant des candidatures universitaires, surveillant les progrès vers les exigences de diplôme, ou comprenant comment différents cours impactent leur position académique générale.",
+      "disclaimer": "Cette calculatrice fournit des estimations basées sur des formules académiques standard et pratiques de notation communes. Les calculs réels de GPA peuvent varier par institution en raison de politiques spécifiques de notation, systèmes de pondération de cours, ou réglementations académiques. Pour les dossiers académiques officiels, consultez toujours le registraire de votre école ou conseiller académique. Cet outil est à des fins éducatives et ne doit pas remplacer les calculs officiels universitaires.",
+      "relatedTools": [
+        "Calculatrices de pourcentage pour conversions de notes et planification académique",
+        "Calculatrices de moyenne pour comprendre les concepts statistiques en éducation",
+        "Outils de suivi de notes pour surveillance intégrale des performances académiques"
+      ],
+      "faqs": [
+        {
+          "question": "Comment calculer mon GPA avec différentes échelles de notation?",
+          "answer": "Sélectionnez votre échelle de notation (4.0, 5.0, ou autres échelles standard) avant d'entrer les notes. Une échelle de 4.0 attribue A=4.0, B=3.0, C=2.0, D=1.0, F=0.0. Une échelle pondérée de 5.0 donne des points bonus pour les cours d'honneurs (A en honneurs = 5.0). Les notes avec +/- sont supportées (A-=3.7, B+=3.3). La calculatrice convertit automatiquement les lettres de note vers les valeurs numériques appropriées pour votre échelle sélectionnée."
+        },
+        {
+          "question": "Quelle est la différence entre GPA pondéré et non pondéré?",
+          "answer": "Le GPA non pondéré traite tous les cours également sur une échelle de 4.0 (A=4.0 indépendamment de la difficulté du cours). Le GPA pondéré donne des points bonus pour les cours d'honneurs ou AP (A en Calcul AP = 5.0 au lieu de 4.0). Les calculs pondérés reflètent mieux le rigor académique, c'est pourquoi les universités préfèrent les GPAs pondérés pour les admissions. Utilisez le calcul pondéré pour le GPA du lycée et non pondéré pour la plupart des applications universitaires."
+        },
+        {
+          "question": "Comment les heures de crédit affectent-elles mon calcul de GPA?",
+          "answer": "Les heures de crédit déterminent l'importance de chaque cours dans votre GPA. Un cours de 4 crédits (comme le Calcul) a deux fois plus d'impact qu'un cours de 2 crédits (comme l'Art). Les points de note sont calculés en multipliant votre valeur de note (A=4.0) par les heures de crédit, puis en divisant les points totaux de note par les heures de crédit totales tentées. Les cours avec plus de crédits ont plus d'influence sur votre GPA final."
+        },
+        {
+          "question": "Puis-je calculer le GPA semestriel ou seulement le GPA cumulé?",
+          "answer": "Vous pouvez calculer les deux! Pour le GPA semestriel, entrez seulement les cours de ce semestre spécifique. Pour le GPA cumulé, entrez tous les cours de tous les semestres complétés. La calculatrice montre à la fois les contributions individuelles des cours et votre GPA général. Suivez semestre par semestre pour surveiller les progrès académiques et identifier les domaines d'amélioration."
+        },
+        {
+          "question": "Comment convertir les lettres de note en points GPA?",
+          "answer": "La calculatrice gère la conversion automatiquement: A/A+ = 4.0/4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0.0. Pour les échelles pondérées, les cours d'honneurs ajoutent 1.0 point (A en AP = 5.0). Entrez simplement vos lettres de note - la calculatrice fait les mathématiques pour vous."
+        }
+      ]
+    }
+  }
+}
