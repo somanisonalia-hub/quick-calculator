@@ -1,0 +1,199 @@
+{
+  "en": {
+    "title": "Pregnancy Calculator",
+    "seoTitle": "Pregnancy Calculator - Calculate Due Date and Week of Pregnancy",
+    "metaDescription": "Free pregnancy calculator to calculate your due date, how many weeks pregnant you are, and track your pregnancy timeline. Based on last menstrual period or conception date.",
+    "keywords": [
+      "pregnancy calculator",
+      "due date calculator",
+      "weeks pregnant calculator",
+      "pregnancy timeline calculator",
+      "conception calculator"
+    ],
+    "longTailKeywords": [
+      "calculate pregnancy due date",
+      "how many weeks pregnant am i calculator",
+      "pregnancy due date by conception date",
+      "calculate weeks and days pregnant",
+      "when is my due date calculator"
+    ],
+    "slug": "pregnancy-calculator",
+    "category": "Health",
+    "difficulty": "Beginner",
+    "tags": ["pregnancy", "due date", "weeks pregnant", "conception", "maternity"],
+    "description": "Calculate your pregnancy due date and track your weeks of pregnancy. Enter your last menstrual period (LMP) or conception date to get an accurate pregnancy timeline, estimated delivery date, and current week of pregnancy.",
+    "summary": "Calculate due date and pregnancy weeks with LMP or conception date.",
+    "component": "PregnancyCalculator",
+    "instructions": [
+      "Enter your last menstrual period (LMP) date",
+      "Or enter your conception date",
+      "View your estimated due date",
+      "See your current pregnancy week and day"
+    ],
+    "seoContent": {
+      "introduction": "Our pregnancy calculator helps you determine your estimated due date and track your weeks of pregnancy. Whether you know your last menstrual period (LMP) or conception date, this calculator provides an accurate pregnancy timeline, helping you plan and prepare for your baby's arrival.",
+      "benefits": [
+        "Calculate accurate due date from LMP or conception date",
+        "Track current week and day of pregnancy",
+        "See trimester information",
+        "Plan prenatal care appointments",
+        "Understand pregnancy milestones by week",
+        "Share estimated due date with family and healthcare providers"
+      ],
+      "steps": [
+        "Select whether you know your LMP or conception date",
+        "Enter the first day of your last menstrual period or conception date",
+        "Click calculate to see results",
+        "View your due date and current pregnancy progress"
+      ],
+      "inputsExplained": [
+        "Last Menstrual Period (LMP): The first day of your last period before pregnancy",
+        "Conception Date: The estimated date of conception",
+        "Standard Pregnancy: Calculated as 280 days (40 weeks) from LMP"
+      ],
+      "formulaExplanation": "Pregnancy due date is typically calculated as 280 days (40 weeks) from the first day of the last menstrual period. This is called Naegele's rule. If you know your conception date, 266 days are added. Most pregnancies last between 266-280 days, with variation being normal.",
+      "examples": [
+        "LMP: January 1, 2024 → Due Date: October 8, 2024",
+        "Conception: January 14, 2024 → Due Date: October 8, 2024",
+        "At 20 weeks: Halfway through pregnancy, anatomy ultrasound typically performed"
+      ],
+      "resultsExplanation": [
+        "Due Date: Estimated delivery date (±2 weeks variation is normal)",
+        "Current Week: Your current week of pregnancy (0-40 weeks)",
+        "Current Day: Day within the current week (0-6)",
+        "Days Remaining: Days until estimated due date",
+        "Trimester: Current trimester of pregnancy"
+      ],
+      "whoItsFor": "This pregnancy calculator is essential for pregnant women and couples trying to understand their pregnancy timeline, healthcare providers scheduling prenatal visits, family members and friends wanting to know when baby is expected, and anyone needing to calculate pregnancy dates for medical, personal, or planning purposes.",
+      "disclaimer": "This pregnancy calculator provides an estimated due date based on standard pregnancy calculations. Due dates are estimates only, with most babies born within 2 weeks before or after the calculated date. Ultrasound dating in early pregnancy is the most accurate method. Always consult with your healthcare provider for personalized pregnancy timeline and medical advice. This calculator is for informational purposes only.",
+      "relatedTools": [
+        "Due date calculator for additional calculations",
+        "Weeks calculator for other date calculations",
+        "Ovulation calculator for conception timing"
+      ],
+      "faqs": [
+        {
+          "question": "How accurate is the pregnancy due date calculator?",
+          "answer": "The due date calculated is an estimate based on a standard 280-day pregnancy (40 weeks) from your last menstrual period. Most babies are born within 2 weeks before or after this date. Ultrasound dating in the first trimester is the most accurate method for determining due dates."
+        },
+        {
+          "question": "What if I don't know my exact LMP date?",
+          "answer": "If you don't remember your exact LMP date, use your best estimate or the date of your first ultrasound to get an approximate due date. Your healthcare provider can also help estimate your due date and may adjust it based on ultrasound findings."
+        },
+        {
+          "question": "Is there a difference between due date and conception date calculations?",
+          "answer": "Yes. The standard due date (Naegele's rule) is 280 days from the first day of your LMP. If you know your conception date (not the LMP), add 266 days for the due date. The difference accounts for the time between LMP and actual conception."
+        },
+        {
+          "question": "Can babies be born before their due date?",
+          "answer": "Yes, absolutely. A pregnancy is considered full-term between 37-40 weeks. Babies born between 37-40 weeks are considered full-term. Babies born before 37 weeks are considered premature. Many healthy babies are born before their calculated due date."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Embarazo",
+    "seoTitle": "Calculadora de Embarazo - Calcular Fecha de Parto y Semanas de Embarazo",
+    "metaDescription": "Calculadora gratuita de embarazo para calcular la fecha de parto estimada y seguir las semanas de embarazo. Basada en el último período menstrual o fecha de concepción.",
+    "keywords": [
+      "calculadora embarazo",
+      "calculadora fecha de parto",
+      "calculadora semanas de embarazo"
+    ],
+    "slug": "pregnancy-calculator",
+    "category": "Health",
+    "difficulty": "Principiante",
+    "tags": ["embarazo", "fecha de parto", "semanas", "concepción", "maternidad"],
+    "description": "Calcule su fecha de parto estimada y siga sus semanas de embarazo. Ingrese su último período menstrual o fecha de concepción.",
+    "summary": "Calcule la fecha de parto y semanas de embarazo con FUM o fecha de concepción.",
+    "component": "PregnancyCalculator",
+    "seoContent": {
+      "introduction": "Nuestra calculadora de embarazo le ayuda a determinar su fecha de parto estimada y seguir sus semanas de embarazo.",
+      "benefits": [
+        "Calcule fecha de parto precisa desde FUM o fecha de concepción",
+        "Rastree la semana y día actual del embarazo",
+        "Vea información del trimestre",
+        "Planifique citas prenatales"
+      ],
+      "steps": [
+        "Seleccione si conoce su FUM o fecha de concepción",
+        "Ingrese el primer día de su último período menstrual o fecha de concepción",
+        "Haga clic en calcular para ver resultados",
+        "Vea su fecha de parto y progreso del embarazo"
+      ],
+      "formulaExplanation": "La fecha de parto se calcula típicamente como 280 días (40 semanas) desde el primer día del último período menstrual.",
+      "examples": [],
+      "faqs": []
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Gravidez",
+    "seoTitle": "Calculadora de Gravidez - Calcular Data de Parto e Semanas de Gravidez",
+    "metaDescription": "Calculadora gratuita de gravidez para calcular a data estimada de parto e acompanhar as semanas de gravidez. Baseada no último período menstrual ou data de concepção.",
+    "keywords": [
+      "calculadora gravidez",
+      "calculadora data de parto",
+      "calculadora semanas de gravidez"
+    ],
+    "slug": "pregnancy-calculator",
+    "category": "Health",
+    "difficulty": "Iniciante",
+    "tags": ["gravidez", "data de parto", "semanas", "concepção", "maternidade"],
+    "description": "Calcule sua data estimada de parto e acompanhe suas semanas de gravidez. Digite seu último período menstrual ou data de concepção.",
+    "summary": "Calcule a data de parto e semanas de gravidez com DUM ou data de concepção.",
+    "component": "PregnancyCalculator",
+    "seoContent": {
+      "introduction": "Nossa calculadora de gravidez ajuda você a determinar sua data estimada de parto e acompanhar suas semanas de gravidez.",
+      "benefits": [
+        "Calcule data de parto precisa a partir de DUM ou data de concepção",
+        "Acompanhe a semana e dia atual da gravidez",
+        "Veja informações do trimestre",
+        "Planeje consultas pré-natais"
+      ],
+      "steps": [
+        "Selecione se conhece sua DUM ou data de concepção",
+        "Digite o primeiro dia do seu último período menstrual ou data de concepção",
+        "Clique em calcular para ver os resultados",
+        "Veja sua data de parto e progresso da gravidez"
+      ],
+      "formulaExplanation": "A data de parto é calculada tipicamente como 280 dias (40 semanas) a partir do primeiro dia do último período menstrual.",
+      "examples": [],
+      "faqs": []
+    }
+  },
+  "fr": {
+    "title": "Calculatrice de Grossesse",
+    "seoTitle": "Calculatrice de Grossesse - Calculer la Date d'Accouchement et les Semaines de Grossesse",
+    "metaDescription": "Calculatrice gratuite de grossesse pour calculer la date estimée d'accouchement et suivre les semaines de grossesse. Basée sur le dernier jour des règles ou la date de conception.",
+    "keywords": [
+      "calculatrice grossesse",
+      "calculatrice date d'accouchement",
+      "calculatrice semaines de grossesse"
+    ],
+    "slug": "pregnancy-calculator",
+    "category": "Health",
+    "difficulty": "Débutant",
+    "tags": ["grossesse", "date d'accouchement", "semaines", "conception", "maternité"],
+    "description": "Calculez votre date estimée d'accouchement et suivez vos semaines de grossesse. Entrez votre dernier jour des règles ou votre date de conception.",
+    "summary": "Calculez la date d'accouchement et les semaines de grossesse avec DDR ou date de conception.",
+    "component": "PregnancyCalculator",
+    "seoContent": {
+      "introduction": "Notre calculatrice de grossesse vous aide à déterminer votre date estimée d'accouchement et à suivre vos semaines de grossesse.",
+      "benefits": [
+        "Calculez la date d'accouchement précise à partir de DDR ou date de conception",
+        "Suivez la semaine et le jour actuels de la grossesse",
+        "Consultez les informations du trimestre",
+        "Planifiez les rendez-vous prénataux"
+      ],
+      "steps": [
+        "Sélectionnez si vous connaissez votre DDR ou date de conception",
+        "Entrez le premier jour de vos dernières règles ou votre date de conception",
+        "Cliquez sur calculer pour voir les résultats",
+        "Consultez votre date d'accouchement et votre progression de la grossesse"
+      ],
+      "formulaExplanation": "La date d'accouchement est calculée comme 280 jours (40 semaines) à partir du premier jour du dernier jour des règles.",
+      "examples": [],
+      "faqs": []
+    }
+  }
+}

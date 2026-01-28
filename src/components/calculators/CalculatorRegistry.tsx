@@ -337,6 +337,30 @@ const ProteinIntakeCalculator = dynamic(() => import('./ProteinIntakeCalculator'
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
 
+const EMICalculator = dynamic(() => import('./EMICalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const TriangleAreaCalculator = dynamic(() => import('./TriangleAreaCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const GradeCalculator = dynamic(() => import('./GradeCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const BiweeklyPayCalculator = dynamic(() => import('./BiweeklyPayCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const PregnancyCalculator = dynamic(() => import('./PregnancyCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const OvulationCalculator = dynamic(() => import('./OvulationCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
 // Registry mapping component names to actual components
 export const calculatorComponents: Record<string, any> = {
   'AverageCalculator': AverageCalculator,
@@ -429,6 +453,12 @@ export const calculatorComponents: Record<string, any> = {
   'MaintenanceCaloriesCalculator': MaintenanceCaloriesCalculator,
   'TDEECalculator': TDEECalculator,
   'WaistToHipRatioCalculator': WaistToHipRatioCalculator,
+  'EMICalculator': EMICalculator,
+  'TriangleAreaCalculator': TriangleAreaCalculator,
+  'GradeCalculator': GradeCalculator,
+  'BiweeklyPayCalculator': BiweeklyPayCalculator,
+  'PregnancyCalculator': PregnancyCalculator,
+  'OvulationCalculator': OvulationCalculator,
 };
 
 export function getCalculatorComponent(componentName: string) {

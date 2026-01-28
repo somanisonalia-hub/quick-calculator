@@ -1,0 +1,212 @@
+{
+  "en": {
+    "title": "Grade Calculator",
+    "seoTitle": "Grade Calculator - Calculate Your Final Grade and GPA",
+    "metaDescription": "Free grade calculator to calculate your current grade, final grade, and what you need on your final exam. Perfect for students tracking their academic performance.",
+    "keywords": [
+      "grade calculator",
+      "final grade calculator",
+      "test grade calculator",
+      "exam grade calculator",
+      "what grade do i need calculator"
+    ],
+    "longTailKeywords": [
+      "what do i need on my final calculator",
+      "calculate grade with weighted assignments",
+      "grade calculator with percentages",
+      "final exam grade calculator",
+      "grade needed on final calculator"
+    ],
+    "slug": "grade-calculator",
+    "category": "Utility",
+    "difficulty": "Beginner",
+    "tags": ["education", "grades", "school", "college", "exam", "gpa"],
+    "description": "Calculate your current grade, predict your final grade, and determine what score you need on your final exam to achieve your target grade. Perfect for students at all levels.",
+    "summary": "Calculate grades, final exam scores needed, and track academic performance.",
+    "component": "GradeCalculator",
+    "instructions": [
+      "Enter your current grade or assignment scores",
+      "Input the weight of each assignment or exam",
+      "Enter your desired final grade",
+      "See what score you need on your final exam"
+    ],
+    "seoContent": {
+      "introduction": "Our free grade calculator helps students calculate their current grade, predict their final grade, and determine what score they need on upcoming exams to achieve their target grade. Whether you're in high school, college, or university, this tool makes grade tracking and academic planning simple and accurate.",
+      "benefits": [
+        "Calculate your current grade based on completed assignments",
+        "Determine what score you need on your final exam",
+        "Plan your study time effectively",
+        "Track weighted assignments and exams",
+        "Reduce grade anxiety with clear projections",
+        "Support for percentage-based and point-based grading"
+      ],
+      "steps": [
+        "Select your grading system (percentage or points)",
+        "Enter your completed assignment scores and their weights",
+        "Input your desired final grade",
+        "Enter the weight of your remaining assignments or final exam",
+        "Get instant calculation of the score needed"
+      ],
+      "inputsExplained": [
+        "Assignment Scores: Enter the grade you received on each completed assignment",
+        "Assignment Weights: Enter the percentage each assignment counts toward your final grade",
+        "Desired Final Grade: Enter the grade you want to achieve in the course",
+        "Final Exam Weight: Enter what percentage the final exam counts toward your final grade"
+      ],
+      "formulaExplanation": "Grade calculation uses weighted averages. Your current grade is calculated by multiplying each assignment score by its weight, summing these values, and dividing by the total weight of completed assignments. To find the score needed on your final exam: (Desired Grade × 100%) - (Current Grade × Current Weight) = Score Needed × Final Exam Weight. This formula accounts for the proportional contribution of each component to your final grade.",
+      "examples": [
+        "Current grade: 85%, Final exam worth 30%, Want 90% final → Need 101.7% on final (may be impossible)",
+        "Current grade: 78%, Final exam worth 25%, Want 80% final → Need 86% on final",
+        "Current grade: 92%, Final exam worth 20%, Want 90% final → Need 66% on final (easier target)"
+      ],
+      "resultsExplanation": [
+        "Current Grade: Your grade based on completed assignments",
+        "Score Needed: The grade required on remaining assignments to achieve your goal",
+        "Feasibility: Whether achieving your goal is possible (score must be ≤100%)",
+        "Grade Projection: Your estimated final grade if you achieve the needed score"
+      ],
+      "whoItsFor": "This grade calculator is essential for high school students tracking semester grades, college students planning for final exams, parents helping children understand grade requirements, teachers demonstrating grade calculation concepts, and anyone wanting to understand how weighted grading systems work. It's particularly useful during midterms and finals when students need to know exactly what scores they need to achieve their target grades.",
+      "disclaimer": "This grade calculator provides estimates based on standard weighted average calculations. Actual grades may vary based on your instructor's specific grading policies, curves, extra credit opportunities, or rounding rules. Some courses use more complex grading schemes. Always confirm grade calculations with your instructor or syllabus. This tool is for educational planning purposes only.",
+      "relatedTools": [
+        "GPA calculator for cumulative grade point average",
+        "Percentage calculator for grade percentages",
+        "Average calculator for simple grade averaging"
+      ],
+      "faqs": [
+        {
+          "question": "How do I calculate my current grade?",
+          "answer": "To calculate your current grade, multiply each assignment score by its weight (as a decimal), add all these values together, and divide by the total weight of completed assignments. For example, if you scored 85% on a test worth 30% and 90% on homework worth 20%, your current grade would be (85×0.30 + 90×0.20) / (0.30 + 0.20) = 87%."
+        },
+        {
+          "question": "What grade do I need on my final exam?",
+          "answer": "To find the grade needed on your final: (1) Calculate your current grade, (2) Multiply it by the percentage it represents of your final grade, (3) Subtract from your desired final grade percentage, (4) Divide by the final exam's weight. For example, if you have 80% and it's worth 70% of your grade, and you want 85% final with the exam worth 30%: (85 - 80×0.70) / 0.30 = 96.7% needed on final."
+        },
+        {
+          "question": "Can I calculate grades with different grading scales?",
+          "answer": "Yes! You can enter grades as percentages (0-100%), letter grades (convert A=90-100, B=80-89, etc.), or points. For points-based systems, enter your points earned and total points possible, then our calculator converts to percentages automatically."
+        },
+        {
+          "question": "What if the calculator says I need over 100%?",
+          "answer": "If the required score exceeds 100%, your target grade is mathematically impossible given your current grade and the exam weight. You'll need to either adjust your target grade to something more realistic or speak with your instructor about extra credit opportunities."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Calificaciones",
+    "seoTitle": "Calculadora de Calificaciones - Calcula tu Nota Final y Promedio",
+    "metaDescription": "Calculadora gratuita de calificaciones para calcular tu nota actual, nota final y lo que necesitas en tu examen final. Perfecta para estudiantes.",
+    "keywords": [
+      "calculadora calificaciones",
+      "calculadora nota final",
+      "calculadora examen",
+      "calculadora promedio"
+    ],
+    "slug": "grade-calculator",
+    "category": "Utility",
+    "difficulty": "Principiante",
+    "tags": ["educación", "calificaciones", "escuela", "universidad", "examen"],
+    "description": "Calcula tu calificación actual, predice tu nota final y determina qué puntuación necesitas en tu examen final para alcanzar tu meta.",
+    "summary": "Calcula calificaciones, notas de exámenes finales necesarias y rastrea rendimiento académico.",
+    "component": "GradeCalculator",
+    "seoContent": {
+      "introduction": "Nuestra calculadora de calificaciones gratuita ayuda a los estudiantes a calcular su nota actual, predecir su calificación final y determinar qué puntuación necesitan en los próximos exámenes para alcanzar su meta.",
+      "benefits": [
+        "Calcula tu calificación actual basada en tareas completadas",
+        "Determina qué puntuación necesitas en tu examen final",
+        "Planifica tu tiempo de estudio efectivamente",
+        "Rastrea tareas y exámenes ponderados"
+      ],
+      "steps": [
+        "Selecciona tu sistema de calificación",
+        "Ingresa las puntuaciones de tus tareas completadas",
+        "Ingresa tu calificación final deseada",
+        "Obtén el cálculo instantáneo de la puntuación necesaria"
+      ],
+      "formulaExplanation": "El cálculo de calificaciones usa promedios ponderados. Tu calificación actual se calcula multiplicando cada puntuación por su peso y dividiendo por el peso total.",
+      "examples": [
+        "Nota actual: 85%, Examen final vale 30%, Quieres 90% → Necesitas 101.7% (imposible)",
+        "Nota actual: 78%, Examen final vale 25%, Quieres 80% → Necesitas 86%"
+      ],
+      "faqs": []
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Notas",
+    "seoTitle": "Calculadora de Notas - Calcule sua Nota Final e Média",
+    "metaDescription": "Calculadora gratuita de notas para calcular sua nota atual, nota final e o que você precisa no exame final. Perfeita para estudantes.",
+    "keywords": [
+      "calculadora notas",
+      "calculadora nota final",
+      "calculadora exame",
+      "calculadora média"
+    ],
+    "slug": "grade-calculator",
+    "category": "Utility",
+    "difficulty": "Iniciante",
+    "tags": ["educação", "notas", "escola", "universidade", "exame"],
+    "description": "Calcule sua nota atual, preveja sua nota final e determine que pontuação você precisa no exame final para atingir sua meta.",
+    "summary": "Calcule notas, pontuações de exames finais necessárias e acompanhe desempenho acadêmico.",
+    "component": "GradeCalculator",
+    "seoContent": {
+      "introduction": "Nossa calculadora de notas gratuita ajuda estudantes a calcular sua nota atual, prever sua nota final e determinar que pontuação precisam nos próximos exames para atingir sua meta.",
+      "benefits": [
+        "Calcule sua nota atual baseada em trabalhos completados",
+        "Determine que pontuação você precisa no exame final",
+        "Planeje seu tempo de estudo efetivamente",
+        "Acompanhe trabalhos e exames ponderados"
+      ],
+      "steps": [
+        "Selecione seu sistema de avaliação",
+        "Digite as pontuações dos seus trabalhos completados",
+        "Digite sua nota final desejada",
+        "Obtenha o cálculo instantâneo da pontuação necessária"
+      ],
+      "formulaExplanation": "O cálculo de notas usa médias ponderadas. Sua nota atual é calculada multiplicando cada pontuação pelo seu peso e dividindo pelo peso total.",
+      "examples": [
+        "Nota atual: 85%, Exame final vale 30%, Quer 90% → Precisa 101.7% (impossível)",
+        "Nota atual: 78%, Exame final vale 25%, Quer 80% → Precisa 86%"
+      ],
+      "faqs": []
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Notes",
+    "seoTitle": "Calculateur de Notes - Calculez votre Note Finale et Moyenne",
+    "metaDescription": "Calculateur gratuit de notes pour calculer votre note actuelle, note finale et ce dont vous avez besoin à l'examen final. Parfait pour les étudiants.",
+    "keywords": [
+      "calculateur notes",
+      "calculateur note finale",
+      "calculateur examen",
+      "calculateur moyenne"
+    ],
+    "slug": "grade-calculator",
+    "category": "Utility",
+    "difficulty": "Débutant",
+    "tags": ["éducation", "notes", "école", "université", "examen"],
+    "description": "Calculez votre note actuelle, prédisez votre note finale et déterminez quel score vous avez besoin à l'examen final pour atteindre votre objectif.",
+    "summary": "Calculez les notes, les scores d'examens finaux nécessaires et suivez les performances académiques.",
+    "component": "GradeCalculator",
+    "seoContent": {
+      "introduction": "Notre calculateur de notes gratuit aide les étudiants à calculer leur note actuelle, prédire leur note finale et déterminer quel score ils ont besoin aux prochains examens pour atteindre leur objectif.",
+      "benefits": [
+        "Calculez votre note actuelle basée sur les devoirs complétés",
+        "Déterminez quel score vous avez besoin à l'examen final",
+        "Planifiez votre temps d'étude efficacement",
+        "Suivez les devoirs et examens pondérés"
+      ],
+      "steps": [
+        "Sélectionnez votre système de notation",
+        "Entrez les scores de vos devoirs complétés",
+        "Entrez votre note finale désirée",
+        "Obtenez le calcul instantané du score nécessaire"
+      ],
+      "formulaExplanation": "Le calcul des notes utilise des moyennes pondérées. Votre note actuelle est calculée en multipliant chaque score par son poids et en divisant par le poids total.",
+      "examples": [
+        "Note actuelle: 85%, Examen final vaut 30%, Voulez 90% → Besoin 101.7% (impossible)",
+        "Note actuelle: 78%, Examen final vaut 25%, Voulez 80% → Besoin 86%"
+      ],
+      "faqs": []
+    }
+  }
+}
