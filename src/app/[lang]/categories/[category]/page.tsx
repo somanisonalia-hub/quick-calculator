@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import BreadcrumbNavigation from '@/components/BreadcrumbNavigation';
+import { StructuredData } from '@/components/StructuredData';
 // Direct breadcrumb generation
 import { generateCategorySchema, CategoryData } from '@/lib/seoContentRenderer';
 import { getCategoryData } from '@/lib/categoryUtils';
@@ -124,9 +125,25 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   
   // Get category data for title and description
   const categoryData = getCategoryData(category, lang);
+  
+  // Generate schema for rendering
+  let categorySchema = null;
+  if (categoryData) {
+    const categorySchemaData: CategoryData = {
+      name: categoryData.title,
+      slug: category,
+      description: categoryData.description,
+      calculators: categoryData.calculators.map(calc => ({
+        name: calc.name,
+        slug: calc.slug
+      }))
+    };
+    categorySchema = generateCategorySchema(categorySchemaData, lang);
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
+        {categorySchema && <StructuredData data={categorySchema} />}
         <Header currentLang={lang} />
 
         <BreadcrumbNavigation breadcrumbs={breadcrumbs} currentLang={lang} />
