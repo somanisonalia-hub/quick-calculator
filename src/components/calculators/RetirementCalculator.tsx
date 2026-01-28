@@ -30,9 +30,28 @@ interface RetirementCalculatorProps {
   inputs: CalculatorInput[];
   output: CalculatorOutput;
   additionalOutputs: AdditionalOutput[];
+  texts?: {
+    retirementPlanning?: string;
+    retirementProjection?: string;
+    savingsBreakdown?: string;
+    currentSavings?: string;
+    futureContributions?: string;
+    investmentGrowth?: string;
+    monthlyIncome?: string;
+  };
 }
 
-export default function RetirementCalculator({ inputs, output, additionalOutputs }: RetirementCalculatorProps) {
+export default function RetirementCalculator({ inputs, output, additionalOutputs, texts }: RetirementCalculatorProps) {
+  // Default texts
+  const t = texts || {
+    retirementPlanning: 'Retirement Planning Inputs',
+    retirementProjection: 'Retirement Projections',
+    savingsBreakdown: 'Savings Breakdown',
+    currentSavings: 'Current Savings',
+    futureContributions: 'Future Contributions',
+    investmentGrowth: 'Investment Growth',
+    monthlyIncome: 'Monthly Income',
+  };
   
   const [values, setValues] = useState<Record<string, number>>(() => {
     const initial: Record<string, number> = {};
@@ -103,7 +122,7 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{retirementPlanning}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{t.retirementPlanning}</h3>
 
           {inputs.map((input) => (
             <div key={input.name} className="space-y-2">
@@ -125,7 +144,7 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{retirementProjection}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{t.retirementProjection}</h3>
 
           {/* Main Output */}
           <div className="bg-blue-50 p-2 sm:p-3 rounded-md border-l-3 border-blue-500">
@@ -135,7 +154,7 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
             </div>
             {results.yearsToRetirement && (
               <div className="text-xs text-gray-500 mt-1">
-                {t('calculator.inYears', { years: results.yearsToRetirement })}
+                {results.yearsToRetirement} years to retirement
               </div>
             )}
           </div>
@@ -159,23 +178,23 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
             <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-gradient-to-r from-green-50 to-teal-50 rounded-lg border border-green-100">
               <h4 className="font-bold text-gray-800 mb-3 text-sm flex items-center">
                 <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                {savingsBreakdown}
+                {t.savingsBreakdown}
               </h4>
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{currentSavings}</div>
+                  <div className="font-medium text-gray-900">{t.currentSavings}</div>
                   <div className="text-gray-600">${(values.currentSavings || 0).toLocaleString()}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{futureContributions}</div>
+                  <div className="font-medium text-gray-900">{t.futureContributions}</div>
                   <div className="text-gray-600">{results.totalContributions ? results.totalContributions.replace(results.totalSavings?.split(' ')[0] || '', '').replace('$', '') : '—'}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{investmentGrowth}</div>
+                  <div className="font-medium text-gray-900">{t.investmentGrowth}</div>
                   <div className="text-green-600 font-medium">{results.totalGrowth}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{monthlyIncome}</div>
+                  <div className="font-medium text-gray-900">{t.monthlyIncome}</div>
                   <div className="text-blue-600 font-medium">{results.monthlyIncome}</div>
                 </div>
               </div>

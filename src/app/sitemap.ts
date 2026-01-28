@@ -2,6 +2,9 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 
+// Mark as static for static export
+export const dynamic = 'force-static'
+
 const baseUrl = 'https://quick-calculator.org'
 
 // Supported languages (EN first for prioritization)

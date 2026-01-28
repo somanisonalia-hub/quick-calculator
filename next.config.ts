@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // output: 'export', // Disabled for development - allows dynamic routes
+  output: 'export', // Static export for deployment (generates 'out' directory)
   trailingSlash: true,
   images: {
-    unoptimized: false, // Enable image optimization for production
+    unoptimized: true, // Required for static export
     formats: ['image/webp', 'image/avif'],
   },
   serverExternalPackages: [],

@@ -122,119 +122,109 @@ export const CookieConsent: React.FC<{ lang?: string }> = ({ lang = 'en' }) => {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      {/* Banner */}
-      <div className="relative w-full max-w-4xl bg-white rounded-t-lg shadow-2xl">
-        <div className="p-6 md:p-8">
+    <div className="fixed bottom-0 left-0 right-0 z-50">
+      {/* Small banner at bottom */}
+      <div className="bg-white border-t border-gray-200 shadow-lg">
+        <div className="max-w-7xl mx-auto px-4 py-3 md:py-4">
           {!showDetails ? (
-            // Simple View
-            <>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h2>
-              <p className="text-gray-700 mb-6">{t.description}</p>
+            // Simple Compact View
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+              <div className="flex-1">
+                <p className="text-xs md:text-sm text-gray-700">
+                  {t.description}
+                  <Link href="/privacy" className="ml-1 text-blue-600 hover:underline font-semibold">
+                    {t.privacyLink}
+                  </Link>
+                </p>
+              </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-4">
+              <div className="flex items-center gap-2 flex-shrink-0">
                 <button
                   onClick={handleRejectAll}
-                  className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-900 rounded-lg hover:bg-gray-50 transition font-semibold"
+                  className="px-3 py-1.5 text-xs md:text-sm border border-gray-300 text-gray-700 rounded hover:bg-gray-50 transition font-medium"
                 >
                   {t.rejectAll}
                 </button>
                 <button
                   onClick={handleAcceptAll}
-                  className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold"
+                  className="px-3 py-1.5 text-xs md:text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition font-medium"
                 >
                   {t.acceptAll}
                 </button>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <p className="text-sm text-gray-600">
-                  {t.learnMore}
-                  <Link href="/privacy" className="text-blue-600 hover:underline">
-                    {t.privacyLink}
-                  </Link>
-                </p>
                 <button
                   onClick={() => setShowDetails(true)}
-                  className="text-blue-600 hover:underline font-semibold"
+                  className="px-3 py-1.5 text-xs md:text-sm text-blue-600 hover:underline font-medium"
                 >
                   {t.managePreferences}
                 </button>
               </div>
-            </>
+            </div>
           ) : (
-            // Detailed View
-            <>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{t.title}</h2>
+            // Detailed View (still compact)
+            <div>
+              <div className="mb-3">
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">{t.title}</h3>
+              </div>
 
-              <div className="space-y-4 mb-6 max-h-96 overflow-y-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-3 max-h-32 overflow-y-auto">
                 {/* Analytics */}
-                <label className="flex items-start p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                <label className="flex items-start p-2 border border-gray-200 rounded hover:bg-gray-50 cursor-pointer">
                   <input
                     type="checkbox"
                     checked={consent.analytics}
                     onChange={() => toggleConsent('analytics')}
-                    className="mt-1 w-4 h-4 text-blue-600 rounded"
+                    className="mt-0.5 w-3 h-3 text-blue-600 rounded"
                   />
-                  <div className="ml-4">
-                    <p className="font-semibold text-gray-900">{t.analytics}</p>
-                    <p className="text-sm text-gray-600">{t.analyticsDesc}</p>
+                  <div className="ml-2">
+                    <p className="text-xs font-semibold text-gray-900">{t.analytics}</p>
+                    <p className="text-xs text-gray-600">{t.analyticsDesc}</p>
                   </div>
                 </label>
 
                 {/* Advertising */}
-                <label className="flex items-start p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                <label className="flex items-start p-2 border border-gray-200 rounded hover:bg-gray-50 cursor-pointer">
                   <input
                     type="checkbox"
                     checked={consent.advertising}
                     onChange={() => toggleConsent('advertising')}
-                    className="mt-1 w-4 h-4 text-blue-600 rounded"
+                    className="mt-0.5 w-3 h-3 text-blue-600 rounded"
                   />
-                  <div className="ml-4">
-                    <p className="font-semibold text-gray-900">{t.advertising}</p>
-                    <p className="text-sm text-gray-600">{t.advertisingDesc}</p>
+                  <div className="ml-2">
+                    <p className="text-xs font-semibold text-gray-900">{t.advertising}</p>
+                    <p className="text-xs text-gray-600">{t.advertisingDesc}</p>
                   </div>
                 </label>
 
                 {/* Performance */}
-                <label className="flex items-start p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                <label className="flex items-start p-2 border border-gray-200 rounded hover:bg-gray-50 cursor-pointer">
                   <input
                     type="checkbox"
                     checked={consent.performance}
                     onChange={() => toggleConsent('performance')}
-                    className="mt-1 w-4 h-4 text-blue-600 rounded"
+                    className="mt-0.5 w-3 h-3 text-blue-600 rounded"
                   />
-                  <div className="ml-4">
-                    <p className="font-semibold text-gray-900">{t.performance}</p>
-                    <p className="text-sm text-gray-600">{t.performanceDesc}</p>
+                  <div className="ml-2">
+                    <p className="text-xs font-semibold text-gray-900">{t.performance}</p>
+                    <p className="text-xs text-gray-600">{t.performanceDesc}</p>
                   </div>
                 </label>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex items-center gap-2">
                 <button
                   onClick={() => setShowDetails(false)}
-                  className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-900 rounded-lg hover:bg-gray-50 transition font-semibold"
+                  className="px-3 py-1.5 text-xs md:text-sm border border-gray-300 text-gray-700 rounded hover:bg-gray-50 transition font-medium"
                 >
                   {t.rejectAll}
                 </button>
                 <button
                   onClick={handleSavePreferences}
-                  className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold"
+                  className="px-3 py-1.5 text-xs md:text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition font-medium"
                 >
                   {t.savePreferences}
                 </button>
               </div>
-
-              <p className="text-xs text-gray-600 mt-4">
-                <Link href="/privacy" className="text-blue-600 hover:underline">
-                  {t.privacyLink}
-                </Link>
-              </p>
-            </>
+            </div>
           )}
         </div>
       </div>

@@ -119,7 +119,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
       )}
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-2 sm:py-4">
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-2 sm:py-4" id="calculator-hero">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-xl sm:text-2xl font-bold mb-1 leading-tight">
@@ -130,17 +130,15 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
       </section>
 
       {/* Calculator Description */}
-      <section className="bg-white py-3 sm:py-6">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-base sm:text-lg text-gray-700 max-w-xl mx-auto leading-relaxed">
-              {calculatorContent.description}
-            </p>
-          </div>
+      <section className="bg-white py-2 sm:py-3" id="calculator-description">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs sm:text-sm text-gray-500 leading-relaxed text-center max-w-3xl mx-auto">
+            {calculatorContent.description}
+          </p>
         </div>
       </section>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8" id="calculator-main">
         <div>
           {/* Main Calculator Section */}
             {/* Calculator Component */}
@@ -224,7 +222,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                   <h2 className="text-xl font-bold text-white">{t('calculator.completeGuide')}</h2>
                 </div>
               </div>
-              <div className="px-6 py-6">
+              <div className="p-[50px]">
                 {(() => {
                   // Use pre-generated structured SEO content if available
                   if (seoContent) {
