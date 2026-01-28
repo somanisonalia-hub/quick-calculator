@@ -75,15 +75,15 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPRXB52PX3"></script>
+        {/* Google Analytics - Defer to improve FCP/LCP */}
+        <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-WJ29X5ZT2M"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-HPRXB52PX3');
+              gtag('config', 'G-WJ29X5ZT2M');
             `,
           }}
         />
