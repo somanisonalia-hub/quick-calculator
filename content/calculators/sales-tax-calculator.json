@@ -232,7 +232,8 @@
           "answer": "To find the pre-tax price from a total: Pre-tax Price = Total Price ÷ (1 + Tax Rate/100). For example, if something costs $108 total with 8% tax: $108 ÷ 1.08 = $100 pre-tax. To find just the tax amount from a total: Tax Amount = Total Price - (Total Price ÷ (1 + Tax Rate/100)). This reverse calculation is useful when receipts only show the final price."
         }
       ]
-    }
+    },
+    "component": "SalesTaxCalculator"
   },
   "es": {
     "title": "Calculadora de Impuestos de Ventas",
@@ -255,6 +256,7 @@
       "presupuesto",
       "precio"
     ],
+    "summary": "Calcule el impuesto de ventas y el precio total de compra.",
     "description": "Calcula el monto del impuesto de ventas y el precio total incluyendo impuestos para cualquier compra. Esencial para presupuestos, compras y comprender el costo real de los artículos antes de impuestos.",
     "instructions": [
       "Ingresa el precio sin impuestos del artículo o servicio. Este es el precio base antes de agregar cualquier impuesto de ventas.",
@@ -465,7 +467,8 @@
           "answer": "Para encontrar el precio pre-impuestos desde un total: Precio Pre-impuestos = Precio Total ÷ (1 + Tasa del Impuesto/100). Por ejemplo, si algo cuesta $108 total con impuesto del 8%: $108 ÷ 1.08 = $100 pre-impuestos. Para encontrar solo el monto del impuesto desde un total: Monto del Impuesto = Precio Total - (Precio Total ÷ (1 + Tasa del Impuesto/100)). Este cálculo inverso es útil cuando recibos solo muestran el precio final."
         }
       ]
-    }
+    },
+    "component": "SalesTaxCalculator"
   },
   "pt": {
     "title": "Calculadora de Imposto sobre Vendas",
@@ -488,6 +491,7 @@
       "orçamento",
       "preço"
     ],
+    "summary": "Calcule o imposto sobre vendas e o preço total de compra.",
     "description": "Calcule o valor do imposto sobre vendas e o preço total incluindo impostos para qualquer compra. Essencial para orçamentos, compras e compreensão do custo real dos itens antes dos impostos.",
     "instructions": [
       "Digite o preço sem impostos do item ou serviço. Este é o preço base antes de qualquer imposto sobre vendas ser adicionado.",
@@ -698,7 +702,8 @@
           "answer": "Para encontrar o preço pré-imposto de um total: Preço Pré-imposto = Preço Total ÷ (1 + Taxa do Imposto/100). Por exemplo, se algo custa $108 total com imposto de 8%: $108 ÷ 1.08 = $100 pré-imposto. Para encontrar apenas o valor do imposto de um total: Valor do Imposto = Preço Total - (Preço Total ÷ (1 + Taxa do Imposto/100)). Este cálculo reverso é útil quando recibos mostram apenas o preço final."
         }
       ]
-    }
+    },
+    "component": "SalesTaxCalculator"
   },
   "fr": {
     "title": "Calculatrice de Taxe de Vente",
@@ -721,6 +726,7 @@
       "budget",
       "prix"
     ],
+    "summary": "Calculez la taxe de vente et le prix total d'achat.",
     "description": "Calculez le montant de la taxe de vente et le prix total incluant les taxes pour tout achat. Essentiel pour les budgets, les achats et la compréhension du coût réel des articles avant les taxes.",
     "instructions": [
       "Entrez le prix hors taxes de l'article ou du service. C'est le prix de base avant l'ajout de toute taxe de vente.",
@@ -931,6 +937,7 @@
           "answer": "Pour trouver le prix hors taxe à partir d'un total : Prix Hors Taxe = Prix Total ÷ (1 + Taux de Taxe/100). Par exemple, si quelque chose coûte 108 $ total avec 8 % de taxe : 108 $ ÷ 1,08 = 100 $ hors taxe. Pour trouver seulement le montant de taxe à partir d'un total : Montant de Taxe = Prix Total - (Prix Total ÷ (1 + Taux de Taxe/100)). Ce calcul inverse est utile lorsque les reçus montrent seulement le prix final."
         }
       ]
-    }
+    },
+    "component": "SalesTaxCalculator"
   }
 }

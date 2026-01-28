@@ -160,8 +160,46 @@ export function isPhase1Calculator(slug: string): boolean {
 }
 
 // Get all calculators for homepage display
+// This function should be called server-side only
 export function getAllCalculatorsForHomepage(lang: string): CalculatorInfo[] {
-  // Return Phase 1 calculators for homepage (curated selection)
+  const calculators: CalculatorInfo[] = [];
+  
+  // Check if we're in a server environment
+  if (typeof window === 'undefined') {
+    try {
+      const fs = require('fs');
+      const path = require('path');
+      
+      // Dynamically load ALL calculators from content directory
+      const contentDir = path.join(process.cwd(), 'content', 'calculators');
+      const files = fs.readdirSync(contentDir).filter((f: string) => f.endsWith('.json'));
+      
+      for (const file of files) {
+        const slug = file.replace('.json', '');
+        try {
+          const content = loadCalculatorContent(lang, slug);
+          if (content && content.title) {
+            calculators.push({
+              name: content.title,
+              slug: content.slug || slug,
+              summary: content.summary || content.description || 'Calculate various metrics',
+              icon: getCalculatorIcon(slug),
+              difficulty: content.difficulty || 'Beginner',
+              featured: isFeaturedCalculator(slug)
+            });
+          }
+        } catch (error) {
+          // Skip calculators that fail to load
+        }
+      }
+      
+      return calculators;
+    } catch (error) {
+      console.error('Error loading calculators:', error);
+    }
+  }
+  
+  // Fallback to Phase 1 calculators for client-side or if error
   return PHASE_1_CALCULATORS.map(calc => ({
     name: calc.name,
     slug: calc.slug,

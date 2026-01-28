@@ -3,12 +3,30 @@
     "title": "Crypto ROI Calculator",
     "seoTitle": "Crypto ROI Calculator - Calculate Cryptocurrency Investment Returns and Profits",
     "metaDescription": "Free crypto ROI calculator. Calculate cryptocurrency investment returns, profits, and performance. Track Bitcoin, Ethereum, and altcoin portfolio gains with live prices.",
-    "keywords": ["crypto ROI calculator", "cryptocurrency calculator", "bitcoin calculator", "crypto investment calculator", "crypto profit calculator"],
-    "longTailKeywords": ["crypto return on investment calculator", "cryptocurrency profit calculator", "bitcoin investment calculator", "crypto portfolio calculator", "crypto gains calculator"],
+    "keywords": [
+      "crypto ROI calculator",
+      "cryptocurrency calculator",
+      "bitcoin calculator",
+      "crypto investment calculator",
+      "crypto profit calculator"
+    ],
+    "longTailKeywords": [
+      "crypto return on investment calculator",
+      "cryptocurrency profit calculator",
+      "bitcoin investment calculator",
+      "crypto portfolio calculator",
+      "crypto gains calculator"
+    ],
     "slug": "crypto-roi-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["cryptocurrency", "bitcoin", "investment", "ROI", "crypto portfolio"],
+    "tags": [
+      "cryptocurrency",
+      "bitcoin",
+      "investment",
+      "ROI",
+      "crypto portfolio"
+    ],
     "summary": "Calculate your cryptocurrency investment returns, track portfolio performance, and analyze crypto profits with real-time data.",
     "description": "Our advanced crypto ROI calculator helps investors track their cryptocurrency portfolio performance. Calculate returns on Bitcoin, Ethereum, and other cryptocurrencies, analyze holding periods, and understand compound growth. Includes live price feeds, portfolio tracking, and detailed performance metrics for informed crypto investment decisions.",
     "instructions": [
@@ -20,17 +38,65 @@
     "calculatorComponent": {
       "componentName": "CryptoROICalculator",
       "inputs": [
-        { "name": "initialInvestment", "label": "Initial Investment ($)", "type": "number", "default": 10000, "min": 1, "max": 10000000, "step": 100 },
-        { "name": "purchasePrice", "label": "Purchase Price per Coin ($)", "type": "number", "default": 30000, "min": 0.01, "max": 1000000, "step": 0.01 },
-        { "name": "currentPrice", "label": "Current Price per Coin ($)", "type": "number", "default": 45000, "min": 0.01, "max": 1000000, "step": 0.01 },
-        { "name": "holdingPeriod", "label": "Holding Period (years)", "type": "number", "default": 1, "min": 0.01, "max": 20, "step": 0.1 }
+        {
+          "name": "initialInvestment",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 1,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "purchasePrice",
+          "label": "Purchase Price per Coin ($)",
+          "type": "number",
+          "default": 30000,
+          "min": 0.01,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "currentPrice",
+          "label": "Current Price per Coin ($)",
+          "type": "number",
+          "default": 45000,
+          "min": 0.01,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "holdingPeriod",
+          "label": "Holding Period (years)",
+          "type": "number",
+          "default": 1,
+          "min": 0.01,
+          "max": 20,
+          "step": 0.1
+        }
       ],
       "formula": "ROI = (Current Value - Initial Investment) / Initial Investment × 100%; Annualized Return = (1 + ROI)^(1/years) - 1",
-      "output": { "label": "Total ROI", "default": "Enter investment details above", "format": "percentage" },
+      "output": {
+        "label": "Total ROI",
+        "default": "Enter investment details above",
+        "format": "percentage"
+      },
       "additionalOutputs": [
-        { "label": "Current Value", "field": "currentValue", "format": "currency" },
-        { "label": "Profit/Loss", "field": "profitLoss", "format": "currency" },
-        { "label": "Annualized Return", "field": "annualizedReturn", "format": "percentage" }
+        {
+          "label": "Current Value",
+          "field": "currentValue",
+          "format": "currency"
+        },
+        {
+          "label": "Profit/Loss",
+          "field": "profitLoss",
+          "format": "currency"
+        },
+        {
+          "label": "Annualized Return",
+          "field": "annualizedReturn",
+          "format": "percentage"
+        }
       ]
     },
     "examples": [
@@ -45,7 +111,11 @@
         "output": "ROI: 75%, Annualized Return: 32.8%, Profit: $3,750"
       }
     ],
-    "relatedCalculators": ["investment-calculator", "stock-return-calculator", "future-value-calculator"],
+    "relatedCalculators": [
+      "investment-calculator",
+      "stock-return-calculator",
+      "future-value-calculator"
+    ],
     "seoContent": {
       "introduction": "Navigate the volatile world of cryptocurrency investing with confidence using our comprehensive crypto ROI calculator that tracks your investment performance across Bitcoin, Ethereum, and altcoins. Cryptocurrency markets are known for extreme volatility, but understanding your returns is crucial for making informed investment decisions. Our calculator analyzes your crypto holdings, calculates total ROI, annualized returns, and profit/loss analysis while accounting for the unique characteristics of digital asset investing. Whether you're a HODLer, day trader, or long-term investor, this tool helps you understand exactly how your crypto portfolio is performing and whether your investment strategy is working.",
       "benefits": [
@@ -112,18 +182,37 @@
           "answer": "Crypto volatility makes ROI calculations timing-dependent. Same investment can show different ROI based on entry/exit points. Use annualized returns to compare across time periods. Consider maximum drawdown (peak-to-trough decline) for risk assessment. High volatility can create both opportunities and significant losses. Use dollar-cost averaging to reduce volatility impact. Focus on long-term holding periods to smooth volatility effects on ROI."
         }
       ]
-    }
+    },
+    "component": "CryptoROICalculator"
   },
   "es": {
     "title": "Calculadora de ROI Cripto",
     "seoTitle": "Calculadora de ROI Cripto - Calcula Rendimientos de Inversión en Criptomonedas y Ganancias",
     "metaDescription": "Calculadora gratuita de ROI cripto. Calcula rendimientos de inversión en criptomonedas, ganancias y rendimiento. Rastrea ganancias de portafolio de Bitcoin, Ethereum y altcoins con precios en vivo.",
-    "keywords": ["calculadora ROI cripto", "calculadora criptomoneda", "calculadora bitcoin", "calculadora inversión cripto", "calculadora ganancia cripto"],
-    "longTailKeywords": ["calculadora retorno inversión cripto", "calculadora ganancia criptomoneda", "calculadora inversión bitcoin", "calculadora portafolio cripto", "calculadora ganancias cripto"],
+    "keywords": [
+      "calculadora ROI cripto",
+      "calculadora criptomoneda",
+      "calculadora bitcoin",
+      "calculadora inversión cripto",
+      "calculadora ganancia cripto"
+    ],
+    "longTailKeywords": [
+      "calculadora retorno inversión cripto",
+      "calculadora ganancia criptomoneda",
+      "calculadora inversión bitcoin",
+      "calculadora portafolio cripto",
+      "calculadora ganancias cripto"
+    ],
     "slug": "crypto-roi-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["criptomoneda", "bitcoin", "inversión", "ROI", "portafolio cripto"],
+    "tags": [
+      "criptomoneda",
+      "bitcoin",
+      "inversión",
+      "ROI",
+      "portafolio cripto"
+    ],
     "summary": "Calcula tus rendimientos de inversión en criptomonedas, rastrea rendimiento de portafolio y analiza ganancias cripto con datos en tiempo real.",
     "description": "Nuestra avanzada calculadora de ROI cripto ayuda a los inversionistas a rastrear el rendimiento de su portafolio de criptomonedas. Calcula rendimientos en Bitcoin, Ethereum y otras criptomonedas, analiza períodos de tenencia y entiende crecimiento compuesto. Incluye feeds de precios en vivo, rastreo de portafolio y métricas detalladas de rendimiento para decisiones informadas de inversión cripto.",
     "instructions": [
@@ -135,17 +224,65 @@
     "calculatorComponent": {
       "componentName": "CryptoROICalculator",
       "inputs": [
-        { "name": "initialInvestment", "label": "Initial Investment ($)", "type": "number", "default": 10000, "min": 1, "max": 10000000, "step": 100 },
-        { "name": "purchasePrice", "label": "Purchase Price per Coin ($)", "type": "number", "default": 30000, "min": 0.01, "max": 1000000, "step": 0.01 },
-        { "name": "currentPrice", "label": "Current Price per Coin ($)", "type": "number", "default": 45000, "min": 0.01, "max": 1000000, "step": 0.01 },
-        { "name": "holdingPeriod", "label": "Holding Period (years)", "type": "number", "default": 1, "min": 0.01, "max": 20, "step": 0.1 }
+        {
+          "name": "initialInvestment",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 1,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "purchasePrice",
+          "label": "Purchase Price per Coin ($)",
+          "type": "number",
+          "default": 30000,
+          "min": 0.01,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "currentPrice",
+          "label": "Current Price per Coin ($)",
+          "type": "number",
+          "default": 45000,
+          "min": 0.01,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "holdingPeriod",
+          "label": "Holding Period (years)",
+          "type": "number",
+          "default": 1,
+          "min": 0.01,
+          "max": 20,
+          "step": 0.1
+        }
       ],
       "formula": "ROI = (Current Value - Initial Investment) / Initial Investment × 100%; Annualized Return = (1 + ROI)^(1/years) - 1",
-      "output": { "label": "Total ROI", "default": "Enter investment details above", "format": "percentage" },
+      "output": {
+        "label": "Total ROI",
+        "default": "Enter investment details above",
+        "format": "percentage"
+      },
       "additionalOutputs": [
-        { "label": "Current Value", "field": "currentValue", "format": "currency" },
-        { "label": "Profit/Loss", "field": "profitLoss", "format": "currency" },
-        { "label": "Annualized Return", "field": "annualizedReturn", "format": "percentage" }
+        {
+          "label": "Current Value",
+          "field": "currentValue",
+          "format": "currency"
+        },
+        {
+          "label": "Profit/Loss",
+          "field": "profitLoss",
+          "format": "currency"
+        },
+        {
+          "label": "Annualized Return",
+          "field": "annualizedReturn",
+          "format": "percentage"
+        }
       ]
     },
     "examples": [
@@ -160,7 +297,11 @@
         "output": "ROI: 75%, Rendimiento Anualizado: 32.8%, Ganancia: $3,750"
       }
     ],
-    "relatedCalculators": ["investment-calculator", "stock-return-calculator", "future-value-calculator"],
+    "relatedCalculators": [
+      "investment-calculator",
+      "stock-return-calculator",
+      "future-value-calculator"
+    ],
     "seoContent": {
       "introduction": "Navega el volátil mundo de las inversiones en criptomonedas con confianza usando nuestra calculadora integral de ROI cripto que rastrea tu rendimiento de inversión a través de Bitcoin, Ethereum, y altcoins. Los mercados de criptomonedas son conocidos por volatilidad extrema, pero entender tus rendimientos es crucial para tomar decisiones informadas de inversión. Nuestra calculadora analiza tus tenencias cripto, calcula ROI total, rendimientos anualizados, y análisis de ganancia/pérdida mientras considera las características únicas de invertir en activos digitales. Ya seas HODLer, trader diario, o inversionista a largo plazo, esta herramienta te ayuda a entender exactamente cómo está funcionando tu portafolio cripto y si tu estrategia de inversión está funcionando.",
       "benefits": [
@@ -227,18 +368,37 @@
           "answer": "Volatilidad cripto hace cálculos de ROI dependientes de timing. Misma inversión puede mostrar diferente ROI basado en puntos de entrada/salida. Usa rendimientos anualizados para comparar a través de períodos de tiempo. Considera reducción máxima (declive pico-a-valle) para evaluación de riesgo. Volatilidad alta puede crear tanto oportunidades como pérdidas significativas. Usa promedio de costo en dólares para reducir impacto de volatilidad. Enfócate en períodos de tenencia a largo plazo para suavizar efectos de volatilidad en ROI."
         }
       ]
-    }
+    },
+    "component": "CryptoROICalculator"
   },
   "pt": {
     "title": "Calculadora de ROI Cripto",
     "seoTitle": "Calculadora de ROI Cripto - Calcule Rendimentos de Investimento em Criptomoedas e Lucros",
     "metaDescription": "Calculadora gratuita de ROI cripto. Calcule rendimentos de investimento em criptomoedas, lucros e performance. Acompanhe ganhos de portfólio de Bitcoin, Ethereum e altcoins com preços ao vivo.",
-    "keywords": ["calculadora ROI cripto", "calculadora criptomoeda", "calculadora bitcoin", "calculadora investimento cripto", "calculadora lucro cripto"],
-    "longTailKeywords": ["calculadora retorno investimento cripto", "calculadora lucro criptomoeda", "calculadora investimento bitcoin", "calculadora portfólio cripto", "calculadora ganhos cripto"],
+    "keywords": [
+      "calculadora ROI cripto",
+      "calculadora criptomoeda",
+      "calculadora bitcoin",
+      "calculadora investimento cripto",
+      "calculadora lucro cripto"
+    ],
+    "longTailKeywords": [
+      "calculadora retorno investimento cripto",
+      "calculadora lucro criptomoeda",
+      "calculadora investimento bitcoin",
+      "calculadora portfólio cripto",
+      "calculadora ganhos cripto"
+    ],
     "slug": "crypto-roi-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["criptomoeda", "bitcoin", "investimento", "ROI", "portfólio cripto"],
+    "tags": [
+      "criptomoeda",
+      "bitcoin",
+      "investimento",
+      "ROI",
+      "portfólio cripto"
+    ],
     "summary": "Calcule seus rendimentos de investimento em criptomoedas, acompanhe performance de portfólio e analise lucros cripto com dados em tempo real.",
     "description": "Nossa calculadora avançada de ROI cripto ajuda investidores a acompanhar a performance de seu portfólio de criptomoedas. Calcule rendimentos em Bitcoin, Ethereum e outras criptomoedas, analise períodos de posse e entenda crescimento composto. Inclui feeds de preços ao vivo, acompanhamento de portfólio e métricas detalhadas de performance para decisões informadas de investimento cripto.",
     "instructions": [
@@ -250,17 +410,65 @@
     "calculatorComponent": {
       "componentName": "CryptoROICalculator",
       "inputs": [
-        { "name": "initialInvestment", "label": "Initial Investment ($)", "type": "number", "default": 10000, "min": 1, "max": 10000000, "step": 100 },
-        { "name": "purchasePrice", "label": "Purchase Price per Coin ($)", "type": "number", "default": 30000, "min": 0.01, "max": 1000000, "step": 0.01 },
-        { "name": "currentPrice", "label": "Current Price per Coin ($)", "type": "number", "default": 45000, "min": 0.01, "max": 1000000, "step": 0.01 },
-        { "name": "holdingPeriod", "label": "Holding Period (years)", "type": "number", "default": 1, "min": 0.01, "max": 20, "step": 0.1 }
+        {
+          "name": "initialInvestment",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 1,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "purchasePrice",
+          "label": "Purchase Price per Coin ($)",
+          "type": "number",
+          "default": 30000,
+          "min": 0.01,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "currentPrice",
+          "label": "Current Price per Coin ($)",
+          "type": "number",
+          "default": 45000,
+          "min": 0.01,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "holdingPeriod",
+          "label": "Holding Period (years)",
+          "type": "number",
+          "default": 1,
+          "min": 0.01,
+          "max": 20,
+          "step": 0.1
+        }
       ],
       "formula": "ROI = (Current Value - Initial Investment) / Initial Investment × 100%; Annualized Return = (1 + ROI)^(1/years) - 1",
-      "output": { "label": "Total ROI", "default": "Enter investment details above", "format": "percentage" },
+      "output": {
+        "label": "Total ROI",
+        "default": "Enter investment details above",
+        "format": "percentage"
+      },
       "additionalOutputs": [
-        { "label": "Current Value", "field": "currentValue", "format": "currency" },
-        { "label": "Profit/Loss", "field": "profitLoss", "format": "currency" },
-        { "label": "Annualized Return", "field": "annualizedReturn", "format": "percentage" }
+        {
+          "label": "Current Value",
+          "field": "currentValue",
+          "format": "currency"
+        },
+        {
+          "label": "Profit/Loss",
+          "field": "profitLoss",
+          "format": "currency"
+        },
+        {
+          "label": "Annualized Return",
+          "field": "annualizedReturn",
+          "format": "percentage"
+        }
       ]
     },
     "examples": [
@@ -275,7 +483,11 @@
         "output": "ROI: 75%, Rendimento Anualizado: 32.8%, Lucro: $3,750"
       }
     ],
-    "relatedCalculators": ["investment-calculator", "stock-return-calculator", "future-value-calculator"],
+    "relatedCalculators": [
+      "investment-calculator",
+      "stock-return-calculator",
+      "future-value-calculator"
+    ],
     "seoContent": {
       "introduction": "Navegue o volátil mundo de investimentos em criptomoedas com confiança usando nossa calculadora abrangente de ROI cripto que rastreia seu desempenho de investimento através de Bitcoin, Ethereum, e altcoins. Mercados de criptomoedas são conhecidos por volatilidade extrema, mas entender seus retornos é crucial para tomar decisões informadas de investimento. Nossa calculadora analisa suas participações cripto, calcula ROI total, retornos anualizados, e análise lucro/prejuízo enquanto considera as características únicas de investir em ativos digitais. Seja você HODLer, trader diário, ou investidor de longo prazo, esta ferramenta ajuda você a entender exatamente como seu portfólio cripto está performando e se sua estratégia de investimento está funcionando.",
       "benefits": [
@@ -342,18 +554,37 @@
           "answer": "Volatilidade cripto torna cálculos de ROI dependentes de timing. Mesmo investimento pode mostrar diferente ROI baseado em pontos de entrada/saída. Use retornos anualizados para comparar através de períodos de tempo. Considere redução máxima (declínio pico-para-valle) para avaliação de risco. Volatilidade alta pode criar tanto oportunidades quanto perdas significativas. Use média de custo em dólar para reduzir impacto de volatilidade. Foque em períodos de posse de longo prazo para suavizar efeitos de volatilidade em ROI."
         }
       ]
-    }
+    },
+    "component": "CryptoROICalculator"
   },
   "fr": {
     "title": "Calculateur ROI Crypto",
     "seoTitle": "Calculateur ROI Crypto - Calculez les Rendements d'Investissement Cryptographique et Profits",
     "metaDescription": "Calculateur gratuit de ROI crypto. Calculez les rendements d'investissement cryptographique, profits et performance. Suivez les gains de portefeuille Bitcoin, Ethereum et altcoins avec prix en direct.",
-    "keywords": ["calculateur ROI crypto", "calculateur cryptomonnaie", "calculateur bitcoin", "calculateur investissement crypto", "calculateur profit crypto"],
-    "longTailKeywords": ["calculateur retour investissement crypto", "calculateur profit cryptomonnaie", "calculateur investissement bitcoin", "calculateur portefeuille crypto", "calculateur gains crypto"],
+    "keywords": [
+      "calculateur ROI crypto",
+      "calculateur cryptomonnaie",
+      "calculateur bitcoin",
+      "calculateur investissement crypto",
+      "calculateur profit crypto"
+    ],
+    "longTailKeywords": [
+      "calculateur retour investissement crypto",
+      "calculateur profit cryptomonnaie",
+      "calculateur investissement bitcoin",
+      "calculateur portefeuille crypto",
+      "calculateur gains crypto"
+    ],
     "slug": "crypto-roi-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["cryptomonnaie", "bitcoin", "investissement", "ROI", "portefeuille crypto"],
+    "tags": [
+      "cryptomonnaie",
+      "bitcoin",
+      "investissement",
+      "ROI",
+      "portefeuille crypto"
+    ],
     "summary": "Calculez vos rendements d'investissement cryptographique, suivez la performance de portefeuille et analysez les profits crypto avec données en temps réel.",
     "description": "Notre calculateur avancé de ROI crypto aide les investisseurs à suivre la performance de leur portefeuille de cryptomonnaies. Calculez les rendements sur Bitcoin, Ethereum et autres cryptomonnaies, analysez les périodes de détention et comprenez la croissance composée. Inclut les flux de prix en direct, suivi de portefeuille et métriques de performance détaillées pour des décisions d'investissement crypto éclairées.",
     "instructions": [
@@ -365,17 +596,65 @@
     "calculatorComponent": {
       "componentName": "CryptoROICalculator",
       "inputs": [
-        { "name": "initialInvestment", "label": "Initial Investment ($)", "type": "number", "default": 10000, "min": 1, "max": 10000000, "step": 100 },
-        { "name": "purchasePrice", "label": "Purchase Price per Coin ($)", "type": "number", "default": 30000, "min": 0.01, "max": 1000000, "step": 0.01 },
-        { "name": "currentPrice", "label": "Current Price per Coin ($)", "type": "number", "default": 45000, "min": 0.01, "max": 1000000, "step": 0.01 },
-        { "name": "holdingPeriod", "label": "Holding Period (years)", "type": "number", "default": 1, "min": 0.01, "max": 20, "step": 0.1 }
+        {
+          "name": "initialInvestment",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 1,
+          "max": 10000000,
+          "step": 100
+        },
+        {
+          "name": "purchasePrice",
+          "label": "Purchase Price per Coin ($)",
+          "type": "number",
+          "default": 30000,
+          "min": 0.01,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "currentPrice",
+          "label": "Current Price per Coin ($)",
+          "type": "number",
+          "default": 45000,
+          "min": 0.01,
+          "max": 1000000,
+          "step": 0.01
+        },
+        {
+          "name": "holdingPeriod",
+          "label": "Holding Period (years)",
+          "type": "number",
+          "default": 1,
+          "min": 0.01,
+          "max": 20,
+          "step": 0.1
+        }
       ],
       "formula": "ROI = (Current Value - Initial Investment) / Initial Investment × 100%; Annualized Return = (1 + ROI)^(1/years) - 1",
-      "output": { "label": "Total ROI", "default": "Enter investment details above", "format": "percentage" },
+      "output": {
+        "label": "Total ROI",
+        "default": "Enter investment details above",
+        "format": "percentage"
+      },
       "additionalOutputs": [
-        { "label": "Current Value", "field": "currentValue", "format": "currency" },
-        { "label": "Profit/Loss", "field": "profitLoss", "format": "currency" },
-        { "label": "Annualized Return", "field": "annualizedReturn", "format": "percentage" }
+        {
+          "label": "Current Value",
+          "field": "currentValue",
+          "format": "currency"
+        },
+        {
+          "label": "Profit/Loss",
+          "field": "profitLoss",
+          "format": "currency"
+        },
+        {
+          "label": "Annualized Return",
+          "field": "annualizedReturn",
+          "format": "percentage"
+        }
       ]
     },
     "examples": [
@@ -390,7 +669,11 @@
         "output": "ROI: 75%, Rendement Annualisé: 32.8%, Profit: $3,750"
       }
     ],
-    "relatedCalculators": ["investment-calculator", "stock-return-calculator", "future-value-calculator"],
+    "relatedCalculators": [
+      "investment-calculator",
+      "stock-return-calculator",
+      "future-value-calculator"
+    ],
     "seoContent": {
       "introduction": "Naviguez le monde volatil de l'investissement cryptographique avec confiance en utilisant notre calculatrice complète de ROI crypto qui suit vos performances d'investissement à travers Bitcoin, Ethereum, et altcoins. Les marchés cryptographiques sont connus pour volatilité extrême, mais comprendre vos rendements est crucial pour prendre décisions d'investissement éclairées. Notre calculatrice analyse vos participations crypto, calcule ROI total, rendements annualisés, et analyse profit/perte tout tenant compte des caractéristiques uniques d'investir dans actifs numériques. Que vous soyez HODLer, trader journalier, ou investisseur long terme, cet outil vous aide comprendre exactement comment votre portefeuille crypto performe et si votre stratégie d'investissement fonctionne.",
       "benefits": [
@@ -457,6 +740,7 @@
           "answer": "Volatilité crypto rend calculs ROI dépendants timing. Même investissement peut montrer différent ROI basé sur points entrée/sortie. Utilisez rendements annualisés pour comparer à travers périodes temps. Considérez retrait maximum (déclin pic-à-creux) pour évaluation risque. Volatilité élevée peut créer opportunités et pertes significatives. Utilisez dollar-cost averaging pour réduire impact volatilité. Concentrez-vous sur périodes détention long terme pour lisser effets volatilité sur ROI."
         }
       ]
-    }
+    },
+    "component": "CryptoROICalculator"
   }
 }

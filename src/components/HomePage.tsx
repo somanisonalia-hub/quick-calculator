@@ -3,15 +3,16 @@
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { getAllCalculatorsForHomepage, CALCULATOR_CATEGORIES } from '@/lib/categoryUtils';
+import { getAllCalculatorsForHomepage, CALCULATOR_CATEGORIES, CalculatorInfo } from '@/lib/categoryUtils';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 interface HomePageProps {
   language?: string;
+  initialCalculators?: CalculatorInfo[];
 }
 
-export default function HomePage({ language }: HomePageProps) {
+export default function HomePage({ language, initialCalculators }: HomePageProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [allCalculators, setAllCalculators] = useState<{ category: string; calculators: any[] }[]>([]);
@@ -429,7 +430,8 @@ export default function HomePage({ language }: HomePageProps) {
 
   // Load all calculators and group by category
   useEffect(() => {
-    const calculators = getAllCalculatorsForHomepage(currentLang);
+    // Use initialCalculators if provided (from server), otherwise load client-side
+    const calculators = initialCalculators || getAllCalculatorsForHomepage(currentLang);
 
     // Group calculators by category
     const grouped: { [key: string]: any[] } = {};
@@ -458,7 +460,7 @@ export default function HomePage({ language }: HomePageProps) {
     }));
 
     setAllCalculators(groupedCalculators);
-  }, [currentLang]);
+  }, [currentLang, initialCalculators]);
 
   // Helper function to create language-aware links
   const createLink = (path: string) => {
@@ -538,19 +540,19 @@ export default function HomePage({ language }: HomePageProps) {
 
           <div className="flex flex-wrap justify-center gap-3">
             <Link href={createLink('/categories/financial')} className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors">
-              💰 Financial
+              💰 {currentLang === 'en' ? 'Financial' : currentLang === 'es' ? 'Financiero' : currentLang === 'pt' ? 'Financeiro' : 'Financier'}
             </Link>
             <Link href={createLink('/categories/health')} className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors">
-              🏥 Health
+              🏥 {currentLang === 'en' ? 'Health' : currentLang === 'es' ? 'Salud' : currentLang === 'pt' ? 'Saúde' : 'Santé'}
             </Link>
             <Link href={createLink('/categories/math')} className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors">
-              🧮 Math
+              🧮 {currentLang === 'en' ? 'Math' : currentLang === 'es' ? 'Matemáticas' : currentLang === 'pt' ? 'Matemática' : 'Mathématiques'}
             </Link>
             <Link href={createLink('/categories/utility')} className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors">
-              🛠️ Utility
+              🛠️ {currentLang === 'en' ? 'Utility' : currentLang === 'es' ? 'Utilidad' : currentLang === 'pt' ? 'Utilitário' : 'Utilitaire'}
             </Link>
             <Link href={createLink('/categories/lifestyle')} className="inline-flex items-center px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium hover:bg-indigo-200 transition-colors">
-              🏠 Lifestyle
+              🏠 {currentLang === 'en' ? 'Lifestyle' : currentLang === 'es' ? 'Estilo de Vida' : currentLang === 'pt' ? 'Estilo de Vida' : 'Style de Vie'}
             </Link>
           </div>
         </div>
@@ -558,7 +560,7 @@ export default function HomePage({ language }: HomePageProps) {
 
       {/* Most Popular Calculators */}
       <section className="py-10 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
               ⭐ {selectedContent.mostPopularTitle}
@@ -568,264 +570,124 @@ export default function HomePage({ language }: HomePageProps) {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {selectedContent.popularCalculators.map((calc, index) => {
-              // Map popular calculator names to their slugs
-              const slugMap: { [key: string]: string } = {
-                'Mortgage Calculator': 'mortgage-calculator',
-                'Loan Calculator': 'loan-calculator',
-                'BMI Calculator': 'bmi-calculator',
-                'Savings Calculator': 'savings-calculator',
-                'Percentage Calculator': 'percentage-calculator',
-                'Tip Calculator': 'tip-calculator',
-                'Calculadora de Hipoteca': 'mortgage-calculator',
-                'Calculadora de Préstamos': 'loan-calculator',
-                'Calculadora IMC': 'bmi-calculator',
-                'Calculadora de Ahorros': 'savings-calculator',
-                'Calculadora de Porcentajes': 'percentage-calculator',
-                'Calculadora de Propina': 'tip-calculator',
-                'Calculateur d\'Hypothèque': 'mortgage-calculator',
-                'Calculateur de Prêt': 'loan-calculator',
-                'Calculateur IMC': 'bmi-calculator',
-                'Calculateur d\'Épargne': 'savings-calculator',
-                'Calculateur de Pourcentages': 'percentage-calculator',
-                'Calculateur de Pourboire': 'tip-calculator'
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            {/* High-traffic calculators based on search volume and user demand */}
+            {[
+              { slug: 'mortgage-calculator', icon: '🏠', category: 'financial' },
+              { slug: 'loan-calculator', icon: '💰', category: 'financial' },
+              { slug: 'bmi-calculator', icon: '⚖️', category: 'health' },
+              { slug: 'percentage-calculator', icon: '📊', category: 'math' },
+              { slug: 'tax-calculator', icon: '💼', category: 'financial' },
+              { slug: 'calorie-calculator', icon: '🍎', category: 'health' },
+              { slug: 'salary-calculator', icon: '💼', category: 'financial' },
+              { slug: 'savings-calculator', icon: '💸', category: 'financial' },
+              { slug: 'compound-interest-calculator', icon: '📈', category: 'financial' },
+              { slug: 'car-loan-calculator', icon: '🚗', category: 'financial' },
+              { slug: 'retirement-calculator', icon: '🏖️', category: 'financial' },
+              { slug: 'tip-calculator', icon: '🧾', category: 'lifestyle' },
+              { slug: 'budget-calculator', icon: '📊', category: 'financial' },
+              { slug: 'credit-card-calculator', icon: '💳', category: 'financial' },
+              { slug: 'investment-calculator', icon: '📈', category: 'financial' },
+              { slug: 'age-calculator', icon: '📅', category: 'lifestyle' }
+            ].map((calc, index) => {
+              // Get calculator data from allCalculators
+              const calculatorData = allCalculators
+                .flatMap(cat => cat.calculators)
+                .find(c => c.slug === calc.slug);
+              
+              if (!calculatorData) return null;
+
+              const categoryColors = {
+                financial: { bg: 'bg-blue-50', border: 'border-blue-300', text: 'text-blue-800', hover: 'hover:bg-blue-100' },
+                health: { bg: 'bg-green-50', border: 'border-green-300', text: 'text-green-800', hover: 'hover:bg-green-100' },
+                math: { bg: 'bg-purple-50', border: 'border-purple-300', text: 'text-purple-800', hover: 'hover:bg-purple-100' },
+                lifestyle: { bg: 'bg-indigo-50', border: 'border-indigo-300', text: 'text-indigo-800', hover: 'hover:bg-indigo-100' },
+                utility: { bg: 'bg-teal-50', border: 'border-teal-300', text: 'text-teal-800', hover: 'hover:bg-teal-100' }
               };
 
-              const slug = slugMap[calc.name] || calc.name.toLowerCase().replace(/\s+/g, '-');
+              const colors = categoryColors[calc.category as keyof typeof categoryColors] || categoryColors.financial;
 
               return (
-                <Link key={index} href={createLink(`/${slug}`)} className="block">
-                  <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all cursor-pointer">
-                    <h3 className="font-semibold text-gray-900 mb-1">{calc.name}</h3>
-                    <p className="text-sm text-gray-600">{calc.desc}</p>
+                <Link key={index} href={createLink(`/${calc.slug}`)} className="block">
+                  <div className={`${colors.bg} rounded-lg p-3 border ${colors.border} ${colors.hover} transition-all cursor-pointer h-full`}>
+                    <div className="flex items-start">
+                      <span className="text-xl mr-2 flex-shrink-0">{calc.icon}</span>
+                      <div className="flex-1 min-w-0">
+                        <h4 className={`font-semibold ${colors.text} text-sm mb-1 leading-tight`}>
+                          {calculatorData.name}
+                        </h4>
+                        <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed">
+                          {calculatorData.summary}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </Link>
               );
-            })}
+            }).filter(Boolean)}
           </div>
         </div>
       </section>
 
-      {/* Financial Calculators */}
-      <section className="py-10 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* All Calculators by Category */}
+      <section className="py-10 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              💰 {selectedContent.financialTitle}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              🧮 {currentLang === 'en' ? 'All Calculators' : currentLang === 'es' ? 'Todas las Calculadoras' : currentLang === 'pt' ? 'Todas as Calculadoras' : 'Tous les Calculateurs'} ({allCalculators.reduce((sum, cat) => sum + cat.calculators.length, 0)})
             </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              {selectedContent.financialDesc}
+            <p className="text-lg text-gray-600">
+              {currentLang === 'en' ? 'Browse our complete collection of free online calculators' : currentLang === 'es' ? 'Explore nuestra colección completa de calculadoras en línea gratuitas' : currentLang === 'pt' ? 'Navegue por nossa coleção completa de calculadoras online gratuitas' : 'Parcourez notre collection complète de calculatrices en ligne gratuites'}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            {selectedContent.financialPopular.map((calc, index) => {
-              // Map financial calculator names to their slugs
-              const financialSlugMap: { [key: string]: string } = {
-                'Mortgage Calculator': 'mortgage-calculator',
-                'Loan Calculator': 'loan-calculator',
-                'Interest Calculator': 'interest-calculator',
-                'Savings Calculator': 'savings-calculator',
-                'Credit Card Payoff Calculator': 'credit-card-calculator'
-              };
-
-              const slug = financialSlugMap[calc] || calc.toLowerCase().replace(/\s+/g, '-');
-
-              return (
-                <Link key={index} href={createLink(`/${slug}`)} className="block">
-                  <div className="bg-white rounded-lg p-4 border-2 border-blue-300 hover:shadow-md hover:border-blue-400 transition-all cursor-pointer text-center">
-                    <span className="text-gray-800">{calc}</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="text-center">
-            <Link href={createLink('/categories/financial')} className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-              👉 {selectedContent.viewAllFinancial}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Health Calculators */}
-      <section className="py-10 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              🏥 {selectedContent.healthTitle}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              {selectedContent.healthDesc}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            {selectedContent.healthPopular.map((calc, index) => {
-              // Map health calculator names to their slugs
-              const healthSlugMap: { [key: string]: string } = {
-                'BMI Calculator': 'bmi-calculator',
-                'BMR Calculator': 'bmr-calculator',
-                'Body Fat Calculator': 'body-fat-calculator',
-                'Ideal Weight Calculator': 'ideal-weight-calculator'
-              };
-
-              const slug = healthSlugMap[calc] || calc.toLowerCase().replace(/\s+/g, '-');
-
-              return (
-                <Link key={index} href={createLink(`/${slug}`)} className="block">
-                  <div className="bg-gray-50 rounded-lg p-4 border-2 border-green-300 hover:shadow-md hover:border-green-400 transition-all cursor-pointer text-center">
-                    <span className="text-gray-800">{calc}</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="text-center">
-            <Link href={createLink('/categories/health')} className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
-              👉 {selectedContent.exploreHealth}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Math Calculators */}
-      <section className="py-10 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              🔢 {selectedContent.mathTitle}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              {selectedContent.mathDesc}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            {selectedContent.mathPopular.map((calc, index) => {
-              // Map math calculator names to their slugs
-              const mathSlugMap: { [key: string]: string } = {
-                'Percentage Calculator': 'percentage-calculator',
-                'Average Calculator': 'average-calculator',
-                'Fraction Calculator': 'fraction-calculator',
-                'Unit Conversion Calculator': 'unit-conversion-calculator',
-                'Calculadora de Porcentajes': 'percentage-calculator',
-                'Calculadora de Promedio': 'average-calculator',
-                'Calculadora de Fracciones': 'fraction-calculator',
-                'Calculadora de Conversión de Unidades': 'unit-conversion-calculator',
-                'Calculadora de Porcentagens': 'percentage-calculator',
-                'Calculadora de Média': 'average-calculator',
-                'Calculadora de Frações': 'fraction-calculator',
-                'Calculadora de Conversão de Unidades': 'unit-conversion-calculator',
-                'Calculateur de Pourcentages': 'percentage-calculator',
-                'Calculateur de Moyenne': 'average-calculator',
-                'Calculateur de Fractions': 'fraction-calculator',
-                'Calculateur de Conversion d\'Unités': 'unit-conversion-calculator'
-              };
-
-              const slug = mathSlugMap[calc] || calc.toLowerCase().replace(/\s+/g, '-');
-
-              return (
-                <Link key={index} href={createLink(`/${slug}`)} className="block">
-                  <div className="bg-white rounded-lg p-4 border-2 border-purple-300 hover:shadow-md hover:border-purple-400 transition-all cursor-pointer text-center">
-                    <span className="text-gray-800">{calc}</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="text-center">
-            <Link href={createLink('/categories/math')} className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
-              👉 {selectedContent.browseMath}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Lifestyle Calculators */}
-      <section className="py-10 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              🎭 {selectedContent.lifestyleTitle}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              {selectedContent.lifestyleDesc}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            {selectedContent.lifestylePopular.map((calc, index) => {
-              // Map lifestyle calculator names to their slugs
-              const lifestyleSlugMap: { [key: string]: string } = {
-                'Age Calculator': 'age-calculator',
-                'Tip Calculator': 'tip-calculator',
-                'GPA Calculator': 'gpa-calculator',
-                'Budget Calculator': 'budget-calculator'
-              };
-
-              const slug = lifestyleSlugMap[calc] || calc.toLowerCase().replace(/\s+/g, '-');
-
-              return (
-                <Link key={index} href={createLink(`/${slug}`)} className="block">
-                  <div className="bg-gray-50 rounded-lg p-4 border-2 border-indigo-300 hover:shadow-md hover:border-indigo-400 transition-all cursor-pointer text-center">
-                    <span className="text-gray-800">{calc}</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="text-center">
-            <Link href={createLink('/categories/lifestyle')} className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors">
-              👉 {selectedContent.exploreLifestyle}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Utility Calculators */}
-      <section className="py-10 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              🛠️ {selectedContent.utilityTitle}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              {selectedContent.utilityDesc}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            {selectedContent.utilityPopular.map((calc, index) => {
-              // Map utility calculator names to their slugs
-              const utilitySlugMap: { [key: string]: string } = {
-                'Word Counter': 'word-counter',
-                'Numbers to Words Converter': 'numbers-to-words-converter',
-                'Date Calculator': 'date-calculator'
-              };
-
-              const slug = utilitySlugMap[calc] || calc.toLowerCase().replace(/\s+/g, '-');
-
-              return (
-                <Link key={index} href={createLink(`/${slug}`)} className="block">
-                  <div className="bg-white rounded-lg p-4 border-2 border-teal-300 hover:shadow-md hover:border-teal-400 transition-all cursor-pointer text-center">
-                    <span className="text-gray-800">{calc}</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="text-center">
-            <Link href={createLink('/categories/utility')} className="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors">
-              👉 {selectedContent.exploreUtility}
-            </Link>
-          </div>
+          {allCalculators.map((categoryGroup, catIndex) => {
+            const categoryColors = {
+              financial: { bg: 'bg-blue-50', border: 'border-blue-300', text: 'text-blue-800', hover: 'hover:bg-blue-100', icon: '💰' },
+              health: { bg: 'bg-green-50', border: 'border-green-300', text: 'text-green-800', hover: 'hover:bg-green-100', icon: '🏥' },
+              math: { bg: 'bg-purple-50', border: 'border-purple-300', text: 'text-purple-800', hover: 'hover:bg-purple-100', icon: '🧮' },
+              lifestyle: { bg: 'bg-indigo-50', border: 'border-indigo-300', text: 'text-indigo-800', hover: 'hover:bg-indigo-100', icon: '🏠' },
+              utility: { bg: 'bg-teal-50', border: 'border-teal-300', text: 'text-teal-800', hover: 'hover:bg-teal-100', icon: '🛠️' }
+            };
+            
+            const colors = categoryColors[categoryGroup.category as keyof typeof categoryColors] || categoryColors.utility;
+            
+            return (
+              <div key={catIndex} className="mb-8">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-2xl font-bold text-gray-900 flex items-center">
+                    <span className="mr-2">{colors.icon}</span>
+                    {categoryGroup.category.charAt(0).toUpperCase() + categoryGroup.category.slice(1)}
+                    <span className="ml-2 text-sm font-normal text-gray-500">
+                      ({categoryGroup.calculators.length} {currentLang === 'en' ? 'calculators' : currentLang === 'es' ? 'calculadoras' : currentLang === 'pt' ? 'calculadoras' : 'calculatrices'})
+                    </span>
+                  </h3>
+                  <Link 
+                    href={createLink(`/categories/${categoryGroup.category}`)} 
+                    className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    {currentLang === 'en' ? 'View All →' : currentLang === 'es' ? 'Ver Todo →' : currentLang === 'pt' ? 'Ver Tudo →' : 'Voir Tout →'}
+                  </Link>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                  {categoryGroup.calculators.map((calc, index) => (
+                    <Link key={index} href={createLink(`/${calc.slug}`)} className="block">
+                      <div className={`${colors.bg} rounded-lg p-3 border ${colors.border} ${colors.hover} transition-all cursor-pointer h-full`}>
+                        <div className="flex items-start">
+                          <span className="text-xl mr-2 flex-shrink-0">{calc.icon}</span>
+                          <div className="flex-1 min-w-0">
+                            <h4 className={`font-semibold ${colors.text} text-sm mb-1 truncate`}>{calc.name}</h4>
+                            <p className="text-xs text-gray-600 line-clamp-2">{calc.summary}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -889,7 +751,7 @@ export default function HomePage({ language }: HomePageProps) {
               {selectedContent.exploreGuidance}
             </p>
             <Link href={createLink('/')} className="inline-flex items-center px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 transition-colors">
-              🔄 Back to Top
+              🔄 {currentLang === 'en' ? 'Back to Top' : currentLang === 'es' ? 'Volver Arriba' : currentLang === 'pt' ? 'Voltar ao Topo' : 'Retour en Haut'}
             </Link>
           </div>
         </div>

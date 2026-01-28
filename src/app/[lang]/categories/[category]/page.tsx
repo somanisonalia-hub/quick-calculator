@@ -7,6 +7,7 @@ import BreadcrumbNavigation from '@/components/BreadcrumbNavigation';
 // Direct breadcrumb generation
 import { generateCategorySchema, CategoryData } from '@/lib/seoContentRenderer';
 import { getCategoryData } from '@/lib/categoryUtils';
+import { loadCalculatorsByCategory } from '@/lib/staticDataLoader';
 import CategoryPageClient from '@/app/categories/[slug]/CategoryPageClient';
 
 // Valid languages and categories
@@ -118,13 +119,24 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     { name: categoryName, href: lang === 'en' ? `/categories/${category}` : `/${lang}/categories/${category}` }
   ];
 
+  // Load ALL calculators for this category at BUILD TIME
+  const categoryCalculators = loadCalculatorsByCategory(lang, category);
+  
+  // Get category data for title and description
+  const categoryData = getCategoryData(category, lang);
+
   return (
     <div className="min-h-screen bg-gray-50">
         <Header currentLang={lang} />
 
         <BreadcrumbNavigation breadcrumbs={breadcrumbs} currentLang={lang} />
 
-        <CategoryPageClient lang={lang} category={category} />
+        <CategoryPageClient 
+          lang={lang} 
+          category={category}
+          initialCalculators={categoryCalculators}
+          categoryData={categoryData}
+        />
 
         <Footer currentLang={lang} />
       </div>

@@ -3,12 +3,30 @@
     "title": "Scientific Calculator",
     "seoTitle": "Scientific Calculator Online - Advanced Math Calculator with Trigonometric Functions",
     "metaDescription": "Free online scientific calculator with trigonometric functions, logarithms, exponentials, and advanced math operations. Perfect for students, engineers, and scientists.",
-    "keywords": ["scientific calculator", "math calculator", "trigonometric calculator", "logarithm calculator", "advanced calculator"],
-    "longTailKeywords": ["online scientific calculator", "scientific calculator with trig functions", "math calculator for students", "engineering calculator online", "scientific calculator with logarithms"],
+    "keywords": [
+      "scientific calculator",
+      "math calculator",
+      "trigonometric calculator",
+      "logarithm calculator",
+      "advanced calculator"
+    ],
+    "longTailKeywords": [
+      "online scientific calculator",
+      "scientific calculator with trig functions",
+      "math calculator for students",
+      "engineering calculator online",
+      "scientific calculator with logarithms"
+    ],
     "slug": "scientific-calculator",
     "category": "math",
     "difficulty": "intermediate",
-    "tags": ["scientific", "trigonometry", "logarithms", "exponentials", "mathematics"],
+    "tags": [
+      "scientific",
+      "trigonometry",
+      "logarithms",
+      "exponentials",
+      "mathematics"
+    ],
     "summary": "Advanced scientific calculator with trigonometric functions, logarithms, exponentials, and mathematical constants for complex calculations.",
     "description": "Our comprehensive scientific calculator includes trigonometric functions (sin, cos, tan), logarithmic functions (log, ln), exponential functions, square roots, factorials, and mathematical constants (π, e). Perfect for students, engineers, scientists, and anyone needing advanced mathematical calculations.",
     "instructions": [
@@ -22,11 +40,27 @@
       "componentName": "ScientificCalculator",
       "inputs": [],
       "formula": "Various mathematical functions: sin(x), cos(x), tan(x), log(x), ln(x), e^x, x^y, √x, x!, etc.",
-      "output": { "label": "Result", "default": "0", "format": "text" },
+      "output": {
+        "label": "Result",
+        "default": "0",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Memory", "field": "memory", "format": "text" },
-        { "label": "Angle Mode", "field": "angleMode", "format": "text" },
-        { "label": "History", "field": "history", "format": "text" }
+        {
+          "label": "Memory",
+          "field": "memory",
+          "format": "text"
+        },
+        {
+          "label": "Angle Mode",
+          "field": "angleMode",
+          "format": "text"
+        },
+        {
+          "label": "History",
+          "field": "history",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -51,7 +85,11 @@
         "output": "0.707"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "fraction-calculator", "unit-converter"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "fraction-calculator",
+      "unit-converter"
+    ],
     "seoContent": {
       "introduction": "Master advanced mathematical calculations with our comprehensive scientific calculator featuring trigonometric functions, logarithmic operations, exponential computations, and mathematical constants. This powerful online tool provides all the functionality of a professional scientific calculator without requiring expensive hardware. Whether you're a student solving complex physics problems, an engineer performing technical calculations, or a scientist analyzing data, our calculator delivers accurate results with an intuitive interface. Access trigonometric functions like sine, cosine, and tangent, logarithmic functions including base-10 and natural logs, exponential operations, square roots, factorials, and essential mathematical constants like π (pi) and e (Euler's number).",
       "benefits": [
@@ -122,18 +160,37 @@
           "answer": "The calculator uses JavaScript's built-in Math library functions, which provide high precision for most practical applications. Trigonometric functions are accurate to within 1 part in 10¹⁵, logarithmic functions maintain precision across typical input ranges, and exponential functions handle both very small and very large numbers. For applications requiring extreme precision beyond 15 decimal places, specialized mathematical software may be necessary."
         }
       ]
-    }
+    },
+    "component": "ScientificCalculator"
   },
   "es": {
     "title": "Calculadora Científica",
     "seoTitle": "Calculadora Científica Online - Calculadora Matemática Avanzada con Funciones Trigonométricas",
     "metaDescription": "Calculadora científica gratuita en línea con funciones trigonométricas, logaritmos, exponenciales y operaciones matemáticas avanzadas. Perfecta para estudiantes, ingenieros y científicos.",
-    "keywords": ["calculadora científica", "calculadora matemática", "calculadora trigonométrica", "calculadora logaritmo", "calculadora avanzada"],
-    "longTailKeywords": ["calculadora científica online", "calculadora científica con funciones trig", "calculadora matemática para estudiantes", "calculadora de ingeniería online", "calculadora científica con logaritmos"],
+    "keywords": [
+      "calculadora científica",
+      "calculadora matemática",
+      "calculadora trigonométrica",
+      "calculadora logaritmo",
+      "calculadora avanzada"
+    ],
+    "longTailKeywords": [
+      "calculadora científica online",
+      "calculadora científica con funciones trig",
+      "calculadora matemática para estudiantes",
+      "calculadora de ingeniería online",
+      "calculadora científica con logaritmos"
+    ],
     "slug": "scientific-calculator",
     "category": "math",
     "difficulty": "intermediate",
-    "tags": ["científica", "trigonométrica", "logaritmos", "exponenciales", "matemáticas"],
+    "tags": [
+      "científica",
+      "trigonométrica",
+      "logaritmos",
+      "exponenciales",
+      "matemáticas"
+    ],
     "summary": "Calculadora científica avanzada con funciones trigonométricas, logaritmos, exponenciales y constantes matemáticas para cálculos complejos.",
     "description": "Nuestra calculadora científica integral incluye funciones trigonométricas (sen, cos, tan), funciones logarítmicas (log, ln), funciones exponenciales, raíces cuadradas, factoriales y constantes matemáticas (π, e). Perfecta para estudiantes, ingenieros, científicos y cualquiera necesitando cálculos matemáticos avanzados.",
     "instructions": [
@@ -147,11 +204,27 @@
       "componentName": "ScientificCalculator",
       "inputs": [],
       "formula": "Varias funciones matemáticas: sen(x), cos(x), tan(x), log(x), ln(x), e^x, x^y, √x, x!, etc.",
-      "output": { "label": "Resultado", "default": "0", "format": "text" },
+      "output": {
+        "label": "Resultado",
+        "default": "0",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Memoria", "field": "memory", "format": "text" },
-        { "label": "Modo Ángulo", "field": "angleMode", "format": "text" },
-        { "label": "Historial", "field": "history", "format": "text" }
+        {
+          "label": "Memoria",
+          "field": "memory",
+          "format": "text"
+        },
+        {
+          "label": "Modo Ángulo",
+          "field": "angleMode",
+          "format": "text"
+        },
+        {
+          "label": "Historial",
+          "field": "history",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -176,7 +249,11 @@
         "output": "0.707"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "fraction-calculator", "unit-converter"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "fraction-calculator",
+      "unit-converter"
+    ],
     "seoContent": {
       "introduction": "Domine cálculos matemáticos avançados com nossa calculadora científica abrangente apresentando funções trigonométricas, operações logarítmicas, computações exponenciais e constantes matemáticas. Esta poderosa ferramenta online fornece toda a funcionalidade de uma calculadora científica profissional sem requerer hardware caro. Seja você um estudante resolvendo problemas complexos de física, um engenheiro realizando cálculos técnicos ou um cientista analisando dados, nossa calculadora entrega resultados precisos com uma interface intuitiva. Acesse funções trigonométricas como seno, cosseno e tangente, funções logarítmicas incluindo logs de base-10 e naturais, operações exponenciais, raízes quadradas, fatoriais e constantes matemáticas essenciais como π (pi) e e (número de Euler).",
       "benefits": [
@@ -247,18 +324,37 @@
           "answer": "A calculadora usa funções da biblioteca Math integrada do JavaScript, que fornecem alta precisão para a maioria das aplicações práticas. Funções trigonométricas são precisas dentro de 1 parte em 10¹⁵, funções logarítmicas mantêm precisão através de faixas de entrada típicas, e funções exponenciais lidam com números tanto muito pequenos quanto muito grandes. Para aplicações requerendo precisão extrema além de 15 casas decimais, software matemático especializado pode ser necessário."
         }
       ]
-    }
+    },
+    "component": "ScientificCalculator"
   },
   "pt": {
     "title": "Calculadora Científica",
     "seoTitle": "Calculadora Científica Online - Calculadora Matemática Avançada com Funções Trigonométricas",
     "metaDescription": "Calculadora científica gratuita online com funções trigonométricas, logaritmos, exponenciais e operações matemáticas avançadas. Perfeita para estudantes, engenheiros e cientistas.",
-    "keywords": ["calculadora científica", "calculadora matemática", "calculadora trigonométrica", "calculadora logaritmo", "calculadora avançada"],
-    "longTailKeywords": ["calculadora científica online", "calculadora científica com funções trig", "calculadora matemática para estudantes", "calculadora de engenharia online", "calculadora científica com logaritmos"],
+    "keywords": [
+      "calculadora científica",
+      "calculadora matemática",
+      "calculadora trigonométrica",
+      "calculadora logaritmo",
+      "calculadora avançada"
+    ],
+    "longTailKeywords": [
+      "calculadora científica online",
+      "calculadora científica com funções trig",
+      "calculadora matemática para estudantes",
+      "calculadora de engenharia online",
+      "calculadora científica com logaritmos"
+    ],
     "slug": "scientific-calculator",
     "category": "math",
     "difficulty": "intermediate",
-    "tags": ["científica", "trigonométrica", "logaritmos", "exponenciais", "matemática"],
+    "tags": [
+      "científica",
+      "trigonométrica",
+      "logaritmos",
+      "exponenciais",
+      "matemática"
+    ],
     "summary": "Calculadora científica avançada com funções trigonométricas, logaritmos, exponenciais e constantes matemáticas para cálculos complexos.",
     "description": "Nossa calculadora científica abrangente inclui funções trigonométricas (sen, cos, tan), funções logarítmicas (log, ln), funções exponenciais, raízes quadradas, fatoriais e constantes matemáticas (π, e). Perfeita para estudantes, engenheiros, cientistas e qualquer um precisando de cálculos matemáticos avançados.",
     "instructions": [
@@ -272,11 +368,27 @@
       "componentName": "ScientificCalculator",
       "inputs": [],
       "formula": "Várias funções matemáticas: sen(x), cos(x), tan(x), log(x), ln(x), e^x, x^y, √x, x!, etc.",
-      "output": { "label": "Resultado", "default": "0", "format": "text" },
+      "output": {
+        "label": "Resultado",
+        "default": "0",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Memória", "field": "memory", "format": "text" },
-        { "label": "Modo Ângulo", "field": "angleMode", "format": "text" },
-        { "label": "Histórico", "field": "history", "format": "text" }
+        {
+          "label": "Memória",
+          "field": "memory",
+          "format": "text"
+        },
+        {
+          "label": "Modo Ângulo",
+          "field": "angleMode",
+          "format": "text"
+        },
+        {
+          "label": "Histórico",
+          "field": "history",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -301,18 +413,91 @@
         "output": "0.707"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "fraction-calculator", "unit-converter"]
+    "relatedCalculators": [
+      "percentage-calculator",
+      "fraction-calculator",
+      "unit-converter"
+    ],
+    "seoContent": {
+      "introduction": "Domine cálculos matemáticos avançados com nossa calculadora científica abrangente apresentando funções trigonométricas, operações logarítmicas, computações exponenciais e constantes matemáticas. Esta poderosa ferramenta online fornece toda a funcionalidade de uma calculadora científica profissional sem requerer hardware caro.",
+      "benefits": [
+        "Realize cálculos trigonométricos complexos com seno, cosseno e tangente",
+        "Execute operações logarítmicas e exponenciais",
+        "Acesse constantes matemáticas como π e e",
+        "Suporte para graus e radianos",
+        "Interface intuitiva e fácil de usar"
+      ],
+      "steps": [
+        "Digite números usando o teclado numérico",
+        "Selecione operações matemáticas desejadas",
+        "Use funções avançadas para cálculos complexos",
+        "Obtenha resultados precisos instantaneamente"
+      ],
+      "inputsExplained": [
+        "Entrada numérica aceita valores decimais",
+        "Modo de ângulo: graus ou radianos",
+        "Botões de função para operações avançadas",
+        "Memória para armazenar resultados"
+      ],
+      "formulaExplanation": "Funções trigonométricas calculam razões de lados de triângulo: sen(θ) = oposto/hipotenusa, cos(θ) = adjacente/hipotenusa, tan(θ) = oposto/adjacente. Funções logarítmicas determinam expoentes: log₁₀(x) e ln(x). A calculadora segue ordem matemática de operações padrão.",
+      "examples": [
+        "Cálculo trigonométrico: sen(30°) = 0.5",
+        "Logaritmo: log(1000) = 3",
+        "Exponencial: e² = 7.389"
+      ],
+      "resultsExplanation": [
+        "Resultados precisos até várias casas decimais",
+        "Cálculos seguem padrões matemáticos",
+        "Suporte para números grandes e pequenos"
+      ],
+      "whoItsFor": "Esta calculadora serve estudantes de matemática, ciências e engenharia, profissionais realizando cálculos técnicos, professores demonstrando conceitos, e qualquer um que necessite funções matemáticas avançadas.",
+      "disclaimer": "Esta calculadora fornece resultados baseados em algoritmos matemáticos padrão. Para aplicações críticas, verifique resultados com métodos alternativos.",
+      "relatedTools": [
+        "Calculadora de porcentagem",
+        "Calculadora de fração",
+        "Conversor de unidades"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre graus e radianos?",
+          "answer": "Graus dividem um círculo em 360 partes, enquanto radianos dividem em 2π partes. Radianos são a medida padrão em matemática avançada. 180° = π radianos."
+        },
+        {
+          "question": "Como usar funções trigonométricas?",
+          "answer": "Selecione o modo de ângulo apropriado (graus ou radianos), digite o ângulo e pressione a função desejada (sen, cos, tan). A calculadora fornecerá o resultado imediatamente."
+        }
+      ]
+    },
+    "component": "ScientificCalculator"
   },
   "fr": {
     "title": "Calculatrice Scientifique",
     "seoTitle": "Calculatrice Scientifique en Ligne - Calculatrice Mathématique Avancée avec Fonctions Trigonométriques",
     "metaDescription": "Calculatrice scientifique gratuite en ligne avec fonctions trigonométriques, logarithmes, exponentielles et opérations mathématiques avancées. Parfaite pour étudiants, ingénieurs et scientifiques.",
-    "keywords": ["calculatrice scientifique", "calculatrice mathématique", "calculatrice trigonométrique", "calculatrice logarithme", "calculatrice avancée"],
-    "longTailKeywords": ["calculatrice scientifique en ligne", "calculatrice scientifique avec fonctions trig", "calculatrice mathématique pour étudiants", "calculatrice d'ingénierie en ligne", "calculatrice scientifique avec logarithmes"],
+    "keywords": [
+      "calculatrice scientifique",
+      "calculatrice mathématique",
+      "calculatrice trigonométrique",
+      "calculatrice logarithme",
+      "calculatrice avancée"
+    ],
+    "longTailKeywords": [
+      "calculatrice scientifique en ligne",
+      "calculatrice scientifique avec fonctions trig",
+      "calculatrice mathématique pour étudiants",
+      "calculatrice d'ingénierie en ligne",
+      "calculatrice scientifique avec logarithmes"
+    ],
     "slug": "scientific-calculator",
     "category": "math",
     "difficulty": "intermediate",
-    "tags": ["scientifique", "trigonométrique", "logarithmes", "exponentielles", "mathématiques"],
+    "tags": [
+      "scientifique",
+      "trigonométrique",
+      "logarithmes",
+      "exponentielles",
+      "mathématiques"
+    ],
     "summary": "Calculatrice scientifique avancée avec fonctions trigonométriques, logarithmes, exponentielles et constantes mathématiques pour calculs complexes.",
     "description": "Notre calculatrice scientifique complète inclut fonctions trigonométriques (sin, cos, tan), fonctions logarithmiques (log, ln), fonctions exponentielles, racines carrées, factorielles et constantes mathématiques (π, e). Parfaite pour étudiants, ingénieurs, scientifiques et quiconque ayant besoin de calculs mathématiques avancés.",
     "instructions": [
@@ -326,11 +511,27 @@
       "componentName": "ScientificCalculator",
       "inputs": [],
       "formula": "Diverses fonctions mathématiques: sin(x), cos(x), tan(x), log(x), ln(x), e^x, x^y, √x, x!, etc.",
-      "output": { "label": "Résultat", "default": "0", "format": "text" },
+      "output": {
+        "label": "Résultat",
+        "default": "0",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Mémoire", "field": "memory", "format": "text" },
-        { "label": "Mode Angle", "field": "angleMode", "format": "text" },
-        { "label": "Historique", "field": "history", "format": "text" }
+        {
+          "label": "Mémoire",
+          "field": "memory",
+          "format": "text"
+        },
+        {
+          "label": "Mode Angle",
+          "field": "angleMode",
+          "format": "text"
+        },
+        {
+          "label": "Historique",
+          "field": "history",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -355,7 +556,11 @@
         "output": "0.707"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "fraction-calculator", "unit-converter"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "fraction-calculator",
+      "unit-converter"
+    ],
     "seoContent": {
       "introduction": "Maîtrisez calculs mathématiques avancés avec notre calculatrice scientifique complète présentant fonctions trigonométriques, opérations logarithmiques, computations exponentielles et constantes mathématiques. Cet outil en ligne puissant fournit toute la fonctionnalité d'une calculatrice scientifique professionnelle sans nécessiter matériel coûteux. Que vous soyez étudiant résolvant problèmes complexes de physique, ingénieur réalisant calculs techniques ou scientifique analysant données, notre calculatrice livre résultats précis avec interface intuitive. Accédez fonctions trigonométriques comme sinus, cosinus et tangente, fonctions logarithmiques incluant logs base-10 et naturels, opérations exponentielles, racines carrées, factorielles et constantes mathématiques essentielles comme π (pi) et e (nombre d'Euler).",
       "benefits": [
@@ -426,6 +631,7 @@
           "answer": "La calculatrice utilise fonctions bibliothèque Math intégrée JavaScript, qui fournissent haute précision pour plupart applications pratiques. Fonctions trigonométriques sont exactes à 1 partie en 10¹⁵, fonctions logarithmiques maintiennent précision à travers gammes entrée typiques, et fonctions exponentielles gèrent nombres très petits et très grands. Pour applications nécessitant précision extrême au-delà 15 décimales, logiciel mathématique spécialisé peut être nécessaire."
         }
       ]
-    }
+    },
+    "component": "ScientificCalculator"
   }
 }

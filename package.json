@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "fix-duplicates": "node scripts/fix_duplicates.js",
-    "test-calculators": "node scripts/test-calculators.js"
+    "test-calculators": "node scripts/test-calculators.js",
+    "validate-translations": "node scripts/validate-translations.js"
   },
   "dependencies": {
     "i18next": "^25.7.3",
@@ -21,6 +22,7 @@
     "react-i18next": "^16.5.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

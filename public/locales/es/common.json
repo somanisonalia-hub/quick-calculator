@@ -132,13 +132,11 @@
     "totalInterestEarned": "Interés Total Ganado",
     "powerOfCompounding": "Poder de la Capitalización",
     "compoundingMessage": "¡Tu inversión crece exponencialmente con el tiempo!",
-    "enterInvestmentDetails": "Ingresa detalles de inversión para ver crecimiento de interés compuesto"
-  },
-  "brand": {
-    "name": "Calculadora Rápida"
-  },
-  "seo": {
-    "keywords": "calculadora, calculadora en línea, calculadora matemática, calculadora financiera, calculadora de salud",
+    "enterInvestmentDetails": "Ingresa detalles de inversión para ver crecimiento de interés compuesto",
+    "completeGuide": "Guía Completa",
+    "howDoesWork": "¿Cómo Funciona",
+    "guideComingSoon": "La guía detallada y explicación de fórmula estarán disponibles pronto.",
+    "comingSoon": "Esta calculadora está actualmente en desarrollo y estará disponible pronto.",
     "taxCalculator": "Calculadora de Impuestos",
     "taxDescription": "Calcule impuestos federales, estatales y FICA",
     "taxInformation": "Información de Impuestos",
@@ -187,8 +185,10 @@
     "propertyTaxDescription": "Calcule impuestos a la propiedad basados en valor evaluado",
     "propertyDetails": "Detalles de la Propiedad",
     "propertyTaxBreakdown": "Desglose de Impuestos a la Propiedad",
+    "assessmentRate": "Tasa de Evaluación",
     "taxExemptions": "Exenciones Fiscales",
-    "propertyTaxNote": "Las tasas de impuestos a la propiedad varían según la ubicación. Esta es una estimación - consulte a las autoridades locales para las tasas exactas.",
+    "taxRate": "Tasa de Impuesto",
+    "propertyTaxNote": "Las tasas de impuestos a la propiedad varían según la ubicación. Esta es una estimativa - consulte a las autoridades locales para las tasas exactas.",
     "futureValueCalculator": "Calculadora de Valor Futuro",
     "futureValueDescription": "Calcule el valor futuro de las inversiones con interés compuesto",
     "futureValueProjection": "Proyección de Valor Futuro",
@@ -232,6 +232,14 @@
     "paymentSchedule": "Programa de Pagos",
     "forFirstMonths": "Por primeros {months} meses",
     "concreteVolume": "Volumen de Concreto",
-    "emiCalculation": "Cálculo de EMI"
+    "emiCalculation": "Cálculo de EMI",
+    "emiFormula": "Fórmula EMI: P × r × (1+r)^n / ((1+r)^n - 1)",
+    "enterLoanDetailsEMI": "Ingrese detalles del préstamo para calcular EMI"
+  },
+  "brand": {
+    "name": "Calculadora Rápida"
+  },
+  "seo": {
+    "keywords": "calculadora, calculadora en línea, calculadora matemática, calculadora financiera, calculadora de salud"
   }
 }

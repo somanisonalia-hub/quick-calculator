@@ -3,12 +3,30 @@
     "title": "Advanced Loan Calculator",
     "seoTitle": "Advanced Loan Calculator - Detailed Loan Analysis with Extra Payments",
     "metaDescription": "Advanced loan calculator with extra payment options, bi-weekly payments, and detailed amortization schedules. Compare loan scenarios and save thousands on interest.",
-    "keywords": ["advanced loan calculator", "loan analysis calculator", "extra payment calculator", "amortization calculator", "loan comparison tool"],
-    "longTailKeywords": ["how to calculate loan payments with extra payments", "advanced mortgage calculator", "loan payoff calculator with extra payments", "amortization schedule calculator", "compare loan options calculator"],
+    "keywords": [
+      "advanced loan calculator",
+      "loan analysis calculator",
+      "extra payment calculator",
+      "amortization calculator",
+      "loan comparison tool"
+    ],
+    "longTailKeywords": [
+      "how to calculate loan payments with extra payments",
+      "advanced mortgage calculator",
+      "loan payoff calculator with extra payments",
+      "amortization schedule calculator",
+      "compare loan options calculator"
+    ],
     "slug": "advanced-loan-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["loan", "mortgage", "amortization", "extra payments", "debt"],
+    "tags": [
+      "loan",
+      "mortgage",
+      "amortization",
+      "extra payments",
+      "debt"
+    ],
     "summary": "Advanced loan calculator with extra payment options, bi-weekly payments, and detailed amortization to help you save thousands on interest.",
     "description": "Our advanced loan calculator goes beyond basic calculations to help you optimize your loan strategy. Calculate the impact of extra payments, compare bi-weekly vs monthly payments, view detailed amortization schedules, and see exactly how to pay off your loan faster while saving significant interest costs.",
     "instructions": [
@@ -20,20 +38,92 @@
     "calculatorComponent": {
       "componentName": "AdvancedLoanCalculator",
       "inputs": [
-        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 250000, "min": 10000, "max": 2000000, "step": 5000 },
-        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 6.5, "min": 1, "max": 20, "step": 0.125 },
-        { "name": "loanTerm", "label": "Loan Term (years)", "type": "number", "default": 30, "min": 5, "max": 50, "step": 1 },
-        { "name": "downPayment", "label": "Down Payment ($)", "type": "number", "default": 50000, "min": 0, "max": 500000, "step": 1000 },
-        { "name": "extraPayment", "label": "Extra Monthly Payment ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 25 },
-        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 4800, "min": 0, "max": 25000, "step": 100 },
-        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1200, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "loanAmount",
+          "label": "Loan Amount ($)",
+          "type": "number",
+          "default": 250000,
+          "min": 10000,
+          "max": 2000000,
+          "step": 5000
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "default": 6.5,
+          "min": 1,
+          "max": 20,
+          "step": 0.125
+        },
+        {
+          "name": "loanTerm",
+          "label": "Loan Term (years)",
+          "type": "number",
+          "default": 30,
+          "min": 5,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "downPayment",
+          "label": "Down Payment ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 500000,
+          "step": 1000
+        },
+        {
+          "name": "extraPayment",
+          "label": "Extra Monthly Payment ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 5000,
+          "step": 25
+        },
+        {
+          "name": "propertyTax",
+          "label": "Annual Property Tax ($)",
+          "type": "number",
+          "default": 4800,
+          "min": 0,
+          "max": 25000,
+          "step": 100
+        },
+        {
+          "name": "homeInsurance",
+          "label": "Annual Home Insurance ($)",
+          "type": "number",
+          "default": 1200,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1] + Property Tax/12 + Insurance/12; Total Cost = Monthly Payment × n × 12",
-      "output": { "label": "Total Monthly Payment", "default": "Enter loan details above", "format": "currency" },
+      "output": {
+        "label": "Total Monthly Payment",
+        "default": "Enter loan details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Principal & Interest", "field": "principalInterest", "format": "currency" },
-        { "label": "Months Saved", "field": "monthsSaved", "format": "number" },
-        { "label": "Total Interest Paid", "field": "totalInterest", "format": "currency" }
+        {
+          "label": "Principal & Interest",
+          "field": "principalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Months Saved",
+          "field": "monthsSaved",
+          "format": "number"
+        },
+        {
+          "label": "Total Interest Paid",
+          "field": "totalInterest",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -48,7 +138,11 @@
         "output": "Payoff: 28.2 years, Interest saved: $45,678"
       }
     ],
-    "relatedCalculators": ["loan-calculator", "mortgage-calculator", "budget-calculator"],
+    "relatedCalculators": [
+      "loan-calculator",
+      "mortgage-calculator",
+      "budget-calculator"
+    ],
     "seoContent": {
       "introduction": "Take your loan planning to the next level with our advanced loan calculator that reveals the true power of strategic payments and accelerated payoff strategies. While basic calculators show standard monthly payments, our advanced tool demonstrates how extra payments, bi-weekly schedules, and smart payment timing can save you tens of thousands in interest while paying off loans years faster. Whether you're buying a home, consolidating debt, or managing business financing, understanding these advanced strategies can transform your financial future. Master the art of loan optimization and see exactly how small changes in payment strategy create massive long-term savings.",
       "benefits": [
@@ -119,18 +213,37 @@
           "answer": "Most loans allow increasing payment amounts or adding extras without penalty. However, some have prepayment restrictions or fees. Check your loan agreement for terms. You can often switch to bi-weekly payments if your lender offers it. If refinancing, you can choose a shorter term. Start with small increases and build up. Even $50-100 monthly extras significantly accelerate payoff and reduce total interest. Monitor your loan balance and adjust strategy annually."
         }
       ]
-    }
+    },
+    "component": "AdvancedLoanCalculator"
   },
   "es": {
     "title": "Calculadora Avanzada de Préstamos",
     "seoTitle": "Calculadora Avanzada de Préstamos - Análisis Detallado con Pagos Extra",
     "metaDescription": "Calculadora avanzada de préstamos con opciones de pagos extra, pagos quincenales y cronogramas de amortización detallados. Compara escenarios de préstamos y ahorra miles en intereses.",
-    "keywords": ["calculadora préstamos avanzada", "calculadora análisis préstamos", "calculadora pagos extra", "calculadora amortización", "herramienta comparación préstamos"],
-    "longTailKeywords": ["cómo calcular pagos préstamo con pagos extra", "calculadora hipoteca avanzada", "calculadora pago préstamo con pagos extra", "calculadora cronograma amortización", "calculadora comparar opciones préstamo"],
+    "keywords": [
+      "calculadora préstamos avanzada",
+      "calculadora análisis préstamos",
+      "calculadora pagos extra",
+      "calculadora amortización",
+      "herramienta comparación préstamos"
+    ],
+    "longTailKeywords": [
+      "cómo calcular pagos préstamo con pagos extra",
+      "calculadora hipoteca avanzada",
+      "calculadora pago préstamo con pagos extra",
+      "calculadora cronograma amortización",
+      "calculadora comparar opciones préstamo"
+    ],
     "slug": "advanced-loan-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["préstamo", "hipoteca", "amortización", "pagos extra", "deuda"],
+    "tags": [
+      "préstamo",
+      "hipoteca",
+      "amortización",
+      "pagos extra",
+      "deuda"
+    ],
     "summary": "Calculadora avanzada de préstamos con opciones de pagos extra, pagos quincenales y amortización detallada para ayudarte a ahorrar miles en intereses.",
     "description": "Nuestra calculadora avanzada de préstamos va más allá de los cálculos básicos para ayudarte a optimizar tu estrategia de préstamo. Calcula el impacto de pagos extra, compara pagos quincenales vs mensuales, ve cronogramas de amortización detallados y observa exactamente cómo pagar tu préstamo más rápido mientras ahorras costos significativos de intereses.",
     "instructions": [
@@ -142,20 +255,92 @@
     "calculatorComponent": {
       "componentName": "AdvancedLoanCalculator",
       "inputs": [
-        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 250000, "min": 10000, "max": 2000000, "step": 5000 },
-        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 6.5, "min": 1, "max": 20, "step": 0.125 },
-        { "name": "loanTerm", "label": "Loan Term (years)", "type": "number", "default": 30, "min": 5, "max": 50, "step": 1 },
-        { "name": "downPayment", "label": "Down Payment ($)", "type": "number", "default": 50000, "min": 0, "max": 500000, "step": 1000 },
-        { "name": "extraPayment", "label": "Extra Monthly Payment ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 25 },
-        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 4800, "min": 0, "max": 25000, "step": 100 },
-        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1200, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "loanAmount",
+          "label": "Loan Amount ($)",
+          "type": "number",
+          "default": 250000,
+          "min": 10000,
+          "max": 2000000,
+          "step": 5000
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "default": 6.5,
+          "min": 1,
+          "max": 20,
+          "step": 0.125
+        },
+        {
+          "name": "loanTerm",
+          "label": "Loan Term (years)",
+          "type": "number",
+          "default": 30,
+          "min": 5,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "downPayment",
+          "label": "Down Payment ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 500000,
+          "step": 1000
+        },
+        {
+          "name": "extraPayment",
+          "label": "Extra Monthly Payment ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 5000,
+          "step": 25
+        },
+        {
+          "name": "propertyTax",
+          "label": "Annual Property Tax ($)",
+          "type": "number",
+          "default": 4800,
+          "min": 0,
+          "max": 25000,
+          "step": 100
+        },
+        {
+          "name": "homeInsurance",
+          "label": "Annual Home Insurance ($)",
+          "type": "number",
+          "default": 1200,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1] + Property Tax/12 + Insurance/12; Total Cost = Monthly Payment × n × 12",
-      "output": { "label": "Total Monthly Payment", "default": "Enter loan details above", "format": "currency" },
+      "output": {
+        "label": "Total Monthly Payment",
+        "default": "Enter loan details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Principal & Interest", "field": "principalInterest", "format": "currency" },
-        { "label": "Months Saved", "field": "monthsSaved", "format": "number" },
-        { "label": "Total Interest Paid", "field": "totalInterest", "format": "currency" }
+        {
+          "label": "Principal & Interest",
+          "field": "principalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Months Saved",
+          "field": "monthsSaved",
+          "format": "number"
+        },
+        {
+          "label": "Total Interest Paid",
+          "field": "totalInterest",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -170,7 +355,11 @@
         "output": "Pago: 28.2 años, Intereses ahorrados: $45,678"
       }
     ],
-    "relatedCalculators": ["loan-calculator", "mortgage-calculator", "budget-calculator"],
+    "relatedCalculators": [
+      "loan-calculator",
+      "mortgage-calculator",
+      "budget-calculator"
+    ],
     "seoContent": {
       "introduction": "Lleva tu planificación de préstamos al siguiente nivel con nuestra calculadora avanzada de préstamos que revela el verdadero poder de pagos estratégicos y estrategias de pago acelerado. Mientras calculadoras básicas muestran pagos mensuales estándar, nuestra herramienta avanzada demuestra cómo pagos extra, cronogramas quincenales, y timing inteligente de pagos pueden ahorrarte decenas de miles en intereses mientras pagas préstamos años más rápido. Ya sea que compres una casa, consolides deuda, o manejes financiamiento comercial, entender estas estrategias avanzadas puede transformar tu futuro financiero. Domina el arte de optimización de préstamos y ve exactamente cómo pequeños cambios en estrategia de pago crean ahorros masivos a largo plazo.",
       "benefits": [
@@ -241,18 +430,37 @@
           "answer": "La mayoría de préstamos permiten aumentar montos de pago o agregar extras sin penalidad. Sin embargo, algunos tienen restricciones de prepago o tarifas. Verifica tu acuerdo de préstamo por términos. Puedes cambiar a pagos quincenales si tu prestamista lo ofrece. Si refinanciando, puedes elegir plazo más corto. Empieza con aumentos pequeños y construye. Incluso $50-100 extras mensuales aceleran significativamente pago y reducen intereses totales. Monitorea tu saldo de préstamo y ajusta estrategia anualmente."
         }
       ]
-    }
+    },
+    "component": "AdvancedLoanCalculator"
   },
   "pt": {
     "title": "Calculadora Avançada de Empréstimos",
     "seoTitle": "Calculadora Avançada de Empréstimos - Análise Detalhada com Pagamentos Extra",
     "metaDescription": "Calculadora avançada de empréstimos com opções de pagamentos extra, pagamentos quinzenais e cronogramas de amortização detalhados. Compare cenários de empréstimos e economize milhares em juros.",
-    "keywords": ["calculadora empréstimos avançada", "calculadora análise empréstimos", "calculadora pagamentos extra", "calculadora amortização", "ferramenta comparação empréstimos"],
-    "longTailKeywords": ["como calcular pagamentos empréstimo com pagamentos extra", "calculadora hipoteca avançada", "calculadora quitação empréstimo com pagamentos extra", "calculadora cronograma amortização", "calculadora comparar opções empréstimo"],
+    "keywords": [
+      "calculadora empréstimos avançada",
+      "calculadora análise empréstimos",
+      "calculadora pagamentos extra",
+      "calculadora amortização",
+      "ferramenta comparação empréstimos"
+    ],
+    "longTailKeywords": [
+      "como calcular pagamentos empréstimo com pagamentos extra",
+      "calculadora hipoteca avançada",
+      "calculadora quitação empréstimo com pagamentos extra",
+      "calculadora cronograma amortização",
+      "calculadora comparar opções empréstimo"
+    ],
     "slug": "advanced-loan-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["empréstimo", "hipoteca", "amortização", "pagamentos extra", "dívida"],
+    "tags": [
+      "empréstimo",
+      "hipoteca",
+      "amortização",
+      "pagamentos extra",
+      "dívida"
+    ],
     "summary": "Calculadora avançada de empréstimos com opções de pagamentos extra, pagamentos quinzenais e amortização detalhada para ajudá-lo a economizar milhares em juros.",
     "description": "Nossa calculadora avançada de empréstimos vai além dos cálculos básicos para ajudá-lo a otimizar sua estratégia de empréstimo. Calcule o impacto de pagamentos extra, compare pagamentos quinzenais vs mensais, veja cronogramas de amortização detalhados e observe exatamente como quitar seu empréstimo mais rápido enquanto economiza custos significativos de juros.",
     "instructions": [
@@ -264,20 +472,92 @@
     "calculatorComponent": {
       "componentName": "AdvancedLoanCalculator",
       "inputs": [
-        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 250000, "min": 10000, "max": 2000000, "step": 5000 },
-        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 6.5, "min": 1, "max": 20, "step": 0.125 },
-        { "name": "loanTerm", "label": "Loan Term (years)", "type": "number", "default": 30, "min": 5, "max": 50, "step": 1 },
-        { "name": "downPayment", "label": "Down Payment ($)", "type": "number", "default": 50000, "min": 0, "max": 500000, "step": 1000 },
-        { "name": "extraPayment", "label": "Extra Monthly Payment ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 25 },
-        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 4800, "min": 0, "max": 25000, "step": 100 },
-        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1200, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "loanAmount",
+          "label": "Loan Amount ($)",
+          "type": "number",
+          "default": 250000,
+          "min": 10000,
+          "max": 2000000,
+          "step": 5000
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "default": 6.5,
+          "min": 1,
+          "max": 20,
+          "step": 0.125
+        },
+        {
+          "name": "loanTerm",
+          "label": "Loan Term (years)",
+          "type": "number",
+          "default": 30,
+          "min": 5,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "downPayment",
+          "label": "Down Payment ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 500000,
+          "step": 1000
+        },
+        {
+          "name": "extraPayment",
+          "label": "Extra Monthly Payment ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 5000,
+          "step": 25
+        },
+        {
+          "name": "propertyTax",
+          "label": "Annual Property Tax ($)",
+          "type": "number",
+          "default": 4800,
+          "min": 0,
+          "max": 25000,
+          "step": 100
+        },
+        {
+          "name": "homeInsurance",
+          "label": "Annual Home Insurance ($)",
+          "type": "number",
+          "default": 1200,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1] + Property Tax/12 + Insurance/12; Total Cost = Monthly Payment × n × 12",
-      "output": { "label": "Total Monthly Payment", "default": "Enter loan details above", "format": "currency" },
+      "output": {
+        "label": "Total Monthly Payment",
+        "default": "Enter loan details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Principal & Interest", "field": "principalInterest", "format": "currency" },
-        { "label": "Months Saved", "field": "monthsSaved", "format": "number" },
-        { "label": "Total Interest Paid", "field": "totalInterest", "format": "currency" }
+        {
+          "label": "Principal & Interest",
+          "field": "principalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Months Saved",
+          "field": "monthsSaved",
+          "format": "number"
+        },
+        {
+          "label": "Total Interest Paid",
+          "field": "totalInterest",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -292,7 +572,11 @@
         "output": "Quitação: 28.2 anos, Juros economizados: $45,678"
       }
     ],
-    "relatedCalculators": ["loan-calculator", "mortgage-calculator", "budget-calculator"],
+    "relatedCalculators": [
+      "loan-calculator",
+      "mortgage-calculator",
+      "budget-calculator"
+    ],
     "seoContent": {
       "introduction": "Leve seu planejamento de empréstimo para o próximo nível com nossa calculadora avançada de empréstimo que revela o verdadeiro poder de pagamentos estratégicos e estratégias de quitação acelerada. Enquanto calculadoras básicas mostram pagamentos mensais padrão, nossa ferramenta avançada demonstra como pagamentos extra, cronogramas quinzenais, e timing inteligente de pagamentos podem economizar dezenas de milhares em juros enquanto quitam empréstimos anos mais rápido. Seja comprando uma casa, consolidando dívida, ou gerenciando financiamento comercial, entender estas estratégias avançadas pode transformar seu futuro financeiro. Domine a arte de otimização de empréstimo e veja exatamente como pequenas mudanças em estratégia de pagamento criam economias massivas de longo prazo.",
       "benefits": [
@@ -363,18 +647,37 @@
           "answer": "A maioria dos empréstimos permite aumentar valores de pagamento ou adicionar extras sem penalidade. No entanto, alguns têm restrições de pré-pagamento ou taxas. Verifique seu acordo de empréstimo por termos. Você pode mudar para pagamentos quinzenais se seu credor oferecer. Se refinanciando, você pode escolher prazo mais curto. Comece com aumentos pequenos e construa. Mesmo $50-100 extras mensais aceleram significativamente quitação e reduzem juros totais. Monitore seu saldo de empréstimo e ajuste estratégia anualmente."
         }
       ]
-    }
+    },
+    "component": "AdvancedLoanCalculator"
   },
   "fr": {
     "title": "Calculateur de Prêt Avancé",
     "seoTitle": "Calculateur de Prêt Avancé - Analyse Détaillée avec Paiements Supplémentaires",
     "metaDescription": "Calculateur de prêt avancé avec options de paiements supplémentaires, paiements bihebdomadaires et échéanciers d'amortissement détaillés. Comparez les scénarios de prêt et économisez des milliers en intérêts.",
-    "keywords": ["calculateur prêt avancé", "calculateur analyse prêt", "calculateur paiements supplémentaires", "calculateur amortissement", "outil comparaison prêt"],
-    "longTailKeywords": ["comment calculer paiements prêt avec paiements supplémentaires", "calculateur hypothèque avancé", "calculateur remboursement prêt avec paiements supplémentaires", "calculateur échéancier amortissement", "calculateur comparer options prêt"],
+    "keywords": [
+      "calculateur prêt avancé",
+      "calculateur analyse prêt",
+      "calculateur paiements supplémentaires",
+      "calculateur amortissement",
+      "outil comparaison prêt"
+    ],
+    "longTailKeywords": [
+      "comment calculer paiements prêt avec paiements supplémentaires",
+      "calculateur hypothèque avancé",
+      "calculateur remboursement prêt avec paiements supplémentaires",
+      "calculateur échéancier amortissement",
+      "calculateur comparer options prêt"
+    ],
     "slug": "advanced-loan-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["prêt", "hypothèque", "amortissement", "paiements supplémentaires", "dette"],
+    "tags": [
+      "prêt",
+      "hypothèque",
+      "amortissement",
+      "paiements supplémentaires",
+      "dette"
+    ],
     "summary": "Calculateur de prêt avancé avec options de paiements supplémentaires, paiements bihebdomadaires et amortissement détaillé pour vous aider à économiser des milliers en intérêts.",
     "description": "Notre calculateur de prêt avancé va au-delà des calculs de base pour vous aider à optimiser votre stratégie de prêt. Calculez l'impact des paiements supplémentaires, comparez les paiements bihebdomadaires vs mensuels, consultez les échéanciers d'amortissement détaillés et voyez exactement comment rembourser votre prêt plus rapidement tout en économisant des coûts d'intérêt significatifs.",
     "instructions": [
@@ -386,20 +689,92 @@
     "calculatorComponent": {
       "componentName": "AdvancedLoanCalculator",
       "inputs": [
-        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 250000, "min": 10000, "max": 2000000, "step": 5000 },
-        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 6.5, "min": 1, "max": 20, "step": 0.125 },
-        { "name": "loanTerm", "label": "Loan Term (years)", "type": "number", "default": 30, "min": 5, "max": 50, "step": 1 },
-        { "name": "downPayment", "label": "Down Payment ($)", "type": "number", "default": 50000, "min": 0, "max": 500000, "step": 1000 },
-        { "name": "extraPayment", "label": "Extra Monthly Payment ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 25 },
-        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 4800, "min": 0, "max": 25000, "step": 100 },
-        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1200, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "loanAmount",
+          "label": "Loan Amount ($)",
+          "type": "number",
+          "default": 250000,
+          "min": 10000,
+          "max": 2000000,
+          "step": 5000
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "default": 6.5,
+          "min": 1,
+          "max": 20,
+          "step": 0.125
+        },
+        {
+          "name": "loanTerm",
+          "label": "Loan Term (years)",
+          "type": "number",
+          "default": 30,
+          "min": 5,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "downPayment",
+          "label": "Down Payment ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 500000,
+          "step": 1000
+        },
+        {
+          "name": "extraPayment",
+          "label": "Extra Monthly Payment ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 5000,
+          "step": 25
+        },
+        {
+          "name": "propertyTax",
+          "label": "Annual Property Tax ($)",
+          "type": "number",
+          "default": 4800,
+          "min": 0,
+          "max": 25000,
+          "step": 100
+        },
+        {
+          "name": "homeInsurance",
+          "label": "Annual Home Insurance ($)",
+          "type": "number",
+          "default": 1200,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1] + Property Tax/12 + Insurance/12; Total Cost = Monthly Payment × n × 12",
-      "output": { "label": "Total Monthly Payment", "default": "Enter loan details above", "format": "currency" },
+      "output": {
+        "label": "Total Monthly Payment",
+        "default": "Enter loan details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Principal & Interest", "field": "principalInterest", "format": "currency" },
-        { "label": "Months Saved", "field": "monthsSaved", "format": "number" },
-        { "label": "Total Interest Paid", "field": "totalInterest", "format": "currency" }
+        {
+          "label": "Principal & Interest",
+          "field": "principalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Months Saved",
+          "field": "monthsSaved",
+          "format": "number"
+        },
+        {
+          "label": "Total Interest Paid",
+          "field": "totalInterest",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -414,7 +789,11 @@
         "output": "Remboursement: 28.2 ans, Intérêts économisés: $45,678"
       }
     ],
-    "relatedCalculators": ["loan-calculator", "mortgage-calculator", "budget-calculator"],
+    "relatedCalculators": [
+      "loan-calculator",
+      "mortgage-calculator",
+      "budget-calculator"
+    ],
     "seoContent": {
       "introduction": "Élevez votre planification de prêt au niveau supérieur avec notre calculatrice de prêt avancée qui révèle le vrai pouvoir des paiements stratégiques et stratégies de remboursement accéléré. Alors que les calculatrices de base montrent les paiements mensuels standard, notre outil avancé démontre comment paiements supplémentaires, calendriers bihebdomadaires, et timing intelligent de paiements peuvent vous sauver des dizaines de milliers en intérêts tout remboursant prêts des années plus rapidement. Que vous achetiez une maison, consolidiez dettes, ou gériez financement commercial, comprendre ces stratégies avancées peut transformer votre avenir financier. Maîtrisez l'art d'optimisation de prêt et voyez exactement comment petits changements en stratégie de paiement créent économies massives long terme.",
       "benefits": [
@@ -485,6 +864,7 @@
           "answer": "La plupart prêts permettent augmenter montants paiement ou ajouter suppléments sans pénalité. Cependant, certains ont restrictions prépaiement ou frais. Vérifiez votre accord prêt pour termes. Vous pouvez souvent basculer à paiements bihebdomadaires si votre prêteur l'offre. Si refinançant, vous pouvez choisir terme plus court. Commencez avec augmentations petites et construisez. Même $50-100 suppléments mensuels accélèrent considérablement remboursement et réduisent intérêts totaux. Surveillez votre solde prêt et ajustez stratégie annuellement."
         }
       ]
-    }
+    },
+    "component": "AdvancedLoanCalculator"
   }
 }

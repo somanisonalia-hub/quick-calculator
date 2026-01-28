@@ -14,11 +14,11 @@ const translations = {
       fr: 'French'
     },
     menu: {
-      financial: 'Financial',
-      health: 'Health',
-      math: 'Math',
-      utility: 'Utility',
-      lifestyle: 'Lifestyle'
+      financial: '💰 Financial',
+      health: '🏥 Health',
+      math: '🧮 Math',
+      utility: '🛠️ Utility',
+      lifestyle: '🏠 Lifestyle'
     }
   },
   es: {
@@ -29,11 +29,11 @@ const translations = {
       fr: 'Francés'
     },
     menu: {
-      financial: 'Financiero',
-      health: 'Salud',
-      math: 'Matemáticas',
-      utility: 'Utilidad',
-      lifestyle: 'Estilo de Vida'
+      financial: '💰 Financiero',
+      health: '🏥 Salud',
+      math: '🧮 Matemáticas',
+      utility: '🛠️ Utilidad',
+      lifestyle: '🏠 Estilo de Vida'
     }
   },
   pt: {
@@ -44,11 +44,11 @@ const translations = {
       fr: 'Francês'
     },
     menu: {
-      financial: 'Financeiro',
-      health: 'Saúde',
-      math: 'Matemática',
-      utility: 'Utilitário',
-      lifestyle: 'Estilo de Vida'
+      financial: '💰 Financeiro',
+      health: '🏥 Saúde',
+      math: '🧮 Matemática',
+      utility: '🛠️ Utilitário',
+      lifestyle: '🏠 Estilo de Vida'
     }
   },
   fr: {
@@ -59,11 +59,11 @@ const translations = {
       fr: 'Français'
     },
     menu: {
-      financial: 'Financier',
-      health: 'Santé',
-      math: 'Mathématiques',
-      utility: 'Utilitaire',
-      lifestyle: 'Style de Vie'
+      financial: '💰 Financier',
+      health: '🏥 Santé',
+      math: '🧮 Mathématiques',
+      utility: '🛠️ Utilitaire',
+      lifestyle: '🏠 Style de Vie'
     }
   }
 };
@@ -109,22 +109,25 @@ export default function Header({ currentLang = 'en', showLanguageSwitcher = true
 
           {/* Language Switcher */}
           {showLanguageSwitcher && (
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-1">
               {[
-                { code: 'en', name: t.languageNames.en, flag: '🇺🇸' }
+                { code: 'en', name: t.languageNames.en, flag: '🇺🇸' },
+                { code: 'es', name: t.languageNames.es, flag: '🇪🇸' },
+                { code: 'pt', name: t.languageNames.pt, flag: '🇵🇹' },
+                { code: 'fr', name: t.languageNames.fr, flag: '🇫🇷' }
               ].map((lang) => (
                 <a
                   key={lang.code}
                   href={lang.code === 'en' ? '/' : `/${lang.code}/`}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center space-x-1 px-2 py-1.5 rounded-md text-sm font-medium transition-colors ${
                     currentLang === lang.code
                       ? 'bg-blue-100 text-blue-700'
                       : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
                   }`}
                   title={lang.name}
                 >
-                  <span>{lang.flag}</span>
-                  <span className="hidden sm:inline">{lang.code.toUpperCase()}</span>
+                  <span className="text-base">{lang.flag}</span>
+                  <span className="hidden sm:inline text-xs">{lang.code.toUpperCase()}</span>
                 </a>
               ))}
             </div>

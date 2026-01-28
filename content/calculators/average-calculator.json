@@ -21,7 +21,12 @@
     "category": "math",
     "calculatorComponent": "AverageCalculator",
     "difficulty": "basic",
-    "tags": ["average", "mean", "arithmetic", "statistics"],
+    "tags": [
+      "average",
+      "mean",
+      "arithmetic",
+      "statistics"
+    ],
     "summary": "Calculate the arithmetic mean (average) of a list of numbers quickly and easily.",
     "description": "Use our average calculator to find the arithmetic mean of any set of numbers. Simply enter your values and get the average instantly. Perfect for students, teachers, and anyone needing to calculate averages.",
     "instructions": [
@@ -35,7 +40,11 @@
       "Find average monthly expenses: 1200, 1350, 1100, 1280, 1420",
       "Average test scores: 87, 91, 84, 96, 89, 93"
     ],
-    "relatedCalculators": ["mean-median-mode-calculator", "percentage-calculator", "grade-calculator"],
+    "relatedCalculators": [
+      "mean-median-mode-calculator",
+      "percentage-calculator",
+      "grade-calculator"
+    ],
     "seoContent": {
       "introduction": "Our average calculator makes it easy to find the arithmetic mean of any set of numbers. Whether you're calculating grades, expenses, test scores, or any other numerical data, this tool provides instant results with clear explanations.",
       "benefits": [
@@ -83,7 +92,8 @@
           "answer": "Yes, the calculator accepts decimal numbers. For example, you can enter 85.5, 92.3, 78.8, etc."
         }
       ]
-    }
+    },
+    "component": "AverageCalculator"
   },
   "es": {
     "title": "Calculadora de Promedio",
@@ -107,7 +117,12 @@
     "category": "math",
     "calculatorComponent": "AverageCalculator",
     "difficulty": "basic",
-    "tags": ["promedio", "media", "aritmética", "estadística"],
+    "tags": [
+      "promedio",
+      "media",
+      "aritmética",
+      "estadística"
+    ],
     "summary": "Calcula la media aritmética (promedio) de una lista de números de forma rápida y sencilla.",
     "description": "Usa nuestra calculadora de promedio para encontrar la media aritmética de cualquier conjunto de números. Simplemente ingresa tus valores y obtén el promedio al instante.",
     "instructions": [
@@ -121,7 +136,11 @@
       "Encontrar promedio de gastos mensuales: 1200, 1350, 1100, 1280, 1420",
       "Promedio de puntajes de exámenes: 87, 91, 84, 96, 89, 93"
     ],
-    "relatedCalculators": ["mean-median-mode-calculator", "percentage-calculator", "grade-calculator"],
+    "relatedCalculators": [
+      "mean-median-mode-calculator",
+      "percentage-calculator",
+      "grade-calculator"
+    ],
     "seoContent": {
       "introduction": "Nuestra calculadora de promedio facilita encontrar la media aritmética de cualquier conjunto de números. Ya sea calculando calificaciones, gastos, puntajes de exámenes o cualquier otro dato numérico, esta herramienta proporciona resultados instantáneos con explicaciones claras.",
       "benefits": [
@@ -169,7 +188,8 @@
           "answer": "Sí, la calculadora acepta números decimales. Por ejemplo, puedes ingresar 85.5, 92.3, 78.8, etc."
         }
       ]
-    }
+    },
+    "component": "AverageCalculator"
   },
   "pt": {
     "title": "Calculadora de Média",
@@ -193,7 +213,12 @@
     "category": "math",
     "calculatorComponent": "AverageCalculator",
     "difficulty": "basic",
-    "tags": ["média", "média", "aritmética", "estatística"],
+    "tags": [
+      "média",
+      "média",
+      "aritmética",
+      "estatística"
+    ],
     "summary": "Calcule a média aritmética (média) de uma lista de números de forma rápida e fácil.",
     "description": "Use nossa calculadora de média para encontrar a média aritmética de qualquer conjunto de números. Simplesmente digite seus valores e obtenha a média instantaneamente.",
     "instructions": [
@@ -207,7 +232,11 @@
       "Encontrar média de despesas mensais: 1200, 1350, 1100, 1280, 1420",
       "Média das pontuações dos testes: 87, 91, 84, 96, 89, 93"
     ],
-    "relatedCalculators": ["mean-median-mode-calculator", "percentage-calculator", "grade-calculator"],
+    "relatedCalculators": [
+      "mean-median-mode-calculator",
+      "percentage-calculator",
+      "grade-calculator"
+    ],
     "seoContent": {
       "introduction": "Nossa calculadora de média facilita encontrar a média aritmética de qualquer conjunto de números. Seja calculando notas, despesas, pontuações de testes ou qualquer outro dado numérico, esta ferramenta fornece resultados instantâneos com explicações claras.",
       "benefits": [
@@ -255,7 +284,8 @@
           "answer": "Sim, a calculadora aceita números decimais. Por exemplo, você pode digitar 85.5, 92.3, 78.8, etc."
         }
       ]
-    }
+    },
+    "component": "AverageCalculator"
   },
   "fr": {
     "title": "Calculateur de Moyenne",
@@ -279,7 +309,12 @@
     "category": "math",
     "calculatorComponent": "AverageCalculator",
     "difficulty": "basic",
-    "tags": ["moyenne", "moyenne", "arithmétique", "statistiques"],
+    "tags": [
+      "moyenne",
+      "moyenne",
+      "arithmétique",
+      "statistiques"
+    ],
     "summary": "Calculez la moyenne arithmétique (moyenne) d'une liste de nombres rapidement et facilement.",
     "description": "Utilisez notre calculateur de moyenne pour trouver la moyenne arithmétique de n'importe quel ensemble de nombres. Saisissez simplement vos valeurs et obtenez la moyenne instantanément.",
     "instructions": [
@@ -293,7 +328,11 @@
       "Trouver la moyenne des dépenses mensuelles: 1200, 1350, 1100, 1280, 1420",
       "Moyenne des scores de test: 87, 91, 84, 96, 89, 93"
     ],
-    "relatedCalculators": ["mean-median-mode-calculator", "percentage-calculator", "grade-calculator"],
+    "relatedCalculators": [
+      "mean-median-mode-calculator",
+      "percentage-calculator",
+      "grade-calculator"
+    ],
     "seoContent": {
       "introduction": "Notre calculateur de moyenne facilite la recherche de la moyenne arithmétique de n'importe quel ensemble de nombres. Que vous calculiez des notes, des dépenses, des scores de test ou toute autre donnée numérique, cet outil fournit des résultats instantanés avec des explications claires.",
       "benefits": [
@@ -341,6 +380,7 @@
           "answer": "Oui, la calculatrice accepte les nombres décimaux. Par exemple, vous pouvez saisir 85.5, 92.3, 78.8, etc."
         }
       ]
-    }
+    },
+    "component": "AverageCalculator"
   }
 }

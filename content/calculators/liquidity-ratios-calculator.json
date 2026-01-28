@@ -103,7 +103,6 @@
       "disclaimer": "Liquidity ratios should be analyzed alongside other financial metrics. Seasonal businesses may show different patterns. Industry norms vary significantly. Consult financial professionals for comprehensive analysis.",
       "relatedTools": [
         "debt-ratios-calculator",
-        
         "operations-ratios-calculator",
         "financial-ratios-calculator"
       ],
@@ -125,7 +124,8 @@
           "answer": "Lenders use liquidity ratios to assess repayment ability. Higher ratios suggest lower credit risk, while lower ratios may result in higher interest rates or credit denial."
         }
       ]
-    }
+    },
+    "component": "LiquidityRatiosCalculator"
   },
   "es": {
     "title": "Calculadora de Ratios de Liquidez",
@@ -231,7 +231,6 @@
       "disclaimer": "Los ratios de liquidez deben analizarse junto con otras métricas financieras. Empresas estacionales pueden mostrar patrones diferentes. Normas de industria varían significativamente. Consulta profesionales financieros para análisis comprehensivo.",
       "relatedTools": [
         "debt-ratios-calculator",
-        
         "operations-ratios-calculator",
         "financial-ratios-calculator"
       ],
@@ -253,7 +252,8 @@
           "answer": "Los prestamistas usan ratios de liquidez para evaluar capacidad de pago. Ratios más altos sugieren riesgo de crédito menor, mientras que ratios más bajos pueden resultar en tasas de interés más altas o denegación de crédito."
         }
       ]
-    }
+    },
+    "component": "LiquidityRatiosCalculator"
   },
   "pt": {
     "title": "Calculadora de Índices de Liquidez",
@@ -359,7 +359,6 @@
       "disclaimer": "Índices de liquidez devem ser analisados junto com outras métricas financeiras. Empresas sazonais podem mostrar padrões diferentes. Normas de indústria variam significativamente. Consulte profissionais financeiros para análise comprehensiva.",
       "relatedTools": [
         "debt-ratios-calculator",
-        
         "operations-ratios-calculator",
         "financial-ratios-calculator"
       ],
@@ -381,7 +380,8 @@
           "answer": "Credores usam índices de liquidez para avaliar capacidade de pagamento. Índices mais altos sugerem risco de crédito menor, enquanto índices mais baixos podem resultar em taxas de juros mais altas ou negação de crédito."
         }
       ]
-    }
+    },
+    "component": "LiquidityRatiosCalculator"
   },
   "fr": {
     "title": "Calculateur de Ratios de Liquidité",
@@ -487,7 +487,6 @@
       "disclaimer": "Les ratios de liquidité devraient être analysés aux côtés d'autres métriques financières. Les entreprises saisonnières peuvent montrer différents patterns. Les normes d'industrie varient significativement. Consultez professionnels financiers pour analyse complète.",
       "relatedTools": [
         "debt-ratios-calculator",
-        
         "operations-ratios-calculator",
         "financial-ratios-calculator"
       ],
@@ -509,6 +508,7 @@
           "answer": "Les prêteurs utilisent les ratios de liquidité pour évaluer capacité de remboursement. Des ratios plus élevés suggèrent risque de crédit moindre, tandis que des ratios plus bas peuvent entraîner des taux d'intérêt plus élevés ou refus de crédit."
         }
       ]
-    }
+    },
+    "component": "LiquidityRatiosCalculator"
   }
 }

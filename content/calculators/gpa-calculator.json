@@ -3,12 +3,30 @@
     "title": "GPA Calculator",
     "seoTitle": "GPA Calculator - Calculate Grade Point Average Online",
     "metaDescription": "Free GPA calculator for students. Calculate semester and cumulative GPA with different grading scales. Perfect for college and high school students tracking academic performance.",
-    "keywords": ["GPA calculator", "grade point average calculator", "academic calculator", "student calculator", "grade calculator"],
-    "longTailKeywords": ["how to calculate GPA", "college GPA calculator", "high school GPA calculator", "weighted GPA calculator", "cumulative GPA calculator"],
+    "keywords": [
+      "GPA calculator",
+      "grade point average calculator",
+      "academic calculator",
+      "student calculator",
+      "grade calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate GPA",
+      "college GPA calculator",
+      "high school GPA calculator",
+      "weighted GPA calculator",
+      "cumulative GPA calculator"
+    ],
     "slug": "gpa-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["education", "grades", "academic", "students", "college"],
+    "tags": [
+      "education",
+      "grades",
+      "academic",
+      "students",
+      "college"
+    ],
     "summary": "Calculate your GPA instantly with support for different grading scales and weighted/unweighted calculations.",
     "description": "Our comprehensive GPA calculator helps students calculate their Grade Point Average for individual semesters or cumulative academic performance. Supports multiple grading scales (4.0, 5.0, 12.0) and both weighted and unweighted calculations. Perfect for high school and college students planning their academic future.",
     "instructions": [
@@ -20,18 +38,75 @@
     "calculatorComponent": {
       "componentName": "GPACalculator",
       "inputs": [
-        { "name": "gradingScale", "label": "Grading Scale", "type": "select", "default": "4.0", "options": ["4.0", "5.0"] },
-        { "name": "grades", "label": "Add Course Grades", "type": "dynamic", "default": [], "fields": [
-          { "name": "grade", "label": "Grade", "type": "select", "options": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"] },
-          { "name": "credits", "label": "Credits", "type": "number", "min": 0.5, "max": 6, "step": 0.5 }
-        ]}
+        {
+          "name": "gradingScale",
+          "label": "Grading Scale",
+          "type": "select",
+          "default": "4.0",
+          "options": [
+            "4.0",
+            "5.0"
+          ]
+        },
+        {
+          "name": "grades",
+          "label": "Add Course Grades",
+          "type": "dynamic",
+          "default": [],
+          "fields": [
+            {
+              "name": "grade",
+              "label": "Grade",
+              "type": "select",
+              "options": [
+                "A+",
+                "A",
+                "A-",
+                "B+",
+                "B",
+                "B-",
+                "C+",
+                "C",
+                "C-",
+                "D+",
+                "D",
+                "D-",
+                "F"
+              ]
+            },
+            {
+              "name": "credits",
+              "label": "Credits",
+              "type": "number",
+              "min": 0.5,
+              "max": 6,
+              "step": 0.5
+            }
+          ]
+        }
       ],
       "formula": "GPA = (Sum of grade points × credits) ÷ Total credits",
-      "output": { "label": "Your GPA", "default": "Add courses above to calculate GPA", "format": "number" },
+      "output": {
+        "label": "Your GPA",
+        "default": "Add courses above to calculate GPA",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Total Credits", "field": "totalCredits", "format": "number" },
-        { "label": "Grade Classification", "field": "classification", "format": "text" },
-        { "label": "Letter Grade Equivalent", "field": "letterGrade", "format": "text" }
+        {
+          "label": "Total Credits",
+          "field": "totalCredits",
+          "format": "number"
+        },
+        {
+          "label": "Grade Classification",
+          "field": "classification",
+          "format": "text"
+        },
+        {
+          "label": "Letter Grade Equivalent",
+          "field": "letterGrade",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -46,7 +121,11 @@
         "output": "Weighted GPA: 4.25 (5.0 scale)"
       }
     ],
-    "relatedCalculators": ["percent-calculator", "percentage-change-calculator", "mean-median-mode-calculator"],
+    "relatedCalculators": [
+      "percent-calculator",
+      "percentage-change-calculator",
+      "mean-median-mode-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculate your GPA instantly with support for different grading scales and weighted/unweighted calculations. This comprehensive tool helps students, educators, and academic professionals track and calculate grade point averages with precision and ease. Whether you're a high school student planning your college applications, a college student monitoring your academic progress, or an educator helping students understand their performance, this GPA calculator provides accurate calculations based on standard grading systems. The tool supports multiple grading scales and both weighted and unweighted calculations, making it suitable for different educational institutions and academic requirements.",
       "benefits": [
@@ -109,18 +188,37 @@
           "answer": "The calculator handles conversion automatically: A/A+ = 4.0/4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0.0. For weighted scales, honors courses add 1.0 point (A in AP = 5.0). Just enter your letter grades - the calculator does the math for you."
         }
       ]
-    }
+    },
+    "component": "GPACalculator"
   },
   "es": {
     "title": "Calculadora de GPA",
     "seoTitle": "Calculadora de GPA - Calcula el Promedio de Calificaciones en Línea",
     "metaDescription": "Calculadora de GPA gratuita para estudiantes. Calcula GPA semestral y acumulado con diferentes escalas de calificación. Perfecta para estudiantes universitarios y de secundaria rastreando rendimiento académico.",
-    "keywords": ["calculadora GPA", "calculadora promedio calificaciones", "calculadora académica", "calculadora estudiante", "calculadora calificaciones"],
-    "longTailKeywords": ["cómo calcular GPA", "calculadora GPA universidad", "calculadora GPA secundaria", "calculadora GPA ponderado", "calculadora GPA acumulado"],
+    "keywords": [
+      "calculadora GPA",
+      "calculadora promedio calificaciones",
+      "calculadora académica",
+      "calculadora estudiante",
+      "calculadora calificaciones"
+    ],
+    "longTailKeywords": [
+      "cómo calcular GPA",
+      "calculadora GPA universidad",
+      "calculadora GPA secundaria",
+      "calculadora GPA ponderado",
+      "calculadora GPA acumulado"
+    ],
     "slug": "gpa-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["educación", "calificaciones", "académico", "estudiantes", "universidad"],
+    "tags": [
+      "educación",
+      "calificaciones",
+      "académico",
+      "estudiantes",
+      "universidad"
+    ],
     "summary": "Calcula tu GPA al instante con soporte para diferentes escalas de calificación y cálculos ponderados/no ponderados.",
     "description": "Nuestra completa calculadora de GPA ayuda a los estudiantes a calcular su Promedio de Calificaciones para semestres individuales o rendimiento académico acumulado. Soporta múltiples escalas de calificación (4.0, 5.0, 12.0) y cálculos tanto ponderados como no ponderados. Perfecta para estudiantes de secundaria y universidad planificando su futuro académico.",
     "instructions": [
@@ -132,18 +230,75 @@
     "calculatorComponent": {
       "componentName": "GPACalculator",
       "inputs": [
-        { "name": "gradingScale", "label": "Grading Scale", "type": "select", "default": "4.0", "options": ["4.0", "5.0"] },
-        { "name": "grades", "label": "Add Course Grades", "type": "dynamic", "default": [], "fields": [
-          { "name": "grade", "label": "Grade", "type": "select", "options": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"] },
-          { "name": "credits", "label": "Credits", "type": "number", "min": 0.5, "max": 6, "step": 0.5 }
-        ]}
+        {
+          "name": "gradingScale",
+          "label": "Grading Scale",
+          "type": "select",
+          "default": "4.0",
+          "options": [
+            "4.0",
+            "5.0"
+          ]
+        },
+        {
+          "name": "grades",
+          "label": "Add Course Grades",
+          "type": "dynamic",
+          "default": [],
+          "fields": [
+            {
+              "name": "grade",
+              "label": "Grade",
+              "type": "select",
+              "options": [
+                "A+",
+                "A",
+                "A-",
+                "B+",
+                "B",
+                "B-",
+                "C+",
+                "C",
+                "C-",
+                "D+",
+                "D",
+                "D-",
+                "F"
+              ]
+            },
+            {
+              "name": "credits",
+              "label": "Credits",
+              "type": "number",
+              "min": 0.5,
+              "max": 6,
+              "step": 0.5
+            }
+          ]
+        }
       ],
       "formula": "GPA = (Sum of grade points × credits) ÷ Total credits",
-      "output": { "label": "Your GPA", "default": "Add courses above to calculate GPA", "format": "number" },
+      "output": {
+        "label": "Your GPA",
+        "default": "Add courses above to calculate GPA",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Total Credits", "field": "totalCredits", "format": "number" },
-        { "label": "Grade Classification", "field": "classification", "format": "text" },
-        { "label": "Letter Grade Equivalent", "field": "letterGrade", "format": "text" }
+        {
+          "label": "Total Credits",
+          "field": "totalCredits",
+          "format": "number"
+        },
+        {
+          "label": "Grade Classification",
+          "field": "classification",
+          "format": "text"
+        },
+        {
+          "label": "Letter Grade Equivalent",
+          "field": "letterGrade",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -158,7 +313,11 @@
         "output": "GPA Ponderado: 4.25 (escala 5.0)"
       }
     ],
-    "relatedCalculators": ["percent-calculator", "percentage-change-calculator", "mean-median-mode-calculator"],
+    "relatedCalculators": [
+      "percent-calculator",
+      "percentage-change-calculator",
+      "mean-median-mode-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcule su GPA al instante con soporte para diferentes escalas de calificación y cálculos ponderados/no ponderados. Nuestra completa calculadora de GPA ayuda a los estudiantes a calcular su Promedio de Calificaciones para semestres individuales o rendimiento académico acumulado. Soporta múltiples escalas de calificación (4.0, 5.0, 12.0) y cálculos tanto ponderados como no ponderados. Perfecta para estudiantes de secundaria y universidad planificando su futuro académico. Esta herramienta integral ayuda a estudiantes, educadores y profesionales académicos a rastrear y calcular promedios de calificaciones con precisión y facilidad. Ya sea que sea un estudiante de secundaria preparando solicitudes universitarias, un estudiante universitario monitoreando su progreso académico, o un educador ayudando a estudiantes a entender su rendimiento, esta calculadora de GPA proporciona cálculos precisos basados en sistemas de calificación estándar. La herramienta soporta múltiples escalas de calificación y cálculos tanto ponderados como no ponderados, haciéndola adecuada para diferentes instituciones educativas y requisitos académicos.",
       "benefits": [
@@ -221,18 +380,37 @@
           "answer": "La calculadora maneja la conversión automáticamente: A/A+ = 4.0/4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0.0. Para escalas ponderadas, los cursos de honores agregan 1.0 punto (A en AP = 5.0). Solo ingresa tus letras de calificación - la calculadora hace las matemáticas por ti."
         }
       ]
-    }
+    },
+    "component": "GPACalculator"
   },
   "pt": {
     "title": "Calculadora de GPA",
     "seoTitle": "Calculadora de GPA - Calcule a Média de Notas Online",
     "metaDescription": "Calculadora de GPA gratuita para estudantes. Calcule GPA semestral e acumulado com diferentes escalas de notas. Perfeita para estudantes universitários e do ensino médio acompanhando desempenho acadêmico.",
-    "keywords": ["calculadora GPA", "calculadora média notas", "calculadora acadêmica", "calculadora estudante", "calculadora notas"],
-    "longTailKeywords": ["como calcular GPA", "calculadora GPA faculdade", "calculadora GPA ensino médio", "calculadora GPA ponderado", "calculadora GPA acumulado"],
+    "keywords": [
+      "calculadora GPA",
+      "calculadora média notas",
+      "calculadora acadêmica",
+      "calculadora estudante",
+      "calculadora notas"
+    ],
+    "longTailKeywords": [
+      "como calcular GPA",
+      "calculadora GPA faculdade",
+      "calculadora GPA ensino médio",
+      "calculadora GPA ponderado",
+      "calculadora GPA acumulado"
+    ],
     "slug": "gpa-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["educação", "notas", "acadêmico", "estudantes", "faculdade"],
+    "tags": [
+      "educação",
+      "notas",
+      "acadêmico",
+      "estudantes",
+      "faculdade"
+    ],
     "summary": "Calcule seu GPA instantaneamente com suporte para diferentes escalas de notas e cálculos ponderados/não ponderados.",
     "description": "Nossa calculadora completa de GPA ajuda estudantes a calcular sua Média de Notas para semestres individuais ou desempenho acadêmico acumulado. Suporta múltiplas escalas de notas (4.0, 5.0, 12.0) e cálculos tanto ponderados quanto não ponderados. Perfeita para estudantes do ensino médio e faculdade planejando seu futuro acadêmico.",
     "instructions": [
@@ -244,18 +422,75 @@
     "calculatorComponent": {
       "componentName": "GPACalculator",
       "inputs": [
-        { "name": "gradingScale", "label": "Grading Scale", "type": "select", "default": "4.0", "options": ["4.0", "5.0"] },
-        { "name": "grades", "label": "Add Course Grades", "type": "dynamic", "default": [], "fields": [
-          { "name": "grade", "label": "Grade", "type": "select", "options": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"] },
-          { "name": "credits", "label": "Credits", "type": "number", "min": 0.5, "max": 6, "step": 0.5 }
-        ]}
+        {
+          "name": "gradingScale",
+          "label": "Grading Scale",
+          "type": "select",
+          "default": "4.0",
+          "options": [
+            "4.0",
+            "5.0"
+          ]
+        },
+        {
+          "name": "grades",
+          "label": "Add Course Grades",
+          "type": "dynamic",
+          "default": [],
+          "fields": [
+            {
+              "name": "grade",
+              "label": "Grade",
+              "type": "select",
+              "options": [
+                "A+",
+                "A",
+                "A-",
+                "B+",
+                "B",
+                "B-",
+                "C+",
+                "C",
+                "C-",
+                "D+",
+                "D",
+                "D-",
+                "F"
+              ]
+            },
+            {
+              "name": "credits",
+              "label": "Credits",
+              "type": "number",
+              "min": 0.5,
+              "max": 6,
+              "step": 0.5
+            }
+          ]
+        }
       ],
       "formula": "GPA = (Sum of grade points × credits) ÷ Total credits",
-      "output": { "label": "Your GPA", "default": "Add courses above to calculate GPA", "format": "number" },
+      "output": {
+        "label": "Your GPA",
+        "default": "Add courses above to calculate GPA",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Total Credits", "field": "totalCredits", "format": "number" },
-        { "label": "Grade Classification", "field": "classification", "format": "text" },
-        { "label": "Letter Grade Equivalent", "field": "letterGrade", "format": "text" }
+        {
+          "label": "Total Credits",
+          "field": "totalCredits",
+          "format": "number"
+        },
+        {
+          "label": "Grade Classification",
+          "field": "classification",
+          "format": "text"
+        },
+        {
+          "label": "Letter Grade Equivalent",
+          "field": "letterGrade",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -270,7 +505,11 @@
         "output": "GPA Ponderado: 4.25 (escala 5.0)"
       }
     ],
-    "relatedCalculators": ["percent-calculator", "percentage-change-calculator", "mean-median-mode-calculator"],
+    "relatedCalculators": [
+      "percent-calculator",
+      "percentage-change-calculator",
+      "mean-median-mode-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcule seu GPA instantaneamente com suporte para diferentes escalas de classificação e cálculos ponderados/não ponderados. Nossa completa calculadora de GPA ajuda estudantes a calcular sua Média de Pontos de Qualidade para semestres individuais ou desempenho acadêmico acumulado. Suporta múltiplas escalas de classificação (4.0, 5.0, 12.0) e cálculos tanto ponderados quanto não ponderados. Perfeita para estudantes do ensino médio e universitários planejando seu futuro acadêmico. Esta ferramenta abrangente ajuda estudantes, educadores e profissionais acadêmicos a rastrear e calcular médias de pontos de qualidade com precisão e facilidade. Seja você um estudante do ensino médio preparando aplicações universitárias, um estudante universitário monitorando seu progresso acadêmico, ou um educador ajudando estudantes a entender seu desempenho, esta calculadora de GPA fornece cálculos precisos baseados em sistemas de classificação padrão. A ferramenta suporta múltiplas escalas de classificação e cálculos tanto ponderados quanto não ponderados, tornando-a adequada para diferentes instituições educacionais e requisitos acadêmicos.",
       "benefits": [
@@ -333,18 +572,37 @@
           "answer": "A calculadora lida com conversão automaticamente: A/A+ = 4.0/4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0.0. Para escalas ponderadas, cursos de honras adicionam 1.0 ponto (A em AP = 5.0). Apenas insira suas letras de nota - a calculadora faz as contas para você."
         }
       ]
-    }
+    },
+    "component": "GPACalculator"
   },
   "fr": {
     "title": "Calculateur de GPA",
     "seoTitle": "Calculateur de GPA - Calculez la Moyenne Générale en Ligne",
     "metaDescription": "Calculateur de GPA gratuit pour étudiants. Calculez le GPA semestriel et cumulé avec différentes échelles de notation. Parfait pour les étudiants du collège et lycée suivant leurs performances académiques.",
-    "keywords": ["calculateur GPA", "calculateur moyenne générale", "calculateur académique", "calculateur étudiant", "calculateur notes"],
-    "longTailKeywords": ["comment calculer GPA", "calculateur GPA université", "calculateur GPA lycée", "calculateur GPA pondéré", "calculateur GPA cumulé"],
+    "keywords": [
+      "calculateur GPA",
+      "calculateur moyenne générale",
+      "calculateur académique",
+      "calculateur étudiant",
+      "calculateur notes"
+    ],
+    "longTailKeywords": [
+      "comment calculer GPA",
+      "calculateur GPA université",
+      "calculateur GPA lycée",
+      "calculateur GPA pondéré",
+      "calculateur GPA cumulé"
+    ],
     "slug": "gpa-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["éducation", "notes", "académique", "étudiants", "université"],
+    "tags": [
+      "éducation",
+      "notes",
+      "académique",
+      "étudiants",
+      "université"
+    ],
     "summary": "Calculez votre GPA instantanément avec support pour différentes échelles de notation et calculs pondérés/non pondérés.",
     "description": "Notre calculateur complet de GPA aide les étudiants à calculer leur Moyenne Générale pour des semestres individuels ou des performances académiques cumulées. Supporte plusieurs échelles de notation (4.0, 5.0, 12.0) et calculs pondérés et non pondérés. Parfait pour les étudiants du lycée et université planifiant leur avenir académique.",
     "instructions": [
@@ -356,18 +614,75 @@
     "calculatorComponent": {
       "componentName": "GPACalculator",
       "inputs": [
-        { "name": "gradingScale", "label": "Grading Scale", "type": "select", "default": "4.0", "options": ["4.0", "5.0"] },
-        { "name": "grades", "label": "Add Course Grades", "type": "dynamic", "default": [], "fields": [
-          { "name": "grade", "label": "Grade", "type": "select", "options": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"] },
-          { "name": "credits", "label": "Credits", "type": "number", "min": 0.5, "max": 6, "step": 0.5 }
-        ]}
+        {
+          "name": "gradingScale",
+          "label": "Grading Scale",
+          "type": "select",
+          "default": "4.0",
+          "options": [
+            "4.0",
+            "5.0"
+          ]
+        },
+        {
+          "name": "grades",
+          "label": "Add Course Grades",
+          "type": "dynamic",
+          "default": [],
+          "fields": [
+            {
+              "name": "grade",
+              "label": "Grade",
+              "type": "select",
+              "options": [
+                "A+",
+                "A",
+                "A-",
+                "B+",
+                "B",
+                "B-",
+                "C+",
+                "C",
+                "C-",
+                "D+",
+                "D",
+                "D-",
+                "F"
+              ]
+            },
+            {
+              "name": "credits",
+              "label": "Credits",
+              "type": "number",
+              "min": 0.5,
+              "max": 6,
+              "step": 0.5
+            }
+          ]
+        }
       ],
       "formula": "GPA = (Sum of grade points × credits) ÷ Total credits",
-      "output": { "label": "Your GPA", "default": "Add courses above to calculate GPA", "format": "number" },
+      "output": {
+        "label": "Your GPA",
+        "default": "Add courses above to calculate GPA",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Total Credits", "field": "totalCredits", "format": "number" },
-        { "label": "Grade Classification", "field": "classification", "format": "text" },
-        { "label": "Letter Grade Equivalent", "field": "letterGrade", "format": "text" }
+        {
+          "label": "Total Credits",
+          "field": "totalCredits",
+          "format": "number"
+        },
+        {
+          "label": "Grade Classification",
+          "field": "classification",
+          "format": "text"
+        },
+        {
+          "label": "Letter Grade Equivalent",
+          "field": "letterGrade",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -382,7 +697,11 @@
         "output": "GPA Pondéré: 4.25 (échelle 5.0)"
       }
     ],
-    "relatedCalculators": ["percent-calculator", "percentage-change-calculator", "mean-median-mode-calculator"],
+    "relatedCalculators": [
+      "percent-calculator",
+      "percentage-change-calculator",
+      "mean-median-mode-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculez votre GPA instantanément avec support pour différentes échelles de notation et calculs pondérés/non pondérés. Notre complète calculatrice de GPA aide les étudiants à calculer leur Moyenne Générale pour des semestres individuels ou performance académique cumulée. Supporte multiples échelles de notation (4.0, 5.0, 12.0) et calculs tant pondérés que non pondérés. Parfaite pour les étudiants du lycée et université planifiant leur avenir académique. Cet outil complet aide les étudiants, éducateurs et professionnels académiques à suivre et calculer les moyennes générales avec précision et facilité. Que vous soyez un étudiant du lycée préparant des candidatures universitaires, un étudiant universitaire surveillant votre progrès académique, ou un éducateur aidant les étudiants à comprendre leur performance, cette calculatrice de GPA fournit des calculs précis basés sur des systèmes de notation standard. L'outil supporte multiples échelles de notation et calculs tant pondérés que non pondérés, le rendant adapté pour différentes institutions éducatives et exigences académiques.",
       "benefits": [
@@ -445,6 +764,7 @@
           "answer": "La calculatrice gère la conversion automatiquement: A/A+ = 4.0/4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0.0. Pour les échelles pondérées, les cours d'honneurs ajoutent 1.0 point (A en AP = 5.0). Entrez simplement vos lettres de note - la calculatrice fait les mathématiques pour vous."
         }
       ]
-    }
+    },
+    "component": "GPACalculator"
   }
 }

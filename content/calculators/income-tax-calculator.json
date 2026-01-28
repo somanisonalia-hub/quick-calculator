@@ -72,7 +72,12 @@
         "label": "Filing Status",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -89,7 +94,10 @@
         "label": "Deduction Type",
         "type": "select",
         "default": "standard",
-        "options": ["standard", "itemized"]
+        "options": [
+          "standard",
+          "itemized"
+        ]
       },
       {
         "name": "itemizedDeductions",
@@ -117,14 +125,70 @@
         "label": "State",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "taxYear",
         "label": "Tax Year",
         "type": "select",
         "default": "2024",
-        "options": ["2024", "2023", "2022"]
+        "options": [
+          "2024",
+          "2023",
+          "2022"
+        ]
       }
     ],
     "formula": "Taxable Income = Gross Income - Standard Deduction (or Itemized Deductions) - (Dependents × $4,700 exemption)\nFederal Tax = Sum of tax on each bracket portion using progressive rates\nState Tax = Taxable Income × State tax rate\nTotal Tax Liability = Federal Tax + State Tax - Tax Credits\nEffective Tax Rate = Total Tax ÷ Gross Income × 100%\nMarginal Tax Rate = Highest tax bracket rate applied to additional income",
@@ -197,7 +261,7 @@
           "stateTax": 1725,
           "taxableIncome": 61550,
           "effectiveTaxRate": 13.7,
-          "marginalTaxRate": 22.0,
+          "marginalTaxRate": 22,
           "afterTaxIncome": 64750
         }
       },
@@ -218,8 +282,8 @@
           "federalTax": 13200,
           "stateTax": 0,
           "taxableIncome": 92600,
-          "effectiveTaxRate": 11.0,
-          "marginalTaxRate": 22.0,
+          "effectiveTaxRate": 11,
+          "marginalTaxRate": 22,
           "afterTaxIncome": 106800
         }
       }
@@ -296,7 +360,8 @@
           "answer": "Tax brackets are indexed for inflation and typically adjusted annually. Major tax law changes can also affect brackets, deductions, and credits. The Tax Cuts and Jobs Act of 2017 doubled the standard deduction and suspended personal exemptions through 2025, significantly changing tax calculations for most taxpayers."
         }
       ]
-    }
+    },
+    "component": "IncomeTaxCalculator"
   },
   "es": {
     "title": "Calculadora de Impuesto a la Renta",
@@ -371,7 +436,12 @@
         "label": "Estado Civil",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -388,7 +458,10 @@
         "label": "Tipo de Deducción",
         "type": "select",
         "default": "standard",
-        "options": ["standard", "itemized"]
+        "options": [
+          "standard",
+          "itemized"
+        ]
       },
       {
         "name": "itemizedDeductions",
@@ -416,14 +489,70 @@
         "label": "Estado",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "taxYear",
         "label": "Año Fiscal",
         "type": "select",
         "default": "2024",
-        "options": ["2024", "2023", "2022"]
+        "options": [
+          "2024",
+          "2023",
+          "2022"
+        ]
       }
     ],
     "formula": "Ingreso Gravable = Ingreso Bruto - Deducción Estándar (o Deducciones Detalladas) - (Dependientes × $4,700 exención)\nImpuesto Federal = Suma de impuesto en cada porción de categoría usando tasas progresivas\nImpuesto Estatal = Ingreso Gravable × Tasa impuesto estatal\nResponsabilidad Fiscal Total = Impuesto Federal + Impuesto Estatal - Créditos Fiscales\nTasa Efectiva Impuesto = Impuesto Total ÷ Ingreso Bruto × 100%\nTasa Marginal Impuesto = Tasa de categoría más alta aplicada a ingreso adicional",
@@ -496,7 +625,7 @@
           "stateTax": 1725,
           "taxableIncome": 61550,
           "effectiveTaxRate": 13.7,
-          "marginalTaxRate": 22.0,
+          "marginalTaxRate": 22,
           "afterTaxIncome": 64750
         }
       },
@@ -517,8 +646,8 @@
           "federalTax": 13200,
           "stateTax": 0,
           "taxableIncome": 92600,
-          "effectiveTaxRate": 11.0,
-          "marginalTaxRate": 22.0,
+          "effectiveTaxRate": 11,
+          "marginalTaxRate": 22,
           "afterTaxIncome": 106800
         }
       }
@@ -595,7 +724,8 @@
           "answer": "Las categorías de impuesto están indexadas por inflación y típicamente ajustadas anualmente. Cambios mayores en leyes fiscales también pueden afectar categorías, deducciones y créditos. La Ley de Cortes de Impuestos y Empleos de 2017 duplicó la deducción estándar y suspendió exenciones personales hasta 2025, cambiando significativamente cálculos fiscales para la mayoría de contribuyentes."
         }
       ]
-    }
+    },
+    "component": "IncomeTaxCalculator"
   },
   "pt": {
     "title": "Calculadora de Imposto de Renda",
@@ -670,7 +800,12 @@
         "label": "Estado Civil",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -687,7 +822,10 @@
         "label": "Tipo de Dedução",
         "type": "select",
         "default": "standard",
-        "options": ["standard", "itemized"]
+        "options": [
+          "standard",
+          "itemized"
+        ]
       },
       {
         "name": "itemizedDeductions",
@@ -715,14 +853,70 @@
         "label": "Estado",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "taxYear",
         "label": "Ano Fiscal",
         "type": "select",
         "default": "2024",
-        "options": ["2024", "2023", "2022"]
+        "options": [
+          "2024",
+          "2023",
+          "2022"
+        ]
       }
     ],
     "formula": "Renda Tributável = Renda Bruta - Dedução Padrão (ou Deduções Detalhadas) - (Dependentes × R$4,700 isenção)\nImposto Federal = Soma de imposto em cada porção de categoria usando taxas progressivas\nImposto Estadual = Renda Tributável × Taxa imposto estadual\nResponsabilidade Fiscal Total = Imposto Federal + Imposto Estadual - Créditos Fiscais\nTaxa Efetiva Imposto = Imposto Total ÷ Renda Bruta × 100%\nTaxa Marginal Imposto = Taxa de categoria mais alta aplicada a renda adicional",
@@ -795,7 +989,7 @@
           "stateTax": 1725,
           "taxableIncome": 61550,
           "effectiveTaxRate": 13.7,
-          "marginalTaxRate": 22.0,
+          "marginalTaxRate": 22,
           "afterTaxIncome": 64750
         }
       },
@@ -816,8 +1010,8 @@
           "federalTax": 13200,
           "stateTax": 0,
           "taxableIncome": 92600,
-          "effectiveTaxRate": 11.0,
-          "marginalTaxRate": 22.0,
+          "effectiveTaxRate": 11,
+          "marginalTaxRate": 22,
           "afterTaxIncome": 106800
         }
       }
@@ -894,7 +1088,8 @@
           "answer": "Categorias de imposto são indexadas por inflação e tipicamente ajustadas anualmente. Mudanças maiores em leis fiscais também podem afetar categorias, deduções e créditos. A Lei de Cortes de Impostos e Empregos de 2017 dobrou a dedução padrão e suspendeu isenções pessoais até 2025, mudando significativamente cálculos fiscais para a maioria dos contribuintes."
         }
       ]
-    }
+    },
+    "component": "IncomeTaxCalculator"
   },
   "fr": {
     "title": "Calculateur d'Impôt sur le Revenu",
@@ -969,7 +1164,12 @@
         "label": "Statut Matrimonial",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -986,7 +1186,10 @@
         "label": "Type de Déduction",
         "type": "select",
         "default": "standard",
-        "options": ["standard", "itemized"]
+        "options": [
+          "standard",
+          "itemized"
+        ]
       },
       {
         "name": "itemizedDeductions",
@@ -1014,14 +1217,70 @@
         "label": "État",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "taxYear",
         "label": "Année Fiscale",
         "type": "select",
         "default": "2024",
-        "options": ["2024", "2023", "2022"]
+        "options": [
+          "2024",
+          "2023",
+          "2022"
+        ]
       }
     ],
     "formula": "Revenu Imposable = Revenu Brut - Déduction Standard (ou Déductions Détaillées) - (Personnes à Charge × €4,700 exemption)\nImpôt Fédéral = Somme d'impôt sur chaque portion de catégorie utilisant taux progressifs\nImpôt État = Revenu Imposable × Taux impôt étatique\nResponsabilité Fiscale Totale = Impôt Fédéral + Impôt État - Crédits Fiscaux\nTaux Effectif Impôt = Impôt Total ÷ Revenu Brut × 100%\nTaux Marginal Impôt = Taux de catégorie plus élevé appliqué à revenu additionnel",
@@ -1094,7 +1353,7 @@
           "stateTax": 1725,
           "taxableIncome": 61550,
           "effectiveTaxRate": 13.7,
-          "marginalTaxRate": 22.0,
+          "marginalTaxRate": 22,
           "afterTaxIncome": 64750
         }
       },
@@ -1115,8 +1374,8 @@
           "federalTax": 13200,
           "stateTax": 0,
           "taxableIncome": 92600,
-          "effectiveTaxRate": 11.0,
-          "marginalTaxRate": 22.0,
+          "effectiveTaxRate": 11,
+          "marginalTaxRate": 22,
           "afterTaxIncome": 106800
         }
       }
@@ -1193,6 +1452,7 @@
           "answer": "Les catégories d'impôt sont indexées pour inflation et typiquement ajustées annuellement. Des changements majeurs dans lois fiscales peuvent également affecter catégories, déductions et crédits. La Loi de Coupes d'Impôts et Emplois de 2017 a doublé la déduction standard et suspendu exemptions personnelles jusqu'à 2025, changeant significativement calculs fiscaux pour la plupart des contribuables."
         }
       ]
-    }
+    },
+    "component": "IncomeTaxCalculator"
   }
 }

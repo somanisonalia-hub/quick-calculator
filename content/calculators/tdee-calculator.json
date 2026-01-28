@@ -67,7 +67,10 @@
         "label": "Weight Unit",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "height",
@@ -84,14 +87,20 @@
         "label": "Height Unit",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Gender",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -108,14 +117,26 @@
         "label": "Activity Level",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "exerciseFrequency",
         "label": "Exercise Frequency",
         "type": "select",
         "default": "moderate",
-        "options": ["none", "light", "moderate", "heavy", "very_heavy"]
+        "options": [
+          "none",
+          "light",
+          "moderate",
+          "heavy",
+          "very_heavy"
+        ]
       }
     ],
     "formula": "BMR = 10 × Weight(kg) + 6.25 × Height(cm) - 5 × Age + 5 (men) / -161 (women)\nTDEE = BMR × Activity Multiplier\nActivity Multipliers: Sedentary (1.2), Lightly Active (1.375), Moderately Active (1.55), Very Active (1.725), Extremely Active (1.9)",
@@ -180,8 +201,8 @@
           "bmr": 1676,
           "activityMultiplier": 1.2,
           "activityCategory": "Sedentary",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       },
       {
@@ -201,8 +222,8 @@
           "bmr": 1400,
           "activityMultiplier": 1.55,
           "activityCategory": "Moderately Active",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       },
       {
@@ -222,8 +243,8 @@
           "bmr": 1900,
           "activityMultiplier": 1.725,
           "activityCategory": "Very Active",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       }
     ],
@@ -304,7 +325,8 @@
           "answer": "Calculator estimates are good starting points, but tracking actual TDEE through weight changes and calorie intake provides more accurate data. Use the calculator as a guide, then adjust based on real results. Tools like fitness trackers can help estimate daily expenditure more precisely."
         }
       ]
-    }
+    },
+    "component": "TDEECalculator"
   },
   "es": {
     "title": "Calculadora de TDEE",
@@ -374,7 +396,10 @@
         "label": "Unidad de Peso",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "height",
@@ -391,14 +416,20 @@
         "label": "Unidad de Altura",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Género",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -415,14 +446,26 @@
         "label": "Nivel de Actividad",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "exerciseFrequency",
         "label": "Frecuencia de Ejercicio",
         "type": "select",
         "default": "moderate",
-        "options": ["none", "light", "moderate", "heavy", "very_heavy"]
+        "options": [
+          "none",
+          "light",
+          "moderate",
+          "heavy",
+          "very_heavy"
+        ]
       }
     ],
     "formula": "BMR = 10 × Peso(kg) + 6.25 × Altura(cm) - 5 × Edad + 5 (hombres) / -161 (mujeres)\nTDEE = BMR × Multiplicador Actividad\nMultiplicadores Actividad: Sedentario (1.2), Ligeramente Activo (1.375), Moderadamente Activo (1.55), Muy Activo (1.725), Extremadamente Activo (1.9)",
@@ -487,8 +530,8 @@
           "bmr": 1676,
           "activityMultiplier": 1.2,
           "activityCategory": "Sedentario",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       },
       {
@@ -508,8 +551,8 @@
           "bmr": 1400,
           "activityMultiplier": 1.55,
           "activityCategory": "Moderadamente Activo",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       },
       {
@@ -529,8 +572,8 @@
           "bmr": 1900,
           "activityMultiplier": 1.725,
           "activityCategory": "Muy Activo",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       }
     ],
@@ -611,7 +654,8 @@
           "answer": "Estimaciones de calculadora son buenos puntos de partida, pero rastrear TDEE real a través de cambios de peso e ingesta calórica proporciona datos más precisos. Usa la calculadora como guía, luego ajusta basándote en resultados reales. Herramientas como rastreadores fitness pueden ayudar estimar gasto diario más precisamente."
         }
       ]
-    }
+    },
+    "component": "TDEECalculator"
   },
   "pt": {
     "title": "Calculadora de TDEE",
@@ -681,7 +725,10 @@
         "label": "Unidade de Peso",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "height",
@@ -698,14 +745,20 @@
         "label": "Unidade de Altura",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Gênero",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -722,14 +775,26 @@
         "label": "Nível de Atividade",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "exerciseFrequency",
         "label": "Frequência de Exercício",
         "type": "select",
         "default": "moderate",
-        "options": ["none", "light", "moderate", "heavy", "very_heavy"]
+        "options": [
+          "none",
+          "light",
+          "moderate",
+          "heavy",
+          "very_heavy"
+        ]
       }
     ],
     "formula": "BMR = 10 × Peso(kg) + 6.25 × Altura(cm) - 5 × Idade + 5 (homens) / -161 (mulheres)\nTDEE = BMR × Multiplicador Atividade\nMultiplicadores Atividade: Sedentário (1.2), Ligeramente Ativo (1.375), Moderadamente Ativo (1.55), Muito Ativo (1.725), Extremamente Ativo (1.9)",
@@ -794,8 +859,8 @@
           "bmr": 1676,
           "activityMultiplier": 1.2,
           "activityCategory": "Sedentário",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       },
       {
@@ -815,8 +880,8 @@
           "bmr": 1400,
           "activityMultiplier": 1.55,
           "activityCategory": "Moderadamente Ativo",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       },
       {
@@ -836,8 +901,8 @@
           "bmr": 1900,
           "activityMultiplier": 1.725,
           "activityCategory": "Muito Ativo",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       }
     ],
@@ -918,7 +983,8 @@
           "answer": "Estimativas de calculadora são bons pontos de partida, mas acompanhar TDEE real através de mudanças de peso e ingestão calórica fornece dados mais precisos. Use a calculadora como guia, então ajuste baseando-se em resultados reais. Ferramentas como rastreadores fitness podem ajudar estimar gasto diário mais precisamente."
         }
       ]
-    }
+    },
+    "component": "TDEECalculator"
   },
   "fr": {
     "title": "Calculateur de TDEE",
@@ -988,7 +1054,10 @@
         "label": "Unité de Poids",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "height",
@@ -1005,14 +1074,20 @@
         "label": "Unité de Taille",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Genre",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -1029,14 +1104,26 @@
         "label": "Niveau d'Activité",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "exerciseFrequency",
         "label": "Fréquence d'Exercice",
         "type": "select",
         "default": "moderate",
-        "options": ["none", "light", "moderate", "heavy", "very_heavy"]
+        "options": [
+          "none",
+          "light",
+          "moderate",
+          "heavy",
+          "very_heavy"
+        ]
       }
     ],
     "formula": "BMR = 10 × Poids(kg) + 6.25 × Taille(cm) - 5 × Âge + 5 (hommes) / -161 (femmes)\nTDEE = BMR × Multiplicateur Activité\nMultiplicateurs Activité: Sédentaire (1.2), Légèrement Actif (1.375), Modérément Actif (1.55), Très Actif (1.725), Extrêmement Actif (1.9)",
@@ -1101,8 +1188,8 @@
           "bmr": 1676,
           "activityMultiplier": 1.2,
           "activityCategory": "Sédentaire",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       },
       {
@@ -1122,8 +1209,8 @@
           "bmr": 1400,
           "activityMultiplier": 1.55,
           "activityCategory": "Modérément Actif",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       },
       {
@@ -1143,8 +1230,8 @@
           "bmr": 1900,
           "activityMultiplier": 1.725,
           "activityCategory": "Très Actif",
-          "weightLossRate": 1.0,
-          "weightGainRate": 1.0
+          "weightLossRate": 1,
+          "weightGainRate": 1
         }
       }
     ],
@@ -1225,6 +1312,7 @@
           "answer": "Estimations calculateur sont bons points de départ, mais suivre TDEE réel à travers changements poids et apport calorique fournit données plus précises. Utilisez calculateur comme guide, puis ajustez basé sur résultats réels. Outils comme trackers fitness peuvent aider estimer dépense quotidienne plus précisément."
         }
       ]
-    }
+    },
+    "component": "TDEECalculator"
   }
 }

@@ -3,12 +3,30 @@
     "title": "Car Insurance Calculator",
     "seoTitle": "Car Insurance Calculator - Calculate Auto Insurance Quotes and Coverage Costs",
     "metaDescription": "Free car insurance calculator. Get personalized auto insurance quotes, calculate coverage costs, and compare rates. Essential for finding affordable car insurance.",
-    "keywords": ["car insurance calculator", "auto insurance quote calculator", "car insurance cost calculator", "vehicle insurance calculator", "auto coverage calculator"],
-    "longTailKeywords": ["how much does car insurance cost calculator", "car insurance quote calculator", "auto insurance premium calculator", "vehicle insurance cost calculator", "car insurance rate calculator"],
+    "keywords": [
+      "car insurance calculator",
+      "auto insurance quote calculator",
+      "car insurance cost calculator",
+      "vehicle insurance calculator",
+      "auto coverage calculator"
+    ],
+    "longTailKeywords": [
+      "how much does car insurance cost calculator",
+      "car insurance quote calculator",
+      "auto insurance premium calculator",
+      "vehicle insurance cost calculator",
+      "car insurance rate calculator"
+    ],
     "slug": "car-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["car insurance", "auto insurance", "insurance quotes", "vehicle coverage", "premium calculator"],
+    "tags": [
+      "car insurance",
+      "auto insurance",
+      "insurance quotes",
+      "vehicle coverage",
+      "premium calculator"
+    ],
     "summary": "Calculate personalized car insurance quotes, compare coverage options, and find the best rates for your vehicle.",
     "description": "Our comprehensive car insurance calculator helps you estimate auto insurance premiums based on your driving record, vehicle type, coverage options, and location. Compare full coverage vs liability-only, calculate the impact of deductibles, and understand what factors affect your car insurance rates. Perfect for shopping for affordable auto insurance.",
     "instructions": [
@@ -20,19 +38,88 @@
     "calculatorComponent": {
       "componentName": "CarInsuranceCalculator",
       "inputs": [
-        { "name": "age", "label": "Driver Age", "type": "number", "default": 30, "min": 16, "max": 80, "step": 1 },
-        { "name": "vehicleValue", "label": "Vehicle Value ($)", "type": "number", "default": 25000, "min": 1000, "max": 100000, "step": 1000 },
-        { "name": "coverageType", "label": "Coverage Type", "type": "select", "default": "full", "options": ["liability", "full", "minimum"] },
-        { "name": "deductible", "label": "Deductible ($)", "type": "number", "default": 500, "min": 0, "max": 5000, "step": 100 },
-        { "name": "annualMileage", "label": "Annual Mileage", "type": "number", "default": 12000, "min": 1000, "max": 50000, "step": 1000 },
-        { "name": "drivingRecord", "label": "Driving Record", "type": "select", "default": "clean", "options": ["clean", "minor", "major", "suspended"] }
+        {
+          "name": "age",
+          "label": "Driver Age",
+          "type": "number",
+          "default": 30,
+          "min": 16,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "vehicleValue",
+          "label": "Vehicle Value ($)",
+          "type": "number",
+          "default": 25000,
+          "min": 1000,
+          "max": 100000,
+          "step": 1000
+        },
+        {
+          "name": "coverageType",
+          "label": "Coverage Type",
+          "type": "select",
+          "default": "full",
+          "options": [
+            "liability",
+            "full",
+            "minimum"
+          ]
+        },
+        {
+          "name": "deductible",
+          "label": "Deductible ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 5000,
+          "step": 100
+        },
+        {
+          "name": "annualMileage",
+          "label": "Annual Mileage",
+          "type": "number",
+          "default": 12000,
+          "min": 1000,
+          "max": 50000,
+          "step": 1000
+        },
+        {
+          "name": "drivingRecord",
+          "label": "Driving Record",
+          "type": "select",
+          "default": "clean",
+          "options": [
+            "clean",
+            "minor",
+            "major",
+            "suspended"
+          ]
+        }
       ],
       "formula": "Base premium × Age factor × Coverage factor × Vehicle factor × Record factor",
-      "output": { "label": "Estimated Annual Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Estimated Annual Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" },
-        { "label": "Coverage Level", "field": "coverageLevel", "format": "text" },
-        { "label": "Risk Assessment", "field": "riskAssessment", "format": "text" }
+        {
+          "label": "Monthly Payment",
+          "field": "monthlyPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Coverage Level",
+          "field": "coverageLevel",
+          "format": "text"
+        },
+        {
+          "label": "Risk Assessment",
+          "field": "riskAssessment",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -47,7 +134,11 @@
         "output": "Estimated Annual Premium: $600-$900, Monthly: $50-$75"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "expense-calculator", "loan-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "expense-calculator",
+      "loan-calculator"
+    ],
     "seoContent": {
       "introduction": "Navigate the complex world of auto insurance with confidence using our comprehensive car insurance calculator that provides personalized quotes based on your unique driving profile. Car insurance costs vary dramatically based on age, driving record, vehicle type, coverage levels, and location. Whether you're shopping for your first policy, comparing rates, or understanding how different factors affect your premiums, our calculator demystifies the car insurance marketplace. Make informed decisions about coverage levels, deductibles, and insurance choices that balance protection with affordability. Understanding car insurance pricing helps you avoid overpaying while ensuring adequate protection for your vehicle and financial security.",
       "benefits": [
@@ -117,18 +208,37 @@
           "answer": "Maintain clean driving record, increase deductibles ($500-$1,000 saves 15-25%), choose safer vehicles, bundle policies, take defensive driving courses, maintain good credit, consider usage-based insurance, shop annually, ask about discounts (safe driver, multi-policy, low mileage). Safe driving saves $500+ annually. Higher deductibles reduce premiums but increase out-of-pocket costs. Compare rates every 6-12 months as costs change. Loyalty discounts may not be best value - shop around."
         }
       ]
-    }
+    },
+    "component": "CarInsuranceCalculator"
   },
   "es": {
     "title": "Calculadora de Seguro de Auto",
     "seoTitle": "Calculadora de Seguro de Auto - Calcula Cotizaciones de Seguro Automóvil y Costos de Cobertura",
     "metaDescription": "Calculadora gratuita de seguro de auto. Obtén cotizaciones personalizadas de seguro automóvil, calcula costos de cobertura y compara tarifas. Esencial para encontrar seguro de auto asequible.",
-    "keywords": ["calculadora seguro auto", "calculadora cotización seguro automóvil", "calculadora costo seguro auto", "calculadora seguro vehículo", "calculadora cobertura auto"],
-    "longTailKeywords": ["cuánto cuesta seguro auto calculadora", "calculadora cotización seguro auto", "calculadora prima seguro automóvil", "calculadora costo seguro vehículo", "calculadora tarifa seguro auto"],
+    "keywords": [
+      "calculadora seguro auto",
+      "calculadora cotización seguro automóvil",
+      "calculadora costo seguro auto",
+      "calculadora seguro vehículo",
+      "calculadora cobertura auto"
+    ],
+    "longTailKeywords": [
+      "cuánto cuesta seguro auto calculadora",
+      "calculadora cotización seguro auto",
+      "calculadora prima seguro automóvil",
+      "calculadora costo seguro vehículo",
+      "calculadora tarifa seguro auto"
+    ],
     "slug": "car-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["seguro auto", "seguro automóvil", "cotizaciones seguro", "cobertura vehículo", "calculadora prima"],
+    "tags": [
+      "seguro auto",
+      "seguro automóvil",
+      "cotizaciones seguro",
+      "cobertura vehículo",
+      "calculadora prima"
+    ],
     "summary": "Calcula cotizaciones personalizadas de seguro de auto, compara opciones de cobertura y encuentra las mejores tarifas para tu vehículo.",
     "description": "Nuestra completa calculadora de seguro de auto te ayuda a estimar primas de seguro automóvil basadas en tu historial de conducción, tipo de vehículo, opciones de cobertura y ubicación. Compara cobertura completa vs responsabilidad civil únicamente, calcula el impacto de deducibles y entiende qué factores afectan tus tarifas de seguro de auto. Perfecta para buscar seguro de auto asequible.",
     "instructions": [
@@ -140,19 +250,88 @@
     "calculatorComponent": {
       "componentName": "CarInsuranceCalculator",
       "inputs": [
-        { "name": "age", "label": "Driver Age", "type": "number", "default": 30, "min": 16, "max": 80, "step": 1 },
-        { "name": "vehicleValue", "label": "Vehicle Value ($)", "type": "number", "default": 25000, "min": 1000, "max": 100000, "step": 1000 },
-        { "name": "coverageType", "label": "Coverage Type", "type": "select", "default": "full", "options": ["liability", "full", "minimum"] },
-        { "name": "deductible", "label": "Deductible ($)", "type": "number", "default": 500, "min": 0, "max": 5000, "step": 100 },
-        { "name": "annualMileage", "label": "Annual Mileage", "type": "number", "default": 12000, "min": 1000, "max": 50000, "step": 1000 },
-        { "name": "drivingRecord", "label": "Driving Record", "type": "select", "default": "clean", "options": ["clean", "minor", "major", "suspended"] }
+        {
+          "name": "age",
+          "label": "Driver Age",
+          "type": "number",
+          "default": 30,
+          "min": 16,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "vehicleValue",
+          "label": "Vehicle Value ($)",
+          "type": "number",
+          "default": 25000,
+          "min": 1000,
+          "max": 100000,
+          "step": 1000
+        },
+        {
+          "name": "coverageType",
+          "label": "Coverage Type",
+          "type": "select",
+          "default": "full",
+          "options": [
+            "liability",
+            "full",
+            "minimum"
+          ]
+        },
+        {
+          "name": "deductible",
+          "label": "Deductible ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 5000,
+          "step": 100
+        },
+        {
+          "name": "annualMileage",
+          "label": "Annual Mileage",
+          "type": "number",
+          "default": 12000,
+          "min": 1000,
+          "max": 50000,
+          "step": 1000
+        },
+        {
+          "name": "drivingRecord",
+          "label": "Driving Record",
+          "type": "select",
+          "default": "clean",
+          "options": [
+            "clean",
+            "minor",
+            "major",
+            "suspended"
+          ]
+        }
       ],
       "formula": "Base premium × Age factor × Coverage factor × Vehicle factor × Record factor",
-      "output": { "label": "Estimated Annual Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Estimated Annual Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" },
-        { "label": "Coverage Level", "field": "coverageLevel", "format": "text" },
-        { "label": "Risk Assessment", "field": "riskAssessment", "format": "text" }
+        {
+          "label": "Monthly Payment",
+          "field": "monthlyPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Coverage Level",
+          "field": "coverageLevel",
+          "format": "text"
+        },
+        {
+          "label": "Risk Assessment",
+          "field": "riskAssessment",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -167,7 +346,11 @@
         "output": "Prima Anual Estimada: $600-$900, Mensual: $50-$75"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "expense-calculator", "loan-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "expense-calculator",
+      "loan-calculator"
+    ],
     "seoContent": {
       "introduction": "Navega el complejo mundo del seguro de auto con confianza usando nuestra calculadora integral de seguro de auto que proporciona cotizaciones personalizadas basadas en tu perfil único de conducción. Los costos de seguro de auto varían dramáticamente basado en edad, historial de conducción, tipo de vehículo, niveles de cobertura, y ubicación. Ya sea que busques tu primera póliza, compares tarifas, o entiendas cómo diferentes factores afectan tus primas, nuestra calculadora desmistifica el mercado de seguros de auto. Toma decisiones informadas sobre niveles de cobertura, deducibles, y elecciones de seguro que balancean protección con asequibilidad. Entender precios de seguro de auto te ayuda a evitar pagar de más mientras aseguras protección adecuada para tu vehículo y seguridad financiera.",
       "benefits": [
@@ -237,18 +420,37 @@
           "answer": "Mantén historial de conducción limpio, aumenta deducibles ($500-$1,000 ahorra 15-25%), elige vehículos más seguros, agrupa pólizas, toma cursos de conducción defensiva, mantiene buen crédito, considera seguro basado en uso, compra anualmente, pregunta por descuentos (conductor seguro, multi-póliza, kilometraje bajo). Conducción segura ahorra $500+ anualmente. Deducibles más altos reducen primas pero aumentan costos fuera de bolsillo. Compara tarifas cada 6-12 meses conforme costos cambian. Descuentos de lealtad pueden no ser mejor valor - compara alrededor."
         }
       ]
-    }
+    },
+    "component": "CarInsuranceCalculator"
   },
   "pt": {
     "title": "Calculadora de Seguro de Carro",
     "seoTitle": "Calculadora de Seguro de Carro - Calcule Cotações de Seguro Automóvel e Custos de Cobertura",
     "metaDescription": "Calculadora gratuita de seguro de carro. Obtenha cotações personalizadas de seguro automóvel, calcule custos de cobertura e compare tarifas. Essencial para encontrar seguro de carro acessível.",
-    "keywords": ["calculadora seguro carro", "calculadora cotação seguro automóvel", "calculadora custo seguro carro", "calculadora seguro veículo", "calculadora cobertura carro"],
-    "longTailKeywords": ["quanto custa seguro carro calculadora", "calculadora cotação seguro carro", "calculadora prêmio seguro automóvel", "calculadora custo seguro veículo", "calculadora tarifa seguro carro"],
+    "keywords": [
+      "calculadora seguro carro",
+      "calculadora cotação seguro automóvel",
+      "calculadora custo seguro carro",
+      "calculadora seguro veículo",
+      "calculadora cobertura carro"
+    ],
+    "longTailKeywords": [
+      "quanto custa seguro carro calculadora",
+      "calculadora cotação seguro carro",
+      "calculadora prêmio seguro automóvel",
+      "calculadora custo seguro veículo",
+      "calculadora tarifa seguro carro"
+    ],
     "slug": "car-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["seguro carro", "seguro automóvel", "cotações seguro", "cobertura veículo", "calculadora prêmio"],
+    "tags": [
+      "seguro carro",
+      "seguro automóvel",
+      "cotações seguro",
+      "cobertura veículo",
+      "calculadora prêmio"
+    ],
     "summary": "Calcule cotações personalizadas de seguro de carro, compare opções de cobertura e encontre as melhores tarifas para seu veículo.",
     "description": "Nossa calculadora completa de seguro de carro ajuda você a estimar prêmios de seguro automóvel baseados em seu histórico de direção, tipo de veículo, opções de cobertura e localização. Compare cobertura completa vs responsabilidade civil apenas, calcule o impacto de franquias e entenda quais fatores afetam suas tarifas de seguro de carro. Perfeita para buscar seguro de carro acessível.",
     "instructions": [
@@ -260,19 +462,88 @@
     "calculatorComponent": {
       "componentName": "CarInsuranceCalculator",
       "inputs": [
-        { "name": "age", "label": "Driver Age", "type": "number", "default": 30, "min": 16, "max": 80, "step": 1 },
-        { "name": "vehicleValue", "label": "Vehicle Value ($)", "type": "number", "default": 25000, "min": 1000, "max": 100000, "step": 1000 },
-        { "name": "coverageType", "label": "Coverage Type", "type": "select", "default": "full", "options": ["liability", "full", "minimum"] },
-        { "name": "deductible", "label": "Deductible ($)", "type": "number", "default": 500, "min": 0, "max": 5000, "step": 100 },
-        { "name": "annualMileage", "label": "Annual Mileage", "type": "number", "default": 12000, "min": 1000, "max": 50000, "step": 1000 },
-        { "name": "drivingRecord", "label": "Driving Record", "type": "select", "default": "clean", "options": ["clean", "minor", "major", "suspended"] }
+        {
+          "name": "age",
+          "label": "Driver Age",
+          "type": "number",
+          "default": 30,
+          "min": 16,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "vehicleValue",
+          "label": "Vehicle Value ($)",
+          "type": "number",
+          "default": 25000,
+          "min": 1000,
+          "max": 100000,
+          "step": 1000
+        },
+        {
+          "name": "coverageType",
+          "label": "Coverage Type",
+          "type": "select",
+          "default": "full",
+          "options": [
+            "liability",
+            "full",
+            "minimum"
+          ]
+        },
+        {
+          "name": "deductible",
+          "label": "Deductible ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 5000,
+          "step": 100
+        },
+        {
+          "name": "annualMileage",
+          "label": "Annual Mileage",
+          "type": "number",
+          "default": 12000,
+          "min": 1000,
+          "max": 50000,
+          "step": 1000
+        },
+        {
+          "name": "drivingRecord",
+          "label": "Driving Record",
+          "type": "select",
+          "default": "clean",
+          "options": [
+            "clean",
+            "minor",
+            "major",
+            "suspended"
+          ]
+        }
       ],
       "formula": "Base premium × Age factor × Coverage factor × Vehicle factor × Record factor",
-      "output": { "label": "Estimated Annual Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Estimated Annual Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" },
-        { "label": "Coverage Level", "field": "coverageLevel", "format": "text" },
-        { "label": "Risk Assessment", "field": "riskAssessment", "format": "text" }
+        {
+          "label": "Monthly Payment",
+          "field": "monthlyPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Coverage Level",
+          "field": "coverageLevel",
+          "format": "text"
+        },
+        {
+          "label": "Risk Assessment",
+          "field": "riskAssessment",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -287,7 +558,11 @@
         "output": "Prêmio Anual Estimado: $600-$900, Mensal: $50-$75"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "expense-calculator", "loan-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "expense-calculator",
+      "loan-calculator"
+    ],
     "seoContent": {
       "introduction": "Navegue o complexo mundo do seguro auto com confiança usando nossa calculadora abrangente de seguro de carro que fornece cotações personalizadas baseadas em seu perfil único de direção. Custos de seguro de carro variam dramaticamente baseado em idade, histórico de direção, tipo de veículo, níveis de cobertura, e localização. Seja comprando sua primeira apólice, comparando taxas, ou entendendo como diferentes fatores afetam seus prêmios, nossa calculadora desmistifica o mercado de seguros de carro. Tome decisões informadas sobre níveis de cobertura, franquias, e escolhas de seguro que balanceiam proteção com acessibilidade. Entender preços de seguro de carro ajuda você a evitar pagar demais enquanto garantindo proteção adequada para seu veículo e segurança financeira.",
       "benefits": [
@@ -357,18 +632,37 @@
           "answer": "Mantenha histórico de direção limpo, aumente franquias ($500-$1,000 economiza 15-25%), escolha veículos mais seguros, agrupe apólices, tome cursos de direção defensiva, mantenha bom crédito, considere seguro baseado em uso, compre anualmente, pergunte por descontos (motorista seguro, multi-apólice, quilometragem baixa). Direção segura economiza $500+ anualmente. Franquias mais altas reduzem prêmios mas aumentam custos fora de bolso. Compare taxas a cada 6-12 meses conforme custos mudam. Descontos de lealdade podem não ser melhor valor - compre ao redor."
         }
       ]
-    }
+    },
+    "component": "CarInsuranceCalculator"
   },
   "fr": {
     "title": "Calculateur d'Assurance Auto",
     "seoTitle": "Calculateur d'Assurance Auto - Calculez les Devis d'Assurance Automobile et Coûts de Couverture",
     "metaDescription": "Calculateur gratuit d'assurance auto. Obtenez des devis personnalisés d'assurance automobile, calculez les coûts de couverture et comparez les tarifs. Essentiel pour trouver une assurance auto abordable.",
-    "keywords": ["calculateur assurance auto", "calculateur devis assurance automobile", "calculateur coût assurance auto", "calculateur assurance véhicule", "calculateur couverture auto"],
-    "longTailKeywords": ["combien coûte assurance auto calculateur", "calculateur devis assurance auto", "calculateur prime assurance automobile", "calculateur coût assurance véhicule", "calculateur tarif assurance auto"],
+    "keywords": [
+      "calculateur assurance auto",
+      "calculateur devis assurance automobile",
+      "calculateur coût assurance auto",
+      "calculateur assurance véhicule",
+      "calculateur couverture auto"
+    ],
+    "longTailKeywords": [
+      "combien coûte assurance auto calculateur",
+      "calculateur devis assurance auto",
+      "calculateur prime assurance automobile",
+      "calculateur coût assurance véhicule",
+      "calculateur tarif assurance auto"
+    ],
     "slug": "car-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["assurance auto", "assurance automobile", "devis assurance", "couverture véhicule", "calculateur prime"],
+    "tags": [
+      "assurance auto",
+      "assurance automobile",
+      "devis assurance",
+      "couverture véhicule",
+      "calculateur prime"
+    ],
     "summary": "Calculez des devis personnalisés d'assurance auto, comparez les options de couverture et trouvez les meilleurs tarifs pour votre véhicule.",
     "description": "Notre calculateur complet d'assurance auto vous aide à estimer les primes d'assurance automobile basées sur votre historique de conduite, type de véhicule, options de couverture et localisation. Comparez l'assurance tous risques vs responsabilité civile uniquement, calculez l'impact des franchises et comprenez quels facteurs affectent vos tarifs d'assurance auto. Parfait pour rechercher une assurance auto abordable.",
     "instructions": [
@@ -380,19 +674,88 @@
     "calculatorComponent": {
       "componentName": "CarInsuranceCalculator",
       "inputs": [
-        { "name": "age", "label": "Driver Age", "type": "number", "default": 30, "min": 16, "max": 80, "step": 1 },
-        { "name": "vehicleValue", "label": "Vehicle Value ($)", "type": "number", "default": 25000, "min": 1000, "max": 100000, "step": 1000 },
-        { "name": "coverageType", "label": "Coverage Type", "type": "select", "default": "full", "options": ["liability", "full", "minimum"] },
-        { "name": "deductible", "label": "Deductible ($)", "type": "number", "default": 500, "min": 0, "max": 5000, "step": 100 },
-        { "name": "annualMileage", "label": "Annual Mileage", "type": "number", "default": 12000, "min": 1000, "max": 50000, "step": 1000 },
-        { "name": "drivingRecord", "label": "Driving Record", "type": "select", "default": "clean", "options": ["clean", "minor", "major", "suspended"] }
+        {
+          "name": "age",
+          "label": "Driver Age",
+          "type": "number",
+          "default": 30,
+          "min": 16,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "vehicleValue",
+          "label": "Vehicle Value ($)",
+          "type": "number",
+          "default": 25000,
+          "min": 1000,
+          "max": 100000,
+          "step": 1000
+        },
+        {
+          "name": "coverageType",
+          "label": "Coverage Type",
+          "type": "select",
+          "default": "full",
+          "options": [
+            "liability",
+            "full",
+            "minimum"
+          ]
+        },
+        {
+          "name": "deductible",
+          "label": "Deductible ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 5000,
+          "step": 100
+        },
+        {
+          "name": "annualMileage",
+          "label": "Annual Mileage",
+          "type": "number",
+          "default": 12000,
+          "min": 1000,
+          "max": 50000,
+          "step": 1000
+        },
+        {
+          "name": "drivingRecord",
+          "label": "Driving Record",
+          "type": "select",
+          "default": "clean",
+          "options": [
+            "clean",
+            "minor",
+            "major",
+            "suspended"
+          ]
+        }
       ],
       "formula": "Base premium × Age factor × Coverage factor × Vehicle factor × Record factor",
-      "output": { "label": "Estimated Annual Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Estimated Annual Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" },
-        { "label": "Coverage Level", "field": "coverageLevel", "format": "text" },
-        { "label": "Risk Assessment", "field": "riskAssessment", "format": "text" }
+        {
+          "label": "Monthly Payment",
+          "field": "monthlyPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Coverage Level",
+          "field": "coverageLevel",
+          "format": "text"
+        },
+        {
+          "label": "Risk Assessment",
+          "field": "riskAssessment",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -407,7 +770,11 @@
         "output": "Prime Annuelle Estimée: 600-900€, Mensuelle: 50-75€"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "expense-calculator", "loan-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "expense-calculator",
+      "loan-calculator"
+    ],
     "seoContent": {
       "introduction": "Naviguez le monde complexe de l'assurance auto avec confiance en utilisant notre calculatrice complète d'assurance auto qui fournit des devis personnalisés basés sur votre profil de conduite unique. Les coûts d'assurance auto varient considérablement selon l'âge, le dossier de conduite, le type de véhicule, les niveaux de couverture et l'emplacement. Que vous achetiez votre première police, compariez les tarifs ou compreniez comment différents facteurs affectent vos primes, notre calculatrice démystifie le marché de l'assurance auto. Prenez des décisions éclairées concernant les niveaux de couverture, les franchises et les choix d'assurance qui équilibrent protection et abordabilité. Comprendre les prix d'assurance auto vous aide à éviter de trop payer tout en assurant une protection adéquate pour votre véhicule et sécurité financière.",
       "benefits": [
@@ -477,6 +844,7 @@
           "answer": "Maintenez dossier conduite propre, augmentez franchises ($500-$1,000 économise 15-25%), choisissez véhicules plus sûrs, regroupez polices, prenez cours conduite défensive, maintenez bon crédit, considérez assurance basée utilisation, magasinez annuellement, demandez remises (conducteur sûr, multi-police, faible kilométrage). Conduite sûre économise $500+ annuellement. Franchises plus élevées réduisent primes mais augmentent coûts hors poche. Comparez taux tous 6-12 mois comme coûts changent. Remises fidélité peuvent ne pas être meilleure valeur - magasinez."
         }
       ]
-    }
+    },
+    "component": "CarInsuranceCalculator"
   }
 }

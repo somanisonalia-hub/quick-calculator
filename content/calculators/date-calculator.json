@@ -3,12 +3,30 @@
     "title": "Date Calculator",
     "seoTitle": "Date Calculator - Calculate Days Between Dates, Add or Subtract Time Online",
     "metaDescription": "Free date calculator. Calculate days between dates, add or subtract days/weeks/months/years from any date. Perfect for planning events, tracking deadlines, and date calculations.",
-    "keywords": ["date calculator", "days between dates", "date difference calculator", "add days to date", "date math calculator"],
-    "longTailKeywords": ["how many days between two dates", "date calculator add days", "calculate days from date", "date difference in days", "add months to date calculator"],
+    "keywords": [
+      "date calculator",
+      "days between dates",
+      "date difference calculator",
+      "add days to date",
+      "date math calculator"
+    ],
+    "longTailKeywords": [
+      "how many days between two dates",
+      "date calculator add days",
+      "calculate days from date",
+      "date difference in days",
+      "add months to date calculator"
+    ],
     "slug": "date-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["date", "calendar", "time", "calculation", "planning"],
+    "tags": [
+      "date",
+      "calendar",
+      "time",
+      "calculation",
+      "planning"
+    ],
     "summary": "Calculate days between dates, add or subtract time periods, and perform date arithmetic operations.",
     "description": "Our date calculator helps you calculate the number of days between two dates, add or subtract days, weeks, months, or years from any date, and perform various date-related calculations. Perfect for event planning, deadline tracking, and understanding time periods.",
     "instructions": [
@@ -20,18 +38,72 @@
     "calculatorComponent": {
       "componentName": "DateCalculator",
       "inputs": [
-        { "name": "calculationType", "label": "Calculation Type", "type": "select", "default": "difference", "options": ["difference", "add", "subtract"] },
-        { "name": "startDate", "label": "Start Date", "type": "date", "default": "2024-01-01" },
-        { "name": "endDate", "label": "End Date", "type": "date", "default": "2024-01-31" },
-        { "name": "addSubtractValue", "label": "Value to Add/Subtract", "type": "number", "default": 30, "min": 1, "max": 10000 },
-        { "name": "addSubtractUnit", "label": "Unit", "type": "select", "default": "days", "options": ["days", "weeks", "months", "years"] }
+        {
+          "name": "calculationType",
+          "label": "Calculation Type",
+          "type": "select",
+          "default": "difference",
+          "options": [
+            "difference",
+            "add",
+            "subtract"
+          ]
+        },
+        {
+          "name": "startDate",
+          "label": "Start Date",
+          "type": "date",
+          "default": "2024-01-01"
+        },
+        {
+          "name": "endDate",
+          "label": "End Date",
+          "type": "date",
+          "default": "2024-01-31"
+        },
+        {
+          "name": "addSubtractValue",
+          "label": "Value to Add/Subtract",
+          "type": "number",
+          "default": 30,
+          "min": 1,
+          "max": 10000
+        },
+        {
+          "name": "addSubtractUnit",
+          "label": "Unit",
+          "type": "select",
+          "default": "days",
+          "options": [
+            "days",
+            "weeks",
+            "months",
+            "years"
+          ]
+        }
       ],
       "formula": "Date Difference = End Date - Start Date; New Date = Start Date ± (Value × Unit)",
-      "output": { "label": "Result", "default": "Enter dates above", "format": "text" },
+      "output": {
+        "label": "Result",
+        "default": "Enter dates above",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Total Days", "field": "totalDays", "format": "number" },
-        { "label": "Weeks", "field": "weeks", "format": "number" },
-        { "label": "Months", "field": "months", "format": "number" }
+        {
+          "label": "Total Days",
+          "field": "totalDays",
+          "format": "number"
+        },
+        {
+          "label": "Weeks",
+          "field": "weeks",
+          "format": "number"
+        },
+        {
+          "label": "Months",
+          "field": "months",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -51,7 +123,11 @@
         "output": "January 15, 2024"
       }
     ],
-    "relatedCalculators": ["age-calculator", "time-zone-calculator", "percentage-calculator"],
+    "relatedCalculators": [
+      "age-calculator",
+      "time-zone-calculator",
+      "percentage-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculate dates and time periods with precision using our comprehensive date calculator. This essential planning tool helps you determine days between dates, add or subtract time periods, and perform complex date arithmetic operations. Whether you're planning project deadlines, tracking important events, calculating ages in days, or managing schedules, our calculator handles all date calculations with accuracy. The tool accounts for leap years, varying month lengths, and calendar irregularities to ensure reliable results for any date calculation needs.",
       "benefits": [
@@ -117,18 +193,37 @@
           "answer": "Date calculations are highly accurate for any time period within the Gregorian calendar system. The calculator accounts for all calendar irregularities and maintains precision even for calculations spanning multiple decades or centuries. However, extremely long-term calculations may be affected by potential future calendar reforms."
         }
       ]
-    }
+    },
+    "component": "DateCalculator"
   },
   "es": {
     "title": "Calculadora de Fechas",
     "seoTitle": "Calculadora de Fechas - Calcula Días Entre Fechas, Suma o Resta Tiempo Online",
     "metaDescription": "Calculadora gratuita de fechas. Calcula días entre fechas, suma o resta días/semanas/meses/años de cualquier fecha. Perfecta para planificar eventos, rastrear plazos y cálculos de fechas.",
-    "keywords": ["calculadora fechas", "días entre fechas", "calculadora diferencia fechas", "sumar días a fecha", "calculadora matemática fechas"],
-    "longTailKeywords": ["cuántos días entre dos fechas", "calculadora fechas sumar días", "calcular días desde fecha", "diferencia fechas en días", "sumar meses a fecha calculadora"],
+    "keywords": [
+      "calculadora fechas",
+      "días entre fechas",
+      "calculadora diferencia fechas",
+      "sumar días a fecha",
+      "calculadora matemática fechas"
+    ],
+    "longTailKeywords": [
+      "cuántos días entre dos fechas",
+      "calculadora fechas sumar días",
+      "calcular días desde fecha",
+      "diferencia fechas en días",
+      "sumar meses a fecha calculadora"
+    ],
     "slug": "date-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["fecha", "calendario", "tiempo", "cálculo", "planificación"],
+    "tags": [
+      "fecha",
+      "calendario",
+      "tiempo",
+      "cálculo",
+      "planificación"
+    ],
     "summary": "Calcula días entre fechas, suma o resta períodos de tiempo, y realiza operaciones aritméticas de fechas.",
     "description": "Nuestra calculadora de fechas te ayuda a calcular el número de días entre dos fechas, sumar o restar días, semanas, meses o años de cualquier fecha, y realizar varios cálculos relacionados con fechas. Perfecta para planificación de eventos, rastreo de plazos y comprensión de períodos de tiempo.",
     "instructions": [
@@ -140,18 +235,72 @@
     "calculatorComponent": {
       "componentName": "DateCalculator",
       "inputs": [
-        { "name": "calculationType", "label": "Tipo de Cálculo", "type": "select", "default": "difference", "options": ["difference", "add", "subtract"] },
-        { "name": "startDate", "label": "Fecha Inicial", "type": "date", "default": "2024-01-01" },
-        { "name": "endDate", "label": "Fecha Final", "type": "date", "default": "2024-01-31" },
-        { "name": "addSubtractValue", "label": "Valor a Sumar/Restar", "type": "number", "default": 30, "min": 1, "max": 10000 },
-        { "name": "addSubtractUnit", "label": "Unidad", "type": "select", "default": "days", "options": ["days", "weeks", "months", "years"] }
+        {
+          "name": "calculationType",
+          "label": "Tipo de Cálculo",
+          "type": "select",
+          "default": "difference",
+          "options": [
+            "difference",
+            "add",
+            "subtract"
+          ]
+        },
+        {
+          "name": "startDate",
+          "label": "Fecha Inicial",
+          "type": "date",
+          "default": "2024-01-01"
+        },
+        {
+          "name": "endDate",
+          "label": "Fecha Final",
+          "type": "date",
+          "default": "2024-01-31"
+        },
+        {
+          "name": "addSubtractValue",
+          "label": "Valor a Sumar/Restar",
+          "type": "number",
+          "default": 30,
+          "min": 1,
+          "max": 10000
+        },
+        {
+          "name": "addSubtractUnit",
+          "label": "Unidad",
+          "type": "select",
+          "default": "days",
+          "options": [
+            "days",
+            "weeks",
+            "months",
+            "years"
+          ]
+        }
       ],
       "formula": "Diferencia de Fecha = Fecha Final - Fecha Inicial; Nueva Fecha = Fecha Inicial ± (Valor × Unidad)",
-      "output": { "label": "Resultado", "default": "Ingresa fechas arriba", "format": "text" },
+      "output": {
+        "label": "Resultado",
+        "default": "Ingresa fechas arriba",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Días Totales", "field": "totalDays", "format": "number" },
-        { "label": "Semanas", "field": "weeks", "format": "number" },
-        { "label": "Meses", "field": "months", "format": "number" }
+        {
+          "label": "Días Totales",
+          "field": "totalDays",
+          "format": "number"
+        },
+        {
+          "label": "Semanas",
+          "field": "weeks",
+          "format": "number"
+        },
+        {
+          "label": "Meses",
+          "field": "months",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -171,7 +320,11 @@
         "output": "15 enero 2024"
       }
     ],
-    "relatedCalculators": ["age-calculator", "time-zone-calculator", "percentage-calculator"],
+    "relatedCalculators": [
+      "age-calculator",
+      "time-zone-calculator",
+      "percentage-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcula fechas y períodos de tiempo con precisión usando nuestra calculadora integral de fechas. Esta herramienta esencial de planificación te ayuda a determinar días entre fechas, sumar o restar períodos de tiempo, y realizar operaciones aritméticas complejas de fechas. Ya sea que estés planificando plazos de proyecto, rastreando eventos importantes, calculando edades en días, o manejando horarios, nuestra calculadora maneja todos los cálculos de fechas con exactitud. La herramienta considera años bisiestos, longitudes variables de mes, e irregularidades de calendario para asegurar resultados confiables para cualquier necesidad de cálculo de fechas.",
       "benefits": [
@@ -237,18 +390,37 @@
           "answer": "Los cálculos de fecha son altamente precisos para cualquier período de tiempo dentro del sistema de calendario gregoriano. La calculadora considera todas las irregularidades de calendario y mantiene precisión incluso para cálculos abarcando múltiples décadas o siglos. Sin embargo, cálculos de largo término extremadamente largo pueden ser afectados por reformas potenciales futuras de calendario."
         }
       ]
-    }
+    },
+    "component": "DateCalculator"
   },
   "pt": {
     "title": "Calculadora de Datas",
     "seoTitle": "Calculadora de Datas - Calcule Dias Entre Datas, Some ou Subtraia Tempo Online",
     "metaDescription": "Calculadora gratuita de datas. Calcule dias entre datas, some ou subtraia dias/semanas/meses/anos de qualquer data. Perfeita para planejar eventos, rastrear prazos e cálculos de data.",
-    "keywords": ["calculadora datas", "dias entre datas", "calculadora diferença datas", "somar dias a data", "calculadora matemática datas"],
-    "longTailKeywords": ["quantos dias entre duas datas", "calculadora datas somar dias", "calcular dias a partir data", "diferença datas em dias", "somar meses a data calculadora"],
+    "keywords": [
+      "calculadora datas",
+      "dias entre datas",
+      "calculadora diferença datas",
+      "somar dias a data",
+      "calculadora matemática datas"
+    ],
+    "longTailKeywords": [
+      "quantos dias entre duas datas",
+      "calculadora datas somar dias",
+      "calcular dias a partir data",
+      "diferença datas em dias",
+      "somar meses a data calculadora"
+    ],
     "slug": "date-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["data", "calendário", "tempo", "cálculo", "planejamento"],
+    "tags": [
+      "data",
+      "calendário",
+      "tempo",
+      "cálculo",
+      "planejamento"
+    ],
     "summary": "Calcule dias entre datas, some ou subtraia períodos de tempo, e realize operações aritméticas de data.",
     "description": "Nossa calculadora de datas ajuda você a calcular o número de dias entre duas datas, somar ou subtrair dias, semanas, meses ou anos de qualquer data, e realizar vários cálculos relacionados a data. Perfeita para planejamento de eventos, rastreamento de prazos e compreensão de períodos de tempo.",
     "instructions": [
@@ -260,18 +432,72 @@
     "calculatorComponent": {
       "componentName": "DateCalculator",
       "inputs": [
-        { "name": "calculationType", "label": "Tipo de Cálculo", "type": "select", "default": "difference", "options": ["difference", "add", "subtract"] },
-        { "name": "startDate", "label": "Data Inicial", "type": "date", "default": "2024-01-01" },
-        { "name": "endDate", "label": "Data Final", "type": "date", "default": "2024-01-31" },
-        { "name": "addSubtractValue", "label": "Valor a Somar/Subtrair", "type": "number", "default": 30, "min": 1, "max": 10000 },
-        { "name": "addSubtractUnit", "label": "Unidade", "type": "select", "default": "days", "options": ["days", "weeks", "months", "years"] }
+        {
+          "name": "calculationType",
+          "label": "Tipo de Cálculo",
+          "type": "select",
+          "default": "difference",
+          "options": [
+            "difference",
+            "add",
+            "subtract"
+          ]
+        },
+        {
+          "name": "startDate",
+          "label": "Data Inicial",
+          "type": "date",
+          "default": "2024-01-01"
+        },
+        {
+          "name": "endDate",
+          "label": "Data Final",
+          "type": "date",
+          "default": "2024-01-31"
+        },
+        {
+          "name": "addSubtractValue",
+          "label": "Valor a Somar/Subtrair",
+          "type": "number",
+          "default": 30,
+          "min": 1,
+          "max": 10000
+        },
+        {
+          "name": "addSubtractUnit",
+          "label": "Unidade",
+          "type": "select",
+          "default": "days",
+          "options": [
+            "days",
+            "weeks",
+            "months",
+            "years"
+          ]
+        }
       ],
       "formula": "Diferença de Data = Data Final - Data Inicial; Nova Data = Data Inicial ± (Valor × Unidade)",
-      "output": { "label": "Resultado", "default": "Digite datas acima", "format": "text" },
+      "output": {
+        "label": "Resultado",
+        "default": "Digite datas acima",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Dias Totais", "field": "totalDays", "format": "number" },
-        { "label": "Semanas", "field": "weeks", "format": "number" },
-        { "label": "Meses", "field": "months", "format": "number" }
+        {
+          "label": "Dias Totais",
+          "field": "totalDays",
+          "format": "number"
+        },
+        {
+          "label": "Semanas",
+          "field": "weeks",
+          "format": "number"
+        },
+        {
+          "label": "Meses",
+          "field": "months",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -291,7 +517,11 @@
         "output": "15 janeiro 2024"
       }
     ],
-    "relatedCalculators": ["age-calculator", "time-zone-calculator", "percentage-calculator"],
+    "relatedCalculators": [
+      "age-calculator",
+      "time-zone-calculator",
+      "percentage-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcule datas e períodos de tempo com precisão usando nossa calculadora abrangente de datas. Esta ferramenta essencial de planejamento ajuda você a determinar dias entre datas, somar ou subtrair períodos de tempo, e realizar operações aritméticas complexas de data. Seja você planejando prazos de projeto, rastreando eventos importantes, calculando idades em dias, ou gerenciando cronogramas, nossa calculadora lida com todos os cálculos de data com exatidão. A ferramenta considera anos bissextos, comprimentos variáveis de mês, e irregularidades de calendário para garantir resultados confiáveis para qualquer necessidade de cálculo de data.",
       "benefits": [
@@ -357,18 +587,37 @@
           "answer": "Cálculos de data são altamente precisos para qualquer período de tempo dentro do sistema de calendário gregoriano. A calculadora considera todas as irregularidades de calendário e mantém precisão mesmo para cálculos abrangendo múltiplas décadas ou séculos. No entanto, cálculos de longo termo extremamente longo podem ser afetados por reformas potenciais futuras de calendário."
         }
       ]
-    }
+    },
+    "component": "DateCalculator"
   },
   "fr": {
     "title": "Calculateur de Dates",
     "seoTitle": "Calculateur de Dates - Calculez Jours Entre Dates, Ajoutez ou Soustrayez Temps en Ligne",
     "metaDescription": "Calculateur gratuit de dates. Calculez jours entre dates, ajoutez ou soustrayez jours/semaines/mois/années de n'importe quelle date. Parfait pour planifier événements, suivre délais et calculs de dates.",
-    "keywords": ["calculateur dates", "jours entre dates", "calculateur différence dates", "ajouter jours à date", "calculateur mathématique dates"],
-    "longTailKeywords": ["combien jours entre deux dates", "calculateur dates ajouter jours", "calculer jours à partir date", "différence dates en jours", "ajouter mois à date calculateur"],
+    "keywords": [
+      "calculateur dates",
+      "jours entre dates",
+      "calculateur différence dates",
+      "ajouter jours à date",
+      "calculateur mathématique dates"
+    ],
+    "longTailKeywords": [
+      "combien jours entre deux dates",
+      "calculateur dates ajouter jours",
+      "calculer jours à partir date",
+      "différence dates en jours",
+      "ajouter mois à date calculateur"
+    ],
     "slug": "date-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["date", "calendrier", "temps", "calcul", "planification"],
+    "tags": [
+      "date",
+      "calendrier",
+      "temps",
+      "calcul",
+      "planification"
+    ],
     "summary": "Calculez jours entre dates, ajoutez ou soustrayez périodes de temps, et réalisez opérations arithmétiques de dates.",
     "description": "Notre calculateur de dates vous aide à calculer le nombre de jours entre deux dates, ajouter ou soustraire jours, semaines, mois ou années de n'importe quelle date, et réaliser divers calculs liés aux dates. Parfait pour planification d'événements, suivi de délais et compréhension de périodes de temps.",
     "instructions": [
@@ -380,18 +629,72 @@
     "calculatorComponent": {
       "componentName": "DateCalculator",
       "inputs": [
-        { "name": "calculationType", "label": "Type de Calcul", "type": "select", "default": "difference", "options": ["difference", "add", "subtract"] },
-        { "name": "startDate", "label": "Date de Départ", "type": "date", "default": "2024-01-01" },
-        { "name": "endDate", "label": "Date de Fin", "type": "date", "default": "2024-01-31" },
-        { "name": "addSubtractValue", "label": "Valeur à Ajouter/Soustraire", "type": "number", "default": 30, "min": 1, "max": 10000 },
-        { "name": "addSubtractUnit", "label": "Unité", "type": "select", "default": "days", "options": ["days", "weeks", "months", "years"] }
+        {
+          "name": "calculationType",
+          "label": "Type de Calcul",
+          "type": "select",
+          "default": "difference",
+          "options": [
+            "difference",
+            "add",
+            "subtract"
+          ]
+        },
+        {
+          "name": "startDate",
+          "label": "Date de Départ",
+          "type": "date",
+          "default": "2024-01-01"
+        },
+        {
+          "name": "endDate",
+          "label": "Date de Fin",
+          "type": "date",
+          "default": "2024-01-31"
+        },
+        {
+          "name": "addSubtractValue",
+          "label": "Valeur à Ajouter/Soustraire",
+          "type": "number",
+          "default": 30,
+          "min": 1,
+          "max": 10000
+        },
+        {
+          "name": "addSubtractUnit",
+          "label": "Unité",
+          "type": "select",
+          "default": "days",
+          "options": [
+            "days",
+            "weeks",
+            "months",
+            "years"
+          ]
+        }
       ],
       "formula": "Différence de Date = Date de Fin - Date de Départ; Nouvelle Date = Date de Départ ± (Valeur × Unité)",
-      "output": { "label": "Résultat", "default": "Entrez dates ci-dessus", "format": "text" },
+      "output": {
+        "label": "Résultat",
+        "default": "Entrez dates ci-dessus",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Jours Totaux", "field": "totalDays", "format": "number" },
-        { "label": "Semaines", "field": "weeks", "format": "number" },
-        { "label": "Mois", "field": "months", "format": "number" }
+        {
+          "label": "Jours Totaux",
+          "field": "totalDays",
+          "format": "number"
+        },
+        {
+          "label": "Semaines",
+          "field": "weeks",
+          "format": "number"
+        },
+        {
+          "label": "Mois",
+          "field": "months",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -411,7 +714,11 @@
         "output": "15 janvier 2024"
       }
     ],
-    "relatedCalculators": ["age-calculator", "time-zone-calculator", "percentage-calculator"],
+    "relatedCalculators": [
+      "age-calculator",
+      "time-zone-calculator",
+      "percentage-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculez dates et périodes de temps avec précision utilisant notre calculateur complet de dates. Cet outil essentiel de planification vous aide à déterminer jours entre dates, ajouter ou soustraire périodes de temps, et réaliser opérations arithmétiques complexes de dates. Que vous planifiez délais de projet, suiviez événements importants, calculiez âges en jours, ou gériez horaires, notre calculateur gère tous les calculs de dates avec exactitude. L'outil considère années bissextiles, longueurs variables de mois, et irrégularités de calendrier pour assurer résultats fiables pour tout besoin de calcul de dates.",
       "benefits": [
@@ -477,6 +784,7 @@
           "answer": "Calculs de dates sont hautement précis pour n'importe quelle période de temps dans le système de calendrier grégorien. Le calculateur considère toutes les irrégularités de calendrier et maintient précision même pour calculs englobant multiples décennies ou siècles. Cependant, calculs de très long terme pourraient être affectés par réformes potentielles futures de calendrier."
         }
       ]
-    }
+    },
+    "component": "DateCalculator"
   }
 }

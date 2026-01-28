@@ -70,14 +70,20 @@
         "label": "Weight Unit",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "gender",
         "label": "Gender",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -94,14 +100,26 @@
         "label": "Activity Level",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "fitnessGoal",
         "label": "Fitness Goal",
         "type": "select",
         "default": "maintenance",
-        "options": ["maintenance", "weight_loss", "muscle_gain", "athletic_performance", "bodybuilding"]
+        "options": [
+          "maintenance",
+          "weight_loss",
+          "muscle_gain",
+          "athletic_performance",
+          "bodybuilding"
+        ]
       },
       {
         "name": "trainingFrequency",
@@ -172,7 +190,7 @@
         },
         "outputs": {
           "dailyProteinIntake": 80,
-          "proteinPerKg": 1.0,
+          "proteinPerKg": 1,
           "proteinPerMeal": 20,
           "proteinPerMeal6": 13,
           "proteinPerPound": 0.45,
@@ -215,7 +233,7 @@
           "proteinPerKg": 2.2,
           "proteinPerMeal": 36,
           "proteinPerMeal6": 24,
-          "proteinPerPound": 1.0,
+          "proteinPerPound": 1,
           "caloriesFromProtein": 572
         }
       }
@@ -297,7 +315,8 @@
           "answer": "Protein supplements can help meet requirements but should supplement, not replace, whole food protein sources. Whole foods provide additional nutrients, fiber, and better satiety. Use supplements strategically when whole food intake is insufficient."
         }
       ]
-    }
+    },
+    "component": "ProteinIntakeCalculator"
   },
   "es": {
     "title": "Calculadora de Ingesta de Proteína",
@@ -370,14 +389,20 @@
         "label": "Unidad de Peso",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "gender",
         "label": "Género",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -394,14 +419,26 @@
         "label": "Nivel de Actividad",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "fitnessGoal",
         "label": "Objetivo de Fitness",
         "type": "select",
         "default": "maintenance",
-        "options": ["maintenance", "weight_loss", "muscle_gain", "athletic_performance", "bodybuilding"]
+        "options": [
+          "maintenance",
+          "weight_loss",
+          "muscle_gain",
+          "athletic_performance",
+          "bodybuilding"
+        ]
       },
       {
         "name": "trainingFrequency",
@@ -472,7 +509,7 @@
         },
         "outputs": {
           "dailyProteinIntake": 80,
-          "proteinPerKg": 1.0,
+          "proteinPerKg": 1,
           "proteinPerMeal": 20,
           "proteinPerMeal6": 13,
           "proteinPerPound": 0.45,
@@ -515,7 +552,7 @@
           "proteinPerKg": 2.2,
           "proteinPerMeal": 36,
           "proteinPerMeal6": 24,
-          "proteinPerPound": 1.0,
+          "proteinPerPound": 1,
           "caloriesFromProtein": 572
         }
       }
@@ -597,7 +634,8 @@
           "answer": "Los suplementos de proteína pueden ayudar cumplir requerimientos pero deberían suplementar, no reemplazar, fuentes de proteína de alimentos completos. Alimentos completos proporcionan nutrientes adicionales, fibra y mejor saciedad. Usa suplementos estratégicamente cuando la ingesta de alimentos completos es insuficiente."
         }
       ]
-    }
+    },
+    "component": "ProteinIntakeCalculator"
   },
   "pt": {
     "title": "Calculadora de Ingestão de Proteína",
@@ -670,14 +708,20 @@
         "label": "Unidade de Peso",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "gender",
         "label": "Gênero",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -694,14 +738,26 @@
         "label": "Nível de Atividade",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "fitnessGoal",
         "label": "Objetivo de Fitness",
         "type": "select",
         "default": "maintenance",
-        "options": ["maintenance", "weight_loss", "muscle_gain", "athletic_performance", "bodybuilding"]
+        "options": [
+          "maintenance",
+          "weight_loss",
+          "muscle_gain",
+          "athletic_performance",
+          "bodybuilding"
+        ]
       },
       {
         "name": "trainingFrequency",
@@ -772,7 +828,7 @@
         },
         "outputs": {
           "dailyProteinIntake": 80,
-          "proteinPerKg": 1.0,
+          "proteinPerKg": 1,
           "proteinPerMeal": 20,
           "proteinPerMeal6": 13,
           "proteinPerPound": 0.45,
@@ -815,7 +871,7 @@
           "proteinPerKg": 2.2,
           "proteinPerMeal": 36,
           "proteinPerMeal6": 24,
-          "proteinPerPound": 1.0,
+          "proteinPerPound": 1,
           "caloriesFromProtein": 572
         }
       }
@@ -897,7 +953,8 @@
           "answer": "Suplementos de proteína podem ajudar cumprir requerimentos mas deveriam suplementar, não substituir, fontes de proteína de alimentos integrais. Alimentos integrais fornecem nutrientes adicionais, fibra e melhor saciedade. Use suplementos estrategicamente quando ingestão de alimentos integrais é insuficiente."
         }
       ]
-    }
+    },
+    "component": "ProteinIntakeCalculator"
   },
   "fr": {
     "title": "Calculateur d'Apport en Protéines",
@@ -970,14 +1027,20 @@
         "label": "Unité de Poids",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "gender",
         "label": "Genre",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -994,14 +1057,26 @@
         "label": "Niveau d'Activité",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "fitnessGoal",
         "label": "Objectif Fitness",
         "type": "select",
         "default": "maintenance",
-        "options": ["maintenance", "weight_loss", "muscle_gain", "athletic_performance", "bodybuilding"]
+        "options": [
+          "maintenance",
+          "weight_loss",
+          "muscle_gain",
+          "athletic_performance",
+          "bodybuilding"
+        ]
       },
       {
         "name": "trainingFrequency",
@@ -1072,7 +1147,7 @@
         },
         "outputs": {
           "dailyProteinIntake": 80,
-          "proteinPerKg": 1.0,
+          "proteinPerKg": 1,
           "proteinPerMeal": 20,
           "proteinPerMeal6": 13,
           "proteinPerPound": 0.45,
@@ -1115,7 +1190,7 @@
           "proteinPerKg": 2.2,
           "proteinPerMeal": 36,
           "proteinPerMeal6": 24,
-          "proteinPerPound": 1.0,
+          "proteinPerPound": 1,
           "caloriesFromProtein": 572
         }
       }
@@ -1197,6 +1272,7 @@
           "answer": "Suppléments de protéines peuvent aider rencontrer besoins mais devraient compléter, pas remplacer, sources protéines d'aliments entiers. Aliments entiers fournissent nutriments additionnels, fibre et meilleure satiété. Utilisez suppléments stratégiquement quand apport d'aliments entiers est insuffisant."
         }
       ]
-    }
+    },
+    "component": "ProteinIntakeCalculator"
   }
 }

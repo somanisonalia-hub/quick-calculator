@@ -3,12 +3,30 @@
     "title": "Unit Converter",
     "seoTitle": "Unit Converter - Convert Length, Weight, Temperature, and More Online",
     "metaDescription": "Free unit converter for length, weight, temperature, area, volume, and more. Convert between metric and imperial units instantly. Perfect for students, engineers, and professionals.",
-    "keywords": ["unit converter", "measurement converter", "metric converter", "imperial converter", "length converter"],
-    "longTailKeywords": ["convert meters to feet", "convert kilograms to pounds", "convert celsius to fahrenheit", "unit conversion calculator", "metric to imperial converter"],
+    "keywords": [
+      "unit converter",
+      "measurement converter",
+      "metric converter",
+      "imperial converter",
+      "length converter"
+    ],
+    "longTailKeywords": [
+      "convert meters to feet",
+      "convert kilograms to pounds",
+      "convert celsius to fahrenheit",
+      "unit conversion calculator",
+      "metric to imperial converter"
+    ],
     "slug": "unit-conversion-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["conversion", "measurement", "metric", "imperial", "engineering"],
+    "tags": [
+      "conversion",
+      "measurement",
+      "metric",
+      "imperial",
+      "engineering"
+    ],
     "summary": "Convert between different units of measurement including length, weight, temperature, area, and volume.",
     "description": "Our comprehensive unit converter supports conversions between metric and imperial systems for length, weight, temperature, area, volume, and more. Perfect for students, engineers, scientists, and anyone needing quick and accurate unit conversions.",
     "instructions": [
@@ -35,7 +53,11 @@
         "output": "77°F"
       }
     ],
-    "relatedCalculators": ["currency-converter", "percentage-calculator", "scientific-calculator"],
+    "relatedCalculators": [
+      "currency-converter",
+      "percentage-calculator",
+      "scientific-calculator"
+    ],
     "seoContent": {
       "introduction": "Convert between different units of measurement instantly with our comprehensive unit converter. This essential tool supports conversions for length, weight, temperature, area, volume, time, speed, and more between metric and imperial systems. Whether you're a student working on physics homework, an engineer designing products, a chef following international recipes, or a traveler understanding foreign measurements, this calculator provides accurate conversions using standard conversion factors. The tool supports both common and specialized units across multiple categories for complete measurement flexibility.",
       "benefits": [
@@ -101,18 +123,37 @@
           "answer": "Absolutely! The calculator includes common cooking measurements like cups, tablespoons, teaspoons, fluid ounces, and milliliters. This makes it perfect for adapting international recipes, converting between US customary and metric cooking measurements, and ensuring accurate ingredient proportions."
         }
       ]
-    }
+    },
+    "component": "UnitConverter"
   },
   "es": {
     "title": "Conversor de Unidades",
     "seoTitle": "Conversor de Unidades - Convierte Longitud, Peso, Temperatura y Más Online",
     "metaDescription": "Conversor gratuito de unidades para longitud, peso, temperatura, área, volumen y más. Convierte entre unidades métricas e imperiales al instante. Perfecto para estudiantes, ingenieros y profesionales.",
-    "keywords": ["conversor unidades", "conversor medidas", "conversor métrico", "conversor imperial", "conversor longitud"],
-    "longTailKeywords": ["convertir metros a pies", "convertir kilogramos a libras", "convertir celsius a fahrenheit", "calculadora conversión unidades", "conversor métrico a imperial"],
+    "keywords": [
+      "conversor unidades",
+      "conversor medidas",
+      "conversor métrico",
+      "conversor imperial",
+      "conversor longitud"
+    ],
+    "longTailKeywords": [
+      "convertir metros a pies",
+      "convertir kilogramos a libras",
+      "convertir celsius a fahrenheit",
+      "calculadora conversión unidades",
+      "conversor métrico a imperial"
+    ],
     "slug": "unit-conversion-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["conversión", "medición", "métrico", "imperial", "ingeniería"],
+    "tags": [
+      "conversión",
+      "medición",
+      "métrico",
+      "imperial",
+      "ingeniería"
+    ],
     "summary": "Convierte entre diferentes unidades de medición incluyendo longitud, peso, temperatura, área y volumen.",
     "description": "Nuestro conversor integral de unidades soporta conversiones entre sistemas métricos e imperiales para longitud, peso, temperatura, área, volumen y más. Perfecto para estudiantes, ingenieros, científicos y cualquiera necesitando conversiones rápidas y precisas de unidades.",
     "instructions": [
@@ -124,13 +165,50 @@
     "calculatorComponent": {
       "componentName": "UnitConverter",
       "inputs": [
-        { "name": "conversionType", "label": "Tipo de Conversión", "type": "select", "default": "length", "options": ["length", "weight", "temperature", "area", "volume", "time", "speed"] },
-        { "name": "fromUnit", "label": "Unidad Desde", "type": "dynamic-select", "default": "meters", "dependsOn": "conversionType" },
-        { "name": "toUnit", "label": "Unidad Hasta", "type": "dynamic-select", "default": "feet", "dependsOn": "conversionType" },
-        { "name": "value", "label": "Valor a Convertir", "type": "number", "default": 1, "min": 0, "step": 0.01 }
+        {
+          "name": "conversionType",
+          "label": "Tipo de Conversión",
+          "type": "select",
+          "default": "length",
+          "options": [
+            "length",
+            "weight",
+            "temperature",
+            "area",
+            "volume",
+            "time",
+            "speed"
+          ]
+        },
+        {
+          "name": "fromUnit",
+          "label": "Unidad Desde",
+          "type": "dynamic-select",
+          "default": "meters",
+          "dependsOn": "conversionType"
+        },
+        {
+          "name": "toUnit",
+          "label": "Unidad Hasta",
+          "type": "dynamic-select",
+          "default": "feet",
+          "dependsOn": "conversionType"
+        },
+        {
+          "name": "value",
+          "label": "Valor a Convertir",
+          "type": "number",
+          "default": 1,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Resultado = Valor de Entrada × Factor de Conversión",
-      "output": { "label": "Valor Convertido", "default": "Ingresa valor arriba", "format": "number" },
+      "output": {
+        "label": "Valor Convertido",
+        "default": "Ingresa valor arriba",
+        "format": "number"
+      },
       "additionalOutputs": []
     },
     "examples": [
@@ -150,7 +228,11 @@
         "output": "77°F"
       }
     ],
-    "relatedCalculators": ["currency-converter", "percentage-calculator", "scientific-calculator"],
+    "relatedCalculators": [
+      "currency-converter",
+      "percentage-calculator",
+      "scientific-calculator"
+    ],
     "seoContent": {
       "introduction": "Convierte entre diferentes unidades de medición al instante con nuestro conversor integral de unidades. Esta herramienta esencial soporta conversiones para longitud, peso, temperatura, área, volumen, tiempo, velocidad y más entre sistemas métricos e imperiales. Ya sea que seas un estudiante trabajando en tarea de física, un ingeniero diseñando productos, un chef siguiendo recetas internacionales, o un viajero entendiendo mediciones extranjeras, esta calculadora proporciona conversiones precisas usando factores estándar de conversión. La herramienta soporta tanto unidades comunes como especializadas a través de múltiples categorías para completa flexibilidad de medición.",
       "benefits": [
@@ -216,18 +298,37 @@
           "answer": "¡Absolutamente! La calculadora incluye mediciones comunes de cocina como tazas, cucharadas, cucharaditas, onzas fluidas y mililitros. Esto la hace perfecta para adaptar recetas internacionales, convertir entre mediciones culinarias customary de EE.UU. y métricas, y asegurar proporciones precisas de ingredientes."
         }
       ]
-    }
+    },
+    "component": "UnitConverter"
   },
   "pt": {
     "title": "Conversor de Unidades",
     "seoTitle": "Conversor de Unidades - Converte Comprimento, Peso, Temperatura e Mais Online",
     "metaDescription": "Conversor gratuito de unidades para comprimento, peso, temperatura, área, volume e mais. Converte entre unidades métricas e imperiais instantaneamente. Perfeito para estudantes, engenheiros e profissionais.",
-    "keywords": ["conversor unidades", "conversor medidas", "conversor métrico", "conversor imperial", "conversor comprimento"],
-    "longTailKeywords": ["converter metros para pés", "converter quilogramas para libras", "converter celsius para fahrenheit", "calculadora conversão unidades", "conversor métrico para imperial"],
+    "keywords": [
+      "conversor unidades",
+      "conversor medidas",
+      "conversor métrico",
+      "conversor imperial",
+      "conversor comprimento"
+    ],
+    "longTailKeywords": [
+      "converter metros para pés",
+      "converter quilogramas para libras",
+      "converter celsius para fahrenheit",
+      "calculadora conversão unidades",
+      "conversor métrico para imperial"
+    ],
     "slug": "unit-conversion-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["conversão", "medição", "métrico", "imperial", "engenharia"],
+    "tags": [
+      "conversão",
+      "medição",
+      "métrico",
+      "imperial",
+      "engenharia"
+    ],
     "summary": "Converte entre diferentes unidades de medição incluindo comprimento, peso, temperatura, área e volume.",
     "description": "Nosso conversor abrangente de unidades suporta conversões entre sistemas métricos e imperiais para comprimento, peso, temperatura, área, volume e mais. Perfeito para estudantes, engenheiros, cientistas e qualquer um precisando de conversões rápidas e precisas de unidades.",
     "instructions": [
@@ -239,13 +340,50 @@
     "calculatorComponent": {
       "componentName": "UnitConverter",
       "inputs": [
-        { "name": "conversionType", "label": "Tipo de Conversão", "type": "select", "default": "length", "options": ["length", "weight", "temperature", "area", "volume", "time", "speed"] },
-        { "name": "fromUnit", "label": "Unidade De", "type": "dynamic-select", "default": "meters", "dependsOn": "conversionType" },
-        { "name": "toUnit", "label": "Unidade Para", "type": "dynamic-select", "default": "feet", "dependsOn": "conversionType" },
-        { "name": "value", "label": "Valor a Converter", "type": "number", "default": 1, "min": 0, "step": 0.01 }
+        {
+          "name": "conversionType",
+          "label": "Tipo de Conversão",
+          "type": "select",
+          "default": "length",
+          "options": [
+            "length",
+            "weight",
+            "temperature",
+            "area",
+            "volume",
+            "time",
+            "speed"
+          ]
+        },
+        {
+          "name": "fromUnit",
+          "label": "Unidade De",
+          "type": "dynamic-select",
+          "default": "meters",
+          "dependsOn": "conversionType"
+        },
+        {
+          "name": "toUnit",
+          "label": "Unidade Para",
+          "type": "dynamic-select",
+          "default": "feet",
+          "dependsOn": "conversionType"
+        },
+        {
+          "name": "value",
+          "label": "Valor a Converter",
+          "type": "number",
+          "default": 1,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Resultado = Valor de Entrada × Fator de Conversão",
-      "output": { "label": "Valor Convertido", "default": "Digite valor acima", "format": "number" },
+      "output": {
+        "label": "Valor Convertido",
+        "default": "Digite valor acima",
+        "format": "number"
+      },
       "additionalOutputs": []
     },
     "examples": [
@@ -265,7 +403,11 @@
         "output": "77°F"
       }
     ],
-    "relatedCalculators": ["currency-converter", "percentage-calculator", "scientific-calculator"],
+    "relatedCalculators": [
+      "currency-converter",
+      "percentage-calculator",
+      "scientific-calculator"
+    ],
     "seoContent": {
       "introduction": "Converte entre diferentes unidades de medição instantaneamente com nosso conversor abrangente de unidades. Esta ferramenta essencial suporta conversões para comprimento, peso, temperatura, área, volume, tempo, velocidade e mais entre sistemas métricos e imperiais. Seja você um estudante trabalhando em tarefa de física, um engenheiro projetando produtos, um chef seguindo receitas internacionais, ou um viajante entendendo medições estrangeiras, esta calculadora fornece conversões precisas usando fatores padrão de conversão. A ferramenta suporta tanto unidades comuns quanto especializadas através de múltiplas categorias para completa flexibilidade de medição.",
       "benefits": [
@@ -331,18 +473,37 @@
           "answer": "Absolutamente! A calculadora inclui medições comuns de cozinha como xícaras, colheres de sopa, colheres de chá, onças fluidas e mililitros. Isso a torna perfeita para adaptar receitas internacionais, converter entre medições culinárias customary dos EUA e métricas, e garantir proporções precisas de ingredientes."
         }
       ]
-    }
+    },
+    "component": "UnitConverter"
   },
   "fr": {
     "title": "Convertisseur d'Unités",
     "seoTitle": "Convertisseur d'Unités - Convertissez Longueur, Poids, Température et Plus en Ligne",
     "metaDescription": "Convertisseur gratuit d'unités pour longueur, poids, température, aire, volume et plus. Convertissez entre unités métriques et impériales instantanément. Parfait pour étudiants, ingénieurs et professionnels.",
-    "keywords": ["convertisseur unités", "convertisseur mesures", "convertisseur métrique", "convertisseur impérial", "convertisseur longueur"],
-    "longTailKeywords": ["convertir mètres en pieds", "convertir kilogrammes en livres", "convertir celsius en fahrenheit", "calculatrice conversion unités", "convertisseur métrique en impérial"],
+    "keywords": [
+      "convertisseur unités",
+      "convertisseur mesures",
+      "convertisseur métrique",
+      "convertisseur impérial",
+      "convertisseur longueur"
+    ],
+    "longTailKeywords": [
+      "convertir mètres en pieds",
+      "convertir kilogrammes en livres",
+      "convertir celsius en fahrenheit",
+      "calculatrice conversion unités",
+      "convertisseur métrique en impérial"
+    ],
     "slug": "unit-conversion-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["conversion", "mesure", "métrique", "impérial", "ingénierie"],
+    "tags": [
+      "conversion",
+      "mesure",
+      "métrique",
+      "impérial",
+      "ingénierie"
+    ],
     "summary": "Convertissez entre différentes unités de mesure incluant longueur, poids, température, aire et volume.",
     "description": "Notre convertisseur complet d'unités supporte les conversions entre systèmes métriques et impériaux pour longueur, poids, température, aire, volume et plus. Parfait pour étudiants, ingénieurs, scientifiques et quiconque ayant besoin de conversions rapides et précises d'unités.",
     "instructions": [
@@ -354,13 +515,50 @@
     "calculatorComponent": {
       "componentName": "UnitConverter",
       "inputs": [
-        { "name": "conversionType", "label": "Type de Conversion", "type": "select", "default": "length", "options": ["length", "weight", "temperature", "area", "volume", "time", "speed"] },
-        { "name": "fromUnit", "label": "Unité Depuis", "type": "dynamic-select", "default": "meters", "dependsOn": "conversionType" },
-        { "name": "toUnit", "label": "Unité Vers", "type": "dynamic-select", "default": "feet", "dependsOn": "conversionType" },
-        { "name": "value", "label": "Valeur à Convertir", "type": "number", "default": 1, "min": 0, "step": 0.01 }
+        {
+          "name": "conversionType",
+          "label": "Type de Conversion",
+          "type": "select",
+          "default": "length",
+          "options": [
+            "length",
+            "weight",
+            "temperature",
+            "area",
+            "volume",
+            "time",
+            "speed"
+          ]
+        },
+        {
+          "name": "fromUnit",
+          "label": "Unité Depuis",
+          "type": "dynamic-select",
+          "default": "meters",
+          "dependsOn": "conversionType"
+        },
+        {
+          "name": "toUnit",
+          "label": "Unité Vers",
+          "type": "dynamic-select",
+          "default": "feet",
+          "dependsOn": "conversionType"
+        },
+        {
+          "name": "value",
+          "label": "Valeur à Convertir",
+          "type": "number",
+          "default": 1,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Résultat = Valeur d'Entrée × Facteur de Conversion",
-      "output": { "label": "Valeur Convertie", "default": "Entrez valeur ci-dessus", "format": "number" },
+      "output": {
+        "label": "Valeur Convertie",
+        "default": "Entrez valeur ci-dessus",
+        "format": "number"
+      },
       "additionalOutputs": []
     },
     "examples": [
@@ -380,7 +578,11 @@
         "output": "77°F"
       }
     ],
-    "relatedCalculators": ["currency-converter", "percentage-calculator", "scientific-calculator"],
+    "relatedCalculators": [
+      "currency-converter",
+      "percentage-calculator",
+      "scientific-calculator"
+    ],
     "seoContent": {
       "introduction": "Convertissez entre différentes unités de mesure instantanément avec notre convertisseur complet d'unités. Cet outil essentiel supporte les conversions pour longueur, poids, température, aire, volume, temps, vitesse et plus entre systèmes métriques et impériaux. Que vous soyez étudiant travaillant sur des devoirs de physique, ingénieur concevant des produits, chef suivant des recettes internationales, ou voyageur comprenant des mesures étrangères, cette calculatrice fournit des conversions précises utilisant des facteurs standard de conversion. L'outil supporte à la fois des unités communes et spécialisées à travers multiples catégories pour une flexibilité de mesure complète.",
       "benefits": [
@@ -446,6 +648,7 @@
           "answer": "Absolument! La calculatrice inclut des mesures communes de cuisine comme tasses, cuillères à soupe, cuillères à thé, onces liquides et millilitres. Cela la rend parfaite pour adapter des recettes internationales, convertir entre mesures culinaires customary des États-Unis et métriques, et assurer des proportions précises d'ingrédients."
         }
       ]
-    }
+    },
+    "component": "UnitConverter"
   }
 }

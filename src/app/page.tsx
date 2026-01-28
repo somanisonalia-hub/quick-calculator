@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import HomePage from '@/components/HomePage';
 import { generateHomepageSchema } from '@/lib/seoContentRenderer';
+import { loadAllCalculatorsStatic } from '@/lib/staticDataLoader';
 
 export const metadata: Metadata = {
   alternates: {
@@ -19,5 +20,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <HomePage language="en" />;
+  // Load all calculators at BUILD TIME for static generation
+  const allCalculators = loadAllCalculatorsStatic('en');
+  
+  return <HomePage language="en" initialCalculators={allCalculators} />;
 }

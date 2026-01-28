@@ -72,7 +72,10 @@
         "label": "Weight Unit",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "height",
@@ -89,14 +92,20 @@
         "label": "Height Unit",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Gender",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -113,14 +122,24 @@
         "label": "Activity Level",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "bmrMethod",
         "label": "BMR Calculation Method",
         "type": "select",
         "default": "mifflin",
-        "options": ["harris", "mifflin", "katch"]
+        "options": [
+          "harris",
+          "mifflin",
+          "katch"
+        ]
       },
       {
         "name": "bodyFat",
@@ -324,7 +343,8 @@
           "answer": "Yes, always! Use calculator results as starting points, then track weight changes over 2-4 weeks. If losing slower than expected, reduce calories by another 100-200. If losing too fast or feeling fatigued, increase calories. Individual responses vary based on metabolism and activity level."
         }
       ]
-    }
+    },
+    "component": "MaintenanceCaloriesCalculator"
   },
   "es": {
     "title": "Calculadora de Calorías de Mantenimiento",
@@ -399,7 +419,10 @@
         "label": "Unidad de Peso",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "height",
@@ -416,14 +439,20 @@
         "label": "Unidad de Altura",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Género",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -440,14 +469,24 @@
         "label": "Nivel de Actividad",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "bmrMethod",
         "label": "Método de Cálculo BMR",
         "type": "select",
         "default": "mifflin",
-        "options": ["harris", "mifflin", "katch"]
+        "options": [
+          "harris",
+          "mifflin",
+          "katch"
+        ]
       },
       {
         "name": "bodyFat",
@@ -651,7 +690,8 @@
           "answer": "¡Sí, siempre! Usa resultados de calculadora como puntos de partida, luego rastrea cambios de peso sobre 2-4 semanas. Si pierdes más lento de lo esperado, reduce calorías en otros 100-200. Si pierdes demasiado rápido o te sientes fatigado, aumenta calorías. Las respuestas individuales varían basadas en metabolismo y nivel de actividad."
         }
       ]
-    }
+    },
+    "component": "MaintenanceCaloriesCalculator"
   },
   "pt": {
     "title": "Calculadora de Calorias de Manutenção",
@@ -726,7 +766,10 @@
         "label": "Unidade de Peso",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "height",
@@ -743,14 +786,20 @@
         "label": "Unidade de Altura",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Gênero",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -767,14 +816,24 @@
         "label": "Nível de Atividade",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "bmrMethod",
         "label": "Método de Cálculo BMR",
         "type": "select",
         "default": "mifflin",
-        "options": ["harris", "mifflin", "katch"]
+        "options": [
+          "harris",
+          "mifflin",
+          "katch"
+        ]
       },
       {
         "name": "bodyFat",
@@ -978,7 +1037,8 @@
           "answer": "Sim, sempre! Use resultados de calculadora como pontos de partida, então acompanhe mudanças de peso sobre 2-4 semanas. Se perdendo mais devagar do que esperado, reduza calorias em outros 100-200. Se perdendo muito rápido ou se sentindo fatigado, aumente calorias. Respostas individuais variam baseadas em metabolismo e nível de atividade."
         }
       ]
-    }
+    },
+    "component": "MaintenanceCaloriesCalculator"
   },
   "fr": {
     "title": "Calculateur de Calories de Maintenance",
@@ -1053,7 +1113,10 @@
         "label": "Unité de Poids",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "height",
@@ -1070,14 +1133,20 @@
         "label": "Unité de Taille",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Genre",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       },
       {
         "name": "age",
@@ -1094,14 +1163,24 @@
         "label": "Niveau d'Activité",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "bmrMethod",
         "label": "Méthode de Calcul BMR",
         "type": "select",
         "default": "mifflin",
-        "options": ["harris", "mifflin", "katch"]
+        "options": [
+          "harris",
+          "mifflin",
+          "katch"
+        ]
       },
       {
         "name": "bodyFat",
@@ -1305,6 +1384,7 @@
           "answer": "Oui, toujours ! Utilisez résultats calculateur comme points de départ, puis suivez changements poids sur 2-4 semaines. Si perdant plus lentement qu'attendu, réduisez calories de 100-200 supplémentaires. Si perdant trop rapidement ou vous sentant fatigué, augmentez calories. Réponses individuelles varient basées sur métabolisme et niveau d'activité."
         }
       ]
-    }
+    },
+    "component": "MaintenanceCaloriesCalculator"
   }
 }

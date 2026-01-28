@@ -10,7 +10,11 @@
     "seoContent": {
       "metaTitle": "Mortgage Calculator - Calculate Monthly Payments & Interest",
       "metaDescription": "Free mortgage calculator to estimate monthly payments, total interest, and amortization schedule. Calculate home loan payments instantly.",
-      "keywords": ["mortgage calculator", "home loan calculator", "monthly payment calculator"],
+      "keywords": [
+        "mortgage calculator",
+        "home loan calculator",
+        "monthly payment calculator"
+      ],
       "h1": "Mortgage Calculator",
       "introduction": "Our mortgage calculator helps you estimate your monthly mortgage payments, total interest paid over the life of the loan, and create a complete amortization schedule.",
       "benefits": [
@@ -48,7 +52,13 @@
       ],
       "whoItsFor": "Home buyers, real estate professionals, financial planners, and anyone considering a mortgage loan.",
       "disclaimer": "This calculator provides estimates only. Actual mortgage terms depend on lender requirements, credit score, and current market conditions. Consult with a mortgage professional for personalized advice.",
-      "relatedTools": ["loan-calculator", "home-affordability-calculator", "debt-ratios-calculator"],
+      "howDoesWork": "A mortgage calculator uses the standard loan payment formula to determine your monthly payments. It takes your loan amount (principal), annual interest rate, and loan term, then calculates the monthly payment using the formula: M = P[r(1+r)^n]/[(1+r)^n-1], where M is monthly payment, P is principal, r is monthly interest rate, and n is number of payments. The calculator also generates an amortization schedule showing how each payment is split between principal and interest over time.",
+      "completeGuide": "To use this mortgage calculator effectively: 1) Enter your loan amount (the principal you want to borrow), 2) Input the annual interest rate (check current mortgage rates), 3) Specify the loan term in years (typically 15 or 30 years), 4) Optionally add property taxes and home insurance for more accurate total payment, 5) Click calculate to see your monthly payment, total interest, and amortization schedule. Use the results to compare different loan scenarios and plan your home buying budget.",
+      "relatedTools": [
+        "loan-calculator",
+        "home-affordability-calculator",
+        "debt-ratios-calculator"
+      ],
       "faqs": [
         {
           "question": "What is a mortgage calculator?",
@@ -75,7 +85,8 @@
           "answer": "You can refinance your mortgage to change terms, but it involves closing costs and may extend your loan term. Consider your long-term goals before refinancing. Rate-and-term refinances change your interest rate and/or loan length."
         }
       ]
-    }
+    },
+    "component": "MortgageCalculator"
   },
   "es": {
     "title": "Calculadora de Hipoteca",
@@ -88,7 +99,11 @@
     "seoContent": {
       "metaTitle": "Calculadora de Hipoteca - Calcula Pagos Mensuales e Intereses",
       "metaDescription": "Calculadora de hipoteca gratuita para estimar pagos mensuales, intereses totales y calendario de amortización.",
-      "keywords": ["calculadora hipoteca", "calculadora préstamo casa", "calculadora pago mensual"],
+      "keywords": [
+        "calculadora hipoteca",
+        "calculadora préstamo casa",
+        "calculadora pago mensual"
+      ],
       "h1": "Calculadora de Hipoteca",
       "introduction": "Nuestra calculadora de hipoteca te ayuda a estimar tus pagos mensuales de hipoteca, intereses totales pagados durante la vida del préstamo y crear un calendario completo de amortización.",
       "benefits": [
@@ -126,7 +141,13 @@
       ],
       "whoItsFor": "Compradores de vivienda, profesionales inmobiliarios, planificadores financieros y cualquier persona que considere un préstamo hipotecario.",
       "disclaimer": "Esta calculadora proporciona estimaciones únicamente. Los términos hipotecarios reales dependen de los requisitos del prestamista, puntaje crediticio y condiciones actuales del mercado. Consulta con un profesional hipotecario para asesoramiento personalizado.",
-      "relatedTools": ["loan-calculator", "home-affordability-calculator", "debt-ratios-calculator"],
+      "howDoesWork": "Una calculadora de hipoteca utiliza la fórmula estándar de pago de préstamo para determinar tus pagos mensuales. Toma el monto de tu préstamo (principal), tasa de interés anual y plazo del préstamo, luego calcula el pago mensual usando la fórmula: M = P[r(1+r)^n]/[(1+r)^n-1], donde M es pago mensual, P es principal, r es tasa de interés mensual y n es número de pagos. La calculadora también genera un calendario de amortización mostrando cómo se divide cada pago entre principal e intereses con el tiempo.",
+      "completeGuide": "Para usar esta calculadora de hipoteca efectivamente: 1) Ingresa el monto de tu préstamo (el principal que deseas pedir prestado), 2) Ingresa la tasa de interés anual (consulta las tasas hipotecarias actuales), 3) Especifica el plazo del préstamo en años (típicamente 15 o 30 años), 4) Opcionalmente agrega impuestos prediales y seguro de hogar para un pago total más preciso, 5) Haz clic en calcular para ver tu pago mensual, interés total y calendario de amortización. Usa los resultados para comparar diferentes escenarios de préstamo y planificar el presupuesto de compra de tu hogar.",
+      "relatedTools": [
+        "loan-calculator",
+        "home-affordability-calculator",
+        "debt-ratios-calculator"
+      ],
       "faqs": [
         {
           "question": "¿Qué es una calculadora de hipoteca?",
@@ -153,7 +174,8 @@
           "answer": "Puedes refinanciar tu hipoteca para cambiar los términos, pero involucra costos de cierre y puede extender el plazo de tu préstamo. Considera tus metas a largo plazo antes de refinanciar. Los refinanciamientos de tasa y plazo cambian tu tasa de interés y/o longitud del préstamo."
         }
       ]
-    }
+    },
+    "component": "MortgageCalculator"
   },
   "pt": {
     "title": "Calculadora de Hipoteca",
@@ -166,7 +188,11 @@
     "seoContent": {
       "metaTitle": "Calculadora de Hipoteca - Calcule Pagamentos Mensais e Juros",
       "metaDescription": "Calculadora de hipoteca gratuita para estimar pagamentos mensais, juros totais e cronograma de amortização.",
-      "keywords": ["calculadora hipoteca", "calculadora empréstimo casa", "calculadora pagamento mensal"],
+      "keywords": [
+        "calculadora hipoteca",
+        "calculadora empréstimo casa",
+        "calculadora pagamento mensal"
+      ],
       "h1": "Calculadora de Hipoteca",
       "introduction": "Nossa calculadora de hipoteca ajuda você a estimar seus pagamentos mensais de hipoteca, juros totais pagos durante a vida do empréstimo e criar um cronograma completo de amortização.",
       "benefits": [
@@ -204,7 +230,11 @@
       ],
       "whoItsFor": "Compradores de imóveis, profissionais imobiliários, planejadores financeiros e qualquer pessoa considerando um empréstimo hipotecário.",
       "disclaimer": "Esta calculadora fornece estimativas apenas. Os termos hipotecários reais dependem dos requisitos do credor, pontuação de crédito e condições atuais do mercado. Consulte um profissional hipotecário para aconselhamento personalizado.",
-      "relatedTools": ["loan-calculator", "home-affordability-calculator", "debt-ratios-calculator"],
+      "relatedTools": [
+        "loan-calculator",
+        "home-affordability-calculator",
+        "debt-ratios-calculator"
+      ],
       "faqs": [
         {
           "question": "O que é uma calculadora de hipoteca?",
@@ -231,7 +261,8 @@
           "answer": "Você pode refinanciar sua hipoteca para alterar os termos, mas envolve custos de fechamento e pode estender o prazo do seu empréstimo. Considere suas metas de longo prazo antes de refinanciar. Refinanciamentos de taxa e prazo alteram sua taxa de juros e/ou duração do empréstimo."
         }
       ]
-    }
+    },
+    "component": "MortgageCalculator"
   },
   "fr": {
     "title": "Calculateur d'Hypothèque",
@@ -244,7 +275,11 @@
     "seoContent": {
       "metaTitle": "Calculateur d'Hypothèque - Calculez les Paiements Mensuels et Intérêts",
       "metaDescription": "Calculateur d'hypothèque gratuit pour estimer les paiements mensuels, intérêts totaux et calendrier d'amortissement.",
-      "keywords": ["calculateur hypothèque", "calculateur prêt immobilier", "calculateur paiement mensuel"],
+      "keywords": [
+        "calculateur hypothèque",
+        "calculateur prêt immobilier",
+        "calculateur paiement mensuel"
+      ],
       "h1": "Calculateur d'Hypothèque",
       "introduction": "Notre calculateur d'hypothèque vous aide à estimer vos paiements mensuels d'hypothèque, intérêts totaux payés pendant la durée du prêt et à créer un calendrier complet d'amortissement.",
       "benefits": [
@@ -282,7 +317,11 @@
       ],
       "whoItsFor": "Acheteurs immobiliers, professionnels de l'immobilier, planificateurs financiers et toute personne envisageant un prêt hypothécaire.",
       "disclaimer": "Ce calculateur fournit uniquement des estimations. Les conditions hypothécaires réelles dépendent des exigences du prêteur, du score de crédit et des conditions actuelles du marché. Consultez un professionnel hypothécaire pour des conseils personnalisés.",
-      "relatedTools": ["loan-calculator", "home-affordability-calculator", "debt-ratios-calculator"],
+      "relatedTools": [
+        "loan-calculator",
+        "home-affordability-calculator",
+        "debt-ratios-calculator"
+      ],
       "faqs": [
         {
           "question": "Qu'est-ce qu'un calculateur d'hypothèque?",
@@ -309,6 +348,7 @@
           "answer": "Vous pouvez refinancer votre hypothèque pour changer les termes, mais cela implique des frais de clôture et peut prolonger la durée de votre prêt. Considérez vos objectifs à long terme avant de refinancer. Les refinancements de taux et de durée changent votre taux d'intérêt et/ou la durée du prêt."
         }
       ]
-    }
+    },
+    "component": "MortgageCalculator"
   }
 }

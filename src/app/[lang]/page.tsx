@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import HomePage from '@/components/HomePage';
 import { generateHomepageSchema } from '@/lib/seoContentRenderer';
+import { loadAllCalculatorsStatic } from '@/lib/staticDataLoader';
 
 // Valid languages
 const validLanguages = ['en', 'es', 'pt', 'fr'];
@@ -54,5 +55,8 @@ export default async function DynamicHome({ params }: { params: Promise<{ lang: 
     notFound();
   }
 
-  return <HomePage language={lang} />;
+  // Load all calculators at BUILD TIME for static generation
+  const allCalculators = loadAllCalculatorsStatic(lang);
+
+  return <HomePage language={lang} initialCalculators={allCalculators} />;
 }

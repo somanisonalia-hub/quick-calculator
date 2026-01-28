@@ -3,13 +3,32 @@
     "title": "Circle Circumference Calculator",
     "seoTitle": "Circle Circumference Calculator - Calculate Circumference of a Circle Online",
     "metaDescription": "Free circle circumference calculator. Calculate the circumference of a circle using radius or diameter. Includes formula explanation and step-by-step calculations.",
-    "keywords": ["circle circumference calculator", "circumference of circle", "circle perimeter calculator", "geometry calculator"],
-    "longTailKeywords": ["how to calculate circumference of circle", "circle circumference formula", "circumference of circle with radius", "circle perimeter calculator online", "geometry circle circumference"],
+    "keywords": [
+      "circle circumference calculator",
+      "circumference of circle",
+      "circle perimeter calculator",
+      "geometry calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate circumference of circle",
+      "circle circumference formula",
+      "circumference of circle with radius",
+      "circle perimeter calculator online",
+      "geometry circle circumference"
+    ],
     "slug": "circle-circumference-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "basic",
-    "tags": ["circle", "circumference", "perimeter", "geometry", "radius", "diameter", "pi"],
+    "tags": [
+      "circle",
+      "circumference",
+      "perimeter",
+      "geometry",
+      "radius",
+      "diameter",
+      "pi"
+    ],
     "summary": "Calculate the circumference of a circle using radius or diameter with step-by-step explanations.",
     "description": "Our circle circumference calculator helps you find the perimeter of any circle using either the radius or diameter. The calculator provides the formula, step-by-step calculations, and visual explanations perfect for students learning geometry.",
     "instructions": [
@@ -21,16 +40,52 @@
     "calculatorComponent": {
       "componentName": "CircleCircumferenceCalculator",
       "inputs": [
-        { "name": "inputMethod", "label": "Input Method", "type": "select", "default": "radius", "options": ["radius", "diameter"] },
-        { "name": "value", "label": "Value", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+        {
+          "name": "inputMethod",
+          "label": "Input Method",
+          "type": "select",
+          "default": "radius",
+          "options": [
+            "radius",
+            "diameter"
+          ]
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Circumference = 2 × π × r (when using radius); Circumference = π × d (when using diameter)",
-      "output": { "label": "Circle Circumference", "default": "Enter radius or diameter above", "format": "number" },
+      "output": {
+        "label": "Circle Circumference",
+        "default": "Enter radius or diameter above",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Radius", "field": "radius", "format": "number" },
-        { "label": "Diameter", "field": "diameter", "format": "number" },
-        { "label": "Area", "field": "area", "format": "number" },
-        { "label": "Formula Used", "field": "formula", "format": "text" }
+        {
+          "label": "Radius",
+          "field": "radius",
+          "format": "number"
+        },
+        {
+          "label": "Diameter",
+          "field": "diameter",
+          "format": "number"
+        },
+        {
+          "label": "Area",
+          "field": "area",
+          "format": "number"
+        },
+        {
+          "label": "Formula Used",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -50,7 +105,11 @@
         "output": "Circumference = 87.96 inches (distance traveled per rotation)"
       }
     ],
-    "relatedCalculators": ["circle-area-calculator", "triangle-area-calculator", "volume-calculator"],
+    "relatedCalculators": [
+      "circle-area-calculator",
+      "triangle-area-calculator",
+      "volume-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculate the circumference (perimeter) of any circle instantly with our comprehensive circle circumference calculator. Whether you're working with radius or diameter measurements, this geometry calculator provides accurate results using the standard mathematical formula C = 2πr. Perfect for students learning geometry, engineers working with circular components, manufacturers calculating wheel rotations, and anyone needing to calculate circle perimeters for practical applications. Access step-by-step calculations, visual explanations, and related geometric properties all in one convenient tool.",
       "benefits": [
@@ -118,19 +177,39 @@
           "answer": "Yes, for circles with small radii, the circumference can be larger than the area. For example, a circle with radius 1 has circumference ≈6.28 and area ≈3.14. As the radius increases, the area grows faster than the circumference (area grows with r² while circumference grows with r), so larger circles have much greater area than circumference."
         }
       ]
-    }
+    },
+    "component": "CircleCircumferenceCalculator"
   },
   "es": {
     "title": "Calculadora de Circunferencia del Círculo",
     "seoTitle": "Calculadora de Circunferencia del Círculo - Calcula Circunferencia de un Círculo Online",
     "metaDescription": "Calculadora gratuita de circunferencia del círculo. Calcula la circunferencia de un círculo usando radio o diámetro. Incluye explicación de fórmula y cálculos paso a paso.",
-    "keywords": ["calculadora circunferencia círculo", "circunferencia del círculo", "calculadora perímetro círculo", "calculadora geometría"],
-    "longTailKeywords": ["como calcular circunferencia del círculo", "fórmula circunferencia círculo", "circunferencia del círculo con radio", "calculadora perímetro círculo online", "geometría circunferencia círculo"],
+    "keywords": [
+      "calculadora circunferencia círculo",
+      "circunferencia del círculo",
+      "calculadora perímetro círculo",
+      "calculadora geometría"
+    ],
+    "longTailKeywords": [
+      "como calcular circunferencia del círculo",
+      "fórmula circunferencia círculo",
+      "circunferencia del círculo con radio",
+      "calculadora perímetro círculo online",
+      "geometría circunferencia círculo"
+    ],
     "slug": "circle-circumference-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "basic",
-    "tags": ["círculo", "circunferencia", "perímetro", "geometría", "radio", "diámetro", "pi"],
+    "tags": [
+      "círculo",
+      "circunferencia",
+      "perímetro",
+      "geometría",
+      "radio",
+      "diámetro",
+      "pi"
+    ],
     "summary": "Calcula la circunferencia de un círculo usando radio o diámetro con explicaciones paso a paso.",
     "description": "Nuestra calculadora de circunferencia del círculo te ayuda a encontrar el perímetro de cualquier círculo usando el radio o diámetro. La calculadora proporciona la fórmula, cálculos paso a paso, y explicaciones visuales perfectas para estudiantes aprendiendo geometría.",
     "instructions": [
@@ -142,16 +221,52 @@
     "calculatorComponent": {
       "componentName": "CircleCircumferenceCalculator",
       "inputs": [
-        { "name": "inputMethod", "label": "Método de Entrada", "type": "select", "default": "radius", "options": ["radius", "diameter"] },
-        { "name": "value", "label": "Valor", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+        {
+          "name": "inputMethod",
+          "label": "Método de Entrada",
+          "type": "select",
+          "default": "radius",
+          "options": [
+            "radius",
+            "diameter"
+          ]
+        },
+        {
+          "name": "value",
+          "label": "Valor",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Circunferencia = 2 × π × r (cuando usando radio); Circunferencia = π × d (cuando usando diámetro)",
-      "output": { "label": "Circunferencia del Círculo", "default": "Ingresa radio o diámetro arriba", "format": "number" },
+      "output": {
+        "label": "Circunferencia del Círculo",
+        "default": "Ingresa radio o diámetro arriba",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Radio", "field": "radius", "format": "number" },
-        { "label": "Diámetro", "field": "diameter", "format": "number" },
-        { "label": "Área", "field": "area", "format": "number" },
-        { "label": "Fórmula Usada", "field": "formula", "format": "text" }
+        {
+          "label": "Radio",
+          "field": "radius",
+          "format": "number"
+        },
+        {
+          "label": "Diámetro",
+          "field": "diameter",
+          "format": "number"
+        },
+        {
+          "label": "Área",
+          "field": "area",
+          "format": "number"
+        },
+        {
+          "label": "Fórmula Usada",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -171,7 +286,11 @@
         "output": "Circunferencia = 87.96 pulgadas (distancia recorrida por rotación)"
       }
     ],
-    "relatedCalculators": ["circle-area-calculator", "triangle-area-calculator", "volume-calculator"],
+    "relatedCalculators": [
+      "circle-area-calculator",
+      "triangle-area-calculator",
+      "volume-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcule a circunferência (perímetro) de qualquer círculo instantaneamente com nossa calculadora abrangente de circunferência do círculo. Seja trabalhando com medidas de raio ou diâmetro, esta calculadora de geometria fornece resultados precisos usando a fórmula matemática padrão C = 2πr. Perfeita para estudantes aprendendo geometria, engenheiros trabalhando com componentes circulares, fabricantes calculando rotações de rodas, e qualquer um precisando calcular perímetros de círculos para aplicações práticas. Acesse cálculos passo a passo, explicações visuais, e propriedades geométricas relacionadas tudo em uma ferramenta conveniente.",
       "benefits": [
@@ -239,19 +358,39 @@
           "answer": "Sim, para círculos com raios pequenos, a circunferência pode ser maior que a área. Por exemplo, um círculo com raio 1 tem circunferência ≈6.28 e área ≈3.14. À medida que o raio aumenta, a área cresce mais rápido que a circunferência (área cresce com r² enquanto circunferência cresce com r), então círculos maiores têm área muito maior que circunferência."
         }
       ]
-    }
+    },
+    "component": "CircleCircumferenceCalculator"
   },
   "pt": {
     "title": "Calculadora da Circunferência do Círculo",
     "seoTitle": "Calculadora da Circunferência do Círculo - Calcule Circunferência de um Círculo Online",
     "metaDescription": "Calculadora gratuita da circunferência do círculo. Calcule a circunferência de um círculo usando raio ou diâmetro. Inclui explicação de fórmula e cálculos passo a passo.",
-    "keywords": ["calculadora circunferência círculo", "circunferência do círculo", "calculadora perímetro círculo", "calculadora geometria"],
-    "longTailKeywords": ["como calcular circunferência do círculo", "fórmula circunferência círculo", "circunferência do círculo com raio", "calculadora perímetro círculo online", "geometria circunferência círculo"],
+    "keywords": [
+      "calculadora circunferência círculo",
+      "circunferência do círculo",
+      "calculadora perímetro círculo",
+      "calculadora geometria"
+    ],
+    "longTailKeywords": [
+      "como calcular circunferência do círculo",
+      "fórmula circunferência círculo",
+      "circunferência do círculo com raio",
+      "calculadora perímetro círculo online",
+      "geometria circunferência círculo"
+    ],
     "slug": "circle-circumference-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "basic",
-    "tags": ["círculo", "circunferência", "perímetro", "geometria", "raio", "diâmetro", "pi"],
+    "tags": [
+      "círculo",
+      "circunferência",
+      "perímetro",
+      "geometria",
+      "raio",
+      "diâmetro",
+      "pi"
+    ],
     "summary": "Calcule a circunferência de um círculo usando raio ou diâmetro com explicações passo a passo.",
     "description": "Nossa calculadora da circunferência do círculo ajuda você a encontrar o perímetro de qualquer círculo usando o raio ou diâmetro. A calculadora fornece a fórmula, cálculos passo a passo, e explicações visuais perfeitas para estudantes aprendendo geometria.",
     "instructions": [
@@ -263,16 +402,52 @@
     "calculatorComponent": {
       "componentName": "CircleCircumferenceCalculator",
       "inputs": [
-        { "name": "inputMethod", "label": "Método de Entrada", "type": "select", "default": "radius", "options": ["radius", "diameter"] },
-        { "name": "value", "label": "Valor", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+        {
+          "name": "inputMethod",
+          "label": "Método de Entrada",
+          "type": "select",
+          "default": "radius",
+          "options": [
+            "radius",
+            "diameter"
+          ]
+        },
+        {
+          "name": "value",
+          "label": "Valor",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Circunferência = 2 × π × r (quando usando raio); Circunferência = π × d (quando usando diâmetro)",
-      "output": { "label": "Circunferência do Círculo", "default": "Digite raio ou diâmetro acima", "format": "number" },
+      "output": {
+        "label": "Circunferência do Círculo",
+        "default": "Digite raio ou diâmetro acima",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Raio", "field": "radius", "format": "number" },
-        { "label": "Diâmetro", "field": "diameter", "format": "number" },
-        { "label": "Área", "field": "area", "format": "number" },
-        { "label": "Fórmula Usada", "field": "formula", "format": "text" }
+        {
+          "label": "Raio",
+          "field": "radius",
+          "format": "number"
+        },
+        {
+          "label": "Diâmetro",
+          "field": "diameter",
+          "format": "number"
+        },
+        {
+          "label": "Área",
+          "field": "area",
+          "format": "number"
+        },
+        {
+          "label": "Fórmula Usada",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -292,19 +467,92 @@
         "output": "Circunferência = 87.96 polegadas (distância percorrida por rotação)"
       }
     ],
-    "relatedCalculators": ["circle-area-calculator", "triangle-area-calculator", "volume-calculator"]
+    "relatedCalculators": [
+      "circle-area-calculator",
+      "triangle-area-calculator",
+      "volume-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule a circunferência de um círculo instantaneamente com nossa calculadora precisa. A circunferência é a distância ao redor da borda de um círculo e é essencial em matemática, engenharia e aplicações do mundo real.",
+      "benefits": [
+        "Calcule circunferência usando raio ou diâmetro",
+        "Suporta múltiplas unidades de medida",
+        "Fornece resultados instantâneos e precisos",
+        "Útil para projetos de construção e design",
+        "Explica a fórmula matemática claramente"
+      ],
+      "steps": [
+        "Selecione se você tem raio ou diâmetro",
+        "Digite a medida do círculo",
+        "Escolha sua unidade de medida",
+        "Obtenha o resultado da circunferência instantaneamente"
+      ],
+      "inputsExplained": [
+        "Raio: distância do centro até a borda do círculo",
+        "Diâmetro: distância através do círculo passando pelo centro",
+        "Unidades: cm, m, polegadas, pés, etc."
+      ],
+      "formulaExplanation": "A fórmula da circunferência é C = 2πr (usando raio) ou C = πd (usando diâmetro), onde π (pi) é aproximadamente 3.14159. Esta relação constante entre circunferência e diâmetro é uma das propriedades fundamentais dos círculos.",
+      "examples": [
+        "Círculo com raio 5cm: C = 2π(5) = 31.42 cm",
+        "Círculo com diâmetro 10m: C = π(10) = 31.42 m",
+        "Roda com raio 14 polegadas: C = 87.96 polegadas"
+      ],
+      "resultsExplanation": [
+        "Resultado da circunferência em suas unidades escolhidas",
+        "Cálculo baseado na fórmula matemática padrão",
+        "Precisão até várias casas decimais"
+      ],
+      "whoItsFor": "Esta calculadora serve estudantes aprendendo geometria, engenheiros projetando componentes circulares, construtores planejando estruturas, e qualquer um que precise de medições precisas de círculos.",
+      "disclaimer": "Esta calculadora fornece resultados baseados em fórmulas matemáticas padrão. Para aplicações críticas de engenharia, consulte profissionais e padrões relevantes.",
+      "relatedTools": [
+        "Calculadora de área de círculo",
+        "Calculadora de volume",
+        "Calculadora de área de triângulo"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre raio e diâmetro?",
+          "answer": "O raio é a distância do centro do círculo até sua borda, enquanto o diâmetro é a distância através do círculo passando pelo centro. O diâmetro é sempre o dobro do raio."
+        },
+        {
+          "question": "Por que usamos π (pi) no cálculo?",
+          "answer": "Pi é a constante matemática que representa a razão entre a circunferência e o diâmetro de qualquer círculo. É aproximadamente 3.14159 e é sempre a mesma para todos os círculos."
+        }
+      ]
+    },
+    "component": "CircleCircumferenceCalculator"
   },
   "fr": {
     "title": "Calculateur de Circonférence de Cercle",
     "seoTitle": "Calculateur de Circonférence de Cercle - Calculez Circonférence d'un Cercle en Ligne",
     "metaDescription": "Calculateur gratuit de circonférence de cercle. Calculez la circonférence d'un cercle en utilisant rayon ou diamètre. Inclut explication de formule et calculs étape par étape.",
-    "keywords": ["calculateur circonférence cercle", "circonférence du cercle", "calculateur périmètre cercle", "calculateur géométrie"],
-    "longTailKeywords": ["comment calculer circonférence du cercle", "formule circonférence cercle", "circonférence du cercle avec rayon", "calculateur périmètre cercle en ligne", "géométrie circonférence cercle"],
+    "keywords": [
+      "calculateur circonférence cercle",
+      "circonférence du cercle",
+      "calculateur périmètre cercle",
+      "calculateur géométrie"
+    ],
+    "longTailKeywords": [
+      "comment calculer circonférence du cercle",
+      "formule circonférence cercle",
+      "circonférence du cercle avec rayon",
+      "calculateur périmètre cercle en ligne",
+      "géométrie circonférence cercle"
+    ],
     "slug": "circle-circumference-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "basic",
-    "tags": ["cercle", "circonférence", "périmètre", "géométrie", "rayon", "diamètre", "pi"],
+    "tags": [
+      "cercle",
+      "circonférence",
+      "périmètre",
+      "géométrie",
+      "rayon",
+      "diamètre",
+      "pi"
+    ],
     "summary": "Calculez la circonférence d'un cercle en utilisant rayon ou diamètre avec explications étape par étape.",
     "description": "Notre calculateur de circonférence de cercle vous aide à trouver le périmètre de n'importe quel cercle en utilisant le rayon ou diamètre. Le calculateur fournit la formule, calculs étape par étape, et explications visuelles parfaites pour étudiants apprenant la géométrie.",
     "instructions": [
@@ -316,16 +564,52 @@
     "calculatorComponent": {
       "componentName": "CircleCircumferenceCalculator",
       "inputs": [
-        { "name": "inputMethod", "label": "Méthode d'Entrée", "type": "select", "default": "radius", "options": ["radius", "diameter"] },
-        { "name": "value", "label": "Valeur", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+        {
+          "name": "inputMethod",
+          "label": "Méthode d'Entrée",
+          "type": "select",
+          "default": "radius",
+          "options": [
+            "radius",
+            "diameter"
+          ]
+        },
+        {
+          "name": "value",
+          "label": "Valeur",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Circonférence = 2 × π × r (lorsque utilisant rayon); Circonférence = π × d (lorsque utilisant diamètre)",
-      "output": { "label": "Circonférence du Cercle", "default": "Entrez rayon ou diamètre ci-dessus", "format": "number" },
+      "output": {
+        "label": "Circonférence du Cercle",
+        "default": "Entrez rayon ou diamètre ci-dessus",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Rayon", "field": "radius", "format": "number" },
-        { "label": "Diamètre", "field": "diameter", "format": "number" },
-        { "label": "Aire", "field": "area", "format": "number" },
-        { "label": "Formule Utilisée", "field": "formula", "format": "text" }
+        {
+          "label": "Rayon",
+          "field": "radius",
+          "format": "number"
+        },
+        {
+          "label": "Diamètre",
+          "field": "diameter",
+          "format": "number"
+        },
+        {
+          "label": "Aire",
+          "field": "area",
+          "format": "number"
+        },
+        {
+          "label": "Formule Utilisée",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -345,7 +629,11 @@
         "output": "Circonférence = 87.96 pouces (distance parcourue par rotation)"
       }
     ],
-    "relatedCalculators": ["circle-area-calculator", "triangle-area-calculator", "volume-calculator"],
+    "relatedCalculators": [
+      "circle-area-calculator",
+      "triangle-area-calculator",
+      "volume-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculez la circonférence (périmètre) de n'importe quel cercle instantanément avec notre calculateur complet de circonférence de cercle. Que vous travailliez avec mesures de rayon ou diamètre, cette calculatrice de géométrie fournit résultats précis utilisant la formule mathématique standard C = 2πr. Parfaite pour étudiants apprenant la géométrie, ingénieurs travaillant avec composants circulaires, fabricants calculant rotations de roulettes, et quiconque ayant besoin calculer périmètres de cercles pour applications pratiques. Accédez calculs étape par étape, explications visuelles, et propriétés géométriques connexes tout dans un outil pratique.",
       "benefits": [
@@ -413,6 +701,7 @@
           "answer": "Oui, pour cercles avec rayons petits, la circonférence peut être plus grande que l'aire. Par exemple, un cercle avec rayon 1 a circonférence ≈6.28 et aire ≈3.14. Au fur rayon augmente, l'aire grandit plus vite que circonférence (aire grandit avec r² tandis circonférence grandit avec r), donc cercles plus grands ont aire beaucoup plus grande que circonférence."
         }
       ]
-    }
+    },
+    "component": "CircleCircumferenceCalculator"
   }
 }

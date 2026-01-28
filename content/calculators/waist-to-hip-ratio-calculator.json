@@ -75,14 +75,20 @@
         "label": "Measurement Unit",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Gender",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       }
     ],
     "formula": "WHR = Waist Circumference ÷ Hip Circumference\nHealth Risk Categories:\nWomen: Low (<0.80), Moderate (0.80-0.84), High (≥0.85)\nMen: Low (<0.90), Moderate (0.90-0.99), High (≥1.00)\nBody Shape: Apple (>0.85 W, >0.90 M), Pear (<0.80 W, <0.90 M)",
@@ -236,7 +242,8 @@
           "answer": "WHR may be less reliable in athletes and bodybuilders due to high muscle mass. Very muscular individuals may have higher WHR without increased health risks. In these cases, combine WHR with other measures like body fat percentage, BMI, and overall health markers for accurate assessment."
         }
       ]
-    }
+    },
+    "component": "WaistToHipRatioCalculator"
   },
   "es": {
     "title": "Calculadora de Relación Cintura-Cadera",
@@ -314,14 +321,20 @@
         "label": "Unidad de Medición",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Género",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       }
     ],
     "formula": "RCC = Circunferencia Cintura ÷ Circunferencia Cadera\nCategorías Riesgo Salud:\nMujeres: Bajo (<0.80), Moderado (0.80-0.84), Alto (≥0.85)\nHombres: Bajo (<0.90), Moderado (0.90-0.99), Alto (≥1.00)\nForma Corporal: Manzana (>0.85 M, >0.90 H), Pera (<0.80 M, <0.90 H)",
@@ -475,7 +488,8 @@
           "answer": "RCC puede ser menos confiable en atletas y fisiculturistas debido a alta masa muscular. Individuos muy musculosos pueden tener RCC más alto sin riesgos de salud aumentados. En estos casos, combina RCC con otras medidas como porcentaje de grasa corporal, IMC y marcadores generales de salud para evaluación precisa."
         }
       ]
-    }
+    },
+    "component": "WaistToHipRatioCalculator"
   },
   "pt": {
     "title": "Calculadora de Relação Cintura-Quadril",
@@ -553,14 +567,20 @@
         "label": "Unidade de Medição",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Gênero",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       }
     ],
     "formula": "RCQ = Circunferência Cintura ÷ Circunferência Quadril\nCategorias Risco Saúde:\nMulheres: Baixo (<0.80), Moderado (0.80-0.84), Alto (≥0.85)\nHomens: Baixo (<0.90), Moderado (0.90-0.99), Alto (≥1.00)\nForma Corporal: Maçã (>0.85 M, >0.90 H), Pera (<0.80 M, <0.90 H)",
@@ -714,7 +734,8 @@
           "answer": "RCQ pode ser menos confiável em atletas e fisiculturistas devido a alta massa muscular. Indivíduos muito musculosos podem ter RCQ mais alto sem riscos de saúde aumentados. Nestes casos, combine RCQ com outras medidas como porcentagem de gordura corporal, IMC e marcadores gerais de saúde para avaliação precisa."
         }
       ]
-    }
+    },
+    "component": "WaistToHipRatioCalculator"
   },
   "fr": {
     "title": "Calculateur de Rapport Taille-Hanches",
@@ -792,14 +813,20 @@
         "label": "Unité de Mesure",
         "type": "select",
         "default": "cm",
-        "options": ["cm", "inches"]
+        "options": [
+          "cm",
+          "inches"
+        ]
       },
       {
         "name": "gender",
         "label": "Genre",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       }
     ],
     "formula": "RTH = Circonférence Taille ÷ Circonférence Hanches\nCatégories Risque Santé:\nFemmes: Faible (<0.80), Modéré (0.80-0.84), Élevé (≥0.85)\nHommes: Faible (<0.90), Modéré (0.90-0.99), Élevé (≥1.00)\nForme Corporelle: Pomme (>0.85 F, >0.90 H), Poire (<0.80 F, <0.90 H)",
@@ -953,6 +980,7 @@
           "answer": "RTH peut être moins fiable chez athlètes et bodybuilders dû à haute masse musculaire. Individus très musclés peuvent avoir RTH plus élevé sans risques de santé augmentés. Dans ces cas, combinez RTH avec d'autres mesures comme pourcentage de graisse corporelle, IMC et marqueurs généraux de santé pour évaluation précise."
         }
       ]
-    }
+    },
+    "component": "WaistToHipRatioCalculator"
   }
 }

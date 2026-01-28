@@ -68,28 +68,48 @@
         "label": "Weight Unit",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "activityLevel",
         "label": "Activity Level",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "climate",
         "label": "Climate Conditions",
         "type": "select",
         "default": "normal",
-        "options": ["normal", "hot_dry", "cold_dry", "humid"]
+        "options": [
+          "normal",
+          "hot_dry",
+          "cold_dry",
+          "humid"
+        ]
       },
       {
         "name": "healthCondition",
         "label": "Health Conditions",
         "type": "select",
         "default": "normal",
-        "options": ["normal", "pregnancy", "breastfeeding", "illness", "elderly"]
+        "options": [
+          "normal",
+          "pregnancy",
+          "breastfeeding",
+          "illness",
+          "elderly"
+        ]
       },
       {
         "name": "age",
@@ -106,7 +126,10 @@
         "label": "Gender",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       }
     ],
     "formula": "Base Water Intake = 30-35ml × Body Weight (kg)\nActivity Adjustment = Base × Activity Multiplier (1.0-2.0)\nClimate Adjustment = Base × Climate Multiplier (1.0-1.5)\nHealth Adjustment = Base × Health Multiplier (1.0-2.0)\nDaily Water Intake = Adjusted Base + Adjustments",
@@ -179,7 +202,7 @@
         },
         "outputs": {
           "dailyWaterIntake": 4000,
-          "waterLiters": 4.0,
+          "waterLiters": 4,
           "waterOunces": 135,
           "waterCups": 16.9,
           "hydrationSchedule": "Drink before, during, and after exercise"
@@ -200,7 +223,7 @@
           "dailyWaterIntake": 2600,
           "waterLiters": 2.6,
           "waterOunces": 88,
-          "waterCups": 11.0,
+          "waterCups": 11,
           "hydrationSchedule": "Small sips throughout the day"
         }
       }
@@ -282,7 +305,8 @@
           "answer": "Hot and dry climates increase water loss through sweat and respiration, requiring 50-100% more water intake. Cold climates can also increase needs due to dry air and indoor heating. Humid climates may require more water for cooling the body. High altitude can increase water needs due to faster breathing."
         }
       ]
-    }
+    },
+    "component": "WaterIntakeCalculator"
   },
   "es": {
     "title": "Calculadora de Ingesta de Agua",
@@ -353,28 +377,48 @@
         "label": "Unidad de Peso",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "activityLevel",
         "label": "Nivel de Actividad",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "climate",
         "label": "Condiciones Climáticas",
         "type": "select",
         "default": "normal",
-        "options": ["normal", "hot_dry", "cold_dry", "humid"]
+        "options": [
+          "normal",
+          "hot_dry",
+          "cold_dry",
+          "humid"
+        ]
       },
       {
         "name": "healthCondition",
         "label": "Condiciones de Salud",
         "type": "select",
         "default": "normal",
-        "options": ["normal", "pregnancy", "breastfeeding", "illness", "elderly"]
+        "options": [
+          "normal",
+          "pregnancy",
+          "breastfeeding",
+          "illness",
+          "elderly"
+        ]
       },
       {
         "name": "age",
@@ -391,7 +435,10 @@
         "label": "Género",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       }
     ],
     "formula": "Ingesta Base Agua = 30-35ml × Peso Corporal (kg)\nAjuste Actividad = Base × Multiplicador Actividad (1.0-2.0)\nAjuste Clima = Base × Multiplicador Clima (1.0-1.5)\nAjuste Salud = Base × Multiplicador Salud (1.0-2.0)\nIngesta Diaria Agua = Base Ajustada + Ajustes",
@@ -464,7 +511,7 @@
         },
         "outputs": {
           "dailyWaterIntake": 4000,
-          "waterLiters": 4.0,
+          "waterLiters": 4,
           "waterOunces": 135,
           "waterCups": 16.9,
           "hydrationSchedule": "Bebe antes, durante y después del ejercicio"
@@ -485,7 +532,7 @@
           "dailyWaterIntake": 2600,
           "waterLiters": 2.6,
           "waterOunces": 88,
-          "waterCups": 11.0,
+          "waterCups": 11,
           "hydrationSchedule": "Pequeños sorbos a lo largo del día"
         }
       }
@@ -567,7 +614,8 @@
           "answer": "Climas calientes y secos aumentan pérdida de agua a través de sudor y respiración, requiriendo 50-100% más ingesta de agua. Climas fríos también pueden aumentar necesidades debido a aire seco y calefacción indoor. Climas húmedos pueden requerir más agua para enfriar el cuerpo. Altitud alta puede aumentar necesidades de agua debido a respiración más rápida."
         }
       ]
-    }
+    },
+    "component": "WaterIntakeCalculator"
   },
   "pt": {
     "title": "Calculadora de Ingestão de Água",
@@ -638,28 +686,48 @@
         "label": "Unidade de Peso",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "activityLevel",
         "label": "Nível de Atividade",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "climate",
         "label": "Condições Climáticas",
         "type": "select",
         "default": "normal",
-        "options": ["normal", "hot_dry", "cold_dry", "humid"]
+        "options": [
+          "normal",
+          "hot_dry",
+          "cold_dry",
+          "humid"
+        ]
       },
       {
         "name": "healthCondition",
         "label": "Condições de Saúde",
         "type": "select",
         "default": "normal",
-        "options": ["normal", "pregnancy", "breastfeeding", "illness", "elderly"]
+        "options": [
+          "normal",
+          "pregnancy",
+          "breastfeeding",
+          "illness",
+          "elderly"
+        ]
       },
       {
         "name": "age",
@@ -676,7 +744,10 @@
         "label": "Gênero",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       }
     ],
     "formula": "Ingestão Base Água = 30-35ml × Peso Corporal (kg)\nAjuste Atividade = Base × Multiplicador Atividade (1.0-2.0)\nAjuste Clima = Base × Multiplicador Clima (1.0-1.5)\nAjuste Saúde = Base × Multiplicador Saúde (1.0-2.0)\nIngestão Diária Água = Base Ajustada + Ajustes",
@@ -749,7 +820,7 @@
         },
         "outputs": {
           "dailyWaterIntake": 4000,
-          "waterLiters": 4.0,
+          "waterLiters": 4,
           "waterOunces": 135,
           "waterCups": 16.9,
           "hydrationSchedule": "Beba antes, durante e após exercício"
@@ -770,7 +841,7 @@
           "dailyWaterIntake": 2600,
           "waterLiters": 2.6,
           "waterOunces": 88,
-          "waterCups": 11.0,
+          "waterCups": 11,
           "hydrationSchedule": "Pequenos goles ao longo do dia"
         }
       }
@@ -852,7 +923,8 @@
           "answer": "Climas quentes e secos aumentam perda de água através de suor e respiração, requerendo 50-100% mais ingestão de água. Climas frios também podem aumentar necessidades devido a ar seco e aquecimento interno. Climas úmidos podem requerer mais água para resfriar o corpo. Altitude alta pode aumentar necessidades de água devido a respiração mais rápida."
         }
       ]
-    }
+    },
+    "component": "WaterIntakeCalculator"
   },
   "fr": {
     "title": "Calculateur d'Apport en Eau",
@@ -923,28 +995,48 @@
         "label": "Unité de Poids",
         "type": "select",
         "default": "kg",
-        "options": ["kg", "lbs"]
+        "options": [
+          "kg",
+          "lbs"
+        ]
       },
       {
         "name": "activityLevel",
         "label": "Niveau d'Activité",
         "type": "select",
         "default": "moderately_active",
-        "options": ["sedentary", "lightly_active", "moderately_active", "very_active", "extremely_active"]
+        "options": [
+          "sedentary",
+          "lightly_active",
+          "moderately_active",
+          "very_active",
+          "extremely_active"
+        ]
       },
       {
         "name": "climate",
         "label": "Conditions Climatiques",
         "type": "select",
         "default": "normal",
-        "options": ["normal", "hot_dry", "cold_dry", "humid"]
+        "options": [
+          "normal",
+          "hot_dry",
+          "cold_dry",
+          "humid"
+        ]
       },
       {
         "name": "healthCondition",
         "label": "Conditions de Santé",
         "type": "select",
         "default": "normal",
-        "options": ["normal", "pregnancy", "breastfeeding", "illness", "elderly"]
+        "options": [
+          "normal",
+          "pregnancy",
+          "breastfeeding",
+          "illness",
+          "elderly"
+        ]
       },
       {
         "name": "age",
@@ -961,7 +1053,10 @@
         "label": "Genre",
         "type": "select",
         "default": "male",
-        "options": ["male", "female"]
+        "options": [
+          "male",
+          "female"
+        ]
       }
     ],
     "formula": "Apport Base Eau = 30-35ml × Poids Corporel (kg)\nAjustement Activité = Base × Multiplicateur Activité (1.0-2.0)\nAjustement Climat = Base × Multiplicateur Climat (1.0-1.5)\nAjustement Santé = Base × Multiplicateur Santé (1.0-2.0)\nApport Quotidien Eau = Base Ajustée + Ajustements",
@@ -1034,7 +1129,7 @@
         },
         "outputs": {
           "dailyWaterIntake": 4000,
-          "waterLiters": 4.0,
+          "waterLiters": 4,
           "waterOunces": 135,
           "waterCups": 16.9,
           "hydrationSchedule": "Buvez avant, pendant et après l'exercice"
@@ -1055,7 +1150,7 @@
           "dailyWaterIntake": 2600,
           "waterLiters": 2.6,
           "waterOunces": 88,
-          "waterCups": 11.0,
+          "waterCups": 11,
           "hydrationSchedule": "Petites gorgées tout au long de la journée"
         }
       }
@@ -1137,6 +1232,7 @@
           "answer": "Climats chauds et secs augmentent perte d'eau à travers sueur et respiration, requérant 50-100% plus apport en eau. Climats froids peuvent également augmenter besoins dû air sec et chauffage intérieur. Climats humides peuvent nécessiter plus d'eau pour refroidir corps. Haute altitude peut augmenter besoins en eau dû respiration plus rapide."
         }
       ]
-    }
+    },
+    "component": "WaterIntakeCalculator"
   }
 }

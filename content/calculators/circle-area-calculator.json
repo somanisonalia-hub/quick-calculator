@@ -3,13 +3,31 @@
     "title": "Circle Area Calculator",
     "seoTitle": "Circle Area Calculator - Calculate Area of a Circle Online",
     "metaDescription": "Free circle area calculator. Calculate the area of a circle using radius or diameter. Includes formula explanation and step-by-step calculations.",
-    "keywords": ["circle area calculator", "area of circle", "circle calculator", "geometry calculator"],
-    "longTailKeywords": ["how to calculate area of circle", "circle area formula", "area of circle with radius", "circle area calculator online", "geometry circle area"],
+    "keywords": [
+      "circle area calculator",
+      "area of circle",
+      "circle calculator",
+      "geometry calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate area of circle",
+      "circle area formula",
+      "area of circle with radius",
+      "circle area calculator online",
+      "geometry circle area"
+    ],
     "slug": "circle-area-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "basic",
-    "tags": ["circle", "area", "geometry", "radius", "diameter", "pi"],
+    "tags": [
+      "circle",
+      "area",
+      "geometry",
+      "radius",
+      "diameter",
+      "pi"
+    ],
     "summary": "Calculate the area of a circle using radius or diameter with step-by-step explanations.",
     "description": "Our circle area calculator helps you find the area of any circle using either the radius or diameter. The calculator provides the formula, step-by-step calculations, and visual explanations perfect for students learning geometry.",
     "instructions": [
@@ -21,16 +39,52 @@
     "calculatorComponent": {
       "componentName": "CircleAreaCalculator",
       "inputs": [
-        { "name": "inputMethod", "label": "Input Method", "type": "select", "default": "radius", "options": ["radius", "diameter"] },
-        { "name": "value", "label": "Value", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+        {
+          "name": "inputMethod",
+          "label": "Input Method",
+          "type": "select",
+          "default": "radius",
+          "options": [
+            "radius",
+            "diameter"
+          ]
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Area = π × r² (when using radius); Area = (π × d²) ÷ 4 (when using diameter)",
-      "output": { "label": "Circle Area", "default": "Enter radius or diameter above", "format": "number" },
+      "output": {
+        "label": "Circle Area",
+        "default": "Enter radius or diameter above",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Radius", "field": "radius", "format": "number" },
-        { "label": "Diameter", "field": "diameter", "format": "number" },
-        { "label": "Circumference", "field": "circumference", "format": "number" },
-        { "label": "Formula Used", "field": "formula", "format": "text" }
+        {
+          "label": "Radius",
+          "field": "radius",
+          "format": "number"
+        },
+        {
+          "label": "Diameter",
+          "field": "diameter",
+          "format": "number"
+        },
+        {
+          "label": "Circumference",
+          "field": "circumference",
+          "format": "number"
+        },
+        {
+          "label": "Formula Used",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -50,7 +104,11 @@
         "output": "Area = 201.06 square inches"
       }
     ],
-    "relatedCalculators": ["circle-circumference-calculator", "triangle-area-calculator", "volume-calculator"],
+    "relatedCalculators": [
+      "circle-circumference-calculator",
+      "triangle-area-calculator",
+      "volume-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculate the area of any circle instantly with our comprehensive circle area calculator. Whether you're working with radius or diameter measurements, this geometry calculator provides accurate results using the standard mathematical formula A = πr². Perfect for students learning geometry, architects designing circular spaces, engineers working with cylindrical components, and anyone needing to calculate circle areas for practical applications. Access step-by-step calculations, visual explanations, and related geometric properties all in one convenient tool.",
       "benefits": [
@@ -118,19 +176,38 @@
           "answer": "Both area and circumference depend on the radius, but they use different formulas. Circumference (perimeter) is calculated as C = 2πr, while area is A = πr². Interestingly, if you know the circumference, you can calculate the area, and vice versa, since both are functions of the radius. The ratio of circumference to diameter is always 2π, which is why π appears in both formulas."
         }
       ]
-    }
+    },
+    "component": "CircleAreaCalculator"
   },
   "es": {
     "title": "Calculadora del Área del Círculo",
     "seoTitle": "Calculadora del Área del Círculo - Calcula Área de un Círculo Online",
     "metaDescription": "Calculadora gratuita del área del círculo. Calcula el área de un círculo usando radio o diámetro. Incluye explicación de fórmula y cálculos paso a paso.",
-    "keywords": ["calculadora área círculo", "área del círculo", "calculadora círculo", "calculadora geometría"],
-    "longTailKeywords": ["como calcular área del círculo", "fórmula área círculo", "área del círculo con radio", "calculadora área círculo online", "geometría área círculo"],
+    "keywords": [
+      "calculadora área círculo",
+      "área del círculo",
+      "calculadora círculo",
+      "calculadora geometría"
+    ],
+    "longTailKeywords": [
+      "como calcular área del círculo",
+      "fórmula área círculo",
+      "área del círculo con radio",
+      "calculadora área círculo online",
+      "geometría área círculo"
+    ],
     "slug": "circle-area-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "basic",
-    "tags": ["círculo", "área", "geometría", "radio", "diámetro", "pi"],
+    "tags": [
+      "círculo",
+      "área",
+      "geometría",
+      "radio",
+      "diámetro",
+      "pi"
+    ],
     "summary": "Calcula el área de un círculo usando radio o diámetro con explicaciones paso a paso.",
     "description": "Nuestra calculadora del área del círculo te ayuda a encontrar el área de cualquier círculo usando el radio o diámetro. La calculadora proporciona la fórmula, cálculos paso a paso, y explicaciones visuales perfectas para estudiantes aprendiendo geometría.",
     "instructions": [
@@ -142,16 +219,52 @@
     "calculatorComponent": {
       "componentName": "CircleAreaCalculator",
       "inputs": [
-        { "name": "inputMethod", "label": "Método de Entrada", "type": "select", "default": "radius", "options": ["radius", "diameter"] },
-        { "name": "value", "label": "Valor", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+        {
+          "name": "inputMethod",
+          "label": "Método de Entrada",
+          "type": "select",
+          "default": "radius",
+          "options": [
+            "radius",
+            "diameter"
+          ]
+        },
+        {
+          "name": "value",
+          "label": "Valor",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Área = π × r² (cuando usando radio); Área = (π × d²) ÷ 4 (cuando usando diámetro)",
-      "output": { "label": "Área del Círculo", "default": "Ingresa radio o diámetro arriba", "format": "number" },
+      "output": {
+        "label": "Área del Círculo",
+        "default": "Ingresa radio o diámetro arriba",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Radio", "field": "radius", "format": "number" },
-        { "label": "Diámetro", "field": "diameter", "format": "number" },
-        { "label": "Circunferencia", "field": "circumference", "format": "number" },
-        { "label": "Fórmula Usada", "field": "formula", "format": "text" }
+        {
+          "label": "Radio",
+          "field": "radius",
+          "format": "number"
+        },
+        {
+          "label": "Diámetro",
+          "field": "diameter",
+          "format": "number"
+        },
+        {
+          "label": "Circunferencia",
+          "field": "circumference",
+          "format": "number"
+        },
+        {
+          "label": "Fórmula Usada",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -171,7 +284,11 @@
         "output": "Área = 201.06 pulgadas cuadradas"
       }
     ],
-    "relatedCalculators": ["circle-circumference-calculator", "triangle-area-calculator", "volume-calculator"],
+    "relatedCalculators": [
+      "circle-circumference-calculator",
+      "triangle-area-calculator",
+      "volume-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcula el área de cualquier círculo al instante con nuestra calculadora integral del área del círculo. Ya sea trabajando con medidas de radio o diámetro, esta calculadora de geometría proporciona resultados precisos usando la fórmula matemática estándar A = πr². Perfecta para estudiantes aprendiendo geometría, arquitectos diseñando espacios circulares, ingenieros trabajando con componentes cilíndricos, y cualquiera necesitando calcular áreas de círculos para aplicaciones prácticas. Accede cálculos paso a paso, explicaciones visuales, y propiedades geométricas relacionadas todo en una herramienta conveniente.",
       "benefits": [
@@ -239,19 +356,38 @@
           "answer": "Ambos área y circunferencia dependen del radio, pero usan fórmulas diferentes. Circunferencia (perímetro) se calcula como C = 2πr, mientras área es A = πr². Interesantemente, si conoces la circunferencia, puedes calcular el área, y viceversa, ya que ambas son funciones del radio. La proporción de circunferencia a diámetro es siempre 2π, razón por la cual π aparece en ambas fórmulas."
         }
       ]
-    }
+    },
+    "component": "CircleAreaCalculator"
   },
   "pt": {
     "title": "Calculadora da Área do Círculo",
     "seoTitle": "Calculadora da Área do Círculo - Calcule Área de um Círculo Online",
     "metaDescription": "Calculadora gratuita da área do círculo. Calcule a área de um círculo usando raio ou diâmetro. Inclui explicação de fórmula e cálculos passo a passo.",
-    "keywords": ["calculadora área círculo", "área do círculo", "calculadora círculo", "calculadora geometria"],
-    "longTailKeywords": ["como calcular área do círculo", "fórmula área círculo", "área do círculo com raio", "calculadora área círculo online", "geometria área círculo"],
+    "keywords": [
+      "calculadora área círculo",
+      "área do círculo",
+      "calculadora círculo",
+      "calculadora geometria"
+    ],
+    "longTailKeywords": [
+      "como calcular área do círculo",
+      "fórmula área círculo",
+      "área do círculo com raio",
+      "calculadora área círculo online",
+      "geometria área círculo"
+    ],
     "slug": "circle-area-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "basic",
-    "tags": ["círculo", "área", "geometria", "raio", "diâmetro", "pi"],
+    "tags": [
+      "círculo",
+      "área",
+      "geometria",
+      "raio",
+      "diâmetro",
+      "pi"
+    ],
     "summary": "Calcule a área de um círculo usando raio ou diâmetro com explicações passo a passo.",
     "description": "Nossa calculadora da área do círculo ajuda você a encontrar a área de qualquer círculo usando o raio ou diâmetro. A calculadora fornece a fórmula, cálculos passo a passo, e explicações visuais perfeitas para estudantes aprendendo geometria.",
     "instructions": [
@@ -263,16 +399,52 @@
     "calculatorComponent": {
       "componentName": "CircleAreaCalculator",
       "inputs": [
-        { "name": "inputMethod", "label": "Método de Entrada", "type": "select", "default": "radius", "options": ["radius", "diameter"] },
-        { "name": "value", "label": "Valor", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+        {
+          "name": "inputMethod",
+          "label": "Método de Entrada",
+          "type": "select",
+          "default": "radius",
+          "options": [
+            "radius",
+            "diameter"
+          ]
+        },
+        {
+          "name": "value",
+          "label": "Valor",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Área = π × r² (quando usando raio); Área = (π × d²) ÷ 4 (quando usando diâmetro)",
-      "output": { "label": "Área do Círculo", "default": "Digite raio ou diâmetro acima", "format": "number" },
+      "output": {
+        "label": "Área do Círculo",
+        "default": "Digite raio ou diâmetro acima",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Raio", "field": "radius", "format": "number" },
-        { "label": "Diâmetro", "field": "diameter", "format": "number" },
-        { "label": "Circunferência", "field": "circumference", "format": "number" },
-        { "label": "Fórmula Usada", "field": "formula", "format": "text" }
+        {
+          "label": "Raio",
+          "field": "radius",
+          "format": "number"
+        },
+        {
+          "label": "Diâmetro",
+          "field": "diameter",
+          "format": "number"
+        },
+        {
+          "label": "Circunferência",
+          "field": "circumference",
+          "format": "number"
+        },
+        {
+          "label": "Fórmula Usada",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -292,7 +464,11 @@
         "output": "Área = 201.06 polegadas quadradas"
       }
     ],
-    "relatedCalculators": ["circle-circumference-calculator", "triangle-area-calculator", "volume-calculator"],
+    "relatedCalculators": [
+      "circle-circumference-calculator",
+      "triangle-area-calculator",
+      "volume-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcule a área de qualquer círculo instantaneamente com nossa calculadora abrangente da área do círculo. Seja trabalhando com medidas de raio ou diâmetro, esta calculadora de geometria fornece resultados precisos usando a fórmula matemática padrão A = πr². Perfeita para estudantes aprendendo geometria, arquitetos projetando espaços circulares, engenheiros trabalhando com componentes cilíndricos, e qualquer um precisando calcular áreas de círculos para aplicações práticas. Acesse cálculos passo a passo, explicações visuais, e propriedades geométricas relacionadas tudo em uma ferramenta conveniente.",
       "benefits": [
@@ -360,19 +536,38 @@
           "answer": "Ambos área e circunferência dependem do raio, mas usam fórmulas diferentes. Circunferência (perímetro) é calculada como C = 2πr, enquanto área é A = πr². Interessantemente, se você conhece a circunferência, pode calcular a área, e vice-versa, já que ambas são funções do raio. A proporção de circunferência ao diâmetro é sempre 2π, razão pela qual π aparece em ambas as fórmulas."
         }
       ]
-    }
+    },
+    "component": "CircleAreaCalculator"
   },
   "fr": {
     "title": "Calculateur d'Aire de Cercle",
     "seoTitle": "Calculateur d'Aire de Cercle - Calculez Aire d'un Cercle en Ligne",
     "metaDescription": "Calculateur gratuit d'aire de cercle. Calculez l'aire d'un cercle en utilisant rayon ou diamètre. Inclut explication de formule et calculs étape par étape.",
-    "keywords": ["calculateur aire cercle", "aire du cercle", "calculateur cercle", "calculateur géométrie"],
-    "longTailKeywords": ["comment calculer aire du cercle", "formule aire cercle", "aire du cercle avec rayon", "calculateur aire cercle en ligne", "géométrie aire cercle"],
+    "keywords": [
+      "calculateur aire cercle",
+      "aire du cercle",
+      "calculateur cercle",
+      "calculateur géométrie"
+    ],
+    "longTailKeywords": [
+      "comment calculer aire du cercle",
+      "formule aire cercle",
+      "aire du cercle avec rayon",
+      "calculateur aire cercle en ligne",
+      "géométrie aire cercle"
+    ],
     "slug": "circle-area-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "basic",
-    "tags": ["cercle", "aire", "géométrie", "rayon", "diamètre", "pi"],
+    "tags": [
+      "cercle",
+      "aire",
+      "géométrie",
+      "rayon",
+      "diamètre",
+      "pi"
+    ],
     "summary": "Calculez l'aire d'un cercle en utilisant rayon ou diamètre avec explications étape par étape.",
     "description": "Notre calculateur d'aire de cercle vous aide à trouver l'aire de n'importe quel cercle en utilisant le rayon ou diamètre. Le calculateur fournit la formule, calculs étape par étape, et explications visuelles parfaites pour étudiants apprenant la géométrie.",
     "instructions": [
@@ -384,16 +579,52 @@
     "calculatorComponent": {
       "componentName": "CircleAreaCalculator",
       "inputs": [
-        { "name": "inputMethod", "label": "Méthode d'Entrée", "type": "select", "default": "radius", "options": ["radius", "diameter"] },
-        { "name": "value", "label": "Valeur", "type": "number", "default": 5, "min": 0, "step": 0.01 }
+        {
+          "name": "inputMethod",
+          "label": "Méthode d'Entrée",
+          "type": "select",
+          "default": "radius",
+          "options": [
+            "radius",
+            "diameter"
+          ]
+        },
+        {
+          "name": "value",
+          "label": "Valeur",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        }
       ],
       "formula": "Aire = π × r² (lorsque utilisant rayon); Aire = (π × d²) ÷ 4 (lorsque utilisant diamètre)",
-      "output": { "label": "Aire du Cercle", "default": "Entrez rayon ou diamètre ci-dessus", "format": "number" },
+      "output": {
+        "label": "Aire du Cercle",
+        "default": "Entrez rayon ou diamètre ci-dessus",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Rayon", "field": "radius", "format": "number" },
-        { "label": "Diamètre", "field": "diameter", "format": "number" },
-        { "label": "Circonférence", "field": "circumference", "format": "number" },
-        { "label": "Formule Utilisée", "field": "formula", "format": "text" }
+        {
+          "label": "Rayon",
+          "field": "radius",
+          "format": "number"
+        },
+        {
+          "label": "Diamètre",
+          "field": "diameter",
+          "format": "number"
+        },
+        {
+          "label": "Circonférence",
+          "field": "circumference",
+          "format": "number"
+        },
+        {
+          "label": "Formule Utilisée",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -413,7 +644,11 @@
         "output": "Aire = 201.06 pouces carrés"
       }
     ],
-    "relatedCalculators": ["circle-circumference-calculator", "triangle-area-calculator", "volume-calculator"],
+    "relatedCalculators": [
+      "circle-circumference-calculator",
+      "triangle-area-calculator",
+      "volume-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculez l'aire de n'importe quel cercle instantanément avec notre calculateur complet d'aire de cercle. Que vous travailliez avec mesures de rayon ou diamètre, cette calculatrice de géométrie fournit résultats précis utilisant la formule mathématique standard A = πr². Parfaite pour étudiants apprenant la géométrie, architectes concevant espaces circulaires, ingénieurs travaillant avec composants cylindriques, et quiconque ayant besoin calculer aires de cercles pour applications pratiques. Accédez calculs étape par étape, explications visuelles, et propriétés géométriques connexes tout dans un outil pratique.",
       "benefits": [
@@ -481,6 +716,7 @@
           "answer": "Aire et circonférence dépendent toutes deux du rayon, mais elles utilisent formules différentes. Circonférence (périmètre) est calculée comme C = 2πr, tandis aire est A = πr². Intéressamment, si vous connaissez circonférence, vous pouvez calculer aire, et vice-versa, puisque les deux sont fonctions du rayon. Proportion circonférence au diamètre est toujours 2π, raison pour laquelle π apparaît dans les deux formules."
         }
       ]
-    }
+    },
+    "component": "CircleAreaCalculator"
   }
 }

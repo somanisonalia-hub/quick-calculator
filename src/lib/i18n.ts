@@ -91,7 +91,9 @@ const translations = {
       compoundFrequency: "Compound Frequency", annually: "Annually", semiAnnually: "Semi-Annually", quarterly: "Quarterly",
       monthly: "Monthly", daily: "Daily",
       principalInvested: "Principal Invested", totalInterestEarned: "Total Interest Earned", powerOfCompounding: "Power of Compounding",
-      compoundingMessage: "Your investment grows exponentially over time!", enterInvestmentDetails: "Enter investment details to see compound interest growth"
+      compoundingMessage: "Your investment grows exponentially over time!", enterInvestmentDetails: "Enter investment details to see compound interest growth",
+      completeGuide: "Complete Guide", howDoesWork: "How Does", guideComingSoon: "Detailed guide and formula explanation will be available soon.",
+      comingSoon: "This calculator is currently under development and will be available soon."
     },
     brand: { name: "Quick Calculator" },
     footer: { description: "Free online calculators for math, finance, health, and more. All calculations are performed in your browser.", copyright: "© 2024 Quick Calculator. All rights reserved.", privacy: "Privacy Policy", terms: "Terms of Service" },
@@ -115,7 +117,9 @@ const translations = {
       loading: "Cargando calculadora...", notFound: "Calculadora no encontrada", backToHomepage: "← Volver al inicio",
       notImplemented: "Componente de calculadora aún no implementado.", component: "Componente",
       futureValueProjection: "Proyección de Valor Futuro", investmentDetails: "Detalles de Inversión", paymentBreakdown: "Desglose de Pago",
-      principalInterest: "Principal e Interés", taxesInsurance: "Impuestos y Seguro"
+      principalInterest: "Principal e Interés", taxesInsurance: "Impuestos y Seguro",
+      completeGuide: "Guía Completa", howDoesWork: "¿Cómo Funciona", guideComingSoon: "La guía detallada y explicación de fórmula estarán disponibles pronto.",
+      comingSoon: "Esta calculadora está actualmente en desarrollo y estará disponible pronto."
     },
     brand: { name: "Calculadora Rápida" },
     footer: { description: "Calculadoras en línea gratuitas para matemáticas, finanzas, salud y más. Todos los cálculos se realizan en su navegador.", copyright: "© 2024 Calculadora Rápida. Todos los derechos reservados.", privacy: "Política de Privacidad", terms: "Términos de Servicio" },
@@ -139,7 +143,9 @@ const translations = {
       loading: "Carregando calculadora...", notFound: "Calculadora não encontrada", backToHomepage: "← Voltar ao início",
       notImplemented: "Componente da calculadora ainda não implementado.", component: "Componente",
       futureValueProjection: "Projeção de Valor Futuro", investmentDetails: "Detalhes do Investimento", paymentBreakdown: "Detalhamento do Pagamento",
-      principalInterest: "Principal e Juros", taxesInsurance: "Impostos e Seguro"
+      principalInterest: "Principal e Juros", taxesInsurance: "Impostos e Seguro",
+      completeGuide: "Guia Completo", howDoesWork: "Como Funciona", guideComingSoon: "O guia detalhado e explicação da fórmula estarão disponíveis em breve.",
+      comingSoon: "Esta calculadora está atualmente em desenvolvimento e estará disponível em breve."
     },
     brand: { name: "Calculadora Rápida" },
     footer: { description: "Calculadoras online gratuitas para matemática, finanças, saúde e mais. Todos os cálculos são realizados no seu navegador.", copyright: "© 2024 Calculadora Rápida. Todos os direitos reservados.", privacy: "Política de Privacidade", terms: "Termos de Serviço" },
@@ -163,7 +169,9 @@ const translations = {
       loading: "Chargement du calculateur...", notFound: "Calculateur introuvable", backToHomepage: "← Retour à l'accueil",
       notImplemented: "Composant de calculateur pas encore implémenté.", component: "Composant",
       futureValueProjection: "Projection de Valeur Future", investmentDetails: "Détails d'Investissement", paymentBreakdown: "Répartition du Paiement",
-      principalInterest: "Principal et Intérêts", taxesInsurance: "Impôts et Assurance"
+      principalInterest: "Principal et Intérêts", taxesInsurance: "Impôts et Assurance",
+      completeGuide: "Guide Complet", howDoesWork: "Comment Ça Marche", guideComingSoon: "Le guide détaillé et l'explication de formule seront disponibles bientôt.",
+      comingSoon: "Cette calculatrice est actuellement en développement et sera disponible bientôt."
     },
     brand: { name: "Calculateur Rapide" },
     footer: { description: "Calculateurs en ligne gratuits pour les mathématiques, finances, santé et plus. Tous les calculs sont effectués dans votre navigateur.", copyright: "© 2024 Calculateur Rapide. Tous droits réservés.", privacy: "Politique de Confidentialité", terms: "Conditions d'Utilisation" },

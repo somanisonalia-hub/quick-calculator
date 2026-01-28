@@ -63,7 +63,12 @@
         "label": "Filing Status",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -80,14 +85,70 @@
         "label": "State",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "taxYear",
         "label": "Tax Year",
         "type": "select",
         "default": "2024",
-        "options": ["2024", "2023", "2022"]
+        "options": [
+          "2024",
+          "2023",
+          "2022"
+        ]
       }
     ],
     "formula": "Taxable Income = Gross Income - Standard Deduction - (Dependents × Dependent Exemption)\nFederal Tax = Calculate using tax brackets for filing status\nFICA Tax = (Social Security 6.2% + Medicare 1.45%) × Gross Income\nState Tax = State-specific tax calculation\nNet Income = Gross Income - Federal Tax - State Tax - FICA Tax",
@@ -231,7 +292,8 @@
           "answer": "Eight states have no state income tax (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Other states have progressive tax systems with rates ranging from about 3% to 13.3%, depending on income level and state-specific tax structures."
         }
       ]
-    }
+    },
+    "component": "NetIncomeCalculator"
   },
   "es": {
     "title": "Calculadora de Ingreso Neto",
@@ -297,7 +359,12 @@
         "label": "Estado Civil",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -314,14 +381,70 @@
         "label": "Estado",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "taxYear",
         "label": "Año Fiscal",
         "type": "select",
         "default": "2024",
-        "options": ["2024", "2023", "2022"]
+        "options": [
+          "2024",
+          "2023",
+          "2022"
+        ]
       }
     ],
     "formula": "Ingreso Gravable = Ingreso Bruto - Deducción Estándar - (Dependientes × Exención Dependiente)\nImpuesto Federal = Calcular usando categorías de impuestos para estado civil\nImpuesto FICA = (Seguro Social 6.2% + Medicare 1.45%) × Ingreso Bruto\nImpuesto Estatal = Cálculo específico del estado\nIngreso Neto = Ingreso Bruto - Impuesto Federal - Impuesto Estatal - Impuesto FICA",
@@ -465,7 +588,8 @@
           "answer": "Ocho estados no tienen impuesto estatal a la renta (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Otros estados tienen sistemas progresivos con tasas que van aproximadamente del 3% al 13.3%, dependiendo del nivel de ingreso y estructuras fiscales específicas del estado."
         }
       ]
-    }
+    },
+    "component": "NetIncomeCalculator"
   },
   "pt": {
     "title": "Calculadora de Renda Líquida",
@@ -531,7 +655,12 @@
         "label": "Estado Civil",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -548,14 +677,70 @@
         "label": "Estado",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "taxYear",
         "label": "Ano Fiscal",
         "type": "select",
         "default": "2024",
-        "options": ["2024", "2023", "2022"]
+        "options": [
+          "2024",
+          "2023",
+          "2022"
+        ]
       }
     ],
     "formula": "Renda Tributável = Renda Bruta - Dedução Padrão - (Dependentes × Isenção Dependente)\nImposto Federal = Calcular usando faixas de impostos para estado civil\nImposto FICA = (Previdência Social 6.2% + Medicare 1.45%) × Renda Bruta\nImposto Estadual = Cálculo específico do estado\nRenda Líquida = Renda Bruta - Impuesto Federal - Impuesto Estadual - Impuesto FICA",
@@ -699,7 +884,8 @@
           "answer": "Oito estados não têm imposto estadual de renda (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Outros estados têm sistemas progressivos com taxas variando de cerca de 3% a 13.3%, dependendo do nível de renda e estruturas fiscais específicas do estado."
         }
       ]
-    }
+    },
+    "component": "NetIncomeCalculator"
   },
   "fr": {
     "title": "Calculateur de Revenu Net",
@@ -765,7 +951,12 @@
         "label": "Statut Matrimonial",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -782,14 +973,70 @@
         "label": "État",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "taxYear",
         "label": "Année Fiscale",
         "type": "select",
         "default": "2024",
-        "options": ["2024", "2023", "2022"]
+        "options": [
+          "2024",
+          "2023",
+          "2022"
+        ]
       }
     ],
     "formula": "Revenu Imposable = Revenu Brut - Déduction Standard - (Personnes à Charge × Exemption Personne à Charge)\nImpôt Fédéral = Calculer en utilisant tranches d'impôt pour statut matrimonial\nImpôt FICA = (Sécurité Sociale 6.2% + Medicare 1.45%) × Revenu Brut\nImpôt État = Calcul spécifique de l'état\nRevenu Net = Revenu Brut - Impôt Fédéral - Impôt État - Impôt FICA",
@@ -933,6 +1180,7 @@
           "answer": "Huit états n'ont pas d'impôt étatique sur le revenu (Texas, Floride, Nevada, Washington, Wyoming, Dakota du Sud, Alaska, Tennessee). D'autres états ont des systèmes progressifs avec des taux allant d'environ 3% à 13.3%, selon le niveau de revenu et structures fiscales spécifiques de l'état."
         }
       ]
-    }
+    },
+    "component": "NetIncomeCalculator"
   }
 }

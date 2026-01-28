@@ -66,14 +66,24 @@
         "label": "Pay Frequency",
         "type": "select",
         "default": "biweekly",
-        "options": ["weekly", "biweekly", "semimonthly", "monthly"]
+        "options": [
+          "weekly",
+          "biweekly",
+          "semimonthly",
+          "monthly"
+        ]
       },
       {
         "name": "filingStatus",
         "label": "Federal Filing Status",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -90,7 +100,59 @@
         "label": "State",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "healthInsurance",
@@ -182,9 +244,9 @@
         },
         "outputs": {
           "netTakeHome": 1395.25,
-          "federalTax": 218.50,
-          "stateTax": 101.00,
-          "ficaTax": 145.00,
+          "federalTax": 218.5,
+          "stateTax": 101,
+          "ficaTax": 145,
           "totalDeductions": 604.75,
           "takeHomePercentage": 69.8
         }
@@ -203,9 +265,9 @@
         },
         "outputs": {
           "netTakeHome": 868.55,
-          "federalTax": 96.40,
+          "federalTax": 96.4,
           "stateTax": 0,
-          "ficaTax": 87.60,
+          "ficaTax": 87.6,
           "totalDeductions": 215.45,
           "takeHomePercentage": 72.4
         }
@@ -276,7 +338,8 @@
           "answer": "Actual take-home pay may differ due to specific company policies, additional benefits deductions, local taxes, garnishments, union dues, charitable contributions, exact state withholding formulas, or changes in your W-4 allowances. This calculator provides estimates based on standard withholding methods."
         }
       ]
-    }
+    },
+    "component": "TakeHomePayCalculator"
   },
   "es": {
     "title": "Calculadora de Salario Neto",
@@ -345,14 +408,24 @@
         "label": "Frecuencia de Pago",
         "type": "select",
         "default": "biweekly",
-        "options": ["weekly", "biweekly", "semimonthly", "monthly"]
+        "options": [
+          "weekly",
+          "biweekly",
+          "semimonthly",
+          "monthly"
+        ]
       },
       {
         "name": "filingStatus",
         "label": "Estado Civil Federal",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -369,7 +442,59 @@
         "label": "Estado",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "healthInsurance",
@@ -461,9 +586,9 @@
         },
         "outputs": {
           "netTakeHome": 1395.25,
-          "federalTax": 218.50,
-          "stateTax": 101.00,
-          "ficaTax": 145.00,
+          "federalTax": 218.5,
+          "stateTax": 101,
+          "ficaTax": 145,
           "totalDeductions": 604.75,
           "takeHomePercentage": 69.8
         }
@@ -482,9 +607,9 @@
         },
         "outputs": {
           "netTakeHome": 868.55,
-          "federalTax": 96.40,
+          "federalTax": 96.4,
           "stateTax": 0,
-          "ficaTax": 87.60,
+          "ficaTax": 87.6,
           "totalDeductions": 215.45,
           "takeHomePercentage": 72.4
         }
@@ -555,7 +680,8 @@
           "answer": "El salario neto real puede diferir debido a políticas específicas de la compañía, deducciones adicionales de beneficios, impuestos locales, embargos, cuotas sindicales, contribuciones caritativas, fórmulas exactas de retención estatal o cambios en tus exenciones W-4. Esta calculadora proporciona estimaciones basadas en métodos estándar de retención."
         }
       ]
-    }
+    },
+    "component": "TakeHomePayCalculator"
   },
   "pt": {
     "title": "Calculadora de Salário Líquido",
@@ -624,14 +750,24 @@
         "label": "Frequência de Pagamento",
         "type": "select",
         "default": "biweekly",
-        "options": ["weekly", "biweekly", "semimonthly", "monthly"]
+        "options": [
+          "weekly",
+          "biweekly",
+          "semimonthly",
+          "monthly"
+        ]
       },
       {
         "name": "filingStatus",
         "label": "Estado Civil Federal",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -648,7 +784,59 @@
         "label": "Estado",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "healthInsurance",
@@ -740,9 +928,9 @@
         },
         "outputs": {
           "netTakeHome": 1395.25,
-          "federalTax": 218.50,
-          "stateTax": 101.00,
-          "ficaTax": 145.00,
+          "federalTax": 218.5,
+          "stateTax": 101,
+          "ficaTax": 145,
           "totalDeductions": 604.75,
           "takeHomePercentage": 69.8
         }
@@ -761,9 +949,9 @@
         },
         "outputs": {
           "netTakeHome": 868.55,
-          "federalTax": 96.40,
+          "federalTax": 96.4,
           "stateTax": 0,
-          "ficaTax": 87.60,
+          "ficaTax": 87.6,
           "totalDeductions": 215.45,
           "takeHomePercentage": 72.4
         }
@@ -834,7 +1022,8 @@
           "answer": "O salário líquido real pode diferir devido a políticas específicas da empresa, deduções adicionais de benefícios, impostos locais, penhoras, taxas sindicais, contribuições caritativas, fórmulas exatas de retenção estadual ou mudanças em suas isenções W-4. Esta calculadora fornece estimativas baseadas em métodos padrão de retenção."
         }
       ]
-    }
+    },
+    "component": "TakeHomePayCalculator"
   },
   "fr": {
     "title": "Calculateur de Salaire Net",
@@ -903,14 +1092,24 @@
         "label": "Fréquence de Paiement",
         "type": "select",
         "default": "biweekly",
-        "options": ["weekly", "biweekly", "semimonthly", "monthly"]
+        "options": [
+          "weekly",
+          "biweekly",
+          "semimonthly",
+          "monthly"
+        ]
       },
       {
         "name": "filingStatus",
         "label": "Statut Matrimonial Fédéral",
         "type": "select",
         "default": "single",
-        "options": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household"]
+        "options": [
+          "single",
+          "married_filing_jointly",
+          "married_filing_separately",
+          "head_of_household"
+        ]
       },
       {
         "name": "dependents",
@@ -927,7 +1126,59 @@
         "label": "État",
         "type": "select",
         "default": "CA",
-        "options": ["CA", "TX", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MO", "MD", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "WV", "ID", "HI", "NH", "ME", "RI", "MT", "DE", "SD", "AK", "ND", "VT", "WY", "DC"]
+        "options": [
+          "CA",
+          "TX",
+          "FL",
+          "NY",
+          "PA",
+          "IL",
+          "OH",
+          "GA",
+          "NC",
+          "MI",
+          "NJ",
+          "VA",
+          "WA",
+          "AZ",
+          "MA",
+          "TN",
+          "IN",
+          "MO",
+          "MD",
+          "WI",
+          "CO",
+          "MN",
+          "SC",
+          "AL",
+          "LA",
+          "KY",
+          "OR",
+          "OK",
+          "CT",
+          "UT",
+          "IA",
+          "NV",
+          "AR",
+          "MS",
+          "KS",
+          "NM",
+          "NE",
+          "WV",
+          "ID",
+          "HI",
+          "NH",
+          "ME",
+          "RI",
+          "MT",
+          "DE",
+          "SD",
+          "AK",
+          "ND",
+          "VT",
+          "WY",
+          "DC"
+        ]
       },
       {
         "name": "healthInsurance",
@@ -1019,9 +1270,9 @@
         },
         "outputs": {
           "netTakeHome": 1395.25,
-          "federalTax": 218.50,
-          "stateTax": 101.00,
-          "ficaTax": 145.00,
+          "federalTax": 218.5,
+          "stateTax": 101,
+          "ficaTax": 145,
           "totalDeductions": 604.75,
           "takeHomePercentage": 69.8
         }
@@ -1040,9 +1291,9 @@
         },
         "outputs": {
           "netTakeHome": 868.55,
-          "federalTax": 96.40,
+          "federalTax": 96.4,
           "stateTax": 0,
-          "ficaTax": 87.60,
+          "ficaTax": 87.6,
           "totalDeductions": 215.45,
           "takeHomePercentage": 72.4
         }
@@ -1113,6 +1364,7 @@
           "answer": "Le salaire net réel peut différer en raison de politiques spécifiques d'entreprise, déductions additionnelles de bénéfices, impôts locaux, saisies, cotisations syndicales, contributions caritatives, formules exactes de retenue étatique ou changements dans vos exemptions W-4. Ce calculateur fournit des estimations basées sur méthodes standard de retenue."
         }
       ]
-    }
+    },
+    "component": "TakeHomePayCalculator"
   }
 }

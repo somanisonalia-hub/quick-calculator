@@ -3,12 +3,30 @@
     "title": "Tip Calculator",
     "seoTitle": "Tip Calculator - Calculate Gratuity and Split Bills with Ease",
     "metaDescription": "Free tip calculator. Calculate tips, split bills, and total amounts including tax. Perfect for restaurants, bars, and service industry. Calculate tip percentage and split between people.",
-    "keywords": ["tip calculator", "gratuity calculator", "bill splitter", "restaurant calculator", "tip percentage"],
-    "longTailKeywords": ["how to calculate tip", "tip calculator with tax", "split bill calculator", "restaurant tip calculator", "calculate gratuity"],
+    "keywords": [
+      "tip calculator",
+      "gratuity calculator",
+      "bill splitter",
+      "restaurant calculator",
+      "tip percentage"
+    ],
+    "longTailKeywords": [
+      "how to calculate tip",
+      "tip calculator with tax",
+      "split bill calculator",
+      "restaurant tip calculator",
+      "calculate gratuity"
+    ],
     "slug": "tip-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["tip", "restaurant", "bill", "split", "gratuity"],
+    "tags": [
+      "tip",
+      "restaurant",
+      "bill",
+      "split",
+      "gratuity"
+    ],
     "summary": "Calculate tips, split bills, and determine total amounts including tax for restaurant and service bills.",
     "description": "Our tip calculator helps you calculate appropriate gratuity amounts based on service quality, split bills among multiple people, and determine total costs including tax. Perfect for restaurants, bars, delivery services, and any situation requiring tip calculations.",
     "instructions": [
@@ -21,18 +39,78 @@
     "calculatorComponent": {
       "componentName": "TipCalculator",
       "inputs": [
-        { "name": "billAmount", "label": "Bill Amount (Before Tax)", "type": "number", "default": 50, "min": 0, "step": 0.01 },
-        { "name": "taxAmount", "label": "Tax Amount", "type": "number", "default": 0, "min": 0, "step": 0.01 },
-        { "name": "tipPercentage", "label": "Tip Percentage", "type": "select", "default": "15", "options": ["10", "12", "15", "18", "20", "25", "custom"] },
-        { "name": "customTip", "label": "Custom Tip %", "type": "number", "default": 15, "min": 0, "max": 100, "step": 0.1 },
-        { "name": "numPeople", "label": "Split Between", "type": "number", "default": 1, "min": 1, "max": 50, "step": 1 }
+        {
+          "name": "billAmount",
+          "label": "Bill Amount (Before Tax)",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "taxAmount",
+          "label": "Tax Amount",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "tipPercentage",
+          "label": "Tip Percentage",
+          "type": "select",
+          "default": "15",
+          "options": [
+            "10",
+            "12",
+            "15",
+            "18",
+            "20",
+            "25",
+            "custom"
+          ]
+        },
+        {
+          "name": "customTip",
+          "label": "Custom Tip %",
+          "type": "number",
+          "default": 15,
+          "min": 0,
+          "max": 100,
+          "step": 0.1
+        },
+        {
+          "name": "numPeople",
+          "label": "Split Between",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        }
       ],
       "formula": "Tip Amount = Bill Amount × (Tip Percentage / 100); Total = Bill + Tax + Tip; Per Person = Total ÷ Number of People",
-      "output": { "label": "Total Amount", "default": "Enter bill amount above", "format": "currency" },
+      "output": {
+        "label": "Total Amount",
+        "default": "Enter bill amount above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Tip Amount", "field": "tipAmount", "format": "currency" },
-        { "label": "Amount Per Person", "field": "perPerson", "format": "currency" },
-        { "label": "Total Per Person", "field": "totalPerPerson", "format": "currency" }
+        {
+          "label": "Tip Amount",
+          "field": "tipAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Amount Per Person",
+          "field": "perPerson",
+          "format": "currency"
+        },
+        {
+          "label": "Total Per Person",
+          "field": "totalPerPerson",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -52,7 +130,11 @@
         "output": "Total: $37.33, Tip: $5.75, Per Person: $12.44"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "currency-converter", "budget-calculator"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "currency-converter",
+      "budget-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculate tips and split bills effortlessly with our comprehensive tip calculator. This essential dining companion helps you determine appropriate gratuity amounts based on service quality, calculate totals including tax, and fairly divide bills among multiple people. Whether you're dining at restaurants, bars, cafes, or receiving delivery services, this calculator ensures you tip appropriately while managing your budget effectively. The tool supports standard tip percentages and custom amounts to match different service experiences and cultural expectations.",
       "benefits": [
@@ -117,18 +199,37 @@
           "answer": "Delivery tipping typically ranges from $2-5 for standard orders, or 10-20% of the order total. Consider order size, distance traveled, and service quality. For takeout where no delivery service is provided, a small tip ($1-2) is appreciated but not always expected. Weather conditions and special requests can justify higher tip amounts."
         }
       ]
-    }
+    },
+    "component": "TipCalculator"
   },
   "es": {
     "title": "Calculadora de Propina",
     "seoTitle": "Calculadora de Propina - Calcula Propina y Divide Cuentas con Facilidad",
     "metaDescription": "Calculadora gratuita de propina. Calcula propinas, divide cuentas y montos totales incluyendo impuestos. Perfecta para restaurantes, bares e industria de servicios. Calcula porcentaje de propina y divide entre personas.",
-    "keywords": ["calculadora propina", "calculadora gratuidad", "divisor cuentas", "calculadora restaurante", "porcentaje propina"],
-    "longTailKeywords": ["cómo calcular propina", "calculadora propina con impuestos", "calculadora dividir cuenta", "calculadora propina restaurante", "calcular gratuidad"],
+    "keywords": [
+      "calculadora propina",
+      "calculadora gratuidad",
+      "divisor cuentas",
+      "calculadora restaurante",
+      "porcentaje propina"
+    ],
+    "longTailKeywords": [
+      "cómo calcular propina",
+      "calculadora propina con impuestos",
+      "calculadora dividir cuenta",
+      "calculadora propina restaurante",
+      "calcular gratuidad"
+    ],
     "slug": "tip-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["propina", "restaurante", "cuenta", "dividir", "gratuidad"],
+    "tags": [
+      "propina",
+      "restaurante",
+      "cuenta",
+      "dividir",
+      "gratuidad"
+    ],
     "summary": "Calcula propinas, divide cuentas y determina montos totales incluyendo impuestos para cuentas de restaurante y servicio.",
     "description": "Nuestra calculadora de propina te ayuda a calcular montos apropiados de gratuidad basados en calidad de servicio, dividir cuentas entre múltiples personas y determinar costos totales incluyendo impuestos. Perfecta para restaurantes, bares, servicios de entrega y cualquier situación requiriendo cálculos de propina.",
     "instructions": [
@@ -141,18 +242,78 @@
     "calculatorComponent": {
       "componentName": "TipCalculator",
       "inputs": [
-        { "name": "billAmount", "label": "Monto de Cuenta (Antes de Impuestos)", "type": "number", "default": 50, "min": 0, "step": 0.01 },
-        { "name": "taxAmount", "label": "Monto de Impuestos", "type": "number", "default": 0, "min": 0, "step": 0.01 },
-        { "name": "tipPercentage", "label": "Porcentaje de Propina", "type": "select", "default": "15", "options": ["10", "12", "15", "18", "20", "25", "custom"] },
-        { "name": "customTip", "label": "Propina Personalizada %", "type": "number", "default": 15, "min": 0, "max": 100, "step": 0.1 },
-        { "name": "numPeople", "label": "Dividir Entre", "type": "number", "default": 1, "min": 1, "max": 50, "step": 1 }
+        {
+          "name": "billAmount",
+          "label": "Monto de Cuenta (Antes de Impuestos)",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "taxAmount",
+          "label": "Monto de Impuestos",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "tipPercentage",
+          "label": "Porcentaje de Propina",
+          "type": "select",
+          "default": "15",
+          "options": [
+            "10",
+            "12",
+            "15",
+            "18",
+            "20",
+            "25",
+            "custom"
+          ]
+        },
+        {
+          "name": "customTip",
+          "label": "Propina Personalizada %",
+          "type": "number",
+          "default": 15,
+          "min": 0,
+          "max": 100,
+          "step": 0.1
+        },
+        {
+          "name": "numPeople",
+          "label": "Dividir Entre",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        }
       ],
       "formula": "Monto de Propina = Monto de Cuenta × (Porcentaje de Propina / 100); Total = Cuenta + Impuestos + Propina; Por Persona = Total ÷ Número de Personas",
-      "output": { "label": "Monto Total", "default": "Ingresa monto de cuenta arriba", "format": "currency" },
+      "output": {
+        "label": "Monto Total",
+        "default": "Ingresa monto de cuenta arriba",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Monto de Propina", "field": "tipAmount", "format": "currency" },
-        { "label": "Monto Por Persona", "field": "perPerson", "format": "currency" },
-        { "label": "Total Por Persona", "field": "totalPerPerson", "format": "currency" }
+        {
+          "label": "Monto de Propina",
+          "field": "tipAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Monto Por Persona",
+          "field": "perPerson",
+          "format": "currency"
+        },
+        {
+          "label": "Total Por Persona",
+          "field": "totalPerPerson",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -172,7 +333,11 @@
         "output": "Total: $37.33, Propina: $5.75, Por Persona: $12.44"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "currency-converter", "budget-calculator"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "currency-converter",
+      "budget-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcula propinas y divide cuentas sin esfuerzo con nuestra calculadora integral de propina. Este compañero esencial de cena te ayuda a determinar montos apropiados de gratuidad basados en calidad de servicio, calcular totales incluyendo impuestos y dividir cuentas justamente entre múltiples personas. Ya sea que estés cenando en restaurantes, bares, cafés o recibiendo servicios de entrega, esta calculadora asegura que des propina apropiadamente mientras manejas tu presupuesto efectivamente. La herramienta soporta porcentajes estándar de propina y montos personalizados para coincidir con diferentes experiencias de servicio y expectativas culturales.",
       "benefits": [
@@ -237,18 +402,37 @@
           "answer": "Propina de entrega típicamente varía de $2-5 para pedidos estándar, o 10-20% del total del pedido. Considera tamaño del pedido, distancia viajada y calidad de servicio. Para llevar donde no se proporciona servicio de entrega, una propina pequeña ($1-2) es apreciada pero no siempre esperada. Condiciones climáticas y solicitudes especiales pueden justificar montos más altos de propina."
         }
       ]
-    }
+    },
+    "component": "TipCalculator"
   },
   "pt": {
     "title": "Calculadora de Gorjeta",
     "seoTitle": "Calculadora de Gorjeta - Calcule Gorjeta e Divida Contas com Facilidade",
     "metaDescription": "Calculadora gratuita de gorjeta. Calcule gorjetas, divida contas e montantes totais incluindo impostos. Perfeita para restaurantes, bares e indústria de serviços. Calcule porcentagem de gorjeta e divida entre pessoas.",
-    "keywords": ["calculadora gorjeta", "calculadora gratificação", "divisor contas", "calculadora restaurante", "porcentagem gorjeta"],
-    "longTailKeywords": ["como calcular gorjeta", "calculadora gorjeta com impostos", "calculadora dividir conta", "calculadora gorjeta restaurante", "calcular gratificação"],
+    "keywords": [
+      "calculadora gorjeta",
+      "calculadora gratificação",
+      "divisor contas",
+      "calculadora restaurante",
+      "porcentagem gorjeta"
+    ],
+    "longTailKeywords": [
+      "como calcular gorjeta",
+      "calculadora gorjeta com impostos",
+      "calculadora dividir conta",
+      "calculadora gorjeta restaurante",
+      "calcular gratificação"
+    ],
     "slug": "tip-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["gorjeta", "restaurante", "conta", "dividir", "gratificação"],
+    "tags": [
+      "gorjeta",
+      "restaurante",
+      "conta",
+      "dividir",
+      "gratificação"
+    ],
     "summary": "Calcule gorjetas, divida contas e determine montantes totais incluindo impostos para contas de restaurante e serviço.",
     "description": "Nossa calculadora de gorjeta ajuda você a calcular montantes apropriados de gratificação baseados em qualidade de serviço, dividir contas entre múltiplas pessoas e determinar custos totais incluindo impostos. Perfeita para restaurantes, bares, serviços de entrega e qualquer situação requerendo cálculos de gorjeta.",
     "instructions": [
@@ -261,18 +445,78 @@
     "calculatorComponent": {
       "componentName": "TipCalculator",
       "inputs": [
-        { "name": "billAmount", "label": "Valor da Conta (Antes de Impostos)", "type": "number", "default": 50, "min": 0, "step": 0.01 },
-        { "name": "taxAmount", "label": "Valor dos Impostos", "type": "number", "default": 0, "min": 0, "step": 0.01 },
-        { "name": "tipPercentage", "label": "Porcentagem de Gorjeta", "type": "select", "default": "15", "options": ["10", "12", "15", "18", "20", "25", "custom"] },
-        { "name": "customTip", "label": "Gorjeta Personalizada %", "type": "number", "default": 15, "min": 0, "max": 100, "step": 0.1 },
-        { "name": "numPeople", "label": "Dividir Entre", "type": "number", "default": 1, "min": 1, "max": 50, "step": 1 }
+        {
+          "name": "billAmount",
+          "label": "Valor da Conta (Antes de Impostos)",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "taxAmount",
+          "label": "Valor dos Impostos",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "tipPercentage",
+          "label": "Porcentagem de Gorjeta",
+          "type": "select",
+          "default": "15",
+          "options": [
+            "10",
+            "12",
+            "15",
+            "18",
+            "20",
+            "25",
+            "custom"
+          ]
+        },
+        {
+          "name": "customTip",
+          "label": "Gorjeta Personalizada %",
+          "type": "number",
+          "default": 15,
+          "min": 0,
+          "max": 100,
+          "step": 0.1
+        },
+        {
+          "name": "numPeople",
+          "label": "Dividir Entre",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        }
       ],
       "formula": "Valor da Gorjeta = Valor da Conta × (Porcentagem da Gorjeta / 100); Total = Conta + Impostos + Gorjeta; Por Pessoa = Total ÷ Número de Pessoas",
-      "output": { "label": "Valor Total", "default": "Digite valor da conta acima", "format": "currency" },
+      "output": {
+        "label": "Valor Total",
+        "default": "Digite valor da conta acima",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Valor da Gorjeta", "field": "tipAmount", "format": "currency" },
-        { "label": "Valor Por Pessoa", "field": "perPerson", "format": "currency" },
-        { "label": "Total Por Pessoa", "field": "totalPerPerson", "format": "currency" }
+        {
+          "label": "Valor da Gorjeta",
+          "field": "tipAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Valor Por Pessoa",
+          "field": "perPerson",
+          "format": "currency"
+        },
+        {
+          "label": "Total Por Pessoa",
+          "field": "totalPerPerson",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -292,7 +536,11 @@
         "output": "Total: $37.33, Gorjeta: $5.75, Por Pessoa: $12.44"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "currency-converter", "budget-calculator"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "currency-converter",
+      "budget-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcule gorjetas e divida contas sem esforço com nossa calculadora abrangente de gorjeta. Este companheiro essencial de jantar ajuda você a determinar montantes apropriados de gratificação baseados em qualidade de serviço, calcular totais incluindo impostos e dividir contas justamente entre múltiplas pessoas. Seja você jantando em restaurantes, bares, cafés ou recebendo serviços de entrega, esta calculadora garante que você dê gorjeta apropriadamente enquanto gerencia seu orçamento efetivamente. A ferramenta suporta porcentagens padrão de gorjeta e montantes personalizados para corresponder a diferentes experiências de serviço e expectativas culturais.",
       "benefits": [
@@ -357,18 +605,37 @@
           "answer": "Gorjeta de entrega tipicamente varia de $2-5 para pedidos padrão, ou 10-20% do total do pedido. Considere tamanho do pedido, distância viajada e qualidade de serviço. Para viagem onde nenhum serviço de entrega é fornecido, uma gorjeta pequena ($1-2) é apreciada mas não sempre esperada. Condições climáticas e solicitações especiais podem justificar valores mais altos de gorjeta."
         }
       ]
-    }
+    },
+    "component": "TipCalculator"
   },
   "fr": {
     "title": "Calculateur de Pourboire",
     "seoTitle": "Calculateur de Pourboire - Calculez Pourboire et Divisez Additions avec Facilité",
     "metaDescription": "Calculateur gratuit de pourboire. Calculez pourboires, divisez additions et montants totaux incluant taxes. Parfait pour restaurants, bars et industrie de services. Calculez pourcentage de pourboire et divisez entre personnes.",
-    "keywords": ["calculateur pourboire", "calculateur gratification", "diviseur additions", "calculateur restaurant", "pourcentage pourboire"],
-    "longTailKeywords": ["comment calculer pourboire", "calculateur pourboire avec taxes", "calculateur diviser addition", "calculateur pourboire restaurant", "calculer gratification"],
+    "keywords": [
+      "calculateur pourboire",
+      "calculateur gratification",
+      "diviseur additions",
+      "calculateur restaurant",
+      "pourcentage pourboire"
+    ],
+    "longTailKeywords": [
+      "comment calculer pourboire",
+      "calculateur pourboire avec taxes",
+      "calculateur diviser addition",
+      "calculateur pourboire restaurant",
+      "calculer gratification"
+    ],
     "slug": "tip-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["pourboire", "restaurant", "addition", "diviser", "gratification"],
+    "tags": [
+      "pourboire",
+      "restaurant",
+      "addition",
+      "diviser",
+      "gratification"
+    ],
     "summary": "Calculez pourboires, divisez additions et déterminez montants totaux incluant taxes pour additions de restaurant et service.",
     "description": "Notre calculateur de pourboire vous aide à calculer montants appropriés de gratification basés sur qualité de service, diviser additions entre multiples personnes et déterminer coûts totaux incluant taxes. Parfait pour restaurants, bars, services de livraison et toute situation nécessitant calculs de pourboire.",
     "instructions": [
@@ -381,18 +648,78 @@
     "calculatorComponent": {
       "componentName": "TipCalculator",
       "inputs": [
-        { "name": "billAmount", "label": "Montant de l'Addition (Avant Taxes)", "type": "number", "default": 50, "min": 0, "step": 0.01 },
-        { "name": "taxAmount", "label": "Montant des Taxes", "type": "number", "default": 0, "min": 0, "step": 0.01 },
-        { "name": "tipPercentage", "label": "Pourcentage de Pourboire", "type": "select", "default": "15", "options": ["10", "12", "15", "18", "20", "25", "custom"] },
-        { "name": "customTip", "label": "Pourboire Personnalisé %", "type": "number", "default": 15, "min": 0, "max": 100, "step": 0.1 },
-        { "name": "numPeople", "label": "Diviser Entre", "type": "number", "default": 1, "min": 1, "max": 50, "step": 1 }
+        {
+          "name": "billAmount",
+          "label": "Montant de l'Addition (Avant Taxes)",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "taxAmount",
+          "label": "Montant des Taxes",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "tipPercentage",
+          "label": "Pourcentage de Pourboire",
+          "type": "select",
+          "default": "15",
+          "options": [
+            "10",
+            "12",
+            "15",
+            "18",
+            "20",
+            "25",
+            "custom"
+          ]
+        },
+        {
+          "name": "customTip",
+          "label": "Pourboire Personnalisé %",
+          "type": "number",
+          "default": 15,
+          "min": 0,
+          "max": 100,
+          "step": 0.1
+        },
+        {
+          "name": "numPeople",
+          "label": "Diviser Entre",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        }
       ],
       "formula": "Montant du Pourboire = Montant de l'Addition × (Pourcentage de Pourboire / 100); Total = Addition + Taxes + Pourboire; Par Personne = Total ÷ Nombre de Personnes",
-      "output": { "label": "Montant Total", "default": "Entrez montant d'addition ci-dessus", "format": "currency" },
+      "output": {
+        "label": "Montant Total",
+        "default": "Entrez montant d'addition ci-dessus",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Montant du Pourboire", "field": "tipAmount", "format": "currency" },
-        { "label": "Montant Par Personne", "field": "perPerson", "format": "currency" },
-        { "label": "Total Par Personne", "field": "totalPerPerson", "format": "currency" }
+        {
+          "label": "Montant du Pourboire",
+          "field": "tipAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Montant Par Personne",
+          "field": "perPerson",
+          "format": "currency"
+        },
+        {
+          "label": "Total Par Personne",
+          "field": "totalPerPerson",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -412,7 +739,11 @@
         "output": "Total: $37.33, Pourboire: $5.75, Par Personne: $12.44"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "currency-converter", "budget-calculator"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "currency-converter",
+      "budget-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculez pourboires et divisez additions sans effort avec notre calculateur complet de pourboire. Ce compagnon essentiel de dîner vous aide à déterminer montants appropriés de gratification basés sur qualité de service, calculer totaux incluant taxes et diviser additions justement entre multiples personnes. Que vous dîniez dans restaurants, bars, cafés ou receviez services de livraison, cette calculatrice assure que vous donniez pourboire appropriément tout en gérant votre budget efficacement. L'outil supporte pourcentages standard de pourboire et montants personnalisés pour correspondre à différentes expériences de service et attentes culturelles.",
       "benefits": [
@@ -477,6 +808,7 @@
           "answer": "Pourboire de livraison varie typiquement de $2-5 pour commandes standard, ou 10-20% du total de la commande. Considérez taille de commande, distance parcourue et qualité de service. Pour à emporter où aucun service de livraison n'est fourni, un petit pourboire ($1-2) est apprécié mais pas toujours attendu. Conditions météorologiques et demandes spéciales peuvent justifier montants plus élevés de pourboire."
         }
       ]
-    }
+    },
+    "component": "TipCalculator"
   }
 }

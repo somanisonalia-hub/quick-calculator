@@ -3,12 +3,30 @@
     "title": "Currency Converter",
     "seoTitle": "Currency Converter - Convert Money Between Currencies Online",
     "metaDescription": "Free online currency converter. Convert between all major world currencies with live exchange rates. Perfect for travel, business, and international transactions.",
-    "keywords": ["currency converter", "exchange rate calculator", "money converter", "forex converter", "currency exchange"],
-    "longTailKeywords": ["convert currency online", "live exchange rates", "foreign currency calculator", "international money converter", "currency conversion tool"],
+    "keywords": [
+      "currency converter",
+      "exchange rate calculator",
+      "money converter",
+      "forex converter",
+      "currency exchange"
+    ],
+    "longTailKeywords": [
+      "convert currency online",
+      "live exchange rates",
+      "foreign currency calculator",
+      "international money converter",
+      "currency conversion tool"
+    ],
     "slug": "currency-converter",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["currency", "exchange rates", "international", "travel", "business"],
+    "tags": [
+      "currency",
+      "exchange rates",
+      "international",
+      "travel",
+      "business"
+    ],
     "summary": "Convert between all major world currencies with live exchange rates for accurate international money calculations.",
     "description": "Our comprehensive currency converter provides real-time exchange rates for all major world currencies. Perfect for travelers, international business professionals, and anyone dealing with foreign currency. Get accurate conversions with historical rates and currency charts for better financial planning.",
     "instructions": [
@@ -20,15 +38,89 @@
     "calculatorComponent": {
       "componentName": "CurrencyConverter",
       "inputs": [
-        { "name": "amount", "label": "Amount", "type": "number", "default": 1000, "min": 0.01, "max": 10000000, "step": 0.01 },
-        { "name": "fromCurrency", "label": "From Currency", "type": "select", "default": "USD", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] },
-        { "name": "toCurrency", "label": "To Currency", "type": "select", "default": "EUR", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] }
+        {
+          "name": "amount",
+          "label": "Amount",
+          "type": "number",
+          "default": 1000,
+          "min": 0.01,
+          "max": 10000000,
+          "step": 0.01
+        },
+        {
+          "name": "fromCurrency",
+          "label": "From Currency",
+          "type": "select",
+          "default": "USD",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        },
+        {
+          "name": "toCurrency",
+          "label": "To Currency",
+          "type": "select",
+          "default": "EUR",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        }
       ],
       "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
-      "output": { "label": "Converted Amount", "default": "Enter amount and currencies above", "format": "currency" },
+      "output": {
+        "label": "Converted Amount",
+        "default": "Enter amount and currencies above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Exchange Rate", "field": "exchangeRate", "format": "number" },
-        { "label": "Inverse Rate", "field": "inverseRate", "format": "number" }
+        {
+          "label": "Exchange Rate",
+          "field": "exchangeRate",
+          "format": "number"
+        },
+        {
+          "label": "Inverse Rate",
+          "field": "inverseRate",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -43,7 +135,11 @@
         "output": "Approximately 63,500 USD (based on current rates)"
       }
     ],
-    "relatedCalculators": ["inflation-calculator", "budget-calculator", "investment-calculator"],
+    "relatedCalculators": [
+      "inflation-calculator",
+      "budget-calculator",
+      "investment-calculator"
+    ],
     "seoContent": {
       "introduction": "Navigate the global economy with confidence using our comprehensive currency converter that provides accurate, real-time exchange rates for all major world currencies. Whether you're planning international travel, conducting business across borders, or simply curious about foreign money values, this essential financial tool ensures you always know the true value of your money in any currency. Stay informed about currency fluctuations and make smarter decisions for international transactions, travel budgets, and cross-border investments.",
       "benefits": [
@@ -111,18 +207,37 @@
           "answer": "Banks and exchange services offer different rates for buying (when you buy foreign currency) and selling (when you sell foreign currency back). The difference creates a 'spread' that represents their profit margin, typically 3-5% for retail customers. Buying rates are worse for you (you get less foreign currency for your money), while selling rates are better for you (you get more home currency when selling foreign currency). Always ask for both rates when comparing services."
         }
       ]
-    }
+    },
+    "component": "CurrencyConverter"
   },
   "es": {
     "title": "Convertidor de Moneda",
     "seoTitle": "Convertidor de Moneda - Convierte Dinero Entre Monedas en Línea",
     "metaDescription": "Convertidor de moneda gratuito en línea. Convierte entre todas las monedas principales del mundo con tasas de cambio en vivo. Perfecto para viajes, negocios y transacciones internacionales.",
-    "keywords": ["convertidor moneda", "calculadora tasa cambio", "convertidor dinero", "convertidor forex", "cambio moneda"],
-    "longTailKeywords": ["convertir moneda online", "tasas cambio en vivo", "calculadora moneda extranjera", "convertidor dinero internacional", "herramienta conversión moneda"],
+    "keywords": [
+      "convertidor moneda",
+      "calculadora tasa cambio",
+      "convertidor dinero",
+      "convertidor forex",
+      "cambio moneda"
+    ],
+    "longTailKeywords": [
+      "convertir moneda online",
+      "tasas cambio en vivo",
+      "calculadora moneda extranjera",
+      "convertidor dinero internacional",
+      "herramienta conversión moneda"
+    ],
     "slug": "currency-converter",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["moneda", "tasas cambio", "internacional", "viajes", "negocios"],
+    "tags": [
+      "moneda",
+      "tasas cambio",
+      "internacional",
+      "viajes",
+      "negocios"
+    ],
     "summary": "Convierte entre todas las monedas principales del mundo con tasas de cambio en vivo para cálculos precisos de dinero internacional.",
     "description": "Nuestro completo convertidor de moneda proporciona tasas de cambio en tiempo real para todas las monedas principales del mundo. Perfecto para viajeros, profesionales de negocios internacionales y cualquier persona que maneje moneda extranjera. Obtén conversiones precisas con tasas históricas y gráficos de moneda para una mejor planificación financiera.",
     "instructions": [
@@ -134,15 +249,89 @@
     "calculatorComponent": {
       "componentName": "CurrencyConverter",
       "inputs": [
-        { "name": "amount", "label": "Amount", "type": "number", "default": 1000, "min": 0.01, "max": 10000000, "step": 0.01 },
-        { "name": "fromCurrency", "label": "From Currency", "type": "select", "default": "USD", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] },
-        { "name": "toCurrency", "label": "To Currency", "type": "select", "default": "EUR", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] }
+        {
+          "name": "amount",
+          "label": "Amount",
+          "type": "number",
+          "default": 1000,
+          "min": 0.01,
+          "max": 10000000,
+          "step": 0.01
+        },
+        {
+          "name": "fromCurrency",
+          "label": "From Currency",
+          "type": "select",
+          "default": "USD",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        },
+        {
+          "name": "toCurrency",
+          "label": "To Currency",
+          "type": "select",
+          "default": "EUR",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        }
       ],
       "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
-      "output": { "label": "Converted Amount", "default": "Enter amount and currencies above", "format": "currency" },
+      "output": {
+        "label": "Converted Amount",
+        "default": "Enter amount and currencies above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Exchange Rate", "field": "exchangeRate", "format": "number" },
-        { "label": "Inverse Rate", "field": "inverseRate", "format": "number" }
+        {
+          "label": "Exchange Rate",
+          "field": "exchangeRate",
+          "format": "number"
+        },
+        {
+          "label": "Inverse Rate",
+          "field": "inverseRate",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -157,7 +346,11 @@
         "output": "Aproximadamente 63,500 USD (basado en tasas actuales)"
       }
     ],
-    "relatedCalculators": ["inflation-calculator", "budget-calculator", "investment-calculator"],
+    "relatedCalculators": [
+      "inflation-calculator",
+      "budget-calculator",
+      "investment-calculator"
+    ],
     "seoContent": {
       "introduction": "Navega la economía global con confianza usando nuestro convertidor integral de moneda que proporciona tasas de cambio precisas y en tiempo real para todas las monedas principales del mundo. Ya sea que planees viajes internacionales, conduzcas negocios a través de fronteras, o simplemente tengas curiosidad sobre los valores de dinero extranjero, esta herramienta financiera esencial asegura que siempre sepas el verdadero valor de tu dinero en cualquier moneda. Mantente informado sobre fluctuaciones de moneda y toma decisiones más inteligentes para transacciones internacionales, presupuestos de viaje, e inversiones transfronterizas.",
       "benefits": [
@@ -225,18 +418,37 @@
           "answer": "Los bancos y servicios de cambio ofrecen diferentes tasas para compra (cuando compras moneda extranjera) y venta (cuando vendes moneda extranjera de vuelta). La diferencia crea un 'spread' que representa su margen de ganancia, típicamente 3-5% para clientes minoristas. Las tasas de compra son peores para ti (obtienes menos moneda extranjera por tu dinero), mientras las tasas de venta son mejores para ti (obtienes más moneda local cuando vendes moneda extranjera). Siempre pregunta por ambas tasas cuando compares servicios."
         }
       ]
-    }
+    },
+    "component": "CurrencyConverter"
   },
   "pt": {
     "title": "Conversor de Moeda",
     "seoTitle": "Conversor de Moeda - Converta Dinheiro Entre Moedas Online",
     "metaDescription": "Conversor de moeda gratuito online. Converta entre todas as moedas principais do mundo com taxas de câmbio ao vivo. Perfeito para viagens, negócios e transações internacionais.",
-    "keywords": ["conversor moeda", "calculadora taxa câmbio", "conversor dinheiro", "conversor forex", "câmbio moeda"],
-    "longTailKeywords": ["converter moeda online", "taxas câmbio ao vivo", "calculadora moeda estrangeira", "conversor dinheiro internacional", "ferramenta conversão moeda"],
+    "keywords": [
+      "conversor moeda",
+      "calculadora taxa câmbio",
+      "conversor dinheiro",
+      "conversor forex",
+      "câmbio moeda"
+    ],
+    "longTailKeywords": [
+      "converter moeda online",
+      "taxas câmbio ao vivo",
+      "calculadora moeda estrangeira",
+      "conversor dinheiro internacional",
+      "ferramenta conversão moeda"
+    ],
     "slug": "currency-converter",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["moeda", "taxas câmbio", "internacional", "viagens", "negócios"],
+    "tags": [
+      "moeda",
+      "taxas câmbio",
+      "internacional",
+      "viagens",
+      "negócios"
+    ],
     "summary": "Converta entre todas as moedas principais do mundo com taxas de câmbio ao vivo para cálculos precisos de dinheiro internacional.",
     "description": "Nosso conversor completo de moeda fornece taxas de câmbio em tempo real para todas as moedas principais do mundo. Perfeito para viajantes, profissionais de negócios internacionais e qualquer pessoa que lide com moeda estrangeira. Obtenha conversões precisas com taxas históricas e gráficos de moeda para melhor planejamento financeiro.",
     "instructions": [
@@ -248,15 +460,89 @@
     "calculatorComponent": {
       "componentName": "CurrencyConverter",
       "inputs": [
-        { "name": "amount", "label": "Amount", "type": "number", "default": 1000, "min": 0.01, "max": 10000000, "step": 0.01 },
-        { "name": "fromCurrency", "label": "From Currency", "type": "select", "default": "USD", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] },
-        { "name": "toCurrency", "label": "To Currency", "type": "select", "default": "EUR", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] }
+        {
+          "name": "amount",
+          "label": "Amount",
+          "type": "number",
+          "default": 1000,
+          "min": 0.01,
+          "max": 10000000,
+          "step": 0.01
+        },
+        {
+          "name": "fromCurrency",
+          "label": "From Currency",
+          "type": "select",
+          "default": "USD",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        },
+        {
+          "name": "toCurrency",
+          "label": "To Currency",
+          "type": "select",
+          "default": "EUR",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        }
       ],
       "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
-      "output": { "label": "Converted Amount", "default": "Enter amount and currencies above", "format": "currency" },
+      "output": {
+        "label": "Converted Amount",
+        "default": "Enter amount and currencies above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Exchange Rate", "field": "exchangeRate", "format": "number" },
-        { "label": "Inverse Rate", "field": "inverseRate", "format": "number" }
+        {
+          "label": "Exchange Rate",
+          "field": "exchangeRate",
+          "format": "number"
+        },
+        {
+          "label": "Inverse Rate",
+          "field": "inverseRate",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -271,7 +557,11 @@
         "output": "Aproximadamente 63,500 USD (baseado em taxas atuais)"
       }
     ],
-    "relatedCalculators": ["inflation-calculator", "budget-calculator", "investment-calculator"],
+    "relatedCalculators": [
+      "inflation-calculator",
+      "budget-calculator",
+      "investment-calculator"
+    ],
     "seoContent": {
       "introduction": "Navegue a economia global com confiança usando nosso conversor abrangente de moeda que fornece taxas de câmbio precisas e em tempo real para todas as moedas principais do mundo. Seja você planejando viagens internacionais, conduzindo negócios através de fronteiras, ou simplesmente curioso sobre valores de dinheiro estrangeiro, esta ferramenta financeira essencial garante que você sempre saiba o verdadeiro valor do seu dinheiro em qualquer moeda. Mantenha-se informado sobre flutuações de moeda e tome decisões mais inteligentes para transações internacionais, orçamentos de viagem, e investimentos transfronteiriços.",
       "benefits": [
@@ -339,18 +629,37 @@
           "answer": "Bancos e serviços de câmbio oferecem diferentes taxas para compra (quando você compra moeda estrangeira) e venda (quando você vende moeda estrangeira de volta). A diferença cria um 'spread' que representa sua margem de lucro, tipicamente 3-5% para clientes varejistas. Taxas de compra são piores para você (você obtém menos moeda estrangeira por seu dinheiro), enquanto taxas de venda são melhores para você (você obtém mais moeda local quando vende moeda estrangeira). Sempre pergunte por ambas as taxas quando comparar serviços."
         }
       ]
-    }
+    },
+    "component": "CurrencyConverter"
   },
   "fr": {
     "title": "Convertisseur de Devise",
     "seoTitle": "Convertisseur de Devise - Convertissez de l'Argent Entre Devises en Ligne",
     "metaDescription": "Convertisseur de devise gratuit en ligne. Convertissez entre toutes les principales devises mondiales avec des taux de change en direct. Parfait pour les voyages, les affaires et les transactions internationales.",
-    "keywords": ["convertisseur devise", "calculatrice taux change", "convertisseur argent", "convertisseur forex", "change devise"],
-    "longTailKeywords": ["convertir devise en ligne", "taux change en direct", "calculatrice devise étrangère", "convertisseur argent international", "outil conversion devise"],
+    "keywords": [
+      "convertisseur devise",
+      "calculatrice taux change",
+      "convertisseur argent",
+      "convertisseur forex",
+      "change devise"
+    ],
+    "longTailKeywords": [
+      "convertir devise en ligne",
+      "taux change en direct",
+      "calculatrice devise étrangère",
+      "convertisseur argent international",
+      "outil conversion devise"
+    ],
     "slug": "currency-converter",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["devise", "taux change", "international", "voyages", "affaires"],
+    "tags": [
+      "devise",
+      "taux change",
+      "international",
+      "voyages",
+      "affaires"
+    ],
     "summary": "Convertissez entre toutes les principales devises mondiales avec des taux de change en direct pour des calculs précis d'argent international.",
     "description": "Notre convertisseur complet de devise fournit des taux de change en temps réel pour toutes les principales devises mondiales. Parfait pour les voyageurs, les professionnels des affaires internationales et toute personne traitant avec des devises étrangères. Obtenez des conversions précises avec des taux historiques et des graphiques de devise pour une meilleure planification financière.",
     "instructions": [
@@ -362,15 +671,89 @@
     "calculatorComponent": {
       "componentName": "CurrencyConverter",
       "inputs": [
-        { "name": "amount", "label": "Amount", "type": "number", "default": 1000, "min": 0.01, "max": 10000000, "step": 0.01 },
-        { "name": "fromCurrency", "label": "From Currency", "type": "select", "default": "USD", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] },
-        { "name": "toCurrency", "label": "To Currency", "type": "select", "default": "EUR", "options": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "SEK", "NZD", "MXN", "SGD", "HKD", "NOK", "KRW", "TRY", "RUB", "INR", "BRL", "ZAR"] }
+        {
+          "name": "amount",
+          "label": "Amount",
+          "type": "number",
+          "default": 1000,
+          "min": 0.01,
+          "max": 10000000,
+          "step": 0.01
+        },
+        {
+          "name": "fromCurrency",
+          "label": "From Currency",
+          "type": "select",
+          "default": "USD",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        },
+        {
+          "name": "toCurrency",
+          "label": "To Currency",
+          "type": "select",
+          "default": "EUR",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        }
       ],
       "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
-      "output": { "label": "Converted Amount", "default": "Enter amount and currencies above", "format": "currency" },
+      "output": {
+        "label": "Converted Amount",
+        "default": "Enter amount and currencies above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Exchange Rate", "field": "exchangeRate", "format": "number" },
-        { "label": "Inverse Rate", "field": "inverseRate", "format": "number" }
+        {
+          "label": "Exchange Rate",
+          "field": "exchangeRate",
+          "format": "number"
+        },
+        {
+          "label": "Inverse Rate",
+          "field": "inverseRate",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -385,7 +768,11 @@
         "output": "Environ 63,500 USD (basé sur les taux actuels)"
       }
     ],
-    "relatedCalculators": ["inflation-calculator", "budget-calculator", "investment-calculator"],
+    "relatedCalculators": [
+      "inflation-calculator",
+      "budget-calculator",
+      "investment-calculator"
+    ],
     "seoContent": {
       "introduction": "Naviguez l'économie mondiale en toute confiance en utilisant notre convertisseur complet de devise qui fournit des taux de change précis et en temps réel pour toutes les principales monnaies mondiales. Que vous planifiiez des voyages internationaux, meniez des affaires à travers les frontières, ou soyez simplement curieux des valeurs d'argent étranger, cet outil financier essentiel garantit que vous connaissez toujours la vraie valeur de votre argent dans n'importe quelle monnaie. Restez informé des fluctuations monétaires et prenez des décisions plus intelligentes pour les transactions internationales, les budgets de voyage, et les investissements transfrontaliers.",
       "benefits": [
@@ -453,6 +840,7 @@
           "answer": "Les banques et services de change offrent différents taux pour l'achat (lorsque vous achetez de la devise étrangère) et la vente (lorsque vous vendez de la devise étrangère en retour). La différence crée un 'écart' qui représente leur marge bénéficiaire, généralement 3-5% pour les clients de détail. Les taux d'achat sont pires pour vous (vous obtenez moins de devise étrangère pour votre argent), tandis que les taux de vente sont meilleurs pour vous (vous obtenez plus de devise locale en vendant de la devise étrangère). Demandez toujours les deux taux lorsque vous comparez les services."
         }
       ]
-    }
+    },
+    "component": "CurrencyConverter"
   }
 }

@@ -3,12 +3,30 @@
     "title": "BMI Calculator",
     "seoTitle": "BMI Calculator - Body Mass Index Calculator Online",
     "metaDescription": "Free BMI calculator. Calculate your Body Mass Index (BMI) and get health category assessment. Find out if you're underweight, normal weight, overweight or obese.",
-    "keywords": ["BMI calculator", "body mass index calculator", "BMI chart", "healthy weight calculator", "weight status calculator"],
-    "longTailKeywords": ["how to calculate BMI", "BMI calculator for women", "BMI calculator for men", "healthy BMI range", "BMI categories explained"],
+    "keywords": [
+      "BMI calculator",
+      "body mass index calculator",
+      "BMI chart",
+      "healthy weight calculator",
+      "weight status calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate BMI",
+      "BMI calculator for women",
+      "BMI calculator for men",
+      "healthy BMI range",
+      "BMI categories explained"
+    ],
     "slug": "bmi-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["BMI", "weight", "health", "body mass index", "fitness"],
+    "tags": [
+      "BMI",
+      "weight",
+      "health",
+      "body mass index",
+      "fitness"
+    ],
     "summary": "Calculate your Body Mass Index (BMI) and determine your weight status category using height and weight measurements.",
     "description": "Our BMI calculator uses the standard formula to determine your Body Mass Index and provides health category assessment. BMI is a screening tool that can indicate whether you're underweight, normal weight, overweight, or obese.",
     "instructions": [
@@ -20,19 +38,86 @@
     "calculatorComponent": {
       "componentName": "BMICalculator",
       "inputs": [
-        { "name": "unit", "label": "Unit System", "type": "select", "default": "metric", "options": ["metric", "imperial"] },
-        { "name": "height", "label": "Height", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1, "unit": "cm" },
-        { "name": "weight", "label": "Weight", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1, "unit": "kg" },
-        { "name": "heightFeet", "label": "Height (Feet)", "type": "number", "default": 5, "min": 3, "max": 8, "step": 1 },
-        { "name": "heightInches", "label": "Height (Inches)", "type": "number", "default": 9, "min": 0, "max": 11, "step": 1 },
-        { "name": "weightLbs", "label": "Weight (Pounds)", "type": "number", "default": 154, "min": 66, "max": 661, "step": 0.1 }
+        {
+          "name": "unit",
+          "label": "Unit System",
+          "type": "select",
+          "default": "metric",
+          "options": [
+            "metric",
+            "imperial"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Height",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1,
+          "unit": "cm"
+        },
+        {
+          "name": "weight",
+          "label": "Weight",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1,
+          "unit": "kg"
+        },
+        {
+          "name": "heightFeet",
+          "label": "Height (Feet)",
+          "type": "number",
+          "default": 5,
+          "min": 3,
+          "max": 8,
+          "step": 1
+        },
+        {
+          "name": "heightInches",
+          "label": "Height (Inches)",
+          "type": "number",
+          "default": 9,
+          "min": 0,
+          "max": 11,
+          "step": 1
+        },
+        {
+          "name": "weightLbs",
+          "label": "Weight (Pounds)",
+          "type": "number",
+          "default": 154,
+          "min": 66,
+          "max": 661,
+          "step": 0.1
+        }
       ],
       "formula": "BMI = weight (kg) / [height (m)]²; BMI = 703 × weight (lbs) / [height (inches)]²",
-      "output": { "label": "Your BMI", "default": "Enter height and weight above", "format": "number" },
+      "output": {
+        "label": "Your BMI",
+        "default": "Enter height and weight above",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "BMI Category", "field": "category", "format": "text" },
-        { "label": "Healthy BMI Range", "field": "healthyRange", "format": "text" },
-        { "label": "BMI Prime", "field": "bmiPrime", "format": "number" }
+        {
+          "label": "BMI Category",
+          "field": "category",
+          "format": "text"
+        },
+        {
+          "label": "Healthy BMI Range",
+          "field": "healthyRange",
+          "format": "text"
+        },
+        {
+          "label": "BMI Prime",
+          "field": "bmiPrime",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -52,7 +137,11 @@
         "output": "BMI: 23.6 (Normal weight)"
       }
     ],
-    "relatedCalculators": ["body-fat-calculator", "bmr-calculator", "ideal-weight-calculator"],
+    "relatedCalculators": [
+      "body-fat-calculator",
+      "bmr-calculator",
+      "ideal-weight-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculate your Body Mass Index (BMI) with precision using our comprehensive health calculator. This fundamental health metric provides a screening tool to assess whether your weight falls within a healthy range for your height. While BMI doesn't measure body fat directly, it correlates strongly with body fat percentage and serves as an important indicator of potential health risks. Our calculator supports both metric and imperial units, making it accessible for users worldwide. Understanding your BMI is the first step toward maintaining optimal health and preventing weight-related health issues.",
       "benefits": [
@@ -117,18 +206,37 @@
           "answer": "BMI is a screening tool that suggests discussing weight with healthcare providers. They can assess overall health, body composition, and risk factors. Weight management should involve sustainable lifestyle changes including balanced nutrition, regular physical activity, and behavior modifications. Focus on health improvements rather than just weight numbers."
         }
       ]
-    }
+    },
+    "component": "BMICalculator"
   },
   "es": {
     "title": "Calculadora IMC",
     "seoTitle": "Calculadora IMC - Índice de Masa Corporal Online",
     "metaDescription": "Calculadora gratuita IMC. Calcula tu Índice de Masa Corporal (IMC) y obtén evaluación de categoría de salud. Averigua si estás bajo peso, peso normal, sobrepeso u obeso.",
-    "keywords": ["calculadora IMC", "calculadora índice masa corporal", "tabla IMC", "calculadora peso saludable", "calculadora estado peso"],
-    "longTailKeywords": ["como calcular IMC", "calculadora IMC mujeres", "calculadora IMC hombres", "rango IMC saludable", "categorías IMC explicadas"],
+    "keywords": [
+      "calculadora IMC",
+      "calculadora índice masa corporal",
+      "tabla IMC",
+      "calculadora peso saludable",
+      "calculadora estado peso"
+    ],
+    "longTailKeywords": [
+      "como calcular IMC",
+      "calculadora IMC mujeres",
+      "calculadora IMC hombres",
+      "rango IMC saludable",
+      "categorías IMC explicadas"
+    ],
     "slug": "bmi-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["IMC", "peso", "salud", "índice masa corporal", "fitness"],
+    "tags": [
+      "IMC",
+      "peso",
+      "salud",
+      "índice masa corporal",
+      "fitness"
+    ],
     "summary": "Calcula tu Índice de Masa Corporal (IMC) y determina tu categoría de estado de peso usando mediciones de altura y peso.",
     "description": "Nuestra calculadora IMC usa la fórmula estándar para determinar tu Índice de Masa Corporal y proporciona evaluación de categoría de salud. IMC es una herramienta de cribado que puede indicar si estás bajo peso, peso normal, sobrepeso u obeso.",
     "instructions": [
@@ -140,19 +248,86 @@
     "calculatorComponent": {
       "componentName": "BMICalculator",
       "inputs": [
-        { "name": "unit", "label": "Sistema de Unidades", "type": "select", "default": "metric", "options": ["metric", "imperial"] },
-        { "name": "height", "label": "Altura", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1, "unit": "cm" },
-        { "name": "weight", "label": "Peso", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1, "unit": "kg" },
-        { "name": "heightFeet", "label": "Altura (Pies)", "type": "number", "default": 5, "min": 3, "max": 8, "step": 1 },
-        { "name": "heightInches", "label": "Altura (Pulgadas)", "type": "number", "default": 9, "min": 0, "max": 11, "step": 1 },
-        { "name": "weightLbs", "label": "Peso (Libras)", "type": "number", "default": 154, "min": 66, "max": 661, "step": 0.1 }
+        {
+          "name": "unit",
+          "label": "Sistema de Unidades",
+          "type": "select",
+          "default": "metric",
+          "options": [
+            "metric",
+            "imperial"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Altura",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1,
+          "unit": "cm"
+        },
+        {
+          "name": "weight",
+          "label": "Peso",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1,
+          "unit": "kg"
+        },
+        {
+          "name": "heightFeet",
+          "label": "Altura (Pies)",
+          "type": "number",
+          "default": 5,
+          "min": 3,
+          "max": 8,
+          "step": 1
+        },
+        {
+          "name": "heightInches",
+          "label": "Altura (Pulgadas)",
+          "type": "number",
+          "default": 9,
+          "min": 0,
+          "max": 11,
+          "step": 1
+        },
+        {
+          "name": "weightLbs",
+          "label": "Peso (Libras)",
+          "type": "number",
+          "default": 154,
+          "min": 66,
+          "max": 661,
+          "step": 0.1
+        }
       ],
       "formula": "IMC = peso (kg) / [altura (m)]²; IMC = 703 × peso (lbs) / [altura (pulgadas)]²",
-      "output": { "label": "Tu IMC", "default": "Ingresa altura y peso arriba", "format": "number" },
+      "output": {
+        "label": "Tu IMC",
+        "default": "Ingresa altura y peso arriba",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Categoría IMC", "field": "category", "format": "text" },
-        { "label": "Rango IMC Saludable", "field": "healthyRange", "format": "text" },
-        { "label": "IMC Prime", "field": "bmiPrime", "format": "number" }
+        {
+          "label": "Categoría IMC",
+          "field": "category",
+          "format": "text"
+        },
+        {
+          "label": "Rango IMC Saludable",
+          "field": "healthyRange",
+          "format": "text"
+        },
+        {
+          "label": "IMC Prime",
+          "field": "bmiPrime",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -172,7 +347,11 @@
         "output": "IMC: 23.6 (Peso normal)"
       }
     ],
-    "relatedCalculators": ["body-fat-calculator", "bmr-calculator", "ideal-weight-calculator"],
+    "relatedCalculators": [
+      "body-fat-calculator",
+      "bmr-calculator",
+      "ideal-weight-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcule seu Índice de Massa Corporal (IMC) com precisão usando nossa calculadora de saúde abrangente. Esta métrica fundamental de saúde fornece uma ferramenta de triagem para avaliar se seu peso cai dentro de uma faixa saudável para sua altura. Embora IMC não meça gordura corporal diretamente, correlaciona fortemente com porcentagem de gordura corporal e serve como indicador importante de potenciais riscos à saúde. Nossa calculadora suporta tanto unidades métricas quanto imperiais, tornando-a acessível para usuários em todo o mundo. Compreender seu IMC é o primeiro passo para manter saúde ótima e prevenir problemas de saúde relacionados ao peso.",
       "benefits": [
@@ -237,18 +416,37 @@
           "answer": "IMC é uma ferramenta de triagem que sugere discutir peso com provedores de saúde. Eles podem avaliar saúde geral, composição corporal, e fatores de risco. Gerenciamento de peso deve envolver mudanças sustentáveis de estilo de vida incluindo nutrição balanceada, atividade física regular, e modificações comportamentais. Foque em melhorias de saúde em vez de apenas números de peso."
         }
       ]
-    }
+    },
+    "component": "BMICalculator"
   },
   "pt": {
     "title": "Calculadora IMC",
     "seoTitle": "Calculadora IMC - Índice de Massa Corporal Online",
     "metaDescription": "Calculadora gratuita IMC. Calcule seu Índice de Massa Corporal (IMC) e obtenha avaliação de categoria de saúde. Descubra se você está abaixo do peso, peso normal, sobrepeso ou obeso.",
-    "keywords": ["calculadora IMC", "calculadora índice massa corporal", "tabela IMC", "calculadora peso saudável", "calculadora estado peso"],
-    "longTailKeywords": ["como calcular IMC", "calculadora IMC mulheres", "calculadora IMC homens", "faixa IMC saudável", "categorias IMC explicadas"],
+    "keywords": [
+      "calculadora IMC",
+      "calculadora índice massa corporal",
+      "tabela IMC",
+      "calculadora peso saudável",
+      "calculadora estado peso"
+    ],
+    "longTailKeywords": [
+      "como calcular IMC",
+      "calculadora IMC mulheres",
+      "calculadora IMC homens",
+      "faixa IMC saudável",
+      "categorias IMC explicadas"
+    ],
     "slug": "bmi-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["IMC", "peso", "saúde", "índice massa corporal", "fitness"],
+    "tags": [
+      "IMC",
+      "peso",
+      "saúde",
+      "índice massa corporal",
+      "fitness"
+    ],
     "summary": "Calcule seu Índice de Massa Corporal (IMC) e determine sua categoria de estado de peso usando medições de altura e peso.",
     "description": "Nossa calculadora IMC usa a fórmula padrão para determinar seu Índice de Massa Corporal e fornece avaliação de categoria de saúde. IMC é uma ferramenta de triagem que pode indicar se você está abaixo do peso, peso normal, sobrepeso ou obeso.",
     "instructions": [
@@ -260,19 +458,86 @@
     "calculatorComponent": {
       "componentName": "BMICalculator",
       "inputs": [
-        { "name": "unit", "label": "Sistema de Unidades", "type": "select", "default": "metric", "options": ["metric", "imperial"] },
-        { "name": "height", "label": "Altura", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1, "unit": "cm" },
-        { "name": "weight", "label": "Peso", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1, "unit": "kg" },
-        { "name": "heightFeet", "label": "Altura (Pés)", "type": "number", "default": 5, "min": 3, "max": 8, "step": 1 },
-        { "name": "heightInches", "label": "Altura (Polegadas)", "type": "number", "default": 9, "min": 0, "max": 11, "step": 1 },
-        { "name": "weightLbs", "label": "Peso (Libras)", "type": "number", "default": 154, "min": 66, "max": 661, "step": 0.1 }
+        {
+          "name": "unit",
+          "label": "Sistema de Unidades",
+          "type": "select",
+          "default": "metric",
+          "options": [
+            "metric",
+            "imperial"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Altura",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1,
+          "unit": "cm"
+        },
+        {
+          "name": "weight",
+          "label": "Peso",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1,
+          "unit": "kg"
+        },
+        {
+          "name": "heightFeet",
+          "label": "Altura (Pés)",
+          "type": "number",
+          "default": 5,
+          "min": 3,
+          "max": 8,
+          "step": 1
+        },
+        {
+          "name": "heightInches",
+          "label": "Altura (Polegadas)",
+          "type": "number",
+          "default": 9,
+          "min": 0,
+          "max": 11,
+          "step": 1
+        },
+        {
+          "name": "weightLbs",
+          "label": "Peso (Libras)",
+          "type": "number",
+          "default": 154,
+          "min": 66,
+          "max": 661,
+          "step": 0.1
+        }
       ],
       "formula": "IMC = peso (kg) / [altura (m)]²; IMC = 703 × peso (lbs) / [altura (polegadas)]²",
-      "output": { "label": "Seu IMC", "default": "Digite altura e peso acima", "format": "number" },
+      "output": {
+        "label": "Seu IMC",
+        "default": "Digite altura e peso acima",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Categoria IMC", "field": "category", "format": "text" },
-        { "label": "Faixa IMC Saudável", "field": "healthyRange", "format": "text" },
-        { "label": "IMC Prime", "field": "bmiPrime", "format": "number" }
+        {
+          "label": "Categoria IMC",
+          "field": "category",
+          "format": "text"
+        },
+        {
+          "label": "Faixa IMC Saudável",
+          "field": "healthyRange",
+          "format": "text"
+        },
+        {
+          "label": "IMC Prime",
+          "field": "bmiPrime",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -292,18 +557,106 @@
         "output": "IMC: 23.6 (Peso normal)"
       }
     ],
-    "relatedCalculators": ["body-fat-calculator", "bmr-calculator", "ideal-weight-calculator"]
+    "relatedCalculators": [
+      "body-fat-calculator",
+      "bmr-calculator",
+      "ideal-weight-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule seu Índice de Massa Corporal (IMC) com precisão usando nossa calculadora de saúde abrangente. Esta métrica fundamental de saúde fornece uma ferramenta de triagem para avaliar se seu peso está dentro de uma faixa saudável para sua altura. Embora o IMC não meça a gordura corporal diretamente, ele se correlaciona fortemente com a porcentagem de gordura corporal e serve como um indicador importante de potenciais riscos à saúde. Nossa calculadora suporta unidades métricas e imperiais, tornando-a acessível para usuários em todo o mundo. Compreender seu IMC é o primeiro passo para manter a saúde ideal e prevenir problemas de saúde relacionados ao peso.",
+      "benefits": [
+        "Calcule o IMC instantaneamente usando fórmulas cientificamente aceitas",
+        "Obtenha avaliação clara da categoria de saúde (abaixo do peso, normal, sobrepeso, obeso)",
+        "Suporta medições métricas (cm/kg) e imperiais (pés/libras)",
+        "Fornece IMC Prime para contexto adicional sobre status de peso",
+        "Mostra faixa de IMC saudável para sua referência",
+        "Primeiro passo essencial na avaliação de saúde e fitness"
+      ],
+      "steps": [
+        "Selecione seu sistema de unidades preferido (métrico ou imperial)",
+        "Digite sua altura em centímetros ou pés/polegadas",
+        "Digite seu peso em quilogramas ou libras",
+        "Revise seu valor de IMC e interpretação da categoria de saúde"
+      ],
+      "inputsExplained": [
+        "Seleção do sistema de unidades permite cálculo em medições familiares",
+        "Medição de altura é elevada ao quadrado na fórmula do IMC, tornando-a crítica para precisão",
+        "Medição de peso é dividida pela altura ao quadrado para determinar o valor do IMC",
+        "Todas as entradas funcionam juntas usando a fórmula padrão do IMC para resultados confiáveis"
+      ],
+      "formulaExplanation": "O cálculo do IMC usa a fórmula padrão: IMC = peso (kg) / [altura (m)]². Para unidades imperiais, a fórmula é IMC = 703 × peso (lbs) / [altura (polegadas)]². O resultado categoriza indivíduos como abaixo do peso (IMC < 18.5), peso normal (18.5-24.9), sobrepeso (25-29.9) ou obeso (≥30). O IMC Prime expressa o IMC como uma razão para o limite superior do normal (25), fornecendo contexto adicional. Embora útil para triagem populacional, o IMC deve ser considerado junto com outras métricas de saúde para avaliação individual.",
+      "examples": [
+        "Uma pessoa de 175cm de altura pesando 70kg calcula: IMC = 70 / (1.75)² = 22.9, caindo na categoria peso normal",
+        "Uma pessoa de 165cm de altura pesando 75kg calcula: IMC = 75 / (1.65)² = 27.5, indicando status de sobrepeso",
+        "Usando unidades imperiais, pessoa de 5'9\" (69 polegadas) de altura pesando 160 lbs calcula: IMC = 703 × 160 / (69)² = 23.6, dentro da faixa normal"
+      ],
+      "resultsExplanation": [
+        "Valor do IMC mostra seu status de peso relativo à altura",
+        "Categoria de saúde fornece interpretação clara dos resultados do IMC",
+        "Faixa de IMC saudável indica zona de peso ótima para adultos",
+        "IMC Prime oferece perspectiva adicional sobre status de peso",
+        "Todos os resultados são calculados usando classificações de IMC aprovadas pela OMS"
+      ],
+      "whoItsFor": "Esta calculadora serve indivíduos que buscam entender seu status de peso, profissionais de saúde conduzindo avaliações iniciais de saúde, entusiastas de fitness rastreando progresso, nutricionistas fornecendo orientação nutricional, e qualquer pessoa preocupada com riscos à saúde relacionados ao peso. É particularmente valiosa para adultos que buscam manter faixas de peso saudáveis, indivíduos planejando programas de perda ou ganho de peso, e aqueles recebendo exames de saúde ou aconselhamento médico.",
+      "disclaimer": "O IMC é uma ferramenta de triagem que fornece avaliação geral de risco à saúde, mas tem limitações. Não distingue entre massa muscular e gordura, pode não ser preciso para atletas, indivíduos grávidos ou aqueles com alta massa muscular. Crianças e idosos podem requerer interpretações diferentes de IMC. Para avaliação abrangente de saúde, consulte profissionais de saúde que podem considerar fatores adicionais como composição corporal, histórico médico e estilo de vida. Esta calculadora fornece estimativas apenas para fins educacionais.",
+      "relatedTools": [
+        "Calculadoras de gordura corporal para análise mais detalhada de composição corporal",
+        "Calculadoras de TMB para compreensão de taxa metabólica e necessidades calóricas",
+        "Calculadoras de peso ideal para avaliação de faixa de peso alvo"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre IMC e porcentagem de gordura corporal?",
+          "answer": "IMC é uma medida de peso relativo à altura que se correlaciona com gordura corporal, mas não a mede diretamente. Porcentagem de gordura corporal mede o conteúdo real de gordura no corpo. IMC é mais fácil de calcular e serve como ferramenta de triagem, enquanto porcentagem de gordura corporal fornece informações mais detalhadas sobre composição corporal. Atletas podem ter IMC alto devido à massa muscular, mas baixa porcentagem de gordura corporal."
+        },
+        {
+          "question": "O IMC é preciso para todos?",
+          "answer": "O IMC funciona bem para triagem populacional geral, mas tem limitações. É menos preciso para atletas, fisiculturistas, mulheres grávidas, crianças e idosos. Populações asiáticas podem ter riscos mais altos à saúde em faixas menores de IMC. O IMC não considera massa muscular, densidade óssea ou distribuição de gordura. Para estes grupos, avaliações de saúde adicionais são recomendadas."
+        },
+        {
+          "question": "Com que frequência devo verificar meu IMC?",
+          "answer": "Verifique o IMC mensalmente durante programas de perda/ganho de peso para rastrear progresso. Para monitoramento geral de saúde, verificações trimestrais ou anuais são suficientes, a menos que aconselhado de outra forma por profissionais de saúde. O IMC deve ser monitorado junto com outros indicadores de saúde como pressão arterial, colesterol e medições corporais para avaliação abrangente de saúde."
+        },
+        {
+          "question": "O IMC pode ser usado para crianças e adolescentes?",
+          "answer": "O IMC para crianças usa percentis específicos de idade e gênero em vez de faixas fixas. Crianças crescem em taxas diferentes, então o IMC deve ser interpretado usando gráficos de crescimento. Percentis de IMC acima do 85º indicam sobrepeso, acima do 95º indicam obesidade. O IMC pediátrico requer interpretação profissional considerando padrões de crescimento e estágios de desenvolvimento."
+        },
+        {
+          "question": "O que devo fazer se meu IMC indicar que estou com sobrepeso ou obeso?",
+          "answer": "O IMC é uma ferramenta de triagem que sugere discutir peso com profissionais de saúde. Eles podem avaliar saúde geral, composição corporal e fatores de risco. O gerenciamento de peso deve envolver mudanças sustentáveis de estilo de vida incluindo nutrição balanceada, atividade física regular e modificações comportamentais. Foque em melhorias de saúde em vez de apenas números de peso."
+        }
+      ]
+    },
+    "component": "BMICalculator"
   },
   "fr": {
     "title": "Calculateur IMC",
     "seoTitle": "Calculateur IMC - Indice de Masse Corporelle en Ligne",
     "metaDescription": "Calculateur gratuit IMC. Calculez votre Indice de Masse Corporelle (IMC) et obtenez évaluation catégorie santé. Découvrez si vous êtes sous-poids, poids normal, surpoids ou obèse.",
-    "keywords": ["calculateur IMC", "calculateur indice masse corporelle", "table IMC", "calculateur poids sain", "calculateur statut poids"],
-    "longTailKeywords": ["comment calculer IMC", "calculateur IMC femmes", "calculateur IMC hommes", "gamme IMC saine", "catégories IMC expliquées"],
+    "keywords": [
+      "calculateur IMC",
+      "calculateur indice masse corporelle",
+      "table IMC",
+      "calculateur poids sain",
+      "calculateur statut poids"
+    ],
+    "longTailKeywords": [
+      "comment calculer IMC",
+      "calculateur IMC femmes",
+      "calculateur IMC hommes",
+      "gamme IMC saine",
+      "catégories IMC expliquées"
+    ],
     "slug": "bmi-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["IMC", "poids", "santé", "indice masse corporelle", "fitness"],
+    "tags": [
+      "IMC",
+      "poids",
+      "santé",
+      "indice masse corporelle",
+      "fitness"
+    ],
     "summary": "Calculez votre Indice de Masse Corporelle (IMC) et déterminez votre catégorie statut poids utilisant mesures taille et poids.",
     "description": "Notre calculateur IMC utilise formule standard pour déterminer votre Indice de Masse Corporelle et fournit évaluation catégorie santé. IMC est outil dépistage pouvant indiquer si vous êtes sous-poids, poids normal, surpoids ou obèse.",
     "instructions": [
@@ -315,19 +668,86 @@
     "calculatorComponent": {
       "componentName": "BMICalculator",
       "inputs": [
-        { "name": "unit", "label": "Système d'Unités", "type": "select", "default": "metric", "options": ["metric", "imperial"] },
-        { "name": "height", "label": "Taille", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1, "unit": "cm" },
-        { "name": "weight", "label": "Poids", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1, "unit": "kg" },
-        { "name": "heightFeet", "label": "Taille (Pieds)", "type": "number", "default": 5, "min": 3, "max": 8, "step": 1 },
-        { "name": "heightInches", "label": "Taille (Pouces)", "type": "number", "default": 9, "min": 0, "max": 11, "step": 1 },
-        { "name": "weightLbs", "label": "Poids (Livres)", "type": "number", "default": 154, "min": 66, "max": 661, "step": 0.1 }
+        {
+          "name": "unit",
+          "label": "Système d'Unités",
+          "type": "select",
+          "default": "metric",
+          "options": [
+            "metric",
+            "imperial"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Taille",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1,
+          "unit": "cm"
+        },
+        {
+          "name": "weight",
+          "label": "Poids",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1,
+          "unit": "kg"
+        },
+        {
+          "name": "heightFeet",
+          "label": "Taille (Pieds)",
+          "type": "number",
+          "default": 5,
+          "min": 3,
+          "max": 8,
+          "step": 1
+        },
+        {
+          "name": "heightInches",
+          "label": "Taille (Pouces)",
+          "type": "number",
+          "default": 9,
+          "min": 0,
+          "max": 11,
+          "step": 1
+        },
+        {
+          "name": "weightLbs",
+          "label": "Poids (Livres)",
+          "type": "number",
+          "default": 154,
+          "min": 66,
+          "max": 661,
+          "step": 0.1
+        }
       ],
       "formula": "IMC = poids (kg) / [taille (m)]²; IMC = 703 × poids (lbs) / [taille (pouces)]²",
-      "output": { "label": "Votre IMC", "default": "Entrez taille et poids ci-dessus", "format": "number" },
+      "output": {
+        "label": "Votre IMC",
+        "default": "Entrez taille et poids ci-dessus",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Catégorie IMC", "field": "category", "format": "text" },
-        { "label": "Gamme IMC Saine", "field": "healthyRange", "format": "text" },
-        { "label": "IMC Prime", "field": "bmiPrime", "format": "number" }
+        {
+          "label": "Catégorie IMC",
+          "field": "category",
+          "format": "text"
+        },
+        {
+          "label": "Gamme IMC Saine",
+          "field": "healthyRange",
+          "format": "text"
+        },
+        {
+          "label": "IMC Prime",
+          "field": "bmiPrime",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -347,7 +767,11 @@
         "output": "IMC: 23.6 (Poids normal)"
       }
     ],
-    "relatedCalculators": ["body-fat-calculator", "bmr-calculator", "ideal-weight-calculator"],
+    "relatedCalculators": [
+      "body-fat-calculator",
+      "bmr-calculator",
+      "ideal-weight-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculez votre Indice de Masse Corporelle (IMC) avec précision utilisant notre calculatrice santé complète. Cette métrique santé fondamentale fournit outil dépistage pour évaluer si votre poids tombe dans gamme saine pour votre taille. Bien qu'IMC ne mesure pas graisse corporelle directement, il corrèle fortement avec pourcentage graisse corporelle et sert comme indicateur important de risques santé potentiels. Notre calculatrice supporte unités métriques et impériales, la rendant accessible pour utilisateurs mondiaux. Comprendre votre IMC est première étape vers maintien santé optimale et prévention problèmes santé liés au poids.",
       "benefits": [
@@ -412,6 +836,7 @@
           "answer": "IMC est outil dépistage suggérant discuter poids avec fournisseurs soins santé. Ils peuvent évaluer santé générale, composition corporelle, et facteurs risque. Gestion poids devrait impliquer changements style vie durables incluant nutrition équilibrée, activité physique régulière, et modifications comportementales. Concentrez-vous sur améliorations santé plutôt que seulement nombres poids."
         }
       ]
-    }
+    },
+    "component": "BMICalculator"
   }
 }

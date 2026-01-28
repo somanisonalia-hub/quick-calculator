@@ -34,6 +34,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
       'calculator.relatedCalculators': { es: 'Calculadoras Relacionadas', pt: 'Calculadoras Relacionadas', fr: 'Calculateurs Connexes', en: 'Related Calculators' },
       'calculator.calculatorDetails': { es: 'Detalles de la Calculadora', pt: 'Detalhes da Calculadora', fr: 'Détails du Calculateur', en: 'Calculator Details' },
       'calculator.howDoesWork': { es: '¿Cómo Funciona', pt: 'Como Funciona', fr: 'Comment Ça Marche', en: 'How Does' },
+      'calculator.completeGuide': { es: 'Guía Completa', pt: 'Guia Completo', fr: 'Guide Complet', en: 'Complete Guide' },
       'calculator.input': { es: 'Entrada', pt: 'Entrada', fr: 'Entrée', en: 'Input' },
       'calculator.output': { es: 'Salida', pt: 'Saída', fr: 'Sortie', en: 'Output' },
       'calculator.comingSoon': { es: 'Esta calculadora está actualmente en desarrollo y estará disponible pronto.', pt: 'Esta calculadora está atualmente em desenvolvimento e estará disponível em breve.', fr: 'Cette calculatrice est actuellement en développement et sera disponible bientôt.', en: 'This calculator is currently under development and will be available soon.' },
@@ -147,19 +148,17 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
               <div className="p-6">
                 {(() => {
                   // Handle both old object format and new string format
-                  const componentName = typeof calculatorContent.calculatorComponent === 'string'
-                    ? calculatorContent.calculatorComponent
-                    : calculatorContent.calculatorComponent?.componentName;
+                  // Check for 'component' field first (new standard), then 'calculatorComponent' (legacy)
+                  const componentName = calculatorContent.component 
+                    || (typeof calculatorContent.calculatorComponent === 'string'
+                      ? calculatorContent.calculatorComponent
+                      : calculatorContent.calculatorComponent?.componentName);
 
                   const CalculatorComponent = getCalculatorComponent(componentName);
 
                   if (CalculatorComponent) {
-                    // New format: calculatorComponent is just a string, pass lang prop
-                    if (typeof calculatorContent.calculatorComponent === 'string') {
-                      return <CalculatorComponent lang={lang} />;
-                    }
-                    // Old format: calculatorComponent is an object with inputs/output
-                    else {
+                    // If calculatorComponent is an object with inputs, use old format (pass inputs/output)
+                    if (calculatorContent.calculatorComponent && typeof calculatorContent.calculatorComponent === 'object' && calculatorContent.calculatorComponent.inputs) {
                       return (
                         <CalculatorComponent
                           inputs={calculatorContent.calculatorComponent.inputs || []}
@@ -167,6 +166,10 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                           additionalOutputs={calculatorContent.calculatorComponent.additionalOutputs || []}
                         />
                       );
+                    }
+                    // New format: component is a string, pass lang prop only
+                    else {
+                      return <CalculatorComponent lang={lang} />;
                     }
                   } else {
                     return (
@@ -218,7 +221,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                   <svg className="w-6 h-6 mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <h2 className="text-xl font-bold text-white">{tLang('calculator.completeGuide')}</h2>
+                  <h2 className="text-xl font-bold text-white">{t('calculator.completeGuide')}</h2>
                 </div>
               </div>
               <div className="px-6 py-6">

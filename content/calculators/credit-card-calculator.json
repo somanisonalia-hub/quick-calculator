@@ -3,11 +3,24 @@
     "title": "Credit Card Calculator",
     "seoTitle": "Credit Card Calculator - Calculate Payoff Time & Interest Costs",
     "metaDescription": "Calculate how long it will take to pay off your credit card debt and how much interest you'll pay. Compare minimum payments vs. higher payments to save money.",
-    "keywords": ["credit card calculator", "credit card payoff calculator", "debt calculator", "minimum payment calculator", "credit card interest"],
+    "keywords": [
+      "credit card calculator",
+      "credit card payoff calculator",
+      "debt calculator",
+      "minimum payment calculator",
+      "credit card interest"
+    ],
     "slug": "credit-card-calculator",
     "category": "financial",
     "difficulty": "Intermediate",
-    "tags": ["credit card", "debt", "payoff", "interest", "minimum payment", "finance"],
+    "tags": [
+      "credit card",
+      "debt",
+      "payoff",
+      "interest",
+      "minimum payment",
+      "finance"
+    ],
     "description": "Calculate exactly how long it will take to pay off your credit card balance and how much interest you'll pay. Compare different payment scenarios to find the best strategy for becoming debt-free faster.",
     "summary": "Plan your credit card debt payoff strategy.",
     "instructions": [
@@ -20,9 +33,33 @@
     "calculatorComponent": {
       "componentName": "CreditCardCalculator",
       "inputs": [
-        { "name": "balance", "label": "Current Balance ($)", "type": "number", "default": 5000, "min": 0, "max": 50000, "step": 100 },
-        { "name": "interestRate", "label": "Interest Rate (APR %) ", "type": "number", "default": 18, "min": 0, "max": 35, "step": 0.1 },
-        { "name": "monthlyPayment", "label": "Monthly Payment ($)", "type": "number", "default": 150, "min": 10, "max": 10000, "step": 10 }
+        {
+          "name": "balance",
+          "label": "Current Balance ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "max": 50000,
+          "step": 100
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (APR %) ",
+          "type": "number",
+          "default": 18,
+          "min": 0,
+          "max": 35,
+          "step": 0.1
+        },
+        {
+          "name": "monthlyPayment",
+          "label": "Monthly Payment ($)",
+          "type": "number",
+          "default": 150,
+          "min": 10,
+          "max": 10000,
+          "step": 10
+        }
       ],
       "formula": "Uses credit card amortization calculation to determine payoff time and total interest",
       "output": {
@@ -31,44 +68,116 @@
         "format": "number"
       },
       "additionalOutputs": [
-        { "label": "Total Interest Paid", "field": "totalInterest", "format": "currency" },
-        { "label": "Total Amount Paid", "field": "totalPaid", "format": "currency" },
-        { "label": "Payoff Date", "field": "payoffDate", "format": "date" }
+        {
+          "label": "Total Interest Paid",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Total Amount Paid",
+          "field": "totalPaid",
+          "format": "currency"
+        },
+        {
+          "label": "Payoff Date",
+          "field": "payoffDate",
+          "format": "date"
+        }
       ]
     },
     "examples": [
       {
         "title": "Minimum Payment Scenario",
-        "input": { "balance": 5000, "interestRate": 18, "monthlyPayment": 125 },
-        "output": { "monthsToPayoff": 93, "totalInterest": 7275, "totalPaid": 12275, "payoffDate": "7 years, 9 months" },
+        "input": {
+          "balance": 5000,
+          "interestRate": 18,
+          "monthlyPayment": 125
+        },
+        "output": {
+          "monthsToPayoff": 93,
+          "totalInterest": 7275,
+          "totalPaid": 12275,
+          "payoffDate": "7 years, 9 months"
+        },
         "explanation": "Paying minimum $125/month on $5,000 at 18% APR takes 7.75 years and costs $7,275 in interest - more than the original balance!"
       },
       {
         "title": "Higher Payment Strategy",
-        "input": { "balance": 5000, "interestRate": 18, "monthlyPayment": 300 },
-        "output": { "monthsToPayoff": 18, "totalInterest": 900, "totalPaid": 5900, "payoffDate": "1 year, 6 months" },
+        "input": {
+          "balance": 5000,
+          "interestRate": 18,
+          "monthlyPayment": 300
+        },
+        "output": {
+          "monthsToPayoff": 18,
+          "totalInterest": 900,
+          "totalPaid": 5900,
+          "payoffDate": "1 year, 6 months"
+        },
         "explanation": "Increasing payment to $300/month reduces payoff time to 18 months and saves $6,375 in interest compared to minimum payments."
       },
       {
         "title": "Aggressive Payoff",
-        "input": { "balance": 3000, "interestRate": 22, "monthlyPayment": 500 },
-        "output": { "monthsToPayoff": 7, "totalInterest": 350, "totalPaid": 3350, "payoffDate": "7 months" },
+        "input": {
+          "balance": 3000,
+          "interestRate": 22,
+          "monthlyPayment": 500
+        },
+        "output": {
+          "monthsToPayoff": 7,
+          "totalInterest": 350,
+          "totalPaid": 3350,
+          "payoffDate": "7 months"
+        },
         "explanation": "Paying $500/month on $3,000 at 22% APR eliminates debt in just 7 months with only $350 in interest."
       }
     ],
     "comparisonTable": {
       "title": "Payment Strategy Comparison ($5,000 Balance, 18% APR)",
-      "headers": ["Monthly Payment", "Payoff Time", "Total Interest", "Money Saved"],
+      "headers": [
+        "Monthly Payment",
+        "Payoff Time",
+        "Total Interest",
+        "Money Saved"
+      ],
       "rows": [
-        ["$125 (Minimum)", "7 years, 9 months", "$7,275", "$0"],
-        ["$200", "3 years, 8 months", "$3,400", "$3,875"],
-        ["$300", "1 year, 6 months", "$900", "$6,375"],
-        ["$400", "11 months", "$367", "$6,908"]
+        [
+          "$125 (Minimum)",
+          "7 years, 9 months",
+          "$7,275",
+          "$0"
+        ],
+        [
+          "$200",
+          "3 years, 8 months",
+          "$3,400",
+          "$3,875"
+        ],
+        [
+          "$300",
+          "1 year, 6 months",
+          "$900",
+          "$6,375"
+        ],
+        [
+          "$400",
+          "11 months",
+          "$367",
+          "$6,908"
+        ]
       ]
     },
     "relatedCalculators": [
-      { "name": "Loan Calculator", "slug": "loan-calculator", "description": "Calculate general loan payments" },
-      { "name": "Mortgage Calculator", "slug": "mortgage-calculator", "description": "Calculate home loan payments" }
+      {
+        "name": "Loan Calculator",
+        "slug": "loan-calculator",
+        "description": "Calculate general loan payments"
+      },
+      {
+        "name": "Mortgage Calculator",
+        "slug": "mortgage-calculator",
+        "description": "Calculate home loan payments"
+      }
     ],
     "seoContent": {
       "introduction": "Take control of your credit card debt with our comprehensive credit card payoff calculator that reveals exactly how long it will take to become debt-free and how much interest you'll pay. Credit card debt can be one of the most expensive forms of borrowing due to high interest rates, but understanding your payoff timeline is the first step toward financial freedom. Our calculator compares minimum payments versus higher payments, showing you how small increases can save thousands in interest and years of payments.",
@@ -135,17 +244,32 @@
           "answer": "Build emergency fund (3-6 months expenses) to avoid using cards for unexpected costs. Live below means - spend less than you earn. Use credit cards for rewards but pay in full monthly. Track spending with budgeting apps. Set card limits below what you can afford. Consider secured cards if rebuilding credit. The key is spending discipline and having alternatives to credit for unexpected expenses."
         }
       ]
-    }
+    },
+    "component": "CreditCardCalculator"
   },
   "es": {
     "title": "Calculadora de Tarjeta de Crédito",
     "seoTitle": "Calculadora de Tarjeta de Crédito - Calcular Tiempo de Liquidación y Costos de Interés",
     "metaDescription": "Calcula cuánto tiempo tomará liquidar tu deuda de tarjeta de crédito y cuánto interés pagarás. Compara pagos mínimos vs. pagos más altos para ahorrar dinero.",
-    "keywords": ["calculadora tarjeta crédito", "calculadora liquidación tarjeta crédito", "calculadora deuda", "calculadora pago mínimo", "interés tarjeta crédito"],
+    "keywords": [
+      "calculadora tarjeta crédito",
+      "calculadora liquidación tarjeta crédito",
+      "calculadora deuda",
+      "calculadora pago mínimo",
+      "interés tarjeta crédito"
+    ],
     "slug": "calculadora-tarjeta-credito",
     "category": "financial",
     "difficulty": "Intermediate",
-    "tags": ["tarjeta crédito", "deuda", "liquidación", "interés", "pago mínimo", "finanzas"],
+    "tags": [
+      "tarjeta crédito",
+      "deuda",
+      "liquidación",
+      "interés",
+      "pago mínimo",
+      "finanzas"
+    ],
+    "summary": "Planifica tu estrategia de liquidación de deuda de tarjeta de crédito.",
     "description": "Calcula exactamente cuánto tiempo tomará liquidar tu saldo de tarjeta de crédito y cuánto interés pagarás. Compara diferentes escenarios de pago para encontrar la mejor estrategia para quedar libre de deudas más rápido.",
     "instructions": [
       "Ingresa tu saldo actual de tarjeta de crédito. Este es el monto total adeudado.",
@@ -157,9 +281,33 @@
     "calculatorComponent": {
       "componentName": "CreditCardCalculator",
       "inputs": [
-        { "name": "balance", "label": "Saldo Actual ($)", "type": "number", "default": 5000, "min": 0, "max": 50000, "step": 100 },
-        { "name": "interestRate", "label": "Tasa de Interés (APR %)", "type": "number", "default": 18, "min": 0, "max": 35, "step": 0.1 },
-        { "name": "monthlyPayment", "label": "Pago Mensual ($)", "type": "number", "default": 150, "min": 10, "max": 10000, "step": 10 }
+        {
+          "name": "balance",
+          "label": "Saldo Actual ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "max": 50000,
+          "step": 100
+        },
+        {
+          "name": "interestRate",
+          "label": "Tasa de Interés (APR %)",
+          "type": "number",
+          "default": 18,
+          "min": 0,
+          "max": 35,
+          "step": 0.1
+        },
+        {
+          "name": "monthlyPayment",
+          "label": "Pago Mensual ($)",
+          "type": "number",
+          "default": 150,
+          "min": 10,
+          "max": 10000,
+          "step": 10
+        }
       ],
       "formula": "Usa cálculo de amortización de tarjeta de crédito para determinar tiempo de liquidación e interés total",
       "output": {
@@ -168,44 +316,116 @@
         "format": "number"
       },
       "additionalOutputs": [
-        { "label": "Interés Total Pagado", "field": "totalInterest", "format": "currency" },
-        { "label": "Monto Total Pagado", "field": "totalPaid", "format": "currency" },
-        { "label": "Fecha de Liquidación", "field": "payoffDate", "format": "date" }
+        {
+          "label": "Interés Total Pagado",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Monto Total Pagado",
+          "field": "totalPaid",
+          "format": "currency"
+        },
+        {
+          "label": "Fecha de Liquidación",
+          "field": "payoffDate",
+          "format": "date"
+        }
       ]
     },
     "examples": [
       {
         "title": "Escenario de Pago Mínimo",
-        "input": { "balance": 5000, "interestRate": 18, "monthlyPayment": 125 },
-        "output": { "monthsToPayoff": 93, "totalInterest": 7275, "totalPaid": 12275, "payoffDate": "7 años, 9 meses" },
+        "input": {
+          "balance": 5000,
+          "interestRate": 18,
+          "monthlyPayment": 125
+        },
+        "output": {
+          "monthsToPayoff": 93,
+          "totalInterest": 7275,
+          "totalPaid": 12275,
+          "payoffDate": "7 años, 9 meses"
+        },
         "explanation": "Pagando mínimo $125/mes en $5,000 al 18% APR toma 7.75 años y cuesta $7,275 en interés - ¡más que el saldo original!"
       },
       {
         "title": "Estrategia de Pago Más Alto",
-        "input": { "balance": 5000, "interestRate": 18, "monthlyPayment": 300 },
-        "output": { "monthsToPayoff": 18, "totalInterest": 900, "totalPaid": 5900, "payoffDate": "1 año, 6 meses" },
+        "input": {
+          "balance": 5000,
+          "interestRate": 18,
+          "monthlyPayment": 300
+        },
+        "output": {
+          "monthsToPayoff": 18,
+          "totalInterest": 900,
+          "totalPaid": 5900,
+          "payoffDate": "1 año, 6 meses"
+        },
         "explanation": "Aumentando pago a $300/mes reduce tiempo de liquidación a 18 meses y ahorra $6,375 en interés comparado con pagos mínimos."
       },
       {
         "title": "Liquidación Agresiva",
-        "input": { "balance": 3000, "interestRate": 22, "monthlyPayment": 500 },
-        "output": { "monthsToPayoff": 7, "totalInterest": 350, "totalPaid": 3350, "payoffDate": "7 meses" },
+        "input": {
+          "balance": 3000,
+          "interestRate": 22,
+          "monthlyPayment": 500
+        },
+        "output": {
+          "monthsToPayoff": 7,
+          "totalInterest": 350,
+          "totalPaid": 3350,
+          "payoffDate": "7 meses"
+        },
         "explanation": "Pagando $500/mes en $3,000 al 22% APR elimina deuda en solo 7 meses con solo $350 en interés."
       }
     ],
     "comparisonTable": {
       "title": "Comparación de Estrategia de Pago (Saldo de $5,000, 18% APR)",
-      "headers": ["Pago Mensual", "Tiempo de Liquidación", "Interés Total", "Dinero Ahorrado"],
+      "headers": [
+        "Pago Mensual",
+        "Tiempo de Liquidación",
+        "Interés Total",
+        "Dinero Ahorrado"
+      ],
       "rows": [
-        ["$125 (Mínimo)", "7 años, 9 meses", "$7,275", "$0"],
-        ["$200", "3 años, 8 meses", "$3,400", "$3,875"],
-        ["$300", "1 año, 6 meses", "$900", "$6,375"],
-        ["$400", "11 meses", "$367", "$6,908"]
+        [
+          "$125 (Mínimo)",
+          "7 años, 9 meses",
+          "$7,275",
+          "$0"
+        ],
+        [
+          "$200",
+          "3 años, 8 meses",
+          "$3,400",
+          "$3,875"
+        ],
+        [
+          "$300",
+          "1 año, 6 meses",
+          "$900",
+          "$6,375"
+        ],
+        [
+          "$400",
+          "11 meses",
+          "$367",
+          "$6,908"
+        ]
       ]
     },
     "relatedCalculators": [
-      { "name": "Calculadora de Préstamo", "slug": "calculadora-prestamo", "description": "Calcula pagos de préstamo general" },
-      { "name": "Calculadora de Hipoteca", "slug": "calculadora-hipoteca", "description": "Calcula pagos de préstamo de casa" }
+      {
+        "name": "Calculadora de Préstamo",
+        "slug": "calculadora-prestamo",
+        "description": "Calcula pagos de préstamo general"
+      },
+      {
+        "name": "Calculadora de Hipoteca",
+        "slug": "calculadora-hipoteca",
+        "description": "Calcula pagos de préstamo de casa"
+      }
     ],
     "seoContent": {
       "introduction": "Toma el control de tu deuda de tarjeta de crédito con nuestra calculadora integral de pago de tarjeta de crédito que revela exactamente cuánto tiempo tomará volverte libre de deudas y cuánto interés pagarás. La deuda de tarjeta de crédito puede ser una de las formas más costosas de endeudamiento debido a altas tasas de interés, pero entender tu timeline de pago es el primer paso hacia libertad financiera. Nuestra calculadora compara pagos mínimos versus pagos más altos, mostrándote cómo pequeños aumentos pueden ahorrar miles en intereses y años de pagos.",
@@ -272,17 +492,32 @@
           "answer": "Construye fondo de emergencia (3-6 meses gastos) para evitar usar tarjetas para costos inesperados. Vive bajo tus medios - gasta menos de lo que ganas. Usa tarjetas de crédito para recompensas pero paga en pleno mensualmente. Rastrea gastos con apps de presupuesto. Establece límites de tarjeta bajo lo que puedes permitirte. Considera tarjetas aseguradas si reconstruyendo crédito. La clave es disciplina de gasto y tener alternativas a crédito para gastos inesperados."
         }
       ]
-    }
+    },
+    "component": "CreditCardCalculator"
   },
   "pt": {
     "title": "Calculadora de Cartão de Crédito",
     "seoTitle": "Calculadora de Cartão de Crédito - Calcular Tempo de Quitação e Custos de Juros",
     "metaDescription": "Calcule quanto tempo levará para quitar sua dívida de cartão de crédito e quanto juros você pagará. Compare pagamentos mínimos vs. pagamentos mais altos para economizar dinheiro.",
-    "keywords": ["calculadora cartão crédito", "calculadora quitação cartão crédito", "calculadora dívida", "calculadora pagamento mínimo", "juros cartão crédito"],
+    "keywords": [
+      "calculadora cartão crédito",
+      "calculadora quitação cartão crédito",
+      "calculadora dívida",
+      "calculadora pagamento mínimo",
+      "juros cartão crédito"
+    ],
     "slug": "calculadora-cartao-credito",
     "category": "financial",
     "difficulty": "Intermediate",
-    "tags": ["cartão crédito", "dívida", "quitação", "juros", "pagamento mínimo", "finanças"],
+    "tags": [
+      "cartão crédito",
+      "dívida",
+      "quitação",
+      "juros",
+      "pagamento mínimo",
+      "finanças"
+    ],
+    "summary": "Planeje sua estratégia de quitação de dívida de cartão de crédito.",
     "description": "Calcule exatamente quanto tempo levará para quitar seu saldo de cartão de crédito e quanto juros você pagará. Compare diferentes cenários de pagamento para encontrar a melhor estratégia para ficar livre de dívidas mais rápido.",
     "instructions": [
       "Digite seu saldo atual de cartão de crédito. Este é o valor total devido.",
@@ -294,9 +529,33 @@
     "calculatorComponent": {
       "componentName": "CreditCardCalculator",
       "inputs": [
-        { "name": "balance", "label": "Saldo Atual ($)", "type": "number", "default": 5000, "min": 0, "max": 50000, "step": 100 },
-        { "name": "interestRate", "label": "Taxa de Juros (APR %)", "type": "number", "default": 18, "min": 0, "max": 35, "step": 0.1 },
-        { "name": "monthlyPayment", "label": "Pagamento Mensal ($)", "type": "number", "default": 150, "min": 10, "max": 10000, "step": 10 }
+        {
+          "name": "balance",
+          "label": "Saldo Atual ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "max": 50000,
+          "step": 100
+        },
+        {
+          "name": "interestRate",
+          "label": "Taxa de Juros (APR %)",
+          "type": "number",
+          "default": 18,
+          "min": 0,
+          "max": 35,
+          "step": 0.1
+        },
+        {
+          "name": "monthlyPayment",
+          "label": "Pagamento Mensal ($)",
+          "type": "number",
+          "default": 150,
+          "min": 10,
+          "max": 10000,
+          "step": 10
+        }
       ],
       "formula": "Usa cálculo de amortização de cartão de crédito para determinar tempo de quitação e juros totais",
       "output": {
@@ -305,44 +564,116 @@
         "format": "number"
       },
       "additionalOutputs": [
-        { "label": "Juros Totais Pagos", "field": "totalInterest", "format": "currency" },
-        { "label": "Valor Total Pago", "field": "totalPaid", "format": "currency" },
-        { "label": "Data de Quitação", "field": "payoffDate", "format": "date" }
+        {
+          "label": "Juros Totais Pagos",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Valor Total Pago",
+          "field": "totalPaid",
+          "format": "currency"
+        },
+        {
+          "label": "Data de Quitação",
+          "field": "payoffDate",
+          "format": "date"
+        }
       ]
     },
     "examples": [
       {
         "title": "Cenário de Pagamento Mínimo",
-        "input": { "balance": 5000, "interestRate": 18, "monthlyPayment": 125 },
-        "output": { "monthsToPayoff": 93, "totalInterest": 7275, "totalPaid": 12275, "payoffDate": "7 anos, 9 meses" },
+        "input": {
+          "balance": 5000,
+          "interestRate": 18,
+          "monthlyPayment": 125
+        },
+        "output": {
+          "monthsToPayoff": 93,
+          "totalInterest": 7275,
+          "totalPaid": 12275,
+          "payoffDate": "7 anos, 9 meses"
+        },
         "explanation": "Pagando mínimo $125/mês em $5,000 a 18% APR leva 7.75 anos e custa $7,275 em juros - mais que o saldo original!"
       },
       {
         "title": "Estratégia de Pagamento Mais Alto",
-        "input": { "balance": 5000, "interestRate": 18, "monthlyPayment": 300 },
-        "output": { "monthsToPayoff": 18, "totalInterest": 900, "totalPaid": 5900, "payoffDate": "1 ano, 6 meses" },
+        "input": {
+          "balance": 5000,
+          "interestRate": 18,
+          "monthlyPayment": 300
+        },
+        "output": {
+          "monthsToPayoff": 18,
+          "totalInterest": 900,
+          "totalPaid": 5900,
+          "payoffDate": "1 ano, 6 meses"
+        },
         "explanation": "Aumentando pagamento para $300/mês reduz tempo de quitação para 18 meses e economiza $6,375 em juros comparado com pagamentos mínimos."
       },
       {
         "title": "Quitação Agressiva",
-        "input": { "balance": 3000, "interestRate": 22, "monthlyPayment": 500 },
-        "output": { "monthsToPayoff": 7, "totalInterest": 350, "totalPaid": 3350, "payoffDate": "7 meses" },
+        "input": {
+          "balance": 3000,
+          "interestRate": 22,
+          "monthlyPayment": 500
+        },
+        "output": {
+          "monthsToPayoff": 7,
+          "totalInterest": 350,
+          "totalPaid": 3350,
+          "payoffDate": "7 meses"
+        },
         "explanation": "Pagando $500/mês em $3,000 a 22% APR elimina dívida em apenas 7 meses com apenas $350 em juros."
       }
     ],
     "comparisonTable": {
       "title": "Comparação de Estratégia de Pagamento (Saldo de $5,000, 18% APR)",
-      "headers": ["Pagamento Mensal", "Tempo de Quitação", "Juros Totais", "Dinheiro Economizado"],
+      "headers": [
+        "Pagamento Mensal",
+        "Tempo de Quitação",
+        "Juros Totais",
+        "Dinheiro Economizado"
+      ],
       "rows": [
-        ["$125 (Mínimo)", "7 anos, 9 meses", "$7,275", "$0"],
-        ["$200", "3 anos, 8 meses", "$3,400", "$3,875"],
-        ["$300", "1 ano, 6 meses", "$900", "$6,375"],
-        ["$400", "11 meses", "$367", "$6,908"]
+        [
+          "$125 (Mínimo)",
+          "7 anos, 9 meses",
+          "$7,275",
+          "$0"
+        ],
+        [
+          "$200",
+          "3 anos, 8 meses",
+          "$3,400",
+          "$3,875"
+        ],
+        [
+          "$300",
+          "1 ano, 6 meses",
+          "$900",
+          "$6,375"
+        ],
+        [
+          "$400",
+          "11 meses",
+          "$367",
+          "$6,908"
+        ]
       ]
     },
     "relatedCalculators": [
-      { "name": "Calculadora de Empréstimo", "slug": "calculadora-emprestimo", "description": "Calcule pagamentos de empréstimo geral" },
-      { "name": "Calculadora de Hipoteca", "slug": "calculadora-hipoteca", "description": "Calcule pagamentos de empréstimo imobiliário" }
+      {
+        "name": "Calculadora de Empréstimo",
+        "slug": "calculadora-emprestimo",
+        "description": "Calcule pagamentos de empréstimo geral"
+      },
+      {
+        "name": "Calculadora de Hipoteca",
+        "slug": "calculadora-hipoteca",
+        "description": "Calcule pagamentos de empréstimo imobiliário"
+      }
     ],
     "seoContent": {
       "introduction": "Tome controle de sua dívida de cartão de crédito com nossa calculadora abrangente de quitação de cartão de crédito que revela exatamente quanto tempo levará para se tornar livre de dívidas e quanto juros você pagará. Dívida de cartão de crédito pode ser uma das formas mais caras de empréstimo devido a altas taxas de juros, mas entender sua linha do tempo de quitação é o primeiro passo rumo à liberdade financeira. Nossa calculadora compara pagamentos mínimos versus pagamentos mais altos, mostrando como pequenos aumentos podem economizar milhares em juros e anos de pagamentos.",
@@ -409,17 +740,32 @@
           "answer": "Construa fundo de emergência (3-6 meses despesas) para evitar usar cartões para custos inesperados. Viva abaixo de seus meios - gaste menos do que ganha. Use cartões de crédito para recompensas mas pague em pleno mensalmente. Rastreie gastos com apps de orçamento. Defina limites de cartão abaixo do que você pode permitir. Considere cartões garantidos se reconstruindo crédito. A chave é disciplina de gastos e ter alternativas ao crédito para despesas inesperadas."
         }
       ]
-    }
+    },
+    "component": "CreditCardCalculator"
   },
   "fr": {
     "title": "Calculatrice de Carte de Crédit",
     "seoTitle": "Calculatrice de Carte de Crédit - Calculer le Temps de Remboursement et les Coûts d'Intérêts",
     "metaDescription": "Calculez combien de temps il faudra pour rembourser votre dette de carte de crédit et combien d'intérêts vous paierez. Comparez les paiements minimums vs. paiements plus élevés pour économiser de l'argent.",
-    "keywords": ["calculatrice carte crédit", "calculatrice remboursement carte crédit", "calculatrice dette", "calculatrice paiement minimum", "intérêts carte crédit"],
+    "keywords": [
+      "calculatrice carte crédit",
+      "calculatrice remboursement carte crédit",
+      "calculatrice dette",
+      "calculatrice paiement minimum",
+      "intérêts carte crédit"
+    ],
     "slug": "calculatrice-carte-credit",
     "category": "financial",
     "difficulty": "Intermediate",
-    "tags": ["carte crédit", "dette", "remboursement", "intérêt", "paiement minimum", "finance"],
+    "tags": [
+      "carte crédit",
+      "dette",
+      "remboursement",
+      "intérêt",
+      "paiement minimum",
+      "finance"
+    ],
+    "summary": "Planifiez votre stratégie de remboursement de dette de carte de crédit.",
     "description": "Calculez exactement combien de temps il faudra pour rembourser votre solde de carte de crédit et combien d'intérêts vous paierez. Comparez différents scénarios de paiement pour trouver la meilleure stratégie pour devenir libre de dettes plus rapidement.",
     "instructions": [
       "Entrez votre solde actuel de carte de crédit. C'est le montant total dû.",
@@ -431,9 +777,33 @@
     "calculatorComponent": {
       "componentName": "CreditCardCalculator",
       "inputs": [
-        { "name": "balance", "label": "Solde Actuel ($)", "type": "number", "default": 5000, "min": 0, "max": 50000, "step": 100 },
-        { "name": "interestRate", "label": "Taux d'Intérêt (APR %)", "type": "number", "default": 18, "min": 0, "max": 35, "step": 0.1 },
-        { "name": "monthlyPayment", "label": "Paiement Mensuel ($)", "type": "number", "default": 150, "min": 10, "max": 10000, "step": 10 }
+        {
+          "name": "balance",
+          "label": "Solde Actuel ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "max": 50000,
+          "step": 100
+        },
+        {
+          "name": "interestRate",
+          "label": "Taux d'Intérêt (APR %)",
+          "type": "number",
+          "default": 18,
+          "min": 0,
+          "max": 35,
+          "step": 0.1
+        },
+        {
+          "name": "monthlyPayment",
+          "label": "Paiement Mensuel ($)",
+          "type": "number",
+          "default": 150,
+          "min": 10,
+          "max": 10000,
+          "step": 10
+        }
       ],
       "formula": "Utilise le calcul d'amortissement de carte de crédit pour déterminer le temps de remboursement et les intérêts totaux",
       "output": {
@@ -442,44 +812,116 @@
         "format": "number"
       },
       "additionalOutputs": [
-        { "label": "Intérêts Totaux Payés", "field": "totalInterest", "format": "currency" },
-        { "label": "Montant Total Payé", "field": "totalPaid", "format": "currency" },
-        { "label": "Date de Remboursement", "field": "payoffDate", "format": "date" }
+        {
+          "label": "Intérêts Totaux Payés",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Montant Total Payé",
+          "field": "totalPaid",
+          "format": "currency"
+        },
+        {
+          "label": "Date de Remboursement",
+          "field": "payoffDate",
+          "format": "date"
+        }
       ]
     },
     "examples": [
       {
         "title": "Scénario de Paiement Minimum",
-        "input": { "balance": 5000, "interestRate": 18, "monthlyPayment": 125 },
-        "output": { "monthsToPayoff": 93, "totalInterest": 7275, "totalPaid": 12275, "payoffDate": "7 ans, 9 mois" },
+        "input": {
+          "balance": 5000,
+          "interestRate": 18,
+          "monthlyPayment": 125
+        },
+        "output": {
+          "monthsToPayoff": 93,
+          "totalInterest": 7275,
+          "totalPaid": 12275,
+          "payoffDate": "7 ans, 9 mois"
+        },
         "explanation": "Payer minimum $125/mois sur $5,000 à 18% APR prend 7.75 ans et coûte $7,275 en intérêts - plus que le solde original!"
       },
       {
         "title": "Stratégie de Paiement Plus Élevé",
-        "input": { "balance": 5000, "interestRate": 18, "monthlyPayment": 300 },
-        "output": { "monthsToPayoff": 18, "totalInterest": 900, "totalPaid": 5900, "payoffDate": "1 an, 6 mois" },
+        "input": {
+          "balance": 5000,
+          "interestRate": 18,
+          "monthlyPayment": 300
+        },
+        "output": {
+          "monthsToPayoff": 18,
+          "totalInterest": 900,
+          "totalPaid": 5900,
+          "payoffDate": "1 an, 6 mois"
+        },
         "explanation": "Augmenter le paiement à $300/mois réduit le temps de remboursement à 18 mois et économise $6,375 en intérêts par rapport aux paiements minimums."
       },
       {
         "title": "Remboursement Agressif",
-        "input": { "balance": 3000, "interestRate": 22, "monthlyPayment": 500 },
-        "output": { "monthsToPayoff": 7, "totalInterest": 350, "totalPaid": 3350, "payoffDate": "7 mois" },
+        "input": {
+          "balance": 3000,
+          "interestRate": 22,
+          "monthlyPayment": 500
+        },
+        "output": {
+          "monthsToPayoff": 7,
+          "totalInterest": 350,
+          "totalPaid": 3350,
+          "payoffDate": "7 mois"
+        },
         "explanation": "Payer $500/mois sur $3,000 à 22% APR élimine la dette en seulement 7 mois avec seulement $350 en intérêts."
       }
     ],
     "comparisonTable": {
       "title": "Comparaison de Stratégie de Paiement (Solde de $5,000, 18% APR)",
-      "headers": ["Paiement Mensuel", "Temps de Remboursement", "Intérêts Totaux", "Argent Économisé"],
+      "headers": [
+        "Paiement Mensuel",
+        "Temps de Remboursement",
+        "Intérêts Totaux",
+        "Argent Économisé"
+      ],
       "rows": [
-        ["$125 (Minimum)", "7 ans, 9 mois", "$7,275", "$0"],
-        ["$200", "3 ans, 8 mois", "$3,400", "$3,875"],
-        ["$300", "1 an, 6 mois", "$900", "$6,375"],
-        ["$400", "11 mois", "$367", "$6,908"]
+        [
+          "$125 (Minimum)",
+          "7 ans, 9 mois",
+          "$7,275",
+          "$0"
+        ],
+        [
+          "$200",
+          "3 ans, 8 mois",
+          "$3,400",
+          "$3,875"
+        ],
+        [
+          "$300",
+          "1 an, 6 mois",
+          "$900",
+          "$6,375"
+        ],
+        [
+          "$400",
+          "11 mois",
+          "$367",
+          "$6,908"
+        ]
       ]
     },
     "relatedCalculators": [
-      { "name": "Calculatrice de Prêt", "slug": "calculatrice-pret", "description": "Calculez les paiements de prêt général" },
-      { "name": "Calculatrice d'Hypothèque", "slug": "calculatrice-hypotheque", "description": "Calculez les paiements de prêt immobilier" }
+      {
+        "name": "Calculatrice de Prêt",
+        "slug": "calculatrice-pret",
+        "description": "Calculez les paiements de prêt général"
+      },
+      {
+        "name": "Calculatrice d'Hypothèque",
+        "slug": "calculatrice-hypotheque",
+        "description": "Calculez les paiements de prêt immobilier"
+      }
     ],
     "seoContent": {
       "introduction": "Prenez le contrôle de votre dette de carte de crédit avec notre calculatrice complète de remboursement de carte de crédit qui révèle exactement combien de temps il faudra pour devenir libre de dettes et combien d'intérêts vous paierez. La dette de carte de crédit peut être l'une des formes les plus coûteuses d'emprunt en raison des taux d'intérêt élevés, mais comprendre votre calendrier de remboursement est la première étape vers la liberté financière. Notre calculatrice compare les paiements minimums versus paiements plus élevés, vous montrant comment de petites augmentations peuvent économiser des milliers en intérêts et des années de paiements.",
@@ -546,6 +988,7 @@
           "answer": "Construisez fonds urgence (3-6 mois dépenses) pour éviter utiliser cartes pour coûts inattendus. Vivez en dessous moyens - dépensez moins que vous gagnez. Utilisez cartes crédit pour récompenses mais payez en plein mensuellement. Suivez dépenses avec apps budget. Définissez limites cartes en dessous ce que vous pouvez vous permettre. Considérez cartes garanties si reconstruisant crédit. La clé est discipline dépense et avoir alternatives au crédit pour dépenses inattendues."
         }
       ]
-    }
+    },
+    "component": "CreditCardCalculator"
   }
 }

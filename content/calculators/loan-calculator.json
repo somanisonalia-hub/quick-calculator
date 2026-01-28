@@ -40,7 +40,11 @@
       ],
       "whoItsFor": "Borrowers, financial planners, small business owners, and anyone considering taking out a loan.",
       "disclaimer": "This calculator provides estimates only. Actual loan terms depend on lender requirements, credit score, and current market conditions. Consult with a financial advisor for personalized advice.",
-      "relatedTools": ["mortgage-calculator", "savings-calculator", "debt-consolidation-calculator"],
+      "relatedTools": [
+        "mortgage-calculator",
+        "savings-calculator",
+        "debt-consolidation-calculator"
+      ],
       "faqs": [
         {
           "question": "How is loan interest calculated?",
@@ -55,7 +59,8 @@
           "answer": "Yes, most loans allow early repayment. However, some loans may have prepayment penalties. Check your loan agreement for specific terms."
         }
       ]
-    }
+    },
+    "component": "LoanCalculator"
   },
   "es": {
     "title": "Calculadora de Préstamos",
@@ -98,7 +103,11 @@
       ],
       "whoItsFor": "Prestatarios, planificadores financieros, propietarios de pequeños negocios y cualquier persona que considere solicitar un préstamo.",
       "disclaimer": "Esta calculadora proporciona estimaciones únicamente. Los términos reales del préstamo dependen de los requisitos del prestamista, el puntaje crediticio y las condiciones actuales del mercado. Consulta con un asesor financiero para consejos personalizados.",
-      "relatedTools": ["mortgage-calculator", "savings-calculator", "debt-consolidation-calculator"],
+      "relatedTools": [
+        "mortgage-calculator",
+        "savings-calculator",
+        "debt-consolidation-calculator"
+      ],
       "faqs": [
         {
           "question": "¿Cómo se calcula el interés de los préstamos?",
@@ -113,7 +122,8 @@
           "answer": "Sí, la mayoría de los préstamos permiten el pago anticipado. Sin embargo, algunos préstamos pueden tener penalizaciones por pago anticipado. Verifica tu contrato de préstamo para términos específicos."
         }
       ]
-    }
+    },
+    "component": "LoanCalculator"
   },
   "pt": {
     "title": "Calculadora de Empréstimos",
@@ -156,7 +166,11 @@
       ],
       "whoItsFor": "Tomadores de empréstimo, planejadores financeiros, proprietários de pequenos negócios e qualquer pessoa que considere contratar um empréstimo.",
       "disclaimer": "Esta calculadora fornece estimativas apenas. Os termos reais do empréstimo dependem dos requisitos do credor, pontuação de crédito e condições atuais do mercado. Consulte um consultor financeiro para conselhos personalizados.",
-      "relatedTools": ["mortgage-calculator", "savings-calculator", "debt-consolidation-calculator"],
+      "relatedTools": [
+        "mortgage-calculator",
+        "savings-calculator",
+        "debt-consolidation-calculator"
+      ],
       "faqs": [
         {
           "question": "Como é calculado o juros dos empréstimos?",
@@ -171,7 +185,8 @@
           "answer": "Sim, a maioria dos empréstimos permite quitação antecipada. No entanto, alguns empréstimos podem ter penalidades por quitação antecipada. Verifique seu contrato de empréstimo para termos específicos."
         }
       ]
-    }
+    },
+    "component": "LoanCalculator"
   },
   "fr": {
     "title": "Calculateur de Prêt",
@@ -214,7 +229,11 @@
       ],
       "whoItsFor": "Emprunteurs, planificateurs financiers, propriétaires de petites entreprises et toute personne envisageant de contracter un prêt.",
       "disclaimer": "Ce calculateur fournit des estimations uniquement. Les conditions réelles du prêt dépendent des exigences du prêteur, du score de crédit et des conditions actuelles du marché. Consultez un conseiller financier pour des conseils personnalisés.",
-      "relatedTools": ["mortgage-calculator", "savings-calculator", "debt-consolidation-calculator"],
+      "relatedTools": [
+        "mortgage-calculator",
+        "savings-calculator",
+        "debt-consolidation-calculator"
+      ],
       "faqs": [
         {
           "question": "Comment les intérêts de prêt sont-ils calculés?",
@@ -229,6 +248,7 @@
           "answer": "Oui, la plupart des prêts permettent le remboursement anticipé. Cependant, certains prêts peuvent avoir des pénalités de remboursement anticipé. Vérifiez votre contrat de prêt pour les termes spécifiques."
         }
       ]
-    }
+    },
+    "component": "LoanCalculator"
   }
 }

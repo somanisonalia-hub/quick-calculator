@@ -120,7 +120,8 @@
           "answer": "Yes, datasets can be multimodal with multiple modes (values that appear equally most often). For example, [1, 2, 2, 3, 3, 4] has two modes (2 and 3). Datasets with all unique values have no mode. Understanding multimodality helps identify subgroups or patterns in data. In some contexts, having multiple modes indicates data complexity."
         }
       ]
-    }
+    },
+    "component": "MeanMedianModeCalculator"
   },
   "es": {
     "title": "Calculadora de Media Mediana Moda",
@@ -243,7 +244,8 @@
           "answer": "Sí, conjuntos de datos pueden ser multimodales con múltiples modas (valores que aparecen igual más a menudo). Por ejemplo, [1, 2, 2, 3, 3, 4] tiene dos modas (2 y 3). Conjuntos de datos con todos valores únicos no tienen moda. Entender multimodalidad ayuda identificar subgrupos o patrones en datos. En algunos contextos, tener múltiples modas indica complejidad de datos."
         }
       ]
-    }
+    },
+    "component": "MeanMedianModeCalculator"
   },
   "pt": {
     "title": "Calculadora de Média Mediana Moda",
@@ -366,7 +368,8 @@
           "answer": "Sim, conjuntos de dados podem ser multimodais com múltiplas modas (valores que aparecem igualmente mais frequentemente). Por exemplo, [1, 2, 2, 3, 3, 4] tem duas modas (2 e 3). Conjuntos de dados com todos valores únicos não têm moda. Entender multimodalidade ajuda identificar subgrupos ou padrões em dados. Em alguns contextos, ter múltiplas modas indica complexidade de dados."
         }
       ]
-    }
+    },
+    "component": "MeanMedianModeCalculator"
   },
   "fr": {
     "title": "Calculateur Moyenne Médiane Mode",
@@ -489,6 +492,7 @@
           "answer": "Oui, ensembles de données peuvent être multimodaux avec multiples modes (valeurs apparaissant également le plus souvent). Par exemple, [1, 2, 2, 3, 3, 4] a deux modes (2 et 3). Ensembles de données avec toutes valeurs uniques n'ont pas mode. Comprendre multimodalité aide identifier sous-groupes ou patterns dans données. Dans certains contextes, avoir multiples modes indique complexité des données."
         }
       ]
-    }
+    },
+    "component": "MeanMedianModeCalculator"
   }
 }

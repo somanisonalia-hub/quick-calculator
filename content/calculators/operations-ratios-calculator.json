@@ -96,7 +96,6 @@
       "disclaimer": "Operations ratios should be analyzed with industry context and company-specific factors. Seasonal variations may affect results.",
       "relatedTools": [
         "liquidity-ratios-calculator",
-        
         "debt-ratios-calculator"
       ],
       "faqs": [
@@ -109,7 +108,8 @@
           "answer": "DSO = (Average Accounts Receivable / Daily Sales) where Daily Sales = Annual Sales / 365."
         }
       ]
-    }
+    },
+    "component": "OperationsRatiosCalculator"
   },
   "es": {
     "title": "Calculadora de Ratios Operativos",
@@ -205,7 +205,6 @@
       "disclaimer": "Los ratios operativos deben analizarse con contexto de industria y factores específicos de empresa. Variaciones estacionales pueden afectar resultados.",
       "relatedTools": [
         "liquidity-ratios-calculator",
-        
         "debt-ratios-calculator"
       ],
       "faqs": [
@@ -218,7 +217,8 @@
           "answer": "Días Ventas Pendientes = (Cuentas por Cobrar Promedio / Ventas Diarias) donde Ventas Diarias = Ventas Anuales / 365."
         }
       ]
-    }
+    },
+    "component": "OperationsRatiosCalculator"
   },
   "pt": {
     "title": "Calculadora de Índices Operacionais",
@@ -314,7 +314,6 @@
       "disclaimer": "Índices operacionais devem ser analisados com contexto de indústria e fatores específicos de empresa. Variações sazonais podem afetar resultados.",
       "relatedTools": [
         "liquidity-ratios-calculator",
-        
         "debt-ratios-calculator"
       ],
       "faqs": [
@@ -327,7 +326,8 @@
           "answer": "Dias Vendas Pendentes = (Contas a Receber Médias / Vendas Diárias) onde Vendas Diárias = Vendas Anuais / 365."
         }
       ]
-    }
+    },
+    "component": "OperationsRatiosCalculator"
   },
   "fr": {
     "title": "Calculateur de Ratios Opérationnels",
@@ -423,7 +423,6 @@
       "disclaimer": "Les ratios opérationnels devraient être analysés avec contexte d'industrie et facteurs spécifiques d'entreprise. Variations saisonnières peuvent affecter résultats.",
       "relatedTools": [
         "liquidity-ratios-calculator",
-        
         "debt-ratios-calculator"
       ],
       "faqs": [
@@ -436,6 +435,7 @@
           "answer": "Jours Ventes en Suspens = (Créances Moyennes / Ventes Quotidiennes) où Ventes Quotidiennes = Ventes Annuelles / 365."
         }
       ]
-    }
+    },
+    "component": "OperationsRatiosCalculator"
   }
 }

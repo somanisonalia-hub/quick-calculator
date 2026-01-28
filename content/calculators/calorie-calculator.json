@@ -3,12 +3,30 @@
     "title": "Calorie Calculator",
     "seoTitle": "Calorie Calculator - Daily Calorie Needs Calculator Online",
     "metaDescription": "Free calorie calculator. Calculate your daily calorie needs for weight loss, maintenance, and gain. Includes TDEE calculation with activity levels and goals.",
-    "keywords": ["calorie calculator", "daily calorie needs", "TDEE calculator", "weight loss calories", "maintenance calories"],
-    "longTailKeywords": ["how many calories should I eat daily", "calorie calculator for weight loss", "daily calorie intake calculator", "TDEE calculation", "calories for weight gain"],
+    "keywords": [
+      "calorie calculator",
+      "daily calorie needs",
+      "TDEE calculator",
+      "weight loss calories",
+      "maintenance calories"
+    ],
+    "longTailKeywords": [
+      "how many calories should I eat daily",
+      "calorie calculator for weight loss",
+      "daily calorie intake calculator",
+      "TDEE calculation",
+      "calories for weight gain"
+    ],
     "slug": "calorie-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["calories", "TDEE", "nutrition", "weight loss", "diet"],
+    "tags": [
+      "calories",
+      "TDEE",
+      "nutrition",
+      "weight loss",
+      "diet"
+    ],
     "summary": "Calculate your Total Daily Energy Expenditure (TDEE) and daily calorie needs for different fitness goals.",
     "description": "Our comprehensive calorie calculator determines your Total Daily Energy Expenditure (TDEE) by combining your Basal Metabolic Rate (BMR) with your activity level. Get personalized calorie recommendations for weight loss, maintenance, or weight gain based on your goals and lifestyle.",
     "instructions": [
@@ -20,20 +38,104 @@
     "calculatorComponent": {
       "componentName": "CalorieCalculator",
       "inputs": [
-        { "name": "age", "label": "Age", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
-        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "height", "label": "Height (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
-        { "name": "weight", "label": "Weight (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
-        { "name": "activityLevel", "label": "Activity Level", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] },
-        { "name": "goal", "label": "Goal", "type": "select", "default": "maintain", "options": ["lose", "maintain", "gain"] },
-        { "name": "rate", "label": "Rate", "type": "select", "default": "moderate", "options": ["slow", "moderate", "fast"] }
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Height (cm)",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1
+        },
+        {
+          "name": "weight",
+          "label": "Weight (kg)",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1
+        },
+        {
+          "name": "activityLevel",
+          "label": "Activity Level",
+          "type": "select",
+          "default": "sedentary",
+          "options": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active",
+            "very_active"
+          ]
+        },
+        {
+          "name": "goal",
+          "label": "Goal",
+          "type": "select",
+          "default": "maintain",
+          "options": [
+            "lose",
+            "maintain",
+            "gain"
+          ]
+        },
+        {
+          "name": "rate",
+          "label": "Rate",
+          "type": "select",
+          "default": "moderate",
+          "options": [
+            "slow",
+            "moderate",
+            "fast"
+          ]
+        }
       ],
       "formula": "TDEE = BMR × Activity Factor; Daily Calories = TDEE ± Deficit/Surplus",
-      "output": { "label": "Daily Calories Needed", "default": "Enter your details above", "format": "number", "unit": "calories/day" },
+      "output": {
+        "label": "Daily Calories Needed",
+        "default": "Enter your details above",
+        "format": "number",
+        "unit": "calories/day"
+      },
       "additionalOutputs": [
-        { "label": "BMR (Basal Metabolic Rate)", "field": "bmr", "format": "number", "unit": "calories/day" },
-        { "label": "TDEE (Total Daily Energy Expenditure)", "field": "tdee", "format": "number", "unit": "calories/day" },
-        { "label": "Weekly Change", "field": "weeklyChange", "format": "text" }
+        {
+          "label": "BMR (Basal Metabolic Rate)",
+          "field": "bmr",
+          "format": "number",
+          "unit": "calories/day"
+        },
+        {
+          "label": "TDEE (Total Daily Energy Expenditure)",
+          "field": "tdee",
+          "format": "number",
+          "unit": "calories/day"
+        },
+        {
+          "label": "Weekly Change",
+          "field": "weeklyChange",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -53,18 +155,98 @@
         "output": "TDEE: 2,800 calories, Daily intake: 3,150 calories (gain 1 lb/week)"
       }
     ],
-    "relatedCalculators": ["bmr-calculator", "body-fat-calculator", "bmi-calculator"]
+    "relatedCalculators": [
+      "bmr-calculator",
+      "body-fat-calculator",
+      "bmi-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate calorie calculator accurately with our comprehensive online calculator. This powerful tool helps you solve complex health problems quickly and efficiently. Whether you're a student, professional, or enthusiast, our calculator provides instant results with clear explanations. Built with precision algorithms and user-friendly interface, it's designed to handle various calculation scenarios with ease.",
+      "benefits": [
+        "Perform calorie calculator calculations instantly",
+        "Get accurate results with step-by-step explanations",
+        "Support for multiple input formats and units",
+        "Mobile-friendly design for calculations on the go",
+        "Save time with automated complex calculations",
+        "Learn the underlying formulas and concepts"
+      ],
+      "steps": [
+        "Enter the required input values",
+        "Select appropriate units or options if applicable",
+        "Click calculate to get instant results",
+        "Review the detailed breakdown and explanation",
+        "Use results for your planning or analysis needs"
+      ],
+      "inputsExplained": [
+        "Input fields accept numerical values with appropriate units",
+        "Optional fields provide additional calculation parameters",
+        "Validation ensures all inputs are within acceptable ranges",
+        "Clear labels guide you through the calculation process"
+      ],
+      "formulaExplanation": "This calculator uses standard health formulas to ensure accurate results. The calculation process follows established mathematical or financial principles, providing reliable outcomes for your needs. Results are computed using precise algorithms that handle edge cases and various input scenarios appropriately.",
+      "examples": [
+        "Example 1: Basic calorie calculator with standard inputs",
+        "Example 2: Advanced scenario with multiple parameters",
+        "Example 3: Real-world application demonstrating practical use"
+      ],
+      "resultsExplanation": [
+        "Primary result shows the main calculated value",
+        "Additional metrics provide deeper insights",
+        "Breakdown helps understand how the result was derived",
+        "Results are formatted for easy interpretation and use"
+      ],
+      "whoItsFor": "This calculator serves students learning health concepts, professionals requiring quick calculations, educators teaching problem-solving, researchers analyzing data, and anyone needing reliable calorie calculator results. It's particularly useful for those working on projects, homework, professional tasks, or personal planning that requires accurate calculations.",
+      "disclaimer": "This calculator provides estimates based on standard formulas and algorithms. Results should be verified for critical applications. While we strive for accuracy, actual results may vary based on specific circumstances. This tool is for educational and planning purposes. Consult professionals for important decisions requiring precise calculations.",
+      "relatedTools": [
+        "Scientific calculator for advanced mathematical operations",
+        "Unit converter for measurement conversions",
+        "Related specialized calculators for similar calculations"
+      ],
+      "faqs": [
+        {
+          "question": "How does this calorie calculator work?",
+          "answer": "The calculator uses standard health formulas to process your inputs and provide accurate results. It handles various input scenarios and provides clear explanations of the calculation process."
+        },
+        {
+          "question": "Is this calculator accurate?",
+          "answer": "Yes, the calculator uses standard formulas and algorithms to ensure accurate results. However, for critical applications, always verify results and consult professionals when needed."
+        },
+        {
+          "question": "Can I use this calculator on my phone?",
+          "answer": "Absolutely! The calculator is fully responsive and works seamlessly on smartphones, tablets, and desktop computers. All features are optimized for mobile use."
+        }
+      ]
+    },
+    "component": "CalorieCalculator"
   },
   "es": {
     "title": "Calculadora de Calorías",
     "seoTitle": "Calculadora de Calorías - Calculadora de Necesidades Diarias de Calorías Online",
     "metaDescription": "Calculadora gratuita de calorías. Calcula tus necesidades diarias de calorías para pérdida, mantenimiento y ganancia de peso. Incluye cálculo TDEE con niveles de actividad y metas.",
-    "keywords": ["calculadora calorías", "necesidades calorías diarias", "calculadora TDEE", "calorías pérdida peso", "calorías mantenimiento"],
-    "longTailKeywords": ["cuántas calorías debo comer diariamente", "calculadora calorías para pérdida peso", "calculadora ingesta calorías diaria", "cálculo TDEE", "calorías para ganancia peso"],
+    "keywords": [
+      "calculadora calorías",
+      "necesidades calorías diarias",
+      "calculadora TDEE",
+      "calorías pérdida peso",
+      "calorías mantenimiento"
+    ],
+    "longTailKeywords": [
+      "cuántas calorías debo comer diariamente",
+      "calculadora calorías para pérdida peso",
+      "calculadora ingesta calorías diaria",
+      "cálculo TDEE",
+      "calorías para ganancia peso"
+    ],
     "slug": "calorie-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["calorías", "TDEE", "nutrición", "pérdida peso", "dieta"],
+    "tags": [
+      "calorías",
+      "TDEE",
+      "nutrición",
+      "pérdida peso",
+      "dieta"
+    ],
     "summary": "Calcula tu Gasto Energético Total Diario (TDEE) y necesidades calóricas diarias para diferentes metas de fitness.",
     "description": "Nuestra calculadora integral de calorías determina tu Gasto Energético Total Diario (TDEE) combinando tu Tasa Metabólica Basal (BMR) con tu nivel de actividad. Obtén recomendaciones personalizadas de calorías para pérdida de peso, mantenimiento o ganancia de peso basadas en tus metas y estilo de vida.",
     "instructions": [
@@ -76,20 +258,104 @@
     "calculatorComponent": {
       "componentName": "CalorieCalculator",
       "inputs": [
-        { "name": "age", "label": "Edad", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
-        { "name": "gender", "label": "Género", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "height", "label": "Altura (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
-        { "name": "weight", "label": "Peso (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
-        { "name": "activityLevel", "label": "Nivel de Actividad", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] },
-        { "name": "goal", "label": "Meta", "type": "select", "default": "maintain", "options": ["lose", "maintain", "gain"] },
-        { "name": "rate", "label": "Velocidad", "type": "select", "default": "moderate", "options": ["slow", "moderate", "fast"] }
+        {
+          "name": "age",
+          "label": "Edad",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Género",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Altura (cm)",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1
+        },
+        {
+          "name": "weight",
+          "label": "Peso (kg)",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1
+        },
+        {
+          "name": "activityLevel",
+          "label": "Nivel de Actividad",
+          "type": "select",
+          "default": "sedentary",
+          "options": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active",
+            "very_active"
+          ]
+        },
+        {
+          "name": "goal",
+          "label": "Meta",
+          "type": "select",
+          "default": "maintain",
+          "options": [
+            "lose",
+            "maintain",
+            "gain"
+          ]
+        },
+        {
+          "name": "rate",
+          "label": "Velocidad",
+          "type": "select",
+          "default": "moderate",
+          "options": [
+            "slow",
+            "moderate",
+            "fast"
+          ]
+        }
       ],
       "formula": "TDEE = BMR × Factor Actividad; Calorías Diarias = TDEE ± Déficit/Excedente",
-      "output": { "label": "Calorías Diarias Necesarias", "default": "Ingresa tus datos arriba", "format": "number", "unit": "calorías/día" },
+      "output": {
+        "label": "Calorías Diarias Necesarias",
+        "default": "Ingresa tus datos arriba",
+        "format": "number",
+        "unit": "calorías/día"
+      },
       "additionalOutputs": [
-        { "label": "BMR (Tasa Metabólica Basal)", "field": "bmr", "format": "number", "unit": "calorías/día" },
-        { "label": "TDEE (Gasto Energético Total Diario)", "field": "tdee", "format": "number", "unit": "calorías/día" },
-        { "label": "Cambio Semanal", "field": "weeklyChange", "format": "text" }
+        {
+          "label": "BMR (Tasa Metabólica Basal)",
+          "field": "bmr",
+          "format": "number",
+          "unit": "calorías/día"
+        },
+        {
+          "label": "TDEE (Gasto Energético Total Diario)",
+          "field": "tdee",
+          "format": "number",
+          "unit": "calorías/día"
+        },
+        {
+          "label": "Cambio Semanal",
+          "field": "weeklyChange",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -109,18 +375,98 @@
         "output": "TDEE: 2,800 calorías, Ingesta diaria: 3,150 calorías (ganar 0.5 kg/semana)"
       }
     ],
-    "relatedCalculators": ["bmr-calculator", "body-fat-calculator", "bmi-calculator"]
+    "relatedCalculators": [
+      "bmr-calculator",
+      "body-fat-calculator",
+      "bmi-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule calorie calculator con precisión usando nuestra calculadora integral en línea. Esta poderosa herramienta le ayuda a resolver problemas complejos de finanzas rápida y eficientemente. Ya sea estudiante, profesional o entusiasta, nuestra calculadora proporciona resultados instantáneos con explicaciones claras.",
+      "benefits": [
+        "Realice cálculos de calorie calculator instantáneamente",
+        "Obtenga resultados precisos con explicaciones paso a paso",
+        "Soporte para múltiples formatos de entrada y unidades",
+        "Diseño amigable para móviles para cálculos sobre la marcha",
+        "Ahorre tiempo con cálculos complejos automatizados",
+        "Aprenda las fórmulas y conceptos subyacentes"
+      ],
+      "steps": [
+        "Ingrese los valores de entrada requeridos",
+        "Seleccione unidades u opciones apropiadas si aplica",
+        "Haga clic en calcular para obtener resultados instantáneos",
+        "Revise el desglose detallado y la explicación",
+        "Use los resultados para sus necesidades de planificación o análisis"
+      ],
+      "inputsExplained": [
+        "Los campos de entrada aceptan valores numéricos con unidades apropiadas",
+        "Los campos opcionales proporcionan parámetros de cálculo adicionales",
+        "La validación asegura que todas las entradas estén dentro de rangos aceptables",
+        "Las etiquetas claras lo guían a través del proceso de cálculo"
+      ],
+      "formulaExplanation": "Esta calculadora utiliza fórmulas estándar de finanzas para garantizar resultados precisos. El proceso de cálculo sigue principios establecidos, proporcionando resultados confiables. Los resultados se calculan utilizando algoritmos precisos.",
+      "examples": [
+        "Ejemplo 1: calorie calculator básico con entradas estándar",
+        "Ejemplo 2: Escenario avanzado con múltiples parámetros",
+        "Ejemplo 3: Aplicación del mundo real demostrando uso práctico"
+      ],
+      "resultsExplanation": [
+        "El resultado principal muestra el valor calculado principal",
+        "Las métricas adicionales proporcionan información más profunda",
+        "El desglose ayuda a comprender cómo se derivó el resultado",
+        "Los resultados están formateados para fácil interpretación y uso"
+      ],
+      "whoItsFor": "Esta calculadora sirve a estudiantes aprendiendo conceptos de finanzas, profesionales que requieren cálculos rápidos, educadores enseñando resolución de problemas, investigadores analizando datos, y cualquiera que necesite resultados confiables.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en fórmulas y algoritmos estándar. Los resultados deben verificarse para aplicaciones críticas. Esta herramienta es para fines educativos y de planificación. Consulte a profesionales para decisiones importantes que requieran cálculos precisos.",
+      "relatedTools": [
+        "Calculadora científica para operaciones matemáticas avanzadas",
+        "Convertidor de unidades para conversiones de medidas",
+        "Calculadoras especializadas relacionadas para cálculos similares"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo funciona esta calculadora?",
+          "answer": "La calculadora utiliza fórmulas estándar para procesar sus entradas y proporcionar resultados precisos. Maneja varios escenarios de entrada y proporciona explicaciones claras del proceso de cálculo."
+        },
+        {
+          "question": "¿Es precisa esta calculadora?",
+          "answer": "Sí, la calculadora utiliza fórmulas y algoritmos estándar para garantizar resultados precisos. Sin embargo, para aplicaciones críticas, siempre verifique los resultados y consulte a profesionales cuando sea necesario."
+        },
+        {
+          "question": "¿Puedo usar esta calculadora en mi teléfono?",
+          "answer": "¡Absolutamente! La calculadora es completamente receptiva y funciona perfectamente en teléfonos inteligentes, tabletas y computadoras de escritorio. Todas las funciones están optimizadas para uso móvil."
+        }
+      ]
+    },
+    "component": "CalorieCalculator"
   },
   "pt": {
     "title": "Calculadora de Calorias",
     "seoTitle": "Calculadora de Calorias - Calculadora de Necessidades Diárias de Calorias Online",
     "metaDescription": "Calculadora gratuita de calorias. Calcule suas necessidades diárias de calorias para perda, manutenção e ganho de peso. Inclui cálculo TDEE com níveis de atividade e metas.",
-    "keywords": ["calculadora calorias", "necessidades calorias diárias", "calculadora TDEE", "calorias perda peso", "calorias manutenção"],
-    "longTailKeywords": ["quantas calorias devo comer diariamente", "calculadora calorias para perda peso", "calculadora ingesta calorias diária", "cálculo TDEE", "calorias para ganho peso"],
+    "keywords": [
+      "calculadora calorias",
+      "necessidades calorias diárias",
+      "calculadora TDEE",
+      "calorias perda peso",
+      "calorias manutenção"
+    ],
+    "longTailKeywords": [
+      "quantas calorias devo comer diariamente",
+      "calculadora calorias para perda peso",
+      "calculadora ingesta calorias diária",
+      "cálculo TDEE",
+      "calorias para ganho peso"
+    ],
     "slug": "calorie-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["calorias", "TDEE", "nutrição", "perda peso", "dieta"],
+    "tags": [
+      "calorias",
+      "TDEE",
+      "nutrição",
+      "perda peso",
+      "dieta"
+    ],
     "summary": "Calcule seu Gasto Energético Total Diário (TDEE) e necessidades calóricas diárias para diferentes metas de fitness.",
     "description": "Nossa calculadora abrangente de calorias determina seu Gasto Energético Total Diário (TDEE) combinando sua Taxa Metabólica Basal (BMR) com seu nível de atividade. Obtenha recomendações personalizadas de calorias para perda de peso, manutenção ou ganho de peso baseadas em suas metas e estilo de vida.",
     "instructions": [
@@ -132,20 +478,104 @@
     "calculatorComponent": {
       "componentName": "CalorieCalculator",
       "inputs": [
-        { "name": "age", "label": "Idade", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
-        { "name": "gender", "label": "Gênero", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "height", "label": "Altura (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
-        { "name": "weight", "label": "Peso (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
-        { "name": "activityLevel", "label": "Nível de Atividade", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] },
-        { "name": "goal", "label": "Meta", "type": "select", "default": "maintain", "options": ["lose", "maintain", "gain"] },
-        { "name": "rate", "label": "Velocidade", "type": "select", "default": "moderate", "options": ["slow", "moderate", "fast"] }
+        {
+          "name": "age",
+          "label": "Idade",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Gênero",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Altura (cm)",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1
+        },
+        {
+          "name": "weight",
+          "label": "Peso (kg)",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1
+        },
+        {
+          "name": "activityLevel",
+          "label": "Nível de Atividade",
+          "type": "select",
+          "default": "sedentary",
+          "options": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active",
+            "very_active"
+          ]
+        },
+        {
+          "name": "goal",
+          "label": "Meta",
+          "type": "select",
+          "default": "maintain",
+          "options": [
+            "lose",
+            "maintain",
+            "gain"
+          ]
+        },
+        {
+          "name": "rate",
+          "label": "Velocidade",
+          "type": "select",
+          "default": "moderate",
+          "options": [
+            "slow",
+            "moderate",
+            "fast"
+          ]
+        }
       ],
       "formula": "TDEE = BMR × Fator Atividade; Calorias Diárias = TDEE ± Déficit/Excedente",
-      "output": { "label": "Calorias Diárias Necessárias", "default": "Digite seus dados acima", "format": "number", "unit": "calorias/dia" },
+      "output": {
+        "label": "Calorias Diárias Necessárias",
+        "default": "Digite seus dados acima",
+        "format": "number",
+        "unit": "calorias/dia"
+      },
       "additionalOutputs": [
-        { "label": "BMR (Taxa Metabólica Basal)", "field": "bmr", "format": "number", "unit": "calorias/dia" },
-        { "label": "TDEE (Gasto Energético Total Diário)", "field": "tdee", "format": "number", "unit": "calorias/dia" },
-        { "label": "Mudança Semanal", "field": "weeklyChange", "format": "text" }
+        {
+          "label": "BMR (Taxa Metabólica Basal)",
+          "field": "bmr",
+          "format": "number",
+          "unit": "calorias/dia"
+        },
+        {
+          "label": "TDEE (Gasto Energético Total Diário)",
+          "field": "tdee",
+          "format": "number",
+          "unit": "calorias/dia"
+        },
+        {
+          "label": "Mudança Semanal",
+          "field": "weeklyChange",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -165,18 +595,98 @@
         "output": "TDEE: 2,800 calorias, Ingesta diária: 3,150 calorias (ganhar 0.5 kg/semana)"
       }
     ],
-    "relatedCalculators": ["bmr-calculator", "body-fat-calculator", "bmi-calculator"]
+    "relatedCalculators": [
+      "bmr-calculator",
+      "body-fat-calculator",
+      "bmi-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule calorie calculator com precisão usando nossa calculadora abrangente online. Esta poderosa ferramenta ajuda você a resolver problemas complexos de finanças rápida e eficientemente. Seja você estudante, profissional ou entusiasta, nossa calculadora fornece resultados instantâneos com explicações claras.",
+      "benefits": [
+        "Realize cálculos de calorie calculator instantaneamente",
+        "Obtenha resultados precisos com explicações passo a passo",
+        "Suporte para múltiplos formatos de entrada e unidades",
+        "Design amigável para celular para cálculos em movimento",
+        "Economize tempo com cálculos complexos automatizados",
+        "Aprenda as fórmulas e conceitos subjacentes"
+      ],
+      "steps": [
+        "Digite os valores de entrada necessários",
+        "Selecione unidades ou opções apropriadas se aplicável",
+        "Clique em calcular para obter resultados instantâneos",
+        "Revise o detalhamento e explicação detalhada",
+        "Use os resultados para suas necessidades de planejamento ou análise"
+      ],
+      "inputsExplained": [
+        "Os campos de entrada aceitam valores numéricos com unidades apropriadas",
+        "Campos opcionais fornecem parâmetros de cálculo adicionais",
+        "A validação garante que todas as entradas estejam dentro de faixas aceitáveis",
+        "Rótulos claros o guiam através do processo de cálculo"
+      ],
+      "formulaExplanation": "Esta calculadora usa fórmulas padrão de finanças para garantir resultados precisos. O processo de cálculo segue princípios estabelecidos, fornecendo resultados confiáveis. Os resultados são computados usando algoritmos precisos.",
+      "examples": [
+        "Exemplo 1: calorie calculator básico com entradas padrão",
+        "Exemplo 2: Cenário avançado com múltiplos parâmetros",
+        "Exemplo 3: Aplicação do mundo real demonstrando uso prático"
+      ],
+      "resultsExplanation": [
+        "O resultado principal mostra o valor calculado principal",
+        "Métricas adicionais fornecem insights mais profundos",
+        "O detalhamento ajuda a entender como o resultado foi derivado",
+        "Os resultados são formatados para fácil interpretação e uso"
+      ],
+      "whoItsFor": "Esta calculadora serve estudantes aprendendo conceitos de finanças, profissionais que requerem cálculos rápidos, educadores ensinando resolução de problemas, pesquisadores analisando dados, e qualquer um que precise de resultados confiáveis.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em fórmulas e algoritmos padrão. Os resultados devem ser verificados para aplicações críticas. Esta ferramenta é para fins educacionais e de planejamento. Consulte profissionais para decisões importantes que requerem cálculos precisos.",
+      "relatedTools": [
+        "Calculadora científica para operações matemáticas avançadas",
+        "Conversor de unidades para conversões de medidas",
+        "Calculadoras especializadas relacionadas para cálculos similares"
+      ],
+      "faqs": [
+        {
+          "question": "Como funciona esta calculadora?",
+          "answer": "A calculadora usa fórmulas padrão para processar suas entradas e fornecer resultados precisos. Ela lida com vários cenários de entrada e fornece explicações claras do processo de cálculo."
+        },
+        {
+          "question": "Esta calculadora é precisa?",
+          "answer": "Sim, a calculadora usa fórmulas e algoritmos padrão para garantir resultados precisos. No entanto, para aplicações críticas, sempre verifique os resultados e consulte profissionais quando necessário."
+        },
+        {
+          "question": "Posso usar esta calculadora no meu telefone?",
+          "answer": "Absolutamente! A calculadora é totalmente responsiva e funciona perfeitamente em smartphones, tablets e computadores desktop. Todos os recursos são otimizados para uso móvel."
+        }
+      ]
+    },
+    "component": "CalorieCalculator"
   },
   "fr": {
     "title": "Calculateur de Calories",
     "seoTitle": "Calculateur de Calories - Calculateur de Besoins Caloriques Quotidiens en Ligne",
     "metaDescription": "Calculateur gratuit de calories. Calculez vos besoins caloriques quotidiens pour perte, maintenance et gain de poids. Inclut calcul TDEE avec niveaux d'activité et objectifs.",
-    "keywords": ["calculateur calories", "besoins caloriques quotidiens", "calculateur TDEE", "calories perte poids", "calories maintenance"],
-    "longTailKeywords": ["combien calories devrais-je manger quotidiennement", "calculateur calories pour perte poids", "calculateur apport calorique quotidien", "calcul TDEE", "calories pour gain poids"],
+    "keywords": [
+      "calculateur calories",
+      "besoins caloriques quotidiens",
+      "calculateur TDEE",
+      "calories perte poids",
+      "calories maintenance"
+    ],
+    "longTailKeywords": [
+      "combien calories devrais-je manger quotidiennement",
+      "calculateur calories pour perte poids",
+      "calculateur apport calorique quotidien",
+      "calcul TDEE",
+      "calories pour gain poids"
+    ],
     "slug": "calorie-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["calories", "TDEE", "nutrition", "perte poids", "régime"],
+    "tags": [
+      "calories",
+      "TDEE",
+      "nutrition",
+      "perte poids",
+      "régime"
+    ],
     "summary": "Calculez votre Dépense Énergétique Totale Quotidienne (TDEE) et besoins caloriques quotidiens pour différents objectifs fitness.",
     "description": "Notre calculateur complet de calories détermine votre Dépense Énergétique Totale Quotidienne (TDEE) en combinant votre Taux Métabolique Basal (BMR) avec votre niveau d'activité. Obtenez recommandations caloriques personnalisées pour perte poids, maintenance ou gain poids basées sur vos objectifs et style vie.",
     "instructions": [
@@ -188,20 +698,104 @@
     "calculatorComponent": {
       "componentName": "CalorieCalculator",
       "inputs": [
-        { "name": "age", "label": "Âge", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
-        { "name": "gender", "label": "Genre", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "height", "label": "Taille (cm)", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1 },
-        { "name": "weight", "label": "Poids (kg)", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1 },
-        { "name": "activityLevel", "label": "Niveau d'Activité", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] },
-        { "name": "goal", "label": "Objectif", "type": "select", "default": "maintain", "options": ["lose", "maintain", "gain"] },
-        { "name": "rate", "label": "Vitesse", "type": "select", "default": "moderate", "options": ["slow", "moderate", "fast"] }
+        {
+          "name": "age",
+          "label": "Âge",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Genre",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Taille (cm)",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1
+        },
+        {
+          "name": "weight",
+          "label": "Poids (kg)",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1
+        },
+        {
+          "name": "activityLevel",
+          "label": "Niveau d'Activité",
+          "type": "select",
+          "default": "sedentary",
+          "options": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active",
+            "very_active"
+          ]
+        },
+        {
+          "name": "goal",
+          "label": "Objectif",
+          "type": "select",
+          "default": "maintain",
+          "options": [
+            "lose",
+            "maintain",
+            "gain"
+          ]
+        },
+        {
+          "name": "rate",
+          "label": "Vitesse",
+          "type": "select",
+          "default": "moderate",
+          "options": [
+            "slow",
+            "moderate",
+            "fast"
+          ]
+        }
       ],
       "formula": "TDEE = BMR × Facteur Activité; Calories Quotidiennes = TDEE ± Déficit/Excédent",
-      "output": { "label": "Calories Quotidiennes Nécessaires", "default": "Entrez vos données ci-dessus", "format": "number", "unit": "calories/jour" },
+      "output": {
+        "label": "Calories Quotidiennes Nécessaires",
+        "default": "Entrez vos données ci-dessus",
+        "format": "number",
+        "unit": "calories/jour"
+      },
       "additionalOutputs": [
-        { "label": "BMR (Taux Métabolique Basal)", "field": "bmr", "format": "number", "unit": "calories/jour" },
-        { "label": "TDEE (Dépense Énergétique Totale Quotidienne)", "field": "tdee", "format": "number", "unit": "calories/jour" },
-        { "label": "Changement Hebdomadaire", "field": "weeklyChange", "format": "text" }
+        {
+          "label": "BMR (Taux Métabolique Basal)",
+          "field": "bmr",
+          "format": "number",
+          "unit": "calories/jour"
+        },
+        {
+          "label": "TDEE (Dépense Énergétique Totale Quotidienne)",
+          "field": "tdee",
+          "format": "number",
+          "unit": "calories/jour"
+        },
+        {
+          "label": "Changement Hebdomadaire",
+          "field": "weeklyChange",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -221,6 +815,68 @@
         "output": "TDEE: 2,800 calories, Apport quotidien: 3,150 calories (gagner 0.5 kg/semaine)"
       }
     ],
-    "relatedCalculators": ["bmr-calculator", "body-fat-calculator", "bmi-calculator"]
+    "relatedCalculators": [
+      "bmr-calculator",
+      "body-fat-calculator",
+      "bmi-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez calorie calculator avec précision en utilisant notre calculateur complet en ligne. Cet outil puissant vous aide à résoudre des problèmes complexes de finances rapidement et efficacement. Que vous soyez étudiant, professionnel ou passionné, notre calculateur fournit des résultats instantanés avec des explications claires.",
+      "benefits": [
+        "Effectuez des calculs de calorie calculator instantanément",
+        "Obtenez des résultats précis avec des explications étape par étape",
+        "Support pour plusieurs formats d'entrée et unités",
+        "Design adapté aux mobiles pour calculs en déplacement",
+        "Économisez du temps avec calculs complexes automatisés",
+        "Apprenez les formules et concepts sous-jacents"
+      ],
+      "steps": [
+        "Entrez les valeurs d'entrée requises",
+        "Sélectionnez unités ou options appropriées si applicable",
+        "Cliquez sur calculer pour obtenir résultats instantanés",
+        "Examinez la ventilation détaillée et l'explication",
+        "Utilisez les résultats pour vos besoins de planification ou analyse"
+      ],
+      "inputsExplained": [
+        "Les champs d'entrée acceptent des valeurs numériques avec unités appropriées",
+        "Les champs optionnels fournissent des paramètres de calcul supplémentaires",
+        "La validation garantit que toutes les entrées sont dans des plages acceptables",
+        "Les étiquettes claires vous guident à travers le processus de calcul"
+      ],
+      "formulaExplanation": "Ce calculateur utilise des formules standard de finances pour garantir des résultats précis. Le processus de calcul suit des principes établis, fournissant des résultats fiables. Les résultats sont calculés en utilisant des algorithmes précis.",
+      "examples": [
+        "Exemple 1: calorie calculator de base avec entrées standard",
+        "Exemple 2: Scénario avancé avec plusieurs paramètres",
+        "Exemple 3: Application du monde réel démontrant utilisation pratique"
+      ],
+      "resultsExplanation": [
+        "Le résultat principal montre la valeur calculée principale",
+        "Les métriques supplémentaires fournissent des informations plus approfondies",
+        "La ventilation aide à comprendre comment le résultat a été dérivé",
+        "Les résultats sont formatés pour une interprétation et utilisation faciles"
+      ],
+      "whoItsFor": "Ce calculateur sert les étudiants apprenant des concepts de finances, les professionnels nécessitant des calculs rapides, les éducateurs enseignant la résolution de problèmes, les chercheurs analysant des données, et quiconque ayant besoin de résultats fiables.",
+      "disclaimer": "Ce calculateur fournit des estimations basées sur des formules et algorithmes standard. Les résultats doivent être vérifiés pour des applications critiques. Cet outil est à des fins éducatives et de planification. Consultez des professionnels pour décisions importantes nécessitant des calculs précis.",
+      "relatedTools": [
+        "Calculatrice scientifique pour opérations mathématiques avancées",
+        "Convertisseur d'unités pour conversions de mesures",
+        "Calculatrices spécialisées connexes pour calculs similaires"
+      ],
+      "faqs": [
+        {
+          "question": "Comment fonctionne ce calculateur?",
+          "answer": "Le calculateur utilise des formules standard pour traiter vos entrées et fournir des résultats précis. Il gère divers scénarios d'entrée et fournit des explications claires du processus de calcul."
+        },
+        {
+          "question": "Ce calculateur est-il précis?",
+          "answer": "Oui, le calculateur utilise des formules et algorithmes standard pour garantir des résultats précis. Cependant, pour des applications critiques, vérifiez toujours les résultats et consultez des professionnels si nécessaire."
+        },
+        {
+          "question": "Puis-je utiliser ce calculateur sur mon téléphone?",
+          "answer": "Absolument! Le calculateur est entièrement responsive et fonctionne parfaitement sur smartphones, tablettes et ordinateurs de bureau. Toutes les fonctionnalités sont optimisées pour utilisation mobile."
+        }
+      ]
+    },
+    "component": "CalorieCalculator"
   }
 }

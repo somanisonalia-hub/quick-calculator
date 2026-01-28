@@ -3,13 +3,32 @@
     "title": "Triangle Area Calculator",
     "seoTitle": "Triangle Area Calculator - Calculate Area of Triangles Online",
     "metaDescription": "Free triangle area calculator. Calculate the area of triangles using base and height, three sides (Heron's formula), or two sides and angle. Step-by-step solutions.",
-    "keywords": ["triangle area calculator", "area of triangle", "triangle calculator", "geometry calculator"],
-    "longTailKeywords": ["how to calculate area of triangle", "triangle area formula", "area of triangle with base and height", "triangle area calculator online", "geometry triangle area"],
+    "keywords": [
+      "triangle area calculator",
+      "area of triangle",
+      "triangle calculator",
+      "geometry calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate area of triangle",
+      "triangle area formula",
+      "area of triangle with base and height",
+      "triangle area calculator online",
+      "geometry triangle area"
+    ],
     "slug": "triangle-area-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "intermediate",
-    "tags": ["triangle", "area", "geometry", "base", "height", "herons formula"],
+    "component": "TriangleAreaCalculator",
+    "tags": [
+      "triangle",
+      "area",
+      "geometry",
+      "base",
+      "height",
+      "herons formula"
+    ],
     "summary": "Calculate the area of triangles using multiple methods with step-by-step explanations.",
     "description": "Our comprehensive triangle area calculator supports multiple calculation methods: base and height, three sides (Heron's formula), and two sides with included angle. Perfect for students learning geometry and professionals working with triangular shapes.",
     "instructions": [
@@ -21,20 +40,89 @@
     "calculatorComponent": {
       "componentName": "TriangleAreaCalculator",
       "inputs": [
-        { "name": "method", "label": "Calculation Method", "type": "select", "default": "baseHeight", "options": ["baseHeight", "heronsFormula", "twoSidesAngle"] },
-        { "name": "base", "label": "Base", "type": "number", "default": 10, "min": 0, "step": 0.01 },
-        { "name": "height", "label": "Height", "type": "number", "default": 8, "min": 0, "step": 0.01 },
-        { "name": "sideA", "label": "Side A", "type": "number", "default": 5, "min": 0, "step": 0.01 },
-        { "name": "sideB", "label": "Side B", "type": "number", "default": 5, "min": 0, "step": 0.01 },
-        { "name": "sideC", "label": "Side C", "type": "number", "default": 6, "min": 0, "step": 0.01 },
-        { "name": "angle", "label": "Angle (degrees)", "type": "number", "default": 60, "min": 0, "max": 180, "step": 0.1 }
+        {
+          "name": "method",
+          "label": "Calculation Method",
+          "type": "select",
+          "default": "baseHeight",
+          "options": [
+            "baseHeight",
+            "heronsFormula",
+            "twoSidesAngle"
+          ]
+        },
+        {
+          "name": "base",
+          "label": "Base",
+          "type": "number",
+          "default": 10,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "height",
+          "label": "Height",
+          "type": "number",
+          "default": 8,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideA",
+          "label": "Side A",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideB",
+          "label": "Side B",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideC",
+          "label": "Side C",
+          "type": "number",
+          "default": 6,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "angle",
+          "label": "Angle (degrees)",
+          "type": "number",
+          "default": 60,
+          "min": 0,
+          "max": 180,
+          "step": 0.1
+        }
       ],
       "formula": "Base × Height ÷ 2; Heron's: √[s(s-a)(s-b)(s-c)] where s = (a+b+c)÷2; Two sides × sin(angle) ÷ 2",
-      "output": { "label": "Triangle Area", "default": "Enter measurements above", "format": "number" },
+      "output": {
+        "label": "Triangle Area",
+        "default": "Enter measurements above",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Perimeter", "field": "perimeter", "format": "number" },
-        { "label": "Semiperimeter", "field": "semiperimeter", "format": "number" },
-        { "label": "Formula Used", "field": "formula", "format": "text" }
+        {
+          "label": "Perimeter",
+          "field": "perimeter",
+          "format": "number"
+        },
+        {
+          "label": "Semiperimeter",
+          "field": "semiperimeter",
+          "format": "number"
+        },
+        {
+          "label": "Formula Used",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -54,19 +142,98 @@
         "output": "Area = 10.83 square units"
       }
     ],
-    "relatedCalculators": ["circle-area-calculator", "pythagorean-theorem-calculator", "volume-calculator"]
+    "relatedCalculators": [
+      "circle-area-calculator",
+      "pythagorean-theorem-calculator",
+      "volume-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate triangle area calculator accurately with our comprehensive online calculator. This powerful tool helps you solve complex math problems quickly and efficiently. Whether you're a student, professional, or enthusiast, our calculator provides instant results with clear explanations. Built with precision algorithms and user-friendly interface, it's designed to handle various calculation scenarios with ease.",
+      "benefits": [
+        "Perform triangle area calculator calculations instantly",
+        "Get accurate results with step-by-step explanations",
+        "Support for multiple input formats and units",
+        "Mobile-friendly design for calculations on the go",
+        "Save time with automated complex calculations",
+        "Learn the underlying formulas and concepts"
+      ],
+      "steps": [
+        "Enter the required input values",
+        "Select appropriate units or options if applicable",
+        "Click calculate to get instant results",
+        "Review the detailed breakdown and explanation",
+        "Use results for your planning or analysis needs"
+      ],
+      "inputsExplained": [
+        "Input fields accept numerical values with appropriate units",
+        "Optional fields provide additional calculation parameters",
+        "Validation ensures all inputs are within acceptable ranges",
+        "Clear labels guide you through the calculation process"
+      ],
+      "formulaExplanation": "This calculator uses standard math formulas to ensure accurate results. The calculation process follows established mathematical or financial principles, providing reliable outcomes for your needs. Results are computed using precise algorithms that handle edge cases and various input scenarios appropriately.",
+      "examples": [
+        "Example 1: Basic triangle area calculator with standard inputs",
+        "Example 2: Advanced scenario with multiple parameters",
+        "Example 3: Real-world application demonstrating practical use"
+      ],
+      "resultsExplanation": [
+        "Primary result shows the main calculated value",
+        "Additional metrics provide deeper insights",
+        "Breakdown helps understand how the result was derived",
+        "Results are formatted for easy interpretation and use"
+      ],
+      "whoItsFor": "This calculator serves students learning math concepts, professionals requiring quick calculations, educators teaching problem-solving, researchers analyzing data, and anyone needing reliable triangle area calculator results. It's particularly useful for those working on projects, homework, professional tasks, or personal planning that requires accurate calculations.",
+      "disclaimer": "This calculator provides estimates based on standard formulas and algorithms. Results should be verified for critical applications. While we strive for accuracy, actual results may vary based on specific circumstances. This tool is for educational and planning purposes. Consult professionals for important decisions requiring precise calculations.",
+      "relatedTools": [
+        "Scientific calculator for advanced mathematical operations",
+        "Unit converter for measurement conversions",
+        "Related specialized calculators for similar calculations"
+      ],
+      "faqs": [
+        {
+          "question": "How does this triangle area calculator work?",
+          "answer": "The calculator uses standard math formulas to process your inputs and provide accurate results. It handles various input scenarios and provides clear explanations of the calculation process."
+        },
+        {
+          "question": "Is this calculator accurate?",
+          "answer": "Yes, the calculator uses standard formulas and algorithms to ensure accurate results. However, for critical applications, always verify results and consult professionals when needed."
+        },
+        {
+          "question": "Can I use this calculator on my phone?",
+          "answer": "Absolutely! The calculator is fully responsive and works seamlessly on smartphones, tablets, and desktop computers. All features are optimized for mobile use."
+        }
+      ]
+    }
   },
   "es": {
     "title": "Calculadora del Área del Triángulo",
     "seoTitle": "Calculadora del Área del Triángulo - Calcula Área de Triángulos Online",
     "metaDescription": "Calculadora gratuita del área del triángulo. Calcula el área de triángulos usando base y altura, tres lados (fórmula de Herón), o dos lados y ángulo. Soluciones paso a paso.",
-    "keywords": ["calculadora área triángulo", "área del triángulo", "calculadora triángulo", "calculadora geometría"],
-    "longTailKeywords": ["como calcular área del triángulo", "fórmula área triángulo", "área del triángulo con base y altura", "calculadora área triángulo online", "geometría área triángulo"],
+    "keywords": [
+      "calculadora área triángulo",
+      "área del triángulo",
+      "calculadora triángulo",
+      "calculadora geometría"
+    ],
+    "longTailKeywords": [
+      "como calcular área del triángulo",
+      "fórmula área triángulo",
+      "área del triángulo con base y altura",
+      "calculadora área triángulo online",
+      "geometría área triángulo"
+    ],
     "slug": "triangle-area-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "intermediate",
-    "tags": ["triángulo", "área", "geometría", "base", "altura", "fórmula herón"],
+    "tags": [
+      "triángulo",
+      "área",
+      "geometría",
+      "base",
+      "altura",
+      "fórmula herón"
+    ],
     "summary": "Calcula el área de triángulos usando múltiples métodos con explicaciones paso a paso.",
     "description": "Nuestra calculadora integral del área del triángulo soporta múltiples métodos de cálculo: base y altura, tres lados (fórmula de Herón), y dos lados con ángulo incluido. Perfecta para estudiantes aprendiendo geometría y profesionales trabajando con formas triangulares.",
     "instructions": [
@@ -78,20 +245,89 @@
     "calculatorComponent": {
       "componentName": "TriangleAreaCalculator",
       "inputs": [
-        { "name": "method", "label": "Método de Cálculo", "type": "select", "default": "baseHeight", "options": ["baseHeight", "heronsFormula", "twoSidesAngle"] },
-        { "name": "base", "label": "Base", "type": "number", "default": 10, "min": 0, "step": 0.01 },
-        { "name": "height", "label": "Altura", "type": "number", "default": 8, "min": 0, "step": 0.01 },
-        { "name": "sideA", "label": "Lado A", "type": "number", "default": 5, "min": 0, "step": 0.01 },
-        { "name": "sideB", "label": "Lado B", "type": "number", "default": 5, "min": 0, "step": 0.01 },
-        { "name": "sideC", "label": "Lado C", "type": "number", "default": 6, "min": 0, "step": 0.01 },
-        { "name": "angle", "label": "Ángulo (grados)", "type": "number", "default": 60, "min": 0, "max": 180, "step": 0.1 }
+        {
+          "name": "method",
+          "label": "Método de Cálculo",
+          "type": "select",
+          "default": "baseHeight",
+          "options": [
+            "baseHeight",
+            "heronsFormula",
+            "twoSidesAngle"
+          ]
+        },
+        {
+          "name": "base",
+          "label": "Base",
+          "type": "number",
+          "default": 10,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "height",
+          "label": "Altura",
+          "type": "number",
+          "default": 8,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideA",
+          "label": "Lado A",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideB",
+          "label": "Lado B",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideC",
+          "label": "Lado C",
+          "type": "number",
+          "default": 6,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "angle",
+          "label": "Ángulo (grados)",
+          "type": "number",
+          "default": 60,
+          "min": 0,
+          "max": 180,
+          "step": 0.1
+        }
       ],
       "formula": "Base × Altura ÷ 2; Herón: √[s(s-a)(s-b)(s-c)] donde s = (a+b+c)÷2; Dos lados × sen(ángulo) ÷ 2",
-      "output": { "label": "Área del Triángulo", "default": "Ingresa medidas arriba", "format": "number" },
+      "output": {
+        "label": "Área del Triángulo",
+        "default": "Ingresa medidas arriba",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Perímetro", "field": "perimeter", "format": "number" },
-        { "label": "Semiperímetro", "field": "semiperimeter", "format": "number" },
-        { "label": "Fórmula Usada", "field": "formula", "format": "text" }
+        {
+          "label": "Perímetro",
+          "field": "perimeter",
+          "format": "number"
+        },
+        {
+          "label": "Semiperímetro",
+          "field": "semiperimeter",
+          "format": "number"
+        },
+        {
+          "label": "Fórmula Usada",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -111,19 +347,99 @@
         "output": "Área = 10.83 unidades cuadradas"
       }
     ],
-    "relatedCalculators": ["circle-area-calculator", "pythagorean-theorem-calculator", "volume-calculator"]
+    "relatedCalculators": [
+      "circle-area-calculator",
+      "pythagorean-theorem-calculator",
+      "volume-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule triangle area calculator con precisión usando nuestra calculadora integral en línea. Esta poderosa herramienta le ayuda a resolver problemas complejos de matemáticas rápida y eficientemente. Ya sea estudiante, profesional o entusiasta, nuestra calculadora proporciona resultados instantáneos con explicaciones claras.",
+      "benefits": [
+        "Realice cálculos de triangle area calculator instantáneamente",
+        "Obtenga resultados precisos con explicaciones paso a paso",
+        "Soporte para múltiples formatos de entrada y unidades",
+        "Diseño amigable para móviles para cálculos sobre la marcha",
+        "Ahorre tiempo con cálculos complejos automatizados",
+        "Aprenda las fórmulas y conceptos subyacentes"
+      ],
+      "steps": [
+        "Ingrese los valores de entrada requeridos",
+        "Seleccione unidades u opciones apropiadas si aplica",
+        "Haga clic en calcular para obtener resultados instantáneos",
+        "Revise el desglose detallado y la explicación",
+        "Use los resultados para sus necesidades de planificación o análisis"
+      ],
+      "inputsExplained": [
+        "Los campos de entrada aceptan valores numéricos con unidades apropiadas",
+        "Los campos opcionales proporcionan parámetros de cálculo adicionales",
+        "La validación asegura que todas las entradas estén dentro de rangos aceptables",
+        "Las etiquetas claras lo guían a través del proceso de cálculo"
+      ],
+      "formulaExplanation": "Esta calculadora utiliza fórmulas estándar de matemáticas para garantizar resultados precisos. El proceso de cálculo sigue principios establecidos, proporcionando resultados confiables. Los resultados se calculan utilizando algoritmos precisos.",
+      "examples": [
+        "Ejemplo 1: triangle area calculator básico con entradas estándar",
+        "Ejemplo 2: Escenario avanzado con múltiples parámetros",
+        "Ejemplo 3: Aplicación del mundo real demostrando uso práctico"
+      ],
+      "resultsExplanation": [
+        "El resultado principal muestra el valor calculado principal",
+        "Las métricas adicionales proporcionan información más profunda",
+        "El desglose ayuda a comprender cómo se derivó el resultado",
+        "Los resultados están formateados para fácil interpretación y uso"
+      ],
+      "whoItsFor": "Esta calculadora sirve a estudiantes aprendiendo conceptos de matemáticas, profesionales que requieren cálculos rápidos, educadores enseñando resolución de problemas, investigadores analizando datos, y cualquiera que necesite resultados confiables.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en fórmulas y algoritmos estándar. Los resultados deben verificarse para aplicaciones críticas. Esta herramienta es para fines educativos y de planificación. Consulte a profesionales para decisiones importantes que requieran cálculos precisos.",
+      "relatedTools": [
+        "Calculadora científica para operaciones matemáticas avanzadas",
+        "Convertidor de unidades para conversiones de medidas",
+        "Calculadoras especializadas relacionadas para cálculos similares"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo funciona esta calculadora?",
+          "answer": "La calculadora utiliza fórmulas estándar para procesar sus entradas y proporcionar resultados precisos. Maneja varios escenarios de entrada y proporciona explicaciones claras del proceso de cálculo."
+        },
+        {
+          "question": "¿Es precisa esta calculadora?",
+          "answer": "Sí, la calculadora utiliza fórmulas y algoritmos estándar para garantizar resultados precisos. Sin embargo, para aplicaciones críticas, siempre verifique los resultados y consulte a profesionales cuando sea necesario."
+        },
+        {
+          "question": "¿Puedo usar esta calculadora en mi teléfono?",
+          "answer": "¡Absolutamente! La calculadora es completamente receptiva y funciona perfectamente en teléfonos inteligentes, tabletas y computadoras de escritorio. Todas las funciones están optimizadas para uso móvil."
+        }
+      ]
+    },
+    "component": "TriangleAreaCalculator"
   },
   "pt": {
     "title": "Calculadora da Área do Triângulo",
     "seoTitle": "Calculadora da Área do Triângulo - Calcule Área de Triângulos Online",
     "metaDescription": "Calculadora gratuita da área do triângulo. Calcule a área de triângulos usando base e altura, três lados (fórmula de Heron), ou dois lados e ângulo. Soluções passo a passo.",
-    "keywords": ["calculadora área triângulo", "área do triângulo", "calculadora triângulo", "calculadora geometria"],
-    "longTailKeywords": ["como calcular área do triângulo", "fórmula área triângulo", "área do triângulo com base e altura", "calculadora área triângulo online", "geometria área triângulo"],
+    "keywords": [
+      "calculadora área triângulo",
+      "área do triângulo",
+      "calculadora triângulo",
+      "calculadora geometria"
+    ],
+    "longTailKeywords": [
+      "como calcular área do triângulo",
+      "fórmula área triângulo",
+      "área do triângulo com base e altura",
+      "calculadora área triângulo online",
+      "geometria área triângulo"
+    ],
     "slug": "triangle-area-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "intermediate",
-    "tags": ["triângulo", "área", "geometria", "base", "altura", "fórmula heron"],
+    "tags": [
+      "triângulo",
+      "área",
+      "geometria",
+      "base",
+      "altura",
+      "fórmula heron"
+    ],
     "summary": "Calcule a área de triângulos usando múltiplos métodos com explicações passo a passo.",
     "description": "Nossa calculadora abrangente da área do triângulo suporta múltiplos métodos de cálculo: base e altura, três lados (fórmula de Heron), e dois lados com ângulo incluído. Perfeita para estudantes aprendendo geometria e profissionais trabalhando com formas triangulares.",
     "instructions": [
@@ -135,20 +451,89 @@
     "calculatorComponent": {
       "componentName": "TriangleAreaCalculator",
       "inputs": [
-        { "name": "method", "label": "Método de Cálculo", "type": "select", "default": "baseHeight", "options": ["baseHeight", "heronsFormula", "twoSidesAngle"] },
-        { "name": "base", "label": "Base", "type": "number", "default": 10, "min": 0, "step": 0.01 },
-        { "name": "height", "label": "Altura", "type": "number", "default": 8, "min": 0, "step": 0.01 },
-        { "name": "sideA", "label": "Lado A", "type": "number", "default": 5, "min": 0, "step": 0.01 },
-        { "name": "sideB", "label": "Lado B", "type": "number", "default": 5, "min": 0, "step": 0.01 },
-        { "name": "sideC", "label": "Lado C", "type": "number", "default": 6, "min": 0, "step": 0.01 },
-        { "name": "angle", "label": "Ângulo (graus)", "type": "number", "default": 60, "min": 0, "max": 180, "step": 0.1 }
+        {
+          "name": "method",
+          "label": "Método de Cálculo",
+          "type": "select",
+          "default": "baseHeight",
+          "options": [
+            "baseHeight",
+            "heronsFormula",
+            "twoSidesAngle"
+          ]
+        },
+        {
+          "name": "base",
+          "label": "Base",
+          "type": "number",
+          "default": 10,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "height",
+          "label": "Altura",
+          "type": "number",
+          "default": 8,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideA",
+          "label": "Lado A",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideB",
+          "label": "Lado B",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideC",
+          "label": "Lado C",
+          "type": "number",
+          "default": 6,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "angle",
+          "label": "Ângulo (graus)",
+          "type": "number",
+          "default": 60,
+          "min": 0,
+          "max": 180,
+          "step": 0.1
+        }
       ],
       "formula": "Base × Altura ÷ 2; Heron: √[s(s-a)(s-b)(s-c)] onde s = (a+b+c)÷2; Dois lados × sen(ângulo) ÷ 2",
-      "output": { "label": "Área do Triângulo", "default": "Digite medidas acima", "format": "number" },
+      "output": {
+        "label": "Área do Triângulo",
+        "default": "Digite medidas acima",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Perímetro", "field": "perimeter", "format": "number" },
-        { "label": "Semiperímetro", "field": "semiperimeter", "format": "number" },
-        { "label": "Fórmula Usada", "field": "formula", "format": "text" }
+        {
+          "label": "Perímetro",
+          "field": "perimeter",
+          "format": "number"
+        },
+        {
+          "label": "Semiperímetro",
+          "field": "semiperimeter",
+          "format": "number"
+        },
+        {
+          "label": "Fórmula Usada",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -168,19 +553,99 @@
         "output": "Área = 10.83 unidades quadradas"
       }
     ],
-    "relatedCalculators": ["circle-area-calculator", "pythagorean-theorem-calculator", "volume-calculator"]
+    "relatedCalculators": [
+      "circle-area-calculator",
+      "pythagorean-theorem-calculator",
+      "volume-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule triangle area calculator com precisão usando nossa calculadora abrangente online. Esta poderosa ferramenta ajuda você a resolver problemas complexos de matemática rápida e eficientemente. Seja você estudante, profissional ou entusiasta, nossa calculadora fornece resultados instantâneos com explicações claras.",
+      "benefits": [
+        "Realize cálculos de triangle area calculator instantaneamente",
+        "Obtenha resultados precisos com explicações passo a passo",
+        "Suporte para múltiplos formatos de entrada e unidades",
+        "Design amigável para celular para cálculos em movimento",
+        "Economize tempo com cálculos complexos automatizados",
+        "Aprenda as fórmulas e conceitos subjacentes"
+      ],
+      "steps": [
+        "Digite os valores de entrada necessários",
+        "Selecione unidades ou opções apropriadas se aplicável",
+        "Clique em calcular para obter resultados instantâneos",
+        "Revise o detalhamento e explicação detalhada",
+        "Use os resultados para suas necessidades de planejamento ou análise"
+      ],
+      "inputsExplained": [
+        "Os campos de entrada aceitam valores numéricos com unidades apropriadas",
+        "Campos opcionais fornecem parâmetros de cálculo adicionais",
+        "A validação garante que todas as entradas estejam dentro de faixas aceitáveis",
+        "Rótulos claros o guiam através do processo de cálculo"
+      ],
+      "formulaExplanation": "Esta calculadora usa fórmulas padrão de matemática para garantir resultados precisos. O processo de cálculo segue princípios estabelecidos, fornecendo resultados confiáveis. Os resultados são computados usando algoritmos precisos.",
+      "examples": [
+        "Exemplo 1: triangle area calculator básico com entradas padrão",
+        "Exemplo 2: Cenário avançado com múltiplos parâmetros",
+        "Exemplo 3: Aplicação do mundo real demonstrando uso prático"
+      ],
+      "resultsExplanation": [
+        "O resultado principal mostra o valor calculado principal",
+        "Métricas adicionais fornecem insights mais profundos",
+        "O detalhamento ajuda a entender como o resultado foi derivado",
+        "Os resultados são formatados para fácil interpretação e uso"
+      ],
+      "whoItsFor": "Esta calculadora serve estudantes aprendendo conceitos de matemática, profissionais que requerem cálculos rápidos, educadores ensinando resolução de problemas, pesquisadores analisando dados, e qualquer um que precise de resultados confiáveis.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em fórmulas e algoritmos padrão. Os resultados devem ser verificados para aplicações críticas. Esta ferramenta é para fins educacionais e de planejamento. Consulte profissionais para decisões importantes que requerem cálculos precisos.",
+      "relatedTools": [
+        "Calculadora científica para operações matemáticas avançadas",
+        "Conversor de unidades para conversões de medidas",
+        "Calculadoras especializadas relacionadas para cálculos similares"
+      ],
+      "faqs": [
+        {
+          "question": "Como funciona esta calculadora?",
+          "answer": "A calculadora usa fórmulas padrão para processar suas entradas e fornecer resultados precisos. Ela lida com vários cenários de entrada e fornece explicações claras do processo de cálculo."
+        },
+        {
+          "question": "Esta calculadora é precisa?",
+          "answer": "Sim, a calculadora usa fórmulas e algoritmos padrão para garantir resultados precisos. No entanto, para aplicações críticas, sempre verifique os resultados e consulte profissionais quando necessário."
+        },
+        {
+          "question": "Posso usar esta calculadora no meu telefone?",
+          "answer": "Absolutamente! A calculadora é totalmente responsiva e funciona perfeitamente em smartphones, tablets e computadores desktop. Todos os recursos são otimizados para uso móvel."
+        }
+      ]
+    },
+    "component": "TriangleAreaCalculator"
   },
   "fr": {
     "title": "Calculateur d'Aire de Triangle",
     "seoTitle": "Calculateur d'Aire de Triangle - Calculez Aire de Triangles en Ligne",
     "metaDescription": "Calculateur gratuit d'aire de triangle. Calculez l'aire de triangles en utilisant base et hauteur, trois côtés (formule de Heron), ou deux côtés et angle. Solutions étape par étape.",
-    "keywords": ["calculateur aire triangle", "aire du triangle", "calculateur triangle", "calculateur géométrie"],
-    "longTailKeywords": ["comment calculer aire du triangle", "formule aire triangle", "aire du triangle avec base et hauteur", "calculateur aire triangle en ligne", "géométrie aire triangle"],
+    "keywords": [
+      "calculateur aire triangle",
+      "aire du triangle",
+      "calculateur triangle",
+      "calculateur géométrie"
+    ],
+    "longTailKeywords": [
+      "comment calculer aire du triangle",
+      "formule aire triangle",
+      "aire du triangle avec base et hauteur",
+      "calculateur aire triangle en ligne",
+      "géométrie aire triangle"
+    ],
     "slug": "triangle-area-calculator",
     "category": "math",
     "subcategory": "geometry",
     "difficulty": "intermediate",
-    "tags": ["triangle", "aire", "géométrie", "base", "hauteur", "formule heron"],
+    "tags": [
+      "triangle",
+      "aire",
+      "géométrie",
+      "base",
+      "hauteur",
+      "formule heron"
+    ],
     "summary": "Calculez l'aire de triangles utilisant multiples méthodes avec explications étape par étape.",
     "description": "Notre calculateur complet d'aire de triangle supporte multiples méthodes de calcul: base et hauteur, trois côtés (formule de Heron), et deux côtés avec angle inclus. Parfait pour étudiants apprenant la géométrie et professionnels travaillant avec formes triangulaires.",
     "instructions": [
@@ -192,20 +657,89 @@
     "calculatorComponent": {
       "componentName": "TriangleAreaCalculator",
       "inputs": [
-        { "name": "method", "label": "Méthode de Calcul", "type": "select", "default": "baseHeight", "options": ["baseHeight", "heronsFormula", "twoSidesAngle"] },
-        { "name": "base", "label": "Base", "type": "number", "default": 10, "min": 0, "step": 0.01 },
-        { "name": "height", "label": "Hauteur", "type": "number", "default": 8, "min": 0, "step": 0.01 },
-        { "name": "sideA", "label": "Côté A", "type": "number", "default": 5, "min": 0, "step": 0.01 },
-        { "name": "sideB", "label": "Côté B", "type": "number", "default": 5, "min": 0, "step": 0.01 },
-        { "name": "sideC", "label": "Côté C", "type": "number", "default": 6, "min": 0, "step": 0.01 },
-        { "name": "angle", "label": "Angle (degrés)", "type": "number", "default": 60, "min": 0, "max": 180, "step": 0.1 }
+        {
+          "name": "method",
+          "label": "Méthode de Calcul",
+          "type": "select",
+          "default": "baseHeight",
+          "options": [
+            "baseHeight",
+            "heronsFormula",
+            "twoSidesAngle"
+          ]
+        },
+        {
+          "name": "base",
+          "label": "Base",
+          "type": "number",
+          "default": 10,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "height",
+          "label": "Hauteur",
+          "type": "number",
+          "default": 8,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideA",
+          "label": "Côté A",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideB",
+          "label": "Côté B",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "sideC",
+          "label": "Côté C",
+          "type": "number",
+          "default": 6,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "angle",
+          "label": "Angle (degrés)",
+          "type": "number",
+          "default": 60,
+          "min": 0,
+          "max": 180,
+          "step": 0.1
+        }
       ],
       "formula": "Base × Hauteur ÷ 2; Heron: √[s(s-a)(s-b)(s-c)] où s = (a+b+c)÷2; Deux côtés × sin(angle) ÷ 2",
-      "output": { "label": "Aire du Triangle", "default": "Entrez mesures ci-dessus", "format": "number" },
+      "output": {
+        "label": "Aire du Triangle",
+        "default": "Entrez mesures ci-dessus",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Périmètre", "field": "perimeter", "format": "number" },
-        { "label": "Demi-périmètre", "field": "semiperimeter", "format": "number" },
-        { "label": "Formule Utilisée", "field": "formula", "format": "text" }
+        {
+          "label": "Périmètre",
+          "field": "perimeter",
+          "format": "number"
+        },
+        {
+          "label": "Demi-périmètre",
+          "field": "semiperimeter",
+          "format": "number"
+        },
+        {
+          "label": "Formule Utilisée",
+          "field": "formula",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -225,6 +759,68 @@
         "output": "Aire = 10.83 unités carrées"
       }
     ],
-    "relatedCalculators": ["circle-area-calculator", "pythagorean-theorem-calculator", "volume-calculator"]
+    "relatedCalculators": [
+      "circle-area-calculator",
+      "pythagorean-theorem-calculator",
+      "volume-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez triangle area calculator avec précision en utilisant notre calculateur complet en ligne. Cet outil puissant vous aide à résoudre des problèmes complexes de mathématiques rapidement et efficacement. Que vous soyez étudiant, professionnel ou passionné, notre calculateur fournit des résultats instantanés avec des explications claires.",
+      "benefits": [
+        "Effectuez des calculs de triangle area calculator instantanément",
+        "Obtenez des résultats précis avec des explications étape par étape",
+        "Support pour plusieurs formats d'entrée et unités",
+        "Design adapté aux mobiles pour calculs en déplacement",
+        "Économisez du temps avec calculs complexes automatisés",
+        "Apprenez les formules et concepts sous-jacents"
+      ],
+      "steps": [
+        "Entrez les valeurs d'entrée requises",
+        "Sélectionnez unités ou options appropriées si applicable",
+        "Cliquez sur calculer pour obtenir résultats instantanés",
+        "Examinez la ventilation détaillée et l'explication",
+        "Utilisez les résultats pour vos besoins de planification ou analyse"
+      ],
+      "inputsExplained": [
+        "Les champs d'entrée acceptent des valeurs numériques avec unités appropriées",
+        "Les champs optionnels fournissent des paramètres de calcul supplémentaires",
+        "La validation garantit que toutes les entrées sont dans des plages acceptables",
+        "Les étiquettes claires vous guident à travers le processus de calcul"
+      ],
+      "formulaExplanation": "Ce calculateur utilise des formules standard de mathématiques pour garantir des résultats précis. Le processus de calcul suit des principes établis, fournissant des résultats fiables. Les résultats sont calculés en utilisant des algorithmes précis.",
+      "examples": [
+        "Exemple 1: triangle area calculator de base avec entrées standard",
+        "Exemple 2: Scénario avancé avec plusieurs paramètres",
+        "Exemple 3: Application du monde réel démontrant utilisation pratique"
+      ],
+      "resultsExplanation": [
+        "Le résultat principal montre la valeur calculée principale",
+        "Les métriques supplémentaires fournissent des informations plus approfondies",
+        "La ventilation aide à comprendre comment le résultat a été dérivé",
+        "Les résultats sont formatés pour une interprétation et utilisation faciles"
+      ],
+      "whoItsFor": "Ce calculateur sert les étudiants apprenant des concepts de mathématiques, les professionnels nécessitant des calculs rapides, les éducateurs enseignant la résolution de problèmes, les chercheurs analysant des données, et quiconque ayant besoin de résultats fiables.",
+      "disclaimer": "Ce calculateur fournit des estimations basées sur des formules et algorithmes standard. Les résultats doivent être vérifiés pour des applications critiques. Cet outil est à des fins éducatives et de planification. Consultez des professionnels pour décisions importantes nécessitant des calculs précis.",
+      "relatedTools": [
+        "Calculatrice scientifique pour opérations mathématiques avancées",
+        "Convertisseur d'unités pour conversions de mesures",
+        "Calculatrices spécialisées connexes pour calculs similaires"
+      ],
+      "faqs": [
+        {
+          "question": "Comment fonctionne ce calculateur?",
+          "answer": "Le calculateur utilise des formules standard pour traiter vos entrées et fournir des résultats précis. Il gère divers scénarios d'entrée et fournit des explications claires du processus de calcul."
+        },
+        {
+          "question": "Ce calculateur est-il précis?",
+          "answer": "Oui, le calculateur utilise des formules et algorithmes standard pour garantir des résultats précis. Cependant, pour des applications critiques, vérifiez toujours les résultats et consultez des professionnels si nécessaire."
+        },
+        {
+          "question": "Puis-je utiliser ce calculateur sur mon téléphone?",
+          "answer": "Absolument! Le calculateur est entièrement responsive et fonctionne parfaitement sur smartphones, tablettes et ordinateurs de bureau. Toutes les fonctionnalités sont optimisées pour utilisation mobile."
+        }
+      ]
+    },
+    "component": "TriangleAreaCalculator"
   }
 }

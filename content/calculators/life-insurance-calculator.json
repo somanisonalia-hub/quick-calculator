@@ -3,12 +3,30 @@
     "title": "Life Insurance Calculator",
     "seoTitle": "Life Insurance Calculator - Calculate Coverage Needs and Premium Costs",
     "metaDescription": "Free life insurance calculator. Calculate how much coverage you need and estimate premium costs. Essential for financial planning and family protection.",
-    "keywords": ["life insurance calculator", "insurance coverage calculator", "life insurance premium calculator", "term life calculator", "whole life calculator"],
-    "longTailKeywords": ["how much life insurance do I need calculator", "life insurance cost calculator", "calculate life insurance coverage", "term life insurance calculator", "life insurance needs calculator"],
+    "keywords": [
+      "life insurance calculator",
+      "insurance coverage calculator",
+      "life insurance premium calculator",
+      "term life calculator",
+      "whole life calculator"
+    ],
+    "longTailKeywords": [
+      "how much life insurance do I need calculator",
+      "life insurance cost calculator",
+      "calculate life insurance coverage",
+      "term life insurance calculator",
+      "life insurance needs calculator"
+    ],
     "slug": "life-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["life insurance", "coverage", "premiums", "financial planning", "family protection"],
+    "tags": [
+      "life insurance",
+      "coverage",
+      "premiums",
+      "financial planning",
+      "family protection"
+    ],
     "summary": "Calculate your life insurance needs and estimate premium costs to ensure your family's financial security.",
     "description": "Our comprehensive life insurance calculator helps you determine the right coverage amount based on your income, debts, and family needs. Compare term life vs whole life insurance options, estimate monthly premiums, and understand the true cost of protecting your family's financial future. Essential planning tool for breadwinners and parents.",
     "instructions": [
@@ -20,19 +38,88 @@
     "calculatorComponent": {
       "componentName": "LifeInsuranceCalculator",
       "inputs": [
-        { "name": "age", "label": "Age", "type": "number", "default": 35, "min": 18, "max": 80, "step": 1 },
-        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "coverageAmount", "label": "Coverage Amount ($)", "type": "number", "default": 500000, "min": 50000, "max": 5000000, "step": 25000 },
-        { "name": "termLength", "label": "Term Length (years)", "type": "number", "default": 20, "min": 5, "max": 30, "step": 5 },
-        { "name": "healthRating", "label": "Health Rating", "type": "select", "default": "excellent", "options": ["excellent", "very-good", "good", "fair"] },
-        { "name": "smokingStatus", "label": "Smoking Status", "type": "select", "default": "non-smoker", "options": ["non-smoker", "smoker"] }
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "default": 35,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "coverageAmount",
+          "label": "Coverage Amount ($)",
+          "type": "number",
+          "default": 500000,
+          "min": 50000,
+          "max": 5000000,
+          "step": 25000
+        },
+        {
+          "name": "termLength",
+          "label": "Term Length (years)",
+          "type": "number",
+          "default": 20,
+          "min": 5,
+          "max": 30,
+          "step": 5
+        },
+        {
+          "name": "healthRating",
+          "label": "Health Rating",
+          "type": "select",
+          "default": "excellent",
+          "options": [
+            "excellent",
+            "very-good",
+            "good",
+            "fair"
+          ]
+        },
+        {
+          "name": "smokingStatus",
+          "label": "Smoking Status",
+          "type": "select",
+          "default": "non-smoker",
+          "options": [
+            "non-smoker",
+            "smoker"
+          ]
+        }
       ],
       "formula": "Monthly Premium = (Coverage × Rate per $1000) × Age factor × Gender factor × Health factor × Smoking factor",
-      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Monthly Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
-        { "label": "Total Coverage", "field": "coverageAmount", "format": "currency" },
-        { "label": "Risk Class", "field": "riskClass", "format": "text" }
+        {
+          "label": "Annual Premium",
+          "field": "annualPremium",
+          "format": "currency"
+        },
+        {
+          "label": "Total Coverage",
+          "field": "coverageAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Risk Class",
+          "field": "riskClass",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -47,7 +134,11 @@
         "output": "Recommended Coverage: $600K, Estimated Monthly Premium: $45-65"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "tax-calculator", "retirement-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "tax-calculator",
+      "retirement-calculator"
+    ],
     "seoContent": {
       "introduction": "Secure your family's financial future with confidence using our comprehensive life insurance calculator that helps you determine exactly how much coverage you need and what it will cost. Life insurance is one of the most important financial decisions you'll make, providing crucial protection for your loved ones in case of unexpected tragedy. Our calculator analyzes your income, debts, family situation, and lifestyle to recommend the right coverage amount, then shows you realistic premium costs for different policy types. Whether you're a breadwinner, parent, or simply want peace of mind, this tool ensures you're properly protected without overpaying.",
       "benefits": [
@@ -117,18 +208,37 @@
           "answer": "Group plans through employers are convenient and often cheaper initially, but coverage ends when you leave the job and premiums increase with age. Individual policies are portable, customizable, and can be more comprehensive. Compare both options - employer coverage might be sufficient for basic needs, but individual policies offer better long-term value for larger coverage amounts. Many people use employer coverage for supplemental protection while building individual policies for primary needs."
         }
       ]
-    }
+    },
+    "component": "LifeInsuranceCalculator"
   },
   "es": {
     "title": "Calculadora de Seguro de Vida",
     "seoTitle": "Calculadora de Seguro de Vida - Calcula Necesidades de Cobertura y Costos de Primas",
     "metaDescription": "Calculadora gratuita de seguro de vida. Calcula cuánto cobertura necesitas y estima costos de primas. Esencial para planificación financiera y protección familiar.",
-    "keywords": ["calculadora seguro vida", "calculadora cobertura seguro", "calculadora prima seguro vida", "calculadora vida temporal", "calculadora vida entera"],
-    "longTailKeywords": ["cuánto seguro vida necesito calculadora", "calculadora costo seguro vida", "calcular cobertura seguro vida", "calculadora seguro vida temporal", "calculadora necesidades seguro vida"],
+    "keywords": [
+      "calculadora seguro vida",
+      "calculadora cobertura seguro",
+      "calculadora prima seguro vida",
+      "calculadora vida temporal",
+      "calculadora vida entera"
+    ],
+    "longTailKeywords": [
+      "cuánto seguro vida necesito calculadora",
+      "calculadora costo seguro vida",
+      "calcular cobertura seguro vida",
+      "calculadora seguro vida temporal",
+      "calculadora necesidades seguro vida"
+    ],
     "slug": "life-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["seguro vida", "cobertura", "primas", "planificación financiera", "protección familiar"],
+    "tags": [
+      "seguro vida",
+      "cobertura",
+      "primas",
+      "planificación financiera",
+      "protección familiar"
+    ],
     "summary": "Calcula tus necesidades de seguro de vida y estima costos de primas para asegurar la seguridad financiera de tu familia.",
     "description": "Nuestra completa calculadora de seguro de vida te ayuda a determinar la cantidad correcta de cobertura basada en tus ingresos, deudas y necesidades familiares. Compara opciones de seguro de vida temporal vs vida entera, estima primas mensuales y entiende el verdadero costo de proteger el futuro financiero de tu familia. Herramienta esencial de planificación para sostenes de familia y padres.",
     "instructions": [
@@ -140,19 +250,88 @@
     "calculatorComponent": {
       "componentName": "LifeInsuranceCalculator",
       "inputs": [
-        { "name": "age", "label": "Age", "type": "number", "default": 35, "min": 18, "max": 80, "step": 1 },
-        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "coverageAmount", "label": "Coverage Amount ($)", "type": "number", "default": 500000, "min": 50000, "max": 5000000, "step": 25000 },
-        { "name": "termLength", "label": "Term Length (years)", "type": "number", "default": 20, "min": 5, "max": 30, "step": 5 },
-        { "name": "healthRating", "label": "Health Rating", "type": "select", "default": "excellent", "options": ["excellent", "very-good", "good", "fair"] },
-        { "name": "smokingStatus", "label": "Smoking Status", "type": "select", "default": "non-smoker", "options": ["non-smoker", "smoker"] }
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "default": 35,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "coverageAmount",
+          "label": "Coverage Amount ($)",
+          "type": "number",
+          "default": 500000,
+          "min": 50000,
+          "max": 5000000,
+          "step": 25000
+        },
+        {
+          "name": "termLength",
+          "label": "Term Length (years)",
+          "type": "number",
+          "default": 20,
+          "min": 5,
+          "max": 30,
+          "step": 5
+        },
+        {
+          "name": "healthRating",
+          "label": "Health Rating",
+          "type": "select",
+          "default": "excellent",
+          "options": [
+            "excellent",
+            "very-good",
+            "good",
+            "fair"
+          ]
+        },
+        {
+          "name": "smokingStatus",
+          "label": "Smoking Status",
+          "type": "select",
+          "default": "non-smoker",
+          "options": [
+            "non-smoker",
+            "smoker"
+          ]
+        }
       ],
       "formula": "Monthly Premium = (Coverage × Rate per $1000) × Age factor × Gender factor × Health factor × Smoking factor",
-      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Monthly Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
-        { "label": "Total Coverage", "field": "coverageAmount", "format": "currency" },
-        { "label": "Risk Class", "field": "riskClass", "format": "text" }
+        {
+          "label": "Annual Premium",
+          "field": "annualPremium",
+          "format": "currency"
+        },
+        {
+          "label": "Total Coverage",
+          "field": "coverageAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Risk Class",
+          "field": "riskClass",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -167,7 +346,11 @@
         "output": "Cobertura Recomendada: $600K, Prima Mensual Estimada: $45-65"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "tax-calculator", "retirement-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "tax-calculator",
+      "retirement-calculator"
+    ],
     "seoContent": {
       "introduction": "Asegura el futuro financiero de tu familia con confianza usando nuestra calculadora integral de seguro de vida que te ayuda a determinar exactamente cuánto cobertura necesitas y cuánto costará. El seguro de vida es una de las decisiones financieras más importantes que tomarás, proporcionando protección crucial para tus seres queridos en caso de tragedia inesperada. Nuestra calculadora analiza tus ingresos, deudas, situación familiar, y estilo de vida para recomendar el monto correcto de cobertura, luego te muestra costos realistas de primas para diferentes tipos de póliza. Ya seas sostén de familia, padre, o simplemente quieras tranquilidad, esta herramienta asegura que estés debidamente protegido sin pagar de más.",
       "benefits": [
@@ -237,18 +420,37 @@
           "answer": "Planes grupales a través de empleadores son convenientes y a menudo más baratos inicialmente, pero cobertura termina cuando dejas el trabajo y primas aumentan con edad. Pólizas individuales son portátiles, personalizables, y pueden ser más comprehensivas. Compara ambas opciones - cobertura de empleador podría ser suficiente para necesidades básicas, pero pólizas individuales ofrecen mejor valor a largo plazo para montos de cobertura más grandes. Muchas personas usan cobertura de empleador para protección suplementaria mientras construyen pólizas individuales para necesidades primarias."
         }
       ]
-    }
+    },
+    "component": "LifeInsuranceCalculator"
   },
   "pt": {
     "title": "Calculadora de Seguro de Vida",
     "seoTitle": "Calculadora de Seguro de Vida - Calcule Necessidades de Cobertura e Custos de Prêmios",
     "metaDescription": "Calculadora gratuita de seguro de vida. Calcule quanto cobertura você precisa e estime custos de prêmios. Essencial para planejamento financeiro e proteção familiar.",
-    "keywords": ["calculadora seguro vida", "calculadora cobertura seguro", "calculadora prêmio seguro vida", "calculadora vida temporária", "calculadora vida inteira"],
-    "longTailKeywords": ["quanto seguro vida preciso calculadora", "calculadora custo seguro vida", "calcular cobertura seguro vida", "calculadora seguro vida temporário", "calculadora necessidades seguro vida"],
+    "keywords": [
+      "calculadora seguro vida",
+      "calculadora cobertura seguro",
+      "calculadora prêmio seguro vida",
+      "calculadora vida temporária",
+      "calculadora vida inteira"
+    ],
+    "longTailKeywords": [
+      "quanto seguro vida preciso calculadora",
+      "calculadora custo seguro vida",
+      "calcular cobertura seguro vida",
+      "calculadora seguro vida temporário",
+      "calculadora necessidades seguro vida"
+    ],
     "slug": "life-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["seguro vida", "cobertura", "prêmios", "planejamento financeiro", "proteção familiar"],
+    "tags": [
+      "seguro vida",
+      "cobertura",
+      "prêmios",
+      "planejamento financeiro",
+      "proteção familiar"
+    ],
     "summary": "Calcule suas necessidades de seguro de vida e estime custos de prêmios para garantir a segurança financeira de sua família.",
     "description": "Nossa calculadora completa de seguro de vida ajuda você a determinar a quantia correta de cobertura baseada em seus rendimentos, dívidas e necessidades familiares. Compare opções de seguro de vida temporário vs vida inteira, estime prêmios mensais e entenda o verdadeiro custo de proteger o futuro financeiro de sua família. Ferramenta essencial de planejamento para provedores e pais.",
     "instructions": [
@@ -260,19 +462,88 @@
     "calculatorComponent": {
       "componentName": "LifeInsuranceCalculator",
       "inputs": [
-        { "name": "age", "label": "Age", "type": "number", "default": 35, "min": 18, "max": 80, "step": 1 },
-        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "coverageAmount", "label": "Coverage Amount ($)", "type": "number", "default": 500000, "min": 50000, "max": 5000000, "step": 25000 },
-        { "name": "termLength", "label": "Term Length (years)", "type": "number", "default": 20, "min": 5, "max": 30, "step": 5 },
-        { "name": "healthRating", "label": "Health Rating", "type": "select", "default": "excellent", "options": ["excellent", "very-good", "good", "fair"] },
-        { "name": "smokingStatus", "label": "Smoking Status", "type": "select", "default": "non-smoker", "options": ["non-smoker", "smoker"] }
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "default": 35,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "coverageAmount",
+          "label": "Coverage Amount ($)",
+          "type": "number",
+          "default": 500000,
+          "min": 50000,
+          "max": 5000000,
+          "step": 25000
+        },
+        {
+          "name": "termLength",
+          "label": "Term Length (years)",
+          "type": "number",
+          "default": 20,
+          "min": 5,
+          "max": 30,
+          "step": 5
+        },
+        {
+          "name": "healthRating",
+          "label": "Health Rating",
+          "type": "select",
+          "default": "excellent",
+          "options": [
+            "excellent",
+            "very-good",
+            "good",
+            "fair"
+          ]
+        },
+        {
+          "name": "smokingStatus",
+          "label": "Smoking Status",
+          "type": "select",
+          "default": "non-smoker",
+          "options": [
+            "non-smoker",
+            "smoker"
+          ]
+        }
       ],
       "formula": "Monthly Premium = (Coverage × Rate per $1000) × Age factor × Gender factor × Health factor × Smoking factor",
-      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Monthly Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
-        { "label": "Total Coverage", "field": "coverageAmount", "format": "currency" },
-        { "label": "Risk Class", "field": "riskClass", "format": "text" }
+        {
+          "label": "Annual Premium",
+          "field": "annualPremium",
+          "format": "currency"
+        },
+        {
+          "label": "Total Coverage",
+          "field": "coverageAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Risk Class",
+          "field": "riskClass",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -287,7 +558,11 @@
         "output": "Cobertura Recomendada: $600K, Prêmio Mensal Estimado: $45-65"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "tax-calculator", "retirement-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "tax-calculator",
+      "retirement-calculator"
+    ],
     "seoContent": {
       "introduction": "Assegure o futuro financeiro de sua família com confiança usando nossa calculadora abrangente de seguro de vida que ajuda você a determinar exatamente quanto cobertura você precisa e quanto custará. Seguro de vida é uma das decisões financeiras mais importantes que você tomará, fornecendo proteção crucial para seus entes queridos em caso de tragédia inesperada. Nossa calculadora analisa sua renda, dívidas, situação familiar, e estilo de vida para recomendar o valor correto de cobertura, então mostra custos realistas de prêmios para diferentes tipos de apólice. Seja você provedor de família, pai, ou simplesmente querendo paz de espírito, esta ferramenta garante que você esteja devidamente protegido sem pagar demais.",
       "benefits": [
@@ -357,18 +632,37 @@
           "answer": "Planos grupais através de empregadores são convenientes e frequentemente mais baratos inicialmente, mas cobertura termina quando você deixa o trabalho e prêmios aumentam com idade. Apólices individuais são portáteis, personalizáveis, e podem ser mais abrangentes. Compare ambas opções - cobertura de empregador pode ser suficiente para necessidades básicas, mas apólices individuais oferecem melhor valor de longo prazo para valores de cobertura maiores. Muitas pessoas usam cobertura de empregador para proteção suplementar enquanto constroem apólices individuais para necessidades primárias."
         }
       ]
-    }
+    },
+    "component": "LifeInsuranceCalculator"
   },
   "fr": {
     "title": "Calculateur d'Assurance Vie",
     "seoTitle": "Calculateur d'Assurance Vie - Calculez les Besoins de Couverture et Coûts de Primes",
     "metaDescription": "Calculateur gratuit d'assurance vie. Calculez combien de couverture vous devez avoir et estimez les coûts de primes. Essentiel pour la planification financière et protection familiale.",
-    "keywords": ["calculateur assurance vie", "calculateur couverture assurance", "calculateur prime assurance vie", "calculateur vie temporaire", "calculateur vie entière"],
-    "longTailKeywords": ["combien assurance vie ai-je besoin calculateur", "calculateur coût assurance vie", "calculer couverture assurance vie", "calculateur assurance vie temporaire", "calculateur besoins assurance vie"],
+    "keywords": [
+      "calculateur assurance vie",
+      "calculateur couverture assurance",
+      "calculateur prime assurance vie",
+      "calculateur vie temporaire",
+      "calculateur vie entière"
+    ],
+    "longTailKeywords": [
+      "combien assurance vie ai-je besoin calculateur",
+      "calculateur coût assurance vie",
+      "calculer couverture assurance vie",
+      "calculateur assurance vie temporaire",
+      "calculateur besoins assurance vie"
+    ],
     "slug": "life-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["assurance vie", "couverture", "primes", "planification financière", "protection familiale"],
+    "tags": [
+      "assurance vie",
+      "couverture",
+      "primes",
+      "planification financière",
+      "protection familiale"
+    ],
     "summary": "Calculez vos besoins d'assurance vie et estimez les coûts de primes pour assurer la sécurité financière de votre famille.",
     "description": "Notre calculateur complet d'assurance vie vous aide à déterminer le montant de couverture approprié basé sur vos revenus, dettes et besoins familiaux. Comparez les options d'assurance vie temporaire vs vie entière, estimez les primes mensuelles et comprenez le véritable coût de la protection de l'avenir financier de votre famille. Outil de planification essentiel pour les soutiens de famille et parents.",
     "instructions": [
@@ -380,19 +674,88 @@
     "calculatorComponent": {
       "componentName": "LifeInsuranceCalculator",
       "inputs": [
-        { "name": "age", "label": "Age", "type": "number", "default": 35, "min": 18, "max": 80, "step": 1 },
-        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "coverageAmount", "label": "Coverage Amount ($)", "type": "number", "default": 500000, "min": 50000, "max": 5000000, "step": 25000 },
-        { "name": "termLength", "label": "Term Length (years)", "type": "number", "default": 20, "min": 5, "max": 30, "step": 5 },
-        { "name": "healthRating", "label": "Health Rating", "type": "select", "default": "excellent", "options": ["excellent", "very-good", "good", "fair"] },
-        { "name": "smokingStatus", "label": "Smoking Status", "type": "select", "default": "non-smoker", "options": ["non-smoker", "smoker"] }
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "default": 35,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "coverageAmount",
+          "label": "Coverage Amount ($)",
+          "type": "number",
+          "default": 500000,
+          "min": 50000,
+          "max": 5000000,
+          "step": 25000
+        },
+        {
+          "name": "termLength",
+          "label": "Term Length (years)",
+          "type": "number",
+          "default": 20,
+          "min": 5,
+          "max": 30,
+          "step": 5
+        },
+        {
+          "name": "healthRating",
+          "label": "Health Rating",
+          "type": "select",
+          "default": "excellent",
+          "options": [
+            "excellent",
+            "very-good",
+            "good",
+            "fair"
+          ]
+        },
+        {
+          "name": "smokingStatus",
+          "label": "Smoking Status",
+          "type": "select",
+          "default": "non-smoker",
+          "options": [
+            "non-smoker",
+            "smoker"
+          ]
+        }
       ],
       "formula": "Monthly Premium = (Coverage × Rate per $1000) × Age factor × Gender factor × Health factor × Smoking factor",
-      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Monthly Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
-        { "label": "Total Coverage", "field": "coverageAmount", "format": "currency" },
-        { "label": "Risk Class", "field": "riskClass", "format": "text" }
+        {
+          "label": "Annual Premium",
+          "field": "annualPremium",
+          "format": "currency"
+        },
+        {
+          "label": "Total Coverage",
+          "field": "coverageAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Risk Class",
+          "field": "riskClass",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -407,7 +770,11 @@
         "output": "Couverture Recommandée: $600K, Prime Mensuelle Estimée: $45-65"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "tax-calculator", "retirement-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "tax-calculator",
+      "retirement-calculator"
+    ],
     "seoContent": {
       "introduction": "Sécurisez l'avenir financier de votre famille avec confiance en utilisant notre calculatrice complète d'assurance vie qui vous aide à déterminer exactement combien de couverture vous devez avoir et combien cela coûtera. L'assurance vie est l'une des décisions financières les plus importantes que vous prendrez, fournissant une protection cruciale pour vos proches en cas de tragédie inattendue. Notre calculatrice analyse vos revenus, dettes, situation familiale, et style de vie pour recommander le bon montant de couverture, puis vous montre des coûts réalistes de primes pour différents types de polices. Que vous soyez soutien de famille, parent, ou souhaitiez simplement la tranquillité d'esprit, cet outil garantit que vous êtes correctement protégé sans trop payer.",
       "benefits": [
@@ -477,6 +844,7 @@
           "answer": "Plans groupe par employeurs sont pratiques et souvent moins chers initialement, mais couverture finit quand vous quittez emploi et primes augmentent avec âge. Polices individuelles sont portables, personnalisables, et peuvent être plus complètes. Comparez les deux options - couverture employeur pourrait être suffisante pour besoins basiques, mais polices individuelles offrent meilleure valeur long terme pour montants couverture plus grands. Beaucoup gens utilisent couverture employeur pour protection supplémentaire tout construisant polices individuelles pour besoins primaires."
         }
       ]
-    }
+    },
+    "component": "LifeInsuranceCalculator"
   }
 }

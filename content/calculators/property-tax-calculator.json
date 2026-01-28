@@ -3,12 +3,30 @@
     "title": "Property Tax Calculator",
     "seoTitle": "Property Tax Calculator - Calculate Real Estate Property Taxes",
     "metaDescription": "Free property tax calculator. Calculate annual property taxes based on home value and local tax rates. Essential for homeowners, buyers, and real estate investors.",
-    "keywords": ["property tax calculator", "real estate tax calculator", "home tax calculator", "property assessment calculator", "tax rate calculator"],
-    "longTailKeywords": ["how to calculate property taxes", "property tax estimator", "real estate tax calculation", "home assessment calculator", "local property tax rates"],
+    "keywords": [
+      "property tax calculator",
+      "real estate tax calculator",
+      "home tax calculator",
+      "property assessment calculator",
+      "tax rate calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate property taxes",
+      "property tax estimator",
+      "real estate tax calculation",
+      "home assessment calculator",
+      "local property tax rates"
+    ],
     "slug": "property-tax-calculator",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["property tax", "real estate", "homeownership", "taxes", "assessment"],
+    "tags": [
+      "property tax",
+      "real estate",
+      "homeownership",
+      "taxes",
+      "assessment"
+    ],
     "summary": "Calculate property taxes based on home value, assessment rate, and local tax rates for accurate annual tax estimation.",
     "description": "Our property tax calculator helps homeowners, buyers, and investors estimate annual property tax payments. Calculate taxes based on property value, assessment ratios, and local millage rates. Essential for budgeting, mortgage planning, and understanding the true cost of homeownership across different locations.",
     "instructions": [
@@ -20,17 +38,65 @@
     "calculatorComponent": {
       "componentName": "PropertyTaxCalculator",
       "inputs": [
-        { "name": "propertyValue", "label": "Property Value ($)", "type": "number", "default": 300000, "min": 10000, "max": 10000000, "step": 1000 },
-        { "name": "assessmentRate", "label": "Assessment Rate (%)", "type": "number", "default": 80, "min": 10, "max": 100, "step": 5 },
-        { "name": "taxRate", "label": "Property Tax Rate (%)", "type": "number", "default": 1.5, "min": 0.1, "max": 5, "step": 0.1 },
-        { "name": "exemptions", "label": "Tax Exemptions ($)", "type": "number", "default": 0, "min": 0, "max": 100000, "step": 1000 }
+        {
+          "name": "propertyValue",
+          "label": "Property Value ($)",
+          "type": "number",
+          "default": 300000,
+          "min": 10000,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "assessmentRate",
+          "label": "Assessment Rate (%)",
+          "type": "number",
+          "default": 80,
+          "min": 10,
+          "max": 100,
+          "step": 5
+        },
+        {
+          "name": "taxRate",
+          "label": "Property Tax Rate (%)",
+          "type": "number",
+          "default": 1.5,
+          "min": 0.1,
+          "max": 5,
+          "step": 0.1
+        },
+        {
+          "name": "exemptions",
+          "label": "Tax Exemptions ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 100000,
+          "step": 1000
+        }
       ],
       "formula": "Assessed Value = Property Value × Assessment Rate; Taxable Value = Assessed Value - Exemptions; Annual Tax = Taxable Value × Tax Rate",
-      "output": { "label": "Annual Property Tax", "default": "Enter property details above", "format": "currency" },
+      "output": {
+        "label": "Annual Property Tax",
+        "default": "Enter property details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Assessed Value", "field": "assessedValue", "format": "currency" },
-        { "label": "Taxable Value", "field": "taxableValue", "format": "currency" },
-        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" }
+        {
+          "label": "Assessed Value",
+          "field": "assessedValue",
+          "format": "currency"
+        },
+        {
+          "label": "Taxable Value",
+          "field": "taxableValue",
+          "format": "currency"
+        },
+        {
+          "label": "Monthly Payment",
+          "field": "monthlyPayment",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -45,7 +111,11 @@
         "output": "Annual Property Tax: $14,025"
       }
     ],
-    "relatedCalculators": ["mortgage-calculator", "budget-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "mortgage-calculator",
+      "budget-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Navigate the complex world of property taxation with confidence using our comprehensive property tax calculator that shows you exactly how much you'll pay annually on your real estate. Property taxes are one of the most significant ongoing costs of homeownership, and understanding them is crucial for budgeting, mortgage planning, and investment decisions. Our calculator breaks down the assessment process, tax rates, and exemptions to give you a clear picture of your property tax liability across different locations and property values. Whether you're buying a home, refinancing, or planning your budget, accurate property tax calculations are essential for financial planning.",
       "benefits": [
@@ -112,18 +182,37 @@
           "answer": "Property taxes change annually through reassessment cycles (every 1-5 years depending on location). Tax rates can change yearly based on local budgets. Assessment values update periodically to reflect market changes. Property tax bills arrive annually or semi-annually. Monitor local tax rates and assessment schedules. Significant home improvements increase assessed value and taxes. Understanding reassessment timing helps plan for potential tax increases."
         }
       ]
-    }
+    },
+    "component": "PropertyTaxCalculator"
   },
   "es": {
     "title": "Calculadora de Impuestos a la Propiedad",
     "seoTitle": "Calculadora de Impuestos a la Propiedad - Calcula Impuestos de Bienes Raíces",
     "metaDescription": "Calculadora gratuita de impuestos a la propiedad. Calcula impuestos anuales a la propiedad basados en valor del hogar y tasas impositivas locales. Esencial para propietarios, compradores e inversionistas inmobiliarios.",
-    "keywords": ["calculadora impuestos propiedad", "calculadora impuestos bienes raíces", "calculadora impuestos hogar", "calculadora valoración propiedad", "calculadora tasa impositiva"],
-    "longTailKeywords": ["cómo calcular impuestos propiedad", "estimador impuestos propiedad", "cálculo impuestos bienes raíces", "calculadora valoración hogar", "tasas impuestos propiedad local"],
+    "keywords": [
+      "calculadora impuestos propiedad",
+      "calculadora impuestos bienes raíces",
+      "calculadora impuestos hogar",
+      "calculadora valoración propiedad",
+      "calculadora tasa impositiva"
+    ],
+    "longTailKeywords": [
+      "cómo calcular impuestos propiedad",
+      "estimador impuestos propiedad",
+      "cálculo impuestos bienes raíces",
+      "calculadora valoración hogar",
+      "tasas impuestos propiedad local"
+    ],
     "slug": "property-tax-calculator",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["impuestos propiedad", "bienes raíces", "propiedad", "impuestos", "valoración"],
+    "tags": [
+      "impuestos propiedad",
+      "bienes raíces",
+      "propiedad",
+      "impuestos",
+      "valoración"
+    ],
     "summary": "Calcula impuestos a la propiedad basados en valor del hogar, tasa de valoración y tasas impositivas locales para estimación anual precisa.",
     "description": "Nuestra calculadora de impuestos a la propiedad ayuda a propietarios, compradores e inversionistas a estimar pagos anuales de impuestos a la propiedad. Calcula impuestos basados en valor de propiedad, ratios de valoración y tasas de millaje locales. Esencial para presupuestación, planificación hipotecaria y comprensión del verdadero costo de la propiedad en diferentes ubicaciones.",
     "instructions": [
@@ -135,17 +224,65 @@
     "calculatorComponent": {
       "componentName": "PropertyTaxCalculator",
       "inputs": [
-        { "name": "propertyValue", "label": "Property Value ($)", "type": "number", "default": 300000, "min": 10000, "max": 10000000, "step": 1000 },
-        { "name": "assessmentRate", "label": "Assessment Rate (%)", "type": "number", "default": 80, "min": 10, "max": 100, "step": 5 },
-        { "name": "taxRate", "label": "Property Tax Rate (%)", "type": "number", "default": 1.5, "min": 0.1, "max": 5, "step": 0.1 },
-        { "name": "exemptions", "label": "Tax Exemptions ($)", "type": "number", "default": 0, "min": 0, "max": 100000, "step": 1000 }
+        {
+          "name": "propertyValue",
+          "label": "Property Value ($)",
+          "type": "number",
+          "default": 300000,
+          "min": 10000,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "assessmentRate",
+          "label": "Assessment Rate (%)",
+          "type": "number",
+          "default": 80,
+          "min": 10,
+          "max": 100,
+          "step": 5
+        },
+        {
+          "name": "taxRate",
+          "label": "Property Tax Rate (%)",
+          "type": "number",
+          "default": 1.5,
+          "min": 0.1,
+          "max": 5,
+          "step": 0.1
+        },
+        {
+          "name": "exemptions",
+          "label": "Tax Exemptions ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 100000,
+          "step": 1000
+        }
       ],
       "formula": "Assessed Value = Property Value × Assessment Rate; Taxable Value = Assessed Value - Exemptions; Annual Tax = Taxable Value × Tax Rate",
-      "output": { "label": "Annual Property Tax", "default": "Enter property details above", "format": "currency" },
+      "output": {
+        "label": "Annual Property Tax",
+        "default": "Enter property details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Assessed Value", "field": "assessedValue", "format": "currency" },
-        { "label": "Taxable Value", "field": "taxableValue", "format": "currency" },
-        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" }
+        {
+          "label": "Assessed Value",
+          "field": "assessedValue",
+          "format": "currency"
+        },
+        {
+          "label": "Taxable Value",
+          "field": "taxableValue",
+          "format": "currency"
+        },
+        {
+          "label": "Monthly Payment",
+          "field": "monthlyPayment",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -160,7 +297,11 @@
         "output": "Impuesto Anual a la Propiedad: $14,025"
       }
     ],
-    "relatedCalculators": ["mortgage-calculator", "budget-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "mortgage-calculator",
+      "budget-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Navega el complejo mundo de la tributación inmobiliaria con confianza usando nuestra calculadora integral de impuestos a la propiedad que te muestra exactamente cuánto pagarás anualmente en tus bienes raíces. Los impuestos a la propiedad son uno de los costos continuos más significativos de la propiedad de vivienda, y entenderlos es crucial para presupuestar, planificación hipotecaria, y decisiones de inversión. Nuestra calculadora desglosa el proceso de valoración, tasas impositivas, y exenciones para darte una imagen clara de tu responsabilidad fiscal inmobiliaria a través de diferentes ubicaciones y valores de propiedad. Ya sea que estés comprando una casa, refinanciando, o planeando tu presupuesto, los cálculos precisos de impuestos a la propiedad son esenciales para planificación financiera.",
       "benefits": [
@@ -227,18 +368,37 @@
           "answer": "Los impuestos a la propiedad cambian anualmente a través de ciclos de revaloración (cada 1-5 años dependiendo de ubicación). Las tasas fiscales pueden cambiar anualmente basado en presupuestos locales. Los valores de valoración se actualizan periódicamente para reflejar cambios de mercado. Las facturas de impuestos a la propiedad llegan anualmente o semi-anualmente. Monitorea tasas fiscales locales y horarios de valoración. Mejoras significativas de hogar aumentan valor valorado e impuestos. Entender timing de revaloración ayuda a planear para aumentos fiscales potenciales."
         }
       ]
-    }
+    },
+    "component": "PropertyTaxCalculator"
   },
   "pt": {
     "title": "Calculadora de Imposto Predial",
     "seoTitle": "Calculadora de Imposto Predial - Calcule Impostos de Imóveis",
     "metaDescription": "Calculadora gratuita de imposto predial. Calcule impostos anuais de propriedade baseados em valor do imóvel e taxas locais. Essencial para proprietários, compradores e investidores imobiliários.",
-    "keywords": ["calculadora imposto predial", "calculadora imposto imóveis", "calculadora imposto casa", "calculadora avaliação propriedade", "calculadora taxa imposto"],
-    "longTailKeywords": ["como calcular imposto predial", "estimador imposto propriedade", "cálculo imposto imóveis", "calculadora avaliação casa", "taxas imposto propriedade local"],
+    "keywords": [
+      "calculadora imposto predial",
+      "calculadora imposto imóveis",
+      "calculadora imposto casa",
+      "calculadora avaliação propriedade",
+      "calculadora taxa imposto"
+    ],
+    "longTailKeywords": [
+      "como calcular imposto predial",
+      "estimador imposto propriedade",
+      "cálculo imposto imóveis",
+      "calculadora avaliação casa",
+      "taxas imposto propriedade local"
+    ],
     "slug": "property-tax-calculator",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["imposto predial", "imóveis", "propriedade", "impostos", "avaliação"],
+    "tags": [
+      "imposto predial",
+      "imóveis",
+      "propriedade",
+      "impostos",
+      "avaliação"
+    ],
     "summary": "Calcule impostos prediais baseados em valor do imóvel, taxa de avaliação e taxas locais para estimativa anual precisa.",
     "description": "Nossa calculadora de imposto predial ajuda proprietários, compradores e investidores a estimar pagamentos anuais de impostos de propriedade. Calcule impostos baseados em valor da propriedade, ratios de avaliação e taxas de millage locais. Essencial para orçamento, planejamento de hipoteca e compreensão do verdadeiro custo da propriedade em diferentes localizações.",
     "instructions": [
@@ -250,17 +410,65 @@
     "calculatorComponent": {
       "componentName": "PropertyTaxCalculator",
       "inputs": [
-        { "name": "propertyValue", "label": "Property Value ($)", "type": "number", "default": 300000, "min": 10000, "max": 10000000, "step": 1000 },
-        { "name": "assessmentRate", "label": "Assessment Rate (%)", "type": "number", "default": 80, "min": 10, "max": 100, "step": 5 },
-        { "name": "taxRate", "label": "Property Tax Rate (%)", "type": "number", "default": 1.5, "min": 0.1, "max": 5, "step": 0.1 },
-        { "name": "exemptions", "label": "Tax Exemptions ($)", "type": "number", "default": 0, "min": 0, "max": 100000, "step": 1000 }
+        {
+          "name": "propertyValue",
+          "label": "Property Value ($)",
+          "type": "number",
+          "default": 300000,
+          "min": 10000,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "assessmentRate",
+          "label": "Assessment Rate (%)",
+          "type": "number",
+          "default": 80,
+          "min": 10,
+          "max": 100,
+          "step": 5
+        },
+        {
+          "name": "taxRate",
+          "label": "Property Tax Rate (%)",
+          "type": "number",
+          "default": 1.5,
+          "min": 0.1,
+          "max": 5,
+          "step": 0.1
+        },
+        {
+          "name": "exemptions",
+          "label": "Tax Exemptions ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 100000,
+          "step": 1000
+        }
       ],
       "formula": "Assessed Value = Property Value × Assessment Rate; Taxable Value = Assessed Value - Exemptions; Annual Tax = Taxable Value × Tax Rate",
-      "output": { "label": "Annual Property Tax", "default": "Enter property details above", "format": "currency" },
+      "output": {
+        "label": "Annual Property Tax",
+        "default": "Enter property details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Assessed Value", "field": "assessedValue", "format": "currency" },
-        { "label": "Taxable Value", "field": "taxableValue", "format": "currency" },
-        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" }
+        {
+          "label": "Assessed Value",
+          "field": "assessedValue",
+          "format": "currency"
+        },
+        {
+          "label": "Taxable Value",
+          "field": "taxableValue",
+          "format": "currency"
+        },
+        {
+          "label": "Monthly Payment",
+          "field": "monthlyPayment",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -275,7 +483,11 @@
         "output": "Imposto Anual de Propriedade: $14,025"
       }
     ],
-    "relatedCalculators": ["mortgage-calculator", "budget-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "mortgage-calculator",
+      "budget-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Navegue o complexo mundo da tributação imobiliária com confiança usando nossa calculadora abrangente de imposto predial que mostra exatamente quanto você pagará anualmente em seus imóveis. Impostos prediais são um dos custos contínuos mais significativos da propriedade de casa, e entendê-los é crucial para orçar, planejamento hipotecário, e decisões de investimento. Nossa calculadora quebra o processo de avaliação, taxas fiscais, e isenções para dar a você uma imagem clara de sua responsabilidade fiscal imobiliária através de diferentes localizações e valores de propriedade. Seja comprando uma casa, refinanciando, ou planejando seu orçamento, cálculos precisos de imposto predial são essenciais para planejamento financeiro.",
       "benefits": [
@@ -342,18 +554,37 @@
           "answer": "Impostos prediais mudam anualmente através de ciclos de reavaliação (cada 1-5 anos dependendo de localização). Taxas fiscais podem mudar anualmente baseado em orçamentos locais. Valores de avaliação atualizam periodicamente para refletir mudanças de mercado. Contas de imposto predial chegam anualmente ou semi-anualmente. Monitore taxas fiscais locais e cronogramas de avaliação. Melhorias significativas de casa aumentam valor avaliado e impostos. Entender timing de reavaliação ajuda planejar para aumentos fiscais potenciais."
         }
       ]
-    }
+    },
+    "component": "PropertyTaxCalculator"
   },
   "fr": {
     "title": "Calculateur de Taxe Foncière",
     "seoTitle": "Calculateur de Taxe Foncière - Calculez les Taxes Immobilières",
     "metaDescription": "Calculateur gratuit de taxe foncière. Calculez les taxes annuelles de propriété basées sur la valeur du domicile et les taux locaux. Essentiel pour les propriétaires, acheteurs et investisseurs immobiliers.",
-    "keywords": ["calculateur taxe foncière", "calculateur taxe immobilière", "calculateur taxe maison", "calculateur évaluation propriété", "calculateur taux taxe"],
-    "longTailKeywords": ["comment calculer taxe foncière", "estimateur taxe propriété", "calcul taxe immobilière", "calculateur évaluation maison", "taux taxe propriété local"],
+    "keywords": [
+      "calculateur taxe foncière",
+      "calculateur taxe immobilière",
+      "calculateur taxe maison",
+      "calculateur évaluation propriété",
+      "calculateur taux taxe"
+    ],
+    "longTailKeywords": [
+      "comment calculer taxe foncière",
+      "estimateur taxe propriété",
+      "calcul taxe immobilière",
+      "calculateur évaluation maison",
+      "taux taxe propriété local"
+    ],
     "slug": "property-tax-calculator",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["taxe foncière", "immobilier", "propriété", "taxes", "évaluation"],
+    "tags": [
+      "taxe foncière",
+      "immobilier",
+      "propriété",
+      "taxes",
+      "évaluation"
+    ],
     "summary": "Calculez les taxes foncières basées sur la valeur du bien, le taux d'évaluation et les taux locaux pour une estimation annuelle précise.",
     "description": "Notre calculateur de taxe foncière aide les propriétaires, acheteurs et investisseurs à estimer les paiements annuels de taxes de propriété. Calculez les taxes basées sur la valeur de la propriété, les ratios d'évaluation et les taux de millage locaux. Essentiel pour le budget, la planification hypothécaire et la compréhension du véritable coût de la propriété dans différentes localisations.",
     "instructions": [
@@ -365,17 +596,65 @@
     "calculatorComponent": {
       "componentName": "PropertyTaxCalculator",
       "inputs": [
-        { "name": "propertyValue", "label": "Property Value ($)", "type": "number", "default": 300000, "min": 10000, "max": 10000000, "step": 1000 },
-        { "name": "assessmentRate", "label": "Assessment Rate (%)", "type": "number", "default": 80, "min": 10, "max": 100, "step": 5 },
-        { "name": "taxRate", "label": "Property Tax Rate (%)", "type": "number", "default": 1.5, "min": 0.1, "max": 5, "step": 0.1 },
-        { "name": "exemptions", "label": "Tax Exemptions ($)", "type": "number", "default": 0, "min": 0, "max": 100000, "step": 1000 }
+        {
+          "name": "propertyValue",
+          "label": "Property Value ($)",
+          "type": "number",
+          "default": 300000,
+          "min": 10000,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "assessmentRate",
+          "label": "Assessment Rate (%)",
+          "type": "number",
+          "default": 80,
+          "min": 10,
+          "max": 100,
+          "step": 5
+        },
+        {
+          "name": "taxRate",
+          "label": "Property Tax Rate (%)",
+          "type": "number",
+          "default": 1.5,
+          "min": 0.1,
+          "max": 5,
+          "step": 0.1
+        },
+        {
+          "name": "exemptions",
+          "label": "Tax Exemptions ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 100000,
+          "step": 1000
+        }
       ],
       "formula": "Assessed Value = Property Value × Assessment Rate; Taxable Value = Assessed Value - Exemptions; Annual Tax = Taxable Value × Tax Rate",
-      "output": { "label": "Annual Property Tax", "default": "Enter property details above", "format": "currency" },
+      "output": {
+        "label": "Annual Property Tax",
+        "default": "Enter property details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Assessed Value", "field": "assessedValue", "format": "currency" },
-        { "label": "Taxable Value", "field": "taxableValue", "format": "currency" },
-        { "label": "Monthly Payment", "field": "monthlyPayment", "format": "currency" }
+        {
+          "label": "Assessed Value",
+          "field": "assessedValue",
+          "format": "currency"
+        },
+        {
+          "label": "Taxable Value",
+          "field": "taxableValue",
+          "format": "currency"
+        },
+        {
+          "label": "Monthly Payment",
+          "field": "monthlyPayment",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -390,7 +669,11 @@
         "output": "Taxe Annuelle de Propriété: $14,025"
       }
     ],
-    "relatedCalculators": ["mortgage-calculator", "budget-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "mortgage-calculator",
+      "budget-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Naviguez le monde complexe de la taxation immobilière avec confiance en utilisant notre calculatrice complète de taxe foncière qui vous montre exactement combien vous paierez annuellement sur vos biens immobiliers. Les taxes foncières sont l'un des coûts continus les plus significatifs de la propriété immobilière, et les comprendre est crucial pour budgétiser, planification hypothécaire, et décisions d'investissement. Notre calculatrice décompose le processus d'évaluation, taux fiscaux, et exemptions pour vous donner une image claire de votre responsabilité fiscale immobilière à travers différentes localisations et valeurs de propriété. Que vous achetiez une maison, refinanciez, ou planifiiez votre budget, les calculs précis de taxe foncière sont essentiels pour la planification financière.",
       "benefits": [
@@ -457,6 +740,7 @@
           "answer": "Taxes foncières changent annuellement par cycles réévaluation (tous 1-5 ans selon localisation). Taux fiscaux peuvent changer annuellement basé budgets locaux. Valeurs évaluation mettent à jour périodiquement pour refléter changements marché. Factures taxe foncière arrivent annuellement ou semi-annuellement. Surveillez taux fiscaux locaux et calendriers évaluation. Améliorations maison significatives augmentent valeur évaluée et taxes. Comprendre timing réévaluation aide planifier augmentations fiscales potentielles."
         }
       ]
-    }
+    },
+    "component": "PropertyTaxCalculator"
   }
 }

@@ -145,7 +145,8 @@
           "answer": "No, EAR only accounts for interest compounding. It does not include fees, taxes, or other costs that may affect the actual return or cost."
         }
       ]
-    }
+    },
+    "component": "EARCalculator"
   },
   "es": {
     "title": "Calculadora de TAE",
@@ -293,7 +294,8 @@
           "answer": "No, la TAE solo considera capitalización de interés. No incluye comisiones, impuestos u otros costos que pueden afectar el retorno o costo real."
         }
       ]
-    }
+    },
+    "component": "EARCalculator"
   },
   "pt": {
     "title": "Calculadora de Taxa Efetiva Anual",
@@ -441,7 +443,8 @@
           "answer": "Não, a TEA apenas considera capitalização de juros. Não inclui taxas, impostos ou outros custos que podem afetar o retorno ou custo real."
         }
       ]
-    }
+    },
+    "component": "EARCalculator"
   },
   "fr": {
     "title": "Calculateur de Taux Effectif Annuel",
@@ -589,6 +592,7 @@
           "answer": "Non, le TEA considère seulement capitalisation d'intérêt. N'inclut pas frais, taxes ou autres coûts pouvant affecter retour ou coût réel."
         }
       ]
-    }
+    },
+    "component": "EARCalculator"
   }
 }

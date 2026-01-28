@@ -3,12 +3,30 @@
     "title": "Interest-Only Mortgage Calculator",
     "seoTitle": "Interest-Only Mortgage Calculator - Calculate Interest-Only Payments and Principal Payoff",
     "metaDescription": "Free interest-only mortgage calculator. Calculate interest-only payments, principal payoff amounts, and compare with traditional mortgages. Essential for investment properties and short-term ownership.",
-    "keywords": ["interest-only mortgage calculator", "interest-only loan calculator", "mortgage payoff calculator", "investment property calculator", "mortgage comparison calculator"],
-    "longTailKeywords": ["how does interest-only mortgage work calculator", "interest-only mortgage payment calculator", "mortgage principal payoff calculator", "investment property mortgage calculator", "interest-only vs traditional mortgage calculator"],
+    "keywords": [
+      "interest-only mortgage calculator",
+      "interest-only loan calculator",
+      "mortgage payoff calculator",
+      "investment property calculator",
+      "mortgage comparison calculator"
+    ],
+    "longTailKeywords": [
+      "how does interest-only mortgage work calculator",
+      "interest-only mortgage payment calculator",
+      "mortgage principal payoff calculator",
+      "investment property mortgage calculator",
+      "interest-only vs traditional mortgage calculator"
+    ],
     "slug": "interest-only-mortgage-calculator",
     "category": "financial",
     "difficulty": "advanced",
-    "tags": ["interest-only mortgage", "investment property", "mortgage payments", "principal payoff", "mortgage comparison"],
+    "tags": [
+      "interest-only mortgage",
+      "investment property",
+      "mortgage payments",
+      "principal payoff",
+      "mortgage comparison"
+    ],
     "summary": "Calculate interest-only mortgage payments, principal payoff requirements, and compare with traditional mortgages for informed home financing decisions.",
     "description": "Our specialized interest-only mortgage calculator helps you understand interest-only loan structures common in investment properties and short-term ownership scenarios. Calculate monthly interest payments, principal payoff amounts at loan end, and compare total costs with traditional amortizing mortgages. Essential for real estate investors and those planning short-term home ownership.",
     "instructions": [
@@ -20,19 +38,83 @@
     "calculatorComponent": {
       "componentName": "InterestOnlyMortgageCalculator",
       "inputs": [
-        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 300000, "min": 50000, "max": 2000000, "step": 10000 },
-        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 5.5, "min": 2, "max": 15, "step": 0.125 },
-        { "name": "interestOnlyPeriod", "label": "Interest-Only Period (years)", "type": "number", "default": 5, "min": 1, "max": 10, "step": 1 },
-        { "name": "amortizationPeriod", "label": "Amortization Period (years)", "type": "number", "default": 25, "min": 15, "max": 40, "step": 1 },
-        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 6000, "min": 0, "max": 30000, "step": 100 },
-        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1500, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "loanAmount",
+          "label": "Loan Amount ($)",
+          "type": "number",
+          "default": 300000,
+          "min": 50000,
+          "max": 2000000,
+          "step": 10000
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "default": 5.5,
+          "min": 2,
+          "max": 15,
+          "step": 0.125
+        },
+        {
+          "name": "interestOnlyPeriod",
+          "label": "Interest-Only Period (years)",
+          "type": "number",
+          "default": 5,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "amortizationPeriod",
+          "label": "Amortization Period (years)",
+          "type": "number",
+          "default": 25,
+          "min": 15,
+          "max": 40,
+          "step": 1
+        },
+        {
+          "name": "propertyTax",
+          "label": "Annual Property Tax ($)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 30000,
+          "step": 100
+        },
+        {
+          "name": "homeInsurance",
+          "label": "Annual Home Insurance ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Interest-Only Payment = Loan Amount × Interest Rate / 12; Principal Payment = Loan Amount / (Amortization Period × 12)",
-      "output": { "label": "Current Monthly Payment", "default": "Enter mortgage details above", "format": "currency" },
+      "output": {
+        "label": "Current Monthly Payment",
+        "default": "Enter mortgage details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Interest-Only Payment", "field": "interestOnlyPayment", "format": "currency" },
-        { "label": "Full Payment (After)", "field": "fullPayment", "format": "currency" },
-        { "label": "Payment Increase", "field": "paymentIncrease", "format": "currency" }
+        {
+          "label": "Interest-Only Payment",
+          "field": "interestOnlyPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Full Payment (After)",
+          "field": "fullPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Payment Increase",
+          "field": "paymentIncrease",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -47,7 +129,11 @@
         "output": "Monthly Interest Payment: $1,125, Balloon Payment: $300,000, Total Interest Paid: $40,500"
       }
     ],
-    "relatedCalculators": ["mortgage-calculator", "loan-calculator", "investment-calculator"],
+    "relatedCalculators": [
+      "mortgage-calculator",
+      "loan-calculator",
+      "investment-calculator"
+    ],
     "seoContent": {
       "introduction": "Master the complexities of interest-only mortgages with our specialized calculator designed specifically for investment properties and strategic home financing. Interest-only loans offer unique advantages for real estate investors and those planning short-term ownership, but they require careful planning and understanding of the payment shock when principal payments begin. Our calculator helps you navigate these sophisticated loan structures, comparing interest-only payments with traditional mortgages while calculating the total cost implications and cash flow requirements. Whether you're considering an investment property purchase or planning your exit strategy, this tool provides the clarity needed to make informed mortgage decisions in competitive real estate markets.",
       "benefits": [
@@ -115,18 +201,37 @@
           "answer": "Calculate the exact payment increase using our calculator. Build emergency savings equal to 6-12 months of new payment amount. Plan property sale or refinance before interest-only period ends. Consider extra payments during interest-only period to reduce principal. Budget for worst-case scenarios including rate increases. Have contingency plans for job loss or income changes. Consult financial advisors about timing and risk tolerance."
         }
       ]
-    }
+    },
+    "component": "InterestOnlyMortgageCalculator"
   },
   "es": {
     "title": "Calculadora de Hipoteca Solo Intereses",
     "seoTitle": "Calculadora de Hipoteca Solo Intereses - Calcula Pagos Solo Intereses y Pago de Capital",
     "metaDescription": "Calculadora gratuita de hipoteca solo intereses. Calcula pagos solo intereses, montos de pago de capital y compara con hipotecas tradicionales. Esencial para propiedades de inversión y propiedad a corto plazo.",
-    "keywords": ["calculadora hipoteca solo intereses", "calculadora préstamo solo intereses", "calculadora pago hipoteca", "calculadora propiedad inversión", "calculadora comparación hipoteca"],
-    "longTailKeywords": ["cómo funciona hipoteca solo intereses calculadora", "calculadora pago hipoteca solo intereses", "calculadora pago capital hipoteca", "calculadora hipoteca propiedad inversión", "calculadora hipoteca solo intereses vs tradicional"],
+    "keywords": [
+      "calculadora hipoteca solo intereses",
+      "calculadora préstamo solo intereses",
+      "calculadora pago hipoteca",
+      "calculadora propiedad inversión",
+      "calculadora comparación hipoteca"
+    ],
+    "longTailKeywords": [
+      "cómo funciona hipoteca solo intereses calculadora",
+      "calculadora pago hipoteca solo intereses",
+      "calculadora pago capital hipoteca",
+      "calculadora hipoteca propiedad inversión",
+      "calculadora hipoteca solo intereses vs tradicional"
+    ],
     "slug": "interest-only-mortgage-calculator",
     "category": "financial",
     "difficulty": "advanced",
-    "tags": ["hipoteca solo intereses", "propiedad inversión", "pagos hipoteca", "pago capital", "comparación hipoteca"],
+    "tags": [
+      "hipoteca solo intereses",
+      "propiedad inversión",
+      "pagos hipoteca",
+      "pago capital",
+      "comparación hipoteca"
+    ],
     "summary": "Calcula pagos de hipoteca solo intereses, requisitos de pago de capital y compara con hipotecas tradicionales para decisiones informadas de financiamiento de vivienda.",
     "description": "Nuestra calculadora especializada de hipoteca solo intereses te ayuda a entender estructuras de préstamos solo intereses comunes en propiedades de inversión y escenarios de propiedad a corto plazo. Calcula pagos mensuales de intereses, montos de pago de capital al final del préstamo y compara costos totales con hipotecas tradicionales amortizantes. Esencial para inversionistas inmobiliarios y aquellos planificando propiedad de vivienda a corto plazo.",
     "instructions": [
@@ -138,19 +243,83 @@
     "calculatorComponent": {
       "componentName": "InterestOnlyMortgageCalculator",
       "inputs": [
-        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 300000, "min": 50000, "max": 2000000, "step": 10000 },
-        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 5.5, "min": 2, "max": 15, "step": 0.125 },
-        { "name": "interestOnlyPeriod", "label": "Interest-Only Period (years)", "type": "number", "default": 5, "min": 1, "max": 10, "step": 1 },
-        { "name": "amortizationPeriod", "label": "Amortization Period (years)", "type": "number", "default": 25, "min": 15, "max": 40, "step": 1 },
-        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 6000, "min": 0, "max": 30000, "step": 100 },
-        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1500, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "loanAmount",
+          "label": "Loan Amount ($)",
+          "type": "number",
+          "default": 300000,
+          "min": 50000,
+          "max": 2000000,
+          "step": 10000
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "default": 5.5,
+          "min": 2,
+          "max": 15,
+          "step": 0.125
+        },
+        {
+          "name": "interestOnlyPeriod",
+          "label": "Interest-Only Period (years)",
+          "type": "number",
+          "default": 5,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "amortizationPeriod",
+          "label": "Amortization Period (years)",
+          "type": "number",
+          "default": 25,
+          "min": 15,
+          "max": 40,
+          "step": 1
+        },
+        {
+          "name": "propertyTax",
+          "label": "Annual Property Tax ($)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 30000,
+          "step": 100
+        },
+        {
+          "name": "homeInsurance",
+          "label": "Annual Home Insurance ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Interest-Only Payment = Loan Amount × Interest Rate / 12; Principal Payment = Loan Amount / (Amortization Period × 12)",
-      "output": { "label": "Current Monthly Payment", "default": "Enter mortgage details above", "format": "currency" },
+      "output": {
+        "label": "Current Monthly Payment",
+        "default": "Enter mortgage details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Interest-Only Payment", "field": "interestOnlyPayment", "format": "currency" },
-        { "label": "Full Payment (After)", "field": "fullPayment", "format": "currency" },
-        { "label": "Payment Increase", "field": "paymentIncrease", "format": "currency" }
+        {
+          "label": "Interest-Only Payment",
+          "field": "interestOnlyPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Full Payment (After)",
+          "field": "fullPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Payment Increase",
+          "field": "paymentIncrease",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -165,7 +334,11 @@
         "output": "Pago Mensual Intereses: $1,125, Pago Globo: $300,000, Interés Total Pagado: $40,500"
       }
     ],
-    "relatedCalculators": ["mortgage-calculator", "loan-calculator", "investment-calculator"],
+    "relatedCalculators": [
+      "mortgage-calculator",
+      "loan-calculator",
+      "investment-calculator"
+    ],
     "seoContent": {
       "introduction": "Domina las complejidades de las hipotecas solo intereses con nuestra calculadora especializada diseñada específicamente para propiedades de inversión y financiamiento estratégico de vivienda. Los préstamos solo intereses ofrecen ventajas únicas para inversionistas inmobiliarios y aquellos planeando propiedad a corto plazo, pero requieren planificación cuidadosa y entendimiento del shock de pago cuando comienzan los pagos de capital. Nuestra calculadora te ayuda a navegar estas estructuras sofisticadas de préstamo, comparando pagos solo intereses con hipotecas tradicionales mientras calculas las implicaciones de costo total y requerimientos de flujo de caja. Ya sea que consideres compra de propiedad de inversión o planeando tu estrategia de salida, esta herramienta proporciona la claridad necesaria para tomar decisiones informadas de hipoteca en mercados inmobiliarios competitivos.",
       "benefits": [
@@ -233,18 +406,37 @@
           "answer": "Calcula el aumento exacto de pago usando nuestra calculadora. Construye ahorros de emergencia igual a 6-12 meses de nuevo monto de pago. Plane a venta de propiedad o refinanciamiento antes que período solo intereses termine. Considera pagos extra durante período solo intereses para reducir capital. Presupuesta para peores escenarios incluyendo aumentos de tasa. Ten planes de contingencia para pérdida de trabajo o cambios de ingreso. Consulta asesores financieros sobre timing y tolerancia de riesgo."
         }
       ]
-    }
+    },
+    "component": "InterestOnlyMortgageCalculator"
   },
   "pt": {
     "title": "Calculadora de Hipoteca Apenas Juros",
     "seoTitle": "Calculadora de Hipoteca Apenas Juros - Calcule Pagamentos Apenas Juros e Quitação de Capital",
     "metaDescription": "Calculadora gratuita de hipoteca apenas juros. Calcule pagamentos apenas juros, valores de quitação de capital e compare com hipotecas tradicionais. Essencial para propriedades de investimento e propriedade a curto prazo.",
-    "keywords": ["calculadora hipoteca apenas juros", "calculadora empréstimo apenas juros", "calculadora quitação hipoteca", "calculadora propriedade investimento", "calculadora comparação hipoteca"],
-    "longTailKeywords": ["como funciona hipoteca apenas juros calculadora", "calculadora pagamento hipoteca apenas juros", "calculadora quitação capital hipoteca", "calculadora hipoteca propriedade investimento", "calculadora hipoteca apenas juros vs tradicional"],
+    "keywords": [
+      "calculadora hipoteca apenas juros",
+      "calculadora empréstimo apenas juros",
+      "calculadora quitação hipoteca",
+      "calculadora propriedade investimento",
+      "calculadora comparação hipoteca"
+    ],
+    "longTailKeywords": [
+      "como funciona hipoteca apenas juros calculadora",
+      "calculadora pagamento hipoteca apenas juros",
+      "calculadora quitação capital hipoteca",
+      "calculadora hipoteca propriedade investimento",
+      "calculadora hipoteca apenas juros vs tradicional"
+    ],
     "slug": "interest-only-mortgage-calculator",
     "category": "financial",
     "difficulty": "advanced",
-    "tags": ["hipoteca apenas juros", "propriedade investimento", "pagamentos hipoteca", "quitação capital", "comparação hipoteca"],
+    "tags": [
+      "hipoteca apenas juros",
+      "propriedade investimento",
+      "pagamentos hipoteca",
+      "quitação capital",
+      "comparação hipoteca"
+    ],
     "summary": "Calcule pagamentos de hipoteca apenas juros, requisitos de quitação de capital e compare com hipotecas tradicionais para decisões informadas de financiamento imobiliário.",
     "description": "Nossa calculadora especializada de hipoteca apenas juros ajuda você a entender estruturas de empréstimos apenas juros comuns em propriedades de investimento e cenários de propriedade a curto prazo. Calcule pagamentos mensais de juros, valores de quitação de capital no final do empréstimo e compare custos totais com hipotecas tradicionais amortizantes. Essencial para investidores imobiliários e aqueles planejando propriedade residencial a curto prazo.",
     "instructions": [
@@ -256,19 +448,83 @@
     "calculatorComponent": {
       "componentName": "InterestOnlyMortgageCalculator",
       "inputs": [
-        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 300000, "min": 50000, "max": 2000000, "step": 10000 },
-        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 5.5, "min": 2, "max": 15, "step": 0.125 },
-        { "name": "interestOnlyPeriod", "label": "Interest-Only Period (years)", "type": "number", "default": 5, "min": 1, "max": 10, "step": 1 },
-        { "name": "amortizationPeriod", "label": "Amortization Period (years)", "type": "number", "default": 25, "min": 15, "max": 40, "step": 1 },
-        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 6000, "min": 0, "max": 30000, "step": 100 },
-        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1500, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "loanAmount",
+          "label": "Loan Amount ($)",
+          "type": "number",
+          "default": 300000,
+          "min": 50000,
+          "max": 2000000,
+          "step": 10000
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "default": 5.5,
+          "min": 2,
+          "max": 15,
+          "step": 0.125
+        },
+        {
+          "name": "interestOnlyPeriod",
+          "label": "Interest-Only Period (years)",
+          "type": "number",
+          "default": 5,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "amortizationPeriod",
+          "label": "Amortization Period (years)",
+          "type": "number",
+          "default": 25,
+          "min": 15,
+          "max": 40,
+          "step": 1
+        },
+        {
+          "name": "propertyTax",
+          "label": "Annual Property Tax ($)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 30000,
+          "step": 100
+        },
+        {
+          "name": "homeInsurance",
+          "label": "Annual Home Insurance ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Interest-Only Payment = Loan Amount × Interest Rate / 12; Principal Payment = Loan Amount / (Amortization Period × 12)",
-      "output": { "label": "Current Monthly Payment", "default": "Enter mortgage details above", "format": "currency" },
+      "output": {
+        "label": "Current Monthly Payment",
+        "default": "Enter mortgage details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Interest-Only Payment", "field": "interestOnlyPayment", "format": "currency" },
-        { "label": "Full Payment (After)", "field": "fullPayment", "format": "currency" },
-        { "label": "Payment Increase", "field": "paymentIncrease", "format": "currency" }
+        {
+          "label": "Interest-Only Payment",
+          "field": "interestOnlyPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Full Payment (After)",
+          "field": "fullPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Payment Increase",
+          "field": "paymentIncrease",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -283,7 +539,11 @@
         "output": "Pagamento Mensal Juros: $1,125, Pagamento Balão: $300,000, Juros Totais Pagos: $40,500"
       }
     ],
-    "relatedCalculators": ["mortgage-calculator", "loan-calculator", "investment-calculator"],
+    "relatedCalculators": [
+      "mortgage-calculator",
+      "loan-calculator",
+      "investment-calculator"
+    ],
     "seoContent": {
       "introduction": "Domine as complexidades de hipotecas apenas juros com nossa calculadora especializada projetada especificamente para propriedades de investimento e financiamento estratégico imobiliário. Empréstimos apenas juros oferecem vantagens únicas para investidores imobiliários e aqueles planejando propriedade a curto prazo, mas requerem planejamento cuidadoso e entendimento do choque de pagamento quando pagamentos de capital começam. Nossa calculadora ajuda você a navegar estas estruturas sofisticadas de empréstimo, comparando pagamentos apenas juros com hipotecas tradicionais enquanto calcula as implicações de custo total e requerimentos de fluxo de caixa. Seja considerando compra de propriedade de investimento ou planejando sua estratégia de saída, esta ferramenta fornece a clareza necessária para tomar decisões informadas de hipoteca em mercados imobiliários competitivos.",
       "benefits": [
@@ -351,18 +611,37 @@
           "answer": "Calcule o aumento exato de pagamento usando nossa calculadora. Construa economias de emergência igual a 6-12 meses de novo valor de pagamento. Planeje venda de propriedade ou refinanciamento antes do período apenas juros terminar. Considere pagamentos extra durante período apenas juros para reduzir capital. Orce para piores cenários incluindo aumentos de taxa. Tenha planos de contingência para perda de trabalho ou mudanças de renda. Consulte consultores financeiros sobre timing e tolerância de risco."
         }
       ]
-    }
+    },
+    "component": "InterestOnlyMortgageCalculator"
   },
   "fr": {
     "title": "Calculateur d'Hypothèque Intérêts Seulement",
     "seoTitle": "Calculateur d'Hypothèque Intérêts Seulement - Calculez les Paiements Intérêts Seulement et Remboursement Principal",
     "metaDescription": "Calculateur gratuit d'hypothèque intérêts seulement. Calculez les paiements intérêts seulement, montants de remboursement principal et comparez avec les hypothèques traditionnelles. Essentiel pour les propriétés d'investissement et propriété à court terme.",
-    "keywords": ["calculateur hypothèque intérêts seulement", "calculateur prêt intérêts seulement", "calculateur remboursement hypothèque", "calculateur propriété investissement", "calculateur comparaison hypothèque"],
-    "longTailKeywords": ["comment fonctionne hypothèque intérêts seulement calculateur", "calculateur paiement hypothèque intérêts seulement", "calculateur remboursement principal hypothèque", "calculateur hypothèque propriété investissement", "calculateur hypothèque intérêts seulement vs traditionnel"],
+    "keywords": [
+      "calculateur hypothèque intérêts seulement",
+      "calculateur prêt intérêts seulement",
+      "calculateur remboursement hypothèque",
+      "calculateur propriété investissement",
+      "calculateur comparaison hypothèque"
+    ],
+    "longTailKeywords": [
+      "comment fonctionne hypothèque intérêts seulement calculateur",
+      "calculateur paiement hypothèque intérêts seulement",
+      "calculateur remboursement principal hypothèque",
+      "calculateur hypothèque propriété investissement",
+      "calculateur hypothèque intérêts seulement vs traditionnel"
+    ],
     "slug": "interest-only-mortgage-calculator",
     "category": "financial",
     "difficulty": "advanced",
-    "tags": ["hypothèque intérêts seulement", "propriété investissement", "paiements hypothèque", "remboursement principal", "comparaison hypothèque"],
+    "tags": [
+      "hypothèque intérêts seulement",
+      "propriété investissement",
+      "paiements hypothèque",
+      "remboursement principal",
+      "comparaison hypothèque"
+    ],
     "summary": "Calculez les paiements d'hypothèque intérêts seulement, exigences de remboursement principal et comparez avec les hypothèques traditionnelles pour des décisions de financement immobilier éclairées.",
     "description": "Notre calculateur spécialisé d'hypothèque intérêts seulement vous aide à comprendre les structures de prêt intérêts seulement courantes dans les propriétés d'investissement et scénarios de propriété à court terme. Calculez les paiements mensuels d'intérêts, montants de remboursement principal à la fin du prêt et comparez les coûts totaux avec les hypothèques traditionnelles amortissantes. Essentiel pour les investisseurs immobiliers et ceux planifiant une propriété résidentielle à court terme.",
     "instructions": [
@@ -374,19 +653,83 @@
     "calculatorComponent": {
       "componentName": "InterestOnlyMortgageCalculator",
       "inputs": [
-        { "name": "loanAmount", "label": "Loan Amount ($)", "type": "number", "default": 300000, "min": 50000, "max": 2000000, "step": 10000 },
-        { "name": "interestRate", "label": "Interest Rate (%)", "type": "number", "default": 5.5, "min": 2, "max": 15, "step": 0.125 },
-        { "name": "interestOnlyPeriod", "label": "Interest-Only Period (years)", "type": "number", "default": 5, "min": 1, "max": 10, "step": 1 },
-        { "name": "amortizationPeriod", "label": "Amortization Period (years)", "type": "number", "default": 25, "min": 15, "max": 40, "step": 1 },
-        { "name": "propertyTax", "label": "Annual Property Tax ($)", "type": "number", "default": 6000, "min": 0, "max": 30000, "step": 100 },
-        { "name": "homeInsurance", "label": "Annual Home Insurance ($)", "type": "number", "default": 1500, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "loanAmount",
+          "label": "Loan Amount ($)",
+          "type": "number",
+          "default": 300000,
+          "min": 50000,
+          "max": 2000000,
+          "step": 10000
+        },
+        {
+          "name": "interestRate",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "default": 5.5,
+          "min": 2,
+          "max": 15,
+          "step": 0.125
+        },
+        {
+          "name": "interestOnlyPeriod",
+          "label": "Interest-Only Period (years)",
+          "type": "number",
+          "default": 5,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "amortizationPeriod",
+          "label": "Amortization Period (years)",
+          "type": "number",
+          "default": 25,
+          "min": 15,
+          "max": 40,
+          "step": 1
+        },
+        {
+          "name": "propertyTax",
+          "label": "Annual Property Tax ($)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 30000,
+          "step": 100
+        },
+        {
+          "name": "homeInsurance",
+          "label": "Annual Home Insurance ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Interest-Only Payment = Loan Amount × Interest Rate / 12; Principal Payment = Loan Amount / (Amortization Period × 12)",
-      "output": { "label": "Current Monthly Payment", "default": "Enter mortgage details above", "format": "currency" },
+      "output": {
+        "label": "Current Monthly Payment",
+        "default": "Enter mortgage details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Interest-Only Payment", "field": "interestOnlyPayment", "format": "currency" },
-        { "label": "Full Payment (After)", "field": "fullPayment", "format": "currency" },
-        { "label": "Payment Increase", "field": "paymentIncrease", "format": "currency" }
+        {
+          "label": "Interest-Only Payment",
+          "field": "interestOnlyPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Full Payment (After)",
+          "field": "fullPayment",
+          "format": "currency"
+        },
+        {
+          "label": "Payment Increase",
+          "field": "paymentIncrease",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -401,7 +744,11 @@
         "output": "Paiement Mensuel Intérêts: $1,125, Paiement Ballon: $300,000, Intérêts Totaux Payés: $40,500"
       }
     ],
-    "relatedCalculators": ["mortgage-calculator", "loan-calculator", "investment-calculator"],
+    "relatedCalculators": [
+      "mortgage-calculator",
+      "loan-calculator",
+      "investment-calculator"
+    ],
     "seoContent": {
       "introduction": "Maîtrisez les complexités des hypothèques intérêts seulement avec notre calculatrice spécialisée conçue spécifiquement pour propriétés d'investissement et financement immobilier stratégique. Les prêts intérêts seulement offrent avantages uniques pour investisseurs immobiliers et ceux planifiant propriété à court terme, mais requièrent planification soigneuse et compréhension du choc de paiement quand paiements principal commencent. Notre calculatrice vous aide naviguer ces structures sophistiquées de prêt, comparant paiements intérêts seulement avec hypothèques traditionnelles tout calculant implications coût total et exigences flux trésorerie. Que vous considériez achat propriété d'investissement ou planifiant votre stratégie de sortie, cet outil fournit la clarté nécessaire pour prendre décisions éclairées d'hypothèque dans marchés immobiliers compétitifs.",
       "benefits": [
@@ -469,6 +816,7 @@
           "answer": "Calculez augmentation paiement exacte utilisant notre calculatrice. Construisez économies urgence égal à 6-12 mois nouveau montant paiement. Planifiez vente propriété ou refinancement avant période intérêts seulement finit. Considérez paiements supplémentaires pendant période intérêts seulement pour réduire principal. Budgétez pour pires scénarios incluant augmentations taux. Ayez plans contingence pour perte emploi ou changements revenu. Consultez conseillers financiers concernant timing et tolérance risque."
         }
       ]
-    }
+    },
+    "component": "InterestOnlyMortgageCalculator"
   }
 }

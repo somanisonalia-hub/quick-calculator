@@ -3,12 +3,31 @@
     "title": "Fraction Calculator",
     "seoTitle": "Fraction Calculator - Add, Subtract, Multiply, Divide Fractions Online",
     "metaDescription": "Free fraction calculator. Add, subtract, multiply, and divide fractions with step-by-step solutions. Convert between mixed numbers and improper fractions.",
-    "keywords": ["fraction calculator", "add fractions", "subtract fractions", "multiply fractions", "divide fractions"],
-    "longTailKeywords": ["fraction calculator with steps", "adding fractions calculator", "subtracting fractions calculator", "multiplying fractions calculator", "dividing fractions calculator"],
+    "keywords": [
+      "fraction calculator",
+      "add fractions",
+      "subtract fractions",
+      "multiply fractions",
+      "divide fractions"
+    ],
+    "longTailKeywords": [
+      "fraction calculator with steps",
+      "adding fractions calculator",
+      "subtracting fractions calculator",
+      "multiplying fractions calculator",
+      "dividing fractions calculator"
+    ],
     "slug": "fraction-calculator",
     "category": "math",
     "difficulty": "intermediate",
-    "tags": ["fractions", "math", "addition", "subtraction", "multiplication", "division"],
+    "tags": [
+      "fractions",
+      "math",
+      "addition",
+      "subtraction",
+      "multiplication",
+      "division"
+    ],
     "summary": "Complete fraction calculator with addition, subtraction, multiplication, division, and simplification.",
     "description": "Our comprehensive fraction calculator handles all basic fraction operations including addition, subtraction, multiplication, and division. It automatically finds common denominators, simplifies fractions, and provides step-by-step solutions. Perfect for students learning fractions, teachers demonstrating concepts, and anyone working with fractional calculations.",
     "instructions": [
@@ -21,25 +40,117 @@
     "calculatorComponent": {
       "componentName": "FractionCalculator",
       "inputs": [
-        { "name": "operation", "label": "Operation", "type": "select", "default": "add", "options": ["add", "subtract", "multiply", "divide"] },
-        { "name": "fraction1", "label": "First Fraction", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 2 }, "fields": [
-          { "name": "whole", "label": "Whole", "type": "number", "default": 0, "min": 0 },
-          { "name": "numerator", "label": "Numerator", "type": "number", "default": 1, "min": 0 },
-          { "name": "denominator", "label": "Denominator", "type": "number", "default": 2, "min": 1 }
-        ]},
-        { "name": "fraction2", "label": "Second Fraction", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 3 }, "fields": [
-          { "name": "whole", "label": "Whole", "type": "number", "default": 0, "min": 0 },
-          { "name": "numerator", "label": "Numerator", "type": "number", "default": 1, "min": 0 },
-          { "name": "denominator", "label": "Denominator", "type": "number", "default": 3, "min": 1 }
-        ]},
-        { "name": "outputFormat", "label": "Output Format", "type": "select", "default": "mixed", "options": ["mixed", "improper"] }
+        {
+          "name": "operation",
+          "label": "Operation",
+          "type": "select",
+          "default": "add",
+          "options": [
+            "add",
+            "subtract",
+            "multiply",
+            "divide"
+          ]
+        },
+        {
+          "name": "fraction1",
+          "label": "First Fraction",
+          "type": "fraction",
+          "default": {
+            "whole": 0,
+            "numerator": 1,
+            "denominator": 2
+          },
+          "fields": [
+            {
+              "name": "whole",
+              "label": "Whole",
+              "type": "number",
+              "default": 0,
+              "min": 0
+            },
+            {
+              "name": "numerator",
+              "label": "Numerator",
+              "type": "number",
+              "default": 1,
+              "min": 0
+            },
+            {
+              "name": "denominator",
+              "label": "Denominator",
+              "type": "number",
+              "default": 2,
+              "min": 1
+            }
+          ]
+        },
+        {
+          "name": "fraction2",
+          "label": "Second Fraction",
+          "type": "fraction",
+          "default": {
+            "whole": 0,
+            "numerator": 1,
+            "denominator": 3
+          },
+          "fields": [
+            {
+              "name": "whole",
+              "label": "Whole",
+              "type": "number",
+              "default": 0,
+              "min": 0
+            },
+            {
+              "name": "numerator",
+              "label": "Numerator",
+              "type": "number",
+              "default": 1,
+              "min": 0
+            },
+            {
+              "name": "denominator",
+              "label": "Denominator",
+              "type": "number",
+              "default": 3,
+              "min": 1
+            }
+          ]
+        },
+        {
+          "name": "outputFormat",
+          "label": "Output Format",
+          "type": "select",
+          "default": "mixed",
+          "options": [
+            "mixed",
+            "improper"
+          ]
+        }
       ],
       "formula": "Addition: a/b + c/d = (ad + bc)/bd; Subtraction: a/b - c/d = (ad - bc)/bd; Multiplication: a/b × c/d = ac/bd; Division: a/b ÷ c/d = ad/bc",
-      "output": { "label": "Result", "default": "Enter fractions above", "format": "text" },
+      "output": {
+        "label": "Result",
+        "default": "Enter fractions above",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Step-by-Step Solution", "field": "steps", "format": "text" },
-        { "label": "Simplified Result", "field": "simplified", "format": "text" },
-        { "label": "Decimal Equivalent", "field": "decimal", "format": "number" }
+        {
+          "label": "Step-by-Step Solution",
+          "field": "steps",
+          "format": "text"
+        },
+        {
+          "label": "Simplified Result",
+          "field": "simplified",
+          "format": "text"
+        },
+        {
+          "label": "Decimal Equivalent",
+          "field": "decimal",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -69,7 +180,11 @@
         "output": "3 5/6 (or 3.833...)"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "scientific-calculator", "unit-converter"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "scientific-calculator",
+      "unit-converter"
+    ],
     "seoContent": {
       "introduction": "Master fraction calculations with our comprehensive online fraction calculator that handles all basic fraction operations with step-by-step solutions. Whether you're adding fractions, subtracting fractions, multiplying fractions, or dividing fractions, this calculator automatically finds common denominators, simplifies results, and provides detailed explanations perfect for students learning fractions. Access mixed number and improper fraction conversions, automatic simplification to lowest terms, and decimal equivalents for complete fraction understanding. Perfect for elementary and middle school students mastering fraction concepts, teachers demonstrating mathematical operations, and anyone working with fractional calculations in cooking, construction, engineering, or financial applications. Handle complex fraction problems with confidence using our educational tool that shows every step of the mathematical process.",
       "benefits": [
@@ -144,18 +259,38 @@
           "answer": "Yes, the calculator can handle various complex fraction scenarios including mixed number arithmetic, multiple operations, and fractions with large numbers. It automatically manages common denominator calculations for addition and subtraction, handles reciprocal operations for division, and provides step-by-step solutions for all operations. The calculator also supports decimal conversion for practical applications and can handle both positive and negative fraction values."
         }
       ]
-    }
+    },
+    "component": "FractionCalculator"
   },
   "es": {
     "title": "Calculadora de Fracciones",
     "seoTitle": "Calculadora de Fracciones - Suma, Resta, Multiplica, Divide Fracciones Online",
     "metaDescription": "Calculadora gratuita de fracciones. Suma, resta, multiplica y divide fracciones con soluciones paso a paso. Convierte entre números mixtos y fracciones impropias.",
-    "keywords": ["calculadora fracciones", "sumar fracciones", "restar fracciones", "multiplicar fracciones", "dividir fracciones"],
-    "longTailKeywords": ["calculadora fracciones con pasos", "sumando fracciones calculadora", "restando fracciones calculadora", "multiplicando fracciones calculadora", "dividiendo fracciones calculadora"],
+    "keywords": [
+      "calculadora fracciones",
+      "sumar fracciones",
+      "restar fracciones",
+      "multiplicar fracciones",
+      "dividir fracciones"
+    ],
+    "longTailKeywords": [
+      "calculadora fracciones con pasos",
+      "sumando fracciones calculadora",
+      "restando fracciones calculadora",
+      "multiplicando fracciones calculadora",
+      "dividiendo fracciones calculadora"
+    ],
     "slug": "fraction-calculator",
     "category": "math",
     "difficulty": "intermediate",
-    "tags": ["fracciones", "matemáticas", "suma", "resta", "multiplicación", "división"],
+    "tags": [
+      "fracciones",
+      "matemáticas",
+      "suma",
+      "resta",
+      "multiplicación",
+      "división"
+    ],
     "summary": "Calculadora completa de fracciones con suma, resta, multiplicación, división y simplificación.",
     "description": "Nuestra calculadora integral de fracciones maneja todas operaciones básicas fracciones incluyendo suma, resta, multiplicación y división. Encuentra automáticamente denominadores comunes, simplifica fracciones, y proporciona soluciones paso a paso. Perfecta para estudiantes aprendiendo fracciones, maestros demostrando conceptos, y cualquiera trabajando con cálculos fraccionarios.",
     "instructions": [
@@ -168,25 +303,117 @@
     "calculatorComponent": {
       "componentName": "FractionCalculator",
       "inputs": [
-        { "name": "operation", "label": "Operación", "type": "select", "default": "add", "options": ["add", "subtract", "multiply", "divide"] },
-        { "name": "fraction1", "label": "Primera Fracción", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 2 }, "fields": [
-          { "name": "whole", "label": "Entero", "type": "number", "default": 0, "min": 0 },
-          { "name": "numerator", "label": "Numerador", "type": "number", "default": 1, "min": 0 },
-          { "name": "denominator", "label": "Denominador", "type": "number", "default": 2, "min": 1 }
-        ]},
-        { "name": "fraction2", "label": "Segunda Fracción", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 3 }, "fields": [
-          { "name": "whole", "label": "Entero", "type": "number", "default": 0, "min": 0 },
-          { "name": "numerator", "label": "Numerador", "type": "number", "default": 1, "min": 0 },
-          { "name": "denominator", "label": "Denominador", "type": "number", "default": 3, "min": 1 }
-        ]},
-        { "name": "outputFormat", "label": "Formato Salida", "type": "select", "default": "mixed", "options": ["mixed", "improper"] }
+        {
+          "name": "operation",
+          "label": "Operación",
+          "type": "select",
+          "default": "add",
+          "options": [
+            "add",
+            "subtract",
+            "multiply",
+            "divide"
+          ]
+        },
+        {
+          "name": "fraction1",
+          "label": "Primera Fracción",
+          "type": "fraction",
+          "default": {
+            "whole": 0,
+            "numerator": 1,
+            "denominator": 2
+          },
+          "fields": [
+            {
+              "name": "whole",
+              "label": "Entero",
+              "type": "number",
+              "default": 0,
+              "min": 0
+            },
+            {
+              "name": "numerator",
+              "label": "Numerador",
+              "type": "number",
+              "default": 1,
+              "min": 0
+            },
+            {
+              "name": "denominator",
+              "label": "Denominador",
+              "type": "number",
+              "default": 2,
+              "min": 1
+            }
+          ]
+        },
+        {
+          "name": "fraction2",
+          "label": "Segunda Fracción",
+          "type": "fraction",
+          "default": {
+            "whole": 0,
+            "numerator": 1,
+            "denominator": 3
+          },
+          "fields": [
+            {
+              "name": "whole",
+              "label": "Entero",
+              "type": "number",
+              "default": 0,
+              "min": 0
+            },
+            {
+              "name": "numerator",
+              "label": "Numerador",
+              "type": "number",
+              "default": 1,
+              "min": 0
+            },
+            {
+              "name": "denominator",
+              "label": "Denominador",
+              "type": "number",
+              "default": 3,
+              "min": 1
+            }
+          ]
+        },
+        {
+          "name": "outputFormat",
+          "label": "Formato Salida",
+          "type": "select",
+          "default": "mixed",
+          "options": [
+            "mixed",
+            "improper"
+          ]
+        }
       ],
       "formula": "Suma: a/b + c/d = (ad + bc)/bd; Resta: a/b - c/d = (ad - bc)/bd; Multiplicación: a/b × c/d = ac/bd; División: a/b ÷ c/d = ad/bc",
-      "output": { "label": "Resultado", "default": "Ingresa fracciones arriba", "format": "text" },
+      "output": {
+        "label": "Resultado",
+        "default": "Ingresa fracciones arriba",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Solución Paso a Paso", "field": "steps", "format": "text" },
-        { "label": "Resultado Simplificado", "field": "simplified", "format": "text" },
-        { "label": "Equivalente Decimal", "field": "decimal", "format": "number" }
+        {
+          "label": "Solución Paso a Paso",
+          "field": "steps",
+          "format": "text"
+        },
+        {
+          "label": "Resultado Simplificado",
+          "field": "simplified",
+          "format": "text"
+        },
+        {
+          "label": "Equivalente Decimal",
+          "field": "decimal",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -216,7 +443,11 @@
         "output": "3 5/6 (o 3.833...)"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "scientific-calculator", "unit-converter"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "scientific-calculator",
+      "unit-converter"
+    ],
     "seoContent": {
       "introduction": "Domine cálculos fraccionarios con nuestra calculadora fraccionaria integral en línea que maneja todas operaciones básicas fracciones con soluciones paso a paso. Ya sea sumando fracciones, restando fracciones, multiplicando fracciones o dividiendo fracciones, esta calculadora encuentra automáticamente denominadores comunes, simplifica resultados, y proporciona explicaciones detalladas perfectas para estudiantes aprendiendo fracciones. Acceda conversiones números mixtos y fracciones impropias, simplificación automática a términos más bajos, y equivalentes decimales para comprensión fraccionaria completa. Perfecta para estudiantes primaria y secundaria dominando conceptos fraccionarios, maestros demostrando operaciones matemáticas, y cualquiera trabajando con cálculos fraccionarios en cocina, construcción, ingeniería, o aplicaciones financieras. Maneje problemas fraccionarios complejos con confianza usando nuestra herramienta educativa que muestra cada paso proceso matemático.",
       "benefits": [
@@ -291,18 +522,38 @@
           "answer": "Sí, la calculadora puede manejar varios escenarios fraccionarios complejos incluyendo aritmética números mixtos, múltiples operaciones, y fracciones con números grandes. Maneja automáticamente cálculos denominador común para suma y resta, maneja operaciones recíprocas para división, y proporciona soluciones paso a paso para todas operaciones. La calculadora también soporta conversión decimal para aplicaciones prácticas y puede manejar valores fraccionarios positivos y negativos."
         }
       ]
-    }
+    },
+    "component": "FractionCalculator"
   },
   "pt": {
     "title": "Calculadora de Frações",
     "seoTitle": "Calculadora de Frações - Soma, Subtrai, Multiplica, Divide Frações Online",
     "metaDescription": "Calculadora gratuita de frações. Soma, subtrai, multiplica e divide frações com soluções passo a passo. Converte entre números mistos e frações impróprias.",
-    "keywords": ["calculadora frações", "somar frações", "subtrair frações", "multiplicar frações", "dividir frações"],
-    "longTailKeywords": ["calculadora frações com passos", "somando frações calculadora", "subtraindo frações calculadora", "multiplicando frações calculadora", "dividindo frações calculadora"],
+    "keywords": [
+      "calculadora frações",
+      "somar frações",
+      "subtrair frações",
+      "multiplicar frações",
+      "dividir frações"
+    ],
+    "longTailKeywords": [
+      "calculadora frações com passos",
+      "somando frações calculadora",
+      "subtraindo frações calculadora",
+      "multiplicando frações calculadora",
+      "dividindo frações calculadora"
+    ],
     "slug": "fraction-calculator",
     "category": "math",
     "difficulty": "intermediate",
-    "tags": ["frações", "matemática", "soma", "subtração", "multiplicação", "divisão"],
+    "tags": [
+      "frações",
+      "matemática",
+      "soma",
+      "subtração",
+      "multiplicação",
+      "divisão"
+    ],
     "summary": "Calculadora completa de frações com soma, subtração, multiplicação, divisão e simplificação.",
     "description": "Nossa calculadora abrangente de frações lida com todas operações básicas frações incluindo soma, subtração, multiplicação e divisão. Encontra automaticamente denominadores comuns, simplifica frações, e fornece soluções passo a passo. Perfeita para estudantes aprendendo frações, professores demonstrando conceitos, e qualquer um trabalhando com cálculos fracionários.",
     "instructions": [
@@ -315,25 +566,117 @@
     "calculatorComponent": {
       "componentName": "FractionCalculator",
       "inputs": [
-        { "name": "operation", "label": "Operação", "type": "select", "default": "add", "options": ["add", "subtract", "multiply", "divide"] },
-        { "name": "fraction1", "label": "Primeira Fração", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 2 }, "fields": [
-          { "name": "whole", "label": "Inteiro", "type": "number", "default": 0, "min": 0 },
-          { "name": "numerator", "label": "Numerador", "type": "number", "default": 1, "min": 0 },
-          { "name": "denominator", "label": "Denominador", "type": "number", "default": 2, "min": 1 }
-        ]},
-        { "name": "fraction2", "label": "Segunda Fração", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 3 }, "fields": [
-          { "name": "whole", "label": "Inteiro", "type": "number", "default": 0, "min": 0 },
-          { "name": "numerator", "label": "Numerador", "type": "number", "default": 1, "min": 0 },
-          { "name": "denominator", "label": "Denominador", "type": "number", "default": 3, "min": 1 }
-        ]},
-        { "name": "outputFormat", "label": "Formato Saída", "type": "select", "default": "mixed", "options": ["mixed", "improper"] }
+        {
+          "name": "operation",
+          "label": "Operação",
+          "type": "select",
+          "default": "add",
+          "options": [
+            "add",
+            "subtract",
+            "multiply",
+            "divide"
+          ]
+        },
+        {
+          "name": "fraction1",
+          "label": "Primeira Fração",
+          "type": "fraction",
+          "default": {
+            "whole": 0,
+            "numerator": 1,
+            "denominator": 2
+          },
+          "fields": [
+            {
+              "name": "whole",
+              "label": "Inteiro",
+              "type": "number",
+              "default": 0,
+              "min": 0
+            },
+            {
+              "name": "numerator",
+              "label": "Numerador",
+              "type": "number",
+              "default": 1,
+              "min": 0
+            },
+            {
+              "name": "denominator",
+              "label": "Denominador",
+              "type": "number",
+              "default": 2,
+              "min": 1
+            }
+          ]
+        },
+        {
+          "name": "fraction2",
+          "label": "Segunda Fração",
+          "type": "fraction",
+          "default": {
+            "whole": 0,
+            "numerator": 1,
+            "denominator": 3
+          },
+          "fields": [
+            {
+              "name": "whole",
+              "label": "Inteiro",
+              "type": "number",
+              "default": 0,
+              "min": 0
+            },
+            {
+              "name": "numerator",
+              "label": "Numerador",
+              "type": "number",
+              "default": 1,
+              "min": 0
+            },
+            {
+              "name": "denominator",
+              "label": "Denominador",
+              "type": "number",
+              "default": 3,
+              "min": 1
+            }
+          ]
+        },
+        {
+          "name": "outputFormat",
+          "label": "Formato Saída",
+          "type": "select",
+          "default": "mixed",
+          "options": [
+            "mixed",
+            "improper"
+          ]
+        }
       ],
       "formula": "Soma: a/b + c/d = (ad + bc)/bd; Subtração: a/b - c/d = (ad - bc)/bd; Multiplicação: a/b × c/d = ac/bd; Divisão: a/b ÷ c/d = ad/bc",
-      "output": { "label": "Resultado", "default": "Digite frações acima", "format": "text" },
+      "output": {
+        "label": "Resultado",
+        "default": "Digite frações acima",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Solução Passo a Passo", "field": "steps", "format": "text" },
-        { "label": "Resultado Simplificado", "field": "simplified", "format": "text" },
-        { "label": "Equivalente Decimal", "field": "decimal", "format": "number" }
+        {
+          "label": "Solução Passo a Passo",
+          "field": "steps",
+          "format": "text"
+        },
+        {
+          "label": "Resultado Simplificado",
+          "field": "simplified",
+          "format": "text"
+        },
+        {
+          "label": "Equivalente Decimal",
+          "field": "decimal",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -363,7 +706,11 @@
         "output": "3 5/6 (ou 3.833...)"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "scientific-calculator", "unit-converter"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "scientific-calculator",
+      "unit-converter"
+    ],
     "seoContent": {
       "introduction": "Domine cálculos fração com nossa calculadora fração abrangente online que lida com todas operações básicas frações com soluções passo a passo. Seja somando frações, subtraindo frações, multiplicando frações ou dividindo frações, esta calculadora encontra automaticamente denominadores comuns, simplifica resultados, e fornece explicações detalhadas perfeitas para estudantes aprendendo frações. Acesse conversões números mistos e frações impróprias, simplificação automática a termos mais baixos, e equivalentes decimais para compreensão fração completa. Perfeita para estudantes fundamental e médio dominando conceitos fracionários, professores demonstrando operações matemáticas, e qualquer um trabalhando com cálculos fracionários em cozinha, construção, engenharia, ou aplicações financeiras. Lide com problemas fração complexos com confiança usando nossa ferramenta educativa que mostra cada passo processo matemático.",
       "benefits": [
@@ -438,18 +785,38 @@
           "answer": "Sim, a calculadora pode lidar com vários cenários fração complexos incluindo aritmética números mistos, múltiplas operações, e frações com números grandes. Lida automaticamente com cálculos denominador comum para soma e subtração, maneja operações recíprocas para divisão, e fornece soluções passo a passo para todas operações. A calculadora também suporta conversão decimal para aplicações práticas e pode lidar com valores fração positivos e negativos."
         }
       ]
-    }
+    },
+    "component": "FractionCalculator"
   },
   "fr": {
     "title": "Calculateur de Fractions",
     "seoTitle": "Calculateur de Fractions - Addition, Soustraction, Multiplication, Division de Fractions en Ligne",
     "metaDescription": "Calculateur gratuit de fractions. Addition, soustraction, multiplication et division de fractions avec solutions étape par étape. Conversion entre nombres mixtes et fractions impropres.",
-    "keywords": ["calculateur fractions", "addition fractions", "soustraction fractions", "multiplication fractions", "division fractions"],
-    "longTailKeywords": ["calculateur fractions avec étapes", "addition fractions calculateur", "soustraction fractions calculateur", "multiplication fractions calculateur", "division fractions calculateur"],
+    "keywords": [
+      "calculateur fractions",
+      "addition fractions",
+      "soustraction fractions",
+      "multiplication fractions",
+      "division fractions"
+    ],
+    "longTailKeywords": [
+      "calculateur fractions avec étapes",
+      "addition fractions calculateur",
+      "soustraction fractions calculateur",
+      "multiplication fractions calculateur",
+      "division fractions calculateur"
+    ],
     "slug": "fraction-calculator",
     "category": "math",
     "difficulty": "intermediate",
-    "tags": ["fractions", "mathématiques", "addition", "soustraction", "multiplication", "division"],
+    "tags": [
+      "fractions",
+      "mathématiques",
+      "addition",
+      "soustraction",
+      "multiplication",
+      "division"
+    ],
     "summary": "Calculateur complet de fractions avec addition, soustraction, multiplication, division et simplification.",
     "description": "Notre calculateur complet de fractions gère toutes opérations de base fractions incluant addition, soustraction, multiplication et division. Il trouve automatiquement dénominateurs communs, simplifie fractions, et fournit solutions étape par étape. Parfait pour étudiants apprenant fractions, enseignants démontrant concepts, et quiconque travaillant avec calculs fractionnaires.",
     "instructions": [
@@ -462,25 +829,117 @@
     "calculatorComponent": {
       "componentName": "FractionCalculator",
       "inputs": [
-        { "name": "operation", "label": "Opération", "type": "select", "default": "add", "options": ["add", "subtract", "multiply", "divide"] },
-        { "name": "fraction1", "label": "Première Fraction", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 2 }, "fields": [
-          { "name": "whole", "label": "Entier", "type": "number", "default": 0, "min": 0 },
-          { "name": "numerator", "label": "Numérateur", "type": "number", "default": 1, "min": 0 },
-          { "name": "denominator", "label": "Dénominateur", "type": "number", "default": 2, "min": 1 }
-        ]},
-        { "name": "fraction2", "label": "Deuxième Fraction", "type": "fraction", "default": { "whole": 0, "numerator": 1, "denominator": 3 }, "fields": [
-          { "name": "whole", "label": "Entier", "type": "number", "default": 0, "min": 0 },
-          { "name": "numerator", "label": "Numérateur", "type": "number", "default": 1, "min": 0 },
-          { "name": "denominator", "label": "Dénominateur", "type": "number", "default": 3, "min": 1 }
-        ]},
-        { "name": "outputFormat", "label": "Format Sortie", "type": "select", "default": "mixed", "options": ["mixed", "improper"] }
+        {
+          "name": "operation",
+          "label": "Opération",
+          "type": "select",
+          "default": "add",
+          "options": [
+            "add",
+            "subtract",
+            "multiply",
+            "divide"
+          ]
+        },
+        {
+          "name": "fraction1",
+          "label": "Première Fraction",
+          "type": "fraction",
+          "default": {
+            "whole": 0,
+            "numerator": 1,
+            "denominator": 2
+          },
+          "fields": [
+            {
+              "name": "whole",
+              "label": "Entier",
+              "type": "number",
+              "default": 0,
+              "min": 0
+            },
+            {
+              "name": "numerator",
+              "label": "Numérateur",
+              "type": "number",
+              "default": 1,
+              "min": 0
+            },
+            {
+              "name": "denominator",
+              "label": "Dénominateur",
+              "type": "number",
+              "default": 2,
+              "min": 1
+            }
+          ]
+        },
+        {
+          "name": "fraction2",
+          "label": "Deuxième Fraction",
+          "type": "fraction",
+          "default": {
+            "whole": 0,
+            "numerator": 1,
+            "denominator": 3
+          },
+          "fields": [
+            {
+              "name": "whole",
+              "label": "Entier",
+              "type": "number",
+              "default": 0,
+              "min": 0
+            },
+            {
+              "name": "numerator",
+              "label": "Numérateur",
+              "type": "number",
+              "default": 1,
+              "min": 0
+            },
+            {
+              "name": "denominator",
+              "label": "Dénominateur",
+              "type": "number",
+              "default": 3,
+              "min": 1
+            }
+          ]
+        },
+        {
+          "name": "outputFormat",
+          "label": "Format Sortie",
+          "type": "select",
+          "default": "mixed",
+          "options": [
+            "mixed",
+            "improper"
+          ]
+        }
       ],
       "formula": "Addition: a/b + c/d = (ad + bc)/bd; Soustraction: a/b - c/d = (ad - bc)/bd; Multiplication: a/b × c/d = ac/bd; Division: a/b ÷ c/d = ad/bc",
-      "output": { "label": "Résultat", "default": "Entrez fractions ci-dessus", "format": "text" },
+      "output": {
+        "label": "Résultat",
+        "default": "Entrez fractions ci-dessus",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Solution Étape par Étape", "field": "steps", "format": "text" },
-        { "label": "Résultat Simplifié", "field": "simplified", "format": "text" },
-        { "label": "Équivalent Décimal", "field": "decimal", "format": "number" }
+        {
+          "label": "Solution Étape par Étape",
+          "field": "steps",
+          "format": "text"
+        },
+        {
+          "label": "Résultat Simplifié",
+          "field": "simplified",
+          "format": "text"
+        },
+        {
+          "label": "Équivalent Décimal",
+          "field": "decimal",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -510,7 +969,11 @@
         "output": "3 5/6 (ou 3.833...)"
       }
     ],
-    "relatedCalculators": ["percentage-calculator", "scientific-calculator", "unit-converter"],
+    "relatedCalculators": [
+      "percentage-calculator",
+      "scientific-calculator",
+      "unit-converter"
+    ],
     "seoContent": {
       "introduction": "Maîtrisez calculs fraction avec notre calculatrice fraction complète en ligne qui gère toutes opérations de base fractions avec solutions étape par étape. Que vous ajoutiez fractions, soustrayiez fractions, multipliiez fractions ou divisiiez fractions, cette calculatrice trouve automatiquement dénominateurs communs, simplifie résultats, et fournit explications détaillées parfaites pour étudiants apprenant fractions. Accédez conversions nombres mixtes et fractions impropres, simplification automatique à termes plus bas, et équivalents décimaux pour compréhension fraction complète. Parfaite pour étudiants primaire et collège maîtrisant concepts fractionnaires, enseignants démontrant opérations mathématiques, et quiconque travaillant avec calculs fractionnaires en cuisine, construction, ingénierie, ou applications financières. Gérez problèmes fraction complexes avec confiance utilisant notre outil éducatif qui montre chaque étape processus mathématique.",
       "benefits": [
@@ -585,6 +1048,7 @@
           "answer": "Oui, la calculatrice peut gérer divers scénarios fraction complexes incluant arithmétique nombres mixtes, multiples opérations, et fractions avec grands nombres. Elle gère automatiquement calculs dénominateur commun pour addition et soustraction, gère opérations réciproques pour division, et fournit solutions étape par étape pour toutes opérations. La calculatrice supporte aussi conversion décimale pour applications pratiques et peut gérer valeurs fraction positives et négatives."
         }
       ]
-    }
+    },
+    "component": "FractionCalculator"
   }
 }

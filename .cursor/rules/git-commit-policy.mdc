@@ -1,0 +1,69 @@
+---
+description: Git commit policy - Only commit when explicitly requested by user
+alwaysApply: true
+---
+
+# Git Commit Policy
+
+## Rule: User-Controlled Commits Only
+
+**NEVER commit code automatically.** Only create git commits when the user explicitly requests it.
+
+### When to Commit
+
+✅ User explicitly says:
+- "commit this"
+- "git commit"
+- "save changes"
+- "push this"
+- "create a commit"
+
+### When NOT to Commit
+
+❌ Do NOT commit:
+- After completing a task (even if code is complete)
+- After adding new features
+- After fixing bugs
+- After running tests
+- Automatically as part of workflow
+- Unless explicitly instructed by the user
+
+### What to Do Instead
+
+When you complete a task:
+
+1. **Show status**: Display what changes were made
+2. **Ask permission**: Say "Ready to commit? Let me know when you want me to."
+3. **Wait for approval**: Only commit when user explicitly approves
+4. **Report changes**: Show `git status` before and after any commit
+
+### Example Workflow
+
+```
+❌ BAD:
+User: "Add new calculator"
+AI: [Adds calculator, tests it, commits automatically]
+Result: Commit made without permission
+
+✅ GOOD:
+User: "Add new calculator"
+AI: [Adds calculator, tests it]
+AI: "✅ Debt Payoff Calculator completed. 
+    - 5 files created (JSON, TSX, etc)
+    - All tests passing
+    - Ready for commit when you approve"
+User: "commit this"
+AI: [Creates git commit with message]
+```
+
+### Git Commands Allowed Without Permission
+
+These operational commands are fine without permission:
+- `git status` (checking status)
+- `git log` (viewing history)
+- `git diff` (viewing changes)
+- `git add` (only when preparing for user-approved commit)
+
+### Summary
+
+**User controls commits. AI prepares and reports.**

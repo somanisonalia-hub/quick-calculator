@@ -3,12 +3,30 @@
     "title": "Stock Return Calculator",
     "seoTitle": "Stock Return Calculator - Calculate Investment Returns and Portfolio Performance",
     "metaDescription": "Free stock return calculator. Calculate total returns, annualized returns, and portfolio performance. Perfect for investors tracking stock performance and investment growth.",
-    "keywords": ["stock return calculator", "investment return calculator", "portfolio calculator", "stock performance calculator", "annualized return calculator"],
-    "longTailKeywords": ["how to calculate stock returns", "investment performance calculator", "portfolio return calculator", "stock growth calculator", "total return calculation"],
+    "keywords": [
+      "stock return calculator",
+      "investment return calculator",
+      "portfolio calculator",
+      "stock performance calculator",
+      "annualized return calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate stock returns",
+      "investment performance calculator",
+      "portfolio return calculator",
+      "stock growth calculator",
+      "total return calculation"
+    ],
     "slug": "stock-return-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["stocks", "investment", "returns", "portfolio", "performance"],
+    "tags": [
+      "stocks",
+      "investment",
+      "returns",
+      "portfolio",
+      "performance"
+    ],
     "summary": "Calculate stock returns, annualized performance, and portfolio growth to track your investment success over time.",
     "description": "Our comprehensive stock return calculator helps investors analyze their portfolio performance. Calculate total returns, annualized returns, dividend yields, and compound growth. Perfect for tracking individual stocks, mutual funds, ETFs, and overall portfolio performance with detailed breakdowns and performance metrics.",
     "instructions": [
@@ -20,18 +38,74 @@
     "calculatorComponent": {
       "componentName": "StockReturnCalculator",
       "inputs": [
-        { "name": "initialInvestment", "label": "Initial Investment ($)", "type": "number", "default": 10000, "min": 100, "max": 1000000, "step": 100 },
-        { "name": "purchasePrice", "label": "Purchase Price per Share ($)", "type": "number", "default": 50, "min": 0.01, "max": 10000, "step": 0.01 },
-        { "name": "currentPrice", "label": "Current Price per Share ($)", "type": "number", "default": 75, "min": 0.01, "max": 10000, "step": 0.01 },
-        { "name": "sharesOwned", "label": "Shares Owned", "type": "number", "default": 200, "min": 1, "max": 100000, "step": 1 },
-        { "name": "holdingPeriod", "label": "Holding Period (years)", "type": "number", "default": 2, "min": 0.01, "max": 50, "step": 0.1 }
+        {
+          "name": "initialInvestment",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 100,
+          "max": 1000000,
+          "step": 100
+        },
+        {
+          "name": "purchasePrice",
+          "label": "Purchase Price per Share ($)",
+          "type": "number",
+          "default": 50,
+          "min": 0.01,
+          "max": 10000,
+          "step": 0.01
+        },
+        {
+          "name": "currentPrice",
+          "label": "Current Price per Share ($)",
+          "type": "number",
+          "default": 75,
+          "min": 0.01,
+          "max": 10000,
+          "step": 0.01
+        },
+        {
+          "name": "sharesOwned",
+          "label": "Shares Owned",
+          "type": "number",
+          "default": 200,
+          "min": 1,
+          "max": 100000,
+          "step": 1
+        },
+        {
+          "name": "holdingPeriod",
+          "label": "Holding Period (years)",
+          "type": "number",
+          "default": 2,
+          "min": 0.01,
+          "max": 50,
+          "step": 0.1
+        }
       ],
       "formula": "Total Return = (Current Value - Initial Investment) / Initial Investment × 100; Annualized Return = (1 + Total Return)^(1/years) - 1",
-      "output": { "label": "Total Return", "default": "Enter investment details above", "format": "percentage" },
+      "output": {
+        "label": "Total Return",
+        "default": "Enter investment details above",
+        "format": "percentage"
+      },
       "additionalOutputs": [
-        { "label": "Current Value", "field": "currentValue", "format": "currency" },
-        { "label": "Profit/Loss", "field": "profitLoss", "format": "currency" },
-        { "label": "Annualized Return", "field": "annualizedReturn", "format": "percentage" }
+        {
+          "label": "Current Value",
+          "field": "currentValue",
+          "format": "currency"
+        },
+        {
+          "label": "Profit/Loss",
+          "field": "profitLoss",
+          "format": "currency"
+        },
+        {
+          "label": "Annualized Return",
+          "field": "annualizedReturn",
+          "format": "percentage"
+        }
       ]
     },
     "examples": [
@@ -46,7 +120,11 @@
         "output": "Total Return: 48%, Annualized Return: 8.3% (including dividends)"
       }
     ],
-    "relatedCalculators": ["investment-calculator", "future-value-calculator", "inflation-calculator"],
+    "relatedCalculators": [
+      "investment-calculator",
+      "future-value-calculator",
+      "inflation-calculator"
+    ],
     "seoContent": {
       "introduction": "Track and analyze your stock market investments with precision using our comprehensive stock return calculator that measures total returns, annualized performance, and portfolio growth. Whether you're a day trader, long-term investor, or retirement planner, understanding your investment returns is crucial for making informed decisions. Our calculator handles individual stocks, ETFs, mutual funds, and entire portfolios, providing detailed performance metrics including capital gains, dividends, and compound growth. Make data-driven investment decisions with accurate return calculations that account for time value and market performance.",
       "benefits": [
@@ -116,18 +194,37 @@
           "answer": "Always include dividends for accurate total return calculations. Dividends represent 40-50% of long-term stock market returns. Excluding dividends significantly understates performance. For example, S&P 500 total returns average 10% annually including dividends, vs. 7% price-only returns. Total return (price + dividends) provides complete performance picture. Use price-only returns only for specific analysis purposes like comparing to non-dividend paying investments."
         }
       ]
-    }
+    },
+    "component": "StockReturnCalculator"
   },
   "es": {
     "title": "Calculadora de Rendimiento de Acciones",
     "seoTitle": "Calculadora de Rendimiento de Acciones - Calcula Rendimientos de Inversión y Rendimiento de Portafolio",
     "metaDescription": "Calculadora gratuita de rendimiento de acciones. Calcula rendimientos totales, rendimientos anualizados y rendimiento de portafolio. Perfecta para inversionistas rastreando rendimiento de acciones y crecimiento de inversión.",
-    "keywords": ["calculadora rendimiento acciones", "calculadora rendimiento inversión", "calculadora portafolio", "calculadora rendimiento acciones", "calculadora rendimiento anualizado"],
-    "longTailKeywords": ["cómo calcular rendimientos acciones", "calculadora rendimiento inversión", "calculadora rendimiento portafolio", "calculadora crecimiento acciones", "cálculo rendimiento total"],
+    "keywords": [
+      "calculadora rendimiento acciones",
+      "calculadora rendimiento inversión",
+      "calculadora portafolio",
+      "calculadora rendimiento acciones",
+      "calculadora rendimiento anualizado"
+    ],
+    "longTailKeywords": [
+      "cómo calcular rendimientos acciones",
+      "calculadora rendimiento inversión",
+      "calculadora rendimiento portafolio",
+      "calculadora crecimiento acciones",
+      "cálculo rendimiento total"
+    ],
     "slug": "stock-return-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["acciones", "inversión", "rendimientos", "portafolio", "rendimiento"],
+    "tags": [
+      "acciones",
+      "inversión",
+      "rendimientos",
+      "portafolio",
+      "rendimiento"
+    ],
     "summary": "Calcula rendimientos de acciones, rendimiento anualizado y crecimiento de portafolio para rastrear tu éxito de inversión con el tiempo.",
     "description": "Nuestra completa calculadora de rendimiento de acciones ayuda a los inversionistas a analizar el rendimiento de su portafolio. Calcula rendimientos totales, rendimientos anualizados, rendimientos por dividendos y crecimiento compuesto. Perfecta para rastrear acciones individuales, fondos mutuos, ETFs y rendimiento general de portafolio con desgloses detallados y métricas de rendimiento.",
     "instructions": [
@@ -139,18 +236,74 @@
     "calculatorComponent": {
       "componentName": "StockReturnCalculator",
       "inputs": [
-        { "name": "initialInvestment", "label": "Initial Investment ($)", "type": "number", "default": 10000, "min": 100, "max": 1000000, "step": 100 },
-        { "name": "purchasePrice", "label": "Purchase Price per Share ($)", "type": "number", "default": 50, "min": 0.01, "max": 10000, "step": 0.01 },
-        { "name": "currentPrice", "label": "Current Price per Share ($)", "type": "number", "default": 75, "min": 0.01, "max": 10000, "step": 0.01 },
-        { "name": "sharesOwned", "label": "Shares Owned", "type": "number", "default": 200, "min": 1, "max": 100000, "step": 1 },
-        { "name": "holdingPeriod", "label": "Holding Period (years)", "type": "number", "default": 2, "min": 0.01, "max": 50, "step": 0.1 }
+        {
+          "name": "initialInvestment",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 100,
+          "max": 1000000,
+          "step": 100
+        },
+        {
+          "name": "purchasePrice",
+          "label": "Purchase Price per Share ($)",
+          "type": "number",
+          "default": 50,
+          "min": 0.01,
+          "max": 10000,
+          "step": 0.01
+        },
+        {
+          "name": "currentPrice",
+          "label": "Current Price per Share ($)",
+          "type": "number",
+          "default": 75,
+          "min": 0.01,
+          "max": 10000,
+          "step": 0.01
+        },
+        {
+          "name": "sharesOwned",
+          "label": "Shares Owned",
+          "type": "number",
+          "default": 200,
+          "min": 1,
+          "max": 100000,
+          "step": 1
+        },
+        {
+          "name": "holdingPeriod",
+          "label": "Holding Period (years)",
+          "type": "number",
+          "default": 2,
+          "min": 0.01,
+          "max": 50,
+          "step": 0.1
+        }
       ],
       "formula": "Total Return = (Current Value - Initial Investment) / Initial Investment × 100; Annualized Return = (1 + Total Return)^(1/years) - 1",
-      "output": { "label": "Total Return", "default": "Enter investment details above", "format": "percentage" },
+      "output": {
+        "label": "Total Return",
+        "default": "Enter investment details above",
+        "format": "percentage"
+      },
       "additionalOutputs": [
-        { "label": "Current Value", "field": "currentValue", "format": "currency" },
-        { "label": "Profit/Loss", "field": "profitLoss", "format": "currency" },
-        { "label": "Annualized Return", "field": "annualizedReturn", "format": "percentage" }
+        {
+          "label": "Current Value",
+          "field": "currentValue",
+          "format": "currency"
+        },
+        {
+          "label": "Profit/Loss",
+          "field": "profitLoss",
+          "format": "currency"
+        },
+        {
+          "label": "Annualized Return",
+          "field": "annualizedReturn",
+          "format": "percentage"
+        }
       ]
     },
     "examples": [
@@ -165,7 +318,11 @@
         "output": "Rendimiento Total: 48%, Rendimiento Anualizado: 8.3% (incluyendo dividendos)"
       }
     ],
-    "relatedCalculators": ["investment-calculator", "future-value-calculator", "inflation-calculator"],
+    "relatedCalculators": [
+      "investment-calculator",
+      "future-value-calculator",
+      "inflation-calculator"
+    ],
     "seoContent": {
       "introduction": "Rastrea y analiza tus inversiones en el mercado de valores con precisión usando nuestra calculadora integral de rendimiento de acciones que mide rendimientos totales, rendimiento anualizado, y crecimiento de portafolio. Ya sea que seas trader diario, inversionista a largo plazo, o planificador de jubilación, entender tus rendimientos de inversión es crucial para tomar decisiones informadas. Nuestra calculadora maneja acciones individuales, ETFs, fondos mutuos, y portafolios enteros, proporcionando métricas detalladas de rendimiento incluyendo ganancias de capital, dividendos, y crecimiento compuesto. Toma decisiones de inversión basadas en datos con cálculos precisos de rendimiento que consideran valor temporal y rendimiento de mercado.",
       "benefits": [
@@ -235,18 +392,37 @@
           "answer": "Siempre incluye dividendos para cálculos precisos de rendimiento total. Los dividendos representan 40-50% de rendimientos de mercado de acciones a largo plazo. Excluir dividendos subestima significativamente rendimiento. Por ejemplo, retornos totales S&P 500 promedian 10% anualmente incluyendo dividendos, vs. 7% retornos solo precio. Rendimiento total (precio + dividendos) proporciona imagen completa de rendimiento. Usa retornos solo precio solo para propósitos específicos de análisis como comparar con inversiones que no pagan dividendos."
         }
       ]
-    }
+    },
+    "component": "StockReturnCalculator"
   },
   "pt": {
     "title": "Calculadora de Retorno de Ações",
     "seoTitle": "Calculadora de Retorno de Ações - Calcule Retornos de Investimento e Performance de Portfólio",
     "metaDescription": "Calculadora gratuita de retorno de ações. Calcule retornos totais, retornos anualizados e performance de portfólio. Perfeita para investidores acompanhando performance de ações e crescimento de investimento.",
-    "keywords": ["calculadora retorno ações", "calculadora retorno investimento", "calculadora portfólio", "calculadora performance ações", "calculadora retorno anualizado"],
-    "longTailKeywords": ["como calcular retornos ações", "calculadora performance investimento", "calculadora retorno portfólio", "calculadora crescimento ações", "cálculo retorno total"],
+    "keywords": [
+      "calculadora retorno ações",
+      "calculadora retorno investimento",
+      "calculadora portfólio",
+      "calculadora performance ações",
+      "calculadora retorno anualizado"
+    ],
+    "longTailKeywords": [
+      "como calcular retornos ações",
+      "calculadora performance investimento",
+      "calculadora retorno portfólio",
+      "calculadora crescimento ações",
+      "cálculo retorno total"
+    ],
     "slug": "stock-return-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["ações", "investimento", "retornos", "portfólio", "performance"],
+    "tags": [
+      "ações",
+      "investimento",
+      "retornos",
+      "portfólio",
+      "performance"
+    ],
     "summary": "Calcule retornos de ações, performance anualizada e crescimento de portfólio para acompanhar seu sucesso de investimento ao longo do tempo.",
     "description": "Nossa calculadora completa de retorno de ações ajuda investidores a analisar a performance de seu portfólio. Calcule retornos totais, retornos anualizados, rendimentos de dividendos e crescimento composto. Perfeita para acompanhar ações individuais, fundos mútuos, ETFs e performance geral de portfólio com detalhamentos e métricas de performance.",
     "instructions": [
@@ -258,18 +434,74 @@
     "calculatorComponent": {
       "componentName": "StockReturnCalculator",
       "inputs": [
-        { "name": "initialInvestment", "label": "Initial Investment ($)", "type": "number", "default": 10000, "min": 100, "max": 1000000, "step": 100 },
-        { "name": "purchasePrice", "label": "Purchase Price per Share ($)", "type": "number", "default": 50, "min": 0.01, "max": 10000, "step": 0.01 },
-        { "name": "currentPrice", "label": "Current Price per Share ($)", "type": "number", "default": 75, "min": 0.01, "max": 10000, "step": 0.01 },
-        { "name": "sharesOwned", "label": "Shares Owned", "type": "number", "default": 200, "min": 1, "max": 100000, "step": 1 },
-        { "name": "holdingPeriod", "label": "Holding Period (years)", "type": "number", "default": 2, "min": 0.01, "max": 50, "step": 0.1 }
+        {
+          "name": "initialInvestment",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 100,
+          "max": 1000000,
+          "step": 100
+        },
+        {
+          "name": "purchasePrice",
+          "label": "Purchase Price per Share ($)",
+          "type": "number",
+          "default": 50,
+          "min": 0.01,
+          "max": 10000,
+          "step": 0.01
+        },
+        {
+          "name": "currentPrice",
+          "label": "Current Price per Share ($)",
+          "type": "number",
+          "default": 75,
+          "min": 0.01,
+          "max": 10000,
+          "step": 0.01
+        },
+        {
+          "name": "sharesOwned",
+          "label": "Shares Owned",
+          "type": "number",
+          "default": 200,
+          "min": 1,
+          "max": 100000,
+          "step": 1
+        },
+        {
+          "name": "holdingPeriod",
+          "label": "Holding Period (years)",
+          "type": "number",
+          "default": 2,
+          "min": 0.01,
+          "max": 50,
+          "step": 0.1
+        }
       ],
       "formula": "Total Return = (Current Value - Initial Investment) / Initial Investment × 100; Annualized Return = (1 + Total Return)^(1/years) - 1",
-      "output": { "label": "Total Return", "default": "Enter investment details above", "format": "percentage" },
+      "output": {
+        "label": "Total Return",
+        "default": "Enter investment details above",
+        "format": "percentage"
+      },
       "additionalOutputs": [
-        { "label": "Current Value", "field": "currentValue", "format": "currency" },
-        { "label": "Profit/Loss", "field": "profitLoss", "format": "currency" },
-        { "label": "Annualized Return", "field": "annualizedReturn", "format": "percentage" }
+        {
+          "label": "Current Value",
+          "field": "currentValue",
+          "format": "currency"
+        },
+        {
+          "label": "Profit/Loss",
+          "field": "profitLoss",
+          "format": "currency"
+        },
+        {
+          "label": "Annualized Return",
+          "field": "annualizedReturn",
+          "format": "percentage"
+        }
       ]
     },
     "examples": [
@@ -284,7 +516,11 @@
         "output": "Retorno Total: 48%, Retorno Anualizado: 8.3% (incluindo dividendos)"
       }
     ],
-    "relatedCalculators": ["investment-calculator", "future-value-calculator", "inflation-calculator"],
+    "relatedCalculators": [
+      "investment-calculator",
+      "future-value-calculator",
+      "inflation-calculator"
+    ],
     "seoContent": {
       "introduction": "Rastreie e analise seus investimentos no mercado de ações com precisão usando nossa calculadora abrangente de retorno de ações que mede retornos totais, performance anualizada, e crescimento de portfólio. Seja você um trader diário, investidor de longo prazo, ou planejador de aposentadoria, entender seus retornos de investimento é crucial para tomar decisões informadas. Nossa calculadora lida com ações individuais, ETFs, fundos mútuos, e portfólios inteiros, fornecendo métricas detalhadas de performance incluindo ganhos de capital, dividendos, e crescimento composto. Tome decisões de investimento baseadas em dados com cálculos precisos de retorno que consideram valor temporal e performance de mercado.",
       "benefits": [
@@ -354,18 +590,37 @@
           "answer": "Sempre inclua dividendos para cálculos precisos de retorno total. Dividendos representam 40-50% de retornos de mercado de ações de longo prazo. Excluir dividendos subestima significativamente performance. Por exemplo, retornos totais S&P 500 média 10% anualmente incluindo dividendos, vs. 7% retornos preço-somente. Retorno total (preço + dividendos) fornece imagem completa de performance. Use retornos preço-somente apenas para propósitos específicos de análise como comparar com investimentos não pagadores de dividendos."
         }
       ]
-    }
+    },
+    "component": "StockReturnCalculator"
   },
   "fr": {
     "title": "Calculateur de Rendement Boursier",
     "seoTitle": "Calculateur de Rendement Boursier - Calculez les Rendements d'Investissement et Performance de Portefeuille",
     "metaDescription": "Calculateur gratuit de rendement boursier. Calculez les rendements totaux, rendements annualisés et performance de portefeuille. Parfait pour les investisseurs suivant la performance boursière et la croissance d'investissement.",
-    "keywords": ["calculateur rendement boursier", "calculateur rendement investissement", "calculateur portefeuille", "calculateur performance actions", "calculateur rendement annualisé"],
-    "longTailKeywords": ["comment calculer rendements boursiers", "calculateur performance investissement", "calculateur rendement portefeuille", "calculateur croissance actions", "calcul rendement total"],
+    "keywords": [
+      "calculateur rendement boursier",
+      "calculateur rendement investissement",
+      "calculateur portefeuille",
+      "calculateur performance actions",
+      "calculateur rendement annualisé"
+    ],
+    "longTailKeywords": [
+      "comment calculer rendements boursiers",
+      "calculateur performance investissement",
+      "calculateur rendement portefeuille",
+      "calculateur croissance actions",
+      "calcul rendement total"
+    ],
     "slug": "stock-return-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["actions", "investissement", "rendements", "portefeuille", "performance"],
+    "tags": [
+      "actions",
+      "investissement",
+      "rendements",
+      "portefeuille",
+      "performance"
+    ],
     "summary": "Calculez les rendements boursiers, performance annualisée et croissance de portefeuille pour suivre votre succès d'investissement au fil du temps.",
     "description": "Notre calculateur complet de rendement boursier aide les investisseurs à analyser la performance de leur portefeuille. Calculez les rendements totaux, rendements annualisés, rendements de dividendes et croissance composée. Parfait pour suivre les actions individuelles, fonds communs, ETFs et performance générale de portefeuille avec des ventilations détaillées et métriques de performance.",
     "instructions": [
@@ -377,18 +632,74 @@
     "calculatorComponent": {
       "componentName": "StockReturnCalculator",
       "inputs": [
-        { "name": "initialInvestment", "label": "Initial Investment ($)", "type": "number", "default": 10000, "min": 100, "max": 1000000, "step": 100 },
-        { "name": "purchasePrice", "label": "Purchase Price per Share ($)", "type": "number", "default": 50, "min": 0.01, "max": 10000, "step": 0.01 },
-        { "name": "currentPrice", "label": "Current Price per Share ($)", "type": "number", "default": 75, "min": 0.01, "max": 10000, "step": 0.01 },
-        { "name": "sharesOwned", "label": "Shares Owned", "type": "number", "default": 200, "min": 1, "max": 100000, "step": 1 },
-        { "name": "holdingPeriod", "label": "Holding Period (years)", "type": "number", "default": 2, "min": 0.01, "max": 50, "step": 0.1 }
+        {
+          "name": "initialInvestment",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 100,
+          "max": 1000000,
+          "step": 100
+        },
+        {
+          "name": "purchasePrice",
+          "label": "Purchase Price per Share ($)",
+          "type": "number",
+          "default": 50,
+          "min": 0.01,
+          "max": 10000,
+          "step": 0.01
+        },
+        {
+          "name": "currentPrice",
+          "label": "Current Price per Share ($)",
+          "type": "number",
+          "default": 75,
+          "min": 0.01,
+          "max": 10000,
+          "step": 0.01
+        },
+        {
+          "name": "sharesOwned",
+          "label": "Shares Owned",
+          "type": "number",
+          "default": 200,
+          "min": 1,
+          "max": 100000,
+          "step": 1
+        },
+        {
+          "name": "holdingPeriod",
+          "label": "Holding Period (years)",
+          "type": "number",
+          "default": 2,
+          "min": 0.01,
+          "max": 50,
+          "step": 0.1
+        }
       ],
       "formula": "Total Return = (Current Value - Initial Investment) / Initial Investment × 100; Annualized Return = (1 + Total Return)^(1/years) - 1",
-      "output": { "label": "Total Return", "default": "Enter investment details above", "format": "percentage" },
+      "output": {
+        "label": "Total Return",
+        "default": "Enter investment details above",
+        "format": "percentage"
+      },
       "additionalOutputs": [
-        { "label": "Current Value", "field": "currentValue", "format": "currency" },
-        { "label": "Profit/Loss", "field": "profitLoss", "format": "currency" },
-        { "label": "Annualized Return", "field": "annualizedReturn", "format": "percentage" }
+        {
+          "label": "Current Value",
+          "field": "currentValue",
+          "format": "currency"
+        },
+        {
+          "label": "Profit/Loss",
+          "field": "profitLoss",
+          "format": "currency"
+        },
+        {
+          "label": "Annualized Return",
+          "field": "annualizedReturn",
+          "format": "percentage"
+        }
       ]
     },
     "examples": [
@@ -403,7 +714,11 @@
         "output": "Rendement Total: 48%, Rendement Annualisé: 8.3% (dividendes inclus)"
       }
     ],
-    "relatedCalculators": ["investment-calculator", "future-value-calculator", "inflation-calculator"],
+    "relatedCalculators": [
+      "investment-calculator",
+      "future-value-calculator",
+      "inflation-calculator"
+    ],
     "seoContent": {
       "introduction": "Suivez et analysez vos investissements en bourse avec précision en utilisant notre calculatrice complète de rendement boursier qui mesure les rendements totaux, performance annualisée, et croissance de portefeuille. Que vous soyez trader journalier, investisseur long terme, ou planificateur retraite, comprendre vos rendements d'investissement est crucial pour prendre des décisions éclairées. Notre calculatrice gère actions individuelles, ETFs, fonds communs, et portefeuilles entiers, fournissant des métriques détaillées de performance incluant gains en capital, dividendes, et croissance composée. Prenez des décisions d'investissement basées sur données avec calculs précis de rendement qui tiennent compte valeur temporelle et performance marché.",
       "benefits": [
@@ -473,6 +788,7 @@
           "answer": "Incluez toujours dividendes pour calculs rendement total précis. Dividendes représentent 40-50% rendements marché actions long terme. Exclure dividendes sous-estime significativement performance. Par exemple, rendements totaux S&P 500 moyenne 10% annuellement incluant dividendes, vs. 7% rendements prix-seulement. Rendement total (prix + dividendes) fournit image complète performance. Utilisez rendements prix-seulement seulement pour fins analyse spécifique comme comparer avec investissements non versant dividendes."
         }
       ]
-    }
+    },
+    "component": "StockReturnCalculator"
   }
 }

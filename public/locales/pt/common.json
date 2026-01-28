@@ -126,19 +126,11 @@
     "totalInterestEarned": "Juros Totais Ganhos",
     "powerOfCompounding": "Poder da Capitalização",
     "compoundingMessage": "Seu investimento cresce exponencialmente com o tempo!",
-    "enterInvestmentDetails": "Digite detalhes do investimento para ver crescimento de juros compostos"
-  },
-  "brand": {
-    "name": "Calculadora Rápida"
-  },
-  "footer": {
-    "description": "Calculadoras online gratuitas para matemática, finanças, saúde e mais. Todos os cálculos são realizados no seu navegador.",
-    "copyright": "© 2024 Quick Calculator. Todos os direitos reservados.",
-    "privacy": "Política de Privacidade",
-    "terms": "Termos de Serviço"
-  },
-  "seo": {
-    "keywords": "calculadora, calculadora online, calculadora matemática, calculadora financeira, calculadora de saúde",
+    "enterInvestmentDetails": "Digite detalhes do investimento para ver crescimento de juros compostos",
+    "completeGuide": "Guia Completo",
+    "howDoesWork": "Como Funciona",
+    "guideComingSoon": "O guia detalhado e explicação da fórmula estarão disponíveis em breve.",
+    "comingSoon": "Esta calculadora está atualmente em desenvolvimento e estará disponível em breve.",
     "taxCalculator": "Calculadora de Impostos",
     "taxDescription": "Calcule impostos federais, estaduais e FICA",
     "taxInformation": "Informações Fiscais",
@@ -187,7 +179,9 @@
     "propertyTaxDescription": "Calcule impostos sobre propriedade com base no valor avaliado",
     "propertyDetails": "Detalhes da Propriedade",
     "propertyTaxBreakdown": "Detalhamento de Impostos sobre Propriedade",
+    "assessmentRate": "Taxa de Avaliação",
     "taxExemptions": "Isenções Fiscais",
+    "taxRate": "Taxa de Imposto",
     "propertyTaxNote": "As taxas de impostos sobre propriedade variam por localização. Esta é uma estimativa - consulte as autoridades locais para as taxas exatas.",
     "futureValueCalculator": "Calculadora de Valor Futuro",
     "futureValueDescription": "Calcule o valor futuro de investimentos com juros compostos",
@@ -232,6 +226,20 @@
     "paymentSchedule": "Cronograma de Pagamento",
     "forFirstMonths": "Por primeiros {months} meses",
     "concreteVolume": "Volume de Concreto",
-    "emiCalculation": "Cálculo de EMI"
+    "emiCalculation": "Cálculo de EMI",
+    "emiFormula": "Fórmula EMI: P × r × (1+r)^n / ((1+r)^n - 1)",
+    "enterLoanDetailsEMI": "Digite detalhes do empréstimo para calcular EMI"
+  },
+  "brand": {
+    "name": "Calculadora Rápida"
+  },
+  "footer": {
+    "description": "Calculadoras online gratuitas para matemática, finanças, saúde e mais. Todos os cálculos são realizados no seu navegador.",
+    "copyright": "© 2024 Quick Calculator. Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço"
+  },
+  "seo": {
+    "keywords": "calculadora, calculadora online, calculadora matemática, calculadora financeira, calculadora de saúde"
   }
 }

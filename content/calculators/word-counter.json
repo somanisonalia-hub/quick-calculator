@@ -3,12 +3,30 @@
     "title": "Word Counter",
     "seoTitle": "Word Counter - Count Words, Characters, and Reading Time",
     "metaDescription": "Free online word counter. Count words, characters, sentences, and paragraphs. Calculate reading time and writing metrics. Perfect for writers, students, and content creators.",
-    "keywords": ["word counter", "character counter", "reading time calculator", "text analyzer", "writing tool"],
-    "longTailKeywords": ["how to count words online", "character counter with spaces", "reading time calculator", "text statistics tool", "writing metrics calculator"],
+    "keywords": [
+      "word counter",
+      "character counter",
+      "reading time calculator",
+      "text analyzer",
+      "writing tool"
+    ],
+    "longTailKeywords": [
+      "how to count words online",
+      "character counter with spaces",
+      "reading time calculator",
+      "text statistics tool",
+      "writing metrics calculator"
+    ],
     "slug": "word-counter-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["writing", "text analysis", "word count", "content creation", "education"],
+    "tags": [
+      "writing",
+      "text analysis",
+      "word count",
+      "content creation",
+      "education"
+    ],
     "summary": "Count words, characters, sentences, and paragraphs while calculating estimated reading time for your text.",
     "description": "Our comprehensive word counter provides detailed text analysis including word count, character count (with and without spaces), sentence count, paragraph count, and estimated reading time. Essential tool for writers, students, bloggers, and content creators who need to meet word count requirements or analyze text metrics.",
     "instructions": [
@@ -20,16 +38,46 @@
     "calculatorComponent": {
       "componentName": "WordCounter",
       "inputs": [
-        { "name": "text", "label": "Enter your text here", "type": "textarea", "default": "", "placeholder": "Paste or type your text here to count words, characters, and more..." }
+        {
+          "name": "text",
+          "label": "Enter your text here",
+          "type": "textarea",
+          "default": "",
+          "placeholder": "Paste or type your text here to count words, characters, and more..."
+        }
       ],
       "formula": "Word count = number of words, Character count = total characters, Reading time = (words ÷ 200) × 60 seconds",
-      "output": { "label": "Word Count", "default": "Enter text above to see statistics", "format": "number" },
+      "output": {
+        "label": "Word Count",
+        "default": "Enter text above to see statistics",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Character Count (with spaces)", "field": "charactersWithSpaces", "format": "number" },
-        { "label": "Character Count (no spaces)", "field": "charactersNoSpaces", "format": "number" },
-        { "label": "Sentence Count", "field": "sentences", "format": "number" },
-        { "label": "Paragraph Count", "field": "paragraphs", "format": "number" },
-        { "label": "Estimated Reading Time", "field": "readingTime", "format": "text" }
+        {
+          "label": "Character Count (with spaces)",
+          "field": "charactersWithSpaces",
+          "format": "number"
+        },
+        {
+          "label": "Character Count (no spaces)",
+          "field": "charactersNoSpaces",
+          "format": "number"
+        },
+        {
+          "label": "Sentence Count",
+          "field": "sentences",
+          "format": "number"
+        },
+        {
+          "label": "Paragraph Count",
+          "field": "paragraphs",
+          "format": "number"
+        },
+        {
+          "label": "Estimated Reading Time",
+          "field": "readingTime",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -44,7 +92,11 @@
         "output": "Words: 800, Characters: 4,320, Sentences: 45, Reading Time: 4 minutes"
       }
     ],
-    "relatedCalculators": ["percent-calculator", "mean-median-mode-calculator", "gpa-calculator"],
+    "relatedCalculators": [
+      "percent-calculator",
+      "mean-median-mode-calculator",
+      "gpa-calculator"
+    ],
     "seoContent": {
       "introduction": "Master text analysis with our comprehensive word counter that provides detailed metrics for writers, students, and content creators. Whether you're writing essays, blog posts, social media content, or professional documents, understanding your text statistics is crucial for meeting requirements and optimizing readability. Our advanced word counter goes beyond basic counting to analyze reading time, sentence structure, and text complexity, helping you create more effective written content. From academic papers to marketing copy, this tool provides the insights you need to improve your writing and meet editorial standards.",
       "benefits": [
@@ -112,18 +164,37 @@
           "answer": "Use average sentence length (words ÷ sentences) to check readability - aim for 15-20 words per sentence. Paragraph count indicates content structure - 3-5 sentences per paragraph works well. Reading time helps ensure content isn't too long or short. Character density (characters ÷ words) shows writing style. Track these metrics over time to improve your writing efficiency and effectiveness."
         }
       ]
-    }
+    },
+    "component": "WordCounter"
   },
   "es": {
     "title": "Contador de Palabras",
     "seoTitle": "Contador de Palabras - Cuenta Palabras, Caracteres y Tiempo de Lectura",
     "metaDescription": "Contador de palabras gratuito en línea. Cuenta palabras, caracteres, oraciones y párrafos. Calcula tiempo de lectura y métricas de escritura. Perfecto para escritores, estudiantes y creadores de contenido.",
-    "keywords": ["contador palabras", "contador caracteres", "calculadora tiempo lectura", "analizador texto", "herramienta escritura"],
-    "longTailKeywords": ["cómo contar palabras online", "contador caracteres con espacios", "calculadora tiempo lectura", "herramienta estadísticas texto", "calculadora métricas escritura"],
+    "keywords": [
+      "contador palabras",
+      "contador caracteres",
+      "calculadora tiempo lectura",
+      "analizador texto",
+      "herramienta escritura"
+    ],
+    "longTailKeywords": [
+      "cómo contar palabras online",
+      "contador caracteres con espacios",
+      "calculadora tiempo lectura",
+      "herramienta estadísticas texto",
+      "calculadora métricas escritura"
+    ],
     "slug": "word-counter-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["escritura", "análisis texto", "conteo palabras", "creación contenido", "educación"],
+    "tags": [
+      "escritura",
+      "análisis texto",
+      "conteo palabras",
+      "creación contenido",
+      "educación"
+    ],
     "summary": "Cuenta palabras, caracteres, oraciones y párrafos mientras calcula tiempo estimado de lectura para tu texto.",
     "description": "Nuestro completo contador de palabras proporciona análisis detallado de texto incluyendo conteo de palabras, conteo de caracteres (con y sin espacios), conteo de oraciones, conteo de párrafos y tiempo estimado de lectura. Herramienta esencial para escritores, estudiantes, bloggers y creadores de contenido que necesitan cumplir con requisitos de conteo de palabras o analizar métricas de texto.",
     "instructions": [
@@ -135,16 +206,46 @@
     "calculatorComponent": {
       "componentName": "WordCounter",
       "inputs": [
-        { "name": "text", "label": "Enter your text here", "type": "textarea", "default": "", "placeholder": "Paste or type your text here to count words, characters, and more..." }
+        {
+          "name": "text",
+          "label": "Enter your text here",
+          "type": "textarea",
+          "default": "",
+          "placeholder": "Paste or type your text here to count words, characters, and more..."
+        }
       ],
       "formula": "Word count = number of words, Character count = total characters, Reading time = (words ÷ 200) × 60 seconds",
-      "output": { "label": "Word Count", "default": "Enter text above to see statistics", "format": "number" },
+      "output": {
+        "label": "Word Count",
+        "default": "Enter text above to see statistics",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Character Count (with spaces)", "field": "charactersWithSpaces", "format": "number" },
-        { "label": "Character Count (no spaces)", "field": "charactersNoSpaces", "format": "number" },
-        { "label": "Sentence Count", "field": "sentences", "format": "number" },
-        { "label": "Paragraph Count", "field": "paragraphs", "format": "number" },
-        { "label": "Estimated Reading Time", "field": "readingTime", "format": "text" }
+        {
+          "label": "Character Count (with spaces)",
+          "field": "charactersWithSpaces",
+          "format": "number"
+        },
+        {
+          "label": "Character Count (no spaces)",
+          "field": "charactersNoSpaces",
+          "format": "number"
+        },
+        {
+          "label": "Sentence Count",
+          "field": "sentences",
+          "format": "number"
+        },
+        {
+          "label": "Paragraph Count",
+          "field": "paragraphs",
+          "format": "number"
+        },
+        {
+          "label": "Estimated Reading Time",
+          "field": "readingTime",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -159,7 +260,11 @@
         "output": "Palabras: 800, Caracteres: 4,320, Oraciones: 45, Tiempo Lectura: 4 minutos"
       }
     ],
-    "relatedCalculators": ["percent-calculator", "mean-median-mode-calculator", "gpa-calculator"],
+    "relatedCalculators": [
+      "percent-calculator",
+      "mean-median-mode-calculator",
+      "gpa-calculator"
+    ],
     "seoContent": {
       "introduction": "Domina análisis de texto con nuestra calculadora integral de palabras que proporciona métricas detalladas para escritores, estudiantes, y creadores de contenido. Ya sea que escribas ensayos, publicaciones de blog, contenido de redes sociales, o documentos profesionales, entender tus estadísticas de texto es crucial para cumplir requerimientos y optimizar legibilidad. Nuestra calculadora avanzada de palabras va más allá del conteo básico para analizar tiempo de lectura, estructura de oraciones, y complejidad de texto, ayudándote a crear contenido escrito más efectivo. Desde trabajos académicos hasta copias de marketing, esta herramienta proporciona las perspectivas que necesitas para mejorar tu escritura y cumplir estándares editoriales.",
       "benefits": [
@@ -227,18 +332,37 @@
           "answer": "Usa longitud promedio de oración (palabras ÷ oraciones) para verificar legibilidad - apunta a 15-20 palabras por oración. Conteo de párrafos indica estructura de contenido - 3-5 oraciones por párrafo funcionan bien. Tiempo de lectura ayuda asegurar contenido no es demasiado largo o corto. Densidad de caracteres (caracteres ÷ palabras) muestra estilo de escritura. Rastrea estas métricas con el tiempo para mejorar tu eficiencia y efectividad de escritura."
         }
       ]
-    }
+    },
+    "component": "WordCounter"
   },
   "pt": {
     "title": "Contador de Palavras",
     "seoTitle": "Contador de Palavras - Conte Palavras, Caracteres e Tempo de Leitura",
     "metaDescription": "Contador de palavras gratuito online. Conte palavras, caracteres, sentenças e parágrafos. Calcule tempo de leitura e métricas de escrita. Perfeito para escritores, estudantes e criadores de conteúdo.",
-    "keywords": ["contador palavras", "contador caracteres", "calculadora tempo leitura", "analisador texto", "ferramenta escrita"],
-    "longTailKeywords": ["como contar palavras online", "contador caracteres com espaços", "calculadora tempo leitura", "ferramenta estatísticas texto", "calculadora métricas escrita"],
+    "keywords": [
+      "contador palavras",
+      "contador caracteres",
+      "calculadora tempo leitura",
+      "analisador texto",
+      "ferramenta escrita"
+    ],
+    "longTailKeywords": [
+      "como contar palavras online",
+      "contador caracteres com espaços",
+      "calculadora tempo leitura",
+      "ferramenta estatísticas texto",
+      "calculadora métricas escrita"
+    ],
     "slug": "word-counter-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["escrita", "análise texto", "contagem palavras", "criação conteúdo", "educação"],
+    "tags": [
+      "escrita",
+      "análise texto",
+      "contagem palavras",
+      "criação conteúdo",
+      "educação"
+    ],
     "summary": "Conte palavras, caracteres, sentenças e parágrafos enquanto calcula tempo estimado de leitura para seu texto.",
     "description": "Nosso contador completo de palavras fornece análise detalhada de texto incluindo contagem de palavras, contagem de caracteres (com e sem espaços), contagem de sentenças, contagem de parágrafos e tempo estimado de leitura. Ferramenta essencial para escritores, estudantes, bloggers e criadores de conteúdo que precisam atender requisitos de contagem de palavras ou analisar métricas de texto.",
     "instructions": [
@@ -250,16 +374,46 @@
     "calculatorComponent": {
       "componentName": "WordCounter",
       "inputs": [
-        { "name": "text", "label": "Enter your text here", "type": "textarea", "default": "", "placeholder": "Paste or type your text here to count words, characters, and more..." }
+        {
+          "name": "text",
+          "label": "Enter your text here",
+          "type": "textarea",
+          "default": "",
+          "placeholder": "Paste or type your text here to count words, characters, and more..."
+        }
       ],
       "formula": "Word count = number of words, Character count = total characters, Reading time = (words ÷ 200) × 60 seconds",
-      "output": { "label": "Word Count", "default": "Enter text above to see statistics", "format": "number" },
+      "output": {
+        "label": "Word Count",
+        "default": "Enter text above to see statistics",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Character Count (with spaces)", "field": "charactersWithSpaces", "format": "number" },
-        { "label": "Character Count (no spaces)", "field": "charactersNoSpaces", "format": "number" },
-        { "label": "Sentence Count", "field": "sentences", "format": "number" },
-        { "label": "Paragraph Count", "field": "paragraphs", "format": "number" },
-        { "label": "Estimated Reading Time", "field": "readingTime", "format": "text" }
+        {
+          "label": "Character Count (with spaces)",
+          "field": "charactersWithSpaces",
+          "format": "number"
+        },
+        {
+          "label": "Character Count (no spaces)",
+          "field": "charactersNoSpaces",
+          "format": "number"
+        },
+        {
+          "label": "Sentence Count",
+          "field": "sentences",
+          "format": "number"
+        },
+        {
+          "label": "Paragraph Count",
+          "field": "paragraphs",
+          "format": "number"
+        },
+        {
+          "label": "Estimated Reading Time",
+          "field": "readingTime",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -274,7 +428,11 @@
         "output": "Palavras: 800, Caracteres: 4,320, Sentenças: 45, Tempo Leitura: 4 minutos"
       }
     ],
-    "relatedCalculators": ["percent-calculator", "mean-median-mode-calculator", "gpa-calculator"],
+    "relatedCalculators": [
+      "percent-calculator",
+      "mean-median-mode-calculator",
+      "gpa-calculator"
+    ],
     "seoContent": {
       "introduction": "Domine análise de texto com nossa calculadora abrangente de palavras que fornece métricas detalhadas para escritores, estudantes, e criadores de conteúdo. Seja escrevendo ensaios, publicações de blog, conteúdo de mídias sociais, ou documentos profissionais, entender suas estatísticas de texto é crucial para cumprir requerimentos e otimizar legibilidade. Nossa calculadora avançada de palavras vai além de contagem básica para analisar tempo de leitura, estrutura de sentenças, e complexidade de texto, ajudando você a criar conteúdo escrito mais efetivo. De trabalhos acadêmicos a cópias de marketing, esta ferramenta fornece as perspectivas que você precisa para melhorar sua escrita e cumprir padrões editoriais.",
       "benefits": [
@@ -342,18 +500,37 @@
           "answer": "Use comprimento médio de sentença (palavras ÷ sentenças) para verificar legibilidade - mire em 15-20 palavras por sentença. Contagem de parágrafos indica estrutura de conteúdo - 3-5 sentenças por parágrafo funcionam bem. Tempo de leitura ajuda garantir conteúdo não é longo demais ou curto demais. Densidade de caracteres (caracteres ÷ palavras) mostra estilo de escrita. Rastreie estas métricas com o tempo para melhorar sua eficiência e efetividade de escrita."
         }
       ]
-    }
+    },
+    "component": "WordCounter"
   },
   "fr": {
     "title": "Compteur de Mots",
     "seoTitle": "Compteur de Mots - Comptez les Mots, Caractères et Temps de Lecture",
     "metaDescription": "Compteur de mots gratuit en ligne. Comptez les mots, caractères, phrases et paragraphes. Calculez le temps de lecture et les métriques d'écriture. Parfait pour les écrivains, étudiants et créateurs de contenu.",
-    "keywords": ["compteur mots", "compteur caractères", "calculateur temps lecture", "analyseur texte", "outil écriture"],
-    "longTailKeywords": ["comment compter mots en ligne", "compteur caractères avec espaces", "calculateur temps lecture", "outil statistiques texte", "calculateur métriques écriture"],
+    "keywords": [
+      "compteur mots",
+      "compteur caractères",
+      "calculateur temps lecture",
+      "analyseur texte",
+      "outil écriture"
+    ],
+    "longTailKeywords": [
+      "comment compter mots en ligne",
+      "compteur caractères avec espaces",
+      "calculateur temps lecture",
+      "outil statistiques texte",
+      "calculateur métriques écriture"
+    ],
     "slug": "word-counter-calculator",
     "category": "utility",
     "difficulty": "basic",
-    "tags": ["écriture", "analyse texte", "compte mots", "création contenu", "éducation"],
+    "tags": [
+      "écriture",
+      "analyse texte",
+      "compte mots",
+      "création contenu",
+      "éducation"
+    ],
     "summary": "Comptez les mots, caractères, phrases et paragraphes tout en calculant le temps de lecture estimé pour votre texte.",
     "description": "Notre compteur de mots complet fournit une analyse détaillée du texte incluant le compte de mots, le compte de caractères (avec et sans espaces), le compte de phrases, le compte de paragraphes et le temps de lecture estimé. Outil essentiel pour les écrivains, étudiants, blogueurs et créateurs de contenu qui doivent respecter les exigences de compte de mots ou analyser les métriques de texte.",
     "instructions": [
@@ -365,16 +542,46 @@
     "calculatorComponent": {
       "componentName": "WordCounter",
       "inputs": [
-        { "name": "text", "label": "Enter your text here", "type": "textarea", "default": "", "placeholder": "Paste or type your text here to count words, characters, and more..." }
+        {
+          "name": "text",
+          "label": "Enter your text here",
+          "type": "textarea",
+          "default": "",
+          "placeholder": "Paste or type your text here to count words, characters, and more..."
+        }
       ],
       "formula": "Word count = number of words, Character count = total characters, Reading time = (words ÷ 200) × 60 seconds",
-      "output": { "label": "Word Count", "default": "Enter text above to see statistics", "format": "number" },
+      "output": {
+        "label": "Word Count",
+        "default": "Enter text above to see statistics",
+        "format": "number"
+      },
       "additionalOutputs": [
-        { "label": "Character Count (with spaces)", "field": "charactersWithSpaces", "format": "number" },
-        { "label": "Character Count (no spaces)", "field": "charactersNoSpaces", "format": "number" },
-        { "label": "Sentence Count", "field": "sentences", "format": "number" },
-        { "label": "Paragraph Count", "field": "paragraphs", "format": "number" },
-        { "label": "Estimated Reading Time", "field": "readingTime", "format": "text" }
+        {
+          "label": "Character Count (with spaces)",
+          "field": "charactersWithSpaces",
+          "format": "number"
+        },
+        {
+          "label": "Character Count (no spaces)",
+          "field": "charactersNoSpaces",
+          "format": "number"
+        },
+        {
+          "label": "Sentence Count",
+          "field": "sentences",
+          "format": "number"
+        },
+        {
+          "label": "Paragraph Count",
+          "field": "paragraphs",
+          "format": "number"
+        },
+        {
+          "label": "Estimated Reading Time",
+          "field": "readingTime",
+          "format": "text"
+        }
       ]
     },
     "examples": [
@@ -389,7 +596,11 @@
         "output": "Mots: 800, Caractères: 4,320, Phrases: 45, Temps Lecture: 4 minutes"
       }
     ],
-    "relatedCalculators": ["percent-calculator", "mean-median-mode-calculator", "gpa-calculator"],
+    "relatedCalculators": [
+      "percent-calculator",
+      "mean-median-mode-calculator",
+      "gpa-calculator"
+    ],
     "seoContent": {
       "introduction": "Maîtrisez analyse texte avec notre calculatrice complète de mots qui fournit métriques détaillées pour écrivains, étudiants, et créateurs de contenu. Que vous écriviez essais, publications blog, contenu médias sociaux, ou documents professionnels, comprendre vos statistiques texte est crucial pour rencontrer exigences et optimiser lisibilité. Notre calculatrice avancée de mots va au-delà comptage de base pour analyser temps lecture, structure phrases, et complexité texte, vous aidant créer contenu écrit plus efficace. De travaux académiques à copies marketing, cet outil fournit les perspectives dont vous avez besoin pour améliorer votre écriture et rencontrer standards éditoriaux.",
       "benefits": [
@@ -457,6 +668,7 @@
           "answer": "Utilisez longueur phrase moyenne (mots ÷ phrases) pour vérifier lisibilité - visez 15-20 mots par phrase. Comptage paragraphes indique structure contenu - 3-5 phrases par paragraphe fonctionnent bien. Temps lecture aide assurer contenu n'est pas trop long ou court. Densité caractères (caractères ÷ mots) montre style écriture. Suivez ces métriques dans temps pour améliorer votre efficacité et effectivité écriture."
         }
       ]
-    }
+    },
+    "component": "WordCounter"
   }
 }

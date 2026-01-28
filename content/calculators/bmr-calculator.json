@@ -3,12 +3,30 @@
     "title": "BMR Calculator",
     "seoTitle": "BMR Calculator - Calculate Basal Metabolic Rate Online",
     "metaDescription": "Free BMR calculator. Calculate your basal metabolic rate using Mifflin-St Jeor and Harris-Benedict equations. Find out how many calories you burn at rest daily.",
-    "keywords": ["BMR calculator", "basal metabolic rate calculator", "calorie calculator", "metabolism calculator", "daily calorie burn"],
-    "longTailKeywords": ["how to calculate BMR", "BMR Mifflin-St Jeor calculator", "basal metabolic rate formula", "calculate calories burned at rest", "daily calorie needs calculator"],
+    "keywords": [
+      "BMR calculator",
+      "basal metabolic rate calculator",
+      "calorie calculator",
+      "metabolism calculator",
+      "daily calorie burn"
+    ],
+    "longTailKeywords": [
+      "how to calculate BMR",
+      "BMR Mifflin-St Jeor calculator",
+      "basal metabolic rate formula",
+      "calculate calories burned at rest",
+      "daily calorie needs calculator"
+    ],
     "slug": "bmr-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["BMR", "metabolism", "calories", "fitness", "health"],
+    "tags": [
+      "BMR",
+      "metabolism",
+      "calories",
+      "fitness",
+      "health"
+    ],
     "summary": "Calculate your Basal Metabolic Rate (BMR) using scientifically proven formulas to determine daily calorie needs.",
     "description": "Our BMR calculator uses the most accurate Mifflin-St Jeor equation along with the Harris-Benedict formula to calculate your basal metabolic rate. This represents the number of calories your body burns at rest to maintain basic physiological functions.",
     "instructions": [
@@ -20,19 +38,95 @@
     "calculatorComponent": {
       "componentName": "BMRCalculator",
       "inputs": [
-        { "name": "age", "label": "Age", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
-        { "name": "gender", "label": "Gender", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "height", "label": "Height", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1, "unit": "cm" },
-        { "name": "weight", "label": "Weight", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1, "unit": "kg" },
-        { "name": "formula", "label": "Formula", "type": "select", "default": "mifflin", "options": ["mifflin", "harris"] },
-        { "name": "activityLevel", "label": "Activity Level", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] }
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Height",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1,
+          "unit": "cm"
+        },
+        {
+          "name": "weight",
+          "label": "Weight",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1,
+          "unit": "kg"
+        },
+        {
+          "name": "formula",
+          "label": "Formula",
+          "type": "select",
+          "default": "mifflin",
+          "options": [
+            "mifflin",
+            "harris"
+          ]
+        },
+        {
+          "name": "activityLevel",
+          "label": "Activity Level",
+          "type": "select",
+          "default": "sedentary",
+          "options": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active",
+            "very_active"
+          ]
+        }
       ],
       "formula": "Mifflin-St Jeor: BMR = 10×weight + 6.25×height - 5×age + 5 (men) or -161 (women); Harris-Benedict: BMR = 88.362 + 13.397×weight + 4.799×height - 5.677×age (men)",
-      "output": { "label": "Your BMR", "default": "Enter your details above", "format": "number", "unit": "calories/day" },
+      "output": {
+        "label": "Your BMR",
+        "default": "Enter your details above",
+        "format": "number",
+        "unit": "calories/day"
+      },
       "additionalOutputs": [
-        { "label": "Daily Calories (Maintenance)", "field": "maintenanceCalories", "format": "number", "unit": "calories/day" },
-        { "label": "Daily Calories (Weight Loss)", "field": "weightLossCalories", "format": "number", "unit": "calories/day" },
-        { "label": "Daily Calories (Weight Gain)", "field": "weightGainCalories", "format": "number", "unit": "calories/day" }
+        {
+          "label": "Daily Calories (Maintenance)",
+          "field": "maintenanceCalories",
+          "format": "number",
+          "unit": "calories/day"
+        },
+        {
+          "label": "Daily Calories (Weight Loss)",
+          "field": "weightLossCalories",
+          "format": "number",
+          "unit": "calories/day"
+        },
+        {
+          "label": "Daily Calories (Weight Gain)",
+          "field": "weightGainCalories",
+          "format": "number",
+          "unit": "calories/day"
+        }
       ]
     },
     "examples": [
@@ -52,7 +146,11 @@
         "output": "BMR: 1,832 calories/day"
       }
     ],
-    "relatedCalculators": ["bmi-calculator", "calorie-calculator", "body-fat-calculator"],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "calorie-calculator",
+      "body-fat-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculate your Basal Metabolic Rate (BMR) with precision using our scientifically-backed calculator. This essential health metric represents the number of calories your body burns at rest to maintain vital functions like breathing, circulation, and cell production. Understanding your BMR is crucial for effective weight management, whether you're looking to lose weight, gain muscle, or maintain your current weight. Our calculator uses the most accurate formulas available, including the Mifflin-St Jeor equation and Harris-Benedict formula, to provide reliable results based on your age, gender, height, and weight.",
       "benefits": [
@@ -118,18 +216,37 @@
           "answer": "Men generally have higher BMR due to greater muscle mass, which requires more energy to maintain than fat tissue. Hormonal differences also play a role. However, individual variations exist, and two people of the same gender, age, and weight can have different BMR based on muscle-to-fat ratio and other factors."
         }
       ]
-    }
+    },
+    "component": "BMRCalculator"
   },
   "es": {
     "title": "Calculadora BMR",
     "seoTitle": "Calculadora BMR - Calcula Tasa Metabólica Basal Online",
     "metaDescription": "Calculadora gratuita BMR. Calcula tu tasa metabólica basal usando ecuaciones Mifflin-St Jeor y Harris-Benedict. Averigua cuántas calorías quemas en reposo diariamente.",
-    "keywords": ["calculadora BMR", "calculadora tasa metabólica basal", "calculadora calorías", "calculadora metabolismo", "quema diaria calorías"],
-    "longTailKeywords": ["como calcular BMR", "calculadora BMR Mifflin-St Jeor", "formula tasa metabólica basal", "calcular calorías quemadas en reposo", "calculadora necesidades calorías diarias"],
+    "keywords": [
+      "calculadora BMR",
+      "calculadora tasa metabólica basal",
+      "calculadora calorías",
+      "calculadora metabolismo",
+      "quema diaria calorías"
+    ],
+    "longTailKeywords": [
+      "como calcular BMR",
+      "calculadora BMR Mifflin-St Jeor",
+      "formula tasa metabólica basal",
+      "calcular calorías quemadas en reposo",
+      "calculadora necesidades calorías diarias"
+    ],
     "slug": "bmr-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["BMR", "metabolismo", "calorías", "fitness", "salud"],
+    "tags": [
+      "BMR",
+      "metabolismo",
+      "calorías",
+      "fitness",
+      "salud"
+    ],
     "summary": "Calcula tu Tasa Metabólica Basal (BMR) usando fórmulas científicamente probadas para determinar necesidades calóricas diarias.",
     "description": "Nuestra calculadora BMR usa la ecuación más precisa Mifflin-St Jeor junto con la fórmula Harris-Benedict para calcular tu tasa metabólica basal. Esto representa el número de calorías que tu cuerpo quema en reposo para mantener funciones fisiológicas básicas.",
     "instructions": [
@@ -141,19 +258,95 @@
     "calculatorComponent": {
       "componentName": "BMRCalculator",
       "inputs": [
-        { "name": "age", "label": "Edad", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
-        { "name": "gender", "label": "Género", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "height", "label": "Altura", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1, "unit": "cm" },
-        { "name": "weight", "label": "Peso", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1, "unit": "kg" },
-        { "name": "formula", "label": "Fórmula", "type": "select", "default": "mifflin", "options": ["mifflin", "harris"] },
-        { "name": "activityLevel", "label": "Nivel de Actividad", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] }
+        {
+          "name": "age",
+          "label": "Edad",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Género",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Altura",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1,
+          "unit": "cm"
+        },
+        {
+          "name": "weight",
+          "label": "Peso",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1,
+          "unit": "kg"
+        },
+        {
+          "name": "formula",
+          "label": "Fórmula",
+          "type": "select",
+          "default": "mifflin",
+          "options": [
+            "mifflin",
+            "harris"
+          ]
+        },
+        {
+          "name": "activityLevel",
+          "label": "Nivel de Actividad",
+          "type": "select",
+          "default": "sedentary",
+          "options": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active",
+            "very_active"
+          ]
+        }
       ],
       "formula": "Mifflin-St Jeor: BMR = 10×peso + 6.25×altura - 5×edad + 5 (hombres) o -161 (mujeres); Harris-Benedict: BMR = 88.362 + 13.397×peso + 4.799×altura - 5.677×edad (hombres)",
-      "output": { "label": "Tu BMR", "default": "Ingresa tus datos arriba", "format": "number", "unit": "calorías/día" },
+      "output": {
+        "label": "Tu BMR",
+        "default": "Ingresa tus datos arriba",
+        "format": "number",
+        "unit": "calorías/día"
+      },
       "additionalOutputs": [
-        { "label": "Calorías Diarias (Mantenimiento)", "field": "maintenanceCalories", "format": "number", "unit": "calorías/día" },
-        { "label": "Calorías Diarias (Pérdida de Peso)", "field": "weightLossCalories", "format": "number", "unit": "calorías/día" },
-        { "label": "Calorías Diarias (Ganancia de Peso)", "field": "weightGainCalories", "format": "number", "unit": "calorías/día" }
+        {
+          "label": "Calorías Diarias (Mantenimiento)",
+          "field": "maintenanceCalories",
+          "format": "number",
+          "unit": "calorías/día"
+        },
+        {
+          "label": "Calorías Diarias (Pérdida de Peso)",
+          "field": "weightLossCalories",
+          "format": "number",
+          "unit": "calorías/día"
+        },
+        {
+          "label": "Calorías Diarias (Ganancia de Peso)",
+          "field": "weightGainCalories",
+          "format": "number",
+          "unit": "calorías/día"
+        }
       ]
     },
     "examples": [
@@ -173,7 +366,11 @@
         "output": "BMR: 1,832 calorías/día"
       }
     ],
-    "relatedCalculators": ["bmi-calculator", "calorie-calculator", "body-fat-calculator"],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "calorie-calculator",
+      "body-fat-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcula tu Tasa Metabólica Basal (BMR) con precisión usando nuestra calculadora respaldada científicamente. Esta métrica de salud esencial representa el número de calorías que tu cuerpo quema en reposo para mantener funciones vitales como respiración, circulación y producción celular. Comprender tu BMR es crucial para el manejo efectivo del peso, ya sea que busques perder peso, ganar músculo o mantener tu peso actual. Nuestra calculadora usa las fórmulas más precisas disponibles, incluyendo la ecuación Mifflin-St Jeor y la fórmula Harris-Benedict, para proporcionar resultados confiables basados en tu edad, género, altura y peso.",
       "benefits": [
@@ -239,18 +436,37 @@
           "answer": "Los hombres generalmente tienen BMR más alto debido a mayor masa muscular, que requiere más energía para mantener que tejido graso. Las diferencias hormonales también juegan un rol. Sin embargo, existen variaciones individuales, y dos personas del mismo género, edad y peso pueden tener diferente BMR basado en ratio músculo-grasa y otros factores."
         }
       ]
-    }
+    },
+    "component": "BMRCalculator"
   },
   "pt": {
     "title": "Calculadora BMR",
     "seoTitle": "Calculadora BMR - Calcule Taxa Metabólica Basal Online",
     "metaDescription": "Calculadora gratuita BMR. Calcule sua taxa metabólica basal usando equações Mifflin-St Jeor e Harris-Benedict. Descubra quantas calorias você queima em repouso diariamente.",
-    "keywords": ["calculadora BMR", "calculadora taxa metabólica basal", "calculadora calorias", "calculadora metabolismo", "queima diaria calorias"],
-    "longTailKeywords": ["como calcular BMR", "calculadora BMR Mifflin-St Jeor", "formula taxa metabólica basal", "calcular calorias queimadas em repouso", "calculadora necessidades calorias diarias"],
+    "keywords": [
+      "calculadora BMR",
+      "calculadora taxa metabólica basal",
+      "calculadora calorias",
+      "calculadora metabolismo",
+      "queima diaria calorias"
+    ],
+    "longTailKeywords": [
+      "como calcular BMR",
+      "calculadora BMR Mifflin-St Jeor",
+      "formula taxa metabólica basal",
+      "calcular calorias queimadas em repouso",
+      "calculadora necessidades calorias diarias"
+    ],
     "slug": "bmr-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["BMR", "metabolismo", "calorias", "fitness", "saúde"],
+    "tags": [
+      "BMR",
+      "metabolismo",
+      "calorias",
+      "fitness",
+      "saúde"
+    ],
     "summary": "Calcule sua Taxa Metabólica Basal (BMR) usando fórmulas cientificamente comprovadas para determinar necessidades calóricas diárias.",
     "description": "Nossa calculadora BMR usa a equação mais precisa Mifflin-St Jeor junto com a fórmula Harris-Benedict para calcular sua taxa metabólica basal. Isso representa o número de calorias que seu corpo queima em repouso para manter funções fisiológicas básicas.",
     "instructions": [
@@ -262,19 +478,95 @@
     "calculatorComponent": {
       "componentName": "BMRCalculator",
       "inputs": [
-        { "name": "age", "label": "Idade", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
-        { "name": "gender", "label": "Gênero", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "height", "label": "Altura", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1, "unit": "cm" },
-        { "name": "weight", "label": "Peso", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1, "unit": "kg" },
-        { "name": "formula", "label": "Fórmula", "type": "select", "default": "mifflin", "options": ["mifflin", "harris"] },
-        { "name": "activityLevel", "label": "Nível de Atividade", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] }
+        {
+          "name": "age",
+          "label": "Idade",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Gênero",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Altura",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1,
+          "unit": "cm"
+        },
+        {
+          "name": "weight",
+          "label": "Peso",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1,
+          "unit": "kg"
+        },
+        {
+          "name": "formula",
+          "label": "Fórmula",
+          "type": "select",
+          "default": "mifflin",
+          "options": [
+            "mifflin",
+            "harris"
+          ]
+        },
+        {
+          "name": "activityLevel",
+          "label": "Nível de Atividade",
+          "type": "select",
+          "default": "sedentary",
+          "options": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active",
+            "very_active"
+          ]
+        }
       ],
       "formula": "Mifflin-St Jeor: BMR = 10×peso + 6.25×altura - 5×idade + 5 (homens) ou -161 (mulheres); Harris-Benedict: BMR = 88.362 + 13.397×peso + 4.799×altura - 5.677×idade (homens)",
-      "output": { "label": "Seu BMR", "default": "Digite seus dados acima", "format": "number", "unit": "calorias/dia" },
+      "output": {
+        "label": "Seu BMR",
+        "default": "Digite seus dados acima",
+        "format": "number",
+        "unit": "calorias/dia"
+      },
       "additionalOutputs": [
-        { "label": "Calorias Diárias (Manutenção)", "field": "maintenanceCalories", "format": "number", "unit": "calorias/dia" },
-        { "label": "Calorias Diárias (Perda de Peso)", "field": "weightLossCalories", "format": "number", "unit": "calorias/dia" },
-        { "label": "Calorias Diárias (Ganho de Peso)", "field": "weightGainCalories", "format": "number", "unit": "calorias/dia" }
+        {
+          "label": "Calorias Diárias (Manutenção)",
+          "field": "maintenanceCalories",
+          "format": "number",
+          "unit": "calorias/dia"
+        },
+        {
+          "label": "Calorias Diárias (Perda de Peso)",
+          "field": "weightLossCalories",
+          "format": "number",
+          "unit": "calorias/dia"
+        },
+        {
+          "label": "Calorias Diárias (Ganho de Peso)",
+          "field": "weightGainCalories",
+          "format": "number",
+          "unit": "calorias/dia"
+        }
       ]
     },
     "examples": [
@@ -294,7 +586,11 @@
         "output": "BMR: 1,832 calorias/dia"
       }
     ],
-    "relatedCalculators": ["bmi-calculator", "calorie-calculator", "body-fat-calculator"],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "calorie-calculator",
+      "body-fat-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcule sua Taxa Metabólica Basal (BMR) com precisão usando nossa calculadora respaldada cientificamente. Esta métrica de saúde essencial representa o número de calorias que seu corpo queima em repouso para manter funções vitais como respiração, circulação e produção celular. Compreender sua BMR é crucial para gerenciamento efetivo de peso, seja você buscando perder peso, ganhar músculo ou manter seu peso atual. Nossa calculadora usa as fórmulas mais precisas disponíveis, incluindo a equação Mifflin-St Jeor e a fórmula Harris-Benedict, para fornecer resultados confiáveis baseados em sua idade, gênero, altura e peso.",
       "benefits": [
@@ -360,18 +656,37 @@
           "answer": "Homens geralmente têm BMR mais alto devido a maior massa muscular, que requer mais energia para manter que tecido gorduroso. Diferenças hormonais também desempenham um papel. No entanto, variações individuais existem, e duas pessoas do mesmo gênero, idade e peso podem ter diferente BMR baseado em razão músculo-gordura e outros fatores."
         }
       ]
-    }
+    },
+    "component": "BMRCalculator"
   },
   "fr": {
     "title": "Calculateur BMR",
     "seoTitle": "Calculateur BMR - Calculez Taux Métabolique Basal en Ligne",
     "metaDescription": "Calculateur gratuit BMR. Calculez votre taux métabolique basal utilisant équations Mifflin-St Jeor et Harris-Benedict. Découvrez combien de calories vous brûlez au repos quotidiennement.",
-    "keywords": ["calculateur BMR", "calculateur taux métabolique basal", "calculateur calories", "calculateur métabolisme", "brûlure quotidienne calories"],
-    "longTailKeywords": ["comment calculer BMR", "calculateur BMR Mifflin-St Jeor", "formule taux métabolique basal", "calculer calories brûlées au repos", "calculateur besoins caloriques quotidiens"],
+    "keywords": [
+      "calculateur BMR",
+      "calculateur taux métabolique basal",
+      "calculateur calories",
+      "calculateur métabolisme",
+      "brûlure quotidienne calories"
+    ],
+    "longTailKeywords": [
+      "comment calculer BMR",
+      "calculateur BMR Mifflin-St Jeor",
+      "formule taux métabolique basal",
+      "calculer calories brûlées au repos",
+      "calculateur besoins caloriques quotidiens"
+    ],
     "slug": "bmr-calculator",
     "category": "health",
     "difficulty": "basic",
-    "tags": ["BMR", "métabolisme", "calories", "fitness", "santé"],
+    "tags": [
+      "BMR",
+      "métabolisme",
+      "calories",
+      "fitness",
+      "santé"
+    ],
     "summary": "Calculez votre Taux Métabolique Basal (BMR) utilisant formules scientifiquement prouvées pour déterminer besoins caloriques quotidiens.",
     "description": "Notre calculateur BMR utilise l'équation la plus précise Mifflin-St Jeor avec la formule Harris-Benedict pour calculer votre taux métabolique basal. Cela représente le nombre de calories que votre corps brûle au repos pour maintenir fonctions physiologiques de base.",
     "instructions": [
@@ -383,19 +698,95 @@
     "calculatorComponent": {
       "componentName": "BMRCalculator",
       "inputs": [
-        { "name": "age", "label": "Âge", "type": "number", "default": 30, "min": 10, "max": 120, "step": 1 },
-        { "name": "gender", "label": "Genre", "type": "select", "default": "male", "options": ["male", "female"] },
-        { "name": "height", "label": "Taille", "type": "number", "default": 170, "min": 100, "max": 250, "step": 0.1, "unit": "cm" },
-        { "name": "weight", "label": "Poids", "type": "number", "default": 70, "min": 30, "max": 300, "step": 0.1, "unit": "kg" },
-        { "name": "formula", "label": "Formule", "type": "select", "default": "mifflin", "options": ["mifflin", "harris"] },
-        { "name": "activityLevel", "label": "Niveau d'Activité", "type": "select", "default": "sedentary", "options": ["sedentary", "light", "moderate", "active", "very_active"] }
+        {
+          "name": "age",
+          "label": "Âge",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "gender",
+          "label": "Genre",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Taille",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1,
+          "unit": "cm"
+        },
+        {
+          "name": "weight",
+          "label": "Poids",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1,
+          "unit": "kg"
+        },
+        {
+          "name": "formula",
+          "label": "Formule",
+          "type": "select",
+          "default": "mifflin",
+          "options": [
+            "mifflin",
+            "harris"
+          ]
+        },
+        {
+          "name": "activityLevel",
+          "label": "Niveau d'Activité",
+          "type": "select",
+          "default": "sedentary",
+          "options": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active",
+            "very_active"
+          ]
+        }
       ],
       "formula": "Mifflin-St Jeor: BMR = 10×poids + 6.25×taille - 5×âge + 5 (hommes) ou -161 (femmes); Harris-Benedict: BMR = 88.362 + 13.397×poids + 4.799×taille - 5.677×âge (hommes)",
-      "output": { "label": "Votre BMR", "default": "Entrez vos données ci-dessus", "format": "number", "unit": "calories/jour" },
+      "output": {
+        "label": "Votre BMR",
+        "default": "Entrez vos données ci-dessus",
+        "format": "number",
+        "unit": "calories/jour"
+      },
       "additionalOutputs": [
-        { "label": "Calories Quotidiennes (Maintenance)", "field": "maintenanceCalories", "format": "number", "unit": "calories/jour" },
-        { "label": "Calories Quotidiennes (Perte de Poids)", "field": "weightLossCalories", "format": "number", "unit": "calories/jour" },
-        { "label": "Calories Quotidiennes (Gain de Poids)", "field": "weightGainCalories", "format": "number", "unit": "calories/jour" }
+        {
+          "label": "Calories Quotidiennes (Maintenance)",
+          "field": "maintenanceCalories",
+          "format": "number",
+          "unit": "calories/jour"
+        },
+        {
+          "label": "Calories Quotidiennes (Perte de Poids)",
+          "field": "weightLossCalories",
+          "format": "number",
+          "unit": "calories/jour"
+        },
+        {
+          "label": "Calories Quotidiennes (Gain de Poids)",
+          "field": "weightGainCalories",
+          "format": "number",
+          "unit": "calories/jour"
+        }
       ]
     },
     "examples": [
@@ -415,7 +806,11 @@
         "output": "BMR: 1,832 calories/jour"
       }
     ],
-    "relatedCalculators": ["bmi-calculator", "calorie-calculator", "body-fat-calculator"],
+    "relatedCalculators": [
+      "bmi-calculator",
+      "calorie-calculator",
+      "body-fat-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculez votre Taux Métabolique Basal (BMR) avec précision utilisant notre calculatrice scientifiquement étayée. Cette métrique de santé essentielle représente le nombre de calories que votre corps brûle au repos pour maintenir fonctions vitales comme respiration, circulation et production cellulaire. Comprendre votre BMR est crucial pour gestion efficace du poids, que vous cherchiez à perdre du poids, gagner du muscle ou maintenir votre poids actuel. Notre calculatrice utilise les formules les plus précises disponibles, incluant équation Mifflin-St Jeor et formule Harris-Benedict, pour fournir résultats fiables basés sur votre âge, genre, taille et poids.",
       "benefits": [
@@ -481,6 +876,7 @@
           "answer": "Les hommes ont généralement BMR plus élevé dû à plus grande masse musculaire, qui nécessite plus d'énergie à maintenir que tissu graisseux. Différences hormonales jouent aussi un rôle. Cependant, variations individuelles existent, et deux personnes du même genre, âge et poids peuvent avoir différent BMR basé sur ratio muscle-graisse et autres facteurs."
         }
       ]
-    }
+    },
+    "component": "BMRCalculator"
   }
 }

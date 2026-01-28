@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
   serverExternalPackages: [],
+  turbopack: {
+    root: __dirname,
+  },
 };
 
 export default nextConfig;

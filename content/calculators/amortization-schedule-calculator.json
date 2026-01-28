@@ -58,8 +58,8 @@
         },
         "output": {
           "monthlyPayment": 1264.14,
-          "totalPayments": 455090.40,
-          "totalInterest": 255090.40,
+          "totalPayments": 455090.4,
+          "totalInterest": 255090.4,
           "payoffDate": "2054-01-01",
           "interestToPrincipalRatio": 127.5
         }
@@ -75,8 +75,8 @@
         },
         "output": {
           "monthlyPayment": 1706.97,
-          "totalPayments": 307254.60,
-          "totalInterest": 107254.60,
+          "totalPayments": 307254.6,
+          "totalInterest": 107254.6,
           "payoffDate": "2039-01-01",
           "interestToPrincipalRatio": 53.6
         }
@@ -152,7 +152,8 @@
           "answer": "While the calculator shows the standard schedule, you can modify your actual payments by making extra principal payments. Use the schedule to see how additional payments reduce your total interest and payoff time."
         }
       ]
-    }
+    },
+    "component": "AmortizationScheduleCalculator"
   },
   "es": {
     "title": "Calculadora de Tabla de Amortización",
@@ -213,8 +214,8 @@
         },
         "output": {
           "monthlyPayment": 1264.14,
-          "totalPayments": 455090.40,
-          "totalInterest": 255090.40,
+          "totalPayments": 455090.4,
+          "totalInterest": 255090.4,
           "payoffDate": "2054-01-01",
           "interestToPrincipalRatio": 127.5
         }
@@ -230,8 +231,8 @@
         },
         "output": {
           "monthlyPayment": 1706.97,
-          "totalPayments": 307254.60,
-          "totalInterest": 107254.60,
+          "totalPayments": 307254.6,
+          "totalInterest": 107254.6,
           "payoffDate": "2039-01-01",
           "interestToPrincipalRatio": 53.6
         }
@@ -307,7 +308,8 @@
           "answer": "Mientras la calculadora muestra el programa estándar, puedes modificar tus pagos reales haciendo pagos extra. Usa la tabla para ver cómo pagos adicionales reducen tu interés total y tiempo de liquidación."
         }
       ]
-    }
+    },
+    "component": "AmortizationScheduleCalculator"
   },
   "pt": {
     "title": "Calculadora de Tabela de Amortização",
@@ -368,8 +370,8 @@
         },
         "output": {
           "monthlyPayment": 1264.14,
-          "totalPayments": 455090.40,
-          "totalInterest": 255090.40,
+          "totalPayments": 455090.4,
+          "totalInterest": 255090.4,
           "payoffDate": "2054-01-01",
           "interestToPrincipalRatio": 127.5
         }
@@ -385,8 +387,8 @@
         },
         "output": {
           "monthlyPayment": 1706.97,
-          "totalPayments": 307254.60,
-          "totalInterest": 107254.60,
+          "totalPayments": 307254.6,
+          "totalInterest": 107254.6,
           "payoffDate": "2039-01-01",
           "interestToPrincipalRatio": 53.6
         }
@@ -462,7 +464,8 @@
           "answer": "Enquanto a calculadora mostra o programa padrão, você pode modificar seus pagamentos reais fazendo pagamentos extras. Use a tabela para ver como pagamentos adicionais reduzem seu juros total e tempo de liquidação."
         }
       ]
-    }
+    },
+    "component": "AmortizationScheduleCalculator"
   },
   "fr": {
     "title": "Calculateur de Tableau d'Amortissement",
@@ -523,8 +526,8 @@
         },
         "output": {
           "monthlyPayment": 1264.14,
-          "totalPayments": 455090.40,
-          "totalInterest": 255090.40,
+          "totalPayments": 455090.4,
+          "totalInterest": 255090.4,
           "payoffDate": "2054-01-01",
           "interestToPrincipalRatio": 127.5
         }
@@ -540,8 +543,8 @@
         },
         "output": {
           "monthlyPayment": 1706.97,
-          "totalPayments": 307254.60,
-          "totalInterest": 107254.60,
+          "totalPayments": 307254.6,
+          "totalInterest": 107254.6,
           "payoffDate": "2039-01-01",
           "interestToPrincipalRatio": 53.6
         }
@@ -617,6 +620,7 @@
           "answer": "Alors que le calculateur montre le programme standard, vous pouvez modifier vos paiements réels en effectuant des paiements supplémentaires. Utilisez le tableau pour voir comment les paiements supplémentaires réduisent vos intérêts totaux et durée de remboursement."
         }
       ]
-    }
+    },
+    "component": "AmortizationScheduleCalculator"
   }
 }

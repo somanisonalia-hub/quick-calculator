@@ -3,12 +3,30 @@
     "title": "Age Calculator",
     "seoTitle": "Age Calculator - Calculate Your Exact Age in Years, Months, Days, and More",
     "metaDescription": "Free age calculator. Calculate your exact age in years, months, days, hours, and minutes. Find out how many days until your next birthday and age milestones.",
-    "keywords": ["age calculator", "birthday calculator", "exact age calculator", "age in days calculator", "birthday countdown"],
-    "longTailKeywords": ["how old am I calculator", "age calculator by date of birth", "exact age in years months days", "birthday countdown calculator", "age calculator with hours"],
+    "keywords": [
+      "age calculator",
+      "birthday calculator",
+      "exact age calculator",
+      "age in days calculator",
+      "birthday countdown"
+    ],
+    "longTailKeywords": [
+      "how old am I calculator",
+      "age calculator by date of birth",
+      "exact age in years months days",
+      "birthday countdown calculator",
+      "age calculator with hours"
+    ],
     "slug": "age-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["age", "birthday", "time", "date", "calculation"],
+    "tags": [
+      "age",
+      "birthday",
+      "time",
+      "date",
+      "calculation"
+    ],
     "summary": "Calculate your exact age in years, months, days, hours, and minutes from your birthdate.",
     "description": "Our comprehensive age calculator determines your exact age in years, months, days, hours, and minutes. Enter your birth date and get detailed age information including days until your next birthday, age milestones, and time lived statistics.",
     "instructions": [
@@ -20,21 +38,94 @@
     "calculatorComponent": {
       "componentName": "AgeCalculator",
       "inputs": [
-        { "name": "birthMonth", "label": "Birth Month", "type": "number", "default": 1, "min": 1, "max": 12, "step": 1 },
-        { "name": "birthDay", "label": "Birth Day", "type": "number", "default": 1, "min": 1, "max": 31, "step": 1 },
-        { "name": "birthYear", "label": "Birth Year", "type": "number", "default": 2000, "min": 1900, "max": 2024, "step": 1 },
-        { "name": "useToday", "label": "Use Today's Date", "type": "checkbox", "default": true },
-        { "name": "currentMonth", "label": "Current Month", "type": "number", "default": 1, "min": 1, "max": 12, "step": 1 },
-        { "name": "currentDay", "label": "Current Day", "type": "number", "default": 1, "min": 1, "max": 31, "step": 1 },
-        { "name": "currentYear", "label": "Current Year", "type": "number", "default": 2024, "min": 1900, "max": 2030, "step": 1 }
+        {
+          "name": "birthMonth",
+          "label": "Birth Month",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 12,
+          "step": 1
+        },
+        {
+          "name": "birthDay",
+          "label": "Birth Day",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 31,
+          "step": 1
+        },
+        {
+          "name": "birthYear",
+          "label": "Birth Year",
+          "type": "number",
+          "default": 2000,
+          "min": 1900,
+          "max": 2024,
+          "step": 1
+        },
+        {
+          "name": "useToday",
+          "label": "Use Today's Date",
+          "type": "checkbox",
+          "default": true
+        },
+        {
+          "name": "currentMonth",
+          "label": "Current Month",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 12,
+          "step": 1
+        },
+        {
+          "name": "currentDay",
+          "label": "Current Day",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 31,
+          "step": 1
+        },
+        {
+          "name": "currentYear",
+          "label": "Current Year",
+          "type": "number",
+          "default": 2024,
+          "min": 1900,
+          "max": 2030,
+          "step": 1
+        }
       ],
       "formula": "Age in years = Current year - Birth year; Adjust for months/days; Hours/minutes = Total days × 24/1440",
-      "output": { "label": "Your Age", "default": "Enter your birth date above", "format": "text" },
+      "output": {
+        "label": "Your Age",
+        "default": "Enter your birth date above",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Age in Years", "field": "ageInYears", "format": "number" },
-        { "label": "Age in Months", "field": "ageInMonths", "format": "number" },
-        { "label": "Age in Days", "field": "ageInDays", "format": "number" },
-        { "label": "Days Until Next Birthday", "field": "daysToBirthday", "format": "number" }
+        {
+          "label": "Age in Years",
+          "field": "ageInYears",
+          "format": "number"
+        },
+        {
+          "label": "Age in Months",
+          "field": "ageInMonths",
+          "format": "number"
+        },
+        {
+          "label": "Age in Days",
+          "field": "ageInDays",
+          "format": "number"
+        },
+        {
+          "label": "Days Until Next Birthday",
+          "field": "daysToBirthday",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -54,7 +145,11 @@
         "output": "Age: 30 years, 0 months, 0 days (30th birthday!)"
       }
     ],
-    "relatedCalculators": ["date-calculator", "time-zone-calculator", "percentage-calculator"],
+    "relatedCalculators": [
+      "date-calculator",
+      "time-zone-calculator",
+      "percentage-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculate your exact age in years, months, days, hours, and minutes with our comprehensive age calculator. This tool helps people of all ages determine their precise age from birth date, track important life milestones, and understand time lived. Whether you're planning a birthday celebration, curious about your age in different units, or need age calculations for official purposes, this calculator provides accurate results based on standard calendar calculations. The tool supports both past and future dates, making it useful for age verification, milestone planning, and general curiosity about time measurement.",
       "benefits": [
@@ -118,18 +213,37 @@
           "answer": "When calculating age before someone's birthday in the current year, the calculator shows their age as one year less than their birth year difference, with remaining months and days until their birthday. This ensures accurate representation of their current age status."
         }
       ]
-    }
+    },
+    "component": "AgeCalculator"
   },
   "es": {
     "title": "Calculadora de Edad",
     "seoTitle": "Calculadora de Edad - Calcula Tu Edad Exacta en Años, Meses, Días y Más",
     "metaDescription": "Calculadora gratuita de edad. Calcula tu edad exacta en años, meses, días, horas y minutos. Averigua cuántos días faltan para tu próximo cumpleaños y hitos de edad.",
-    "keywords": ["calculadora edad", "calculadora cumpleaños", "calculadora edad exacta", "calculadora edad en días", "cuenta regresiva cumpleaños"],
-    "longTailKeywords": ["qué edad tengo calculadora", "calculadora edad por fecha nacimiento", "edad exacta años meses días", "calculadora cuenta regresiva cumpleaños", "calculadora edad con horas"],
+    "keywords": [
+      "calculadora edad",
+      "calculadora cumpleaños",
+      "calculadora edad exacta",
+      "calculadora edad en días",
+      "cuenta regresiva cumpleaños"
+    ],
+    "longTailKeywords": [
+      "qué edad tengo calculadora",
+      "calculadora edad por fecha nacimiento",
+      "edad exacta años meses días",
+      "calculadora cuenta regresiva cumpleaños",
+      "calculadora edad con horas"
+    ],
     "slug": "age-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["edad", "cumpleaños", "tiempo", "fecha", "cálculo"],
+    "tags": [
+      "edad",
+      "cumpleaños",
+      "tiempo",
+      "fecha",
+      "cálculo"
+    ],
     "summary": "Calcula tu edad exacta en años, meses, días, horas y minutos desde tu fecha de nacimiento.",
     "description": "Nuestra calculadora integral de edad determina tu edad exacta en años, meses, días, horas y minutos. Ingresa tu fecha de nacimiento y obtén información detallada de edad incluyendo días hasta tu próximo cumpleaños, hitos de edad y estadísticas de tiempo vivido.",
     "instructions": [
@@ -141,20 +255,88 @@
     "calculatorComponent": {
       "componentName": "AgeCalculator",
       "inputs": [
-        { "name": "birthMonth", "label": "Mes de Nacimiento", "type": "number", "default": 1, "min": 1, "max": 12, "step": 1 },
-        { "name": "birthDay", "label": "Día de Nacimiento", "type": "number", "default": 1, "min": 1, "max": 31, "step": 1 },
-        { "name": "birthYear", "label": "Año de Nacimiento", "type": "number", "default": 2000, "min": 1900, "max": 2024, "step": 1 },
-        { "name": "currentMonth", "label": "Mes Actual", "type": "number", "default": 1, "min": 1, "max": 12, "step": 1 },
-        { "name": "currentDay", "label": "Día Actual", "type": "number", "default": 1, "min": 1, "max": 31, "step": 1 },
-        { "name": "currentYear", "label": "Año Actual", "type": "number", "default": 2024, "min": 1900, "max": 2030, "step": 1 }
+        {
+          "name": "birthMonth",
+          "label": "Mes de Nacimiento",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 12,
+          "step": 1
+        },
+        {
+          "name": "birthDay",
+          "label": "Día de Nacimiento",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 31,
+          "step": 1
+        },
+        {
+          "name": "birthYear",
+          "label": "Año de Nacimiento",
+          "type": "number",
+          "default": 2000,
+          "min": 1900,
+          "max": 2024,
+          "step": 1
+        },
+        {
+          "name": "currentMonth",
+          "label": "Mes Actual",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 12,
+          "step": 1
+        },
+        {
+          "name": "currentDay",
+          "label": "Día Actual",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 31,
+          "step": 1
+        },
+        {
+          "name": "currentYear",
+          "label": "Año Actual",
+          "type": "number",
+          "default": 2024,
+          "min": 1900,
+          "max": 2030,
+          "step": 1
+        }
       ],
       "formula": "Edad en años = Año actual - Año nacimiento; Ajustar por meses/días; Horas/minutos = Días totales × 24/1440",
-      "output": { "label": "Tu Edad", "default": "Ingresa tu fecha de nacimiento arriba", "format": "text" },
+      "output": {
+        "label": "Tu Edad",
+        "default": "Ingresa tu fecha de nacimiento arriba",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Edad en Años", "field": "ageInYears", "format": "number" },
-        { "label": "Edad en Meses", "field": "ageInMonths", "format": "number" },
-        { "label": "Edad en Días", "field": "ageInDays", "format": "number" },
-        { "label": "Días Hasta Próximo Cumpleaños", "field": "daysToBirthday", "format": "number" }
+        {
+          "label": "Edad en Años",
+          "field": "ageInYears",
+          "format": "number"
+        },
+        {
+          "label": "Edad en Meses",
+          "field": "ageInMonths",
+          "format": "number"
+        },
+        {
+          "label": "Edad en Días",
+          "field": "ageInDays",
+          "format": "number"
+        },
+        {
+          "label": "Días Hasta Próximo Cumpleaños",
+          "field": "daysToBirthday",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -169,7 +351,11 @@
         "output": "Edad: 39 años, 3 meses, 18 días, 110 días hasta cumpleaños"
       }
     ],
-    "relatedCalculators": ["date-calculator", "time-zone-calculator", "percentage-calculator"],
+    "relatedCalculators": [
+      "date-calculator",
+      "time-zone-calculator",
+      "percentage-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcula tu edad exacta en años, meses, días, horas y minutos con nuestra calculadora integral de edad. Esta herramienta ayuda a personas de todas las edades a determinar su edad precisa desde la fecha de nacimiento, rastrear hitos importantes de la vida y comprender el tiempo vivido. Ya sea que estés planeando una celebración de cumpleaños, curioso sobre tu edad en diferentes unidades, o necesites cálculos de edad para propósitos oficiales, esta calculadora proporciona resultados precisos basados en cálculos estándar de calendario. La herramienta soporta tanto fechas pasadas como futuras, haciéndola útil para verificación de edad, planificación de hitos y curiosidad general sobre medición del tiempo.",
       "benefits": [
@@ -231,18 +417,37 @@
           "answer": "Cuando calculando edad antes del cumpleaños de alguien en el año actual, la calculadora muestra su edad como un año menos que su diferencia de año de nacimiento, con meses y días restantes hasta su cumpleaños. Esto asegura representación precisa de su estado de edad actual."
         }
       ]
-    }
+    },
+    "component": "AgeCalculator"
   },
   "pt": {
     "title": "Calculadora de Idade",
     "seoTitle": "Calculadora de Idade - Calcule Sua Idade Exata em Anos, Meses, Dias e Mais",
     "metaDescription": "Calculadora gratuita de idade. Calcule sua idade exata em anos, meses, dias, horas e minutos. Descubra quantos dias até seu próximo aniversário e marcos de idade.",
-    "keywords": ["calculadora idade", "calculadora aniversário", "calculadora idade exata", "calculadora idade em dias", "contagem regressiva aniversário"],
-    "longTailKeywords": ["quantos anos eu tenho calculadora", "calculadora idade por data nascimento", "idade exata anos meses dias", "calculadora contagem regressiva aniversário", "calculadora idade com horas"],
+    "keywords": [
+      "calculadora idade",
+      "calculadora aniversário",
+      "calculadora idade exata",
+      "calculadora idade em dias",
+      "contagem regressiva aniversário"
+    ],
+    "longTailKeywords": [
+      "quantos anos eu tenho calculadora",
+      "calculadora idade por data nascimento",
+      "idade exata anos meses dias",
+      "calculadora contagem regressiva aniversário",
+      "calculadora idade com horas"
+    ],
     "slug": "age-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["idade", "aniversário", "tempo", "data", "cálculo"],
+    "tags": [
+      "idade",
+      "aniversário",
+      "tempo",
+      "data",
+      "cálculo"
+    ],
     "summary": "Calcule sua idade exata em anos, meses, dias, horas e minutos desde sua data de nascimento.",
     "description": "Nossa calculadora abrangente de idade determina sua idade exata em anos, meses, dias, horas e minutos. Digite sua data de nascimento e obtenha informação detalhada de idade incluindo dias até seu próximo aniversário, marcos de idade e estatísticas de tempo vivido.",
     "instructions": [
@@ -254,20 +459,88 @@
     "calculatorComponent": {
       "componentName": "AgeCalculator",
       "inputs": [
-        { "name": "birthMonth", "label": "Mês de Nascimento", "type": "number", "default": 1, "min": 1, "max": 12, "step": 1 },
-        { "name": "birthDay", "label": "Dia de Nascimento", "type": "number", "default": 1, "min": 1, "max": 31, "step": 1 },
-        { "name": "birthYear", "label": "Ano de Nascimento", "type": "number", "default": 2000, "min": 1900, "max": 2024, "step": 1 },
-        { "name": "currentMonth", "label": "Mês Atual", "type": "number", "default": 1, "min": 1, "max": 12, "step": 1 },
-        { "name": "currentDay", "label": "Dia Atual", "type": "number", "default": 1, "min": 1, "max": 31, "step": 1 },
-        { "name": "currentYear", "label": "Ano Atual", "type": "number", "default": 2024, "min": 1900, "max": 2030, "step": 1 }
+        {
+          "name": "birthMonth",
+          "label": "Mês de Nascimento",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 12,
+          "step": 1
+        },
+        {
+          "name": "birthDay",
+          "label": "Dia de Nascimento",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 31,
+          "step": 1
+        },
+        {
+          "name": "birthYear",
+          "label": "Ano de Nascimento",
+          "type": "number",
+          "default": 2000,
+          "min": 1900,
+          "max": 2024,
+          "step": 1
+        },
+        {
+          "name": "currentMonth",
+          "label": "Mês Atual",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 12,
+          "step": 1
+        },
+        {
+          "name": "currentDay",
+          "label": "Dia Atual",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 31,
+          "step": 1
+        },
+        {
+          "name": "currentYear",
+          "label": "Ano Atual",
+          "type": "number",
+          "default": 2024,
+          "min": 1900,
+          "max": 2030,
+          "step": 1
+        }
       ],
       "formula": "Idade em anos = Ano atual - Ano nascimento; Ajustar por meses/dias; Horas/minutos = Dias totais × 24/1440",
-      "output": { "label": "Sua Idade", "default": "Digite sua data de nascimento acima", "format": "text" },
+      "output": {
+        "label": "Sua Idade",
+        "default": "Digite sua data de nascimento acima",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Idade em Anos", "field": "ageInYears", "format": "number" },
-        { "label": "Idade em Meses", "field": "ageInMonths", "format": "number" },
-        { "label": "Idade em Dias", "field": "ageInDays", "format": "number" },
-        { "label": "Dias Até Próximo Aniversário", "field": "daysToBirthday", "format": "number" }
+        {
+          "label": "Idade em Anos",
+          "field": "ageInYears",
+          "format": "number"
+        },
+        {
+          "label": "Idade em Meses",
+          "field": "ageInMonths",
+          "format": "number"
+        },
+        {
+          "label": "Idade em Dias",
+          "field": "ageInDays",
+          "format": "number"
+        },
+        {
+          "label": "Dias Até Próximo Aniversário",
+          "field": "daysToBirthday",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -282,7 +555,11 @@
         "output": "Idade: 39 anos, 3 meses, 18 dias, 110 dias até aniversário"
       }
     ],
-    "relatedCalculators": ["date-calculator", "time-zone-calculator", "percentage-calculator"],
+    "relatedCalculators": [
+      "date-calculator",
+      "time-zone-calculator",
+      "percentage-calculator"
+    ],
     "seoContent": {
       "introduction": "Calcule sua idade exata em anos, meses, dias, horas e minutos com nossa calculadora abrangente de idade. Esta ferramenta ajuda pessoas de todas as idades a determinar sua idade precisa desde a data de nascimento, rastrear marcos importantes da vida e compreender o tempo vivido. Seja você planejando uma celebração de aniversário, curioso sobre sua idade em diferentes unidades, ou precisando de cálculos de idade para propósitos oficiais, esta calculadora fornece resultados precisos baseados em cálculos padrão de calendário. A ferramenta suporta tanto datas passadas quanto futuras, tornando-a útil para verificação de idade, planejamento de marcos e curiosidade geral sobre medição de tempo.",
       "benefits": [
@@ -344,18 +621,37 @@
           "answer": "Quando calculando idade antes do aniversário de alguém no ano atual, a calculadora mostra sua idade como um ano a menos que sua diferença de ano de nascimento, com meses e dias restantes até seu aniversário. Isso garante representação precisa de seu status de idade atual."
         }
       ]
-    }
+    },
+    "component": "AgeCalculator"
   },
   "fr": {
     "title": "Calculateur d'Âge",
     "seoTitle": "Calculateur d'Âge - Calculez Votre Âge Exact en Années, Mois, Jours et Plus",
     "metaDescription": "Calculateur gratuit d'âge. Calculez votre âge exact en années, mois, jours, heures et minutes. Découvrez combien de jours jusqu'à votre prochain anniversaire et jalons d'âge.",
-    "keywords": ["calculateur âge", "calculateur anniversaire", "calculateur âge exact", "calculateur âge en jours", "compte à rebours anniversaire"],
-    "longTailKeywords": ["quel âge ai-je calculateur", "calculateur âge par date naissance", "âge exact années mois jours", "calculateur compte à rebours anniversaire", "calculateur âge avec heures"],
+    "keywords": [
+      "calculateur âge",
+      "calculateur anniversaire",
+      "calculateur âge exact",
+      "calculateur âge en jours",
+      "compte à rebours anniversaire"
+    ],
+    "longTailKeywords": [
+      "quel âge ai-je calculateur",
+      "calculateur âge par date naissance",
+      "âge exact années mois jours",
+      "calculateur compte à rebours anniversaire",
+      "calculateur âge avec heures"
+    ],
     "slug": "age-calculator",
     "category": "lifestyle",
     "difficulty": "basic",
-    "tags": ["âge", "anniversaire", "temps", "date", "calcul"],
+    "tags": [
+      "âge",
+      "anniversaire",
+      "temps",
+      "date",
+      "calcul"
+    ],
     "summary": "Calculez votre âge exact en années, mois, jours, heures et minutes depuis votre date de naissance.",
     "description": "Notre calculateur complet d'âge détermine votre âge exact en années, mois, jours, heures et minutes. Entrez votre date de naissance et obtenez information d'âge détaillée incluant jours jusqu'à votre prochain anniversaire, jalons d'âge et statistiques temps vécu.",
     "instructions": [
@@ -367,20 +663,88 @@
     "calculatorComponent": {
       "componentName": "AgeCalculator",
       "inputs": [
-        { "name": "birthMonth", "label": "Mois de Naissance", "type": "number", "default": 1, "min": 1, "max": 12, "step": 1 },
-        { "name": "birthDay", "label": "Jour de Naissance", "type": "number", "default": 1, "min": 1, "max": 31, "step": 1 },
-        { "name": "birthYear", "label": "Année de Naissance", "type": "number", "default": 2000, "min": 1900, "max": 2024, "step": 1 },
-        { "name": "currentMonth", "label": "Mois Actuel", "type": "number", "default": 1, "min": 1, "max": 12, "step": 1 },
-        { "name": "currentDay", "label": "Jour Actuel", "type": "number", "default": 1, "min": 1, "max": 31, "step": 1 },
-        { "name": "currentYear", "label": "Année Actuelle", "type": "number", "default": 2024, "min": 1900, "max": 2030, "step": 1 }
+        {
+          "name": "birthMonth",
+          "label": "Mois de Naissance",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 12,
+          "step": 1
+        },
+        {
+          "name": "birthDay",
+          "label": "Jour de Naissance",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 31,
+          "step": 1
+        },
+        {
+          "name": "birthYear",
+          "label": "Année de Naissance",
+          "type": "number",
+          "default": 2000,
+          "min": 1900,
+          "max": 2024,
+          "step": 1
+        },
+        {
+          "name": "currentMonth",
+          "label": "Mois Actuel",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 12,
+          "step": 1
+        },
+        {
+          "name": "currentDay",
+          "label": "Jour Actuel",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 31,
+          "step": 1
+        },
+        {
+          "name": "currentYear",
+          "label": "Année Actuelle",
+          "type": "number",
+          "default": 2024,
+          "min": 1900,
+          "max": 2030,
+          "step": 1
+        }
       ],
       "formula": "Âge en années = Année actuelle - Année naissance; Ajuster pour mois/jours; Heures/minutes = Jours totaux × 24/1440",
-      "output": { "label": "Votre Âge", "default": "Entrez votre date de naissance ci-dessus", "format": "text" },
+      "output": {
+        "label": "Votre Âge",
+        "default": "Entrez votre date de naissance ci-dessus",
+        "format": "text"
+      },
       "additionalOutputs": [
-        { "label": "Âge en Années", "field": "ageInYears", "format": "number" },
-        { "label": "Âge en Mois", "field": "ageInMonths", "format": "number" },
-        { "label": "Âge en Jours", "field": "ageInDays", "format": "number" },
-        { "label": "Jours Jusqu'au Prochain Anniversaire", "field": "daysToBirthday", "format": "number" }
+        {
+          "label": "Âge en Années",
+          "field": "ageInYears",
+          "format": "number"
+        },
+        {
+          "label": "Âge en Mois",
+          "field": "ageInMonths",
+          "format": "number"
+        },
+        {
+          "label": "Âge en Jours",
+          "field": "ageInDays",
+          "format": "number"
+        },
+        {
+          "label": "Jours Jusqu'au Prochain Anniversaire",
+          "field": "daysToBirthday",
+          "format": "number"
+        }
       ]
     },
     "examples": [
@@ -395,7 +759,11 @@
         "output": "Âge: 39 ans, 3 mois, 18 jours, 110 jours jusqu'à l'anniversaire"
       }
     ],
-    "relatedCalculators": ["date-calculator", "time-zone-calculator", "percentage-calculator"],
+    "relatedCalculators": [
+      "date-calculator",
+      "time-zone-calculator",
+      "percentage-calculator"
+    ],
     "seoContent": {
       "introduction": "Calculez votre âge exact en années, mois, jours, heures et minutes avec notre calculateur complet d'âge. Cet outil aide les personnes de tous âges à déterminer leur âge précis depuis la date de naissance, suivre les jalons importants de la vie et comprendre le temps vécu. Que vous planifiez une célébration d'anniversaire, curieux de votre âge en différentes unités, ou ayant besoin de calculs d'âge pour des buts officiels, ce calculateur fournit des résultats précis basés sur les calculs standard de calendrier. L'outil supporte à la fois les dates passées et futures, le rendant utile pour la vérification d'âge, la planification de jalons et la curiosité générale sur la mesure du temps.",
       "benefits": [
@@ -457,6 +825,7 @@
           "answer": "Lors du calcul d'âge avant l'anniversaire de quelqu'un dans l'année actuelle, le calculateur montre son âge comme un an de moins que sa différence d'année de naissance, avec les mois et jours restants jusqu'à son anniversaire. Cela assure une représentation précise de son statut d'âge actuel."
         }
       ]
-    }
+    },
+    "component": "AgeCalculator"
   }
 }

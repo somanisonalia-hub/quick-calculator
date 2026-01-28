@@ -3,12 +3,30 @@
     "title": "Expense Calculator",
     "seoTitle": "Expense Calculator - Track and Calculate Monthly Expenses and Budget",
     "metaDescription": "Free expense calculator. Track monthly expenses, calculate budget allocations, and analyze spending patterns. Perfect for personal finance management and budget planning.",
-    "keywords": ["expense calculator", "budget calculator", "monthly expense tracker", "spending calculator", "personal finance calculator"],
-    "longTailKeywords": ["how to calculate monthly expenses", "expense tracking calculator", "budget expense calculator", "monthly spending calculator", "personal finance expense tracker"],
+    "keywords": [
+      "expense calculator",
+      "budget calculator",
+      "monthly expense tracker",
+      "spending calculator",
+      "personal finance calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate monthly expenses",
+      "expense tracking calculator",
+      "budget expense calculator",
+      "monthly spending calculator",
+      "personal finance expense tracker"
+    ],
     "slug": "expense-calculator",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["budget", "expenses", "personal finance", "tracking", "spending"],
+    "tags": [
+      "budget",
+      "expenses",
+      "personal finance",
+      "tracking",
+      "spending"
+    ],
     "summary": "Track monthly expenses, calculate budget allocations, and analyze your spending patterns for better financial management.",
     "description": "Our comprehensive expense calculator helps you track and categorize monthly expenses, set budget goals, and analyze spending patterns. Perfect for individuals and families looking to understand where their money goes and create more effective budgets. Includes expense categories, percentage breakdowns, and savings recommendations.",
     "instructions": [
@@ -20,20 +38,92 @@
     "calculatorComponent": {
       "componentName": "ExpenseCalculator",
       "inputs": [
-        { "name": "monthlyIncome", "label": "Monthly Income ($)", "type": "number", "default": 5000, "min": 1000, "max": 50000, "step": 100 },
-        { "name": "housing", "label": "Housing/Rent ($)", "type": "number", "default": 1500, "min": 0, "max": 10000, "step": 50 },
-        { "name": "utilities", "label": "Utilities ($)", "type": "number", "default": 200, "min": 0, "max": 1000, "step": 10 },
-        { "name": "groceries", "label": "Groceries ($)", "type": "number", "default": 400, "min": 0, "max": 2000, "step": 25 },
-        { "name": "transportation", "label": "Transportation ($)", "type": "number", "default": 300, "min": 0, "max": 2000, "step": 25 },
-        { "name": "entertainment", "label": "Entertainment ($)", "type": "number", "default": 150, "min": 0, "max": 1000, "step": 25 },
-        { "name": "otherExpenses", "label": "Other Expenses ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "monthlyIncome",
+          "label": "Monthly Income ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 1000,
+          "max": 50000,
+          "step": 100
+        },
+        {
+          "name": "housing",
+          "label": "Housing/Rent ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 50
+        },
+        {
+          "name": "utilities",
+          "label": "Utilities ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 1000,
+          "step": 10
+        },
+        {
+          "name": "groceries",
+          "label": "Groceries ($)",
+          "type": "number",
+          "default": 400,
+          "min": 0,
+          "max": 2000,
+          "step": 25
+        },
+        {
+          "name": "transportation",
+          "label": "Transportation ($)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "max": 2000,
+          "step": 25
+        },
+        {
+          "name": "entertainment",
+          "label": "Entertainment ($)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "max": 1000,
+          "step": 25
+        },
+        {
+          "name": "otherExpenses",
+          "label": "Other Expenses ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Total Expenses = Sum of all expense categories; Net Income = Income - Total Expenses",
-      "output": { "label": "Monthly Net Income", "default": "Enter your income and expenses", "format": "currency" },
+      "output": {
+        "label": "Monthly Net Income",
+        "default": "Enter your income and expenses",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Total Expenses", "field": "totalExpenses", "format": "currency" },
-        { "label": "Expense Ratio", "field": "expenseRatio", "format": "percentage" },
-        { "label": "Savings Potential", "field": "savingsPotential", "format": "currency" }
+        {
+          "label": "Total Expenses",
+          "field": "totalExpenses",
+          "format": "currency"
+        },
+        {
+          "label": "Expense Ratio",
+          "field": "expenseRatio",
+          "format": "percentage"
+        },
+        {
+          "label": "Savings Potential",
+          "field": "savingsPotential",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -48,7 +138,11 @@
         "output": "Expense Ratio: 70%, Recommended Savings: 20%, Potential Monthly Savings: $600"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "savings-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "savings-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Take control of your spending and understand exactly where your money goes with our comprehensive expense calculator. This essential personal finance tool helps you track monthly expenses across all categories, analyze spending patterns, and identify opportunities to save more. Whether you're living paycheck to paycheck, trying to build savings, or just want to understand your financial habits better, knowing your expense breakdown is the foundation of effective money management and wealth building.",
       "benefits": [
@@ -117,18 +211,37 @@
           "answer": "Daily tracking provides the most control and catches overspending early, but can be time-consuming. Weekly reviews work well for most people and allow course correction mid-month. Monthly tracking is easiest but may miss patterns. Use budgeting apps for automatic tracking. Start with your preferred frequency, then adjust based on needs. Daily tracking is recommended when first starting or during spending diets. Weekly reviews work well for ongoing management."
         }
       ]
-    }
+    },
+    "component": "ExpenseCalculator"
   },
   "es": {
     "title": "Calculadora de Gastos",
     "seoTitle": "Calculadora de Gastos - Rastrea y Calcula Gastos Mensuales y Presupuesto",
     "metaDescription": "Calculadora gratuita de gastos. Rastrea gastos mensuales, calcula asignaciones presupuestarias y analiza patrones de gasto. Perfecta para gestión financiera personal y planificación presupuestaria.",
-    "keywords": ["calculadora gastos", "calculadora presupuesto", "rastreador gastos mensuales", "calculadora gasto", "calculadora finanzas personales"],
-    "longTailKeywords": ["cómo calcular gastos mensuales", "calculadora rastreo gastos", "calculadora gastos presupuesto", "calculadora gasto mensual", "rastreador gastos finanzas personales"],
+    "keywords": [
+      "calculadora gastos",
+      "calculadora presupuesto",
+      "rastreador gastos mensuales",
+      "calculadora gasto",
+      "calculadora finanzas personales"
+    ],
+    "longTailKeywords": [
+      "cómo calcular gastos mensuales",
+      "calculadora rastreo gastos",
+      "calculadora gastos presupuesto",
+      "calculadora gasto mensual",
+      "rastreador gastos finanzas personales"
+    ],
     "slug": "expense-calculator",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["presupuesto", "gastos", "finanzas personales", "rastreo", "gasto"],
+    "tags": [
+      "presupuesto",
+      "gastos",
+      "finanzas personales",
+      "rastreo",
+      "gasto"
+    ],
     "summary": "Rastrea gastos mensuales, calcula asignaciones presupuestarias y analiza tus patrones de gasto para mejor gestión financiera.",
     "description": "Nuestra completa calculadora de gastos te ayuda a rastrear y categorizar gastos mensuales, establecer metas presupuestarias y analizar patrones de gasto. Perfecta para individuos y familias que buscan entender a dónde va su dinero y crear presupuestos más efectivos. Incluye categorías de gastos, desgloses porcentuales y recomendaciones de ahorro.",
     "instructions": [
@@ -140,20 +253,92 @@
     "calculatorComponent": {
       "componentName": "ExpenseCalculator",
       "inputs": [
-        { "name": "monthlyIncome", "label": "Monthly Income ($)", "type": "number", "default": 5000, "min": 1000, "max": 50000, "step": 100 },
-        { "name": "housing", "label": "Housing/Rent ($)", "type": "number", "default": 1500, "min": 0, "max": 10000, "step": 50 },
-        { "name": "utilities", "label": "Utilities ($)", "type": "number", "default": 200, "min": 0, "max": 1000, "step": 10 },
-        { "name": "groceries", "label": "Groceries ($)", "type": "number", "default": 400, "min": 0, "max": 2000, "step": 25 },
-        { "name": "transportation", "label": "Transportation ($)", "type": "number", "default": 300, "min": 0, "max": 2000, "step": 25 },
-        { "name": "entertainment", "label": "Entertainment ($)", "type": "number", "default": 150, "min": 0, "max": 1000, "step": 25 },
-        { "name": "otherExpenses", "label": "Other Expenses ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "monthlyIncome",
+          "label": "Monthly Income ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 1000,
+          "max": 50000,
+          "step": 100
+        },
+        {
+          "name": "housing",
+          "label": "Housing/Rent ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 50
+        },
+        {
+          "name": "utilities",
+          "label": "Utilities ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 1000,
+          "step": 10
+        },
+        {
+          "name": "groceries",
+          "label": "Groceries ($)",
+          "type": "number",
+          "default": 400,
+          "min": 0,
+          "max": 2000,
+          "step": 25
+        },
+        {
+          "name": "transportation",
+          "label": "Transportation ($)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "max": 2000,
+          "step": 25
+        },
+        {
+          "name": "entertainment",
+          "label": "Entertainment ($)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "max": 1000,
+          "step": 25
+        },
+        {
+          "name": "otherExpenses",
+          "label": "Other Expenses ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Total Expenses = Sum of all expense categories; Net Income = Income - Total Expenses",
-      "output": { "label": "Monthly Net Income", "default": "Enter your income and expenses", "format": "currency" },
+      "output": {
+        "label": "Monthly Net Income",
+        "default": "Enter your income and expenses",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Total Expenses", "field": "totalExpenses", "format": "currency" },
-        { "label": "Expense Ratio", "field": "expenseRatio", "format": "percentage" },
-        { "label": "Savings Potential", "field": "savingsPotential", "format": "currency" }
+        {
+          "label": "Total Expenses",
+          "field": "totalExpenses",
+          "format": "currency"
+        },
+        {
+          "label": "Expense Ratio",
+          "field": "expenseRatio",
+          "format": "percentage"
+        },
+        {
+          "label": "Savings Potential",
+          "field": "savingsPotential",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -168,7 +353,11 @@
         "output": "Ratio de Gastos: 70%, Ahorros Recomendados: 20%, Ahorros Mensuales Potenciales: $600"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "savings-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "savings-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Toma el control de tus gastos y entiende exactamente adónde va tu dinero con nuestra calculadora integral de gastos. Esta herramienta esencial de finanzas personales te ayuda a rastrear gastos mensuales a través de todas las categorías, analizar patrones de gasto, e identificar oportunidades para ahorrar más. Ya sea que vivas de cheque en cheque, trates de construir ahorros, o solo quieras entender mejor tus hábitos financieros, conocer tu desglose de gastos es la base de una gestión efectiva del dinero y construcción de riqueza.",
       "benefits": [
@@ -237,18 +426,37 @@
           "answer": "Rastreo diario proporciona el mayor control y detecta gastos excesivos temprano, pero puede ser consumidor de tiempo. Revisiones semanales funcionan bien para la mayoría de personas y permiten corrección de curso a mediados de mes. Rastreo mensual es más fácil pero puede perder patrones. Usa apps de presupuesto para rastreo automático. Comienza con tu frecuencia preferida, luego ajusta basado en necesidades. Rastreo diario se recomienda cuando comenzando por primera vez o durante dietas de gasto. Revisiones semanales funcionan bien para gestión continua."
         }
       ]
-    }
+    },
+    "component": "ExpenseCalculator"
   },
   "pt": {
     "title": "Calculadora de Despesas",
     "seoTitle": "Calculadora de Despesas - Acompanhe e Calcule Despesas Mensais e Orçamento",
     "metaDescription": "Calculadora gratuita de despesas. Acompanhe despesas mensais, calcule alocações orçamentárias e analise padrões de gastos. Perfeita para gestão financeira pessoal e planejamento orçamentário.",
-    "keywords": ["calculadora despesas", "calculadora orçamento", "rastreador despesas mensais", "calculadora gastos", "calculadora finanças pessoais"],
-    "longTailKeywords": ["como calcular despesas mensais", "calculadora rastreamento despesas", "calculadora despesas orçamento", "calculadora gastos mensal", "rastreador despesas finanças pessoais"],
+    "keywords": [
+      "calculadora despesas",
+      "calculadora orçamento",
+      "rastreador despesas mensais",
+      "calculadora gastos",
+      "calculadora finanças pessoais"
+    ],
+    "longTailKeywords": [
+      "como calcular despesas mensais",
+      "calculadora rastreamento despesas",
+      "calculadora despesas orçamento",
+      "calculadora gastos mensal",
+      "rastreador despesas finanças pessoais"
+    ],
     "slug": "expense-calculator",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["orçamento", "despesas", "finanças pessoais", "rastreamento", "gastos"],
+    "tags": [
+      "orçamento",
+      "despesas",
+      "finanças pessoais",
+      "rastreamento",
+      "gastos"
+    ],
     "summary": "Acompanhe despesas mensais, calcule alocações orçamentárias e analise seus padrões de gastos para melhor gestão financeira.",
     "description": "Nossa calculadora completa de despesas ajuda você a acompanhar e categorizar despesas mensais, estabelecer metas orçamentárias e analisar padrões de gastos. Perfeita para indivíduos e famílias que buscam entender para onde vai seu dinheiro e criar orçamentos mais efetivos. Inclui categorias de despesas, detalhamentos percentuais e recomendações de economia.",
     "instructions": [
@@ -260,20 +468,92 @@
     "calculatorComponent": {
       "componentName": "ExpenseCalculator",
       "inputs": [
-        { "name": "monthlyIncome", "label": "Monthly Income ($)", "type": "number", "default": 5000, "min": 1000, "max": 50000, "step": 100 },
-        { "name": "housing", "label": "Housing/Rent ($)", "type": "number", "default": 1500, "min": 0, "max": 10000, "step": 50 },
-        { "name": "utilities", "label": "Utilities ($)", "type": "number", "default": 200, "min": 0, "max": 1000, "step": 10 },
-        { "name": "groceries", "label": "Groceries ($)", "type": "number", "default": 400, "min": 0, "max": 2000, "step": 25 },
-        { "name": "transportation", "label": "Transportation ($)", "type": "number", "default": 300, "min": 0, "max": 2000, "step": 25 },
-        { "name": "entertainment", "label": "Entertainment ($)", "type": "number", "default": 150, "min": 0, "max": 1000, "step": 25 },
-        { "name": "otherExpenses", "label": "Other Expenses ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "monthlyIncome",
+          "label": "Monthly Income ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 1000,
+          "max": 50000,
+          "step": 100
+        },
+        {
+          "name": "housing",
+          "label": "Housing/Rent ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 50
+        },
+        {
+          "name": "utilities",
+          "label": "Utilities ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 1000,
+          "step": 10
+        },
+        {
+          "name": "groceries",
+          "label": "Groceries ($)",
+          "type": "number",
+          "default": 400,
+          "min": 0,
+          "max": 2000,
+          "step": 25
+        },
+        {
+          "name": "transportation",
+          "label": "Transportation ($)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "max": 2000,
+          "step": 25
+        },
+        {
+          "name": "entertainment",
+          "label": "Entertainment ($)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "max": 1000,
+          "step": 25
+        },
+        {
+          "name": "otherExpenses",
+          "label": "Other Expenses ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Total Expenses = Sum of all expense categories; Net Income = Income - Total Expenses",
-      "output": { "label": "Monthly Net Income", "default": "Enter your income and expenses", "format": "currency" },
+      "output": {
+        "label": "Monthly Net Income",
+        "default": "Enter your income and expenses",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Total Expenses", "field": "totalExpenses", "format": "currency" },
-        { "label": "Expense Ratio", "field": "expenseRatio", "format": "percentage" },
-        { "label": "Savings Potential", "field": "savingsPotential", "format": "currency" }
+        {
+          "label": "Total Expenses",
+          "field": "totalExpenses",
+          "format": "currency"
+        },
+        {
+          "label": "Expense Ratio",
+          "field": "expenseRatio",
+          "format": "percentage"
+        },
+        {
+          "label": "Savings Potential",
+          "field": "savingsPotential",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -288,7 +568,11 @@
         "output": "Razão de Despesas: 70%, Economias Recomendadas: 20%, Economias Mensais Potenciais: $600"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "savings-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "savings-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Tome controle de seus gastos e entenda exatamente para onde vai seu dinheiro com nossa calculadora abrangente de despesas. Esta ferramenta essencial de finanças pessoais ajuda você a rastrear despesas mensais através de todas as categorias, analisar padrões de gastos, e identificar oportunidades para economizar mais. Seja você vivendo de salário em salário, tentando construir economias, ou apenas querendo entender melhor seus hábitos financeiros, conhecer sua quebra de despesas é a base de gestão efetiva de dinheiro e construção de riqueza.",
       "benefits": [
@@ -357,18 +641,37 @@
           "answer": "Rastreamento diário fornece o maior controle e detecta gastos excessivos cedo, mas pode ser consumidor de tempo. Revisões semanais funcionam bem para a maioria das pessoas e permitem correção de curso no meio do mês. Rastreamento mensal é mais fácil mas pode perder padrões. Use apps de orçamento para rastreamento automático. Comece com sua frequência preferida, então ajuste baseado em necessidades. Rastreamento diário é recomendado quando começando pela primeira vez ou durante dietas de gastos. Revisões semanais funcionam bem para gestão contínua."
         }
       ]
-    }
+    },
+    "component": "ExpenseCalculator"
   },
   "fr": {
     "title": "Calculateur de Dépenses",
     "seoTitle": "Calculateur de Dépenses - Suivez et Calculez les Dépenses Mensuelles et Budget",
     "metaDescription": "Calculateur gratuit de dépenses. Suivez les dépenses mensuelles, calculez les allocations budgétaires et analysez les habitudes de dépenses. Parfait pour la gestion financière personnelle et planification budgétaire.",
-    "keywords": ["calculateur dépenses", "calculateur budget", "suiveur dépenses mensuelles", "calculateur dépenses", "calculateur finances personnelles"],
-    "longTailKeywords": ["comment calculer dépenses mensuelles", "calculateur suivi dépenses", "calculateur dépenses budget", "calculateur dépenses mensuelles", "suiveur dépenses finances personnelles"],
+    "keywords": [
+      "calculateur dépenses",
+      "calculateur budget",
+      "suiveur dépenses mensuelles",
+      "calculateur dépenses",
+      "calculateur finances personnelles"
+    ],
+    "longTailKeywords": [
+      "comment calculer dépenses mensuelles",
+      "calculateur suivi dépenses",
+      "calculateur dépenses budget",
+      "calculateur dépenses mensuelles",
+      "suiveur dépenses finances personnelles"
+    ],
     "slug": "expense-calculator",
     "category": "financial",
     "difficulty": "basic",
-    "tags": ["budget", "dépenses", "finances personnelles", "suivi", "dépenses"],
+    "tags": [
+      "budget",
+      "dépenses",
+      "finances personnelles",
+      "suivi",
+      "dépenses"
+    ],
     "summary": "Suivez les dépenses mensuelles, calculez les allocations budgétaires et analysez vos habitudes de dépenses pour une meilleure gestion financière.",
     "description": "Notre calculateur complet de dépenses vous aide à suivre et catégoriser les dépenses mensuelles, établir des objectifs budgétaires et analyser les habitudes de dépenses. Parfait pour les individus et familles cherchant à comprendre où va leur argent et créer des budgets plus efficaces. Inclut les catégories de dépenses, ventilations en pourcentage et recommandations d'épargne.",
     "instructions": [
@@ -380,20 +683,92 @@
     "calculatorComponent": {
       "componentName": "ExpenseCalculator",
       "inputs": [
-        { "name": "monthlyIncome", "label": "Monthly Income ($)", "type": "number", "default": 5000, "min": 1000, "max": 50000, "step": 100 },
-        { "name": "housing", "label": "Housing/Rent ($)", "type": "number", "default": 1500, "min": 0, "max": 10000, "step": 50 },
-        { "name": "utilities", "label": "Utilities ($)", "type": "number", "default": 200, "min": 0, "max": 1000, "step": 10 },
-        { "name": "groceries", "label": "Groceries ($)", "type": "number", "default": 400, "min": 0, "max": 2000, "step": 25 },
-        { "name": "transportation", "label": "Transportation ($)", "type": "number", "default": 300, "min": 0, "max": 2000, "step": 25 },
-        { "name": "entertainment", "label": "Entertainment ($)", "type": "number", "default": 150, "min": 0, "max": 1000, "step": 25 },
-        { "name": "otherExpenses", "label": "Other Expenses ($)", "type": "number", "default": 200, "min": 0, "max": 5000, "step": 50 }
+        {
+          "name": "monthlyIncome",
+          "label": "Monthly Income ($)",
+          "type": "number",
+          "default": 5000,
+          "min": 1000,
+          "max": 50000,
+          "step": 100
+        },
+        {
+          "name": "housing",
+          "label": "Housing/Rent ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 50
+        },
+        {
+          "name": "utilities",
+          "label": "Utilities ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 1000,
+          "step": 10
+        },
+        {
+          "name": "groceries",
+          "label": "Groceries ($)",
+          "type": "number",
+          "default": 400,
+          "min": 0,
+          "max": 2000,
+          "step": 25
+        },
+        {
+          "name": "transportation",
+          "label": "Transportation ($)",
+          "type": "number",
+          "default": 300,
+          "min": 0,
+          "max": 2000,
+          "step": 25
+        },
+        {
+          "name": "entertainment",
+          "label": "Entertainment ($)",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "max": 1000,
+          "step": 25
+        },
+        {
+          "name": "otherExpenses",
+          "label": "Other Expenses ($)",
+          "type": "number",
+          "default": 200,
+          "min": 0,
+          "max": 5000,
+          "step": 50
+        }
       ],
       "formula": "Total Expenses = Sum of all expense categories; Net Income = Income - Total Expenses",
-      "output": { "label": "Monthly Net Income", "default": "Enter your income and expenses", "format": "currency" },
+      "output": {
+        "label": "Monthly Net Income",
+        "default": "Enter your income and expenses",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Total Expenses", "field": "totalExpenses", "format": "currency" },
-        { "label": "Expense Ratio", "field": "expenseRatio", "format": "percentage" },
-        { "label": "Savings Potential", "field": "savingsPotential", "format": "currency" }
+        {
+          "label": "Total Expenses",
+          "field": "totalExpenses",
+          "format": "currency"
+        },
+        {
+          "label": "Expense Ratio",
+          "field": "expenseRatio",
+          "format": "percentage"
+        },
+        {
+          "label": "Savings Potential",
+          "field": "savingsPotential",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -408,7 +783,11 @@
         "output": "Ratio de Dépenses: 70%, Épargnes Recommandées: 20%, Épargnes Mensuelles Potentielles: $600"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "savings-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "savings-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Prenez le contrôle de vos dépenses et comprenez exactement où va votre argent avec notre calculatrice complète de dépenses. Cet outil essentiel de finances personnelles vous aide à suivre les dépenses mensuelles à travers toutes les catégories, analyser les habitudes de dépenses, et identifier les opportunités d'économiser plus. Que vous viviez de chèque en chèque, essayiez de construire des économies, ou souhaitiez simplement mieux comprendre vos habitudes financières, connaître votre ventilation des dépenses est la base d'une gestion efficace de l'argent et de la construction de richesse.",
       "benefits": [
@@ -477,6 +856,7 @@
           "answer": "Suivi quotidien fournit le plus grand contrôle et détecte dépenses excessives tôt, mais peut être consommateur de temps. Révisions hebdomadaires fonctionnent bien pour la plupart des gens et permettent correction de cours milieu-mois. Suivi mensuel est plus facile mais peut manquer schémas. Utilisez apps budgétaires pour suivi automatique. Commencez avec votre fréquence préférée, puis ajustez basé sur besoins. Suivi quotidien recommandé quand commençant première fois ou pendant régimes dépenses. Révisions hebdomadaires fonctionnent bien pour gestion continue."
         }
       ]
-    }
+    },
+    "component": "ExpenseCalculator"
   }
 }

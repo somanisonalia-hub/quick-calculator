@@ -3,12 +3,30 @@
     "title": "Health Insurance Calculator",
     "seoTitle": "Health Insurance Calculator - Calculate Healthcare Costs and Plan Premiums",
     "metaDescription": "Free health insurance calculator. Calculate healthcare costs, compare insurance plans, and estimate premium payments. Essential for ACA marketplace and health planning.",
-    "keywords": ["health insurance calculator", "healthcare cost calculator", "insurance premium calculator", "ACA calculator", "health plan calculator"],
-    "longTailKeywords": ["how much does health insurance cost calculator", "ACA health insurance calculator", "health insurance premium calculator", "healthcare cost estimator", "insurance plan comparison calculator"],
+    "keywords": [
+      "health insurance calculator",
+      "healthcare cost calculator",
+      "insurance premium calculator",
+      "ACA calculator",
+      "health plan calculator"
+    ],
+    "longTailKeywords": [
+      "how much does health insurance cost calculator",
+      "ACA health insurance calculator",
+      "health insurance premium calculator",
+      "healthcare cost estimator",
+      "insurance plan comparison calculator"
+    ],
     "slug": "health-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["health insurance", "healthcare costs", "insurance premiums", "ACA marketplace", "medical coverage"],
+    "tags": [
+      "health insurance",
+      "healthcare costs",
+      "insurance premiums",
+      "ACA marketplace",
+      "medical coverage"
+    ],
     "summary": "Calculate health insurance premiums, compare plan options, and estimate healthcare costs for informed decision making.",
     "description": "Our comprehensive health insurance calculator helps you estimate healthcare costs and insurance premiums for individual and family plans. Compare different metal tiers (Bronze, Silver, Gold, Platinum), calculate subsidies and tax credits, and understand out-of-pocket expenses. Perfect for ACA marketplace shopping and annual health insurance planning.",
     "instructions": [
@@ -19,18 +37,79 @@
     "calculatorComponent": {
       "componentName": "HealthInsuranceCalculator",
       "inputs": [
-        { "name": "annualIncome", "label": "Annual Household Income ($)", "type": "number", "default": 50000, "min": 10000, "max": 200000, "step": 1000 },
-        { "name": "householdSize", "label": "Household Size", "type": "number", "default": 1, "min": 1, "max": 10, "step": 1 },
-        { "name": "planType", "label": "Plan Type", "type": "select", "default": "silver", "options": ["bronze", "silver", "gold", "platinum"] },
-        { "name": "location", "label": "Location Type", "type": "select", "default": "urban", "options": ["urban", "suburban", "rural"] },
-        { "name": "age", "label": "Primary Applicant Age", "type": "number", "default": 35, "min": 18, "max": 65, "step": 1 }
+        {
+          "name": "annualIncome",
+          "label": "Annual Household Income ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 10000,
+          "max": 200000,
+          "step": 1000
+        },
+        {
+          "name": "householdSize",
+          "label": "Household Size",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "planType",
+          "label": "Plan Type",
+          "type": "select",
+          "default": "silver",
+          "options": [
+            "bronze",
+            "silver",
+            "gold",
+            "platinum"
+          ]
+        },
+        {
+          "name": "location",
+          "label": "Location Type",
+          "type": "select",
+          "default": "urban",
+          "options": [
+            "urban",
+            "suburban",
+            "rural"
+          ]
+        },
+        {
+          "name": "age",
+          "label": "Primary Applicant Age",
+          "type": "number",
+          "default": 35,
+          "min": 18,
+          "max": 65,
+          "step": 1
+        }
       ],
       "formula": "Premium = Base rate × Plan multiplier × Age factor × Location factor; Subsidy = Income-based ACA subsidy",
-      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Monthly Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
-        { "label": "ACA Subsidy", "field": "subsidy", "format": "currency" },
-        { "label": "Net Monthly Cost", "field": "netMonthly", "format": "currency" }
+        {
+          "label": "Annual Premium",
+          "field": "annualPremium",
+          "format": "currency"
+        },
+        {
+          "label": "ACA Subsidy",
+          "field": "subsidy",
+          "format": "currency"
+        },
+        {
+          "label": "Net Monthly Cost",
+          "field": "netMonthly",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -45,7 +124,11 @@
         "output": "Monthly Premium: $1,050, Annual Subsidy: $4,200, Net Cost: $8,400/year"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "expense-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "expense-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Navigate the complex world of health insurance with confidence using our comprehensive health insurance calculator that shows you exactly how much coverage costs and what you'll pay after subsidies. Healthcare costs are one of the largest expenses in American life, but understanding insurance options can save thousands annually. Our calculator analyzes your household income, size, location, and coverage preferences to estimate premiums for different metal tiers (Bronze, Silver, Gold, Platinum), calculate ACA subsidies, and help you find the best plan for your healthcare needs. Whether you're shopping for individual coverage, family plans, or understanding subsidy eligibility, this tool demystifies health insurance costs.",
       "benefits": [
@@ -113,18 +196,37 @@
           "answer": "Age is biggest factor - premiums increase steadily after age 30, jumping significantly after 50. Location affects costs based on local healthcare prices. Household size increases premiums for family coverage. Plan type (metal tier) determines base premium level. Tobacco use can increase premiums 50%+. Pre-existing conditions no longer affect premiums post-ACA. Gender can influence rates slightly. Income determines subsidy eligibility. Plan design (HMO vs. PPO) affects pricing. Annual rate changes reflect healthcare cost inflation."
         }
       ]
-    }
+    },
+    "component": "HealthInsuranceCalculator"
   },
   "es": {
     "title": "Calculadora de Seguro Médico",
     "seoTitle": "Calculadora de Seguro Médico - Calcula Costos de Atención Médica y Primas de Planes",
     "metaDescription": "Calculadora gratuita de seguro médico. Calcula costos de atención médica, compara planes de seguro y estima pagos de primas. Esencial para mercado ACA y planificación de salud.",
-    "keywords": ["calculadora seguro médico", "calculadora costos atención médica", "calculadora prima seguro", "calculadora ACA", "calculadora plan salud"],
-    "longTailKeywords": ["cuánto cuesta seguro médico calculadora", "calculadora seguro médico ACA", "calculadora prima seguro médico", "estimador costos atención médica", "calculadora comparación planes seguro"],
+    "keywords": [
+      "calculadora seguro médico",
+      "calculadora costos atención médica",
+      "calculadora prima seguro",
+      "calculadora ACA",
+      "calculadora plan salud"
+    ],
+    "longTailKeywords": [
+      "cuánto cuesta seguro médico calculadora",
+      "calculadora seguro médico ACA",
+      "calculadora prima seguro médico",
+      "estimador costos atención médica",
+      "calculadora comparación planes seguro"
+    ],
     "slug": "health-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["seguro médico", "costos atención médica", "primas seguro", "mercado ACA", "cobertura médica"],
+    "tags": [
+      "seguro médico",
+      "costos atención médica",
+      "primas seguro",
+      "mercado ACA",
+      "cobertura médica"
+    ],
     "summary": "Calcula primas de seguro médico, compara opciones de planes y estima costos de atención médica para toma de decisiones informada.",
     "description": "Nuestra completa calculadora de seguro médico te ayuda a estimar costos de atención médica y primas de seguro para planes individuales y familiares. Compara diferentes niveles metálicos (Bronce, Plata, Oro, Platino), calcula subsidios y créditos fiscales, y entiende gastos de bolsillo. Perfecta para compras en el mercado ACA y planificación anual de seguro médico.",
     "instructions": [
@@ -135,18 +237,79 @@
     "calculatorComponent": {
       "componentName": "HealthInsuranceCalculator",
       "inputs": [
-        { "name": "annualIncome", "label": "Annual Household Income ($)", "type": "number", "default": 50000, "min": 10000, "max": 200000, "step": 1000 },
-        { "name": "householdSize", "label": "Household Size", "type": "number", "default": 1, "min": 1, "max": 10, "step": 1 },
-        { "name": "planType", "label": "Plan Type", "type": "select", "default": "silver", "options": ["bronze", "silver", "gold", "platinum"] },
-        { "name": "location", "label": "Location Type", "type": "select", "default": "urban", "options": ["urban", "suburban", "rural"] },
-        { "name": "age", "label": "Primary Applicant Age", "type": "number", "default": 35, "min": 18, "max": 65, "step": 1 }
+        {
+          "name": "annualIncome",
+          "label": "Annual Household Income ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 10000,
+          "max": 200000,
+          "step": 1000
+        },
+        {
+          "name": "householdSize",
+          "label": "Household Size",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "planType",
+          "label": "Plan Type",
+          "type": "select",
+          "default": "silver",
+          "options": [
+            "bronze",
+            "silver",
+            "gold",
+            "platinum"
+          ]
+        },
+        {
+          "name": "location",
+          "label": "Location Type",
+          "type": "select",
+          "default": "urban",
+          "options": [
+            "urban",
+            "suburban",
+            "rural"
+          ]
+        },
+        {
+          "name": "age",
+          "label": "Primary Applicant Age",
+          "type": "number",
+          "default": 35,
+          "min": 18,
+          "max": 65,
+          "step": 1
+        }
       ],
       "formula": "Premium = Base rate × Plan multiplier × Age factor × Location factor; Subsidy = Income-based ACA subsidy",
-      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Monthly Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
-        { "label": "ACA Subsidy", "field": "subsidy", "format": "currency" },
-        { "label": "Net Monthly Cost", "field": "netMonthly", "format": "currency" }
+        {
+          "label": "Annual Premium",
+          "field": "annualPremium",
+          "format": "currency"
+        },
+        {
+          "label": "ACA Subsidy",
+          "field": "subsidy",
+          "format": "currency"
+        },
+        {
+          "label": "Net Monthly Cost",
+          "field": "netMonthly",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -161,7 +324,11 @@
         "output": "Prima Mensual: $1,050, Subsidio Anual: $4,200, Costo Neto: $8,400/año"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "expense-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "expense-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Navega el complejo mundo del seguro médico con confianza usando nuestra calculadora integral de seguro de salud que te muestra exactamente cuánto cuesta la cobertura y cuánto pagarás después de subsidios. Los costos de atención médica son uno de los gastos más grandes en la vida estadounidense, pero entender las opciones de seguro puede ahorrar miles anualmente. Nuestra calculadora analiza tus ingresos del hogar, tamaño, ubicación, y preferencias de cobertura para estimar primas para diferentes niveles metálicos (Bronce, Plata, Oro, Platino), calcular subsidios ACA, y ayudarte a encontrar el mejor plan para tus necesidades de atención médica. Ya sea que busques cobertura individual, planes familiares, o entendiendo elegibilidad de subsidio, esta herramienta desmistifica los costos de seguro de salud.",
       "benefits": [
@@ -229,18 +396,37 @@
           "answer": "La edad es el factor más grande - primas aumentan constantemente después de edad 30, saltando significativamente después de 50. La ubicación afecta costos basado en precios locales de atención médica. El tamaño del hogar aumenta primas para cobertura familiar. El tipo de plan (nivel metálico) determina nivel de prima base. El uso de tabaco puede aumentar primas 50%+. Las condiciones preexistentes ya no afectan primas post-ACA. El género puede influir tasas ligeramente. Los ingresos determinan elegibilidad de subsidio. El diseño del plan (HMO vs. PPO) afecta precios. Los cambios anuales de tasa reflejan inflación de costos de atención médica."
         }
       ]
-    }
+    },
+    "component": "HealthInsuranceCalculator"
   },
   "pt": {
     "title": "Calculadora de Seguro Saúde",
     "seoTitle": "Calculadora de Seguro Saúde - Calcule Custos de Saúde e Prêmios de Planos",
     "metaDescription": "Calculadora gratuita de seguro saúde. Calcule custos de saúde, compare planos de seguro e estime pagamentos de prêmios. Essencial para marketplace ACA e planejamento de saúde.",
-    "keywords": ["calculadora seguro saúde", "calculadora custos saúde", "calculadora prêmio seguro", "calculadora ACA", "calculadora plano saúde"],
-    "longTailKeywords": ["quanto custa seguro saúde calculadora", "calculadora seguro saúde ACA", "calculadora prêmio seguro saúde", "estimador custos saúde", "calculadora comparação planos seguro"],
+    "keywords": [
+      "calculadora seguro saúde",
+      "calculadora custos saúde",
+      "calculadora prêmio seguro",
+      "calculadora ACA",
+      "calculadora plano saúde"
+    ],
+    "longTailKeywords": [
+      "quanto custa seguro saúde calculadora",
+      "calculadora seguro saúde ACA",
+      "calculadora prêmio seguro saúde",
+      "estimador custos saúde",
+      "calculadora comparação planos seguro"
+    ],
     "slug": "health-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["seguro saúde", "custos saúde", "prêmios seguro", "marketplace ACA", "cobertura médica"],
+    "tags": [
+      "seguro saúde",
+      "custos saúde",
+      "prêmios seguro",
+      "marketplace ACA",
+      "cobertura médica"
+    ],
     "summary": "Calcule prêmios de seguro saúde, compare opções de planos e estime custos de saúde para tomada de decisões informada.",
     "description": "Nossa calculadora completa de seguro saúde ajuda você a estimar custos de saúde e prêmios de seguro para planos individuais e familiares. Compare diferentes níveis metálicos (Bronze, Prata, Ouro, Platina), calcule subsídios e créditos fiscais, e entenda despesas de bolso. Perfeita para compras no marketplace ACA e planejamento anual de seguro saúde.",
     "instructions": [
@@ -251,18 +437,79 @@
     "calculatorComponent": {
       "componentName": "HealthInsuranceCalculator",
       "inputs": [
-        { "name": "annualIncome", "label": "Annual Household Income ($)", "type": "number", "default": 50000, "min": 10000, "max": 200000, "step": 1000 },
-        { "name": "householdSize", "label": "Household Size", "type": "number", "default": 1, "min": 1, "max": 10, "step": 1 },
-        { "name": "planType", "label": "Plan Type", "type": "select", "default": "silver", "options": ["bronze", "silver", "gold", "platinum"] },
-        { "name": "location", "label": "Location Type", "type": "select", "default": "urban", "options": ["urban", "suburban", "rural"] },
-        { "name": "age", "label": "Primary Applicant Age", "type": "number", "default": 35, "min": 18, "max": 65, "step": 1 }
+        {
+          "name": "annualIncome",
+          "label": "Annual Household Income ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 10000,
+          "max": 200000,
+          "step": 1000
+        },
+        {
+          "name": "householdSize",
+          "label": "Household Size",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "planType",
+          "label": "Plan Type",
+          "type": "select",
+          "default": "silver",
+          "options": [
+            "bronze",
+            "silver",
+            "gold",
+            "platinum"
+          ]
+        },
+        {
+          "name": "location",
+          "label": "Location Type",
+          "type": "select",
+          "default": "urban",
+          "options": [
+            "urban",
+            "suburban",
+            "rural"
+          ]
+        },
+        {
+          "name": "age",
+          "label": "Primary Applicant Age",
+          "type": "number",
+          "default": 35,
+          "min": 18,
+          "max": 65,
+          "step": 1
+        }
       ],
       "formula": "Premium = Base rate × Plan multiplier × Age factor × Location factor; Subsidy = Income-based ACA subsidy",
-      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Monthly Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
-        { "label": "ACA Subsidy", "field": "subsidy", "format": "currency" },
-        { "label": "Net Monthly Cost", "field": "netMonthly", "format": "currency" }
+        {
+          "label": "Annual Premium",
+          "field": "annualPremium",
+          "format": "currency"
+        },
+        {
+          "label": "ACA Subsidy",
+          "field": "subsidy",
+          "format": "currency"
+        },
+        {
+          "label": "Net Monthly Cost",
+          "field": "netMonthly",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -277,7 +524,11 @@
         "output": "Prêmio Mensal: $1,050, Subsídio Anual: $4,200, Custo Líquido: $8,400/ano"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "expense-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "expense-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Navegue o complexo mundo do seguro saúde com confiança usando nossa calculadora abrangente de seguro saúde que mostra exatamente quanto cobertura custa e quanto você pagará após subsídios. Custos de saúde são uma das maiores despesas na vida americana, mas entender opções de seguro pode economizar milhares anualmente. Nossa calculadora analisa renda de sua casa, tamanho, localização, e preferências de cobertura para estimar prêmios para diferentes níveis metálicos (Bronze, Prata, Ouro, Platina), calcular subsídios ACA, e ajudar você a encontrar o melhor plano para suas necessidades de saúde. Seja comprando cobertura individual, planos familiares, ou entendendo elegibilidade de subsídio, esta ferramenta desmistifica custos de seguro saúde.",
       "benefits": [
@@ -345,18 +596,37 @@
           "answer": "Idade é maior fator - prêmios aumentam constantemente após idade 30, saltando significativamente após 50. Localização afeta custos baseado em preços locais de saúde. Tamanho de casa aumenta prêmios para cobertura familiar. Tipo de plano (nível metálico) determina nível de prêmio base. Uso de tabaco pode aumentar prêmios 50%+. Condições pré-existentes não afetam mais prêmios pós-ACA. Gênero pode influenciar taxas ligeiramente. Renda determina elegibilidade de subsídio. Design de plano (HMO vs. PPO) afeta preços. Mudanças anuais de taxa refletem inflação de custos de saúde."
         }
       ]
-    }
+    },
+    "component": "HealthInsuranceCalculator"
   },
   "fr": {
     "title": "Calculateur d'Assurance Santé",
     "seoTitle": "Calculateur d'Assurance Santé - Calculez les Coûts de Soins et Primes de Plans",
     "metaDescription": "Calculateur gratuit d'assurance santé. Calculez les coûts de soins de santé, comparez les plans d'assurance et estimez les paiements de primes. Essentiel pour le marché ACA et la planification de santé.",
-    "keywords": ["calculateur assurance santé", "calculateur coûts soins santé", "calculateur prime assurance", "calculateur ACA", "calculateur plan santé"],
-    "longTailKeywords": ["combien coûte assurance santé calculateur", "calculateur assurance santé ACA", "calculateur prime assurance santé", "estimateur coûts soins santé", "calculateur comparaison plans assurance"],
+    "keywords": [
+      "calculateur assurance santé",
+      "calculateur coûts soins santé",
+      "calculateur prime assurance",
+      "calculateur ACA",
+      "calculateur plan santé"
+    ],
+    "longTailKeywords": [
+      "combien coûte assurance santé calculateur",
+      "calculateur assurance santé ACA",
+      "calculateur prime assurance santé",
+      "estimateur coûts soins santé",
+      "calculateur comparaison plans assurance"
+    ],
     "slug": "health-insurance-calculator",
     "category": "financial",
     "difficulty": "intermediate",
-    "tags": ["assurance santé", "coûts soins santé", "primes assurance", "marché ACA", "couverture médicale"],
+    "tags": [
+      "assurance santé",
+      "coûts soins santé",
+      "primes assurance",
+      "marché ACA",
+      "couverture médicale"
+    ],
     "summary": "Calculez les primes d'assurance santé, comparez les options de plans et estimez les coûts de soins de santé pour une prise de décision éclairée.",
     "description": "Notre calculateur complet d'assurance santé vous aide à estimer les coûts de soins de santé et les primes d'assurance pour les plans individuels et familiaux. Comparez les différents niveaux métalliques (Bronze, Argent, Or, Platine), calculez les subventions et crédits d'impôt, et comprenez les dépenses à votre charge. Parfait pour les achats sur le marché ACA et la planification annuelle d'assurance santé.",
     "instructions": [
@@ -367,18 +637,79 @@
     "calculatorComponent": {
       "componentName": "HealthInsuranceCalculator",
       "inputs": [
-        { "name": "annualIncome", "label": "Annual Household Income ($)", "type": "number", "default": 50000, "min": 10000, "max": 200000, "step": 1000 },
-        { "name": "householdSize", "label": "Household Size", "type": "number", "default": 1, "min": 1, "max": 10, "step": 1 },
-        { "name": "planType", "label": "Plan Type", "type": "select", "default": "silver", "options": ["bronze", "silver", "gold", "platinum"] },
-        { "name": "location", "label": "Location Type", "type": "select", "default": "urban", "options": ["urban", "suburban", "rural"] },
-        { "name": "age", "label": "Primary Applicant Age", "type": "number", "default": 35, "min": 18, "max": 65, "step": 1 }
+        {
+          "name": "annualIncome",
+          "label": "Annual Household Income ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 10000,
+          "max": 200000,
+          "step": 1000
+        },
+        {
+          "name": "householdSize",
+          "label": "Household Size",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "planType",
+          "label": "Plan Type",
+          "type": "select",
+          "default": "silver",
+          "options": [
+            "bronze",
+            "silver",
+            "gold",
+            "platinum"
+          ]
+        },
+        {
+          "name": "location",
+          "label": "Location Type",
+          "type": "select",
+          "default": "urban",
+          "options": [
+            "urban",
+            "suburban",
+            "rural"
+          ]
+        },
+        {
+          "name": "age",
+          "label": "Primary Applicant Age",
+          "type": "number",
+          "default": 35,
+          "min": 18,
+          "max": 65,
+          "step": 1
+        }
       ],
       "formula": "Premium = Base rate × Plan multiplier × Age factor × Location factor; Subsidy = Income-based ACA subsidy",
-      "output": { "label": "Monthly Premium", "default": "Enter your details above", "format": "currency" },
+      "output": {
+        "label": "Monthly Premium",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
       "additionalOutputs": [
-        { "label": "Annual Premium", "field": "annualPremium", "format": "currency" },
-        { "label": "ACA Subsidy", "field": "subsidy", "format": "currency" },
-        { "label": "Net Monthly Cost", "field": "netMonthly", "format": "currency" }
+        {
+          "label": "Annual Premium",
+          "field": "annualPremium",
+          "format": "currency"
+        },
+        {
+          "label": "ACA Subsidy",
+          "field": "subsidy",
+          "format": "currency"
+        },
+        {
+          "label": "Net Monthly Cost",
+          "field": "netMonthly",
+          "format": "currency"
+        }
       ]
     },
     "examples": [
@@ -393,7 +724,11 @@
         "output": "Prime Mensuelle: 1 050 $, Subvention Annuelle: 4 200 $, Coût Net: 8 400 $/an"
       }
     ],
-    "relatedCalculators": ["budget-calculator", "expense-calculator", "tax-calculator"],
+    "relatedCalculators": [
+      "budget-calculator",
+      "expense-calculator",
+      "tax-calculator"
+    ],
     "seoContent": {
       "introduction": "Naviguez le monde complexe de l'assurance santé avec confiance en utilisant notre calculatrice complète d'assurance santé qui vous montre exactement combien la couverture coûte et ce que vous paierez après subventions. Les coûts de soins de santé sont l'une des plus grandes dépenses dans la vie américaine, mais comprendre les options d'assurance peut sauver des milliers annuellement. Notre calculatrice analyse le revenu de votre foyer, taille, localisation, et préférences de couverture pour estimer les primes pour différents niveaux métalliques (Bronze, Argent, Or, Platine), calculer les subventions ACA, et vous aider à trouver le meilleur plan pour vos besoins de soins de santé. Que vous achetiez une couverture individuelle, des plans familiaux, ou compreniez l'éligibilité aux subventions, cet outil démystifie les coûts d'assurance santé.",
       "benefits": [
@@ -461,6 +796,7 @@
           "answer": "Âge est plus grand facteur - primes augmentent constamment après âge 30, sautant considérablement après 50. Localisation affecte coûts basé sur prix locaux soins de santé. Taille foyer augmente primes pour couverture familiale. Type plan (niveau métallique) détermine niveau prime base. Usage tabac peut augmenter primes 50%+. Conditions pré-existantes n'affectent plus primes post-ACA. Genre peut influencer taux légèrement. Revenu détermine éligibilité subvention. Design plan (HMO vs. PPO) affecte prix. Changements taux annuels reflètent inflation coûts soins de santé."
         }
       ]
-    }
+    },
+    "component": "HealthInsuranceCalculator"
   }
 }
