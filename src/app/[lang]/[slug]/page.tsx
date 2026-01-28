@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import LangCalculatorClient from './LangCalculatorClient';
 import { generateCalculatorSchema, CalculatorData } from '@/lib/seoContentRenderer';
 import { loadCalculatorContent } from '@/lib/contentRegistry';
+import { StructuredData } from '@/components/StructuredData';
 
 // Generate static params for all language + calculator combinations
 export async function generateStaticParams() {
@@ -76,8 +77,24 @@ export default async function LangCalculatorPage({ params }: { params: Promise<{
   const resolvedParams = await params;
   const { lang, slug } = resolvedParams;
 
+  // Generate schema for client component
+  const calculatorContent = loadCalculatorContent(lang, slug);
+  let calculatorSchema = null;
+
+  if (calculatorContent && calculatorContent.title) {
+    const calculatorData: CalculatorData = {
+      title: calculatorContent.title,
+      slug: calculatorContent.slug || slug,
+      category: calculatorContent.category || 'financial',
+      seoContent: calculatorContent.seoContent || {} as any
+    };
+
+    calculatorSchema = generateCalculatorSchema(calculatorData, lang);
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {calculatorSchema && <StructuredData data={calculatorSchema} />}
       <Header currentLang={lang} />
       <LangCalculatorClient lang={lang} slug={slug} />
       <Footer currentLang={lang} />

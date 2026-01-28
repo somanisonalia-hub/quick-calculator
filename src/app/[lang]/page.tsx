@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import HomePage from '@/components/HomePage';
 import { generateHomepageSchema } from '@/lib/seoContentRenderer';
 import { loadAllCalculatorsStatic } from '@/lib/staticDataLoader';
+import { StructuredData } from '@/components/StructuredData';
 
 // Valid languages
 const validLanguages = ['en', 'es', 'pt', 'fr'];
@@ -57,6 +58,12 @@ export default async function DynamicHome({ params }: { params: Promise<{ lang: 
 
   // Load all calculators at BUILD TIME for static generation
   const allCalculators = loadAllCalculatorsStatic(lang);
+  const homepageSchema = generateHomepageSchema(lang);
 
-  return <HomePage language={lang} initialCalculators={allCalculators} />;
+  return (
+    <>
+      <StructuredData data={homepageSchema} />
+      <HomePage language={lang} initialCalculators={allCalculators} />
+    </>
+  );
 }
