@@ -128,7 +128,12 @@ function getCalculatorIcon(slug: string): string {
     'quadratic-equation-calculator': '🔢',
     'percentage-change-calculator': '📊',
     'stock-ratios-calculator': '📈',
-    'profitability-ratios-calculator': '📈'
+    'profitability-ratios-calculator': '📈',
+    'debt-payoff-calculator': '💸',
+    'macro-calculator': '🍽️',
+    '401k-calculator': '🏦',
+    'roth-ira-calculator': '🏦',
+    'social-security-calculator': '📋'
   };
   return iconMap[slug] || '🧮';
 }
@@ -245,7 +250,12 @@ export function getCalculatorCategory(slug: string): string {
   'biweekly-pay-calculator': 'financial',
   'pregnancy-calculator': 'health',
   'ovulation-calculator': 'health',
-  'blood-pressure-calculator': 'health'
+  'blood-pressure-calculator': 'health',
+  'debt-payoff-calculator': 'financial',
+  'macro-calculator': 'health',
+  '401k-calculator': 'financial',
+  'roth-ira-calculator': 'financial',
+  'social-security-calculator': 'financial'
 };
 
 return CALCULATOR_CATEGORIES[slug] || 'utility';

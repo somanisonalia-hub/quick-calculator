@@ -361,6 +361,30 @@ const OvulationCalculator = dynamic(() => import('./OvulationCalculator'), {
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
 
+const BloodPressureCalculator = dynamic(() => import('./BloodPressureCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const DebtPayoffCalculator = dynamic(() => import('./DebtPayoffCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const MacroCalculator = dynamic(() => import('./MacroCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const Calculator401k = dynamic(() => import('./Calculator401k'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const RothIRACalculator = dynamic(() => import('./RothIRACalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const SocialSecurityCalculator = dynamic(() => import('./SocialSecurityCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
 // Registry mapping component names to actual components
 export const calculatorComponents: Record<string, any> = {
   'AverageCalculator': AverageCalculator,
@@ -459,6 +483,12 @@ export const calculatorComponents: Record<string, any> = {
   'BiweeklyPayCalculator': BiweeklyPayCalculator,
   'PregnancyCalculator': PregnancyCalculator,
   'OvulationCalculator': OvulationCalculator,
+  'BloodPressureCalculator': BloodPressureCalculator,
+  'DebtPayoffCalculator': DebtPayoffCalculator,
+  'MacroCalculator': MacroCalculator,
+  'Calculator401k': Calculator401k,
+  'RothIRACalculator': RothIRACalculator,
+  'SocialSecurityCalculator': SocialSecurityCalculator,
 };
 
 export function getCalculatorComponent(componentName: string) {
