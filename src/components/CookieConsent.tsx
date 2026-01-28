@@ -1,58 +1,245 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
-export default function CookieConsent() {
-  const [showConsent, setShowConsent] = useState(false);
+export const CookieConsent: React.FC<{ lang?: string }> = ({ lang = 'en' }) => {
+  const [showBanner, setShowBanner] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
+  const [consent, setConsent] = useState({
+    analytics: false,
+    advertising: false,
+    performance: false,
+  });
+
+  const texts = {
+    en: {
+      title: 'Your Privacy Choices',
+      description: 'We use cookies for services, performance, and ads. With your consent, partners use data for analytics and advertising.',
+      analytics: 'Analytics',
+      analyticsDesc: 'Help us improve by anonymously tracking how you use our site',
+      advertising: 'Advertising',
+      advertisingDesc: 'Show you relevant ads based on your interests',
+      performance: 'Performance',
+      performanceDesc: 'Measure site performance and optimize user experience',
+      privacyLink: 'Privacy Policy',
+      learnMore: 'Learn more about our ',
+      acceptAll: 'Accept all',
+      rejectAll: 'Do not consent',
+      savePreferences: 'Save Preferences',
+      managePreferences: 'Manage Preferences',
+    },
+    es: {
+      title: 'Tus Opciones de Privacidad',
+      description: 'Usamos cookies para servicios, rendimiento y anuncios. Con tu consentimiento, los socios utilizan datos para análisis y publicidad.',
+      analytics: 'Análisis',
+      analyticsDesc: 'Ayúdanos a mejorar rastreando anónimamente cómo usas nuestro sitio',
+      advertising: 'Publicidad',
+      advertisingDesc: 'Mostrarte anuncios relevantes basados en tus intereses',
+      performance: 'Rendimiento',
+      performanceDesc: 'Medir el rendimiento del sitio y optimizar la experiencia del usuario',
+      privacyLink: 'Política de Privacidad',
+      learnMore: 'Aprende más sobre nuestra ',
+      acceptAll: 'Aceptar todo',
+      rejectAll: 'No consentir',
+      savePreferences: 'Guardar Preferencias',
+      managePreferences: 'Gestionar Preferencias',
+    },
+    pt: {
+      title: 'Suas Escolhas de Privacidade',
+      description: 'Usamos cookies para serviços, desempenho e anúncios. Com seu consentimento, parceiros usam dados para análise e publicidade.',
+      analytics: 'Análise',
+      analyticsDesc: 'Ajude-nos a melhorar rastreando anonimamente como você usa nosso site',
+      advertising: 'Publicidade',
+      advertisingDesc: 'Mostrar anúncios relevantes com base em seus interesses',
+      performance: 'Desempenho',
+      performanceDesc: 'Medir o desempenho do site e otimizar a experiência do usuário',
+      privacyLink: 'Política de Privacidade',
+      learnMore: 'Saiba mais sobre nossa ',
+      acceptAll: 'Aceitar tudo',
+      rejectAll: 'Não consentir',
+      savePreferences: 'Salvar Preferências',
+      managePreferences: 'Gerenciar Preferências',
+    },
+    fr: {
+      title: 'Vos Choix de Confidentialité',
+      description: 'Nous utilisons des cookies pour les services, les performances et les publicités. Avec votre consentement, les partenaires utilisent les données pour l\'analyse et la publicité.',
+      analytics: 'Analyse',
+      analyticsDesc: 'Aidez-nous à améliorer en suivant anonymement comment vous utilisez notre site',
+      advertising: 'Publicité',
+      advertisingDesc: 'Vous montrer des annonces pertinentes basées sur vos intérêts',
+      performance: 'Performance',
+      performanceDesc: 'Mesurer les performances du site et optimiser l\'expérience utilisateur',
+      privacyLink: 'Politique de Confidentialité',
+      learnMore: 'En savoir plus sur notre ',
+      acceptAll: 'Accepter tout',
+      rejectAll: 'Ne pas consentir',
+      savePreferences: 'Enregistrer les Préférences',
+      managePreferences: 'Gérer les Préférences',
+    },
+  };
+
+  const t = texts[lang as keyof typeof texts] || texts.en;
 
   useEffect(() => {
-    // Check if user has already consented
-    const consent = localStorage.getItem('cookie-consent');
-    if (!consent) {
-      setShowConsent(true);
+    // Check if user has already made a choice
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('cookieConsent');
+      if (!saved) {
+        setShowBanner(true);
+      }
     }
   }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem('cookie-consent', 'accepted');
-    setShowConsent(false);
-    // Initialize any tracking scripts here
+  const handleAcceptAll = () => {
+    const allConsent = { analytics: true, advertising: true, performance: true };
+    localStorage.setItem('cookieConsent', JSON.stringify(allConsent));
+    setConsent(allConsent);
+    setShowBanner(false);
+    // Trigger analytics/ads scripts here
+    if (typeof window !== 'undefined') {
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push({ event: 'consent_accepted' });
+    }
   };
 
-  const declineCookies = () => {
-    localStorage.setItem('cookie-consent', 'declined');
-    setShowConsent(false);
+  const handleRejectAll = () => {
+    const noConsent = { analytics: false, advertising: false, performance: false };
+    localStorage.setItem('cookieConsent', JSON.stringify(noConsent));
+    setConsent(noConsent);
+    setShowBanner(false);
   };
 
-  if (!showConsent) return null;
+  const handleSavePreferences = () => {
+    localStorage.setItem('cookieConsent', JSON.stringify(consent));
+    setShowBanner(false);
+  };
+
+  const toggleConsent = (type: keyof typeof consent) => {
+    setConsent(prev => ({ ...prev, [type]: !prev[type] }));
+  };
+
+  if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div className="flex-1">
-          <p className="text-sm">
-            We use cookies to enhance your experience, analyze site traffic, and provide personalized content and advertisements.
-            By continuing to use our site, you agree to our use of cookies.
-            <a href="/privacy-policy" className="text-blue-400 hover:text-blue-300 ml-1 underline">
-              Learn more
-            </a>
-          </p>
-        </div>
-        <div className="flex gap-2 flex-shrink-0">
-          <button
-            onClick={declineCookies}
-            className="px-4 py-2 text-sm bg-gray-700 hover:bg-gray-600 text-white rounded transition-colors"
-          >
-            Decline
-          </button>
-          <button
-            onClick={acceptCookies}
-            className="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors"
-          >
-            Accept All
-          </button>
+    <div className="fixed inset-0 z-50 flex items-end justify-center">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      {/* Banner */}
+      <div className="relative w-full max-w-4xl bg-white rounded-t-lg shadow-2xl">
+        <div className="p-6 md:p-8">
+          {!showDetails ? (
+            // Simple View
+            <>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h2>
+              <p className="text-gray-700 mb-6">{t.description}</p>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-4">
+                <button
+                  onClick={handleRejectAll}
+                  className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-900 rounded-lg hover:bg-gray-50 transition font-semibold"
+                >
+                  {t.rejectAll}
+                </button>
+                <button
+                  onClick={handleAcceptAll}
+                  className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold"
+                >
+                  {t.acceptAll}
+                </button>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-gray-600">
+                  {t.learnMore}
+                  <Link href="/privacy" className="text-blue-600 hover:underline">
+                    {t.privacyLink}
+                  </Link>
+                </p>
+                <button
+                  onClick={() => setShowDetails(true)}
+                  className="text-blue-600 hover:underline font-semibold"
+                >
+                  {t.managePreferences}
+                </button>
+              </div>
+            </>
+          ) : (
+            // Detailed View
+            <>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">{t.title}</h2>
+
+              <div className="space-y-4 mb-6 max-h-96 overflow-y-auto">
+                {/* Analytics */}
+                <label className="flex items-start p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={consent.analytics}
+                    onChange={() => toggleConsent('analytics')}
+                    className="mt-1 w-4 h-4 text-blue-600 rounded"
+                  />
+                  <div className="ml-4">
+                    <p className="font-semibold text-gray-900">{t.analytics}</p>
+                    <p className="text-sm text-gray-600">{t.analyticsDesc}</p>
+                  </div>
+                </label>
+
+                {/* Advertising */}
+                <label className="flex items-start p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={consent.advertising}
+                    onChange={() => toggleConsent('advertising')}
+                    className="mt-1 w-4 h-4 text-blue-600 rounded"
+                  />
+                  <div className="ml-4">
+                    <p className="font-semibold text-gray-900">{t.advertising}</p>
+                    <p className="text-sm text-gray-600">{t.advertisingDesc}</p>
+                  </div>
+                </label>
+
+                {/* Performance */}
+                <label className="flex items-start p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={consent.performance}
+                    onChange={() => toggleConsent('performance')}
+                    className="mt-1 w-4 h-4 text-blue-600 rounded"
+                  />
+                  <div className="ml-4">
+                    <p className="font-semibold text-gray-900">{t.performance}</p>
+                    <p className="text-sm text-gray-600">{t.performanceDesc}</p>
+                  </div>
+                </label>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={() => setShowDetails(false)}
+                  className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-900 rounded-lg hover:bg-gray-50 transition font-semibold"
+                >
+                  {t.rejectAll}
+                </button>
+                <button
+                  onClick={handleSavePreferences}
+                  className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold"
+                >
+                  {t.savePreferences}
+                </button>
+              </div>
+
+              <p className="text-xs text-gray-600 mt-4">
+                <Link href="/privacy" className="text-blue-600 hover:underline">
+                  {t.privacyLink}
+                </Link>
+              </p>
+            </>
+          )}
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default CookieConsent;
