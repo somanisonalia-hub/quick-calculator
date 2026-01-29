@@ -17,8 +17,12 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Sitemap
+# Sitemaps
 Sitemap: https://quick-calculator.org/sitemap.xml
+Sitemap: https://quick-calculator.org/sitemap-en.xml
+Sitemap: https://quick-calculator.org/sitemap-es.xml
+Sitemap: https://quick-calculator.org/sitemap-pt.xml
+Sitemap: https://quick-calculator.org/sitemap-fr.xml
 
 # Crawl delay (optional)
 Crawl-delay: 1
