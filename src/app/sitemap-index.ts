@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
 
-export default function sitemapIndex(): MetadataRoute.SitemapIndex {
+export default function sitemapIndex(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://quick-calculator.org/sitemap-en.xml',
