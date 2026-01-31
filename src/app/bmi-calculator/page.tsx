@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
 
-export default function BMICalculatorRedirect() {
+export default function BmiCalculatorRedirect() {
   redirect('/en/bmi-calculator');
 }

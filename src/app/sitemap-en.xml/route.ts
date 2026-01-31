@@ -27,17 +27,21 @@ export async function GET() {
   })
 
   // Categories
-  const categories = ['financial', 'health', 'math', 'conversion']
+  const categories = ['financial', 'health', 'math', 'utility', 'lifestyle']
   categories.forEach(category => {
     sitemap.push({
       url: `${baseUrl}/${lang}/categories/${category}/`
     })
   })
 
-  // Static pages
+  // Legal and static pages
   sitemap.push(
-    { url: `${baseUrl}/privacy` },
-    { url: `${baseUrl}/terms` }
+    { url: `${baseUrl}/${lang}/privacy-policy/` },
+    { url: `${baseUrl}/${lang}/terms-of-service/` },
+    { url: `${baseUrl}/${lang}/cookie-policy/` },
+    { url: `${baseUrl}/${lang}/disclaimer/` },
+    { url: `${baseUrl}/${lang}/about-us/` },
+    { url: `${baseUrl}/${lang}/contact/` }
   )
 
   // Generate XML
