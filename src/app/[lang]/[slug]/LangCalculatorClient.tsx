@@ -50,7 +50,6 @@ export default function LangCalculatorClient({ lang, slug }: LangCalculatorClien
         }
       } catch (error) {
         // Skip if related calculator can't be loaded
-        console.warn(`Could not load related calculator: ${relatedSlug}`);
       }
     }
   } catch (error) {

@@ -18,7 +18,6 @@ interface CalculatorPageClientProps {
 export default function CalculatorPageClient({ lang, slug, seoContent, initialCalculatorContent, initialRelatedCalculators, breadcrumbs }: CalculatorPageClientProps) {
   const { t, i18n } = useTranslation('common');
 
-  console.log('CalculatorPageClient received seoContent:', !!seoContent, seoContent ? Object.keys(seoContent) : 'none');
   const [calculatorContent, setCalculatorContent] = useState<any>(null);
   const [relatedCalculators, setRelatedCalculators] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
