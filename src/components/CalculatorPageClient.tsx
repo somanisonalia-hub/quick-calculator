@@ -91,7 +91,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">{t('common.loading', '{t("calculator.loading", "Loading calculator...")}')}</p>
+          <p className="text-gray-600">{tLang('calculator.loading', 'Loading calculator...')}</p>
         </div>
       </div>
     );
@@ -179,7 +179,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                           {t("calculator.notImplemented", "Calculator Coming Soon")}
                         </h3>
                         <p className="text-amber-700 mb-4">
-                          {t('calculator.comingSoon')}
+                          {tLang('calculator.comingSoon')}
                         </p>
                         <p className="text-sm text-amber-600">
                           Component: {componentName || 'Unknown'}
@@ -219,7 +219,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                   <svg className="w-6 h-6 mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <h2 className="text-xl font-bold text-white">{t('calculator.completeGuide')}</h2>
+                  <h2 className="text-xl font-bold text-white">{tLang('calculator.completeGuide')}</h2>
                 </div>
               </div>
               <div className="p-[50px]">
@@ -230,7 +230,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                     return (
                       <div className="space-y-6">
                         <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                          {t('calculator.howDoesWork')} {calculatorContent?.title || 'Calculator'} Work?
+                          {tLang('calculator.howDoesWork')} {calculatorContent?.title || 'Calculator'} Work?
                         </h2>
                         <div
                           dangerouslySetInnerHTML={{
@@ -245,8 +245,8 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                         <svg className="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
-                        <h2 className="text-2xl font-semibold mb-2">{t('calculator.howDoesWork')} {calculatorContent?.title || 'Calculator'} Work?</h2>
-                        <p className="mt-2">{t('calculator.guideComingSoon')}</p>
+                        <h2 className="text-2xl font-semibold mb-2">{tLang('calculator.howDoesWork')} {calculatorContent?.title || 'Calculator'} Work?</h2>
+                        <p className="mt-2">{tLang('calculator.guideComingSoon')}</p>
                       </div>
                     );
                   }

@@ -1,4 +1,10 @@
+'use client';
+
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import i18n from '@/lib/i18n';
 
 interface HeaderProps {
   currentLang?: string;
@@ -69,7 +75,47 @@ const translations = {
 };
 
 export default function Header({ currentLang = 'en', showLanguageSwitcher = true }: HeaderProps) {
+  const pathname = usePathname();
   const t = translations[currentLang as keyof typeof translations] || translations.en;
+
+  // Function to get the path for a specific language
+  const getLanguagePath = (langCode: string) => {
+    const currentPath = pathname || '/';
+    if (!currentPath || currentPath === '/') return langCode === 'en' ? '/' : `/${langCode}/`;
+
+    // Extract the path without any language prefix
+    let pathWithoutLang = currentPath;
+
+    // Remove any existing language prefix (es, pt, fr, en)
+    pathWithoutLang = pathWithoutLang.replace(/^\/(es|pt|fr|en)/, '');
+
+    // Ensure we have a leading slash
+    if (!pathWithoutLang.startsWith('/')) {
+      pathWithoutLang = '/' + pathWithoutLang;
+    }
+
+    // Handle home page
+    if (pathWithoutLang === '/' || pathWithoutLang === '') {
+      pathWithoutLang = '/';
+    }
+
+    // Always add language prefix for consistency with routing
+    return `/${langCode}${pathWithoutLang}`;
+  };
+
+  // Function to handle language change
+  const changeLanguage = async (langCode: string) => {
+    if (langCode === currentLang) return;
+
+    // Change the i18n language
+    await i18n.changeLanguage(langCode);
+
+    // Navigate to the new language path
+    const newPath = getLanguagePath(langCode);
+    if (typeof window !== 'undefined') {
+      window.location.href = newPath;
+    }
+  };
 
   // Menu items
   const menuItems = [
@@ -116,9 +162,9 @@ export default function Header({ currentLang = 'en', showLanguageSwitcher = true
                 { code: 'pt', name: t.languageNames.pt, flag: '🇵🇹' },
                 { code: 'fr', name: t.languageNames.fr, flag: '🇫🇷' }
               ].map((lang) => (
-                <a
+                <button
                   key={lang.code}
-                  href={lang.code === 'en' ? '/' : `/${lang.code}/`}
+                  onClick={() => changeLanguage(lang.code)}
                   className={`flex items-center space-x-1 px-2 py-1.5 rounded-md text-sm font-medium transition-colors ${
                     currentLang === lang.code
                       ? 'bg-blue-100 text-blue-700'
@@ -128,7 +174,7 @@ export default function Header({ currentLang = 'en', showLanguageSwitcher = true
                 >
                   <span className="text-base">{lang.flag}</span>
                   <span className="hidden sm:inline text-xs">{lang.code.toUpperCase()}</span>
-                </a>
+                </button>
               ))}
             </div>
           )}

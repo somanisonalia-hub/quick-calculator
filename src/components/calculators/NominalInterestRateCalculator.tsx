@@ -29,7 +29,12 @@ export default function NominalInterestRateCalculator({ lang = 'en' }: NominalIn
       semiMonthly: "Semi-Monthly",
       biWeekly: "Bi-Weekly",
       weekly: "Weekly",
-      daily: "Daily"
+      daily: "Daily",
+      understandingNominalVsEffective: "Understanding Nominal vs Effective Rates",
+      nominalRateDesc: "Nominal Rate: Stated rate, what you see advertised",
+      effectiveRateDesc: "Effective Rate: True rate including compounding effects",
+      moreCompounding: "More compounding = Lower nominal rate needed",
+      alwaysCompare: "Always compare effective rates for accuracy"
     },
     es: {
       title: "Calculadora de Tasa de Interés Nominal",
@@ -51,7 +56,12 @@ export default function NominalInterestRateCalculator({ lang = 'en' }: NominalIn
       semiMonthly: "Semi-Mensual",
       biWeekly: "Quincenal",
       weekly: "Semanal",
-      daily: "Diaria"
+      daily: "Diaria",
+      understandingNominalVsEffective: "Entendiendo Tasas Nominales vs Efectivas",
+      nominalRateDesc: "Tasa Nominal: Tasa declarada, lo que se anuncia",
+      effectiveRateDesc: "Tasa Efectiva: Tasa real incluyendo efectos de capitalización",
+      moreCompounding: "Más capitalización = Se necesita tasa nominal más baja",
+      alwaysCompare: "Siempre compare tasas efectivas para precisión"
     },
     pt: {
       title: "Calculadora de Taxa de Juros Nominal",
@@ -73,7 +83,12 @@ export default function NominalInterestRateCalculator({ lang = 'en' }: NominalIn
       semiMonthly: "Semi-Mensal",
       biWeekly: "Quinzenal",
       weekly: "Semanal",
-      daily: "Diária"
+      daily: "Diária",
+      understandingNominalVsEffective: "Entendendo Taxas Nominais vs Efetivas",
+      nominalRateDesc: "Taxa Nominal: Taxa declarada, o que é anunciado",
+      effectiveRateDesc: "Taxa Efetiva: Taxa real incluindo efeitos de capitalização",
+      moreCompounding: "Mais capitalização = Taxa nominal mais baixa necessária",
+      alwaysCompare: "Sempre compare taxas efetivas para precisão"
     },
     fr: {
       title: "Calculateur de Taux d'Intérêt Nominal",
@@ -95,7 +110,12 @@ export default function NominalInterestRateCalculator({ lang = 'en' }: NominalIn
       semiMonthly: "Semi-Mensuel",
       biWeekly: "Bi-Hebdomadaire",
       weekly: "Hebdomadaire",
-      daily: "Quotidien"
+      daily: "Quotidien",
+      understandingNominalVsEffective: "Comprendre les Taux Nominaux vs Effectifs",
+      nominalRateDesc: "Taux Nominal: Taux déclaré, ce qui est annoncé",
+      effectiveRateDesc: "Taux Effectif: Taux réel incluant les effets de capitalisation",
+      moreCompounding: "Plus de capitalisation = Taux nominal plus bas nécessaire",
+      alwaysCompare: "Toujours comparer les taux effectifs pour la précision"
     }
   };
 
@@ -267,12 +287,12 @@ export default function NominalInterestRateCalculator({ lang = 'en' }: NominalIn
 
               {/* Educational Info */}
               <div className="bg-indigo-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-indigo-900 mb-2">Understanding Nominal vs Effective Rates</h4>
+                <h4 className="text-sm font-semibold text-indigo-900 mb-2">{t.understandingNominalVsEffective}</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
-                  <div><strong>Nominal Rate:</strong> Stated rate, what you see advertised</div>
-                  <div><strong>Effective Rate:</strong> True rate including compounding effects</div>
-                  <div><strong>More compounding</strong> = Lower nominal rate needed</div>
-                  <div><strong>Always compare</strong> effective rates for accuracy</div>
+                  <div>{t.nominalRateDesc}</div>
+                  <div>{t.effectiveRateDesc}</div>
+                  <div>{t.moreCompounding}</div>
+                  <div>{t.alwaysCompare}</div>
                 </div>
               </div>
             </div>

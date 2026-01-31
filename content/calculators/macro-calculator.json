@@ -8,10 +8,21 @@
     "metaDescription": "Use our free macro calculator to determine your daily protein, carbs, and fat intake based on your fitness goals and lifestyle.",
     "keywords": "macro calculator, macronutrient calculator, IIFYM calculator, calorie and macro calculator",
     "longTailKeywords": "macro calculator free, calculate macros for weight loss, macro calculator for muscle gain",
-    "tags": ["Health", "Fitness", "Nutrition", "Diet"],
+    "tags": [
+      "Health",
+      "Fitness",
+      "Nutrition",
+      "Diet"
+    ],
     "description": "Calculate your ideal daily macronutrient split tailored to your fitness goals, metabolism, and lifestyle.",
     "summary": "Determine your daily protein, carbohydrate, and fat requirements for optimal fitness results.",
-    "instructions": ["Enter your age, weight, height, and gender", "Select your activity level", "Choose your fitness goal", "View your personalized macronutrient breakdown", "Adjust portions to suit your preferences"],
+    "instructions": [
+      "Enter your age, weight, height, and gender",
+      "Select your activity level",
+      "Choose your fitness goal",
+      "View your personalized macronutrient breakdown",
+      "Adjust portions to suit your preferences"
+    ],
     "seoContent": {
       "introduction": "Proper nutrition is essential for achieving your fitness goals. Our macro calculator helps you determine the right balance of proteins, carbohydrates, and fats for your specific needs. Whether you're trying to lose weight, build muscle, or maintain your current physique, understanding your macro targets is crucial.",
       "benefits": "Personalized nutrition plan, Optimized protein intake for muscle gain, Proper carb timing for energy, Balanced fat intake for health, Track your nutrition easily, Achieve fitness goals faster",
@@ -24,13 +35,103 @@
       "disclaimer": "This calculator provides estimates based on standard formulas. Individual needs may vary based on metabolism, medical conditions, and medications. Consult with a registered dietitian for personalized nutrition advice.",
       "relatedTools": "TDEE Calculator, Calorie Calculator, BMI Calculator, Body Fat Calculator, Meal Plan Calculator",
       "faqs": [
-        {"question": "What are macronutrients?", "answer": "Macronutrients are protein, carbohydrates, and fats - the three main nutrients your body needs for energy and function."},
-        {"question": "How do I use the macro results?", "answer": "Use these targets to plan your meals, track with fitness apps, and adjust based on progress toward your goals."},
-        {"question": "Can I adjust my macros?", "answer": "Yes! These are starting points. Adjust based on your hunger levels, energy, and progress."},
-        {"question": "What's the best macro split?", "answer": "It depends on your goals. For weight loss, higher protein helps preserve muscle. For endurance, higher carbs fuel activity."},
-        {"question": "Do I need to hit exact numbers?", "answer": "No, aim for ranges within 5-10g. Perfect accuracy isn't necessary for results."}
+        {
+          "question": "What are macronutrients?",
+          "answer": "Macronutrients are protein, carbohydrates, and fats - the three main nutrients your body needs for energy and function."
+        },
+        {
+          "question": "How do I use the macro results?",
+          "answer": "Use these targets to plan your meals, track with fitness apps, and adjust based on progress toward your goals."
+        },
+        {
+          "question": "Can I adjust my macros?",
+          "answer": "Yes! These are starting points. Adjust based on your hunger levels, energy, and progress."
+        },
+        {
+          "question": "What's the best macro split?",
+          "answer": "It depends on your goals. For weight loss, higher protein helps preserve muscle. For endurance, higher carbs fuel activity."
+        },
+        {
+          "question": "Do I need to hit exact numbers?",
+          "answer": "No, aim for ranges within 5-10g. Perfect accuracy isn't necessary for results."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "slug": "macro-calculator",
@@ -41,10 +142,21 @@
     "metaDescription": "Usa nuestra calculadora de macros gratuita para determinar tu ingesta diaria de proteínas, carbohidratos y grasas.",
     "keywords": "calculadora de macros, calculadora de macronutrientes, macros para adelgazar, macros para ganancia muscular",
     "longTailKeywords": "calculadora de macros gratis, calcular macros para pérdida de peso, calculadora macros ganancia muscular",
-    "tags": ["Salud", "Fitness", "Nutrición", "Dieta"],
+    "tags": [
+      "Salud",
+      "Fitness",
+      "Nutrición",
+      "Dieta"
+    ],
     "description": "Calcula tu división ideal diaria de macronutrientes personalizada para tus objetivos fitness.",
     "summary": "Determina tus requerimientos diarios de proteínas, carbohidratos y grasas para resultados fitness óptimos.",
-    "instructions": ["Ingresa tu edad, peso, altura y género", "Selecciona tu nivel de actividad", "Elige tu objetivo fitness", "Ve tu desglose de macronutrientes personalizado", "Ajusta las porciones a tus preferencias"],
+    "instructions": [
+      "Ingresa tu edad, peso, altura y género",
+      "Selecciona tu nivel de actividad",
+      "Elige tu objetivo fitness",
+      "Ve tu desglose de macronutrientes personalizado",
+      "Ajusta las porciones a tus preferencias"
+    ],
     "seoContent": {
       "introduction": "La nutrición adecuada es esencial para lograr tus objetivos fitness. Nuestra calculadora de macros te ayuda a determinar el equilibrio correcto de proteínas, carbohidratos y grasas.",
       "benefits": "Plan de nutrición personalizado, Ingesta de proteína optimizada, Carbohidratos en el momento correcto, Ingesta equilibrada de grasas, Seguimiento fácil de nutrición",
@@ -57,10 +169,91 @@
       "disclaimer": "Esta calculadora proporciona estimaciones. Las necesidades individuales pueden variar. Consulta con un nutriólogo registrado.",
       "relatedTools": "Calculadora de TDEE, Calculadora de Calorías, Calculadora de IMC",
       "faqs": [
-        {"question": "¿Qué son los macronutrientes?", "answer": "Los macronutrientes son proteína, carbohidratos y grasas - los tres nutrientes principales que tu cuerpo necesita."},
-        {"question": "¿Cómo uso los resultados de macros?", "answer": "Usa estos objetivos para planificar comidas y rastrear con aplicaciones de fitness."}
+        {
+          "question": "¿Qué son los macronutrientes?",
+          "answer": "Los macronutrientes son proteína, carbohidratos y grasas - los tres nutrientes principales que tu cuerpo necesita."
+        },
+        {
+          "question": "¿Cómo uso los resultados de macros?",
+          "answer": "Usa estos objetivos para planificar comidas y rastrear con aplicaciones de fitness."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "slug": "macro-calculator",
@@ -71,10 +264,21 @@
     "metaDescription": "Use nossa calculadora de macros gratuita para determinar sua ingestão diária de proteínas, carboidratos e gorduras.",
     "keywords": "calculadora de macros, calculadora de macronutrientes, macros para perder peso",
     "longTailKeywords": "calculadora de macros grátis, calcular macros para perda de peso",
-    "tags": ["Saúde", "Fitness", "Nutrição", "Dieta"],
+    "tags": [
+      "Saúde",
+      "Fitness",
+      "Nutrição",
+      "Dieta"
+    ],
     "description": "Calcule sua divisão ideal diária de macronutrientes personalizada para seus objetivos de fitness.",
     "summary": "Determine suas necessidades diárias de proteína, carboidrato e gordura para resultados ideais de fitness.",
-    "instructions": ["Digite sua idade, peso, altura e gênero", "Selecione seu nível de atividade", "Escolha seu objetivo fitness", "Veja seu resumo personalizado de macronutrientes", "Ajuste as porções de acordo com suas preferências"],
+    "instructions": [
+      "Digite sua idade, peso, altura e gênero",
+      "Selecione seu nível de atividade",
+      "Escolha seu objetivo fitness",
+      "Veja seu resumo personalizado de macronutrientes",
+      "Ajuste as porções de acordo com suas preferências"
+    ],
     "seoContent": {
       "introduction": "A nutrição adequada é essencial para alcançar seus objetivos de fitness. Nossa calculadora de macros ajuda você a determinar o equilíbrio correto de proteínas, carboidratos e gorduras.",
       "benefits": "Plano de nutrição personalizado, Ingestão de proteína otimizada, Carboidratos no momento certo, Ingestão equilibrada de gordura",
@@ -87,10 +291,91 @@
       "disclaimer": "Esta calculadora fornece estimativas. As necessidades individuais podem variar. Consulte um nutricionista registrado.",
       "relatedTools": "Calculadora de TDEE, Calculadora de Calorias, Calculadora de IMC",
       "faqs": [
-        {"question": "O que são macronutrientes?", "answer": "Macronutrientes são proteína, carboidratos e gordura - os três principais nutrientes que seu corpo precisa."},
-        {"question": "Como uso os resultados dos macros?", "answer": "Use esses objetivos para planejar refeições e rastrear com aplicativos de fitness."}
+        {
+          "question": "O que são macronutrientes?",
+          "answer": "Macronutrientes são proteína, carboidratos e gordura - os três principais nutrientes que seu corpo precisa."
+        },
+        {
+          "question": "Como uso os resultados dos macros?",
+          "answer": "Use esses objetivos para planejar refeições e rastrear com aplicativos de fitness."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "slug": "macro-calculator",
@@ -101,10 +386,21 @@
     "metaDescription": "Utilisez notre calculatrice de macros gratuite pour déterminer votre apport quotidien en protéines, glucides et lipides.",
     "keywords": "calculatrice de macros, calculatrice de macronutriments, macros perte de poids",
     "longTailKeywords": "calculatrice de macros gratuite, calculer les macros pour la perte de poids",
-    "tags": ["Santé", "Fitness", "Nutrition", "Régime"],
+    "tags": [
+      "Santé",
+      "Fitness",
+      "Nutrition",
+      "Régime"
+    ],
     "description": "Calculez votre répartition quotidienne idéale de macronutriments personnalisée pour vos objectifs de fitness.",
     "summary": "Déterminez vos besoins quotidiens en protéines, glucides et lipides pour des résultats de fitness optimaux.",
-    "instructions": ["Entrez votre âge, votre poids, votre taille et votre sexe", "Sélectionnez votre niveau d'activité", "Choisissez votre objectif de fitness", "Consultez votre répartition personnalisée des macronutriments", "Ajustez les portions selon vos préférences"],
+    "instructions": [
+      "Entrez votre âge, votre poids, votre taille et votre sexe",
+      "Sélectionnez votre niveau d'activité",
+      "Choisissez votre objectif de fitness",
+      "Consultez votre répartition personnalisée des macronutriments",
+      "Ajustez les portions selon vos préférences"
+    ],
     "seoContent": {
       "introduction": "Une bonne nutrition est essentielle pour atteindre vos objectifs de fitness. Notre calculatrice de macros vous aide à déterminer le bon équilibre de protéines, glucides et lipides.",
       "benefits": "Plan de nutrition personnalisé, Apport protéique optimisé, Glucides au bon moment, Apport équilibré en lipides",
@@ -117,9 +413,90 @@
       "disclaimer": "Cette calculatrice fournit des estimations. Les besoins individuels peuvent varier. Consultez un nutritionniste agréé.",
       "relatedTools": "Calculatrice de TDEE, Calculatrice de Calories, Calculatrice d'IMC",
       "faqs": [
-        {"question": "Que sont les macronutriments?", "answer": "Les macronutriments sont les protéines, les glucides et les lipides - les trois nutriments principaux dont votre corps a besoin."},
-        {"question": "Comment utiliser les résultats des macros?", "answer": "Utilisez ces objectifs pour planifier vos repas et suivre avec des applications de fitness."}
+        {
+          "question": "Que sont les macronutriments?",
+          "answer": "Les macronutriments sont les protéines, les glucides et les lipides - les trois nutriments principaux dont votre corps a besoin."
+        },
+        {
+          "question": "Comment utiliser les résultats des macros?",
+          "answer": "Utilisez ces objectifs pour planifier vos repas et suivre avec des applications de fitness."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

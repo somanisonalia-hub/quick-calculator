@@ -125,7 +125,8 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
       ml: "ml",
       liters: "L",
       ounces: "oz",
-      cups: "cups"
+      cups: "copos",
+      noteDisclaimer: "Nota: Estas recomendações são diretrizes gerais baseadas em pesquisa de saúde estabelecida."
     },
     es: {
       title: "Calculadora de Ingesta de Agua",
@@ -175,7 +176,8 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
       ml: "ml",
       liters: "L",
       ounces: "oz",
-      cups: "tazas"
+      cups: "tazas",
+      noteDisclaimer: "Nota: Estas recomendaciones son pautas generales basadas en investigación de salud establecida."
     },
     pt: {
       title: "Calculadora de Ingestão de Água",
@@ -225,7 +227,8 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
       ml: "ml",
       liters: "L",
       ounces: "onças",
-      cups: "xícaras"
+      cups: "xícaras",
+      noteDisclaimer: "Nota: Estas recomendações são diretrizes gerais baseadas em pesquisa de saúde estabelecida."
     },
     fr: {
       title: "Calculateur d'Apport en Eau",
@@ -275,7 +278,8 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
       ml: "ml",
       liters: "L",
       ounces: "onces",
-      cups: "tasses"
+      cups: "tasses",
+      noteDisclaimer: "Remarque: Ces recommandations sont des lignes directrices générales basées sur la recherche en santé établie."
     }
   };
 
@@ -594,7 +598,7 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
       {/* Disclaimer */}
       <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          <strong>Note:</strong> These recommendations are general guidelines based on established health research.
+          {t.noteDisclaimer}
           Individual needs may vary based on sweat rate, medications, caffeine/alcohol intake, and specific health conditions.
           Consult a healthcare provider for specific medical conditions or extreme circumstances.
         </p>

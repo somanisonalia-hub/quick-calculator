@@ -12,18 +12,16 @@ export async function generateStaticParams() {
   const { getAllCalculatorSlugs } = await import('@/lib/staticDataLoader');
   
   const languages = ['en', 'es', 'pt', 'fr'];
-  const calculators = getAllCalculatorSlugs();
-
-  const params = [];
+  const slugs = getAllCalculatorSlugs();
+  
+  const params: Array<{ lang: string; slug: string }> = [];
+  
   for (const lang of languages) {
-    for (const calc of calculators) {
-      params.push({
-        lang,
-        slug: calc
-      });
+    for (const slug of slugs) {
+      params.push({ lang, slug });
     }
   }
-
+  
   return params;
 }
 
@@ -32,14 +30,18 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const resolvedParams = await params;
   const { lang, slug } = resolvedParams;
 
+  // For non-English pages, we need to determine if slug is translated or English
+  // For now, assume slug is always English (we'll fix slug translation later)
+  const enSlug = slug;
+
   // Get calculator data for schema generation
-  const calculatorContent = loadCalculatorContent(lang, slug);
+  const calculatorContent = loadCalculatorContent(lang, enSlug);
   let calculatorSchema = null;
 
   if (calculatorContent && calculatorContent.title) {
     const calculatorData: CalculatorData = {
       title: calculatorContent.title,
-      slug: calculatorContent.slug || slug,
+      slug: calculatorContent.slug || enSlug,
       category: calculatorContent.category || 'financial',
       seoContent: calculatorContent.seoContent || {} as any
     };
@@ -77,14 +79,17 @@ export default async function LangCalculatorPage({ params }: { params: Promise<{
   const resolvedParams = await params;
   const { lang, slug } = resolvedParams;
 
+  // slug is already the English slug from static params
+  const enSlug = slug;
+
   // Generate schema for client component
-  const calculatorContent = loadCalculatorContent(lang, slug);
+  const calculatorContent = loadCalculatorContent(lang, enSlug);
   let calculatorSchema = null;
 
   if (calculatorContent && calculatorContent.title) {
     const calculatorData: CalculatorData = {
       title: calculatorContent.title,
-      slug: calculatorContent.slug || slug,
+      slug: calculatorContent.slug || enSlug,
       category: calculatorContent.category || 'financial',
       seoContent: calculatorContent.seoContent || {} as any
     };
@@ -96,7 +101,7 @@ export default async function LangCalculatorPage({ params }: { params: Promise<{
     <div className="min-h-screen bg-gray-50">
       {calculatorSchema && <StructuredData data={calculatorSchema} />}
       <Header currentLang={lang} />
-      <LangCalculatorClient lang={lang} slug={slug} />
+      <LangCalculatorClient lang={lang} slug={enSlug} />
       <Footer currentLang={lang} />
     </div>
   );

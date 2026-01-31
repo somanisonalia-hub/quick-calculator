@@ -54,6 +54,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       yearbyyear: "Year-by-Year",
       monthbymonth: "Month-by-Month",
       exportcsv: "Export CSV",
+      principalInterest: "Principal & Interest",
+      taxesInsurance: "Taxes & Insurance",
   },
     es: {
       loanDetails: "Detalles del Préstamo",
@@ -74,6 +76,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       yearbyyear: "Año por Año",
       monthbymonth: "Mes por Mes",
       exportcsv: "Exportar CSV",
+      principalInterest: "Principal e Intereses",
+      taxesInsurance: "Impuestos y Seguros",
       paymentnumberdatepaymentprincipalinterestbalancen: "Número de Pago,Fecha,Pago,Principal,Intereses,Saldo\n",
       hideamortizationschedule: "Ocultar Plan de Amortización",
       showamortizationschedule: "Mostrar Plan de Amortización",
@@ -97,6 +101,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       yearbyyear: "Ano a Ano",
       monthbymonth: "Mês a Mês",
       exportcsv: "Exportar CSV",
+      principalInterest: "Principal e Juros",
+      taxesInsurance: "Impostos e Seguros",
       paymentnumberdatepaymentprincipalinterestbalancen: "Número do Pagamento,Data,Pagamento,Principal,Juros,Saldo\n",
       hideamortizationschedule: "Ocultar Plano de Amortização",
       showamortizationschedule: "Mostrar Plano de Amortização",
@@ -120,6 +126,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       yearbyyear: "Année par Année",
       monthbymonth: "Mois par Mois",
       exportcsv: "Exporter CSV",
+      principalInterest: "Principal et Intérêts",
+      taxesInsurance: "Taxes et Assurance",
       paymentnumberdatepaymentprincipalinterestbalancen: "Numéro de Paiement,Date,Paiement,Principal,Intérêts,Solde\n",
       hideamortizationschedule: "Masquer le Plan d'Amortissement",
       showamortizationschedule: "Afficher le Plan d'Amortissement",
@@ -397,11 +405,11 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
               <h4 className="font-medium text-gray-900 mb-2 text-xs">{t.paymentBreakdown}</h4>
               <div className="space-y-1">
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">{additionalOutputs?.find(o => o.field === 'principalInterest')?.label || 'Principal & Interest'}</span>
+                  <span className="text-gray-600">{t.principalInterest}</span>
                   <span className="font-medium text-gray-900">{formatCurrency(results.principalInterest || 0)}</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">{additionalOutputs?.find(o => o.field === 'taxesInsurance')?.label || 'Taxes & Insurance'}</span>
+                  <span className="text-gray-600">{t.taxesInsurance}</span>
                   <span className="font-medium text-gray-900">{formatCurrency(results.taxesInsurance || 0)}</span>
                 </div>
                 <hr className="border-gray-300 my-1.5" />

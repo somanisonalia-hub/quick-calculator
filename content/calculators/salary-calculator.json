@@ -1,7 +1,7 @@
 {
   "en": {
     "title": "Salary Calculator",
-    "seoTitle": "Salary Calculator - Calculate Total Compensation & Employer Cost",
+    "seoTitle": "Salary Calculator 2026 - Calculate Total Compensation & Employer Cost",
     "metaDescription": "Calculate total compensation packages including salary, bonuses, benefits, and employer costs. Free salary calculator for HR professionals and job seekers.",
     "keywords": [
       "salary calculator",
@@ -47,36 +47,22 @@
     "calculatorComponent": "HourlyToSalaryCalculator",
     "examples": [
       {
-        "title": "Full-time Employee",
-        "inputs": {
-          "hourlyRate": 25,
-          "hoursPerWeek": 40,
-          "weeksPerYear": 52,
-          "includeOvertime": false
-        },
-        "outputs": {
-          "annualSalary": 52000,
-          "monthlySalary": 4333.33,
-          "biweeklySalary": 2000,
-          "weeklySalary": 1000
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "With Overtime",
-        "inputs": {
-          "hourlyRate": 20,
-          "hoursPerWeek": 40,
-          "weeksPerYear": 52,
-          "includeOvertime": true,
-          "overtimeHours": 5,
-          "overtimeMultiplier": "1.5"
-        },
-        "outputs": {
-          "annualSalary": 44200,
-          "monthlySalary": 3683.33,
-          "biweeklySalary": 1692.31,
-          "weeklySalary": 846.15
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -117,28 +103,40 @@
       ],
       "faqs": [
         {
-          "question": "How do you convert hourly wage to annual salary?",
-          "answer": "Multiply your hourly rate by the number of hours you work per week, then multiply by the number of weeks you work per year. For example: $20/hour × 40 hours/week × 52 weeks/year = $41,600 annual salary."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "What's the difference between gross and net salary?",
-          "answer": "Gross salary is your total earnings before taxes and deductions. Net salary (take-home pay) is what you actually receive after taxes, insurance, retirement contributions, and other deductions are subtracted."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "How does overtime affect annual salary?",
-          "answer": "Overtime is typically paid at 1.5x your regular hourly rate for hours worked over 40 per week. This can significantly increase your annual earnings, especially if you work consistent overtime."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "What's a good hourly wage to salary conversion?",
-          "answer": "A $25/hour wage at 40 hours/week and 52 weeks/year equals $52,000 annually. However, 'good' depends on your location, experience, industry standards, and cost of living."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "SalaryCalculator"
   },
   "es": {
     "title": "Calculadora de Horas a Salario",
-    "seoTitle": "Calculadora de Horas a Salario - Convierte Salario por Hora a Anual",
+    "seoTitle": "Calculadora de Horas a Salario 2026 - Convierte Salario por Hora a Anual",
     "metaDescription": "Convierte salarios por hora a salario anual. Calcula tus ingresos anuales, mensuales y quincenales desde tarifas por hora. Conversor gratuito de horas a salario.",
     "keywords": [
       "calculadora horas a salario",
@@ -183,36 +181,22 @@
     "calculatorComponent": "HourlyToSalaryCalculator",
     "examples": [
       {
-        "title": "Empleado de Tiempo Completo",
-        "inputs": {
-          "hourlyRate": 25,
-          "hoursPerWeek": 40,
-          "weeksPerYear": 52,
-          "includeOvertime": false
-        },
-        "outputs": {
-          "annualSalary": 52000,
-          "monthlySalary": 4333.33,
-          "biweeklySalary": 2000,
-          "weeklySalary": 1000
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Con Horas Extras",
-        "inputs": {
-          "hourlyRate": 20,
-          "hoursPerWeek": 40,
-          "weeksPerYear": 52,
-          "includeOvertime": true,
-          "overtimeHours": 5,
-          "overtimeMultiplier": "1.5"
-        },
-        "outputs": {
-          "annualSalary": 44200,
-          "monthlySalary": 3683.33,
-          "biweeklySalary": 1692.31,
-          "weeklySalary": 846.15
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -222,13 +206,13 @@
       "salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Convierte tu salario por hora a salario anual con nuestra Calculadora de Horas a Salario gratuita. Ya sea que estés comparando ofertas de trabajo, negociando un aumento, o planeando tu presupuesto, entender tu verdadero potencial de ingresos es crucial. Nuestra calculadora proporciona conversiones instantáneas entre diferentes estructuras de pago e incluye cálculos de horas extras.",
+      "introduction": "Convert your hourly wage to annual salary with our free Hourly to Salary Calculator. Whether you're comparing job offers, negotiating a raise, or planning your budget, understanding your true earning potential is crucial. Our calculator provides instant conversions between different pay structures and includes overtime calculations.",
       "benefits": [
-        "Compara ofertas de trabajo con diferentes estructuras de pago",
-        "Entiende tu potencial de ingresos anuales",
-        "Calcula el impacto del pago de horas extras",
-        "Plane budgets con información salarial precisa",
-        "Toma decisiones informadas sobre carrera"
+        "Compare job offers with different pay structures",
+        "Understand your annual earning potential",
+        "Calculate overtime pay impact",
+        "Plan budgets with accurate salary information",
+        "Make informed career decisions"
       ],
       "howToUse": [
         "Ingresa tu tarifa por hora actual u ofrecida",
@@ -253,28 +237,40 @@
       ],
       "faqs": [
         {
-          "question": "¿Cómo convertir salario por hora a salario anual?",
-          "answer": "Multiplica tu tarifa por hora por el número de horas que trabajas por semana, luego multiplica por el número de semanas que trabajas por año. Por ejemplo: $20/hora × 40 horas/semana × 52 semanas/año = $41,600 salario anual."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "¿Cuál es la diferencia entre salario bruto y neto?",
-          "answer": "El salario bruto es tus ingresos totales antes de impuestos y deducciones. El salario neto (sueldo a llevar) es lo que realmente recibes después de que se restan impuestos, seguro, contribuciones de retiro y otras deducciones."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "¿Cómo afectan las horas extras al salario anual?",
-          "answer": "Las horas extras se pagan típicamente a 1.5x tu tarifa por hora regular por horas trabajadas sobre 40 por semana. Esto puede aumentar significativamente tus ingresos anuales, especialmente si trabajas horas extras consistentes."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "¿Cuál es una buena conversión de horas a salario?",
-          "answer": "Un salario de $25/hora a 40 horas/semana y 52 semanas/año equivale a $52,000 anualmente. Sin embargo, 'bueno' depende de tu ubicación, experiencia, estándares de la industria y costo de vida."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "SalaryCalculator"
   },
   "pt": {
     "title": "Calculadora de Horas para Salário",
-    "seoTitle": "Calculadora de Horas para Salário - Converte Salário por Hora para Anual",
+    "seoTitle": "Calculadora de Horas para Salário 2026 - Converte Salário por Hora para Anual",
     "metaDescription": "Converte salários por hora para salário anual. Calcule seus rendimentos anuais, mensais e quinzenais a partir de taxas por hora. Conversor gratuito de horas para salário.",
     "keywords": [
       "calculadora horas para salário",
@@ -319,36 +315,22 @@
     "calculatorComponent": "HourlyToSalaryCalculator",
     "examples": [
       {
-        "title": "Funcionário em Tempo Integral",
-        "inputs": {
-          "hourlyRate": 25,
-          "hoursPerWeek": 40,
-          "weeksPerYear": 52,
-          "includeOvertime": false
-        },
-        "outputs": {
-          "annualSalary": 52000,
-          "monthlySalary": 4333.33,
-          "biweeklySalary": 2000,
-          "weeklySalary": 1000
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Com Horas Extras",
-        "inputs": {
-          "hourlyRate": 20,
-          "hoursPerWeek": 40,
-          "weeksPerYear": 52,
-          "includeOvertime": true,
-          "overtimeHours": 5,
-          "overtimeMultiplier": "1.5"
-        },
-        "outputs": {
-          "annualSalary": 44200,
-          "monthlySalary": 3683.33,
-          "biweeklySalary": 1692.31,
-          "weeklySalary": 846.15
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -358,13 +340,13 @@
       "salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Converte seu salário por hora para salário anual com nossa Calculadora de Horas para Salário gratuita. Seja comparando ofertas de emprego, negociando um aumento, ou planejando seu orçamento, entender seu verdadeiro potencial de ganhos é crucial. Nossa calculadora fornece conversões instantâneas entre diferentes estruturas de pagamento e inclui cálculos de horas extras.",
+      "introduction": "Convert your hourly wage to annual salary with our free Hourly to Salary Calculator. Whether you're comparing job offers, negotiating a raise, or planning your budget, understanding your true earning potential is crucial. Our calculator provides instant conversions between different pay structures and includes overtime calculations.",
       "benefits": [
-        "Compare ofertas de emprego com diferentes estruturas de pagamento",
-        "Entenda seu potencial de ganhos anuais",
-        "Calcule o impacto do pagamento de horas extras",
-        "Planeje orçamentos com informações salariais precisas",
-        "Tome decisões informadas sobre carreira"
+        "Compare job offers with different pay structures",
+        "Understand your annual earning potential",
+        "Calculate overtime pay impact",
+        "Plan budgets with accurate salary information",
+        "Make informed career decisions"
       ],
       "howToUse": [
         "Digite sua taxa por hora atual ou oferecida",
@@ -389,28 +371,40 @@
       ],
       "faqs": [
         {
-          "question": "Como converter salário por hora para salário anual?",
-          "answer": "Multiplique sua taxa por hora pelo número de horas que trabalha por semana, então multiplique pelo número de semanas que trabalha por ano. Por exemplo: R$20/hora × 40 horas/semana × 52 semanas/ano = R$41.600 salário anual."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "Qual é a diferença entre salário bruto e líquido?",
-          "answer": "Salário bruto é seus ganhos totais antes de impostos e deduções. Salário líquido (salário na mão) é o que você realmente recebe após impostos, seguro, contribuições de aposentadoria e outras deduções serem subtraídas."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "Como as horas extras afetam o salário anual?",
-          "answer": "Horas extras são tipicamente pagas a 1.5x sua taxa por hora regular por horas trabalhadas acima de 40 por semana. Isso pode aumentar significativamente seus ganhos anuais, especialmente se você trabalha horas extras consistentes."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "Qual é uma boa conversão de horas para salário?",
-          "answer": "Um salário de R$25/hora a 40 horas/semana e 52 semanas/ano equivale a R$52.000 anualmente. Porém, 'bom' depende de sua localização, experiência, padrões da indústria e custo de vida."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "SalaryCalculator"
   },
   "fr": {
     "title": "Calculateur d'Heures en Salaire",
-    "seoTitle": "Calculateur d'Heures en Salaire - Convertir Salaire Horaire en Annuel",
+    "seoTitle": "Calculateur d'Heures en Salaire 2026 - Convertir Salaire Horaire en Annuel",
     "metaDescription": "Convertissez les salaires horaires en salaire annuel. Calculez vos revenus annuels, mensuels et bihebdomadaires à partir des taux horaires. Convertisseur gratuit d'heures en salaire.",
     "keywords": [
       "calculateur heures en salaire",
@@ -455,36 +449,22 @@
     "calculatorComponent": "HourlyToSalaryCalculator",
     "examples": [
       {
-        "title": "Employé à Temps Plein",
-        "inputs": {
-          "hourlyRate": 25,
-          "hoursPerWeek": 40,
-          "weeksPerYear": 52,
-          "includeOvertime": false
-        },
-        "outputs": {
-          "annualSalary": 52000,
-          "monthlySalary": 4333.33,
-          "biweeklySalary": 2000,
-          "weeklySalary": 1000
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Avec Heures Supplémentaires",
-        "inputs": {
-          "hourlyRate": 20,
-          "hoursPerWeek": 40,
-          "weeksPerYear": 52,
-          "includeOvertime": true,
-          "overtimeHours": 5,
-          "overtimeMultiplier": "1.5"
-        },
-        "outputs": {
-          "annualSalary": 44200,
-          "monthlySalary": 3683.33,
-          "biweeklySalary": 1692.31,
-          "weeklySalary": 846.15
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -494,13 +474,13 @@
       "salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Convertissez votre salaire horaire en salaire annuel avec notre Calculateur d'Heures en Salaire gratuit. Que vous compariez des offres d'emploi, négociiez une augmentation, ou planifiiez votre budget, comprendre votre véritable potentiel de gains est crucial. Notre calculateur fournit des conversions instantanées entre différentes structures de paiement et inclut les calculs d'heures supplémentaires.",
+      "introduction": "Convert your hourly wage to annual salary with our free Hourly to Salary Calculator. Whether you're comparing job offers, negotiating a raise, or planning your budget, understanding your true earning potential is crucial. Our calculator provides instant conversions between different pay structures and includes overtime calculations.",
       "benefits": [
-        "Comparez les offres d'emploi avec différentes structures de paiement",
-        "Comprenez votre potentiel de gains annuels",
-        "Calculez l'impact du paiement des heures supplémentaires",
-        "Planifiez les budgets avec des informations salariales précises",
-        "Prenez des décisions éclairées sur votre carrière"
+        "Compare job offers with different pay structures",
+        "Understand your annual earning potential",
+        "Calculate overtime pay impact",
+        "Plan budgets with accurate salary information",
+        "Make informed career decisions"
       ],
       "howToUse": [
         "Entrez votre taux horaire actuel ou offert",
@@ -525,21 +505,33 @@
       ],
       "faqs": [
         {
-          "question": "Comment convertir un salaire horaire en salaire annuel ?",
-          "answer": "Multipliez votre taux horaire par le nombre d'heures que vous travaillez par semaine, puis multipliez par le nombre de semaines que vous travaillez par an. Par exemple : €20/heure × 40 heures/semaine × 52 semaines/an = €41.600 salaire annuel."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "Quelle est la différence entre salaire brut et net ?",
-          "answer": "Le salaire brut est vos gains totaux avant impôts et déductions. Le salaire net (salaire à emporter) est ce que vous recevez réellement après soustraction des impôts, assurances, cotisations de retraite et autres déductions."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "Comment les heures supplémentaires affectent-elles le salaire annuel ?",
-          "answer": "Les heures supplémentaires sont généralement payées à 1.5x votre taux horaire régulier pour les heures travaillées au-delà de 40 par semaine. Cela peut augmenter considérablement vos gains annuels, surtout si vous travaillez régulièrement des heures supplémentaires."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "Quelle est une bonne conversion d'heures en salaire ?",
-          "answer": "Un salaire de €25/heure à 40 heures/semaine et 52 semaines/an équivaut à €52.000 annuellement. Cependant, 'bon' dépend de votre localisation, expérience, normes sectorielles et coût de la vie."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "SalaryCalculator"

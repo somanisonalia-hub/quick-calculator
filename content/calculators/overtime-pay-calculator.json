@@ -102,19 +102,22 @@
     ],
     "examples": [
       {
-        "title": "Standard Overtime",
-        "inputs": {
-          "hourlyRate": 20,
-          "totalHours": 45,
-          "overtimeMultiplier": "1.5"
-        },
-        "outputs": {
-          "totalWeeklyPay": 900,
-          "regularPay": 800,
-          "overtimePay": 150,
-          "overtimeHours": 5,
-          "overtimeRate": 30
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
+      },
+      {
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -152,17 +155,33 @@
       ],
       "faqs": [
         {
-          "question": "What is overtime pay?",
-          "answer": "Overtime pay is additional compensation for hours worked beyond the standard workweek, typically over 40 hours."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "When does overtime start?",
-          "answer": "Under FLSA regulations, overtime typically begins after 40 hours in a workweek."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "What is double time?",
-          "answer": "Double time is when overtime is paid at twice the regular hourly rate instead of the standard 1.5x rate."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "OvertimePayCalculator"
@@ -270,19 +289,22 @@
     ],
     "examples": [
       {
-        "title": "Horas Extras Estándar",
-        "inputs": {
-          "hourlyRate": 20,
-          "totalHours": 45,
-          "overtimeMultiplier": "1.5"
-        },
-        "outputs": {
-          "totalWeeklyPay": 900,
-          "regularPay": 800,
-          "overtimePay": 150,
-          "overtimeHours": 5,
-          "overtimeRate": 30
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
+      },
+      {
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -291,11 +313,13 @@
       "salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcula tu pago de horas extras de manera rápida y precisa con nuestra Calculadora de Pago de Horas Extras gratuita.",
+      "introduction": "Calculate your overtime pay quickly and accurately with our free Overtime Pay Calculator. Whether you're tracking your weekly earnings or planning your work schedule, understanding overtime pay is essential for proper compensation.",
       "benefits": [
-        "Calcula pago de horas extras para cualquier número de horas extra",
-        "Soporte para diferentes multiplicadores de horas extras (1.5x, 2x)",
-        "Desglose claro de pago regular vs horas extras"
+        "Calculate overtime pay for any number of extra hours",
+        "Support for different overtime multipliers (1.5x, 2x)",
+        "Clear breakdown of regular vs overtime pay",
+        "Help ensure you're paid correctly for extra work",
+        "Plan earnings based on expected work hours"
       ],
       "howToUse": [
         "Ingresa tu tarifa por hora regular",
@@ -318,13 +342,33 @@
       ],
       "faqs": [
         {
-          "question": "¿Qué es el pago de horas extras?",
-          "answer": "El pago de horas extras es compensación adicional por horas trabajadas más allá de la semana laboral estándar."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "¿Cuándo comienzan las horas extras?",
-          "answer": "Bajo regulaciones FLSA, las horas extras típicamente comienzan después de 40 horas en una semana laboral."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "OvertimePayCalculator"
@@ -412,17 +456,22 @@
     ],
     "examples": [
       {
-        "title": "Horas Extras Padrão",
-        "inputs": {
-          "hourlyRate": 20,
-          "totalHours": 45,
-          "overtimeMultiplier": "1.5"
-        },
-        "outputs": {
-          "totalWeeklyPay": 900,
-          "regularPay": 800,
-          "overtimePay": 150
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
+      },
+      {
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -431,10 +480,13 @@
       "salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule seu pagamento de horas extras de forma rápida e precisa.",
+      "introduction": "Calculate your overtime pay quickly and accurately with our free Overtime Pay Calculator. Whether you're tracking your weekly earnings or planning your work schedule, understanding overtime pay is essential for proper compensation.",
       "benefits": [
-        "Calcule pagamento de horas extras para qualquer número de horas extra",
-        "Suporte para diferentes multiplicadores de horas extras"
+        "Calculate overtime pay for any number of extra hours",
+        "Support for different overtime multipliers (1.5x, 2x)",
+        "Clear breakdown of regular vs overtime pay",
+        "Help ensure you're paid correctly for extra work",
+        "Plan earnings based on expected work hours"
       ],
       "howToUse": [
         "Digite sua taxa por hora regular",
@@ -453,9 +505,33 @@
       ],
       "faqs": [
         {
-          "question": "O que é pagamento de horas extras?",
-          "answer": "Pagamento de horas extras é compensação adicional por horas trabalhadas além da semana padrão."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "OvertimePayCalculator"
@@ -540,17 +616,22 @@
     ],
     "examples": [
       {
-        "title": "Heures Supplémentaires Standard",
-        "inputs": {
-          "hourlyRate": 20,
-          "totalHours": 45,
-          "overtimeMultiplier": "1.5"
-        },
-        "outputs": {
-          "totalWeeklyPay": 900,
-          "regularPay": 800,
-          "overtimePay": 150
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
+      },
+      {
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -559,10 +640,13 @@
       "salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez votre paiement d'heures supplémentaires rapidement et précisément.",
+      "introduction": "Calculate your overtime pay quickly and accurately with our free Overtime Pay Calculator. Whether you're tracking your weekly earnings or planning your work schedule, understanding overtime pay is essential for proper compensation.",
       "benefits": [
-        "Calculez le paiement d'heures supplémentaires pour n'importe quel nombre d'heures extra",
-        "Support pour différents multiplicateurs d'heures supplémentaires"
+        "Calculate overtime pay for any number of extra hours",
+        "Support for different overtime multipliers (1.5x, 2x)",
+        "Clear breakdown of regular vs overtime pay",
+        "Help ensure you're paid correctly for extra work",
+        "Plan earnings based on expected work hours"
       ],
       "howToUse": [
         "Entrez votre taux horaire régulier",
@@ -581,9 +665,33 @@
       ],
       "faqs": [
         {
-          "question": "Qu'est-ce que le paiement d'heures supplémentaires ?",
-          "answer": "Le paiement d'heures supplémentaires est une compensation supplémentaire pour les heures travaillées au-delà de la semaine standard."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "OvertimePayCalculator"

@@ -304,6 +304,14 @@
           "question": "How does climate affect water needs?",
           "answer": "Hot and dry climates increase water loss through sweat and respiration, requiring 50-100% more water intake. Cold climates can also increase needs due to dry air and indoor heating. Humid climates may require more water for cooling the body. High altitude can increase water needs due to faster breathing."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "WaterIntakeCalculator"
@@ -545,16 +553,16 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcula tu ingesta óptima diaria de agua con nuestra completa Calculadora de Ingesta de Agua. La hidratación adecuada es esencial para la salud, rendimiento atlético y prevención de deshidratación. Nuestra calculadora proporciona recomendaciones personalizadas basadas en tu peso corporal, nivel de actividad, clima y condiciones de salud.",
+      "introduction": "Calculate your optimal daily water intake with our comprehensive Water Intake Calculator. Proper hydration is essential for health, athletic performance, and preventing dehydration. Our calculator provides personalized recommendations based on your body weight, activity level, climate, and health conditions.",
       "benefits": [
-        "Calcula requerimientos diarios personalizados de agua",
-        "Considera nivel de actividad y factores ambientales",
-        "Cuenta condiciones de salud y circunstancias especiales",
-        "Obtén recomendaciones en múltiples unidades (ml, litros, onzas, tazas)",
-        "Aprende timing y programación apropiados de hidratación",
-        "Optimiza rendimiento atlético y recuperación",
-        "Apoya objetivos generales de salud y bienestar",
-        "Previene deshidratación y problemas relacionados con la salud"
+        "Calculate personalized daily water requirements",
+        "Account for activity level and environmental factors",
+        "Consider health conditions and special circumstances",
+        "Get recommendations in multiple units (ml, liters, ounces, cups)",
+        "Learn proper hydration timing and scheduling",
+        "Optimize athletic performance and recovery",
+        "Support overall health and wellness goals",
+        "Prevent dehydration and related health issues"
       ],
       "howToUse": [
         "Ingresa tu peso corporal actual en kilogramos o libras",
@@ -582,37 +590,45 @@
       ],
       "faqs": [
         {
-          "question": "¿Cuánta agua debo beber por día?",
-          "answer": "Las necesidades diarias de agua varían por individuo: generalmente 3.7 litros para hombres y 2.7 litros para mujeres de todas las fuentes (comida proporciona cerca de 20%). Factores como nivel de actividad, clima y condiciones de salud pueden aumentar requerimientos significativamente. Usa nuestra calculadora para recomendaciones personalizadas."
+          "question": "How much water should I drink per day?",
+          "answer": "Daily water needs vary by individual: generally 3.7 liters for men and 2.7 liters for women from all sources (food provides about 20%). Factors like activity level, climate, and health conditions can increase requirements significantly. Use our calculator for personalized recommendations."
         },
         {
-          "question": "¿Cuenta el café y té hacia la ingesta diaria de agua?",
-          "answer": "Sí, pero en moderación. Las bebidas cafeinadas tienen un efecto diurético leve, así que contribuyen a hidratación pero no son tan efectivas como agua simple. El alcohol tiene un efecto deshidratante y no cuenta hacia ingesta diaria de agua. Por cada bebida cafeinada o alcohólica, puedes necesitar un vaso extra de agua."
+          "question": "Does coffee and tea count toward daily water intake?",
+          "answer": "Yes, but in moderation. Caffeinated beverages have a mild diuretic effect, so they contribute to hydration but aren't as effective as plain water. Alcohol has a dehydrating effect and doesn't count toward daily water intake. For every caffeinated or alcoholic drink, you may need an extra glass of water."
         },
         {
-          "question": "¿Cómo sé si estoy bebiendo suficiente agua?",
-          "answer": "Monitorea color de orina - amarillo pálido o claro indica buena hidratación, amarillo oscuro sugiere necesitas más agua. Otros signos de hidratación adecuada incluyen micción regular, boca y labios húmedos, y ausencia de sed. Signos de deshidratación incluyen boca seca, fatiga, mareo y orina oscura."
+          "question": "How do I know if I'm drinking enough water?",
+          "answer": "Monitor urine color - pale yellow or clear indicates good hydration, dark yellow suggests you need more water. Other signs of adequate hydration include regular urination, moist mouth and lips, and absence of thirst. Dehydration signs include dry mouth, fatigue, dizziness, and dark urine."
         },
         {
-          "question": "¿Debo beber más agua cuando hago ejercicio?",
-          "answer": "Sí, significativamente más. Bebe 16-32 onzas (475-950ml) de agua 2-3 horas antes del ejercicio, 6-12 onzas (175-350ml) cada 15-20 minutos durante ejercicio, y 16-24 onzas (475-710ml) por cada libra (0.45kg) de peso corporal perdido después del ejercicio. En clima caliente, aumenta en 50%."
+          "question": "Should I drink more water when exercising?",
+          "answer": "Yes, significantly more. Drink 16-32 ounces (475-950ml) of water 2-3 hours before exercise, 6-12 ounces (175-350ml) every 15-20 minutes during exercise, and 16-24 ounces (475-710ml) for every pound (0.45kg) of body weight lost after exercise. In hot weather, increase by 50%."
         },
         {
-          "question": "¿Beber más agua ayuda con pérdida de peso?",
-          "answer": "El agua puede apoyar pérdida de peso de varias maneras: ayuda controlar hambre llenando el estómago, aumenta metabolismo ligeramente, ayuda el cuerpo quemar grasa más eficientemente, y puede reemplazar bebidas altas en calorías. Beber agua antes de comidas puede reducir ingesta calórica. Sin embargo, agua sola no causará pérdida de peso sin déficit calórico."
+          "question": "Does drinking more water help with weight loss?",
+          "answer": "Water can support weight loss in several ways: it helps control hunger by filling the stomach, boosts metabolism slightly, helps the body burn fat more efficiently, and can replace high-calorie drinks. Drinking water before meals may reduce calorie intake. However, water alone won't cause weight loss without a calorie deficit."
         },
         {
-          "question": "¿Puedo beber demasiada agua?",
-          "answer": "Sí, aunque raro, sobrehidratación (hiponatremia) puede ocurrir, especialmente durante eventos de resistencia con ingesta excesiva de agua sin reemplazo de electrolitos. Síntomas incluyen náusea, dolor de cabeza, confusión, y en casos severos, convulsiones. Mantente en cantidades recomendadas y escucha señales de sed de tu cuerpo."
+          "question": "Can I drink too much water?",
+          "answer": "Yes, though rare, overhydration (hyponatremia) can occur, especially during endurance events with excessive water intake without electrolyte replacement. Symptoms include nausea, headache, confusion, and in severe cases, seizures. Stick to recommended amounts and listen to your body's thirst signals."
         },
         {
-          "question": "¿La comida proporciona ingesta de agua?",
-          "answer": "Sí, cerca de 20-30% de agua diaria viene de comida. Alimentos ricos en agua como frutas y vegetales (pepinos, sandía, naranjas) contribuyen significativamente. Sopas, caldos y alimentos con alto contenido de agua ayudan cumplir necesidades diarias de hidratación."
+          "question": "Does food provide water intake?",
+          "answer": "Yes, about 20-30% of daily water comes from food. Water-rich foods like fruits and vegetables (cucumbers, watermelon, oranges) contribute significantly. Soups, broths, and foods with high water content help meet daily hydration needs."
         },
         {
-          "question": "¿Cómo afecta el clima las necesidades de agua?",
-          "answer": "Climas calientes y secos aumentan pérdida de agua a través de sudor y respiración, requiriendo 50-100% más ingesta de agua. Climas fríos también pueden aumentar necesidades debido a aire seco y calefacción indoor. Climas húmedos pueden requerir más agua para enfriar el cuerpo. Altitud alta puede aumentar necesidades de agua debido a respiración más rápida."
+          "question": "How does climate affect water needs?",
+          "answer": "Hot and dry climates increase water loss through sweat and respiration, requiring 50-100% more water intake. Cold climates can also increase needs due to dry air and indoor heating. Humid climates may require more water for cooling the body. High altitude can increase water needs due to faster breathing."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "WaterIntakeCalculator"
@@ -854,16 +870,16 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule sua ingestão ótima diária de água com nossa completa Calculadora de Ingestão de Água. Hidratação adequada é essencial para saúde, performance atlética e prevenção de desidratação. Nossa calculadora fornece recomendações personalizadas baseadas em seu peso corporal, nível de atividade, clima e condições de saúde.",
+      "introduction": "Calculate your optimal daily water intake with our comprehensive Water Intake Calculator. Proper hydration is essential for health, athletic performance, and preventing dehydration. Our calculator provides personalized recommendations based on your body weight, activity level, climate, and health conditions.",
       "benefits": [
-        "Calcule requerimentos diários personalizados de água",
-        "Considere nível de atividade e fatores ambientais",
-        "Conte condições de saúde e circunstâncias especiais",
-        "Obtenha recomendações em múltiplas unidades (ml, litros, onças, xícaras)",
-        "Aprenda timing e programação apropriados de hidratação",
-        "Otimize performance atlética e recuperação",
-        "Apoie objetivos gerais de saúde e bem-estar",
-        "Previna desidratação e problemas relacionados à saúde"
+        "Calculate personalized daily water requirements",
+        "Account for activity level and environmental factors",
+        "Consider health conditions and special circumstances",
+        "Get recommendations in multiple units (ml, liters, ounces, cups)",
+        "Learn proper hydration timing and scheduling",
+        "Optimize athletic performance and recovery",
+        "Support overall health and wellness goals",
+        "Prevent dehydration and related health issues"
       ],
       "howToUse": [
         "Digite seu peso corporal atual em quilogramas ou libras",
@@ -891,37 +907,45 @@
       ],
       "faqs": [
         {
-          "question": "Quanto água devo beber por dia?",
-          "answer": "Necessidades diárias de água variam por indivíduo: geralmente 3.7 litros para homens e 2.7 litros para mulheres de todas as fontes (comida fornece cerca de 20%). Fatores como nível de atividade, clima e condições de saúde podem aumentar requerimentos significativamente. Use nossa calculadora para recomendações personalizadas."
+          "question": "How much water should I drink per day?",
+          "answer": "Daily water needs vary by individual: generally 3.7 liters for men and 2.7 liters for women from all sources (food provides about 20%). Factors like activity level, climate, and health conditions can increase requirements significantly. Use our calculator for personalized recommendations."
         },
         {
-          "question": "¿Café e chá contam para ingestão diária de água?",
-          "answer": "Sim, mas em moderação. Bebidas cafeinadas têm um efeito diurético leve, então contribuem para hidratação mas não são tão efetivas quanto água pura. Álcool tem um efeito desidratante e não conta para ingestão diária de água. Para cada bebida cafeinada ou alcoólica, você pode precisar de um copo extra de água."
+          "question": "Does coffee and tea count toward daily water intake?",
+          "answer": "Yes, but in moderation. Caffeinated beverages have a mild diuretic effect, so they contribute to hydration but aren't as effective as plain water. Alcohol has a dehydrating effect and doesn't count toward daily water intake. For every caffeinated or alcoholic drink, you may need an extra glass of water."
         },
         {
-          "question": "Como sei se estou bebendo água suficiente?",
-          "answer": "Monitore cor da urina - amarelo claro ou claro indica boa hidratação, amarelo escuro sugere você precisa mais água. Outros sinais de hidratação adequada incluem micção regular, boca e lábios úmidos, e ausência de sede. Sinais de desidratação incluem boca seca, fadiga, tontura e urina escura."
+          "question": "How do I know if I'm drinking enough water?",
+          "answer": "Monitor urine color - pale yellow or clear indicates good hydration, dark yellow suggests you need more water. Other signs of adequate hydration include regular urination, moist mouth and lips, and absence of thirst. Dehydration signs include dry mouth, fatigue, dizziness, and dark urine."
         },
         {
-          "question": "Devo beber mais água quando faço exercício?",
-          "answer": "Sim, significativamente mais. Beba 16-32 onças (475-950ml) de água 2-3 horas antes do exercício, 6-12 onças (175-350ml) a cada 15-20 minutos durante exercício, e 16-24 onças (475-710ml) por cada libra (0.45kg) de peso corporal perdido após exercício. Em clima quente, aumente em 50%."
+          "question": "Should I drink more water when exercising?",
+          "answer": "Yes, significantly more. Drink 16-32 ounces (475-950ml) of water 2-3 hours before exercise, 6-12 ounces (175-350ml) every 15-20 minutes during exercise, and 16-24 ounces (475-710ml) for every pound (0.45kg) of body weight lost after exercise. In hot weather, increase by 50%."
         },
         {
-          "question": "Beber mais água ajuda com perda de peso?",
-          "answer": "Água pode apoiar perda de peso de várias maneiras: ajuda controlar fome preenchendo o estômago, aumenta metabolismo ligeiramente, ajuda o corpo queimar gordura mais eficientemente, e pode substituir bebidas altas em calorias. Beber água antes de refeições pode reduzir ingestão calórica. No entanto, água sozinha não causará perda de peso sem déficit calórico."
+          "question": "Does drinking more water help with weight loss?",
+          "answer": "Water can support weight loss in several ways: it helps control hunger by filling the stomach, boosts metabolism slightly, helps the body burn fat more efficiently, and can replace high-calorie drinks. Drinking water before meals may reduce calorie intake. However, water alone won't cause weight loss without a calorie deficit."
         },
         {
-          "question": "Posso beber água demais?",
-          "answer": "Sim, embora raro, superhidratação (hiponatremia) pode ocorrer, especialmente durante eventos de resistência com ingestão excessiva de água sem reposição de eletrólitos. Sintomas incluem náusea, dor de cabeça, confusão, e em casos severos, convulsões. Mantenha-se em quantidades recomendadas e ouça sinais de sede do seu corpo."
+          "question": "Can I drink too much water?",
+          "answer": "Yes, though rare, overhydration (hyponatremia) can occur, especially during endurance events with excessive water intake without electrolyte replacement. Symptoms include nausea, headache, confusion, and in severe cases, seizures. Stick to recommended amounts and listen to your body's thirst signals."
         },
         {
-          "question": "¿Comida fornece ingestão de água?",
-          "answer": "Sim, cerca de 20-30% de água diária vem da comida. Alimentos ricos em água como frutas e vegetais (pepinos, melancia, laranjas) contribuem significativamente. Sopas, caldos e alimentos com alto conteúdo de água ajudam cumprir necessidades diárias de hidratação."
+          "question": "Does food provide water intake?",
+          "answer": "Yes, about 20-30% of daily water comes from food. Water-rich foods like fruits and vegetables (cucumbers, watermelon, oranges) contribute significantly. Soups, broths, and foods with high water content help meet daily hydration needs."
         },
         {
-          "question": "Como clima afeta necessidades de água?",
-          "answer": "Climas quentes e secos aumentam perda de água através de suor e respiração, requerendo 50-100% mais ingestão de água. Climas frios também podem aumentar necessidades devido a ar seco e aquecimento interno. Climas úmidos podem requerer mais água para resfriar o corpo. Altitude alta pode aumentar necessidades de água devido a respiração mais rápida."
+          "question": "How does climate affect water needs?",
+          "answer": "Hot and dry climates increase water loss through sweat and respiration, requiring 50-100% more water intake. Cold climates can also increase needs due to dry air and indoor heating. Humid climates may require more water for cooling the body. High altitude can increase water needs due to faster breathing."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "WaterIntakeCalculator"
@@ -1163,16 +1187,16 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez votre apport optimal quotidien en eau avec notre Calculateur d'Apport en Eau complet. L'hydratation adéquate est essentielle pour santé, performance athlétique et prévention déshydratation. Notre calculateur fournit des recommandations personnalisées basées sur votre poids corporel, niveau d'activité, climat et conditions de santé.",
+      "introduction": "Calculate your optimal daily water intake with our comprehensive Water Intake Calculator. Proper hydration is essential for health, athletic performance, and preventing dehydration. Our calculator provides personalized recommendations based on your body weight, activity level, climate, and health conditions.",
       "benefits": [
-        "Calculez besoins quotidiens personnalisés en eau",
-        "Tenez compte niveau d'activité et facteurs environnementaux",
-        "Considérez conditions de santé et circonstances spéciales",
-        "Obtenez recommandations en multiples unités (ml, litres, onces, tasses)",
-        "Apprenez timing et programmation appropriés d'hydratation",
-        "Optimisez performance athlétique et récupération",
-        "Soutenez objectifs généraux de santé et bien-être",
-        "Préveniez déshydratation et problèmes de santé connexes"
+        "Calculate personalized daily water requirements",
+        "Account for activity level and environmental factors",
+        "Consider health conditions and special circumstances",
+        "Get recommendations in multiple units (ml, liters, ounces, cups)",
+        "Learn proper hydration timing and scheduling",
+        "Optimize athletic performance and recovery",
+        "Support overall health and wellness goals",
+        "Prevent dehydration and related health issues"
       ],
       "howToUse": [
         "Entrez votre poids corporel actuel en kilogrammes ou livres",
@@ -1200,37 +1224,45 @@
       ],
       "faqs": [
         {
-          "question": "Combien d'eau dois-je boire par jour ?",
-          "answer": "Besoins quotidiens en eau varient par individu : généralement 3.7 litres pour hommes et 2.7 litres pour femmes de toutes sources (nourriture fournit environ 20%). Facteurs comme niveau d'activité, climat et conditions de santé peuvent augmenter besoins significativement. Utilisez notre calculateur pour recommandations personnalisées."
+          "question": "How much water should I drink per day?",
+          "answer": "Daily water needs vary by individual: generally 3.7 liters for men and 2.7 liters for women from all sources (food provides about 20%). Factors like activity level, climate, and health conditions can increase requirements significantly. Use our calculator for personalized recommendations."
         },
         {
-          "question": "Café et thé comptent-ils vers apport quotidien en eau ?",
-          "answer": "Oui, mais en modération. Boissons caféinées ont effet diurétique léger, donc elles contribuent à hydratation mais ne sont pas aussi efficaces que eau pure. Alcool a effet déshydratant et ne compte pas vers apport quotidien en eau. Pour chaque boisson caféinée ou alcoolisée, vous pouvez avoir besoin d'un verre d'eau supplémentaire."
+          "question": "Does coffee and tea count toward daily water intake?",
+          "answer": "Yes, but in moderation. Caffeinated beverages have a mild diuretic effect, so they contribute to hydration but aren't as effective as plain water. Alcohol has a dehydrating effect and doesn't count toward daily water intake. For every caffeinated or alcoholic drink, you may need an extra glass of water."
         },
         {
-          "question": "Comment sais-je si je bois assez d'eau ?",
-          "answer": "Surveillez couleur d'urine - jaune pâle ou clair indique bonne hydratation, jaune foncé suggère vous avez besoin plus d'eau. Autres signes d'hydratation adéquate incluent miction régulière, bouche et lèvres humides, et absence de soif. Signes de déshydratation incluent bouche sèche, fatigue, étourdissements et urine foncée."
+          "question": "How do I know if I'm drinking enough water?",
+          "answer": "Monitor urine color - pale yellow or clear indicates good hydration, dark yellow suggests you need more water. Other signs of adequate hydration include regular urination, moist mouth and lips, and absence of thirst. Dehydration signs include dry mouth, fatigue, dizziness, and dark urine."
         },
         {
-          "question": "Dois-je boire plus d'eau pendant l'exercice ?",
-          "answer": "Oui, significativement plus. Buvez 16-32 onces (475-950ml) d'eau 2-3 heures avant exercice, 6-12 onces (175-350ml) toutes les 15-20 minutes pendant exercice, et 16-24 onces (475-710ml) pour chaque livre (0.45kg) de poids corporel perdue après exercice. En climat chaud, augmentez de 50%."
+          "question": "Should I drink more water when exercising?",
+          "answer": "Yes, significantly more. Drink 16-32 ounces (475-950ml) of water 2-3 hours before exercise, 6-12 ounces (175-350ml) every 15-20 minutes during exercise, and 16-24 ounces (475-710ml) for every pound (0.45kg) of body weight lost after exercise. In hot weather, increase by 50%."
         },
         {
-          "question": "Boire plus d'eau aide-t-il à perte de poids ?",
-          "answer": "Eau peut soutenir perte de poids de plusieurs manières : elle aide contrôler faim en remplissant estomac, augmente métabolisme légèrement, aide corps brûler graisse plus efficacement, et peut remplacer boissons riches en calories. Boire eau avant repas peut réduire apport calorique. Cependant, eau seule ne causera pas perte de poids sans déficit calorique."
+          "question": "Does drinking more water help with weight loss?",
+          "answer": "Water can support weight loss in several ways: it helps control hunger by filling the stomach, boosts metabolism slightly, helps the body burn fat more efficiently, and can replace high-calorie drinks. Drinking water before meals may reduce calorie intake. However, water alone won't cause weight loss without a calorie deficit."
         },
         {
-          "question": "Puis-je boire trop d'eau ?",
-          "answer": "Oui, bien que rare, surhydratation (hyponatrémie) peut survenir, particulièrement pendant événements d'endurance avec apport excessif d'eau sans remplacement électrolytes. Symptômes incluent nausée, mal de tête, confusion, et dans cas sévères, convulsions. Restez dans quantités recommandées et écoutez signaux de soif de votre corps."
+          "question": "Can I drink too much water?",
+          "answer": "Yes, though rare, overhydration (hyponatremia) can occur, especially during endurance events with excessive water intake without electrolyte replacement. Symptoms include nausea, headache, confusion, and in severe cases, seizures. Stick to recommended amounts and listen to your body's thirst signals."
         },
         {
-          "question": "Nourriture fournit-elle apport en eau ?",
-          "answer": "Oui, environ 20-30% d'eau quotidienne vient nourriture. Aliments riches en eau comme fruits et légumes (concombres, pastèque, oranges) contribuent significativement. Soupes, bouillons et aliments avec haute teneur en eau aident satisfaire besoins quotidiens en hydratation."
+          "question": "Does food provide water intake?",
+          "answer": "Yes, about 20-30% of daily water comes from food. Water-rich foods like fruits and vegetables (cucumbers, watermelon, oranges) contribute significantly. Soups, broths, and foods with high water content help meet daily hydration needs."
         },
         {
-          "question": "Comment climat affecte-t-il besoins en eau ?",
-          "answer": "Climats chauds et secs augmentent perte d'eau à travers sueur et respiration, requérant 50-100% plus apport en eau. Climats froids peuvent également augmenter besoins dû air sec et chauffage intérieur. Climats humides peuvent nécessiter plus d'eau pour refroidir corps. Haute altitude peut augmenter besoins en eau dû respiration plus rapide."
+          "question": "How does climate affect water needs?",
+          "answer": "Hot and dry climates increase water loss through sweat and respiration, requiring 50-100% more water intake. Cold climates can also increase needs due to dry air and indoor heating. Humid climates may require more water for cooling the body. High altitude can increase water needs due to faster breathing."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "WaterIntakeCalculator"

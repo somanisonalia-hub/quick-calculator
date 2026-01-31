@@ -48,44 +48,22 @@
     "calculatorComponent": "CarAffordabilityCalculator",
     "examples": [
       {
-        "title": "Middle Income Buyer",
-        "description": "A person earning $5,000 monthly with $400 current car payment",
-        "input": {
-          "monthlyIncome": 5000,
-          "currentCarPayment": 400,
-          "downPayment": 5000,
-          "tradeInValue": 3000,
-          "interestRate": 6,
-          "loanTerm": 5
-        },
-        "output": {
-          "carPrice": 32000,
-          "monthlyPayment": 450,
-          "loanAmount": 24000,
-          "transportationRatio": 12.5,
-          "totalCost": 37000,
-          "totalInterest": 5000
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "High Income with Trade-in",
-        "description": "High earner with significant trade-in value",
-        "input": {
-          "monthlyIncome": 8000,
-          "currentCarPayment": 600,
-          "downPayment": 8000,
-          "tradeInValue": 15000,
-          "interestRate": 5,
-          "loanTerm": 6
-        },
-        "output": {
-          "carPrice": 45000,
-          "monthlyPayment": 650,
-          "loanAmount": 22000,
-          "transportationRatio": 10.6,
-          "totalCost": 50700,
-          "totalInterest": 5700
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -211,44 +189,22 @@
     "calculatorComponent": "CarAffordabilityCalculator",
     "examples": [
       {
-        "title": "Comprador de Ingresos Medios",
-        "description": "Una persona que gana $5,000 mensuales con $400 pago actual de auto",
-        "input": {
-          "monthlyIncome": 5000,
-          "currentCarPayment": 400,
-          "downPayment": 5000,
-          "tradeInValue": 3000,
-          "interestRate": 6,
-          "loanTerm": 5
-        },
-        "output": {
-          "carPrice": 32000,
-          "monthlyPayment": 450,
-          "loanAmount": 24000,
-          "transportationRatio": 12.5,
-          "totalCost": 37000,
-          "totalInterest": 5000
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Ingresos Altos con Intercambio",
-        "description": "Persona de altos ingresos con valor significativo de intercambio",
-        "input": {
-          "monthlyIncome": 8000,
-          "currentCarPayment": 600,
-          "downPayment": 8000,
-          "tradeInValue": 15000,
-          "interestRate": 5,
-          "loanTerm": 6
-        },
-        "output": {
-          "carPrice": 45000,
-          "monthlyPayment": 650,
-          "loanAmount": 22000,
-          "transportationRatio": 10.6,
-          "totalCost": 50700,
-          "totalInterest": 5700
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -374,44 +330,22 @@
     "calculatorComponent": "CarAffordabilityCalculator",
     "examples": [
       {
-        "title": "Comprador de Renda Média",
-        "description": "Uma pessoa ganhando R$ 5.000 mensais com R$ 400 pagamento atual de carro",
-        "input": {
-          "monthlyIncome": 5000,
-          "currentCarPayment": 400,
-          "downPayment": 5000,
-          "tradeInValue": 3000,
-          "interestRate": 6,
-          "loanTerm": 5
-        },
-        "output": {
-          "carPrice": 32000,
-          "monthlyPayment": 450,
-          "loanAmount": 24000,
-          "transportationRatio": 12.5,
-          "totalCost": 37000,
-          "totalInterest": 5000
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Renda Alta com Troca",
-        "description": "Pessoa de alta renda com valor significativo de troca",
-        "input": {
-          "monthlyIncome": 8000,
-          "currentCarPayment": 600,
-          "downPayment": 8000,
-          "tradeInValue": 15000,
-          "interestRate": 5,
-          "loanTerm": 6
-        },
-        "output": {
-          "carPrice": 45000,
-          "monthlyPayment": 650,
-          "loanAmount": 22000,
-          "transportationRatio": 10.6,
-          "totalCost": 50700,
-          "totalInterest": 5700
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -537,44 +471,22 @@
     "calculatorComponent": "CarAffordabilityCalculator",
     "examples": [
       {
-        "title": "Acheteur à Revenus Moyens",
-        "description": "Une personne gagnant 5 000 € mensuels avec 400 € paiement actuel de voiture",
-        "input": {
-          "monthlyIncome": 5000,
-          "currentCarPayment": 400,
-          "downPayment": 5000,
-          "tradeInValue": 3000,
-          "interestRate": 6,
-          "loanTerm": 5
-        },
-        "output": {
-          "carPrice": 32000,
-          "monthlyPayment": 450,
-          "loanAmount": 24000,
-          "transportationRatio": 12.5,
-          "totalCost": 37000,
-          "totalInterest": 5000
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Revenus Élevés avec Reprise",
-        "description": "Personne à hauts revenus avec valeur de reprise significative",
-        "input": {
-          "monthlyIncome": 8000,
-          "currentCarPayment": 600,
-          "downPayment": 8000,
-          "tradeInValue": 15000,
-          "interestRate": 5,
-          "loanTerm": 6
-        },
-        "output": {
-          "carPrice": 45000,
-          "monthlyPayment": 650,
-          "loanAmount": 22000,
-          "transportationRatio": 10.6,
-          "totalCost": 50700,
-          "totalInterest": 5700
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

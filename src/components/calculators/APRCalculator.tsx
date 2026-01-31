@@ -23,7 +23,12 @@ export default function APRCalculator({ lang = 'en' }: APRCalculatorProps) {
       financeChargeRatio: "Finance Charge Ratio",
       costComparison: "Cost Comparison",
       enterLoanDetails: "Enter loan details above to calculate APR",
-      currency: "$"
+      currency: "$",
+      understandingAPR: "Understanding APR",
+      aprShowsCost: "APR shows the true annualized cost of borrowing",
+      higherAPR: "Higher APR means more expensive borrowing",
+      includesFees: "Includes fees unlike simple interest rates",
+      standardized: "Standardized way to compare loan offers"
     },
     es: {
       title: "Calculadora de TAE",
@@ -39,7 +44,12 @@ export default function APRCalculator({ lang = 'en' }: APRCalculatorProps) {
       financeChargeRatio: "Ratio de Cargos Financieros",
       costComparison: "Comparación de Costo",
       enterLoanDetails: "Ingresa detalles del préstamo arriba para calcular TAE",
-      currency: "$"
+      currency: "$",
+      understandingAPR: "Entendiendo la TAE",
+      aprShowsCost: "TAE muestra el costo anualizado real del préstamo",
+      higherAPR: "Mayor TAE significa préstamo más costoso",
+      includesFees: "Incluye comisiones a diferencia de tasas de interés simples",
+      standardized: "Forma estandarizada de comparar ofertas de préstamos"
     },
     pt: {
       title: "Calculadora de CET",
@@ -55,7 +65,12 @@ export default function APRCalculator({ lang = 'en' }: APRCalculatorProps) {
       financeChargeRatio: "Taxa de Encargos Financeiros",
       costComparison: "Comparação de Custo",
       enterLoanDetails: "Digite detalhes do empréstimo acima para calcular CET",
-      currency: "R$"
+      currency: "R$",
+      understandingAPR: "Entendendo o CET",
+      aprShowsCost: "CET mostra o custo anualizado real do empréstimo",
+      higherAPR: "Maior CET significa empréstimo mais caro",
+      includesFees: "Inclui taxas ao contrário de taxas de juros simples",
+      standardized: "Forma padronizada de comparar ofertas de empréstimos"
     },
     fr: {
       title: "Calculateur de TAEG",
@@ -71,7 +86,12 @@ export default function APRCalculator({ lang = 'en' }: APRCalculatorProps) {
       financeChargeRatio: "Ratio Frais Financiers",
       costComparison: "Comparaison Coût",
       enterLoanDetails: "Entrez détails du prêt ci-dessus pour calculer TAEG",
-      currency: "€"
+      currency: "€",
+      understandingAPR: "Comprendre le TAEG",
+      aprShowsCost: "Le TAEG montre le coût annualisé réel de l'emprunt",
+      higherAPR: "Un TAEG plus élevé signifie un emprunt plus coûteux",
+      includesFees: "Inclut les frais contrairement aux taux d'intérêt simples",
+      standardized: "Manière standardisée de comparer les offres de prêt"
     }
   };
 
@@ -264,12 +284,12 @@ export default function APRCalculator({ lang = 'en' }: APRCalculatorProps) {
 
               {/* Educational Info */}
               <div className="bg-green-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-green-900 mb-2">Understanding APR</h4>
+                <h4 className="text-sm font-semibold text-green-900 mb-2">{t.understandingAPR}</h4>
                 <div className="text-xs text-green-700 space-y-1">
-                  <div><strong>APR</strong> shows the true annualized cost of borrowing</div>
-                  <div><strong>Higher APR</strong> means more expensive borrowing</div>
-                  <div><strong>Includes fees</strong> unlike simple interest rates</div>
-                  <div><strong>Standardized</strong> way to compare loan offers</div>
+                  <div>{t.aprShowsCost}</div>
+                  <div>{t.higherAPR}</div>
+                  <div>{t.includesFees}</div>
+                  <div>{t.standardized}</div>
                 </div>
               </div>
             </div>

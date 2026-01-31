@@ -8,10 +8,21 @@
     "metaDescription": "Use our free Roth IRA calculator to project tax-free growth and retirement savings with contribution limits.",
     "keywords": "Roth IRA calculator, Roth IRA growth calculator, tax-free retirement calculator",
     "longTailKeywords": "Roth IRA calculator free, Roth IRA contribution calculator, Roth IRA projection",
-    "tags": ["Financial", "Retirement", "Investment", "IRA"],
+    "tags": [
+      "Financial",
+      "Retirement",
+      "Investment",
+      "IRA"
+    ],
     "description": "Calculate your Roth IRA balance at retirement with tax-free growth and distribution potential.",
     "summary": "Project your Roth IRA savings growth with tax-free compounding.",
-    "instructions": ["Enter your current age", "Set your annual Roth IRA contribution", "Assume expected annual return", "Set your retirement age", "View projected balance and tax-free withdrawals"],
+    "instructions": [
+      "Enter your current age",
+      "Set your annual Roth IRA contribution",
+      "Assume expected annual return",
+      "Set your retirement age",
+      "View projected balance and tax-free withdrawals"
+    ],
     "seoContent": {
       "introduction": "A Roth IRA is a powerful retirement savings vehicle offering tax-free growth and withdrawals. Our calculator helps you project your Roth IRA balance and understand how much you can withdraw tax-free in retirement.",
       "benefits": "Tax-free growth forever, Flexibility in withdrawals, No required minimum distributions, Tax-free inheritance for heirs, Lower income taxes in retirement",
@@ -24,13 +35,103 @@
       "disclaimer": "Calculator provides estimates. Actual returns vary. Contribution limits change yearly. Consult a tax advisor for eligibility and strategy.",
       "relatedTools": "401k Calculator, Traditional IRA Calculator, Retirement Calculator, Social Security Calculator",
       "faqs": [
-        {"question": "What's the Roth IRA contribution limit?", "answer": "2024: $7,000 ($8,000 if 50+). Limits increase yearly for inflation."},
-        {"question": "Can I withdraw Roth IRA contributions anytime?", "answer": "Yes! You can always withdraw contributions tax and penalty-free."},
-        {"question": "What's a backdoor Roth?", "answer": "Strategy for high earners to contribute to Roth IRA indirectly through a traditional IRA."},
-        {"question": "When can I withdraw earnings?", "answer": "After 59.5 and account open 5+ years, withdrawals are tax and penalty-free."},
-        {"question": "Do I pay taxes on Roth IRA growth?", "answer": "No! All growth and qualified withdrawals are completely tax-free."}
+        {
+          "question": "What's the Roth IRA contribution limit?",
+          "answer": "2024: $7,000 ($8,000 if 50+). Limits increase yearly for inflation."
+        },
+        {
+          "question": "Can I withdraw Roth IRA contributions anytime?",
+          "answer": "Yes! You can always withdraw contributions tax and penalty-free."
+        },
+        {
+          "question": "What's a backdoor Roth?",
+          "answer": "Strategy for high earners to contribute to Roth IRA indirectly through a traditional IRA."
+        },
+        {
+          "question": "When can I withdraw earnings?",
+          "answer": "After 59.5 and account open 5+ years, withdrawals are tax and penalty-free."
+        },
+        {
+          "question": "Do I pay taxes on Roth IRA growth?",
+          "answer": "No! All growth and qualified withdrawals are completely tax-free."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "slug": "roth-ira-calculator",
@@ -41,10 +142,21 @@
     "metaDescription": "Usa nuestra calculadora Roth IRA gratuita para proyectar el crecimiento libre de impuestos.",
     "keywords": "calculadora Roth IRA, calculadora de crecimiento Roth IRA",
     "longTailKeywords": "calculadora Roth IRA gratis, calculadora de contribución Roth IRA",
-    "tags": ["Financiero", "Jubilación", "Inversión", "IRA"],
+    "tags": [
+      "Financiero",
+      "Jubilación",
+      "Inversión",
+      "IRA"
+    ],
     "description": "Calcula tu saldo Roth IRA en la jubilación con crecimiento libre de impuestos.",
     "summary": "Proyecta el crecimiento de tus ahorros Roth IRA con compuesto libre de impuestos.",
-    "instructions": ["Ingresa tu edad actual", "Establece tu contribución anual Roth IRA", "Asume el rendimiento anual esperado", "Establece tu edad de jubilación", "Ve tu saldo proyectado libre de impuestos"],
+    "instructions": [
+      "Ingresa tu edad actual",
+      "Establece tu contribución anual Roth IRA",
+      "Asume el rendimiento anual esperado",
+      "Establece tu edad de jubilación",
+      "Ve tu saldo proyectado libre de impuestos"
+    ],
     "seoContent": {
       "introduction": "Un Roth IRA es un vehículo poderoso para el ahorro de jubilación con crecimiento libre de impuestos. Nuestra calculadora te ayuda a proyectar tu saldo Roth IRA.",
       "benefits": "Crecimiento libre de impuestos para siempre, Flexibilidad en retiros, Sin distribuciones mínimas requeridas",
@@ -57,10 +169,91 @@
       "disclaimer": "La calculadora proporciona estimaciones. Los rendimientos reales varían. Consulta a un asesor fiscal.",
       "relatedTools": "Calculadora 401k, Calculadora IRA Tradicional, Calculadora de Jubilación",
       "faqs": [
-        {"question": "¿Cuál es el límite de contribución del Roth IRA?", "answer": "2024: $7,000 ($8,000 si tienes 50+). Los límites aumentan anualmente."},
-        {"question": "¿Puedo retirar contribuciones del Roth IRA en cualquier momento?", "answer": "¡Sí! Siempre puedes retirar contribuciones sin impuestos ni penalizaciones."}
+        {
+          "question": "¿Cuál es el límite de contribución del Roth IRA?",
+          "answer": "2024: $7,000 ($8,000 si tienes 50+). Los límites aumentan anualmente."
+        },
+        {
+          "question": "¿Puedo retirar contribuciones del Roth IRA en cualquier momento?",
+          "answer": "¡Sí! Siempre puedes retirar contribuciones sin impuestos ni penalizaciones."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "slug": "roth-ira-calculator",
@@ -71,10 +264,21 @@
     "metaDescription": "Use nossa calculadora Roth IRA gratuita para projetar crescimento livre de impostos.",
     "keywords": "calculadora Roth IRA, calculadora de crescimento Roth IRA",
     "longTailKeywords": "calculadora Roth IRA grátis, calculadora de contribuição Roth IRA",
-    "tags": ["Financeiro", "Aposentadoria", "Investimento", "IRA"],
+    "tags": [
+      "Financeiro",
+      "Aposentadoria",
+      "Investimento",
+      "IRA"
+    ],
     "description": "Calcule seu saldo Roth IRA na aposentadoria com crescimento livre de impostos.",
     "summary": "Projete o crescimento de suas economias Roth IRA com composto livre de impostos.",
-    "instructions": ["Digite sua idade atual", "Defina sua contribuição anual Roth IRA", "Assuma o retorno anual esperado", "Defina sua idade de aposentadoria", "Veja seu saldo projetado livre de impostos"],
+    "instructions": [
+      "Digite sua idade atual",
+      "Defina sua contribuição anual Roth IRA",
+      "Assuma o retorno anual esperado",
+      "Defina sua idade de aposentadoria",
+      "Veja seu saldo projetado livre de impostos"
+    ],
     "seoContent": {
       "introduction": "Um Roth IRA é um veículo poderoso para economizar para a aposentadoria com crescimento livre de impostos. Nossa calculadora ajuda você a projetar seu saldo Roth IRA.",
       "benefits": "Crescimento livre de impostos para sempre, Flexibilidade nos saques, Sem distribuições mínimas obrigatórias",
@@ -87,10 +291,91 @@
       "disclaimer": "A calculadora fornece estimativas. Os retornos reais variam. Consulte um consultor fiscal.",
       "relatedTools": "Calculadora 401k, Calculadora IRA Tradicional, Calculadora de Aposentadoria",
       "faqs": [
-        {"question": "Qual é o limite de contribuição do Roth IRA?", "answer": "2024: $7.000 ($8.000 se você tem 50+). Os limites aumentam anualmente."},
-        {"question": "Posso sacar contribuições do Roth IRA a qualquer momento?", "answer": "Sim! Você sempre pode sacar contribuições sem impostos ou penalidades."}
+        {
+          "question": "Qual é o limite de contribuição do Roth IRA?",
+          "answer": "2024: $7.000 ($8.000 se você tem 50+). Os limites aumentam anualmente."
+        },
+        {
+          "question": "Posso sacar contribuições do Roth IRA a qualquer momento?",
+          "answer": "Sim! Você sempre pode sacar contribuições sem impostos ou penalidades."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "slug": "roth-ira-calculator",
@@ -101,10 +386,21 @@
     "metaDescription": "Utilisez notre calculatrice Roth IRA gratuite pour projeter la croissance libre d'impôts.",
     "keywords": "calculatrice Roth IRA, calculatrice de croissance Roth IRA",
     "longTailKeywords": "calculatrice Roth IRA gratuite, calculatrice de cotisation Roth IRA",
-    "tags": ["Financier", "Retraite", "Investissement", "IRA"],
+    "tags": [
+      "Financier",
+      "Retraite",
+      "Investissement",
+      "IRA"
+    ],
     "description": "Calculez votre solde Roth IRA à la retraite avec une croissance libre d'impôts.",
     "summary": "Projetez la croissance de vos économies Roth IRA avec des intérêts composés libres d'impôts.",
-    "instructions": ["Entrez votre âge actuel", "Définissez votre cotisation annuelle Roth IRA", "Supposez le rendement annuel attendu", "Définissez votre âge de retraite", "Consultez votre solde projeté libre d'impôts"],
+    "instructions": [
+      "Entrez votre âge actuel",
+      "Définissez votre cotisation annuelle Roth IRA",
+      "Supposez le rendement annuel attendu",
+      "Définissez votre âge de retraite",
+      "Consultez votre solde projeté libre d'impôts"
+    ],
     "seoContent": {
       "introduction": "Un Roth IRA est un véhicule puissant pour épargner pour la retraite avec une croissance libre d'impôts. Notre calculatrice vous aide à projeter votre solde Roth IRA.",
       "benefits": "Croissance libre d'impôts à jamais, Flexibilité des retraits, Pas de distributions minimales obligatoires",
@@ -117,9 +413,90 @@
       "disclaimer": "La calculatrice fournit des estimations. Les rendements réels varient. Consultez un conseiller fiscal.",
       "relatedTools": "Calculatrice 401k, Calculatrice IRA Traditionnelle, Calculatrice de Retraite",
       "faqs": [
-        {"question": "Quel est le plafond de cotisation du Roth IRA?", "answer": "2024: 7 000 $ (8 000 $ si vous avez 50 ans ou plus). Les plafonds augmentent annuellement."},
-        {"question": "Puis-je retirer les cotisations du Roth IRA à tout moment?", "answer": "Oui! Vous pouvez toujours retirer les cotisations sans impôts ni pénalités."}
+        {
+          "question": "Quel est le plafond de cotisation du Roth IRA?",
+          "answer": "2024: 7 000 $ (8 000 $ si vous avez 50 ans ou plus). Les plafonds augmentent annuellement."
+        },
+        {
+          "question": "Puis-je retirer les cotisations du Roth IRA à tout moment?",
+          "answer": "Oui! Vous pouvez toujours retirer les cotisations sans impôts ni pénalités."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

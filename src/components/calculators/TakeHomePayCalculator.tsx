@@ -204,6 +204,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
       },
       currency: "$",
       percentage: "%"
+,
+      noteDisclaimer: "Note: This calculator provides estimates based on 2024 federal withholding tables and standard deduction. State taxes, local taxes, additional deductions, and other payroll factors are not included. Actual take-home pay may vary."
     },
     es: {
       title: "Calculadora de Salario Neto",
@@ -292,6 +294,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
       },
       currency: "$",
       percentage: "%"
+,
+      noteDisclaimer: "Nota: Esta calculadora proporciona estimaciones basadas en las tablas de retención federal de 2024 y la deducción estándar. No se incluyen impuestos estatales, impuestos locales, deducciones adicionales y otros factores de nómina. El pago neto real puede variar."
     },
     pt: {
       title: "Calculadora de Salário Líquido",
@@ -380,6 +384,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
       },
       currency: "R$",
       percentage: "%"
+,
+      noteDisclaimer: "Nota: Esta calculadora fornece estimativas baseadas nas tabelas de retenção federal de 2024 e dedução padrão. Impostos estaduais, impostos locais, deduções adicionais e outros fatores de folha de pagamento não estão incluídos. O pagamento líquido real pode variar."
     },
     fr: {
       title: "Calculateur de Salaire Net",
@@ -468,6 +474,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
       },
       currency: "€",
       percentage: "%"
+,
+      noteDisclaimer: "Remarque: Cette calculatrice fournit des estimations basées sur les tables de retenue fédérales de 2024 et la déduction standard. Les impôts d'État, les impôts locaux, les déductions supplémentaires et d'autres facteurs de paie ne sont pas inclus. Le salaire net réel peut varier."
     }
   };
 
@@ -825,10 +833,7 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
       {/* Disclaimer */}
       <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          <strong>Note:</strong> This calculator provides estimates based on 2024 federal withholding tables and general state tax rates.
-          Actual withholdings may vary based on your W-4 form allowances, additional income, exact state withholding formulas, and local tax laws.
-          FICA taxes are capped at $168,600 for Social Security in 2024. Consult your employer's payroll department or a tax professional for precise calculations.
-        </p>
+          {t.noteDisclaimer}</p>
       </div>
     </div>
   );

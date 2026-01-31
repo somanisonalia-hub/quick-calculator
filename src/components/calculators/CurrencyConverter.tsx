@@ -26,7 +26,16 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
       convertedAmount: "Converted Amount",
       exchangeRate: "Exchange Rate",
       lastUpdated: "Last Updated",
-      currency: "$"
+      currency: "$",
+      understandingCurrencyConversion: "Understanding Currency Conversion",
+      exchangeRateLabel: "Exchange Rate:",
+      exchangeRateDesc: "Price of one currency in terms of another",
+      baseCurrencyLabel: "Base Currency:",
+      baseCurrencyDesc: "Currency being converted from",
+      quoteCurrencyLabel: "Quote Currency:",
+      quoteCurrencyDesc: "Currency being converted to",
+      realTimeRatesLabel: "Real-time Rates:",
+      realTimeRatesDesc: "Exchange rates fluctuate constantly"
     },
     es: {
       title: "Conversor de Moneda",
@@ -45,7 +54,16 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
       convertedAmount: "Monto Convertido",
       exchangeRate: "Tasa de Cambio",
       lastUpdated: "Última Actualización",
-      currency: "$"
+      currency: "$",
+      understandingCurrencyConversion: "Entendiendo la Conversión de Moneda",
+      exchangeRateLabel: "Tasa de Cambio:",
+      exchangeRateDesc: "Precio de una moneda en términos de otra",
+      baseCurrencyLabel: "Moneda Base:",
+      baseCurrencyDesc: "Moneda desde la que se convierte",
+      quoteCurrencyLabel: "Moneda de Cotización:",
+      quoteCurrencyDesc: "Moneda a la que se convierte",
+      realTimeRatesLabel: "Tasas en Tiempo Real:",
+      realTimeRatesDesc: "Las tasas de cambio fluctúan constantemente"
     },
     pt: {
       title: "Conversor de Moeda",
@@ -64,7 +82,16 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
       convertedAmount: "Valor Convertido",
       exchangeRate: "Taxa de Câmbio",
       lastUpdated: "Última Atualização",
-      currency: "R$"
+      currency: "R$",
+      understandingCurrencyConversion: "Entendendo a Conversão de Moeda",
+      exchangeRateLabel: "Taxa de Câmbio:",
+      exchangeRateDesc: "Preço de uma moeda em termos de outra",
+      baseCurrencyLabel: "Moeda Base:",
+      baseCurrencyDesc: "Moeda da qual se converte",
+      quoteCurrencyLabel: "Moeda de Cotação:",
+      quoteCurrencyDesc: "Moeda para a qual se converte",
+      realTimeRatesLabel: "Taxas em Tempo Real:",
+      realTimeRatesDesc: "As taxas de câmbio flutuam constantemente"
     },
     fr: {
       title: "Convertisseur de Devise",
@@ -83,7 +110,16 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
       convertedAmount: "Montant Convertit",
       exchangeRate: "Taux de Change",
       lastUpdated: "Dernière Mise à Jour",
-      currency: "€"
+      currency: "€",
+      understandingCurrencyConversion: "Comprendre la Conversion de Devise",
+      exchangeRateLabel: "Taux de Change:",
+      exchangeRateDesc: "Prix d'une devise en termes d'une autre",
+      baseCurrencyLabel: "Devise de Base:",
+      baseCurrencyDesc: "Devise à partir de laquelle on convertit",
+      quoteCurrencyLabel: "Devise de Cotation:",
+      quoteCurrencyDesc: "Devise vers laquelle on convertit",
+      realTimeRatesLabel: "Taux en Temps Réel:",
+      realTimeRatesDesc: "Les taux de change fluctuent constamment"
     }
   };
 
@@ -272,12 +308,12 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
 
               {/* Educational Info */}
               <div className="bg-indigo-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-indigo-900 mb-2">Understanding Currency Conversion</h4>
+                <h4 className="text-sm font-semibold text-indigo-900 mb-2">{t.understandingCurrencyConversion}</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
-                  <div><strong>Exchange Rate:</strong> Price of one currency in terms of another</div>
-                  <div><strong>Base Currency:</strong> Currency being converted from</div>
-                  <div><strong>Quote Currency:</strong> Currency being converted to</div>
-                  <div><strong>Real-time Rates:</strong> Exchange rates fluctuate constantly</div>
+                  <div><strong>{t.exchangeRateLabel}</strong> {t.exchangeRateDesc}</div>
+                  <div><strong>{t.baseCurrencyLabel}</strong> {t.baseCurrencyDesc}</div>
+                  <div><strong>{t.quoteCurrencyLabel}</strong> {t.quoteCurrencyDesc}</div>
+                  <div><strong>{t.realTimeRatesLabel}</strong> {t.realTimeRatesDesc}</div>
                 </div>
               </div>
             </div>

@@ -20,7 +20,14 @@
     "slug": "biweekly-pay-calculator",
     "category": "Financial",
     "difficulty": "Beginner",
-    "tags": ["salary", "paycheck", "biweekly", "income", "wages", "pay period"],
+    "tags": [
+      "salary",
+      "paycheck",
+      "biweekly",
+      "income",
+      "wages",
+      "pay period"
+    ],
     "description": "Calculate your biweekly pay from annual salary or hourly wage. Understand how much you earn per pay period, calculate annual income from biweekly pay, and plan your budget with accurate biweekly paycheck estimates.",
     "summary": "Convert between annual, biweekly, and hourly pay rates with tax calculations.",
     "component": "BiweeklyPayCalculator",
@@ -76,23 +83,102 @@
       ],
       "faqs": [
         {
-          "question": "How many biweekly pay periods are there in a year?",
-          "answer": "There are 26 biweekly pay periods in a year. Biweekly means every two weeks, so 52 weeks ÷ 2 = 26 pay periods. This differs from semi-monthly pay (24 periods) where employees are paid twice per month."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "How do I calculate biweekly pay from annual salary?",
-          "answer": "Divide your annual salary by 26. For example, if you earn $52,000 per year, your biweekly gross pay is $52,000 ÷ 26 = $2,000 per paycheck. This is before taxes and other deductions."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "Why do some months have three paychecks?",
-          "answer": "Since there are 52 weeks in a year and 26 biweekly pay periods, some months will have three paychecks instead of two. This happens twice per year. For budgeting, many people use these 'extra' paychecks for savings or large expenses."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "What's the difference between biweekly and semi-monthly pay?",
-          "answer": "Biweekly pay occurs every two weeks (26 pay periods per year, consistent days like every other Friday). Semi-monthly pay occurs twice per month (24 pay periods, typically on set dates like the 15th and last day). Biweekly provides two extra paychecks annually."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "title": "Calculadora de Pago Quincenal",
@@ -106,30 +192,136 @@
     "slug": "biweekly-pay-calculator",
     "category": "Financial",
     "difficulty": "Principiante",
-    "tags": ["salario", "cheque de pago", "quincenal", "ingreso", "periodo de pago"],
+    "tags": [
+      "salario",
+      "cheque de pago",
+      "quincenal",
+      "ingreso",
+      "periodo de pago"
+    ],
     "description": "Calcule su pago quincenal desde salario anual o salario por hora. Entienda cuánto gana por período de pago y planifique su presupuesto.",
     "summary": "Convierta entre tasas de pago anual, quincenal y por hora con cálculos de impuestos.",
     "component": "BiweeklyPayCalculator",
     "seoContent": {
-      "introduction": "Nuestra calculadora de pago quincenal ayuda a empleados pagados cada dos semanas a entender sus ingresos. Convierta salario anual a pago quincenal y planifique su presupuesto.",
+      "introduction": "Our biweekly pay calculator helps employees paid every two weeks understand their earnings. Convert annual salary to biweekly pay, calculate take-home pay after taxes and deductions, and plan your budget around your 26 annual paychecks. Perfect for employees transitioning between pay schedules or evaluating job offers with biweekly pay.",
       "benefits": [
-        "Calcule pago quincenal desde salario anual instantáneamente",
-        "Convierta pago quincenal a ingreso anual",
-        "Estime el pago neto después de impuestos"
+        "Calculate biweekly pay from annual salary instantly",
+        "Convert biweekly pay to annual income",
+        "Estimate take-home pay after taxes and deductions",
+        "Understand gross vs net biweekly earnings",
+        "Plan monthly budget with biweekly paychecks",
+        "Compare job offers with different pay schedules"
       ],
       "steps": [
-        "Ingrese su salario anual o salario por hora",
-        "Para por hora: Ingrese horas trabajadas por semana",
-        "Agregue su tasa de impuestos",
-        "Vea su pago quincenal bruto y neto"
+        "Enter your annual salary or hourly wage rate",
+        "For hourly: Enter hours worked per week (typically 40)",
+        "Add your tax rate (federal, state, local combined)",
+        "Include any pre-tax deductions (401k, health insurance)",
+        "View your gross and net biweekly pay"
       ],
       "formulaExplanation": "El pago quincenal se calcula dividiendo el salario anual por 26 (el número de períodos de pago quincenales en un año).",
       "examples": [
         "$52,000 salario anual = $2,000 pago quincenal bruto",
         "$25/hora × 40 horas/semana = $2,000 pago quincenal bruto"
       ],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "title": "Calculadora de Pagamento Quinzenal",
@@ -143,30 +335,136 @@
     "slug": "biweekly-pay-calculator",
     "category": "Financial",
     "difficulty": "Iniciante",
-    "tags": ["salário", "contracheque", "quinzenal", "renda", "período de pagamento"],
+    "tags": [
+      "salário",
+      "contracheque",
+      "quinzenal",
+      "renda",
+      "período de pagamento"
+    ],
     "description": "Calcule seu pagamento quinzenal a partir do salário anual ou salário por hora. Entenda quanto você ganha por período de pagamento e planeje seu orçamento.",
     "summary": "Converta entre taxas de pagamento anual, quinzenal e por hora com cálculos de impostos.",
     "component": "BiweeklyPayCalculator",
     "seoContent": {
-      "introduction": "Nossa calculadora de pagamento quinzenal ajuda funcionários pagos a cada duas semanas a entender seus ganhos. Converta salário anual em pagamento quinzenal e planeje seu orçamento.",
+      "introduction": "Our biweekly pay calculator helps employees paid every two weeks understand their earnings. Convert annual salary to biweekly pay, calculate take-home pay after taxes and deductions, and plan your budget around your 26 annual paychecks. Perfect for employees transitioning between pay schedules or evaluating job offers with biweekly pay.",
       "benefits": [
-        "Calcule pagamento quinzenal a partir do salário anual instantaneamente",
-        "Converta pagamento quinzenal em renda anual",
-        "Estime o pagamento líquido após impostos"
+        "Calculate biweekly pay from annual salary instantly",
+        "Convert biweekly pay to annual income",
+        "Estimate take-home pay after taxes and deductions",
+        "Understand gross vs net biweekly earnings",
+        "Plan monthly budget with biweekly paychecks",
+        "Compare job offers with different pay schedules"
       ],
       "steps": [
-        "Digite seu salário anual ou salário por hora",
-        "Para por hora: Digite horas trabalhadas por semana",
-        "Adicione sua taxa de impostos",
-        "Veja seu pagamento quinzenal bruto e líquido"
+        "Enter your annual salary or hourly wage rate",
+        "For hourly: Enter hours worked per week (typically 40)",
+        "Add your tax rate (federal, state, local combined)",
+        "Include any pre-tax deductions (401k, health insurance)",
+        "View your gross and net biweekly pay"
       ],
       "formulaExplanation": "O pagamento quinzenal é calculado dividindo o salário anual por 26 (o número de períodos de pagamento quinzenais em um ano).",
       "examples": [
         "Salário anual de $52.000 = Pagamento quinzenal bruto de $2.000",
         "$25/hora × 40 horas/semana = Pagamento quinzenal bruto de $2.000"
       ],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "title": "Calculateur de Paiement Bihebdomadaire",
@@ -180,29 +478,135 @@
     "slug": "biweekly-pay-calculator",
     "category": "Financial",
     "difficulty": "Débutant",
-    "tags": ["salaire", "chèque de paie", "bihebdomadaire", "revenu", "période de paie"],
+    "tags": [
+      "salaire",
+      "chèque de paie",
+      "bihebdomadaire",
+      "revenu",
+      "période de paie"
+    ],
     "description": "Calculez votre paiement bihebdomadaire à partir du salaire annuel ou du salaire horaire. Comprenez combien vous gagnez par période de paie et planifiez votre budget.",
     "summary": "Convertissez entre les taux de paiement annuel, bihebdomadaire et horaire avec calculs d'impôts.",
     "component": "BiweeklyPayCalculator",
     "seoContent": {
-      "introduction": "Notre calculateur de paiement bihebdomadaire aide les employés payés toutes les deux semaines à comprendre leurs revenus. Convertissez le salaire annuel en paiement bihebdomadaire et planifiez votre budget.",
+      "introduction": "Our biweekly pay calculator helps employees paid every two weeks understand their earnings. Convert annual salary to biweekly pay, calculate take-home pay after taxes and deductions, and plan your budget around your 26 annual paychecks. Perfect for employees transitioning between pay schedules or evaluating job offers with biweekly pay.",
       "benefits": [
-        "Calculez le paiement bihebdomadaire à partir du salaire annuel instantanément",
-        "Convertissez le paiement bihebdomadaire en revenu annuel",
-        "Estimez le salaire net après impôts"
+        "Calculate biweekly pay from annual salary instantly",
+        "Convert biweekly pay to annual income",
+        "Estimate take-home pay after taxes and deductions",
+        "Understand gross vs net biweekly earnings",
+        "Plan monthly budget with biweekly paychecks",
+        "Compare job offers with different pay schedules"
       ],
       "steps": [
-        "Entrez votre salaire annuel ou salaire horaire",
-        "Pour horaire: Entrez les heures travaillées par semaine",
-        "Ajoutez votre taux d'imposition",
-        "Voyez votre paiement bihebdomadaire brut et net"
+        "Enter your annual salary or hourly wage rate",
+        "For hourly: Enter hours worked per week (typically 40)",
+        "Add your tax rate (federal, state, local combined)",
+        "Include any pre-tax deductions (401k, health insurance)",
+        "View your gross and net biweekly pay"
       ],
       "formulaExplanation": "Le paiement bihebdomadaire est calculé en divisant le salaire annuel par 26 (le nombre de périodes de paie bihebdomadaires dans une année).",
       "examples": [
         "Salaire annuel de 52 000$ = Paiement bihebdomadaire brut de 2 000$",
         "25$/heure × 40 heures/semaine = Paiement bihebdomadaire brut de 2 000$"
       ],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

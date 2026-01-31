@@ -231,46 +231,22 @@
     ],
     "examples": [
       {
-        "title": "Biweekly Paycheck, Single Filer, California",
-        "inputs": {
-          "grossPay": 2000,
-          "payFrequency": "biweekly",
-          "filingStatus": "single",
-          "dependents": 0,
-          "state": "CA",
-          "healthInsurance": 150,
-          "retirement401k": 200,
-          "otherDeductions": 25
-        },
-        "outputs": {
-          "netTakeHome": 1395.25,
-          "federalTax": 218.5,
-          "stateTax": 101,
-          "ficaTax": 145,
-          "totalDeductions": 604.75,
-          "takeHomePercentage": 69.8
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Weekly Paycheck, Married Filing Jointly, Texas",
-        "inputs": {
-          "grossPay": 1200,
-          "payFrequency": "weekly",
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "state": "TX",
-          "healthInsurance": 80,
-          "retirement401k": 120,
-          "otherDeductions": 15
-        },
-        "outputs": {
-          "netTakeHome": 868.55,
-          "federalTax": 96.4,
-          "stateTax": 0,
-          "ficaTax": 87.6,
-          "totalDeductions": 215.45,
-          "takeHomePercentage": 72.4
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -337,6 +313,14 @@
           "question": "Why might my actual take-home pay differ from this calculator?",
           "answer": "Actual take-home pay may differ due to specific company policies, additional benefits deductions, local taxes, garnishments, union dues, charitable contributions, exact state withholding formulas, or changes in your W-4 allowances. This calculator provides estimates based on standard withholding methods."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "TakeHomePayCalculator"
@@ -573,46 +557,22 @@
     ],
     "examples": [
       {
-        "title": "Nómina Quincenal, Soltero, California",
-        "inputs": {
-          "grossPay": 2000,
-          "payFrequency": "biweekly",
-          "filingStatus": "single",
-          "dependents": 0,
-          "state": "CA",
-          "healthInsurance": 150,
-          "retirement401k": 200,
-          "otherDeductions": 25
-        },
-        "outputs": {
-          "netTakeHome": 1395.25,
-          "federalTax": 218.5,
-          "stateTax": 101,
-          "ficaTax": 145,
-          "totalDeductions": 604.75,
-          "takeHomePercentage": 69.8
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Nómina Semanal, Casados Declarando Conjuntamente, Texas",
-        "inputs": {
-          "grossPay": 1200,
-          "payFrequency": "weekly",
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "state": "TX",
-          "healthInsurance": 80,
-          "retirement401k": 120,
-          "otherDeductions": 15
-        },
-        "outputs": {
-          "netTakeHome": 868.55,
-          "federalTax": 96.4,
-          "stateTax": 0,
-          "ficaTax": 87.6,
-          "totalDeductions": 215.45,
-          "takeHomePercentage": 72.4
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -622,15 +582,15 @@
       "paycheck-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcula tu salario neto con nuestra completa Calculadora de Salario Neto. Entender tu nómina real después de impuestos y deducciones es crucial para presupuesto efectivo, planificación financiera y negociaciones salariales. Nuestra calculadora proporciona desgloses detallados de todas las retenciones y deducciones de tu pago bruto.",
+      "introduction": "Calculate your take-home pay with our comprehensive Take-Home Pay Calculator. Understanding your actual net paycheck after taxes and deductions is crucial for effective budgeting, financial planning, and salary negotiations. Our calculator provides detailed breakdowns of all withholdings and deductions from your gross pay.",
       "benefits": [
-        "Calcula nómina neta precisa desde monto bruto",
-        "Entiende todas las deducciones incluyendo impuestos federales, estatales y FICA",
-        "Considera prima de seguro médico, contribuciones de jubilación y otras deducciones",
-        "Compara diferentes frecuencias de pago y sus implicaciones fiscales",
-        "Planea tu presupuesto con estimaciones realistas de salario neto",
-        "Ve el impacto del estado civil y dependientes en retenciones",
-        "Toma decisiones informadas sobre ofertas salariales y paquetes de beneficios"
+        "Calculate accurate net paycheck from gross pay amount",
+        "Understand all deductions including federal, state, and FICA taxes",
+        "Factor in health insurance, retirement contributions, and other deductions",
+        "Compare different pay frequencies and their tax implications",
+        "Plan your budget with realistic take-home pay estimates",
+        "See the impact of filing status and dependents on withholdings",
+        "Make informed decisions about salary offers and benefits packages"
       ],
       "howToUse": [
         "Ingresa tu monto bruto de nómina antes de cualquier deducción",
@@ -656,29 +616,37 @@
       ],
       "faqs": [
         {
-          "question": "¿Cuál es la diferencia entre pago bruto y pago neto?",
-          "answer": "El pago bruto es tus ganancias totales antes de que cualquier impuesto o deducción sea retirado. El pago neto (salario que llevas a casa) es lo que realmente recibes después de que impuesto federal a la renta, impuesto estatal a la renta, Seguro Social, Medicare, seguro médico, contribuciones de jubilación y otras deducciones son sustraídas."
+          "question": "What's the difference between gross pay and net pay?",
+          "answer": "Gross pay is your total earnings before any taxes or deductions are taken out. Net pay (take-home pay) is what you actually receive after federal income tax, state income tax, Social Security, Medicare, health insurance, retirement contributions, and other deductions are subtracted."
         },
         {
-          "question": "¿Cómo se calcula la retención de impuesto federal?",
-          "answer": "La retención de impuesto federal se calcula usando tablas IRS basadas en tu período de pago (semanal, quincenal, etc.), estado civil (soltero, casado, etc.), número de dependientes y exenciones reclamadas en tu formulario W-4. El cálculo usa un sistema progresivo con diferentes tasas para diferentes niveles de ingreso."
+          "question": "How is federal income tax withholding calculated?",
+          "answer": "Federal income tax withholding is calculated using IRS withholding tables based on your pay period (weekly, biweekly, etc.), filing status (single, married, etc.), number of dependents, and allowances claimed on your W-4 form. The calculation uses a progressive tax system with different tax rates for different income levels."
         },
         {
-          "question": "¿Qué son los impuestos FICA?",
-          "answer": "FICA significa Federal Insurance Contributions Act. Incluye impuesto de Seguro Social (6.2% de salarios hasta $168,600 en 2024) e impuesto de Medicare (1.45% de todos los salarios). Estos impuestos financian beneficios de jubilación de Seguro Social y atención médica Medicare. Los empleadores también pagan una cantidad igual por cada empleado."
+          "question": "What are FICA taxes?",
+          "answer": "FICA stands for Federal Insurance Contributions Act. It includes Social Security tax (6.2% of wages up to $168,600 in 2024) and Medicare tax (1.45% of all wages). These taxes fund Social Security retirement benefits and Medicare healthcare. Employers also pay a matching amount for each employee."
         },
         {
-          "question": "¿Qué deducciones salen antes de impuestos?",
-          "answer": "Las deducciones pre-impuestos se sustraen de tu pago bruto antes de que los impuestos a la renta sean calculados. Las deducciones pre-impuestos comunes incluyen primas de seguro médico, dental y visión, contribuciones de jubilación (401(k), 403(b)), cuentas de gastos flexibles (FSA) y algunos beneficios de transporte. Estas reducen tu ingreso gravable."
+          "question": "What deductions come out before taxes?",
+          "answer": "Pre-tax deductions are subtracted from your gross pay before income taxes are calculated. Common pre-tax deductions include health insurance premiums, dental and vision insurance, retirement contributions (401(k), 403(b)), flexible spending accounts (FSA), and some commuter benefits. These reduce your taxable income."
         },
         {
-          "question": "¿Cómo afecta la frecuencia de pago a mi salario neto?",
-          "answer": "La frecuencia de pago afecta cálculos de retención fiscal porque las tablas IRS usan diferentes categorías para períodos semanal, quincenal, semimensual y mensual. Generalmente, períodos más frecuentes (como semanal) resultan en retenciones anuales totales ligeramente más altas debido a la naturaleza progresiva de las categorías fiscales, aunque la diferencia usualmente es pequeña."
+          "question": "How does pay frequency affect my take-home pay?",
+          "answer": "Pay frequency affects tax withholding calculations because IRS withholding tables use different brackets for weekly, biweekly, semimonthly, and monthly pay periods. Generally, more frequent pay periods (like weekly) result in slightly higher total annual withholdings due to the progressive nature of tax brackets, though the difference is usually small."
         },
         {
-          "question": "¿Por qué podría diferir mi salario neto real de esta calculadora?",
-          "answer": "El salario neto real puede diferir debido a políticas específicas de la compañía, deducciones adicionales de beneficios, impuestos locales, embargos, cuotas sindicales, contribuciones caritativas, fórmulas exactas de retención estatal o cambios en tus exenciones W-4. Esta calculadora proporciona estimaciones basadas en métodos estándar de retención."
+          "question": "Why might my actual take-home pay differ from this calculator?",
+          "answer": "Actual take-home pay may differ due to specific company policies, additional benefits deductions, local taxes, garnishments, union dues, charitable contributions, exact state withholding formulas, or changes in your W-4 allowances. This calculator provides estimates based on standard withholding methods."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "TakeHomePayCalculator"
@@ -915,46 +883,22 @@
     ],
     "examples": [
       {
-        "title": "Contracheque Quinzenal, Solteiro, California",
-        "inputs": {
-          "grossPay": 2000,
-          "payFrequency": "biweekly",
-          "filingStatus": "single",
-          "dependents": 0,
-          "state": "CA",
-          "healthInsurance": 150,
-          "retirement401k": 200,
-          "otherDeductions": 25
-        },
-        "outputs": {
-          "netTakeHome": 1395.25,
-          "federalTax": 218.5,
-          "stateTax": 101,
-          "ficaTax": 145,
-          "totalDeductions": 604.75,
-          "takeHomePercentage": 69.8
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Contracheque Semanal, Casados Declarando em Conjunto, Texas",
-        "inputs": {
-          "grossPay": 1200,
-          "payFrequency": "weekly",
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "state": "TX",
-          "healthInsurance": 80,
-          "retirement401k": 120,
-          "otherDeductions": 15
-        },
-        "outputs": {
-          "netTakeHome": 868.55,
-          "federalTax": 96.4,
-          "stateTax": 0,
-          "ficaTax": 87.6,
-          "totalDeductions": 215.45,
-          "takeHomePercentage": 72.4
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -964,15 +908,15 @@
       "paycheck-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule seu salário líquido com nossa completa Calculadora de Salário Líquido. Entender seu contracheque real após impostos e deduções é crucial para orçamento efetivo, planejamento financeiro e negociações salariais. Nossa calculadora fornece detalhamentos de todas as retenções e deduções de seu pagamento bruto.",
+      "introduction": "Calculate your take-home pay with our comprehensive Take-Home Pay Calculator. Understanding your actual net paycheck after taxes and deductions is crucial for effective budgeting, financial planning, and salary negotiations. Our calculator provides detailed breakdowns of all withholdings and deductions from your gross pay.",
       "benefits": [
-        "Calcule contracheque líquido preciso a partir do valor bruto",
-        "Entenda todas as deduções incluindo impostos federais, estaduais e FICA",
-        "Considere prêmio de plano de saúde, contribuições de aposentadoria e outras deduções",
-        "Compare diferentes frequências de pagamento e suas implicações fiscais",
-        "Planeje seu orçamento com estimativas realistas de salário líquido",
-        "Veja o impacto do estado civil e dependentes nas retenções",
-        "Tome decisões informadas sobre ofertas salariais e pacotes de benefícios"
+        "Calculate accurate net paycheck from gross pay amount",
+        "Understand all deductions including federal, state, and FICA taxes",
+        "Factor in health insurance, retirement contributions, and other deductions",
+        "Compare different pay frequencies and their tax implications",
+        "Plan your budget with realistic take-home pay estimates",
+        "See the impact of filing status and dependents on withholdings",
+        "Make informed decisions about salary offers and benefits packages"
       ],
       "howToUse": [
         "Digite seu valor bruto do contracheque antes de qualquer dedução",
@@ -998,29 +942,37 @@
       ],
       "faqs": [
         {
-          "question": "Qual é a diferença entre pagamento bruto e pagamento líquido?",
-          "answer": "Pagamento bruto é seus ganhos totais antes de quaisquer impostos ou deduções serem retirados. Pagamento líquido (salário que você leva para casa) é o que você realmente recebe após imposto federal de renda, imposto estadual de renda, Previdência Social, Medicare, plano de saúde, contribuições de aposentadoria e outras deduções serem subtraídas."
+          "question": "What's the difference between gross pay and net pay?",
+          "answer": "Gross pay is your total earnings before any taxes or deductions are taken out. Net pay (take-home pay) is what you actually receive after federal income tax, state income tax, Social Security, Medicare, health insurance, retirement contributions, and other deductions are subtracted."
         },
         {
-          "question": "Como é calculada a retenção de imposto federal?",
-          "answer": "A retenção de imposto federal é calculada usando tabelas IRS baseadas em seu período de pagamento (semanal, quinzenal, etc.), estado civil (solteiro, casado, etc.), número de dependentes e isenções reclamadas em seu formulário W-4. O cálculo usa um sistema progressivo com diferentes taxas para diferentes níveis de renda."
+          "question": "How is federal income tax withholding calculated?",
+          "answer": "Federal income tax withholding is calculated using IRS withholding tables based on your pay period (weekly, biweekly, etc.), filing status (single, married, etc.), number of dependents, and allowances claimed on your W-4 form. The calculation uses a progressive tax system with different tax rates for different income levels."
         },
         {
-          "question": "O que são impostos FICA?",
-          "answer": "FICA significa Federal Insurance Contributions Act. Inclui imposto de Previdência Social (6.2% de salários até R$168.600 em 2024) e imposto de Medicare (1.45% de todos os salários). Estes impostos financiam benefícios de aposentadoria da Previdência Social e assistência médica Medicare. Empregadores também pagam uma quantia igual para cada funcionário."
+          "question": "What are FICA taxes?",
+          "answer": "FICA stands for Federal Insurance Contributions Act. It includes Social Security tax (6.2% of wages up to $168,600 in 2024) and Medicare tax (1.45% of all wages). These taxes fund Social Security retirement benefits and Medicare healthcare. Employers also pay a matching amount for each employee."
         },
         {
-          "question": "Quais deduções saem antes de impostos?",
-          "answer": "Dedução pré-impostos são subtraídas de seu pagamento bruto antes de impostos de renda serem calculados. Deduções pré-impostos comuns incluem prêmios de plano de saúde, dental e visão, contribuições de aposentadoria (401(k), 403(b)), contas de despesas flexíveis (FSA) e alguns benefícios de transporte. Estas reduzem sua renda tributável."
+          "question": "What deductions come out before taxes?",
+          "answer": "Pre-tax deductions are subtracted from your gross pay before income taxes are calculated. Common pre-tax deductions include health insurance premiums, dental and vision insurance, retirement contributions (401(k), 403(b)), flexible spending accounts (FSA), and some commuter benefits. These reduce your taxable income."
         },
         {
-          "question": "¿Cómo afecta la frecuencia de pago a mi salario neto?",
-          "answer": "A frequência de pagamento afeta cálculos de retenção fiscal porque tabelas IRS usam diferentes categorias para períodos semanal, quinzenal, semimensal e mensal. Geralmente, períodos mais frequentes (como semanal) resultam em retenções anuais totais ligeiramente mais altas devido à natureza progressiva das categorias fiscais, embora a diferença geralmente seja pequena."
+          "question": "How does pay frequency affect my take-home pay?",
+          "answer": "Pay frequency affects tax withholding calculations because IRS withholding tables use different brackets for weekly, biweekly, semimonthly, and monthly pay periods. Generally, more frequent pay periods (like weekly) result in slightly higher total annual withholdings due to the progressive nature of tax brackets, though the difference is usually small."
         },
         {
-          "question": "Por que meu salário líquido real pode diferir desta calculadora?",
-          "answer": "O salário líquido real pode diferir devido a políticas específicas da empresa, deduções adicionais de benefícios, impostos locais, penhoras, taxas sindicais, contribuições caritativas, fórmulas exatas de retenção estadual ou mudanças em suas isenções W-4. Esta calculadora fornece estimativas baseadas em métodos padrão de retenção."
+          "question": "Why might my actual take-home pay differ from this calculator?",
+          "answer": "Actual take-home pay may differ due to specific company policies, additional benefits deductions, local taxes, garnishments, union dues, charitable contributions, exact state withholding formulas, or changes in your W-4 allowances. This calculator provides estimates based on standard withholding methods."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "TakeHomePayCalculator"
@@ -1257,46 +1209,22 @@
     ],
     "examples": [
       {
-        "title": "Paie Bihebdomadaire, Célibataire, Californie",
-        "inputs": {
-          "grossPay": 2000,
-          "payFrequency": "biweekly",
-          "filingStatus": "single",
-          "dependents": 0,
-          "state": "CA",
-          "healthInsurance": 150,
-          "retirement401k": 200,
-          "otherDeductions": 25
-        },
-        "outputs": {
-          "netTakeHome": 1395.25,
-          "federalTax": 218.5,
-          "stateTax": 101,
-          "ficaTax": 145,
-          "totalDeductions": 604.75,
-          "takeHomePercentage": 69.8
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Paie Hebdomadaire, Mariés Déclarant Conjointement, Texas",
-        "inputs": {
-          "grossPay": 1200,
-          "payFrequency": "weekly",
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "state": "TX",
-          "healthInsurance": 80,
-          "retirement401k": 120,
-          "otherDeductions": 15
-        },
-        "outputs": {
-          "netTakeHome": 868.55,
-          "federalTax": 96.4,
-          "stateTax": 0,
-          "ficaTax": 87.6,
-          "totalDeductions": 215.45,
-          "takeHomePercentage": 72.4
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -1306,15 +1234,15 @@
       "paycheck-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez votre salaire net avec notre Calculateur de Salaire Net complet. Comprendre votre paie réelle après impôts et déductions est crucial pour budgétisation effective, planification financière et négociations salariales. Notre calculateur fournit des ventilations détaillées de toutes les retenues et déductions de votre paiement brut.",
+      "introduction": "Calculate your take-home pay with our comprehensive Take-Home Pay Calculator. Understanding your actual net paycheck after taxes and deductions is crucial for effective budgeting, financial planning, and salary negotiations. Our calculator provides detailed breakdowns of all withholdings and deductions from your gross pay.",
       "benefits": [
-        "Calculez paie nette précise à partir de la valeur brute",
-        "Comprenez toutes les déductions incluant impôts fédéraux, étatiques et FICA",
-        "Considérez prime d'assurance santé, contributions retraite et autres déductions",
-        "Comparez différentes fréquences de paiement et leurs implications fiscales",
-        "Planifiez votre budget avec estimations réalistes de salaire net",
-        "Voyez l'impact du statut matrimonial et personnes à charge sur retenues",
-        "Prenez des décisions éclairées sur offres salariales et packages de bénéfices"
+        "Calculate accurate net paycheck from gross pay amount",
+        "Understand all deductions including federal, state, and FICA taxes",
+        "Factor in health insurance, retirement contributions, and other deductions",
+        "Compare different pay frequencies and their tax implications",
+        "Plan your budget with realistic take-home pay estimates",
+        "See the impact of filing status and dependents on withholdings",
+        "Make informed decisions about salary offers and benefits packages"
       ],
       "howToUse": [
         "Entrez votre valeur brute de paie avant toute déduction",
@@ -1340,29 +1268,37 @@
       ],
       "faqs": [
         {
-          "question": "Quelle est la différence entre paiement brut et paiement net ?",
-          "answer": "Le paiement brut est vos gains totaux avant que tout impôt ou déduction soit retiré. Le paiement net (salaire que vous rapportez à la maison) est ce que vous recevez réellement après impôt fédéral sur le revenu, impôt étatique sur le revenu, Sécurité Sociale, Medicare, assurance santé, contributions retraite et autres déductions sont soustraites."
+          "question": "What's the difference between gross pay and net pay?",
+          "answer": "Gross pay is your total earnings before any taxes or deductions are taken out. Net pay (take-home pay) is what you actually receive after federal income tax, state income tax, Social Security, Medicare, health insurance, retirement contributions, and other deductions are subtracted."
         },
         {
-          "question": "Comment la retenue d'impôt fédéral est-elle calculée ?",
-          "answer": "La retenue d'impôt fédéral est calculée en utilisant tableaux IRS basés sur votre période de paiement (hebdomadaire, bihebdomadaire, etc.), statut matrimonial (célibataire, marié, etc.), nombre de personnes à charge et exemptions réclamées sur votre formulaire W-4. Le calcul utilise un système progressif avec différents taux pour différents niveaux de revenu."
+          "question": "How is federal income tax withholding calculated?",
+          "answer": "Federal income tax withholding is calculated using IRS withholding tables based on your pay period (weekly, biweekly, etc.), filing status (single, married, etc.), number of dependents, and allowances claimed on your W-4 form. The calculation uses a progressive tax system with different tax rates for different income levels."
         },
         {
-          "question": "Qu'est-ce que les impôts FICA ?",
-          "answer": "FICA signifie Federal Insurance Contributions Act. Il inclut impôt Sécurité Sociale (6.2% de salaires jusqu'à €168.600 en 2024) et impôt Medicare (1.45% de tous salaires). Ces impôts financent prestations retraite Sécurité Sociale et soins médicaux Medicare. Les employeurs paient également un montant égal pour chaque employé."
+          "question": "What are FICA taxes?",
+          "answer": "FICA stands for Federal Insurance Contributions Act. It includes Social Security tax (6.2% of wages up to $168,600 in 2024) and Medicare tax (1.45% of all wages). These taxes fund Social Security retirement benefits and Medicare healthcare. Employers also pay a matching amount for each employee."
         },
         {
-          "question": "¿Qué déductions sortent avant impôts ?",
-          "answer": "Les déductions pré-impôts sont soustraites de votre paiement brut avant que impôts sur le revenu soient calculés. Déductions pré-impôts communes incluent primes d'assurance santé, dentaire et vision, contributions retraite (401(k), 403(b)), comptes de dépenses flexibles (FSA) et certains bénéfices de transport. Celles-ci réduisent votre revenu imposable."
+          "question": "What deductions come out before taxes?",
+          "answer": "Pre-tax deductions are subtracted from your gross pay before income taxes are calculated. Common pre-tax deductions include health insurance premiums, dental and vision insurance, retirement contributions (401(k), 403(b)), flexible spending accounts (FSA), and some commuter benefits. These reduce your taxable income."
         },
         {
-          "question": "Comment la fréquence de paiement affecte-t-elle mon salaire net ?",
-          "answer": "La fréquence de paiement affecte calculs de retenue fiscale parce que tableaux IRS utilisent différentes catégories pour périodes hebdomadaire, bihebdomadaire, semi-mensuelle et mensuelle. Généralement, périodes plus fréquentes (comme hebdomadaire) résultent en retenues annuelles totales légèrement plus élevées en raison de la nature progressive des catégories fiscales, bien que la différence soit généralement petite."
+          "question": "How does pay frequency affect my take-home pay?",
+          "answer": "Pay frequency affects tax withholding calculations because IRS withholding tables use different brackets for weekly, biweekly, semimonthly, and monthly pay periods. Generally, more frequent pay periods (like weekly) result in slightly higher total annual withholdings due to the progressive nature of tax brackets, though the difference is usually small."
         },
         {
-          "question": "Pourquoi mon salaire net réel pourrait-il différer de ce calculateur ?",
-          "answer": "Le salaire net réel peut différer en raison de politiques spécifiques d'entreprise, déductions additionnelles de bénéfices, impôts locaux, saisies, cotisations syndicales, contributions caritatives, formules exactes de retenue étatique ou changements dans vos exemptions W-4. Ce calculateur fournit des estimations basées sur méthodes standard de retenue."
+          "question": "Why might my actual take-home pay differ from this calculator?",
+          "answer": "Actual take-home pay may differ due to specific company policies, additional benefits deductions, local taxes, garnishments, union dues, charitable contributions, exact state withholding formulas, or changes in your W-4 allowances. This calculator provides estimates based on standard withholding methods."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "TakeHomePayCalculator"

@@ -29,9 +29,64 @@ interface NumbersToWordsConverterProps {
   inputs: CalculatorInput[];
   output: CalculatorOutput;
   additionalOutputs: AdditionalOutput[];
+  lang?: string;
 }
 
-export default function NumbersToWordsConverter({ inputs, output, additionalOutputs }: NumbersToWordsConverterProps) {
+export default function NumbersToWordsConverter({ inputs, output, additionalOutputs, lang = 'en' }: NumbersToWordsConverterProps) {
+  
+  // Embedded translations - CRITICAL REQUIREMENT
+  const translations = {
+    en: {
+      supportedFormats: "Supported Formats",
+      numbers: "Numbers",
+      currency: "Currency",
+      ordinals: "Ordinals",
+      languages: "Languages",
+      supportedLanguages: "English & Spanish",
+      numberExamples: "1234 → one thousand...",
+      currencyExamples: "$567.89 → five hundred...",
+      ordinalsExamples: "1st → first, 2nd → second",
+      result: "Result"
+    },
+    es: {
+      supportedFormats: "Formatos Compatibles",
+      numbers: "Números",
+      currency: "Moneda",
+      ordinals: "Ordinales",
+      languages: "Idiomas",
+      supportedLanguages: "Inglés y Español",
+      numberExamples: "1234 → mil doscientos treinta y cuatro...",
+      currencyExamples: "$567,89 → quinientos sesenta y siete...",
+      ordinalsExamples: "1º → primero, 2º → segundo",
+      result: "Resultado"
+    },
+    pt: {
+      supportedFormats: "Formatos Suportados",
+      numbers: "Números",
+      currency: "Moeda",
+      ordinals: "Ordinais",
+      languages: "Idiomas",
+      supportedLanguages: "Inglês e Espanhol",
+      numberExamples: "1234 → mil duzentos e trinta e quatro...",
+      currencyExamples: "R$567,89 → quinhentos e sessenta e sete...",
+      ordinalsExamples: "1º → primeiro, 2º → segundo",
+      result: "Resultado"
+    },
+    fr: {
+      supportedFormats: "Formats Supportés",
+      numbers: "Nombres",
+      currency: "Devises",
+      ordinals: "Ordinaux",
+      languages: "Langues",
+      supportedLanguages: "Anglais et Espagnol",
+      numberExamples: "1234 → mille deux cent trente-quatre...",
+      currencyExamples: "567,89 € → cinq cent soixante-sept...",
+      ordinalsExamples: "1er → premier, 2e → deuxième",
+      result: "Résultat"
+    }
+  };
+
+  const t = translations[lang as keyof typeof translations] || translations.en;
   
   const [values, setValues] = useState<Record<string, string>>(() => {
     const initial: Record<string, string> = {};
@@ -284,7 +339,7 @@ export default function NumbersToWordsConverter({ inputs, output, additionalOutp
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{numberInput}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Input</h3>
 
           {inputs.map((input) => (
             <div key={input.name} className="space-y-2">
@@ -319,7 +374,7 @@ export default function NumbersToWordsConverter({ inputs, output, additionalOutp
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{conversionResult}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{results.numberType || t.result}</h3>
 
           {/* Main Output */}
           <div className="bg-blue-50 p-2 sm:p-3 rounded-md border-l-3 border-blue-500">
@@ -345,24 +400,24 @@ export default function NumbersToWordsConverter({ inputs, output, additionalOutp
           <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-green-100">
             <h4 className="font-bold text-gray-800 mb-3 text-sm flex items-center">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-{supportedFormats}
+{t.supportedFormats}
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-700">
               <div className="bg-white p-2 rounded border">
-                <div className="font-medium text-gray-900 mb-1">{numbers}</div>
-                <div>1234 → one thousand...</div>
+                <div className="font-medium text-gray-900 mb-1">{t.numbers}</div>
+                <div>{t.numberExamples}</div>
               </div>
               <div className="bg-white p-2 rounded border">
-                <div className="font-medium text-gray-900 mb-1">{currency}</div>
-                <div>$567.89 → five hundred...</div>
+                <div className="font-medium text-gray-900 mb-1">{t.currency}</div>
+                <div>{t.currencyExamples}</div>
               </div>
               <div className="bg-white p-2 rounded border">
-                <div className="font-medium text-gray-900 mb-1">{ordinals}</div>
-                <div>1st → first, 2nd → second</div>
+                <div className="font-medium text-gray-900 mb-1">{t.ordinals}</div>
+                <div>{t.ordinalsExamples}</div>
               </div>
               <div className="bg-white p-2 rounded border">
-                <div className="font-medium text-gray-900 mb-1">{language}</div>
-                <div>{switchForSpanish}</div>
+                <div className="font-medium text-gray-900 mb-1">{t.languages}</div>
+                <div>{t.supportedLanguages}</div>
               </div>
             </div>
           </div>

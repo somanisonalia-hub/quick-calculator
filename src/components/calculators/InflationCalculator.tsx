@@ -47,7 +47,15 @@ export default function InflationCalculator({ lang = 'en' }: InflationCalculator
       percent: "%",
       historicalExplanation: "This shows what $X from YEAR would be worth in today's dollars",
       futureExplanation: "This shows what you need today to have $X in purchasing power in the future",
-      inflationImpact: "Inflation Impact Analysis"
+      inflationImpact: "Inflation Impact Analysis",
+      calculation: "Calculation:",
+      value: "Value",
+      original: "Original:",
+      adjusted: "Adjusted:",
+      rate: "Rate:",
+      perYear: "per year",
+      today: "today",
+      inYears: "in"
     },
     es: {
       title: "Calculadora de Inflación",
@@ -73,7 +81,15 @@ export default function InflationCalculator({ lang = 'en' }: InflationCalculator
       percent: "%",
       historicalExplanation: "Esto muestra qué valdría $X del AÑO en dólares actuales",
       futureExplanation: "Esto muestra qué necesitas hoy para tener $X en poder adquisitivo en el futuro",
-      inflationImpact: "Análisis del Impacto de la Inflación"
+      inflationImpact: "Análisis de Impacto de Inflación",
+      calculation: "Cálculo:",
+      value: "Valor",
+      original: "Original:",
+      adjusted: "Ajustado:",
+      rate: "Tasa:",
+      perYear: "por año",
+      today: "hoy",
+      inYears: "en"
     },
     pt: {
       title: "Calculadora de Inflação",
@@ -99,7 +115,15 @@ export default function InflationCalculator({ lang = 'en' }: InflationCalculator
       percent: "%",
       historicalExplanation: "Isso mostra o que $X do ANO valeria em dólares atuais",
       futureExplanation: "Isso mostra o que você precisa hoje para ter $X em poder de compra no futuro",
-      inflationImpact: "Análise do Impacto da Inflação"
+      inflationImpact: "Análise de Impacto da Inflação",
+      calculation: "Cálculo:",
+      value: "Valor",
+      original: "Original:",
+      adjusted: "Ajustado:",
+      rate: "Taxa:",
+      perYear: "por ano",
+      today: "hoje",
+      inYears: "em"
     },
     fr: {
       title: "Calculateur d'Inflation",
@@ -125,7 +149,16 @@ export default function InflationCalculator({ lang = 'en' }: InflationCalculator
       percent: "%",
       historicalExplanation: "Cela montre ce que vaudrait $X de l'ANNÉE en dollars actuels",
       futureExplanation: "Cela montre ce dont vous avez besoin aujourd'hui pour avoir $X de pouvoir d'achat à l'avenir",
-      inflationImpact: "Analyse de l'Impact de l'Inflation"
+      inflationImpact: "Analyse de l'Impact de l'Inflation",
+      calculation: "Calcul:",
+
+      value: "Valeur",
+      original: "Original:",
+      adjusted: "Ajusté:",
+      rate: "Taux:",
+      perYear: "par an",
+      today: "aujourd'hui",
+      inYears: "dans"
     }
   };
 
@@ -332,10 +365,10 @@ export default function InflationCalculator({ lang = 'en' }: InflationCalculator
           <div className="bg-gray-50 p-4 rounded-lg">
             <h4 className="text-sm font-semibold text-gray-900 mb-2">{t.inflationImpact}</h4>
             <div className="text-xs text-gray-700 space-y-1">
-              <div><strong>Calculation:</strong> {calculationType === 'historical' ? 'Historical' : 'Future'} Value</div>
-              <div><strong>Original:</strong> {t.dollars}{originalAmount.toLocaleString()} {calculationType === 'historical' ? `(${originalYear})` : '(today)'}</div>
-              <div><strong>Adjusted:</strong> {t.dollars}{results.adjustedAmount.toLocaleString(undefined, { maximumFractionDigits: 2 })} {calculationType === 'historical' ? `(${t.currentYear})` : `(in ${years} ${t.yearsUnit})`}</div>
-              <div><strong>Rate:</strong> {inflationRate}{t.percent} per year</div>
+              <div><strong>{t.calculation}</strong> {calculationType === 'historical' ? t.historical : t.future} {t.value}</div>
+              <div><strong>{t.original}</strong> {t.dollars}{originalAmount.toLocaleString()} {calculationType === 'historical' ? `(${originalYear})` : `(${t.today})`}</div>
+              <div><strong>{t.adjusted}</strong> {t.dollars}{results.adjustedAmount.toLocaleString(undefined, { maximumFractionDigits: 2 })} {calculationType === 'historical' ? `(${t.currentYear})` : `(${t.inYears} ${years} ${t.yearsUnit})`}</div>
+              <div><strong>{t.rate}</strong> {inflationRate}{t.percent} {t.perYear}</div>
             </div>
           </div>
         </div>

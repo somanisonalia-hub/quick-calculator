@@ -29,7 +29,12 @@ export default function EARCalculator({ lang = 'en' }: EARCalculatorProps) {
       semiMonthly: "Semi-Monthly",
       biWeekly: "Bi-Weekly",
       weekly: "Weekly",
-      daily: "Daily"
+      daily: "Daily",
+      understandingEAR: "Understanding EAR",
+      earShowsCost: "EAR shows the true annual cost of borrowing or return on investment",
+      moreFrequentCompounding: "More frequent compounding = Higher effective rates",
+      nominalRateDesc: "Nominal rate is the stated rate without compounding",
+      useEAR: "Use EAR to compare different compounding frequencies"
     },
     es: {
       title: "Calculadora de Tasa Anual Efectiva",
@@ -51,7 +56,12 @@ export default function EARCalculator({ lang = 'en' }: EARCalculatorProps) {
       semiMonthly: "Semi-Mensual",
       biWeekly: "Quincenal",
       weekly: "Semanal",
-      daily: "Diaria"
+      daily: "Diaria",
+      understandingEAR: "Entendiendo la TAE",
+      earShowsCost: "TAE muestra el costo anual real del préstamo o retorno de inversión",
+      moreFrequentCompounding: "Capitalización más frecuente = Tasas efectivas más altas",
+      nominalRateDesc: "Tasa nominal es la tasa declarada sin capitalización",
+      useEAR: "Use TAE para comparar diferentes frecuencias de capitalización"
     },
     pt: {
       title: "Calculadora de Taxa Efetiva Anual",
@@ -73,7 +83,12 @@ export default function EARCalculator({ lang = 'en' }: EARCalculatorProps) {
       semiMonthly: "Semi-Mensal",
       biWeekly: "Quinzenal",
       weekly: "Semanal",
-      daily: "Diária"
+      daily: "Diária",
+      understandingEAR: "Entendendo a TEA",
+      earShowsCost: "TEA mostra o custo anual real do empréstimo ou retorno do investimento",
+      moreFrequentCompounding: "Capitalização mais frequente = Taxas efetivas mais altas",
+      nominalRateDesc: "Taxa nominal é a taxa declarada sem capitalização",
+      useEAR: "Use TEA para comparar diferentes frequências de capitalização"
     },
     fr: {
       title: "Calculateur de Taux Effectif Annuel",
@@ -95,7 +110,12 @@ export default function EARCalculator({ lang = 'en' }: EARCalculatorProps) {
       semiMonthly: "Semi-Mensuel",
       biWeekly: "Bi-Hebdomadaire",
       weekly: "Hebdomadaire",
-      daily: "Quotidien"
+      daily: "Quotidien",
+      understandingEAR: "Comprendre le TEA",
+      earShowsCost: "Le TEA montre le coût annuel réel de l'emprunt ou le retour sur investissement",
+      moreFrequentCompounding: "Capitalisation plus fréquente = Taux effectifs plus élevés",
+      nominalRateDesc: "Le taux nominal est le taux déclaré sans capitalisation",
+      useEAR: "Utilisez le TEA pour comparer différentes fréquences de capitalisation"
     }
   };
 
@@ -283,12 +303,12 @@ export default function EARCalculator({ lang = 'en' }: EARCalculatorProps) {
 
               {/* Educational Info */}
               <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-blue-900 mb-2">Understanding EAR</h4>
+                <h4 className="text-sm font-semibold text-blue-900 mb-2">{t.understandingEAR}</h4>
                 <div className="text-xs text-blue-700 space-y-1">
-                  <div><strong>EAR</strong> shows the true annual cost of borrowing or return on investment</div>
-                  <div><strong>More frequent compounding</strong> = Higher effective rates</div>
-                  <div><strong>Nominal rate</strong> is the stated rate without compounding</div>
-                  <div><strong>Use EAR</strong> to compare different compounding frequencies</div>
+                  <div>{t.earShowsCost}</div>
+                  <div>{t.moreFrequentCompounding}</div>
+                  <div>{t.nominalRateDesc}</div>
+                  <div>{t.useEAR}</div>
                 </div>
               </div>
             </div>

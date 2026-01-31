@@ -314,6 +314,14 @@
           "question": "Can I get all my protein from supplements?",
           "answer": "Protein supplements can help meet requirements but should supplement, not replace, whole food protein sources. Whole foods provide additional nutrients, fiber, and better satiety. Use supplements strategically when whole food intake is insufficient."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "ProteinIntakeCalculator"
@@ -565,16 +573,16 @@
       "body-fat-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcula tu ingesta óptima diaria de proteína con nuestra completa Calculadora de Ingesta de Proteína. Entender tus requerimientos de proteína es crucial para construcción muscular, manejo de peso, rendimiento atlético y salud general. Nuestra calculadora proporciona recomendaciones personalizadas basadas en tu peso corporal, nivel de actividad y objetivos de fitness.",
+      "introduction": "Calculate your optimal daily protein intake with our comprehensive Protein Intake Calculator. Understanding your protein requirements is crucial for muscle building, weight management, athletic performance, and overall health. Our calculator provides personalized recommendations based on your body weight, activity level, and fitness goals.",
       "benefits": [
-        "Calcula requerimientos diarios personalizados de proteína",
-        "Entiende necesidades de proteína para diferentes objetivos de fitness",
-        "Considera nivel de actividad y frecuencia de entrenamiento",
-        "Obtén ingesta de proteína en múltiples formatos (por kg, por lb, por comida)",
-        "Aprende cómo la proteína contribuye a tu ingesta diaria de calorías",
-        "Toma decisiones informadas sobre nutrición y suplementación",
-        "Optimiza recuperación y crecimiento muscular",
-        "Apoya objetivos de pérdida o mantenimiento de peso"
+        "Calculate personalized daily protein requirements",
+        "Understand protein needs for different fitness goals",
+        "Account for activity level and training frequency",
+        "Get protein intake in multiple formats (per kg, per lb, per meal)",
+        "Learn how protein contributes to your daily calorie intake",
+        "Make informed decisions about nutrition and supplementation",
+        "Optimize muscle recovery and growth",
+        "Support weight loss or maintenance goals"
       ],
       "howToUse": [
         "Ingresa tu peso corporal actual en kilogramos o libras",
@@ -602,37 +610,45 @@
       ],
       "faqs": [
         {
-          "question": "¿Cuánta proteína necesito por día?",
-          "answer": "Las necesidades diarias de proteína varían por individuo: adultos sedentarios necesitan 0.8-1.0g por kg peso corporal, individuos activos necesitan 1.2-1.6g/kg, atletas necesitan 1.6-2.2g/kg, y culturistas pueden necesitar 2.0-2.5g/kg. Usa nuestra calculadora para recomendaciones personalizadas basadas en tu peso, nivel de actividad y objetivos."
+          "question": "How much protein do I need per day?",
+          "answer": "Daily protein needs vary by individual: sedentary adults need 0.8-1.0g per kg body weight, active individuals need 1.2-1.6g/kg, athletes need 1.6-2.2g/kg, and bodybuilders may need 2.0-2.5g/kg. Use our calculator for personalized recommendations based on your weight, activity level, and goals."
         },
         {
-          "question": "¿Cuál es la mejor manera de distribuir la ingesta de proteína a través del día?",
-          "answer": "Apunta a 20-40g de proteína de alta calidad cada 3-4 horas para maximizar síntesis proteica muscular. La mayoría de personas se desempeñan bien con 4-6 comidas/meriendas conteniendo proteína. Distribuye tu proteína diaria total a través de estas comidas para absorción y utilización óptimas."
+          "question": "What's the best way to distribute protein intake throughout the day?",
+          "answer": "Aim for 20-40g of high-quality protein every 3-4 hours to maximize muscle protein synthesis. Most people do well with 4-6 meals/snacks containing protein. Distribute your total daily protein across these meals for optimal absorption and utilization."
         },
         {
-          "question": "¿La proteína ayuda con pérdida de peso?",
-          "answer": "Sí, una ingesta más alta de proteína puede apoyar pérdida de peso aumentando saciedad, preservando masa muscular durante restricción calórica, y aumentando metabolismo ligeramente. Estudios muestran 1.6-2.2g proteína por kg peso corporal ayuda mantener músculo mientras pierde grasa."
+          "question": "Does protein help with weight loss?",
+          "answer": "Yes, higher protein intake can support weight loss by increasing satiety, preserving muscle mass during calorie restriction, and boosting metabolism slightly. Studies show 1.6-2.2g protein per kg body weight helps maintain muscle while losing fat."
         },
         {
-          "question": "¿Puedes obtener suficiente proteína en una dieta vegetariana o vegana?",
-          "answer": "Sí, con planificación apropiada. Vegetarianos pueden obtener proteína de lácteos, huevos y alimentos vegetales. Veganos necesitan combinar diferentes proteínas vegetales (arroz + frijoles, hummus + pita) a través del día para obtener todos los aminoácidos esenciales. Algunos pueden necesitar ingesta ligeramente más alta (1.8-2.5g/kg) para compensar menor digestibilidad."
+          "question": "Can you get enough protein on a vegetarian or vegan diet?",
+          "answer": "Yes, with proper planning. Vegetarians can get protein from dairy, eggs, and plant foods. Vegans need to combine different plant proteins (rice + beans, hummus + pita) throughout the day to get all essential amino acids. Some may need slightly higher intake (1.8-2.5g/kg) to compensate for lower digestibility."
         },
         {
-          "question": "¿Es dañina demasiada proteína?",
-          "answer": "Ingesta excesiva de proteína (sobre 3g/kg por períodos extendidos) puede sobrecargar riñones en individuos susceptibles y puede ser costosa. La mayoría de personas saludables toleran 2.0-2.5g/kg bien. Enfócate en fuentes de proteína de calidad e hidratación adecuada. Consulta un proveedor de atención médica si tienes preocupaciones renales."
+          "question": "Is too much protein harmful?",
+          "answer": "Excessive protein intake (over 3g/kg for extended periods) may strain kidneys in susceptible individuals and can be expensive. Most healthy people tolerate 2.0-2.5g/kg well. Focus on quality protein sources and adequate hydration. Consult a healthcare provider if you have kidney concerns."
         },
         {
-          "question": "¿Qué son proteínas completas vs incompletas?",
-          "answer": "Proteínas completas contienen todos los aminoácidos esenciales (fuentes animales como carne, pescado, huevos, lácteos). Proteínas incompletas carecen de algunos aminoácidos (la mayoría de fuentes vegetales). Combina proteínas incompletas (frijoles + arroz, mantequilla maní + pan) para crear proteínas completas."
+          "question": "What are complete vs incomplete proteins?",
+          "answer": "Complete proteins contain all essential amino acids (animal sources like meat, fish, eggs, dairy). Incomplete proteins lack some amino acids (most plant sources). Combine incomplete proteins (beans + rice, peanut butter + bread) to create complete proteins."
         },
         {
-          "question": "¿Cómo afecta la edad a las necesidades de proteína?",
-          "answer": "Adultos mayores (sobre 65) pueden necesitar ligeramente más proteína (1.2-1.6g/kg) para mantener masa muscular y prevenir pérdida muscular relacionada con edad (sarcopenia). Entrenamiento de resistencia combinado con ingesta adecuada de proteína es particularmente importante para adultos mayores."
+          "question": "How does age affect protein needs?",
+          "answer": "Older adults (over 65) may need slightly more protein (1.2-1.6g/kg) to maintain muscle mass and prevent age-related muscle loss (sarcopenia). Resistance training combined with adequate protein intake is particularly important for older adults."
         },
         {
-          "question": "¿Puedo obtener toda mi proteína de suplementos?",
-          "answer": "Los suplementos de proteína pueden ayudar cumplir requerimientos pero deberían suplementar, no reemplazar, fuentes de proteína de alimentos completos. Alimentos completos proporcionan nutrientes adicionales, fibra y mejor saciedad. Usa suplementos estratégicamente cuando la ingesta de alimentos completos es insuficiente."
+          "question": "Can I get all my protein from supplements?",
+          "answer": "Protein supplements can help meet requirements but should supplement, not replace, whole food protein sources. Whole foods provide additional nutrients, fiber, and better satiety. Use supplements strategically when whole food intake is insufficient."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "ProteinIntakeCalculator"
@@ -884,16 +900,16 @@
       "body-fat-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule sua ingestão ótima diária de proteína com nossa completa Calculadora de Ingestão de Proteína. Entender seus requerimentos de proteína é crucial para construção muscular, gerenciamento de peso, performance atlética e saúde geral. Nossa calculadora fornece recomendações personalizadas baseadas em seu peso corporal, nível de atividade e objetivos de fitness.",
+      "introduction": "Calculate your optimal daily protein intake with our comprehensive Protein Intake Calculator. Understanding your protein requirements is crucial for muscle building, weight management, athletic performance, and overall health. Our calculator provides personalized recommendations based on your body weight, activity level, and fitness goals.",
       "benefits": [
-        "Calcule requerimentos diários personalizados de proteína",
-        "Entenda necessidades de proteína para diferentes objetivos de fitness",
-        "Considere nível de atividade e frequência de treinamento",
-        "Obtenha ingestão de proteína em múltiplos formatos (por kg, por lb, por refeição)",
-        "Aprenda como proteína contribui para sua ingestão diária de calorias",
-        "Tome decisões informadas sobre nutrição e suplementação",
-        "Otimize recuperação e crescimento muscular",
-        "Apoie objetivos de perda ou manutenção de peso"
+        "Calculate personalized daily protein requirements",
+        "Understand protein needs for different fitness goals",
+        "Account for activity level and training frequency",
+        "Get protein intake in multiple formats (per kg, per lb, per meal)",
+        "Learn how protein contributes to your daily calorie intake",
+        "Make informed decisions about nutrition and supplementation",
+        "Optimize muscle recovery and growth",
+        "Support weight loss or maintenance goals"
       ],
       "howToUse": [
         "Digite seu peso corporal atual em quilogramas ou libras",
@@ -921,37 +937,45 @@
       ],
       "faqs": [
         {
-          "question": "Quanto proteína preciso por dia?",
-          "answer": "Necessidades diárias de proteína variam por indivíduo: adultos sedentários precisam 0.8-1.0g por kg peso corporal, indivíduos ativos precisam 1.2-1.6g/kg, atletas precisam 1.6-2.2g/kg, e fisiculturistas podem precisar 2.0-2.5g/kg. Use nossa calculadora para recomendações personalizadas baseadas em seu peso, nível de atividade e objetivos."
+          "question": "How much protein do I need per day?",
+          "answer": "Daily protein needs vary by individual: sedentary adults need 0.8-1.0g per kg body weight, active individuals need 1.2-1.6g/kg, athletes need 1.6-2.2g/kg, and bodybuilders may need 2.0-2.5g/kg. Use our calculator for personalized recommendations based on your weight, activity level, and goals."
         },
         {
-          "question": "Qual é a melhor maneira de distribuir ingestão de proteína ao longo do dia?",
-          "answer": "Mire em 20-40g de proteína de alta qualidade a cada 3-4 horas para maximizar síntese proteica muscular. A maioria das pessoas se sai bem com 4-6 refeições/lanches contendo proteína. Distribua sua proteína diária total através destas refeições para absorção e utilização ótimas."
+          "question": "What's the best way to distribute protein intake throughout the day?",
+          "answer": "Aim for 20-40g of high-quality protein every 3-4 hours to maximize muscle protein synthesis. Most people do well with 4-6 meals/snacks containing protein. Distribute your total daily protein across these meals for optimal absorption and utilization."
         },
         {
-          "question": "Proteína ajuda com perda de peso?",
-          "answer": "Sim, ingestão mais alta de proteína pode apoiar perda de peso aumentando saciedade, preservando massa muscular durante restrição calórica, e aumentando metabolismo ligeiramente. Estudos mostram 1.6-2.2g proteína por kg peso corporal ajuda manter músculo enquanto perde gordura."
+          "question": "Does protein help with weight loss?",
+          "answer": "Yes, higher protein intake can support weight loss by increasing satiety, preserving muscle mass during calorie restriction, and boosting metabolism slightly. Studies show 1.6-2.2g protein per kg body weight helps maintain muscle while losing fat."
         },
         {
-          "question": "Pode obter proteína suficiente em dieta vegetariana ou vegana?",
-          "answer": "Sim, com planejamento apropriado. Vegetarianos podem obter proteína de laticínios, ovos e alimentos vegetais. Veganos precisam combinar diferentes proteínas vegetais (arroz + feijão, homus + pão) ao longo do dia para obter todos aminoácidos essenciais. Alguns podem precisar ingestão ligeiramente mais alta (1.8-2.5g/kg) para compensar menor digestibilidade."
+          "question": "Can you get enough protein on a vegetarian or vegan diet?",
+          "answer": "Yes, with proper planning. Vegetarians can get protein from dairy, eggs, and plant foods. Vegans need to combine different plant proteins (rice + beans, hummus + pita) throughout the day to get all essential amino acids. Some may need slightly higher intake (1.8-2.5g/kg) to compensate for lower digestibility."
         },
         {
-          "question": "Muita proteína é prejudicial?",
-          "answer": "Ingestão excessiva de proteína (sobre 3g/kg por períodos extendidos) pode sobrecarregar rins em indivíduos suscetíveis e pode ser cara. A maioria das pessoas saudáveis tolera 2.0-2.5g/kg bem. Foque em fontes de proteína de qualidade e hidratação adequada. Consulte um provedor de cuidados de saúde se você tem preocupações renais."
+          "question": "Is too much protein harmful?",
+          "answer": "Excessive protein intake (over 3g/kg for extended periods) may strain kidneys in susceptible individuals and can be expensive. Most healthy people tolerate 2.0-2.5g/kg well. Focus on quality protein sources and adequate hydration. Consult a healthcare provider if you have kidney concerns."
         },
         {
-          "question": "O que são proteínas completas vs incompletas?",
-          "answer": "Proteínas completas contêm todos aminoácidos essenciais (fontes animais como carne, peixe, ovos, laticínios). Proteínas incompletas faltam alguns aminoácidos (maioria das fontes vegetais). Combine proteínas incompletas (feijão + arroz, manteiga amendoim + pão) para criar proteínas completas."
+          "question": "What are complete vs incomplete proteins?",
+          "answer": "Complete proteins contain all essential amino acids (animal sources like meat, fish, eggs, dairy). Incomplete proteins lack some amino acids (most plant sources). Combine incomplete proteins (beans + rice, peanut butter + bread) to create complete proteins."
         },
         {
-          "question": "Como idade afeta necessidades de proteína?",
-          "answer": "Adultos mais velhos (sobre 65) podem precisar ligeiramente mais proteína (1.2-1.6g/kg) para manter massa muscular e prevenir perda muscular relacionada com idade (sarcopenia). Treinamento de resistência combinado com ingestão adequada de proteína é particularmente importante para adultos mais velhos."
+          "question": "How does age affect protein needs?",
+          "answer": "Older adults (over 65) may need slightly more protein (1.2-1.6g/kg) to maintain muscle mass and prevent age-related muscle loss (sarcopenia). Resistance training combined with adequate protein intake is particularly important for older adults."
         },
         {
-          "question": "Posso obter toda minha proteína de suplementos?",
-          "answer": "Suplementos de proteína podem ajudar cumprir requerimentos mas deveriam suplementar, não substituir, fontes de proteína de alimentos integrais. Alimentos integrais fornecem nutrientes adicionais, fibra e melhor saciedade. Use suplementos estrategicamente quando ingestão de alimentos integrais é insuficiente."
+          "question": "Can I get all my protein from supplements?",
+          "answer": "Protein supplements can help meet requirements but should supplement, not replace, whole food protein sources. Whole foods provide additional nutrients, fiber, and better satiety. Use supplements strategically when whole food intake is insufficient."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "ProteinIntakeCalculator"
@@ -1203,16 +1227,16 @@
       "body-fat-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez votre apport optimal quotidien en protéines avec notre Calculateur d'Apport en Protéines complet. Comprendre vos besoins en protéines est crucial pour construction musculaire, gestion du poids, performance athlétique et santé générale. Notre calculateur fournit des recommandations personnalisées basées sur votre poids corporel, niveau d'activité et objectifs fitness.",
+      "introduction": "Calculate your optimal daily protein intake with our comprehensive Protein Intake Calculator. Understanding your protein requirements is crucial for muscle building, weight management, athletic performance, and overall health. Our calculator provides personalized recommendations based on your body weight, activity level, and fitness goals.",
       "benefits": [
-        "Calculez besoins quotidiens personnalisés en protéines",
-        "Comprenez besoins en protéines pour différents objectifs fitness",
-        "Tenez compte niveau d'activité et fréquence d'entraînement",
-        "Obtenez apport en protéines en multiples formats (par kg, par lb, par repas)",
-        "Apprenez comment protéines contribuent à votre apport calorique quotidien",
-        "Prenez décisions éclairées sur nutrition et supplémentation",
-        "Optimisez récupération et croissance musculaire",
-        "Soutenez objectifs perte ou maintenance de poids"
+        "Calculate personalized daily protein requirements",
+        "Understand protein needs for different fitness goals",
+        "Account for activity level and training frequency",
+        "Get protein intake in multiple formats (per kg, per lb, per meal)",
+        "Learn how protein contributes to your daily calorie intake",
+        "Make informed decisions about nutrition and supplementation",
+        "Optimize muscle recovery and growth",
+        "Support weight loss or maintenance goals"
       ],
       "howToUse": [
         "Entrez votre poids corporel actuel en kilogrammes ou livres",
@@ -1240,37 +1264,45 @@
       ],
       "faqs": [
         {
-          "question": "Combien de protéines ai-je besoin par jour ?",
-          "answer": "Besoins quotidiens en protéines varient par individu : adultes sédentaires ont besoin 0.8-1.0g par kg poids corporel, individus actifs ont besoin 1.2-1.6g/kg, athlètes ont besoin 1.6-2.2g/kg, et bodybuilders peuvent avoir besoin 2.0-2.5g/kg. Utilisez notre calculateur pour recommandations personnalisées basées sur votre poids, niveau d'activité et objectifs."
+          "question": "How much protein do I need per day?",
+          "answer": "Daily protein needs vary by individual: sedentary adults need 0.8-1.0g per kg body weight, active individuals need 1.2-1.6g/kg, athletes need 1.6-2.2g/kg, and bodybuilders may need 2.0-2.5g/kg. Use our calculator for personalized recommendations based on your weight, activity level, and goals."
         },
         {
-          "question": "Quelle est la meilleure façon de distribuer apport en protéines tout au long de la journée ?",
-          "answer": "Visez 20-40g de protéines de haute qualité toutes les 3-4 heures pour maximiser synthèse protéique musculaire. La plupart des gens se débrouillent bien avec 4-6 repas/colations contenant protéines. Distribuez vos protéines quotidiennes totales à travers ces repas pour absorption et utilisation optimales."
+          "question": "What's the best way to distribute protein intake throughout the day?",
+          "answer": "Aim for 20-40g of high-quality protein every 3-4 hours to maximize muscle protein synthesis. Most people do well with 4-6 meals/snacks containing protein. Distribute your total daily protein across these meals for optimal absorption and utilization."
         },
         {
-          "question": "Les protéines aident-elles à perte de poids ?",
-          "answer": "Oui, apport plus élevé en protéines peut soutenir perte de poids en augmentant satiété, préservant masse musculaire pendant restriction calorique, et augmentant métabolisme légèrement. Études montrent 1.6-2.2g protéines par kg poids corporel aide maintenir muscle tout en perdant graisse."
+          "question": "Does protein help with weight loss?",
+          "answer": "Yes, higher protein intake can support weight loss by increasing satiety, preserving muscle mass during calorie restriction, and boosting metabolism slightly. Studies show 1.6-2.2g protein per kg body weight helps maintain muscle while losing fat."
         },
         {
-          "question": "Peut-on obtenir assez de protéines sur régime végétarien ou végétalien ?",
-          "answer": "Oui, avec planification appropriée. Végétariens peuvent obtenir protéines de produits laitiers, œufs et aliments végétaux. Végétaliens ont besoin combiner différentes protéines végétales (riz + haricots, houmous + pain) tout au long de la journée pour obtenir tous acides aminés essentiels. Certains peuvent avoir besoin apport légèrement plus élevé (1.8-2.5g/kg) pour compenser digestibilité moindre."
+          "question": "Can you get enough protein on a vegetarian or vegan diet?",
+          "answer": "Yes, with proper planning. Vegetarians can get protein from dairy, eggs, and plant foods. Vegans need to combine different plant proteins (rice + beans, hummus + pita) throughout the day to get all essential amino acids. Some may need slightly higher intake (1.8-2.5g/kg) to compensate for lower digestibility."
         },
         {
-          "question": "Trop de protéines est-il nuisible ?",
-          "answer": "Apport excessif en protéines (sur 3g/kg pour périodes étendues) peut surcharger reins chez individus sensibles et peut être coûteux. La plupart des gens sains tolèrent 2.0-2.5g/kg bien. Concentrez-vous sur sources protéines de qualité et hydratation adéquate. Consultez un fournisseur de soins de santé si vous avez préoccupations rénales."
+          "question": "Is too much protein harmful?",
+          "answer": "Excessive protein intake (over 3g/kg for extended periods) may strain kidneys in susceptible individuals and can be expensive. Most healthy people tolerate 2.0-2.5g/kg well. Focus on quality protein sources and adequate hydration. Consult a healthcare provider if you have kidney concerns."
         },
         {
-          "question": "Quelles sont protéines complètes vs incomplètes ?",
-          "answer": "Protéines complètes contiennent tous acides aminés essentiels (sources animales comme viande, poisson, œufs, produits laitiers). Protéines incomplètes manquent certains acides aminés (la plupart sources végétales). Combinez protéines incomplètes (haricots + riz, beurre d'arachide + pain) pour créer protéines complètes."
+          "question": "What are complete vs incomplete proteins?",
+          "answer": "Complete proteins contain all essential amino acids (animal sources like meat, fish, eggs, dairy). Incomplete proteins lack some amino acids (most plant sources). Combine incomplete proteins (beans + rice, peanut butter + bread) to create complete proteins."
         },
         {
-          "question": "Comment âge affecte-t-il besoins en protéines ?",
-          "answer": "Adultes plus âgés (sur 65) peuvent avoir besoin légèrement plus protéines (1.2-1.6g/kg) pour maintenir masse musculaire et prévenir perte musculaire liée à âge (sarcopénie). Entraînement résistance combiné avec apport adéquat en protéines est particulièrement important pour adultes plus âgés."
+          "question": "How does age affect protein needs?",
+          "answer": "Older adults (over 65) may need slightly more protein (1.2-1.6g/kg) to maintain muscle mass and prevent age-related muscle loss (sarcopenia). Resistance training combined with adequate protein intake is particularly important for older adults."
         },
         {
-          "question": "Puis-je obtenir toutes mes protéines de suppléments ?",
-          "answer": "Suppléments de protéines peuvent aider rencontrer besoins mais devraient compléter, pas remplacer, sources protéines d'aliments entiers. Aliments entiers fournissent nutriments additionnels, fibre et meilleure satiété. Utilisez suppléments stratégiquement quand apport d'aliments entiers est insuffisant."
+          "question": "Can I get all my protein from supplements?",
+          "answer": "Protein supplements can help meet requirements but should supplement, not replace, whole food protein sources. Whole foods provide additional nutrients, fiber, and better satiety. Use supplements strategically when whole food intake is insufficient."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "ProteinIntakeCalculator"

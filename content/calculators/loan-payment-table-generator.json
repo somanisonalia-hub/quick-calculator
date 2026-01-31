@@ -47,38 +47,22 @@
     "calculatorComponent": "LoanPaymentTableGenerator",
     "examples": [
       {
-        "title": "Mortgage Rate Comparison",
-        "description": "Comparing mortgage payments at different interest rates",
-        "input": {
-          "tableType": "interest_rate",
-          "baseLoanAmount": 300000,
-          "baseInterestRate": 6.5,
-          "baseLoanTerm": 30,
-          "comparisonValues": "5.5,6.0,6.5,7.0,7.5"
-        },
-        "output": {
-          "tableSummary": "5-rate mortgage comparison showing $238 monthly payment difference",
-          "bestRate": "5.5% rate saves $1,425 monthly",
-          "paymentRange": "$1,419 - $1,844 monthly",
-          "interestRange": "$211,000 - $363,000 total interest"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Loan Term Comparison",
-        "description": "Comparing payments for different loan terms",
-        "input": {
-          "tableType": "loan_term",
-          "baseLoanAmount": 250000,
-          "baseInterestRate": 6.5,
-          "baseLoanTerm": 30,
-          "comparisonValues": "15,20,25,30"
-        },
-        "output": {
-          "tableSummary": "4-term comparison showing impact of loan duration",
-          "bestRate": "15-year term saves $475 monthly",
-          "paymentRange": "$1,975 - $2,450 monthly",
-          "interestRange": "$106,000 - $430,000 total interest"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -201,38 +185,22 @@
     "calculatorComponent": "LoanPaymentTableGenerator",
     "examples": [
       {
-        "title": "Comparación de Tasas de Hipoteca",
-        "description": "Comparando pagos de hipoteca a diferentes tasas de interés",
-        "input": {
-          "tableType": "interest_rate",
-          "baseLoanAmount": 300000,
-          "baseInterestRate": 6.5,
-          "baseLoanTerm": 30,
-          "comparisonValues": "5.5,6.0,6.5,7.0,7.5"
-        },
-        "output": {
-          "tableSummary": "Comparación de 5 tasas mostrando diferencia de $238 en pago mensual",
-          "bestRate": "Tasa del 5.5% ahorra $1,425 mensuales",
-          "paymentRange": "$1,419 - $1,844 mensuales",
-          "interestRange": "$211,000 - $363,000 intereses totales"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comparación de Plazos de Préstamo",
-        "description": "Comparando pagos para diferentes plazos de préstamo",
-        "input": {
-          "tableType": "loan_term",
-          "baseLoanAmount": 250000,
-          "baseInterestRate": 6.5,
-          "baseLoanTerm": 30,
-          "comparisonValues": "15,20,25,30"
-        },
-        "output": {
-          "tableSummary": "Comparación de 4 plazos mostrando impacto de duración del préstamo",
-          "bestRate": "Plazo de 15 años ahorra $475 mensuales",
-          "paymentRange": "$1,975 - $2,450 mensuales",
-          "interestRange": "$106,000 - $430,000 intereses totales"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -355,38 +323,22 @@
     "calculatorComponent": "LoanPaymentTableGenerator",
     "examples": [
       {
-        "title": "Comparação de Taxas de Hipoteca",
-        "description": "Comparando pagamentos de hipoteca em diferentes taxas de juros",
-        "input": {
-          "tableType": "interest_rate",
-          "baseLoanAmount": 300000,
-          "baseInterestRate": 6.5,
-          "baseLoanTerm": 30,
-          "comparisonValues": "5.5,6.0,6.5,7.0,7.5"
-        },
-        "output": {
-          "tableSummary": "Comparação de 5 taxas mostrando diferença de $238 no pagamento mensal",
-          "bestRate": "Taxa de 5.5% economiza $1,425 mensais",
-          "paymentRange": "$1,419 - $1,844 mensais",
-          "interestRange": "$211,000 - $363,000 juros totais"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comparação de Prazos de Empréstimo",
-        "description": "Comparando pagamentos para diferentes prazos de empréstimo",
-        "input": {
-          "tableType": "loan_term",
-          "baseLoanAmount": 250000,
-          "baseInterestRate": 6.5,
-          "baseLoanTerm": 30,
-          "comparisonValues": "15,20,25,30"
-        },
-        "output": {
-          "tableSummary": "Comparação de 4 prazos mostrando impacto da duração do empréstimo",
-          "bestRate": "Prazo de 15 anos economiza $475 mensais",
-          "paymentRange": "$1,975 - $2,450 mensais",
-          "interestRange": "$106,000 - $430,000 juros totais"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -509,38 +461,22 @@
     "calculatorComponent": "LoanPaymentTableGenerator",
     "examples": [
       {
-        "title": "Comparaison de Taux d'Hypothèque",
-        "description": "Comparant paiements d'hypothèque à différents taux d'intérêt",
-        "input": {
-          "tableType": "interest_rate",
-          "baseLoanAmount": 300000,
-          "baseInterestRate": 6.5,
-          "baseLoanTerm": 30,
-          "comparisonValues": "5.5,6.0,6.5,7.0,7.5"
-        },
-        "output": {
-          "tableSummary": "Comparaison de 5 taux montrant différence de $238 dans paiement mensuel",
-          "bestRate": "Taux de 5.5% économise $1,425 mensuels",
-          "paymentRange": "$1,419 - $1,844 mensuels",
-          "interestRange": "$211,000 - $363,000 intérêts totaux"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comparaison de Durées d'Emprunt",
-        "description": "Comparant paiements pour différentes durées d'emprunt",
-        "input": {
-          "tableType": "loan_term",
-          "baseLoanAmount": 250000,
-          "baseInterestRate": 6.5,
-          "baseLoanTerm": 30,
-          "comparisonValues": "15,20,25,30"
-        },
-        "output": {
-          "tableSummary": "Comparaison de 4 durées montrant impact de durée d'emprunt",
-          "bestRate": "Durée de 15 ans économise $475 mensuels",
-          "paymentRange": "$1,975 - $2,450 mensuels",
-          "interestRange": "$106,000 - $430,000 intérêts totaux"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

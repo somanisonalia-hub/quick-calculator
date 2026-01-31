@@ -30,7 +30,11 @@ export default function EquivalentInterestRateCalculator({ lang = 'en' }: Equiva
       "semi-monthly": "Semi-Monthly",
       "bi-weekly": "Bi-Weekly",
       weekly: "Weekly",
-      daily: "Daily"
+      daily: "Daily",
+      sameEconomicReturn: "Same economic return: Different rates, same final amount",
+      compoundingEffect: "Compounding effect: More frequent = lower equivalent rates",
+      effectiveComparison: "Effective comparison: Use equivalent rates for accuracy",
+      annualEquivalence: "Annual equivalence: Both rates produce same annual yield"
     },
     es: {
       title: "Calculadora de Tasa de Interés Equivalente",
@@ -53,7 +57,11 @@ export default function EquivalentInterestRateCalculator({ lang = 'en' }: Equiva
       "semi-monthly": "Semi-Mensual",
       "bi-weekly": "Quincenal",
       weekly: "Semanal",
-      daily: "Diaria"
+      daily: "Diaria",
+      sameEconomicReturn: "Mismo retorno económico: Diferentes tasas, mismo monto final",
+      compoundingEffect: "Efecto capitalización: Más frecuente = tasas equivalentes más bajas",
+      effectiveComparison: "Comparación efectiva: Usa tasas equivalentes para precisión",
+      annualEquivalence: "Equivalencia anual: Ambas tasas producen mismo rendimiento anual"
     },
     pt: {
       title: "Calculadora de Taxa de Juros Equivalente",
@@ -76,7 +84,11 @@ export default function EquivalentInterestRateCalculator({ lang = 'en' }: Equiva
       "semi-monthly": "Semi-Mensal",
       "bi-weekly": "Quinzenal",
       weekly: "Semanal",
-      daily: "Diária"
+      daily: "Diária",
+      sameEconomicReturn: "Mesmo retorno econômico: Taxas diferentes, mesmo valor final",
+      compoundingEffect: "Efeito capitalização: Mais frequente = taxas equivalentes menores",
+      effectiveComparison: "Comparação efetiva: Use taxas equivalentes para precisão",
+      annualEquivalence: "Equivalência anual: Ambas taxas produzem mesmo rendimento anual"
     },
     fr: {
       title: "Calculateur de Taux d'Intérêt Équivalent",
@@ -99,7 +111,11 @@ export default function EquivalentInterestRateCalculator({ lang = 'en' }: Equiva
       "semi-monthly": "Semi-Mensuel",
       "bi-weekly": "Bi-Hebdomadaire",
       weekly: "Hebdomadaire",
-      daily: "Quotidien"
+      daily: "Quotidien",
+      sameEconomicReturn: "Même rendement économique: Taux différents, même montant final",
+      compoundingEffect: "Effet capitalisation: Plus fréquent = taux équivalents plus bas",
+      effectiveComparison: "Comparaison efficace: Utilisez taux équivalents pour précision",
+      annualEquivalence: "Équivalence annuelle: Les deux taux produisent même rendement annuel"
     }
   };
 
@@ -294,10 +310,10 @@ export default function EquivalentInterestRateCalculator({ lang = 'en' }: Equiva
               <div className="bg-indigo-50 p-4 rounded-lg">
                 <h4 className="text-sm font-semibold text-indigo-900 mb-2">Understanding Rate Equivalence</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
-                  <div><strong>Same economic return:</strong> Different rates, same final amount</div>
-                  <div><strong>Compounding effect:</strong> More frequent = lower equivalent rates</div>
-                  <div><strong>Effective comparison:</strong> Use equivalent rates for accuracy</div>
-                  <div><strong>Annual equivalence:</strong> Both rates produce same annual yield</div>
+                  <div>{t.sameEconomicReturn}</div>
+                  <div>{t.compoundingEffect}</div>
+                  <div>{t.effectiveComparison}</div>
+                  <div>{t.annualEquivalence}</div>
                 </div>
               </div>
             </div>

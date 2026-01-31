@@ -81,24 +81,103 @@
       ],
       "faqs": [
         {
-          "question": "What is EMI and how is it calculated?",
-          "answer": "EMI (Equated Monthly Installment) is a fixed payment amount made by a borrower to a lender on a specified date each month. It's calculated using the formula that considers principal amount, interest rate, and loan tenure to ensure equal monthly payments throughout the loan period."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "Does EMI remain the same throughout the loan tenure?",
-          "answer": "Yes, in a standard loan with fixed interest rate, the EMI amount remains constant throughout the loan period. However, the composition changes - initially more goes toward interest, and gradually more goes toward principal repayment."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "How can I reduce my EMI?",
-          "answer": "You can reduce EMI by: 1) Negotiating a lower interest rate, 2) Extending the loan tenure (increases total interest though), 3) Making a larger down payment to reduce principal, 4) Making prepayments when possible to reduce outstanding principal."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "What happens if I miss an EMI payment?",
-          "answer": "Missing EMI payments can result in late payment fees, increased interest charges, negative impact on credit score, and potential legal action by the lender. It's crucial to maintain timely EMI payments. If facing difficulties, contact your lender immediately to discuss restructuring options."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
     },
-    "component": "EMICalculator"
+    "component": "EMICalculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "title": "Calculadora EMI",
@@ -124,21 +203,21 @@
     "description": "Calcule su Cuota Mensual Equivalente (EMI) para préstamos con nuestra calculadora completa. Obtenga desglose instantáneo de principal, interés y pago total con tabla de amortización detallada.",
     "summary": "Calcule EMI para préstamos con desglose instantáneo de pagos.",
     "seoContent": {
-      "introduction": "Calcule su Cuota Mensual Equivalente (EMI) rápida y precisamente con nuestra calculadora EMI gratuita. Ya sea que esté planificando un préstamo hipotecario, préstamo de auto, préstamo personal o préstamo comercial, entender su obligación de pago mensual es crucial para la planificación financiera.",
+      "introduction": "Calculate your Equated Monthly Installment (EMI) quickly and accurately with our free EMI calculator. Whether you're planning a home loan, car loan, personal loan, or business loan, understanding your monthly payment obligation is crucial for financial planning. Our calculator provides instant results with detailed breakdown of principal and interest components, helping you make informed borrowing decisions.",
       "benefits": [
-        "Cálculo instantáneo de EMI para cualquier monto y plazo de préstamo",
-        "Desglose detallado de pagos de principal e intereses",
-        "Tabla de amortización completa mostrando progresión de pagos",
-        "Compare diferentes escenarios de préstamo para encontrar la mejor opción",
-        "Planifique su presupuesto con estimaciones precisas de pago mensual",
-        "Comprenda el interés total pagadero durante el período del préstamo"
+        "Instant EMI calculation for any loan amount and tenure",
+        "Detailed breakdown of principal and interest payments",
+        "Complete amortization schedule showing payment progression",
+        "Compare different loan scenarios to find the best option",
+        "Plan your budget with accurate monthly payment estimates",
+        "Understand total interest payable over the loan period"
       ],
       "steps": [
-        "Ingrese el monto total del préstamo que necesita",
-        "Ingrese la tasa de interés anual ofrecida por su prestamista",
-        "Especifique el plazo del préstamo en meses o años",
-        "Haga clic en calcular para ver su EMI mensual",
-        "Revise el desglose de pagos y la tabla de amortización"
+        "Enter the total loan amount you need to borrow",
+        "Input the annual interest rate offered by your lender",
+        "Specify the loan tenure in months or years",
+        "Click calculate to see your monthly EMI",
+        "Review the payment breakdown and amortization schedule"
       ],
       "inputsExplained": [
         "Monto del Préstamo (Principal): El monto total que desea pedir prestado",
@@ -165,12 +244,103 @@
       ],
       "faqs": [
         {
-          "question": "¿Qué es EMI y cómo se calcula?",
-          "answer": "EMI (Cuota Mensual Equivalente) es un monto de pago fijo realizado por un prestatario a un prestamista en una fecha específica cada mes. Se calcula usando una fórmula que considera el monto principal, la tasa de interés y el plazo del préstamo."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
     },
-    "component": "EMICalculator"
+    "component": "EMICalculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "title": "Calculadora EMI",
@@ -196,21 +366,21 @@
     "description": "Calcule sua Parcela Mensal Equivalente (EMI) para empréstimos com nossa calculadora completa. Obtenha detalhamento instantâneo de principal, juros e pagamento total com tabela de amortização detalhada.",
     "summary": "Calcule EMI para empréstimos com detalhamento instantâneo de pagamentos.",
     "seoContent": {
-      "introduction": "Calcule sua Parcela Mensal Equivalente (EMI) rápida e precisamente com nossa calculadora EMI gratuita. Seja planejando um empréstimo hipotecário, empréstimo de carro, empréstimo pessoal ou empréstimo comercial, entender sua obrigação de pagamento mensal é crucial para o planejamento financeiro.",
+      "introduction": "Calculate your Equated Monthly Installment (EMI) quickly and accurately with our free EMI calculator. Whether you're planning a home loan, car loan, personal loan, or business loan, understanding your monthly payment obligation is crucial for financial planning. Our calculator provides instant results with detailed breakdown of principal and interest components, helping you make informed borrowing decisions.",
       "benefits": [
-        "Cálculo instantâneo de EMI para qualquer valor e prazo de empréstimo",
-        "Detalhamento detalhado de pagamentos de principal e juros",
-        "Tabela de amortização completa mostrando progressão de pagamentos",
-        "Compare diferentes cenários de empréstimo para encontrar a melhor opção",
-        "Planeje seu orçamento com estimativas precisas de pagamento mensal",
-        "Compreenda os juros totais pagáveis durante o período do empréstimo"
+        "Instant EMI calculation for any loan amount and tenure",
+        "Detailed breakdown of principal and interest payments",
+        "Complete amortization schedule showing payment progression",
+        "Compare different loan scenarios to find the best option",
+        "Plan your budget with accurate monthly payment estimates",
+        "Understand total interest payable over the loan period"
       ],
       "steps": [
-        "Digite o valor total do empréstimo que você precisa",
-        "Digite a taxa de juros anual oferecida pelo seu credor",
-        "Especifique o prazo do empréstimo em meses ou anos",
-        "Clique em calcular para ver seu EMI mensal",
-        "Revise o detalhamento de pagamentos e a tabela de amortização"
+        "Enter the total loan amount you need to borrow",
+        "Input the annual interest rate offered by your lender",
+        "Specify the loan tenure in months or years",
+        "Click calculate to see your monthly EMI",
+        "Review the payment breakdown and amortization schedule"
       ],
       "inputsExplained": [
         "Valor do Empréstimo (Principal): O valor total que você deseja emprestar",
@@ -237,12 +407,103 @@
       ],
       "faqs": [
         {
-          "question": "O que é EMI e como é calculado?",
-          "answer": "EMI (Parcela Mensal Equivalente) é um valor de pagamento fixo feito por um tomador de empréstimo a um credor em uma data específica a cada mês. É calculado usando uma fórmula que considera o valor principal, a taxa de juros e o prazo do empréstimo."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
     },
-    "component": "EMICalculator"
+    "component": "EMICalculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "title": "Calculateur EMI",
@@ -268,21 +529,21 @@
     "description": "Calculez votre Mensualité Équivalente (EMI) pour les prêts avec notre calculateur complet. Obtenez une ventilation instantanée du principal, des intérêts et du paiement total avec tableau d'amortissement détaillé.",
     "summary": "Calculez EMI pour les prêts avec ventilation instantanée des paiements.",
     "seoContent": {
-      "introduction": "Calculez votre Mensualité Équivalente (EMI) rapidement et précisément avec notre calculateur EMI gratuit. Que vous planifiez un prêt hypothécaire, un prêt auto, un prêt personnel ou un prêt commercial, comprendre votre obligation de paiement mensuel est crucial pour la planification financière.",
+      "introduction": "Calculate your Equated Monthly Installment (EMI) quickly and accurately with our free EMI calculator. Whether you're planning a home loan, car loan, personal loan, or business loan, understanding your monthly payment obligation is crucial for financial planning. Our calculator provides instant results with detailed breakdown of principal and interest components, helping you make informed borrowing decisions.",
       "benefits": [
-        "Calcul instantané d'EMI pour tout montant et durée de prêt",
-        "Ventilation détaillée des paiements de principal et d'intérêts",
-        "Tableau d'amortissement complet montrant la progression des paiements",
-        "Comparez différents scénarios de prêt pour trouver la meilleure option",
-        "Planifiez votre budget avec des estimations précises de paiement mensuel",
-        "Comprenez les intérêts totaux payables pendant la période du prêt"
+        "Instant EMI calculation for any loan amount and tenure",
+        "Detailed breakdown of principal and interest payments",
+        "Complete amortization schedule showing payment progression",
+        "Compare different loan scenarios to find the best option",
+        "Plan your budget with accurate monthly payment estimates",
+        "Understand total interest payable over the loan period"
       ],
       "steps": [
-        "Entrez le montant total du prêt dont vous avez besoin",
-        "Entrez le taux d'intérêt annuel offert par votre prêteur",
-        "Spécifiez la durée du prêt en mois ou années",
-        "Cliquez sur calculer pour voir votre EMI mensuel",
-        "Examinez la ventilation des paiements et le tableau d'amortissement"
+        "Enter the total loan amount you need to borrow",
+        "Input the annual interest rate offered by your lender",
+        "Specify the loan tenure in months or years",
+        "Click calculate to see your monthly EMI",
+        "Review the payment breakdown and amortization schedule"
       ],
       "inputsExplained": [
         "Montant du Prêt (Principal): Le montant total que vous souhaitez emprunter",
@@ -309,11 +570,102 @@
       ],
       "faqs": [
         {
-          "question": "Qu'est-ce que l'EMI et comment est-il calculé?",
-          "answer": "EMI (Mensualité Équivalente) est un montant de paiement fixe effectué par un emprunteur à un prêteur à une date spécifique chaque mois. Il est calculé en utilisant une formule qui prend en compte le montant principal, le taux d'intérêt et la durée du prêt."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
     },
-    "component": "EMICalculator"
+    "component": "EMICalculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

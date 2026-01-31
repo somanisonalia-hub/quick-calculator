@@ -1,6 +1,59 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 
 export default function NotFound() {
+  const pathname = usePathname();
+  const { i18n } = useTranslation('common');
+
+  // Get current language from pathname
+  const getCurrentLang = (path: string) => {
+    if (path.startsWith('/es/') || path === '/es') return 'es';
+    if (path.startsWith('/pt/') || path === '/pt') return 'pt';
+    if (path.startsWith('/fr/') || path === '/fr') return 'fr';
+    if (path.startsWith('/en/') || path === '/en') return 'en';
+    return 'en'; // Default to English
+  };
+
+  const currentLang = getCurrentLang(pathname);
+
+  // Function to get the path for a specific language
+  const getLanguagePath = (langCode: string) => {
+    if (!pathname) return langCode === 'en' ? '/' : `/${langCode}/`;
+
+    // Extract the path without any language prefix
+    let pathWithoutLang = pathname;
+
+    // Remove any existing language prefix (es, pt, fr, en)
+    pathWithoutLang = pathWithoutLang.replace(/^\/(es|pt|fr|en)/, '');
+
+    // Ensure we have a leading slash
+    if (!pathWithoutLang.startsWith('/')) {
+      pathWithoutLang = '/' + pathWithoutLang;
+    }
+
+    // Handle home page
+    if (pathWithoutLang === '/' || pathWithoutLang === '') {
+      pathWithoutLang = '/';
+    }
+
+    // Always add language prefix for consistency with routing
+    return `/${langCode}${pathWithoutLang}`;
+  };
+
+  // Function to handle language change
+  const changeLanguage = async (langCode: string) => {
+    if (langCode === currentLang) return;
+
+    // Change the i18n language
+    await i18n.changeLanguage(langCode);
+
+    // Navigate to the new language path
+    const newPath = getLanguagePath(langCode);
+    window.location.href = newPath;
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -20,17 +73,24 @@ export default function NotFound() {
             {/* Language Switcher */}
             <div className="flex items-center space-x-2">
               {[
-                { code: 'en', name: 'English', flag: '🇺🇸' }
+                { code: 'en', name: 'English', flag: '🇺🇸' },
+                { code: 'es', name: 'Spanish', flag: '🇪🇸' },
+                { code: 'pt', name: 'Portuguese', flag: '🇵🇹' },
+                { code: 'fr', name: 'French', flag: '🇫🇷' }
               ].map((lang) => (
-                <a
+                <button
                   key={lang.code}
-                  href={lang.code === 'en' ? '/' : `/${lang.code}/`}
-                  className="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-500 hover:text-gray-700 hover:bg-gray-100"
+                  onClick={() => changeLanguage(lang.code)}
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    currentLang === lang.code
+                      ? 'bg-blue-100 text-blue-700'
+                      : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+                  }`}
                   title={lang.name}
                 >
                   <span>{lang.flag}</span>
                   <span className="hidden sm:inline">{lang.code.toUpperCase()}</span>
-                </a>
+                </button>
               ))}
             </div>
           </div>

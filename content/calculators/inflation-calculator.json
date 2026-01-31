@@ -35,17 +35,79 @@
       "Choose between using historical data or custom inflation rate",
       "Get detailed breakdown of purchasing power changes"
     ],
-    "calculatorComponent": "InflationCalculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
     "examples": [
       {
-        "title": "Historical Value",
-        "input": "$1,000 in 2000",
-        "output": "2024 value: $1,819 (81.9% increase due to inflation)"
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
       },
       {
-        "title": "Future Purchasing Power",
-        "input": "$50,000 needed in 10 years at 3% inflation",
-        "output": "Current value needed: $37,121 to maintain same purchasing power"
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [

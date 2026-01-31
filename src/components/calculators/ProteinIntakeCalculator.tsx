@@ -124,7 +124,8 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
       grams: "grams",
       gPerKg: "g/kg",
       gPerLb: "g/lb",
-      calories: "calories"
+      calories: "calories",
+      noteDisclaimer: "Note: These recommendations are general guidelines. Consult with a healthcare professional or registered dietitian for personalized advice."
     },
     es: {
       title: "Calculadora de Ingesta de Proteína",
@@ -169,7 +170,8 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
       grams: "gramos",
       gPerKg: "g/kg",
       gPerLb: "g/lb",
-      calories: "calorías"
+      calories: "calorías",
+      noteDisclaimer: "Nota: Estas recomendaciones son pautas generales. Consulte con un profesional de salud o dietista registrado para asesoramiento personalizado."
     },
     pt: {
       title: "Calculadora de Ingestão de Proteína",
@@ -214,7 +216,8 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
       grams: "gramas",
       gPerKg: "g/kg",
       gPerLb: "g/lb",
-      calories: "calorias"
+      calories: "calorias",
+      noteDisclaimer: "Nota: Estas recomendações são baseadas em diretrizes gerais de nutrição esportiva."
     },
     fr: {
       title: "Calculateur d'Apport en Protéines",
@@ -259,7 +262,8 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
       grams: "grammes",
       gPerKg: "g/kg",
       gPerLb: "g/lb",
-      calories: "calories"
+      calories: "calories",
+      noteDisclaimer: "Remarque: Ces recommandations sont basées sur les directives générales de nutrition sportive."
     }
   };
 
@@ -541,7 +545,7 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
       {/* Disclaimer */}
       <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          <strong>Note:</strong> These recommendations are based on general sports nutrition guidelines.
+          {t.noteDisclaimer}
           Individual needs may vary based on body composition, training intensity, metabolism, and health conditions.
           Consult a healthcare provider or registered dietitian for personalized nutrition advice.
         </p>

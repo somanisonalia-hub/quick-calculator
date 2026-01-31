@@ -47,34 +47,22 @@
     "calculatorComponent": "BasicAPRCalculator",
     "examples": [
       {
-        "title": "Simple Loan APR",
-        "description": "Calculate APR for a $10,000 loan with $1,200 interest over 1 year",
-        "input": {
-          "loanAmount": 10000,
-          "totalInterest": 1200,
-          "loanYears": 1
-        },
-        "output": {
-          "apr": "12.00%",
-          "interestRate": "12.00%",
-          "totalAmount": "$11,200",
-          "costAnalysis": "$1,200 interest on $10,000 loan = 12% APR"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Credit Card APR",
-        "description": "Calculate APR for credit card charges of $500 on $5,000 balance over 6 months",
-        "input": {
-          "loanAmount": 5000,
-          "totalInterest": 500,
-          "loanYears": 0.5
-        },
-        "output": {
-          "apr": "20.00%",
-          "interestRate": "20.00%",
-          "totalAmount": "$5,500",
-          "costAnalysis": "$500 finance charges on $5,000 balance = 20% APR"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -196,34 +184,22 @@
     "calculatorComponent": "BasicAPRCalculator",
     "examples": [
       {
-        "title": "TAE Simple de Préstamo",
-        "description": "Calcula TAE para un préstamo de $10,000 con $1,200 intereses durante 1 año",
-        "input": {
-          "loanAmount": 10000,
-          "totalInterest": 1200,
-          "loanYears": 1
-        },
-        "output": {
-          "apr": "12.00%",
-          "interestRate": "12.00%",
-          "totalAmount": "$11,200",
-          "costAnalysis": "$1,200 intereses en préstamo de $10,000 = 12% TAE"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "TAE Tarjeta de Crédito",
-        "description": "Calcula TAE para cargos de tarjeta de crédito de $500 en saldo de $5,000 durante 6 meses",
-        "input": {
-          "loanAmount": 5000,
-          "totalInterest": 500,
-          "loanYears": 0.5
-        },
-        "output": {
-          "apr": "20.00%",
-          "interestRate": "20.00%",
-          "totalAmount": "$5,500",
-          "costAnalysis": "$500 cargos financieros en saldo de $5,000 = 20% TAE"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -345,34 +321,22 @@
     "calculatorComponent": "BasicAPRCalculator",
     "examples": [
       {
-        "title": "CET Simples de Empréstimo",
-        "description": "Calcule CET para um empréstimo de R$ 10.000 com R$ 1.200 juros durante 1 ano",
-        "input": {
-          "loanAmount": 10000,
-          "totalInterest": 1200,
-          "loanYears": 1
-        },
-        "output": {
-          "apr": "12.00%",
-          "interestRate": "12.00%",
-          "totalAmount": "R$ 11,200",
-          "costAnalysis": "R$ 1.200 juros em empréstimo de R$ 10.000 = 12% CET"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "CET Cartão de Crédito",
-        "description": "Calcule CET para encargos de cartão de crédito de R$ 500 em saldo de R$ 5.000 durante 6 meses",
-        "input": {
-          "loanAmount": 5000,
-          "totalInterest": 500,
-          "loanYears": 0.5
-        },
-        "output": {
-          "apr": "20.00%",
-          "interestRate": "20.00%",
-          "totalAmount": "R$ 5,500",
-          "costAnalysis": "R$ 500 encargos financeiros em saldo de R$ 5.000 = 20% CET"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -494,34 +458,22 @@
     "calculatorComponent": "BasicAPRCalculator",
     "examples": [
       {
-        "title": "TAEG Simple de Prêt",
-        "description": "Calculez TAEG pour un prêt de 10 000 € avec 1 200 € intérêts sur 1 an",
-        "input": {
-          "loanAmount": 10000,
-          "totalInterest": 1200,
-          "loanYears": 1
-        },
-        "output": {
-          "apr": "12.00%",
-          "interestRate": "12.00%",
-          "totalAmount": "11 200 €",
-          "costAnalysis": "1 200 € intérêts sur prêt de 10 000 € = 12% TAEG"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "TAEG Carte de Crédit",
-        "description": "Calculez TAEG pour frais carte de crédit de 500 € sur solde de 5 000 € sur 6 mois",
-        "input": {
-          "loanAmount": 5000,
-          "totalInterest": 500,
-          "loanYears": 0.5
-        },
-        "output": {
-          "apr": "20.00%",
-          "interestRate": "20.00%",
-          "totalAmount": "5 500 €",
-          "costAnalysis": "500 € frais financiers sur solde de 5 000 € = 20% TAEG"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

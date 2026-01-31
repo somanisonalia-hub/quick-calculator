@@ -242,7 +242,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
         "2022": "2022"
       },
       currency: "$",
-      percentage: "%"
+      percentage: "%",
+      noteDisclaimer: "Note: This calculator provides estimates based on 2024 tax brackets and simplified state tax rates. Actual taxes may vary based on specific circumstances, additional income sources, exact state tax formulas, and IRS rules. Personal exemptions are suspended through 2025. Consult a tax professional for personalized tax advice."
     },
     es: {
       title: "Calculadora de Impuesto a la Renta",
@@ -338,7 +339,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
         "2022": "2022"
       },
       currency: "$",
-      percentage: "%"
+      percentage: "%",
+      noteDisclaimer: "Nota: Esta calculadora proporciona estimaciones basadas en los tramos impositivos de 2024 y tasas impositivas estatales simplificadas. Los impuestos reales pueden variar según circunstancias específicas, fuentes de ingresos adicionales, fórmulas exactas de impuestos estatales y reglas del IRS. Las exenciones personales están suspendidas hasta 2025. Consulte a un profesional de impuestos para asesoramiento personalizado."
     },
     pt: {
       title: "Calculadora de Imposto de Renda",
@@ -434,7 +436,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
         "2022": "2022"
       },
       currency: "R$",
-      percentage: "%"
+      percentage: "%",
+      noteDisclaimer: "Nota: Esta calculadora fornece estimativas baseadas nas faixas de impostos de 2024 e taxas de impostos estaduais simplificadas. Os impostos reais podem variar com base em circunstâncias específicas, fontes de renda adicionais, fórmulas exatas de impostos estaduais e regras do IRS. As isenções pessoais estão suspensas até 2025. Consulte um profissional de impostos para aconselhamento personalizado."
     },
     fr: {
       title: "Calculateur d'Impôt sur le Revenu",
@@ -530,7 +533,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
         "2022": "2022"
       },
       currency: "€",
-      percentage: "%"
+      percentage: "%",
+      noteDisclaimer: "Remarque: Cette calculatrice fournit des estimations basées sur les tranches d'imposition de 2024 et les taux d'imposition d'État simplifiés. Les impôts réels peuvent varier en fonction de circonstances spécifiques, de sources de revenus supplémentaires, de formules exactes d'imposition des États et de règles de l'IRS. Les exemptions personnelles sont suspendues jusqu'en 2025. Consultez un professionnel de la fiscalité pour des conseils personnalisés."
     }
   };
 
@@ -900,9 +904,7 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       {/* Disclaimer */}
       <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          <strong>Note:</strong> This calculator provides estimates based on 2024 tax brackets and simplified state tax rates.
-          Actual taxes may vary based on specific circumstances, additional income sources, exact state tax formulas, and IRS rules.
-          Personal exemptions are suspended through 2025. Consult a tax professional for personalized tax advice.
+          {t.noteDisclaimer}
         </p>
       </div>
     </div>

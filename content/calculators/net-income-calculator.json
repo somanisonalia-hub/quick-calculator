@@ -197,40 +197,22 @@
     ],
     "examples": [
       {
-        "title": "Single Filer, California",
-        "inputs": {
-          "grossIncome": 75000,
-          "filingStatus": "single",
-          "dependents": 0,
-          "state": "CA",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "netIncome": 54825,
-          "federalTax": 10250,
-          "stateTax": 4875,
-          "ficaTax": 5550,
-          "effectiveTaxRate": 26.8,
-          "taxableIncome": 61550
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Married Filing Jointly, Texas",
-        "inputs": {
-          "grossIncome": 120000,
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "state": "TX",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "netIncome": 89700,
-          "federalTax": 16200,
-          "stateTax": 0,
-          "ficaTax": 8880,
-          "effectiveTaxRate": 20.2,
-          "taxableIncome": 94600
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -291,6 +273,14 @@
           "question": "Why do states have different tax rates?",
           "answer": "Eight states have no state income tax (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Other states have progressive tax systems with rates ranging from about 3% to 13.3%, depending on income level and state-specific tax structures."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "NetIncomeCalculator"
@@ -493,40 +483,22 @@
     ],
     "examples": [
       {
-        "title": "Soltero, California",
-        "inputs": {
-          "grossIncome": 75000,
-          "filingStatus": "single",
-          "dependents": 0,
-          "state": "CA",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "netIncome": 54825,
-          "federalTax": 10250,
-          "stateTax": 4875,
-          "ficaTax": 5550,
-          "effectiveTaxRate": 26.8,
-          "taxableIncome": 61550
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Casados Declarando Conjuntamente, Texas",
-        "inputs": {
-          "grossIncome": 120000,
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "state": "TX",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "netIncome": 89700,
-          "federalTax": 16200,
-          "stateTax": 0,
-          "ficaTax": 8880,
-          "effectiveTaxRate": 20.2,
-          "taxableIncome": 94600
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -536,14 +508,14 @@
       "hourly-to-salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcula tu ingreso neto y salario después de impuestos con nuestra completa Calculadora de Ingreso Neto. Entender tus verdaderas ganancias después de impuestos es crucial para planificación financiera, negociaciones salariales y planificación de jubilación. Nuestra calculadora proporciona desgloses detallados de impuestos federales, estatales y de nómina para darte un panorama completo de tu ingreso después de impuestos.",
+      "introduction": "Calculate your net income and take-home pay with our comprehensive Net Income Calculator. Understanding your true earnings after taxes is crucial for financial planning, salary negotiations, and retirement planning. Our calculator provides detailed breakdowns of federal, state, and payroll taxes to give you a complete picture of your after-tax income.",
       "benefits": [
-        "Calcula ingreso neto preciso desde salario bruto anual",
-        "Entiende tu carga completa de impuestos incluyendo federales, estatales y FICA",
-        "Compara diferentes estados civiles y estados",
-        "Planea tus finanzas con estimaciones realistas de salario después de impuestos",
-        "Toma decisiones informadas sobre ofertas salariales y planificación fiscal",
-        "Ve el impacto de dependientes y deducciones en tus impuestos"
+        "Calculate accurate net income from gross annual salary",
+        "Understand your complete tax burden including federal, state, and FICA taxes",
+        "Compare different filing statuses and states",
+        "Plan your finances with realistic take-home pay estimates",
+        "Make informed decisions about salary offers and tax planning",
+        "See the impact of dependents and deductions on your taxes"
       ],
       "howToUse": [
         "Ingresa tu ingreso bruto anual antes de cualquier deducción",
@@ -568,25 +540,33 @@
       ],
       "faqs": [
         {
-          "question": "¿Cuál es la diferencia entre ingreso bruto e ingreso neto?",
-          "answer": "El ingreso bruto es tus ganancias totales antes de que cualquier impuesto o deducción sea retirado. El ingreso neto (salario después de impuestos) es lo que realmente recibes después de que impuesto federal a la renta, impuesto estatal a la renta, Seguro Social, Medicare, y otras deducciones son sustraídas."
+          "question": "What's the difference between gross income and net income?",
+          "answer": "Gross income is your total earnings before any taxes or deductions are taken out. Net income (take-home pay) is what you actually receive after federal income tax, state income tax, Social Security, Medicare, and other deductions are subtracted."
         },
         {
-          "question": "¿Qué es el ingreso gravable?",
-          "answer": "El ingreso gravable es tu ingreso bruto menos deducciones y exenciones. Para la mayoría de personas, esto incluye la deducción estándar ($14,600 para solteros en 2024) y exenciones dependientes. Solo el monto de ingreso gravable está sujeto a impuestos federales y estatales a la renta."
+          "question": "What is taxable income?",
+          "answer": "Taxable income is your gross income minus deductions and exemptions. For most people, this includes the standard deduction ($14,600 for single filers in 2024) and dependent exemptions. Only the taxable income amount is subject to federal and state income taxes."
         },
         {
-          "question": "¿Qué son los impuestos FICA?",
-          "answer": "FICA (Federal Insurance Contributions Act) incluye impuesto de Seguro Social (6.2%) e impuesto de Medicare (1.45%), para un total del 7.65%. Estos son impuestos de nómina que financian beneficios de jubilación de Seguro Social y atención médica Medicare. El impuesto de Seguro Social aplica solo hasta un límite de ingreso ($168,600 en 2024)."
+          "question": "What are FICA taxes?",
+          "answer": "FICA (Federal Insurance Contributions Act) taxes include Social Security tax (6.2%) and Medicare tax (1.45%), for a total of 7.65%. These are payroll taxes that fund Social Security retirement benefits and Medicare healthcare. Social Security tax applies only up to an income cap ($168,600 in 2024)."
         },
         {
-          "question": "¿Cómo afectan los dependientes a mis impuestos?",
-          "answer": "Los dependientes pueden reducir tu ingreso gravable a través de exenciones o créditos. En 2024, cada exención dependiente reduce tu ingreso gravable en $4,700. El Crédito Fiscal por Hijos proporciona hasta $2,000 por hijo calificado, y hay créditos adicionales para educación y otros dependientes."
+          "question": "How do dependents affect my taxes?",
+          "answer": "Dependents can reduce your taxable income through exemptions or credits. In 2024, each dependent exemption reduces your taxable income by $4,700. The Child Tax Credit provides up to $2,000 per qualifying child, and there are additional credits for education and other dependents."
         },
         {
-          "question": "¿Por qué los estados tienen diferentes tasas de impuestos?",
-          "answer": "Ocho estados no tienen impuesto estatal a la renta (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Otros estados tienen sistemas progresivos con tasas que van aproximadamente del 3% al 13.3%, dependiendo del nivel de ingreso y estructuras fiscales específicas del estado."
+          "question": "Why do states have different tax rates?",
+          "answer": "Eight states have no state income tax (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Other states have progressive tax systems with rates ranging from about 3% to 13.3%, depending on income level and state-specific tax structures."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "NetIncomeCalculator"
@@ -789,40 +769,22 @@
     ],
     "examples": [
       {
-        "title": "Solteiro, California",
-        "inputs": {
-          "grossIncome": 75000,
-          "filingStatus": "single",
-          "dependents": 0,
-          "state": "CA",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "netIncome": 54825,
-          "federalTax": 10250,
-          "stateTax": 4875,
-          "ficaTax": 5550,
-          "effectiveTaxRate": 26.8,
-          "taxableIncome": 61550
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Casados Declarando em Conjunto, Texas",
-        "inputs": {
-          "grossIncome": 120000,
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "state": "TX",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "netIncome": 89700,
-          "federalTax": 16200,
-          "stateTax": 0,
-          "ficaTax": 8880,
-          "effectiveTaxRate": 20.2,
-          "taxableIncome": 94600
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -832,14 +794,14 @@
       "hourly-to-salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule sua renda líquida e salário após impostos com nossa completa Calculadora de Renda Líquida. Entender suas verdadeiras ganhos após impostos é crucial para planejamento financeiro, negociações salariais e planejamento de aposentadoria. Nossa calculadora fornece detalhamentos de impostos federais, estaduais e de folha de pagamento para dar a você um panorama completo de sua renda após impostos.",
+      "introduction": "Calculate your net income and take-home pay with our comprehensive Net Income Calculator. Understanding your true earnings after taxes is crucial for financial planning, salary negotiations, and retirement planning. Our calculator provides detailed breakdowns of federal, state, and payroll taxes to give you a complete picture of your after-tax income.",
       "benefits": [
-        "Calcule renda líquida precisa a partir do salário bruto anual",
-        "Entenda sua carga completa de impostos incluindo federais, estaduais e FICA",
-        "Compare diferentes estados civis e estados",
-        "Planeje suas finanças com estimativas realistas de salário após impostos",
-        "Tome decisões informadas sobre ofertas salariais e planejamento fiscal",
-        "Veja o impacto de dependentes e deduções em seus impostos"
+        "Calculate accurate net income from gross annual salary",
+        "Understand your complete tax burden including federal, state, and FICA taxes",
+        "Compare different filing statuses and states",
+        "Plan your finances with realistic take-home pay estimates",
+        "Make informed decisions about salary offers and tax planning",
+        "See the impact of dependents and deductions on your taxes"
       ],
       "howToUse": [
         "Digite sua renda bruta anual antes de qualquer dedução",
@@ -864,25 +826,33 @@
       ],
       "faqs": [
         {
-          "question": "Qual é a diferença entre renda bruta e renda líquida?",
-          "answer": "Renda bruta é seus ganhos totais antes de quaisquer impostos ou deduções serem retirados. Renda líquida (salário após impostos) é o que você realmente recebe após imposto federal de renda, imposto estadual de renda, Previdência Social, Medicare, e outras deduções serem subtraídas."
+          "question": "What's the difference between gross income and net income?",
+          "answer": "Gross income is your total earnings before any taxes or deductions are taken out. Net income (take-home pay) is what you actually receive after federal income tax, state income tax, Social Security, Medicare, and other deductions are subtracted."
         },
         {
-          "question": "O que é renda tributável?",
-          "answer": "Renda tributável é sua renda bruta menos deduções e isenções. Para a maioria das pessoas, isso inclui a dedução padrão (R$14.600 para solteiros em 2024) e isenções dependentes. Apenas o valor da renda tributável está sujeito a impostos federais e estaduais de renda."
+          "question": "What is taxable income?",
+          "answer": "Taxable income is your gross income minus deductions and exemptions. For most people, this includes the standard deduction ($14,600 for single filers in 2024) and dependent exemptions. Only the taxable income amount is subject to federal and state income taxes."
         },
         {
-          "question": "O que são impostos FICA?",
-          "answer": "FICA (Federal Insurance Contributions Act) inclui imposto de Previdência Social (6.2%) e imposto de Medicare (1.45%), para um total de 7.65%. Estes são impostos de folha de pagamento que financiam benefícios de aposentadoria da Previdência Social e assistência médica Medicare. Imposto de Previdência Social aplica apenas até um limite de renda (R$168.600 em 2024)."
+          "question": "What are FICA taxes?",
+          "answer": "FICA (Federal Insurance Contributions Act) taxes include Social Security tax (6.2%) and Medicare tax (1.45%), for a total of 7.65%. These are payroll taxes that fund Social Security retirement benefits and Medicare healthcare. Social Security tax applies only up to an income cap ($168,600 in 2024)."
         },
         {
-          "question": "Como dependentes afetam meus impostos?",
-          "answer": "Dependentes podem reduzir sua renda tributável através de isenções ou créditos. Em 2024, cada isenção dependente reduz sua renda tributável em R$4.700. O Crédito Fiscal por Filho fornece até R$2.000 por filho qualificado, e há créditos adicionais para educação e outros dependentes."
+          "question": "How do dependents affect my taxes?",
+          "answer": "Dependents can reduce your taxable income through exemptions or credits. In 2024, each dependent exemption reduces your taxable income by $4,700. The Child Tax Credit provides up to $2,000 per qualifying child, and there are additional credits for education and other dependents."
         },
         {
-          "question": "Por que estados têm diferentes taxas de impostos?",
-          "answer": "Oito estados não têm imposto estadual de renda (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Outros estados têm sistemas progressivos com taxas variando de cerca de 3% a 13.3%, dependendo do nível de renda e estruturas fiscais específicas do estado."
+          "question": "Why do states have different tax rates?",
+          "answer": "Eight states have no state income tax (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Other states have progressive tax systems with rates ranging from about 3% to 13.3%, depending on income level and state-specific tax structures."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "NetIncomeCalculator"
@@ -1085,40 +1055,22 @@
     ],
     "examples": [
       {
-        "title": "Célibataire, Californie",
-        "inputs": {
-          "grossIncome": 75000,
-          "filingStatus": "single",
-          "dependents": 0,
-          "state": "CA",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "netIncome": 54825,
-          "federalTax": 10250,
-          "stateTax": 4875,
-          "ficaTax": 5550,
-          "effectiveTaxRate": 26.8,
-          "taxableIncome": 61550
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Mariés Déclarant Conjointement, Texas",
-        "inputs": {
-          "grossIncome": 120000,
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "state": "TX",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "netIncome": 89700,
-          "federalTax": 16200,
-          "stateTax": 0,
-          "ficaTax": 8880,
-          "effectiveTaxRate": 20.2,
-          "taxableIncome": 94600
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -1128,14 +1080,14 @@
       "hourly-to-salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez votre revenu net et salaire après impôts avec notre Calculateur de Revenu Net complet. Comprendre vos véritables gains après impôts est crucial pour planification financière, négociations salariales et planification retraite. Notre calculateur fournit des ventilations détaillées d'impôts fédéraux, étatiques et de paie pour vous donner un panorama complet de votre revenu après impôts.",
+      "introduction": "Calculate your net income and take-home pay with our comprehensive Net Income Calculator. Understanding your true earnings after taxes is crucial for financial planning, salary negotiations, and retirement planning. Our calculator provides detailed breakdowns of federal, state, and payroll taxes to give you a complete picture of your after-tax income.",
       "benefits": [
-        "Calculez revenu net précis à partir du salaire brut annuel",
-        "Comprenez votre charge fiscale complète incluant impôts fédéraux, étatiques et FICA",
-        "Comparez différents statuts matrimoniaux et états",
-        "Planifiez vos finances avec estimations réalistes de salaire après impôts",
-        "Prenez des décisions éclairées sur offres salariales et planification fiscale",
-        "Voyez l'impact de personnes à charge et déductions sur vos impôts"
+        "Calculate accurate net income from gross annual salary",
+        "Understand your complete tax burden including federal, state, and FICA taxes",
+        "Compare different filing statuses and states",
+        "Plan your finances with realistic take-home pay estimates",
+        "Make informed decisions about salary offers and tax planning",
+        "See the impact of dependents and deductions on your taxes"
       ],
       "howToUse": [
         "Entrez votre revenu brut annuel avant toute déduction",
@@ -1160,25 +1112,33 @@
       ],
       "faqs": [
         {
-          "question": "Quelle est la différence entre revenu brut et revenu net ?",
-          "answer": "Le revenu brut est vos gains totaux avant que tout impôt ou déduction soit retiré. Le revenu net (salaire après impôts) est ce que vous recevez réellement après impôt fédéral sur le revenu, impôt étatique sur le revenu, Sécurité Sociale, Medicare, et autres déductions sont soustraites."
+          "question": "What's the difference between gross income and net income?",
+          "answer": "Gross income is your total earnings before any taxes or deductions are taken out. Net income (take-home pay) is what you actually receive after federal income tax, state income tax, Social Security, Medicare, and other deductions are subtracted."
         },
         {
-          "question": "Qu'est-ce que le revenu imposable ?",
-          "answer": "Le revenu imposable est votre revenu brut moins déductions et exemptions. Pour la plupart des gens, cela inclut la déduction standard (€14.600 pour célibataires en 2024) et exemptions personnes à charge. Seule la valeur de revenu imposable est soumise aux impôts fédéraux et étatiques sur le revenu."
+          "question": "What is taxable income?",
+          "answer": "Taxable income is your gross income minus deductions and exemptions. For most people, this includes the standard deduction ($14,600 for single filers in 2024) and dependent exemptions. Only the taxable income amount is subject to federal and state income taxes."
         },
         {
-          "question": "Qu'est-ce que les impôts FICA ?",
-          "answer": "FICA (Federal Insurance Contributions Act) inclut impôt Sécurité Sociale (6.2%) et impôt Medicare (1.45%), pour un total de 7.65%. Ce sont des impôts de paie qui financent prestations retraite Sécurité Sociale et soins médicaux Medicare. L'impôt Sécurité Sociale s'applique seulement jusqu'à une limite de revenu (€168.600 en 2024)."
+          "question": "What are FICA taxes?",
+          "answer": "FICA (Federal Insurance Contributions Act) taxes include Social Security tax (6.2%) and Medicare tax (1.45%), for a total of 7.65%. These are payroll taxes that fund Social Security retirement benefits and Medicare healthcare. Social Security tax applies only up to an income cap ($168,600 in 2024)."
         },
         {
-          "question": "Comment les personnes à charge affectent-elles vos impôts ?",
-          "answer": "Les personnes à charge peuvent réduire votre revenu imposable à travers exemptions ou crédits. En 2024, chaque exemption personne à charge réduit votre revenu imposable de €4.700. Le Crédit Fiscal Enfant fournit jusqu'à €2.000 par enfant qualifié, et il y a des crédits additionnels pour éducation et autres personnes à charge."
+          "question": "How do dependents affect my taxes?",
+          "answer": "Dependents can reduce your taxable income through exemptions or credits. In 2024, each dependent exemption reduces your taxable income by $4,700. The Child Tax Credit provides up to $2,000 per qualifying child, and there are additional credits for education and other dependents."
         },
         {
-          "question": "Pourquoi les états ont-ils des taux d'impôt différents ?",
-          "answer": "Huit états n'ont pas d'impôt étatique sur le revenu (Texas, Floride, Nevada, Washington, Wyoming, Dakota du Sud, Alaska, Tennessee). D'autres états ont des systèmes progressifs avec des taux allant d'environ 3% à 13.3%, selon le niveau de revenu et structures fiscales spécifiques de l'état."
+          "question": "Why do states have different tax rates?",
+          "answer": "Eight states have no state income tax (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee). Other states have progressive tax systems with rates ranging from about 3% to 13.3%, depending on income level and state-specific tax structures."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "NetIncomeCalculator"

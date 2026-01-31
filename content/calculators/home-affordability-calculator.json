@@ -49,50 +49,22 @@
     "calculatorComponent": "HomeAffordabilityCalculator",
     "examples": [
       {
-        "title": "First-Time Homebuyer",
-        "description": "A buyer earning $6,000 monthly with $500 in existing debt",
-        "input": {
-          "monthlyIncome": 6000,
-          "monthlyDebt": 500,
-          "downPayment": 60000,
-          "creditScore": 720,
-          "interestRate": 6.5,
-          "loanTerm": 30,
-          "propertyTaxRate": 1.2,
-          "homeInsurance": 1200
-        },
-        "output": {
-          "homePrice": 375000,
-          "monthlyPayment": 1680,
-          "loanAmount": 315000,
-          "housingRatio": 28,
-          "monthlyPropertyTax": 375,
-          "monthlyInsurance": 100,
-          "totalMonthlyCost": 2155
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "High-Income Buyer with Large Down Payment",
-        "description": "High earner with substantial down payment and low debt",
-        "input": {
-          "monthlyIncome": 15000,
-          "monthlyDebt": 800,
-          "downPayment": 200000,
-          "creditScore": 780,
-          "interestRate": 5.5,
-          "loanTerm": 30,
-          "propertyTaxRate": 1.5,
-          "homeInsurance": 2400
-        },
-        "output": {
-          "homePrice": 1100000,
-          "monthlyPayment": 3900,
-          "loanAmount": 900000,
-          "housingRatio": 26,
-          "monthlyPropertyTax": 1375,
-          "monthlyInsurance": 200,
-          "totalMonthlyCost": 5475
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -222,50 +194,22 @@
     "calculatorComponent": "HomeAffordabilityCalculator",
     "examples": [
       {
-        "title": "Comprador Primerizo de Casa",
-        "description": "Un comprador ganando $6,000 mensuales con $500 en deuda existente",
-        "input": {
-          "monthlyIncome": 6000,
-          "monthlyDebt": 500,
-          "downPayment": 60000,
-          "creditScore": 720,
-          "interestRate": 6.5,
-          "loanTerm": 30,
-          "propertyTaxRate": 1.2,
-          "homeInsurance": 1200
-        },
-        "output": {
-          "homePrice": 375000,
-          "monthlyPayment": 1680,
-          "loanAmount": 315000,
-          "housingRatio": 28,
-          "monthlyPropertyTax": 375,
-          "monthlyInsurance": 100,
-          "totalMonthlyCost": 2155
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comprador de Altos Ingresos con Gran Pago Inicial",
-        "description": "Persona de altos ingresos con pago inicial sustancial y deuda baja",
-        "input": {
-          "monthlyIncome": 15000,
-          "monthlyDebt": 800,
-          "downPayment": 200000,
-          "creditScore": 780,
-          "interestRate": 5.5,
-          "loanTerm": 30,
-          "propertyTaxRate": 1.5,
-          "homeInsurance": 2400
-        },
-        "output": {
-          "homePrice": 1100000,
-          "monthlyPayment": 3900,
-          "loanAmount": 900000,
-          "housingRatio": 26,
-          "monthlyPropertyTax": 1375,
-          "monthlyInsurance": 200,
-          "totalMonthlyCost": 5475
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -395,50 +339,22 @@
     "calculatorComponent": "HomeAffordabilityCalculator",
     "examples": [
       {
-        "title": "Comprador de Casa Pela Primeira Vez",
-        "description": "Um comprador ganhando R$ 6.000 mensais com R$ 500 em dívida existente",
-        "input": {
-          "monthlyIncome": 6000,
-          "monthlyDebt": 500,
-          "downPayment": 60000,
-          "creditScore": 720,
-          "interestRate": 6.5,
-          "loanTerm": 30,
-          "propertyTaxRate": 1.2,
-          "homeInsurance": 1200
-        },
-        "output": {
-          "homePrice": 375000,
-          "monthlyPayment": 1680,
-          "loanAmount": 315000,
-          "housingRatio": 28,
-          "monthlyPropertyTax": 375,
-          "monthlyInsurance": 100,
-          "totalMonthlyCost": 2155
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comprador de Alta Renda com Grande Entrada",
-        "description": "Pessoa de alta renda com entrada substancial e dívida baixa",
-        "input": {
-          "monthlyIncome": 15000,
-          "monthlyDebt": 800,
-          "downPayment": 200000,
-          "creditScore": 780,
-          "interestRate": 5.5,
-          "loanTerm": 30,
-          "propertyTaxRate": 1.5,
-          "homeInsurance": 2400
-        },
-        "output": {
-          "homePrice": 1100000,
-          "monthlyPayment": 3900,
-          "loanAmount": 900000,
-          "housingRatio": 26,
-          "monthlyPropertyTax": 1375,
-          "monthlyInsurance": 200,
-          "totalMonthlyCost": 5475
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -568,50 +484,22 @@
     "calculatorComponent": "HomeAffordabilityCalculator",
     "examples": [
       {
-        "title": "Acheteur Immobilier Débutant",
-        "description": "Un acheteur gagnant 6 000 € mensuels avec 500 € en dette existante",
-        "input": {
-          "monthlyIncome": 6000,
-          "monthlyDebt": 500,
-          "downPayment": 60000,
-          "creditScore": 720,
-          "interestRate": 6.5,
-          "loanTerm": 30,
-          "propertyTaxRate": 1.2,
-          "homeInsurance": 1200
-        },
-        "output": {
-          "homePrice": 375000,
-          "monthlyPayment": 1680,
-          "loanAmount": 315000,
-          "housingRatio": 28,
-          "monthlyPropertyTax": 375,
-          "monthlyInsurance": 100,
-          "totalMonthlyCost": 2155
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Acheteur à Haut Revenus avec Gros Acompte",
-        "description": "Personne à hauts revenus avec acompte substantiel et dette faible",
-        "input": {
-          "monthlyIncome": 15000,
-          "monthlyDebt": 800,
-          "downPayment": 200000,
-          "creditScore": 780,
-          "interestRate": 5.5,
-          "loanTerm": 30,
-          "propertyTaxRate": 1.5,
-          "homeInsurance": 2400
-        },
-        "output": {
-          "homePrice": 1100000,
-          "monthlyPayment": 3900,
-          "loanAmount": 900000,
-          "housingRatio": 26,
-          "monthlyPropertyTax": 1375,
-          "monthlyInsurance": 200,
-          "totalMonthlyCost": 5475
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

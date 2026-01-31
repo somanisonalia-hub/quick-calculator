@@ -27,7 +27,11 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
       second: "Second",
       third: "Third",
       tip: "Tip",
-      tipText: "Standard pregnancy is 280 days (40 weeks) from LMP. Due dates are estimates - actual delivery typically occurs within 2 weeks before or after."
+      tipText: "Standard pregnancy is 280 days (40 weeks) from LMP. Due dates are estimates - actual delivery typically occurs within 2 weeks before or after.",
+      pregnancyProgress: "Pregnancy Progress",
+      pregnancyProgressWeeks: "weeks",
+      pregnancyProgressDays: "days",
+      pregnancyProgressOf: "of"
     },
     es: {
       title: "Calculadora de Embarazo",
@@ -48,7 +52,11 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
       second: "Segundo",
       third: "Tercero",
       tip: "Consejo",
-      tipText: "El embarazo estándar es 280 días (40 semanas) desde FUM. Las fechas de parto son estimaciones."
+      tipText: "El embarazo estándar es 280 días (40 semanas) desde FUM. Las fechas de parto son estimaciones.",
+      pregnancyProgress: "Progreso del Embarazo",
+      pregnancyProgressWeeks: "semanas",
+      pregnancyProgressDays: "días",
+      pregnancyProgressOf: "de"
     },
     pt: {
       title: "Calculadora de Gravidez",
@@ -69,7 +77,11 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
       second: "Segundo",
       third: "Terceiro",
       tip: "Dica",
-      tipText: "A gravidez padrão é 280 dias (40 semanas) a partir da DUM. As datas de parto são estimativas."
+      tipText: "A gravidez padrão é 280 dias (40 semanas) a partir da DUM. As datas de parto são estimativas.",
+      pregnancyProgress: "Progresso da Gravidez",
+      pregnancyProgressWeeks: "semanas",
+      pregnancyProgressDays: "dias",
+      pregnancyProgressOf: "de"
     },
     fr: {
       title: "Calculatrice de Grossesse",
@@ -90,7 +102,11 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
       second: "Deuxième",
       third: "Troisième",
       tip: "Astuce",
-      tipText: "La grossesse standard est 280 jours (40 semaines) à partir de DDR. Les dates d'accouchement sont des estimations."
+      tipText: "La grossesse standard est 280 jours (40 semaines) à partir de DDR. Les dates d'accouchement sont des estimations.",
+      pregnancyProgress: "Progrès de la Grossesse",
+      pregnancyProgressWeeks: "semaines",
+      pregnancyProgressDays: "jours",
+      pregnancyProgressOf: "de"
     }
   };
 
@@ -260,7 +276,7 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
 
           <div className="mt-4 p-3 bg-white rounded-lg border-t border-pink-200">
             <p className="text-sm text-gray-700">
-              <strong>Pregnancy Progress:</strong> {results.weeksPregnant} weeks + {results.daysPregnant % 7} days / 40 weeks
+              <strong>{t.pregnancyProgress}:</strong> {results.weeksPregnant} {t.pregnancyProgressWeeks} + {results.daysPregnant % 7} {t.pregnancyProgressDays} {t.pregnancyProgressOf} 40 {t.pregnancyProgressWeeks}
             </p>
             <div className="mt-2 w-full bg-gray-200 rounded-full h-2">
               <div

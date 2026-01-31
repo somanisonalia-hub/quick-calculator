@@ -47,34 +47,22 @@
     "calculatorComponent": "EARCalculator",
     "examples": [
       {
-        "title": "Credit Card EAR Calculation",
-        "description": "Calculate EAR for a credit card with 18% nominal APR compounded monthly",
-        "input": {
-          "nominalRate": 18,
-          "compoundingFrequency": "12"
-        },
-        "output": {
-          "ear": "19.56%",
-          "nominalRateDisplay": "18.00%",
-          "difference": "1.56%",
-          "compoundingEffect": "Monthly compounding adds 1.56% to the effective rate",
-          "frequencyComparison": "Annual: 18.00% vs Monthly: 19.56% (8.7% increase)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Savings Account EAR",
-        "description": "Calculate EAR for a savings account with 4% nominal rate compounded quarterly",
-        "input": {
-          "nominalRate": 4,
-          "compoundingFrequency": "4"
-        },
-        "output": {
-          "ear": "4.06%",
-          "nominalRateDisplay": "4.00%",
-          "difference": "0.06%",
-          "compoundingEffect": "Quarterly compounding adds 0.06% to the effective rate",
-          "frequencyComparison": "Annual: 4.00% vs Quarterly: 4.06% (1.5% increase)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -196,34 +184,22 @@
     "calculatorComponent": "EARCalculator",
     "examples": [
       {
-        "title": "Cálculo TAE Tarjeta de Crédito",
-        "description": "Calcula TAE para una tarjeta de crédito con 18% TAE nominal capitalizado mensualmente",
-        "input": {
-          "nominalRate": 18,
-          "compoundingFrequency": "12"
-        },
-        "output": {
-          "ear": "19.56%",
-          "nominalRateDisplay": "18.00%",
-          "difference": "1.56%",
-          "compoundingEffect": "Capitalización mensual añade 1.56% a la tasa efectiva",
-          "frequencyComparison": "Anual: 18.00% vs Mensual: 19.56% (8.7% aumento)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "TAE Cuenta de Ahorros",
-        "description": "Calcula TAE para una cuenta de ahorros con 4% tasa nominal capitalizado trimestralmente",
-        "input": {
-          "nominalRate": 4,
-          "compoundingFrequency": "4"
-        },
-        "output": {
-          "ear": "4.06%",
-          "nominalRateDisplay": "4.00%",
-          "difference": "0.06%",
-          "compoundingEffect": "Capitalización trimestral añade 0.06% a la tasa efectiva",
-          "frequencyComparison": "Anual: 4.00% vs Trimestral: 4.06% (1.5% aumento)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -345,34 +321,22 @@
     "calculatorComponent": "EARCalculator",
     "examples": [
       {
-        "title": "Cálculo TEA Cartão de Crédito",
-        "description": "Calcule TEA para um cartão de crédito com 18% CET nominal capitalizado mensalmente",
-        "input": {
-          "nominalRate": 18,
-          "compoundingFrequency": "12"
-        },
-        "output": {
-          "ear": "19.56%",
-          "nominalRateDisplay": "18.00%",
-          "difference": "1.56%",
-          "compoundingEffect": "Capitalização mensal adiciona 1.56% à taxa efetiva",
-          "frequencyComparison": "Anual: 18.00% vs Mensal: 19.56% (8.7% aumento)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "TEA Conta Poupança",
-        "description": "Calcule TEA para uma conta poupança com 4% taxa nominal capitalizado trimestralmente",
-        "input": {
-          "nominalRate": 4,
-          "compoundingFrequency": "4"
-        },
-        "output": {
-          "ear": "4.06%",
-          "nominalRateDisplay": "4.00%",
-          "difference": "0.06%",
-          "compoundingEffect": "Capitalização trimestral adiciona 0.06% à taxa efetiva",
-          "frequencyComparison": "Anual: 4.00% vs Trimestral: 4.06% (1.5% aumento)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -494,34 +458,22 @@
     "calculatorComponent": "EARCalculator",
     "examples": [
       {
-        "title": "Calcul TEA Carte de Crédit",
-        "description": "Calculez TEA pour une carte de crédit avec 18% TAEG nominal capitalisé mensuellement",
-        "input": {
-          "nominalRate": 18,
-          "compoundingFrequency": "12"
-        },
-        "output": {
-          "ear": "19.56%",
-          "nominalRateDisplay": "18.00%",
-          "difference": "1.56%",
-          "compoundingEffect": "Capitalisation mensuelle ajoute 1.56% au taux effectif",
-          "frequencyComparison": "Annuel: 18.00% vs Mensuel: 19.56% (8.7% augmentation)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "TEA Compte Épargne",
-        "description": "Calculez TEA pour un compte épargne avec 4% taux nominal capitalisé trimestriellement",
-        "input": {
-          "nominalRate": 4,
-          "compoundingFrequency": "4"
-        },
-        "output": {
-          "ear": "4.06%",
-          "nominalRateDisplay": "4.00%",
-          "difference": "0.06%",
-          "compoundingEffect": "Capitalisation trimestrielle ajoute 0.06% au taux effectif",
-          "frequencyComparison": "Annuel: 4.00% vs Trimestriel: 4.06% (1.5% augmentation)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

@@ -20,7 +20,13 @@
     "slug": "ovulation-calculator",
     "category": "Health",
     "difficulty": "Beginner",
-    "tags": ["ovulation", "fertility", "fertile days", "conception", "pregnancy planning"],
+    "tags": [
+      "ovulation",
+      "fertility",
+      "fertile days",
+      "conception",
+      "pregnancy planning"
+    ],
     "description": "Calculate your ovulation date and identify your fertile window to help plan conception. Enter your last menstrual period and cycle length to discover your most fertile days.",
     "summary": "Identify your ovulation date and fertile window for family planning.",
     "component": "OvulationCalculator",
@@ -41,10 +47,12 @@
         "Share results with healthcare providers"
       ],
       "steps": [
-        "Enter the first day of your last menstrual period",
-        "Enter your average menstrual cycle length (typical 28 days)",
-        "Click calculate to see your ovulation date",
-        "View your fertile window and best conception days"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "inputsExplained": [
         "Last Menstrual Period (LMP): First day of your last period",
@@ -72,23 +80,102 @@
       ],
       "faqs": [
         {
-          "question": "How accurate is the ovulation calculator?",
-          "answer": "This calculator provides estimates based on typical ovulation patterns (14 days before next period). Accuracy depends on cycle regularity. Women with irregular cycles may have less accurate predictions. Ovulation predictor kits or tracking methods like basal body temperature are more precise."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "What is the fertile window?",
-          "answer": "The fertile window is approximately 5-6 days when conception is most likely. It includes the 5 days before ovulation and the day of ovulation. Sperm can survive up to 5 days, while an egg survives about 12-24 hours after release."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "Can ovulation be predicted with 100% accuracy?",
-          "answer": "No. While most women ovulate around day 14 of a 28-day cycle, there's natural variation. Stress, illness, diet, and other factors can shift ovulation timing. Ovulation predictor kits or tracking methods provide more accurate detection than calculators."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "What if my cycle is irregular?",
-          "answer": "If your cycles vary significantly in length, use your average cycle length. However, this calculator will be less accurate for irregular cycles. Ovulation predictor kits or tracking methods may be more reliable. Consult your healthcare provider about irregular cycles."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "title": "Calculadora de Ovulación",
@@ -102,27 +189,134 @@
     "slug": "ovulation-calculator",
     "category": "Health",
     "difficulty": "Principiante",
-    "tags": ["ovulación", "fertilidad", "días fértiles", "concepción", "planificación"],
+    "tags": [
+      "ovulación",
+      "fertilidad",
+      "días fértiles",
+      "concepción",
+      "planificación"
+    ],
     "description": "Calcula tu fecha de ovulación e identifica tu ventana fértil para ayudar a planificar la concepción. Ingresa tu último período menstrual y duración del ciclo.",
     "summary": "Identifica tu fecha de ovulación y ventana fértil para la planificación familiar.",
     "component": "OvulationCalculator",
     "seoContent": {
-      "introduction": "Nuestra calculadora de ovulación te ayuda a identificar tus días más fértiles y planificar tu estrategia de concepción.",
+      "introduction": "Our ovulation calculator helps you identify your most fertile days and plan your conception strategy. By entering your last menstrual period and cycle length, you can determine when you're most likely to ovulate and conceive.",
       "benefits": [
-        "Calcula fecha de ovulación precisa según duración del ciclo",
-        "Identifica tu ventana fértil (mejores días para concebir)",
-        "Planifica embarazo con precisión científica"
+        "Calculate accurate ovulation date based on cycle length",
+        "Identify your fertile window (best days to conceive)",
+        "Plan pregnancy with scientific accuracy",
+        "Understand your menstrual cycle better",
+        "Track fertility patterns over time",
+        "Share results with healthcare providers"
       ],
       "steps": [
-        "Ingresa el primer día de tu último período menstrual",
-        "Ingresa tu duración promedio del ciclo menstrual",
-        "Haz clic en calcular para ver tu fecha de ovulación",
-        "Visualiza tu ventana fértil y mejores días para concebir"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "formulaExplanation": "La ovulación típicamente ocurre alrededor de 14 días antes de tu próximo período.",
       "examples": [],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "title": "Calculadora de Ovulação",
@@ -136,27 +330,134 @@
     "slug": "ovulation-calculator",
     "category": "Health",
     "difficulty": "Iniciante",
-    "tags": ["ovulação", "fertilidade", "dias férteis", "concepção", "planejamento"],
+    "tags": [
+      "ovulação",
+      "fertilidade",
+      "dias férteis",
+      "concepção",
+      "planejamento"
+    ],
     "description": "Calcule sua data de ovulação e identifique sua janela fértil para ajudar a planejar a concepção. Insira seu último período menstrual e duração do ciclo.",
     "summary": "Identifique sua data de ovulação e janela fértil para planejamento familiar.",
     "component": "OvulationCalculator",
     "seoContent": {
-      "introduction": "Nossa calculadora de ovulação ajuda você a identificar seus dias mais férteis e planejar sua estratégia de concepção.",
+      "introduction": "Our ovulation calculator helps you identify your most fertile days and plan your conception strategy. By entering your last menstrual period and cycle length, you can determine when you're most likely to ovulate and conceive.",
       "benefits": [
-        "Calcule data de ovulação precisa com base na duração do ciclo",
-        "Identifique sua janela fértil (melhores dias para conceber)",
-        "Planeje gravidez com precisão científica"
+        "Calculate accurate ovulation date based on cycle length",
+        "Identify your fertile window (best days to conceive)",
+        "Plan pregnancy with scientific accuracy",
+        "Understand your menstrual cycle better",
+        "Track fertility patterns over time",
+        "Share results with healthcare providers"
       ],
       "steps": [
-        "Digite o primeiro dia do seu último período menstrual",
-        "Digite sua duração média do ciclo menstrual",
-        "Clique em calcular para ver sua data de ovulação",
-        "Visualize sua janela fértil e melhores dias para conceber"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "formulaExplanation": "A ovulação normalmente ocorre cerca de 14 dias antes do seu próximo período.",
       "examples": [],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "title": "Calculatrice d'Ovulation",
@@ -170,26 +471,133 @@
     "slug": "ovulation-calculator",
     "category": "Health",
     "difficulty": "Débutant",
-    "tags": ["ovulation", "fertilité", "jours fertiles", "conception", "planification"],
+    "tags": [
+      "ovulation",
+      "fertilité",
+      "jours fertiles",
+      "conception",
+      "planification"
+    ],
     "description": "Calculez votre date d'ovulation et identifiez votre période fertile pour aider à planifier la conception. Entrez votre dernier jour des règles et la durée de votre cycle.",
     "summary": "Identifiez votre date d'ovulation et période fertile pour la planification familiale.",
     "component": "OvulationCalculator",
     "seoContent": {
-      "introduction": "Notre calculatrice d'ovulation vous aide à identifier vos jours les plus fertiles et à planifier votre stratégie de conception.",
+      "introduction": "Our ovulation calculator helps you identify your most fertile days and plan your conception strategy. By entering your last menstrual period and cycle length, you can determine when you're most likely to ovulate and conceive.",
       "benefits": [
-        "Calculez la date d'ovulation précise en fonction de la durée du cycle",
-        "Identifiez votre période fertile (meilleurs jours pour concevoir)",
-        "Planifiez une grossesse avec précision scientifique"
+        "Calculate accurate ovulation date based on cycle length",
+        "Identify your fertile window (best days to conceive)",
+        "Plan pregnancy with scientific accuracy",
+        "Understand your menstrual cycle better",
+        "Track fertility patterns over time",
+        "Share results with healthcare providers"
       ],
       "steps": [
-        "Entrez le premier jour de votre dernier jour des règles",
-        "Entrez votre durée moyenne du cycle menstruel",
-        "Cliquez sur calculer pour voir votre date d'ovulation",
-        "Visualisez votre période fertile et vos meilleurs jours pour concevoir"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "formulaExplanation": "L'ovulation se produit généralement environ 14 jours avant vos prochaines règles.",
       "examples": [],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

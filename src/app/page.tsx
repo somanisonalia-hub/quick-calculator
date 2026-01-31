@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import HomePage from '@/components/HomePage';
+import HomePageSimple from '@/components/HomePageSimple';
 import { generateHomepageSchema } from '@/lib/seoContentRenderer';
 import { loadAllCalculatorsStatic } from '@/lib/staticDataLoader';
 import { StructuredData } from '@/components/StructuredData';
@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <StructuredData data={homepageSchema} />
-      <HomePage language="en" initialCalculators={allCalculators} />
+      <HomePageSimple language="en" initialCalculators={allCalculators} />
     </>
   );
 }

@@ -28,7 +28,11 @@ export default function ProfitabilityRatiosCalculator({ lang = 'en' }: Profitabi
       returnOnAssets: "Return on Assets (ROA)",
       returnOnEquity: "Return on Equity (ROE)",
       interpretation: "Ratio Interpretation",
-      currency: "$"
+      currency: "$",
+      grossMarginStrong: "Gross Margin > 30%: Strong profitability",
+      netMarginGood: "Net Margin > 10%: Good bottom-line performance",
+      roaEffective: "ROA > 6%: Effective asset utilization",
+      roeExcellent: "ROE > 15%: Excellent shareholder returns"
     },
     es: {
       title: "Calculadora de Ratios de Rentabilidad",
@@ -49,7 +53,11 @@ export default function ProfitabilityRatiosCalculator({ lang = 'en' }: Profitabi
       returnOnAssets: "Retorno sobre Activos (ROA)",
       returnOnEquity: "Retorno sobre Capital (ROE)",
       interpretation: "Interpretación del Ratio",
-      currency: "$"
+      currency: "$",
+      grossMarginStrong: "Margen Bruto > 30%: Fuerte rentabilidad",
+      netMarginGood: "Margen Neto > 10%: Buen desempeño de resultado final",
+      roaEffective: "ROA > 6%: Utilización efectiva de activos",
+      roeExcellent: "ROE > 15%: Excelentes retornos para accionistas"
     },
     pt: {
       title: "Calculadora de Índices de Rentabilidade",
@@ -70,7 +78,11 @@ export default function ProfitabilityRatiosCalculator({ lang = 'en' }: Profitabi
       returnOnAssets: "Retorno sobre Ativos (ROA)",
       returnOnEquity: "Retorno sobre Capital (ROE)",
       interpretation: "Interpretação do Índice",
-      currency: "R$"
+      currency: "R$",
+      grossMarginStrong: "Margem Bruta > 30%: Forte rentabilidade",
+      netMarginGood: "Margem Líquida > 10%: Bom desempenho de resultado final",
+      roaEffective: "ROA > 6%: Utilização eficaz de ativos",
+      roeExcellent: "ROE > 15%: Excelentes retornos para acionistas"
     },
     fr: {
       title: "Calculateur de Ratios de Rentabilité",
@@ -91,7 +103,11 @@ export default function ProfitabilityRatiosCalculator({ lang = 'en' }: Profitabi
       returnOnAssets: "Retour sur Actifs (ROA)",
       returnOnEquity: "Retour sur Capitaux Propres (ROE)",
       interpretation: "Interprétation du Ratio",
-      currency: "€"
+      currency: "€",
+      grossMarginStrong: "Marge Brute > 30%: Forte rentabilité",
+      netMarginGood: "Marge Nette > 10%: Bonne performance de résultat final",
+      roaEffective: "ROA > 6%: Utilisation efficace des actifs",
+      roeExcellent: "ROE > 15%: Excellents rendements pour actionnaires"
     }
   };
 
@@ -360,10 +376,10 @@ export default function ProfitabilityRatiosCalculator({ lang = 'en' }: Profitabi
               <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
                 <h4 className="text-sm font-semibold text-yellow-900 mb-2">{t.interpretation}</h4>
                 <div className="text-xs text-yellow-700 space-y-1">
-                  <div><strong>Gross Margin &gt; 30%:</strong> Strong profitability</div>
-                  <div><strong>Net Margin &gt; 10%:</strong> Good bottom-line performance</div>
-                  <div><strong>ROA &gt; 6%:</strong> Effective asset utilization</div>
-                  <div><strong>ROE &gt; 15%:</strong> Excellent shareholder returns</div>
+                  <div>{t.grossMarginStrong}</div>
+                  <div>{t.netMarginGood}</div>
+                  <div>{t.roaEffective}</div>
+                  <div>{t.roeExcellent}</div>
                 </div>
               </div>
             </div>

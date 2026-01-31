@@ -348,6 +348,14 @@
           "question": "How often should I measure body composition?",
           "answer": "Measure every 4-6 weeks during training programs to track progress without excessive frequency. Daily weight fluctuations can mask true composition changes. Use the same method and conditions each time for consistent measurements. Focus on trends rather than single measurements."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "LeanBodyMassCalculator"
@@ -638,15 +646,15 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcula tu masa corporal magra y porcentaje de grasa corporal con nuestra completa Calculadora de Masa Corporal Magra. Entender tu composición corporal es crucial para objetivos de fitness, monitoreo de salud y rendimiento atlético. Nuestra calculadora usa métodos científicamente validados para estimar tu masa magra y porcentaje de grasa corporal.",
+      "introduction": "Calculate your lean body mass and body fat percentage with our comprehensive Lean Body Mass Calculator. Understanding your body composition is crucial for fitness goals, health monitoring, and athletic performance. Our calculator uses scientifically validated methods to estimate your lean mass and body fat percentage.",
       "benefits": [
-        "Calcula masa corporal magra y porcentaje de grasa corporal con precisión",
-        "Compara diferentes métodos de cálculo de composición corporal",
-        "Rastrea cambios en masa muscular y grasa corporal con el tiempo",
-        "Entiende tu categoría de composición corporal y estado de salud",
-        "Toma decisiones informadas sobre objetivos de fitness y nutrición",
-        "Monitorea progreso hacia objetivos atléticos o de composición corporal",
-        "Evalúa niveles generales de salud y fitness"
+        "Calculate lean body mass and body fat percentage accurately",
+        "Compare different body composition calculation methods",
+        "Track changes in muscle mass and body fat over time",
+        "Understand your body composition category and health status",
+        "Make informed decisions about fitness and nutrition goals",
+        "Monitor progress toward athletic or body composition targets",
+        "Assess overall health and fitness levels"
       ],
       "howToUse": [
         "Ingresa tu peso corporal actual en kilogramos o libras",
@@ -674,33 +682,41 @@
       ],
       "faqs": [
         {
-          "question": "¿Cuál es la diferencia entre masa corporal magra y grasa corporal?",
-          "answer": "La masa corporal magra incluye todo en tu cuerpo excepto grasa - músculos, huesos, órganos, agua y tejido conectivo. La grasa corporal es la grasa almacenada en tu cuerpo. La masa corporal magra es metabólicamente activa y crucial para salud y rendimiento, mientras exceso de grasa corporal puede impactar salud."
+          "question": "What's the difference between lean body mass and body fat?",
+          "answer": "Lean body mass includes everything in your body except fat - muscles, bones, organs, water, and connective tissue. Body fat is the fat stored in your body. Lean body mass is metabolically active and crucial for health and performance, while excess body fat can impact health."
         },
         {
-          "question": "¿Qué método de cálculo es más preciso?",
-          "answer": "La precisión varía: método BMI es menos preciso (estimaciones solo), método Navy es moderadamente preciso para población general, fórmula Boer es buena para estimar masa magra. Para mayor precisión, métodos profesionales como escáneres DEXA, pesaje hidrostático o mediciones de pliegues cutáneos por profesionales entrenados son recomendados."
+          "question": "Which calculation method is most accurate?",
+          "answer": "Accuracy varies: BMI method is least accurate (estimates only), Navy method is moderately accurate for general population, Boer formula is good for estimating lean mass. For highest accuracy, professional methods like DEXA scans, hydrostatic weighing, or skinfold measurements by trained professionals are recommended."
         },
         {
-          "question": "¿Cuáles son porcentajes saludables de grasa corporal?",
-          "answer": "Los rangos saludables varían por género y edad: hombres típicamente 10-20% (atlético), mujeres 18-28% (atlético). Grasa esencial es 2-5% para hombres, 10-13% para mujeres. Grasa corporal por debajo de niveles esenciales puede perjudicar salud. Por encima de 25% para hombres y 32% para mujeres aumenta riesgos de salud."
+          "question": "What are healthy body fat percentages?",
+          "answer": "Healthy ranges vary by gender and age: Men typically 10-20% (athletic), women 18-28% (athletic). Essential fat is 2-5% for men, 10-13% for women. Body fat below essential levels can impair health. Above 25% for men and 32% for women increases health risks."
         },
         {
-          "question": "¿Cómo cambia la composición corporal con la edad?",
-          "answer": "La grasa corporal aumenta naturalmente con la edad mientras masa magra disminuye. Esto se llama sarcopenia (pérdida muscular). Entrenamiento de resistencia regular y ingesta adecuada de proteína pueden ayudar mantener masa magra. Metabolismo también se ralentiza con edad, afectando mantenimiento de composición corporal."
+          "question": "How does body composition change with age?",
+          "answer": "Body fat naturally increases with age while lean mass decreases. This is called sarcopenia (muscle loss). Regular resistance training and adequate protein intake can help maintain lean mass. Metabolism also slows with age, affecting body composition maintenance."
         },
         {
-          "question": "¿Puedo construir músculo y perder grasa al mismo tiempo?",
-          "answer": "Recomposición corporal (construir músculo mientras perder grasa) es posible para principiantes y aquellos retornando al entrenamiento. Se vuelve más difícil con experiencia. Enfócate en sobrecarga progresiva, proteína adecuada (1.6-2.2g/kg), déficit/superávit calórico y entrenamiento consistente. Rastrea cambios de masa corporal magra con el tiempo."
+          "question": "Can I build muscle and lose fat at the same time?",
+          "answer": "Body recomposition (building muscle while losing fat) is possible for beginners and those returning to training. It becomes harder with experience. Focus on progressive overload, adequate protein (1.6-2.2g/kg), calorie deficit/surplus, and consistent training. Track lean body mass changes over time."
         },
         {
-          "question": "¿Por qué es la composición corporal más importante que el peso?",
-          "answer": "La composición corporal revela qué hay dentro de tu peso - proporción músculo vs grasa. Dos personas pueden pesar lo mismo pero tener perfiles de salud muy diferentes. Masa muscular más alta mejora metabolismo, fuerza y resultados de salud. Los cambios de composición corporal deberían ser el enfoque sobre peso de balanza solo."
+          "question": "Why is body composition more important than weight?",
+          "answer": "Body composition reveals what's inside your weight - muscle vs fat ratio. Two people can weigh the same but have very different health profiles. Higher muscle mass improves metabolism, strength, and health outcomes. Body composition changes should be the focus over scale weight alone."
         },
         {
-          "question": "¿Con qué frecuencia debería medir composición corporal?",
-          "answer": "Mide cada 4-6 semanas durante programas de entrenamiento para rastrear progreso sin frecuencia excesiva. Las fluctuaciones diarias de peso pueden enmascarar cambios reales de composición. Usa el mismo método y condiciones cada vez para mediciones consistentes. Enfócate en tendencias en lugar de mediciones individuales."
+          "question": "How often should I measure body composition?",
+          "answer": "Measure every 4-6 weeks during training programs to track progress without excessive frequency. Daily weight fluctuations can mask true composition changes. Use the same method and conditions each time for consistent measurements. Focus on trends rather than single measurements."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "LeanBodyMassCalculator"
@@ -991,15 +1007,15 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule sua massa corporal magra e porcentagem de gordura corporal com nossa completa Calculadora de Massa Corporal Magra. Entender sua composição corporal é crucial para objetivos de fitness, monitoramento de saúde e performance atlética. Nossa calculadora usa métodos cientificamente validados para estimar sua massa magra e porcentagem de gordura corporal.",
+      "introduction": "Calculate your lean body mass and body fat percentage with our comprehensive Lean Body Mass Calculator. Understanding your body composition is crucial for fitness goals, health monitoring, and athletic performance. Our calculator uses scientifically validated methods to estimate your lean mass and body fat percentage.",
       "benefits": [
-        "Calcule massa corporal magra e porcentagem de gordura corporal com precisão",
-        "Compare diferentes métodos de cálculo de composição corporal",
-        "Acompanhe mudanças em massa muscular e gordura corporal ao longo do tempo",
-        "Entenda sua categoria de composição corporal e status de saúde",
-        "Tome decisões informadas sobre objetivos de fitness e nutrição",
-        "Monitore progresso rumo a objetivos atléticos ou de composição corporal",
-        "Avalie níveis gerais de saúde e fitness"
+        "Calculate lean body mass and body fat percentage accurately",
+        "Compare different body composition calculation methods",
+        "Track changes in muscle mass and body fat over time",
+        "Understand your body composition category and health status",
+        "Make informed decisions about fitness and nutrition goals",
+        "Monitor progress toward athletic or body composition targets",
+        "Assess overall health and fitness levels"
       ],
       "howToUse": [
         "Digite seu peso corporal atual em quilogramas ou libras",
@@ -1027,33 +1043,41 @@
       ],
       "faqs": [
         {
-          "question": "Qual é a diferença entre massa corporal magra e gordura corporal?",
-          "answer": "Massa corporal magra inclui tudo em seu corpo exceto gordura - músculos, ossos, órgãos, água e tecido conjuntivo. Gordura corporal é a gordura armazenada em seu corpo. Massa corporal magra é metabolicamente ativa e crucial para saúde e performance, enquanto gordura corporal excessiva pode impactar saúde."
+          "question": "What's the difference between lean body mass and body fat?",
+          "answer": "Lean body mass includes everything in your body except fat - muscles, bones, organs, water, and connective tissue. Body fat is the fat stored in your body. Lean body mass is metabolically active and crucial for health and performance, while excess body fat can impact health."
         },
         {
-          "question": "Qual método de cálculo é mais preciso?",
-          "answer": "Precisão varia: método IMC é menos preciso (estimativas apenas), método Navy é moderadamente preciso para população geral, fórmula Boer é boa para estimar massa magra. Para maior precisão, métodos profissionais como varreduras DEXA, pesagem hidrostática ou medições de dobras cutâneas por profissionais treinados são recomendados."
+          "question": "Which calculation method is most accurate?",
+          "answer": "Accuracy varies: BMI method is least accurate (estimates only), Navy method is moderately accurate for general population, Boer formula is good for estimating lean mass. For highest accuracy, professional methods like DEXA scans, hydrostatic weighing, or skinfold measurements by trained professionals are recommended."
         },
         {
-          "question": "Quais são porcentagens saudáveis de gordura corporal?",
-          "answer": "Faixas saudáveis variam por gênero e idade: homens tipicamente 10-20% (atlético), mulheres 18-28% (atlético). Gordura essencial é 2-5% para homens, 10-13% para mulheres. Gordura corporal abaixo de níveis essenciais pode prejudicar saúde. Acima de 25% para homens e 32% para mulheres aumenta riscos de saúde."
+          "question": "What are healthy body fat percentages?",
+          "answer": "Healthy ranges vary by gender and age: Men typically 10-20% (athletic), women 18-28% (athletic). Essential fat is 2-5% for men, 10-13% for women. Body fat below essential levels can impair health. Above 25% for men and 32% for women increases health risks."
         },
         {
-          "question": "¿Como composição corporal muda com a idade?",
-          "answer": "Gordura corporal aumenta naturalmente com a idade enquanto massa magra diminui. Isso é chamado sarcopenia (perda muscular). Treinamento de resistência regular e ingestão adequada de proteína podem ajudar manter massa magra. Metabolismo também desacelera com idade, afetando manutenção de composição corporal."
+          "question": "How does body composition change with age?",
+          "answer": "Body fat naturally increases with age while lean mass decreases. This is called sarcopenia (muscle loss). Regular resistance training and adequate protein intake can help maintain lean mass. Metabolism also slows with age, affecting body composition maintenance."
         },
         {
-          "question": "Posso construir músculo e perder gordura ao mesmo tempo?",
-          "answer": "Recomposição corporal (construir músculo enquanto perder gordura) é possível para iniciantes e aqueles retornando ao treinamento. Torna-se mais difícil com experiência. Foque em sobrecarga progressiva, proteína adequada (1.6-2.2g/kg), déficit/surplus calórico e treinamento consistente. Acompanhe mudanças de massa corporal magra ao longo do tempo."
+          "question": "Can I build muscle and lose fat at the same time?",
+          "answer": "Body recomposition (building muscle while losing fat) is possible for beginners and those returning to training. It becomes harder with experience. Focus on progressive overload, adequate protein (1.6-2.2g/kg), calorie deficit/surplus, and consistent training. Track lean body mass changes over time."
         },
         {
-          "question": "Por que composição corporal é mais importante que peso?",
-          "answer": "Composição corporal revela o que há dentro de seu peso - proporção músculo vs gordura. Duas pessoas podem pesar o mesmo mas ter perfis de saúde muito diferentes. Massa muscular mais alta melhora metabolismo, força e resultados de saúde. Mudanças de composição corporal deveriam ser o foco sobre peso da balança sozinho."
+          "question": "Why is body composition more important than weight?",
+          "answer": "Body composition reveals what's inside your weight - muscle vs fat ratio. Two people can weigh the same but have very different health profiles. Higher muscle mass improves metabolism, strength, and health outcomes. Body composition changes should be the focus over scale weight alone."
         },
         {
-          "question": "Com que frequência deveria medir composição corporal?",
-          "answer": "Meça a cada 4-6 semanas durante programas de treinamento para acompanhar progresso sem frequência excessiva. Flutuações diárias de peso podem mascarar mudanças reais de composição. Use o mesmo método e condições cada vez para medições consistentes. Foque em tendências em vez de medições individuais."
+          "question": "How often should I measure body composition?",
+          "answer": "Measure every 4-6 weeks during training programs to track progress without excessive frequency. Daily weight fluctuations can mask true composition changes. Use the same method and conditions each time for consistent measurements. Focus on trends rather than single measurements."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "LeanBodyMassCalculator"
@@ -1344,15 +1368,15 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez votre masse corporelle maigre et pourcentage de graisse corporelle avec notre Calculateur de Masse Corporelle Maigre complet. Comprendre votre composition corporelle est crucial pour objectifs fitness, surveillance santé et performance athlétique. Notre calculateur utilise méthodes scientifiquement validées pour estimer votre masse maigre et pourcentage de graisse corporelle.",
+      "introduction": "Calculate your lean body mass and body fat percentage with our comprehensive Lean Body Mass Calculator. Understanding your body composition is crucial for fitness goals, health monitoring, and athletic performance. Our calculator uses scientifically validated methods to estimate your lean mass and body fat percentage.",
       "benefits": [
-        "Calculez masse corporelle maigre et pourcentage de graisse corporelle avec précision",
-        "Comparez différentes méthodes de calcul de composition corporelle",
-        "Suivez changements en masse musculaire et graisse corporelle au fil du temps",
-        "Comprenez votre catégorie de composition corporelle et statut santé",
-        "Prenez décisions éclairées sur objectifs fitness et nutrition",
-        "Surveillez progrès vers objectifs athlétiques ou composition corporelle",
-        "Évaluez niveaux généraux de santé et fitness"
+        "Calculate lean body mass and body fat percentage accurately",
+        "Compare different body composition calculation methods",
+        "Track changes in muscle mass and body fat over time",
+        "Understand your body composition category and health status",
+        "Make informed decisions about fitness and nutrition goals",
+        "Monitor progress toward athletic or body composition targets",
+        "Assess overall health and fitness levels"
       ],
       "howToUse": [
         "Entrez votre poids corporel actuel en kilogrammes ou livres",
@@ -1380,33 +1404,41 @@
       ],
       "faqs": [
         {
-          "question": "Quelle est la différence entre masse corporelle maigre et graisse corporelle ?",
-          "answer": "Masse corporelle maigre inclut tout dans votre corps sauf graisse - muscles, os, organes, eau et tissu conjonctif. Graisse corporelle est la graisse stockée dans votre corps. Masse corporelle maigre est métaboliquement active et cruciale pour santé et performance, tandis que graisse corporelle excessive peut impacter santé."
+          "question": "What's the difference between lean body mass and body fat?",
+          "answer": "Lean body mass includes everything in your body except fat - muscles, bones, organs, water, and connective tissue. Body fat is the fat stored in your body. Lean body mass is metabolically active and crucial for health and performance, while excess body fat can impact health."
         },
         {
-          "question": "Quelle méthode de calcul est la plus précise ?",
-          "answer": "Précision varie : méthode IMC est moins précise (estimations seulement), méthode Navy est modérément précise pour population générale, formule Boer est bonne pour estimer masse maigre. Pour plus haute précision, méthodes professionnelles comme scanners DEXA, pesée hydrostatique ou mesures de plis cutanés par professionnels entraînés sont recommandées."
+          "question": "Which calculation method is most accurate?",
+          "answer": "Accuracy varies: BMI method is least accurate (estimates only), Navy method is moderately accurate for general population, Boer formula is good for estimating lean mass. For highest accuracy, professional methods like DEXA scans, hydrostatic weighing, or skinfold measurements by trained professionals are recommended."
         },
         {
-          "question": "Quels sont pourcentages sains de graisse corporelle ?",
-          "answer": "Plages saines varient par genre et âge : hommes typiquement 10-20% (athlétique), femmes 18-28% (athlétique). Graisse essentielle est 2-5% pour hommes, 10-13% pour femmes. Graisse corporelle en dessous de niveaux essentiels peut altérer santé. Au-dessus de 25% pour hommes et 32% pour femmes augmente risques de santé."
+          "question": "What are healthy body fat percentages?",
+          "answer": "Healthy ranges vary by gender and age: Men typically 10-20% (athletic), women 18-28% (athletic). Essential fat is 2-5% for men, 10-13% for women. Body fat below essential levels can impair health. Above 25% for men and 32% for women increases health risks."
         },
         {
-          "question": "¿Comment composition corporelle change-t-elle avec l'âge ?",
-          "answer": "Graisse corporelle augmente naturellement avec l'âge tandis que masse maigre diminue. C'est appelé sarcopénie (perte musculaire). Entraînement résistance régulier et apport adéquat en protéines peuvent aider maintenir masse maigre. Métabolisme ralentit également avec âge, affectant maintenance de composition corporelle."
+          "question": "How does body composition change with age?",
+          "answer": "Body fat naturally increases with age while lean mass decreases. This is called sarcopenia (muscle loss). Regular resistance training and adequate protein intake can help maintain lean mass. Metabolism also slows with age, affecting body composition maintenance."
         },
         {
-          "question": "Puis-je construire du muscle et perdre graisse en même temps ?",
-          "answer": "Recomposotion corporelle (construire muscle tout en perdant graisse) est possible pour débutants et ceux retournant à entraînement. Elle devient plus difficile avec expérience. Concentrez-vous sur surcharge progressive, protéines adéquates (1.6-2.2g/kg), déficit/surplus calorique et entraînement consistant. Suivez changements de masse corporelle maigre au fil du temps."
+          "question": "Can I build muscle and lose fat at the same time?",
+          "answer": "Body recomposition (building muscle while losing fat) is possible for beginners and those returning to training. It becomes harder with experience. Focus on progressive overload, adequate protein (1.6-2.2g/kg), calorie deficit/surplus, and consistent training. Track lean body mass changes over time."
         },
         {
-          "question": "Pourquoi composition corporelle est-elle plus importante que poids ?",
-          "answer": "Composition corporelle révèle ce qui est à l'intérieur de votre poids - rapport muscle vs graisse. Deux personnes peuvent peser le même mais avoir profils de santé très différents. Masse musculaire plus élevée améliore métabolisme, force et résultats de santé. Changements de composition corporelle devraient être le focus sur poids de balance seul."
+          "question": "Why is body composition more important than weight?",
+          "answer": "Body composition reveals what's inside your weight - muscle vs fat ratio. Two people can weigh the same but have very different health profiles. Higher muscle mass improves metabolism, strength, and health outcomes. Body composition changes should be the focus over scale weight alone."
         },
         {
-          "question": "À quelle fréquence devrais-je mesurer composition corporelle ?",
-          "answer": "Mesurez toutes les 4-6 semaines pendant programmes d'entraînement pour suivre progrès sans fréquence excessive. Fluctuations quotidiennes de poids peuvent masquer changements réels de composition. Utilisez même méthode et conditions chaque fois pour mesures consistantes. Concentrez-vous sur tendances plutôt que mesures individuelles."
+          "question": "How often should I measure body composition?",
+          "answer": "Measure every 4-6 weeks during training programs to track progress without excessive frequency. Daily weight fluctuations can mask true composition changes. Use the same method and conditions each time for consistent measurements. Focus on trends rather than single measurements."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "LeanBodyMassCalculator"

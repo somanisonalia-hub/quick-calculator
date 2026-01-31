@@ -53,14 +53,22 @@
     ],
     "examples": [
       {
-        "title": "Retail Company Analysis",
-        "input": "Current Assets: $500,000, Current Liabilities: $300,000, Inventory: $100,000, Cash: $150,000",
-        "output": "Current Ratio: 1.67, Quick Ratio: 1.33, Cash Ratio: 50%, Working Capital: $200,000"
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Manufacturing Firm Assessment",
-        "input": "Current Assets: $800,000, Current Liabilities: $400,000, Inventory: $200,000, Cash: $100,000",
-        "output": "Current Ratio: 2.0, Quick Ratio: 1.5, Cash Ratio: 25%, Working Capital: $400,000"
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "calculatorComponent": "LiquidityRatiosCalculator",
@@ -108,20 +116,24 @@
       ],
       "faqs": [
         {
-          "question": "What is the difference between current ratio and quick ratio?",
-          "answer": "Current ratio includes all current assets, while quick ratio excludes inventory because inventory may not be easily converted to cash. Quick ratio provides a more conservative view of liquidity."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "What is considered a good current ratio?",
-          "answer": "A current ratio between 1.5 and 3.0 is generally considered good, depending on industry. Too high may indicate inefficient use of assets, too low may signal liquidity problems."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "Why is cash ratio more conservative than other liquidity ratios?",
-          "answer": "Cash ratio only considers cash and cash equivalents, excluding receivables and inventory. It measures the most liquid assets available for immediate obligations."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "How do liquidity ratios affect credit decisions?",
-          "answer": "Lenders use liquidity ratios to assess repayment ability. Higher ratios suggest lower credit risk, while lower ratios may result in higher interest rates or credit denial."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
     },
@@ -181,32 +193,40 @@
     ],
     "examples": [
       {
-        "title": "Análisis Empresa Minorista",
-        "input": "Activos Corrientes: $500,000, Pasivos Corrientes: $300,000, Inventario: $100,000, Efectivo: $150,000",
-        "output": "Ratio Corriente: 1.67, Ratio Rápido: 1.33, Ratio Efectivo: 50%, Capital Trabajo: $200,000"
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Evaluación Empresa Manufacturera",
-        "input": "Activos Corrientes: $800,000, Pasivos Corrientes: $400,000, Inventario: $200,000, Efectivo: $100,000",
-        "output": "Ratio Corriente: 2.0, Ratio Rápido: 1.5, Ratio Efectivo: 25%, Capital Trabajo: $400,000"
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "calculatorComponent": "LiquidityRatiosCalculator",
     "seoContent": {
-      "introduction": "Los ratios de liquidez son métricas financieras esenciales que miden la capacidad de una empresa para cumplir sus obligaciones a corto plazo usando sus activos más líquidos. Nuestra calculadora de ratios de liquidez te ayuda a analizar ratio corriente, ratio rápido y ratio de efectivo para evaluar salud financiera y eficiencia operativa. Estos ratios proporcionan información crítica sobre gestión de efectivo, capital de trabajo y solvencia a corto plazo.",
+      "introduction": "Liquidity ratios are essential financial metrics that measure a company's ability to meet its short-term obligations using its most liquid assets. Our liquidity ratios calculator helps you analyze current ratio, quick ratio, and cash ratio to assess financial health and operational efficiency. These ratios provide critical insights into cash management, working capital, and short-term solvency.",
       "benefits": [
-        "Evaluar capacidad para cumplir obligaciones a corto plazo",
-        "Evaluar efectividad de gestión de efectivo",
-        "Identificar problemas potenciales de liquidez temprano",
-        "Comparar liquidez entre diferentes empresas",
-        "Tomar decisiones informadas de crédito e inversión"
+        "Assess ability to meet short-term obligations",
+        "Evaluate cash management effectiveness",
+        "Identify potential liquidity problems early",
+        "Compare liquidity across different companies",
+        "Make informed credit and investment decisions"
       ],
       "steps": [
-        "Reunir información de balance para período actual",
-        "Ingresar datos de activos y pasivos corrientes",
-        "Calcular múltiples ratios de liquidez simultáneamente",
-        "Comparar resultados con benchmarks de industria",
-        "Monitorear ratios con el tiempo para análisis de tendencias"
+        "Gather balance sheet information for current period",
+        "Enter current assets and liabilities data",
+        "Calculate multiple liquidity ratios simultaneously",
+        "Compare results with industry benchmarks",
+        "Monitor ratios over time for trend analysis"
       ],
       "inputsExplained": [
         "Activos Corrientes: Activos esperados a convertirse en efectivo dentro de un año",
@@ -236,20 +256,24 @@
       ],
       "faqs": [
         {
-          "question": "¿Cuál es la diferencia entre ratio corriente y ratio rápido?",
-          "answer": "El ratio corriente incluye todos activos corrientes, mientras que el ratio rápido excluye inventario porque el inventario puede no convertirse fácilmente en efectivo. El ratio rápido proporciona una vista más conservadora de liquidez."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "¿Qué se considera un buen ratio corriente?",
-          "answer": "Un ratio corriente entre 1.5 y 3.0 se considera generalmente bueno, dependiendo de industria. Muy alto puede indicar uso ineficiente de activos, muy bajo puede señalar problemas de liquidez."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "¿Por qué el ratio de efectivo es más conservador que otros ratios de liquidez?",
-          "answer": "El ratio de efectivo solo considera efectivo y equivalentes de efectivo, excluyendo cuentas por cobrar e inventario. Mide los activos más líquidos disponibles para obligaciones inmediatas."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "¿Cómo afectan los ratios de liquidez las decisiones de crédito?",
-          "answer": "Los prestamistas usan ratios de liquidez para evaluar capacidad de pago. Ratios más altos sugieren riesgo de crédito menor, mientras que ratios más bajos pueden resultar en tasas de interés más altas o denegación de crédito."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
     },
@@ -309,32 +333,40 @@
     ],
     "examples": [
       {
-        "title": "Análise Empresa Varejo",
-        "input": "Ativos Circulantes: R$ 500.000, Passivos Circulantes: R$ 300.000, Estoque: R$ 100.000, Caixa: R$ 150.000",
-        "output": "Índice Corrente: 1.67, Índice Rápido: 1.33, Índice Caixa: 50%, Capital Giro: R$ 200.000"
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Avaliação Empresa Manufatureira",
-        "input": "Ativos Circulantes: R$ 800.000, Passivos Circulantes: R$ 400.000, Estoque: R$ 200.000, Caixa: R$ 100.000",
-        "output": "Índice Corrente: 2.0, Índice Rápido: 1.5, Índice Caixa: 25%, Capital Giro: R$ 400.000"
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "calculatorComponent": "LiquidityRatiosCalculator",
     "seoContent": {
-      "introduction": "Índices de liquidez são métricas financeiras essenciais que medem capacidade de uma empresa de cumprir suas obrigações de curto prazo usando seus ativos mais líquidos. Nossa calculadora de índices de liquidez ajuda você a analisar índice corrente, índice rápido e índice de caixa para avaliar saúde financeira e eficiência operacional. Estes índices fornecem insights críticos sobre gestão de caixa, capital de giro e solvência de curto prazo.",
+      "introduction": "Liquidity ratios are essential financial metrics that measure a company's ability to meet its short-term obligations using its most liquid assets. Our liquidity ratios calculator helps you analyze current ratio, quick ratio, and cash ratio to assess financial health and operational efficiency. These ratios provide critical insights into cash management, working capital, and short-term solvency.",
       "benefits": [
-        "Avaliar capacidade de cumprir obrigações de curto prazo",
-        "Avaliar efetividade de gestão de caixa",
-        "Identificar problemas potenciais de liquidez cedo",
-        "Comparar liquidez entre diferentes empresas",
-        "Tomar decisões informadas de crédito e investimento"
+        "Assess ability to meet short-term obligations",
+        "Evaluate cash management effectiveness",
+        "Identify potential liquidity problems early",
+        "Compare liquidity across different companies",
+        "Make informed credit and investment decisions"
       ],
       "steps": [
-        "Reunir informações de balanço para período atual",
-        "Inserir dados de ativos e passivos circulantes",
-        "Calcular múltiplos índices de liquidez simultaneamente",
-        "Comparar resultados com benchmarks de indústria",
-        "Monitorar índices ao longo do tempo para análise de tendências"
+        "Gather balance sheet information for current period",
+        "Enter current assets and liabilities data",
+        "Calculate multiple liquidity ratios simultaneously",
+        "Compare results with industry benchmarks",
+        "Monitor ratios over time for trend analysis"
       ],
       "inputsExplained": [
         "Ativos Circulantes: Ativos esperados a serem convertidos em caixa dentro de um ano",
@@ -364,20 +396,24 @@
       ],
       "faqs": [
         {
-          "question": "Qual é a diferença entre índice corrente e índice rápido?",
-          "answer": "O índice corrente inclui todos ativos circulantes, enquanto índice rápido exclui estoque porque estoque pode não ser facilmente convertido em caixa. Índice rápido fornece uma visão mais conservadora de liquidez."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "O que é considerado um bom índice corrente?",
-          "answer": "Um índice corrente entre 1.5 e 3.0 é geralmente considerado bom, dependendo de indústria. Muito alto pode indicar uso ineficiente de ativos, muito baixo pode sinalizar problemas de liquidez."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "Por que o índice de caixa é mais conservador que outros índices de liquidez?",
-          "answer": "O índice de caixa considera apenas caixa e equivalentes de caixa, excluindo contas a receber e estoque. Mede os ativos mais líquidos disponíveis para obrigações imediatas."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "Como os índices de liquidez afetam decisões de crédito?",
-          "answer": "Credores usam índices de liquidez para avaliar capacidade de pagamento. Índices mais altos sugerem risco de crédito menor, enquanto índices mais baixos podem resultar em taxas de juros mais altas ou negação de crédito."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
     },
@@ -437,32 +473,40 @@
     ],
     "examples": [
       {
-        "title": "Analyse Société de Distribution",
-        "input": "Actifs Courants: €500,000, Passifs Courants: €300,000, Stock: €100,000, Trésorerie: €150,000",
-        "output": "Ratio Courant: 1.67, Ratio Rapide: 1.33, Ratio Trésorerie: 50%, Fonds Roulement: €200,000"
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Évaluation Société Manufacturière",
-        "input": "Actifs Courants: €800,000, Passifs Courants: €400,000, Stock: €200,000, Trésorerie: €100,000",
-        "output": "Ratio Courant: 2.0, Ratio Rapide: 1.5, Ratio Trésorerie: 25%, Fonds Roulement: €400,000"
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "calculatorComponent": "LiquidityRatiosCalculator",
     "seoContent": {
-      "introduction": "Les ratios de liquidité sont des métriques financières essentielles qui mesurent capacité d'une entreprise à remplir ses obligations à court terme en utilisant ses actifs les plus liquides. Notre calculateur de ratios de liquidité vous aide à analyser ratio courant, ratio rapide et ratio de trésorerie pour évaluer santé financière et efficacité opérationnelle. Ces ratios fournissent des insights critiques sur gestion de trésorerie, fonds de roulement et solvabilité à court terme.",
+      "introduction": "Liquidity ratios are essential financial metrics that measure a company's ability to meet its short-term obligations using its most liquid assets. Our liquidity ratios calculator helps you analyze current ratio, quick ratio, and cash ratio to assess financial health and operational efficiency. These ratios provide critical insights into cash management, working capital, and short-term solvency.",
       "benefits": [
-        "Évaluer capacité à remplir obligations à court terme",
-        "Évaluer efficacité de gestion de trésorerie",
-        "Identifier problèmes potentiels de liquidité tôt",
-        "Comparer liquidité entre différentes entreprises",
-        "Prendre décisions informées de crédit et investissement"
+        "Assess ability to meet short-term obligations",
+        "Evaluate cash management effectiveness",
+        "Identify potential liquidity problems early",
+        "Compare liquidity across different companies",
+        "Make informed credit and investment decisions"
       ],
       "steps": [
-        "Rassembler informations de bilan pour période actuelle",
-        "Entrer données d'actifs et passifs courants",
-        "Calculer multiples ratios de liquidité simultanément",
-        "Comparer résultats avec benchmarks d'industrie",
-        "Surveiller ratios au fil du temps pour analyse de tendances"
+        "Gather balance sheet information for current period",
+        "Enter current assets and liabilities data",
+        "Calculate multiple liquidity ratios simultaneously",
+        "Compare results with industry benchmarks",
+        "Monitor ratios over time for trend analysis"
       ],
       "inputsExplained": [
         "Actifs Courants: Actifs attendus à être convertis en trésorerie dans un an",
@@ -492,20 +536,24 @@
       ],
       "faqs": [
         {
-          "question": "Quelle est la différence entre ratio courant et ratio rapide?",
-          "answer": "Le ratio courant inclut tous actifs courants, tandis que le ratio rapide exclut stock parce que le stock peut ne pas être facilement converti en trésorerie. Le ratio rapide fournit une vue plus conservatrice de liquidité."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "Qu'est-ce qui est considéré comme un bon ratio courant?",
-          "answer": "Un ratio courant entre 1.5 et 3.0 est généralement considéré bon, dépendant d'industrie. Trop élevé peut indiquer utilisation inefficace d'actifs, trop bas peut signaler problèmes de liquidité."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "Pourquoi le ratio de trésorerie est-il plus conservateur que les autres ratios de liquidité?",
-          "answer": "Le ratio de trésorerie considère seulement trésorerie et équivalents de trésorerie, excluant créances et stock. Il mesure les actifs les plus liquides disponibles pour obligations immédiates."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "Comment les ratios de liquidité affectent-ils les décisions de crédit?",
-          "answer": "Les prêteurs utilisent les ratios de liquidité pour évaluer capacité de remboursement. Des ratios plus élevés suggèrent risque de crédit moindre, tandis que des ratios plus bas peuvent entraîner des taux d'intérêt plus élevés ou refus de crédit."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
     },

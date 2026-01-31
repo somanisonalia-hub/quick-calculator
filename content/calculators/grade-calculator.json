@@ -20,7 +20,14 @@
     "slug": "grade-calculator",
     "category": "Utility",
     "difficulty": "Beginner",
-    "tags": ["education", "grades", "school", "college", "exam", "gpa"],
+    "tags": [
+      "education",
+      "grades",
+      "school",
+      "college",
+      "exam",
+      "gpa"
+    ],
     "description": "Calculate your current grade, predict your final grade, and determine what score you need on your final exam to achieve your target grade. Perfect for students at all levels.",
     "summary": "Calculate grades, final exam scores needed, and track academic performance.",
     "component": "GradeCalculator",
@@ -74,23 +81,102 @@
       ],
       "faqs": [
         {
-          "question": "How do I calculate my current grade?",
-          "answer": "To calculate your current grade, multiply each assignment score by its weight (as a decimal), add all these values together, and divide by the total weight of completed assignments. For example, if you scored 85% on a test worth 30% and 90% on homework worth 20%, your current grade would be (85×0.30 + 90×0.20) / (0.30 + 0.20) = 87%."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "What grade do I need on my final exam?",
-          "answer": "To find the grade needed on your final: (1) Calculate your current grade, (2) Multiply it by the percentage it represents of your final grade, (3) Subtract from your desired final grade percentage, (4) Divide by the final exam's weight. For example, if you have 80% and it's worth 70% of your grade, and you want 85% final with the exam worth 30%: (85 - 80×0.70) / 0.30 = 96.7% needed on final."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "Can I calculate grades with different grading scales?",
-          "answer": "Yes! You can enter grades as percentages (0-100%), letter grades (convert A=90-100, B=80-89, etc.), or points. For points-based systems, enter your points earned and total points possible, then our calculator converts to percentages automatically."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "What if the calculator says I need over 100%?",
-          "answer": "If the required score exceeds 100%, your target grade is mathematically impossible given your current grade and the exam weight. You'll need to either adjust your target grade to something more realistic or speak with your instructor about extra credit opportunities."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "title": "Calculadora de Calificaciones",
@@ -105,31 +191,136 @@
     "slug": "grade-calculator",
     "category": "Utility",
     "difficulty": "Principiante",
-    "tags": ["educación", "calificaciones", "escuela", "universidad", "examen"],
+    "tags": [
+      "educación",
+      "calificaciones",
+      "escuela",
+      "universidad",
+      "examen"
+    ],
     "description": "Calcula tu calificación actual, predice tu nota final y determina qué puntuación necesitas en tu examen final para alcanzar tu meta.",
     "summary": "Calcula calificaciones, notas de exámenes finales necesarias y rastrea rendimiento académico.",
     "component": "GradeCalculator",
     "seoContent": {
-      "introduction": "Nuestra calculadora de calificaciones gratuita ayuda a los estudiantes a calcular su nota actual, predecir su calificación final y determinar qué puntuación necesitan en los próximos exámenes para alcanzar su meta.",
+      "introduction": "Our free grade calculator helps students calculate their current grade, predict their final grade, and determine what score they need on upcoming exams to achieve their target grade. Whether you're in high school, college, or university, this tool makes grade tracking and academic planning simple and accurate.",
       "benefits": [
-        "Calcula tu calificación actual basada en tareas completadas",
-        "Determina qué puntuación necesitas en tu examen final",
-        "Planifica tu tiempo de estudio efectivamente",
-        "Rastrea tareas y exámenes ponderados"
+        "Calculate your current grade based on completed assignments",
+        "Determine what score you need on your final exam",
+        "Plan your study time effectively",
+        "Track weighted assignments and exams",
+        "Reduce grade anxiety with clear projections",
+        "Support for percentage-based and point-based grading"
       ],
       "steps": [
-        "Selecciona tu sistema de calificación",
-        "Ingresa las puntuaciones de tus tareas completadas",
-        "Ingresa tu calificación final deseada",
-        "Obtén el cálculo instantáneo de la puntuación necesaria"
+        "Select your grading system (percentage or points)",
+        "Enter your completed assignment scores and their weights",
+        "Input your desired final grade",
+        "Enter the weight of your remaining assignments or final exam",
+        "Get instant calculation of the score needed"
       ],
       "formulaExplanation": "El cálculo de calificaciones usa promedios ponderados. Tu calificación actual se calcula multiplicando cada puntuación por su peso y dividiendo por el peso total.",
       "examples": [
         "Nota actual: 85%, Examen final vale 30%, Quieres 90% → Necesitas 101.7% (imposible)",
         "Nota actual: 78%, Examen final vale 25%, Quieres 80% → Necesitas 86%"
       ],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "title": "Calculadora de Notas",
@@ -144,31 +335,136 @@
     "slug": "grade-calculator",
     "category": "Utility",
     "difficulty": "Iniciante",
-    "tags": ["educação", "notas", "escola", "universidade", "exame"],
+    "tags": [
+      "educação",
+      "notas",
+      "escola",
+      "universidade",
+      "exame"
+    ],
     "description": "Calcule sua nota atual, preveja sua nota final e determine que pontuação você precisa no exame final para atingir sua meta.",
     "summary": "Calcule notas, pontuações de exames finais necessárias e acompanhe desempenho acadêmico.",
     "component": "GradeCalculator",
     "seoContent": {
-      "introduction": "Nossa calculadora de notas gratuita ajuda estudantes a calcular sua nota atual, prever sua nota final e determinar que pontuação precisam nos próximos exames para atingir sua meta.",
+      "introduction": "Our free grade calculator helps students calculate their current grade, predict their final grade, and determine what score they need on upcoming exams to achieve their target grade. Whether you're in high school, college, or university, this tool makes grade tracking and academic planning simple and accurate.",
       "benefits": [
-        "Calcule sua nota atual baseada em trabalhos completados",
-        "Determine que pontuação você precisa no exame final",
-        "Planeje seu tempo de estudo efetivamente",
-        "Acompanhe trabalhos e exames ponderados"
+        "Calculate your current grade based on completed assignments",
+        "Determine what score you need on your final exam",
+        "Plan your study time effectively",
+        "Track weighted assignments and exams",
+        "Reduce grade anxiety with clear projections",
+        "Support for percentage-based and point-based grading"
       ],
       "steps": [
-        "Selecione seu sistema de avaliação",
-        "Digite as pontuações dos seus trabalhos completados",
-        "Digite sua nota final desejada",
-        "Obtenha o cálculo instantâneo da pontuação necessária"
+        "Select your grading system (percentage or points)",
+        "Enter your completed assignment scores and their weights",
+        "Input your desired final grade",
+        "Enter the weight of your remaining assignments or final exam",
+        "Get instant calculation of the score needed"
       ],
       "formulaExplanation": "O cálculo de notas usa médias ponderadas. Sua nota atual é calculada multiplicando cada pontuação pelo seu peso e dividindo pelo peso total.",
       "examples": [
         "Nota atual: 85%, Exame final vale 30%, Quer 90% → Precisa 101.7% (impossível)",
         "Nota atual: 78%, Exame final vale 25%, Quer 80% → Precisa 86%"
       ],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "title": "Calculateur de Notes",
@@ -183,30 +479,135 @@
     "slug": "grade-calculator",
     "category": "Utility",
     "difficulty": "Débutant",
-    "tags": ["éducation", "notes", "école", "université", "examen"],
+    "tags": [
+      "éducation",
+      "notes",
+      "école",
+      "université",
+      "examen"
+    ],
     "description": "Calculez votre note actuelle, prédisez votre note finale et déterminez quel score vous avez besoin à l'examen final pour atteindre votre objectif.",
     "summary": "Calculez les notes, les scores d'examens finaux nécessaires et suivez les performances académiques.",
     "component": "GradeCalculator",
     "seoContent": {
-      "introduction": "Notre calculateur de notes gratuit aide les étudiants à calculer leur note actuelle, prédire leur note finale et déterminer quel score ils ont besoin aux prochains examens pour atteindre leur objectif.",
+      "introduction": "Our free grade calculator helps students calculate their current grade, predict their final grade, and determine what score they need on upcoming exams to achieve their target grade. Whether you're in high school, college, or university, this tool makes grade tracking and academic planning simple and accurate.",
       "benefits": [
-        "Calculez votre note actuelle basée sur les devoirs complétés",
-        "Déterminez quel score vous avez besoin à l'examen final",
-        "Planifiez votre temps d'étude efficacement",
-        "Suivez les devoirs et examens pondérés"
+        "Calculate your current grade based on completed assignments",
+        "Determine what score you need on your final exam",
+        "Plan your study time effectively",
+        "Track weighted assignments and exams",
+        "Reduce grade anxiety with clear projections",
+        "Support for percentage-based and point-based grading"
       ],
       "steps": [
-        "Sélectionnez votre système de notation",
-        "Entrez les scores de vos devoirs complétés",
-        "Entrez votre note finale désirée",
-        "Obtenez le calcul instantané du score nécessaire"
+        "Select your grading system (percentage or points)",
+        "Enter your completed assignment scores and their weights",
+        "Input your desired final grade",
+        "Enter the weight of your remaining assignments or final exam",
+        "Get instant calculation of the score needed"
       ],
       "formulaExplanation": "Le calcul des notes utilise des moyennes pondérées. Votre note actuelle est calculée en multipliant chaque score par son poids et en divisant par le poids total.",
       "examples": [
         "Note actuelle: 85%, Examen final vaut 30%, Voulez 90% → Besoin 101.7% (impossible)",
         "Note actuelle: 78%, Examen final vaut 25%, Voulez 80% → Besoin 86%"
       ],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

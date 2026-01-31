@@ -2,6 +2,7 @@ import CalculatorPageClient from '@/components/CalculatorPageClient';
 import fs from 'fs';
 import path from 'path';
 import { CALCULATOR_CATEGORIES } from '@/lib/categoryUtils';
+import { getFilenameForSlug } from '@/lib/staticDataLoader';
 // Direct breadcrumb generation
 
 interface LangCalculatorClientProps {
@@ -19,7 +20,9 @@ export default function LangCalculatorClient({ lang, slug }: LangCalculatorClien
   const calculatorCategory = (CALCULATOR_CATEGORIES as any)[slug] || 'utility';
 
   try {
-    const filePath = path.join(process.cwd(), 'content', 'calculators', `${slug}.json`);
+    // Map slug to filename
+    const filename = getFilenameForSlug(slug);
+    const filePath = path.join(process.cwd(), 'content', 'calculators', `${filename}.json`);
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const data = JSON.parse(fileContent);
     calculatorContent = data[lang];
@@ -30,7 +33,8 @@ export default function LangCalculatorClient({ lang, slug }: LangCalculatorClien
     const relatedSlugs = calculatorContent?.relatedCalculators || [];
     for (const relatedSlug of relatedSlugs.slice(0, 6)) { // Limit to 6
       try {
-        const relatedFilePath = path.join(process.cwd(), 'content', 'calculators', `${relatedSlug}.json`);
+        const relatedFilename = getFilenameForSlug(relatedSlug);
+        const relatedFilePath = path.join(process.cwd(), 'content', 'calculators', `${relatedFilename}.json`);
         const relatedFileContent = fs.readFileSync(relatedFilePath, 'utf-8');
         const relatedData = JSON.parse(relatedFileContent);
         const relatedContent = relatedData[lang];
@@ -68,9 +72,9 @@ export default function LangCalculatorClient({ lang, slug }: LangCalculatorClien
   const calculatorName = calculatorContent?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
   const breadcrumbs = [
-    { name: homeName, href: lang === 'en' ? '/' : `/${lang}` },
-    { name: categoryName, href: lang === 'en' ? `/categories/${calculatorCategory}` : `/${lang}/categories/${calculatorCategory}` },
-    { name: calculatorName, href: lang === 'en' ? `/${slug}` : `/${lang}/${slug}` }
+    { name: homeName, href: `/${lang}` },
+    { name: categoryName, href: `/${lang}/categories/${calculatorCategory}` },
+    { name: calculatorName, href: `/${lang}/${slug}` }
   ];
 
   return (

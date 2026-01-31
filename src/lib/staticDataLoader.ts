@@ -10,11 +10,59 @@ import { CalculatorInfo } from './categoryUtils';
 /**
  * Load all calculator slugs at build time
  * This runs ONLY during build, not at runtime
+ * Returns the actual slugs from file content, not filenames
  */
 export function getAllCalculatorSlugs(): string[] {
   const contentDir = path.join(process.cwd(), 'content', 'calculators');
   const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.json'));
-  return files.map(f => f.replace('.json', ''));
+  const slugs: string[] = [];
+  
+  for (const file of files) {
+    try {
+      const filePath = path.join(contentDir, file);
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const data = JSON.parse(fileContent);
+      
+      // Get slug from English content (fallback to filename without .json)
+      const slug = data.en?.slug || file.replace('.json', '');
+      slugs.push(slug);
+    } catch (error) {
+      console.warn(`Failed to read slug from: ${file}`, error);
+      // Fallback to filename
+      slugs.push(file.replace('.json', ''));
+    }
+  }
+  
+  return slugs;
+}
+
+/**
+ * Get filename for a given slug
+ * Maps slug to actual filename
+ */
+export function getFilenameForSlug(slug: string): string {
+  const contentDir = path.join(process.cwd(), 'content', 'calculators');
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.json'));
+  
+  for (const file of files) {
+    try {
+      const filePath = path.join(contentDir, file);
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const data = JSON.parse(fileContent);
+      
+      // Check if this file's slug matches
+      const fileSlug = data.en?.slug || file.replace('.json', '');
+      if (fileSlug === slug) {
+        return file.replace('.json', '');
+      }
+    } catch (error) {
+      // Skip invalid files
+      continue;
+    }
+  }
+  
+  // Fallback: assume slug is the filename
+  return slug;
 }
 
 /**
@@ -27,7 +75,8 @@ export function loadAllCalculatorsStatic(lang: string): CalculatorInfo[] {
   
   for (const slug of slugs) {
     try {
-      const filePath = path.join(process.cwd(), 'content', 'calculators', `${slug}.json`);
+      const filename = getFilenameForSlug(slug);
+      const filePath = path.join(process.cwd(), 'content', 'calculators', `${filename}.json`);
       const fileContent = fs.readFileSync(filePath, 'utf-8');
       const data = JSON.parse(fileContent);
       
@@ -162,101 +211,97 @@ export function loadCalculatorsByCategory(lang: string, category: string): Calcu
 
 /**
  * Get calculator category mapping
+ * NOTE: This is kept for backward compatibility. Use CALCULATOR_CATEGORIES from categoryUtils.ts for canonical mapping.
  */
 export function getCalculatorCategory(slug: string): string {
-  const CALCULATOR_CATEGORIES: Record<string, string> = {
-    // Financial
-    'loan-calculator': 'financial',
-    'mortgage-calculator': 'financial',
-    'emi-calculator': 'financial',
-    'car-loan-calculator': 'financial',
-    'interest-only-mortgage-calculator': 'financial',
-    'simple-interest-calculator': 'financial',
-    'compound-interest-calculator': 'financial',
-    'investment-calculator': 'financial',
-    'income-tax-calculator': 'financial',
-    'sales-tax-calculator': 'financial',
-    'tax-calculator': 'financial',
-    'savings-calculator': 'financial',
-    'budget-calculator': 'financial',
-    'credit-card-calculator': 'financial',
-    'debt-consolidation-calculator': 'financial',
-    'inflation-calculator': 'financial',
-    'currency-converter': 'financial',
-    'property-tax-calculator': 'financial',
-    'future-value-calculator': 'financial',
-    'advanced-loan-calculator': 'financial',
-    'stock-return-calculator': 'financial',
-    'life-insurance-calculator': 'financial',
-    'car-insurance-calculator': 'financial',
-    'health-insurance-calculator': 'financial',
-    'hourly-to-salary-calculator': 'financial',
-    'net-income-calculator': 'financial',
-    'salary-calculator': 'financial',
-    'overtime-pay-calculator': 'financial',
-    'take-home-pay-calculator': 'financial',
-    'crypto-roi-calculator': 'financial',
-    'car-payment-calculator': 'financial',
-    'retirement-calculator': 'financial',
-    'paycheck-calculator': 'financial',
-    'stock-ratios-calculator': 'financial',
-    'profitability-ratios-calculator': 'financial',
-    
-    // Health
-    'bmi-calculator': 'health',
-    'bmr-calculator': 'health',
-    'calorie-calculator': 'health',
-    'tdee-calculator': 'health',
-    'body-fat-calculator': 'health',
-    'ideal-weight-calculator': 'health',
-    'protein-intake-calculator': 'health',
-    'water-intake-calculator': 'health',
-    'lean-body-mass-calculator': 'health',
-    'maintenance-calories-calculator': 'health',
-    'waist-to-hip-ratio-calculator': 'health',
-    
-    // Math
-    'percentage-calculator': 'math',
-    'percentage-change-calculator': 'math',
-    'fraction-calculator': 'math',
-    'ratio-calculator': 'math',
-    'scientific-calculator': 'math',
-    'average-calculator': 'math',
-    'standard-deviation-calculator': 'math',
-    'pythagorean-theorem-calculator': 'math',
-    'circle-area-calculator': 'math',
-    'circle-circumference-calculator': 'math',
-    'triangle-area-calculator': 'math',
-    'quadratic-equation-calculator': 'math',
-    'volume-calculator': 'math',
-    'surface-area-calculator': 'math',
-    
-    // Lifestyle
-    'age-calculator': 'lifestyle',
-    'tip-calculator': 'lifestyle',
-    'gpa-calculator': 'lifestyle',
-    'expense-calculator': 'lifestyle',
-    
-    // Utility
-    'square-footage-calculator': 'utility',
-    'concrete-calculator': 'utility',
-    'feet-inches-calculator': 'utility',
-  'tank-volume-calculator': 'utility',
-  'word-counter': 'utility',
-  'numbers-to-words-converter': 'utility',
-  'unit-converter': 'utility',
-  'date-calculator': 'utility',
-  'grade-calculator': 'utility',
-  'biweekly-pay-calculator': 'financial',
-  'pregnancy-calculator': 'health',
-  'ovulation-calculator': 'health',
-  'blood-pressure-calculator': 'health',
-  'debt-payoff-calculator': 'financial',
-  'macro-calculator': 'health',
-  '401k-calculator': 'financial',
-  'roth-ira-calculator': 'financial',
-  'social-security-calculator': 'financial'
-};
+  // Import from categoryUtils for single source of truth
+  const { CALCULATOR_CATEGORIES } = require('./categoryUtils');
+  return (CALCULATOR_CATEGORIES as any)[slug] || 'utility';
+}
 
-return CALCULATOR_CATEGORIES[slug] || 'utility';
+/**
+ * Get translated slug for a calculator in a specific language
+ * Maps English slug to language-specific slug
+ */
+export function getTranslatedSlug(enSlug: string, lang: string): string {
+  if (lang === 'en') {
+    return enSlug;
+  }
+
+  const contentDir = path.join(process.cwd(), 'content', 'calculators');
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.json'));
+  
+  for (const file of files) {
+    try {
+      const filePath = path.join(contentDir, file);
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const data = JSON.parse(fileContent);
+      
+      // Find calculator with matching English slug
+      const enSlugFromFile = data.en?.slug || file.replace('.json', '');
+      if (enSlugFromFile === enSlug) {
+        // Get translated slug
+        const translatedSlug = data[lang]?.slug || enSlug;
+        return translatedSlug;
+      }
+    } catch (error) {
+      continue;
+    }
+  }
+  
+  return enSlug; // Fallback to English slug
+}
+
+/**
+ * Get all translated slugs for all languages
+ * Returns array of {lang, slug} pairs for static generation
+ */
+export function getAllTranslatedSlugs(): Array<{ lang: string; slug: string }> {
+  const languages = ['en', 'es', 'pt', 'fr'];
+  const enSlugs = getAllCalculatorSlugs();
+  const params: Array<{ lang: string; slug: string }> = [];
+
+  for (const lang of languages) {
+    for (const enSlug of enSlugs) {
+      const translatedSlug = getTranslatedSlug(enSlug, lang);
+      params.push({
+        lang,
+        slug: translatedSlug
+      });
+    }
+  }
+
+  return params;
+}
+
+/**
+ * Get English slug from translated slug in a specific language
+ * Used to map translated URLs back to English content keys
+ */
+export function getEnglishSlug(translatedSlug: string, lang: string): string {
+  if (lang === 'en') {
+    return translatedSlug;
+  }
+
+  const contentDir = path.join(process.cwd(), 'content', 'calculators');
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.json'));
+  
+  for (const file of files) {
+    try {
+      const filePath = path.join(contentDir, file);
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const data = JSON.parse(fileContent);
+      
+      // Check if this is the calculator with matching translated slug
+      const currentTranslatedSlug = data[lang]?.slug || data.en?.slug || file.replace('.json', '');
+      if (currentTranslatedSlug === translatedSlug) {
+        // Return English slug
+        return data.en?.slug || file.replace('.json', '');
+      }
+    } catch (error) {
+      continue;
+    }
+  }
+  
+  return translatedSlug; // Fallback - assume it's an English slug
 }

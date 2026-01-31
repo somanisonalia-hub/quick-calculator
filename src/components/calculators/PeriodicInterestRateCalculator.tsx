@@ -30,7 +30,18 @@ export default function PeriodicInterestRateCalculator({ lang = 'en' }: Periodic
       "semi-monthly": "Semi-Monthly",
       "bi-weekly": "Bi-Weekly",
       weekly: "Weekly",
-      daily: "Daily"
+      daily: "Daily",
+      conversionFormulas: "Conversion Formulas",
+      toPeriodic: "To Periodic: Rate ÷ Periods per Year",
+      toAnnual: "To Annual: Rate × Periods per Year",
+      example: "Example: 6% annual → 0.5% monthly",
+      rateConvertedTo: "Rate converted to",
+      period: "period",
+      understandingTimePeriods: "Understanding Time Periods",
+      annualDesc: "Annual: Rate applies once per year",
+      monthlyDesc: "Monthly: Rate applies 12 times per year",
+      quarterlyDesc: "Quarterly: Rate applies 4 times per year",
+      alwaysSpecify: "Always specify: The time period for rate comparisons"
     },
     es: {
       title: "Calculadora de Tasa de Interés Periódica",
@@ -53,7 +64,18 @@ export default function PeriodicInterestRateCalculator({ lang = 'en' }: Periodic
       "semi-monthly": "Semi-Mensual",
       "bi-weekly": "Quincenal",
       weekly: "Semanal",
-      daily: "Diaria"
+      daily: "Diaria",
+      conversionFormulas: "Fórmulas de Conversión",
+      toPeriodic: "A Periódica: Tasa ÷ Períodos por Año",
+      toAnnual: "A Anual: Tasa × Períodos por Año",
+      example: "Ejemplo: 6% anual → 0.5% mensual",
+      rateConvertedTo: "Tasa convertida a",
+      period: "período",
+      understandingTimePeriods: "Entendiendo Períodos de Tiempo",
+      annualDesc: "Anual: Tasa se aplica una vez al año",
+      monthlyDesc: "Mensual: Tasa se aplica 12 veces al año",
+      quarterlyDesc: "Trimestral: Tasa se aplica 4 veces al año",
+      alwaysSpecify: "Siempre especifique: El período de tiempo para comparaciones de tasas"
     },
     pt: {
       title: "Calculadora de Taxa de Juros Periódica",
@@ -76,7 +98,18 @@ export default function PeriodicInterestRateCalculator({ lang = 'en' }: Periodic
       "semi-monthly": "Semi-Mensal",
       "bi-weekly": "Quinzenal",
       weekly: "Semanal",
-      daily: "Diária"
+      daily: "Diária",
+      conversionFormulas: "Fórmulas de Conversão",
+      toPeriodic: "Para Periódica: Taxa ÷ Períodos por Ano",
+      toAnnual: "Para Anual: Taxa × Períodos por Ano",
+      example: "Exemplo: 6% anual → 0.5% mensal",
+      rateConvertedTo: "Taxa convertida para",
+      period: "período",
+      understandingTimePeriods: "Entendendo Períodos de Tempo",
+      annualDesc: "Anual: Taxa se aplica uma vez por ano",
+      monthlyDesc: "Mensal: Taxa se aplica 12 vezes por ano",
+      quarterlyDesc: "Trimestral: Taxa se aplica 4 vezes por ano",
+      alwaysSpecify: "Sempre especifique: O período de tempo para comparações de taxas"
     },
     fr: {
       title: "Calculateur de Taux d'Intérêt Périodique",
@@ -99,7 +132,18 @@ export default function PeriodicInterestRateCalculator({ lang = 'en' }: Periodic
       "semi-monthly": "Semi-Mensuel",
       "bi-weekly": "Bi-Hebdomadaire",
       weekly: "Hebdomadaire",
-      daily: "Quotidien"
+      daily: "Quotidien",
+      conversionFormulas: "Formules de Conversion",
+      toPeriodic: "Vers Périodique: Taux ÷ Périodes par An",
+      toAnnual: "Vers Annuel: Taux × Périodes par An",
+      example: "Exemple: 6% annuel → 0.5% mensuel",
+      rateConvertedTo: "Taux converti en",
+      period: "période",
+      understandingTimePeriods: "Comprendre les Périodes de Temps",
+      annualDesc: "Annuel: Taux s'applique une fois par an",
+      monthlyDesc: "Mensuel: Taux s'applique 12 fois par an",
+      quarterlyDesc: "Trimestriel: Taux s'applique 4 fois par an",
+      alwaysSpecify: "Toujours spécifier: La période de temps pour les comparaisons de taux"
     }
   };
 
@@ -241,11 +285,11 @@ export default function PeriodicInterestRateCalculator({ lang = 'en' }: Periodic
 
           {/* Formula Display */}
           <div className="bg-green-50 p-4 rounded-lg">
-            <h4 className="text-sm font-semibold text-green-900 mb-2">Conversion Formulas</h4>
+            <h4 className="text-sm font-semibold text-green-900 mb-2">{t.conversionFormulas}</h4>
             <div className="text-xs text-green-700 space-y-1">
-              <div><strong>To Periodic:</strong> Rate ÷ Periods per Year</div>
-              <div><strong>To Annual:</strong> Rate × Periods per Year</div>
-              <div><strong>Example:</strong> 6% annual → 0.5% monthly</div>
+              <div>{t.toPeriodic}</div>
+              <div>{t.toAnnual}</div>
+              <div>{t.example}</div>
             </div>
           </div>
         </div>
@@ -261,7 +305,7 @@ export default function PeriodicInterestRateCalculator({ lang = 'en' }: Periodic
                   {results.convertedRate}%
                 </div>
                 <div className="text-xs text-green-600 mt-2">
-                  Rate converted to {t[outputPeriod as keyof typeof t].toLowerCase()} period
+                  {t.rateConvertedTo} {t[outputPeriod as keyof typeof t].toLowerCase()} {t.period}
                 </div>
               </div>
 
@@ -298,12 +342,12 @@ export default function PeriodicInterestRateCalculator({ lang = 'en' }: Periodic
 
               {/* Educational Info */}
               <div className="bg-indigo-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-indigo-900 mb-2">Understanding Time Periods</h4>
+                <h4 className="text-sm font-semibold text-indigo-900 mb-2">{t.understandingTimePeriods}</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
-                  <div><strong>Annual:</strong> Rate applies once per year</div>
-                  <div><strong>Monthly:</strong> Rate applies 12 times per year</div>
-                  <div><strong>Quarterly:</strong> Rate applies 4 times per year</div>
-                  <div><strong>Always specify:</strong> The time period for rate comparisons</div>
+                  <div>{t.annualDesc}</div>
+                  <div>{t.monthlyDesc}</div>
+                  <div>{t.quarterlyDesc}</div>
+                  <div>{t.alwaysSpecify}</div>
                 </div>
               </div>
             </div>

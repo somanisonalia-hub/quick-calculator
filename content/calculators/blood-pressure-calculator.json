@@ -20,7 +20,13 @@
     "slug": "blood-pressure-calculator",
     "category": "Health",
     "difficulty": "Beginner",
-    "tags": ["blood pressure", "hypertension", "health", "vital signs", "medical"],
+    "tags": [
+      "blood pressure",
+      "hypertension",
+      "health",
+      "vital signs",
+      "medical"
+    ],
     "description": "Check your blood pressure reading instantly and understand your health category. Enter your systolic and diastolic numbers to see if you're in the normal, elevated, or hypertension range.",
     "summary": "Determine your blood pressure category and health risk level.",
     "component": "BloodPressureCalculator",
@@ -41,10 +47,12 @@
         "Learn healthy BP ranges"
       ],
       "steps": [
-        "Enter your systolic blood pressure (top number)",
-        "Enter your diastolic blood pressure (bottom number)",
-        "Click calculate to see your results",
-        "Review your BP category and health recommendations"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "inputsExplained": [
         "Systolic (top number): Pressure when heart beats",
@@ -75,23 +83,102 @@
       ],
       "faqs": [
         {
-          "question": "What is a normal blood pressure reading?",
-          "answer": "Normal blood pressure is less than 120/80 mmHg. The top number (systolic) should be under 120, and the bottom number (diastolic) should be under 80. Values higher than this may indicate elevated blood pressure or hypertension."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "What causes high blood pressure?",
-          "answer": "High blood pressure can result from genetics, age, poor diet (high sodium), lack of exercise, obesity, stress, alcohol use, and certain medical conditions. Lifestyle changes and medications can help manage hypertension."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "How often should I check my blood pressure?",
-          "answer": "If you have normal blood pressure, annual checks during routine health exams are usually sufficient. If you have elevated or high BP, your doctor may recommend checking multiple times per week or daily at home. Ask your healthcare provider for specific recommendations."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "When is blood pressure considered a medical emergency?",
-          "answer": "Blood pressure readings of 180/120 mmHg or higher are considered a hypertensive crisis and require immediate medical attention. If accompanied by chest pain, vision changes, or severe headache, call emergency services immediately."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "title": "Calculadora de Presión Arterial",
@@ -106,28 +193,133 @@
     "slug": "blood-pressure-calculator",
     "category": "Health",
     "difficulty": "Principiante",
-    "tags": ["presión arterial", "hipertensión", "salud", "signos vitales"],
+    "tags": [
+      "presión arterial",
+      "hipertensión",
+      "salud",
+      "signos vitales"
+    ],
     "description": "Verifica tu lectura de presión arterial instantáneamente y entiende tu categoría de salud. Ingresa tus números sistólico y diastólico para ver si estás en rango normal, elevado o de hipertensión.",
     "summary": "Determina tu categoría de presión arterial y nivel de riesgo de salud.",
     "component": "BloodPressureCalculator",
     "seoContent": {
-      "introduction": "Nuestra calculadora de presión arterial te ayuda a entender tus lecturas de PA y evaluar tu riesgo de salud cardiovascular.",
+      "introduction": "Our blood pressure calculator helps you understand your BP readings and assess your cardiovascular health risk. Enter your systolic and diastolic numbers to instantly determine your blood pressure category and get personalized guidance on maintaining healthy blood pressure.",
       "benefits": [
-        "Categoriza instantáneamente tu lectura de presión arterial",
-        "Entiende tu nivel de riesgo de salud",
-        "Rastrea tendencias de presión arterial a lo largo del tiempo",
-        "Obtén recomendaciones basadas en tu categoría de PA"
+        "Instantly categorize your blood pressure reading",
+        "Understand your health risk level",
+        "Track blood pressure trends over time",
+        "Get recommendations based on your BP category",
+        "Identify hypertension risk early",
+        "Learn healthy BP ranges"
       ],
       "steps": [
-        "Ingresa tu presión arterial sistólica (número superior)",
-        "Ingresa tu presión arterial diastólica (número inferior)",
-        "Haz clic en calcular para ver tus resultados",
-        "Revisa tu categoría de PA y recomendaciones de salud"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "formulaExplanation": "La presión arterial se categoriza según las directrices ACC/AHA.",
       "examples": [],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "title": "Calculadora de Pressão Arterial",
@@ -142,28 +334,133 @@
     "slug": "blood-pressure-calculator",
     "category": "Health",
     "difficulty": "Iniciante",
-    "tags": ["pressão arterial", "hipertensão", "saúde", "sinais vitais"],
+    "tags": [
+      "pressão arterial",
+      "hipertensão",
+      "saúde",
+      "sinais vitais"
+    ],
     "description": "Verifique sua leitura de pressão arterial instantaneamente e entenda sua categoria de saúde. Digite seus números sistólico e diastólico para ver se você está na faixa normal, elevada ou de hipertensão.",
     "summary": "Determine sua categoria de pressão arterial e nível de risco de saúde.",
     "component": "BloodPressureCalculator",
     "seoContent": {
-      "introduction": "Nossa calculadora de pressão arterial ajuda você a entender suas leituras de PA e avaliar seu risco de saúde cardiovascular.",
+      "introduction": "Our blood pressure calculator helps you understand your BP readings and assess your cardiovascular health risk. Enter your systolic and diastolic numbers to instantly determine your blood pressure category and get personalized guidance on maintaining healthy blood pressure.",
       "benefits": [
-        "Categoriza instantaneamente sua leitura de pressão arterial",
-        "Entenda seu nível de risco de saúde",
-        "Rastreie tendências de pressão arterial ao longo do tempo",
-        "Obtenha recomendações com base em sua categoria de PA"
+        "Instantly categorize your blood pressure reading",
+        "Understand your health risk level",
+        "Track blood pressure trends over time",
+        "Get recommendations based on your BP category",
+        "Identify hypertension risk early",
+        "Learn healthy BP ranges"
       ],
       "steps": [
-        "Digite sua pressão arterial sistólica (número superior)",
-        "Digite sua pressão arterial diastólica (número inferior)",
-        "Clique em calcular para ver seus resultados",
-        "Revise sua categoria de PA e recomendações de saúde"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "formulaExplanation": "A pressão arterial é categorizada de acordo com as diretrizes ACC/AHA.",
       "examples": [],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "title": "Calculatrice de Tension Artérielle",
@@ -178,27 +475,132 @@
     "slug": "blood-pressure-calculator",
     "category": "Health",
     "difficulty": "Débutant",
-    "tags": ["tension artérielle", "hypertension", "santé", "signes vitaux"],
+    "tags": [
+      "tension artérielle",
+      "hypertension",
+      "santé",
+      "signes vitaux"
+    ],
     "description": "Vérifiez votre lecture de tension artérielle instantanément et comprenez votre catégorie de santé. Entrez vos chiffres systolique et diastolique pour voir si vous êtes dans la plage normale, élevée ou d'hypertension.",
     "summary": "Déterminez votre catégorie de tension artérielle et votre niveau de risque sanitaire.",
     "component": "BloodPressureCalculator",
     "seoContent": {
-      "introduction": "Notre calculatrice de tension artérielle vous aide à comprendre vos lectures de TA et à évaluer votre risque de santé cardiovasculaire.",
+      "introduction": "Our blood pressure calculator helps you understand your BP readings and assess your cardiovascular health risk. Enter your systolic and diastolic numbers to instantly determine your blood pressure category and get personalized guidance on maintaining healthy blood pressure.",
       "benefits": [
-        "Catégorise instantanément votre lecture de tension artérielle",
-        "Comprenez votre niveau de risque sanitaire",
-        "Suivez les tendances de tension artérielle au fil du temps",
-        "Obtenez des recommandations basées sur votre catégorie de TA"
+        "Instantly categorize your blood pressure reading",
+        "Understand your health risk level",
+        "Track blood pressure trends over time",
+        "Get recommendations based on your BP category",
+        "Identify hypertension risk early",
+        "Learn healthy BP ranges"
       ],
       "steps": [
-        "Entrez votre tension artérielle systolique (nombre supérieur)",
-        "Entrez votre tension artérielle diastolique (nombre inférieur)",
-        "Cliquez sur calculer pour voir vos résultats",
-        "Examinez votre catégorie de TA et vos recommandations de santé"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "formulaExplanation": "La tension artérielle est catégorisée selon les directives ACC/AHA.",
       "examples": [],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

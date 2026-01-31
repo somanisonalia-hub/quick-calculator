@@ -104,6 +104,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       calories: "calories",
       x: "x",
       lbsPerWeek: "lbs/week"
+,
+      noteDisclaimer: "Note: TDEE calculations provide estimates based on established formulas. Individual metabolic rates can vary significantly. For weight management or fitness goals, consult a healthcare or fitness professional."
     },
     es: {
       title: "Calculadora de TDEE",
@@ -151,6 +153,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       calories: "calorías",
       x: "x",
       lbsPerWeek: "lbs/semana"
+,
+      noteDisclaimer: "Nota: Los cálculos de TDEE proporcionan estimaciones basadas en fórmulas establecidas. Las tasas metabólicas individuales pueden variar significativamente. Para el manejo del peso o metas de condición física, consulte a un profesional de la salud o acondicionamiento físico."
     },
     pt: {
       title: "Calculadora de TDEE",
@@ -198,6 +202,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       calories: "calorias",
       x: "x",
       lbsPerWeek: "lbs/semana"
+,
+      noteDisclaimer: "Nota: Os cálculos de TDEE fornecem estimativas baseadas em fórmulas estabelecidas. As taxas metabólicas individuais podem variar significativamente. Para gerenciamento de peso ou metas de condicionamento físico, consulte um profissional de saúde ou condicionamento físico."
     },
     fr: {
       title: "Calculateur de TDEE",
@@ -245,6 +251,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       calories: "calories",
       x: "x",
       lbsPerWeek: "lbs/semaine"
+,
+      noteDisclaimer: "Remarque: Les calculs TDEE fournissent des estimations basées sur des formules établies. Les taux métaboliques individuels peuvent varier considérablement. Pour la gestion du poids ou les objectifs de condition physique, consultez un professionnel de la santé ou de la condition physique."
     }
   };
 
@@ -589,12 +597,7 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       {/* Disclaimer */}
       <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          <strong>Note:</strong> TDEE calculations provide estimates based on established formulas and activity levels.
-          Individual metabolic rates can vary by 10-15% due to genetics, muscle mass, and other factors.
-          Track actual weight changes over 2-4 weeks and adjust calorie intake accordingly.
-          For weight loss, consume 250-500 calories below TDEE. For weight gain, consume 250-500 calories above TDEE.
-          Consult healthcare providers for medical conditions or extreme caloric needs.
-        </p>
+          {t.noteDisclaimer}</p>
       </div>
     </div>
   );

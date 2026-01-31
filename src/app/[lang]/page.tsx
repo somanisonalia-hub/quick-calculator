@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import HomePage from '@/components/HomePage';
+import HomePageSimple from '@/components/HomePageSimple';
 import { generateHomepageSchema } from '@/lib/seoContentRenderer';
 import { loadAllCalculatorsStatic } from '@/lib/staticDataLoader';
 import { StructuredData } from '@/components/StructuredData';
@@ -63,7 +63,7 @@ export default async function DynamicHome({ params }: { params: Promise<{ lang: 
   return (
     <>
       <StructuredData data={homepageSchema} />
-      <HomePage language={lang} initialCalculators={allCalculators} />
+      <HomePageSimple language={lang} initialCalculators={allCalculators} />
     </>
   );
 }

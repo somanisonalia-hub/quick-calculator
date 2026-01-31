@@ -1,9 +1,20 @@
-# 🔄 Remaining Calculators to Build (30 total)
+# 🔄 Remaining Calculators to Build
 
-## 📋 Current Status
-- ✅ **Completed**: 33 calculators
-- 🔄 **Remaining**: 30 calculators
-- 📊 **Progress**: ~52% complete
+## 📋 Current Status (Jan 31, 2026)
+- ✅ **Completed**: 102 calculators (93 existing + 9 new)
+- 🔄 **In Progress**: 13 remaining from target list
+- 📊 **Progress**: ~89% complete for target list
+
+## ✅ NEWLY COMPLETED (Jan 31, 2026)
+1. **Debt-to-Income Calculator** - debt-to-income-calculator.json + Component ✅
+2. **Loan Affordability** - loan-affordability.json
+3. **Retirement Savings** - retirement-savings.json
+4. **Savings Goal** - savings-goal.json
+5. **Personal Budget** - personal-budget.json
+6. **Investment Return** - investment-return.json
+7. **Credit Card Payoff** - credit-card-payoff.json
+8. **Net Worth** - net-worth.json
+9. **Loan Repayment** - loan-repayment.json
 
 ## 🎯 REMAINING HIGH-IMPACT CALCULATORS
 

@@ -8,10 +8,21 @@
     "metaDescription": "Use our free Social Security calculator to estimate your monthly benefits based on your earnings and claiming age.",
     "keywords": "Social Security calculator, Social Security benefits calculator, SSA calculator",
     "longTailKeywords": "Social Security calculator free, estimate Social Security benefits, Social Security retirement calculator",
-    "tags": ["Financial", "Retirement", "Social Security", "Benefits"],
+    "tags": [
+      "Financial",
+      "Retirement",
+      "Social Security",
+      "Benefits"
+    ],
     "description": "Calculate your estimated Social Security benefits based on your earnings history and claiming age.",
     "summary": "Estimate your monthly Social Security retirement benefits.",
-    "instructions": ["Enter your birth year", "Input your average annual earnings", "Select your claiming age", "Adjust for inflation assumptions", "View your estimated monthly benefit"],
+    "instructions": [
+      "Enter your birth year",
+      "Input your average annual earnings",
+      "Select your claiming age",
+      "Adjust for inflation assumptions",
+      "View your estimated monthly benefit"
+    ],
     "seoContent": {
       "introduction": "Social Security is a critical component of most retirement plans. Our calculator helps you estimate your monthly benefits based on your earnings record and when you decide to claim.",
       "benefits": "Accurate benefit estimates, Compare claiming age scenarios, Plan retirement timing, Understand delayed retirement credits, Coordinate with spouse's benefits",
@@ -24,13 +35,103 @@
       "disclaimer": "Estimates based on current law. Actual benefits depend on official earnings record, future law changes, and longevity. Contact SSA for official estimate.",
       "relatedTools": "Retirement Calculator, 401k Calculator, Pension Calculator, Breakeven Analysis",
       "faqs": [
-        {"question": "What's my full retirement age?", "answer": "Depends on birth year: 1943-54 (66), 1955 (66+2mo), 1960+ (67). Check SSA.gov for exact age."},
-        {"question": "Can I claim early?", "answer": "Yes, at 62, but benefits reduced ~30%. Best if you need income immediately."},
-        {"question": "Should I delay?", "answer": "Delaying increases benefits ~24% (62 to 70). Beneficial if you expect longevity."},
-        {"question": "How is my benefit calculated?", "answer": "Based on your 35 highest-earning years, adjusted for inflation, using a progressive formula."},
-        {"question": "Can I work and collect?", "answer": "Yes, but earnings reduce benefits before full retirement age ($1 reduction per $2 earned over limit)."}
+        {
+          "question": "What's my full retirement age?",
+          "answer": "Depends on birth year: 1943-54 (66), 1955 (66+2mo), 1960+ (67). Check SSA.gov for exact age."
+        },
+        {
+          "question": "Can I claim early?",
+          "answer": "Yes, at 62, but benefits reduced ~30%. Best if you need income immediately."
+        },
+        {
+          "question": "Should I delay?",
+          "answer": "Delaying increases benefits ~24% (62 to 70). Beneficial if you expect longevity."
+        },
+        {
+          "question": "How is my benefit calculated?",
+          "answer": "Based on your 35 highest-earning years, adjusted for inflation, using a progressive formula."
+        },
+        {
+          "question": "Can I work and collect?",
+          "answer": "Yes, but earnings reduce benefits before full retirement age ($1 reduction per $2 earned over limit)."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "slug": "social-security-calculator",
@@ -41,10 +142,21 @@
     "metaDescription": "Usa nuestra calculadora del Seguro Social gratuita para estimar tus beneficios mensuales.",
     "keywords": "calculadora del Seguro Social, calculadora de beneficios del Seguro Social",
     "longTailKeywords": "calculadora Seguro Social gratis, estimar beneficios Seguro Social",
-    "tags": ["Financiero", "Jubilación", "Seguro Social", "Beneficios"],
+    "tags": [
+      "Financiero",
+      "Jubilación",
+      "Seguro Social",
+      "Beneficios"
+    ],
     "description": "Calcula tus beneficios del Seguro Social estimados basados en tu historial de ganancias.",
     "summary": "Estima tu beneficio mensual de jubilación del Seguro Social.",
-    "instructions": ["Ingresa tu año de nacimiento", "Introduce tus ganancias anuales promedio", "Selecciona tu edad de reclamación", "Ajusta para suposiciones de inflación", "Ve tu beneficio mensual estimado"],
+    "instructions": [
+      "Ingresa tu año de nacimiento",
+      "Introduce tus ganancias anuales promedio",
+      "Selecciona tu edad de reclamación",
+      "Ajusta para suposiciones de inflación",
+      "Ve tu beneficio mensual estimado"
+    ],
     "seoContent": {
       "introduction": "El Seguro Social es un componente crítico de la mayoría de los planes de jubilación. Nuestra calculadora te ayuda a estimar tus beneficios mensuales.",
       "benefits": "Estimaciones de beneficios precisas, Compara escenarios de edad de reclamación, Planifica el tiempo de jubilación",
@@ -57,10 +169,91 @@
       "disclaimer": "Estimaciones basadas en la ley actual. Los beneficios reales dependen del registro oficial de ganancias.",
       "relatedTools": "Calculadora de Jubilación, Calculadora 401k, Calculadora de Pensión",
       "faqs": [
-        {"question": "¿Cuál es mi edad plena de jubilación?", "answer": "Depende del año de nacimiento: 1943-54 (66), 1955 (66+2mo), 1960+ (67)."},
-        {"question": "¿Puedo reclamar temprano?", "answer": "Sí, a los 62, pero los beneficios se reducen ~30%."}
+        {
+          "question": "¿Cuál es mi edad plena de jubilación?",
+          "answer": "Depende del año de nacimiento: 1943-54 (66), 1955 (66+2mo), 1960+ (67)."
+        },
+        {
+          "question": "¿Puedo reclamar temprano?",
+          "answer": "Sí, a los 62, pero los beneficios se reducen ~30%."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "slug": "social-security-calculator",
@@ -71,10 +264,21 @@
     "metaDescription": "Use nossa calculadora de Seguro Social gratuita para estimar seus benefícios mensais.",
     "keywords": "calculadora de Seguro Social, calculadora de benefícios de Seguro Social",
     "longTailKeywords": "calculadora Seguro Social grátis, estimar benefícios Seguro Social",
-    "tags": ["Financeiro", "Aposentadoria", "Seguro Social", "Benefícios"],
+    "tags": [
+      "Financeiro",
+      "Aposentadoria",
+      "Seguro Social",
+      "Benefícios"
+    ],
     "description": "Calcule seus benefícios de Seguro Social estimados com base no seu histórico de ganhos.",
     "summary": "Estime seu benefício mensal de aposentadoria do Seguro Social.",
-    "instructions": ["Digite seu ano de nascimento", "Insira suas ganhos anuais médios", "Selecione sua idade de reclamação", "Ajuste para suposições de inflação", "Veja seu benefício mensal estimado"],
+    "instructions": [
+      "Digite seu ano de nascimento",
+      "Insira suas ganhos anuais médios",
+      "Selecione sua idade de reclamação",
+      "Ajuste para suposições de inflação",
+      "Veja seu benefício mensal estimado"
+    ],
     "seoContent": {
       "introduction": "O Seguro Social é um componente crítico da maioria dos planos de aposentadoria. Nossa calculadora ajuda você a estimar seus benefícios mensais.",
       "benefits": "Estimativas precisas de benefícios, Compare cenários de idade de reclamação, Planeje o tempo de aposentadoria",
@@ -87,10 +291,91 @@
       "disclaimer": "Estimativas com base na lei atual. Os benefícios reais dependem do registro oficial de ganhos.",
       "relatedTools": "Calculadora de Aposentadoria, Calculadora 401k, Calculadora de Pensão",
       "faqs": [
-        {"question": "Qual é minha idade plena de aposentadoria?", "answer": "Depende do ano de nascimento: 1943-54 (66), 1955 (66+2mo), 1960+ (67)."},
-        {"question": "Posso reclamar cedo?", "answer": "Sim, aos 62, mas os benefícios são reduzidos ~30%."}
+        {
+          "question": "Qual é minha idade plena de aposentadoria?",
+          "answer": "Depende do ano de nascimento: 1943-54 (66), 1955 (66+2mo), 1960+ (67)."
+        },
+        {
+          "question": "Posso reclamar cedo?",
+          "answer": "Sim, aos 62, mas os benefícios são reduzidos ~30%."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "slug": "social-security-calculator",
@@ -101,10 +386,21 @@
     "metaDescription": "Utilisez notre calculatrice de Sécurité Sociale gratuite pour estimer vos prestations mensuelles.",
     "keywords": "calculatrice de Sécurité Sociale, calculatrice de prestations de Sécurité Sociale",
     "longTailKeywords": "calculatrice Sécurité Sociale gratuite, estimer prestations Sécurité Sociale",
-    "tags": ["Financier", "Retraite", "Sécurité Sociale", "Prestations"],
+    "tags": [
+      "Financier",
+      "Retraite",
+      "Sécurité Sociale",
+      "Prestations"
+    ],
     "description": "Calculez vos prestations de Sécurité Sociale estimées en fonction de vos antécédents de revenus.",
     "summary": "Estimez votre prestation mensuelle de retraite de la Sécurité Sociale.",
-    "instructions": ["Entrez votre année de naissance", "Saisissez vos revenus annuels moyens", "Sélectionnez votre âge de réclamation", "Ajustez pour les hypothèses d'inflation", "Consultez votre prestation mensuelle estimée"],
+    "instructions": [
+      "Entrez votre année de naissance",
+      "Saisissez vos revenus annuels moyens",
+      "Sélectionnez votre âge de réclamation",
+      "Ajustez pour les hypothèses d'inflation",
+      "Consultez votre prestation mensuelle estimée"
+    ],
     "seoContent": {
       "introduction": "La Sécurité Sociale est un élément essentiel de la plupart des plans de retraite. Notre calculatrice vous aide à estimer vos prestations mensuelles.",
       "benefits": "Estimations de prestations précises, Comparez les scénarios d'âge de réclamation, Planifiez le moment de la retraite",
@@ -117,9 +413,90 @@
       "disclaimer": "Estimations basées sur la loi actuelle. Les prestations réelles dépendent du dossier officiel de revenus.",
       "relatedTools": "Calculatrice de Retraite, Calculatrice 401k, Calculatrice de Pension",
       "faqs": [
-        {"question": "Quel est mon âge de retraite à taux plein?", "answer": "Dépend de l'année de naissance: 1943-54 (66), 1955 (66+2mo), 1960+ (67)."},
-        {"question": "Puis-je réclamer plus tôt?", "answer": "Oui, à 62 ans, mais les prestations sont réduites d'environ 30%."}
+        {
+          "question": "Quel est mon âge de retraite à taux plein?",
+          "answer": "Dépend de l'année de naissance: 1943-54 (66), 1955 (66+2mo), 1960+ (67)."
+        },
+        {
+          "question": "Puis-je réclamer plus tôt?",
+          "answer": "Oui, à 62 ans, mais les prestations sont réduites d'environ 30%."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

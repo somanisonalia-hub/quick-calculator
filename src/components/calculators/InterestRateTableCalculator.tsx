@@ -38,7 +38,17 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       rateRange: "Rate Range",
       paymentRange: "Payment/Return Range",
       bestRate: "Best Rate",
-      rateImpact: "Rate Impact"
+      rateImpact: "Rate Impact",
+      loanPaymentFormula: "Loan Payment: P × (r × (1+r)^n) ÷ ((1+r)^n - 1)",
+      futureValueFormula: "Future Value: P × (1+r)^n",
+      lowerRates: "Lower rates",
+      higherRates: "Higher rates",
+      lowerPayments: "Lower payments",
+      lowerReturns: "Lower returns",
+      higherPayments: "Higher payments",
+      higherReturns: "Higher returns",
+      smallDifferences: "Small differences can have big financial impacts",
+      alwaysCompare: "Always compare total costs or returns, not just rates"
     },
     es: {
       title: "Calculadora de Tabla de Tasas de Interés",
@@ -62,7 +72,17 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       rateRange: "Rango Tasas",
       paymentRange: "Rango Pago/Retorno",
       bestRate: "Mejor Tasa",
-      rateImpact: "Impacto Tasa"
+      rateImpact: "Impacto Tasa",
+      loanPaymentFormula: "Pago Préstamo: P × (r × (1+r)^n) ÷ ((1+r)^n - 1)",
+      futureValueFormula: "Valor Futuro: P × (1+r)^n",
+      lowerRates: "Tasas más bajas",
+      higherRates: "Tasas más altas",
+      lowerPayments: "Pagos más bajos",
+      lowerReturns: "Retornos más bajos",
+      higherPayments: "Pagos más altos",
+      higherReturns: "Retornos más altos",
+      smallDifferences: "Pequeñas diferencias pueden tener grandes impactos financieros",
+      alwaysCompare: "Siempre compara costos o retornos totales, no solo tasas"
     },
     pt: {
       title: "Calculadora de Tabela de Taxas de Juros",
@@ -86,7 +106,17 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       rateRange: "Intervalo Taxas",
       paymentRange: "Intervalo Pagamento/Retorno",
       bestRate: "Melhor Taxa",
-      rateImpact: "Impacto Taxa"
+      rateImpact: "Impacto Taxa",
+      loanPaymentFormula: "Pagamento Empréstimo: P × (r × (1+r)^n) ÷ ((1+r)^n - 1)",
+      futureValueFormula: "Valor Futuro: P × (1+r)^n",
+      lowerRates: "Taxas mais baixas",
+      higherRates: "Taxas mais altas",
+      lowerPayments: "Pagamentos mais baixos",
+      lowerReturns: "Retornos mais baixos",
+      higherPayments: "Pagamentos mais altos",
+      higherReturns: "Retornos mais altos",
+      smallDifferences: "Pequenas diferenças podem ter grandes impactos financeiros",
+      alwaysCompare: "Sempre compare custos ou retornos totais, não apenas taxas"
     },
     fr: {
       title: "Calculateur de Tableau de Taux d'Intérêt",
@@ -110,7 +140,17 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       rateRange: "Plage Taux",
       paymentRange: "Plage Paiement/Retour",
       bestRate: "Meilleur Taux",
-      rateImpact: "Impact Taux"
+      rateImpact: "Impact Taux",
+      loanPaymentFormula: "Paiement Prêt: P × (r × (1+r)^n) ÷ ((1+r)^n - 1)",
+      futureValueFormula: "Valeur Future: P × (1+r)^n",
+      lowerRates: "Taux inférieurs",
+      higherRates: "Taux supérieurs",
+      lowerPayments: "Paiements inférieurs",
+      lowerReturns: "Rendements inférieurs",
+      higherPayments: "Paiements supérieurs",
+      higherReturns: "Rendements supérieurs",
+      smallDifferences: "Petites différences peuvent avoir de grands impacts financiers",
+      alwaysCompare: "Toujours comparer coûts ou rendements totaux, pas seulement taux"
     }
   };
 
@@ -332,8 +372,8 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
           <div className="bg-green-50 p-4 rounded-lg">
             <h4 className="text-sm font-semibold text-green-900 mb-2">Calculation Formulas</h4>
             <div className="text-xs text-green-700 space-y-1">
-              <div><strong>Loan Payment:</strong> P × (r × (1+r)^n) ÷ ((1+r)^n - 1)</div>
-              <div><strong>Future Value:</strong> P × (1+r)^n</div>
+              <div>{t.loanPaymentFormula}</div>
+              <div>{t.futureValueFormula}</div>
               <div>Where: P = principal, r = monthly rate, n = number of payments</div>
             </div>
           </div>
@@ -404,10 +444,10 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
               <div className="bg-indigo-50 p-4 rounded-lg">
                 <h4 className="text-sm font-semibold text-indigo-900 mb-2">Understanding Rate Comparisons</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
-                  <div><strong>Lower rates</strong> = {calculationType === 'loan' ? 'Lower payments' : 'Lower returns'}</div>
-                  <div><strong>Higher rates</strong> = {calculationType === 'loan' ? 'Higher payments' : 'Higher returns'}</div>
-                  <div><strong>Small differences</strong> can have big financial impacts</div>
-                  <div><strong>Always compare</strong> total costs or returns, not just rates</div>
+                  <div>{t.lowerRates} = {calculationType === 'loan' ? t.lowerPayments : t.lowerReturns}</div>
+                  <div>{t.higherRates} = {calculationType === 'loan' ? t.higherPayments : t.higherReturns}</div>
+                  <div>{t.smallDifferences}</div>
+                  <div>{t.alwaysCompare}</div>
                 </div>
               </div>
             </div>

@@ -342,6 +342,14 @@
           "question": "Should I adjust calories based on actual results?",
           "answer": "Yes, always! Use calculator results as starting points, then track weight changes over 2-4 weeks. If losing slower than expected, reduce calories by another 100-200. If losing too fast or feeling fatigued, increase calories. Individual responses vary based on metabolism and activity level."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "MaintenanceCaloriesCalculator"
@@ -620,16 +628,16 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcula tus calorías de mantenimiento con nuestra completa Calculadora de Calorías de Mantenimiento. Entender tus necesidades calóricas diarias es crucial para manejo de peso, objetivos fitness y salud general. Nuestra calculadora usa fórmulas BMR y TDEE científicamente validadas para proporcionar cálculos precisos de calorías de mantenimiento.",
+      "introduction": "Calculate your maintenance calories with our comprehensive Maintenance Calories Calculator. Understanding your daily caloric needs is crucial for weight management, fitness goals, and overall health. Our calculator uses scientifically validated BMR and TDEE formulas to provide accurate maintenance calorie calculations.",
       "benefits": [
-        "Calcula calorías de mantenimiento precisas para mantenimiento de peso",
-        "Entiende tu Tasa Metabólica Basal (BMR) y Gasto Energético Total Diario (TDEE)",
-        "Elige entre múltiples métodos de cálculo científicamente validados",
-        "Considera nivel de actividad y composición corporal",
-        "Obtén recomendaciones de desglose de macronutrientes",
-        "Toma decisiones informadas sobre ingesta y gasto calórico",
-        "Apoya objetivos de pérdida o ganancia de peso con base calórica apropiada",
-        "Rastrea salud metabólica y necesidades energéticas"
+        "Calculate accurate maintenance calories for weight maintenance",
+        "Understand your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE)",
+        "Choose from multiple scientifically validated calculation methods",
+        "Account for activity level and body composition",
+        "Get macronutrient breakdown recommendations",
+        "Make informed decisions about calorie intake and expenditure",
+        "Support weight loss or muscle gain goals with proper caloric foundation",
+        "Track metabolic health and energy needs"
       ],
       "howToUse": [
         "Ingresa tu peso corporal actual en kilogramos o libras",
@@ -658,37 +666,45 @@
       ],
       "faqs": [
         {
-          "question": "¿Cuál es la diferencia entre BMR y TDEE?",
-          "answer": "BMR (Tasa Metabólica Basal) es el número de calorías que tu cuerpo quema en reposo para mantener funciones fisiológicas básicas. TDEE (Gasto Energético Total Diario) incluye BMR más calorías quemadas a través de todas actividades diarias, ejercicio y digestión. TDEE representa tus calorías totales de mantenimiento."
+          "question": "What's the difference between BMR and TDEE?",
+          "answer": "BMR (Basal Metabolic Rate) is the number of calories your body burns at rest to maintain basic physiological functions. TDEE (Total Daily Energy Expenditure) includes BMR plus calories burned through all daily activities, exercise, and digestion. TDEE represents your total maintenance calories."
         },
         {
-          "question": "¿Qué método de cálculo BMR es más preciso?",
-          "answer": "Katch-McArdle es generalmente más preciso si conoces tu porcentaje de grasa corporal, seguido por Mifflin-St Jeor (más comúnmente usado), luego Harris-Benedict (fórmula más antigua). La precisión depende de tener medidas de entrada correctas. Todos métodos proporcionan estimaciones razonables para la mayoría de personas."
+          "question": "Which BMR calculation method is most accurate?",
+          "answer": "Katch-McArdle is generally most accurate if you know your body fat percentage, followed by Mifflin-St Jeor (most commonly used), then Harris-Benedict (older formula). Accuracy depends on having correct input measurements. All methods provide reasonable estimates for most people."
         },
         {
-          "question": "¿Cómo uso calorías de mantenimiento para pérdida de peso?",
-          "answer": "Para pérdida de peso sostenible, resta 250-500 calorías de tu nivel de mantenimiento diariamente. Esto crea un déficit moderado que permite pérdida de 0.5-1 lb semanalmente mientras preserva masa muscular. Combina con entrenamiento de resistencia e ingesta adecuada de proteína. Evita déficits más grandes que pueden ralentizar metabolismo."
+          "question": "How do I use maintenance calories for weight loss?",
+          "answer": "For sustainable weight loss, subtract 250-500 calories from your maintenance level daily. This creates a moderate deficit that allows 0.5-1 lb weekly loss while preserving muscle mass. Combine with resistance training and adequate protein intake. Avoid larger deficits which can slow metabolism."
         },
         {
-          "question": "¿Por qué atletas necesitan más calorías?",
-          "answer": "Los atletas tienen TDEE más alto debido a masa muscular aumentada, volumen de entrenamiento y necesidades de recuperación. Individuos muy activos pueden necesitar 2,500-4,000+ calorías diarias dependiendo de deporte e intensidad de entrenamiento. Atletas de resistencia a menudo necesitan carbohidratos adicionales para almacenamiento de glucógeno."
+          "question": "Why do athletes need more calories?",
+          "answer": "Athletes have higher TDEE due to increased muscle mass, training volume, and recovery needs. Very active individuals may need 2,500-4,000+ calories daily depending on sport and training intensity. Endurance athletes often need additional carbohydrates for glycogen storage."
         },
         {
-          "question": "¿Se ralentiza el metabolismo con la edad?",
-          "answer": "Sí, BMR disminuye naturalmente cerca de 1-2% por década después de los 20 debido a pérdida muscular y cambios hormonales. Entrenamiento de resistencia regular y mantener masa magra puede ayudar preservar tasa metabólica. Adultos mayores pueden necesitar menos calorías de mantenimiento pero deberían enfocarse en densidad nutricional."
+          "question": "Does metabolism slow down with age?",
+          "answer": "Yes, BMR naturally decreases about 1-2% per decade after age 20 due to muscle loss and hormonal changes. Regular resistance training and maintaining lean mass can help preserve metabolic rate. Older adults may need fewer maintenance calories but should focus on nutrient density."
         },
         {
-          "question": "¿Puedo comer por debajo de mi BMR para pérdida de peso?",
-          "answer": "Comer por debajo de BMR (dieta de inanición) no es recomendado ya que puede ralentizar metabolismo, causar pérdida muscular y conducir a recuperación de peso. Apunta a déficits moderados (250-500 calorías por debajo de TDEE) para resultados sostenibles. Enfócate en alimentos densos en nutrientes y entrenamiento de resistencia para preservar músculo."
+          "question": "Can I eat below my BMR for weight loss?",
+          "answer": "Eating below BMR (starvation dieting) is not recommended as it can slow metabolism, cause muscle loss, and lead to rebound weight gain. Aim for moderate deficits (250-500 calories below TDEE) for sustainable results. Focus on nutrient-dense foods and resistance training to preserve muscle."
         },
         {
-          "question": "¿Cómo afecta composición corporal las necesidades calóricas?",
-          "answer": "El tejido muscular quema más calorías que tejido graso, así que individuos con masa muscular más alta tienen BMR más alto. Es por eso que atletas y quienes entrenan resistencia tienen calorías de mantenimiento más altas. El porcentaje de grasa corporal también afecta qué método de cálculo es más preciso."
+          "question": "How does body composition affect calorie needs?",
+          "answer": "Muscle tissue burns more calories than fat tissue, so individuals with higher muscle mass have higher BMR. That's why athletes and those who resistance train have higher maintenance calories. Body fat percentage also affects which calculation method is most accurate."
         },
         {
-          "question": "¿Debería ajustar calorías basadas en resultados reales?",
-          "answer": "¡Sí, siempre! Usa resultados de calculadora como puntos de partida, luego rastrea cambios de peso sobre 2-4 semanas. Si pierdes más lento de lo esperado, reduce calorías en otros 100-200. Si pierdes demasiado rápido o te sientes fatigado, aumenta calorías. Las respuestas individuales varían basadas en metabolismo y nivel de actividad."
+          "question": "Should I adjust calories based on actual results?",
+          "answer": "Yes, always! Use calculator results as starting points, then track weight changes over 2-4 weeks. If losing slower than expected, reduce calories by another 100-200. If losing too fast or feeling fatigued, increase calories. Individual responses vary based on metabolism and activity level."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "MaintenanceCaloriesCalculator"
@@ -967,16 +983,16 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule suas calorias de manutenção com nossa completa Calculadora de Calorias de Manutenção. Entender suas necessidades calóricas diárias é crucial para gerenciamento de peso, objetivos fitness e saúde geral. Nossa calculadora usa fórmulas BMR e TDEE cientificamente validadas para fornecer cálculos precisos de calorias de manutenção.",
+      "introduction": "Calculate your maintenance calories with our comprehensive Maintenance Calories Calculator. Understanding your daily caloric needs is crucial for weight management, fitness goals, and overall health. Our calculator uses scientifically validated BMR and TDEE formulas to provide accurate maintenance calorie calculations.",
       "benefits": [
-        "Calcule calorias de manutenção precisas para manutenção de peso",
-        "Entenda sua Taxa Metabólica Basal (BMR) e Gasto Energético Total Diário (TDEE)",
-        "Escolha entre múltiplos métodos de cálculo cientificamente validados",
-        "Considere nível de atividade e composição corporal",
-        "Obtenha recomendações de quebra de macronutrientes",
-        "Tome decisões informadas sobre ingestão e gasto calórico",
-        "Apoie objetivos de perda ou ganho de peso com base calórica apropriada",
-        "Acompanhe saúde metabólica e necessidades energéticas"
+        "Calculate accurate maintenance calories for weight maintenance",
+        "Understand your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE)",
+        "Choose from multiple scientifically validated calculation methods",
+        "Account for activity level and body composition",
+        "Get macronutrient breakdown recommendations",
+        "Make informed decisions about calorie intake and expenditure",
+        "Support weight loss or muscle gain goals with proper caloric foundation",
+        "Track metabolic health and energy needs"
       ],
       "howToUse": [
         "Digite seu peso corporal atual em quilogramas ou libras",
@@ -1005,37 +1021,45 @@
       ],
       "faqs": [
         {
-          "question": "Qual é a diferença entre BMR e TDEE?",
-          "answer": "BMR (Taxa Metabólica Basal) é o número de calorias seu corpo queima em repouso para manter funções fisiológicas básicas. TDEE (Gasto Energético Total Diário) inclui BMR mais calorias queimadas através de todas atividades diárias, exercício e digestão. TDEE representa suas calorias totais de manutenção."
+          "question": "What's the difference between BMR and TDEE?",
+          "answer": "BMR (Basal Metabolic Rate) is the number of calories your body burns at rest to maintain basic physiological functions. TDEE (Total Daily Energy Expenditure) includes BMR plus calories burned through all daily activities, exercise, and digestion. TDEE represents your total maintenance calories."
         },
         {
-          "question": "Qual método de cálculo BMR é mais preciso?",
-          "answer": "Katch-McArdle é geralmente mais preciso se você conhece sua porcentagem de gordura corporal, seguido por Mifflin-St Jeor (mais comumente usado), então Harris-Benedict (fórmula mais antiga). Precisão depende de ter medidas de entrada corretas. Todos métodos fornecem estimativas razoáveis para a maioria das pessoas."
+          "question": "Which BMR calculation method is most accurate?",
+          "answer": "Katch-McArdle is generally most accurate if you know your body fat percentage, followed by Mifflin-St Jeor (most commonly used), then Harris-Benedict (older formula). Accuracy depends on having correct input measurements. All methods provide reasonable estimates for most people."
         },
         {
-          "question": "¿Como usar calorias de manutenção para perda de peso?",
-          "answer": "Para perda de peso sustentável, subtraia 250-500 calorias de seu nível de manutenção diariamente. Isso cria um déficit moderado que permite perda de 0.5-1 lb semanalmente enquanto preserva massa muscular. Combine com treinamento de resistência e ingestão adequada de proteína. Evite déficits maiores que podem desacelerar metabolismo."
+          "question": "How do I use maintenance calories for weight loss?",
+          "answer": "For sustainable weight loss, subtract 250-500 calories from your maintenance level daily. This creates a moderate deficit that allows 0.5-1 lb weekly loss while preserving muscle mass. Combine with resistance training and adequate protein intake. Avoid larger deficits which can slow metabolism."
         },
         {
-          "question": "Por que atletas precisam de mais calorias?",
-          "answer": "Atletas têm TDEE mais alto devido a massa muscular aumentada, volume de treinamento e necessidades de recuperação. Indivíduos muito ativos podem precisar 2,500-4,000+ calorias diárias dependendo de esporte e intensidade de treinamento. Atletas de resistência frequentemente precisam carboidratos adicionais para armazenamento de glicogênio."
+          "question": "Why do athletes need more calories?",
+          "answer": "Athletes have higher TDEE due to increased muscle mass, training volume, and recovery needs. Very active individuals may need 2,500-4,000+ calories daily depending on sport and training intensity. Endurance athletes often need additional carbohydrates for glycogen storage."
         },
         {
-          "question": "Metabolismo desacelera com a idade?",
-          "answer": "Sim, BMR diminui naturalmente cerca de 1-2% por década após idade 20 devido a perda muscular e mudanças hormonais. Treinamento de resistência regular e manter massa magra pode ajudar preservar taxa metabólica. Adultos mais velhos podem precisar menos calorias de manutenção mas deveriam focar em densidade nutricional."
+          "question": "Does metabolism slow down with age?",
+          "answer": "Yes, BMR naturally decreases about 1-2% per decade after age 20 due to muscle loss and hormonal changes. Regular resistance training and maintaining lean mass can help preserve metabolic rate. Older adults may need fewer maintenance calories but should focus on nutrient density."
         },
         {
-          "question": "Posso comer abaixo do meu BMR para perda de peso?",
-          "answer": "Comer abaixo do BMR (dieta de fome) não é recomendado pois pode desacelerar metabolismo, causar perda muscular e levar a recuperação de peso. Mire déficits moderados (250-500 calorias abaixo do TDEE) para resultados sustentáveis. Foque em alimentos densos em nutrientes e treinamento de resistência para preservar músculo."
+          "question": "Can I eat below my BMR for weight loss?",
+          "answer": "Eating below BMR (starvation dieting) is not recommended as it can slow metabolism, cause muscle loss, and lead to rebound weight gain. Aim for moderate deficits (250-500 calories below TDEE) for sustainable results. Focus on nutrient-dense foods and resistance training to preserve muscle."
         },
         {
-          "question": "¿Como composição corporal afeta necessidades calóricas?",
-          "answer": "Tecido muscular queima mais calorias que tecido gorduroso, então indivíduos com massa muscular mais alta têm BMR mais alto. É por isso que atletas e aqueles que treinam resistência têm calorias de manutenção mais altas. Porcentagem de gordura corporal também afeta qual método de cálculo é mais preciso."
+          "question": "How does body composition affect calorie needs?",
+          "answer": "Muscle tissue burns more calories than fat tissue, so individuals with higher muscle mass have higher BMR. That's why athletes and those who resistance train have higher maintenance calories. Body fat percentage also affects which calculation method is most accurate."
         },
         {
-          "question": "Devo ajustar calorias baseadas em resultados reais?",
-          "answer": "Sim, sempre! Use resultados de calculadora como pontos de partida, então acompanhe mudanças de peso sobre 2-4 semanas. Se perdendo mais devagar do que esperado, reduza calorias em outros 100-200. Se perdendo muito rápido ou se sentindo fatigado, aumente calorias. Respostas individuais variam baseadas em metabolismo e nível de atividade."
+          "question": "Should I adjust calories based on actual results?",
+          "answer": "Yes, always! Use calculator results as starting points, then track weight changes over 2-4 weeks. If losing slower than expected, reduce calories by another 100-200. If losing too fast or feeling fatigued, increase calories. Individual responses vary based on metabolism and activity level."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "MaintenanceCaloriesCalculator"
@@ -1314,16 +1338,16 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez vos calories de maintenance avec notre Calculateur de Calories de Maintenance complet. Comprendre vos besoins caloriques quotidiens est crucial pour gestion poids, objectifs fitness et santé générale. Notre calculateur utilise formules BMR et TDEE scientifiquement validées pour fournir calculs précis de calories de maintenance.",
+      "introduction": "Calculate your maintenance calories with our comprehensive Maintenance Calories Calculator. Understanding your daily caloric needs is crucial for weight management, fitness goals, and overall health. Our calculator uses scientifically validated BMR and TDEE formulas to provide accurate maintenance calorie calculations.",
       "benefits": [
-        "Calculez calories de maintenance précises pour maintenance poids",
-        "Comprenez votre Taux Métabolique Basal (BMR) et Dépense Énergétique Totale Quotidienne (TDEE)",
-        "Choisissez parmi multiples méthodes de calcul scientifiquement validées",
-        "Considérez niveau d'activité et composition corporelle",
-        "Obtenez recommandations de répartition macronutriments",
-        "Prenez décisions éclairées sur apport et dépense calorique",
-        "Soutenez objectifs perte ou gain de poids avec base calorique appropriée",
-        "Suivez santé métabolique et besoins énergétiques"
+        "Calculate accurate maintenance calories for weight maintenance",
+        "Understand your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE)",
+        "Choose from multiple scientifically validated calculation methods",
+        "Account for activity level and body composition",
+        "Get macronutrient breakdown recommendations",
+        "Make informed decisions about calorie intake and expenditure",
+        "Support weight loss or muscle gain goals with proper caloric foundation",
+        "Track metabolic health and energy needs"
       ],
       "howToUse": [
         "Entrez votre poids corporel actuel en kilogrammes ou livres",
@@ -1352,37 +1376,45 @@
       ],
       "faqs": [
         {
-          "question": "Quelle est la différence entre BMR et TDEE ?",
-          "answer": "BMR (Taux Métabolique Basal) est le nombre de calories votre corps brûle au repos pour maintenir fonctions physiologiques de base. TDEE (Dépense Énergétique Totale Quotidienne) inclut BMR plus calories brûlées à travers toutes activités quotidiennes, exercice et digestion. TDEE représente vos calories totales de maintenance."
+          "question": "What's the difference between BMR and TDEE?",
+          "answer": "BMR (Basal Metabolic Rate) is the number of calories your body burns at rest to maintain basic physiological functions. TDEE (Total Daily Energy Expenditure) includes BMR plus calories burned through all daily activities, exercise, and digestion. TDEE represents your total maintenance calories."
         },
         {
-          "question": "Quelle méthode de calcul BMR est la plus précise ?",
-          "answer": "Katch-McArdle est généralement plus précise si vous connaissez votre pourcentage de graisse corporelle, suivie par Mifflin-St Jeor (plus couramment utilisée), puis Harris-Benedict (formule plus ancienne). Précision dépend d'avoir mesures d'entrée correctes. Toutes méthodes fournissent estimations raisonnables pour plupart des gens."
+          "question": "Which BMR calculation method is most accurate?",
+          "answer": "Katch-McArdle is generally most accurate if you know your body fat percentage, followed by Mifflin-St Jeor (most commonly used), then Harris-Benedict (older formula). Accuracy depends on having correct input measurements. All methods provide reasonable estimates for most people."
         },
         {
-          "question": "¿Comment utiliser calories de maintenance pour perte de poids ?",
-          "answer": "Pour perte de poids durable, soustrayez 250-500 calories de votre niveau de maintenance quotidiennement. Cela crée déficit modéré permettant perte de 0.5-1 lb hebdomadairement tout en préservant masse musculaire. Combinez avec entraînement résistance et apport protéique adéquat. Évitez déficits plus grands pouvant ralentir métabolisme."
+          "question": "How do I use maintenance calories for weight loss?",
+          "answer": "For sustainable weight loss, subtract 250-500 calories from your maintenance level daily. This creates a moderate deficit that allows 0.5-1 lb weekly loss while preserving muscle mass. Combine with resistance training and adequate protein intake. Avoid larger deficits which can slow metabolism."
         },
         {
-          "question": "Pourquoi athlètes ont-ils besoin de plus de calories ?",
-          "answer": "Athlètes ont TDEE plus élevé dû à masse musculaire augmentée, volume d'entraînement et besoins de récupération. Individus très actifs peuvent avoir besoin 2,500-4,000+ calories quotidiennes selon sport et intensité d'entraînement. Athlètes d'endurance ont souvent besoin glucides additionnels pour stockage glycogène."
+          "question": "Why do athletes need more calories?",
+          "answer": "Athletes have higher TDEE due to increased muscle mass, training volume, and recovery needs. Very active individuals may need 2,500-4,000+ calories daily depending on sport and training intensity. Endurance athletes often need additional carbohydrates for glycogen storage."
         },
         {
-          "question": "Métabolisme ralentit-il avec l'âge ?",
-          "answer": "Oui, BMR diminue naturellement environ 1-2% par décennie après âge 20 dû à perte musculaire et changements hormonaux. Entraînement résistance régulier et maintenir masse maigre peut aider préserver taux métabolique. Adultes plus âgés peuvent avoir besoin moins calories de maintenance mais devraient se concentrer sur densité nutritionnelle."
+          "question": "Does metabolism slow down with age?",
+          "answer": "Yes, BMR naturally decreases about 1-2% per decade after age 20 due to muscle loss and hormonal changes. Regular resistance training and maintaining lean mass can help preserve metabolic rate. Older adults may need fewer maintenance calories but should focus on nutrient density."
         },
         {
-          "question": "Puis-je manger en dessous de mon BMR pour perte de poids ?",
-          "answer": "Manger en dessous de BMR (diète famine) n'est pas recommandé car cela peut ralentir métabolisme, causer perte musculaire et mener à récupération poids. Visez déficits modérés (250-500 calories en dessous de TDEE) pour résultats durables. Concentrez-vous sur aliments denses en nutriments et entraînement résistance pour préserver muscle."
+          "question": "Can I eat below my BMR for weight loss?",
+          "answer": "Eating below BMR (starvation dieting) is not recommended as it can slow metabolism, cause muscle loss, and lead to rebound weight gain. Aim for moderate deficits (250-500 calories below TDEE) for sustainable results. Focus on nutrient-dense foods and resistance training to preserve muscle."
         },
         {
-          "question": "¿Comment composition corporelle affecte-t-elle besoins caloriques ?",
-          "answer": "Tissu musculaire brûle plus de calories que tissu adipeux, donc individus avec masse musculaire plus élevée ont BMR plus élevé. C'est pourquoi athlètes et ceux faisant entraînement résistance ont calories de maintenance plus élevées. Pourcentage de graisse corporelle affecte aussi quelle méthode de calcul est plus précise."
+          "question": "How does body composition affect calorie needs?",
+          "answer": "Muscle tissue burns more calories than fat tissue, so individuals with higher muscle mass have higher BMR. That's why athletes and those who resistance train have higher maintenance calories. Body fat percentage also affects which calculation method is most accurate."
         },
         {
-          "question": "Dois-je ajuster calories basées sur résultats réels ?",
-          "answer": "Oui, toujours ! Utilisez résultats calculateur comme points de départ, puis suivez changements poids sur 2-4 semaines. Si perdant plus lentement qu'attendu, réduisez calories de 100-200 supplémentaires. Si perdant trop rapidement ou vous sentant fatigué, augmentez calories. Réponses individuelles varient basées sur métabolisme et niveau d'activité."
+          "question": "Should I adjust calories based on actual results?",
+          "answer": "Yes, always! Use calculator results as starting points, then track weight changes over 2-4 weeks. If losing slower than expected, reduce calories by another 100-200. If losing too fast or feeling fatigued, increase calories. Individual responses vary based on metabolism and activity level."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "MaintenanceCaloriesCalculator"

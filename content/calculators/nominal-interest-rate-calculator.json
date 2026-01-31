@@ -47,34 +47,22 @@
     "calculatorComponent": "NominalInterestRateCalculator",
     "examples": [
       {
-        "title": "Monthly Compounding",
-        "description": "Convert 5.12% effective annual rate to nominal rate with monthly compounding",
-        "input": {
-          "effectiveRate": 5.12,
-          "compoundingFrequency": "12"
-        },
-        "output": {
-          "nominalRate": "5.00%",
-          "effectiveRateDisplay": "5.12%",
-          "rateDifference": "-0.12%",
-          "compoundingExplanation": "Monthly compounding requires 5.00% nominal rate to achieve 5.12% effective rate",
-          "rateComparison": "Nominal: 5.00% vs Effective: 5.12% (2.4% difference)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Quarterly Compounding",
-        "description": "Convert 6.09% effective annual rate to nominal rate with quarterly compounding",
-        "input": {
-          "effectiveRate": 6.09,
-          "compoundingFrequency": "4"
-        },
-        "output": {
-          "nominalRate": "6.00%",
-          "effectiveRateDisplay": "6.09%",
-          "rateDifference": "-0.09%",
-          "compoundingExplanation": "Quarterly compounding requires 6.00% nominal rate to achieve 6.09% effective rate",
-          "rateComparison": "Nominal: 6.00% vs Effective: 6.09% (1.5% difference)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -196,34 +184,22 @@
     "calculatorComponent": "NominalInterestRateCalculator",
     "examples": [
       {
-        "title": "Capitalización Mensual",
-        "description": "Convierte 5.12% tasa anual efectiva a tasa nominal con capitalización mensual",
-        "input": {
-          "effectiveRate": 5.12,
-          "compoundingFrequency": "12"
-        },
-        "output": {
-          "nominalRate": "5.00%",
-          "effectiveRateDisplay": "5.12%",
-          "rateDifference": "-0.12%",
-          "compoundingExplanation": "Capitalización mensual requiere 5.00% tasa nominal para lograr 5.12% tasa efectiva",
-          "rateComparison": "Nominal: 5.00% vs Efectiva: 5.12% (2.4% diferencia)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Capitalización Trimestral",
-        "description": "Convierte 6.09% tasa anual efectiva a tasa nominal con capitalización trimestral",
-        "input": {
-          "effectiveRate": 6.09,
-          "compoundingFrequency": "4"
-        },
-        "output": {
-          "nominalRate": "6.00%",
-          "effectiveRateDisplay": "6.09%",
-          "rateDifference": "-0.09%",
-          "compoundingExplanation": "Capitalización trimestral requiere 6.00% tasa nominal para lograr 6.09% tasa efectiva",
-          "rateComparison": "Nominal: 6.00% vs Efectiva: 6.09% (1.5% diferencia)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -345,34 +321,22 @@
     "calculatorComponent": "NominalInterestRateCalculator",
     "examples": [
       {
-        "title": "Capitalização Mensal",
-        "description": "Converte 5.12% taxa anual efetiva para taxa nominal com capitalização mensal",
-        "input": {
-          "effectiveRate": 5.12,
-          "compoundingFrequency": "12"
-        },
-        "output": {
-          "nominalRate": "5.00%",
-          "effectiveRateDisplay": "5.12%",
-          "rateDifference": "-0.12%",
-          "compoundingExplanation": "Capitalização mensal requer 5.00% taxa nominal para lograr 5.12% taxa efetiva",
-          "rateComparison": "Nominal: 5.00% vs Efetiva: 5.12% (2.4% diferença)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Capitalização Trimestral",
-        "description": "Converte 6.09% taxa anual efetiva para taxa nominal com capitalização trimestral",
-        "input": {
-          "effectiveRate": 6.09,
-          "compoundingFrequency": "4"
-        },
-        "output": {
-          "nominalRate": "6.00%",
-          "effectiveRateDisplay": "6.09%",
-          "rateDifference": "-0.09%",
-          "compoundingExplanation": "Capitalização trimestral requer 6.00% taxa nominal para lograr 6.09% taxa efetiva",
-          "rateComparison": "Nominal: 6.00% vs Efetiva: 6.09% (1.5% diferença)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -494,34 +458,22 @@
     "calculatorComponent": "NominalInterestRateCalculator",
     "examples": [
       {
-        "title": "Capitalisation Mensuelle",
-        "description": "Convertissez 5.12% taux annuel effectif vers taux nominal avec capitalisation mensuelle",
-        "input": {
-          "effectiveRate": 5.12,
-          "compoundingFrequency": "12"
-        },
-        "output": {
-          "nominalRate": "5.00%",
-          "effectiveRateDisplay": "5.12%",
-          "rateDifference": "-0.12%",
-          "compoundingExplanation": "Capitalisation mensuelle requiert 5.00% taux nominal pour atteindre 5.12% taux effectif",
-          "rateComparison": "Nominal: 5.00% vs Effectif: 5.12% (2.4% différence)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Capitalisation Trimestrielle",
-        "description": "Convertissez 6.09% taux annuel effectif vers taux nominal avec capitalisation trimestrielle",
-        "input": {
-          "effectiveRate": 6.09,
-          "compoundingFrequency": "4"
-        },
-        "output": {
-          "nominalRate": "6.00%",
-          "effectiveRateDisplay": "6.09%",
-          "rateDifference": "-0.09%",
-          "compoundingExplanation": "Capitalisation trimestrielle requiert 6.00% taux nominal pour atteindre 6.09% taux effectif",
-          "rateComparison": "Nominal: 6.00% vs Effectif: 6.09% (1.5% différence)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

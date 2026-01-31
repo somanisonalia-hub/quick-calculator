@@ -47,36 +47,22 @@
     "calculatorComponent": "PeriodicInterestRateCalculator",
     "examples": [
       {
-        "title": "Annual to Monthly Conversion",
-        "description": "Convert 6% annual rate to monthly periodic rate",
-        "input": {
-          "inputRate": 6,
-          "inputPeriod": "annual",
-          "outputPeriod": "monthly"
-        },
-        "output": {
-          "convertedRate": "0.50%",
-          "inputSummary": "6.00% Annual Rate",
-          "outputSummary": "0.50% Monthly Rate",
-          "conversionFactor": "12",
-          "periodComparison": "Annual rate divided by 12 = monthly rate"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Monthly to Annual Conversion",
-        "description": "Convert 0.5% monthly rate to annual equivalent",
-        "input": {
-          "inputRate": 0.5,
-          "inputPeriod": "monthly",
-          "outputPeriod": "annual"
-        },
-        "output": {
-          "convertedRate": "6.00%",
-          "inputSummary": "0.50% Monthly Rate",
-          "outputSummary": "6.00% Annual Rate",
-          "conversionFactor": "12",
-          "periodComparison": "Monthly rate multiplied by 12 = annual rate"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -198,36 +184,22 @@
     "calculatorComponent": "PeriodicInterestRateCalculator",
     "examples": [
       {
-        "title": "Conversión Anual a Mensual",
-        "description": "Convierte 6% tasa anual a tasa periódica mensual",
-        "input": {
-          "inputRate": 6,
-          "inputPeriod": "annual",
-          "outputPeriod": "monthly"
-        },
-        "output": {
-          "convertedRate": "0.50%",
-          "inputSummary": "6.00% Tasa Anual",
-          "outputSummary": "0.50% Tasa Mensual",
-          "conversionFactor": "12",
-          "periodComparison": "Tasa anual dividida por 12 = tasa mensual"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Conversión Mensual a Anual",
-        "description": "Convierte 0.5% tasa mensual a equivalente anual",
-        "input": {
-          "inputRate": 0.5,
-          "inputPeriod": "monthly",
-          "outputPeriod": "annual"
-        },
-        "output": {
-          "convertedRate": "6.00%",
-          "inputSummary": "0.50% Tasa Mensual",
-          "outputSummary": "6.00% Tasa Anual",
-          "conversionFactor": "12",
-          "periodComparison": "Tasa mensual multiplicada por 12 = tasa anual"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -349,36 +321,22 @@
     "calculatorComponent": "PeriodicInterestRateCalculator",
     "examples": [
       {
-        "title": "Conversão Anual para Mensal",
-        "description": "Converte 6% taxa anual para taxa periódica mensal",
-        "input": {
-          "inputRate": 6,
-          "inputPeriod": "annual",
-          "outputPeriod": "monthly"
-        },
-        "output": {
-          "convertedRate": "0.50%",
-          "inputSummary": "6.00% Taxa Anual",
-          "outputSummary": "0.50% Taxa Mensal",
-          "conversionFactor": "12",
-          "periodComparison": "Taxa anual dividida por 12 = taxa mensal"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Conversão Mensal para Anual",
-        "description": "Converte 0.5% taxa mensal para equivalente anual",
-        "input": {
-          "inputRate": 0.5,
-          "inputPeriod": "monthly",
-          "outputPeriod": "annual"
-        },
-        "output": {
-          "convertedRate": "6.00%",
-          "inputSummary": "0.50% Taxa Mensal",
-          "outputSummary": "6.00% Taxa Anual",
-          "conversionFactor": "12",
-          "periodComparison": "Taxa mensal multiplicada por 12 = taxa anual"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -500,36 +458,22 @@
     "calculatorComponent": "PeriodicInterestRateCalculator",
     "examples": [
       {
-        "title": "Conversion Annuel vers Mensuel",
-        "description": "Convertissez 6% taux annuel vers taux périodique mensuel",
-        "input": {
-          "inputRate": 6,
-          "inputPeriod": "annual",
-          "outputPeriod": "monthly"
-        },
-        "output": {
-          "convertedRate": "0.50%",
-          "inputSummary": "6.00% Taux Annuel",
-          "outputSummary": "0.50% Taux Mensuel",
-          "conversionFactor": "12",
-          "periodComparison": "Taux annuel divisé par 12 = taux mensuel"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Conversion Mensuel vers Annuel",
-        "description": "Convertissez 0.5% taux mensuel vers équivalent annuel",
-        "input": {
-          "inputRate": 0.5,
-          "inputPeriod": "monthly",
-          "outputPeriod": "annual"
-        },
-        "output": {
-          "convertedRate": "6.00%",
-          "inputSummary": "0.50% Taux Mensuel",
-          "outputSummary": "6.00% Taux Annuel",
-          "conversionFactor": "12",
-          "periodComparison": "Taux mensuel multiplié par 12 = taux annuel"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

@@ -38,73 +38,200 @@ export interface CategoryData {
   calculators: CalculatorInfo[];
 }
 
-// Available calculators with their categories
+// Available calculators with their categories (ALL 131 calculators mapped)
 export const CALCULATOR_CATEGORIES = {
-  // Financial (loans, mortgages, investments)
+  // ========================================
+  // FINANCIAL CALCULATORS (~75)
+  // ========================================
+  
+  // Loans & Mortgages
   'loan-calculator': 'financial',
   'mortgage-calculator': 'financial',
   'emi-calculator': 'financial',
   'car-loan-calculator': 'financial',
+  'car-affordability-calculator': 'financial',
   'interest-only-mortgage-calculator': 'financial',
+  'advanced-loan-calculator': 'financial',
+  'home-affordability-calculator': 'financial',
+  'amortization-schedule-calculator': 'financial',
+  'apr-calculator': 'financial',
+  'basic-apr-calculator': 'financial',
+  'ear-calculator': 'financial',
+  'effective-interest-rate-calculator': 'financial',
+  'nominal-interest-rate-calculator': 'financial',
+  'periodic-interest-rate-calculator': 'financial',
+  'equivalent-interest-rate-calculator': 'financial',
+  'equal-principal-amortization-calculator': 'financial',
+  'interest-calculator': 'financial',
+  'interest-rate-table-calculator': 'financial',
+  'loan-payment-table-generator': 'financial',
+  'loan-repayment': 'financial',
+  'loan-comparison': 'financial',
+  'loan-affordability': 'financial',
+  'loan-affordability-calculator': 'financial',
+  
+  // Investments & Savings
   'simple-interest-calculator': 'financial',
   'compound-interest-calculator': 'financial',
   'investment-calculator': 'financial',
+  'future-value-calculator': 'financial',
+  'retirement-calculator': 'financial',
+  'retirement-savings': 'financial',
+  'savings-goal': 'financial',
+  'savings-interest': 'financial',
+  'retirement-plan': 'financial',
+  '401k-calculator': 'financial',
+  'roth-ira-calculator': 'financial',
+  'investment-return': 'financial',
+  'investment-planner': 'financial',
+  
+  // Stocks & Bonds
+  'stock-return-calculator': 'financial',
+  'bond-duration-calculator': 'financial',
+  'bond-yield-calculator': 'financial',
+  'dividend-calculator': 'financial',
+  'capital-gains-calculator': 'financial',
+  'stock-ratios-calculator': 'financial',
+  'profitability-ratios-calculator': 'financial',
+  'crypto-roi-calculator': 'financial',
+  
+  // Taxes
   'income-tax-calculator': 'financial',
   'sales-tax-calculator': 'financial',
-
-  // Lifestyle (personal finance, daily life)
-  'savings-calculator': 'lifestyle',
-  'budget-calculator': 'lifestyle',
-  'expense-calculator': 'lifestyle',
-  'credit-card-calculator': 'lifestyle',
-  'debt-consolidation-calculator': 'lifestyle',
-  'tip-calculator': 'lifestyle',
-  'age-calculator': 'lifestyle',
-  'gpa-calculator': 'lifestyle',
-
-  // Math
-  'percentage-calculator': 'math',
-  'percentage-change-calculator': 'math',
-  'fraction-calculator': 'math',
-  'ratio-calculator': 'math',
-
-  // Health
-  'bmi-calculator': 'health',
-  'bmr-calculator': 'health',
-  'calorie-calculator': 'health',
-  'tdee-calculator': 'health',
-
-  // Utility (measurements, construction)
-  'square-footage-calculator': 'utility',
-  'concrete-calculator': 'utility',
-  'feet-inches-calculator': 'utility',
-  'tank-volume-calculator': 'utility',
-  'inflation-calculator': 'financial',
-  'currency-converter': 'financial',
+  'tax-calculator': 'financial',
   'property-tax-calculator': 'financial',
-  'future-value-calculator': 'financial',
-  'word-counter': 'utility',
-  'numbers-to-words-converter': 'utility',
-  'advanced-loan-calculator': 'financial',
-  'stock-return-calculator': 'financial',
-  'life-insurance-calculator': 'financial',
-  'car-insurance-calculator': 'financial',
-  'health-insurance-calculator': 'financial',
+  'salary-tax': 'financial',
+  'business-tax': 'financial',
+  
+  // Credit & Debt
+  'credit-card-payoff': 'financial',
+  'debt-consolidation-calculator': 'financial',
+  'debt-payoff-calculator': 'financial',
+  'debt-to-income': 'financial',
+  'debt-to-income-calculator': 'financial',
+  'emergency-fund': 'financial',
+  
+  // Salary & Payroll
   'hourly-to-salary-calculator': 'financial',
   'net-income-calculator': 'financial',
   'salary-calculator': 'financial',
   'overtime-pay-calculator': 'financial',
   'take-home-pay-calculator': 'financial',
-  'crypto-roi-calculator': 'financial',
+  'paycheck-calculator': 'financial',
+  'biweekly-pay-calculator': 'financial',
+  'salary-payroll': 'financial',
+  'employee-bonus': 'financial',
+  
+  // Insurance
+  'life-insurance-calculator': 'financial',
+  'car-insurance-calculator': 'financial',
+  'health-insurance-calculator': 'financial',
+  
+  // Business & Finance
+  'working-capital-calculator': 'financial',
+  'ebit-calculator': 'financial',
+  'roe-calculator': 'financial',
+  'liquidity-ratios-calculator': 'financial',
+  'operations-ratios-calculator': 'financial',
+  'debt-ratios-calculator': 'financial',
+  'startup-cost': 'financial',
+  'revenue-growth': 'financial',
+  'inventory': 'financial',
+  'invoice-total': 'financial',
+  'net-worth': 'financial',
+  
+  // Other Financial
+  'inflation-calculator': 'financial',
+  'currency-converter': 'financial',
+  'social-security-calculator': 'financial',
+  'car-payment-calculator': 'financial',
+  'shipping-cost': 'financial',
+  'fuel-cost': 'financial',
+  'parking-cost': 'financial',
+  'toll-cost': 'financial',
+
+  // ========================================
+  // HEALTH & FITNESS CALCULATORS (~16)
+  // ========================================
+  'bmi-calculator': 'health',
+  'bmr-calculator': 'health',
+  'calorie-calculator': 'health',
+  'tdee-calculator': 'health',
+  'body-fat-calculator': 'health',
+  'ideal-weight-calculator': 'health',
   'protein-intake-calculator': 'health',
   'water-intake-calculator': 'health',
   'lean-body-mass-calculator': 'health',
   'maintenance-calories-calculator': 'health',
   'waist-to-hip-ratio-calculator': 'health',
-  'car-payment-calculator': 'financial',
-  'retirement-calculator': 'financial',
-  'paycheck-calculator': 'financial',
-  'tax-calculator': 'financial'
+  'macro-calculator': 'health',
+  'pregnancy-calculator': 'health',
+  'ovulation-calculator': 'health',
+  'blood-pressure-calculator': 'health',
+  'sleep-calculator': 'health',
+
+  // ========================================
+  // MATH CALCULATORS (~19)
+  // ========================================
+  'percentage-calculator': 'math',
+  'percent-calculator': 'math',
+  'percentage-change-calculator': 'math',
+  'fraction-calculator': 'math',
+  'ratio-calculator': 'math',
+  'scientific-calculator': 'math',
+  'average-calculator': 'math',
+  'mean-median-mode-calculator': 'math',
+  'standard-deviation-calculator': 'math',
+  'percentile': 'math',
+  'percentile-calculator': 'math',
+  'probability': 'math',
+  'probability-calculator': 'math',
+  'ratio-proportion': 'math',
+  'fraction-decimal': 'math',
+  'linear-equation': 'math',
+  'geometry-area': 'math',
+  'circle-area-calculator': 'math',
+  'circle-circumference-calculator': 'math',
+  'triangle-area-calculator': 'math',
+  'volume-calculator': 'math',
+  'surface-area-calculator': 'math',
+  'pythagorean-theorem-calculator': 'math',
+  'quadratic-equation-calculator': 'math',
+
+  // ========================================
+  // LIFESTYLE CALCULATORS (~13)
+  // ========================================
+  'age-calculator': 'lifestyle',
+  'tip-calculator': 'lifestyle',
+  'gpa-calculator': 'lifestyle',
+  'grade-calculator': 'lifestyle',
+  'expense-calculator': 'lifestyle',
+  'budget-calculator': 'lifestyle',
+  'personal-budget': 'lifestyle',
+  'savings-calculator': 'lifestyle',
+  'credit-card-calculator': 'lifestyle',
+  'exam-score-predictor': 'lifestyle',
+  'study-hours-planner': 'lifestyle',
+  'trip-planner': 'lifestyle',
+  'travel-budget': 'lifestyle',
+  'taxi-fare': 'lifestyle',
+  'flight-carbon': 'lifestyle',
+
+  // ========================================
+  // UTILITY CALCULATORS (~8)
+  // ========================================
+  'square-footage-calculator': 'utility',
+  'concrete-calculator': 'utility',
+  'feet-inches-calculator': 'utility',
+  'tank-volume-calculator': 'utility',
+  'word-counter': 'utility',
+  'numbers-to-words-converter': 'utility',
+  'unit-converter': 'utility',
+  'unit-conversion-calculator': 'utility',
+  'date-calculator': 'utility',
+  'speed-time': 'utility',
+  'fuel-efficiency': 'utility',
+  'password-generator': 'utility'
 };
 
 // Phase 1 Calculator Configuration - Common data source for consistent behavior across all pages

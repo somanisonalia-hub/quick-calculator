@@ -25,7 +25,13 @@ export default function LiquidityRatiosCalculator({ lang = 'en' }: LiquidityRati
       cashRatio: "Cash Ratio",
       workingCapital: "Working Capital",
       interpretation: "Ratio Interpretation",
-      currency: "$"
+      currency: "$",
+      currentRatioExcellent: "Current Ratio > 2.0: Excellent liquidity",
+      currentRatioGood: "Current Ratio 1.5-2.0: Good liquidity",
+      currentRatioAdequate: "Current Ratio 1.0-1.5: Adequate liquidity",
+      currentRatioPoor: "Current Ratio < 1.0: Potential liquidity issues",
+      quickRatioStrong: "Quick Ratio > 1.0: Strong immediate liquidity",
+      cashRatioExcellent: "Cash Ratio > 20%: Excellent cash position"
     },
     es: {
       title: "Calculadora de Ratios de Liquidez",
@@ -43,7 +49,13 @@ export default function LiquidityRatiosCalculator({ lang = 'en' }: LiquidityRati
       cashRatio: "Ratio de Efectivo",
       workingCapital: "Capital de Trabajo",
       interpretation: "Interpretación del Ratio",
-      currency: "$"
+      currency: "$",
+      currentRatioExcellent: "Ratio Corriente > 2.0: Liquidez excelente",
+      currentRatioGood: "Ratio Corriente 1.5-2.0: Buena liquidez",
+      currentRatioAdequate: "Ratio Corriente 1.0-1.5: Liquidez adecuada",
+      currentRatioPoor: "Ratio Corriente < 1.0: Problemas potenciales de liquidez",
+      quickRatioStrong: "Ratio Rápido > 1.0: Fuerte liquidez inmediata",
+      cashRatioExcellent: "Ratio de Efectivo > 20%: Posición de efectivo excelente"
     },
     pt: {
       title: "Calculadora de Índices de Liquidez",
@@ -61,7 +73,13 @@ export default function LiquidityRatiosCalculator({ lang = 'en' }: LiquidityRati
       cashRatio: "Índice de Caixa",
       workingCapital: "Capital de Giro",
       interpretation: "Interpretação do Índice",
-      currency: "R$"
+      currency: "R$",
+      currentRatioExcellent: "Índice Corrente > 2.0: Liquidez excelente",
+      currentRatioGood: "Índice Corrente 1.5-2.0: Boa liquidez",
+      currentRatioAdequate: "Índice Corrente 1.0-1.5: Liquidez adequada",
+      currentRatioPoor: "Índice Corrente < 1.0: Problemas potenciais de liquidez",
+      quickRatioStrong: "Índice Rápido > 1.0: Forte liquidez imediata",
+      cashRatioExcellent: "Índice de Caixa > 20%: Excelente posição de caixa"
     },
     fr: {
       title: "Calculateur de Ratios de Liquidité",
@@ -79,7 +97,13 @@ export default function LiquidityRatiosCalculator({ lang = 'en' }: LiquidityRati
       cashRatio: "Ratio de Trésorerie",
       workingCapital: "Fonds de Roulement",
       interpretation: "Interprétation du Ratio",
-      currency: "€"
+      currency: "€",
+      currentRatioExcellent: "Ratio Courant > 2.0: Liquidité excellente",
+      currentRatioGood: "Ratio Courant 1.5-2.0: Bonne liquidité",
+      currentRatioAdequate: "Ratio Courant 1.0-1.5: Liquidité adéquate",
+      currentRatioPoor: "Ratio Courant < 1.0: Problèmes potentiels de liquidité",
+      quickRatioStrong: "Ratio Rapide > 1.0: Forte liquidité immédiate",
+      cashRatioExcellent: "Ratio de Trésorerie > 20%: Excellente position de trésorerie"
     }
   };
 
@@ -314,12 +338,12 @@ export default function LiquidityRatiosCalculator({ lang = 'en' }: LiquidityRati
               <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
                 <h4 className="text-sm font-semibold text-yellow-900 mb-2">{t.interpretation}</h4>
                 <div className="text-xs text-yellow-700 space-y-1">
-                  <div><strong>Current Ratio &gt; 2.0:</strong> Excellent liquidity</div>
-                  <div><strong>Current Ratio 1.5-2.0:</strong> Good liquidity</div>
-                  <div><strong>Current Ratio 1.0-1.5:</strong> Adequate liquidity</div>
-                  <div><strong>Current Ratio &lt; 1.0:</strong> Potential liquidity issues</div>
-                  <div><strong>Quick Ratio &gt; 1.0:</strong> Strong immediate liquidity</div>
-                  <div><strong>Cash Ratio &gt; 20%:</strong> Excellent cash position</div>
+                  <div>{t.currentRatioExcellent}</div>
+                  <div>{t.currentRatioGood}</div>
+                  <div>{t.currentRatioAdequate}</div>
+                  <div>{t.currentRatioPoor}</div>
+                  <div>{t.quickRatioStrong}</div>
+                  <div>{t.cashRatioExcellent}</div>
                 </div>
               </div>
             </div>

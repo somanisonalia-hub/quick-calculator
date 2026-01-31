@@ -22,7 +22,12 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
       totalAmount: "Total Amount",
       costAnalysis: "Cost Analysis",
       enterLoanDetails: "Enter loan details above to calculate basic APR",
-      currency: "$"
+      currency: "$",
+      understandingBasicAPR: "Understanding Basic APR",
+      aprShowsCost: "APR shows the true annual borrowing cost",
+      simpleCalculation: "Simple calculation for straightforward scenarios",
+      includesAllCosts: "Includes all costs as a percentage of loan amount",
+      higherAPR: "Higher APR means more expensive borrowing"
     },
     es: {
       title: "Calculadora Básica de TAE",
@@ -37,7 +42,12 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
       totalAmount: "Monto Total",
       costAnalysis: "Análisis de Costo",
       enterLoanDetails: "Ingresa detalles del préstamo arriba para calcular TAE básica",
-      currency: "$"
+      currency: "$",
+      understandingBasicAPR: "Entendiendo la TAE Básica",
+      aprShowsCost: "TAE muestra el costo anual real del préstamo",
+      simpleCalculation: "Cálculo simple para escenarios sencillos",
+      includesAllCosts: "Incluye todos los costos como porcentaje del monto del préstamo",
+      higherAPR: "Mayor TAE significa préstamo más costoso"
     },
     pt: {
       title: "Calculadora Básica de CET",
@@ -52,7 +62,12 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
       totalAmount: "Valor Total",
       costAnalysis: "Análise de Custo",
       enterLoanDetails: "Digite detalhes do empréstimo acima para calcular CET básico",
-      currency: "R$"
+      currency: "R$",
+      understandingBasicAPR: "Entendendo o CET Básico",
+      aprShowsCost: "CET mostra o custo anual real do empréstimo",
+      simpleCalculation: "Cálculo simples para cenários diretos",
+      includesAllCosts: "Inclui todos os custos como porcentagem do valor do empréstimo",
+      higherAPR: "Maior CET significa empréstimo mais caro"
     },
     fr: {
       title: "Calculateur de TAEG Basique",
@@ -67,7 +82,12 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
       totalAmount: "Montant Total",
       costAnalysis: "Analyse Coût",
       enterLoanDetails: "Entrez détails du prêt ci-dessus pour calculer TAEG basique",
-      currency: "€"
+      currency: "€",
+      understandingBasicAPR: "Comprendre le TAEG Basique",
+      aprShowsCost: "Le TAEG montre le coût annuel réel de l'emprunt",
+      simpleCalculation: "Calcul simple pour scénarios simples",
+      includesAllCosts: "Inclut tous les coûts en pourcentage du montant du prêt",
+      higherAPR: "Un TAEG plus élevé signifie un emprunt plus coûteux"
     }
   };
 
@@ -243,12 +263,12 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
 
               {/* Educational Info */}
               <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-blue-900 mb-2">Understanding Basic APR</h4>
+                <h4 className="text-sm font-semibold text-blue-900 mb-2">{t.understandingBasicAPR}</h4>
                 <div className="text-xs text-blue-700 space-y-1">
-                  <div><strong>APR</strong> shows the true annual borrowing cost</div>
-                  <div><strong>Simple calculation</strong> for straightforward scenarios</div>
-                  <div><strong>Includes all costs</strong> as a percentage of loan amount</div>
-                  <div><strong>Higher APR</strong> means more expensive borrowing</div>
+                  <div>{t.aprShowsCost}</div>
+                  <div>{t.simpleCalculation}</div>
+                  <div>{t.includesAllCosts}</div>
+                  <div>{t.higherAPR}</div>
                 </div>
               </div>
             </div>

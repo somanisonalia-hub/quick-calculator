@@ -27,7 +27,13 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
       longTermDebtRatio: "Long-term Debt Ratio",
       debtToAssetRatio: "Debt-to-Asset Ratio",
       interpretation: "Ratio Interpretation",
-      currency: "$"
+      currency: "$",
+      debtToEquityConservative: "Debt-to-Equity < 0.5: Conservative financing",
+      debtToEquityModerate: "Debt-to-Equity 0.5-1.0: Moderate leverage",
+      debtToEquityHigh: "Debt-to-Equity 1.0-2.0: High leverage",
+      debtRatioLow: "Debt Ratio < 30%: Low risk position",
+      debtRatioModerate: "Debt Ratio 30-50%: Moderate risk",
+      debtRatioHigh: "Debt Ratio > 50%: High risk position"
     },
     es: {
       title: "Calculadora de Ratios de Deuda",
@@ -47,7 +53,13 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
       longTermDebtRatio: "Ratio de Deuda a Largo Plazo",
       debtToAssetRatio: "Ratio Deuda-Activos",
       interpretation: "Interpretación del Ratio",
-      currency: "$"
+      currency: "$",
+      debtToEquityConservative: "Deuda-Capital < 0.5: Financiamiento conservador",
+      debtToEquityModerate: "Deuda-Capital 0.5-1.0: Apalancamiento moderado",
+      debtToEquityHigh: "Deuda-Capital 1.0-2.0: Alto apalancamiento",
+      debtRatioLow: "Ratio de Deuda < 30%: Posición de bajo riesgo",
+      debtRatioModerate: "Ratio de Deuda 30-50%: Riesgo moderado",
+      debtRatioHigh: "Ratio de Deuda > 50%: Posición de alto riesgo"
     },
     pt: {
       title: "Calculadora de Índices de Dívida",
@@ -67,7 +79,13 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
       longTermDebtRatio: "Índice de Dívida de Longo Prazo",
       debtToAssetRatio: "Índice Dívida-Ativos",
       interpretation: "Interpretação do Índice",
-      currency: "R$"
+      currency: "R$",
+      debtToEquityConservative: "Dívida-Capital < 0.5: Financiamento conservador",
+      debtToEquityModerate: "Dívida-Capital 0.5-1.0: Alavancagem moderada",
+      debtToEquityHigh: "Dívida-Capital 1.0-2.0: Alta alavancagem",
+      debtRatioLow: "Índice de Dívida < 30%: Posição de baixo risco",
+      debtRatioModerate: "Índice de Dívida 30-50%: Risco moderado",
+      debtRatioHigh: "Índice de Dívida > 50%: Posição de alto risco"
     },
     fr: {
       title: "Calculateur de Ratios d'Endettement",
@@ -87,7 +105,13 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
       longTermDebtRatio: "Ratio d'Endettement à Long Terme",
       debtToAssetRatio: "Ratio Dette-Actifs",
       interpretation: "Interprétation du Ratio",
-      currency: "€"
+      currency: "€",
+      debtToEquityConservative: "Dette-Capitaux < 0.5: Financement conservateur",
+      debtToEquityModerate: "Dette-Capitaux 0.5-1.0: Levier modéré",
+      debtToEquityHigh: "Dette-Capitaux 1.0-2.0: Levier élevé",
+      debtRatioLow: "Ratio d'Endettement < 30%: Position à faible risque",
+      debtRatioModerate: "Ratio d'Endettement 30-50%: Risque modéré",
+      debtRatioHigh: "Ratio d'Endettement > 50%: Position à risque élevé"
     }
   };
 
@@ -316,12 +340,12 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
               <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
                 <h4 className="text-sm font-semibold text-yellow-900 mb-2">{t.interpretation}</h4>
                 <div className="text-xs text-yellow-700 space-y-1">
-                  <div><strong>Debt-to-Equity &lt; 0.5:</strong> Conservative financing</div>
-                  <div><strong>Debt-to-Equity 0.5-1.0:</strong> Moderate leverage</div>
-                  <div><strong>Debt-to-Equity 1.0-2.0:</strong> High leverage</div>
-                  <div><strong>Debt Ratio &lt; 30%:</strong> Low risk position</div>
-                  <div><strong>Debt Ratio 30-50%:</strong> Moderate risk</div>
-                  <div><strong>Debt Ratio &gt; 50%:</strong> High risk position</div>
+                  <div>{t.debtToEquityConservative}</div>
+                  <div>{t.debtToEquityModerate}</div>
+                  <div>{t.debtToEquityHigh}</div>
+                  <div>{t.debtRatioLow}</div>
+                  <div>{t.debtRatioModerate}</div>
+                  <div>{t.debtRatioHigh}</div>
                 </div>
               </div>
             </div>

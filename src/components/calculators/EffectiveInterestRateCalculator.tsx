@@ -26,7 +26,18 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
       nominalToEffective: "Nominal to Effective Rate",
       effectiveToNominal: "Effective to Nominal Rate",
       periodicToEffective: "Periodic to Effective Rate",
-      effectiveToPeriodic: "Effective to Periodic Rate"
+      effectiveToPeriodic: "Effective to Periodic Rate",
+      conversionFormulas: "Conversion Formulas",
+      nominalToEffectiveFormula: "Nominal → Effective: EAR = (1 + r/n)^n - 1",
+      effectiveToNominalFormula: "Effective → Nominal: r = n × ((1 + EAR)^(1/n) - 1)",
+      periodicToEffectiveFormula: "Periodic → Effective: EAR = (1 + p)^n - 1",
+      effectiveToPeriodicFormula: "Effective → Periodic: p = (1 + EAR)^(1/n) - 1",
+      convertedRateResult: "Converted rate result",
+      understandingRateConversions: "Understanding Rate Conversions",
+      nominalRateDesc: "Nominal Rate: Stated annual rate without compounding",
+      effectiveRateDesc: "Effective Rate: True annual rate with compounding effects",
+      periodicRateDesc: "Periodic Rate: Rate applied per compounding period",
+      alwaysCompare: "Always compare: Effective rates for accurate comparisons"
     },
     es: {
       title: "Calculadora de Tasa de Interés Efectiva",
@@ -45,7 +56,18 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
       nominalToEffective: "Nominal a Tasa Efectiva",
       effectiveToNominal: "Efectiva a Tasa Nominal",
       periodicToEffective: "Periódica a Tasa Efectiva",
-      effectiveToPeriodic: "Efectiva a Tasa Periódica"
+      effectiveToPeriodic: "Efectiva a Tasa Periódica",
+      conversionFormulas: "Fórmulas de Conversión",
+      nominalToEffectiveFormula: "Nominal → Efectiva: TAE = (1 + r/n)^n - 1",
+      effectiveToNominalFormula: "Efectiva → Nominal: r = n × ((1 + TAE)^(1/n) - 1)",
+      periodicToEffectiveFormula: "Periódica → Efectiva: TAE = (1 + p)^n - 1",
+      effectiveToPeriodicFormula: "Efectiva → Periódica: p = (1 + TAE)^(1/n) - 1",
+      convertedRateResult: "Resultado de tasa convertida",
+      understandingRateConversions: "Entendiendo Conversiones de Tasas",
+      nominalRateDesc: "Tasa Nominal: Tasa anual declarada sin capitalización",
+      effectiveRateDesc: "Tasa Efectiva: Tasa anual real con efectos de capitalización",
+      periodicRateDesc: "Tasa Periódica: Tasa aplicada por período de capitalización",
+      alwaysCompare: "Siempre compare: Tasas efectivas para comparaciones precisas"
     },
     pt: {
       title: "Calculadora de Taxa de Juros Efetiva",
@@ -64,7 +86,18 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
       nominalToEffective: "Nominal para Taxa Efetiva",
       effectiveToNominal: "Efetiva para Taxa Nominal",
       periodicToEffective: "Periódica para Taxa Efetiva",
-      effectiveToPeriodic: "Efetiva para Taxa Periódica"
+      effectiveToPeriodic: "Efetiva para Taxa Periódica",
+      conversionFormulas: "Fórmulas de Conversão",
+      nominalToEffectiveFormula: "Nominal → Efetiva: TEA = (1 + r/n)^n - 1",
+      effectiveToNominalFormula: "Efetiva → Nominal: r = n × ((1 + TEA)^(1/n) - 1)",
+      periodicToEffectiveFormula: "Periódica → Efetiva: TEA = (1 + p)^n - 1",
+      effectiveToPeriodicFormula: "Efetiva → Periódica: p = (1 + TEA)^(1/n) - 1",
+      convertedRateResult: "Resultado da taxa convertida",
+      understandingRateConversions: "Entendendo Conversões de Taxas",
+      nominalRateDesc: "Taxa Nominal: Taxa anual declarada sem capitalização",
+      effectiveRateDesc: "Taxa Efetiva: Taxa anual real com efeitos de capitalização",
+      periodicRateDesc: "Taxa Periódica: Taxa aplicada por período de capitalização",
+      alwaysCompare: "Sempre compare: Taxas efetivas para comparações precisas"
     },
     fr: {
       title: "Calculateur de Taux d'Intérêt Effectif",
@@ -83,7 +116,18 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
       nominalToEffective: "Nominal vers Taux Effectif",
       effectiveToNominal: "Effectif vers Taux Nominal",
       periodicToEffective: "Périodique vers Taux Effectif",
-      effectiveToPeriodic: "Effectif vers Taux Périodique"
+      effectiveToPeriodic: "Effectif vers Taux Périodique",
+      conversionFormulas: "Formules de Conversion",
+      nominalToEffectiveFormula: "Nominal → Effectif: TEA = (1 + r/n)^n - 1",
+      effectiveToNominalFormula: "Effectif → Nominal: r = n × ((1 + TEA)^(1/n) - 1)",
+      periodicToEffectiveFormula: "Périodique → Effectif: TEA = (1 + p)^n - 1",
+      effectiveToPeriodicFormula: "Effectif → Périodique: p = (1 + TEA)^(1/n) - 1",
+      convertedRateResult: "Résultat du taux converti",
+      understandingRateConversions: "Comprendre les Conversions de Taux",
+      nominalRateDesc: "Taux Nominal: Taux annuel déclaré sans capitalisation",
+      effectiveRateDesc: "Taux Effectif: Taux annuel réel avec effets de capitalisation",
+      periodicRateDesc: "Taux Périodique: Taux appliqué par période de capitalisation",
+      alwaysCompare: "Toujours comparer: Taux effectifs pour des comparaisons précises"
     }
   };
 
@@ -236,12 +280,12 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
 
           {/* Formula Display */}
           <div className="bg-purple-50 p-4 rounded-lg">
-            <h4 className="text-sm font-semibold text-purple-900 mb-2">Conversion Formulas</h4>
+            <h4 className="text-sm font-semibold text-purple-900 mb-2">{t.conversionFormulas}</h4>
             <div className="text-xs text-purple-700 space-y-1">
-              <div><strong>Nominal → Effective:</strong> EAR = (1 + r/n)^n - 1</div>
-              <div><strong>Effective → Nominal:</strong> r = n × ((1 + EAR)^(1/n) - 1)</div>
-              <div><strong>Periodic → Effective:</strong> EAR = (1 + p)^n - 1</div>
-              <div><strong>Effective → Periodic:</strong> p = (1 + EAR)^(1/n) - 1</div>
+              <div>{t.nominalToEffectiveFormula}</div>
+              <div>{t.effectiveToNominalFormula}</div>
+              <div>{t.periodicToEffectiveFormula}</div>
+              <div>{t.effectiveToPeriodicFormula}</div>
             </div>
           </div>
         </div>
@@ -257,7 +301,7 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
                   {results.convertedRate}%
                 </div>
                 <div className="text-xs text-purple-600 mt-2">
-                  Converted rate result
+                  {t.convertedRateResult}
                 </div>
               </div>
 
@@ -294,12 +338,12 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
 
               {/* Educational Info */}
               <div className="bg-indigo-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-indigo-900 mb-2">Understanding Rate Conversions</h4>
+                <h4 className="text-sm font-semibold text-indigo-900 mb-2">{t.understandingRateConversions}</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
-                  <div><strong>Nominal Rate:</strong> Stated annual rate without compounding</div>
-                  <div><strong>Effective Rate:</strong> True annual rate with compounding effects</div>
-                  <div><strong>Periodic Rate:</strong> Rate applied per compounding period</div>
-                  <div><strong>Always compare:</strong> Effective rates for accurate comparisons</div>
+                  <div>{t.nominalRateDesc}</div>
+                  <div>{t.effectiveRateDesc}</div>
+                  <div>{t.periodicRateDesc}</div>
+                  <div>{t.alwaysCompare}</div>
                 </div>
               </div>
             </div>

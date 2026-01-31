@@ -47,36 +47,22 @@
     "calculatorComponent": "APRCalculator",
     "examples": [
       {
-        "title": "Credit Card APR Calculation",
-        "description": "Calculate APR for a credit card with $10,000 limit and $1,200 in finance charges over one year",
-        "input": {
-          "loanAmount": 10000,
-          "financeCharges": 1200,
-          "loanTerm": 1
-        },
-        "output": {
-          "apr": "12.00%",
-          "monthlyPayment": "$333.33",
-          "totalCost": "$11,200",
-          "financeChargeRatio": "12.00%",
-          "costComparison": "$1,200 finance charges on $10,000 balance = 12% APR"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Auto Loan APR",
-        "description": "Calculate APR for a 5-year auto loan with $25,000 amount and $4,500 total finance charges",
-        "input": {
-          "loanAmount": 25000,
-          "financeCharges": 4500,
-          "loanTerm": 5
-        },
-        "output": {
-          "apr": "3.60%",
-          "monthlyPayment": "$483.33",
-          "totalCost": "$29,000",
-          "financeChargeRatio": "18.00%",
-          "costComparison": "$4,500 finance charges over 5 years = 3.6% APR"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -198,36 +184,22 @@
     "calculatorComponent": "APRCalculator",
     "examples": [
       {
-        "title": "Cálculo TAE Tarjeta de Crédito",
-        "description": "Calcula TAE para una tarjeta de crédito con $10,000 límite y $1,200 en cargos financieros durante un año",
-        "input": {
-          "loanAmount": 10000,
-          "financeCharges": 1200,
-          "loanTerm": 1
-        },
-        "output": {
-          "apr": "12.00%",
-          "monthlyPayment": "$333.33",
-          "totalCost": "$11,200",
-          "financeChargeRatio": "12.00%",
-          "costComparison": "$1,200 cargos financieros en $10,000 saldo = 12% TAE"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "TAE Préstamo Auto",
-        "description": "Calcula TAE para un préstamo de auto de 5 años con $25,000 monto y $4,500 cargos financieros totales",
-        "input": {
-          "loanAmount": 25000,
-          "financeCharges": 4500,
-          "loanTerm": 5
-        },
-        "output": {
-          "apr": "3.60%",
-          "monthlyPayment": "$483.33",
-          "totalCost": "$29,000",
-          "financeChargeRatio": "18.00%",
-          "costComparison": "$4,500 cargos financieros durante 5 años = 3.6% TAE"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -349,36 +321,22 @@
     "calculatorComponent": "APRCalculator",
     "examples": [
       {
-        "title": "Cálculo CET Cartão de Crédito",
-        "description": "Calcule CET para um cartão de crédito com R$ 10.000 limite e R$ 1.200 em encargos financeiros durante um ano",
-        "input": {
-          "loanAmount": 10000,
-          "financeCharges": 1200,
-          "loanTerm": 1
-        },
-        "output": {
-          "apr": "12.00%",
-          "monthlyPayment": "$333.33",
-          "totalCost": "$11,200",
-          "financeChargeRatio": "12.00%",
-          "costComparison": "R$ 1.200 encargos financeiros em R$ 10.000 saldo = 12% CET"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "CET Empréstimo Carro",
-        "description": "Calcule CET para um empréstimo de carro de 5 anos com R$ 25.000 valor e R$ 4.500 encargos financeiros totais",
-        "input": {
-          "loanAmount": 25000,
-          "financeCharges": 4500,
-          "loanTerm": 5
-        },
-        "output": {
-          "apr": "3.60%",
-          "monthlyPayment": "$483.33",
-          "totalCost": "$29,000",
-          "financeChargeRatio": "18.00%",
-          "costComparison": "R$ 4.500 encargos financeiros durante 5 anos = 3.6% CET"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -500,36 +458,22 @@
     "calculatorComponent": "APRCalculator",
     "examples": [
       {
-        "title": "Calcul TAEG Carte de Crédit",
-        "description": "Calculez TAEG pour une carte de crédit avec 10 000 € limite et 1 200 € frais financiers sur un an",
-        "input": {
-          "loanAmount": 10000,
-          "financeCharges": 1200,
-          "loanTerm": 1
-        },
-        "output": {
-          "apr": "12.00%",
-          "monthlyPayment": "$333.33",
-          "totalCost": "$11,200",
-          "financeChargeRatio": "12.00%",
-          "costComparison": "1 200 € frais financiers sur 10 000 € solde = 12% TAEG"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "TAEG Prêt Auto",
-        "description": "Calculez TAEG pour un prêt auto 5 ans avec 25 000 € montant et 4 500 € frais financiers totaux",
-        "input": {
-          "loanAmount": 25000,
-          "financeCharges": 4500,
-          "loanTerm": 5
-        },
-        "output": {
-          "apr": "3.60%",
-          "monthlyPayment": "$483.33",
-          "totalCost": "$29,000",
-          "financeChargeRatio": "18.00%",
-          "costComparison": "4 500 € frais financiers sur 5 ans = 3.6% TAEG"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

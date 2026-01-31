@@ -20,7 +20,12 @@ export default function CryptoROICalculator({ lang = 'en' }: CryptoROICalculator
       calculate: "Calculate",
       reset: "Reset",
       percentage: "%",
-      currency: "$"
+      currency: "$",
+      understandingCryptoROI: "Understanding Crypto ROI",
+      roiFormula: "ROI Formula: Measures investment performance as a percentage",
+      positiveROI: "Positive ROI: Investment gained value",
+      negativeROI: "Negative ROI: Investment lost value",
+      volatility: "Volatility: Crypto investments can be highly volatile"
     },
     es: {
       title: "Calculadora de ROI de Cripto",
@@ -33,7 +38,12 @@ export default function CryptoROICalculator({ lang = 'en' }: CryptoROICalculator
       calculate: "Calcular",
       reset: "Reiniciar",
       percentage: "%",
-      currency: "$"
+      currency: "$",
+      understandingCryptoROI: "Entendiendo el ROI de Cripto",
+      roiFormula: "Fórmula ROI: Mide el rendimiento de inversión como porcentaje",
+      positiveROI: "ROI Positivo: La inversión ganó valor",
+      negativeROI: "ROI Negativo: La inversión perdió valor",
+      volatility: "Volatilidad: Inversiones cripto pueden ser altamente volátiles"
     },
     pt: {
       title: "Calculadora de ROI de Cripto",
@@ -46,7 +56,12 @@ export default function CryptoROICalculator({ lang = 'en' }: CryptoROICalculator
       calculate: "Calcular",
       reset: "Reiniciar",
       percentage: "%",
-      currency: "R$"
+      currency: "R$",
+      understandingCryptoROI: "Entendendo o ROI de Cripto",
+      roiFormula: "Fórmula ROI: Mede o desempenho do investimento como porcentagem",
+      positiveROI: "ROI Positivo: O investimento ganhou valor",
+      negativeROI: "ROI Negativo: O investimento perdeu valor",
+      volatility: "Volatilidade: Investimentos em cripto podem ser altamente voláteis"
     },
     fr: {
       title: "Calculateur de ROI Crypto",
@@ -59,7 +74,12 @@ export default function CryptoROICalculator({ lang = 'en' }: CryptoROICalculator
       calculate: "Calculer",
       reset: "Réinitialiser",
       percentage: "%",
-      currency: "€"
+      currency: "€",
+      understandingCryptoROI: "Comprendre le ROI Crypto",
+      roiFormula: "Formule ROI: Mesure la performance de l'investissement en pourcentage",
+      positiveROI: "ROI Positif: L'investissement a gagné de la valeur",
+      negativeROI: "ROI Négatif: L'investissement a perdu de la valeur",
+      volatility: "Volatilité: Les investissements crypto peuvent être très volatils"
     }
   };
 
@@ -219,12 +239,12 @@ export default function CryptoROICalculator({ lang = 'en' }: CryptoROICalculator
 
               {/* Educational Info */}
               <div className="bg-indigo-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-indigo-900 mb-2">Understanding Crypto ROI</h4>
+                <h4 className="text-sm font-semibold text-indigo-900 mb-2">{t.understandingCryptoROI}</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
-                  <div><strong>ROI Formula:</strong> Measures investment performance as percentage</div>
-                  <div><strong>Positive ROI:</strong> Investment gained value</div>
-                  <div><strong>Negative ROI:</strong> Investment lost value</div>
-                  <div><strong>Volatility:</strong> Crypto investments can be highly volatile</div>
+                  <div>{t.roiFormula}</div>
+                  <div>{t.positiveROI}</div>
+                  <div>{t.negativeROI}</div>
+                  <div>{t.volatility}</div>
                 </div>
               </div>
             </div>

@@ -444,9 +444,9 @@ export default function LoanPaymentTableGenerator({ lang = 'en' }: LoanPaymentTa
           <div className="bg-indigo-50 p-4 rounded-lg">
             <h4 className="text-sm font-semibold text-indigo-900 mb-2">{t.examples}</h4>
             <div className="text-xs text-indigo-700 space-y-1">
-              <div><strong>Interest Rate Comparison:</strong> $300K loan, 30 years - compare 5.5% vs 7.5% ($425 difference)</div>
-              <div><strong>Loan Term Comparison:</strong> $250K at 6.5% - 15 vs 30 years ($475 difference)</div>
-              <div><strong>Loan Amount Comparison:</strong> 6.5% for 30 years - $200K vs $300K ($664 difference)</div>
+              <div>{t.interestRateComparison}</div>
+              <div>{t.loanTermComparison}</div>
+              <div>{t.loanAmountComparison}</div>
             </div>
           </div>
         </div>

@@ -26,7 +26,12 @@ export default function FutureValueCalculator({ lang = 'en' }: FutureValueCalcul
       semiAnnually: "Semi-Annually",
       quarterly: "Quarterly",
       monthly: "Monthly",
-      currency: "$"
+      currency: "$",
+      initialInvestment: "Initial Investment:",
+      interestEarned: "Interest Earned:",
+      finalAmount: "Final Amount:",
+      growthRate: "Growth Rate:",
+      totalReturn: "total return"
     },
     es: {
       title: "Calculadora de Valor Futuro",
@@ -45,7 +50,12 @@ export default function FutureValueCalculator({ lang = 'en' }: FutureValueCalcul
       semiAnnually: "Semi-Anual",
       quarterly: "Trimestral",
       monthly: "Mensual",
-      currency: "$"
+      currency: "$",
+      initialInvestment: "Inversión Inicial:",
+      interestEarned: "Intereses Ganados:",
+      finalAmount: "Monto Final:",
+      growthRate: "Tasa de Crecimiento:",
+      totalReturn: "rendimiento total"
     },
     pt: {
       title: "Calculadora de Valor Futuro",
@@ -64,7 +74,12 @@ export default function FutureValueCalculator({ lang = 'en' }: FutureValueCalcul
       semiAnnually: "Semi-Anual",
       quarterly: "Trimestral",
       monthly: "Mensal",
-      currency: "R$"
+      currency: "R$",
+      initialInvestment: "Investimento Inicial:",
+      interestEarned: "Juros Ganhos:",
+      finalAmount: "Valor Final:",
+      growthRate: "Taxa de Crescimento:",
+      totalReturn: "retorno total"
     },
     fr: {
       title: "Calculateur de Valeur Future",
@@ -83,7 +98,12 @@ export default function FutureValueCalculator({ lang = 'en' }: FutureValueCalcul
       semiAnnually: "Semi-Annuel",
       quarterly: "Trimestriel",
       monthly: "Mensuel",
-      currency: "€"
+      currency: "€",
+      initialInvestment: "Investissement Initial:",
+      interestEarned: "Intérêts Gagnés:",
+      finalAmount: "Montant Final:",
+      growthRate: "Taux de Croissance:",
+      totalReturn: "rendement total"
     }
   };
 
@@ -275,10 +295,10 @@ export default function FutureValueCalculator({ lang = 'en' }: FutureValueCalcul
               <div className="bg-indigo-50 p-4 rounded-lg">
                 <h4 className="text-sm font-semibold text-indigo-900 mb-2">{t.investmentGrowth}</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
-                  <div><strong>Initial Investment:</strong> {formatCurrency(presentValue)}</div>
-                  <div><strong>Interest Earned:</strong> {formatCurrency(parseFloat(results.totalInterest))}</div>
-                  <div><strong>Final Amount:</strong> {formatCurrency(parseFloat(results.futureValue))}</div>
-                  <div><strong>Growth Rate:</strong> {((parseFloat(results.totalInterest) / presentValue) * 100).toFixed(1)}% total return</div>
+                  <div><strong>{t.initialInvestment}</strong> {formatCurrency(presentValue)}</div>
+                  <div><strong>{t.interestEarned}</strong> {formatCurrency(parseFloat(results.totalInterest))}</div>
+                  <div><strong>{t.finalAmount}</strong> {formatCurrency(parseFloat(results.futureValue))}</div>
+                  <div><strong>{t.growthRate}</strong> {((parseFloat(results.totalInterest) / presentValue) * 100).toFixed(1)}% {t.totalReturn}</div>
                 </div>
               </div>
             </div>

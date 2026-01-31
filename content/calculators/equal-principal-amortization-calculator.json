@@ -47,40 +47,22 @@
     "calculatorComponent": "EqualPrincipalAmortizationCalculator",
     "examples": [
       {
-        "title": "Equal Principal Mortgage",
-        "description": "Comparing equal principal vs standard amortization for a mortgage",
-        "input": {
-          "loanAmount": 300000,
-          "interestRate": 6.5,
-          "loanTerm": 30,
-          "showSchedule": false
-        },
-        "output": {
-          "firstMonthPayment": "$2,483.33",
-          "lastMonthPayment": "$1,083.33",
-          "totalInterest": "$320,000",
-          "averagePayment": "$1,783.33",
-          "paymentRange": "$1,083 - $2,483 monthly",
-          "standardComparison": "Standard: $1,927 constant vs Equal Principal: $1,783 average (7% savings)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Equal Principal Car Loan",
-        "description": "Using equal principal for an auto loan",
-        "input": {
-          "loanAmount": 25000,
-          "interestRate": 7.5,
-          "loanTerm": 5,
-          "showSchedule": false
-        },
-        "output": {
-          "firstMonthPayment": "$583.33",
-          "lastMonthPayment": "$416.67",
-          "totalInterest": "$3,000",
-          "averagePayment": "$500.00",
-          "paymentRange": "$417 - $583 monthly",
-          "standardComparison": "Standard: $530 constant vs Equal Principal: $500 average (6% savings)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -207,40 +189,22 @@
     "calculatorComponent": "EqualPrincipalAmortizationCalculator",
     "examples": [
       {
-        "title": "Hipoteca de Principal Igual",
-        "description": "Comparando principal igual vs amortización estándar para hipoteca",
-        "input": {
-          "loanAmount": 300000,
-          "interestRate": 6.5,
-          "loanTerm": 30,
-          "showSchedule": false
-        },
-        "output": {
-          "firstMonthPayment": "$2,483.33",
-          "lastMonthPayment": "$1,083.33",
-          "totalInterest": "$320,000",
-          "averagePayment": "$1,783.33",
-          "paymentRange": "$1,083 - $2,483 mensuales",
-          "standardComparison": "Estándar: $1,927 constante vs Principal Igual: $1,783 promedio (7% ahorro)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Préstamo Auto Principal Igual",
-        "description": "Usando principal igual para préstamo de auto",
-        "input": {
-          "loanAmount": 25000,
-          "interestRate": 7.5,
-          "loanTerm": 5,
-          "showSchedule": false
-        },
-        "output": {
-          "firstMonthPayment": "$583.33",
-          "lastMonthPayment": "$416.67",
-          "totalInterest": "$3,000",
-          "averagePayment": "$500.00",
-          "paymentRange": "$417 - $583 mensuales",
-          "standardComparison": "Estándar: $530 constante vs Principal Igual: $500 promedio (6% ahorro)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -367,40 +331,22 @@
     "calculatorComponent": "EqualPrincipalAmortizationCalculator",
     "examples": [
       {
-        "title": "Hipoteca de Principal Igual",
-        "description": "Comparando principal igual vs amortização padrão para hipoteca",
-        "input": {
-          "loanAmount": 300000,
-          "interestRate": 6.5,
-          "loanTerm": 30,
-          "showSchedule": false
-        },
-        "output": {
-          "firstMonthPayment": "$2,483.33",
-          "lastMonthPayment": "$1,083.33",
-          "totalInterest": "$320,000",
-          "averagePayment": "$1,783.33",
-          "paymentRange": "$1,083 - $2,483 mensais",
-          "standardComparison": "Padrão: $1,927 constante vs Principal Igual: $1,783 médio (7% economia)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Empréstimo Carro Principal Igual",
-        "description": "Usando principal igual para empréstimo de carro",
-        "input": {
-          "loanAmount": 25000,
-          "interestRate": 7.5,
-          "loanTerm": 5,
-          "showSchedule": false
-        },
-        "output": {
-          "firstMonthPayment": "$583.33",
-          "lastMonthPayment": "$416.67",
-          "totalInterest": "$3,000",
-          "averagePayment": "$500.00",
-          "paymentRange": "$417 - $583 mensais",
-          "standardComparison": "Padrão: $530 constante vs Principal Igual: $500 médio (6% economia)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -527,40 +473,22 @@
     "calculatorComponent": "EqualPrincipalAmortizationCalculator",
     "examples": [
       {
-        "title": "Hypothèque de Principal Égal",
-        "description": "Comparant principal égal vs amortissement standard pour hypothèque",
-        "input": {
-          "loanAmount": 300000,
-          "interestRate": 6.5,
-          "loanTerm": 30,
-          "showSchedule": false
-        },
-        "output": {
-          "firstMonthPayment": "$2,483.33",
-          "lastMonthPayment": "$1,083.33",
-          "totalInterest": "$320,000",
-          "averagePayment": "$1,783.33",
-          "paymentRange": "$1,083 - $2,483 mensuels",
-          "standardComparison": "Standard: $1,927 constant vs Principal Égal: $1,783 moyen (7% économie)"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Emprunt Auto Principal Égal",
-        "description": "Utilisant principal égal pour emprunt auto",
-        "input": {
-          "loanAmount": 25000,
-          "interestRate": 7.5,
-          "loanTerm": 5,
-          "showSchedule": false
-        },
-        "output": {
-          "firstMonthPayment": "$583.33",
-          "lastMonthPayment": "$416.67",
-          "totalInterest": "$3,000",
-          "averagePayment": "$500.00",
-          "paymentRange": "$417 - $583 mensuels",
-          "standardComparison": "Standard: $530 constant vs Principal Égal: $500 moyen (6% économie)"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

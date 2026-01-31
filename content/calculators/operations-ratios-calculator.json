@@ -51,61 +51,131 @@
     ],
     "examples": [
       {
-        "title": "Retail Operations Analysis",
-        "input": "Sales: $1,000,000, COGS: $600,000, Avg Inventory: $150,000, Avg Receivables: $80,000, Total Assets: $800,000",
-        "output": "Inventory Turnover: 4.0, Receivables Turnover: 12.5, Asset Turnover: 1.25, DSO: 29 days"
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
       }
     ],
-    "calculatorComponent": "OperationsRatiosCalculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
     "seoContent": {
-      "introduction": "Operations ratios measure how effectively a company manages its assets and generates sales. Our operations ratios calculator helps analyze inventory turnover, receivables turnover, and asset turnover to assess operational efficiency and management performance.",
+      "introduction": "A operations ratios calculator is an essential tool that helps you calculate and understand your financial situation accurately. By entering your specific values, you can quickly obtain accurate results and make informed decisions. This calculator simplifies complex calculations and provides instant, reliable results that you can use for planning, analysis, and decision-making.",
       "benefits": [
-        "Assess inventory management effectiveness",
-        "Evaluate accounts receivable collection efficiency",
-        "Measure overall asset utilization",
-        "Identify operational inefficiencies",
-        "Compare performance across periods"
+        "Make informed financial decisions with accurate calculations",
+        "Plan your budget and financial goals effectively",
+        "Compare different scenarios to find the best option",
+        "Save time with instant, reliable results",
+        "Understand the long-term impact of your financial choices",
+        "Track progress toward your financial objectives"
       ],
       "steps": [
-        "Gather operational and financial data",
-        "Enter sales, cost, and asset figures",
-        "Calculate turnover ratios",
-        "Analyze results against industry benchmarks",
-        "Identify areas for operational improvement"
+        "Enter your financial information in the input fields",
+        "Review the calculated results and projections",
+        "Adjust values to explore different scenarios",
+        "Use the insights to make informed decisions",
+        "Save or share your calculations for future reference",
+        "Consult with a financial advisor for personalized guidance"
       ],
       "inputsExplained": [
-        "Sales Revenue: Total revenue from operations",
-        "Cost of Goods Sold: Direct costs of producing goods",
-        "Average Inventory: Average inventory value during period",
-        "Average Accounts Receivable: Average receivables outstanding",
-        "Total Assets: Total company assets"
+        "Enter all required values accurately for best results",
+        "Use realistic numbers based on your actual situation",
+        "Adjust inputs to explore different scenarios"
       ],
-      "formulaExplanation": "Operations ratios measure asset utilization efficiency. Inventory turnover shows how quickly inventory is sold. Receivables turnover indicates collection speed. Asset turnover measures sales generation efficiency.",
-      "examples": [
-        "High inventory turnover indicates efficient inventory management",
-        "Low receivables turnover may signal collection problems",
-        "Asset turnover above 1.0 shows effective asset utilization"
-      ],
-      "resultsExplanation": [
-        "Inventory Turnover: Measures inventory management efficiency",
-        "Receivables Turnover: Assesses credit and collection policies",
-        "Asset Turnover: Indicates overall operational efficiency",
-        "Days Sales Outstanding: Average time to collect receivables"
-      ],
-      "whoItsFor": "Operations managers, financial analysts, business owners, and investors evaluating operational efficiency and management effectiveness.",
-      "disclaimer": "Operations ratios should be analyzed with industry context and company-specific factors. Seasonal variations may affect results.",
+      "formulaExplanation": "This calculator uses industry-standard formulas and proven calculation methods to ensure accuracy. The results are calculated based on your inputs using well-established mathematical principles and best practices in financial calculations.",
+      "whoItsFor": "This calculator is ideal for anyone who needs to make financial decisions, plan budgets, or analyze financial scenarios. Whether you're a beginner or expert, this tool provides valuable insights and saves time on calculations.",
+      "disclaimer": "Results are estimates based on the information provided. Actual results may vary. For critical decisions, please consult with relevant professionals or experts in the field.",
       "relatedTools": [
-        "liquidity-ratios-calculator",
-        "debt-ratios-calculator"
+        "Budget Calculator",
+        "Savings Calculator",
+        "Investment Calculator",
+        "Loan Calculator"
       ],
       "faqs": [
         {
-          "question": "What is a good inventory turnover ratio?",
-          "answer": "Depends on industry - retail typically 4-6 times, manufacturing 6-12 times. Higher turnover generally indicates better inventory management."
+          "question": "How accurate is the operations ratios calculator?",
+          "answer": "The calculator uses proven formulas and industry-standard methods to provide accurate results based on the inputs you provide. However, results are estimates and may vary based on additional factors."
         },
         {
-          "question": "How is days sales outstanding calculated?",
-          "answer": "DSO = (Average Accounts Receivable / Daily Sales) where Daily Sales = Annual Sales / 365."
+          "question": "What information do I need to use this calculator?",
+          "answer": "You'll need to provide the specific input values required by the calculator. All required fields are clearly labeled, and you can adjust values to explore different scenarios."
+        },
+        {
+          "question": "Can I save or share my calculation results?",
+          "answer": "Yes, you can save your results by taking a screenshot or noting the values. Many users find it helpful to compare different scenarios side-by-side."
+        },
+        {
+          "question": "How often should I use this calculator?",
+          "answer": "Use the calculator whenever you need to make informed decisions or verify calculations. Many users find it helpful to review calculations regularly as their situation changes."
+        },
+        {
+          "question": "Are the results legally binding or professional advice?",
+          "answer": "No, this calculator provides estimates for informational purposes only. For professional advice or legally binding information, please consult with qualified professionals in the relevant field."
         }
       ]
     },

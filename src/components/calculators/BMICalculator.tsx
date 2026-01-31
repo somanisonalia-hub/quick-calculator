@@ -26,6 +26,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
   const translations = {
     en: {
       title: "BMI Calculator",
+      description: "Calculate your Body Mass Index (BMI) and health category",
       unitSystem: "Unit System",
       metric: "Metric (cm/kg)",
       imperial: "Imperial (ft/lbs)",
@@ -53,10 +54,12 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       normalLabel: "Normal:",
       overweightLabel: "Overweight:",
       obeseLabel: "Obese:",
-      num0: "≥ 30"
+      num0: "≥ 30",
+      bmiCategories: "BMI Categories:"
     },
     es: {
       title: "Calculadora IMC",
+      description: "Calcula tu Índice de Masa Corporal (IMC) y categoría de salud",
       unitSystem: "Sistema de Unidades",
       metric: "Métrico (cm/kg)",
       imperial: "Imperial (ft/lbs)",
@@ -84,10 +87,12 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       normalLabel: "Normal:",
       overweightLabel: "Sobrepeso:",
       obeseLabel: "Obeso:",
-      num0: "≥ 30"
+      num0: "≥ 30",
+      bmiCategories: "Categorías IMC:"
     },
     pt: {
       title: "Calculadora IMC",
+      description: "Calcule seu Índice de Massa Corporal (IMC) e categoria de saúde",
       unitSystem: "Sistema de Unidades",
       metric: "Métrico (cm/kg)",
       imperial: "Imperial (ft/lbs)",
@@ -115,10 +120,12 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       normalLabel: "Normal:",
       overweightLabel: "Sobrepeso:",
       obeseLabel: "Obeso:",
-      num0: "≥ 30"
+      num0: "≥ 30",
+      bmiCategories: "Categorias IMC:"
     },
     fr: {
       title: "Calculateur IMC",
+      description: "Calculez votre Indice de Masse Corporelle (IMC) et catégorie de santé",
       unitSystem: "Système d'Unités",
       metric: "Métrique (cm/kg)",
       imperial: "Impérial (ft/lbs)",
@@ -146,7 +153,8 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       normalLabel: "Normal:",
       overweightLabel: "Surpoids:",
       obeseLabel: "Obèse:",
-      num0: "≥ 30"
+      num0: "≥ 30",
+      bmiCategories: "Catégories IMC:"
     }
   };
 
@@ -212,7 +220,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
     <div className="space-y-6">
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h1>
-        <p className="text-gray-600">Calculate your Body Mass Index (BMI) and health category</p>
+        <p className="text-gray-600">{t.description}</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -349,7 +357,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
           </div>
 
           <div className="bg-gray-50 p-3 rounded-lg">
-            <div className="text-xs text-gray-600 mb-2">BMI Categories:</div>
+            <div className="text-xs text-gray-600 mb-2">{t.bmiCategories}</div>
             <div className="space-y-1 text-xs">
               <div className="flex justify-between">
                 <span>{t.underweightLabel}</span>

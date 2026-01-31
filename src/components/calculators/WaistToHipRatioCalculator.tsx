@@ -75,7 +75,12 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
         low: "Low",
         moderate: "Moderate",
         high: "High"
-      }
+      },
+      waistMeasurement: "Waist: Measure at narrowest point",
+      hipsMeasurement: "Hips: Measure at widest point",
+      womenRisk: "Women: Low <0.80, Moderate 0.80-0.84, High ≥0.85",
+      menRisk: "Men: Low <0.90, Moderate 0.90-0.99, High ≥1.00",
+      noteWHR: "Note: WHR is a valuable health indicator that measures body fat distribution. Values in the high-risk range are associated with increased risk of cardiovascular disease and other health conditions."
     },
     es: {
       title: "Calculadora de Relación Cintura-Cadera",
@@ -108,7 +113,12 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
         low: "Bajo",
         moderate: "Moderado",
         high: "Alto"
-      }
+      },
+      waistMeasurement: "Cintura: Medir en el punto más estrecho",
+      hipsMeasurement: "Caderas: Medir en el punto más ancho",
+      womenRisk: "Mujeres: Bajo <0.80, Moderado 0.80-0.84, Alto ≥0.85",
+      menRisk: "Hombres: Bajo <0.90, Moderado 0.90-0.99, Alto ≥1.00",
+      noteWHR: "Nota: La RCC es un valioso indicador de salud que mide la distribución de grasa corporal. Los valores en el rango de alto riesgo están asociados con un mayor riesgo de enfermedad cardiovascular y otras condiciones de salud."
     },
     pt: {
       title: "Calculadora de Relação Cintura-Quadril",
@@ -141,7 +151,12 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
         low: "Baixo",
         moderate: "Moderado",
         high: "Alto"
-      }
+      },
+      waistMeasurement: "Cintura: Medir no ponto mais estreito",
+      hipsMeasurement: "Quadris: Medir no ponto mais largo",
+      womenRisk: "Mulheres: Baixo <0.80, Moderado 0.80-0.84, Alto ≥0.85",
+      menRisk: "Homens: Baixo <0.90, Moderado 0.90-0.99, Alto ≥1.00",
+      noteWHR: "Nota: A RCQ é um valioso indicador de saúde que mede a distribuição de gordura corporal. Valores na faixa de alto risco estão associados com maior risco de doença cardiovascular e outras condições de saúde."
     },
     fr: {
       title: "Calculateur de Rapport Taille-Hanches",
@@ -174,7 +189,12 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
         low: "Faible",
         moderate: "Modéré",
         high: "Élevé"
-      }
+      },
+      waistMeasurement: "Taille: Mesurer au point le plus étroit",
+      hipsMeasurement: "Hanches: Mesurer au point le plus large",
+      womenRisk: "Femmes: Faible <0.80, Modéré 0.80-0.84, Élevé ≥0.85",
+      menRisk: "Hommes: Faible <0.90, Modéré 0.90-0.99, Élevé ≥1.00",
+      noteWHR: "Remarque: Le RTH est un indicateur de santé précieux qui mesure la distribution de la graisse corporelle. Les valeurs dans la plage à haut risque sont associées à un risque accru de maladie cardiovasculaire et d'autres problèmes de santé."
     }
   };
 
@@ -415,8 +435,8 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
             📏 How to Measure
           </h3>
           <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
-            <li>• <strong>Waist:</strong> Measure at narrowest point</li>
-            <li>• <strong>Hips:</strong> Measure at widest point</li>
+            <li>• {t.waistMeasurement}</li>
+            <li>• {t.hipsMeasurement}</li>
             <li>• Use flexible tape measure</li>
             <li>• Measure on bare skin</li>
             <li>• Stand straight and relaxed</li>
@@ -428,8 +448,8 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
             🎯 Health Risk Ranges
           </h3>
           <ul className="text-sm text-green-800 dark:text-green-200 space-y-1">
-            <li>• <strong>Women:</strong> Low &lt;0.80, Moderate 0.80-0.84, High ≥0.85</li>
-            <li>• <strong>Men:</strong> Low &lt;0.90, Moderate 0.90-0.99, High ≥1.00</li>
+            <li>• {t.womenRisk}</li>
+            <li>• {t.menRisk}</li>
             <li>• Apple shape = Higher risk</li>
             <li>• Pear shape = Lower risk</li>
             <li>• Based on WHO guidelines</li>
@@ -440,10 +460,7 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       {/* Disclaimer */}
       <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          <strong>Note:</strong> WHR is a valuable health indicator but should be used alongside other measures like BMI and body fat percentage for comprehensive health assessment.
-          Risk categories are based on WHO guidelines and population studies. Individual results may vary.
-          Always consult healthcare providers for personalized medical advice.
-        </p>
+          {t.noteWHR}</p>
       </div>
     </div>
   );

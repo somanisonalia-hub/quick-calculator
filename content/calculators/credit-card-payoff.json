@@ -1,0 +1,591 @@
+{
+  "en": {
+    "title": "Credit Card Payoff Calculator",
+    "seoTitle": "Credit Card Payoff Calculator – Clear Debt Faster",
+    "metaDescription": "Plan how to pay off credit card debt efficiently and save on interest.",
+    "keywords": [
+      "credit card payoff calculator",
+      "debt payoff calculator",
+      "credit card debt calculator",
+      "pay off credit card",
+      "debt repayment calculator"
+    ],
+    "slug": "credit-card-payoff",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": [
+      "credit card",
+      "debt",
+      "payoff",
+      "interest",
+      "budgeting"
+    ],
+    "summary": "Plan how to pay off credit card debt efficiently.",
+    "description": "Our credit card payoff calculator helps you determine how long it will take to pay off your credit card debt and how much interest you'll pay based on your balance, APR, and monthly payment.",
+    "instructions": [
+      "Enter credit card balance",
+      "Add annual interest rate (APR)",
+      "Specify monthly payment amount",
+      "See payoff timeline and total interest",
+      "Compare different payment scenarios"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "balance",
+          "label": "Current Balance",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "max": 100000,
+          "step": 10,
+          "unit": "$"
+        },
+        {
+          "name": "apr",
+          "label": "Annual Interest Rate (APR)",
+          "type": "number",
+          "default": 18.99,
+          "min": 0,
+          "max": 35,
+          "step": 0.01,
+          "unit": "%"
+        },
+        {
+          "name": "monthlyPayment",
+          "label": "Monthly Payment",
+          "type": "number",
+          "default": 150,
+          "min": 0,
+          "max": 10000,
+          "step": 10,
+          "unit": "$"
+        }
+      ],
+      "formula": "Months = -log(1 - (Balance × (APR/12)) / Payment) / log(1 + (APR/12))",
+      "outputs": [
+        {
+          "name": "monthsToPayoff",
+          "label": "Months to Pay Off",
+          "unit": "months"
+        },
+        {
+          "name": "totalInterest",
+          "label": "Total Interest Paid",
+          "unit": "$"
+        },
+        {
+          "name": "totalPaid",
+          "label": "Total Amount Paid",
+          "unit": "$"
+        }
+      ]
+    },
+    "relatedCalculators": [
+      "debt-to-income",
+      "budget-calculator",
+      "savings-goal",
+      "emergency-fund"
+    ],
+    "examples": [
+      {
+        "title": "Minimum Payment Trap",
+        "input": {
+          "balance": 5000,
+          "apr": 19.99,
+          "monthlyPayment": 100
+        },
+        "output": {
+          "monthsToPayoff": 94,
+          "totalInterest": 4389,
+          "totalPaid": 9389
+        },
+        "explanation": "Paying only $100/month on a $5,000 balance at 19.99% APR takes almost 8 years and nearly doubles the debt with $4,389 in interest."
+      },
+      {
+        "title": "Aggressive Payoff",
+        "input": {
+          "balance": 5000,
+          "apr": 19.99,
+          "monthlyPayment": 300
+        },
+        "output": {
+          "monthsToPayoff": 20,
+          "totalInterest": 987,
+          "totalPaid": 5987
+        },
+        "explanation": "Tripling the payment to $300/month pays off the debt in under 2 years, saving over $3,400 in interest compared to minimum payments."
+      },
+      {
+        "title": "Balance Transfer Savings",
+        "input": {
+          "balance": 5000,
+          "apr": 5.99,
+          "monthlyPayment": 200
+        },
+        "output": {
+          "monthsToPayoff": 27,
+          "totalInterest": 374,
+          "totalPaid": 5374
+        },
+        "explanation": "Transferring to a lower 5.99% APR card and paying $200/month saves thousands in interest and clears debt in just over 2 years."
+      }
+    ],
+    "seoContent": {
+      "introduction": "A credit card payoff calculator is a powerful debt elimination tool that shows you exactly how long it will take to become debt-free and how much you'll pay in total interest. By entering your current balance, APR, and planned monthly payment, you can visualize different payoff strategies and make informed decisions about tackling credit card debt. This calculator reveals the true cost of making minimum payments versus aggressive payoff strategies, helping you save thousands of dollars in interest.",
+      "benefits": [
+        "See exactly how long until you're debt-free with different payment amounts",
+        "Calculate total interest costs to understand the true price of debt",
+        "Compare minimum payments vs. aggressive payoff strategies",
+        "Motivate yourself with a clear payoff timeline and savings potential",
+        "Make data-driven decisions about debt consolidation or balance transfers",
+        "Plan your budget around realistic debt elimination goals"
+      ],
+      "steps": [
+        "Enter your current credit card balance (total amount owed)",
+        "Input your card's APR (annual percentage rate - find on statement)",
+        "Specify your planned monthly payment amount",
+        "Review months to payoff and total interest cost",
+        "Experiment with higher payments to see interest savings",
+        "Create a debt payoff plan based on your optimal payment amount"
+      ],
+      "inputsExplained": [
+        "Balance: Total amount currently owed on the credit card",
+        "APR: Annual interest rate (if you have multiple rates, use weighted average)",
+        "Monthly Payment: Fixed amount you'll pay each month (must exceed minimum)"
+      ],
+      "formulaExplanation": "The calculator uses an amortization formula that accounts for compound interest. Each month, interest is added to your balance, then your payment is applied. The formula calculates how many months until the balance reaches zero, assuming consistent monthly payments and no new charges.",
+      "whoItsFor": "This calculator is essential for anyone carrying credit card debt, from those making minimum payments who want to see the long-term cost, to motivated individuals creating an aggressive payoff plan. It's particularly valuable for comparing balance transfer offers or deciding how much extra to pay beyond the minimum.",
+      "disclaimer": "Results assume no additional charges to the card and consistent monthly payments. Actual payoff may vary if you miss payments, make new purchases, or if your APR changes. For accounts with promotional APRs, use the rate that will apply after the promotion ends for accurate long-term planning.",
+      "relatedTools": [
+        "Debt-to-Income Calculator",
+        "Budget Calculator",
+        "Emergency Fund Calculator",
+        "Savings Goal Calculator"
+      ],
+      "faqs": [
+        {
+          "question": "How much can I save by paying extra on my credit card?",
+          "answer": "The savings can be enormous. For example, on a $5,000 balance at 19.99% APR, paying $200/month instead of $100/month saves over $3,400 in interest and cuts payoff time from 94 months to 31 months. Even an extra $25-50 per month makes a significant difference."
+        },
+        {
+          "question": "What if I can only afford the minimum payment?",
+          "answer": "Minimum payments typically only cover interest plus 1-2% of the balance, which can mean 15-30 years to pay off even moderate balances. If you can only afford minimums, prioritize finding ways to increase income, reduce expenses, or consolidate to a lower-rate loan to avoid the minimum payment trap."
+        },
+        {
+          "question": "Should I focus on one card or spread payments across multiple cards?",
+          "answer": "Use the debt avalanche method: pay minimums on all cards, then put extra money toward the highest APR card first. This saves the most money. Alternatively, the debt snowball method (paying smallest balance first) provides psychological wins. Choose what keeps you motivated."
+        },
+        {
+          "question": "Is a balance transfer worth it?",
+          "answer": "If you can get 0% APR for 12-18 months with a 3-5% transfer fee, it's often worth it. For a $5,000 balance at 20% APR, transferring saves hundreds even with the fee. Critical: have a plan to pay off the full balance before the promotional rate expires."
+        },
+        {
+          "question": "How does the APR affect my payoff time?",
+          "answer": "APR dramatically impacts both time and cost. A $5,000 balance with $200 monthly payment takes 31 months at 20% APR (with $1,138 interest) but only 27 months at 6% APR (with $374 interest) - saving $764. Even small APR reductions make a big difference."
+        }
+      ]
+    },
+    "component": "CreditCardPayoffCalculator"
+  },
+  "es": {
+    "title": "Calculadora de Pago de Tarjeta de Crédito",
+    "seoTitle": "Calculadora de Pago de Tarjeta de Crédito – Elimina Deudas Más Rápido",
+    "metaDescription": "Planifica cómo pagar la deuda de tarjeta de crédito eficientemente y ahorra en intereses.",
+    "keywords": [
+      "calculadora de pago de tarjeta de crédito",
+      "calculadora de pago de deuda",
+      "calculadora de deuda de tarjeta de crédito",
+      "pagar tarjeta de crédito",
+      "calculadora de reembolso de deuda"
+    ],
+    "slug": "credit-card-payoff",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": [
+      "tarjeta de crédito",
+      "deuda",
+      "pago",
+      "interés",
+      "presupuesto"
+    ],
+    "summary": "Planifica cómo pagar la deuda de tarjeta de crédito eficientemente.",
+    "description": "Nuestra calculadora de pago de tarjeta de crédito te ayuda a determinar cuánto tiempo tomará pagar tu deuda y cuánto interés pagarás.",
+    "instructions": [
+      "Ingresa saldo de tarjeta",
+      "Añade tasa de interés anual",
+      "Especifica pago mensual",
+      "Ve cronograma de pago",
+      "Compara escenarios"
+    ],
+    "calculatorComponent": "CreditCardPayoffCalculator",
+    "relatedCalculators": [
+      "debt-to-income",
+      "budget-calculator",
+      "savings-goal",
+      "emergency-fund"
+    ],
+    "seoContent": {
+      "introduction": "Una calculadora de pago de tarjeta de crédito es una herramienta poderosa que muestra exactamente cuánto tiempo tomará quedar libre de deudas y cuánto pagarás en intereses totales.",
+      "benefits": [
+        "Ve exactamente cuánto falta para estar libre de deudas",
+        "Calcula costos totales de intereses",
+        "Compara pagos mínimos vs agresivos",
+        "Motívate con un cronograma claro",
+        "Toma decisiones sobre consolidación",
+        "Planifica tu presupuesto"
+      ],
+      "steps": [
+        "Ingresa tu saldo actual",
+        "Introduce el APR de tu tarjeta",
+        "Especifica tu pago mensual planeado",
+        "Revisa meses hasta pago total",
+        "Experimenta con pagos más altos",
+        "Crea un plan de eliminación de deuda"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánto puedo ahorrar pagando extra?",
+          "answer": "Los ahorros pueden ser enormes. En un saldo de $5,000 al 19.99% APR, pagar $200/mes en lugar de $100/mes ahorra más de $3,400 en intereses."
+        },
+        {
+          "question": "¿Qué pasa si solo puedo pagar el mínimo?",
+          "answer": "Los pagos mínimos pueden significar 15-30 años para pagar saldos moderados. Prioriza encontrar formas de aumentar ingresos o consolidar."
+        },
+        {
+          "question": "¿Debería enfocarme en una tarjeta o distribuir pagos?",
+          "answer": "Usa el método avalancha: paga mínimos en todas, luego dinero extra a la tarjeta con APR más alto primero."
+        },
+        {
+          "question": "¿Vale la pena una transferencia de saldo?",
+          "answer": "Si puedes obtener 0% APR por 12-18 meses con una tarifa del 3-5%, a menudo vale la pena. Ahorra cientos incluso con la tarifa."
+        },
+        {
+          "question": "¿Cómo afecta el APR mi tiempo de pago?",
+          "answer": "El APR impacta dramáticamente. Un saldo de $5,000 con pago de $200 toma 31 meses al 20% pero solo 27 meses al 6%, ahorrando $764."
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Minimum Payment Trap",
+        "input": {
+          "balance": 5000,
+          "apr": 19.99,
+          "monthlyPayment": 100
+        },
+        "output": {
+          "monthsToPayoff": 94,
+          "totalInterest": 4389,
+          "totalPaid": 9389
+        },
+        "explanation": "Paying only $100/month on a $5,000 balance at 19.99% APR takes almost 8 years and nearly doubles the debt with $4,389 in interest."
+      },
+      {
+        "title": "Aggressive Payoff",
+        "input": {
+          "balance": 5000,
+          "apr": 19.99,
+          "monthlyPayment": 300
+        },
+        "output": {
+          "monthsToPayoff": 20,
+          "totalInterest": 987,
+          "totalPaid": 5987
+        },
+        "explanation": "Tripling the payment to $300/month pays off the debt in under 2 years, saving over $3,400 in interest compared to minimum payments."
+      },
+      {
+        "title": "Balance Transfer Savings",
+        "input": {
+          "balance": 5000,
+          "apr": 5.99,
+          "monthlyPayment": 200
+        },
+        "output": {
+          "monthsToPayoff": 27,
+          "totalInterest": 374,
+          "totalPaid": 5374
+        },
+        "explanation": "Transferring to a lower 5.99% APR card and paying $200/month saves thousands in interest and clears debt in just over 2 years."
+      }
+    ],
+    "component": "CreditCardPayoffCalculator"
+  },
+  "fr": {
+    "title": "Calculateur de Remboursement de Carte de Crédit",
+    "seoTitle": "Calculateur de Remboursement de Carte de Crédit – Éliminez les Dettes Plus Rapidement",
+    "metaDescription": "Planifiez comment rembourser efficacement la dette de carte de crédit et économiser sur les intérêts.",
+    "keywords": [
+      "calculateur de remboursement de carte de crédit",
+      "calculateur de paiement de dette",
+      "calculateur de dette de carte de crédit",
+      "rembourser carte de crédit",
+      "calculateur de remboursement de dette"
+    ],
+    "slug": "credit-card-payoff",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": [
+      "carte de crédit",
+      "dette",
+      "remboursement",
+      "intérêt",
+      "budgétisation"
+    ],
+    "summary": "Planifiez comment rembourser efficacement la dette de carte de crédit.",
+    "description": "Notre calculateur de remboursement de carte de crédit vous aide à déterminer combien de temps il faudra pour rembourser votre dette de carte de crédit et combien d'intérêts vous paierez en fonction de votre solde, APR et paiement mensuel.",
+    "instructions": [
+      "Entrez le solde de carte de crédit",
+      "Ajoutez le taux d'intérêt annuel (APR)",
+      "Spécifiez le montant du paiement mensuel",
+      "Voyez le calendrier de remboursement et l'intérêt total",
+      "Comparez différents scénarios de paiement"
+    ],
+    "calculatorComponent": "CreditCardPayoffCalculator",
+    "relatedCalculators": [
+      "debt-to-income",
+      "budget-calculator",
+      "savings-goal",
+      "emergency-fund"
+    ],
+    "seoContent": {
+      "introduction": "Un calculateur de remboursement de carte de crédit est un outil puissant d'élimination de dette qui vous montre exactement combien de temps il faudra pour devenir libre de dettes et combien vous paierez en intérêts totaux. En entrant votre solde actuel, APR et paiement mensuel prévu, vous pouvez visualiser différentes stratégies de remboursement et prendre des décisions éclairées sur la gestion de la dette de carte de crédit. Ce calculateur révèle le coût réel des paiements minimums par rapport aux stratégies de remboursement agressives, vous aidant à économiser des milliers d'euros en intérêts.",
+      "benefits": [
+        "Voyez exactement combien de temps jusqu'à ce que vous soyez libre de dettes avec différents montants de paiement",
+        "Calculez les coûts totaux d'intérêts pour comprendre le vrai prix de la dette",
+        "Comparez les paiements minimums vs. stratégies de remboursement agressives",
+        "Motivez-vous avec un calendrier de remboursement clair et un potentiel d'économies",
+        "Prenez des décisions basées sur les données concernant la consolidation de dettes ou les transferts de solde",
+        "Planifiez votre budget autour d'objectifs réalistes d'élimination de dettes"
+      ],
+      "steps": [
+        "Entrez votre solde de carte de crédit actuel (montant total dû)",
+        "Saisissez l'APR de votre carte (taux annuel effectif global - trouvez sur le relevé)",
+        "Spécifiez le montant de votre paiement mensuel prévu",
+        "Consultez les mois jusqu'au remboursement et le coût total des intérêts",
+        "Expérimentez avec des paiements plus élevés pour voir les économies d'intérêts",
+        "Créez un plan de remboursement de dette basé sur votre montant de paiement optimal"
+      ],
+      "inputsExplained": [
+        "Solde: Montant total actuellement dû sur la carte de crédit",
+        "APR: Taux d'intérêt annuel (si vous avez plusieurs taux, utilisez la moyenne pondérée)",
+        "Paiement Mensuel: Montant fixe que vous paierez chaque mois (doit dépasser le minimum)"
+      ],
+      "formulaExplanation": "Le calculateur utilise une formule d'amortissement qui tient compte des intérêts composés. Chaque mois, les intérêts sont ajoutés à votre solde, puis votre paiement est appliqué. La formule calcule combien de mois jusqu'à ce que le solde atteigne zéro, en supposant des paiements mensuels constants et aucuns nouveaux frais.",
+      "whoItsFor": "Ce calculateur est essentiel pour quiconque porte une dette de carte de crédit, de ceux qui font des paiements minimums et veulent voir le coût à long terme, aux personnes motivées créant un plan de remboursement agressif. Il est particulièrement précieux pour comparer les offres de transfert de solde ou décider combien payer au-delà du minimum.",
+      "disclaimer": "Les résultats supposent aucuns frais supplémentaires sur la carte et des paiements mensuels constants. Le remboursement réel peut varier si vous manquez des paiements, faites de nouveaux achats, ou si votre APR change. Pour les comptes avec des APR promotionnels, utilisez le taux qui s'appliquera après la fin de la promotion pour une planification à long terme précise.",
+      "relatedTools": [
+        "Calculateur Dette-Revenu",
+        "Calculateur de Budget",
+        "Calculateur de Fonds d'Urgence",
+        "Calculateur d'Objectif d'Épargne"
+      ],
+      "faqs": [
+        {
+          "question": "Combien puis-je économiser en payant plus sur ma carte de crédit?",
+          "answer": "Les économies peuvent être énormes. Par exemple, sur un solde de 5 000 € à 19,99% APR, payer 200 €/mois au lieu de 100 €/mois économise plus de 3 400 € en intérêts et réduit le temps de remboursement de 94 mois à 31 mois. Même 25-50 € supplémentaires par mois font une différence significative."
+        },
+        {
+          "question": "Que faire si je ne peux me permettre que le paiement minimum?",
+          "answer": "Les paiements minimums ne couvrent généralement que les intérêts plus 1-2% du solde, ce qui peut signifier 15-30 ans pour rembourser même des soldes modérés. Si vous ne pouvez vous permettre que les minimums, priorisez trouver des moyens d'augmenter les revenus, réduire les dépenses, ou consolider à un prêt à taux plus bas pour éviter le piège du paiement minimum."
+        },
+        {
+          "question": "Dois-je me concentrer sur une carte ou répartir les paiements sur plusieurs cartes?",
+          "answer": "Utilisez la méthode de l'avalanche de dettes : payez les minimums sur toutes les cartes, puis mettez l'argent supplémentaire vers la carte avec l'APR le plus élevé en premier. Cela économise le plus d'argent. Alternativement, la méthode de la boule de neige (payer d'abord le plus petit solde) fournit des victoires psychologiques. Choisissez ce qui vous garde motivé."
+        },
+        {
+          "question": "Un transfert de solde en vaut-il la peine?",
+          "answer": "Si vous pouvez obtenir 0% APR pendant 12-18 mois avec des frais de transfert de 3-5%, cela en vaut souvent la peine. Pour un solde de 5 000 € à 20% APR, le transfert économise des centaines même avec les frais. Critique : ayez un plan pour rembourser le solde complet avant l'expiration du taux promotionnel."
+        },
+        {
+          "question": "Comment l'APR affecte-t-il mon temps de remboursement?",
+          "answer": "L'APR impacte dramatiquement le temps et le coût. Un solde de 5 000 € avec un paiement mensuel de 200 € prend 31 mois à 20% APR (avec 1 138 € d'intérêts) mais seulement 27 mois à 6% APR (avec 374 € d'intérêts) - économisant 764 €. Même de petites réductions d'APR font une grande différence."
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Minimum Payment Trap",
+        "input": {
+          "balance": 5000,
+          "apr": 19.99,
+          "monthlyPayment": 100
+        },
+        "output": {
+          "monthsToPayoff": 94,
+          "totalInterest": 4389,
+          "totalPaid": 9389
+        },
+        "explanation": "Paying only $100/month on a $5,000 balance at 19.99% APR takes almost 8 years and nearly doubles the debt with $4,389 in interest."
+      },
+      {
+        "title": "Aggressive Payoff",
+        "input": {
+          "balance": 5000,
+          "apr": 19.99,
+          "monthlyPayment": 300
+        },
+        "output": {
+          "monthsToPayoff": 20,
+          "totalInterest": 987,
+          "totalPaid": 5987
+        },
+        "explanation": "Tripling the payment to $300/month pays off the debt in under 2 years, saving over $3,400 in interest compared to minimum payments."
+      },
+      {
+        "title": "Balance Transfer Savings",
+        "input": {
+          "balance": 5000,
+          "apr": 5.99,
+          "monthlyPayment": 200
+        },
+        "output": {
+          "monthsToPayoff": 27,
+          "totalInterest": 374,
+          "totalPaid": 5374
+        },
+        "explanation": "Transferring to a lower 5.99% APR card and paying $200/month saves thousands in interest and clears debt in just over 2 years."
+      }
+    ],
+    "component": "CreditCardPayoffCalculator"
+  },
+  "pt": {
+    "title": "Calculadora de Pagamento de Cartão de Crédito",
+    "seoTitle": "Calculadora de Pagamento de Cartão de Crédito – Livre-se de Dívidas Mais Rápido",
+    "metaDescription": "Planeje como pagar dívidas de cartão de crédito com eficiência e economize em juros.",
+    "keywords": [
+      "calculadora de pagamento de cartão de crédito",
+      "calculadora de pagamento de dívida",
+      "calculadora de dívida de cartão de crédito",
+      "pagar cartão de crédito",
+      "calculadora de reembolso de dívida"
+    ],
+    "slug": "credit-card-payoff",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": [
+      "cartão de crédito",
+      "dívida",
+      "pagamento",
+      "juros",
+      "orçamento"
+    ],
+    "summary": "Planeje como pagar dívidas de cartão de crédito com eficiência.",
+    "description": "Nossa calculadora de pagamento de cartão de crédito ajuda você a determinar quanto tempo levará para pagar sua dívida de cartão de crédito e quanto de juros você pagará com base no saldo, APR e pagamento mensal.",
+    "instructions": [
+      "Digite o saldo do cartão de crédito",
+      "Adicione a taxa de juros anual (APR)",
+      "Especifique o valor do pagamento mensal",
+      "Veja o cronograma de pagamento e juros totais",
+      "Compare diferentes cenários de pagamento"
+    ],
+    "calculatorComponent": "CreditCardPayoffCalculator",
+    "relatedCalculators": [
+      "debt-to-income",
+      "budget-calculator",
+      "savings-goal",
+      "emergency-fund"
+    ],
+    "seoContent": {
+      "introduction": "Uma calculadora de pagamento de cartão de crédito é uma poderosa ferramenta de eliminação de dívidas que mostra exatamente quanto tempo levará para ficar livre de dívidas e quanto você pagará em juros totais. Ao inserir seu saldo atual, APR e pagamento mensal planejado, você pode visualizar diferentes estratégias de pagamento e tomar decisões informadas sobre lidar com dívidas de cartão de crédito. Esta calculadora revela o custo real de fazer pagamentos mínimos versus estratégias de pagamento agressivas, ajudando você a economizar milhares de reais em juros.",
+      "benefits": [
+        "Veja exatamente quanto tempo até você ficar livre de dívidas com diferentes valores de pagamento",
+        "Calcule os custos totais de juros para entender o verdadeiro preço da dívida",
+        "Compare pagamentos mínimos vs. estratégias de pagamento agressivas",
+        "Motive-se com um cronograma de pagamento claro e potencial de economia",
+        "Tome decisões baseadas em dados sobre consolidação de dívidas ou transferências de saldo",
+        "Planeje seu orçamento em torno de metas realistas de eliminação de dívidas"
+      ],
+      "steps": [
+        "Digite seu saldo atual de cartão de crédito (valor total devido)",
+        "Insira o APR do seu cartão (taxa percentual anual - encontre no extrato)",
+        "Especifique o valor do seu pagamento mensal planejado",
+        "Revise os meses até o pagamento e o custo total de juros",
+        "Experimente com pagamentos mais altos para ver economias de juros",
+        "Crie um plano de pagamento de dívida baseado no seu valor de pagamento ideal"
+      ],
+      "inputsExplained": [
+        "Saldo: Valor total atualmente devido no cartão de crédito",
+        "APR: Taxa de juros anual (se você tiver várias taxas, use a média ponderada)",
+        "Pagamento Mensal: Valor fixo que você pagará a cada mês (deve exceder o mínimo)"
+      ],
+      "formulaExplanation": "A calculadora usa uma fórmula de amortização que leva em conta juros compostos. A cada mês, os juros são adicionados ao seu saldo, depois seu pagamento é aplicado. A fórmula calcula quantos meses até o saldo chegar a zero, assumindo pagamentos mensais consistentes e sem novas cobranças.",
+      "whoItsFor": "Esta calculadora é essencial para qualquer pessoa com dívida de cartão de crédito, desde aqueles que fazem pagamentos mínimos e querem ver o custo a longo prazo, até indivíduos motivados criando um plano de pagamento agressivo. É particularmente valiosa para comparar ofertas de transferência de saldo ou decidir quanto pagar além do mínimo.",
+      "disclaimer": "Os resultados assumem nenhuma cobrança adicional no cartão e pagamentos mensais consistentes. O pagamento real pode variar se você perder pagamentos, fizer novas compras, ou se seu APR mudar. Para contas com APRs promocionais, use a taxa que se aplicará após o término da promoção para planejamento preciso a longo prazo.",
+      "relatedTools": [
+        "Calculadora de Dívida-Renda",
+        "Calculadora de Orçamento",
+        "Calculadora de Fundo de Emergência",
+        "Calculadora de Meta de Poupança"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto posso economizar pagando mais no meu cartão de crédito?",
+          "answer": "As economias podem ser enormes. Por exemplo, em um saldo de R$ 5.000 a 19,99% APR, pagar R$ 200/mês em vez de R$ 100/mês economiza mais de R$ 3.400 em juros e reduz o tempo de pagamento de 94 meses para 31 meses. Mesmo R$ 25-50 extras por mês fazem uma diferença significativa."
+        },
+        {
+          "question": "E se eu só puder pagar o pagamento mínimo?",
+          "answer": "Pagamentos mínimos normalmente cobrem apenas juros mais 1-2% do saldo, o que pode significar 15-30 anos para pagar até saldos moderados. Se você só pode pagar o mínimo, priorize encontrar maneiras de aumentar a renda, reduzir despesas, ou consolidar para um empréstimo com taxa mais baixa para evitar a armadilha do pagamento mínimo."
+        },
+        {
+          "question": "Devo focar em um cartão ou distribuir pagamentos entre vários cartões?",
+          "answer": "Use o método avalanche de dívidas: pague os mínimos em todos os cartões, depois coloque dinheiro extra no cartão com o APR mais alto primeiro. Isso economiza mais dinheiro. Alternativamente, o método bola de neve (pagar o menor saldo primeiro) fornece vitórias psicológicas. Escolha o que te mantém motivado."
+        },
+        {
+          "question": "Vale a pena uma transferência de saldo?",
+          "answer": "Se você conseguir 0% APR por 12-18 meses com uma taxa de transferência de 3-5%, geralmente vale a pena. Para um saldo de R$ 5.000 a 20% APR, transferir economiza centenas mesmo com a taxa. Crítico: tenha um plano para pagar o saldo completo antes que a taxa promocional expire."
+        },
+        {
+          "question": "Como o APR afeta meu tempo de pagamento?",
+          "answer": "O APR impacta dramaticamente tanto o tempo quanto o custo. Um saldo de R$ 5.000 com pagamento mensal de R$ 200 leva 31 meses a 20% APR (com R$ 1.138 de juros) mas apenas 27 meses a 6% APR (com R$ 374 de juros) - economizando R$ 764. Mesmo pequenas reduções de APR fazem uma grande diferença."
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Minimum Payment Trap",
+        "input": {
+          "balance": 5000,
+          "apr": 19.99,
+          "monthlyPayment": 100
+        },
+        "output": {
+          "monthsToPayoff": 94,
+          "totalInterest": 4389,
+          "totalPaid": 9389
+        },
+        "explanation": "Paying only $100/month on a $5,000 balance at 19.99% APR takes almost 8 years and nearly doubles the debt with $4,389 in interest."
+      },
+      {
+        "title": "Aggressive Payoff",
+        "input": {
+          "balance": 5000,
+          "apr": 19.99,
+          "monthlyPayment": 300
+        },
+        "output": {
+          "monthsToPayoff": 20,
+          "totalInterest": 987,
+          "totalPaid": 5987
+        },
+        "explanation": "Tripling the payment to $300/month pays off the debt in under 2 years, saving over $3,400 in interest compared to minimum payments."
+      },
+      {
+        "title": "Balance Transfer Savings",
+        "input": {
+          "balance": 5000,
+          "apr": 5.99,
+          "monthlyPayment": 200
+        },
+        "output": {
+          "monthsToPayoff": 27,
+          "totalInterest": 374,
+          "totalPaid": 5374
+        },
+        "explanation": "Transferring to a lower 5.99% APR card and paying $200/month saves thousands in interest and clears debt in just over 2 years."
+      }
+    ],
+    "component": "CreditCardPayoffCalculator"
+  }
+}

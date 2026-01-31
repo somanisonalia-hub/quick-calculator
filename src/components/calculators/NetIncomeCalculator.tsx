@@ -229,6 +229,8 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
       },
       currency: "$",
       percentage: "%"
+,
+      noteDisclaimer: "Note: This calculator provides estimates based on 2024 tax brackets and standard deduction. State taxes, additional deductions, credits, and other factors are not included. Consult a tax professional for accurate calculations."
     },
     es: {
       title: "Calculadora de Ingreso Neto",
@@ -312,6 +314,8 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
       },
       currency: "$",
       percentage: "%"
+,
+      noteDisclaimer: "Nota: Esta calculadora proporciona estimaciones basadas en los tramos impositivos de 2024 y la deducción estándar. No se incluyen impuestos estatales, deducciones adicionales, créditos y otros factores. Consulte a un profesional de impuestos para cálculos precisos."
     },
     pt: {
       title: "Calculadora de Renda Líquida",
@@ -395,6 +399,8 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
       },
       currency: "R$",
       percentage: "%"
+,
+      noteDisclaimer: "Nota: Esta calculadora fornece estimativas baseadas nas faixas de impostos de 2024 e dedução padrão. Impostos estaduais, deduções adicionais, créditos e outros fatores não estão incluídos. Consulte um profissional de impostos para cálculos precisos."
     },
     fr: {
       title: "Calculateur de Revenu Net",
@@ -478,6 +484,8 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
       },
       currency: "€",
       percentage: "%"
+,
+      noteDisclaimer: "Remarque: Cette calculatrice fournit des estimations basées sur les tranches d'imposition de 2024 et la déduction standard. Les impôts d'État, les déductions supplémentaires, les crédits et d'autres facteurs ne sont pas inclus. Consultez un professionnel de la fiscalité pour des calculs précis."
     }
   };
 
@@ -716,10 +724,7 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
       {/* Disclaimer */}
       <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          <strong>Note:</strong> This calculator provides estimates based on 2024 tax brackets and standard deductions.
-          Actual taxes may vary based on additional income, deductions, credits, and local tax laws.
-          Consult a tax professional for personalized tax advice.
-        </p>
+          {t.noteDisclaimer}</p>
       </div>
     </div>
   );

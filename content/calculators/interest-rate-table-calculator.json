@@ -48,36 +48,22 @@
     "calculatorComponent": "InterestRateTableCalculator",
     "examples": [
       {
-        "title": "Mortgage Rate Shopping",
-        "description": "Compare monthly payments for different mortgage rates on a $300,000 loan",
-        "input": {
-          "principal": 300000,
-          "term": 30,
-          "rates": "6.0,6.25,6.5,6.75,7.0",
-          "calculationType": "loan"
-        },
-        "output": {
-          "rateRange": "6.00% - 7.00%",
-          "paymentRange": "$1,799 - $1,995 monthly",
-          "bestRate": "6.00% rate saves $196 monthly",
-          "rateImpact": "0.25% rate increase costs $49 more per month"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Investment Rate Comparison",
-        "description": "Compare returns for different investment rates on $50,000 over 20 years",
-        "input": {
-          "principal": 50000,
-          "term": 20,
-          "rates": "4.0,5.0,6.0,7.0,8.0",
-          "calculationType": "investment"
-        },
-        "output": {
-          "rateRange": "4.00% - 8.00%",
-          "paymentRange": "$109,357 - $233,048 final value",
-          "bestRate": "8.00% rate returns $123,691 more",
-          "rateImpact": "1% rate increase adds $26,000 to final value"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -200,36 +186,22 @@
     "calculatorComponent": "InterestRateTableCalculator",
     "examples": [
       {
-        "title": "Compra Tasas Hipoteca",
-        "description": "Compara pagos mensuales para diferentes tasas hipoteca en préstamo de $300,000",
-        "input": {
-          "principal": 300000,
-          "term": 30,
-          "rates": "6.0,6.25,6.5,6.75,7.0",
-          "calculationType": "loan"
-        },
-        "output": {
-          "rateRange": "6.00% - 7.00%",
-          "paymentRange": "$1,799 - $1,995 mensuales",
-          "bestRate": "Tasa 6.00% ahorra $196 mensuales",
-          "rateImpact": "Aumento tasa 0.25% cuesta $49 más por mes"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comparación Tasas Inversión",
-        "description": "Compara retornos para diferentes tasas inversión en $50,000 durante 20 años",
-        "input": {
-          "principal": 50000,
-          "term": 20,
-          "rates": "4.0,5.0,6.0,7.0,8.0",
-          "calculationType": "investment"
-        },
-        "output": {
-          "rateRange": "4.00% - 8.00%",
-          "paymentRange": "$109,357 - $233,048 valor final",
-          "bestRate": "Tasa 8.00% retorna $123,691 más",
-          "rateImpact": "Aumento tasa 1% añade $26,000 al valor final"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -352,36 +324,22 @@
     "calculatorComponent": "InterestRateTableCalculator",
     "examples": [
       {
-        "title": "Compra Taxas Hipoteca",
-        "description": "Compare pagamentos mensais para diferentes taxas hipoteca em empréstimo de R$ 300.000",
-        "input": {
-          "principal": 300000,
-          "term": 30,
-          "rates": "6.0,6.25,6.5,6.75,7.0",
-          "calculationType": "loan"
-        },
-        "output": {
-          "rateRange": "6.00% - 7.00%",
-          "paymentRange": "R$ 1,799 - R$ 1,995 mensais",
-          "bestRate": "Taxa 6.00% economiza R$ 196 mensais",
-          "rateImpact": "Aumento taxa 0.25% custa R$ 49 mais por mês"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comparação Taxas Investimento",
-        "description": "Compare retornos para diferentes taxas investimento em R$ 50.000 durante 20 anos",
-        "input": {
-          "principal": 50000,
-          "term": 20,
-          "rates": "4.0,5.0,6.0,7.0,8.0",
-          "calculationType": "investment"
-        },
-        "output": {
-          "rateRange": "4.00% - 8.00%",
-          "paymentRange": "R$ 109,357 - R$ 233,048 valor final",
-          "bestRate": "Taxa 8.00% retorna R$ 123,691 mais",
-          "rateImpact": "Aumento taxa 1% adiciona R$ 26,000 ao valor final"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -504,36 +462,22 @@
     "calculatorComponent": "InterestRateTableCalculator",
     "examples": [
       {
-        "title": "Achat Taux Hypothèque",
-        "description": "Comparez paiements mensuels pour différents taux hypothèque sur prêt de 300 000 €",
-        "input": {
-          "principal": 300000,
-          "term": 30,
-          "rates": "6.0,6.25,6.5,6.75,7.0",
-          "calculationType": "loan"
-        },
-        "output": {
-          "rateRange": "6.00% - 7.00%",
-          "paymentRange": "1 799 € - 1 995 € mensuels",
-          "bestRate": "Taux 6.00% économise 196 € mensuels",
-          "rateImpact": "Augmentation taux 0.25% coûte 49 € de plus par mois"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comparaison Taux Investissement",
-        "description": "Comparez retours pour différents taux investissement sur 50 000 € pendant 20 ans",
-        "input": {
-          "principal": 50000,
-          "term": 20,
-          "rates": "4.0,5.0,6.0,7.0,8.0",
-          "calculationType": "investment"
-        },
-        "output": {
-          "rateRange": "4.00% - 8.00%",
-          "paymentRange": "109 357 € - 233 048 € valeur finale",
-          "bestRate": "Taux 8.00% retourne 123 691 € de plus",
-          "rateImpact": "Augmentation taux 1% ajoute 26 000 € à valeur finale"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

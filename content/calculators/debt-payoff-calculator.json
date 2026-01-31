@@ -8,10 +8,21 @@
     "metaDescription": "Use our free debt payoff calculator to determine how long it will take to pay off your debts. See different payoff strategies and save on interest.",
     "keywords": "debt payoff calculator, debt calculator, debt repayment calculator, how to pay off debt",
     "longTailKeywords": "debt payoff calculator free, calculate time to pay off debt, debt payoff timeline calculator",
-    "tags": ["Financial", "Debt", "Loans", "Budgeting"],
+    "tags": [
+      "Financial",
+      "Debt",
+      "Loans",
+      "Budgeting"
+    ],
     "description": "Plan your path to financial freedom with our comprehensive debt payoff calculator. Compare different payoff strategies and see how quickly you can become debt-free.",
     "summary": "Calculate how long it will take to pay off your debts with different payment strategies.",
-    "instructions": ["Enter your total debt amount", "Input your interest rate", "Set your monthly payment amount", "Choose payoff strategy (Avalanche or Snowball)", "View your payoff timeline and total interest"],
+    "instructions": [
+      "Enter your total debt amount",
+      "Input your interest rate",
+      "Set your monthly payment amount",
+      "Choose payoff strategy (Avalanche or Snowball)",
+      "View your payoff timeline and total interest"
+    ],
     "seoContent": {
       "introduction": "Managing multiple debts can be overwhelming. Our debt payoff calculator helps you develop a strategic plan to eliminate your debts efficiently. Whether you're dealing with credit cards, personal loans, or other liabilities, understanding your payoff timeline is crucial for financial planning.",
       "benefits": "Calculate exact payoff dates, Compare interest paid with different strategies, Visualize your progress, Plan your budget effectively, Reduce financial stress, Accelerate debt elimination",
@@ -24,13 +35,103 @@
       "disclaimer": "This calculator provides estimates based on the information provided. Actual payoff dates may vary based on additional charges, minimum payment changes, or payment consistency. Consult with a financial advisor for personalized debt management strategies.",
       "relatedTools": "Loan Calculator, Interest Calculator, Budget Calculator, Credit Card Payoff Calculator, Savings Calculator",
       "faqs": [
-        {"question": "What's the difference between Avalanche and Snowball methods?", "answer": "Avalanche method pays off highest interest debt first (saves money), Snowball pays off smallest balance first (provides motivation)."},
-        {"question": "Can this calculator handle multiple debts?", "answer": "Yes, you can input multiple debts and the calculator will show payoff timelines for each."},
-        {"question": "How accurate is this calculator?", "answer": "Very accurate for fixed-rate debts. Variable rate debts may differ if rates change."},
-        {"question": "What if I want to pay more than suggested?", "answer": "Paying extra accelerates payoff significantly. Try different amounts to see the impact."},
-        {"question": "Does the calculator include fees or penalties?", "answer": "Enter any fees or penalties in the interest rate for accuracy."}
+        {
+          "question": "What's the difference between Avalanche and Snowball methods?",
+          "answer": "Avalanche method pays off highest interest debt first (saves money), Snowball pays off smallest balance first (provides motivation)."
+        },
+        {
+          "question": "Can this calculator handle multiple debts?",
+          "answer": "Yes, you can input multiple debts and the calculator will show payoff timelines for each."
+        },
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "Very accurate for fixed-rate debts. Variable rate debts may differ if rates change."
+        },
+        {
+          "question": "What if I want to pay more than suggested?",
+          "answer": "Paying extra accelerates payoff significantly. Try different amounts to see the impact."
+        },
+        {
+          "question": "Does the calculator include fees or penalties?",
+          "answer": "Enter any fees or penalties in the interest rate for accuracy."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "slug": "debt-payoff-calculator",
@@ -41,10 +142,21 @@
     "metaDescription": "Usa nuestra calculadora gratuita de pago de deuda para determinar cuánto tiempo tardará en pagar tus deudas.",
     "keywords": "calculadora de pago de deuda, calculadora de deuda, cómo pagar deuda",
     "longTailKeywords": "calculadora de pago de deuda gratis, calcular tiempo para pagar deuda",
-    "tags": ["Financiero", "Deuda", "Préstamos", "Presupuesto"],
+    "tags": [
+      "Financiero",
+      "Deuda",
+      "Préstamos",
+      "Presupuesto"
+    ],
     "description": "Planifica tu camino hacia la libertad financiera con nuestra calculadora integral de pago de deuda.",
     "summary": "Calcula cuánto tiempo tardará en pagar tus deudas con diferentes estrategias de pago.",
-    "instructions": ["Ingresa tu monto total de deuda", "Introduce tu tasa de interés", "Establece tu pago mensual", "Elige estrategia de pago", "Ver tu línea de tiempo de pago"],
+    "instructions": [
+      "Ingresa tu monto total de deuda",
+      "Introduce tu tasa de interés",
+      "Establece tu pago mensual",
+      "Elige estrategia de pago",
+      "Ver tu línea de tiempo de pago"
+    ],
     "seoContent": {
       "introduction": "Gestionar múltiples deudas puede ser abrumador. Nuestra calculadora de pago de deuda te ayuda a desarrollar un plan estratégico para eliminar tus deudas eficientemente.",
       "benefits": "Calcular fechas exactas de pago, Comparar intereses pagados, Visualizar progreso, Planificar presupuesto, Reducir estrés financiero",
@@ -57,10 +169,91 @@
       "disclaimer": "Esta calculadora proporciona estimaciones basadas en la información proporcionada. Los pagos reales pueden variar.",
       "relatedTools": "Calculadora de Préstamos, Calculadora de Intereses, Calculadora de Presupuesto",
       "faqs": [
-        {"question": "¿Cuál es la diferencia entre Avalanche y Snowball?", "answer": "Avalanche paga primero la deuda con mayor interés (ahorra dinero). Snowball paga primero el menor balance (proporciona motivación)."},
-        {"question": "¿Qué tan precisa es esta calculadora?", "answer": "Muy precisa para deudas de tasa fija. Las deudas de tasa variable pueden diferir."}
+        {
+          "question": "¿Cuál es la diferencia entre Avalanche y Snowball?",
+          "answer": "Avalanche paga primero la deuda con mayor interés (ahorra dinero). Snowball paga primero el menor balance (proporciona motivación)."
+        },
+        {
+          "question": "¿Qué tan precisa es esta calculadora?",
+          "answer": "Muy precisa para deudas de tasa fija. Las deudas de tasa variable pueden diferir."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "slug": "debt-payoff-calculator",
@@ -71,10 +264,21 @@
     "metaDescription": "Use nossa calculadora gratuita de pagamento de dívida para determinar quanto tempo levará para pagar suas dívidas.",
     "keywords": "calculadora de pagamento de dívida, calculadora de dívida, como pagar dívida",
     "longTailKeywords": "calculadora de pagamento de dívida grátis, calcular tempo para pagar dívida",
-    "tags": ["Financeiro", "Dívida", "Empréstimos", "Orçamento"],
+    "tags": [
+      "Financeiro",
+      "Dívida",
+      "Empréstimos",
+      "Orçamento"
+    ],
     "description": "Planeje seu caminho para a liberdade financeira com nossa calculadora abrangente de pagamento de dívida.",
     "summary": "Calcule quanto tempo levará para pagar suas dívidas com diferentes estratégias de pagamento.",
-    "instructions": ["Digite o valor total da dívida", "Insira sua taxa de juros", "Defina seu pagamento mensal", "Escolha estratégia de pagamento", "Veja sua linha do tempo de pagamento"],
+    "instructions": [
+      "Digite o valor total da dívida",
+      "Insira sua taxa de juros",
+      "Defina seu pagamento mensal",
+      "Escolha estratégia de pagamento",
+      "Veja sua linha do tempo de pagamento"
+    ],
     "seoContent": {
       "introduction": "Gerenciar múltiplas dívidas pode ser opressor. Nossa calculadora de pagamento de dívida ajuda você a desenvolver um plano estratégico para eliminar suas dívidas com eficiência.",
       "benefits": "Calcular datas exatas de pagamento, Comparar juros pagos, Visualizar progresso, Planejar orçamento, Reduzir estresse financeiro",
@@ -87,10 +291,91 @@
       "disclaimer": "Esta calculadora fornece estimativas com base nas informações fornecidas. Os pagamentos reais podem variar.",
       "relatedTools": "Calculadora de Empréstimo, Calculadora de Juros, Calculadora de Orçamento",
       "faqs": [
-        {"question": "Qual é a diferença entre Avalanche e Snowball?", "answer": "Avalanche paga primeiro a dívida com maior taxa (economiza dinheiro). Snowball paga primeiro o menor saldo (fornece motivação)."},
-        {"question": "Quão precisa é esta calculadora?", "answer": "Muito precisa para dívidas de taxa fixa. Dívidas de taxa variável podem diferir."}
+        {
+          "question": "Qual é a diferença entre Avalanche e Snowball?",
+          "answer": "Avalanche paga primeiro a dívida com maior taxa (economiza dinheiro). Snowball paga primeiro o menor saldo (fornece motivação)."
+        },
+        {
+          "question": "Quão precisa é esta calculadora?",
+          "answer": "Muito precisa para dívidas de taxa fixa. Dívidas de taxa variável podem diferir."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "slug": "debt-payoff-calculator",
@@ -101,10 +386,21 @@
     "metaDescription": "Utilisez notre calculatrice gratuite de remboursement de dettes pour déterminer combien de temps il vous faudra pour rembourser vos dettes.",
     "keywords": "calculatrice de remboursement de dettes, calculatrice de dettes, comment rembourser une dette",
     "longTailKeywords": "calculatrice de remboursement de dettes gratuite, calculer le temps pour rembourser une dette",
-    "tags": ["Financier", "Dettes", "Prêts", "Budget"],
+    "tags": [
+      "Financier",
+      "Dettes",
+      "Prêts",
+      "Budget"
+    ],
     "description": "Planifiez votre chemin vers la liberté financière avec notre calculatrice complète de remboursement de dettes.",
     "summary": "Calculez combien de temps il vous faudra pour rembourser vos dettes avec différentes stratégies de paiement.",
-    "instructions": ["Entrez votre montant total de dettes", "Saisissez votre taux d'intérêt", "Définissez votre paiement mensuel", "Choisissez la stratégie de remboursement", "Consultez votre calendrier de remboursement"],
+    "instructions": [
+      "Entrez votre montant total de dettes",
+      "Saisissez votre taux d'intérêt",
+      "Définissez votre paiement mensuel",
+      "Choisissez la stratégie de remboursement",
+      "Consultez votre calendrier de remboursement"
+    ],
     "seoContent": {
       "introduction": "Gérer plusieurs dettes peut être écrasant. Notre calculatrice de remboursement de dettes vous aide à développer un plan stratégique pour éliminer vos dettes efficacement.",
       "benefits": "Calculer les dates exactes de remboursement, Comparer les intérêts payés, Visualiser la progression, Planifier le budget, Réduire le stress financier",
@@ -117,9 +413,90 @@
       "disclaimer": "Cette calculatrice fournit des estimations basées sur les informations fournies. Les remboursements réels peuvent varier.",
       "relatedTools": "Calculatrice de Prêt, Calculatrice d'Intérêt, Calculatrice de Budget",
       "faqs": [
-        {"question": "Quelle est la différence entre Avalanche et Snowball?", "answer": "Avalanche rembourse d'abord la dette avec le taux le plus élevé (économise de l'argent). Snowball rembourse d'abord le plus petit solde (fournit de la motivation)."},
-        {"question": "Quelle est la précision de cette calculatrice?", "answer": "Très précise pour les dettes à taux fixe. Les dettes à taux variable peuvent différer."}
+        {
+          "question": "Quelle est la différence entre Avalanche et Snowball?",
+          "answer": "Avalanche rembourse d'abord la dette avec le taux le plus élevé (économise de l'argent). Snowball rembourse d'abord le plus petit solde (fournit de la motivation)."
+        },
+        {
+          "question": "Quelle est la précision de cette calculatrice?",
+          "answer": "Très précise pour les dettes à taux fixe. Les dettes à taux variable peuvent différer."
+        }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

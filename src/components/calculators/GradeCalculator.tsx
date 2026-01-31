@@ -35,7 +35,8 @@ export default function GradeCalculator({ lang = 'en' }: GradeCalculatorProps) {
       impossible: "(Over 100% - Not possible)",
       tip: "Tip",
       tipText: "Add all your completed assignments with their weights. Then enter your desired final grade and final exam weight to see what score you need.",
-      reset: "Reset"
+      reset: "Reset",
+      noteExceedsHundred: "Note: The required score exceeds 100%. You may need to adjust your target grade or discuss extra credit options with your instructor."
     },
     es: {
       title: "Calculadora de Calificaciones",
@@ -57,7 +58,8 @@ export default function GradeCalculator({ lang = 'en' }: GradeCalculatorProps) {
       impossible: "(Más del 100% - No posible)",
       tip: "Consejo",
       tipText: "Agrega todas tus tareas completadas con sus pesos. Luego ingresa tu calificación final deseada y peso del examen final para ver qué puntuación necesitas.",
-      reset: "Reiniciar"
+      reset: "Reiniciar",
+      noteExceedsHundred: "Nota: La puntuación requerida excede el 100%. Es posible que necesites ajustar tu calificación objetivo o discutir opciones de crédito extra con tu instructor."
     },
     pt: {
       title: "Calculadora de Notas",
@@ -79,7 +81,8 @@ export default function GradeCalculator({ lang = 'en' }: GradeCalculatorProps) {
       impossible: "(Mais de 100% - Não possível)",
       tip: "Dica",
       tipText: "Adicione todos os seus trabalhos completados com seus pesos. Em seguida, digite sua nota final desejada e peso do exame final para ver que pontuação você precisa.",
-      reset: "Reiniciar"
+      reset: "Reiniciar",
+      noteExceedsHundred: "Nota: A pontuação necessária excede 100%. Você pode precisar ajustar sua nota alvo ou discutir opções de crédito extra com seu instrutor."
     },
     fr: {
       title: "Calculateur de Notes",
@@ -101,7 +104,8 @@ export default function GradeCalculator({ lang = 'en' }: GradeCalculatorProps) {
       impossible: "(Plus de 100% - Pas possible)",
       tip: "Astuce",
       tipText: "Ajoutez tous vos devoirs complétés avec leurs poids. Ensuite, entrez votre note finale désirée et le poids de l'examen final pour voir quel score vous avez besoin.",
-      reset: "Réinitialiser"
+      reset: "Réinitialiser",
+      noteExceedsHundred: "Remarque: Le score requis dépasse 100%. Vous devrez peut-être ajuster votre note cible ou discuter des options de crédit supplémentaire avec votre instructeur."
     }
   };
 
@@ -308,7 +312,7 @@ export default function GradeCalculator({ lang = 'en' }: GradeCalculatorProps) {
           {!results.feasible && (
             <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
               <p className="text-sm text-red-800">
-                <strong>Note:</strong> The required score exceeds 100%. You may need to adjust your target grade or discuss extra credit options with your instructor.
+                {t.noteExceedsHundred}
               </p>
             </div>
           )}

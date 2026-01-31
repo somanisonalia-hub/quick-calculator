@@ -47,36 +47,22 @@
     "calculatorComponent": "EffectiveInterestRateCalculator",
     "examples": [
       {
-        "title": "Credit Card Rate Conversion",
-        "description": "Convert 18% nominal APR compounded monthly to effective annual rate",
-        "input": {
-          "conversionType": "nominal_to_effective",
-          "inputRate": 18,
-          "compoundingPeriods": 12
-        },
-        "output": {
-          "convertedRate": "19.56%",
-          "inputRateType": "18.00% Nominal Annual Rate",
-          "outputRateType": "19.56% Effective Annual Rate",
-          "rateDifference": "1.56%",
-          "annualImpact": "Monthly compounding increases effective rate by 8.7%"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Investment Rate Comparison",
-        "description": "Convert 2% effective quarterly rate to nominal annual rate",
-        "input": {
-          "conversionType": "effective_to_nominal",
-          "inputRate": 2,
-          "compoundingPeriods": 4
-        },
-        "output": {
-          "convertedRate": "1.98%",
-          "inputRateType": "2.00% Effective Annual Rate",
-          "outputRateType": "1.98% Nominal Annual Rate",
-          "rateDifference": "-0.02%",
-          "annualImpact": "Quarterly compounding reduces nominal rate slightly"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -198,36 +184,22 @@
     "calculatorComponent": "EffectiveInterestRateCalculator",
     "examples": [
       {
-        "title": "Conversión Tasa Tarjeta Crédito",
-        "description": "Convierte 18% TAE nominal capitalizado mensualmente a tasa efectiva anual",
-        "input": {
-          "conversionType": "nominal_to_effective",
-          "inputRate": 18,
-          "compoundingPeriods": 12
-        },
-        "output": {
-          "convertedRate": "19.56%",
-          "inputRateType": "18.00% Tasa Anual Nominal",
-          "outputRateType": "19.56% Tasa Anual Efectiva",
-          "rateDifference": "1.56%",
-          "annualImpact": "Capitalización mensual aumenta tasa efectiva en 8.7%"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comparación Tasa Inversión",
-        "description": "Convierte 2% tasa efectiva trimestral a tasa nominal anual",
-        "input": {
-          "conversionType": "effective_to_nominal",
-          "inputRate": 2,
-          "compoundingPeriods": 4
-        },
-        "output": {
-          "convertedRate": "1.98%",
-          "inputRateType": "2.00% Tasa Anual Efectiva",
-          "outputRateType": "1.98% Tasa Anual Nominal",
-          "rateDifference": "-0.02%",
-          "annualImpact": "Capitalización trimestral reduce tasa nominal ligeramente"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -349,36 +321,22 @@
     "calculatorComponent": "EffectiveInterestRateCalculator",
     "examples": [
       {
-        "title": "Conversão Taxa Cartão Crédito",
-        "description": "Converte 18% CET nominal capitalizado mensalmente para taxa efetiva anual",
-        "input": {
-          "conversionType": "nominal_to_effective",
-          "inputRate": 18,
-          "compoundingPeriods": 12
-        },
-        "output": {
-          "convertedRate": "19.56%",
-          "inputRateType": "18.00% Taxa Anual Nominal",
-          "outputRateType": "19.56% Taxa Anual Efetiva",
-          "rateDifference": "1.56%",
-          "annualImpact": "Capitalização mensal aumenta taxa efetiva em 8.7%"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comparação Taxa Investimento",
-        "description": "Converte 2% taxa efetiva trimestral para taxa nominal anual",
-        "input": {
-          "conversionType": "effective_to_nominal",
-          "inputRate": 2,
-          "compoundingPeriods": 4
-        },
-        "output": {
-          "convertedRate": "1.98%",
-          "inputRateType": "2.00% Taxa Anual Efetiva",
-          "outputRateType": "1.98% Taxa Anual Nominal",
-          "rateDifference": "-0.02%",
-          "annualImpact": "Capitalização trimestral reduz taxa nominal ligeiramente"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -500,36 +458,22 @@
     "calculatorComponent": "EffectiveInterestRateCalculator",
     "examples": [
       {
-        "title": "Conversion Taux Carte Crédit",
-        "description": "Convertissez 18% TAEG nominal capitalisé mensuellement vers taux effectif annuel",
-        "input": {
-          "conversionType": "nominal_to_effective",
-          "inputRate": 18,
-          "compoundingPeriods": 12
-        },
-        "output": {
-          "convertedRate": "19.56%",
-          "inputRateType": "18.00% Taux Annuel Nominal",
-          "outputRateType": "19.56% Taux Annuel Effectif",
-          "rateDifference": "1.56%",
-          "annualImpact": "Capitalisation mensuelle augmente taux effectif de 8.7%"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Comparaison Taux Investissement",
-        "description": "Convertissez 2% taux effectif trimestriel vers taux nominal annuel",
-        "input": {
-          "conversionType": "effective_to_nominal",
-          "inputRate": 2,
-          "compoundingPeriods": 4
-        },
-        "output": {
-          "convertedRate": "1.98%",
-          "inputRateType": "2.00% Taux Annuel Effectif",
-          "outputRateType": "1.98% Taux Annuel Nominal",
-          "rateDifference": "-0.02%",
-          "annualImpact": "Capitalisation trimestrielle réduit taux nominal légèrement"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

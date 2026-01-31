@@ -45,6 +45,10 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
       decimal: "Decimal Equivalent",
       quickexamples: "Quick Examples",
       enterFractions: "Enter fractions to calculate",
+      addExample: "Add: 1/2 + 1/3 = 5/6",
+      subtractExample: "Subtract: 3/4 - 1/2 = 1/4",
+      multiplyExample: "Multiply: 2/3 × 3/4 = 1/2",
+      divideExample: "Divide: 1/2 ÷ 1/4 = 2"
   },
     es: {
       title: "Calculadora de Fracciones",
@@ -68,7 +72,11 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
       decimal: "Equivalente Decimal",
       quickexamples: "Ejemplos Rápidos",
       enterFractions: "Ingresa fracciones para calcular",
-  },
+      addExample: "Sumar: 1/2 + 1/3 = 5/6",
+      subtractExample: "Restar: 3/4 - 1/2 = 1/4",
+      multiplyExample: "Multiplicar: 2/3 × 3/4 = 1/2",
+      divideExample: "Dividir: 1/2 ÷ 1/4 = 2"
+    },
     pt: {
       title: "Calculadora de Frações",
       description: "Execute operações com frações com soluções passo a passo e simplificação automática",
@@ -91,6 +99,10 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
       decimal: "Equivalente Decimal",
       quickexamples: "Exemplos Rápidos",
       enterFractions: "Digite frações para calcular",
+      addExample: "Somar: 1/2 + 1/3 = 5/6",
+      subtractExample: "Subtrair: 3/4 - 1/2 = 1/4",
+      multiplyExample: "Multiplicar: 2/3 × 3/4 = 1/2",
+      divideExample: "Dividir: 1/2 ÷ 1/4 = 2"
   },
     fr: {
       title: "Calculateur de Fractions",
@@ -114,6 +126,10 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
       decimal: "Équivalent Décimal",
       quickexamples: "Exemples Rapides",
       enterFractions: "Entrez des fractions à calculer",
+      addExample: "Addition: 1/2 + 1/3 = 5/6",
+      subtractExample: "Soustraction: 3/4 - 1/2 = 1/4",
+      multiplyExample: "Multiplication: 2/3 × 3/4 = 1/2",
+      divideExample: "Division: 1/2 ÷ 1/4 = 2"
   }
   };
 
@@ -478,10 +494,10 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
           <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
             <h4 className="text-sm font-semibold text-gray-900 mb-2">{t.quickexamples}</h4>
             <div className="grid grid-cols-1 gap-2 text-sm">
-              <div><strong>Add:</strong> 1/2 + 1/3 = 5/6</div>
-              <div><strong>Subtract:</strong> 3/4 - 1/2 = 1/4</div>
-              <div><strong>Multiply:</strong> 2/3 × 3/4 = 1/2</div>
-              <div><strong>Divide:</strong> 1/2 ÷ 1/4 = 2</div>
+              <div>{t.addExample}</div>
+              <div>{t.subtractExample}</div>
+              <div>{t.multiplyExample}</div>
+              <div>{t.divideExample}</div>
             </div>
           </div>
 

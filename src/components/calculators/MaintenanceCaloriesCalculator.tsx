@@ -96,6 +96,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       },
       calories: "calories",
       grams: "grams"
+,
+      noteDisclaimer: "Note: These calculations provide estimates based on established formulas. Individual metabolic rates can vary significantly based on genetics, muscle mass, and other factors. Consult a healthcare professional for personalized nutrition advice."
     },
     es: {
       title: "Calculadora de Calorías de Mantenimiento",
@@ -142,6 +144,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       },
       calories: "calorías",
       grams: "gramos"
+,
+      noteDisclaimer: "Nota: Estos cálculos proporcionan estimaciones basadas en fórmulas establecidas. Las tasas metabólicas individuales pueden variar significativamente según la genética, masa muscular y otros factores. Consulte a un profesional de la salud para asesoramiento nutricional personalizado."
     },
     pt: {
       title: "Calculadora de Calorias de Manutenção",
@@ -188,6 +192,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       },
       calories: "calorias",
       grams: "gramas"
+,
+      noteDisclaimer: "Nota: Estes cálculos fornecem estimativas baseadas em fórmulas estabelecidas. As taxas metabólicas individuais podem variar significativamente com base na genética, massa muscular e outros fatores. Consulte um profissional de saúde para aconselhamento nutricional personalizado."
     },
     fr: {
       title: "Calculateur de Calories de Maintenance",
@@ -234,6 +240,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       },
       calories: "calories",
       grams: "grammes"
+,
+      noteDisclaimer: "Remarque: Ces calculs fournissent des estimations basées sur des formules établies. Les taux métaboliques individuels peuvent varier considérablement en fonction de la génétique, de la masse musculaire et d'autres facteurs. Consultez un professionnel de la santé pour des conseils nutritionnels personnalisés."
     }
   };
 
@@ -570,11 +578,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       {/* Disclaimer */}
       <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          <strong>Note:</strong> These calculations provide estimates based on established formulas.
-          Individual metabolic rates can vary by 10-15% due to genetics, thyroid function, and other factors.
-          Track actual weight changes over 2-4 weeks and adjust calories accordingly.
-          Consult healthcare providers for medical conditions or extreme caloric needs.
-        </p>
+          {t.noteDisclaimer}</p>
       </div>
     </div>
   );

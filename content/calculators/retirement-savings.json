@@ -1,0 +1,920 @@
+{
+  "en": {
+    "title": "Retirement Savings Calculator",
+    "seoTitle": "Retirement Savings Calculator 2026 - Plan Your Future & Calculate Retirement Needs",
+    "metaDescription": "Calculate how much you need to save for retirement. Estimate your future nest egg with contributions, growth rates, and monthly income projections for a comfortable retirement.",
+    "keywords": [
+      "retirement savings calculator",
+      "retirement planning calculator",
+      "how much to save for retirement",
+      "retirement nest egg calculator",
+      "retirement goal calculator"
+    ],
+    "slug": "retirement-savings",
+    "category": "financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "retirement",
+      "savings",
+      "investment",
+      "future planning",
+      "financial planning",
+      "nest egg"
+    ],
+    "description": "Plan your retirement with confidence using our comprehensive retirement savings calculator. Calculate your total savings at retirement, investment earnings, and estimated monthly income based on the 4% withdrawal rule.",
+    "summary": "Calculate your retirement savings and plan for a comfortable future.",
+    "instructions": [
+      "Enter your current age and planned retirement age to calculate years until retirement.",
+      "Input your current retirement savings amount if you have any existing funds.",
+      "Specify your monthly contribution amount - how much you'll save each month.",
+      "Set expected annual return rate (typically 6-8% for diversified portfolios).",
+      "Click 'Calculate' to see your projected total savings and monthly retirement income.",
+      "Adjust contributions and returns to see different retirement scenarios."
+    ],
+    "calculatorComponent": {
+      "componentName": "RetirementSavingsCalculator",
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Current Age",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 70,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Retirement Age",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Current Savings ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Monthly Contribution ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 100000,
+          "step": 50
+        },
+        {
+          "name": "annualReturn",
+          "label": "Expected Annual Return (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 15,
+          "step": 0.5
+        }
+      ],
+      "formula": "Uses compound interest formula: FV = PV(1+r)^n + PMT × [((1+r)^n - 1) / r] where FV is future value, PV is present value, r is monthly rate, n is months, and PMT is monthly payment",
+      "output": {
+        "label": "Total Savings at Retirement",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Total Contributions",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Investment Earnings",
+          "field": "totalEarnings",
+          "format": "currency"
+        },
+        {
+          "label": "Years to Retirement",
+          "field": "years",
+          "format": "number"
+        },
+        {
+          "label": "Estimated Monthly Income (4% Rule)",
+          "field": "monthlyIncome",
+          "format": "currency"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Early Starter (Age 30)",
+        "input": {
+          "currentAge": 30,
+          "retirementAge": 65,
+          "currentSavings": 50000,
+          "monthlyContribution": 500,
+          "annualReturn": 7
+        },
+        "output": {
+          "totalSavings": 1247000,
+          "totalContributions": 260000,
+          "totalEarnings": 987000,
+          "years": 35,
+          "monthlyIncome": 4157
+        },
+        "explanation": "Starting at 30 with $50K saved and adding $500/month at 7% returns grows to $1.25M by age 65, providing $4,157/month in retirement income."
+      },
+      {
+        "title": "Late Starter (Age 45)",
+        "input": {
+          "currentAge": 45,
+          "retirementAge": 65,
+          "currentSavings": 100000,
+          "monthlyContribution": 1000,
+          "annualReturn": 7
+        },
+        "output": {
+          "totalSavings": 898000,
+          "totalContributions": 340000,
+          "totalEarnings": 558000,
+          "years": 20,
+          "monthlyIncome": 2993
+        },
+        "explanation": "Starting later at 45 requires higher contributions ($1,000/month) to reach $898K, demonstrating the importance of early retirement planning."
+      },
+      {
+        "title": "Aggressive Saver",
+        "input": {
+          "currentAge": 35,
+          "retirementAge": 60,
+          "currentSavings": 75000,
+          "monthlyContribution": 1500,
+          "annualReturn": 8
+        },
+        "output": {
+          "totalSavings": 1612000,
+          "totalContributions": 525000,
+          "totalEarnings": 1087000,
+          "years": 25,
+          "monthlyIncome": 5373
+        },
+        "explanation": "Aggressive saving of $1,500/month with 8% returns allows early retirement at 60 with $1.61M, providing $5,373 monthly income."
+      }
+    ],
+    "comparisonTable": {
+      "title": "Retirement Savings by Monthly Contribution (Age 30, retiring at 65, 7% return)",
+      "headers": [
+        "Monthly Contribution",
+        "Total at Retirement",
+        "Your Contributions",
+        "Investment Growth"
+      ],
+      "rows": [
+        [
+          "$250",
+          "$833,000",
+          "$155,000",
+          "$678,000"
+        ],
+        [
+          "$500",
+          "$1,247,000",
+          "$260,000",
+          "$987,000"
+        ],
+        [
+          "$1,000",
+          "$2,074,000",
+          "$470,000",
+          "$1,604,000"
+        ],
+        [
+          "$1,500",
+          "$2,901,000",
+          "$680,000",
+          "$2,221,000"
+        ]
+      ]
+    },
+    "relatedCalculators": [
+      {
+        "name": "Savings Goal Calculator",
+        "slug": "savings-goal",
+        "description": "Calculate timeline to reach specific savings goals"
+      },
+      {
+        "name": "Investment Calculator",
+        "slug": "investment-calculator",
+        "description": "Calculate investment returns and growth"
+      },
+      {
+        "name": "Compound Interest Calculator",
+        "slug": "compound-interest-calculator",
+        "description": "See how compound interest grows your money"
+      }
+    ],
+    "seoContent": {
+      "introduction": "Planning for retirement is one of the most important financial decisions you'll make. Our retirement savings calculator helps you estimate exactly how much money you'll have when you retire based on your current savings, monthly contributions, and expected investment returns. Whether you're just starting your career or approaching retirement, understanding your retirement trajectory is crucial for financial security. The calculator uses compound interest formulas to project your nest egg growth and estimates your monthly retirement income using the widely-accepted 4% withdrawal rule.",
+      "benefits": [
+        "Calculate exact retirement savings projections based on your contributions and timeline",
+        "See how compound interest dramatically grows your retirement fund over time",
+        "Estimate monthly retirement income using the 4% safe withdrawal rule",
+        "Compare different contribution amounts to find optimal savings strategy",
+        "Understand the impact of starting early vs. late on retirement outcomes",
+        "Plan retirement date based on your savings goals and current progress"
+      ],
+      "steps": [
+        "Enter your current age to establish starting point for calculations",
+        "Specify planned retirement age to determine years of growth",
+        "Input current retirement savings if you have existing funds",
+        "Set monthly contribution amount you can consistently save",
+        "Choose expected annual return (6-8% for diversified portfolios)",
+        "Review total projected savings and monthly retirement income"
+      ],
+      "inputsExplained": [
+        "Current age determines how many years you have until retirement for compound growth",
+        "Retirement age sets your timeline - earlier retirement requires more aggressive saving",
+        "Current savings is your existing nest egg that will continue growing with contributions",
+        "Monthly contribution is regular amount you'll add - consistency matters more than amount",
+        "Annual return rate reflects investment performance - conservative 6%, moderate 7%, aggressive 8-10%"
+      ],
+      "formulaExplanation": "The calculator uses the future value of compound interest formula combining two components: growth of existing savings and growth of monthly contributions. Your current savings compound at the monthly rate for the number of months until retirement. Monthly contributions use an annuity formula, calculating the future value of regular deposits with compound interest. The formula is: FV = PV(1+r)^n + PMT × [((1+r)^n - 1) / r], where FV is future value at retirement, PV is present value (current savings), r is monthly interest rate (annual rate ÷ 12), n is total months, and PMT is monthly payment. The 4% rule estimates sustainable monthly income by withdrawing 4% annually from total savings.",
+      "examples": [
+        "Age 30 with $50K saved, contributing $500/month at 7% returns grows to $1.25M by 65, providing $4,157 monthly retirement income.",
+        "Starting late at 45 with $100K and $1,000/month contributions at 7% still reaches $898K by 65, showing it's never too late to save.",
+        "Aggressive saver at 35 contributing $1,500/month at 8% can retire early at 60 with $1.61M, demonstrating power of higher contributions and returns."
+      ],
+      "resultsExplanation": [
+        "Total savings at retirement shows your complete nest egg from contributions plus investment growth",
+        "Total contributions is money you actually put in - your out-of-pocket investment",
+        "Investment earnings reveals the power of compound interest - often exceeding your contributions",
+        "Years to retirement shows your time horizon for growth and planning",
+        "Monthly income estimate uses 4% rule (total savings × 4% ÷ 12 months) for sustainable withdrawals"
+      ],
+      "whoItsFor": "This retirement calculator serves young professionals starting their careers, mid-career workers checking retirement progress, those changing jobs and consolidating retirement accounts, couples planning joint retirement, self-employed individuals managing their own retirement, and anyone wondering if they're on track for comfortable retirement. It's valuable for both conservative planners wanting guaranteed retirement security and aggressive savers aiming for early retirement. The calculator helps anyone from age 20 to 60 understand their retirement trajectory.",
+      "disclaimer": "This calculator provides estimates based on consistent contributions and steady returns. Actual results vary due to market fluctuations, inflation, tax changes, job changes, and life circumstances. Investment returns are not guaranteed and past performance doesn't predict future results. 7-8% returns assume long-term averages - individual years vary significantly. The 4% withdrawal rule is a guideline, not guarantee of sustainable retirement income. Consider consulting financial advisors for personalized retirement planning. Account for Social Security, pensions, healthcare costs, and inflation in complete retirement plans.",
+      "relatedTools": [
+        "Investment calculators for tracking portfolio growth and asset allocation",
+        "Savings goal calculators for specific financial targets beyond retirement",
+        "Budget calculators for finding money to increase retirement contributions"
+      ],
+      "faqs": [
+        {
+          "question": "How much should I save for retirement?",
+          "answer": "Financial experts recommend saving 10-15% of gross income for retirement, increasing to 15-20% if starting late. A common goal is replacing 70-80% of pre-retirement income. Many use the 25x rule: save 25 times your desired annual retirement expenses. For example, $50,000/year retirement needs requires $1.25M saved. Starting early makes this achievable - $500/month from age 30 at 7% returns reaches $1.25M by 65. Late starters need higher contributions."
+        },
+        {
+          "question": "What is the 4% retirement withdrawal rule?",
+          "answer": "The 4% rule suggests withdrawing 4% of retirement savings annually for sustainable income lasting 30+ years. For $1M saved, withdraw $40,000 yearly ($3,333 monthly). Based on historical stock/bond returns, 4% withdrawal rate survived all 30-year retirement periods since 1926. Conservative planners use 3-3.5%, aggressive might use 5%. The rule assumes diversified portfolio (60% stocks, 40% bonds) and adjusts withdrawals for inflation."
+        },
+        {
+          "question": "Is it better to start saving late with high contributions or early with lower amounts?",
+          "answer": "Early saving almost always wins due to compound interest. $500/month from age 30-65 (35 years) at 7% = $1.25M total. Starting at 45 needs $1,000/month for 20 years to reach only $898K - requiring double contributions for less money. The difference is compound growth time. Early contributions grow for decades. Starting 15 years late essentially halves your retirement savings despite similar total contributions. Start as early as possible, even with small amounts."
+        },
+        {
+          "question": "What's a realistic return rate for retirement investments?",
+          "answer": "Historical S&P 500 returns average 10% annually, but diversified retirement portfolios average 6-8% after inflation and fees. Conservative portfolios (heavy bonds) target 5-6%, balanced portfolios 7%, aggressive (heavy stocks) 8-10%. Use 7% for reasonable planning. Returns vary yearly - some years +20%, others -20%. Long time horizons smooth volatility. Young investors can risk higher stock allocation for better returns. Approach retirement, shift to conservative allocations protecting gains."
+        },
+        {
+          "question": "When can I retire comfortably?",
+          "answer": "Retirement readiness depends on savings, expenses, and income sources. Common guidelines: 1) Save 25x annual expenses (4% rule), 2) Replace 70-80% of working income, 3) Have no debt, especially mortgage. For $60K annual expenses, need $1.5M saved. Add Social Security, pensions, rental income. Many aim for age 65 (full Social Security), some achieve early retirement at 50-60 with aggressive saving. Use this calculator to model different retirement ages and see required savings for each scenario."
+        }
+      ]
+    },
+    "component": "RetirementSavingsCalculator"
+  },
+  "es": {
+    "title": "Calculadora de Ahorro para la Jubilación",
+    "seoTitle": "Calculadora de Ahorro para la Jubilación 2026 - Planifica tu Futuro y Calcula Necesidades",
+    "metaDescription": "Calcula cuánto necesitas ahorrar para la jubilación. Estima tu fondo futuro con contribuciones, tasas de crecimiento y proyecciones de ingreso mensual.",
+    "keywords": [
+      "calculadora de ahorro para jubilación",
+      "calculadora de planificación de jubilación",
+      "cuánto ahorrar para jubilación",
+      "calculadora de fondo de jubilación",
+      "calculadora de meta de jubilación"
+    ],
+    "slug": "ahorros-jubilacion",
+    "category": "financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "jubilación",
+      "ahorros",
+      "inversión",
+      "planificación futura",
+      "planificación financiera",
+      "fondo de retiro"
+    ],
+    "description": "Planifica tu jubilación con confianza usando nuestra calculadora integral. Calcula tus ahorros totales al jubilarte, ganancias de inversión e ingreso mensual estimado.",
+    "summary": "Calcula tus ahorros para la jubilación y planifica un futuro cómodo.",
+    "instructions": [
+      "Ingresa tu edad actual y edad de jubilación planeada.",
+      "Especifica tus ahorros actuales para jubilación si tienes fondos existentes.",
+      "Establece tu contribución mensual - cuánto ahorrarás cada mes.",
+      "Define la tasa de retorno anual esperada (típicamente 6-8%).",
+      "Haz clic en 'Calcular' para ver tus ahorros proyectados e ingreso mensual.",
+      "Ajusta contribuciones y retornos para ver diferentes escenarios."
+    ],
+    "calculatorComponent": {
+      "componentName": "RetirementSavingsCalculator",
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Edad Actual",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 70,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Edad de Jubilación",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Ahorros Actuales ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Contribución Mensual ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 100000,
+          "step": 50
+        },
+        {
+          "name": "annualReturn",
+          "label": "Retorno Anual Esperado (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 15,
+          "step": 0.5
+        }
+      ],
+      "formula": "Usa fórmula de interés compuesto: FV = PV(1+r)^n + PMT × [((1+r)^n - 1) / r]",
+      "output": {
+        "label": "Ahorros Totales al Jubilarse",
+        "default": "Ingresa tus detalles arriba",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Contribuciones Totales",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Ganancias de Inversión",
+          "field": "totalEarnings",
+          "format": "currency"
+        },
+        {
+          "label": "Años hasta la Jubilación",
+          "field": "years",
+          "format": "number"
+        },
+        {
+          "label": "Ingreso Mensual Estimado (Regla 4%)",
+          "field": "monthlyIncome",
+          "format": "currency"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Inicio Temprano (Edad 30)",
+        "input": {
+          "currentAge": 30,
+          "retirementAge": 65,
+          "currentSavings": 50000,
+          "monthlyContribution": 500,
+          "annualReturn": 7
+        },
+        "output": {
+          "totalSavings": 1247000,
+          "totalContributions": 260000,
+          "totalEarnings": 987000,
+          "years": 35,
+          "monthlyIncome": 4157
+        },
+        "explanation": "Comenzar a los 30 con $50K ahorrados y agregar $500/mes al 7% crece a $1.25M a los 65 años."
+      }
+    ],
+    "comparisonTable": {
+      "title": "Ahorros por Contribución Mensual (Edad 30, jubilación a los 65, retorno 7%)",
+      "headers": [
+        "Contribución Mensual",
+        "Total al Jubilarse",
+        "Tus Contribuciones",
+        "Crecimiento de Inversión"
+      ],
+      "rows": [
+        [
+          "$250",
+          "$833,000",
+          "$155,000",
+          "$678,000"
+        ],
+        [
+          "$500",
+          "$1,247,000",
+          "$260,000",
+          "$987,000"
+        ],
+        [
+          "$1,000",
+          "$2,074,000",
+          "$470,000",
+          "$1,604,000"
+        ],
+        [
+          "$1,500",
+          "$2,901,000",
+          "$680,000",
+          "$2,221,000"
+        ]
+      ]
+    },
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Meta de Ahorro",
+        "slug": "savings-goal",
+        "description": "Calcula el cronograma para alcanzar metas específicas"
+      }
+    ],
+    "seoContent": {
+      "introduction": "Planificar la jubilación es una de las decisiones financieras más importantes. Nuestra calculadora te ayuda a estimar cuánto dinero tendrás al jubilarte basándose en tus ahorros actuales, contribuciones mensuales y retornos esperados.",
+      "benefits": [
+        "Calcula proyecciones exactas de ahorros para jubilación",
+        "Ve cómo el interés compuesto aumenta tu fondo de retiro",
+        "Estima ingreso mensual usando la regla del 4%",
+        "Compara diferentes montos de contribución",
+        "Comprende el impacto de comenzar temprano vs tarde"
+      ],
+      "steps": [
+        "Ingresa tu edad actual",
+        "Especifica edad de jubilación planeada",
+        "Añade ahorros actuales si los tienes",
+        "Establece contribución mensual consistente",
+        "Elige tasa de retorno anual esperada",
+        "Revisa ahorros proyectados e ingreso mensual"
+      ],
+      "inputsExplained": [
+        "Edad actual determina cuántos años tienes hasta la jubilación",
+        "Edad de jubilación establece tu línea de tiempo",
+        "Ahorros actuales es tu fondo existente que seguirá creciendo",
+        "Contribución mensual es el monto regular que agregarás"
+      ],
+      "formulaExplanation": "La calculadora usa la fórmula de valor futuro del interés compuesto combinando dos componentes: crecimiento de ahorros existentes y crecimiento de contribuciones mensuales.",
+      "examples": [],
+      "resultsExplanation": [
+        "Ahorros totales muestra tu fondo completo al jubilarte",
+        "Contribuciones totales es el dinero que realmente aportaste",
+        "Ganancias de inversión revela el poder del interés compuesto"
+      ],
+      "whoItsFor": "Esta calculadora sirve a profesionales jóvenes, trabajadores de mediana carrera, parejas planificando jubilación conjunta, y cualquier persona preguntándose si está en camino a una jubilación cómoda.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en contribuciones consistentes y retornos estables. Los resultados reales varían debido a fluctuaciones del mercado, inflación y circunstancias de vida.",
+      "relatedTools": [],
+      "faqs": [
+        {
+          "question": "¿Cuánto debo ahorrar para la jubilación?",
+          "answer": "Los expertos recomiendan ahorrar 10-15% del ingreso bruto para jubilación. Una meta común es reemplazar 70-80% del ingreso pre-jubilación."
+        }
+      ]
+    },
+    "component": "RetirementSavingsCalculator"
+  },
+  "fr": {
+    "title": "Calculateur d'Épargne Retraite",
+    "seoTitle": "Calculateur d'Épargne Retraite 2026 - Planifiez Votre Avenir et Calculez Vos Besoins",
+    "metaDescription": "Calculez combien vous devez épargner pour la retraite. Estimez votre fonds futur avec les cotisations, taux de croissance et projections de revenu mensuel.",
+    "keywords": [
+      "calculateur d'épargne retraite",
+      "calculateur de planification retraite",
+      "combien épargner pour la retraite",
+      "calculateur de fonds de retraite",
+      "calculateur d'objectif de retraite"
+    ],
+    "slug": "epargne-retraite",
+    "category": "financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "retraite",
+      "épargne",
+      "investissement",
+      "planification future",
+      "planification financière",
+      "fonds de retraite"
+    ],
+    "description": "Planifiez votre retraite en toute confiance avec notre calculateur complet. Calculez vos économies totales à la retraite, gains d'investissement et revenu mensuel estimé.",
+    "summary": "Calculez votre épargne retraite et planifiez un avenir confortable.",
+    "instructions": [
+      "Entrez votre âge actuel et l'âge de retraite prévu.",
+      "Spécifiez votre épargne retraite actuelle si vous avez des fonds existants.",
+      "Définissez votre cotisation mensuelle - combien vous épargnerez chaque mois.",
+      "Fixez le taux de rendement annuel attendu (généralement 6-8%).",
+      "Cliquez sur 'Calculer' pour voir vos économies projetées et revenu mensuel.",
+      "Ajustez les cotisations et rendements pour voir différents scénarios."
+    ],
+    "calculatorComponent": {
+      "componentName": "RetirementSavingsCalculator",
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Âge Actuel",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 70,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Âge de Retraite",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Épargne Actuelle ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Cotisation Mensuelle ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 100000,
+          "step": 50
+        },
+        {
+          "name": "annualReturn",
+          "label": "Rendement Annuel Attendu (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 15,
+          "step": 0.5
+        }
+      ],
+      "formula": "Utilise la formule d'intérêt composé: FV = PV(1+r)^n + PMT × [((1+r)^n - 1) / r]",
+      "output": {
+        "label": "Épargne Totale à la Retraite",
+        "default": "Entrez vos détails ci-dessus",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Cotisations Totales",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Gains d'Investissement",
+          "field": "totalEarnings",
+          "format": "currency"
+        },
+        {
+          "label": "Années jusqu'à la Retraite",
+          "field": "years",
+          "format": "number"
+        },
+        {
+          "label": "Revenu Mensuel Estimé (Règle 4%)",
+          "field": "monthlyIncome",
+          "format": "currency"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Début Précoce (Âge 30)",
+        "input": {
+          "currentAge": 30,
+          "retirementAge": 65,
+          "currentSavings": 50000,
+          "monthlyContribution": 500,
+          "annualReturn": 7
+        },
+        "output": {
+          "totalSavings": 1247000,
+          "totalContributions": 260000,
+          "totalEarnings": 987000,
+          "years": 35,
+          "monthlyIncome": 4157
+        },
+        "explanation": "Commencer à 30 ans avec 50K$ économisés et ajouter 500$/mois à 7% atteint 1.25M$ à 65 ans."
+      }
+    ],
+    "comparisonTable": {
+      "title": "Épargne par Cotisation Mensuelle (Âge 30, retraite à 65, rendement 7%)",
+      "headers": [
+        "Cotisation Mensuelle",
+        "Total à la Retraite",
+        "Vos Cotisations",
+        "Croissance Investissement"
+      ],
+      "rows": [
+        [
+          "250$",
+          "833 000$",
+          "155 000$",
+          "678 000$"
+        ],
+        [
+          "500$",
+          "1 247 000$",
+          "260 000$",
+          "987 000$"
+        ],
+        [
+          "1 000$",
+          "2 074 000$",
+          "470 000$",
+          "1 604 000$"
+        ],
+        [
+          "1 500$",
+          "2 901 000$",
+          "680 000$",
+          "2 221 000$"
+        ]
+      ]
+    },
+    "relatedCalculators": [
+      {
+        "name": "Calculateur d'Objectif d'Épargne",
+        "slug": "savings-goal",
+        "description": "Calculez le calendrier pour atteindre des objectifs spécifiques"
+      }
+    ],
+    "seoContent": {
+      "introduction": "La planification de la retraite est l'une des décisions financières les plus importantes. Notre calculateur vous aide à estimer exactement combien d'argent vous aurez à la retraite.",
+      "benefits": [
+        "Calculez les projections exactes d'épargne retraite",
+        "Voyez comment l'intérêt composé augmente votre fonds",
+        "Estimez le revenu mensuel avec la règle des 4%",
+        "Comparez différents montants de cotisation"
+      ],
+      "steps": [
+        "Entrez votre âge actuel",
+        "Spécifiez l'âge de retraite prévu",
+        "Ajoutez l'épargne actuelle",
+        "Définissez la cotisation mensuelle",
+        "Choisissez le taux de rendement annuel"
+      ],
+      "inputsExplained": [
+        "L'âge actuel détermine le temps jusqu'à la retraite",
+        "L'âge de retraite établit votre calendrier"
+      ],
+      "formulaExplanation": "Le calculateur utilise la formule de valeur future de l'intérêt composé.",
+      "examples": [],
+      "resultsExplanation": [
+        "L'épargne totale montre votre fonds complet à la retraite"
+      ],
+      "whoItsFor": "Ce calculateur sert aux jeunes professionnels, travailleurs de mi-carrière, et toute personne se demandant s'ils sont sur la bonne voie.",
+      "disclaimer": "Ce calculateur fournit des estimations basées sur des cotisations cohérentes. Les résultats réels varient.",
+      "relatedTools": [],
+      "faqs": [
+        {
+          "question": "Combien dois-je épargner pour la retraite?",
+          "answer": "Les experts recommandent d'épargner 10-15% du revenu brut pour la retraite."
+        }
+      ]
+    },
+    "component": "RetirementSavingsCalculator"
+  },
+  "pt": {
+    "title": "Calculadora de Poupança para Aposentadoria",
+    "seoTitle": "Calculadora de Poupança para Aposentadoria 2026 - Planeje seu Futuro e Calcule Necessidades",
+    "metaDescription": "Calcule quanto você precisa economizar para aposentadoria. Estime seu fundo futuro com contribuições, taxas de crescimento e projeções de renda mensal.",
+    "keywords": [
+      "calculadora de poupança para aposentadoria",
+      "calculadora de planejamento de aposentadoria",
+      "quanto economizar para aposentadoria",
+      "calculadora de fundo de aposentadoria",
+      "calculadora de meta de aposentadoria"
+    ],
+    "slug": "poupanca-aposentadoria",
+    "category": "financial",
+    "difficulty": "Intermediate",
+    "tags": [
+      "aposentadoria",
+      "poupança",
+      "investimento",
+      "planejamento futuro",
+      "planejamento financeiro",
+      "fundo de aposentadoria"
+    ],
+    "description": "Planeje sua aposentadoria com confiança usando nossa calculadora abrangente. Calcule suas economias totais na aposentadoria, ganhos de investimento e renda mensal estimada.",
+    "summary": "Calcule sua poupança para aposentadoria e planeje um futuro confortável.",
+    "instructions": [
+      "Digite sua idade atual e idade de aposentadoria planejada.",
+      "Especifique suas economias atuais para aposentadoria se tiver fundos existentes.",
+      "Defina sua contribuição mensal - quanto você economizará a cada mês.",
+      "Estabeleça a taxa de retorno anual esperada (tipicamente 6-8%).",
+      "Clique em 'Calcular' para ver suas economias projetadas e renda mensal.",
+      "Ajuste contribuições e retornos para ver diferentes cenários."
+    ],
+    "calculatorComponent": {
+      "componentName": "RetirementSavingsCalculator",
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Idade Atual",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 70,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Idade de Aposentadoria",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Economias Atuais ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Contribuição Mensal ($)",
+          "type": "number",
+          "default": 500,
+          "min": 0,
+          "max": 100000,
+          "step": 50
+        },
+        {
+          "name": "annualReturn",
+          "label": "Retorno Anual Esperado (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 15,
+          "step": 0.5
+        }
+      ],
+      "formula": "Usa a fórmula de juros compostos: FV = PV(1+r)^n + PMT × [((1+r)^n - 1) / r]",
+      "output": {
+        "label": "Economias Totais na Aposentadoria",
+        "default": "Digite seus detalhes acima",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Contribuições Totais",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Ganhos de Investimento",
+          "field": "totalEarnings",
+          "format": "currency"
+        },
+        {
+          "label": "Anos até a Aposentadoria",
+          "field": "years",
+          "format": "number"
+        },
+        {
+          "label": "Renda Mensal Estimada (Regra 4%)",
+          "field": "monthlyIncome",
+          "format": "currency"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Início Precoce (Idade 30)",
+        "input": {
+          "currentAge": 30,
+          "retirementAge": 65,
+          "currentSavings": 50000,
+          "monthlyContribution": 500,
+          "annualReturn": 7
+        },
+        "output": {
+          "totalSavings": 1247000,
+          "totalContributions": 260000,
+          "totalEarnings": 987000,
+          "years": 35,
+          "monthlyIncome": 4157
+        },
+        "explanation": "Começar aos 30 anos com $50K economizados e adicionar $500/mês a 7% chega a $1.25M aos 65 anos."
+      }
+    ],
+    "comparisonTable": {
+      "title": "Economias por Contribuição Mensal (Idade 30, aposentadoria aos 65, retorno 7%)",
+      "headers": [
+        "Contribuição Mensal",
+        "Total na Aposentadoria",
+        "Suas Contribuições",
+        "Crescimento do Investimento"
+      ],
+      "rows": [
+        [
+          "$250",
+          "$833.000",
+          "$155.000",
+          "$678.000"
+        ],
+        [
+          "$500",
+          "$1.247.000",
+          "$260.000",
+          "$987.000"
+        ],
+        [
+          "$1.000",
+          "$2.074.000",
+          "$470.000",
+          "$1.604.000"
+        ],
+        [
+          "$1.500",
+          "$2.901.000",
+          "$680.000",
+          "$2.221.000"
+        ]
+      ]
+    },
+    "relatedCalculators": [
+      {
+        "name": "Calculadora de Meta de Poupança",
+        "slug": "savings-goal",
+        "description": "Calcule o cronograma para atingir metas específicas"
+      }
+    ],
+    "seoContent": {
+      "introduction": "Planejar a aposentadoria é uma das decisões financeiras mais importantes. Nossa calculadora ajuda você a estimar exatamente quanto dinheiro terá quando se aposentar.",
+      "benefits": [
+        "Calcule projeções exatas de poupança para aposentadoria",
+        "Veja como os juros compostos aumentam seu fundo",
+        "Estime a renda mensal usando a regra dos 4%",
+        "Compare diferentes valores de contribuição"
+      ],
+      "steps": [
+        "Digite sua idade atual",
+        "Especifique a idade de aposentadoria planejada",
+        "Adicione economias atuais",
+        "Defina a contribuição mensal",
+        "Escolha a taxa de retorno anual esperada"
+      ],
+      "inputsExplained": [
+        "A idade atual determina quantos anos você tem até a aposentadoria",
+        "A idade de aposentadoria estabelece seu cronograma"
+      ],
+      "formulaExplanation": "A calculadora usa a fórmula de valor futuro de juros compostos.",
+      "examples": [],
+      "resultsExplanation": [
+        "As economias totais mostram seu fundo completo na aposentadoria"
+      ],
+      "whoItsFor": "Esta calculadora serve jovens profissionais, trabalhadores de meia-carreira e qualquer pessoa se perguntando se está no caminho certo.",
+      "disclaimer": "Esta calculadora fornece estimativas baseadas em contribuições consistentes. Os resultados reais variam.",
+      "relatedTools": [],
+      "faqs": [
+        {
+          "question": "Quanto devo economizar para aposentadoria?",
+          "answer": "Especialistas recomendam economizar 10-15% da renda bruta para aposentadoria."
+        }
+      ]
+    },
+    "component": "RetirementSavingsCalculator"
+  }
+}

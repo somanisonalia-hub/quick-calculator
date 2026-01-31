@@ -31,7 +31,11 @@ export default function ExpenseCalculator({ lang = 'en' }: ExpenseCalculatorProp
       expenseBreakdown: "Expense Breakdown",
       savingsPotential: "Savings Potential",
       budgetStatus: "Budget Status",
-      currency: "$"
+      currency: "$",
+      positiveCashFlow: "Positive cash flow! You have",
+      leftAfterExpenses: "left after expenses.",
+      negativeCashFlow: "Negative cash flow! You're overspending by",
+      overspending: "."
     },
     es: {
       title: "Calculadora de Gastos",
@@ -55,7 +59,11 @@ export default function ExpenseCalculator({ lang = 'en' }: ExpenseCalculatorProp
       expenseBreakdown: "Desglose de Gastos",
       savingsPotential: "Potencial de Ahorro",
       budgetStatus: "Estado del Presupuesto",
-      currency: "$"
+      currency: "$",
+      positiveCashFlow: "¡Flujo de efectivo positivo! Tienes",
+      leftAfterExpenses: "después de gastos.",
+      negativeCashFlow: "¡Flujo de efectivo negativo! Estás gastando de más",
+      overspending: "."
     },
     pt: {
       title: "Calculadora de Despesas",
@@ -79,7 +87,11 @@ export default function ExpenseCalculator({ lang = 'en' }: ExpenseCalculatorProp
       expenseBreakdown: "Detalhamento de Despesas",
       savingsPotential: "Potencial de Poupança",
       budgetStatus: "Status do Orçamento",
-      currency: "R$"
+      currency: "R$",
+      positiveCashFlow: "Fluxo de caixa positivo! Você tem",
+      leftAfterExpenses: "restante após despesas.",
+      negativeCashFlow: "Fluxo de caixa negativo! Você está gastando a mais",
+      overspending: "."
     },
     fr: {
       title: "Calculateur de Dépenses",
@@ -103,7 +115,11 @@ export default function ExpenseCalculator({ lang = 'en' }: ExpenseCalculatorProp
       expenseBreakdown: "Décomposition des Dépenses",
       savingsPotential: "Potentiel d'Épargne",
       budgetStatus: "Statut du Budget",
-      currency: "€"
+      currency: "€",
+      positiveCashFlow: "Flux de trésorerie positif! Vous avez",
+      leftAfterExpenses: "restant après dépenses.",
+      negativeCashFlow: "Flux de trésorerie négatif! Vous dépensez trop de",
+      overspending: "."
     }
   };
 
@@ -437,12 +453,12 @@ export default function ExpenseCalculator({ lang = 'en' }: ExpenseCalculatorProp
                 <div className="text-sm">
                   {results.netIncome >= 0 ? (
                     <div className="text-green-700">
-                      <strong>Positive cash flow!</strong> You have {formatCurrency(results.netIncome)} left after expenses.
+                      {t.positiveCashFlow} {formatCurrency(results.netIncome)} {t.leftAfterExpenses}
                       Consider saving or investing this surplus.
                     </div>
                   ) : (
                     <div className="text-red-700">
-                      <strong>Negative cash flow!</strong> You're overspending by {formatCurrency(Math.abs(results.netIncome))}.
+                      {t.negativeCashFlow} {formatCurrency(Math.abs(results.netIncome))}{t.overspending}
                       Consider reducing expenses or increasing income.
                     </div>
                   )}

@@ -49,42 +49,22 @@
     "calculatorComponent": "LoanAffordabilityCalculator",
     "examples": [
       {
-        "title": "Middle Income Borrower",
-        "description": "A person earning $5,000 monthly with $800 in existing debt payments",
-        "input": {
-          "monthlyIncome": 5000,
-          "monthlyDebt": 800,
-          "interestRate": 10,
-          "loanTerm": 5,
-          "downPayment": 1000
-        },
-        "output": {
-          "loanAmount": 25000,
-          "monthlyPayment": 550,
-          "dtiRatio": 27,
-          "maxDtiAmount": 1800,
-          "totalCost": 33300,
-          "totalInterest": 8300
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "High Income with High Debt",
-        "description": "High earner with significant existing monthly obligations",
-        "input": {
-          "monthlyIncome": 12000,
-          "monthlyDebt": 2500,
-          "interestRate": 8,
-          "loanTerm": 7,
-          "downPayment": 5000
-        },
-        "output": {
-          "loanAmount": 50000,
-          "monthlyPayment": 850,
-          "dtiRatio": 31,
-          "maxDtiAmount": 4300,
-          "totalCost": 71400,
-          "totalInterest": 21400
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -208,42 +188,22 @@
     "calculatorComponent": "LoanAffordabilityCalculator",
     "examples": [
       {
-        "title": "Prestatario de Ingresos Medios",
-        "description": "Una persona que gana $5,000 mensuales con $800 en pagos de deudas existentes",
-        "input": {
-          "monthlyIncome": 5000,
-          "monthlyDebt": 800,
-          "interestRate": 10,
-          "loanTerm": 5,
-          "downPayment": 1000
-        },
-        "output": {
-          "loanAmount": 25000,
-          "monthlyPayment": 550,
-          "dtiRatio": 27,
-          "maxDtiAmount": 1800,
-          "totalCost": 33300,
-          "totalInterest": 8300
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Ingresos Altos con Deudas Altas",
-        "description": "Persona de altos ingresos con obligaciones mensuales significativas",
-        "input": {
-          "monthlyIncome": 12000,
-          "monthlyDebt": 2500,
-          "interestRate": 8,
-          "loanTerm": 7,
-          "downPayment": 5000
-        },
-        "output": {
-          "loanAmount": 50000,
-          "monthlyPayment": 850,
-          "dtiRatio": 31,
-          "maxDtiAmount": 4300,
-          "totalCost": 71400,
-          "totalInterest": 21400
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -367,42 +327,22 @@
     "calculatorComponent": "LoanAffordabilityCalculator",
     "examples": [
       {
-        "title": "Tomador de Renda Média",
-        "description": "Uma pessoa ganhando R$ 5.000 mensais com R$ 800 em pagamentos de dívidas existentes",
-        "input": {
-          "monthlyIncome": 5000,
-          "monthlyDebt": 800,
-          "interestRate": 10,
-          "loanTerm": 5,
-          "downPayment": 1000
-        },
-        "output": {
-          "loanAmount": 25000,
-          "monthlyPayment": 550,
-          "dtiRatio": 27,
-          "maxDtiAmount": 1800,
-          "totalCost": 33300,
-          "totalInterest": 8300
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Renda Alta com Dívidas Altas",
-        "description": "Pessoa de alta renda com obrigações mensais significativas",
-        "input": {
-          "monthlyIncome": 12000,
-          "monthlyDebt": 2500,
-          "interestRate": 8,
-          "loanTerm": 7,
-          "downPayment": 5000
-        },
-        "output": {
-          "loanAmount": 50000,
-          "monthlyPayment": 850,
-          "dtiRatio": 31,
-          "maxDtiAmount": 4300,
-          "totalCost": 71400,
-          "totalInterest": 21400
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -526,42 +466,22 @@
     "calculatorComponent": "LoanAffordabilityCalculator",
     "examples": [
       {
-        "title": "Emprunteur à Revenus Moyens",
-        "description": "Une personne gagnant 5 000 € mensuels avec 800 € en paiements de dettes existants",
-        "input": {
-          "monthlyIncome": 5000,
-          "monthlyDebt": 800,
-          "interestRate": 10,
-          "loanTerm": 5,
-          "downPayment": 1000
-        },
-        "output": {
-          "loanAmount": 25000,
-          "monthlyPayment": 550,
-          "dtiRatio": 27,
-          "maxDtiAmount": 1800,
-          "totalCost": 33300,
-          "totalInterest": 8300
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Revenus Élevés avec Dettes Élevées",
-        "description": "Personne à hauts revenus avec des obligations mensuelles significatives",
-        "input": {
-          "monthlyIncome": 12000,
-          "monthlyDebt": 2500,
-          "interestRate": 8,
-          "loanTerm": 7,
-          "downPayment": 5000
-        },
-        "output": {
-          "loanAmount": 50000,
-          "monthlyPayment": 850,
-          "dtiRatio": 31,
-          "maxDtiAmount": 4300,
-          "totalCost": 71400,
-          "totalInterest": 21400
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

@@ -27,7 +27,11 @@ export default function OperationsRatiosCalculator({ lang = 'en' }: OperationsRa
       assetTurnover: "Asset Turnover Ratio",
       daysSalesOutstanding: "Days Sales Outstanding (DSO)",
       interpretation: "Ratio Interpretation",
-      currency: "$"
+      currency: "$",
+      inventoryTurnoverEfficient: "Inventory Turnover > 8: Efficient inventory management",
+      receivablesTurnoverGood: "Receivables Turnover > 6: Good collection efficiency",
+      assetTurnoverEffective: "Asset Turnover > 1.5: Effective asset utilization",
+      dsoStrong: "DSO < 45 days: Strong cash conversion"
     },
     es: {
       title: "Calculadora de Ratios Operativos",
@@ -47,7 +51,11 @@ export default function OperationsRatiosCalculator({ lang = 'en' }: OperationsRa
       assetTurnover: "Ratio de Rotación de Activos",
       daysSalesOutstanding: "Días de Ventas Pendientes (DSO)",
       interpretation: "Interpretación del Ratio",
-      currency: "$"
+      currency: "$",
+      inventoryTurnoverEfficient: "Rotación Inventario > 8: Gestión eficiente de inventario",
+      receivablesTurnoverGood: "Rotación Cuentas x Cobrar > 6: Buena eficiencia de cobro",
+      assetTurnoverEffective: "Rotación Activos > 1.5: Utilización efectiva de activos",
+      dsoStrong: "DSO < 45 días: Fuerte conversión de efectivo"
     },
     pt: {
       title: "Calculadora de Índices Operacionais",
@@ -67,7 +75,11 @@ export default function OperationsRatiosCalculator({ lang = 'en' }: OperationsRa
       assetTurnover: "Índice de Giro de Ativos",
       daysSalesOutstanding: "Dias de Vendas Pendentes (DSO)",
       interpretation: "Interpretação do Índice",
-      currency: "R$"
+      currency: "R$",
+      inventoryTurnoverEfficient: "Giro Estoque > 8: Gestão eficiente de estoque",
+      receivablesTurnoverGood: "Giro Contas a Receber > 6: Boa eficiência de cobrança",
+      assetTurnoverEffective: "Giro Ativos > 1.5: Utilização eficaz de ativos",
+      dsoStrong: "DSO < 45 dias: Forte conversão de caixa"
     },
     fr: {
       title: "Calculateur de Ratios Opérationnels",
@@ -87,7 +99,11 @@ export default function OperationsRatiosCalculator({ lang = 'en' }: OperationsRa
       assetTurnover: "Ratio de Rotation des Actifs",
       daysSalesOutstanding: "Jours de Ventes en Suspens (DSO)",
       interpretation: "Interprétation du Ratio",
-      currency: "€"
+      currency: "€",
+      inventoryTurnoverEfficient: "Rotation Stocks > 8: Gestion efficace des stocks",
+      receivablesTurnoverGood: "Rotation Créances > 6: Bonne efficacité de recouvrement",
+      assetTurnoverEffective: "Rotation Actifs > 1.5: Utilisation efficace des actifs",
+      dsoStrong: "DSO < 45 jours: Forte conversion de trésorerie"
     }
   };
 
@@ -325,10 +341,10 @@ export default function OperationsRatiosCalculator({ lang = 'en' }: OperationsRa
               <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
                 <h4 className="text-sm font-semibold text-yellow-900 mb-2">{t.interpretation}</h4>
                 <div className="text-xs text-yellow-700 space-y-1">
-                  <div><strong>Inventory Turnover &gt; 8:</strong> Efficient inventory management</div>
-                  <div><strong>Receivables Turnover &gt; 6:</strong> Good collection efficiency</div>
-                  <div><strong>Asset Turnover &gt; 1.5:</strong> Effective asset utilization</div>
-                  <div><strong>DSO &lt; 45 days:</strong> Strong cash conversion</div>
+                  <div>{t.inventoryTurnoverEfficient}</div>
+                  <div>{t.receivablesTurnoverGood}</div>
+                  <div>{t.assetTurnoverEffective}</div>
+                  <div>{t.dsoStrong}</div>
                 </div>
               </div>
             </div>

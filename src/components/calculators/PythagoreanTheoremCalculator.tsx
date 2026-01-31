@@ -40,7 +40,8 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
       validRightTriangle: "Valid right triangle",
       notRightTriangle: "Not a right triangle",
       pythagoreanTheorem: "Pythagorean Theorem",
-      theoremExplanation: "In a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides"
+      theoremExplanation: "In a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides",
+      stepsAppear: "Steps will appear here"
     },
     es: {
       title: "Calculadora del Teorema de Pitágoras",
@@ -65,7 +66,8 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
       validRightTriangle: "Triángulo rectángulo válido",
       notRightTriangle: "No es triángulo rectángulo",
       pythagoreanTheorem: "Teorema de Pitágoras",
-      theoremExplanation: "En un triángulo rectángulo, el cuadrado de la hipotenusa es igual a la suma de cuadrados de los otros dos lados"
+      theoremExplanation: "En un triángulo rectángulo, el cuadrado de la hipotenusa es igual a la suma de cuadrados de los otros dos lados",
+      stepsAppear: "Los pasos aparecerán aquí"
     },
     pt: {
       title: "Calculadora do Teorema de Pitágoras",
@@ -90,7 +92,8 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
       validRightTriangle: "Triângulo retângulo válido",
       notRightTriangle: "Não é triângulo retângulo",
       pythagoreanTheorem: "Teorema de Pitágoras",
-      theoremExplanation: "Em um triângulo retângulo, o quadrado da hipotenusa é igual à soma dos quadrados dos outros dois lados"
+      theoremExplanation: "Em um triângulo retângulo, o quadrado da hipotenusa é igual à soma dos quadrados dos outros dois lados",
+      stepsAppear: "Os passos aparecerão aqui"
     },
     fr: {
       title: "Calculateur du Théorème de Pythagore",
@@ -115,7 +118,8 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
       validRightTriangle: "Triangle rectangle valide",
       notRightTriangle: "Pas un triangle rectangle",
       pythagoreanTheorem: "Théorème de Pythagore",
-      theoremExplanation: "Dans un triangle rectangle, le carré de l'hypoténuse égale la somme des carrés des deux autres côtés"
+      theoremExplanation: "Dans un triangle rectangle, le carré de l'hypoténuse égale la somme des carrés des deux autres côtés",
+      stepsAppear: "Les étapes apparaîtront ici"
     }
   };
 
@@ -301,7 +305,7 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
           <div className="bg-purple-50 p-4 rounded-lg">
             <h4 className="text-sm font-semibold text-purple-900 mb-2">{t.stepByStep}</h4>
             <div className="text-sm text-purple-700 whitespace-pre-line font-mono">
-              {steps || 'Steps will appear here'}
+              {steps || t.stepsAppear}
             </div>
           </div>
 

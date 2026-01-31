@@ -1,7 +1,7 @@
 {
   "en": {
     "title": "Income Tax Calculator",
-    "seoTitle": "Income Tax Calculator - Calculate Federal & State Tax Liability 2024",
+    "seoTitle": "Income Tax Calculator - Calculate Federal & State Tax Liability 2026",
     "metaDescription": "Calculate your federal and state income tax liability with detailed tax brackets, marginal rates, and deductions. Free tax calculator for tax planning and refund estimation.",
     "keywords": [
       "income tax calculator",
@@ -22,7 +22,7 @@
       "federal and state income tax calculator",
       "tax bracket calculator with deductions",
       "how much will I owe in taxes this year",
-      "income tax liability calculator 2024",
+      "income tax liability calculator 2026",
       "calculate taxes owed on annual income",
       "federal tax brackets and rates calculator",
       "state income tax calculator by state",
@@ -183,11 +183,10 @@
         "name": "taxYear",
         "label": "Tax Year",
         "type": "select",
-        "default": "2024",
+        "default": "2026",
         "options": [
-          "2024",
-          "2023",
-          "2022"
+          "2027",
+          "2026"
         ]
       }
     ],
@@ -244,48 +243,22 @@
     ],
     "examples": [
       {
-        "title": "Single Filer, Standard Deduction, California",
-        "inputs": {
-          "grossIncome": 75000,
-          "filingStatus": "single",
-          "dependents": 0,
-          "deductionType": "standard",
-          "itemizedDeductions": 0,
-          "taxCredits": 0,
-          "state": "CA",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "totalTaxLiability": 10250,
-          "federalTax": 8525,
-          "stateTax": 1725,
-          "taxableIncome": 61550,
-          "effectiveTaxRate": 13.7,
-          "marginalTaxRate": 22,
-          "afterTaxIncome": 64750
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Married Filing Jointly, Itemized Deductions, Texas",
-        "inputs": {
-          "grossIncome": 120000,
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "deductionType": "itemized",
-          "itemizedDeductions": 25000,
-          "taxCredits": 4000,
-          "state": "TX",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "totalTaxLiability": 13200,
-          "federalTax": 13200,
-          "stateTax": 0,
-          "taxableIncome": 92600,
-          "effectiveTaxRate": 11,
-          "marginalTaxRate": 22,
-          "afterTaxIncome": 106800
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -323,7 +296,7 @@
         "A married couple filing jointly in Texas earning $120,000 with $25,000 itemized deductions and $4,000 tax credits would have taxable income of $92,600, federal tax of $13,200 (after credits), $0 state tax, and total tax liability of $13,200 (11.0% effective rate, 22% marginal rate)"
       ],
       "whoShouldUse": "Individual taxpayers preparing their annual tax returns, tax professionals advising clients, financial advisors helping with tax planning, small business owners understanding self-employment tax, freelancers and contractors calculating quarterly tax payments, and anyone wanting to understand their complete tax situation and optimize their tax strategy.",
-      "importantNotes": "This calculator provides estimates based on 2024 tax brackets, standard deductions ($14,600 for single filers, $29,200 for married filing jointly), and general state tax rates. Actual taxes may vary based on additional income sources, specific deductions, credits eligibility, local tax laws, and IRS rules. The $4,700 personal exemption per dependent is suspended through 2025. Consult a tax professional for personalized tax advice and actual tax preparation.",
+      "importantNotes": "This calculator provides estimates based on 2026 tax brackets, standard deductions ($15,000 for single filers, $30,000 for married filing jointly), and general state tax rates. Actual taxes may vary based on additional income sources, specific deductions, credits eligibility, local tax laws, and IRS rules. Consult a tax professional for personalized tax advice and actual tax preparation.",
       "relatedTools": [
         "Net Income Calculator - Calculate take-home pay after all taxes",
         "Take-Home Pay Calculator - Calculate net paycheck with withholdings",
@@ -353,19 +326,27 @@
         },
         {
           "question": "What income is subject to federal income tax?",
-          "answer": "Almost all income is subject to federal income tax including wages, salaries, tips, bonuses, self-employment income, interest, dividends, capital gains, rental income, and retirement distributions. Some income may be tax-exempt such as certain Social Security benefits, municipal bond interest, and gifts under $18,000 annually (2024 limit)."
+          "answer": "Almost all income is subject to federal income tax including wages, salaries, tips, bonuses, self-employment income, interest, dividends, capital gains, rental income, and retirement distributions. Some income may be tax-exempt such as certain Social Security benefits, municipal bond interest, and gifts under $19,000 annually (2026 limit)."
         },
         {
           "question": "How often do tax brackets change?",
-          "answer": "Tax brackets are indexed for inflation and typically adjusted annually. Major tax law changes can also affect brackets, deductions, and credits. The Tax Cuts and Jobs Act of 2017 doubled the standard deduction and suspended personal exemptions through 2025, significantly changing tax calculations for most taxpayers."
+          "answer": "Tax brackets are indexed for inflation and typically adjusted annually. Major tax law changes can also affect brackets, deductions, and credits. Tax rates and deductions are regularly updated to reflect current tax law and inflation adjustments."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "IncomeTaxCalculator"
   },
   "es": {
     "title": "Calculadora de Impuesto a la Renta",
-    "seoTitle": "Calculadora de Impuesto a la Renta - Calcula Responsabilidad Fiscal Federal y Estatal 2024",
+    "seoTitle": "Calculadora de Impuesto a la Renta - Calcula Responsabilidad Fiscal Federal y Estatal 2026",
     "metaDescription": "Calcula tu responsabilidad fiscal federal y estatal con categorías de impuestos detalladas, tasas marginales y deducciones. Calculadora gratuita de impuestos para planificación fiscal y estimación de reembolso.",
     "keywords": [
       "calculadora impuesto renta",
@@ -386,14 +367,14 @@
       "calculadora impuesto federal y estatal",
       "calculadora categorías impuesto con deducciones",
       "cuánto deberé en impuestos este año",
-      "calculadora responsabilidad fiscal 2024",
+      "calculadora responsabilidad fiscal 2026",
       "calcular impuestos adeudados sobre ingreso anual",
       "calculadora categorías y tasas impuesto federal",
       "calculadora impuesto renta estatal por estado",
       "calculadora impuesto con deducción estándar",
       "calcular ingreso gravable después deducciones"
     ],
-    "slug": "income-tax-calculator",
+    "slug": "calculadora-impuesto-renta",
     "category": "Financial",
     "calculatorComponent": "IncomeTaxCalculator",
     "difficulty": "Intermediate",
@@ -547,11 +528,10 @@
         "name": "taxYear",
         "label": "Año Fiscal",
         "type": "select",
-        "default": "2024",
+        "default": "2026",
         "options": [
-          "2024",
-          "2023",
-          "2022"
+          "2027",
+          "2026"
         ]
       }
     ],
@@ -608,48 +588,22 @@
     ],
     "examples": [
       {
-        "title": "Soltero, Deducción Estándar, California",
-        "inputs": {
-          "grossIncome": 75000,
-          "filingStatus": "single",
-          "dependents": 0,
-          "deductionType": "standard",
-          "itemizedDeductions": 0,
-          "taxCredits": 0,
-          "state": "CA",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "totalTaxLiability": 10250,
-          "federalTax": 8525,
-          "stateTax": 1725,
-          "taxableIncome": 61550,
-          "effectiveTaxRate": 13.7,
-          "marginalTaxRate": 22,
-          "afterTaxIncome": 64750
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Casados Declarando Conjuntamente, Deducciones Detalladas, Texas",
-        "inputs": {
-          "grossIncome": 120000,
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "deductionType": "itemized",
-          "itemizedDeductions": 25000,
-          "taxCredits": 4000,
-          "state": "TX",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "totalTaxLiability": 13200,
-          "federalTax": 13200,
-          "stateTax": 0,
-          "taxableIncome": 92600,
-          "effectiveTaxRate": 11,
-          "marginalTaxRate": 22,
-          "afterTaxIncome": 106800
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -659,16 +613,16 @@
       "hourly-to-salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcula tu responsabilidad fiscal con nuestra completa Calculadora de Impuesto a la Renta. Entender tus obligaciones fiscales federales y estatales es crucial para planificación financiera, preparación de impuestos y tomar decisiones informadas sobre deducciones y créditos. Nuestra calculadora proporciona desgloses detallados por categoría de impuesto y calcula tanto tu tasa efectiva como marginal de impuesto.",
+      "introduction": "Calculate your income tax liability with our comprehensive Income Tax Calculator. Understanding your federal and state tax obligations is crucial for financial planning, tax preparation, and making informed decisions about deductions and credits. Our calculator provides detailed breakdowns by tax bracket and calculates both your effective and marginal tax rates.",
       "benefits": [
-        "Calcula responsabilidad fiscal federal y estatal precisa",
-        "Entiende tu categoría de impuesto y tasa marginal",
-        "Ve el impacto de deducciones y créditos en tu factura fiscal",
-        "Compara deducción estándar vs deducciones detalladas",
-        "Planea tus finanzas con estimaciones realistas de impuestos",
-        "Toma decisiones informadas sobre estrategias fiscales",
-        "Estima reembolsos o montos adeudados",
-        "Compara responsabilidad fiscal a través de diferentes estados"
+        "Calculate accurate federal and state income tax liability",
+        "Understand your tax bracket and marginal tax rate",
+        "See the impact of deductions and credits on your tax bill",
+        "Compare standard vs itemized deductions",
+        "Plan your finances with realistic tax estimates",
+        "Make informed decisions about tax strategies",
+        "Estimate tax refunds or amounts owed",
+        "Compare tax liability across different states"
       ],
       "howToUse": [
         "Ingresa tu ingreso bruto anual de todas las fuentes",
@@ -687,7 +641,7 @@
         "Una pareja casada declarando conjuntamente en Texas ganando $120,000 con $25,000 deducciones detalladas y $4,000 créditos fiscales tendría ingreso gravable de $92,600, impuesto federal de $13,200 (después créditos), $0 impuesto estatal, y responsabilidad fiscal total de $13,200 (11.0% tasa efectiva, 22% tasa marginal)"
       ],
       "whoShouldUse": "Contribuyentes individuales preparando sus declaraciones anuales, profesionales fiscales asesorando clientes, asesores financieros ayudando con planificación fiscal, dueños de pequeños negocios entendiendo impuesto por trabajo independiente, freelancers y contratistas calculando pagos trimestrales, y cualquiera queriendo entender su situación fiscal completa y optimizar su estrategia fiscal.",
-      "importantNotes": "Esta calculadora proporciona estimaciones basadas en categorías de impuestos de 2024, deducciones estándar ($14,600 para solteros, $29,200 para casados declarando conjuntamente), y tasas generales de impuesto estatal. Los impuestos reales pueden variar basados en fuentes adicionales de ingreso, deducciones específicas, elegibilidad de créditos, leyes fiscales locales y reglas IRS. La exención personal de $4,700 por dependiente está suspendida hasta 2025. Consulta un profesional fiscal para consejo fiscal personalizado y preparación real de impuestos.",
+      "importantNotes": "Esta calculadora proporciona estimaciones basadas en categorías de impuestos de 2026, deducciones estándar ($15,000 para solteros, $30,000 para casados declarando conjuntamente), y tasas generales de impuesto estatal. Los impuestos reales pueden variar basados en fuentes adicionales de ingreso, deducciones específicas, elegibilidad de créditos, leyes fiscales locales y reglas IRS. Consulta un profesional fiscal para consejo fiscal personalizado y preparación real de impuestos.",
       "relatedTools": [
         "Calculadora de Ingreso Neto - Calcula salario después de todos los impuestos",
         "Calculadora de Salario Neto - Calcula nómina neta con retenciones",
@@ -696,40 +650,48 @@
       ],
       "faqs": [
         {
-          "question": "¿Cuál es la diferencia entre tasa marginal de impuesto y tasa efectiva de impuesto?",
-          "answer": "Tu tasa marginal de impuesto es la tasa de impuesto aplicada a tu último dólar de ingreso - la categoría de impuesto más alta en la que caes. Tu tasa efectiva de impuesto es tu responsabilidad fiscal total dividida por tu ingreso total - la tasa promedio que pagas en todo tu ingreso. La mayoría de contribuyentes tienen una tasa efectiva más baja que su tasa marginal."
+          "question": "What's the difference between marginal tax rate and effective tax rate?",
+          "answer": "Your marginal tax rate is the tax rate applied to your last dollar of income - the highest tax bracket you fall into. Your effective tax rate is your total tax liability divided by your total income - the average rate you pay on all your income. Most taxpayers have an effective rate lower than their marginal rate."
         },
         {
-          "question": "¿Qué es el ingreso gravable?",
-          "answer": "El ingreso gravable es tu ingreso bruto ajustado (AGI) menos deducciones y exenciones. AGI incluye salarios, sueldos, propinas y otras fuentes de ingreso menos ciertos ajustes. Las deducciones pueden ser el monto estándar o gastos detallados como intereses hipotecarios, impuestos estatales pagados y donaciones caritativas. Las exenciones son montos restados por cada dependiente y tú mismo."
+          "question": "What is taxable income?",
+          "answer": "Taxable income is your adjusted gross income (AGI) minus deductions and exemptions. AGI includes wages, salaries, tips, and other income sources minus certain adjustments. Deductions can be the standard amount or itemized expenses like mortgage interest, state taxes paid, and charitable donations. Exemptions are amounts subtracted for each dependent and yourself."
         },
         {
-          "question": "¿Qué créditos fiscales están disponibles?",
-          "answer": "Los créditos fiscales comunes incluyen Crédito por Hijos (hasta $2,000 por hijo calificado), Crédito por Cuidado de Hijos y Dependientes, Créditos Educativos (Oportunidad Americana y Aprendizaje Vitalicio), Crédito por Adopción, Crédito por Vehículo Eléctrico, y créditos de eficiencia energética. Los créditos reducen tu responsabilidad fiscal dólar por dólar, a diferencia de deducciones que reducen tu ingreso gravable."
+          "question": "What tax credits are available?",
+          "answer": "Common tax credits include the Child Tax Credit (up to $2,000 per qualifying child), Child and Dependent Care Credit, Education Credits (American Opportunity and Lifetime Learning), Adoption Credit, Electric Vehicle Credit, and energy efficiency credits. Credits reduce your tax liability dollar-for-dollar, unlike deductions which reduce your taxable income."
         },
         {
-          "question": "¿Cómo elijo entre deducción estándar y deducciones detalladas?",
-          "answer": "Compara el monto de deducción estándar con tu total de deducciones detalladas. Usa cualquiera que te dé la mayor deducción. La deducción estándar es más simple pero detallar puede ser beneficioso si tienes intereses hipotecarios significativos, impuestos estatales pagados, donaciones caritativas o gastos médicos excediendo 7.5% de AGI. La mayoría de contribuyentes usan la deducción estándar."
+          "question": "How do I choose between standard and itemized deductions?",
+          "answer": "Compare the standard deduction amount to your itemized deductions total. Use whichever gives you the greater deduction. The standard deduction is simpler but itemizing can be beneficial if you have significant mortgage interest, state taxes paid, charitable donations, or medical expenses exceeding 7.5% of AGI. Most taxpayers use the standard deduction."
         },
         {
-          "question": "¿Por qué los estados tienen diferentes tasas de impuesto?",
-          "answer": "Nueve estados no tienen impuesto estatal a la renta (Texas, Florida, Nevada, Washington, Wyoming, Dakota del Sur, Alaska, Tennessee, Nuevo Hampshire). Otros estados tienen sistemas progresivos con tasas típicamente variando del 3% al 13.3%, dependiendo del nivel de ingreso y estructuras fiscales específicas del estado. Algunos estados también gravan diferentes tipos de ingreso diferentemente."
+          "question": "Why do states have different tax rates?",
+          "answer": "Nine states have no state income tax (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee, New Hampshire). Other states have progressive tax systems with rates typically ranging from 3% to 13.3%, depending on income level and state-specific tax structures. Some states also tax different types of income differently."
         },
         {
-          "question": "¿Qué ingreso está sujeto a impuesto federal a la renta?",
-          "answer": "Casi todo ingreso está sujeto a impuesto federal a la renta incluyendo salarios, sueldos, propinas, bonos, ingreso por trabajo independiente, intereses, dividendos, ganancias de capital, ingreso por alquiler y distribuciones de jubilación. Algunos ingresos pueden ser exentos de impuesto como ciertos beneficios de Seguro Social, intereses de bonos municipales y regalos bajo $18,000 anualmente (límite 2024)."
+          "question": "What income is subject to federal income tax?",
+          "answer": "Almost all income is subject to federal income tax including wages, salaries, tips, bonuses, self-employment income, interest, dividends, capital gains, rental income, and retirement distributions. Some income may be tax-exempt such as certain Social Security benefits, municipal bond interest, and gifts under $19,000 annually (2026 limit)."
         },
         {
-          "question": "¿Con qué frecuencia cambian las categorías de impuesto?",
-          "answer": "Las categorías de impuesto están indexadas por inflación y típicamente ajustadas anualmente. Cambios mayores en leyes fiscales también pueden afectar categorías, deducciones y créditos. La Ley de Cortes de Impuestos y Empleos de 2017 duplicó la deducción estándar y suspendió exenciones personales hasta 2025, cambiando significativamente cálculos fiscales para la mayoría de contribuyentes."
+          "question": "How often do tax brackets change?",
+          "answer": "Tax brackets are indexed for inflation and typically adjusted annually. Major tax law changes can also affect brackets, deductions, and credits. Tax rates and deductions are regularly updated to reflect current tax law and inflation adjustments."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "IncomeTaxCalculator"
   },
   "pt": {
     "title": "Calculadora de Imposto de Renda",
-    "seoTitle": "Calculadora de Imposto de Renda - Calcula Responsabilidade Fiscal Federal e Estadual 2024",
+    "seoTitle": "Calculadora de Imposto de Renda - Calcula Responsabilidade Fiscal Federal e Estadual 2026",
     "metaDescription": "Calcule sua responsabilidade fiscal federal e estadual com categorias de impostos detalhadas, taxas marginais e deduções. Calculadora gratuita de impostos para planejamento fiscal e estimativa de reembolso.",
     "keywords": [
       "calculadora imposto renda",
@@ -750,14 +712,14 @@
       "calculadora imposto federal e estadual",
       "calculadora categorias imposto com deduções",
       "quanto deverei em impostos este ano",
-      "calculadora responsabilidade fiscal 2024",
+      "calculadora responsabilidade fiscal 2026",
       "calcular impostos devidos sobre renda anual",
       "calculadora categorias e taxas imposto federal",
       "calculadora imposto renda estadual por estado",
       "calculadora imposto com dedução padrão",
       "calcular renda tributável após deduções"
     ],
-    "slug": "income-tax-calculator",
+    "slug": "calculadora-imposto-renda",
     "category": "Financial",
     "calculatorComponent": "IncomeTaxCalculator",
     "difficulty": "Intermediate",
@@ -911,11 +873,10 @@
         "name": "taxYear",
         "label": "Ano Fiscal",
         "type": "select",
-        "default": "2024",
+        "default": "2026",
         "options": [
-          "2024",
-          "2023",
-          "2022"
+          "2027",
+          "2026"
         ]
       }
     ],
@@ -972,48 +933,22 @@
     ],
     "examples": [
       {
-        "title": "Solteiro, Dedução Padrão, California",
-        "inputs": {
-          "grossIncome": 75000,
-          "filingStatus": "single",
-          "dependents": 0,
-          "deductionType": "standard",
-          "itemizedDeductions": 0,
-          "taxCredits": 0,
-          "state": "CA",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "totalTaxLiability": 10250,
-          "federalTax": 8525,
-          "stateTax": 1725,
-          "taxableIncome": 61550,
-          "effectiveTaxRate": 13.7,
-          "marginalTaxRate": 22,
-          "afterTaxIncome": 64750
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Casados Declarando em Conjunto, Deduções Detalhadas, Texas",
-        "inputs": {
-          "grossIncome": 120000,
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "deductionType": "itemized",
-          "itemizedDeductions": 25000,
-          "taxCredits": 4000,
-          "state": "TX",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "totalTaxLiability": 13200,
-          "federalTax": 13200,
-          "stateTax": 0,
-          "taxableIncome": 92600,
-          "effectiveTaxRate": 11,
-          "marginalTaxRate": 22,
-          "afterTaxIncome": 106800
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -1023,16 +958,16 @@
       "hourly-to-salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule sua responsabilidade fiscal com nossa completa Calculadora de Imposto de Renda. Entender suas obrigações fiscais federais e estaduais é crucial para planejamento financeiro, preparação de impostos e tomar decisões informadas sobre deduções e créditos. Nossa calculadora fornece detalhamentos por categoria de imposto e calcula tanto sua taxa efetiva quanto marginal de imposto.",
+      "introduction": "Calculate your income tax liability with our comprehensive Income Tax Calculator. Understanding your federal and state tax obligations is crucial for financial planning, tax preparation, and making informed decisions about deductions and credits. Our calculator provides detailed breakdowns by tax bracket and calculates both your effective and marginal tax rates.",
       "benefits": [
-        "Calcule responsabilidade fiscal federal e estadual precisa",
-        "Entenda sua categoria de imposto e taxa marginal",
-        "Veja o impacto de deduções e créditos em sua conta fiscal",
-        "Compare dedução padrão vs deduções detalhadas",
-        "Planeje suas finanças com estimativas realistas de impostos",
-        "Tome decisões informadas sobre estratégias fiscais",
-        "Estime reembolsos ou valores devidos",
-        "Compare responsabilidade fiscal através de diferentes estados"
+        "Calculate accurate federal and state income tax liability",
+        "Understand your tax bracket and marginal tax rate",
+        "See the impact of deductions and credits on your tax bill",
+        "Compare standard vs itemized deductions",
+        "Plan your finances with realistic tax estimates",
+        "Make informed decisions about tax strategies",
+        "Estimate tax refunds or amounts owed",
+        "Compare tax liability across different states"
       ],
       "howToUse": [
         "Digite sua renda bruta anual de todas as fontes",
@@ -1051,7 +986,7 @@
         "Um casal casado declarando em conjunto no Texas ganhando R$120.000 com R$25.000 deduções detalhadas e R$4.000 créditos fiscais teria renda tributável de R$92.600, imposto federal de R$13.200 (após créditos), R$0 imposto estadual, e responsabilidade fiscal total de R$13.200 (11.0% taxa efetiva, 22% taxa marginal)"
       ],
       "whoShouldUse": "Contribuintes individuais preparando suas declarações anuais, profissionais fiscais assessorando clientes, consultores financeiros ajudando com planejamento fiscal, donos de pequenos negócios entendendo imposto por trabalho autônomo, freelancers e contratados calculando pagamentos trimestrais, e qualquer pessoa querendo entender sua situação fiscal completa e otimizar sua estratégia fiscal.",
-      "importantNotes": "Esta calculadora fornece estimativas baseadas em categorias de impostos de 2024, deduções padrão (R$14.600 para solteiros, R$29.200 para casados declarando em conjunto), e taxas gerais de imposto estadual. Impostos reais podem variar baseados em fontes adicionais de renda, deduções específicas, elegibilidade de créditos, leis fiscais locais e regras IRS. A isenção pessoal de R$4.700 por dependente está suspensa até 2025. Consulte um profissional fiscal para conselho fiscal personalizado e preparação real de impostos.",
+      "importantNotes": "Esta calculadora fornece estimativas baseadas em categorias de impostos de 2026, deduções padrão (R$15.000 para solteiros, R$30.000 para casados declarando em conjunto), e taxas gerais de imposto estadual. Impostos reais podem variar baseados em fontes adicionais de renda, deduções específicas, elegibilidade de créditos, leis fiscais locais e regras IRS. Consulte um profissional fiscal para conselho fiscal personalizado e preparação real de impostos.",
       "relatedTools": [
         "Calculadora de Renda Líquida - Calcule salário após todos os impostos",
         "Calculadora de Salário Líquido - Calcule contracheque líquido com retenções",
@@ -1060,40 +995,48 @@
       ],
       "faqs": [
         {
-          "question": "Qual é a diferença entre taxa marginal de imposto e taxa efetiva de imposto?",
-          "answer": "Sua taxa marginal de imposto é a taxa de imposto aplicada ao seu último real de renda - a categoria de imposto mais alta na qual você se enquadra. Sua taxa efetiva de imposto é sua responsabilidade fiscal total dividida por sua renda total - a taxa média que você paga em toda sua renda. A maioria dos contribuintes tem uma taxa efetiva menor que sua taxa marginal."
+          "question": "What's the difference between marginal tax rate and effective tax rate?",
+          "answer": "Your marginal tax rate is the tax rate applied to your last dollar of income - the highest tax bracket you fall into. Your effective tax rate is your total tax liability divided by your total income - the average rate you pay on all your income. Most taxpayers have an effective rate lower than their marginal rate."
         },
         {
-          "question": "O que é renda tributável?",
-          "answer": "Renda tributável é sua renda bruta ajustada (AGI) menos deduções e isenções. AGI inclui salários, ordenados, gorjetas e outras fontes de renda menos certos ajustes. Deduções podem ser o valor padrão ou despesas detalhadas como juros hipotecários, impostos estaduais pagos e doações caritativas. Isenções são valores subtraídos por cada dependente e você mesmo."
+          "question": "What is taxable income?",
+          "answer": "Taxable income is your adjusted gross income (AGI) minus deductions and exemptions. AGI includes wages, salaries, tips, and other income sources minus certain adjustments. Deductions can be the standard amount or itemized expenses like mortgage interest, state taxes paid, and charitable donations. Exemptions are amounts subtracted for each dependent and yourself."
         },
         {
-          "question": "¿Quais créditos fiscais estão disponíveis?",
-          "answer": "Créditos fiscais comuns incluem Crédito por Filho (até R$2.000 por filho qualificado), Crédito por Cuidado de Filho e Dependente, Créditos Educacionais (Oportunidade Americana e Aprendizagem Vitalício), Crédito por Adoção, Crédito por Veículo Elétrico, e créditos de eficiência energética. Créditos reduzem sua responsabilidade fiscal real por real, ao contrário de deduções que reduzem sua renda tributável."
+          "question": "What tax credits are available?",
+          "answer": "Common tax credits include the Child Tax Credit (up to $2,000 per qualifying child), Child and Dependent Care Credit, Education Credits (American Opportunity and Lifetime Learning), Adoption Credit, Electric Vehicle Credit, and energy efficiency credits. Credits reduce your tax liability dollar-for-dollar, unlike deductions which reduce your taxable income."
         },
         {
-          "question": "Como escolher entre dedução padrão e deduções detalhadas?",
-          "answer": "Compare o valor de dedução padrão com seu total de deduções detalhadas. Use qualquer um que lhe dê a maior dedução. A dedução padrão é mais simples mas detalhar pode ser benéfico se você tiver juros hipotecários significativos, impostos estaduais pagos, doações caritativas ou despesas médicas excedendo 7.5% de AGI. A maioria dos contribuintes usa a dedução padrão."
+          "question": "How do I choose between standard and itemized deductions?",
+          "answer": "Compare the standard deduction amount to your itemized deductions total. Use whichever gives you the greater deduction. The standard deduction is simpler but itemizing can be beneficial if you have significant mortgage interest, state taxes paid, charitable donations, or medical expenses exceeding 7.5% of AGI. Most taxpayers use the standard deduction."
         },
         {
-          "question": "Por que estados têm diferentes taxas de imposto?",
-          "answer": "Nove estados não têm imposto estadual de renda (Texas, Florida, Nevada, Washington, Wyoming, Dakota do Sul, Alaska, Tennessee, New Hampshire). Outros estados têm sistemas progressivos com taxas tipicamente variando de 3% a 13.3%, dependendo do nível de renda e estruturas fiscais específicas do estado. Alguns estados também tributam diferentes tipos de renda diferentemente."
+          "question": "Why do states have different tax rates?",
+          "answer": "Nine states have no state income tax (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee, New Hampshire). Other states have progressive tax systems with rates typically ranging from 3% to 13.3%, depending on income level and state-specific tax structures. Some states also tax different types of income differently."
         },
         {
-          "question": "Que renda está sujeita a imposto federal de renda?",
-          "answer": "Quase toda renda está sujeita a imposto federal de renda incluindo salários, ordenados, gorjetas, bônus, renda por trabalho autônomo, juros, dividendos, ganhos de capital, renda de aluguel e distribuições de aposentadoria. Alguma renda pode ser isenta de imposto como certos benefícios de Previdência Social, juros de títulos municipais e presentes abaixo de R$18.000 anualmente (limite 2024)."
+          "question": "What income is subject to federal income tax?",
+          "answer": "Almost all income is subject to federal income tax including wages, salaries, tips, bonuses, self-employment income, interest, dividends, capital gains, rental income, and retirement distributions. Some income may be tax-exempt such as certain Social Security benefits, municipal bond interest, and gifts under $19,000 annually (2026 limit)."
         },
         {
-          "question": "Com que frequência categorias de imposto mudam?",
-          "answer": "Categorias de imposto são indexadas por inflação e tipicamente ajustadas anualmente. Mudanças maiores em leis fiscais também podem afetar categorias, deduções e créditos. A Lei de Cortes de Impostos e Empregos de 2017 dobrou a dedução padrão e suspendeu isenções pessoais até 2025, mudando significativamente cálculos fiscais para a maioria dos contribuintes."
+          "question": "How often do tax brackets change?",
+          "answer": "Tax brackets are indexed for inflation and typically adjusted annually. Major tax law changes can also affect brackets, deductions, and credits. Tax rates and deductions are regularly updated to reflect current tax law and inflation adjustments."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "IncomeTaxCalculator"
   },
   "fr": {
     "title": "Calculateur d'Impôt sur le Revenu",
-    "seoTitle": "Calculateur d'Impôt sur le Revenu - Calcule Responsabilité Fiscale Fédérale et État 2024",
+    "seoTitle": "Calculateur d'Impôt sur le Revenu - Calcule Responsabilité Fiscale Fédérale et État 2026",
     "metaDescription": "Calculez votre responsabilité fiscale fédérale et étatique avec catégories d'impôt détaillées, taux marginaux et déductions. Calculateur gratuit d'impôt pour planification fiscale et estimation de remboursement.",
     "keywords": [
       "calculateur impôt revenu",
@@ -1114,14 +1057,14 @@
       "calculateur impôt fédéral et étatique",
       "calculateur catégories impôt avec déductions",
       "combien devrais-je en impôts cette année",
-      "calculateur responsabilité fiscale 2024",
+      "calculateur responsabilité fiscale 2026",
       "calculer impôts dus sur revenu annuel",
       "calculateur catégories et taux impôt fédéral",
       "calculateur impôt revenu étatique par état",
       "calculateur impôt avec déduction standard",
       "calculer revenu imposable après déductions"
     ],
-    "slug": "income-tax-calculator",
+    "slug": "calculatrice-impot-revenu",
     "category": "Financial",
     "calculatorComponent": "IncomeTaxCalculator",
     "difficulty": "Intermediate",
@@ -1275,11 +1218,10 @@
         "name": "taxYear",
         "label": "Année Fiscale",
         "type": "select",
-        "default": "2024",
+        "default": "2026",
         "options": [
-          "2024",
-          "2023",
-          "2022"
+          "2027",
+          "2026"
         ]
       }
     ],
@@ -1336,48 +1278,22 @@
     ],
     "examples": [
       {
-        "title": "Célibataire, Déduction Standard, Californie",
-        "inputs": {
-          "grossIncome": 75000,
-          "filingStatus": "single",
-          "dependents": 0,
-          "deductionType": "standard",
-          "itemizedDeductions": 0,
-          "taxCredits": 0,
-          "state": "CA",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "totalTaxLiability": 10250,
-          "federalTax": 8525,
-          "stateTax": 1725,
-          "taxableIncome": 61550,
-          "effectiveTaxRate": 13.7,
-          "marginalTaxRate": 22,
-          "afterTaxIncome": 64750
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Mariés Déclarant Conjointement, Déductions Détaillées, Texas",
-        "inputs": {
-          "grossIncome": 120000,
-          "filingStatus": "married_filing_jointly",
-          "dependents": 2,
-          "deductionType": "itemized",
-          "itemizedDeductions": 25000,
-          "taxCredits": 4000,
-          "state": "TX",
-          "taxYear": "2024"
-        },
-        "outputs": {
-          "totalTaxLiability": 13200,
-          "federalTax": 13200,
-          "stateTax": 0,
-          "taxableIncome": 92600,
-          "effectiveTaxRate": 11,
-          "marginalTaxRate": 22,
-          "afterTaxIncome": 106800
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "relatedCalculators": [
@@ -1387,16 +1303,16 @@
       "hourly-to-salary-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez votre responsabilité fiscale avec notre Calculateur d'Impôt sur le Revenu complet. Comprendre vos obligations fiscales fédérales et étatiques est crucial pour planification financière, préparation d'impôt et prendre décisions éclairées sur déductions et crédits. Notre calculateur fournit des ventilations détaillées par catégorie d'impôt et calcule à la fois votre taux effectif et marginal d'impôt.",
+      "introduction": "Calculate your income tax liability with our comprehensive Income Tax Calculator. Understanding your federal and state tax obligations is crucial for financial planning, tax preparation, and making informed decisions about deductions and credits. Our calculator provides detailed breakdowns by tax bracket and calculates both your effective and marginal tax rates.",
       "benefits": [
-        "Calculez responsabilité fiscale fédérale et étatique précise",
-        "Comprenez votre catégorie d'impôt et taux marginal",
-        "Voyez l'impact de déductions et crédits sur votre facture fiscale",
-        "Comparez déduction standard vs déductions détaillées",
-        "Planifiez vos finances avec estimations réalistes d'impôt",
-        "Prenez des décisions éclairées sur stratégies fiscales",
-        "Estimez remboursements ou montants dus",
-        "Comparez responsabilité fiscale à travers différents états"
+        "Calculate accurate federal and state income tax liability",
+        "Understand your tax bracket and marginal tax rate",
+        "See the impact of deductions and credits on your tax bill",
+        "Compare standard vs itemized deductions",
+        "Plan your finances with realistic tax estimates",
+        "Make informed decisions about tax strategies",
+        "Estimate tax refunds or amounts owed",
+        "Compare tax liability across different states"
       ],
       "howToUse": [
         "Entrez votre revenu brut annuel de toutes les sources",
@@ -1415,7 +1331,7 @@
         "Un couple marié déclarant conjointement au Texas gagnant €120.000 avec €25.000 déductions détaillées et €4.000 crédits fiscaux aurait revenu imposable de €92.600, impôt fédéral de €13.200 (après crédits), €0 impôt étatique, et responsabilité fiscale totale de €13.200 (11.0% taux effectif, 22% taux marginal)"
       ],
       "whoShouldUse": "Contribuable individuels préparant leurs déclarations annuelles, professionnels fiscaux conseillant clients, conseillers financiers aidant avec planification fiscale, propriétaires de petites entreprises comprenant impôt sur travail indépendant, freelances et contractants calculant paiements trimestriels, et quiconque souhaitant comprendre sa situation fiscale complète et optimiser sa stratégie fiscale.",
-      "importantNotes": "Ce calculateur fournit des estimations basées sur catégories d'impôt de 2024, déductions standard (€14.600 pour célibataires, €29.200 pour mariés déclarant conjointement), et taux généraux d'impôt étatique. Les impôts réels peuvent varier selon sources additionnelles de revenu, déductions spécifiques, éligibilité de crédits, lois fiscales locales et règles IRS. L'exemption personnelle de €4.700 par personne à charge est suspendue jusqu'à 2025. Consultez un professionnel fiscal pour conseils fiscaux personnalisés et préparation réelle d'impôt.",
+      "importantNotes": "Ce calculateur fournit des estimations basées sur catégories d'impôt de 2026, déductions standard (€15.000 pour célibataires, €30.000 pour mariés déclarant conjointement), et taux généraux d'impôt étatique. Les impôts réels peuvent varier selon sources additionnelles de revenu, déductions spécifiques, éligibilité de crédits, lois fiscales locales et règles IRS. Consultez un professionnel fiscal pour conseils fiscaux personnalisés et préparation réelle d'impôt.",
       "relatedTools": [
         "Calculateur de Revenu Net - Calculez salaire après tous impôts",
         "Calculateur de Salaire Net - Calculez paie nette avec retenues",
@@ -1424,33 +1340,41 @@
       ],
       "faqs": [
         {
-          "question": "Quelle est la différence entre taux marginal d'impôt et taux effectif d'impôt ?",
-          "answer": "Votre taux marginal d'impôt est le taux d'impôt appliqué à votre dernier euro de revenu - la catégorie d'impôt la plus élevée dans laquelle vous tombez. Votre taux effectif d'impôt est votre responsabilité fiscale totale divisée par votre revenu total - le taux moyen que vous payez sur tout votre revenu. La plupart des contribuables ont un taux effectif inférieur à leur taux marginal."
+          "question": "What's the difference between marginal tax rate and effective tax rate?",
+          "answer": "Your marginal tax rate is the tax rate applied to your last dollar of income - the highest tax bracket you fall into. Your effective tax rate is your total tax liability divided by your total income - the average rate you pay on all your income. Most taxpayers have an effective rate lower than their marginal rate."
         },
         {
-          "question": "Qu'est-ce que le revenu imposable ?",
-          "answer": "Le revenu imposable est votre revenu brut ajusté (AGI) moins déductions et exemptions. AGI inclut salaires, traitements, pourboires et autres sources de revenu moins certains ajustements. Déductions peuvent être le montant standard ou dépenses détaillées comme intérêts hypothécaires, impôts étatiques payés et dons caritatifs. Exemptions sont montants soustraits pour chaque personne à charge et vous-même."
+          "question": "What is taxable income?",
+          "answer": "Taxable income is your adjusted gross income (AGI) minus deductions and exemptions. AGI includes wages, salaries, tips, and other income sources minus certain adjustments. Deductions can be the standard amount or itemized expenses like mortgage interest, state taxes paid, and charitable donations. Exemptions are amounts subtracted for each dependent and yourself."
         },
         {
-          "question": "¿Quels crédits fiscaux sont disponibles ?",
-          "answer": "Crédits fiscaux communs incluent Crédit Enfant (jusqu'à €2.000 par enfant qualifié), Crédit pour Soins d'Enfant et Personne à Charge, Crédits Éducatifs (Opportunité Américaine et Apprentissage à Vie), Crédit Adoption, Crédit Véhicule Électrique, et crédits d'efficacité énergétique. Crédits réduisent votre responsabilité fiscale euro pour euro, contrairement à déductions qui réduisent votre revenu imposable."
+          "question": "What tax credits are available?",
+          "answer": "Common tax credits include the Child Tax Credit (up to $2,000 per qualifying child), Child and Dependent Care Credit, Education Credits (American Opportunity and Lifetime Learning), Adoption Credit, Electric Vehicle Credit, and energy efficiency credits. Credits reduce your tax liability dollar-for-dollar, unlike deductions which reduce your taxable income."
         },
         {
-          "question": "Comment choisir entre déduction standard et déductions détaillées ?",
-          "answer": "Comparez le montant de déduction standard à votre total de déductions détaillées. Utilisez celui qui vous donne la plus grande déduction. La déduction standard est plus simple mais détailler peut être bénéfique si vous avez intérêts hypothécaires significatifs, impôts étatiques payés, dons caritatifs ou dépenses médicales dépassant 7.5% de AGI. La plupart des contribuables utilisent la déduction standard."
+          "question": "How do I choose between standard and itemized deductions?",
+          "answer": "Compare the standard deduction amount to your itemized deductions total. Use whichever gives you the greater deduction. The standard deduction is simpler but itemizing can be beneficial if you have significant mortgage interest, state taxes paid, charitable donations, or medical expenses exceeding 7.5% of AGI. Most taxpayers use the standard deduction."
         },
         {
-          "question": "Pourquoi les états ont-ils des taux d'impôt différents ?",
-          "answer": "Neuf états n'ont pas d'impôt étatique sur le revenu (Texas, Floride, Nevada, Washington, Wyoming, Dakota du Sud, Alaska, Tennessee, New Hampshire). D'autres états ont des systèmes progressifs avec taux typiquement variant de 3% à 13.3%, selon le niveau de revenu et structures fiscales spécifiques de l'état. Certains états taxent également différents types de revenu différemment."
+          "question": "Why do states have different tax rates?",
+          "answer": "Nine states have no state income tax (Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, Tennessee, New Hampshire). Other states have progressive tax systems with rates typically ranging from 3% to 13.3%, depending on income level and state-specific tax structures. Some states also tax different types of income differently."
         },
         {
-          "question": "Quel revenu est soumis à l'impôt fédéral sur le revenu ?",
-          "answer": "Presque tout revenu est soumis à l'impôt fédéral sur le revenu incluant salaires, traitements, pourboires, bonus, revenu de travail indépendant, intérêts, dividendes, gains en capital, revenu de location et distributions de retraite. Certains revenus peuvent être exonérés d'impôt comme certains avantages Sécurité Sociale, intérêts d'obligations municipales et cadeaux sous €18.000 annuellement (limite 2024)."
+          "question": "What income is subject to federal income tax?",
+          "answer": "Almost all income is subject to federal income tax including wages, salaries, tips, bonuses, self-employment income, interest, dividends, capital gains, rental income, and retirement distributions. Some income may be tax-exempt such as certain Social Security benefits, municipal bond interest, and gifts under $19,000 annually (2026 limit)."
         },
         {
-          "question": "À quelle fréquence les catégories d'impôt changent-elles ?",
-          "answer": "Les catégories d'impôt sont indexées pour inflation et typiquement ajustées annuellement. Des changements majeurs dans lois fiscales peuvent également affecter catégories, déductions et crédits. La Loi de Coupes d'Impôts et Emplois de 2017 a doublé la déduction standard et suspendu exemptions personnelles jusqu'à 2025, changeant significativement calculs fiscaux pour la plupart des contribuables."
+          "question": "How often do tax brackets change?",
+          "answer": "Tax brackets are indexed for inflation and typically adjusted annually. Major tax law changes can also affect brackets, deductions, and credits. Tax rates and deductions are regularly updated to reflect current tax law and inflation adjustments."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "IncomeTaxCalculator"

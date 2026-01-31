@@ -26,7 +26,12 @@ export default function StockRatiosCalculator({ lang = 'en' }: StockRatiosCalcul
       earningsYield: "Earnings Yield",
       dividendPayoutRatio: "Dividend Payout Ratio",
       interpretation: "Ratio Interpretation",
-      currency: "$"
+      currency: "$",
+      peLow: "P/E < 15: Potentially undervalued",
+      peFair: "P/E 15-25: Fairly valued",
+      peHigh: "P/E > 25: Premium valuation",
+      dividendYieldHigh: "Dividend Yield > 4%: High income focus",
+      pbUndervalued: "P/B < 1.5: Potentially undervalued"
     },
     es: {
       title: "Calculadora de Ratios de Acciones",
@@ -45,7 +50,12 @@ export default function StockRatiosCalculator({ lang = 'en' }: StockRatiosCalcul
       earningsYield: "Rendimiento de Ganancias",
       dividendPayoutRatio: "Ratio de Pago de Dividendos",
       interpretation: "Interpretación del Ratio",
-      currency: "$"
+      currency: "$",
+      peLow: "P/E < 15: Potencialmente infravalorada",
+      peFair: "P/E 15-25: Valoración justa",
+      peHigh: "P/E > 25: Valoración premium",
+      dividendYieldHigh: "Rendimiento Dividendos > 4%: Enfoque alto ingreso",
+      pbUndervalued: "P/B < 1.5: Potencialmente infravalorada"
     },
     pt: {
       title: "Calculadora de Índices de Ações",
@@ -64,7 +74,12 @@ export default function StockRatiosCalculator({ lang = 'en' }: StockRatiosCalcul
       earningsYield: "Rendimento de Lucros",
       dividendPayoutRatio: "Índice de Pagamento de Dividendos",
       interpretation: "Interpretação do Índice",
-      currency: "R$"
+      currency: "R$",
+      peLow: "P/L < 15: Potencialmente subvalorizada",
+      peFair: "P/L 15-25: Valorização justa",
+      peHigh: "P/L > 25: Valorização premium",
+      dividendYieldHigh: "Rendimento Dividendos > 4%: Foco alta renda",
+      pbUndervalued: "P/VPA < 1.5: Potencialmente subvalorizada"
     },
     fr: {
       title: "Calculateur de Ratios Boursiers",
@@ -83,7 +98,12 @@ export default function StockRatiosCalculator({ lang = 'en' }: StockRatiosCalcul
       earningsYield: "Rendement des Bénéfices",
       dividendPayoutRatio: "Ratio de Distribution des Dividendes",
       interpretation: "Interprétation du Ratio",
-      currency: "€"
+      currency: "€",
+      peLow: "P/E < 15: Potentiellement sous-évalué",
+      peFair: "P/E 15-25: Évaluation juste",
+      peHigh: "P/E > 25: Évaluation premium",
+      dividendYieldHigh: "Rendement Dividendes > 4%: Focus revenu élevé",
+      pbUndervalued: "P/B < 1.5: Potentiellement sous-évalué"
     }
   };
 
@@ -313,11 +333,11 @@ export default function StockRatiosCalculator({ lang = 'en' }: StockRatiosCalcul
               <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
                 <h4 className="text-sm font-semibold text-yellow-900 mb-2">{t.interpretation}</h4>
                 <div className="text-xs text-yellow-700 space-y-1">
-                  <div><strong>P/E &lt; 15:</strong> Potentially undervalued</div>
-                  <div><strong>P/E 15-25:</strong> Fairly valued</div>
-                  <div><strong>P/E &gt; 25:</strong> Premium valuation</div>
-                  <div><strong>Dividend Yield &gt; 4%:</strong> High income focus</div>
-                  <div><strong>P/B &lt; 1.5:</strong> Potentially undervalued</div>
+                  <div>{t.peLow}</div>
+                  <div>{t.peFair}</div>
+                  <div>{t.peHigh}</div>
+                  <div>{t.dividendYieldHigh}</div>
+                  <div>{t.pbUndervalued}</div>
                 </div>
               </div>
             </div>

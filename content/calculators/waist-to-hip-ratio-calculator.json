@@ -241,6 +241,14 @@
           "question": "Does WHR apply to athletes and very muscular people?",
           "answer": "WHR may be less reliable in athletes and bodybuilders due to high muscle mass. Very muscular individuals may have higher WHR without increased health risks. In these cases, combine WHR with other measures like body fat percentage, BMI, and overall health markers for accurate assessment."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "WaistToHipRatioCalculator"
@@ -421,16 +429,16 @@
       "lean-body-mass-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcula tu relación cintura-cadera (RCC) con nuestra completa herramienta de evaluación de salud. Entender tu distribución de grasa corporal es crucial para evaluar riesgos de salud cardiovascular, salud metabólica y bienestar general. Nuestra calculadora proporciona análisis instantáneo de tu categoría de riesgo de salud y clasificación de forma corporal.",
+      "introduction": "Calculate your waist-to-hip ratio (WHR) with our comprehensive health assessment tool. Understanding your body fat distribution is crucial for assessing cardiovascular health risks, metabolic health, and overall wellness. Our calculator provides instant analysis of your health risk category and body shape classification.",
       "benefits": [
-        "Evalúa riesgo de enfermedad cardiovascular basado en distribución de grasa",
-        "Entiende implicaciones de forma corporal para salud",
-        "Identifica patrones de grasa manzana vs pera",
-        "Obtén categorización de riesgo de salud personalizada",
-        "Aprende sobre indicadores de salud metabólica",
-        "Toma decisiones informadas sobre estilo de vida y salud",
-        "Rastrea cambios en composición corporal con el tiempo",
-        "Entiende umbrales de riesgo específicos por género"
+        "Assess cardiovascular disease risk based on fat distribution",
+        "Understand body shape implications for health",
+        "Identify apple vs pear body fat patterns",
+        "Get personalized health risk categorization",
+        "Learn about metabolic health indicators",
+        "Make informed decisions about lifestyle and health",
+        "Track changes in body composition over time",
+        "Understand gender-specific risk thresholds"
       ],
       "howToUse": [
         "Mide tu cintura en el punto más estrecho (usualmente justo arriba del ombligo)",
@@ -456,37 +464,45 @@
       ],
       "faqs": [
         {
-          "question": "¿Qué es relación cintura-cadera y por qué es importante?",
-          "answer": "Relación cintura-cadera (RCC) mide la distribución de grasa corporal entre abdomen y caderas. Es importante porque grasa abdominal (forma manzana) está asociada con mayor riesgo de enfermedad cardiovascular, diabetes y síndrome metabólico comparado con grasa de cadera/muslo (forma pera). RCC es mejor predictor de riesgos de salud que IMC solo."
+          "question": "What is waist-to-hip ratio and why is it important?",
+          "answer": "Waist-to-hip ratio (WHR) measures the distribution of body fat between abdomen and hips. It's important because abdominal fat (apple shape) is associated with higher cardiovascular disease, diabetes, and metabolic syndrome risk compared to hip/thigh fat (pear shape). WHR is a better predictor of health risks than BMI alone."
         },
         {
-          "question": "¿Cómo mido mi cintura y caderas correctamente?",
-          "answer": "Para cintura: Encuentra la parte más estrecha entre costillas y caderas, usualmente justo arriba del ombligo. Mide a nivel de respiración normal. Para caderas: Mide en la parte más ancha de glúteos. Usa cinta métrica flexible, mantén nivelada, y mide en piel desnuda. Párate derecho con músculos relajados."
+          "question": "How do I measure my waist and hips correctly?",
+          "answer": "For waist: Find the narrowest part between ribs and hips, usually just above the belly button. Measure at normal breathing level. For hips: Measure at the widest part of the buttocks. Use a flexible tape measure, keep it level, and measure on bare skin. Stand straight with relaxed muscles."
         },
         {
-          "question": "¿Cuáles son rangos saludables de RCC?",
-          "answer": "Rangos saludables varían por género: Mujeres deberían apuntar a <0.80 (riesgo bajo), 0.80-0.84 (moderado), >0.85 (alto). Hombres deberían apuntar a <0.90 (riesgo bajo), 0.90-0.99 (moderado), >1.00 (alto). Estos umbrales se basan en guías OMS y grandes estudios epidemiológicos."
+          "question": "What are healthy WHR ranges?",
+          "answer": "Healthy ranges vary by gender: Women should aim for <0.80 (low risk), 0.80-0.84 (moderate), >0.85 (high). Men should aim for <0.90 (low risk), 0.90-0.99 (moderate), >1.00 (high). These thresholds are based on WHO guidelines and large epidemiological studies."
         },
         {
-          "question": "¿Cuál es la diferencia entre formas manzana y pera?",
-          "answer": "Forma manzana (RCC más alto) tiene más almacenamiento de grasa abdominal, asociado con mayor riesgo de enfermedad cardiovascular y metabólica. Forma pera (RCC más bajo) tiene más almacenamiento de grasa de cadera y muslo, generalmente asociado con menores riesgos de salud. Sin embargo, todas formas corporales benefician de hábitos de estilo de vida saludable."
+          "question": "What's the difference between apple and pear shapes?",
+          "answer": "Apple shape (higher WHR) has more abdominal fat storage, associated with higher cardiovascular and metabolic disease risk. Pear shape (lower WHR) has more hip and thigh fat storage, generally associated with lower health risks. However, all body shapes benefit from healthy lifestyle habits."
         },
         {
-          "question": "¿Puede RCC cambiar con el tiempo?",
-          "answer": "Sí, RCC puede mejorar con pérdida de grasa abdominal dirigida a través de dieta, ejercicio y cambios de estilo de vida. Reducción localizada no es posible, pero pérdida de grasa general combinada con construcción muscular puede mejorar RCC. Monitoreo regular ayuda rastrear progreso hacia patrones más saludables de distribución de grasa."
+          "question": "Can WHR change over time?",
+          "answer": "Yes, WHR can improve with targeted fat loss from the abdominal area through diet, exercise, and lifestyle changes. Spot reduction isn't possible, but overall fat loss combined with muscle building can improve WHR. Regular monitoring helps track progress toward healthier fat distribution patterns."
         },
         {
-          "question": "¿Es RCC más importante que IMC?",
-          "answer": "Ambos son valiosos pero miden cosas diferentes. IMC evalúa estado de peso general, mientras RCC evalúa patrones de distribución de grasa. RCC es a menudo mejor predictor de riesgo de enfermedad cardiovascular que IMC, especialmente en individuos de peso normal con grasa abdominal. Usa ambos para evaluación de salud comprehensiva."
+          "question": "Is WHR more important than BMI?",
+          "answer": "Both are valuable but measure different things. BMI assesses overall weight status, while WHR evaluates fat distribution patterns. WHR is often a better predictor of cardiovascular disease risk than BMI, especially in normal-weight individuals with abdominal fat. Use both for comprehensive health assessment."
         },
         {
-          "question": "¿Qué si mi RCC está en categoría de alto riesgo?",
-          "answer": "RCC alto indica riesgos de salud aumentados pero es modificable a través de cambios de estilo de vida. Enfócate en reducir grasa abdominal a través de dieta balanceada, cardio regular y entrenamiento de fuerza, manejo de estrés y sueño adecuado. Consulta proveedores de atención médica para evaluación y guía personalizada."
+          "question": "What if my WHR is in the high-risk category?",
+          "answer": "High WHR indicates increased health risks but is modifiable through lifestyle changes. Focus on reducing abdominal fat through balanced diet, regular cardio and strength training, stress management, and adequate sleep. Consult healthcare providers for personalized assessment and guidance."
         },
         {
-          "question": "¿Aplica RCC a atletas y personas muy musculosas?",
-          "answer": "RCC puede ser menos confiable en atletas y fisiculturistas debido a alta masa muscular. Individuos muy musculosos pueden tener RCC más alto sin riesgos de salud aumentados. En estos casos, combina RCC con otras medidas como porcentaje de grasa corporal, IMC y marcadores generales de salud para evaluación precisa."
+          "question": "Does WHR apply to athletes and very muscular people?",
+          "answer": "WHR may be less reliable in athletes and bodybuilders due to high muscle mass. Very muscular individuals may have higher WHR without increased health risks. In these cases, combine WHR with other measures like body fat percentage, BMI, and overall health markers for accurate assessment."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "WaistToHipRatioCalculator"
@@ -667,16 +683,16 @@
       "lean-body-mass-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule sua relação cintura-quadril (RCQ) com nossa completa ferramenta de avaliação de saúde. Entender sua distribuição de gordura corporal é crucial para avaliar riscos de saúde cardiovascular, saúde metabólica e bem-estar geral. Nossa calculadora fornece análise instantânea de sua categoria de risco de saúde e classificação de forma corporal.",
+      "introduction": "Calculate your waist-to-hip ratio (WHR) with our comprehensive health assessment tool. Understanding your body fat distribution is crucial for assessing cardiovascular health risks, metabolic health, and overall wellness. Our calculator provides instant analysis of your health risk category and body shape classification.",
       "benefits": [
-        "Avalie risco de doença cardiovascular baseado em distribuição de gordura",
-        "Entenda implicações de forma corporal para saúde",
-        "Identifique padrões de gordura maçã vs pera",
-        "Obtenha categorização de risco de saúde personalizada",
-        "Aprenda sobre indicadores de saúde metabólica",
-        "Tome decisões informadas sobre estilo de vida e saúde",
-        "Acompanhe mudanças em composição corporal ao longo do tempo",
-        "Entenda limites de risco específicos por gênero"
+        "Assess cardiovascular disease risk based on fat distribution",
+        "Understand body shape implications for health",
+        "Identify apple vs pear body fat patterns",
+        "Get personalized health risk categorization",
+        "Learn about metabolic health indicators",
+        "Make informed decisions about lifestyle and health",
+        "Track changes in body composition over time",
+        "Understand gender-specific risk thresholds"
       ],
       "howToUse": [
         "Meça sua cintura no ponto mais estreito (geralmente logo acima do umbigo)",
@@ -702,37 +718,45 @@
       ],
       "faqs": [
         {
-          "question": "O que é relação cintura-quadril e por que é importante?",
-          "answer": "Relação cintura-quadril (RCQ) mede a distribuição de gordura corporal entre abdômen e quadris. É importante porque gordura abdominal (forma maçã) está associada com maior risco de doença cardiovascular, diabetes e síndrome metabólica comparado com gordura de quadril/coxa (forma pera). RCQ é melhor preditor de riscos de saúde que IMC sozinho."
+          "question": "What is waist-to-hip ratio and why is it important?",
+          "answer": "Waist-to-hip ratio (WHR) measures the distribution of body fat between abdomen and hips. It's important because abdominal fat (apple shape) is associated with higher cardiovascular disease, diabetes, and metabolic syndrome risk compared to hip/thigh fat (pear shape). WHR is a better predictor of health risks than BMI alone."
         },
         {
-          "question": "¿Como medir minha cintura e quadris corretamente?",
-          "answer": "Para cintura: Encontre a parte mais estreita entre costelas e quadris, geralmente logo acima do umbigo. Meça em nível de respiração normal. Para quadris: Meça na parte mais larga dos glúteos. Use fita métrica flexível, mantenha nivelada, e meça em pele nua. Fique em pé reto com músculos relaxados."
+          "question": "How do I measure my waist and hips correctly?",
+          "answer": "For waist: Find the narrowest part between ribs and hips, usually just above the belly button. Measure at normal breathing level. For hips: Measure at the widest part of the buttocks. Use a flexible tape measure, keep it level, and measure on bare skin. Stand straight with relaxed muscles."
         },
         {
-          "question": "Quais são faixas saudáveis de RCQ?",
-          "answer": "Faixas saudáveis variam por gênero: Mulheres deveriam visar <0.80 (risco baixo), 0.80-0.84 (moderado), >0.85 (alto). Homens deveriam visar <0.90 (risco baixo), 0.90-0.99 (moderado), >1.00 (alto). Estes limites são baseados em diretrizes OMS e grandes estudos epidemiológicos."
+          "question": "What are healthy WHR ranges?",
+          "answer": "Healthy ranges vary by gender: Women should aim for <0.80 (low risk), 0.80-0.84 (moderate), >0.85 (high). Men should aim for <0.90 (low risk), 0.90-0.99 (moderate), >1.00 (high). These thresholds are based on WHO guidelines and large epidemiological studies."
         },
         {
-          "question": "Qual é a diferença entre formas maçã e pera?",
-          "answer": "Forma maçã (RCQ mais alto) tem mais armazenamento de gordura abdominal, associado com maior risco de doença cardiovascular e metabólica. Forma pera (RCQ mais baixo) tem mais armazenamento de gordura de quadril e coxa, geralmente associado com menores riscos de saúde. No entanto, todas formas corporais se beneficiam de hábitos de estilo de vida saudável."
+          "question": "What's the difference between apple and pear shapes?",
+          "answer": "Apple shape (higher WHR) has more abdominal fat storage, associated with higher cardiovascular and metabolic disease risk. Pear shape (lower WHR) has more hip and thigh fat storage, generally associated with lower health risks. However, all body shapes benefit from healthy lifestyle habits."
         },
         {
-          "question": "¿Pode RCQ mudar ao longo do tempo?",
-          "answer": "Sim, RCQ pode melhorar com perda de gordura abdominal direcionada através de dieta, exercício e mudanças de estilo de vida. Redução localizada não é possível, mas perda de gordura geral combinada com construção muscular pode melhorar RCQ. Monitoramento regular ajuda acompanhar progresso rumo a padrões mais saudáveis de distribuição de gordura."
+          "question": "Can WHR change over time?",
+          "answer": "Yes, WHR can improve with targeted fat loss from the abdominal area through diet, exercise, and lifestyle changes. Spot reduction isn't possible, but overall fat loss combined with muscle building can improve WHR. Regular monitoring helps track progress toward healthier fat distribution patterns."
         },
         {
-          "question": "¿É RCQ mais importante que IMC?",
-          "answer": "Ambos são valiosos mas medem coisas diferentes. IMC avalia status geral de peso, enquanto RCQ avalia padrões de distribuição de gordura. RCQ é frequentemente melhor preditor de risco de doença cardiovascular que IMC, especialmente em indivíduos de peso normal com gordura abdominal. Use ambos para avaliação de saúde abrangente."
+          "question": "Is WHR more important than BMI?",
+          "answer": "Both are valuable but measure different things. BMI assesses overall weight status, while WHR evaluates fat distribution patterns. WHR is often a better predictor of cardiovascular disease risk than BMI, especially in normal-weight individuals with abdominal fat. Use both for comprehensive health assessment."
         },
         {
-          "question": "¿E se meu RCQ estiver na categoria de alto risco?",
-          "answer": "RCQ alto indica riscos de saúde aumentados mas é modificável através de mudanças de estilo de vida. Foque em reduzir gordura abdominal através de dieta balanceada, cardio regular e treinamento de força, gerenciamento de estresse e sono adequado. Consulte provedores de cuidados de saúde para avaliação e orientação personalizada."
+          "question": "What if my WHR is in the high-risk category?",
+          "answer": "High WHR indicates increased health risks but is modifiable through lifestyle changes. Focus on reducing abdominal fat through balanced diet, regular cardio and strength training, stress management, and adequate sleep. Consult healthcare providers for personalized assessment and guidance."
         },
         {
-          "question": "¿RCQ se aplica a atletas e pessoas muito musculosas?",
-          "answer": "RCQ pode ser menos confiável em atletas e fisiculturistas devido a alta massa muscular. Indivíduos muito musculosos podem ter RCQ mais alto sem riscos de saúde aumentados. Nestes casos, combine RCQ com outras medidas como porcentagem de gordura corporal, IMC e marcadores gerais de saúde para avaliação precisa."
+          "question": "Does WHR apply to athletes and very muscular people?",
+          "answer": "WHR may be less reliable in athletes and bodybuilders due to high muscle mass. Very muscular individuals may have higher WHR without increased health risks. In these cases, combine WHR with other measures like body fat percentage, BMI, and overall health markers for accurate assessment."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "WaistToHipRatioCalculator"
@@ -913,16 +937,16 @@
       "lean-body-mass-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez votre rapport taille-hanches (RTH) avec notre outil complet d'évaluation de santé. Comprendre votre distribution de graisse corporelle est crucial pour évaluer les risques de santé cardiovasculaire, santé métabolique et bien-être général. Notre calculateur fournit analyse instantanée de votre catégorie de risque de santé et classification de forme corporelle.",
+      "introduction": "Calculate your waist-to-hip ratio (WHR) with our comprehensive health assessment tool. Understanding your body fat distribution is crucial for assessing cardiovascular health risks, metabolic health, and overall wellness. Our calculator provides instant analysis of your health risk category and body shape classification.",
       "benefits": [
-        "Évaluez risque de maladie cardiovasculaire basé sur distribution de graisse",
-        "Comprenez implications de forme corporelle pour santé",
-        "Identifiez schémas de graisse pomme vs poire",
-        "Obtenez catégorisation de risque de santé personnalisée",
-        "Apprenez sur indicateurs de santé métabolique",
-        "Prenez décisions éclairées sur style de vie et santé",
-        "Suivez changements en composition corporelle au fil du temps",
-        "Comprenez seuils de risque spécifiques par genre"
+        "Assess cardiovascular disease risk based on fat distribution",
+        "Understand body shape implications for health",
+        "Identify apple vs pear body fat patterns",
+        "Get personalized health risk categorization",
+        "Learn about metabolic health indicators",
+        "Make informed decisions about lifestyle and health",
+        "Track changes in body composition over time",
+        "Understand gender-specific risk thresholds"
       ],
       "howToUse": [
         "Mesurez votre taille au point le plus étroit (généralement juste au-dessus du nombril)",
@@ -948,37 +972,45 @@
       ],
       "faqs": [
         {
-          "question": "Qu'est-ce que rapport taille-hanches et pourquoi est-il important ?",
-          "answer": "Rapport taille-hanches (RTH) mesure la distribution de graisse corporelle entre abdomen et hanches. Il est important parce que graisse abdominale (forme pomme) est associée avec plus haut risque de maladie cardiovasculaire, diabète et syndrome métabolique comparé à graisse hanche/cuisse (forme poire). RTH est meilleur prédicteur de risques de santé qu'IMC seul."
+          "question": "What is waist-to-hip ratio and why is it important?",
+          "answer": "Waist-to-hip ratio (WHR) measures the distribution of body fat between abdomen and hips. It's important because abdominal fat (apple shape) is associated with higher cardiovascular disease, diabetes, and metabolic syndrome risk compared to hip/thigh fat (pear shape). WHR is a better predictor of health risks than BMI alone."
         },
         {
-          "question": "¿Comment mesurer ma taille et hanches correctement ?",
-          "answer": "Pour taille : Trouvez la partie la plus étroite entre côtes et hanches, généralement juste au-dessus du nombril. Mesurez à niveau de respiration normale. Pour hanches : Mesurez à la partie la plus large des fesses. Utilisez ruban à mesurer flexible, gardez de niveau, et mesurez sur peau nue. Tenez-vous droit avec muscles relâchés."
+          "question": "How do I measure my waist and hips correctly?",
+          "answer": "For waist: Find the narrowest part between ribs and hips, usually just above the belly button. Measure at normal breathing level. For hips: Measure at the widest part of the buttocks. Use a flexible tape measure, keep it level, and measure on bare skin. Stand straight with relaxed muscles."
         },
         {
-          "question": "Quelles sont plages saines de RTH ?",
-          "answer": "Plages saines varient par genre : Femmes devraient viser <0.80 (risque faible), 0.80-0.84 (modéré), >0.85 (élevé). Hommes devraient viser <0.90 (risque faible), 0.90-0.99 (modéré), >1.00 (élevé). Ces seuils sont basés sur directives OMS et grandes études épidémiologiques."
+          "question": "What are healthy WHR ranges?",
+          "answer": "Healthy ranges vary by gender: Women should aim for <0.80 (low risk), 0.80-0.84 (moderate), >0.85 (high). Men should aim for <0.90 (low risk), 0.90-0.99 (moderate), >1.00 (high). These thresholds are based on WHO guidelines and large epidemiological studies."
         },
         {
-          "question": "Quelle est la différence entre formes pomme et poire ?",
-          "answer": "Forme pomme (RTH plus élevé) a plus de stockage de graisse abdominale, associé avec plus haut risque de maladie cardiovasculaire et métabolique. Forme poire (RTH plus bas) a plus de stockage de graisse hanche/cuisse, généralement associé avec moindres risques de santé. Cependant, toutes formes corporelles bénéficient d'habitudes de style de vie sain."
+          "question": "What's the difference between apple and pear shapes?",
+          "answer": "Apple shape (higher WHR) has more abdominal fat storage, associated with higher cardiovascular and metabolic disease risk. Pear shape (lower WHR) has more hip and thigh fat storage, generally associated with lower health risks. However, all body shapes benefit from healthy lifestyle habits."
         },
         {
-          "question": "¿RTH peut-il changer au fil du temps ?",
-          "answer": "Oui, RTH peut s'améliorer avec perte de graisse abdominale ciblée à travers régime, exercice et changements de style de vie. Réduction localisée n'est pas possible, mais perte de graisse générale combinée avec construction musculaire peut améliorer RTH. Surveillance régulière aide suivre progrès vers schémas plus sains de distribution de graisse."
+          "question": "Can WHR change over time?",
+          "answer": "Yes, WHR can improve with targeted fat loss from the abdominal area through diet, exercise, and lifestyle changes. Spot reduction isn't possible, but overall fat loss combined with muscle building can improve WHR. Regular monitoring helps track progress toward healthier fat distribution patterns."
         },
         {
-          "question": "¿RTH est-il plus important qu'IMC ?",
-          "answer": "Les deux sont valables mais mesurent des choses différentes. IMC évalue statut général de poids, tandis que RTH évalue schémas de distribution de graisse. RTH est souvent meilleur prédicteur de risque de maladie cardiovasculaire qu'IMC, spécialement chez individus de poids normal avec graisse abdominale. Utilisez les deux pour évaluation de santé complète."
+          "question": "Is WHR more important than BMI?",
+          "answer": "Both are valuable but measure different things. BMI assesses overall weight status, while WHR evaluates fat distribution patterns. WHR is often a better predictor of cardiovascular disease risk than BMI, especially in normal-weight individuals with abdominal fat. Use both for comprehensive health assessment."
         },
         {
-          "question": "¿Que faire si mon RTH est dans catégorie de haut risque ?",
-          "answer": "RTH élevé indique risques de santé augmentés mais est modifiable à travers changements de style de vie. Concentrez-vous sur réduire graisse abdominale à travers régime équilibré, cardio régulier et entraînement de force, gestion de stress et sommeil adéquat. Consultez fournisseurs de soins de santé pour évaluation et guidance personnalisée."
+          "question": "What if my WHR is in the high-risk category?",
+          "answer": "High WHR indicates increased health risks but is modifiable through lifestyle changes. Focus on reducing abdominal fat through balanced diet, regular cardio and strength training, stress management, and adequate sleep. Consult healthcare providers for personalized assessment and guidance."
         },
         {
-          "question": "¿RTH s'applique-t-il à athlètes et personnes très musclées ?",
-          "answer": "RTH peut être moins fiable chez athlètes et bodybuilders dû à haute masse musculaire. Individus très musclés peuvent avoir RTH plus élevé sans risques de santé augmentés. Dans ces cas, combinez RTH avec d'autres mesures comme pourcentage de graisse corporelle, IMC et marqueurs généraux de santé pour évaluation précise."
+          "question": "Does WHR apply to athletes and very muscular people?",
+          "answer": "WHR may be less reliable in athletes and bodybuilders due to high muscle mass. Very muscular individuals may have higher WHR without increased health risks. In these cases, combine WHR with other measures like body fat percentage, BMI, and overall health markers for accurate assessment."
         }
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ]
     },
     "component": "WaistToHipRatioCalculator"

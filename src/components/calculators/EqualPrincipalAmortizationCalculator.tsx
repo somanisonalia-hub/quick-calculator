@@ -45,7 +45,11 @@ export default function EqualPrincipalAmortizationCalculator({ lang = 'en' }: Eq
       noResults: "Calculate to see results",
       equalPrincipalMethod: "Equal Principal Method",
       standardAmortization: "Standard Amortization",
-      difference: "Difference"
+      difference: "Difference",
+      equalPrincipalDesc: "Equal Principal: $666.67 principal + decreasing interest",
+      standardDesc: "Standard: Increasing principal + decreasing interest",
+      benefit: "Benefit: Pay more principal early, potentially lower total interest",
+      consideration: "Consideration: Higher initial payments may affect cash flow"
     },
     es: {
       title: "Calculadora de Amortización de Principal Igual",
@@ -74,7 +78,11 @@ export default function EqualPrincipalAmortizationCalculator({ lang = 'en' }: Eq
       noResults: "Calcula para ver resultados",
       equalPrincipalMethod: "Método de Principal Igual",
       standardAmortization: "Amortización Estándar",
-      difference: "Diferencia"
+      difference: "Diferencia",
+      equalPrincipalDesc: "Principal Igual: $666.67 principal + intereses decrecientes",
+      standardDesc: "Estándar: Principal creciente + intereses decrecientes",
+      benefit: "Beneficio: Paga más principal temprano, potencialmente menos interés total",
+      consideration: "Consideración: Pagos iniciales más altos pueden afectar flujo de efectivo"
     },
     pt: {
       title: "Calculadora de Amortização de Principal Igual",
@@ -103,7 +111,11 @@ export default function EqualPrincipalAmortizationCalculator({ lang = 'en' }: Eq
       noResults: "Calcule para ver resultados",
       equalPrincipalMethod: "Método de Principal Igual",
       standardAmortization: "Amortização Padrão",
-      difference: "Diferença"
+      difference: "Diferença",
+      equalPrincipalDesc: "Principal Igual: $666.67 principal + juros decrescentes",
+      standardDesc: "Padrão: Principal crescente + juros decrescentes",
+      benefit: "Benefício: Paga mais principal cedo, potencialmente menos juros totais",
+      consideration: "Consideração: Pagamentos iniciais mais altos podem afetar fluxo de caixa"
     },
     fr: {
       title: "Calculateur d'Amortissement de Principal Égal",
@@ -132,7 +144,11 @@ export default function EqualPrincipalAmortizationCalculator({ lang = 'en' }: Eq
       noResults: "Calculez pour voir résultats",
       equalPrincipalMethod: "Méthode de Principal Égal",
       standardAmortization: "Amortissement Standard",
-      difference: "Différence"
+      difference: "Différence",
+      equalPrincipalDesc: "Principal Égal: $666.67 principal + intérêts décroissants",
+      standardDesc: "Standard: Principal croissant + intérêts décroissants",
+      benefit: "Avantage: Payez plus de principal tôt, potentiellement moins d'intérêts totaux",
+      consideration: "Considération: Paiements initiaux plus élevés peuvent affecter flux de trésorerie"
     }
   };
 
@@ -474,10 +490,10 @@ export default function EqualPrincipalAmortizationCalculator({ lang = 'en' }: Eq
           <div className="bg-indigo-50 p-4 rounded-lg">
             <h4 className="text-sm font-semibold text-indigo-900 mb-2">Understanding Equal Principal</h4>
             <div className="text-xs text-indigo-700 space-y-1">
-              <div><strong>Equal Principal:</strong> $666.67 principal + decreasing interest</div>
-              <div><strong>Standard:</strong> Increasing principal + decreasing interest</div>
-              <div><strong>Benefit:</strong> Pay more principal early, potentially lower total interest</div>
-              <div><strong>Consideration:</strong> Higher initial payments may affect cash flow</div>
+              <div>{t.equalPrincipalDesc}</div>
+              <div>{t.standardDesc}</div>
+              <div>{t.benefit}</div>
+              <div>{t.consideration}</div>
             </div>
           </div>
         </div>

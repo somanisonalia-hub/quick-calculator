@@ -1,0 +1,586 @@
+{
+  "en": {
+    "title": "Savings Goal Calculator",
+    "seoTitle": "Savings Goal Calculator – Achieve Your Financial Goals",
+    "metaDescription": "Plan and track your savings to reach financial targets faster.",
+    "keywords": [
+      "savings goal calculator",
+      "savings planner",
+      "financial goals calculator",
+      "how to save money",
+      "savings plan"
+    ],
+    "slug": "savings-goal",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": [
+      "savings",
+      "goals",
+      "planning",
+      "budgeting",
+      "financial planning"
+    ],
+    "summary": "Plan and track your savings to reach financial targets faster.",
+    "description": "Our savings goal calculator helps you determine how much to save each month to reach your financial goals within your desired timeframe.",
+    "instructions": [
+      "Set your savings goal amount",
+      "Enter current savings",
+      "Specify your target date",
+      "Add expected interest rate",
+      "Get your monthly savings target"
+    ],
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "goalAmount",
+          "label": "Savings Goal",
+          "type": "number",
+          "default": 50000,
+          "min": 100,
+          "max": 10000000,
+          "step": 100,
+          "unit": "$"
+        },
+        {
+          "name": "currentSavings",
+          "label": "Current Savings",
+          "type": "number",
+          "default": 5000,
+          "min": 0,
+          "max": 10000000,
+          "step": 100,
+          "unit": "$"
+        },
+        {
+          "name": "monthsToGoal",
+          "label": "Months to Goal",
+          "type": "number",
+          "default": 36,
+          "min": 1,
+          "max": 600,
+          "step": 1,
+          "unit": "months"
+        },
+        {
+          "name": "interestRate",
+          "label": "Expected Annual Interest Rate",
+          "type": "number",
+          "default": 4,
+          "min": 0,
+          "max": 15,
+          "step": 0.1,
+          "unit": "%"
+        }
+      ],
+      "formula": "Monthly Savings = (Goal - Current) × (r/12) / ((1 + r/12)^n - 1) where r = interest rate, n = months",
+      "outputs": [
+        {
+          "name": "monthlySavings",
+          "label": "Monthly Savings Needed",
+          "unit": "$"
+        },
+        {
+          "name": "totalDeposits",
+          "label": "Total Deposits",
+          "unit": "$"
+        },
+        {
+          "name": "totalInterest",
+          "label": "Interest Earned",
+          "unit": "$"
+        }
+      ]
+    },
+    "relatedCalculators": [
+      "retirement-savings",
+      "investment-calculator",
+      "compound-interest-calculator",
+      "budget-calculator"
+    ],
+    "examples": [
+      {
+        "title": "Emergency Fund Goal",
+        "input": {
+          "goalAmount": 15000,
+          "currentSavings": 2000,
+          "monthsToGoal": 24,
+          "interestRate": 3.5
+        },
+        "output": {
+          "monthlySavings": 553,
+          "totalDeposits": 13272,
+          "totalInterest": 728
+        },
+        "explanation": "To build a $15,000 emergency fund in 2 years starting with $2,000, you need to save $553 monthly at 3.5% interest."
+      },
+      {
+        "title": "Vacation Savings",
+        "input": {
+          "goalAmount": 5000,
+          "currentSavings": 500,
+          "monthsToGoal": 12,
+          "interestRate": 2.5
+        },
+        "output": {
+          "monthlySavings": 378,
+          "totalDeposits": 4536,
+          "totalInterest": 64
+        },
+        "explanation": "Save for a $5,000 vacation in one year by saving $378 per month with modest interest earnings."
+      },
+      {
+        "title": "Down Payment Savings",
+        "input": {
+          "goalAmount": 60000,
+          "currentSavings": 10000,
+          "monthsToGoal": 60,
+          "interestRate": 5
+        },
+        "output": {
+          "monthlySavings": 884,
+          "totalDeposits": 53040,
+          "totalInterest": 7960
+        },
+        "explanation": "Reach a $60,000 down payment goal in 5 years with $884 monthly savings and earn nearly $8,000 in interest."
+      }
+    ],
+    "seoContent": {
+      "introduction": "A savings goal calculator is an essential financial planning tool that helps you determine exactly how much money you need to save each month to reach your financial objectives. Whether you're saving for an emergency fund, a dream vacation, a down payment on a home, or any other financial goal, this calculator provides a clear roadmap to success. By factoring in your current savings, target amount, timeframe, and expected interest rate, you can create a realistic and achievable savings plan that fits your budget and timeline.",
+      "benefits": [
+        "Clear monthly savings targets based on your specific financial goals",
+        "Accurate calculations that account for compound interest earnings",
+        "Flexible planning for short-term and long-term savings objectives",
+        "Track progress toward multiple financial goals simultaneously",
+        "Adjust your plan as circumstances change over time",
+        "Make informed decisions about savings accounts and investment options"
+      ],
+      "steps": [
+        "Enter your total savings goal amount (the target you want to reach)",
+        "Input your current savings balance (if starting from zero, enter 0)",
+        "Specify the number of months you have to reach your goal",
+        "Add the expected annual interest rate from your savings account or investment",
+        "Review your required monthly savings amount and total interest earned",
+        "Adjust variables to find a comfortable savings plan that works for you"
+      ],
+      "inputsExplained": [
+        "Savings Goal: The total amount of money you want to accumulate",
+        "Current Savings: Money you've already saved toward this goal",
+        "Months to Goal: Time horizon for achieving your savings target",
+        "Interest Rate: Annual percentage yield (APY) on your savings or investment account"
+      ],
+      "formulaExplanation": "The calculator uses the future value of an annuity formula to determine monthly payments needed. It accounts for compound interest by calculating how each monthly deposit grows over time. The formula adjusts for your current savings balance, reducing the amount you need to save each month.",
+      "whoItsFor": "This calculator is perfect for anyone setting financial goals, from young professionals building their first emergency fund to families saving for major purchases like a home or education. It's especially valuable for those who want to optimize their savings strategy by choosing high-yield savings accounts or investment vehicles that maximize interest earnings.",
+      "disclaimer": "Results are estimates based on the information provided. Actual savings outcomes may vary depending on account fees, tax implications, variable interest rates, and your ability to maintain consistent monthly contributions. Consult with a financial advisor for personalized savings strategies.",
+      "relatedTools": [
+        "Retirement Savings Calculator",
+        "Investment Calculator",
+        "Compound Interest Calculator",
+        "Budget Calculator"
+      ],
+      "faqs": [
+        {
+          "question": "How much should I save each month to reach my goal?",
+          "answer": "The required monthly savings depends on four factors: your goal amount, current savings, time horizon, and interest rate. For example, to save $10,000 in 2 years starting from $0 with 3% interest, you'd need to save about $408 per month. Use the calculator to find your specific amount."
+        },
+        {
+          "question": "What's a realistic interest rate to use?",
+          "answer": "As of 2024, high-yield savings accounts offer 4-5% APY, while traditional savings accounts offer 0.5-1%. Conservative investments might return 5-7% annually, while stock market investments historically average 10% but with higher risk. Use a conservative estimate to avoid disappointment."
+        },
+        {
+          "question": "Should I save for multiple goals at once?",
+          "answer": "Yes, but prioritize them. Start with essential goals like an emergency fund (3-6 months of expenses), then add other goals. You can run the calculator multiple times for different goals and combine the monthly amounts, ensuring your total savings fits your budget."
+        },
+        {
+          "question": "What if I can't afford the required monthly savings?",
+          "answer": "You have three options: extend your timeline (increase months to goal), reduce your goal amount, or find ways to increase income or reduce expenses. Even small adjustments can make a big difference. Saving $50 less per month might add 6-12 months to your timeline."
+        },
+        {
+          "question": "How does compound interest affect my savings goal?",
+          "answer": "Compound interest means your money earns interest, and that interest earns interest too. Over time, this can significantly reduce how much you need to save from your own pocket. For a $50,000 goal over 10 years at 5% interest, compound interest could contribute $10,000-15,000, meaning you only need to deposit $35,000-40,000 yourself."
+        }
+      ]
+    },
+    "component": "SavingsGoalCalculator"
+  },
+  "es": {
+    "title": "Calculadora de Meta de Ahorro",
+    "seoTitle": "Calculadora de Meta de Ahorro – Alcanza tus Objetivos Financieros",
+    "metaDescription": "Planifica y rastrea tus ahorros para alcanzar objetivos financieros más rápido.",
+    "keywords": [
+      "calculadora de meta de ahorro",
+      "planificador de ahorros",
+      "calculadora de objetivos financieros",
+      "cómo ahorrar dinero",
+      "plan de ahorros"
+    ],
+    "slug": "savings-goal",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": [
+      "ahorros",
+      "metas",
+      "planificación",
+      "presupuesto",
+      "planificación financiera"
+    ],
+    "summary": "Planifica y rastrea tus ahorros para alcanzar objetivos financieros más rápido.",
+    "description": "Nuestra calculadora de meta de ahorro te ayuda a determinar cuánto ahorrar cada mes para alcanzar tus objetivos financieros dentro del plazo deseado.",
+    "instructions": [
+      "Establece tu monto de meta de ahorro",
+      "Ingresa ahorros actuales",
+      "Especifica tu fecha objetivo",
+      "Añade tasa de interés esperada",
+      "Obtén tu objetivo mensual de ahorro"
+    ],
+    "calculatorComponent": "SavingsGoalCalculator",
+    "relatedCalculators": [
+      "retirement-savings",
+      "investment-calculator",
+      "compound-interest-calculator",
+      "budget-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Una calculadora de metas de ahorro es una herramienta esencial de planificación financiera que te ayuda a determinar exactamente cuánto dinero necesitas ahorrar cada mes para alcanzar tus objetivos financieros. Ya sea que estés ahorrando para un fondo de emergencia, unas vacaciones de ensueño, el pago inicial de una casa o cualquier otro objetivo financiero, esta calculadora proporciona un plan claro para el éxito.",
+      "benefits": [
+        "Objetivos mensuales de ahorro claros basados en tus metas financieras específicas",
+        "Cálculos precisos que consideran ganancias por interés compuesto",
+        "Planificación flexible para objetivos de ahorro a corto y largo plazo",
+        "Rastrea el progreso hacia múltiples objetivos financieros simultáneamente",
+        "Ajusta tu plan a medida que las circunstancias cambien con el tiempo",
+        "Toma decisiones informadas sobre cuentas de ahorro y opciones de inversión"
+      ],
+      "steps": [
+        "Ingresa el monto total de tu meta de ahorro",
+        "Introduce tu saldo de ahorro actual",
+        "Especifica el número de meses para alcanzar tu meta",
+        "Añade la tasa de interés anual esperada",
+        "Revisa tu monto mensual requerido de ahorro",
+        "Ajusta las variables para encontrar un plan cómodo"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuánto debo ahorrar cada mes para alcanzar mi meta?",
+          "answer": "El ahorro mensual requerido depende de cuatro factores: tu monto objetivo, ahorros actuales, horizonte de tiempo y tasa de interés. Por ejemplo, para ahorrar $10,000 en 2 años comenzando desde $0 con 3% de interés, necesitarías ahorrar aproximadamente $408 por mes."
+        },
+        {
+          "question": "¿Qué tasa de interés realista debo usar?",
+          "answer": "A partir de 2024, las cuentas de ahorro de alto rendimiento ofrecen 4-5% APY, mientras que las cuentas tradicionales ofrecen 0.5-1%. Las inversiones conservadoras podrían retornar 5-7% anualmente. Usa una estimación conservadora para evitar decepciones."
+        },
+        {
+          "question": "¿Debería ahorrar para múltiples metas a la vez?",
+          "answer": "Sí, pero priorízalas. Comienza con metas esenciales como un fondo de emergencia (3-6 meses de gastos), luego añade otras metas. Puedes usar la calculadora varias veces para diferentes metas y combinar los montos mensuales."
+        },
+        {
+          "question": "¿Qué pasa si no puedo pagar el ahorro mensual requerido?",
+          "answer": "Tienes tres opciones: extender tu plazo, reducir tu monto objetivo, o encontrar formas de aumentar ingresos o reducir gastos. Incluso pequeños ajustes pueden hacer una gran diferencia."
+        },
+        {
+          "question": "¿Cómo afecta el interés compuesto mi meta de ahorro?",
+          "answer": "El interés compuesto significa que tu dinero gana intereses, y esos intereses también ganan intereses. Con el tiempo, esto puede reducir significativamente cuánto necesitas ahorrar de tu propio bolsillo."
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Emergency Fund Goal",
+        "input": {
+          "goalAmount": 15000,
+          "currentSavings": 2000,
+          "monthsToGoal": 24,
+          "interestRate": 3.5
+        },
+        "output": {
+          "monthlySavings": 553,
+          "totalDeposits": 13272,
+          "totalInterest": 728
+        },
+        "explanation": "To build a $15,000 emergency fund in 2 years starting with $2,000, you need to save $553 monthly at 3.5% interest."
+      },
+      {
+        "title": "Vacation Savings",
+        "input": {
+          "goalAmount": 5000,
+          "currentSavings": 500,
+          "monthsToGoal": 12,
+          "interestRate": 2.5
+        },
+        "output": {
+          "monthlySavings": 378,
+          "totalDeposits": 4536,
+          "totalInterest": 64
+        },
+        "explanation": "Save for a $5,000 vacation in one year by saving $378 per month with modest interest earnings."
+      },
+      {
+        "title": "Down Payment Savings",
+        "input": {
+          "goalAmount": 60000,
+          "currentSavings": 10000,
+          "monthsToGoal": 60,
+          "interestRate": 5
+        },
+        "output": {
+          "monthlySavings": 884,
+          "totalDeposits": 53040,
+          "totalInterest": 7960
+        },
+        "explanation": "Reach a $60,000 down payment goal in 5 years with $884 monthly savings and earn nearly $8,000 in interest."
+      }
+    ],
+    "component": "SavingsGoalCalculator"
+  },
+  "fr": {
+    "title": "Calculateur d'Objectif d'Épargne",
+    "seoTitle": "Calculateur d'Objectif d'Épargne – Atteignez Vos Objectifs Financiers",
+    "metaDescription": "Planifiez et suivez votre épargne pour atteindre vos objectifs financiers plus rapidement.",
+    "keywords": [
+      "calculateur d'objectif d'épargne",
+      "planificateur d'épargne",
+      "calculateur d'objectifs financiers",
+      "comment économiser de l'argent",
+      "plan d'épargne"
+    ],
+    "slug": "savings-goal",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": [
+      "épargne",
+      "objectifs",
+      "planification",
+      "budgétisation",
+      "planification financière"
+    ],
+    "summary": "Planifiez et suivez votre épargne pour atteindre vos objectifs financiers plus rapidement.",
+    "description": "Notre calculateur d'objectif d'épargne vous aide à déterminer combien épargner chaque mois pour atteindre vos objectifs financiers dans le délai souhaité.",
+    "instructions": [
+      "Définissez votre montant d'objectif d'épargne",
+      "Entrez l'épargne actuelle",
+      "Spécifiez votre date cible",
+      "Ajoutez le taux d'intérêt attendu",
+      "Obtenez votre cible d'épargne mensuelle"
+    ],
+    "calculatorComponent": "SavingsGoalCalculator",
+    "relatedCalculators": [
+      "retirement-savings",
+      "investment-calculator",
+      "compound-interest-calculator",
+      "budget-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Un calculateur d'objectif d'épargne est un outil essentiel de planification financière qui vous aide à déterminer exactement combien d'argent vous devez épargner chaque mois pour atteindre vos objectifs financiers.",
+      "benefits": [
+        "Objectifs d'épargne mensuels clairs",
+        "Calculs précis tenant compte des intérêts composés",
+        "Planification flexible pour objectifs court et long terme",
+        "Suivez plusieurs objectifs simultanément",
+        "Ajustez votre plan selon les changements",
+        "Prenez des décisions éclairées sur l'épargne"
+      ],
+      "steps": [
+        "Entrez le montant total de votre objectif",
+        "Saisissez votre épargne actuelle",
+        "Spécifiez le nombre de mois",
+        "Ajoutez le taux d'intérêt attendu",
+        "Examinez votre épargne mensuelle requise",
+        "Ajustez pour trouver un plan confortable"
+      ],
+      "faqs": [
+        {
+          "question": "Combien dois-je épargner chaque mois?",
+          "answer": "L'épargne mensuelle requise dépend de quatre facteurs: montant objectif, épargne actuelle, horizon temporel et taux d'intérêt."
+        },
+        {
+          "question": "Quel taux d'intérêt utiliser?",
+          "answer": "Les comptes à haut rendement offrent 4-5% APY en 2024, les comptes traditionnels 0,5-1%."
+        },
+        {
+          "question": "Puis-je épargner pour plusieurs objectifs?",
+          "answer": "Oui, mais priorisez-les. Commencez par un fonds d'urgence."
+        },
+        {
+          "question": "Si je ne peux pas payer l'épargne requise?",
+          "answer": "Prolongez le délai, réduisez l'objectif, ou augmentez vos revenus."
+        },
+        {
+          "question": "Impact des intérêts composés?",
+          "answer": "Les intérêts composés réduisent combien vous devez épargner de votre poche."
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Emergency Fund Goal",
+        "input": {
+          "goalAmount": 15000,
+          "currentSavings": 2000,
+          "monthsToGoal": 24,
+          "interestRate": 3.5
+        },
+        "output": {
+          "monthlySavings": 553,
+          "totalDeposits": 13272,
+          "totalInterest": 728
+        },
+        "explanation": "To build a $15,000 emergency fund in 2 years starting with $2,000, you need to save $553 monthly at 3.5% interest."
+      },
+      {
+        "title": "Vacation Savings",
+        "input": {
+          "goalAmount": 5000,
+          "currentSavings": 500,
+          "monthsToGoal": 12,
+          "interestRate": 2.5
+        },
+        "output": {
+          "monthlySavings": 378,
+          "totalDeposits": 4536,
+          "totalInterest": 64
+        },
+        "explanation": "Save for a $5,000 vacation in one year by saving $378 per month with modest interest earnings."
+      },
+      {
+        "title": "Down Payment Savings",
+        "input": {
+          "goalAmount": 60000,
+          "currentSavings": 10000,
+          "monthsToGoal": 60,
+          "interestRate": 5
+        },
+        "output": {
+          "monthlySavings": 884,
+          "totalDeposits": 53040,
+          "totalInterest": 7960
+        },
+        "explanation": "Reach a $60,000 down payment goal in 5 years with $884 monthly savings and earn nearly $8,000 in interest."
+      }
+    ],
+    "component": "SavingsGoalCalculator"
+  },
+  "pt": {
+    "title": "Calculadora de Meta de Poupança",
+    "seoTitle": "Calculadora de Meta de Poupança – Alcance seus Objetivos Financeiros",
+    "metaDescription": "Planeje e rastreie suas economias para atingir metas financeiras mais rápido.",
+    "keywords": [
+      "calculadora de meta de poupança",
+      "planejador de economia",
+      "calculadora de objetivos financeiros",
+      "como economizar dinheiro",
+      "plano de poupança"
+    ],
+    "slug": "savings-goal",
+    "category": "financial",
+    "difficulty": "basic",
+    "tags": [
+      "poupança",
+      "metas",
+      "planejamento",
+      "orçamento",
+      "planejamento financeiro"
+    ],
+    "summary": "Planeje e rastreie suas economias para atingir metas financeiras mais rápido.",
+    "description": "Nossa calculadora de meta de poupança ajuda você a determinar quanto economizar todo mês para atingir seus objetivos financeiros dentro do prazo desejado.",
+    "instructions": [
+      "Defina seu valor de meta de poupança",
+      "Digite economia atual",
+      "Especifique sua data alvo",
+      "Adicione taxa de juros esperada",
+      "Obtenha sua meta mensal de poupança"
+    ],
+    "calculatorComponent": "SavingsGoalCalculator",
+    "relatedCalculators": [
+      "retirement-savings",
+      "investment-calculator",
+      "compound-interest-calculator",
+      "budget-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Uma calculadora de meta de poupança é uma ferramenta essencial de planejamento financeiro que ajuda você a determinar exatamente quanto dinheiro precisa economizar todo mês para atingir seus objetivos financeiros.",
+      "benefits": [
+        "Metas mensais de poupança claras",
+        "Cálculos precisos com juros compostos",
+        "Planejamento flexível curto e longo prazo",
+        "Acompanhe múltiplos objetivos",
+        "Ajuste conforme mudanças",
+        "Decisões informadas sobre poupança"
+      ],
+      "steps": [
+        "Digite o valor total da sua meta",
+        "Insira sua poupança atual",
+        "Especifique o número de meses",
+        "Adicione a taxa de juros esperada",
+        "Revise sua poupança mensal necessária",
+        "Ajuste para encontrar um plano confortável"
+      ],
+      "faqs": [
+        {
+          "question": "Quanto devo economizar por mês?",
+          "answer": "A poupança mensal depende de quatro fatores: valor objetivo, poupança atual, tempo e taxa de juros."
+        },
+        {
+          "question": "Qual taxa de juros usar?",
+          "answer": "Contas de alto rendimento oferecem 4-5% APY em 2024, contas tradicionais 0,5-1%."
+        },
+        {
+          "question": "Posso economizar para múltiplas metas?",
+          "answer": "Sim, mas priorize. Comece com fundo de emergência."
+        },
+        {
+          "question": "Se não puder pagar a poupança necessária?",
+          "answer": "Estenda o prazo, reduza o objetivo, ou aumente a renda."
+        },
+        {
+          "question": "Impacto dos juros compostos?",
+          "answer": "Juros compostos reduzem quanto você precisa economizar do próprio bolso."
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Emergency Fund Goal",
+        "input": {
+          "goalAmount": 15000,
+          "currentSavings": 2000,
+          "monthsToGoal": 24,
+          "interestRate": 3.5
+        },
+        "output": {
+          "monthlySavings": 553,
+          "totalDeposits": 13272,
+          "totalInterest": 728
+        },
+        "explanation": "To build a $15,000 emergency fund in 2 years starting with $2,000, you need to save $553 monthly at 3.5% interest."
+      },
+      {
+        "title": "Vacation Savings",
+        "input": {
+          "goalAmount": 5000,
+          "currentSavings": 500,
+          "monthsToGoal": 12,
+          "interestRate": 2.5
+        },
+        "output": {
+          "monthlySavings": 378,
+          "totalDeposits": 4536,
+          "totalInterest": 64
+        },
+        "explanation": "Save for a $5,000 vacation in one year by saving $378 per month with modest interest earnings."
+      },
+      {
+        "title": "Down Payment Savings",
+        "input": {
+          "goalAmount": 60000,
+          "currentSavings": 10000,
+          "monthsToGoal": 60,
+          "interestRate": 5
+        },
+        "output": {
+          "monthlySavings": 884,
+          "totalDeposits": 53040,
+          "totalInterest": 7960
+        },
+        "explanation": "Reach a $60,000 down payment goal in 5 years with $884 monthly savings and earn nearly $8,000 in interest."
+      }
+    ],
+    "component": "SavingsGoalCalculator"
+  }
+}

@@ -153,10 +153,12 @@
         "Essential first step in health and fitness assessment"
       ],
       "steps": [
-        "Select your preferred unit system (metric or imperial)",
-        "Enter your height in centimeters or feet/inches",
-        "Enter your weight in kilograms or pounds",
-        "Review your BMI value and health category interpretation"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "inputsExplained": [
         "Unit system selection allows calculation in familiar measurements",
@@ -227,7 +229,7 @@
       "rango IMC saludable",
       "categorías IMC explicadas"
     ],
-    "slug": "bmi-calculator",
+    "slug": "calculadora-imc",
     "category": "health",
     "difficulty": "basic",
     "tags": [
@@ -353,20 +355,22 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule seu Índice de Massa Corporal (IMC) com precisão usando nossa calculadora de saúde abrangente. Esta métrica fundamental de saúde fornece uma ferramenta de triagem para avaliar se seu peso cai dentro de uma faixa saudável para sua altura. Embora IMC não meça gordura corporal diretamente, correlaciona fortemente com porcentagem de gordura corporal e serve como indicador importante de potenciais riscos à saúde. Nossa calculadora suporta tanto unidades métricas quanto imperiais, tornando-a acessível para usuários em todo o mundo. Compreender seu IMC é o primeiro passo para manter saúde ótima e prevenir problemas de saúde relacionados ao peso.",
+      "introduction": "Calculate your Body Mass Index (BMI) with precision using our comprehensive health calculator. This fundamental health metric provides a screening tool to assess whether your weight falls within a healthy range for your height. While BMI doesn't measure body fat directly, it correlates strongly with body fat percentage and serves as an important indicator of potential health risks. Our calculator supports both metric and imperial units, making it accessible for users worldwide. Understanding your BMI is the first step toward maintaining optimal health and preventing weight-related health issues.",
       "benefits": [
-        "Calcule IMC instantaneamente usando fórmulas cientificamente aceitas",
-        "Obtenha avaliação clara de categoria de saúde (abaixo do peso, normal, sobrepeso, obeso)",
-        "Suporta tanto medições métricas (cm/kg) quanto imperiais (pés/libras)",
-        "Fornece IMC Prime para contexto adicional sobre status de peso",
-        "Mostra faixa de IMC saudável para sua referência",
-        "Primeiro passo essencial em avaliação de saúde e fitness"
+        "Calculate BMI instantly using scientifically accepted formulas",
+        "Get clear health category assessment (underweight, normal, overweight, obese)",
+        "Supports both metric (cm/kg) and imperial (feet/pounds) measurements",
+        "Provides BMI Prime for additional context on weight status",
+        "Shows healthy BMI range for your reference",
+        "Essential first step in health and fitness assessment"
       ],
       "steps": [
-        "Selecione seu sistema de unidades preferido (métrico ou imperial)",
-        "Digite sua altura em centímetros ou pés/polegadas",
-        "Digite seu peso em quilogramas ou libras",
-        "Revise seu valor IMC e interpretação de categoria de saúde"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "inputsExplained": [
         "Seleção de sistema de unidades permite cálculo em medições familiares",
@@ -396,24 +400,24 @@
       ],
       "faqs": [
         {
-          "question": "Qual é a diferença entre IMC e porcentagem de gordura corporal?",
-          "answer": "IMC é uma medida de peso relativo à altura que correlaciona com gordura corporal mas não a mede diretamente. Porcentagem de gordura corporal mede conteúdo real de gordura no corpo. IMC é mais fácil de calcular e serve como ferramenta de triagem, enquanto porcentagem de gordura corporal fornece informação mais detalhada sobre composição corporal. Atletas podem ter IMC alto devido à massa muscular mas baixa porcentagem de gordura corporal."
+          "question": "What is the difference between BMI and body fat percentage?",
+          "answer": "BMI is a measure of weight relative to height that correlates with body fat but doesn't measure it directly. Body fat percentage measures actual fat content in the body. BMI is easier to calculate and serves as a screening tool, while body fat percentage provides more detailed information about body composition. Athletes may have high BMI due to muscle mass but low body fat percentage."
         },
         {
-          "question": "IMC é preciso para todos?",
-          "answer": "IMC funciona bem para triagem populacional geral mas tem limitações. É menos preciso para atletas, fisiculturistas, mulheres grávidas, crianças, e idosos. Populações asiáticas podem ter riscos mais altos à saúde em faixas menores de IMC. IMC não considera massa muscular, densidade óssea, ou distribuição de gordura. Para estes grupos, avaliações de saúde adicionais são recomendadas."
+          "question": "Is BMI accurate for everyone?",
+          "answer": "BMI works well for general population screening but has limitations. It's less accurate for athletes, bodybuilders, pregnant women, children, and elderly individuals. Asian populations may have higher health risks at lower BMI ranges. BMI doesn't account for muscle mass, bone density, or fat distribution. For these groups, additional health assessments are recommended."
         },
         {
-          "question": "Com que frequência devo verificar meu IMC?",
-          "answer": "Verifique IMC mensalmente durante programas de perda/ganho de peso para rastrear progresso. Para monitoramento geral de saúde, verificações trimestrais ou anuais são suficientes a menos que aconselhado de outra forma por provedores de saúde. IMC deve ser monitorado junto com outros indicadores de saúde como pressão arterial, colesterol, e medições corporais para avaliação abrangente de saúde."
+          "question": "How often should I check my BMI?",
+          "answer": "Check BMI monthly during weight loss/gain programs to track progress. For general health monitoring, quarterly or annual checks are sufficient unless advised otherwise by healthcare providers. BMI should be monitored alongside other health indicators like blood pressure, cholesterol, and body measurements for comprehensive health assessment."
         },
         {
-          "question": "IMC pode ser usado para crianças e adolescentes?",
-          "answer": "IMC para crianças usa percentis específicos de idade e gênero em vez de faixas fixas. Crianças crescem em taxas diferentes, então IMC deve ser interpretado usando gráficos de crescimento. Percentis IMC acima do 85º indicam sobrepeso, acima do 95º indicam obesidade. IMC pediátrico requer interpretação profissional considerando padrões de crescimento e estágios de desenvolvimento."
+          "question": "Can BMI be used for children and teenagers?",
+          "answer": "BMI for children uses age and gender-specific percentiles rather than fixed ranges. Children grow at different rates, so BMI must be interpreted using growth charts. BMI percentiles above 85th indicate overweight, above 95th indicate obesity. Pediatric BMI requires professional interpretation considering growth patterns and developmental stages."
         },
         {
-          "question": "O que devo fazer se meu IMC indica que estou com sobrepeso ou obeso?",
-          "answer": "IMC é uma ferramenta de triagem que sugere discutir peso com provedores de saúde. Eles podem avaliar saúde geral, composição corporal, e fatores de risco. Gerenciamento de peso deve envolver mudanças sustentáveis de estilo de vida incluindo nutrição balanceada, atividade física regular, e modificações comportamentais. Foque em melhorias de saúde em vez de apenas números de peso."
+          "question": "What should I do if my BMI indicates I'm overweight or obese?",
+          "answer": "BMI is a screening tool that suggests discussing weight with healthcare providers. They can assess overall health, body composition, and risk factors. Weight management should involve sustainable lifestyle changes including balanced nutrition, regular physical activity, and behavior modifications. Focus on health improvements rather than just weight numbers."
         }
       ]
     },
@@ -437,7 +441,7 @@
       "faixa IMC saudável",
       "categorias IMC explicadas"
     ],
-    "slug": "bmi-calculator",
+    "slug": "calculadora-imc",
     "category": "health",
     "difficulty": "basic",
     "tags": [
@@ -563,20 +567,22 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calcule seu Índice de Massa Corporal (IMC) com precisão usando nossa calculadora de saúde abrangente. Esta métrica fundamental de saúde fornece uma ferramenta de triagem para avaliar se seu peso está dentro de uma faixa saudável para sua altura. Embora o IMC não meça a gordura corporal diretamente, ele se correlaciona fortemente com a porcentagem de gordura corporal e serve como um indicador importante de potenciais riscos à saúde. Nossa calculadora suporta unidades métricas e imperiais, tornando-a acessível para usuários em todo o mundo. Compreender seu IMC é o primeiro passo para manter a saúde ideal e prevenir problemas de saúde relacionados ao peso.",
+      "introduction": "Calculate your Body Mass Index (BMI) with precision using our comprehensive health calculator. This fundamental health metric provides a screening tool to assess whether your weight falls within a healthy range for your height. While BMI doesn't measure body fat directly, it correlates strongly with body fat percentage and serves as an important indicator of potential health risks. Our calculator supports both metric and imperial units, making it accessible for users worldwide. Understanding your BMI is the first step toward maintaining optimal health and preventing weight-related health issues.",
       "benefits": [
-        "Calcule o IMC instantaneamente usando fórmulas cientificamente aceitas",
-        "Obtenha avaliação clara da categoria de saúde (abaixo do peso, normal, sobrepeso, obeso)",
-        "Suporta medições métricas (cm/kg) e imperiais (pés/libras)",
-        "Fornece IMC Prime para contexto adicional sobre status de peso",
-        "Mostra faixa de IMC saudável para sua referência",
-        "Primeiro passo essencial na avaliação de saúde e fitness"
+        "Calculate BMI instantly using scientifically accepted formulas",
+        "Get clear health category assessment (underweight, normal, overweight, obese)",
+        "Supports both metric (cm/kg) and imperial (feet/pounds) measurements",
+        "Provides BMI Prime for additional context on weight status",
+        "Shows healthy BMI range for your reference",
+        "Essential first step in health and fitness assessment"
       ],
       "steps": [
-        "Selecione seu sistema de unidades preferido (métrico ou imperial)",
-        "Digite sua altura em centímetros ou pés/polegadas",
-        "Digite seu peso em quilogramas ou libras",
-        "Revise seu valor de IMC e interpretação da categoria de saúde"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "inputsExplained": [
         "Seleção do sistema de unidades permite cálculo em medições familiares",
@@ -606,24 +612,24 @@
       ],
       "faqs": [
         {
-          "question": "Qual é a diferença entre IMC e porcentagem de gordura corporal?",
-          "answer": "IMC é uma medida de peso relativo à altura que se correlaciona com gordura corporal, mas não a mede diretamente. Porcentagem de gordura corporal mede o conteúdo real de gordura no corpo. IMC é mais fácil de calcular e serve como ferramenta de triagem, enquanto porcentagem de gordura corporal fornece informações mais detalhadas sobre composição corporal. Atletas podem ter IMC alto devido à massa muscular, mas baixa porcentagem de gordura corporal."
+          "question": "What is the difference between BMI and body fat percentage?",
+          "answer": "BMI is a measure of weight relative to height that correlates with body fat but doesn't measure it directly. Body fat percentage measures actual fat content in the body. BMI is easier to calculate and serves as a screening tool, while body fat percentage provides more detailed information about body composition. Athletes may have high BMI due to muscle mass but low body fat percentage."
         },
         {
-          "question": "O IMC é preciso para todos?",
-          "answer": "O IMC funciona bem para triagem populacional geral, mas tem limitações. É menos preciso para atletas, fisiculturistas, mulheres grávidas, crianças e idosos. Populações asiáticas podem ter riscos mais altos à saúde em faixas menores de IMC. O IMC não considera massa muscular, densidade óssea ou distribuição de gordura. Para estes grupos, avaliações de saúde adicionais são recomendadas."
+          "question": "Is BMI accurate for everyone?",
+          "answer": "BMI works well for general population screening but has limitations. It's less accurate for athletes, bodybuilders, pregnant women, children, and elderly individuals. Asian populations may have higher health risks at lower BMI ranges. BMI doesn't account for muscle mass, bone density, or fat distribution. For these groups, additional health assessments are recommended."
         },
         {
-          "question": "Com que frequência devo verificar meu IMC?",
-          "answer": "Verifique o IMC mensalmente durante programas de perda/ganho de peso para rastrear progresso. Para monitoramento geral de saúde, verificações trimestrais ou anuais são suficientes, a menos que aconselhado de outra forma por profissionais de saúde. O IMC deve ser monitorado junto com outros indicadores de saúde como pressão arterial, colesterol e medições corporais para avaliação abrangente de saúde."
+          "question": "How often should I check my BMI?",
+          "answer": "Check BMI monthly during weight loss/gain programs to track progress. For general health monitoring, quarterly or annual checks are sufficient unless advised otherwise by healthcare providers. BMI should be monitored alongside other health indicators like blood pressure, cholesterol, and body measurements for comprehensive health assessment."
         },
         {
-          "question": "O IMC pode ser usado para crianças e adolescentes?",
-          "answer": "O IMC para crianças usa percentis específicos de idade e gênero em vez de faixas fixas. Crianças crescem em taxas diferentes, então o IMC deve ser interpretado usando gráficos de crescimento. Percentis de IMC acima do 85º indicam sobrepeso, acima do 95º indicam obesidade. O IMC pediátrico requer interpretação profissional considerando padrões de crescimento e estágios de desenvolvimento."
+          "question": "Can BMI be used for children and teenagers?",
+          "answer": "BMI for children uses age and gender-specific percentiles rather than fixed ranges. Children grow at different rates, so BMI must be interpreted using growth charts. BMI percentiles above 85th indicate overweight, above 95th indicate obesity. Pediatric BMI requires professional interpretation considering growth patterns and developmental stages."
         },
         {
-          "question": "O que devo fazer se meu IMC indicar que estou com sobrepeso ou obeso?",
-          "answer": "O IMC é uma ferramenta de triagem que sugere discutir peso com profissionais de saúde. Eles podem avaliar saúde geral, composição corporal e fatores de risco. O gerenciamento de peso deve envolver mudanças sustentáveis de estilo de vida incluindo nutrição balanceada, atividade física regular e modificações comportamentais. Foque em melhorias de saúde em vez de apenas números de peso."
+          "question": "What should I do if my BMI indicates I'm overweight or obese?",
+          "answer": "BMI is a screening tool that suggests discussing weight with healthcare providers. They can assess overall health, body composition, and risk factors. Weight management should involve sustainable lifestyle changes including balanced nutrition, regular physical activity, and behavior modifications. Focus on health improvements rather than just weight numbers."
         }
       ]
     },
@@ -647,7 +653,7 @@
       "gamme IMC saine",
       "catégories IMC expliquées"
     ],
-    "slug": "bmi-calculator",
+    "slug": "calculatrice-imc",
     "category": "health",
     "difficulty": "basic",
     "tags": [
@@ -773,20 +779,22 @@
       "ideal-weight-calculator"
     ],
     "seoContent": {
-      "introduction": "Calculez votre Indice de Masse Corporelle (IMC) avec précision utilisant notre calculatrice santé complète. Cette métrique santé fondamentale fournit outil dépistage pour évaluer si votre poids tombe dans gamme saine pour votre taille. Bien qu'IMC ne mesure pas graisse corporelle directement, il corrèle fortement avec pourcentage graisse corporelle et sert comme indicateur important de risques santé potentiels. Notre calculatrice supporte unités métriques et impériales, la rendant accessible pour utilisateurs mondiaux. Comprendre votre IMC est première étape vers maintien santé optimale et prévention problèmes santé liés au poids.",
+      "introduction": "Calculate your Body Mass Index (BMI) with precision using our comprehensive health calculator. This fundamental health metric provides a screening tool to assess whether your weight falls within a healthy range for your height. While BMI doesn't measure body fat directly, it correlates strongly with body fat percentage and serves as an important indicator of potential health risks. Our calculator supports both metric and imperial units, making it accessible for users worldwide. Understanding your BMI is the first step toward maintaining optimal health and preventing weight-related health issues.",
       "benefits": [
-        "Calculez IMC instantanément utilisant formules scientifiquement acceptées",
-        "Obtenez évaluation claire catégorie santé (sous-poids, normal, surpoids, obèse)",
-        "Supporte mesures métriques (cm/kg) et impériales (pieds/livres)",
-        "Fournit IMC Prime pour contexte supplémentaire sur statut poids",
-        "Montre gamme IMC saine pour votre référence",
-        "Première étape essentielle en évaluation santé et fitness"
+        "Calculate BMI instantly using scientifically accepted formulas",
+        "Get clear health category assessment (underweight, normal, overweight, obese)",
+        "Supports both metric (cm/kg) and imperial (feet/pounds) measurements",
+        "Provides BMI Prime for additional context on weight status",
+        "Shows healthy BMI range for your reference",
+        "Essential first step in health and fitness assessment"
       ],
       "steps": [
-        "Sélectionnez système unités préféré (métrique ou impérial)",
-        "Entrez votre taille en centimètres ou pieds/pouces",
-        "Entrez votre poids en kilogrammes ou livres",
-        "Examinez valeur IMC et interprétation catégorie santé"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "inputsExplained": [
         "Sélection système unités permet calcul en mesures familières",
@@ -816,24 +824,24 @@
       ],
       "faqs": [
         {
-          "question": "Quelle est différence entre IMC et pourcentage graisse corporelle?",
-          "answer": "IMC est mesure poids relatif à taille corrélant avec graisse corporelle mais ne la mesurant pas directement. Pourcentage graisse corporelle mesure contenu graisse réel dans corps. IMC est plus facile à calculer et sert comme outil dépistage, tandis pourcentage graisse corporelle fournit information plus détaillée sur composition corporelle. Athlètes peuvent avoir IMC élevé dû à masse musculaire mais faible pourcentage graisse corporelle."
+          "question": "What is the difference between BMI and body fat percentage?",
+          "answer": "BMI is a measure of weight relative to height that correlates with body fat but doesn't measure it directly. Body fat percentage measures actual fat content in the body. BMI is easier to calculate and serves as a screening tool, while body fat percentage provides more detailed information about body composition. Athletes may have high BMI due to muscle mass but low body fat percentage."
         },
         {
-          "question": "IMC est-il précis pour tout le monde?",
-          "answer": "IMC fonctionne bien pour dépistage population général mais a limitations. Il est moins précis pour athlètes, bodybuilders, femmes enceintes, enfants, et personnes âgées. Populations asiatiques peuvent avoir risques santé plus élevés à gammes IMC plus basses. IMC ne tient pas compte masse musculaire, densité osseuse, ou distribution graisse. Pour ces groupes, évaluations santé supplémentaires sont recommandées."
+          "question": "Is BMI accurate for everyone?",
+          "answer": "BMI works well for general population screening but has limitations. It's less accurate for athletes, bodybuilders, pregnant women, children, and elderly individuals. Asian populations may have higher health risks at lower BMI ranges. BMI doesn't account for muscle mass, bone density, or fat distribution. For these groups, additional health assessments are recommended."
         },
         {
-          "question": "À quelle fréquence devrais-je vérifier mon IMC?",
-          "answer": "Vérifiez IMC mensuellement pendant programmes perte/gain poids pour suivre progrès. Pour surveillance santé général, vérifications trimestrielles ou annuelles sont suffisantes à moins conseillé autrement par fournisseurs soins santé. IMC devrait être surveillé aux côtés autres indicateurs santé comme tension artérielle, cholestérol, et mesures corporelles pour évaluation santé complète."
+          "question": "How often should I check my BMI?",
+          "answer": "Check BMI monthly during weight loss/gain programs to track progress. For general health monitoring, quarterly or annual checks are sufficient unless advised otherwise by healthcare providers. BMI should be monitored alongside other health indicators like blood pressure, cholesterol, and body measurements for comprehensive health assessment."
         },
         {
-          "question": "IMC peut-il être utilisé pour enfants et adolescents?",
-          "answer": "IMC pour enfants utilise percentiles spécifiques âge et genre plutôt que gammes fixes. Enfants grandissent à taux différents, donc IMC doit être interprété utilisant courbes croissance. Percentiles IMC au-dessus 85e indiquent surpoids, au-dessus 95e indiquent obésité. IMC pédiatrique nécessite interprétation professionnelle considérant modèles croissance et stades développement."
+          "question": "Can BMI be used for children and teenagers?",
+          "answer": "BMI for children uses age and gender-specific percentiles rather than fixed ranges. Children grow at different rates, so BMI must be interpreted using growth charts. BMI percentiles above 85th indicate overweight, above 95th indicate obesity. Pediatric BMI requires professional interpretation considering growth patterns and developmental stages."
         },
         {
-          "question": "Que devrais-je faire si mon IMC indique surpoids ou obésité?",
-          "answer": "IMC est outil dépistage suggérant discuter poids avec fournisseurs soins santé. Ils peuvent évaluer santé générale, composition corporelle, et facteurs risque. Gestion poids devrait impliquer changements style vie durables incluant nutrition équilibrée, activité physique régulière, et modifications comportementales. Concentrez-vous sur améliorations santé plutôt que seulement nombres poids."
+          "question": "What should I do if my BMI indicates I'm overweight or obese?",
+          "answer": "BMI is a screening tool that suggests discussing weight with healthcare providers. They can assess overall health, body composition, and risk factors. Weight management should involve sustainable lifestyle changes including balanced nutrition, regular physical activity, and behavior modifications. Focus on health improvements rather than just weight numbers."
         }
       ]
     },

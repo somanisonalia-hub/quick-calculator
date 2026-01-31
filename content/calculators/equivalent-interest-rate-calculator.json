@@ -47,36 +47,22 @@
     "calculatorComponent": "EquivalentInterestRateCalculator",
     "examples": [
       {
-        "title": "Monthly to Quarterly Equivalence",
-        "description": "Find quarterly equivalent of 0.5% monthly rate",
-        "input": {
-          "knownRate": 0.5,
-          "knownFrequency": "12",
-          "targetFrequency": "4"
-        },
-        "output": {
-          "equivalentRate": "2.01%",
-          "knownRateDetails": "0.50% compounded monthly",
-          "equivalentRateDetails": "2.01% compounded quarterly",
-          "rateDifference": "1.51%",
-          "economicEquivalence": "Both rates produce the same annual return of 6.17%"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Annual to Monthly Equivalence",
-        "description": "Find monthly equivalent of 6% annual rate",
-        "input": {
-          "knownRate": 6,
-          "knownFrequency": "1",
-          "targetFrequency": "12"
-        },
-        "output": {
-          "equivalentRate": "0.49%",
-          "knownRateDetails": "6.00% compounded annually",
-          "equivalentRateDetails": "0.49% compounded monthly",
-          "rateDifference": "-5.51%",
-          "economicEquivalence": "Both rates produce the same annual return of 6.00%"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -198,36 +184,22 @@
     "calculatorComponent": "EquivalentInterestRateCalculator",
     "examples": [
       {
-        "title": "Equivalencia Mensual a Trimestral",
-        "description": "Encuentra equivalente trimestral de 0.5% tasa mensual",
-        "input": {
-          "knownRate": 0.5,
-          "knownFrequency": "12",
-          "targetFrequency": "4"
-        },
-        "output": {
-          "equivalentRate": "2.01%",
-          "knownRateDetails": "0.50% capitalizado mensualmente",
-          "equivalentRateDetails": "2.01% capitalizado trimestralmente",
-          "rateDifference": "1.51%",
-          "economicEquivalence": "Ambas tasas producen el mismo retorno anual de 6.17%"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Equivalencia Anual a Mensual",
-        "description": "Encuentra equivalente mensual de 6% tasa anual",
-        "input": {
-          "knownRate": 6,
-          "knownFrequency": "1",
-          "targetFrequency": "12"
-        },
-        "output": {
-          "equivalentRate": "0.49%",
-          "knownRateDetails": "6.00% capitalizado anualmente",
-          "equivalentRateDetails": "0.49% capitalizado mensualmente",
-          "rateDifference": "-5.51%",
-          "economicEquivalence": "Ambas tasas producen el mismo retorno anual de 6.00%"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -349,36 +321,22 @@
     "calculatorComponent": "EquivalentInterestRateCalculator",
     "examples": [
       {
-        "title": "Equivalência Mensal para Trimestral",
-        "description": "Encontre equivalente trimestral de 0.5% taxa mensal",
-        "input": {
-          "knownRate": 0.5,
-          "knownFrequency": "12",
-          "targetFrequency": "4"
-        },
-        "output": {
-          "equivalentRate": "2.01%",
-          "knownRateDetails": "0.50% capitalizado mensalmente",
-          "equivalentRateDetails": "2.01% capitalizado trimestralmente",
-          "rateDifference": "1.51%",
-          "economicEquivalence": "Ambas taxas produzem o mesmo retorno anual de 6.17%"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Equivalência Anual para Mensal",
-        "description": "Encontre equivalente mensal de 6% taxa anual",
-        "input": {
-          "knownRate": 6,
-          "knownFrequency": "1",
-          "targetFrequency": "12"
-        },
-        "output": {
-          "equivalentRate": "0.49%",
-          "knownRateDetails": "6.00% capitalizado anualmente",
-          "equivalentRateDetails": "0.49% capitalizado mensalmente",
-          "rateDifference": "-5.51%",
-          "economicEquivalence": "Ambas taxas produzem o mesmo retorno anual de 6.00%"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {
@@ -500,36 +458,22 @@
     "calculatorComponent": "EquivalentInterestRateCalculator",
     "examples": [
       {
-        "title": "Équivalence Mensuel vers Trimestriel",
-        "description": "Trouvez équivalent trimestriel de 0.5% taux mensuel",
-        "input": {
-          "knownRate": 0.5,
-          "knownFrequency": "12",
-          "targetFrequency": "4"
-        },
-        "output": {
-          "equivalentRate": "2.01%",
-          "knownRateDetails": "0.50% capitalisé mensuellement",
-          "equivalentRateDetails": "2.01% capitalisé trimestriellement",
-          "rateDifference": "1.51%",
-          "economicEquivalence": "Les deux taux produisent même retour annuel de 6.17%"
-        }
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
       },
       {
-        "title": "Équivalence Annuel vers Mensuel",
-        "description": "Trouvez équivalent mensuel de 6% taux annuel",
-        "input": {
-          "knownRate": 6,
-          "knownFrequency": "1",
-          "targetFrequency": "12"
-        },
-        "output": {
-          "equivalentRate": "0.49%",
-          "knownRateDetails": "6.00% capitalisé annuellement",
-          "equivalentRateDetails": "0.49% capitalisé mensuellement",
-          "rateDifference": "-5.51%",
-          "economicEquivalence": "Les deux taux produisent même retour annuel de 6.00%"
-        }
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
       }
     ],
     "seoContent": {

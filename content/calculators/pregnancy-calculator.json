@@ -20,7 +20,13 @@
     "slug": "pregnancy-calculator",
     "category": "Health",
     "difficulty": "Beginner",
-    "tags": ["pregnancy", "due date", "weeks pregnant", "conception", "maternity"],
+    "tags": [
+      "pregnancy",
+      "due date",
+      "weeks pregnant",
+      "conception",
+      "maternity"
+    ],
     "description": "Calculate your pregnancy due date and track your weeks of pregnancy. Enter your last menstrual period (LMP) or conception date to get an accurate pregnancy timeline, estimated delivery date, and current week of pregnancy.",
     "summary": "Calculate due date and pregnancy weeks with LMP or conception date.",
     "component": "PregnancyCalculator",
@@ -41,10 +47,12 @@
         "Share estimated due date with family and healthcare providers"
       ],
       "steps": [
-        "Select whether you know your LMP or conception date",
-        "Enter the first day of your last menstrual period or conception date",
-        "Click calculate to see results",
-        "View your due date and current pregnancy progress"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "inputsExplained": [
         "Last Menstrual Period (LMP): The first day of your last period before pregnancy",
@@ -73,23 +81,102 @@
       ],
       "faqs": [
         {
-          "question": "How accurate is the pregnancy due date calculator?",
-          "answer": "The due date calculated is an estimate based on a standard 280-day pregnancy (40 weeks) from your last menstrual period. Most babies are born within 2 weeks before or after this date. Ultrasound dating in the first trimester is the most accurate method for determining due dates."
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
         },
         {
-          "question": "What if I don't know my exact LMP date?",
-          "answer": "If you don't remember your exact LMP date, use your best estimate or the date of your first ultrasound to get an approximate due date. Your healthcare provider can also help estimate your due date and may adjust it based on ultrasound findings."
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
         },
         {
-          "question": "Is there a difference between due date and conception date calculations?",
-          "answer": "Yes. The standard due date (Naegele's rule) is 280 days from the first day of your LMP. If you know your conception date (not the LMP), add 266 days for the due date. The difference accounts for the time between LMP and actual conception."
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
         },
         {
-          "question": "Can babies be born before their due date?",
-          "answer": "Yes, absolutely. A pregnancy is considered full-term between 37-40 weeks. Babies born between 37-40 weeks are considered full-term. Babies born before 37 weeks are considered premature. Many healthy babies are born before their calculated due date."
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
         }
       ]
-    }
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "es": {
     "title": "Calculadora de Embarazo",
@@ -103,28 +190,134 @@
     "slug": "pregnancy-calculator",
     "category": "Health",
     "difficulty": "Principiante",
-    "tags": ["embarazo", "fecha de parto", "semanas", "concepción", "maternidad"],
+    "tags": [
+      "embarazo",
+      "fecha de parto",
+      "semanas",
+      "concepción",
+      "maternidad"
+    ],
     "description": "Calcule su fecha de parto estimada y siga sus semanas de embarazo. Ingrese su último período menstrual o fecha de concepción.",
     "summary": "Calcule la fecha de parto y semanas de embarazo con FUM o fecha de concepción.",
     "component": "PregnancyCalculator",
     "seoContent": {
-      "introduction": "Nuestra calculadora de embarazo le ayuda a determinar su fecha de parto estimada y seguir sus semanas de embarazo.",
+      "introduction": "Our pregnancy calculator helps you determine your estimated due date and track your weeks of pregnancy. Whether you know your last menstrual period (LMP) or conception date, this calculator provides an accurate pregnancy timeline, helping you plan and prepare for your baby's arrival.",
       "benefits": [
-        "Calcule fecha de parto precisa desde FUM o fecha de concepción",
-        "Rastree la semana y día actual del embarazo",
-        "Vea información del trimestre",
-        "Planifique citas prenatales"
+        "Calculate accurate due date from LMP or conception date",
+        "Track current week and day of pregnancy",
+        "See trimester information",
+        "Plan prenatal care appointments",
+        "Understand pregnancy milestones by week",
+        "Share estimated due date with family and healthcare providers"
       ],
       "steps": [
-        "Seleccione si conoce su FUM o fecha de concepción",
-        "Ingrese el primer día de su último período menstrual o fecha de concepción",
-        "Haga clic en calcular para ver resultados",
-        "Vea su fecha de parto y progreso del embarazo"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "formulaExplanation": "La fecha de parto se calcula típicamente como 280 días (40 semanas) desde el primer día del último período menstrual.",
       "examples": [],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "pt": {
     "title": "Calculadora de Gravidez",
@@ -138,28 +331,134 @@
     "slug": "pregnancy-calculator",
     "category": "Health",
     "difficulty": "Iniciante",
-    "tags": ["gravidez", "data de parto", "semanas", "concepção", "maternidade"],
+    "tags": [
+      "gravidez",
+      "data de parto",
+      "semanas",
+      "concepção",
+      "maternidade"
+    ],
     "description": "Calcule sua data estimada de parto e acompanhe suas semanas de gravidez. Digite seu último período menstrual ou data de concepção.",
     "summary": "Calcule a data de parto e semanas de gravidez com DUM ou data de concepção.",
     "component": "PregnancyCalculator",
     "seoContent": {
-      "introduction": "Nossa calculadora de gravidez ajuda você a determinar sua data estimada de parto e acompanhar suas semanas de gravidez.",
+      "introduction": "Our pregnancy calculator helps you determine your estimated due date and track your weeks of pregnancy. Whether you know your last menstrual period (LMP) or conception date, this calculator provides an accurate pregnancy timeline, helping you plan and prepare for your baby's arrival.",
       "benefits": [
-        "Calcule data de parto precisa a partir de DUM ou data de concepção",
-        "Acompanhe a semana e dia atual da gravidez",
-        "Veja informações do trimestre",
-        "Planeje consultas pré-natais"
+        "Calculate accurate due date from LMP or conception date",
+        "Track current week and day of pregnancy",
+        "See trimester information",
+        "Plan prenatal care appointments",
+        "Understand pregnancy milestones by week",
+        "Share estimated due date with family and healthcare providers"
       ],
       "steps": [
-        "Selecione se conhece sua DUM ou data de concepção",
-        "Digite o primeiro dia do seu último período menstrual ou data de concepção",
-        "Clique em calcular para ver os resultados",
-        "Veja sua data de parto e progresso da gravidez"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "formulaExplanation": "A data de parto é calculada tipicamente como 280 dias (40 semanas) a partir do primeiro dia do último período menstrual.",
       "examples": [],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   },
   "fr": {
     "title": "Calculatrice de Grossesse",
@@ -173,27 +472,133 @@
     "slug": "pregnancy-calculator",
     "category": "Health",
     "difficulty": "Débutant",
-    "tags": ["grossesse", "date d'accouchement", "semaines", "conception", "maternité"],
+    "tags": [
+      "grossesse",
+      "date d'accouchement",
+      "semaines",
+      "conception",
+      "maternité"
+    ],
     "description": "Calculez votre date estimée d'accouchement et suivez vos semaines de grossesse. Entrez votre dernier jour des règles ou votre date de conception.",
     "summary": "Calculez la date d'accouchement et les semaines de grossesse avec DDR ou date de conception.",
     "component": "PregnancyCalculator",
     "seoContent": {
-      "introduction": "Notre calculatrice de grossesse vous aide à déterminer votre date estimée d'accouchement et à suivre vos semaines de grossesse.",
+      "introduction": "Our pregnancy calculator helps you determine your estimated due date and track your weeks of pregnancy. Whether you know your last menstrual period (LMP) or conception date, this calculator provides an accurate pregnancy timeline, helping you plan and prepare for your baby's arrival.",
       "benefits": [
-        "Calculez la date d'accouchement précise à partir de DDR ou date de conception",
-        "Suivez la semaine et le jour actuels de la grossesse",
-        "Consultez les informations du trimestre",
-        "Planifiez les rendez-vous prénataux"
+        "Calculate accurate due date from LMP or conception date",
+        "Track current week and day of pregnancy",
+        "See trimester information",
+        "Plan prenatal care appointments",
+        "Understand pregnancy milestones by week",
+        "Share estimated due date with family and healthcare providers"
       ],
       "steps": [
-        "Sélectionnez si vous connaissez votre DDR ou date de conception",
-        "Entrez le premier jour de vos dernières règles ou votre date de conception",
-        "Cliquez sur calculer pour voir les résultats",
-        "Consultez votre date d'accouchement et votre progression de la grossesse"
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
       ],
       "formulaExplanation": "La date d'accouchement est calculée comme 280 jours (40 semaines) à partir du premier jour du dernier jour des règles.",
       "examples": [],
-      "faqs": []
-    }
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    },
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primary Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondary Value",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Result = Value1 × Value2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Calculated Result",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basic Example",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "This example shows a typical calculation with standard values."
+      },
+      {
+        "title": "High Value Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "This scenario demonstrates the calculation with higher input values."
+      },
+      {
+        "title": "Low Value Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "This example shows how the calculator works with smaller values."
+      }
+    ]
   }
 }

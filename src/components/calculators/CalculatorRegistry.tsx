@@ -285,6 +285,10 @@ const DebtRatiosCalculator = dynamic(() => import('./DebtRatiosCalculator'), {
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
 
+const DebtToIncomeCalculator = dynamic(() => import('./DebtToIncomeCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
 const LiquidityRatiosCalculator = dynamic(() => import('./LiquidityRatiosCalculator'), {
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
@@ -385,6 +389,38 @@ const SocialSecurityCalculator = dynamic(() => import('./SocialSecurityCalculato
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
 
+const CreditCardPayoffCalculator = dynamic(() => import('./CreditCardPayoffCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const EmergencyFundCalculator = dynamic(() => import('./EmergencyFundCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const ExamScorePredictorCalculator = dynamic(() => import('./ExamScorePredictorCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const NetWorthCalculator = dynamic(() => import('./NetWorthCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const RetirementSavingsCalculator = dynamic(() => import('./RetirementSavingsCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const SavingsGoalCalculator = dynamic(() => import('./SavingsGoalCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const SleepCalculator = dynamic(() => import('./SleepCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const TripPlannerCalculator = dynamic(() => import('./TripPlannerCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
 // Registry mapping component names to actual components
 export const calculatorComponents: Record<string, any> = {
   'AverageCalculator': AverageCalculator,
@@ -464,6 +500,7 @@ export const calculatorComponents: Record<string, any> = {
   'PeriodicInterestRateCalculator': PeriodicInterestRateCalculator,
   'EquivalentInterestRateCalculator': EquivalentInterestRateCalculator,
   'DebtRatiosCalculator': DebtRatiosCalculator,
+  'DebtToIncomeCalculator': DebtToIncomeCalculator,
   'LiquidityRatiosCalculator': LiquidityRatiosCalculator,
   'OperationsRatiosCalculator': OperationsRatiosCalculator,
   'ProfitabilityRatiosCalculator': ProfitabilityRatiosCalculator,
@@ -489,6 +526,14 @@ export const calculatorComponents: Record<string, any> = {
   'Calculator401k': Calculator401k,
   'RothIRACalculator': RothIRACalculator,
   'SocialSecurityCalculator': SocialSecurityCalculator,
+  'CreditCardPayoffCalculator': CreditCardPayoffCalculator,
+  'EmergencyFundCalculator': EmergencyFundCalculator,
+  'ExamScorePredictorCalculator': ExamScorePredictorCalculator,
+  'NetWorthCalculator': NetWorthCalculator,
+  'RetirementSavingsCalculator': RetirementSavingsCalculator,
+  'SavingsGoalCalculator': SavingsGoalCalculator,
+  'SleepCalculator': SleepCalculator,
+  'TripPlannerCalculator': TripPlannerCalculator,
 };
 
 export function getCalculatorComponent(componentName: string) {
