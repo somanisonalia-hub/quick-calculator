@@ -25,9 +25,9 @@ const translations = {
       children: 'Children\'s Privacy',
       changes: 'Changes to This Privacy Policy',
       contact: 'Contact Us',
-      contactEmail: 'Email: privacy@quick-calculator.org',
       lastUpdated: 'Last Updated: January 2026'
-    }
+    },
+    contactEmail: 'Email: privacy@quick-calculator.org'
   },
   es: {
     title: 'Política de Privacidad | Quick Calculator',
@@ -50,9 +50,9 @@ const translations = {
       children: 'Privacidad de Menores',
       changes: 'Cambios a Esta Política de Privacidad',
       contact: 'Contáctenos',
-      contactEmail: 'Email: privacy@quick-calculator.org',
       lastUpdated: 'Última Actualización: Enero 2026'
-    }
+    },
+    contactEmail: 'Email: privacy@quick-calculator.org'
   },
   pt: {
     title: 'Política de Privacidade | Quick Calculator',
@@ -75,9 +75,9 @@ const translations = {
       children: 'Privacidade de Crianças',
       changes: 'Alterações a Esta Política de Privacidade',
       contact: 'Entre em Contato',
-      contactEmail: 'Email: privacy@quick-calculator.org',
       lastUpdated: 'Última Atualização: Janeiro 2026'
-    }
+    },
+    contactEmail: 'Email: privacy@quick-calculator.org'
   },
   fr: {
     title: 'Politique de Confidentialité | Quick Calculator',
@@ -100,9 +100,9 @@ const translations = {
       children: 'Confidentialité des Enfants',
       changes: 'Modifications de Cette Politique de Confidentialité',
       contact: 'Nous Contacter',
-      contactEmail: 'Email: privacy@quick-calculator.org',
       lastUpdated: 'Dernière Mise à Jour: Janvier 2026'
-    }
+    },
+    contactEmail: 'Email: privacy@quick-calculator.org'
   }
 };
 
