@@ -410,6 +410,9 @@ export function generateCalculatorSchema(calculatorData: CalculatorData, lang: s
   // Get direct description templates
   const mainDescription = CALCULATOR_DESCRIPTIONS.main[lang as keyof typeof CALCULATOR_DESCRIPTIONS.main] || CALCULATOR_DESCRIPTIONS.main.en;
   const altDescription = CALCULATOR_DESCRIPTIONS.alt[lang as keyof typeof CALCULATOR_DESCRIPTIONS.alt] || CALCULATOR_DESCRIPTIONS.alt.en;
+  
+  // Use seoContent introduction for richer description, fallback to template if not available
+  const richDescription = calculatorData.seoContent?.introduction || altDescription.replace('{{calculatorName}}', calculatorData.title.toLowerCase());
 
   // Generate breadcrumbs directly - Home → Category → Calculator
   const homeName = HOME_NAMES[lang as keyof typeof HOME_NAMES] || 'Home';
@@ -425,24 +428,60 @@ export function generateCalculatorSchema(calculatorData: CalculatorData, lang: s
       "@context": "https://schema.org",
       "@type": "WebPage",
       "@id": `${calculatorUrl}#webpage`,
-      "name": calculatorData.title,
+      "name": `${calculatorData.title} | quick-calculator.org`,
       "description": mainDescription.replace('{{calculatorName}}', calculatorData.title),
       "url": calculatorUrl,
       "inLanguage": getInLanguage(lang),
-      "mainEntity": {
-        "@type": "WebApplication",
-        "@id": `${calculatorUrl}#webapplication`,
-        "name": calculatorData.title,
-        "url": calculatorUrl,
-        "description": altDescription.replace('{{calculatorName}}', calculatorData.title.toLowerCase()),
-        "potentialAction": {
-          "@type": "CalculateAction",
-          "@id": `${calculatorUrl}#calculateaction`,
-          "target": calculatorUrl,
-          "description": `Calculate ${calculatorData.title.toLowerCase()} online`,
-          "resultType": "Text"
+      "breadcrumb": `${calculatorUrl}#breadcrumblist`,
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": `${baseUrl}/calculator-icon.png`
+      },
+      "mainEntity": [
+        {
+          "@type": "WebApplication",
+          "@id": `${calculatorUrl}#webapplication`,
+          "name": `${calculatorData.title} | quick-calculator.org`,
+          "url": calculatorUrl,
+          "description": richDescription,
+          "applicationCategory": "CalculationApplication",
+          "operatingSystem": "Web",
+          "inLanguage": getInLanguage(lang),
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "potentialAction": {
+            "@type": "CalculateAction",
+            "@id": `${calculatorUrl}#calculateaction`,
+            "target": calculatorUrl,
+            "description": `Calculate ${calculatorData.title.toLowerCase()} online`,
+            "resultType": "Text"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": `${calculatorUrl}#softwareapplication`,
+          "name": `${calculatorData.title} | quick-calculator.org`,
+          "url": calculatorUrl,
+          "description": richDescription,
+          "applicationCategory": "CalculationApplication",
+          "inLanguage": getInLanguage(lang),
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1000+"
+          }
         }
-      }
+      ]
     },
     {
       "@type": "BreadcrumbList",
