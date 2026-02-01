@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     calculatorSchema = generateCalculatorSchema(calculatorData, lang);
   }
 
-  const canonicalUrl = lang === 'en' ? `https://quick-calculator.org/${slug}` : `https://quick-calculator.org/${lang}/${slug}`;
+  const canonicalUrl = `https://quick-calculator.org/${lang}/${slug}`;
 
   const metadata: Metadata = {
     title: calculatorContent?.seoTitle || calculatorContent?.title || 'Free Online Calculators',
@@ -57,11 +57,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `https://quick-calculator.org/${slug}`,
+        'en': `https://quick-calculator.org/en/${slug}`,
         'es': `https://quick-calculator.org/es/${slug}`,
         'fr': `https://quick-calculator.org/fr/${slug}`,
         'pt': `https://quick-calculator.org/pt/${slug}`,
-        'x-default': `https://quick-calculator.org/${slug}`,
+        'x-default': `https://quick-calculator.org/en/${slug}`,
       },
     }
   };

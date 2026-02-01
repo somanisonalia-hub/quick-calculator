@@ -23,17 +23,17 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   }
 
   const homepageSchema = generateHomepageSchema(lang);
-  const canonicalUrl = lang === 'en' ? 'https://quick-calculator.org' : `https://quick-calculator.org/${lang}`;
+  const canonicalUrl = `https://quick-calculator.org/${lang}`;
 
   return {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://quick-calculator.org',
+        'en': 'https://quick-calculator.org/en',
         'es': 'https://quick-calculator.org/es',
         'fr': 'https://quick-calculator.org/fr',
         'pt': 'https://quick-calculator.org/pt',
-        'x-default': 'https://quick-calculator.org',
+        'x-default': 'https://quick-calculator.org/en',
       },
     },
     other: {

@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.title,
     description: t.description,
     alternates: {
-      canonical: lang === 'en' ? 'https://quick-calculator.org/cookie-policy' : `https://quick-calculator.org/${lang}/cookie-policy`,
+      canonical: `https://quick-calculator.org/${lang}/cookie-policy`,
       languages: {
         'en': 'https://quick-calculator.org/en/cookie-policy',
         'es': 'https://quick-calculator.org/es/cookie-policy',

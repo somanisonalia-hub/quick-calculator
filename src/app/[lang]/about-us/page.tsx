@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.title,
     description: t.description,
     alternates: {
-      canonical: lang === 'en' ? 'https://quick-calculator.org/about-us' : `https://quick-calculator.org/${lang}/about-us`,
+      canonical: `https://quick-calculator.org/${lang}/about-us`,
       languages: {
         'en': 'https://quick-calculator.org/en/about-us',
         'es': 'https://quick-calculator.org/es/about-us',

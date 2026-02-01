@@ -123,7 +123,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.title,
     description: t.description,
     alternates: {
-      canonical: lang === 'en' ? 'https://quick-calculator.org/privacy-policy' : `https://quick-calculator.org/${lang}/privacy-policy`,
+      canonical: `https://quick-calculator.org/${lang}/privacy-policy`,
       languages: {
         'en': 'https://quick-calculator.org/en/privacy-policy',
         'es': 'https://quick-calculator.org/es/privacy-policy',
