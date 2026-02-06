@@ -52,6 +52,26 @@ export default function TipCalculator({ lang = 'en' }: TipCalculatorProps) {
       tipAmount: "Montant du Pourboire",
       totalAmount: "Montant Total",
       currency: "€"
+    },
+    de: {
+      title: "Trinkgeldrechner",
+      description: "Berechnen Sie Trinkgelder und teilen Sie Rechnungen ganz einfach",
+      billAmount: "Rechnungsbetrag",
+      tipPercentage: "Trinkgeldprozentsatz",
+      calculateTip: "Trinkgeld berechnen",
+      tipAmount: "Trinkgeldbetrag",
+      totalAmount: "Gesamtbetrag",
+      currency: "€"
+    },
+    nl: {
+      title: "Fooicalculator",
+      description: "Bereken fooien en verdeel rekeningen eenvoudig",
+      billAmount: "Rekeneningbedrag",
+      tipPercentage: "Fooi Percentage",
+      calculateTip: "Fooi berekenen",
+      tipAmount: "Fooibedrag",
+      totalAmount: "Totaal bedrag",
+      currency: "€"
     }
   };
 

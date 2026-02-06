@@ -40,6 +40,22 @@ export default function DateCalculator({ lang = 'en' }: DateCalculatorProps) {
       endDate: "Date de Fin",
       result: "Résultat",
       daysBetween: "jours entre les dates"
+    },
+    de: {
+      title: "Datumsrechner",
+      description: "Berechnen Sie Unterschiede zwischen Daten",
+      startDate: "Startdatum",
+      endDate: "Enddatum",
+      result: "Resultat",
+      daysBetween: "Tage zwischen den Daten"
+    },
+    nl: {
+      title: "Datumcalculator",
+      description: "Bereken verschillen tussen datums",
+      startDate: "Startdatum",
+      endDate: "Einddatum",
+      result: "Resultaat",
+      daysBetween: "dagen tussen de datums"
     }
   };
 
