@@ -75,6 +75,7 @@ export const CALCULATOR_CATEGORIES = {
   // Investments & Savings
   'simple-interest-calculator': 'financial',
   'compound-interest-calculator': 'financial',
+  'savings-calculator': 'financial',
   'investment-calculator': 'financial',
   'future-value-calculator': 'financial',
   'retirement-calculator': 'financial',
@@ -112,6 +113,7 @@ export const CALCULATOR_CATEGORIES = {
   'business-tax': 'financial',
   
   // Credit & Debt
+  'credit-card-calculator': 'financial',
   'credit-card-payoff': 'financial',
   'debt-consolidation-calculator': 'financial',
   'debt-payoff-calculator': 'financial',
@@ -149,6 +151,7 @@ export const CALCULATOR_CATEGORIES = {
   
   // Other Financial
   'break-even-calculator': 'financial',
+  'budget-calculator': 'financial',
   'inflation-calculator': 'financial',
   'currency-converter': 'financial',
   'social-security-calculator': 'financial',
@@ -214,10 +217,7 @@ export const CALCULATOR_CATEGORIES = {
   'gpa-calculator': 'lifestyle',
   'grade-calculator': 'lifestyle',
   'expense-calculator': 'lifestyle',
-  'budget-calculator': 'lifestyle',
   'personal-budget': 'lifestyle',
-  'savings-calculator': 'lifestyle',
-  'credit-card-calculator': 'lifestyle',
   'exam-score-predictor': 'lifestyle',
   'study-hours-planner': 'lifestyle',
   'trip-planner': 'lifestyle',
@@ -268,11 +268,10 @@ export const PHASE_1_CALCULATORS = [
   { slug: 'standard-deviation-calculator', category: 'math', name: 'Standard Deviation Calculator', summary: 'Calculate standard deviation and variance', icon: '📈', difficulty: 'Intermediate', featured: false },
   { slug: 'circle-area-calculator', category: 'math', name: 'Circle Area Calculator', summary: 'Calculate the area of circles and sectors', icon: '⭕', difficulty: 'Beginner', featured: false },
 
-  // 🎭 LIFESTYLE CALCULATORS (4 calculators)
+  // 🎭 LIFESTYLE CALCULATORS (3 calculators)
   { slug: 'age-calculator', category: 'lifestyle', name: 'Age Calculator', summary: 'Calculate exact age in years, months, and days', icon: '🎂', difficulty: 'Beginner', featured: false },
   { slug: 'tip-calculator', category: 'lifestyle', name: 'Tip Calculator', summary: 'Calculate tips and split bills at restaurants', icon: '🍽️', difficulty: 'Beginner', featured: false },
   { slug: 'gpa-calculator', category: 'lifestyle', name: 'GPA Calculator', summary: 'Calculate Grade Point Average for students', icon: '🎓', difficulty: 'Beginner', featured: false },
-  { slug: 'budget-calculator', category: 'lifestyle', name: 'Budget Calculator', summary: 'Create and manage personal or business budgets', icon: '📊', difficulty: 'Beginner', featured: false },
 
   // 📅 UTILITY CALCULATORS (3 calculators)
   { slug: 'word-counter', category: 'utility', name: 'Word Counter', summary: 'Count words, characters, and reading time', icon: '📝', difficulty: 'Beginner', featured: false },

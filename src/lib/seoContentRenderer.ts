@@ -137,9 +137,9 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
   // Introduction
   if (seoContent.introduction) {
     sections.push(`
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
-        <h3 class="text-xl font-semibold text-blue-900 mb-3">${t('introduction')}</h3>
-        <p class="text-gray-800 leading-relaxed">${seoContent.introduction}</p>
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 sm:p-6 mb-6 sm:mb-8">
+        <h3 class="text-base sm:text-lg md:text-xl font-semibold text-blue-900 mb-2 sm:mb-3">${t('introduction')}</h3>
+        <p class="text-sm sm:text-base text-gray-800 leading-relaxed">${seoContent.introduction}</p>
       </div>
     `);
   }
@@ -149,16 +149,16 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
     const benefits = Array.isArray(seoContent.benefits) ? seoContent.benefits : [seoContent.benefits];
     if (benefits.length > 0) {
       sections.push(`
-        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-          <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+        <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+          <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2 sm:mr-3"></span>
           ${t('benefits')}
         </h3>
-        <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg mb-8">
-          <ul class="space-y-3">
+        <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
+          <ul class="space-y-2 sm:space-y-3">
             ${benefits.map(benefit => `
               <li class="flex items-start">
-                <span class="inline-block w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-gray-800 leading-relaxed">${benefit}</span>
+                <span class="inline-block w-2 h-2 bg-green-500 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
+                <span class="text-sm sm:text-base text-gray-800 leading-relaxed">${benefit}</span>
               </li>
             `).join('')}
           </ul>
@@ -172,16 +172,16 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
     const steps = Array.isArray(seoContent.steps) ? seoContent.steps : [seoContent.steps];
     if (steps.length > 0) {
       sections.push(`
-        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-          <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+        <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+          <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2 sm:mr-3"></span>
           ${t('howToUse')}
         </h3>
-        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg mb-8">
-          <ol class="space-y-3">
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
+          <ol class="space-y-2 sm:space-y-3">
             ${steps.map((step, index) => `
               <li class="flex items-start">
-                <span class="inline-flex items-center justify-center w-6 h-6 bg-blue-500 text-white text-sm font-bold rounded-full mr-3 flex-shrink-0 mt-0.5">${index + 1}</span>
-                <span class="text-gray-800 leading-relaxed">${step}</span>
+                <span class="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 bg-blue-500 text-white text-xs sm:text-sm font-bold rounded-full mr-2 sm:mr-3 flex-shrink-0 mt-0.5">${index + 1}</span>
+                <span class="text-sm sm:text-base text-gray-800 leading-relaxed">${step}</span>
               </li>
             `).join('')}
           </ol>
@@ -195,14 +195,14 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
     const inputsExplained = Array.isArray(seoContent.inputsExplained) ? seoContent.inputsExplained : [seoContent.inputsExplained];
     if (inputsExplained.length > 0) {
       sections.push(`
-        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-          <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+        <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+          <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-2 sm:mr-3"></span>
           ${t('calculatorInputs')}
         </h3>
-        <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="grid md:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
           ${inputsExplained.map(input => `
-            <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-lg border border-purple-200">
-              <p class="text-gray-800 leading-relaxed">${input}</p>
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-3 sm:p-4 rounded-lg border border-purple-200">
+              <p class="text-sm sm:text-base text-gray-800 leading-relaxed">${input}</p>
             </div>
           `).join('')}
         </div>
@@ -213,12 +213,12 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
   // How the Calculation Works
   if (seoContent.formulaExplanation) {
     sections.push(`
-      <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-        <span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+        <span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2 sm:mr-3"></span>
         ${t('howItWorks')}
       </h3>
-      <div class="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-lg mb-8 border-l-4 border-orange-400">
-        <p class="text-gray-800 leading-relaxed">${seoContent.formulaExplanation}</p>
+      <div class="bg-gradient-to-r from-orange-50 to-amber-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8 border-l-4 border-orange-400">
+        <p class="text-sm sm:text-base text-gray-800 leading-relaxed">${seoContent.formulaExplanation}</p>
       </div>
     `);
   }
@@ -228,16 +228,16 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
     const examples = Array.isArray(seoContent.examples) ? seoContent.examples : [seoContent.examples];
     if (examples.length > 0) {
       sections.push(`
-        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-          <span class="inline-block w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
+        <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+          <span class="inline-block w-2 h-2 bg-teal-500 rounded-full mr-2 sm:mr-3"></span>
           ${t('exampleScenarios')}
         </h3>
-        <div class="space-y-4 mb-8">
+        <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
           ${examples.map((example, index) => `
-            <div class="bg-gradient-to-r from-teal-50 to-cyan-50 p-6 rounded-lg border border-teal-200">
+            <div class="bg-gradient-to-r from-teal-50 to-cyan-50 p-4 sm:p-6 rounded-lg border border-teal-200">
               <div class="flex items-start">
-                <span class="inline-flex items-center justify-center w-8 h-8 bg-teal-500 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0">Ex ${index + 1}</span>
-                <p class="text-gray-800 leading-relaxed">${example}</p>
+                <span class="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-teal-500 text-white text-xs sm:text-sm font-bold rounded-full mr-3 sm:mr-4 flex-shrink-0">Ex ${index + 1}</span>
+                <p class="text-sm sm:text-base text-gray-800 leading-relaxed">${example}</p>
               </div>
             </div>
           `).join('')}
@@ -251,16 +251,16 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
     const resultsExplanation = Array.isArray(seoContent.resultsExplanation) ? seoContent.resultsExplanation : [seoContent.resultsExplanation];
     if (resultsExplanation.length > 0) {
       sections.push(`
-        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-          <span class="inline-block w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+        <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+          <span class="inline-block w-2 h-2 bg-indigo-500 rounded-full mr-2 sm:mr-3"></span>
           ${t('understandingResults')}
         </h3>
-        <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg mb-8">
-          <ul class="space-y-3">
+        <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
+          <ul class="space-y-2 sm:space-y-3">
             ${resultsExplanation.map(result => `
               <li class="flex items-start">
-                <span class="inline-block w-2 h-2 bg-indigo-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-gray-800 leading-relaxed">${result}</span>
+                <span class="inline-block w-2 h-2 bg-indigo-500 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
+                <span class="text-sm sm:text-base text-gray-800 leading-relaxed">${result}</span>
               </li>
             `).join('')}
           </ul>
@@ -272,12 +272,12 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
   // Who It's For
   if (seoContent.whoItsFor) {
     sections.push(`
-      <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-        <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+        <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-2 sm:mr-3"></span>
         ${t('whoItsFor')}
       </h3>
-      <div class="bg-gradient-to-r from-gray-50 to-slate-50 p-6 rounded-lg mb-8">
-        <p class="text-gray-800 leading-relaxed">${seoContent.whoItsFor}</p>
+      <div class="bg-gradient-to-r from-gray-50 to-slate-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
+        <p class="text-sm sm:text-base text-gray-800 leading-relaxed">${seoContent.whoItsFor}</p>
       </div>
     `);
   }
@@ -285,12 +285,12 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
   // Important Notes & Disclaimer
   if (seoContent.disclaimer) {
     sections.push(`
-      <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-        <span class="inline-block w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+        <span class="inline-block w-2 h-2 bg-red-500 rounded-full mr-2 sm:mr-3"></span>
         ${t('importantNotes')}
       </h3>
-      <div class="bg-gradient-to-r from-red-50 to-pink-50 p-6 rounded-lg mb-8 border-l-4 border-red-400">
-        <p class="text-gray-800 leading-relaxed">${seoContent.disclaimer}</p>
+      <div class="bg-gradient-to-r from-red-50 to-pink-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8 border-l-4 border-red-400">
+        <p class="text-sm sm:text-base text-gray-800 leading-relaxed">${seoContent.disclaimer}</p>
       </div>
     `);
   }
@@ -298,16 +298,16 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
   // Related Tools
   if (seoContent.relatedTools && seoContent.relatedTools.length > 0) {
     sections.push(`
-      <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-        <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+        <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-2 sm:mr-3"></span>
         ${t('relatedTools')}
       </h3>
-      <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+      <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-4 sm:p-6 rounded-lg">
         <ul class="space-y-2">
           ${seoContent.relatedTools.map(tool => `
             <li class="flex items-start">
-              <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span class="text-gray-800 leading-relaxed">${tool}</span>
+              <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
+              <span class="text-sm sm:text-base text-gray-800 leading-relaxed">${tool}</span>
             </li>
           `).join('')}
         </ul>
@@ -318,15 +318,15 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
   // FAQs
   if (seoContent.faqs && seoContent.faqs.length > 0) {
     sections.push(`
-      <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-        <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+        <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-2 sm:mr-3"></span>
         Frequently Asked Questions
       </h3>
-      <div class="space-y-4">
+      <div class="space-y-3 sm:space-y-4">
         ${seoContent.faqs.map((faq) => `
-          <div class="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg border border-purple-200">
-            <h4 class="font-semibold text-gray-900 mb-3 text-lg">${faq.question}</h4>
-            <p class="text-gray-800 leading-relaxed">${faq.answer}</p>
+          <div class="bg-gradient-to-r from-purple-50 to-indigo-50 p-4 sm:p-6 rounded-lg border border-purple-200">
+            <h4 class="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base md:text-lg">${faq.question}</h4>
+            <p class="text-sm sm:text-base text-gray-800 leading-relaxed">${faq.answer}</p>
           </div>
         `).join('')}
       </div>

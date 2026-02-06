@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { getCategoryData, CategoryData, CalculatorInfo, CALCULATOR_CATEGORIES } from '@/lib/categoryUtils';
-import { getPopularCalculatorsForCategory } from '@/lib/popularCalculators';
+import { getCategoryData, CategoryData, CalculatorInfo, CALCULATOR_CATEGORIES, getAllCalculatorsForHomepage } from '@/lib/categoryUtils';
+import { getPopularCalculatorsForCategory, isPopularCalculator } from '@/lib/popularCalculators';
 import DE_NL_SELECTED_CALCULATORS from '@/lib/DE_NL_SELECTED_CALCULATORS.json';
+import CategoryNavigation from '@/components/CategoryNavigation';
 
 interface CategoryPageClientProps {
   lang: string;
@@ -18,6 +19,12 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
   const [categoryContent, setCategoryContent] = useState<CategoryData | null>(initialCategoryData || null);
   const [currentCategoryCalcs, setCurrentCategoryCalcs] = useState<CalculatorInfo[]>(initialCalculators || []);
   const [loading, setLoading] = useState(!initialCalculators);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredCalculators, setFilteredCalculators] = useState<CalculatorInfo[]>([]);
+  const [showResults, setShowResults] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [floatingSearchQuery, setFloatingSearchQuery] = useState('');
+  const [floatingSearchResults, setFloatingSearchResults] = useState<CalculatorInfo[]>([]);
 
   useEffect(() => {
     if (!initialCalculators || !initialCategoryData) {
@@ -95,6 +102,39 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
   
   const t = translations[lang] || translations.en;
 
+  // Search functionality - same logic as HomePage
+  useEffect(() => {
+    if (searchQuery.trim() === '') {
+      setFilteredCalculators([]);
+      setShowResults(false);
+      return;
+    }
+
+    const query = searchQuery.toLowerCase();
+    const allAvailableCalcs = allCalculators || currentCategoryCalcs;
+    const filtered = allAvailableCalcs.filter(calc =>
+      calc.name.toLowerCase().includes(query) ||
+      calc.summary.toLowerCase().includes(query)
+    );
+    setFilteredCalculators(filtered);
+    setShowResults(true);
+  }, [searchQuery, allCalculators, currentCategoryCalcs]);
+
+  // Close search results when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (!target.closest('.search-container')) {
+        setShowResults(false);
+      }
+    };
+
+    if (showResults) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [showResults]);
+
   // Category names for grouping
   const categoryNames: Record<string, Record<string, string>> = {
     financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculateurs Financiers', de: 'Finanzrechner', nl: 'Financiële Rekenmachines' },
@@ -143,13 +183,144 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
 
   return (
     <main className="min-h-screen bg-gray-50">
+      <CategoryNavigation lang={lang} />
+
+      {/* Floating Search Button */}
+      <button
+        onClick={() => setSearchOpen(!searchOpen)}
+        className="search-button fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-40 transition-all"
+        aria-label="Search calculators"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+
+      {/* Search Modal */}
+      {searchOpen && (
+        <div className="search-modal fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center pt-20">
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-2xl mx-4">
+            <div className="p-4">
+              <div className="flex items-center gap-2 mb-4">
+                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  value={floatingSearchQuery}
+                  onChange={(e) => setFloatingSearchQuery(e.target.value)}
+                  placeholder="Search calculators..."
+                  className="flex-1 text-lg border-0 focus:ring-0 outline-none"
+                  autoFocus
+                />
+                <button
+                  onClick={() => {
+                    setSearchOpen(false);
+                    setFloatingSearchQuery('');
+                  }}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              
+              {floatingSearchQuery.trim() && (
+                <div className="border-t border-gray-200 max-h-96 overflow-y-auto">
+                  {floatingSearchResults.length > 0 ? (
+                    <div>
+                      {floatingSearchResults.slice(0, 15).map((calc) => {
+                        const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+                        const calcCategory = (CALCULATOR_CATEGORIES as any)[calc.slug] || 'utility';
+                        const isPopular = isPopularCalculator(calc.slug, calcCategory);
+                        return (
+                          <Link
+                            key={calc.slug}
+                            href={`/${lang}/${calc.slug}`}
+                            onClick={() => {
+                              setSearchOpen(false);
+                              setFloatingSearchQuery('');
+                            }}
+                            className="block px-4 py-3 hover:bg-gray-50 border-b border-gray-100 last:border-0"
+                          >
+                            <div className="flex items-center gap-1">
+                              {isPopular && <span className="text-[10px] text-orange-500">★</span>}
+                              <span className="font-medium text-gray-900 text-sm">{shortName}</span>
+                            </div>
+                            <p className="text-xs text-gray-600 mt-1">{calc.summary}</p>
+                          </Link>
+                        );
+                      })}
+                      {floatingSearchResults.length > 15 && (
+                        <div className="px-4 py-2 text-xs text-gray-500 text-center border-t">
+                          +{floatingSearchResults.length - 15} more results
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="px-4 py-8 text-center text-gray-500">
+                      No calculators found for "{floatingSearchQuery}"
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       {categoryContent && (
         <>
-          {/* Hero Section - Blue Gradient */}
-          <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-2 sm:py-4">
+          {/* Hero Section - Blue Gradient with Search */}
+          <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-3 sm:py-5">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
-                <h1 className="text-xl sm:text-2xl font-bold mb-1 leading-tight">{categoryContent.title}</h1>
+                <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 leading-tight">{categoryContent.title}</h1>
+                
+                {/* Search Bar */}
+                <div className="max-w-md mx-auto relative search-container">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder={`🔍 Search ${category} calculators...`}
+                      className="w-full px-4 py-2 pl-10 text-gray-900 bg-white border-0 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-md text-sm"
+                    />
+                    {showResults && filteredCalculators.length > 0 && (
+                      <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-64 overflow-y-auto z-50">
+                        {filteredCalculators.slice(0, 10).map((calc) => {
+                          const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+                          const calcCategory = (CALCULATOR_CATEGORIES as any)[calc.slug] || 'utility';
+                          const isPopular = isPopularCalculator(calc.slug, calcCategory);
+                          return (
+                            <Link
+                              key={calc.slug}
+                              href={`/${lang}/${calc.slug}`}
+                              onClick={() => {
+                                setSearchQuery('');
+                                setShowResults(false);
+                              }}
+                              className="block px-4 py-2 text-left hover:bg-gray-50 border-b border-gray-100 last:border-0"
+                            >
+                              <div className="flex items-center gap-1">
+                                {isPopular && <span className="text-[10px] text-orange-500">★</span>}
+                                <span className="font-medium text-gray-900 text-sm">{shortName}</span>
+                              </div>
+                              <p className="text-xs text-gray-600 mt-0.5">{calc.summary}</p>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                    {showResults && filteredCalculators.length === 0 && searchQuery.trim() !== '' && (
+                      <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">
+                        <p className="text-gray-600 text-sm">No calculators found for "{searchQuery}"</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -167,20 +338,22 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
 
           <section className={`p-6 rounded-lg border-2 ${colors.bg} ${colors.border} mb-10`}>
             <div className="text-center mb-6">
-              <h2 className={`text-2xl font-bold mb-3 ${colors.text}`}>{categoryContent.title}</h2>
+              <h2 className={`text-lg sm:text-xl md:text-2xl font-bold mb-3 ${colors.text}`}>{categoryContent.title}</h2>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-2">
               {categoryCalcs.map((calc) => {
                 const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+                const isPopular = isPopularCalculator(calc.slug, category);
                 return (
                   <Link 
                     key={calc.slug} 
                     href={`/${lang}/${calc.slug}`} 
-                    className="text-blue-600 hover:underline text-xs sm:text-sm"
+                    className="text-blue-600 hover:underline text-xs sm:text-sm flex items-center gap-1"
                     aria-label={`${calc.name} - ${calc.summary}`}
                     title={`${calc.name} - ${calc.summary}`}
                   >
-                    {shortName}
+                    {isPopular && <span className="text-[10px] text-orange-500" title={`Popular: ${calc.name}`}>★</span>}
+                    <span>{shortName}</span>
                   </Link>
                 );
               })}
@@ -192,7 +365,7 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
             <section className="bg-white py-6 sm:py-8 mb-10">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-8">
-                  <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
                     Popular {categoryContent?.name?.replace(' Calculators', '') || category.charAt(0).toUpperCase() + category.slice(1)} Calculators
                   </h1>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-4xl">
@@ -206,11 +379,12 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
                       <Link 
                         key={calc.slug} 
                         href={`/${lang}/${calc.slug}`} 
-                        className="text-blue-600 hover:text-blue-800 hover:underline text-xs sm:text-sm font-medium transition-colors"
+                        className="text-blue-600 hover:text-blue-800 hover:underline text-xs sm:text-sm font-medium transition-colors flex items-center gap-1"
                         aria-label={`${calc.name} - ${calc.summary}`}
                         title={`${calc.name} - ${calc.summary}`}
                       >
-                        ⭐ {shortName}
+                        <span className="text-[10px] text-orange-500" title={`Popular: ${calc.name}`}>★</span>
+                        <span>{shortName}</span>
                       </Link>
                     );
                   })}
@@ -222,7 +396,7 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
           {/* Other Calculators Section - organized by OTHER categories, excluding duplicates */}
           <section className="mb-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">{t.otherCalculators}</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">{t.otherCalculators}</h2>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-4xl">
                 {t.explore}
               </p>
@@ -240,21 +414,23 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
                 return (
                   <div key={categoryKey} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="mb-4">
-                      <h3 className={`text-xl sm:text-2xl font-semibold mb-2 ${categoryColor.text}`}>{categoryTitle}</h3>
+                      <h3 className={`text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 ${categoryColor.text}`}>{categoryTitle}</h3>
                       <p className="text-xs sm:text-sm text-gray-600">{t.essential} {categoryTitle.toLowerCase()}</p>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                       {filteredCalcs.sort((a, b) => a.name.localeCompare(b.name)).map((calc) => {
                         const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+                        const isPopular = isPopularCalculator(calc.slug, categoryKey);
                         return (
                           <Link 
                             key={calc.slug} 
                             href={`/${lang}/${calc.slug}`} 
-                            className="text-blue-600 hover:text-blue-800 hover:underline text-xs sm:text-sm transition-colors"
+                            className="text-blue-600 hover:text-blue-800 hover:underline text-xs sm:text-sm transition-colors flex items-center gap-1"
                             aria-label={`${calc.name} - ${calc.summary}`}
                             title={`${calc.name} - ${calc.summary}`}
                           >
-                            {shortName}
+                            {isPopular && <span className="text-[10px] text-orange-500" title={`Popular: ${calc.name}`}>★</span>}
+                            <span>{shortName}</span>
                           </Link>
                         );
                       })}

@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import { isPopularCalculator } from '@/lib/popularCalculators';
+import { CALCULATOR_CATEGORIES } from '@/lib/categoryUtils';
 
 interface RelatedCalculator {
   slug: string;
@@ -49,19 +51,22 @@ export default function RelatedCalculatorsWidget({
         {widgetTitle}
       </h2>
 
-      {/* Simple Grid - 5 columns x 3 rows for 15 links */}
+      {/* Simple Grid - 5 columns x 4 rows for 20 links */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
         {displayCalculators.map((calc) => {
           const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+          const category = (CALCULATOR_CATEGORIES as any)[calc.slug] || 'utility';
+          const isPopular = isPopularCalculator(calc.slug, category);
           return (
             <Link
               key={calc.slug}
               href={`/${lang}/${calc.slug}`}
-              className="text-blue-600 hover:text-blue-800 hover:underline text-xs sm:text-sm leading-tight"
+              className="text-blue-600 hover:text-blue-800 hover:underline text-xs sm:text-sm leading-tight flex items-center gap-1"
               aria-label={`${calc.name} - ${calc.summary}`}
               title={`${calc.name} - ${calc.summary}`}
             >
-              {shortName}
+              {isPopular && <span className="text-[10px] text-orange-500" title={`Popular: ${calc.name}`}>★</span>}
+              <span>{shortName}</span>
             </Link>
           );
         })}

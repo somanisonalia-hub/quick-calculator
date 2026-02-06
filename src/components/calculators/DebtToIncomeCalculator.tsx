@@ -100,16 +100,17 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
 
   const t = translations[lang as keyof typeof translations] || translations.en;
 
-  const [monthlyIncome, setMonthlyIncome] = useState<number>(5000);
-  const [mortgageRent, setMortgageRent] = useState<number>(1200);
-  const [carLoans, setCarLoans] = useState<number>(400);
-  const [creditCards, setCreditCards] = useState<number>(200);
-  const [studentLoans, setStudentLoans] = useState<number>(300);
-  const [otherDebts, setOtherDebts] = useState<number>(100);
+  const [monthlyIncome, setMonthlyIncome] = useState<number | string>('5000');
+  const [mortgageRent, setMortgageRent] = useState<number | string>('1200');
+  const [carLoans, setCarLoans] = useState<number | string>('400');
+  const [creditCards, setCreditCards] = useState<number | string>('200');
+  const [studentLoans, setStudentLoans] = useState<number | string>('300');
+  const [otherDebts, setOtherDebts] = useState<number | string>('100');
   const [calculated, setCalculated] = useState(false);
 
-  const totalDebts = mortgageRent + carLoans + creditCards + studentLoans + otherDebts;
-  const dtiRatio = monthlyIncome > 0 ? (totalDebts / monthlyIncome) * 100 : 0;
+  const totalDebts = (Number(mortgageRent) || 0) + (Number(carLoans) || 0) + (Number(creditCards) || 0) + (Number(studentLoans) || 0) + (Number(otherDebts) || 0);
+  const income = Number(monthlyIncome) || 0;
+  const dtiRatio = income > 0 ? (totalDebts / income) * 100 : 0;
 
   const getInterpretation = () => {
     if (dtiRatio <= 20) return { level: t.excellent, rec: t.excellentRec, color: 'text-green-600' };
@@ -131,7 +132,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
             <input
               type="number"
               value={monthlyIncome}
-              onChange={(e) => setMonthlyIncome(Number(e.target.value))}
+              onChange={(e) => setMonthlyIncome(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -143,7 +144,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
             <input
               type="number"
               value={mortgageRent}
-              onChange={(e) => setMortgageRent(Number(e.target.value))}
+              onChange={(e) => setMortgageRent(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -155,7 +156,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
             <input
               type="number"
               value={carLoans}
-              onChange={(e) => setCarLoans(Number(e.target.value))}
+              onChange={(e) => setCarLoans(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -167,7 +168,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
             <input
               type="number"
               value={creditCards}
-              onChange={(e) => setCreditCards(Number(e.target.value))}
+              onChange={(e) => setCreditCards(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -179,7 +180,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
             <input
               type="number"
               value={studentLoans}
-              onChange={(e) => setStudentLoans(Number(e.target.value))}
+              onChange={(e) => setStudentLoans(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -191,7 +192,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
             <input
               type="number"
               value={otherDebts}
-              onChange={(e) => setOtherDebts(Number(e.target.value))}
+              onChange={(e) => setOtherDebts(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
             />
           </div>

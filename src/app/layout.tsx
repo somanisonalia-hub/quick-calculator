@@ -28,11 +28,8 @@ export const metadata: Metadata = {
   creator: "Quick Calculator",
   publisher: "Quick Calculator",
   icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: 'any' }
-    ],
-    shortcut: '/favicon.svg',
+    icon: '/favicon.svg',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: "website",

@@ -469,3 +469,103 @@ export function getAvailableCategories(language: string): string[] {
   );
   return availableKeys.map(key => key.replace(`${language}-categories-`, ''));
 }
+/**
+ * Get all calculators with their metadata for client-side use
+ * This works in client components without requiring fs
+ */
+export function getAllCalculatorsMetadata(language: string = 'en') {
+  const calculators: Array<{
+    slug: string;
+    name: string;
+    title: string;
+    summary: string;
+    icon?: string;
+    category?: string;
+    featured?: boolean;
+  }> = [];
+
+  // Get all calculator keys from registry
+  const calculatorKeys = Object.keys(contentRegistry).filter(key =>
+    key.startsWith('calculators-')
+  );
+
+  for (const key of calculatorKeys) {
+    const slug = key.replace('calculators-', '');
+    const content = contentRegistry[key];
+    
+    if (content && content[language]) {
+      const langContent = content[language];
+      calculators.push({
+        slug: langContent.slug || slug,
+        name: langContent.title || slug,
+        title: langContent.title || slug,
+        summary: langContent.summary || langContent.description || '',
+        icon: langContent.icon || getCalculatorIcon(slug),
+        category: langContent.category,
+        featured: langContent.featured || false
+      });
+    }
+  }
+
+  return calculators;
+}
+
+/**
+ * Get calculator icon by slug (fallback)
+ */
+function getCalculatorIcon(slug: string): string {
+  const iconMap: Record<string, string> = {
+    // Financial
+    'mortgage-calculator': '🏠',
+    'loan-calculator': '💰',
+    'savings-calculator': '💰',
+    'budget-calculator': '📊',
+    'credit-card-calculator': '💳',
+    'investment-calculator': '📈',
+    'retirement-calculator': '🏖️',
+    'tax-calculator': '💵',
+    'emi-calculator': '📊',
+    'car-loan-calculator': '🚗',
+    'income-tax-calculator': '💵',
+    'compound-interest-calculator': '💹',
+    'simple-interest-calculator': '💹',
+    'property-tax-calculator': '🏘️',
+    'sales-tax-calculator': '🛒',
+    
+    // Health
+    'bmi-calculator': '⚖️',
+    'calorie-calculator': '🍎',
+    'bmr-calculator': '🔥',
+    'body-fat-calculator': '🏋️',
+    'ideal-weight-calculator': '⚖️',
+    'protein-intake-calculator': '🥩',
+    'water-intake-calculator': '💧',
+    'tdee-calculator': '🔥',
+    'macro-calculator': '🍽️',
+    'calorie-deficit-calculator': '📉',
+    
+    // Math
+    'percentage-calculator': '📐',
+    'fraction-calculator': '🔢',
+    'average-calculator': '📊',
+    'ratio-calculator': '📏',
+    'scientific-calculator': '🧮',
+    'standard-deviation-calculator': '📈',
+    'circle-area-calculator': '⭕',
+    'pythagorean-theorem-calculator': '📐',
+    
+    // Lifestyle
+    'age-calculator': '🎂',
+    'tip-calculator': '🍽️',
+    'gpa-calculator': '🎓',
+    'date-calculator': '📅',
+    
+    // Utility
+    'word-counter': '📝',
+    'unit-converter': '🔄',
+    'currency-converter': '💱',
+    'password-generator': '🔐',
+    'numbers-to-words-converter': '🔤'
+  };
+  return iconMap[slug] || '🧮';
+}

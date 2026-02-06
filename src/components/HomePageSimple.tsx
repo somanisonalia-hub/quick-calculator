@@ -1,10 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { CalculatorInfo, CALCULATOR_CATEGORIES } from '@/lib/categoryUtils';
+import { CalculatorInfo, CALCULATOR_CATEGORIES, getAllCalculatorsForHomepage } from '@/lib/categoryUtils';
+import { isPopularCalculator } from '@/lib/popularCalculators';
+import CategoryNavigation from '@/components/CategoryNavigation';
 
 interface HomePageSimpleProps {
   language?: string;
@@ -13,6 +15,10 @@ interface HomePageSimpleProps {
 
 export default function HomePageSimple({ language = 'en', initialCalculators = [] }: HomePageSimpleProps) {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showResults, setShowResults] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [floatingSearchQuery, setFloatingSearchQuery] = useState('');
+  const [floatingSearchResults, setFloatingSearchResults] = useState<CalculatorInfo[]>([]);
 
   // Group calculators by category
   const categorizedCalculators = initialCalculators.reduce((acc, calc) => {
@@ -36,7 +42,46 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
           calc.keywords?.some(keyword => keyword.toLowerCase().includes(query)) ||
           calc.tags?.some(tag => tag.toLowerCase().includes(query));
       })
-    : null;
+    : [];
+
+  // Update search results visibility
+  useEffect(() => {
+    setShowResults(searchQuery.trim() !== '');
+  }, [searchQuery]);
+
+  // Close search results when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (!target.closest('.search-container')) {
+        setShowResults(false);
+      }
+      if (!target.closest('.search-modal') && !target.closest('.search-button')) {
+        setSearchOpen(false);
+      }
+    };
+
+    if (showResults || searchOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [showResults, searchOpen]);
+
+  // Floating search functionality
+  useEffect(() => {
+    if (floatingSearchQuery.trim() === '') {
+      setFloatingSearchResults([]);
+      return;
+    }
+
+    const allCalcs = getAllCalculatorsForHomepage(language);
+    const query = floatingSearchQuery.toLowerCase();
+    const filtered = allCalcs.filter(calc =>
+      calc.name.toLowerCase().includes(query) ||
+      calc.summary.toLowerCase().includes(query)
+    );
+    setFloatingSearchResults(filtered);
+  }, [floatingSearchQuery, language]);
 
   const content = {
     en: {
@@ -61,21 +106,33 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
       allCalculators: 'All Calculators',
       results: 'results',
       noResults: 'No calculators found matching your search.',
-      whyUse: 'Why Use Our Calculators?',
+      whyUse: 'Why Use Our Free Online Calculators?',
       benefits: {
-        fast: { title: 'Fast & Accurate', desc: 'Get instant results with our precisely programmed calculators. No need to download apps or create accounts - just start calculating immediately.' },
-        mobile: { title: 'Mobile Friendly', desc: 'All calculators work seamlessly on smartphones, tablets, and computers. Calculate on the go, wherever you are.' },
-        free: { title: '100% Free', desc: 'No hidden fees, no subscriptions, no ads blocking your calculations. Use any calculator as many times as you need, completely free.' },
-        privacy: { title: 'Privacy First', desc: 'Your calculations stay private. We don\'t store your data or track your inputs. Calculate with confidence and peace of mind.' }
+        fast: { 
+          title: 'Fast & Accurate Calculations', 
+          desc: 'Get instant, precise results with our professionally programmed online calculators. Each calculator uses verified formulas and algorithms to ensure accuracy. No need to download apps, install software, or create accounts - simply open your browser and start calculating immediately. Perfect for quick calculations at work, school, or home.'
+        },
+        mobile: { 
+          title: 'Mobile-Friendly & Cross-Platform', 
+          desc: 'All our calculators are fully responsive and work seamlessly on any device - smartphones (iPhone, Android), tablets (iPad, Samsung), laptops, and desktop computers. Whether you\'re using Chrome, Safari, Firefox, or Edge, our calculators provide the same smooth experience. Calculate anywhere, anytime, on any device with an internet connection.'
+        },
+        free: { 
+          title: '100% Free - No Hidden Costs', 
+          desc: 'Completely free to use with no hidden fees, premium subscriptions, or paywalls. No annoying ads blocking your calculations or interrupting your work flow. Unlimited access to all calculators - use them as many times as you need for personal, educational, or professional purposes. Free online tools designed to help everyone.'
+        },
+        privacy: { 
+          title: 'Privacy-Focused & Secure', 
+          desc: 'Your data privacy is our priority. We don\'t store, save, or track your calculation inputs or results. No registration required means your personal information stays private. All calculations are performed locally in your browser for maximum security. No data collection, no cookies tracking your activity, no selling your information to third parties.'
+        }
       },
-      popularCategories: 'Popular Calculator Categories',
-      popularCategoriesDesc: 'Our calculator collection covers a wide range of needs:',
+      popularCategories: 'Popular Calculator Categories for Every Need',
+      popularCategoriesDesc: 'Our comprehensive online calculator collection covers every aspect of daily life, work, and education:',
       categoryDetails: {
-        financial: 'Budget planning, loan calculations, salary conversions, tax estimations, and investment planning.',
-        health: 'BMI, calorie tracking, body fat percentage, ideal weight, and fitness goal planning.',
-        math: 'Scientific calculations, percentage calculations, geometry, algebra, and statistics.',
-        utility: 'Unit conversions, time zone calculations, date calculations, and measurement tools.',
-        lifestyle: 'Age calculations, tip calculators, discount calculations, and everyday life helpers.'
+        financial: 'Financial planning tools including mortgage calculators, loan payment calculators, compound interest calculators, investment return calculators, retirement planning, budget management, tax estimation, salary and income calculators, EMI calculators, and ROI calculators.',
+        health: 'Health and fitness calculators including BMI (Body Mass Index), BMR (Basal Metabolic Rate), TDEE (Total Daily Energy Expenditure), calorie counters, macro calculators, body fat percentage, ideal weight, pregnancy due date, water intake, and nutrition tracking tools.',
+        math: 'Mathematical tools for students and professionals including scientific calculators, percentage calculators, fraction calculators, algebra solvers, geometry calculators (area, volume, perimeter), statistics calculators (mean, median, mode, standard deviation), and trigonometry calculators.',
+        utility: 'Everyday utility tools including unit converters (length, weight, temperature, currency), time zone converters, date calculators, age calculators, word counters, number converters, and measurement conversion tools.',
+        lifestyle: 'Daily life helpers including age calculators, tip calculators, discount calculators, GPA calculators, love calculators, and other practical tools for everyday situations and quick calculations.'
       }
     },
     es: {
@@ -205,53 +262,155 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
   return (
     <div className="min-h-screen bg-white">
       <Header currentLang={language} />
+      <CategoryNavigation lang={language} />
+
+      {/* Floating Search Button */}
+      <button
+        onClick={() => setSearchOpen(!searchOpen)}
+        className="search-button fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-40 transition-all"
+        aria-label="Search calculators"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+
+      {/* Search Modal */}
+      {searchOpen && (
+        <div className="search-modal fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center pt-20">
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-2xl mx-4">
+            <div className="p-4">
+              <div className="flex items-center gap-2 mb-4">
+                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  value={floatingSearchQuery}
+                  onChange={(e) => setFloatingSearchQuery(e.target.value)}
+                  placeholder="Search calculators..."
+                  className="flex-1 text-lg border-0 focus:ring-0 outline-none"
+                  autoFocus
+                />
+                <button
+                  onClick={() => {
+                    setSearchOpen(false);
+                    setFloatingSearchQuery('');
+                  }}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              
+              {floatingSearchQuery.trim() && (
+                <div className="border-t border-gray-200 max-h-96 overflow-y-auto">
+                  {floatingSearchResults.length > 0 ? (
+                    <div>
+                      {floatingSearchResults.slice(0, 15).map((calc) => {
+                        const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+                        const category = (CALCULATOR_CATEGORIES as any)[calc.slug] || 'utility';
+                        const isPopular = isPopularCalculator(calc.slug, category);
+                        return (
+                          <Link
+                            key={calc.slug}
+                            href={`/${language}/${calc.slug}`}
+                            onClick={() => {
+                              setSearchOpen(false);
+                              setFloatingSearchQuery('');
+                            }}
+                            className="block px-4 py-3 hover:bg-gray-50 border-b border-gray-100 last:border-0"
+                          >
+                            <div className="flex items-center gap-1">
+                              {isPopular && <span className="text-[10px] text-orange-500">★</span>}
+                              <span className="font-medium text-gray-900 text-sm">{shortName}</span>
+                            </div>
+                            <p className="text-xs text-gray-600 mt-1">{calc.summary}</p>
+                          </Link>
+                        );
+                      })}
+                      {floatingSearchResults.length > 15 && (
+                        <div className="px-4 py-2 text-xs text-gray-500 text-center border-t">
+                          +{floatingSearchResults.length - 15} more results
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="px-4 py-8 text-center text-gray-500">
+                      No calculators found for "{floatingSearchQuery}"
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       <main className="max-w-6xl mx-auto px-4 py-8">
-        {/* Hero Section */}
-        <div className="mb-12 text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">{t.heroTitle}</h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            {t.heroDescription}
-          </p>
-          
-          <div className="max-w-2xl mx-auto">
-            <input
-              type="text"
-              placeholder={t.search}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-6 py-4 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
-            />
+        {/* Hero Section with Search */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-6 sm:py-8 px-4 sm:px-6 rounded-lg mb-12">
+          <div className="text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">{t.heroTitle}</h1>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-6 max-w-3xl mx-auto opacity-90">
+              {t.heroDescription}
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto relative search-container">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder={`🔍 ${t.search}`}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 sm:px-6 py-2 sm:py-3 pl-10 sm:pl-12 text-gray-900 bg-white border-0 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-md text-sm sm:text-base"
+                />
+                {showResults && filteredBySearch.length > 0 && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg max-h-96 overflow-y-auto z-50">
+                    {filteredBySearch.slice(0, 15).map((calc) => {
+                      const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+                      const category = CALCULATOR_CATEGORIES[calc.slug as keyof typeof CALCULATOR_CATEGORIES] || 'utility';
+                      const isPopular = isPopularCalculator(calc.slug, category);
+                      return (
+                        <Link
+                          key={calc.slug}
+                          href={`/${language}/${calc.slug}`}
+                          onClick={() => {
+                            setSearchQuery('');
+                            setShowResults(false);
+                          }}
+                          className="block px-4 py-3 text-left hover:bg-gray-50 border-b border-gray-100 last:border-0"
+                        >
+                          <div className="flex items-center gap-1">
+                            {isPopular && <span className="text-[10px] text-orange-500">★</span>}
+                            <span className="font-medium text-gray-900 text-sm">{shortName}</span>
+                          </div>
+                          <p className="text-xs text-gray-600 mt-1">{calc.summary}</p>
+                        </Link>
+                      );
+                    })}
+                    {filteredBySearch.length > 15 && (
+                      <div className="px-4 py-2 text-xs text-gray-500 text-center border-t border-gray-100">
+                        +{filteredBySearch.length - 15} more results
+                      </div>
+                    )}
+                  </div>
+                )}
+                {showResults && filteredBySearch.length === 0 && searchQuery.trim() !== '' && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">
+                    <p className="text-gray-600 text-sm text-center">{t.noResults}</p>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Search Results */}
-        {filteredBySearch && (
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              {filteredBySearch.length} {t.results}
-            </h2>
-            {filteredBySearch.length === 0 ? (
-              <p className="text-gray-600">{t.noResults}</p>
-            ) : (
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-2">
-                {filteredBySearch.map((calc) => (
-                  <Link
-                    key={calc.slug}
-                    href={`/${language}/${calc.slug}`}
-                    className="text-blue-600 hover:underline text-xs sm:text-sm"
-                  >
-                    {calc.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-
         {/* Categories */}
-        {!filteredBySearch && (
-          <div className="space-y-12">
+        <div className="space-y-12">
             {categoryOrder.map((categoryKey) => {
               const calcs = categorizedCalculators[categoryKey] || [];
               if (calcs.length === 0) return null;
@@ -275,26 +434,30 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
               return (
                 <section key={categoryKey} className={`p-6 rounded-lg border-2 ${categoryColors[categoryKey as keyof typeof categoryColors]}`}>
                   <div className="text-center mb-6">
-                    <h2 className={`text-3xl font-bold mb-3 ${titleColors[categoryKey as keyof typeof titleColors]}`}>
+                    <h2 className={`text-xl sm:text-2xl md:text-3xl font-bold mb-3 ${titleColors[categoryKey as keyof typeof titleColors]}`}>
                       {t.categories[categoryKey as keyof typeof t.categories]}
                     </h2>
-                    <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+                    <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
                       {t.categoryDescriptions[categoryKey as keyof typeof t.categoryDescriptions]}
                     </p>
                   </div>
                   
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-2">
-                    {calcs.map((calc) => (
-                      <Link
-                        key={calc.slug}
-                        href={`/${language}/${calc.slug}`}
-                        className="text-blue-600 hover:underline text-xs sm:text-sm"
-                        aria-label={`${calc.name} - ${calc.summary}`}
-                        title={`${calc.name} - ${calc.summary}`}
-                      >
-                        {calc.name}
-                      </Link>
-                    ))}
+                    {calcs.map((calc) => {
+                      const isPopular = isPopularCalculator(calc.slug, categoryKey);
+                      return (
+                        <Link
+                          key={calc.slug}
+                          href={`/${language}/${calc.slug}`}
+                          className="text-blue-600 hover:underline text-xs sm:text-sm flex items-center gap-1"
+                          aria-label={`${calc.name} - ${calc.summary}`}
+                          title={`${calc.name} - ${calc.summary}`}
+                        >
+                          {isPopular && <span className="text-[10px] text-orange-500" title={`Popular: ${calc.name}`}>★</span>}
+                          {calc.name}
+                        </Link>
+                      );
+                    })}
                   </div>
                 </section>
               );
@@ -312,63 +475,66 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
                     index === self.findIndex(c => c.slug === calc.slug)
                   )
                   .sort((a, b) => a.name.localeCompare(b.name))
-                  .map((calc) => (
-                    <Link
-                      key={calc.slug}
-                      href={`/${language}/${calc.slug}`}
-                      className="text-blue-600 hover:underline text-xs sm:text-sm"
-                      aria-label={`${calc.name} - ${calc.summary}`}
-                      title={`${calc.name} - ${calc.summary}`}
-                    >
-                      {calc.name}
-                    </Link>
-                  ))}
+                  .map((calc) => {
+                    const category = CALCULATOR_CATEGORIES[calc.slug as keyof typeof CALCULATOR_CATEGORIES] || 'utility';
+                    const isPopular = isPopularCalculator(calc.slug, category);
+                    return (
+                      <Link
+                        key={calc.slug}
+                        href={`/${language}/${calc.slug}`}
+                        className="text-blue-600 hover:underline text-xs sm:text-sm flex items-center gap-1"
+                        aria-label={`${calc.name} - ${calc.summary}`}
+                        title={`${calc.name} - ${calc.summary}`}
+                      >
+                        {isPopular && <span className="text-[10px] text-orange-500" title={`Popular: ${calc.name}`}>★</span>}
+                        {calc.name}
+                      </Link>
+                    );
+                  })}
               </div>
             </section>
           </div>
-        )}
 
-        {/* Why Use Our Calculators - only show when not searching */}
-        {!filteredBySearch && (
-          <div className="mt-16 mb-12 prose max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">{t.whyUse}</h2>
+        {/* Why Use Our Calculators */}
+        <div className="mt-16 mb-12 prose max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{t.whyUse}</h2>
             
-            <div className="grid md:grid-cols-2 gap-8 text-gray-700">
+            <div className="grid md:grid-cols-2 gap-6 text-gray-700">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.benefits.fast.title}</h3>
-                <p className="leading-relaxed">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.benefits.fast.title}</h3>
+                <p className="text-sm leading-relaxed">
                   {t.benefits.fast.desc}
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.benefits.mobile.title}</h3>
-                <p className="leading-relaxed">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.benefits.mobile.title}</h3>
+                <p className="text-sm leading-relaxed">
                   {t.benefits.mobile.desc}
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.benefits.free.title}</h3>
-                <p className="leading-relaxed">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.benefits.free.title}</h3>
+                <p className="text-sm leading-relaxed">
                   {t.benefits.free.desc}
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.benefits.privacy.title}</h3>
-                <p className="leading-relaxed">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.benefits.privacy.title}</h3>
+                <p className="text-sm leading-relaxed">
                   {t.benefits.privacy.desc}
                 </p>
               </div>
             </div>
 
             <div className="mt-10">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t.popularCategories}</h3>
-              <p className="text-lg leading-relaxed mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.popularCategories}</h3>
+              <p className="text-base leading-relaxed mb-3">
                 {t.popularCategoriesDesc}
               </p>
-              <ul className="list-disc list-inside space-y-2 text-lg">
+              <ul className="list-disc list-inside space-y-2 text-sm">
                 <li><strong>{t.categories.financial}:</strong> {t.categoryDetails.financial}</li>
                 <li><strong>{t.categories.health}:</strong> {t.categoryDetails.health}</li>
                 <li><strong>{t.categories.math}:</strong> {t.categoryDetails.math}</li>
@@ -377,7 +543,6 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
               </ul>
             </div>
           </div>
-        )}
       </main>
 
       <Footer currentLang={language} />

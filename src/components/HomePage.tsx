@@ -4,8 +4,10 @@ import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { getAllCalculatorsForHomepage, CALCULATOR_CATEGORIES, CalculatorInfo } from '@/lib/categoryUtils';
+import { isPopularCalculator } from '@/lib/popularCalculators';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import CategoryNavigation from '@/components/CategoryNavigation';
 
 interface HomePageProps {
   language?: string;
@@ -19,6 +21,9 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredCalculators, setFilteredCalculators] = useState<any[]>([]);
   const [showResults, setShowResults] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [floatingSearchQuery, setFloatingSearchQuery] = useState('');
+  const [floatingSearchResults, setFloatingSearchResults] = useState<any[]>([]);
 
   // Get current language from pathname
   const getCurrentLang = (path: string) => {
@@ -60,11 +65,30 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
       if (!target.closest('.search-container')) {
         setShowResults(false);
       }
+      if (!target.closest('.search-modal') && !target.closest('.search-button')) {
+        setSearchOpen(false);
+      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // Floating search functionality
+  useEffect(() => {
+    if (floatingSearchQuery.trim() === '') {
+      setFloatingSearchResults([]);
+      return;
+    }
+
+    const allCalcs = getAllCalculatorsForHomepage(currentLang);
+    const query = floatingSearchQuery.toLowerCase();
+    const filtered = allCalcs.filter(calc =>
+      calc.name.toLowerCase().includes(query) ||
+      calc.summary.toLowerCase().includes(query)
+    );
+    setFloatingSearchResults(filtered);
+  }, [floatingSearchQuery, currentLang]);
 
   // Comprehensive homepage content
   const content = {
@@ -115,8 +139,8 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
 
       // Utility Calculators
       utilityTitle: 'Utility Calculators',
-      utilityDesc: 'Utility Calculators: 3 calculators for productivity. Essential tools for everyday tasks like word counting, date calculations, and number conversions.',
-      utilityPopular: ['Word Counter', 'Numbers to Words Converter', 'Date Calculator'],
+      utilityDesc: 'Utility Calculators: 13 calculators for productivity. Essential tools for everyday tasks including word counting, date calculations, unit conversions, password generation, and more.',
+      utilityPopular: ['Word Counter', 'Unit Converter', 'Date Calculator', 'Age Calculator', 'Tip Calculator', 'Percentage Calculator', 'Discount Calculator', 'Currency Converter', 'Numbers to Words Converter', 'Password Generator', 'Ratio Calculator', 'Electricity Cost Calculator', 'Tank Volume Calculator'],
       exploreUtility: 'Explore utility calculators',
 
       // Why Use Section
@@ -205,8 +229,8 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
 
       // Utility Calculators
       utilityTitle: 'Calculadoras de Utilidad',
-      utilityDesc: 'Calculadoras de Utilidad: 3 calculadoras para productividad. Herramientas esenciales para tareas cotidianas como conteo de palabras, cálculos de fechas y conversiones de números.',
-      utilityPopular: ['Contador de Palabras', 'Convertidor Números a Palabras', 'Calculadora de Fecha'],
+      utilityDesc: 'Calculadoras de Utilidad: 13 calculadoras para productividad. Herramientas esenciales para tareas cotidianas incluyendo conteo de palabras, cálculos de fechas, conversiones de unidades, generación de contraseñas y más.',
+      utilityPopular: ['Contador de Palabras', 'Conversor de Unidades', 'Calculadora de Fechas', 'Calculadora de Edad', 'Calculadora de Propina', 'Calculadora de Porcentajes', 'Calculadora de Descuentos', 'Convertidor de Moneda', 'Convertidor de Números a Palabras', 'Generador de Contraseñas', 'Calculadora de Proporciones', 'Calculadora de Costo de Electricidad', 'Calculadora de Volumen de Tanque'],
       exploreUtility: 'Explorar calculadoras de utilidad',
 
       // Why Use Section
@@ -295,8 +319,8 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
 
       // Utility Calculators
       utilityTitle: 'Calculadoras de Utilitários',
-      utilityDesc: 'Calculadoras de Utilitários: 3 calculadoras para produtividade. Ferramentas essenciais para tarefas cotidianas como contagem de palavras, cálculos de datas e conversões de números.',
-      utilityPopular: ['Contador de Palavras', 'Conversor Números para Palavras', 'Calculadora de Data'],
+      utilityDesc: 'Calculadoras de Utilitários: 13 calculadoras para produtividade. Ferramentas essenciais para tarefas cotidianas incluindo contagem de palavras, cálculos de datas, conversões de unidades, geração de senhas e mais.',
+      utilityPopular: ['Contador de Palavras', 'Conversor de Unidades', 'Calculadora de Datas', 'Calculadora de Idade', 'Calculadora de Gorjeta', 'Calculadora de Porcentagem', 'Calculadora de Desconto', 'Conversor de Moeda', 'Conversor de Números para Palavras', 'Gerador de Senhas', 'Calculadora de Proporções', 'Calculadora de Custo de Eletricidade', 'Calculadora de Volume de Tanque'],
       exploreUtility: 'Explorar calculadoras de utilitários',
 
       // Why Use Section
@@ -385,8 +409,8 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
 
       // Utility Calculators
       utilityTitle: 'Calculateurs Utilitaires',
-      utilityDesc: 'Calculateurs Utilitaires: 3 calculateurs pour la productivité. Outils essentiels pour les tâches quotidiennes comme le comptage de mots, les calculs de dates et les conversions de nombres.',
-      utilityPopular: ['Compteur de Mots', 'Convertisseur Nombres en Lettres', 'Calculateur de Date'],
+      utilityDesc: 'Calculateurs Utilitaires: 13 calculateurs pour la productivité. Outils essentiels pour les tâches quotidiennes incluant le comptage de mots, les calculs de dates, les conversions d\'unités, la génération de mots de passe et plus encore.',
+      utilityPopular: ['Compteur de Mots', 'Convertisseur d\'Unités', 'Calculateur de Dates', 'Calculateur d\'Âge', 'Calculateur de Pourboire', 'Calculateur de Pourcentage', 'Calculatrice de Remise', 'Convertisseur de Devise', 'Convertisseur Chiffres en Lettres', 'Générateur de Mots de Passe', 'Calculateur de Proportions', 'Calculatrice des Coûts d\'Électricité', 'Calculateur de Volume de Réservoir'],
       exploreUtility: 'Explorer les calculateurs utilitaires',
 
       // Why Use Section
@@ -475,10 +499,98 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
   return (
     <main className="min-h-screen bg-gray-50">
       <Header currentLang={currentLang} />
+      <CategoryNavigation lang={currentLang} />
+
+      {/* Floating Search Button */}
+      <button
+        onClick={() => setSearchOpen(!searchOpen)}
+        className="search-button fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-40 transition-all"
+        aria-label="Search calculators"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+
+      {/* Search Modal */}
+      {searchOpen && (
+        <div className="search-modal fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center pt-20">
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-2xl mx-4">
+            <div className="p-4">
+              <div className="flex items-center gap-2 mb-4">
+                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  value={floatingSearchQuery}
+                  onChange={(e) => setFloatingSearchQuery(e.target.value)}
+                  placeholder="Search calculators..."
+                  className="flex-1 text-lg border-0 focus:ring-0 outline-none"
+                  autoFocus
+                />
+                <button
+                  onClick={() => {
+                    setSearchOpen(false);
+                    setFloatingSearchQuery('');
+                  }}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              
+              {floatingSearchQuery.trim() && (
+                <div className="border-t border-gray-200 max-h-96 overflow-y-auto">
+                  {floatingSearchResults.length > 0 ? (
+                    <div>
+                      {floatingSearchResults.slice(0, 15).map((calc) => {
+                        const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+                        const category = (CALCULATOR_CATEGORIES as any)[calc.slug] || 'utility';
+                        const isPopular = isPopularCalculator(calc.slug, category);
+                        return (
+                          <Link
+                            key={calc.slug}
+                            href={`/${currentLang}/${calc.slug}`}
+                            onClick={() => {
+                              setSearchOpen(false);
+                              setFloatingSearchQuery('');
+                            }}
+                            className="block px-4 py-3 hover:bg-gray-50 border-b border-gray-100 last:border-0"
+                          >
+                            <div className="flex items-center gap-1">
+                              {isPopular && <span className="text-[10px] text-orange-500">★</span>}
+                              <span className="font-medium text-gray-900 text-sm">{shortName}</span>
+                            </div>
+                            <p className="text-xs text-gray-600 mt-1">{calc.summary}</p>
+                          </Link>
+                        );
+                      })}
+                      {floatingSearchResults.length > 15 && (
+                        <div className="px-4 py-2 text-xs text-gray-500 text-center border-t">
+                          +{floatingSearchResults.length - 15} more results
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="px-4 py-8 text-center text-gray-500">
+                      No calculators found for "{floatingSearchQuery}"
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
-      <section id='calculator-search' className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-[10px]">
+      <section id='calculator-search' className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 sm:py-5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 leading-tight">{selectedContent.title}</h1>
+          
           {/* Search */}
           <div className="max-w-md mx-auto relative search-container">
             <div className="relative">
@@ -487,34 +599,37 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={`🔍 ${selectedContent.searchPrompt}`}
-                className="w-full px-4 py-3 pl-12 text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm"
+                className="w-full px-4 py-2 pl-10 text-gray-900 bg-white border-0 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-md text-sm"
               />
               {showResults && filteredCalculators.length > 0 && (
                 <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-64 overflow-y-auto z-50">
-                  {filteredCalculators.slice(0, 8).map((calc) => (
-                    <button
-                      key={calc.slug}
-                      onClick={() => {
-                        setSearchQuery('');
-                        setShowResults(false);
-                        router.push(createLink(`/${calc.slug}`));
-                      }}
-                      className="w-full px-4 py-3 text-left hover:bg-gray-50 border-b border-gray-100 last:border-b-0 focus:outline-none focus:bg-gray-50"
-                    >
-                      <div className="font-medium text-gray-900">{calc.name}</div>
-                      <div className="text-sm text-gray-600 truncate">{calc.summary}</div>
-                    </button>
-                  ))}
-                  {filteredCalculators.length > 8 && (
-                    <div className="px-4 py-2 text-sm text-gray-500 text-center border-t border-gray-100">
-                      {filteredCalculators.length - 8} more results...
-                    </div>
-                  )}
+                  {filteredCalculators.slice(0, 10).map((calc) => {
+                    const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+                    const calcCategory = (CALCULATOR_CATEGORIES as any)[calc.slug] || 'utility';
+                    const isPopular = isPopularCalculator(calc.slug, calcCategory);
+                    return (
+                      <Link
+                        key={calc.slug}
+                        href={createLink(`/${calc.slug}`)}
+                        onClick={() => {
+                          setSearchQuery('');
+                          setShowResults(false);
+                        }}
+                        className="block px-4 py-2 text-left hover:bg-gray-50 border-b border-gray-100 last:border-0"
+                      >
+                        <div className="flex items-center gap-1">
+                          {isPopular && <span className="text-[10px] text-orange-500">★</span>}
+                          <span className="font-medium text-gray-900 text-sm">{shortName}</span>
+                        </div>
+                        <p className="text-xs text-gray-600 mt-0.5">{calc.summary}</p>
+                      </Link>
+                    );
+                  })}
                 </div>
               )}
               {showResults && filteredCalculators.length === 0 && searchQuery.trim() !== '' && (
-                <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg p-4 text-center text-gray-500 z-50">
-                  No calculators found for "{searchQuery}"
+                <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">
+                  <p className="text-gray-600 text-sm">No calculators found for "{searchQuery}"</p>
                 </div>
               )}
             </div>
@@ -525,9 +640,9 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
       {/* Introduction/About Section */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 leading-tight text-blue-600">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 leading-tight text-blue-600">
             {selectedContent.title}
-          </h1>
+          </h2>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
             {selectedContent.introParagraph}
           </p>
@@ -676,25 +791,31 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                  {categoryGroup.calculators.map((calc, index) => (
-                    <Link 
-                      key={index} 
-                      href={createLink(`/${calc.slug}`)} 
-                      className="block"
-                      aria-label={`${calc.name} - ${calc.summary}`}
-                      title={`${calc.name} - ${calc.summary}`}
-                    >
-                      <div className={`${colors.bg} rounded-lg p-3 border ${colors.border} ${colors.hover} transition-all cursor-pointer h-full`}>
-                        <div className="flex items-start">
-                          <span className="text-xl mr-2 flex-shrink-0">{calc.icon}</span>
-                          <div className="flex-1 min-w-0">
-                            <h4 className={`font-semibold ${colors.text} text-sm mb-1 truncate`}>{calc.name}</h4>
-                            <p className="text-xs text-gray-600 line-clamp-2">{calc.summary}</p>
+                  {categoryGroup.calculators.map((calc, index) => {
+                    const isPopular = isPopularCalculator(calc.slug, categoryGroup.category);
+                    return (
+                      <Link 
+                        key={index} 
+                        href={createLink(`/${calc.slug}`)} 
+                        className="block"
+                        aria-label={`${calc.name} - ${calc.summary}`}
+                        title={`${calc.name} - ${calc.summary}`}
+                      >
+                        <div className={`${colors.bg} rounded-lg p-3 border ${colors.border} ${colors.hover} transition-all cursor-pointer h-full`}>
+                          <div className="flex items-start">
+                            <span className="text-xl mr-2 flex-shrink-0">{calc.icon}</span>
+                            <div className="flex-1 min-w-0">
+                              <h4 className={`font-semibold ${colors.text} text-sm mb-1 truncate flex items-center gap-1`}>
+                                {isPopular && <span className="text-[10px] text-orange-500" title={`Popular: ${calc.name}`}>★</span>}
+                                {calc.name}
+                              </h4>
+                              <p className="text-xs text-gray-600 line-clamp-2">{calc.summary}</p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </Link>
-                  ))}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             );

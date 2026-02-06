@@ -93,22 +93,26 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
 
   const t = translations[lang as keyof typeof translations] || translations.en;
 
-  const [loanAmount, setLoanAmount] = useState(10000);
-  const [totalInterest, setTotalInterest] = useState(1200);
-  const [loanYears, setLoanYears] = useState(1);
+  const [loanAmount, setLoanAmount] = useState<number | string>('10000');
+  const [totalInterest, setTotalInterest] = useState<number | string>('1200');
+  const [loanYears, setLoanYears] = useState<number | string>('1');
   const [results, setResults] = useState<any>({});
 
   const calculateBasicAPR = () => {
-    if (loanAmount <= 0 || totalInterest < 0 || loanYears <= 0) {
+    const loanAmt = Number(loanAmount) || 0;
+    const interest = Number(totalInterest) || 0;
+    const years = Number(loanYears) || 0;
+
+    if (loanAmt <= 0 || interest < 0 || years <= 0) {
       setResults({});
       return;
     }
 
     // Basic APR = (Total Interest / Loan Amount) / Years × 100
-    const apr = (totalInterest / loanAmount) / loanYears * 100;
+    const apr = (interest / loanAmt) / years * 100;
     const interestRate = apr; // Same as APR for basic calculation
-    const totalAmount = loanAmount + totalInterest;
-    const costAnalysis = `${t.currency}${totalInterest.toLocaleString()} finance charges on ${t.currency}${loanAmount.toLocaleString()} loan = ${apr.toFixed(2)}% APR`;
+    const totalAmount = loanAmt + interest;
+    const costAnalysis = `${t.currency}${interest.toLocaleString()} finance charges on ${t.currency}${loanAmt.toLocaleString()} loan = ${apr.toFixed(2)}% APR`;
 
     setResults({
       apr: apr.toFixed(2),
@@ -119,9 +123,9 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
   };
 
   const resetCalculator = () => {
-    setLoanAmount(10000);
-    setTotalInterest(1200);
-    setLoanYears(1);
+    setLoanAmount('10000');
+    setTotalInterest('1200');
+    setLoanYears('1');
     setResults({});
   };
 
@@ -158,7 +162,7 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
                 <input
                   type="number"
                   value={loanAmount}
-                  onChange={(e) => setLoanAmount(Number(e.target.value) || 0)}
+                  onChange={(e) => setLoanAmount(e.target.value)}
                   className="w-full pl-8 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   step="100"
                   min="1"
@@ -173,7 +177,7 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
                 <input
                   type="number"
                   value={totalInterest}
-                  onChange={(e) => setTotalInterest(Number(e.target.value) || 0)}
+                  onChange={(e) => setTotalInterest(e.target.value)}
                   className="w-full pl-8 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   step="10"
                   min="0"
@@ -186,7 +190,7 @@ export default function BasicAPRCalculator({ lang = 'en' }: BasicAPRCalculatorPr
               <input
                 type="number"
                 value={loanYears}
-                onChange={(e) => setLoanYears(Number(e.target.value) || 1)}
+                onChange={(e) => setLoanYears(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 step="0.0833"
                 min="0.0833"

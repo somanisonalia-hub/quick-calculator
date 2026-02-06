@@ -164,40 +164,42 @@ export const manualCalculatorRelationships: Record<string, CalculatorRelation[]>
 /**
  * Get related calculators for a specific calculator
  * Language-aware: Only returns calculators available in the specified language
+ * PRIORITIZES high-traffic calculators from getPopularCalculators
  * @param slug - The calculator slug
  * @param language - The language code (en, es, pt, fr)
  * @param limit - Maximum number of related calculators to return
  * @returns Array of related calculator objects
  */
 export function getRelatedCalculators(slug: string, language: string = 'en', limit: number = 6): CalculatorRelation[] {
-  // Get manual relationships first (if they exist)
-  const manualRelations = manualCalculatorRelationships[slug] || [];
-  
   // Get all available calculators in this language
   const availableInLanguage = getAvailableCalculators(language);
   
-  // Filter manual relations to only include those available in this language
-  let filteredRelations = manualRelations.filter(calc => 
-    availableInLanguage.includes(calc.slug)
-  );
-
-  // If we have enough relations, return them
-  if (filteredRelations.length >= limit) {
-    return filteredRelations.slice(0, limit);
-  }
-
-  // If not enough manual relations, add popular calculators that are available in this language
-  const popular = getPopularCalculators(language, limit);
-  const uniqueSlugs = new Set(filteredRelations.map(r => r.slug));
+  // Start with high-traffic popular calculators (prioritized)
+  const popular = getPopularCalculators(language, limit * 2); // Get more to filter from
+  let result: CalculatorRelation[] = [];
+  const addedSlugs = new Set<string>();
   
+  // Exclude the current calculator
+  addedSlugs.add(slug);
+  
+  // Add popular calculators first (high-traffic priority)
   for (const calc of popular) {
-    if (!uniqueSlugs.has(calc.slug) && filteredRelations.length < limit) {
-      filteredRelations.push(calc);
-      uniqueSlugs.add(calc.slug);
+    if (!addedSlugs.has(calc.slug) && result.length < limit) {
+      result.push(calc);
+      addedSlugs.add(calc.slug);
+    }
+  }
+  
+  // If we still need more, add from manual relationships
+  const manualRelations = manualCalculatorRelationships[slug] || [];
+  for (const calc of manualRelations) {
+    if (!addedSlugs.has(calc.slug) && availableInLanguage.includes(calc.slug) && result.length < limit) {
+      result.push(calc);
+      addedSlugs.add(calc.slug);
     }
   }
 
-  return filteredRelations.slice(0, limit);
+  return result.slice(0, limit);
 }
 
 /**
@@ -211,51 +213,63 @@ export function getPopularCalculators(language: string = 'en', limit: number = 6
   const availableInLanguage = getAvailableCalculators(language);
   
   // Pre-defined popular calculators from each category for better cross-promotion
+  // Ordered by traffic potential (monthly searches) based on HIGH-TRAFFIC-CALCULATORS-PLAN.md
   const categoryPopulars: Record<string, string[]> = {
     financial: [
-      'mortgage-calculator',
-      'loan-calculator',
-      'investment-calculator',
-      'retirement-calculator',
-      'tax-calculator',
-      'salary-calculator',
-      'debt-payoff-calculator',
-      'compound-interest-calculator',
+      'mortgage-calculator',          // 150K searches - High CPC $2-5
+      'compound-interest-calculator', // 90K searches - CPC $1-3
+      'loan-calculator',              // 60K searches - High CPC $2-4
+      'debt-payoff-calculator',       // 55K searches - High CPC $2-4
+      'investment-calculator',        // High value
+      'retirement-calculator',        // Repeat visitors
+      'tax-calculator',               // Seasonal traffic
+      'salary-calculator',            // Regular searches
     ],
     health: [
-      'bmi-calculator',
-      'calorie-calculator',
-      'tdee-calculator',
-      'pregnancy-calculator',
-      'body-fat-calculator',
-      'protein-intake-calculator',
-      'ideal-weight-calculator',
-      'bmr-calculator',
+      'bmi-calculator',               // 250K searches - Highest traffic
+      'pregnancy-calculator',         // 110K searches - Dedicated audience
+      'calorie-deficit-calculator',   // 65K searches - Weight loss focus
+      'protein-calculator',           // 45K searches - Fitness audience
+      'tdee-calculator',              // Popular fitness tool
+      'calorie-calculator',           // Daily use
+      'body-fat-calculator',          // Health metrics
+      'ideal-weight-calculator',      // Goal setting
+      'bmr-calculator',               // Metabolism tracking
     ],
     math: [
-      'percentage-calculator',
-      'grade-calculator',
-      'unit-converter',
-      'percentage-change-calculator',
-      'date-calculator',
-      'tip-calculator',
-      'average-calculator',
-      'fraction-calculator',
+      'percentage-change-calculator', // 110K searches - Business + students
+      'grade-calculator',             // 80K searches - Student traffic
+      'percentage-calculator',        // Broad audience
+      'tip-calculator',               // 90K searches - Daily use
+      'discount-calculator',          // 85K searches - Shopping seasons
+      'date-calculator',              // 75K searches - Planning tool
+      'unit-converter',               // 200K+ searches - Essential tool
+      'average-calculator',           // Student traffic
+      'fraction-calculator',          // Math students
     ],
     lifestyle: [
-      'pregnancy-calculator',
-      'ovulation-calculator',
-      'sleep-calculator',
-      'water-intake-calculator',
-      'pace-calculator',
-      'trip-planner-calculator',
+      'pregnancy-calculator',         // 110K searches - Dedicated audience
+      'pet-age-calculator',           // 40K searches - Pet owners
+      'tip-calculator',               // 90K searches - Daily dining
+      'date-calculator',              // 75K searches - Event planning
+      'age-calculator',               // Personal interest
+      'ovulation-calculator',         // Family planning
+      'sleep-calculator',             // Health conscious
+      'water-intake-calculator',      // Fitness tracking
     ],
     utility: [
-      'concrete-calculator',
-      'unit-conveersion-calculator',
-      'currency-converter',
-      'password-generator',
-      'word-counter',
+      'unit-converter',               // 200K+ searches - Most popular
+      'tip-calculator',               // 90K searches - Daily use
+      'discount-calculator',          // 85K searches - Shopping tool
+      'date-calculator',              // 75K searches - Planning
+      'paint-calculator',             // 65K searches - High CPC $1-2.5
+      'fuel-economy-calculator',      // 60K searches - Gas prices
+      'electricity-cost-calculator',  // 50K searches - High CPC $2-4
+      'concrete-calculator',          // 45K searches - Construction
+      'roof-pitch-calculator',        // 35K searches - High CPC $2-4
+      'currency-converter',           // International travel
+      'password-generator',           // Security tool
+      'word-counter',                 // Content creators
     ],
   };
 

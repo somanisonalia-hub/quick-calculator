@@ -2,9 +2,12 @@
 
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { renderStructuredSEOContent, SEOContent } from '@/lib/seoContentRenderer';
 import { getCalculatorComponent } from '@/components/calculators/CalculatorRegistry';
 import { getRelatedCalculators } from '@/lib/calculatorRelationships';
+import { getAllCalculatorsForHomepage, CALCULATOR_CATEGORIES } from '@/lib/categoryUtils';
+import { isPopularCalculator } from '@/lib/popularCalculators';
 import BreadcrumbNavigation from './BreadcrumbNavigation';
 // import AdSenseUnit from './AdSenseUnit'; // TODO: Enable after AdSense approval
 import RelatedCalculatorsWidget from './RelatedCalculatorsWidget';
@@ -25,6 +28,9 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
   const [relatedCalculators, setRelatedCalculators] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<any[]>([]);
 
   // Create a translation function that uses the lang prop
   const tLang = (key: string, fallback?: string) => {
@@ -55,6 +61,37 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
     }
   }, [lang, i18n]);
 
+  // Search functionality
+  useEffect(() => {
+    if (searchQuery.trim() === '') {
+      setSearchResults([]);
+      return;
+    }
+
+    const allCalcs = getAllCalculatorsForHomepage(lang);
+    const query = searchQuery.toLowerCase();
+    const filtered = allCalcs.filter(calc =>
+      calc.name.toLowerCase().includes(query) ||
+      calc.summary.toLowerCase().includes(query)
+    );
+    setSearchResults(filtered);
+  }, [searchQuery, lang]);
+
+  // Close search when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (!target.closest('.search-modal') && !target.closest('.search-button')) {
+        setSearchOpen(false);
+      }
+    };
+
+    if (searchOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [searchOpen]);
+
   // Load calculator content and related calculators
   useEffect(() => {
     if (calculatorContent && relatedCalculators.length > 0) return; // Already loaded
@@ -66,7 +103,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
 
       // If no related calculators provided, get them from the relationships mapping
       if (related.length === 0) {
-        related = getRelatedCalculators(slug, lang, 6) as any[];
+        related = getRelatedCalculators(slug, lang, 20) as any[];
       }
 
       if (content && content.title) {
@@ -116,6 +153,91 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Floating Search Button */}
+      <button
+        onClick={() => setSearchOpen(!searchOpen)}
+        className="search-button fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-40 transition-all"
+        aria-label="Search calculators"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+
+      {/* Search Modal */}
+      {searchOpen && (
+        <div className="search-modal fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center pt-20">
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-2xl mx-4">
+            <div className="p-4">
+              <div className="flex items-center gap-2 mb-4">
+                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search calculators..."
+                  className="flex-1 text-lg border-0 focus:ring-0 outline-none"
+                  autoFocus
+                />
+                <button
+                  onClick={() => {
+                    setSearchOpen(false);
+                    setSearchQuery('');
+                  }}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              
+              {searchQuery.trim() && (
+                <div className="border-t border-gray-200 max-h-96 overflow-y-auto">
+                  {searchResults.length > 0 ? (
+                    <div>
+                      {searchResults.slice(0, 15).map((calc) => {
+                        const shortName = calc.name.split(/\s+[-–]\s+/)[0].trim();
+                        const category = (CALCULATOR_CATEGORIES as any)[calc.slug] || 'utility';
+                        const isPopular = isPopularCalculator(calc.slug, category);
+                        return (
+                          <Link
+                            key={calc.slug}
+                            href={`/${lang}/${calc.slug}`}
+                            onClick={() => {
+                              setSearchOpen(false);
+                              setSearchQuery('');
+                            }}
+                            className="block px-4 py-3 hover:bg-gray-50 border-b border-gray-100 last:border-0"
+                          >
+                            <div className="flex items-center gap-1">
+                              {isPopular && <span className="text-[10px] text-orange-500">★</span>}
+                              <span className="font-medium text-gray-900 text-sm">{shortName}</span>
+                            </div>
+                            <p className="text-xs text-gray-600 mt-1">{calc.summary}</p>
+                          </Link>
+                        );
+                      })}
+                      {searchResults.length > 15 && (
+                        <div className="px-4 py-2 text-xs text-gray-500 text-center border-t">
+                          +{searchResults.length - 15} more results
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="px-4 py-8 text-center text-gray-500">
+                      No calculators found for "{searchQuery}"
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Breadcrumb Navigation */}
       {breadcrumbs && breadcrumbs.length > 0 && (
         <BreadcrumbNavigation breadcrumbs={breadcrumbs} currentLang={lang} />
@@ -126,7 +248,19 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 leading-tight">
-              {calculatorContent.seoTitle || calculatorContent.title}
+              {(() => {
+                const titleText = calculatorContent.seoTitle || calculatorContent.title;
+                if (titleText.includes(' - ')) {
+                  const [mainTitle, subtitle] = titleText.split(' - ');
+                  return (
+                    <>
+                      <span className="block">{mainTitle}</span>
+                      <span className="block text-base sm:text-lg md:text-xl font-normal mt-1">{subtitle}</span>
+                    </>
+                  );
+                }
+                return titleText;
+              })()}
             </h1>
           </div>
         </div>
@@ -218,22 +352,22 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
 
             {/* SEO Content Section */}
             <section className="bg-gradient-to-br from-slate-50 to-white rounded-xl shadow-lg border border-slate-200 overflow-hidden mb-6">
-              <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 px-6 py-4">
+              <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 px-4 sm:px-6 py-3 sm:py-4">
                 <div className="flex items-center">
-                  <svg className="w-6 h-6 mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <h2 className="text-xl font-bold text-white">{tLang('calculator.completeGuide')}</h2>
+                  <h2 className="text-sm sm:text-base md:text-lg font-bold text-white">{tLang('calculator.completeGuide')}</h2>
                 </div>
               </div>
-              <div className="p-[50px]">
+              <div className="p-4 sm:p-6 md:p-8">
                 {(() => {
                   // Use pre-generated structured SEO content if available
                   if (seoContent) {
                     // Render the structured SEO content
                     return (
-                      <div className="space-y-6">
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                      <div className="space-y-4 sm:space-y-6">
+                        <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">
                           {tLang('calculator.howDoesWork')} {calculatorContent?.title || 'Calculator'} Work?
                         </h2>
                         <div
@@ -245,12 +379,12 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                     );
                   } else {
                     return (
-                      <div className="text-center py-8 text-gray-500">
-                        <svg className="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="text-center py-6 sm:py-8 text-gray-500">
+                        <svg className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
-                        <h2 className="text-2xl font-semibold mb-2">{tLang('calculator.howDoesWork')} {calculatorContent?.title || 'Calculator'} Work?</h2>
-                        <p className="mt-2">{tLang('calculator.guideComingSoon')}</p>
+                        <h2 className="text-base sm:text-lg md:text-xl font-semibold mb-2">{tLang('calculator.howDoesWork')} {calculatorContent?.title || 'Calculator'} Work?</h2>
+                        <p className="mt-2 text-sm sm:text-base">{tLang('calculator.guideComingSoon')}</p>
                       </div>
                     );
                   }
