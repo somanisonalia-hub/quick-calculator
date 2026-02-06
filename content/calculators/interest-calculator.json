@@ -465,5 +465,297 @@
       ]
     },
     "component": "InterestCalculator"
+  },
+  "de": {
+    "title": "Zinsrechner",
+    "seoTitle": "Zinsrechner - Wie viele Zinsen werde ich verdienen?",
+    "metaDescription": "Kostenloser Zinsrechner zur Berechnung einfacher und Zinseszinsen. Berechnen Sie verdiente Zinsen auf Ersparnisse, Investitionen und Kredite mit detaillierten Aufschlüsselungen.",
+    "keywords": [
+      "Zinsrechner",
+      "einfacher Zinsrechner",
+      "Zinseszinsrechner",
+      "Zinsen berechnen",
+      "Zinssatzrechner"
+    ],
+    "longTailKeywords": [
+      "wie Zinsen auf Ersparnisse berechnen",
+      "Zinseszinsrechner online",
+      "einfache vs Zinseszinsen Rechner",
+      "Zinsen auf Kredit berechnen",
+      "verdiente Zinsen Rechner"
+    ],
+    "slug": "interest-calculator",
+    "category": "financial",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Hauptwert",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Sekundärer Wert",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Ergebnis = Wert1 × Wert2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Berechnetes Ergebnis",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Prozentsatz",
+          "unit": "%"
+        }
+      ]
+    },
+    "difficulty": "einfach",
+    "tags": [
+      "Zinsen",
+      "Zinseszins",
+      "einfach",
+      "Investition",
+      "Ersparnisse"
+    ],
+    "summary": "Berechnen Sie einfache und Zinseszinsen auf Investitionen, Ersparnisse und Kredite.",
+    "description": "Unser umfassender Zinsrechner hilft Ihnen, sowohl einfache als auch Zinseszinsen zu berechnen. Perfekt zum Verständnis, wie Ihr Geld im Laufe der Zeit mit verschiedenen Zinsarten und Verzinsungsfrequenzen wächst.",
+    "instructions": [
+      "Wählen Sie die Art der Zinsberechnung (Einfach oder Zinseszins)",
+      "Geben Sie den Hauptbetrag ein",
+      "Geben Sie den Zinssatz ein (jährlich)",
+      "Geben Sie die Zeitperiode an",
+      "Wählen Sie die Verzinsungsfrequenz für Zinseszins",
+      "Klicken Sie auf Berechnen, um Ihre Ergebnisse zu sehen"
+    ],
+    "seoContent": {
+      "metaTitle": "Kostenloser Zinsrechner - Berechnen Sie Einfache & Zinseszinsen",
+      "metaDescription": "Berechnen Sie einfache und Zinseszinsen auf Ersparnisse, Investitionen und Kredite. Unterstützt mehrere Verzinsungsfrequenzen mit detaillierten Aufschlüsselungen. Kostenlos und einfach zu bedienen.",
+      "h1": "Zinsrechner - Einfache & Zinseszinsen",
+      "keywords": "Zinsrechner, einfache Zinsen, Zinseszinsen, Zinsen berechnen, Verzinsung, Zinserträge",
+      "introduction": "Verstehen Sie, wie Ihr Geld mit unserem umfassenden Zinsrechner im Laufe der Zeit wächst. Ob Sie einfache Zinsen auf ein Sparkonto oder Zinseszinsen auf eine langfristige Investition berechnen, unser Rechner liefert detaillierte Aufschlüsselungen und hilft Ihnen, fundierte finanzielle Entscheidungen zu treffen. Unterstützt mehrere Verzinsungsfrequenzen und bietet klare Vergleiche zwischen einfachen und Zinseszinsen.",
+      "benefits": [
+        "Berechnen Sie sowohl einfache als auch Zinseszinsen sofort",
+        "Vergleichen Sie verschiedene Verzinsungsfrequenzen",
+        "Verstehen Sie die Kraft der Verzinsung im Laufe der Zeit",
+        "Sehen Sie detaillierte Aufschlüsselungen Ihrer Zinserträge",
+        "Treffen Sie informierte Spar- und Investitionsentscheidungen",
+        "Verwenden Sie für Kredit- oder Sparszenarien"
+      ],
+      "steps": [
+        "Wählen Sie zwischen Berechnung Einfacher oder Zinseszinsen",
+        "Geben Sie Ihren Hauptbetrag ein (Anfangsinvestition oder Kreditbetrag)",
+        "Geben Sie den jährlichen Zinssatz in Prozent ein",
+        "Geben Sie die Zeitperiode in Jahren an",
+        "Für Zinseszins wählen Sie die Verzinsungsfrequenz",
+        "Überprüfen Sie Ihre Berechnungsergebnisse und Aufschlüsselungen"
+      ],
+      "inputsExplained": [
+        "Hauptbetrag: Der Anfangsbetrag, auf den Sie Zinsen berechnen",
+        "Zinssatz: Jährlicher Zinssatz in Prozent ausgedrückt",
+        "Zeitperiode: Anzahl der Jahre, in denen das Geld Zinsen verdienen wird",
+        "Verzinsungsfrequenz: Wie oft Zinsen dem Hauptbetrag hinzugefügt werden (für Zinseszins)"
+      ],
+      "formulaExplanation": "Einfache Zinsen = P × r × t wobei P Hauptbetrag, r Zinssatz, t Zeit ist. Zinseszinsen = P × (1 + r/n)^(n×t) - P wobei n Verzinsungsfrequenz ist.",
+      "examples": [
+        "Einfache Zinsen: 1.000 € zu 5% über 3 Jahre = 150 € Zinsen, insgesamt 1.150 €",
+        "Zinseszins (vierteljährlich): 1.000 € zu 5% über 3 Jahre = 161,22 € Zinsen, insgesamt 1.161,22 €",
+        "Monatliche Verzinsung: Gleiche Investition = 161,67 € Zinsen, insgesamt 1.161,67 €"
+      ],
+      "resultsExplanation": [
+        "Verdiente Zinsen: Gesamtzinsen, die über den Zeitraum angesammelt wurden",
+        "Zukünftiger Wert: Hauptbetrag plus alle angesammelten Zinsen",
+        "Jährliches Äquivalent: Effektiver jährlicher Zinssatz",
+        "Detaillierte Aufschlüsselungen zeigen, wie Zinsen im Laufe der Zeit wachsen"
+      ],
+      "whoItsFor": "Studenten, die Zinsberechnungen lernen, Investoren, die Portfolios planen, Sparer, die Konten vergleichen, Kreditnehmer, die Kreditkosten verstehen, und alle, die daran interessiert sind, wie Geld im Laufe der Zeit wächst.",
+      "disclaimer": "Dieser Rechner liefert mathematische Berechnungen basierend auf den bereitgestellten Formeln. Tatsächliche Zinssätze und Verzinsungsmethoden können je nach Finanzinstitut variieren. Überprüfen Sie immer mit Ihrer Bank oder Ihrem Finanzberater für reale Anwendungen.",
+      "faqs": [
+        {
+          "question": "Was ist der Unterschied zwischen einfachen und Zinseszinsen?",
+          "answer": "Einfache Zinsen werden nur auf den Hauptbetrag berechnet und werden nicht verzinst. Zinseszinsen werden auf den Hauptbetrag und zuvor verdiente Zinsen berechnet, sodass Ihr Geld im Laufe der Zeit schneller wachsen kann."
+        },
+        {
+          "question": "Wie oft sollten Zinsen verzinst werden?",
+          "answer": "Häufigere Verzinsung (täglich, monatlich, vierteljährlich) ergibt höhere Renditen als jährliche Verzinsung. Der Unterschied wird jedoch über längere Zeiträume signifikanter."
+        },
+        {
+          "question": "Funktioniert dieser Rechner für Kredite?",
+          "answer": "Ja, die gleichen Zinsberechnungsprinzipien gelten für Kredite. Der Rechner zeigt, wie viel Zinsen Sie im Laufe der Zeit zahlen werden, obwohl Kreditzahlungen auch die Rückzahlung des Hauptbetrags beinhalten."
+        },
+        {
+          "question": "Was ist die Regel von 72?",
+          "answer": "Die Regel von 72 ist eine schnelle Möglichkeit abzuschätzen, wie lange es dauert, bis sich eine Investition verdoppelt. Teilen Sie 72 durch den Zinssatz, um die ungefähre Anzahl der Jahre zu erhalten."
+        },
+        {
+          "question": "Welche Verzinsungsfrequenz ist am besten?",
+          "answer": "Häufigere Verzinsung führt zu höheren Gesamtrenditen. Tägliche Verzinsung bietet die höchsten Renditen, gefolgt von monatlicher, vierteljährlicher und jährlicher Verzinsung."
+        },
+        {
+          "question": "Kann ich dies für Sparkonten verwenden?",
+          "answer": "Absolut! Dieser Rechner ist perfekt für Sparkonten. Geben Sie einfach Ihr Anfangsguthaben, den Zinssatz der Bank und die gewünschte Zeitperiode ein, um zu sehen, wie Ihre Ersparnisse wachsen werden."
+        }
+      ]
+    },
+    "component": "InterestCalculator"
+  },
+  "nl": {
+    "title": "Rente Rekenmachine",
+    "seoTitle": "Rente Rekenmachine - Hoeveel Rente Zal Ik Verdienen?",
+    "metaDescription": "Gratis rente rekenmachine om eenvoudige en samengestelde rente te berekenen. Bereken verdiende rente op spaargeld, investeringen en leningen met gedetailleerde uitsplitsingen.",
+    "keywords": [
+      "rente rekenmachine",
+      "eenvoudige rente rekenmachine",
+      "samengestelde rente rekenmachine",
+      "rente berekenen",
+      "rentepercentage rekenmachine"
+    ],
+    "longTailKeywords": [
+      "hoe rente op spaargeld berekenen",
+      "samengestelde rente rekenmachine online",
+      "eenvoudige vs samengestelde rente rekenmachine",
+      "rente op lening berekenen",
+      "verdiende rente rekenmachine"
+    ],
+    "slug": "interest-calculator",
+    "category": "financial",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primaire Waarde",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondaire Waarde",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Resultaat = Waarde1 × Waarde2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Berekend Resultaat",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "difficulty": "basis",
+    "tags": [
+      "rente",
+      "samengesteld",
+      "eenvoudig",
+      "investering",
+      "spaargeld"
+    ],
+    "summary": "Bereken eenvoudige en samengestelde rente op investeringen, spaargeld en leningen.",
+    "description": "Onze uitgebreide rente rekenmachine helpt u zowel eenvoudige als samengestelde rente te berekenen. Perfect om te begrijpen hoe uw geld in de loop van de tijd groeit met verschillende rentetypes en samenstellingsfrequenties.",
+    "instructions": [
+      "Selecteer het type renteberekening (Eenvoudig of Samengesteld)",
+      "Voer het hoofdbedrag in",
+      "Voer het rentepercentage in (jaarlijks)",
+      "Specificeer de tijdsperiode",
+      "Kies samenstellingsfrequentie voor samengestelde rente",
+      "Klik op berekenen om uw resultaten te zien"
+    ],
+    "seoContent": {
+      "metaTitle": "Gratis Rente Rekenmachine - Bereken Eenvoudige & Samengestelde Rente",
+      "metaDescription": "Bereken eenvoudige en samengestelde rente op spaargeld, investeringen en leningen. Ondersteunt meerdere samenstellingsfrequenties met gedetailleerde uitsplitsingen. Gratis en eenvoudig te gebruiken.",
+      "h1": "Rente Rekenmachine - Eenvoudige & Samengestelde Rente",
+      "keywords": "rente rekenmachine, eenvoudige rente, samengestelde rente, rente berekenen, samenstelling, rente-inkomsten",
+      "introduction": "Begrijp hoe uw geld in de loop van de tijd groeit met onze uitgebreide rente rekenmachine. Of u nu eenvoudige rente op een spaarrekening berekent of samengestelde rente op een langetermijninvestering, onze rekenmachine biedt gedetailleerde uitsplitsingen en helpt u weloverwogen financiële beslissingen te nemen. Ondersteunt meerdere samenstellingsfrequenties en biedt duidelijke vergelijkingen tussen eenvoudige en samengestelde rente.",
+      "benefits": [
+        "Bereken zowel eenvoudige als samengestelde rente onmiddellijk",
+        "Vergelijk verschillende samenstellingsfrequenties",
+        "Begrijp de kracht van samenstelling in de loop van de tijd",
+        "Zie gedetailleerde uitsplitsingen van uw rente-inkomsten",
+        "Neem geïnformeerde spaar- en investeringsbeslissingen",
+        "Gebruik voor lening- of spaarscenario's"
+      ],
+      "steps": [
+        "Kies tussen Eenvoudige of Samengestelde renteberekening",
+        "Voer uw hoofdbedrag in (initiële investering of leningbedrag)",
+        "Voer het jaarlijkse rentepercentage in procenten in",
+        "Specificeer de tijdsperiode in jaren",
+        "Voor samengestelde rente, selecteer samenstellingsfrequentie",
+        "Bekijk uw berekeningsresultaten en uitsplitsingen"
+      ],
+      "inputsExplained": [
+        "Hoofdbedrag: Het initiële bedrag waarop u rente berekent",
+        "Rentepercentage: Jaarlijks rentepercentage uitgedrukt als percentage",
+        "Tijdsperiode: Aantal jaren dat het geld rente zal verdienen",
+        "Samenstellingsfrequentie: Hoe vaak rente wordt toegevoegd aan het hoofdbedrag (voor samengestelde rente)"
+      ],
+      "formulaExplanation": "Eenvoudige Rente = P × r × t waarbij P hoofdbedrag, r rentepercentage, t tijd is. Samengestelde Rente = P × (1 + r/n)^(n×t) - P waarbij n samenstellingsfrequentie is.",
+      "examples": [
+        "Eenvoudige rente: € 1.000 tegen 5% over 3 jaar = € 150 rente, totaal € 1.150",
+        "Samengestelde rente (driemaandelijks): € 1.000 tegen 5% over 3 jaar = € 161,22 rente, totaal € 1.161,22",
+        "Maandelijkse samenstelling: Zelfde investering = € 161,67 rente, totaal € 1.161,67"
+      ],
+      "resultsExplanation": [
+        "Verdiende Rente: Totale rente opgebouwd over de tijdsperiode",
+        "Toekomstige Waarde: Hoofdbedrag plus alle opgebouwde rente",
+        "Jaarlijks Equivalent: Effectief jaarlijks rentepercentage",
+        "Gedetailleerde uitsplitsingen tonen hoe rente in de loop van de tijd groeit"
+      ],
+      "whoItsFor": "Studenten die renteberekeningen leren, investeerders die portefeuilles plannen, spaarders die rekeningen vergelijken, leners die leningkosten begrijpen, en iedereen die geïnteresseerd is in hoe geld in de loop van de tijd groeit.",
+      "disclaimer": "Deze rekenmachine biedt wiskundige berekeningen op basis van de verstrekte formules. Werkelijke rentetarieven en samenstellingsmethoden kunnen variëren per financiële instelling. Controleer altijd bij uw bank of financieel adviseur voor toepassingen in de praktijk.",
+      "faqs": [
+        {
+          "question": "Wat is het verschil tussen eenvoudige en samengestelde rente?",
+          "answer": "Eenvoudige rente wordt alleen over het hoofdbedrag berekend en wordt niet samengesteld. Samengestelde rente wordt berekend over het hoofdbedrag en eerder verdiende rente, waardoor uw geld in de loop van de tijd sneller kan groeien."
+        },
+        {
+          "question": "Hoe vaak moet rente samengesteld worden?",
+          "answer": "Frequentere samenstelling (dagelijks, maandelijks, driemaandelijks) levert hogere rendementen op dan jaarlijkse samenstelling. Het verschil wordt echter significanter over langere tijdsperioden."
+        },
+        {
+          "question": "Werkt deze rekenmachine voor leningen?",
+          "answer": "Ja, dezelfde renteberekeningsprincipes zijn van toepassing op leningen. De rekenmachine toont hoeveel rente u in de loop van de tijd zult betalen, hoewel leningbetalingen ook terugbetaling van het hoofdbedrag omvatten."
+        },
+        {
+          "question": "Wat is de regel van 72?",
+          "answer": "De regel van 72 is een snelle manier om te schatten hoe lang het duurt voordat een investering verdubbelt. Deel 72 door het rentepercentage om het geschatte aantal jaren te krijgen."
+        },
+        {
+          "question": "Welke samenstellingsfrequentie is het beste?",
+          "answer": "Frequentere samenstelling leidt tot hogere totale rendementen. Dagelijkse samenstelling biedt de hoogste rendementen, gevolgd door maandelijkse, driemaandelijkse en jaarlijkse samenstelling."
+        },
+        {
+          "question": "Kan ik dit gebruiken voor spaarrekeningen?",
+          "answer": "Absoluut! Deze rekenmachine is perfect voor spaarrekeningen. Voer gewoon uw beginsaldo, het rentepercentage van de bank en de gewenste tijdsperiode in om te zien hoe uw spaargeld zal groeien."
+        }
+      ]
+    },
+    "component": "InterestCalculator"
   }
 }

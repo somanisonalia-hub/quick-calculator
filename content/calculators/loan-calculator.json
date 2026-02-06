@@ -444,5 +444,233 @@
         "explanation": "This example shows how the calculator works with smaller values."
       }
     ]
+  },
+  "de": {
+    "seoTitle": "Kreditrechner - Wie hoch werden meine Kreditzahlungen sein?",
+    "title": "Kreditrechner",
+    "summary": "Berechnen Sie Kreditzahlungen, Zinsen und Rückzahlungspläne.",
+    "description": "Verwenden Sie unseren Kreditrechner zur Berechnung monatlicher Zahlungen, Gesamtzinsen und zur Erstellung eines vollständigen Rückzahlungsplans für jede Art von Kredit.",
+    "category": "financial",
+    "difficulty": "Anfänger",
+    "slug": "loan-calculator",
+    "calculatorComponent": "LoanCalculator",
+    "seoContent": {
+      "introduction": "Unser Kreditrechner hilft Ihnen bei der Berechnung monatlicher Kreditzahlungen, Gesamtzinsen und bei der Erstellung eines vollständigen Rückzahlungsplans für jede Art von Kredit einschließlich Privat-, Auto-, Studien- und Geschäftskrediten.",
+      "benefits": [
+        "Berechnen Sie exakte monatliche Kreditzahlungen",
+        "Sehen Sie die Gesamtzinsen während der Kreditlaufzeit",
+        "Verstehen Sie Ihren vollständigen Rückzahlungsplan",
+        "Vergleichen Sie verschiedene Kreditbeträge und Laufzeiten",
+        "Planen Sie effektiv Ihre Kreditrückzahlungsstrategie"
+      ],
+      "steps": [
+        "Geben Sie den Kreditbetrag ein, den Sie aufnehmen möchten",
+        "Geben Sie den jährlichen Zinssatz ein",
+        "Legen Sie die Kreditlaufzeit in Jahren fest",
+        "Klicken Sie auf Berechnen, um Ihre Ergebnisse zu sehen"
+      ],
+      "inputsExplained": [
+        "Kreditbetrag: Der Gesamtbetrag, den Sie leihen",
+        "Zinssatz: Jährlicher Prozentsatz des Kredits",
+        "Kreditlaufzeit: Anzahl der Jahre zur Rückzahlung des Kredits"
+      ],
+      "formulaExplanation": "Monatliche Zahlung = P * [r(1+r)^n] / [(1+r)^n - 1] wobei P der Hauptbetrag, r der monatliche Zinssatz und n die Anzahl der Zahlungen ist.",
+      "examples": [
+        "Privatkredit über 10.000 € zu 8% Zinsen über 5 Jahre",
+        "Autokredit über 25.000 € zu 5,5% Zinsen über 6 Jahre",
+        "Geschäftskredit über 50.000 € zu 7% Zinsen über 10 Jahre"
+      ],
+      "resultsExplanation": [
+        "Monatliche Zahlung: Der Betrag Ihrer regelmäßigen Kreditzahlung",
+        "Gesamtzinsen: Betrag, der während der Kreditlaufzeit an Zinsen gezahlt wird",
+        "Gesamtbetrag: Gesamtbetrag einschließlich Hauptbetrag und Zinsen"
+      ],
+      "whoItsFor": "Kreditnehmer, Finanzplaner, Kleinunternehmer und alle, die einen Kredit in Erwägung ziehen.",
+      "disclaimer": "Dieser Rechner liefert nur Schätzungen. Die tatsächlichen Kreditbedingungen hängen von den Anforderungen des Kreditgebers, der Kreditwürdigkeit und den aktuellen Marktbedingungen ab. Konsultieren Sie einen Finanzberater für persönliche Beratung.",
+      "relatedTools": [
+        "mortgage-calculator",
+        "savings-calculator",
+        "debt-consolidation-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "Wie werden Kreditzinsen berechnet?",
+          "answer": "Kreditzinsen werden in der Regel mit der Zinseszinsformel berechnet. Der Rechner verwendet die Standardamortisationsformel zur Berechnung der monatlichen Zahlungen und Gesamtzinsen."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen einfachen und zusammengesetzten Zinsen?",
+          "answer": "Einfache Zinsen werden nur auf den Hauptbetrag berechnet, während Zinseszinsen auf den Hauptbetrag und zuvor verdiente Zinsen berechnet werden. Die meisten Kredite verwenden Zinseszinsen."
+        },
+        {
+          "question": "Kann ich meinen Kredit vorzeitig zurückzahlen?",
+          "answer": "Ja, die meisten Kredite erlauben vorzeitige Rückzahlung. Einige Kredite können jedoch Vorfälligkeitsentschädigungen haben. Prüfen Sie Ihren Kreditvertrag für spezifische Bedingungen."
+        },
+        {
+          "question": "Welche Faktoren beeinflussen meinen Kreditzinssatz?",
+          "answer": "Ihr Zinssatz wird hauptsächlich durch Ihre Kreditwürdigkeit, den Kreditbetrag, die Laufzeit, den Kredittyp und die aktuellen Marktbedingungen beeinflusst."
+        },
+        {
+          "question": "Wie kann ich meine monatlichen Kreditzahlungen senken?",
+          "answer": "Sie können Zahlungen senken durch: längere Kreditlaufzeit, niedrigeren Zinssatz, höhere Anzahlung oder durch Refinanzierung zu besseren Konditionen."
+        },
+        {
+          "question": "Was ist eine Tilgungsrechnung?",
+          "answer": "Eine Tilgungsrechnung zeigt jeden Zahlungsterm mit Aufschlüsselung wie viel zum Hauptbetrag und wie viel zu Zinsen geht, plus den verbleibenden Saldo nach jeder Zahlung."
+        }
+      ]
+    },
+    "component": "LoanCalculator",
+    "examples": [
+      {
+        "title": "Grundlegendes Beispiel",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "Dieses Beispiel zeigt eine typische Berechnung mit Standardwerten."
+      },
+      {
+        "title": "Hochwertszenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "Dieses Szenario demonstriert die Berechnung mit höheren Eingabewerten."
+      },
+      {
+        "title": "Niedrigwertszenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "Dieses Beispiel zeigt, wie der Rechner mit kleineren Werten funktioniert."
+      }
+    ]
+  },
+  "nl": {
+    "seoTitle": "Lening Rekenmachine - Hoeveel Worden Mijn Leningbetalingen?",
+    "title": "Lening Rekenmachine",
+    "summary": "Bereken leningbetalingen, rente en terugbetalingsschema's.",
+    "description": "Gebruik onze lening rekenmachine om maandelijkse betalingen, totale betaalde rente te bepalen en een volledig terugbetalingsschema te maken voor elk type lening.",
+    "category": "financial",
+    "difficulty": "Beginner",
+    "slug": "loan-calculator",
+    "calculatorComponent": "LoanCalculator",
+    "seoContent": {
+      "introduction": "Onze lening rekenmachine helpt u bij het bepalen van maandelijkse leningbetalingen, totale betaalde rente en het maken van een volledig terugbetalingsschema voor elk type lening inclusief persoonlijke, auto-, studenten- en zakelijke leningen.",
+      "benefits": [
+        "Bereken exacte maandelijkse leningbetalingen",
+        "Zie de totale rente betaald tijdens de looptijd van de lening",
+        "Begrijp uw volledige terugbetalingsschema",
+        "Vergelijk verschillende leningbedragen en looptijden",
+        "Plan effectief uw terugbetalingsstrategie voor leningen"
+      ],
+      "steps": [
+        "Voer het leningbedrag in dat u wilt lenen",
+        "Voer het jaarlijkse rentepercentage in",
+        "Specificeer de looptijd van de lening in jaren",
+        "Klik op berekenen om uw resultaten te zien"
+      ],
+      "inputsExplained": [
+        "Leningbedrag: Het totale bedrag dat u leent",
+        "Rentepercentage: Jaarlijks percentage van de lening",
+        "Looptijd Lening: Aantal jaren om de lening terug te betalen"
+      ],
+      "formulaExplanation": "Maandelijkse betaling = P * [r(1+r)^n] / [(1+r)^n - 1] waarbij P het hoofdbedrag is, r het maandelijkse rentepercentage en n het aantal betalingen.",
+      "examples": [
+        "Persoonlijke lening van € 10.000 tegen 8% rente over 5 jaar",
+        "Autolening van € 25.000 tegen 5,5% rente over 6 jaar",
+        "Zakelijke lening van € 50.000 tegen 7% rente over 10 jaar"
+      ],
+      "resultsExplanation": [
+        "Maandelijkse Betaling: Het bedrag van uw reguliere leningbetaling",
+        "Totale Rente: Bedrag betaald aan rente tijdens de looptijd van de lening",
+        "Totaal Bedrag: Totaal betaald bedrag inclusief hoofdbedrag en rente"
+      ],
+      "whoItsFor": "Leners, financiële planners, eigenaren van kleine bedrijven en iedereen die een lening overweegt.",
+      "disclaimer": "Deze rekenmachine biedt alleen schattingen. De werkelijke leningvoorwaarden zijn afhankelijk van de vereisten van de kredietverstrekker, kredietscore en huidige marktomstandigheden. Raadpleeg een financieel adviseur voor persoonlijk advies.",
+      "relatedTools": [
+        "mortgage-calculator",
+        "savings-calculator",
+        "debt-consolidation-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "Hoe wordt leningrente berekend?",
+          "answer": "Leningrente wordt meestal berekend met behulp van de samengestelde renteformule. De rekenmachine gebruikt de standaard afschrijvingsformule om maandelijkse betalingen en totale rente te bepalen."
+        },
+        {
+          "question": "Wat is het verschil tussen eenvoudige en samengestelde rente?",
+          "answer": "Eenvoudige rente wordt alleen over het hoofdbedrag berekend, terwijl samengestelde rente wordt berekend over het hoofdbedrag en eerder verdiende rente. De meeste leningen gebruiken samengestelde rente."
+        },
+        {
+          "question": "Kan ik mijn lening vervroegd aflossen?",
+          "answer": "Ja, de meeste leningen staan vervroegde aflossing toe. Sommige leningen kunnen echter boetes voor vervroegde aflossing hebben. Controleer uw leningcontract voor specifieke voorwaarden."
+        },
+        {
+          "question": "Welke factoren beïnvloeden mijn leningrente?",
+          "answer": "Uw rentetarief wordt voornamelijk beïnvloed door uw kredietscore, het leningbedrag, de looptijd, het type lening en de huidige marktomstandigheden."
+        },
+        {
+          "question": "Hoe kan ik mijn maandelijkse leningbetalingen verlagen?",
+          "answer": "U kunt betalingen verlagen door: langere leninglooptijd, lager rentepercentage, hogere aanbetaling of door te herfinancieren tegen betere voorwaarden."
+        },
+        {
+          "question": "Wat is een afschrijvingstabel?",
+          "answer": "Een afschrijvingstabel toont elke betalingsperiode met een uitsplitsing van hoeveel naar het hoofdbedrag gaat en hoeveel naar rente, plus het resterende saldo na elke betaling."
+        }
+      ]
+    },
+    "component": "LoanCalculator",
+    "examples": [
+      {
+        "title": "Basisvoorbeeld",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "Dit voorbeeld toont een typische berekening met standaardwaarden."
+      },
+      {
+        "title": "Hoge Waarde Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "Dit scenario demonstreert de berekening met hogere invoerwaarden."
+      },
+      {
+        "title": "Lage Waarde Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "Dit voorbeeld laat zien hoe de rekenmachine werkt met kleinere waarden."
+      }
+    ]
   }
 }
