@@ -118,5 +118,197 @@
     "slug": "goal-based-investment-calculator",
     "category": "financial",
     "description": "Déterminez l'investissement mensuel ou unique nécessaire pour atteindre vos objectifs financiers spécifiques."
+  },
+  "de": {
+    "title": "Zielbasierter Investitionsrechner",
+    "seoTitle": "Wie Viel SIP Brauche Ich Für Mein Ziel? Zielbasierter Investitionsrechner",
+    "metaDescription": "Berechnen Sie den erforderlichen monatlichen SIP oder Einmalbetrag für Ihre finanziellen Ziele. Planen Sie Bildung, Hauskauf, Ruhestand oder jedes Ziel mit Inflationsanpassung für indische Investoren.",
+    "keywords": [
+      "zielbasierter investitionsrechner",
+      "finanzielles ziel rechner",
+      "zielplanungsrechner",
+      "bildungsziel rechner",
+      "ruhestandsziel rechner",
+      "investitionsziel planer"
+    ],
+    "longTailKeywords": [
+      "wie viel sip für finanzielles ziel benötigt",
+      "zielbasierte investitionsplanung indien",
+      "investition für kinderbildung berechnen",
+      "ruhestandsplanung ziel rechner",
+      "erforderliche investition für ziel berechnen",
+      "zielbasierter vermögensplaner indien"
+    ],
+    "slug": "goal-based-investment-calculator",
+    "category": "financial",
+    "subcategory": "Investitionsrechner",
+    "difficulty": "Mittelstufe",
+    "calculatorComponent": "GoalBasedInvestmentCalculator",
+    "tags": ["Investition", "Zielplanung", "finanzielle Ziele", "SIP", "Vermögensplanung"],
+    "description": "Berechnen Sie die erforderliche Investition oder monatliche SIP, um Ihre finanziellen Ziele zu erreichen. Perfekt für die Planung von Bildung, Hauskauf, Ruhestand oder anderen wichtigen Lebenszielen mit spezifischen Zielbeträgen und Zeitplänen.",
+    "summary": "Bestimmen Sie SIP oder Einmalbetrag zur Erreichung Ihrer finanziellen Ziele mit Inflationsanpassung",
+    "introduction": "Jedes finanzielle Ziel erfordert einen Plan. Ob Sie die Bildung Ihres Kindes in 10 Jahren finanzieren, in 5 Jahren ein Haus kaufen oder in 25 Jahren komfortabel in den Ruhestand gehen möchten, unser zielbasierter Investitionsrechner hilft Ihnen, vom Zielbetrag rückwärts zu arbeiten, um die exakte benötigte Investition zu bestimmen. Berücksichtigen Sie die Inflation, um die tatsächlichen Kosten Ihrer Ziele zu verstehen.",
+    "benefits": [
+      "Berechnet exakte monatliche SIP zur Erreichung des finanziellen Ziels",
+      "Bestimmt benötigten Einmalbetrag für sofortige oder gestaffelte Investitionen",
+      "Berücksichtigt Inflation in Zielberechnungen",
+      "Hilft bei der Priorisierung mehrerer finanzieller Ziele",
+      "Zeigt Auswirkungen verschiedener Renditeerwartungen",
+      "Ermöglicht fundierte Entscheidungen über Zielmachbarkeit"
+    ],
+    "steps": [
+      "Definieren Sie Ihr finanzielles Ziel und Zielbetrag",
+      "Geben Sie an, wann Sie die Mittel benötigen (Jahre/Monate)",
+      "Geben Sie die erwartete jährliche Rendite für Ihre Investitionen ein",
+      "Fügen Sie die Inflationsrate für realistische Zielpreise hinzu",
+      "Sehen Sie den benötigten monatlichen SIP oder Einmalbetrag"
+    ],
+    "inputsExplained": [
+      "Finanzielles Ziel: Der Zielbetrag, den Sie akkumulieren möchten (z.B. ₹20 Lakh für Bildung)",
+      "Zeithorizont: Verbleibende Jahre bis Sie die Mittel benötigen",
+      "Erwartete Rendite: Jährliche Rendite aus Ihren Investmentfonds-Investitionen",
+      "Inflationsrate: Wie stark die Kosten jährlich steigen (typischerweise 5-8% in Indien)"
+    ],
+    "formulaExplanation": "Zielbasierte Berechnung arbeitet rückwärts mit der Zukunftswertformel. Der Rechner bestimmt: Erforderlicher SIP = FV-Ziel × [r / ((1 + r)^n - 1)], oder Erforderlicher Einmalbetrag = FV-Ziel / (1 + r)^n. Das inflationsbereinigte Ziel bedeutet, dass Sie für den tatsächlichen Wert planen, wenn Sie ihn benötigen, nicht für den heutigen Wert. Dies stellt sicher, dass Ihr Zielbetrag trotz Inflation realistisch bleibt.",
+    "examples": [
+      {
+        "title": "Kinderbildungsziel",
+        "description": "Kind tritt in 8 Jahren IIT ein; Bildungskosten sind heute ₹20 Lakh, werden aber auf ₹30 Lakh inflationieren",
+        "inputs": {
+          "targetGoal": 3000000,
+          "years": 8,
+          "expectedReturn": 12,
+          "inflationRate": 6
+        },
+        "result": "Erforderlicher monatlicher SIP: ~₹28.000 für inflationsbereinigtes Bildungsziel"
+      },
+      {
+        "title": "Anzahlungsziel für Haus",
+        "description": "Wollen ₹30 Lakh Anzahlung in 5 Jahren für Haus; Immobilieninflation bei 7%",
+        "inputs": {
+          "targetGoal": 3000000,
+          "years": 5,
+          "expectedReturn": 10,
+          "inflationRate": 7
+        },
+        "result": "Erforderlicher monatlicher SIP: ~₹46.000 zum Sparen für Anzahlung unter Berücksichtigung der Immobilieninflation"
+      },
+      {
+        "title": "Ruhestandskapitalziel",
+        "description": "Benötigen ₹1 Crore für Ruhestand in 20 Jahren mit Lebensstilinflation von 5%",
+        "inputs": {
+          "targetGoal": 10000000,
+          "years": 20,
+          "expectedReturn": 11,
+          "inflationRate": 5
+        },
+        "result": "Erforderlicher monatlicher SIP: ~₹17.500 für angemessenes Ruhestandskapital"
+      }
+    ],
+    "resultsExplanation": [
+      "Inflationsbereinigtes Ziel: Reales Ziel unter Berücksichtigung der Kostensteigerung über die Zeit",
+      "Erforderlicher monatlicher SIP: Exakter monatlicher Investitionsbetrag zur Zielerreichung",
+      "Erforderlicher Einmalbetrag: Einmaliger Investitionsbetrag als Alternative",
+      "Gesamtinvestition: Summe aller SIP-Beiträge oder des Einmalbetrags",
+      "Gesamtrenditen: Wachstum aus Investitionen bei Zielrendite"
+    ],
+    "whoItsFor": "Dieser Rechner ist perfekt für Eltern, die Kinderbildung planen, Erstkäufer von Eigenheimen, Berufstätige bei der Ruhestandsplanung, junge Erwachsene mit finanziellen Zielen, Geschäftsinhaber bei Expansionsplanung und alle mit spezifischen finanziellen Zielen und Zeitplänen. Besonders nützlich für Inder, die mehrere Lebensziele planen.",
+    "disclaimer": "Die Ergebnisse sind Schätzungen basierend auf Ihren Eingaben. Tatsächliche Investitionsrenditen hängen von Marktbedingungen, Vermögensallokation und Fondsauswahl ab. Inflationsraten variieren und können nicht mit Sicherheit vorhergesagt werden. Konsultieren Sie einen Finanzberater für persönliche Beratung. Dieses Tool dient nur Bildungszwecken, nicht als Anlageberatung."
+  },
+  "nl": {
+    "title": "Doelgerichte Beleggingsrekenmachine",
+    "seoTitle": "Hoeveel SIP Heb Ik Nodig Voor Mijn Doel? Doelgerichte Beleggingsrekenmachine",
+    "metaDescription": "Bereken de vereiste maandelijkse SIP of eenmalig bedrag voor uw financiële doelen. Plan onderwijs, aankoop van een huis, pensionering of elk doel met inflatie-aanpassing voor Indiase beleggers.",
+    "keywords": [
+      "doelgerichte beleggingsrekenmachine",
+      "financieel doel rekenmachine",
+      "doelplanning rekenmachine",
+      "onderwijsdoel rekenmachine",
+      "pensioendoel rekenmachine",
+      "beleggingsdoel planner"
+    ],
+    "longTailKeywords": [
+      "hoeveel sip nodig voor financieel doel",
+      "doelgerichte beleggingsplanning india",
+      "benodigde belegging voor onderwijs kind berekenen",
+      "pensioenplanning doel rekenmachine",
+      "benodigde belegging voor doel berekenen",
+      "doelgerichte vermogensplanner india"
+    ],
+    "slug": "goal-based-investment-calculator",
+    "category": "financial",
+    "subcategory": "Beleggingsrekenmachines",
+    "difficulty": "Gemiddeld",
+    "calculatorComponent": "GoalBasedInvestmentCalculator",
+    "tags": ["belegging", "doelplanning", "financiële doelen", "SIP", "vermogensplanning"],
+    "description": "Bereken de vereiste belegging of maandelijkse SIP om uw financiële doelen te bereiken. Perfect voor het plannen van onderwijs, aankoop van een huis, pensionering of andere belangrijke levensdoelen met specifieke streefbedragen en tijdlijnen.",
+    "summary": "Bepaal SIP of eenmalig bedrag om uw financiële doelen te bereiken met inflatie-aanpassing",
+    "introduction": "Elk financieel doel vereist een plan. Of u nu het onderwijs van uw kind over 10 jaar wilt financieren, over 5 jaar een huis wilt kopen, of comfortabel wilt pensioneren over 25 jaar, onze doelgerichte beleggingsrekenmachine helpt u terugwaarts te werken vanaf uw streefbedrag om de exacte benodigde belegging te bepalen. Houd rekening met inflatie om de werkelijke kosten van uw doelen te begrijpen.",
+    "benefits": [
+      "Berekent exacte maandelijkse SIP vereist om financieel doel te bereiken",
+      "Bepaalt benodigde eenmalig bedrag voor onmiddellijke of gefaseerde beleggingen",
+      "Houdt rekening met inflatie in doelberekeningen",
+      "Helpt meerdere financiële doelen te prioriteren",
+      "Toont impact van verschillende rendementsverwachtingen",
+      "Maakt geïnformeerde beslissingen over doelhaalbaarheid mogelijk"
+    ],
+    "steps": [
+      "Definieer uw financiële doel en streefbedrag",
+      "Specificeer wanneer u de middelen nodig heeft (jaren/maanden)",
+      "Voer verwacht jaarlijks rendement in voor uw beleggingen",
+      "Voeg inflatiepercentage toe voor realistische doelprijzen",
+      "Zie maandelijks SIP of eenmalig bedrag dat nodig is om het te bereiken"
+    ],
+    "inputsExplained": [
+      "Financieel Doel: Het streefbedrag dat u wilt accumuleren (bijv. ₹20 lakh voor onderwijs)",
+      "Tijdshorizon: Resterende jaren tot u de middelen nodig heeft",
+      "Verwacht Rendement: Jaarlijks rendement van uw beleggingsfonds-beleggingen",
+      "Inflatiepercentage: Hoeveel kosten jaarlijks stijgen (meestal 5-8% in India)"
+    ],
+    "formulaExplanation": "Doelgerichte berekening werkt achterwaarts met de toekomstige waardeformule. De rekenmachine bepaalt: Vereiste SIP = FV-doel × [r / ((1 + r)^n - 1)], of Vereist Eenmalig Bedrag = FV-doel / (1 + r)^n. Het inflatie-aangepaste doel betekent dat u plant voor wat het bedrag werkelijk waard zal zijn wanneer u het nodig heeft, niet de huidige waarde. Dit zorgt ervoor dat uw doelbedrag realistisch blijft ondanks inflatie.",
+    "examples": [
+      {
+        "title": "Onderwijsdoel Kind",
+        "description": "Kind gaat over 8 jaar naar IIT; onderwijskosten zijn vandaag ₹20 lakh maar zullen stijgen naar ₹30 lakh",
+        "inputs": {
+          "targetGoal": 3000000,
+          "years": 8,
+          "expectedReturn": 12,
+          "inflationRate": 6
+        },
+        "result": "Vereiste maandelijkse SIP: ~₹28.000 om inflatie-aangepast onderwijsdoel te bereiken"
+      },
+      {
+        "title": "Aanbetaling Huis Doel",
+        "description": "Wil ₹30 lakh aanbetaling over 5 jaar voor huis; vastgoedinflatie op 7%",
+        "inputs": {
+          "targetGoal": 3000000,
+          "years": 5,
+          "expectedReturn": 10,
+          "inflationRate": 7
+        },
+        "result": "Vereiste maandelijkse SIP: ~₹46.000 om te sparen voor aanbetaling met vastgoedinflatie"
+      },
+      {
+        "title": "Pensioenkapitaal Doel",
+        "description": "Heeft ₹1 crore nodig voor pensionering over 20 jaar met levensstijlinflatie van 5%",
+        "inputs": {
+          "targetGoal": 10000000,
+          "years": 20,
+          "expectedReturn": 11,
+          "inflationRate": 5
+        },
+        "result": "Vereiste maandelijkse SIP: ~₹17.500 om adequaat pensioenkapitaal te creëren"
+      }
+    ],
+    "resultsExplanation": [
+      "Inflatie-Aangepast Doel: Reëel doel rekening houdend met kostenstijging over tijd",
+      "Vereiste Maandelijkse SIP: Exact bedrag om elke maand te beleggen om doel te bereiken",
+      "Vereist Eenmalig Bedrag: Eenmalige belegging als alternatief",
+      "Totale Belegging: Som van alle SIP-bijdragen of het eenmalige bedrag",
+      "Totaal Rendement: Groei verdiend uit beleggingen bij streefrendement"
+    ],
+    "whoItsFor": "Deze rekenmachine is perfect voor ouders die onderwijs voor kinderen plannen, eerste kopers van een woning, professionals die pensionering plannen, jonge volwassenen met financiële doelen, bedrijfseigenaren die expansie plannen, en iedereen met specifieke financiële doelen en tijdlijnen. Bijzonder nuttig voor Indiërs die meerdere levensdoelen plannen.",
+    "disclaimer": "Resultaten zijn schattingen gebaseerd op uw invoer. Werkelijke beleggingsrendementen zijn afhankelijk van marktomstandigheden, activaallocatie en fondskeuze. Inflatiepercentages variëren en kunnen niet met zekerheid worden voorspeld. Raadpleeg een financieel adviseur voor persoonlijk advies. Deze tool is alleen voor educatieve doeleinden, niet als beleggingsadvies."
   }
 }

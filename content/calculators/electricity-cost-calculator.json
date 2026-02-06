@@ -162,5 +162,124 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "Stromkostenrechner",
+    "seoTitle": "Stromkostenrechner - Wie Viel Kosten Meine Stromkosten?",
+    "metaDescription": "Kostenloser Stromkostenrechner. Berechnen Sie Ihre monatlichen, wöchentlichen und jährlichen Stromrechnungen basierend auf kWh-Verbrauch und Tarifen. Planen Sie Ihr Energiebudget.",
+    "keywords": [
+      "stromkostenrechner",
+      "stromrechnungsrechner",
+      "kwh rechner",
+      "energiekostenrechner",
+      "stromverbrauchsrechner"
+    ],
+    "longTailKeywords": [
+      "wie viel kostet strom pro monat",
+      "stromrechnung berechnen",
+      "energieverbrauch rechner",
+      "stromrechnung schätzer",
+      "versorgungskostenrechner"
+    ],
+    "slug": "electricity-cost-calculator",
+    "calculatorComponent": "ElectricityCostCalculator",
+    "category": "utility",
+    "difficulty": "Grundlegend",
+    "tags": ["Strom", "Rechnung", "Versorgung", "Energie", "Kosten"],
+    "summary": "Berechnen Sie Ihre monatliche Stromrechnung basierend auf kWh-Verbrauch und Ihrem Versorgungstarif.",
+    "description": "Unser Stromkostenrechner hilft Ihnen, Ihre monatliche Stromrechnung zu schätzen. Geben Sie Ihren monatlichen Kilowattstunden (kWh)-Verbrauch und Ihren Tarif pro kWh ein, um tägliche, wöchentliche, monatliche und jährliche Kosten zu berechnen.",
+    "instructions": [
+      "Geben Sie Ihren monatlichen kWh-Verbrauch von Ihrer Stromrechnung ein",
+      "Geben Sie Ihren Versorgungstarif pro kWh ein (normalerweise auf Ihrer Rechnung gezeigt)",
+      "Sehen Sie Kosten nach Tag, Woche, Monat und Jahr aufgeschlüsselt",
+      "Berechnen Sie potenzielle Einsparungen durch Verbrauchsreduzierung"
+    ],
+    "seoContent": {
+      "introduction": "Berechnen Sie Ihre Stromkosten sofort mit unserem kostenlosen Stromkostenrechner. Geben Sie einfach Ihren monatlichen Kilowattstunden (kWh)-Verbrauch und Ihren Versorgungstarif pro kWh ein, um Ihre täglichen, wöchentlichen, monatlichen und jährlichen Stromausgaben zu sehen. Planen Sie Ihr Energiebudget und identifizieren Sie potenzielle Einsparungen.",
+      "benefits": "Berechnen Sie exakte Stromkosten basierend auf Ihrem Verbrauch • Vergleichen Sie Kosten über verschiedene Zeiträume (täglich, wöchentlich, monatlich, jährlich) • Identifizieren Sie energieintensive Geräte und deren Kosten • Planen Sie Budget für kommende Monate • Berechnen Sie Einsparungen durch reduzierten Verbrauch",
+      "formula": "Monatliche Kosten = Monatlicher Verbrauch (kWh) × Tarif pro kWh ($). Tägliche Kosten = Monatliche Kosten ÷ 30. Wöchentliche Kosten = Monatliche Kosten ÷ 4,33. Jährliche Kosten = Monatliche Kosten × 12.",
+      "faqs": [
+        {
+          "question": "Wie finde ich meinen kWh-Verbrauch?",
+          "answer": "Überprüfen Sie Ihre Stromrechnung - sie zeigt Ihren monatlichen kWh-Verbrauch an prominenter Stelle, normalerweise oben oder unten auf der Rechnung."
+        },
+        {
+          "question": "Wo ist der Tarif pro kWh aufgelistet?",
+          "answer": "Ihr Versorgungstarif wird typischerweise auf Ihrer Rechnung als Cent pro kWh oder $/kWh gezeigt. Er kann je nach Region und Saison variieren."
+        },
+        {
+          "question": "Kann ich Einsparungen durch Stromreduzierung berechnen?",
+          "answer": "Ja! Geben Sie den gewünschten Prozentsatz der Verbrauchsreduzierung ein, um potenzielle monatliche und jährliche Einsparungen zu sehen."
+        },
+        {
+          "question": "Warum variieren Stromtarife?",
+          "answer": "Tarife hängen von Standort, Saison (Haupt- vs. Nebenzeiten), Verbrauchsniveau und lokalen Versorgungspreisstrukturen ab."
+        },
+        {
+          "question": "Was verbraucht am meisten Strom?",
+          "answer": "Heiz-/Kühlsysteme (HVAC), Warmwasserbereiter und Großgeräte machen typischerweise 50-80% des Stromverbrauchs im Haushalt aus."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Elektriciteitskosten Rekenmachine",
+    "seoTitle": "Elektriciteitskosten Rekenmachine - Hoeveel Kosten Mijn Elektriciteit?",
+    "metaDescription": "Gratis elektriciteitskosten rekenmachine. Bereken uw maandelijkse, wekelijkse en jaarlijkse elektriciteitsrekeningen op basis van kWh-verbruik en tarieven. Plan uw energiebudget.",
+    "keywords": [
+      "elektriciteitskosten rekenmachine",
+      "energierekening rekenmachine",
+      "kwh rekenmachine",
+      "energiekosten rekenmachine",
+      "stroomverbruik rekenmachine"
+    ],
+    "longTailKeywords": [
+      "hoeveel kost elektriciteit per maand",
+      "elektriciteitsrekening berekenen",
+      "energieverbruik rekenmachine",
+      "energierekening estimator",
+      "nutsvoorzieningen kosten rekenmachine"
+    ],
+    "slug": "electricity-cost-calculator",
+    "calculatorComponent": "ElectricityCostCalculator",
+    "category": "utility",
+    "difficulty": "basis",
+    "tags": ["elektriciteit", "rekening", "nutsvoorziening", "energie", "kosten"],
+    "summary": "Bereken uw maandelijkse elektriciteitsrekening op basis van kWh-verbruik en uw nutstarief.",
+    "description": "Onze elektriciteitskosten rekenmachine helpt u uw maandelijkse elektriciteitsrekening te schatten. Voer uw maandelijkse kilowattuur (kWh)-verbruik en uw tarief per kWh in om dagelijkse, wekelijkse, maandelijkse en jaarlijkse kosten te berekenen.",
+    "instructions": [
+      "Voer uw maandelijkse kWh-verbruik van uw elektriciteitsrekening in",
+      "Voer uw nutstarief per kWh in (meestal getoond op uw rekening)",
+      "Bekijk kosten uitgesplitst per dag, week, maand en jaar",
+      "Bereken potentiële besparingen door verbruik te verlagen"
+    ],
+    "seoContent": {
+      "introduction": "Bereken uw elektriciteitskosten direct met onze gratis elektriciteitskosten rekenmachine. Voer eenvoudig uw maandelijkse kilowattuur (kWh)-verbruik en uw nutstarief per kWh in om uw dagelijkse, wekelijkse, maandelijkse en jaarlijkse elektriciteitsuitgaven te zien. Plan uw energiebudget en identificeer potentiële besparingen.",
+      "benefits": "Bereken exacte elektriciteitskosten op basis van uw verbruik • Vergelijk kosten over verschillende tijdsbestekken (dagelijks, wekelijks, maandelijks, jaarlijks) • Identificeer energieverslindende apparaten en hun kosten • Plan budget voor komende maanden • Bereken besparingen door verminderd verbruik",
+      "formula": "Maandelijkse Kosten = Maandelijks Verbruik (kWh) × Tarief per kWh ($). Dagelijkse Kosten = Maandelijkse Kosten ÷ 30. Wekelijkse Kosten = Maandelijkse Kosten ÷ 4,33. Jaarlijkse Kosten = Maandelijkse Kosten × 12.",
+      "faqs": [
+        {
+          "question": "Hoe vind ik mijn kWh-verbruik?",
+          "answer": "Controleer uw elektriciteitsrekening - het toont uw maandelijkse kWh-verbruik op een prominente plaats, meestal bovenaan of onderaan de rekening."
+        },
+        {
+          "question": "Waar staat het tarief per kWh vermeld?",
+          "answer": "Uw nutstarief wordt meestal op uw rekening getoond als cent per kWh of $/kWh. Het kan variëren per regio en seizoen."
+        },
+        {
+          "question": "Kan ik besparingen berekenen door elektriciteit te verminderen?",
+          "answer": "Ja! Voer het gewenste percentage verbruiksvermindering in om potentiële maandelijkse en jaarlijkse besparingen te zien."
+        },
+        {
+          "question": "Waarom variëren elektriciteitstarieven?",
+          "answer": "Tarieven zijn afhankelijk van locatie, seizoen (piek vs. dal), verbruiksniveau en lokale nutsprijsstructuren."
+        },
+        {
+          "question": "Wat gebruikt de meeste elektriciteit?",
+          "answer": "Verwarmings-/koelsystemen (HVAC), waterverwarming en grote apparaten vormen meestal 50-80% van het huishoudelijke elektriciteitsverbruik."
+        }
+      ]
+    }
   }
 }
+
