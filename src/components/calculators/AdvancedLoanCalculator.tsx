@@ -171,9 +171,22 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       csvYearlyHeader: "Année,Paiements,Principal Payé,Intérêts Payés,Solde Final\n",
       csvMonthlyHeader: "Numéro de Paiement,Date,Paiement,Principal,Intérêts,Solde\n"
     }
-  };
-
-  const t = translations[lang as keyof typeof translations] || translations.en;
+  ,
+    de: {
+      // German translations (to be filled by native speakers)
+      title: "",
+      description: "",
+      instructions: "",
+      placeholder: ""
+    },
+    nl: {
+      // Dutch translations (to be filled by native speakers)
+      title: "",
+      description: "",
+      instructions: "",
+      placeholder: ""
+    }
+  };const t = translations[lang as keyof typeof translations] || translations.en;
   
   const [values, setValues] = useState<Record<string, number>>(() => {
     const initial: Record<string, number> = {};

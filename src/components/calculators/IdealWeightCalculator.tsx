@@ -118,9 +118,22 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       large: "Structure Grande",
       normal: "Poids Normal"
     }
-  };
-
-  const t = translations[lang as keyof typeof translations] || translations.en;
+  ,
+    de: {
+      // German translations (to be filled by native speakers)
+      title: "",
+      description: "",
+      instructions: "",
+      placeholder: ""
+    },
+    nl: {
+      // Dutch translations (to be filled by native speakers)
+      title: "",
+      description: "",
+      instructions: "",
+      placeholder: ""
+    }
+  };const t = translations[lang as keyof typeof translations] || translations.en;
 
   const calculateIdealWeight = () => {
     const { gender, height, method, bodyFrame } = inputs;

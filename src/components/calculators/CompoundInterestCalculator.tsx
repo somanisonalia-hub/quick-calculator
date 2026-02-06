@@ -60,9 +60,22 @@ export default function CompoundInterestCalculator({ inputs, output, additionalO
       powerOfCompounding: "Puissance de la Capitalisation",
       compoundingMessage: "Votre argent croît de manière exponentielle au fil du temps"
     }
-  };
-
-  const t = translations[lang as keyof typeof translations] || translations.en;
+  ,
+    de: {
+      // German translations (to be filled by native speakers)
+      title: "",
+      description: "",
+      instructions: "",
+      placeholder: ""
+    },
+    nl: {
+      // Dutch translations (to be filled by native speakers)
+      title: "",
+      description: "",
+      instructions: "",
+      placeholder: ""
+    }
+  };const t = translations[lang as keyof typeof translations] || translations.en;
   
   const [values, setValues] = useState<Record<string, number | string>>(() => {
     const initial: Record<string, number | string> = {};

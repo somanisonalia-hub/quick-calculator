@@ -273,9 +273,22 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
       months: "Mois",
       years: "Années"
     }
-  };
-
-  const t = translations[lang as keyof typeof translations] || translations.en;
+  ,
+    de: {
+      // German translations (to be filled by native speakers)
+      title: "",
+      description: "",
+      instructions: "",
+      placeholder: ""
+    },
+    nl: {
+      // Dutch translations (to be filled by native speakers)
+      title: "",
+      description: "",
+      instructions: "",
+      placeholder: ""
+    }
+  };const t = translations[lang as keyof typeof translations] || translations.en;
 
   const [value, setValue] = useState('');
   const [category, setCategory] = useState('length');

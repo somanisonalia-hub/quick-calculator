@@ -131,10 +131,58 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       paymentnumberdatepaymentprincipalinterestbalancen: "Numéro de Paiement,Date,Paiement,Principal,Intérêts,Solde\n",
       hideamortizationschedule: "Masquer le Plan d'Amortissement",
       showamortizationschedule: "Afficher le Plan d'Amortissement",
-  }
-  };
-
-  const t = translations[lang as keyof typeof translations] || translations.en;
+    },
+    de: {
+      loanDetails: "Darlehensdetails",
+      monthlyPayment: "Monatliche Zahlung",
+      paymentBreakdown: "Zahlungsaufschlüsselung",
+      totalMonthly: "Monatlich Gesamt",
+      amortizationSchedule: "Tilgungsplan",
+      year: "Jahr",
+      payments: "Zahlungen",
+      principalPaid: "Gezahlter Kapitalbetrag",
+      interestPaid: "Gezahlte Zinsen",
+      endingBalance: "Endsaldo",
+      payment: "Zahlung",
+      date: "Datum",
+      principal: "Kapitalbetrag",
+      interest: "Zinsen",
+      balance: "Saldo",
+      yearbyyear: "Jahr für Jahr",
+      monthbymonth: "Monat für Monat",
+      exportcsv: "CSV exportieren",
+      principalInterest: "Kapitalbetrag und Zinsen",
+      taxesInsurance: "Steuern und Versicherung",
+      paymentnumberdatepaymentprincipalinterestbalancen: "Zahlungsnummer,Datum,Zahlung,Kapitalbetrag,Zinsen,Saldo\n",
+      hideamortizationschedule: "Tilgungsplan ausblenden",
+      showamortizationschedule: "Tilgungsplan anzeigen",
+    },
+    nl: {
+      loanDetails: "Lening Details",
+      monthlyPayment: "Maandelijkse Betaling",
+      paymentBreakdown: "Betalingsopsplitsing",
+      totalMonthly: "Totaal Maandelijks",
+      amortizationSchedule: "Aflossingsschema",
+      year: "Jaar",
+      payments: "Betalingen",
+      principalPaid: "Betaalde Hoofdsom",
+      interestPaid: "Betaalde Rente",
+      endingBalance: "Eindsaldo",
+      payment: "Betaling",
+      date: "Datum",
+      principal: "Hoofdsom",
+      interest: "Rente",
+      balance: "Saldo",
+      yearbyyear: "Jaar na Jaar",
+      monthbymonth: "Maand na Maand",
+      exportcsv: "CSV exporteren",
+      principalInterest: "Hoofdsom en Rente",
+      taxesInsurance: "Belastingen en Verzekering",
+      paymentnumberdatepaymentprincipalinterestbalancen: "Betalingsnummer,Datum,Betaling,Hoofdsom,Rente,Saldo\n",
+      hideamortizationschedule: "Aflossingsschema verbergen",
+      showamortizationschedule: "Aflossingsschema weergeven",
+    }
+  };const t = translations[lang as keyof typeof translations] || translations.en;
 
   // Define calculator configuration internally
   const inputs: CalculatorInput[] = [

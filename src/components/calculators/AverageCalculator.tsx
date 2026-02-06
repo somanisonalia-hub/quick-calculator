@@ -72,6 +72,30 @@ export default function AverageCalculator({ inputs, output, additionalOutputs, l
       clear: "Effacer",
       error: "Veuillez saisir des nombres valides",
       instructions: "Saisissez chaque nombre sur une nouvelle ligne, ou séparez-les par des virgules"
+    },
+    de: {
+      title: "Durchschnittrechner",
+      description: "Berechne das arithmetische Mittel einer Liste von Zahlen",
+      inputLabel: "Zahlen eingeben (eine pro Zeile oder durch Kommas getrennt)",
+      inputPlaceholder: "85, 92, 78, 95, 88\noder\n85\n92\n78\n95\n88",
+      calculate: "Durchschnitt berechnen",
+      result: "Durchschnitt",
+      count: "Anzahl",
+      clear: "Löschen",
+      error: "Bitte geben Sie gültige Zahlen ein",
+      instructions: "Geben Sie jede Zahl in einer neuen Zeile ein, oder trennen Sie sie mit Kommas"
+    },
+    nl: {
+      title: "Gemiddelde Calculator",
+      description: "Bereken het rekenkundig gemiddelde van een lijst met getallen",
+      inputLabel: "Voer getallen in (één per regel of door komma's gescheiden)",
+      inputPlaceholder: "85, 92, 78, 95, 88\nof\n85\n92\n78\n95\n88",
+      calculate: "Gemiddelde berekenen",
+      result: "Gemiddelde",
+      count: "Aantal",
+      clear: "Wissen",
+      error: "Voer alstublieft geldige getallen in",
+      instructions: "Voer elk getal op een nieuwe regel in, of scheid deze met komma's"
     }
   };
 
