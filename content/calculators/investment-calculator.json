@@ -558,5 +558,285 @@
         "explanation": "This example shows how the calculator works with smaller values."
       }
     ]
+  },
+  "de": {
+    "title": "Investitionsrechner",
+    "seoTitle": "Investitionsrechner - Wie viel wird meine Investition wachsen?",
+    "summary": "Berechnen Sie Investitionsrenditen und Wachstum im Laufe der Zeit.",
+    "description": "Verwenden Sie unseren Investitionsrechner, um den zukünftigen Wert Ihrer Investitionen zu projizieren, Zinseszinsen zu berechnen und Ihr finanzielles Wachstum zu planen.",
+    "category": "financial",
+    "difficulty": "Fortgeschritten",
+    "slug": "investment-calculator",
+    "seoContent": {
+      "introduction": "Ein Investitionsrechner ist ein wesentliches Werkzeug, das Ihnen hilft, Ihre finanzielle Situation genau zu berechnen und zu verstehen. Durch Eingabe Ihrer spezifischen Werte können Sie schnell genaue Ergebnisse erhalten und fundierte Entscheidungen treffen. Dieser Rechner vereinfacht komplexe Berechnungen und liefert sofortige, zuverlässige Ergebnisse, die Sie für Planung, Analyse und Entscheidungsfindung verwenden können.",
+      "benefits": [
+        "Treffen Sie fundierte finanzielle Entscheidungen mit präzisen Berechnungen",
+        "Planen Sie Ihr Budget und Ihre finanziellen Ziele effektiv",
+        "Vergleichen Sie verschiedene Szenarien, um die beste Option zu finden",
+        "Sparen Sie Zeit mit sofortigen, zuverlässigen Ergebnissen",
+        "Verstehen Sie die langfristigen Auswirkungen Ihrer finanziellen Entscheidungen",
+        "Verfolgen Sie den Fortschritt zu Ihren finanziellen Zielen"
+      ],
+      "steps": [
+        "Geben Sie Ihre finanziellen Informationen in die Eingabefelder ein",
+        "Überprüfen Sie die berechneten Ergebnisse und Projektionen",
+        "Passen Sie Werte an, um verschiedene Szenarien zu erkunden",
+        "Nutzen Sie die Erkenntnisse, um fundierte Entscheidungen zu treffen",
+        "Speichern oder teilen Sie Ihre Berechnungen für zukünftige Referenz",
+        "Konsultieren Sie einen Finanzberater für personalisierte Beratung"
+      ],
+      "inputsExplained": [
+        "Geben Sie alle erforderlichen Werte genau ein für beste Ergebnisse",
+        "Verwenden Sie realistische Zahlen basierend auf Ihrer tatsächlichen Situation",
+        "Passen Sie Eingaben an, um verschiedene Szenarien zu erkunden"
+      ],
+      "formulaExplanation": "Dieser Rechner verwendet branchenübliche Formeln und bewährte Berechnungsmethoden, um Genauigkeit zu gewährleisten. Die Ergebnisse werden basierend auf Ihren Eingaben unter Verwendung etablierter mathematischer Prinzipien und Best Practices in Finanzberechnungen berechnet.",
+      "whoItsFor": "Dieser Rechner ist ideal für alle, die finanzielle Entscheidungen treffen, Budgets planen oder finanzielle Szenarien analysieren müssen. Ob Anfänger oder Experte, dieses Tool liefert wertvolle Erkenntnisse und spart Zeit bei Berechnungen.",
+      "disclaimer": "Ergebnisse sind Schätzungen basierend auf den bereitgestellten Informationen. Tatsächliche Ergebnisse können variieren. Für kritische Entscheidungen konsultieren Sie bitte relevante Fachleute oder Experten auf dem Gebiet.",
+      "relatedTools": [
+        "Budgetrechner",
+        "Sparrechner",
+        "Investitionsrechner",
+        "Kreditrechner"
+      ],
+      "faqs": [
+        {
+          "question": "Wie genau ist der Investitionsrechner?",
+          "answer": "Der Rechner verwendet bewährte Formeln und branchenübliche Methoden, um genaue Ergebnisse basierend auf Ihren Eingaben zu liefern. Ergebnisse sind jedoch Schätzungen und können aufgrund zusätzlicher Faktoren variieren."
+        },
+        {
+          "question": "Welche Informationen benötige ich, um diesen Rechner zu verwenden?",
+          "answer": "Sie müssen die vom Rechner geforderten spezifischen Eingabewerte angeben. Alle Pflichtfelder sind klar gekennzeichnet, und Sie können Werte anpassen, um verschiedene Szenarien zu erkunden."
+        },
+        {
+          "question": "Kann ich meine Berechnungsergebnisse speichern oder teilen?",
+          "answer": "Ja, Sie können Ihre Ergebnisse speichern, indem Sie einen Screenshot machen oder die Werte notieren. Viele Benutzer finden es hilfreich, verschiedene Szenarien nebeneinander zu vergleichen."
+        },
+        {
+          "question": "Wie oft sollte ich diesen Rechner verwenden?",
+          "answer": "Verwenden Sie den Rechner, wann immer Sie fundierte Entscheidungen treffen oder Berechnungen überprüfen müssen. Viele Benutzer finden es hilfreich, Berechnungen regelmäßig zu überprüfen, wenn sich ihre Situation ändert."
+        },
+        {
+          "question": "Sind die Ergebnisse rechtlich bindend oder professionelle Beratung?",
+          "answer": "Nein, dieser Rechner liefert Schätzungen nur zu Informationszwecken. Für professionelle Beratung oder rechtlich bindende Informationen konsultieren Sie bitte qualifizierte Fachleute im relevanten Bereich."
+        }
+      ]
+    },
+    "component": "InvestmentCalculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Hauptwert",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Sekundärer Wert",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Ergebnis = Wert1 × Wert2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Berechnetes Ergebnis",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Prozentsatz",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Grundlegendes Beispiel",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "Dieses Beispiel zeigt eine typische Berechnung mit Standardwerten."
+      },
+      {
+        "title": "Hochwertszenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "Dieses Szenario demonstriert die Berechnung mit höheren Eingabewerten."
+      },
+      {
+        "title": "Niedrigwertszenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "Dieses Beispiel zeigt, wie der Rechner mit kleineren Werten funktioniert."
+      }
+    ]
+  },
+  "nl": {
+    "title": "Investerings Rekenmachine",
+    "seoTitle": "Investerings Rekenmachine - Hoeveel Zal Mijn Investering Groeien?",
+    "summary": "Bereken investeringsopbrengsten en groei in de loop van de tijd.",
+    "description": "Gebruik onze investeringsrekenmachine om de toekomstige waarde van uw investeringen te projecteren, samengestelde rente te berekenen en uw financiële groei te plannen.",
+    "category": "financial",
+    "difficulty": "Gemiddeld",
+    "slug": "investment-calculator",
+    "seoContent": {
+      "introduction": "Een investeringsrekenmachine is een essentieel hulpmiddel dat u helpt uw financiële situatie nauwkeurig te berekenen en te begrijpen. Door uw specifieke waarden in te voeren, kunt u snel nauwkeurige resultaten verkrijgen en weloverwogen beslissingen nemen. Deze rekenmachine vereenvoudigt complexe berekeningen en biedt directe, betrouwbare resultaten die u kunt gebruiken voor planning, analyse en besluitvorming.",
+      "benefits": [
+        "Neem weloverwogen financiële beslissingen met nauwkeurige berekeningen",
+        "Plan uw budget en financiële doelen effectief",
+        "Vergelijk verschillende scenario's om de beste optie te vinden",
+        "Bespaar tijd met directe, betrouwbare resultaten",
+        "Begrijp de langetermijnimpact van uw financiële keuzes",
+        "Volg de voortgang naar uw financiële doelstellingen"
+      ],
+      "steps": [
+        "Voer uw financiële informatie in de invoervelden in",
+        "Bekijk de berekende resultaten en projecties",
+        "Pas waarden aan om verschillende scenario's te verkennen",
+        "Gebruik de inzichten om weloverwogen beslissingen te nemen",
+        "Bewaar of deel uw berekeningen voor toekomstige referentie",
+        "Raadpleeg een financieel adviseur voor persoonlijk advies"
+      ],
+      "inputsExplained": [
+        "Voer alle vereiste waarden nauwkeurig in voor de beste resultaten",
+        "Gebruik realistische getallen op basis van uw werkelijke situatie",
+        "Pas invoer aan om verschillende scenario's te verkennen"
+      ],
+      "formulaExplanation": "Deze rekenmachine gebruikt branchestandaard formules en bewezen berekeningsmethoden om nauwkeurigheid te waarborgen. De resultaten worden berekend op basis van uw invoer met behulp van gevestigde wiskundige principes en best practices in financiële berekeningen.",
+      "whoItsFor": "Deze rekenmachine is ideaal voor iedereen die financiële beslissingen moet nemen, budgetten moet plannen of financiële scenario's moet analyseren. Of u nu een beginner of expert bent, dit hulpmiddel biedt waardevolle inzichten en bespaart tijd bij berekeningen.",
+      "disclaimer": "Resultaten zijn schattingen op basis van de verstrekte informatie. Werkelijke resultaten kunnen variëren. Voor kritieke beslissingen raadpleegt u relevante professionals of experts op dit gebied.",
+      "relatedTools": [
+        "Budget Rekenmachine",
+        "Spaar Rekenmachine",
+        "Investerings Rekenmachine",
+        "Lening Rekenmachine"
+      ],
+      "faqs": [
+        {
+          "question": "Hoe nauwkeurig is de investeringsrekenmachine?",
+          "answer": "De rekenmachine gebruikt bewezen formules en branchestandaard methoden om nauwkeurige resultaten te leveren op basis van de invoer die u verstrekt. Resultaten zijn echter schattingen en kunnen variëren op basis van aanvullende factoren."
+        },
+        {
+          "question": "Welke informatie heb ik nodig om deze rekenmachine te gebruiken?",
+          "answer": "U moet de specifieke invoerwaarden verstrekken die door de rekenmachine worden vereist. Alle verplichte velden zijn duidelijk gelabeld en u kunt waarden aanpassen om verschillende scenario's te verkennen."
+        },
+        {
+          "question": "Kan ik mijn berekeningsresultaten opslaan of delen?",
+          "answer": "Ja, u kunt uw resultaten opslaan door een screenshot te maken of de waarden te noteren. Veel gebruikers vinden het nuttig om verschillende scenario's naast elkaar te vergelijken."
+        },
+        {
+          "question": "Hoe vaak moet ik deze rekenmachine gebruiken?",
+          "answer": "Gebruik de rekenmachine wanneer u weloverwogen beslissingen moet nemen of berekeningen moet verifiëren. Veel gebruikers vinden het nuttig om berekeningen regelmatig te controleren als hun situatie verandert."
+        },
+        {
+          "question": "Zijn de resultaten juridisch bindend of professioneel advies?",
+          "answer": "Nee, deze rekenmachine biedt schattingen alleen voor informatiedoeleinden. Voor professioneel advies of juridisch bindende informatie raadpleegt u gekwalificeerde professionals op het relevante gebied."
+        }
+      ]
+    },
+    "component": "InvestmentCalculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primaire Waarde",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondaire Waarde",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Resultaat = Waarde1 × Waarde2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Berekend Resultaat",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "examples": [
+      {
+        "title": "Basisvoorbeeld",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "Dit voorbeeld toont een typische berekening met standaardwaarden."
+      },
+      {
+        "title": "Hoge Waarde Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "Dit scenario demonstreert de berekening met hogere invoerwaarden."
+      },
+      {
+        "title": "Lage Waarde Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "Dit voorbeeld laat zien hoe de rekenmachine werkt met kleinere waarden."
+      }
+    ]
   }
 }
