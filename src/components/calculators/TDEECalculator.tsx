@@ -252,8 +252,102 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       x: "x",
       lbsPerWeek: "lbs/semaine"
 ,
-      noteDisclaimer: "Remarque: Les calculs TDEE fournissent des estimations basées sur des formules établies. Les taux métaboliques individuels peuvent varier considérablement. Pour la gestion du poids ou les objectifs de condition physique, consultez un professionnel de la santé ou de la condition physique."
-    }
+      noteDisclaimer: "Remarque: Les calculs TDEE fournissent des estimations basées sur des formules établies. Les taux métaboliques individuels peuvent varier considérablement. Pour la gestion du poids ou les objectifs de condition physique, consultez un professionnel de la santé ou de la condition physique."    },
+    de: {
+      title: "TDEE-Rechner",
+      subtitle: "Berechnen Sie Ihren Gesamttäglichen Energieverbrauch (TDEE) um Ihre tägliche Kalorienverbrauchsrate zu verstehen",
+      weight: "Körpergewicht",
+      height: "Größe",
+      gender: "Geschlecht",
+      age: "Alter",
+      activityLevel: "Aktivitätsniveau",
+      exerciseFrequency: "Trainingsfrequenz",
+      calculate: "TDEE Berechnen",
+      results: "TDEE Ergebnisse",
+      tdee: "Gesamttäglicher Energieverbrauch (TDEE)",
+      bmr: "Grundumsatz (BMR)",
+      activityMultiplier: "Aktivitätsmultiplikator",
+      activityCategory: "Aktivitätskategorie",
+      weightLossRate: "Gewichtsverlustrate (500 cal Defizit)",
+      weightGainRate: "Gewichtszunahmerates (500 cal Überschuss)",
+      activityLevelOptions: {
+        sedentary: "Sitzend (wenig/keine Bewegung, Schreibtischarbeit)",
+        lightly_active: "Leicht aktiv (leichte Bewegung 1-3 Tage/Woche)",
+        moderately_active: "Mäßig aktiv (moderate Bewegung 3-5 Tage/Woche)",
+        very_active: "Sehr aktiv (intensive Bewegung 6-7 Tage/Woche)",
+        extremely_active: "Extrem aktiv (sehr intensive Bewegung, körperliche Arbeit, oder 2x Training)"
+      },
+      exerciseFrequencyOptions: {
+        none: "Keine (sitzendes Leben)",
+        light: "Leicht (1-2 Stunden/Woche)",
+        moderate: "Moderat (3-4 Stunden/Woche)",
+        heavy: "Intensiv (5-6 Stunden/Woche)",
+        very_heavy: "Sehr intensiv (7+ Stunden/Woche)"
+      },
+      genderOptions: {
+        male: "Männlich",
+        female: "Weiblich"
+      },
+      weightUnitOptions: {
+        kg: "Kilogramm (kg)",
+        lbs: "Pfund (lbs)"
+      },
+      heightUnitOptions: {
+        cm: "Zentimeter (cm)",
+        inches: "Zoll (in)"
+      },
+      calories: "Kalorien",
+      x: "x",
+      lbsPerWeek: "lbs/Woche",
+      noteDisclaimer: "Hinweis: TDEE-Berechnungen liefern Schätzungen basierend auf etablierten Formeln. Individuelle Stoffwechselraten können erheblich variieren. Für Gewichtsmanagement oder Fitnessziele wenden Sie sich an einen Gesundheits- oder Fitnessprofi."
+    },
+    nl: {
+      title: "TDEE Rekenmachine",
+      subtitle: "Bereken uw totale dagelijks energieverbruik (TDEE) om uw dagelijks calorieverbrandingspercentage te begrijpen",
+      weight: "Lichaamsgewicht",
+      height: "Lengte",
+      gender: "Geslacht",
+      age: "Leeftijd",
+      activityLevel: "Activiteitsniveau",
+      exerciseFrequency: "Trainingsfrequentie",
+      calculate: "TDEE Berekenen",
+      results: "TDEE Resultaten",
+      tdee: "Totaal Dagelijks Energieverbruik (TDEE)",
+      bmr: "Basaal Metabolisch Tarief (BMR)",
+      activityMultiplier: "Activiteitsmultiplier",
+      activityCategory: "Activiteitscategorie",
+      weightLossRate: "Gewichtsverlies Tarief (500 cal tekort)",
+      weightGainRate: "Gewichtstoename Tarief (500 cal surplus)",
+      activityLevelOptions: {
+        sedentary: "Zittend (weinig/geen beweging, kantoorwerk)",
+        lightly_active: "Licht Actief (lichte beweging 1-3 dagen/week)",
+        moderately_active: "Matig Actief (matige beweging 3-5 dagen/week)",
+        very_active: "Zeer Actief (intensieve beweging 6-7 dagen/week)",
+        extremely_active: "Extreem Actief (zeer intensieve beweging, lichamelijk werk, of 2x training)"
+      },
+      exerciseFrequencyOptions: {
+        none: "Geen (zittend leven)",
+        light: "Licht (1-2 uur/week)",
+        moderate: "Matig (3-4 uur/week)",
+        heavy: "Zwaar (5-6 uur/week)",
+        very_heavy: "Zeer Zwaar (7+ uur/week)"
+      },
+      genderOptions: {
+        male: "Mannelijk",
+        female: "Vrouwelijk"
+      },
+      weightUnitOptions: {
+        kg: "Kilogram (kg)",
+        lbs: "Pond (lbs)"
+      },
+      heightUnitOptions: {
+        cm: "Centimeter (cm)",
+        inches: "Inch (in)"
+      },
+      calories: "calorieën",
+      x: "x",
+      lbsPerWeek: "pond/week",
+      noteDisclaimer: "Opmerking: TDEE-berekeningen geven schattingen op basis van gevestigde formules. Individuele stofwisselingstarief kunnen aanzienlijk variëren. Voor gewichtsbeheer of fitnessdoelen, raadpleeg een gezondheids- of fitnessdeskundige."    }
   };
 
   const t = translations[lang as keyof typeof translations] || translations.en;

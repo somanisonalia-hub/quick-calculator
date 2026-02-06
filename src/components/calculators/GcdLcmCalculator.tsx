@@ -52,6 +52,26 @@ export default function GcdLcmCalculator({ lang = 'en' }: GcdLcmCalculatorProps)
       results: "Résultats",
       gcd: "PGCD (Plus Grand Commun Diviseur)",
       lcm: "PPCM (Plus Petit Commun Multiple)"
+    },
+    de: {
+      title: "GCD & KGV Rechner",
+      description: "Berechnen Sie den größten gemeinsamen Teiler und das kleinste gemeinsame Vielfache",
+      number1: "Erste Zahl",
+      number2: "Zweite Zahl",
+      calculate: "Berechnen",
+      results: "Ergebnisse",
+      gcd: "GCD (Größter Gemeinsamer Teiler)",
+      lcm: "KGV (Kleinstes Gemeinsames Vielfaches)"
+    },
+    nl: {
+      title: "GGD & KGV Rekenmachine",
+      description: "Bereken de grootste gemene deler en het kleinste gemene veelvoud",
+      number1: "Eerste Getal",
+      number2: "Tweede Getal",
+      calculate: "Berekenen",
+      results: "Resultaten",
+      gcd: "GGD (Grootste Gemene Deler)",
+      lcm: "KGV (Kleinste Gemene Veelvoud)"
     }
   };
 

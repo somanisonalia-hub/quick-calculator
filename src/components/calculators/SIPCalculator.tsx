@@ -30,6 +30,61 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
       totalReturns: 'Expected Returns',
       finalAmount: 'Final Amount',
       rupee: '₹'
+    },
+    es: {
+      title: 'Calculadora SIP',
+      monthlyAmount: 'Monto SIP Mensual (₹)',
+      years: 'Período de Inversión (Años)',
+      annualReturn: 'Retorno Anual Esperado (%)',
+      calculate: 'Calcular Retornos SIP',
+      totalInvestment: 'Inversión Total',
+      totalReturns: 'Retornos Esperados',
+      finalAmount: 'Cantidad Final',
+      rupee: '₹'
+    },
+    pt: {
+      title: 'Calculadora SIP',
+      monthlyAmount: 'Valor SIP Mensal (₹)',
+      years: 'Período de Investimento (Anos)',
+      annualReturn: 'Retorno Anual Esperado (%)',
+      calculate: 'Calcular Retornos SIP',
+      totalInvestment: 'Investimento Total',
+      totalReturns: 'Retornos Esperados',
+      finalAmount: 'Valor Final',
+      rupee: '₹'
+    },
+    fr: {
+      title: 'Calculateur PIA',
+      monthlyAmount: 'Montant PIA Mensuel (₹)',
+      years: 'Période d\'Investissement (Années)',
+      annualReturn: 'Rendement Annuel Attendu (%)',
+      calculate: 'Calculer les Rendements PIA',
+      totalInvestment: 'Investissement Total',
+      totalReturns: 'Rendements Attendus',
+      finalAmount: 'Montant Final',
+      rupee: '₹'
+    },
+    de: {
+      title: 'SIP-Rechner',
+      monthlyAmount: 'Monatlicher SIP-Betrag (₹)',
+      years: 'Anlagezeitraum (Jahre)',
+      annualReturn: 'Erwartete jährliche Rendite (%)',
+      calculate: 'SIP-Renditen Berechnen',
+      totalInvestment: 'Gesamtinvestition',
+      totalReturns: 'Erwartete Rendite',
+      finalAmount: 'Endbetrag',
+      rupee: '₹'
+    },
+    nl: {
+      title: 'SIP-Rekenmachine',
+      monthlyAmount: 'Maandelijks SIP-bedrag (₹)',
+      years: 'Investeringsperiode (Jaren)',
+      annualReturn: 'Verwachte Jaarlijkse Opbrengst (%)',
+      calculate: 'SIP-opbrengsten Berekenen',
+      totalInvestment: 'Totale Investering',
+      totalReturns: 'Verwachte Opbrengsten',
+      finalAmount: 'Eindbedrag',
+      rupee: '₹'
     }
   };
 

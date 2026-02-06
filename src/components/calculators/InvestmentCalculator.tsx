@@ -91,12 +91,34 @@ const translations = {
     annually: "annually",
       quarterly: "quarterly",
       string: "string",
-  }
-};
-
-export default function InvestmentCalculator({ inputs, output, additionalOutputs, lang = 'en' }: InvestmentCalculatorProps) {
-  const t = translations[lang as keyof typeof translations] || translations.en;
-
+  },
+  de: {
+    investmentDetails: "Anlagedetails",
+    investmentGrowth: "Anlagewachstum",
+    performanceSummary: "Leistungszusammenfassung",
+    initialInvestment: "Anfängliche Investition",
+    monthlyDeposits: "Monatliche Einzahlungen",
+    investmentPeriod: "Anlageperiode",
+    expectedReturn: "Erwartete Rendite",
+    years: "Jahre",
+    apr: "JPA",
+    annually: "annually",
+    quarterly: "quarterly",
+    string: "string",
+  },
+  nl: {
+    investmentDetails: "Investeringsdetails",
+    investmentGrowth: "Investeringsgroei",
+    performanceSummary: "Prestatiepamflet",
+    initialInvestment: "Initiële Investering",
+    monthlyDeposits: "Maandelijkse Stortingen",
+    investmentPeriod: "Investeringsperiode",
+    expectedReturn: "Verwachte Opbrengst",
+    years: "jaren",
+    apr: "JPR",
+    annually: "annually",
+    quarterly: "quarterly",
+    string: "string",
   // Translated labels for the performance summary
   const initialInvestment = t.initialInvestment;
   const monthlyDeposits = t.monthlyDeposits;

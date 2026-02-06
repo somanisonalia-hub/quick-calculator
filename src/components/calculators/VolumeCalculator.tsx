@@ -75,6 +75,34 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
       volume: "Volume",
       formula: "Formule",
       surfaceArea: "Aire de Surface"
+    },
+    de: {
+      title: "Volumenrechner",
+      description: "Berechnen Sie das Volumen von 3D-Formen",
+      shape: "3D-Form",
+      cube: "Würfel",
+      rectangularPrism: "Rechteckiges Prisma",
+      sphere: "Kugel",
+      cylinder: "Zylinder",
+      cone: "Kegel",
+      pyramid: "Pyramide",
+      volume: "Volumen",
+      formula: "Formel",
+      surfaceArea: "Oberfläche"
+    },
+    nl: {
+      title: "Volume Rekenmachine",
+      description: "Bereken het volume van 3D-vormen",
+      shape: "3D-vorm",
+      cube: "Kubus",
+      rectangularPrism: "Rechthoekig Prisma",
+      sphere: "Bol",
+      cylinder: "Cilinder",
+      cone: "Kegel",
+      pyramid: "Piramide",
+      volume: "Volume",
+      formula: "Formule",
+      surfaceArea: "Oppervlakte"
     }
   };
 

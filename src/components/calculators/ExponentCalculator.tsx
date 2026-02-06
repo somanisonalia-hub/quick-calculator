@@ -48,6 +48,24 @@ export default function ExponentCalculator({ lang = 'en' }: ExponentCalculatorPr
       calculate: "Calculer",
       result: "Résultat",
       formula: "Formule"
+    },
+    de: {
+      title: "Exponentenrechner",
+      description: "Berechnen Sie Potenzen und exponentielle Ausdrücke",
+      base: "Basis",
+      exponent: "Exponent",
+      calculate: "Berechnen",
+      result: "Ergebnis",
+      formula: "Formel"
+    },
+    nl: {
+      title: "Machtscalculator",
+      description: "Bereken machten en exponentiële uitdrukkingen",
+      base: "Basis",
+      exponent: "Exponent",
+      calculate: "Berekenen",
+      result: "Resultaat",
+      formula: "Formule"
     }
   };
 

@@ -264,6 +264,190 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
       gPerLb: "g/lb",
       calories: "calories",
       noteDisclaimer: "Remarque: Ces recommandations sont basées sur les directives générales de nutrition sportive."
+    },
+    de: {
+      title: "Proteinzufuhr-Rechner",
+      subtitle: "Berechnen Sie Ihren täglichen Proteinbedarf basierend auf Gewicht, Aktivitätsniveau und Fitnessziele".,
+      weight: "Körpergewicht",
+      weightUnit: "Gewichtseinheit",
+      gender: "Geschlecht",
+      age: "Alter",
+      activityLevel: "Aktivitätsniveau",
+      fitnessGoal: "Fitnessziel",
+      trainingFrequency: "Trainingstage pro Woche",
+      calculate: "Proteinzufuhr Berechnen",
+      results: "Proteinzufuhr-Empfehlungen",
+      dailyProteinIntake: "Tägliche Proteinzufuhr",
+      proteinPerKg: "Protein pro kg Körpergewicht",
+      proteinPerMeal: "Protein pro Mahlzeit (4 Mahlzeiten)",
+      proteinPerMeal6: "Protein pro Mahlzeit (6 Mahlzeiten)",
+      proteinPerPound: "Protein pro Pfund Körpergewicht",
+      caloriesFromProtein: "Kalorien aus Protein",
+      activityLevelOptions: {
+        sedentary: "Sitzend (wenig/kein Training)",
+        lightly_active: "Leicht Aktiv (leichtes Training 1-3 Tage/Woche)",
+        moderately_active: "Mäßig Aktiv (mäßiges Training 3-5 Tage/Woche)",
+        very_active: "Sehr Aktiv (intensives Training 6-7 Tage/Woche)",
+        extremely_active: "Extrem Aktiv (sehr intensives Training, körperliche Arbeit, oder 2x Training)"
+      },
+      fitnessGoalOptions: {
+        maintenance: "Wartung (aktuelles Gewicht/Muskel erhalten)",
+        weight_loss: "Gewichtsverlust (Fettabbau mit Muskelerhalt)",
+        muscle_gain: "Muskelaufbau (Muskelmasseaufbau)",
+        athletic_performance: "Sportliche Leistung (Ausdauer-/Kraftsportarten)",
+        bodybuilding: "Körperbau (maximales Muskelwachstum)"
+      },
+      genderOptions: {
+        male: "Mädlich",
+        female: "Weiblich"
+      },
+      weightUnitOptions: {
+        kg: "Kilogramm (kg)",
+        lbs: "Pfund (lbs)"
+      },
+      grams: "Gramm",
+      gPerKg: "g/kg",
+      gPerLb: "g/Pfund",
+      calories: "Kalorien",
+      noteDisclaimer: "Hinweis: Diese Empfehlungen basieren auf allgemeinen Richtlinien für Sporterhöhung."
+    },
+    nl: {
+      title: "Eiwitinname Rekenmachine",
+      subtitle: "Bereken uw dagelijkse eiwitbehoefte op basis van gewicht, activiteitsniveau en fitnessdoelen",
+      weight: "Lichaamsgewicht",
+      weightUnit: "Gewichtseenheid",
+      gender: "Geslacht",
+      age: "Leeftijd",
+      activityLevel: "Activiteitsniveau",
+      fitnessGoal: "Fitnessdoel",
+      trainingFrequency: "Trainingstage per Week",
+      calculate: "Eiwitinname Berekenen",
+      results: "Aanbevelingen voor Eiwitinname",
+      dailyProteinIntake: "Dagelijkse Eiwitinname",
+      proteinPerKg: "Eiwit per kg Lichaamsgewicht",
+      proteinPerMeal: "Eiwit per Maaltijd (4 Maaltijden)",
+      proteinPerMeal6: "Eiwit per Maaltijd (6 Maaltijden)",
+      proteinPerPound: "Eiwit per Pond Lichaamsgewicht",
+      caloriesFromProtein: "Calorieën van Eiwit",
+      activityLevelOptions: {
+        sedentary: "Zittend (weinig/geen training)",
+        lightly_active: "Licht Actief (licht training 1-3 dagen/week)",
+        moderately_active: "Matig Actief (matig training 3-5 dagen/week)",
+        very_active: "Zeer Actief (intensief training 6-7 dagen/week)",
+        extremely_active: "Extreem Actief (zeer intensief training, lichamelijk werk, of 2x training)"
+      },
+      fitnessGoalOptions: {
+        maintenance: "Onderhoud (huidigegewicht/spier behouden)",
+        weight_loss: "Gewichtsverlies (vetafname met spierretentie)",
+        muscle_gain: "Spierbouw (spiermassakopbouw)",
+        athletic_performance: "Sportprestatie (uithoudingsvermogen/krachtsportarten)",
+        bodybuilding: "Bodybuilding (maximale spiergroei)"
+      },
+      genderOptions: {
+        male: "Mannelijk",
+        female: "Vrouwelijk"
+      },
+      weightUnitOptions: {
+        kg: "Kilogram (kg)",
+        lbs: "Pond (lbs)"
+      },
+      grams: "Gram",
+      gPerKg: "g/kg",
+      gPerLb: "g/pond",
+      calories: "calorieën",
+      noteDisclaimer: "Opmerking: Deze aanbevelingen zijn gebaseerd op algemene richtlijnen voor sportvoeding."
+    },
+    de: {
+      title: "Proteinzufuhr-Rechner",
+      subtitle: "Berechnen Sie Ihren täglichen Proteinbedarf basierend auf Gewicht, Aktivitätsniveau und Fitnessziele",
+      weight: "Körpergewicht",
+      weightUnit: "Gewichtseinheit",
+      gender: "Geschlecht",
+      age: "Alter",
+      activityLevel: "Aktivitätsniveau",
+      fitnessGoal: "Fitnessziel",
+      trainingFrequency: "Trainingstage pro Woche",
+      calculate: "Proteinzufuhr Berechnen",
+      results: "Proteinzufuhr-Empfehlungen",
+      dailyProteinIntake: "Tägliche Proteinzufuhr",
+      proteinPerKg: "Protein pro kg Körpergewicht",
+      proteinPerMeal: "Protein pro Mahlzeit (4 Mahlzeiten)",
+      proteinPerMeal6: "Protein pro Mahlzeit (6 Mahlzeiten)",
+      proteinPerPound: "Protein pro Pfund Körpergewicht",
+      caloriesFromProtein: "Kalorien aus Protein",
+      activityLevelOptions: {
+        sedentary: "Sitzend (wenig/kein Training)",
+        lightly_active: "Leicht Aktiv (leichtes Training 1-3 Tage/Woche)",
+        moderately_active: "Mäßig Aktiv (mäßiges Training 3-5 Tage/Woche)",
+        very_active: "Sehr Aktiv (intensives Training 6-7 Tage/Woche)",
+        extremely_active: "Extrem Aktiv (sehr intensives Training, körperliche Arbeit, oder 2x Training)"
+      },
+      fitnessGoalOptions: {
+        maintenance: "Wartung (aktuelles Gewicht/Muskel erhalten)",
+        weight_loss: "Gewichtsverlust (Fettabbau mit Muskelerhalt)",
+        muscle_gain: "Muskelaufbau (Muskelmasseaufbau)",
+        athletic_performance: "Sportliche Leistung (Ausdauer-/Kraftsportarten)",
+        bodybuilding: "Körperbau (maximales Muskelwachstum)"
+      },
+      genderOptions: {
+        male: "Männlich",
+        female: "Weiblich"
+      },
+      weightUnitOptions: {
+        kg: "Kilogramm (kg)",
+        lbs: "Pfund (lbs)"
+      },
+      grams: "Gramm",
+      gPerKg: "g/kg",
+      gPerLb: "g/Pfund",
+      calories: "Kalorien",
+      noteDisclaimer: "Hinweis: Diese Empfehlungen basieren auf allgemeinen Richtlinien für Sporternährung."
+    },
+    nl: {
+      title: "Eiwitinname Rekenmachine",
+      subtitle: "Bereken uw dagelijkse eiwitbehoefte op basis van gewicht, activiteitsniveau en fitnessdoelen",
+      weight: "Lichaamsgewicht",
+      weightUnit: "Gewichtseenheid",
+      gender: "Geslacht",
+      age: "Leeftijd",
+      activityLevel: "Activiteitsniveau",
+      fitnessGoal: "Fitnessdoel",
+      trainingFrequency: "Trainingstage per Week",
+      calculate: "Eiwitinname Berekenen",
+      results: "Aanbevelingen voor Eiwitinname",
+      dailyProteinIntake: "Dagelijkse Eiwitinname",
+      proteinPerKg: "Eiwit per kg Lichaamsgewicht",
+      proteinPerMeal: "Eiwit per Maaltijd (4 Maaltijden)",
+      proteinPerMeal6: "Eiwit per Maaltijd (6 Maaltijden)",
+      proteinPerPound: "Eiwit per Pond Lichaamsgewicht",
+      caloriesFromProtein: "Caloriën van Eiwit",
+      activityLevelOptions: {
+        sedentary: "Zittend (weinig/geen training)",
+        lightly_active: "Licht Actief (licht training 1-3 dagen/week)",
+        moderately_active: "Matig Actief (matig training 3-5 dagen/week)",
+        very_active: "Zeer Actief (intensief training 6-7 dagen/week)",
+        extremely_active: "Extreem Actief (zeer intensief training, lichamelijk werk, of 2x training)"
+      },
+      fitnessGoalOptions: {
+        maintenance: "Onderhoud (huidige gewicht/spier behouden)",
+        weight_loss: "Gewichtsverlies (vetafname met spierretentie)",
+        muscle_gain: "Spierbouw (spiermassakopbouw)",
+        athletic_performance: "Sportprestatie (uithoudingsvolley)",
+        bodybuilding: "Bodybuildeng (maximale spierg groei)"
+      },
+      genderOptions: {
+        male: "Mannelijk",
+        female: "Vrouwelijk"
+      },
+      weightUnitOptions: {
+        kg: "Kilogram (kg)",
+        lbs: "Pond (lbs)"
+      },
+      grams: "Gram",
+      gPerKg: "g/kg",
+      gPerLb: "g/pond",
+      calories: "calorieën",
+      noteDisclaimer: "Opmerking: Deze aanbevelingen zijn gebaseerd op algemene richtlijnen voor sportvoeding."
     }
   };
 

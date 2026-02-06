@@ -84,6 +84,44 @@ export default function EMICalculator({ lang = 'en' }: EMICalculatorProps) {
       currency: "€",
       calculateyouremi: "Calculez votre EMI",
       enterloandetailsinstruction: "Entrez les détails du prêt ci-dessus pour voir la répartition EMI"
+    },
+    de: {
+      title: "EMI-Rechner",
+      description: "Berechnen Sie die äquivalente monatliche Rate für Darlehen",
+      loanDetails: "Kreditdetails",
+      emiBreakdown: "EMI-Aufschlüsselung",
+      monthlyEMI: "Monatliche EMI",
+      principalAmount: "Kapitalbetrag",
+      totalInterest: "Gesamtzinsen",
+      totalAmountPaid: "Gesamtbetrag bezahlt",
+      emiFormula: "EMI-Formel",
+      calculate: "Berechnen",
+      reset: "Zurücksetzen",
+      loanAmount: "Darlehensbetrag",
+      interestRate: "Zinssatz (%)",
+      loanTerm: "Kreditlaufzeit (Jahre)",
+      currency: "€",
+      calculateyouremi: "Berechnen Sie Ihre EMI",
+      enterloandetailsinstruction: "Geben Sie die obigen Kreditdetails ein, um die EMI-Aufschlüsselung zu sehen"
+    },
+    nl: {
+      title: "EMI-Rekenmachine",
+      description: "Bereken de equivalente maandelijkse betaling voor leningen",
+      loanDetails: "Leningdetails",
+      emiBreakdown: "EMI-uitsplitsing",
+      monthlyEMI: "Maandelijkse EMI",
+      principalAmount: "Hoofdbedrag",
+      totalInterest: "Totale Rente",
+      totalAmountPaid: "Totaal betaald bedrag",
+      emiFormula: "EMI-formule",
+      calculate: "Berekenen",
+      reset: "Opnieuw instellen",
+      loanAmount: "Leningbedrag",
+      interestRate: "Rentepercentage (%)",
+      loanTerm: "Leningen looptijd (jaren)",
+      currency: "€",
+      calculateyouremi: "Bereken uw EMI",
+      enterloandetailsinstruction: "Voer hierboven de leningdetails in om de EMI-uitsplitsing te zien"
     }
   };
 
