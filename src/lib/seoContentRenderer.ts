@@ -429,6 +429,68 @@ const SITE_INFO = {
   }
 };
 
+export function generateOrganizationSchema() {
+  const baseUrl = 'https://quick-calculator.org';
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${baseUrl}#organization`,
+    "name": "Quick Calculator",
+    "legalName": "Quick Calculator",
+    "url": baseUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "@id": `${baseUrl}#logo`,
+      "url": `${baseUrl}/icon`,
+      "contentUrl": `${baseUrl}/icon`,
+      "caption": "Quick Calculator Logo",
+      "inLanguage": "en",
+      "width": "32",
+      "height": "32",
+      "encodingFormat": "image/svg+xml"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "@id": `${baseUrl}#image`,
+      "url": `${baseUrl}/og-image.png`,
+      "contentUrl": `${baseUrl}/og-image.png`,
+      "caption": "Quick Calculator - Free Online Calculators",
+      "inLanguage": "en",
+      "width": "1200",
+      "height": "630"
+    },
+    "description": "Free online calculators for math, finance, health, and everyday calculations. Fast, accurate, and easy to use.",
+    "slogan": "Calculate Everything, Instantly",
+    "foundingDate": "2024",
+    "sameAs": [
+      `${baseUrl}/en`,
+      `${baseUrl}/es`, 
+      `${baseUrl}/pt`,
+      `${baseUrl}/fr`,
+      `${baseUrl}/de`,
+      `${baseUrl}/nl`,
+      `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/about-us`,
+      `${baseUrl}/contact`
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "url": `${baseUrl}/contact`,
+      "availableLanguage": ["English", "Spanish", "Portuguese", "French", "German", "Dutch"]
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${baseUrl}/?search={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+}
+
 export function generateHomepageSchema(lang: string = 'en') {
   const baseUrl = 'https://quick-calculator.org';
   const url = lang === 'en' ? baseUrl : `${baseUrl}/${lang}`;
@@ -436,29 +498,112 @@ export function generateHomepageSchema(lang: string = 'en') {
   const siteName = SITE_INFO.name[lang as keyof typeof SITE_INFO.name] || SITE_INFO.name.en;
   const siteDescription = SITE_INFO.description[lang as keyof typeof SITE_INFO.description] || SITE_INFO.description.en;
 
+  // Category navigation for SiteNavigationElement
+  const categorySlug = (slug: string) => lang === 'en' ? `${baseUrl}/categories/${slug}` : `${baseUrl}/${lang}/categories/${slug}`;
+  const categoryNames = CATEGORY_NAMES;
+
   return {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${url}#website`,
-    "name": siteName,
-    "url": url,
-    "description": siteDescription,
-    "inLanguage": getInLanguage(lang),
-    "publisher": {
-      "@type": "Organization",
-      "@id": `${baseUrl}#organization`,
-      "name": siteName,
-      "url": baseUrl
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "@id": `${url}#searchaction`,
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${url}/?search={search_term_string}`
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        "url": url,
+        "name": siteName,
+        "description": siteDescription,
+        "inLanguage": getInLanguage(lang),
+        "isPartOf": {
+          "@id": `${url}#website`
+        },
+        "about": {
+          "@id": `${baseUrl}#organization`
+        },
+        "primaryImageOfPage": {
+          "@id": `${baseUrl}#image`
+        }
       },
-      "query-input": "required name=search_term_string"
-    }
+      {
+        "@type": "WebSite",
+        "@id": `${url}#website`,
+        "name": siteName,
+        "url": url,
+        "description": siteDescription,
+        "inLanguage": getInLanguage(lang),
+        "publisher": {
+          "@type": "Organization",
+          "@id": `${baseUrl}#organization`
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "@id": `${url}#searchaction`,
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": `${url}/?search={search_term_string}`
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#categories`,
+        "name": "Calculator Categories",
+        "description": "Browse calculators by category",
+        "numberOfItems": 5,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "CollectionPage",
+              "@id": `${categorySlug('financial')}#collectionpage`,
+              "name": categoryNames.financial[lang as keyof typeof categoryNames.financial] || categoryNames.financial.en,
+              "url": categorySlug('financial')
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "CollectionPage",
+              "@id": `${categorySlug('health')}#collectionpage`,
+              "name": categoryNames.health[lang as keyof typeof categoryNames.health] || categoryNames.health.en,
+              "url": categorySlug('health')
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "CollectionPage",
+              "@id": `${categorySlug('math')}#collectionpage`,
+              "name": categoryNames.math[lang as keyof typeof categoryNames.math] || categoryNames.math.en,
+              "url": categorySlug('math')
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "CollectionPage",
+              "@id": `${categorySlug('utility')}#collectionpage`,
+              "name": categoryNames.utility[lang as keyof typeof categoryNames.utility] || categoryNames.utility.en,
+              "url": categorySlug('utility')
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "CollectionPage",
+              "@id": `${categorySlug('lifestyle')}#collectionpage`,
+              "name": categoryNames.lifestyle[lang as keyof typeof categoryNames.lifestyle] || categoryNames.lifestyle.en,
+              "url": categorySlug('lifestyle')
+            }
+          }
+        ]
+      },
+      generateOrganizationSchema()
+    ]
   };
 }
 
@@ -480,6 +625,31 @@ export function generateCategorySchema(categoryData: CategoryData, lang: string 
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": ["WebPage", "CollectionPage"],
+        "@id": `${categoryUrl}#webpage`,
+        "url": categoryUrl,
+        "name": categoryData.name,
+        "description": categoryData.description,
+        "inLanguage": getInLanguage(lang),
+        "isPartOf": {
+          "@id": lang === 'en' ? `${baseUrl}#website` : `${baseUrl}/${lang}#website`
+        },
+        "breadcrumb": {
+          "@id": `${categoryUrl}#breadcrumblist`
+        },
+        "about": {
+          "@id": `${baseUrl}#organization`
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": `${categoryUrl}?search={search_term_string}`
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
         "@type": "CollectionPage",
         "@id": `${categoryUrl}#collectionpage`,
         "name": categoryData.name,
@@ -497,10 +667,11 @@ export function generateCategorySchema(categoryData: CategoryData, lang: string 
             "@id": `${categoryUrl}#item${index + 1}`,
             "position": index + 1,
             "item": {
-              "@type": "WebPage",
+              "@type": ["WebPage", "WebApplication"],
               "@id": `${lang === 'en' ? `${baseUrl}/${calc.slug}` : `${baseUrl}/${lang}/${calc.slug}`}#webpage`,
               "name": calc.name,
-              "url": lang === 'en' ? `${baseUrl}/${calc.slug}` : `${baseUrl}/${lang}/${calc.slug}`
+              "url": lang === 'en' ? `${baseUrl}/${calc.slug}` : `${baseUrl}/${lang}/${calc.slug}`,
+              "applicationCategory": "CalculatorApplication"
             }
           }))
         }

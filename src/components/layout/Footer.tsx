@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CalculatorLogo from '@/components/icons/CalculatorLogo';
 
 interface FooterProps {
   currentLang?: string;
@@ -311,7 +312,7 @@ export default function Footer({ currentLang = 'en' }: FooterProps) {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-sm">🧮</span>
+                <CalculatorLogo className="text-white" size="md" />
               </div>
               <span className="text-lg font-bold text-gray-900">Quick Calculator</span>
             </div>

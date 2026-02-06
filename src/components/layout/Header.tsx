@@ -1,10 +1,9 @@
 'use client';
 
-'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import i18n from '@/lib/i18n';
+import CalculatorLogo from '@/components/icons/CalculatorLogo';
 
 interface HeaderProps {
   currentLang?: string;
@@ -134,7 +133,7 @@ export default function Header({ currentLang = 'en', showLanguageSwitcher = true
           <div className="flex items-center">
             <Link href={`/${currentLang}`} className="flex items-center">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-lg">🧮</span>
+                <CalculatorLogo className="text-white" size="lg" />
               </div>
               <span className="text-sm md:text-lg font-bold text-gray-900">Quick Calculator</span>
             </Link>

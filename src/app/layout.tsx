@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Quick Calculator" }],
   creator: "Quick Calculator",
   publisher: "Quick Calculator",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    shortcut: '/favicon.svg',
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -73,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Google Analytics - Defer to improve FCP/LCP */}
         <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-WJ29X5ZT2M"></script>
@@ -90,6 +97,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${poppins.variable} font-sans antialiased min-h-screen flex flex-col`}
+        suppressHydrationWarning
       >
         <HtmlLangSetter />
         <I18nProvider>
