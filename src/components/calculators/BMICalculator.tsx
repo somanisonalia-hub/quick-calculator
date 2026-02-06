@@ -263,7 +263,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
 
   useEffect(() => {
     setResults(calculateBMI());
-  }, [inputs, t]);
+  }, [inputs]);
 
   const handleInputChange = (field: string, value: any) => {
     setInputs(prev => ({

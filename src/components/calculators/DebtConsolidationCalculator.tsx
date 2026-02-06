@@ -255,7 +255,7 @@ export default function DebtConsolidationCalculator({ lang = 'en' }: DebtConsoli
                     </button>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div>
                       <label className="block text-xs text-gray-600 mb-1">{t.balance}</label>
                       <div className="relative">
@@ -347,7 +347,7 @@ export default function DebtConsolidationCalculator({ lang = 'en' }: DebtConsoli
             </div>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={calculateConsolidation}
               className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"

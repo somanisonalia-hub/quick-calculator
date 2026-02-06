@@ -19,11 +19,18 @@
       "mutual fund performance xirr india"
     ],
     "slug": "mutual-fund-xirr-calculator",
+    "component": "MutualFundXIRRCalculator",
     "category": "financial",
     "subcategory": "Investment Calculators",
     "difficulty": "Intermediate",
     "calculatorComponent": "MutualFundXIRRCalculator",
-    "tags": ["investment", "XIRR", "mutual funds", "returns", "performance tracking"],
+    "tags": [
+      "investment",
+      "XIRR",
+      "mutual funds",
+      "returns",
+      "performance tracking"
+    ],
     "description": "Calculate your mutual fund XIRR (Extended Internal Rate of Return) with our advanced calculator. Perfect for investors with multiple transactions, SIP entries, and varying investment amounts. Get accurate time-weighted returns for your portfolio.",
     "summary": "Calculate XIRR returns on mutual fund investments accounting for transaction timing",
     "introduction": "XIRR (Extended Internal Rate of Return) is the most accurate way to measure your investment returns when you have irregular transactions or multiple SIP entries. Unlike simple CAGR, XIRR accounts for the timing of each transaction, giving you the true rate of return. Our calculator helps you understand your actual investment performance and compare it against benchmarks.",
@@ -53,9 +60,18 @@
         "title": "SIP with Growth",
         "description": "Investor with 5-year SIP of ₹5,000/month, now worth ₹4 lakhs",
         "inputs": [
-          { "date": "2019-01-01", "amount": 5000 },
-          { "date": "2019-02-01", "amount": 5000 },
-          { "repeats": "monthly", "until": "2024-01-01" }
+          {
+            "date": "2019-01-01",
+            "amount": 5000
+          },
+          {
+            "date": "2019-02-01",
+            "amount": 5000
+          },
+          {
+            "repeats": "monthly",
+            "until": "2024-01-01"
+          }
         ],
         "result": "XIRR approximately 15-18% depending on market performance"
       },
@@ -63,8 +79,14 @@
         "title": "Lumpsum Investment",
         "description": "₹5 lakh invested in 2020, now worth ₹10 lakhs in 4 years",
         "inputs": [
-          { "date": "2020-01-15", "amount": -500000 },
-          { "date": "2024-01-15", "amount": 1000000 }
+          {
+            "date": "2020-01-15",
+            "amount": -500000
+          },
+          {
+            "date": "2024-01-15",
+            "amount": 1000000
+          }
         ],
         "result": "XIRR approximately 18.9% annually - strong fund performance"
       },
@@ -72,10 +94,23 @@
         "title": "Multiple Transactions",
         "description": "Mixed SIP and lumpsum with partial redemptions over time",
         "inputs": [
-          { "date": "2021-06-01", "amount": -100000 },
-          { "date": "2022-01-01", "amount": -3000, "repeats": "monthly until 2024" },
-          { "date": "2023-06-01", "amount": 50000 },
-          { "date": "2024-01-01", "amount": 250000 }
+          {
+            "date": "2021-06-01",
+            "amount": -100000
+          },
+          {
+            "date": "2022-01-01",
+            "amount": -3000,
+            "repeats": "monthly until 2024"
+          },
+          {
+            "date": "2023-06-01",
+            "amount": 50000
+          },
+          {
+            "date": "2024-01-01",
+            "amount": 250000
+          }
         ],
         "result": "XIRR shows true return accounting for all activities"
       }
@@ -158,6 +193,7 @@
     "seoTitle": "¿Cuál Es Mi Rendimiento Real De Fondos Mutuos? Calculadora XIRR",
     "metaDescription": "Calcula el XIRR de tus inversiones en fondos mutuales con múltiples transacciones.",
     "slug": "mutual-fund-xirr-calculator",
+    "component": "MutualFundXIRRCalculator",
     "category": "financial",
     "description": "Calcula la tasa interna de retorno extendida de tus inversiones en fondos mutuales."
   },
@@ -166,6 +202,7 @@
     "seoTitle": "Qual É Meu Rendimento Real De Fundos Mútuos? Calculadora XIRR",
     "metaDescription": "Calcula o XIRR de seus investimentos em fundos mútuos com múltiplas transações.",
     "slug": "mutual-fund-xirr-calculator",
+    "component": "MutualFundXIRRCalculator",
     "category": "financial",
     "description": "Calcule a taxa interna de retorno estendida de seus investimentos em fundos mútuos."
   },
@@ -174,6 +211,7 @@
     "seoTitle": "Quel Est Mon Rendement Réel Des Fonds Communs ? Calculatrice XIRR",
     "metaDescription": "Calculez le XIRR de vos investissements en fonds communs avec plusieurs transactions.",
     "slug": "mutual-fund-xirr-calculator",
+    "component": "MutualFundXIRRCalculator",
     "category": "financial",
     "description": "Calculez le taux interne de retour étendu de vos investissements en fonds communs."
   },
@@ -182,6 +220,7 @@
     "seoTitle": "Was Ist Meine Tatsächliche Investmentfonds-Rendite? XIRR Rechner",
     "metaDescription": "Berechnen Sie XIRR-Renditen von Investmentfonds mit unserem kostenlosen Rechner. Messen Sie die tatsächliche Leistung von Multi-Transaktions-Investitionen mit exakten Daten, Beträgen und zeitgewichteten Renditen für indische Investoren.",
     "slug": "mutual-fund-xirr-calculator",
+    "component": "MutualFundXIRRCalculator",
     "category": "financial",
     "description": "Berechnen Sie Ihre XIRR-Renditen von Investmentfonds mit unserem fortschrittlichen Rechner. Perfekt für Investoren mit mehreren Transaktionen."
   },
@@ -190,6 +229,7 @@
     "seoTitle": "Wat Is Mijn Werkelijke Beleggingsfonds Rendement? XIRR Rekenmachine",
     "metaDescription": "Bereken beleggingsfonds XIRR-rendementen met onze gratis rekenmachine. Meet werkelijke prestaties van multi-transactie beleggingen met exacte datums, bedragen en tijd-gewogen rendementen voor Indiase beleggers.",
     "slug": "mutual-fund-xirr-calculator",
+    "component": "MutualFundXIRRCalculator",
     "category": "financial",
     "description": "Bereken uw beleggingsfonds XIRR-rendementen met onze geavanceerde rekenmachine. Perfect voor beleggers met meerdere transacties."
   }

@@ -89,10 +89,10 @@ export default function PropertyTaxCalculator({ inputs, output, additionalOutput
 
   return (
     <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-200">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{propertyDetails}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Property Details</h3>
 
           {inputs.map((input) => (
             <div key={input.name} className="space-y-2">
@@ -114,7 +114,7 @@ export default function PropertyTaxCalculator({ inputs, output, additionalOutput
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{taxCalculation}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Tax Calculation</h3>
 
           {/* Main Output */}
           <div className="bg-blue-50 p-2 sm:p-3 rounded-md border-l-3 border-blue-500">
@@ -143,28 +143,28 @@ export default function PropertyTaxCalculator({ inputs, output, additionalOutput
             <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-100">
               <h4 className="font-bold text-gray-800 mb-3 text-sm flex items-center">
                 <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                {propertyTaxBreakdown}
+                Property Tax Breakdown
               </h4>
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{propertyValue}</div>
+                  <div className="font-medium text-gray-900">Property Value</div>
                   <div className="text-gray-600">${(values.propertyValue || 0).toLocaleString()}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{assessmentRate}</div>
+                  <div className="font-medium text-gray-900">Assessment Rate</div>
                   <div className="text-gray-600">{values.assessmentRate}%</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{taxExemptions}</div>
+                  <div className="font-medium text-gray-900">Tax Exemptions</div>
                   <div className="text-gray-600">${(values.exemptions || 0).toLocaleString()}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{taxRate}</div>
+                  <div className="font-medium text-gray-900">Tax Rate</div>
                   <div className="text-gray-600">{values.taxRate}%</div>
                 </div>
               </div>
               <div className="mt-3 text-xs text-gray-600 p-2 bg-blue-50 rounded border border-blue-200">
-                <span className="font-medium">{note}:</span> {propertyTaxNote}
+                <span className="font-medium">Note:</span> Property tax calculations are estimates and may vary by jurisdiction.
               </div>
             </div>
           )}

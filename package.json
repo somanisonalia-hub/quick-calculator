@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "lsof -ti:3000 | xargs kill -9 2>/dev/null || true; pkill -f 'next dev' 2>/dev/null || true; rm -f .next/dev/lock 2>/dev/null || true",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,7 +12,10 @@
     "test-calculators": "node scripts/test-calculators.js",
     "validate-translations": "node scripts/validate-translations.js",
     "validate-calculators": "node validate-calculators.js",
-    "prebuild": "npm run validate-calculators"
+    "prebuild": "npm run validate-calculators",
+    "test:quick": "playwright test quick-calculator-test.spec.ts --config=playwright-calculator-test.config.ts",
+    "test:all": "playwright test test-all-calculators.spec.ts --config=playwright-calculator-test.config.ts",
+    "test:headed": "playwright test quick-calculator-test.spec.ts --config=playwright-calculator-test.config.ts --headed"
   },
   "dependencies": {
     "i18next": "^25.7.3",

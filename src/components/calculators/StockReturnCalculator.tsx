@@ -115,7 +115,7 @@ export default function StockReturnCalculator({ inputs, output, additionalOutput
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{stockInvestment}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Stock Investment</h3>
 
           {inputs.map((input) => (
             <div key={input.name} className="space-y-2">
@@ -137,7 +137,7 @@ export default function StockReturnCalculator({ inputs, output, additionalOutput
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{performanceAnalysis}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Performance Analysis</h3>
 
           {/* Main Output */}
           <div className={`p-2 sm:p-3 rounded-md border-l-3 ${String(results.totalReturn || '').startsWith('+') ? 'bg-green-50 border-green-500' : 'bg-red-50 border-red-500'}`}>
@@ -166,30 +166,30 @@ export default function StockReturnCalculator({ inputs, output, additionalOutput
             <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-100">
               <h4 className="font-bold text-gray-800 mb-3 text-sm flex items-center">
                 <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                {investmentSummary}
+                Investment Summary
               </h4>
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{initialInvestment}</div>
+                  <div className="font-medium text-gray-900">Initial Investment</div>
                   <div className="text-gray-600">${results.actualInvestment || values.initialInvestment.toLocaleString()}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{sharesOwned}</div>
+                  <div className="font-medium text-gray-900">Shares Owned</div>
                   <div className="text-gray-600">{results.sharesOwned || values.sharesOwned.toLocaleString()}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{priceChange}</div>
+                  <div className="font-medium text-gray-900">Price Change</div>
                   <div className={`font-medium ${String(results.priceChange || '').startsWith('+') ? 'text-green-600' : 'text-red-600'}`}>
                     {results.priceChange}
                   </div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{currentValue}</div>
+                  <div className="font-medium text-gray-900">Current Value</div>
                   <div className="text-blue-600 font-medium">{results.currentValue}</div>
                 </div>
               </div>
               <div className="mt-3 text-xs text-gray-600 p-2 bg-blue-50 rounded border border-blue-200">
-                <span className="font-medium">📈 {note}:</span> {stockInvestmentsRisk}
+                <span className="font-medium">📈 Note:</span> Stock investments carry risk. Past performance doesn't guarantee future results.
               </div>
             </div>
           )}

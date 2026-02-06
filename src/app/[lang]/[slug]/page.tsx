@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (calculatorContent && calculatorContent.title) {
     const calculatorData: CalculatorData = {
       title: calculatorContent.title,
+      seoTitle: calculatorContent.seoTitle || calculatorContent.title,
       slug: calculatorContent.slug || enSlug,
       category: calculatorContent.category || 'financial',
       seoContent: calculatorContent.seoContent || {} as any
@@ -89,6 +90,7 @@ export default async function LangCalculatorPage({ params }: { params: Promise<{
   if (calculatorContent && calculatorContent.title) {
     const calculatorData: CalculatorData = {
       title: calculatorContent.title,
+      seoTitle: calculatorContent.seoTitle || calculatorContent.title,
       slug: calculatorContent.slug || enSlug,
       category: calculatorContent.category || 'financial',
       seoContent: calculatorContent.seoContent || {} as any

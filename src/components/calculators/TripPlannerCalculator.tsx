@@ -229,37 +229,6 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
       tip3: 'Transportkosten variieren; Budget 10-20% je nach Entfernung',
       tip4: 'Behalten Sie 10-15% für sonstige Ausgaben und Notfälle',
       tip5: 'Recherchieren Sie im Voraus lokale Preise und Transportoptionen'
-    },
-    nl: {
-      title: 'Reisbudgetplanner',
-      subtitle: 'Plan uw reisbudget uitgebreid met accommodatie, maaltijden, activiteiten, vervoer en overige uitgaven',
-      numberOfPeople: 'Aantal Personen',
-      tripDuration: 'Reisduur (Dagen)',
-      dailyBudgetItems: 'Dagelijkse Budgetitems',
-      dailyAccommodation: 'Dagelijkse Logieskosten',
-      dailyMeals: 'Dagelijkse Maaltijdkosten (per persoon)',
-      dailyActivities: 'Dagelijkse Activiteiten en Attracties',
-      dailyTransport: 'Dagelijks Vervoer en Lokale Reizen',
-      dailyMisc: 'Dagelijkse Overige Uitgaven',
-      currency: 'Valuta',
-      calculate: 'Reisbudget Berekenen',
-      results: 'Reisbudget Samenvatting',
-      totalAccommodation: 'Totale Logies',
-      totalMeals: 'Totale Maaltijden',
-      totalActivities: 'Totale Activiteiten',
-      totalTransport: 'Totaal Vervoer',
-      totalMisc: 'Totale Overige Uitgaven',
-      grandTotal: 'Totaal Budget',
-      perPersonCost: 'Kosten per Persoon',
-      dailyBudget: 'Dagelijks Budget',
-      breakdown: 'Budgetindeling',
-      costBreakdown: 'Kostendeling Percentage',
-      tips: 'Budgetplanningsstips',
-      tip1: 'Logies vertegenwoordigt meestal 40-50% van het budget',
-      tip2: 'Voedsel en activiteiten moeten 20-30% bedragen',
-      tip3: 'Vervoerskosten variëren; budget 10-20% afhankelijk van afstand',
-      tip4: 'Houd 10-15% achter voor overige uitgaven en noodgevallen',
-      tip5: 'Onderzoek van tevoren lokale prijzen en vervoersopties'
     }
   };
 

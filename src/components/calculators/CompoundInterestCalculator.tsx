@@ -62,18 +62,16 @@ export default function CompoundInterestCalculator({ inputs, output, additionalO
     }
   ,
     de: {
-      // German translations (to be filled by native speakers)
-      title: "",
-      description: "",
-      instructions: "",
-      placeholder: ""
+      investmentDetails: "Investitionsdetails",
+      investmentGrowth: "Investitionswachstum",
+      powerOfCompounding: "Kraft des Zinseszinses",
+      compoundingMessage: "Ihr Geld wächst exponentiell im Laufe der Zeit"
     },
     nl: {
-      // Dutch translations (to be filled by native speakers)
-      title: "",
-      description: "",
-      instructions: "",
-      placeholder: ""
+      investmentDetails: "Investeringsdetails",
+      investmentGrowth: "Investeringsgroei",
+      powerOfCompounding: "Kracht van Samengestelde Rente",
+      compoundingMessage: "Uw geld groeit exponentieel in de loop van de tijd"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
   

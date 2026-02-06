@@ -166,7 +166,7 @@ export default function TaxCalculator({ inputs, output, additionalOutputs }: Tax
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{taxInformation}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Tax Information</h3>
 
           {inputs.map((input) => (
             <div key={input.name} className="space-y-2">
@@ -203,7 +203,7 @@ export default function TaxCalculator({ inputs, output, additionalOutputs }: Tax
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">
-          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{taxCalculation}</h3>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Tax Calculation</h3>
 
           {/* Main Output */}
           <div className="bg-blue-50 p-2 sm:p-3 rounded-md border-l-3 border-blue-500">
@@ -232,28 +232,28 @@ export default function TaxCalculator({ inputs, output, additionalOutputs }: Tax
             <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-gradient-to-r from-red-50 to-orange-50 rounded-lg border border-red-100">
               <h4 className="font-bold text-gray-800 mb-3 text-sm flex items-center">
                 <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
-                {taxBreakdown}
+                Tax Breakdown
               </h4>
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{federalTax}</div>
+                  <div className="font-medium text-gray-900">Federal Tax</div>
                   <div className="text-gray-600">{results.federalTax}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{stateTax}</div>
+                  <div className="font-medium text-gray-900">State Tax</div>
                   <div className="text-gray-600">{results.stateTax}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{ficaTax}</div>
+                  <div className="font-medium text-gray-900">FICA Tax</div>
                   <div className="text-gray-600">{results.ficaTax}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="font-medium text-gray-900">{takeHomePay}</div>
+                  <div className="font-medium text-gray-900">Take-Home Pay</div>
                   <div className="text-green-600 font-medium">{results.takeHomePay}</div>
                 </div>
               </div>
               <div className="mt-3 text-xs text-gray-600 p-2 bg-yellow-50 rounded border border-yellow-200">
-                <span className="font-medium">{note}:</span> {simplifiedTaxNote}
+                <span className="font-medium">Note:</span> These calculations are simplified estimates for educational purposes only.
               </div>
             </div>
           )}

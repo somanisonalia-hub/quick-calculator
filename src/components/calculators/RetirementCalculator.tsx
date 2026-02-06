@@ -109,10 +109,6 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
 
   // Use translations from lang prop, or fall back to texts prop, or default to English
   const t = texts || translations[lang as keyof typeof translations] || translations.en;
-    futureContributions: 'Future Contributions',
-    investmentGrowth: 'Investment Growth',
-    monthlyIncome: 'Monthly Income',
-  };
   
   const [values, setValues] = useState<Record<string, number>>(() => {
     const initial: Record<string, number> = {};

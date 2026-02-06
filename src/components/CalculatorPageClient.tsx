@@ -125,15 +125,15 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
       <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-2 sm:py-4" id="calculator-hero">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-xl sm:text-2xl font-bold mb-1 leading-tight">
+            <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 leading-tight">
               {calculatorContent.seoTitle || calculatorContent.title}
             </h1>
           </div>
         </div>
       </section>
 
-      {/* Calculator Description */}
-      <section className="bg-white py-2 sm:py-3" id="calculator-description">
+      {/* Calculator Description - Hidden visually but available for SEO */}
+      <section className="sr-only" id="calculator-description">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs sm:text-sm text-gray-500 leading-relaxed text-center max-w-3xl mx-auto">
             {calculatorContent.description}
@@ -145,8 +145,8 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
         <div>
           {/* Main Calculator Section */}
             {/* Calculator Component */}
-            <section id="calculator-section" className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden mb-6">
-              <div className="p-6">
+            <section id="calculator-section" className="overflow-hidden mb-6">
+              <div>
                 {(() => {
                   // Handle both old object format and new string format
                   // Check for 'component' field first (new standard), then 'calculatorComponent' (legacy)

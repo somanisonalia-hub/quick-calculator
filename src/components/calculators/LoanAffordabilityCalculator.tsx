@@ -360,7 +360,7 @@ export default function LoanAffordabilityCalculator({ lang = 'en' }: LoanAfforda
             <label htmlFor="showSteps" className="text-sm text-gray-700">{t.showSteps}</label>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={calculateLoanAffordability}
               className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"

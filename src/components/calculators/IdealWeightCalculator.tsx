@@ -120,18 +120,52 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
     }
   ,
     de: {
-      // German translations (to be filled by native speakers)
-      title: "",
-      description: "",
-      instructions: "",
-      placeholder: ""
+      title: "Idealgewicht-Rechner",
+      gender: "Geschlecht",
+      height: "Größe",
+      method: "Berechnungsmethode",
+      bodyFrame: "Körperbau",
+      calculate: "Idealgewicht Berechnen",
+      idealRange: "Idealgewichtsbereich",
+      minWeight: "Minimales Gesundes Gewicht",
+      maxWeight: "Maximales Gesundes Gewicht",
+      bmiCategory: "BMI-Kategorie",
+      kg: "kg",
+      male: "Männlich",
+      female: "Weiblich",
+      healthy_bmi: "Gesunder BMI (18.5-24.9)",
+      devine: "Devine-Formel",
+      hamwi: "Hamwi-Methode",
+      miller: "Miller-Formel",
+      robinson: "Robinson-Formel",
+      small: "Schmaler Körperbau",
+      medium: "Mittlerer Körperbau",
+      large: "Breiter Körperbau",
+      normal: "Normalgewicht"
     },
     nl: {
-      // Dutch translations (to be filled by native speakers)
-      title: "",
-      description: "",
-      instructions: "",
-      placeholder: ""
+      title: "Ideaal Gewicht Calculator",
+      gender: "Geslacht",
+      height: "Lengte",
+      method: "Berekeningsmethode",
+      bodyFrame: "Lichaamstype",
+      calculate: "Berekenen Ideaal Gewicht",
+      idealRange: "Ideaal Gewichtsbereik",
+      minWeight: "Minimaal Gezond Gewicht",
+      maxWeight: "Maximaal Gezond Gewicht",
+      bmiCategory: "BMI-Categorie",
+      kg: "kg",
+      male: "Mannelijk",
+      female: "Vrouwelijk",
+      healthy_bmi: "Gezonde BMI (18.5-24.9)",
+      devine: "Devine-Formule",
+      hamwi: "Hamwi-Methode",
+      miller: "Miller-Formule",
+      robinson: "Robinson-Formule",
+      small: "Klein Postuur",
+      medium: "Gemiddeld Postuur",
+      large: "Groot Postuur",
+      normal: "Normaal Gewicht"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
 

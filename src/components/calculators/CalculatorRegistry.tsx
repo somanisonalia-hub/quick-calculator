@@ -161,6 +161,10 @@ const CalorieCalculator = dynamic(() => import('./CalorieCalculator'), {
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
 
+const CalorieDeficitCalculator = dynamic(() => import('./CalorieDeficitCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
 const IdealWeightCalculator = dynamic(() => import('./IdealWeightCalculator'), {
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
@@ -541,6 +545,26 @@ const XIRRVsAbsoluteReturnCalculator = dynamic(() => import('./XIRRVsAbsoluteRet
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
 
+const FuelCostCalculator = dynamic(() => import('./FuelCostCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const GeometryAreaCalculator = dynamic(() => import('./GeometryAreaCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const LinearEquationCalculator = dynamic(() => import('./LinearEquationCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const ShippingCostCalculator = dynamic(() => import('./ShippingCostCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const StudyHoursPlannerCalculator = dynamic(() => import('./StudyHoursPlannerCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
 // Registry mapping component names to actual components
 export const calculatorComponents: Record<string, any> = {
   'AverageCalculator': AverageCalculator,
@@ -589,6 +613,7 @@ export const calculatorComponents: Record<string, any> = {
   'BMRCalculator': BMRCalculator,
   'BodyFatCalculator': BodyFatCalculator,
   'CalorieCalculator': CalorieCalculator,
+  'CalorieDeficitCalculator': CalorieDeficitCalculator,
   'IdealWeightCalculator': IdealWeightCalculator,
   'CircleAreaCalculator': CircleAreaCalculator,
   'CircleCircumferenceCalculator': CircleCircumferenceCalculator,
@@ -685,6 +710,11 @@ export const calculatorComponents: Record<string, any> = {
   'MutualFundXIRRCalculator': MutualFundXIRRCalculator,
   'MutualFundInflationCalculator': MutualFundInflationCalculator,
   'XIRRVsAbsoluteReturnCalculator': XIRRVsAbsoluteReturnCalculator,
+  'FuelCostCalculator': FuelCostCalculator,
+  'GeometryAreaCalculator': GeometryAreaCalculator,
+  'LinearEquationCalculator': LinearEquationCalculator,
+  'ShippingCostCalculator': ShippingCostCalculator,
+  'StudyHoursPlannerCalculator': StudyHoursPlannerCalculator,
 };
 
 export function getCalculatorComponent(componentName: string) {

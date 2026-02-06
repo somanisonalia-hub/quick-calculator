@@ -124,41 +124,41 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
 
   const t = translations[lang as keyof typeof translations] || translations.en;
 
-  const calculateBMR = () => {
-    const { age, gender, height, weight, formula } = inputs;
-    let bmr = 0;
-
-    if (formula === 'mifflin') {
-      // Mifflin-St Jeor Equation
-      if (gender === 'male') {
-        bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
-      } else {
-        bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
-      }
-    } else if (formula === 'harris') {
-      // Harris-Benedict Equation
-      if (gender === 'male') {
-        bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
-      } else {
-        bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
-      }
-    }
-
-    return Math.round(bmr);
-  };
-
-  const getActivityMultiplier = (activityLevel: string) => {
-    const multipliers = {
-      sedentary: 1.2,
-      light: 1.375,
-      moderate: 1.55,
-      active: 1.725,
-      very_active: 1.9
-    };
-    return multipliers[activityLevel as keyof typeof multipliers] || 1.2;
-  };
-
   useEffect(() => {
+    const calculateBMR = () => {
+      const { age, gender, height, weight, formula } = inputs;
+      let bmr = 0;
+
+      if (formula === 'mifflin') {
+        // Mifflin-St Jeor Equation
+        if (gender === 'male') {
+          bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+        } else {
+          bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+        }
+      } else if (formula === 'harris') {
+        // Harris-Benedict Equation
+        if (gender === 'male') {
+          bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+        } else {
+          bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+        }
+      }
+
+      return Math.round(bmr);
+    };
+
+    const getActivityMultiplier = (activityLevel: string) => {
+      const multipliers = {
+        sedentary: 1.2,
+        light: 1.375,
+        moderate: 1.55,
+        active: 1.725,
+        very_active: 1.9
+      };
+      return multipliers[activityLevel as keyof typeof multipliers] || 1.2;
+    };
+
     const bmr = calculateBMR();
     const activityMultiplier = getActivityMultiplier(inputs.activityLevel);
 

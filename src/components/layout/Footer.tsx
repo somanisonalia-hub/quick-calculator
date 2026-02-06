@@ -24,6 +24,7 @@ const translations = {
     popularCalculators: 'Popular Calculators',
     categories: 'Categories',
     legal: 'Legal',
+    sitemap: 'Sitemap',
 
     // Category names
     financial: 'Financial',
@@ -67,6 +68,7 @@ const translations = {
     popularCalculators: 'Calculadoras Populares',
     categories: 'Categorías',
     legal: 'Legal',
+    sitemap: 'Mapa del Sitio',
 
     // Category names
     financial: 'Financiero',
@@ -110,6 +112,7 @@ const translations = {
     popularCalculators: 'Calculadoras Populares',
     categories: 'Categorias',
     legal: 'Legal',
+    sitemap: 'Mapa do Site',
 
     // Category names
     financial: 'Financeiro',
@@ -153,6 +156,7 @@ const translations = {
     popularCalculators: 'Calculateurs Populaires',
     categories: 'Catégories',
     legal: 'Légal',
+    sitemap: 'Plan du Site',
 
     // Category names
     financial: 'Financier',
@@ -176,6 +180,94 @@ const translations = {
     tipCalc: 'Calculateur de Pourboire',
     squareFootageCalc: 'Calculateur de Superficie',
     concreteCalc: 'Calculateur de Béton'
+  },
+  de: {
+    // Legal Links
+    privacy: 'Datenschutzrichtlinie',
+    terms: 'Nutzungsbedingungen',
+    contact: 'Kontakt',
+    cookie: 'Cookie-Richtlinie',
+    disclaimer: 'Haftungsausschluss',
+    about: 'Über Uns',
+    copyright: '© 2026 Schnellrechner. Alle Rechte vorbehalten.',
+
+    // Footer Content
+    footerDescription: 'Professionelle Online-Rechner für Finanzen, Gesundheit und alltägliche Berechnungen.',
+    madeWithLove: 'Mit ❤️ für präzise Berechnungen weltweit gemacht',
+    allRightsReserved: 'Alle Rechte vorbehalten',
+
+    // Sections
+    popularCalculators: 'Beliebte Rechner',
+    categories: 'Kategorien',
+    legal: 'Rechtliches',
+    sitemap: 'Sitemap',
+
+    // Category names
+    financial: 'Finanziell',
+    health: 'Gesundheit',
+    math: 'Mathematik',
+    utility: 'Nützlich',
+    lifestyle: 'Lebensstil',
+
+    // Calculator names
+    mortgageCalc: 'Hypothekenrechner',
+    loanCalc: 'Kreditrechner',
+    emiCalc: 'EMI-Rechner',
+    investmentCalc: 'Investitionsrechner',
+    bmiCalc: 'BMI-Rechner',
+    calorieCalc: 'Kalorienrechner',
+    savingsCalc: 'Sparrechner',
+    percentageCalc: 'Prozentrechner',
+    fractionCalc: 'Bruchrechner',
+    unitConverterCalc: 'Einheitenumrechner',
+    ageCalc: 'Altersrechner',
+    tipCalc: 'Trinkgeldrechner',
+    squareFootageCalc: 'Quadratmeterrechner',
+    concreteCalc: 'Betonrechner'
+  },
+  nl: {
+    // Legal Links
+    privacy: 'Privacybeleid',
+    terms: 'Servicevoorwaarden',
+    contact: 'Contact',
+    cookie: 'Cookiebeleid',
+    disclaimer: 'Disclaimer',
+    about: 'Over Ons',
+    copyright: '© 2026 Snelle Calculator. Alle rechten voorbehouden.',
+
+    // Footer Content
+    footerDescription: 'Professionele online calculators voor financiën, gezondheid en dagelijkse berekeningen.',
+    madeWithLove: 'Met ❤️ gemaakt voor nauwkeurige berekeningen wereldwijd',
+    allRightsReserved: 'Alle rechten voorbehouden',
+
+    // Sections
+    popularCalculators: 'Populaire Calculators',
+    categories: 'Categorieën',
+    legal: 'Juridisch',
+    sitemap: 'Sitemap',
+
+    // Category names
+    financial: 'Financieel',
+    health: 'Gezondheid',
+    math: 'Wiskunde',
+    utility: 'Hulpmiddel',
+    lifestyle: 'Levensstijl',
+
+    // Calculator names
+    mortgageCalc: 'Hypotheekcalculator',
+    loanCalc: 'Leningcalculator',
+    emiCalc: 'EMI-calculator',
+    investmentCalc: 'Investeringscalculator',
+    bmiCalc: 'BMI-calculator',
+    calorieCalc: 'Calorieëncalculator',
+    savingsCalc: 'Spaarcalculator',
+    percentageCalc: 'Percentagecalculator',
+    fractionCalc: 'Breukcalculator',
+    unitConverterCalc: 'Eenhedenconverter',
+    ageCalc: 'Leeftijdscalculator',
+    tipCalc: 'Fooiencalculator',
+    squareFootageCalc: 'Vierkante Meter Calculator',
+    concreteCalc: 'Betoncalculator'
   }
 };
 
@@ -311,6 +403,10 @@ export default function Footer({ currentLang = 'en' }: FooterProps) {
               <span className="text-gray-400">|</span>
               <Link href={`/${currentLang}/contact`} className="hover:text-blue-600 transition-colors">
                 {t.contact}
+              </Link>
+              <span className="text-gray-400">|</span>
+              <Link href={`/sitemap-${currentLang}.xml`} className="hover:text-blue-600 transition-colors" target="_blank" rel="noopener">
+                {t.sitemap}
               </Link>
             </div>
           </div>

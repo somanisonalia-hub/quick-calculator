@@ -465,7 +465,7 @@ export default function AmortizationScheduleCalculator({ lang = 'en' }: Amortiza
             <label htmlFor="showSteps" className="text-sm text-gray-700">{t.showSteps}</label>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={calculateAmortizationSchedule}
               className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -481,7 +481,7 @@ export default function AmortizationScheduleCalculator({ lang = 'en' }: Amortiza
           </div>
 
           {/* Export Options */}
-          <div className="flex gap-2 mt-4">
+          <div className="flex flex-col sm:flex-row gap-2 mt-4">
             <button
               onClick={exportToCSV}
               className="flex-1 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"

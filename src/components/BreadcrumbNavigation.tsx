@@ -17,7 +17,9 @@ const searchTranslations = {
   en: { placeholder: 'Search calculators...', button: 'Search' },
   es: { placeholder: 'Buscar calculadoras...', button: 'Buscar' },
   pt: { placeholder: 'Buscar calculadoras...', button: 'Buscar' },
-  fr: { placeholder: 'Rechercher des calculateurs...', button: 'Rechercher' }
+  fr: { placeholder: 'Rechercher des calculateurs...', button: 'Rechercher' },
+  de: { placeholder: 'Rechner suchen...', button: 'Suchen' },
+  nl: { placeholder: 'Zoek rekenmachines...', button: 'Zoeken' }
 };
 
 export default function BreadcrumbNavigation({ breadcrumbs, currentLang = 'en' }: BreadcrumbNavigationProps) {

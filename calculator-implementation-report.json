@@ -1,0 +1,408 @@
+{
+  "timestamp": "2026-02-06T15:37:25.416Z",
+  "summary": {
+    "total": 166,
+    "working": 109,
+    "unimplemented": 0,
+    "errors": 57
+  },
+  "unimplementedCalculators": [],
+  "erroredPages": [
+    {
+      "url": "ratio-proportion",
+      "error": "page.waitForTimeout: Test timeout of 300000ms exce"
+    },
+    {
+      "url": "scientific-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "standard-deviation-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "surface-area-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "triangle-area-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "volume-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "body-composition-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "calorie-deficit-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "calories-burned-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "concrete-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "date-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "decimal-to-fraction-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "discount-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "due-date-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "electricity-cost-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "energy-expenditure-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "exponent-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "factorial-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "feet-inches-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "fitness-metrics-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "gcd-lcm-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "height-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "logarithm-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "long-division-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "love-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "number-base-converter",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "numbers-to-words-converter",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "nutrition-analysis-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "pace-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "password-generator-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "rent-vs-buy-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "roi-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "roman-numeral-converter",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "square-footage-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "student-loan-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "tank-volume-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "unit-converter",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "wellness-tracker-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "word-counter-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "age-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "budget-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "credit-card-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "exam-score-predictor",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "expense-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "gpa-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "grade-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "personal-budget",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "savings-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "study-hours-planner",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "tip-calculator",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "trip-planner",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "privacy-policy",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "terms-of-service",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "cookie-policy",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "disclaimer",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "about-us",
+      "error": "page.goto: Target page, context or browser has bee"
+    },
+    {
+      "url": "contact",
+      "error": "page.goto: Target page, context or browser has bee"
+    }
+  ],
+  "allUrls": [
+    "categoriesfinancial/",
+    "categorieshealth/",
+    "categoriesmath/",
+    "categoriesutility/",
+    "categorieslifestyle/",
+    "advanced-loan-calculator",
+    "amortization-schedule-calculator",
+    "apr-calculator",
+    "basic-apr-calculator",
+    "biweekly-pay-calculator",
+    "break-even-calculator",
+    "car-affordability-calculator",
+    "car-insurance-calculator",
+    "car-loan-calculator",
+    "compound-interest-calculator",
+    "credit-card-payoff",
+    "crypto-roi-calculator",
+    "currency-converter",
+    "debt-consolidation-calculator",
+    "debt-ratios-calculator",
+    "debt-to-income-calculator",
+    "ear-calculator",
+    "effective-interest-rate-calculator",
+    "emergency-fund",
+    "emi-calculator",
+    "equal-principal-amortization-calculator",
+    "equivalent-interest-rate-calculator",
+    "fuel-cost",
+    "future-value-calculator",
+    "goal-based-investment-calculator",
+    "health-insurance-calculator",
+    "home-affordability-calculator",
+    "hourly-to-salary-calculator",
+    "income-tax-calculator",
+    "inflation-calculator",
+    "interest-calculator",
+    "interest-only-mortgage-calculator",
+    "interest-rate-table-calculator",
+    "investment-calculator",
+    "investment-planner",
+    "investment-return",
+    "life-insurance-calculator",
+    "liquidity-ratios-calculator",
+    "loan-affordability-calculator",
+    "loan-affordability",
+    "loan-calculator",
+    "loan-comparison",
+    "loan-payment-table-generator",
+    "loan-repayment",
+    "lumpsum-investment-calculator",
+    "mortgage-calculator",
+    "mutual-fund-inflation-calculator",
+    "mutual-fund-xirr-calculator",
+    "net-income-calculator",
+    "net-worth",
+    "nominal-interest-rate-calculator",
+    "operations-ratios-calculator",
+    "overtime-pay-calculator",
+    "paycheck-calculator",
+    "periodic-interest-rate-calculator",
+    "profitability-ratios-calculator",
+    "property-tax-calculator",
+    "retirement-calculator",
+    "retirement-plan",
+    "retirement-savings",
+    "salary-payroll",
+    "salary-tax",
+    "sales-tax-calculator",
+    "savings-goal",
+    "savings-interest",
+    "shipping-cost",
+    "simple-interest-calculator",
+    "sip-calculator",
+    "stock-ratios-calculator",
+    "stock-return-calculator",
+    "take-home-pay-calculator",
+    "tax-calculator",
+    "xirr-vs-absolute-return-calculator",
+    "blood-pressure-calculator",
+    "bmi-calculator",
+    "bmr-calculator",
+    "body-fat-calculator",
+    "calorie-calculator",
+    "ideal-weight-calculator",
+    "lean-body-mass-calculator",
+    "maintenance-calories-calculator",
+    "ovulation-calculator",
+    "pregnancy-calculator",
+    "protein-intake-calculator",
+    "sleep-calculator",
+    "tdee-calculator",
+    "waist-to-hip-ratio-calculator",
+    "water-intake-calculator",
+    "average-calculator",
+    "circle-area-calculator",
+    "circle-circumference-calculator",
+    "fraction-calculator",
+    "fraction-decimal",
+    "geometry-area",
+    "linear-equation",
+    "mean-median-mode-calculator",
+    "percent-calculator",
+    "percentage-calculator",
+    "percentage-change-calculator",
+    "percentile-calculator",
+    "probability-calculator",
+    "pythagorean-theorem-calculator",
+    "quadratic-equation-calculator",
+    "ratio-calculator",
+    "ratio-proportion",
+    "scientific-calculator",
+    "standard-deviation-calculator",
+    "surface-area-calculator",
+    "triangle-area-calculator",
+    "volume-calculator",
+    "body-composition-calculator",
+    "calorie-deficit-calculator",
+    "calories-burned-calculator",
+    "concrete-calculator",
+    "date-calculator",
+    "decimal-to-fraction-calculator",
+    "discount-calculator",
+    "due-date-calculator",
+    "electricity-cost-calculator",
+    "energy-expenditure-calculator",
+    "exponent-calculator",
+    "factorial-calculator",
+    "feet-inches-calculator",
+    "fitness-metrics-calculator",
+    "gcd-lcm-calculator",
+    "height-calculator",
+    "logarithm-calculator",
+    "long-division-calculator",
+    "love-calculator",
+    "number-base-converter",
+    "numbers-to-words-converter",
+    "nutrition-analysis-calculator",
+    "pace-calculator",
+    "password-generator-calculator",
+    "rent-vs-buy-calculator",
+    "roi-calculator",
+    "roman-numeral-converter",
+    "square-footage-calculator",
+    "student-loan-calculator",
+    "tank-volume-calculator",
+    "unit-converter",
+    "wellness-tracker-calculator",
+    "word-counter-calculator",
+    "age-calculator",
+    "budget-calculator",
+    "credit-card-calculator",
+    "exam-score-predictor",
+    "expense-calculator",
+    "gpa-calculator",
+    "grade-calculator",
+    "personal-budget",
+    "savings-calculator",
+    "study-hours-planner",
+    "tip-calculator",
+    "trip-planner",
+    "privacy-policy",
+    "terms-of-service",
+    "cookie-policy",
+    "disclaimer",
+    "about-us",
+    "contact"
+  ]
+}

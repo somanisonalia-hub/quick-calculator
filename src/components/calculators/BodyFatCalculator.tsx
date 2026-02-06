@@ -132,18 +132,56 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
     }
   ,
     de: {
-      // German translations (to be filled by native speakers)
-      title: "",
-      description: "",
-      instructions: "",
-      placeholder: ""
+      title: "Körperfettrechner",
+      method: "Berechnungsmethode",
+      gender: "Geschlecht",
+      age: "Alter",
+      height: "Größe",
+      weight: "Gewicht",
+      waist: "Taillenumfang",
+      neck: "Halsumfang",
+      hips: "Hüftumfang",
+      calculate: "Körperfett Berechnen",
+      bodyFat: "Körperfettanteil",
+      leanMass: "Fettfreie Körpermasse",
+      fatMass: "Körperfettmasse",
+      category: "Fitness-Kategorie",
+      navy: "US-Marine-Methode",
+      bmi: "BMI-Methode",
+      skinfold: "Hautfalten-Methode",
+      male: "Männlich",
+      female: "Weiblich",
+      essential: "Essentielles Fett",
+      athletes: "Athleten",
+      fitness: "Fitness",
+      average: "Durchschnitt",
+      obese: "Adipös"
     },
     nl: {
-      // Dutch translations (to be filled by native speakers)
-      title: "",
-      description: "",
-      instructions: "",
-      placeholder: ""
+      title: "Lichaamsvetcalculator",
+      method: "Berekeningswijze",
+      gender: "Geslacht",
+      age: "Leeftijd",
+      height: "Lengte",
+      weight: "Gewicht",
+      waist: "Tailleomtrek",
+      neck: "Nekomtrek",
+      hips: "Heupomtrek",
+      calculate: "Berekenen Lichaamsvet",
+      bodyFat: "Lichaamsvetpercentage",
+      leanMass: "Vetvrije Lichaamsmassa",
+      fatMass: "Lichaamsvetmassa",
+      category: "Fitnesscategorie",
+      navy: "Amerikaanse Marine-Methode",
+      bmi: "BMI-Methode",
+      skinfold: "Huidplooi-Methode",
+      male: "Mannelijk",
+      female: "Vrouwelijk",
+      essential: "Essentieel Vet",
+      athletes: "Atleten",
+      fitness: "Fitness",
+      average: "Gemiddeld",
+      obese: "Obesitas"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
 

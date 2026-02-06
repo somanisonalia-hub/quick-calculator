@@ -1,0 +1,38 @@
+
+> quick-calculator-v1@0.1.0 prebuild
+> npm run validate-calculators
+
+
+> quick-calculator-v1@0.1.0 validate-calculators
+> node validate-calculators.js
+
+
+╔═══════════════════════════════════════════════════════════════╗
+║         CALCULATOR COMPONENT VALIDATION REPORT               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📊 Total calculators checked: 132
+📁 Existing component files: 155
+📋 Registered in CalculatorRegistry: 147
+
+✅ All calculators are properly configured!
+
+   • All referenced components exist
+   • All components are registered
+   • All component names are specified
+
+
+> quick-calculator-v1@0.1.0 build
+> next build
+
+▲ Next.js 16.1.1 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.0s
+  Running TypeScript ...
+  Collecting page data using 13 workers ...
+⚠ Page "/opengraph-image" is using runtime = 'edge' which is currently incompatible with dynamic = 'force-static'. Please remove either "runtime" or "force-static" for correct behavior
+⚠ Using edge runtime on a page currently disables static generation for that page
+⚠ Page "/twitter-image" is using runtime = 'edge' which is currently incompatible with dynamic = 'force-static'. Please remove either "runtime" or "force-static" for correct behavior
+  Generating static pages using 13 workers (0/914) ...
+  Generating static pages using 13 workers (228/914) 

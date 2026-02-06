@@ -17,7 +17,7 @@ export default function SEOHead({
   structuredData,
   locale = 'en'
 }: SEOHeadProps) {
-  const siteUrl = 'https://quick-calculator.com'; // Replace with your actual domain
+  const siteUrl = 'https://quick-calculator.org'; // Replace with your actual domain
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
 
   return (
@@ -38,6 +38,10 @@ export default function SEOHead({
       <link rel="canonical" href={fullCanonicalUrl} />
       <link rel="alternate" hrefLang="en" href={`${siteUrl}${canonicalUrl || '/'}`} />
       <link rel="alternate" hrefLang="es" href={`${siteUrl}/es${canonicalUrl || '/'}`} />
+      <link rel="alternate" hrefLang="pt" href={`${siteUrl}/pt${canonicalUrl || '/'}`} />
+      <link rel="alternate" hrefLang="fr" href={`${siteUrl}/fr${canonicalUrl || '/'}`} />
+      <link rel="alternate" hrefLang="de" href={`${siteUrl}/de${canonicalUrl || '/'}`} />
+      <link rel="alternate" hrefLang="nl" href={`${siteUrl}/nl${canonicalUrl || '/'}`} />
       <link rel="alternate" hrefLang="x-default" href={`${siteUrl}${canonicalUrl || '/'}`} />
 
       {structuredData && (
