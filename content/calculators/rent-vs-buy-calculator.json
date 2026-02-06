@@ -269,5 +269,60 @@
         {"question": "Wann macht Kauf mehr Sinn?", "answer": "Kauf macht normalerweise für Langzeitbewohner Sinn, bei günstigen Zinsen und in Wertsteigerungsmärk."}
       ]
     }
+  },
+  "nl": {
+    "title": "Huur vs Koop Calculator",
+    "seoTitle": "Huur vs Koop Calculator - Moet Ik Een Huis Huren of Kopen?",
+    "summary": "Vergelijk de financiële impact van huren vs kopen van een huis.",
+    "description": "Gebruik onze huur vs koop calculator om de financiële verschillen tussen huren en kopen te analyseren met behulp van uw specifieke cijfers, rentetarieven en aannames.",
+    "category": "financial",
+    "difficulty": "Gevorderd",
+    "slug": "rent-vs-buy-calculator",
+    "component": "RentVsBuyCalculator",
+    "seoContent": {
+      "metaTitle": "Huur vs Koop Calculator - Vergelijk Huren vs Kopen van Een Huis",
+      "metaDescription": "Gratis huur vs koop calculator. Vergelijk kosten van huren vs kopen van een huis. Analyseer langetermijnfinanciële impact met waardestijging en eigen vermogen.",
+      "keywords": "huur vs koop calculator, huren vs kopen, kosten woningbezit, vastgoedinvestering, huisvestingscalculator",
+      "h1": "Huur vs Koop Calculator - Moet U Huren of Kopen?",
+      "introduction": "De Huur vs Koop Calculator helpt u een van de grootste financiële beslissingen van het leven te nemen. Door uw huurkosten te vergelijken met de totale kosten van kopen (inclusief hypotheek, onderhoud, belastingen en vermogensopbouw), ziet u welke optie meer financieel zinvol is voor uw situatie. Deze tool houdt rekening met waardestijging van woningen en bouwt een compleet 7-jarig financieel beeld op.",
+      "benefits": [
+        "Vergelijk totale kosten van huren vs kopen",
+        "Bereken langetermijneigen vermogen in huis",
+        "Zie impact van hypotheekrente",
+        "Houd rekening met onderhoud en onroerendgoedbelasting",
+        "Visualiseer waardestijging van woning in de loop van de tijd",
+        "Neem geïnformeerde huisvestingsbeslissingen"
+      ],
+      "steps": [
+        "Voer geschatte aankoopprijs van huis in",
+        "Voer uw huidige/gemiddelde huur in",
+        "Voer aanbetaling in",
+        "Voer hypotheekrente in",
+        "Stel jaren in om te vergelijken",
+        "Bekijk resultaten van financiële vergelijking"
+      ],
+      "inputsExplained": [
+        "Huisprijs: Totale aankoopprijs van onroerend goed",
+        "Maandelijkse Huur: Wat u als huur zou betalen",
+        "Aanbetaling: Geld dat u heeft voor aankoop",
+        "Hypotheekrente: Rentevoet op de lening",
+        "Jaren: Te analyseren tijdsperiode"
+      ],
+      "formulaExplanation": "Koopkosten = (Maandelijkse Betaling + Onderhoud + Belastingen) × Maanden. Huurkosten = Maandelijkse Huur × Maanden. Koopwaarde = Huisprijs × (1 + Waardestijging%)^Jaren - Resterend Saldo.",
+      "resultsExplanation": "Resultaten tonen maandelijkse betalingen, totaal betaalde huur, waarde van huis, opgebouwd eigen vermogen en welke optie economischer is over uw tijdsbestek.",
+      "examples": "Vergelijken van een huis van €300k met €1500/maand huur over 7 jaar toont koopvoordeel als huis jaarlijks 3% in waarde stijgt.",
+      "whoItsFor": "Huiskopers, huurders die koop overwegen, kopers voor de eerste keer, vastgoedinvesteerders en iedereen die tussen huren en kopen besluit.",
+      "disclaimer": "Deze vergelijking is gebaseerd op aannames en geeft mogelijk uw werkelijke situatie niet weer. Raadpleeg financiële adviseurs voor persoonlijk advies.",
+      "howDoesWork": "De calculator berekent volledige kosten van beide opties inclusief huur, hypotheek, belastingen, onderhoud en eigen vermogen om een uitgebreide vergelijking te bieden.",
+      "completeGuide": "De huur- vs koopbeslissing hangt af van meerdere factoren: uw tijdshorizon, lokale markt, rentetarieven en persoonlijke omstandigheden. Deze tool toont de financiële vergelijking over een specifiek tijdsbestek.",
+      "relatedTools": ["Hypotheekcalculator", "ROI Calculator", "Budgetcalculator", "Leningcalculator"],
+      "faqs": [
+        {"question": "Hoe lang moet ik van plan zijn te blijven?", "answer": "Over het algemeen is kopen zinvol voor 5+ jaar. Kortere verblijven kunnen huren bevoordelen vanwege koop-/verkoopkosten."},
+        {"question": "Welke kosten omvat het bezit van een huis?", "answer": "Hypotheekbetaling, onroerendgoedbelasting, verzekering, onderhoud, HOA-kosten, nutsvoorzieningen en waardestijgingswinsten."},
+        {"question": "Moet ik onderhoudskosten opnemen?", "answer": "Ja, budget 1-2% van de waarde van het huis jaarlijks voor onderhoud en reparaties."},
+        {"question": "Wat is waardestijging van onroerend goed?", "answer": "Huiswaardes stijgen doorgaans 2-4% jaarlijks, hoewel dit per locatie en markt verschilt."},
+        {"question": "Wanneer is kopen meer zinvol?", "answer": "Kopen is over het algemeen zinvol voor langetermijnbewoners, wanneer tarieven gunstig zijn en in waardestijgingsmarkten."}
+      ]
+    }
   }
 }

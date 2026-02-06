@@ -260,5 +260,58 @@
         {"question": "Kann sich der Break-Even-Punkt ändern?", "answer": "Ja, wenn sich Fixkosten, Verkaufspreis oder variable Kosten ändern, ändert sich auch Ihr Break-Even-Punkt."}
       ]
     }
+  },
+  "nl": {
+    "title": "Break-Even Calculator",
+    "seoTitle": "Break-Even Calculator - Wanneer Wordt Mijn Bedrijf Winstgevend?",
+    "summary": "Bereken het break-even punt voor uw bedrijf en begrijp de winstgevendheid.",
+    "description": "Gebruik onze break-even calculator om te bepalen hoeveel eenheden u moet verkopen om alle kosten te dekken en winstgevend te worden.",
+    "category": "financial",
+    "difficulty": "Gemiddeld",
+    "slug": "break-even-calculator",
+    "component": "BreakEvenCalculator",
+    "seoContent": {
+      "metaTitle": "Break-Even Calculator - Vind Uw Break-Even Punt",
+      "metaDescription": "Gratis break-even calculator om benodigde eenheden te bepalen. Analyseer winstgevendheid en bedrijfslevensvatbaarheid direct.",
+      "keywords": "break-even calculator, break-even analyse, kostenanalyse, bedrijfswinstgevendheid",
+      "h1": "Break-Even Calculator - Bereken Uw Break-Even Punt",
+      "introduction": "De Break-Even Calculator helpt u het break-even punt van uw bedrijf te bepalen - het exacte aantal eenheden dat u moet verkopen om alle kosten te dekken. Deze cruciale maatstaf toont wanneer uw bedrijf winstgevend wordt en is essentieel voor bedrijfsplanning en financiële prognoses.",
+      "benefits": [
+        "Bereken break-even punt in eenheden en omzet",
+        "Begrijp uw bedrijfs winstgevendheidssdrempel",
+        "Plan productie- en prijsstrategieën",
+        "Neem geïnformeerde bedrijfsbeslissingen",
+        "Analyseer impact van prijzen op winstgevendheid",
+        "Optimaliseer kostenstructuur en marges"
+      ],
+      "steps": [
+        "Voer uw totale vaste kosten in",
+        "Voer de verkoopprijs per eenheid in",
+        "Voer variabele kosten per eenheid in",
+        "Bekijk break-even punt in eenheden",
+        "Zie break-even omzetdoel",
+        "Analyseer bijdragemarge"
+      ],
+      "inputsExplained": [
+        "Vaste Kosten: Kosten die niet veranderen met productievolume (huur, salarissen, etc.)",
+        "Verkoopprijs: Opbrengst per verkochte eenheid",
+        "Variabele Kosten: Kosten die toenemen met elke geproduceerde eenheid (materialen, arbeid)"
+      ],
+      "formulaExplanation": "Break-Even Punt = Vaste Kosten ÷ (Prijs - Variabele Kosten). Dit toont hoeveel eenheden verkocht moeten worden om alle kosten te dekken.",
+      "resultsExplanation": "Resultaten tonen de benodigde eenheden om break-even te draaien, bijbehorende omzet, bijdragemarge per eenheid en bijdrageverhouding percentage.",
+      "examples": "Met €50.000 vaste kosten, €100 verkoopprijs en €30 variabele kosten, moet u 715 eenheden verkopen om break-even te draaien.",
+      "whoItsFor": "Bedrijfseigenaren, ondernemers, managers en iedereen die een bedrijf start of bedrijfslevensvatbaarheid analyseert.",
+      "disclaimer": "Break-even berekeningen zijn schattingen gebaseerd op ingevoerde waarden. Werkelijke break-even punten kunnen variëren op basis van marktomstandigheden en bedrijfsfactoren.",
+      "howDoesWork": "De calculator deelt vaste kosten door de bijdragemarge (prijs minus variabele kosten) om break-even eenheden te vinden.",
+      "completeGuide": "Break-even analyse is cruciaal om uw winstgevendheidssdrempel te begrijpen. Verkopen onder break-even betekent verlies; erboven betekent winst.",
+      "relatedTools": ["ROI Calculator", "Winstmarge Calculator", "Kostenanalyse Tool", "Bedrijfscalculator"],
+      "faqs": [
+        {"question": "Wat is het break-even punt?", "answer": "Het break-even punt is wanneer de omzet gelijk is aan de totale kosten, resulterend in nul winst of verlies."},
+        {"question": "Waarom is break-even analyse belangrijk?", "answer": "Het toont de minimale verkoop die nodig is om verliezen te voorkomen en helpt bij prijzen, productie en bedrijfsplanning."},
+        {"question": "Hoe verlaag ik mijn break-even punt?", "answer": "Verlaag vaste kosten, verhoog verkoopprijs of verlaag variabele kosten per eenheid."},
+        {"question": "Wat is bijdragemarge?", "answer": "Bijdragemarge is de verkoopprijs minus variabele kosten - het geld dat beschikbaar is om vaste kosten en winst te dekken."},
+        {"question": "Kan het break-even punt veranderen?", "answer": "Ja, als vaste kosten, verkoopprijs of variabele kosten veranderen, verandert uw break-even punt ook."}
+      ]
+    }
   }
 }

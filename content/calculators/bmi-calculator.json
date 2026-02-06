@@ -846,5 +846,83 @@
       ]
     },
     "component": "BMICalculator"
+  },
+  "de": {
+    "title": "BMI-Rechner",
+    "seoTitle": "BMI-Rechner - Was Ist Mein Body-Mass-Index?",
+    "metaDescription": "Kostenloser BMI-Rechner. Berechnen Sie Ihren Body-Mass-Index (BMI) und erhalten Sie eine Gesundheitskategorie-Bewertung.",
+    "keywords": ["BMI-Rechner", "Body-Mass-Index-Rechner", "BMI-Tabelle", "Gesundes Gewicht Rechner"],
+    "slug": "bmi-calculator",
+    "category": "health",
+    "difficulty": "einfach",
+    "tags": ["BMI", "Gewicht", "Gesundheit", "Body-Mass-Index", "Fitness"],
+    "summary": "Berechnen Sie Ihren Body-Mass-Index (BMI) und bestimmen Sie Ihre Gewichtskategorie.",
+    "description": "Unser BMI-Rechner verwendet die Standardformel zur Bestimmung Ihres Body-Mass-Index und bietet eine Gesundheitskategorie-Bewertung.",
+    "instructions": ["Geben Sie Ihre Größe in Zentimetern oder Fuß/Zoll ein", "Geben Sie Ihr Gewicht in Kilogramm oder Pfund ein", "Erhalten Sie Ihren BMI-Wert und Gesundheitskategorie", "Erfahren Sie, was Ihr BMI für Ihre Gesundheit bedeutet"],
+    "seoContent": {
+      "metaTitle": "BMI-Rechner - Berechnen Sie Ihren Body-Mass-Index",
+      "metaDescription": "Kostenloser BMI-Rechner mit Gesundheitskategorie-Bewertung. Finden Sie heraus, ob Sie untergewichtig, normalgewichtig, übergewichtig oder fettleibig sind.",
+      "keywords": "BMI-Rechner, Body-Mass-Index, BMI berechnen, Gesundes Gewicht",
+      "h1": "BMI-Rechner - Berechnen Sie Ihren Body-Mass-Index",
+      "introduction": "Der BMI-Rechner hilft Ihnen, Ihren Body-Mass-Index zu bestimmen und Ihre Gewichtskategorie zu verstehen. BMI ist ein Screening-Tool zur Beurteilung des Körpergewichts im Verhältnis zur Größe.",
+      "benefits": ["Berechnen Sie BMI schnell und genau", "Verstehen Sie Ihre Gewichtskategorie", "Erhalten Sie Gesundheitsrichtlinien basierend auf BMI", "Verfolgen Sie Gewichtsänderungen im Laufe der Zeit", "Identifizieren Sie potenzielle Gesundheitsrisiken", "Setzen Sie realistische Gewichtsziele"],
+      "steps": ["Wählen Sie metrisches oder imperiales System", "Geben Sie Ihre Größe ein", "Geben Sie Ihr Gewicht ein", "Sehen Sie BMI-Wert und Kategorie an", "Lesen Sie personalisierte Gesundheitsempfehlungen"],
+      "inputsExplained": ["Größe: Ihre Körpergröße in cm oder Fuß/Zoll", "Gewicht: Ihr Körpergewicht in kg oder Pfund", "Einheit: Wählen Sie metrisch (kg/cm) oder imperial (lbs/Fuß)"],
+      "formulaExplanation": "BMI = Gewicht (kg) / [Größe (m)]². Für imperiale Einheiten: BMI = 703 × Gewicht (lbs) / [Größe (Zoll)]².",
+      "resultsExplanation": "Ergebnisse zeigen BMI-Wert und Kategorie: Untergewicht (<18,5), Normalgewicht (18,5-24,9), Übergewicht (25-29,9), Fettleibig (≥30).",
+      "examples": "Eine Person mit 1,70m und 70kg hat einen BMI von 24,2 (Normalgewicht).",
+      "whoItsFor": "Erwachsene, die Gewichtsstatus überwachen, Gesundheitsziele setzen oder Gewichtsrisiken verstehen möchten.",
+      "disclaimer": "BMI ist ein Screening-Tool und keine diagnostische Methode. Konsultieren Sie medizinisches Fachpersonal für umfassende Gesundheitsbewertungen.",
+      "howDoesWork": "Der Rechner verwendet die Standard-BMI-Formel, um Ihr Gewicht im Verhältnis zur Größe zu bewerten und ordnet Sie einer Gesundheitskategorie zu.",
+      "completeGuide": "BMI ist ein nützliches Werkzeug zur Bewertung des Gewichtsstatus, hat aber Einschränkungen für Sportler und bestimmte Bevölkerungsgruppen.",
+      "relatedTools": ["Körperfettrechner", "Kalorienrechner", "Idealgewichtsrechner", "TDEE-Rechner"],
+      "faqs": [
+        {"question": "Was ist ein gesunder BMI-Bereich?", "answer": "Ein gesunder BMI-Bereich liegt zwischen 18,5 und 24,9 für die meisten Erwachsenen."},
+        {"question": "Ist BMI für Sportler genau?", "answer": "BMI berücksichtigt keine Muskelmasse, daher kann er für Sportler ungenau sein."},
+        {"question": "Wie oft sollte ich meinen BMI überprüfen?", "answer": "Monatliche Überprüfungen während Gewichtsprogrammen sind empfohlen, vierteljährlich für allgemeine Gesundheit."},
+        {"question": "Kann BMI für Kinder verwendet werden?", "answer": "Ja, aber Kinder-BMI verwendet alters- und geschlechtsspezifische Perzentile."},
+        {"question": "Was sollte ich tun, wenn mein BMI hoch ist?", "answer": "Konsultieren Sie einen Arzt für umfassende Bewertung und Gewichtsmanagement-Plan."}
+      ]
+    },
+    "component": "BMICalculator"
+  },
+  "nl": {
+    "title": "BMI Calculator",
+    "seoTitle": "BMI Calculator - Wat Is Mijn Lichaamsmassa-Index?",
+    "metaDescription": "Gratis BMI calculator. Bereken uw Body Mass Index (BMI) en krijg gezondheidscat egorie beoordeling.",
+    "keywords": ["BMI calculator", "lichaamsmassa-index calculator", "BMI grafiek", "gezond gewicht calculator"],
+    "slug": "bmi-calculator",
+    "category": "health",
+    "difficulty": "basis",
+    "tags": ["BMI", "gewicht", "gezondheid", "lichaamsmassa-index", "fitness"],
+    "summary": "Bereken uw Body Mass Index (BMI) en bepaal uw gewichtsstatuscategorie.",
+    "description": "Onze BMI calculator gebruikt de standaardformule om uw Body Mass Index te bepalen en biedt gezondheidscat egorie beoordeling.",
+    "instructions": ["Voer uw lengte in centimeters of voet/inches in", "Voer uw gewicht in kilogrammen of ponden in", "Krijg uw BMI-waarde en gezondheidscategorie", "Leer wat uw BMI betekent voor uw gezondheid"],
+    "seoContent": {
+      "metaTitle": "BMI Calculator - Bereken Uw Lichaamsmassa-Index",
+      "metaDescription": "Gratis BMI calculator met gezondheidscategorie beoordeling. Ontdek of u ondergewicht, normaal gewicht, overgewicht of obesitas heeft.",
+      "keywords": "BMI calculator, lichaamsmassa-index, BMI berekenen, gezond gewicht",
+      "h1": "BMI Calculator - Bereken Uw Lichaamsmassa-Index",
+      "introduction": "De BMI Calculator helpt u uw Body Mass Index te bepalen en uw gewichtscategorie te begrijpen. BMI is een screeningstool voor het beoordelen van lichaamsgewicht ten opzichte van lengte.",
+      "benefits": ["Bereken BMI snel en nauwkeurig", "Begrijp uw gewichtscategorie", "Ontvang gezondheidsrichtlijnen op basis van BMI", "Volg gewichtsveranderingen in de loop van de tijd", "Identificeer potentiële gezondheidsrisico's", "Stel realistische gewichtsdoelen"],
+      "steps": ["Kies metrisch of Engels systeem", "Voer uw lengte in", "Voer uw gewicht in", "Bekijk BMI-waarde en categorie", "Lees gepersonaliseerde gezondheidsaanbevelingen"],
+      "inputsExplained": ["Lengte: Uw lichaamslengte in cm of voet/inches", "Gewicht: Uw lichaamsgewicht in kg of ponden", "Eenheid: Kies metrisch (kg/cm) of Engels (lbs/voet)"],
+      "formulaExplanation": "BMI = Gewicht (kg) / [Lengte (m)]². Voor Engelse eenheden: BMI = 703 × Gewicht (lbs) / [Lengte (inches)]².",
+      "resultsExplanation": "Resultaten tonen BMI-waarde en categorie: Ondergewicht (<18,5), Normaal gewicht (18,5-24,9), Overgewicht (25-29,9), Obesitas (≥30).",
+      "examples": "Een persoon van 1,70m en 70kg heeft een BMI van 24,2 (Normaal gewicht).",
+      "whoItsFor": "Volwassenen die gewichtsstatus monitoren, gezondheidsdoelen stellen of gewichtsrisico's begrijpen.",
+      "disclaimer": "BMI is een screeningstool en geen diagnostische methode. Raadpleeg medisch personeel voor uitgebreide gezondheidsbeoordelingen.",
+      "howDoesWork": "De calculator gebruikt de standaard BMI-formule om uw gewicht ten opzichte van lengte te evalueren en wijst u toe aan een gezondheidscategorie.",
+      "completeGuide": "BMI is een nuttige tool voor het beoordelen van gewichtsstatus, maar heeft beperkingen voor atleten en bepaalde bevolkingsgroepen.",
+      "relatedTools": ["Lichaamsvetcalculator", "Calorieëncalculator", "Ideaal Gewicht Calculator", "TDEE Calculator"],
+      "faqs": [
+        {"question": "Wat is een gezond BMI-bereik?", "answer": "Een gezond BMI-bereik ligt tussen 18,5 en 24,9 voor de meeste volwassenen."},
+        {"question": "Is BMI nauwkeurig voor atleten?", "answer": "BMI houdt geen rekening met spiermassa, dus kan onnauwkeurig zijn voor atleten."},
+        {"question": "Hoe vaak moet ik mijn BMI controleren?", "answer": "Maandelijkse controles tijdens gewichtsprogramma's worden aanbevolen vierteljaarlijks voor algemene gezondheid."},
+        {"question": "Kan BMI voor kinderen worden gebruikt?", "answer": "Ja, maar kinder-BMI gebruikt leeftijds- en geslachts specifieke percentielen."},
+        {"question": "Wat moet ik doen als mijn BMI hoog is?", "answer": "Raadpleeg een arts voor uitgebreide beoordeling en gewichtsbeheerplan."}
+      ]
+    },
+    "component": "BMICalculator"
   }
 }

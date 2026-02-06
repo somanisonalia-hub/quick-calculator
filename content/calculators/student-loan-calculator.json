@@ -267,5 +267,59 @@
         {"question": "Wie berechne ich Gesamtzinsen?", "answer": "Gesamtzinsen = (Monatliche Zahlung × Anzahl der Zahlungen) - Darlehensbetrag."}
       ]
     }
+  },
+  "nl": {
+    "title": "Studielening Calculator",
+    "seoTitle": "Studielening Calculator - Hoeveel Worden Mijn Studieleningbetalingen?",
+    "summary": "Bereken maandelijkse betalingen en totale kosten voor studieleningen.",
+    "description": "Gebruik onze studielening calculator om maandelijkse betalingen, totale rente en terugbetaling timeline te schatten met aflossingsvrije periode.",
+    "category": "financial",
+    "difficulty": "Gemiddeld",
+    "slug": "student-loan-calculator",
+    "component": "StudentLoanCalculator",
+    "seoContent": {
+      "metaTitle": "Studielening Calculator - Bereken Maandelijkse Betalingen",
+      "metaDescription": "Gratis studielening calculator om maandelijkse betalingen, totale rente en terugbetaling timeline te schatten. Plan uw studieleningaflossingstrategie.",
+      "keywords": "studielening calculator, leningbetalingcalculator, maandelijkse betaling, studielening terugbetaling, lening rente",
+      "h1": "Studielening Calculator - Bereken Studieleningbetalingen",
+      "introduction": "De Studielening Calculator helpt u de ware kosten van studieleningen te begrijpen en uw aflossingstrategie te plannen. Door uw leningbedrag, rentevoet, termijn en aflossingsvrije periode in te voeren, ziet u uw maandelijkse betaling, totale betaalde rente en effectieve rentevoet.",
+      "benefits": [
+        "Bereken nauwkeurige maandelijkse leningbetalingen",
+        "Begrijp totale betaalde rente gedurende leningtermijn",
+        "Plan terugbetalingsstrategie met aflossingsvrije periode",
+        "Vergelijk verschillende leningscenario's",
+        "Zie effectieve rentevoet impact",
+        "Neem geïnformeerde leningbeslissingen"
+      ],
+      "steps": [
+        "Voer uw totale leningbedrag in",
+        "Voer jaarlijkse rentevoet in",
+        "Specificeer lening termijn in jaren",
+        "Voer aflossingsvrije periode in maanden in",
+        "Bekijk berekende maandelijkse betaling",
+        "Controleer totale rente en terugbetalingschema"
+      ],
+      "inputsExplained": [
+        "Leningbedrag: Totaal geleend bedrag",
+        "Rentevoet: Jaarlijks percentage van lening",
+        "Lening Termijn: Aantal jaren om terug te betalen",
+        "Aflossingsvrije Periode: Maanden voordat betalingen beginnen"
+      ],
+      "formulaExplanation": "Maandelijkse Betaling = P × [r(1+r)^n] / [(1+r)^n - 1], waarbij P = Kapitaal, r = Maandtarief, n = Aantal betalingen.",
+      "resultsExplanation": "Resultaten tonen maandelijkse betaling, totale betalingsbedrag, totale rente, effectieve rentevoet en betaling na aflossingsvrije periode.",
+      "examples": "Een lening van €50.000 tegen 5,5% voor 10 jaar met 6 maanden aflossingsvrije periode heeft ongeveer €533 maandelijkse betaling.",
+      "whoItsFor": "Studenten, afgestudeerden, ouders die studieleningen plannen en iedereen die leningopties vergelijkt.",
+      "disclaimer": "Berekeningen zijn schattingen gebaseerd op ingevoerde waarden. Werkelijke betalingen kunnen variëren op basis van leningvoorwaarden.",
+      "howDoesWork": "De calculator gebruikt standaard amortisatieformules en houdt rekening met aflossingsvrije perioden om betalingsbedragen en totale rente te projecteren.",
+      "completeGuide": "Het begrijpen van uw studieleningbetalingen helpt bij budgetplanning. Gebruik deze calculator om verschillende bedragen en termijnen te vergelijken.",
+      "relatedTools": ["Leningcalculator", "Schuldencalculator", "Budgetcalculator", "Salariscalculator"],
+      "faqs": [
+        {"question": "Wat is een aflossingsvrije periode?", "answer": "Een aflossingsvrije periode is de tijd na afstuderen voordat u betalingen moet doen, normaal 6 maanden."},
+        {"question": "Loopt rente op tijdens de aflossingsvrije periode?", "answer": "Rente kan oplopen op niet-gesubsidieerde leningen tijdens de aflossingsvrije periode, maar niet op gesubsidieerde federale leningen."},
+        {"question": "Kan ik extra betalen op mijn lening?", "answer": "Ja, extra betalingen verlagen het kapitaal sneller en verminderen de totale betaalde rente over de looptijd."},
+        {"question": "Wat zijn inkomensafhankelijke terugbetalingsplannen?", "answer": "Inkomensgebaseerde plannen passen uw maandelijkse betaling aan uw inkomen aan en kunnen betalingen voor lage verdiensten verlagen."},
+        {"question": "Hoe bereken ik totale rente?", "answer": "Totale Rente = (Maandelijkse Betaling × Aantal Betalingen) - Leningbedrag."}
+      ]
+    }
   }
 }

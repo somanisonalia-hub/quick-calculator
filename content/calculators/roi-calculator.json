@@ -274,5 +274,58 @@
         {"question": "Sollte ich ROIs verschiedener Investitionen vergleichen?", "answer": "Ja, ROI ist nützlich zum Vergleichen der Leistung über verschiedene Investitionen und Zeiträume hinweg."}
       ]
     }
+  },
+  "nl": {
+    "title": "ROI Calculator",
+    "seoTitle": "ROI Calculator - Wat Is Mijn Rendement Op Investering?",
+    "summary": "Bereken uw rendement op investering en analyseer investeringsprestaties.",
+    "description": "Gebruik onze ROI calculator om het rendement op uw investeringen te bepalen en de effectiviteit van uw financiële beslissingen te begrijpen.",
+    "category": "financial",
+    "difficulty": "Gemiddeld",
+    "slug": "roi-calculator",
+    "component": "ROICalculator",
+    "seoContent": {
+      "metaTitle": "ROI Calculator - Bereken Rendement Op Investering",
+      "metaDescription": "Gratis ROI calculator om rendementen op investeringen te meten. Bereken winstpercentage, jaarlijkse ROI en investeringsprestaties direct.",
+      "keywords": "ROI calculator, rendement op investering, investeringscalculator, winstcalculator, investeringsanalyse",
+      "h1": "ROI Calculator - Meet Uw Investeringsrendementen",
+      "introduction": "De ROI Calculator helpt u snel het rendement op uw investeringen te meten. Door uw aanvankelijk investeringsbedrag en eindwaarde in te voeren, ziet u direct uw rendementspercentage, winst en jaarrendement. Deze tool is essentieel voor elke investeerder die investeringsprestaties wil volgen en vergelijken.",
+      "benefits": [
+        "Bereken direct rendement op investeringspercentage",
+        "Vergelijk meerdere investeringsscenario's",
+        "Volg investeringsprestaties in de loop van de tijd",
+        "Neem datagestuurdeinvesteringsbeslissingen",
+        "Begrijp winstmarges en rendementen",
+        "Evalueer investeringseffectiviteit"
+      ],
+      "steps": [
+        "Voer uw aanvankelijk investeringsbedrag in",
+        "Voer de eindwaarde van uw investering in",
+        "Specificeer de tijdsperiode in jaren",
+        "Bekijk uw berekende ROI-percentage",
+        "Pas waarden aan om scenario's te vergelijken",
+        "Gebruik resultaten voor investeringsbeslissingen"
+      ],
+      "inputsExplained": [
+        "Aanvankelijke Investering: Het bedrag dat u aanvankelijk investeerde",
+        "Eindwaarde: De huidige of eindwaarde van uw investering",
+        "Tijdskader: Het aantal jaren voor de investeringsperiode"
+      ],
+      "formulaExplanation": "ROI wordt berekend als: ((Eindwaarde - Aanvankelijke Investering) / Aanvankelijke Investering) × 100. Dit geeft u het rendementspercentage op uw investering.",
+      "resultsExplanation": "De resultaten tonen uw totale ROI-percentage, jaarlijkse ROI, nettowinst en totaal rendementspercentage over uw gespecificeerde tijdsperiode.",
+      "examples": "Voor een investering van €10.000 die groeide naar €12.500 in 1 jaar, is uw ROI 25%. Over 2 jaar zou de jaarlijkse ROI 12,5% zijn.",
+      "whoItsFor": "Deze calculator is ideaal voor investeerders, bedrijfseigenaren en iedereen die investeringsprestaties analyseert. Of u nu aandelen, onroerend goed of zakelijke ondernemingen evalueert, deze tool biedt duidelijke meetwaarden.",
+      "disclaimer": "ROI-berekeningen zijn schattingen gebaseerd op verstrekte waarden. Werkelijke rendementen kunnen variëren op basis van marktomstandigheden en andere factoren.",
+      "howDoesWork": "De calculator gebruikt de standaard ROI-formule om rendementen te berekenen. Voer gewoon uw investeringscijfers in en het berekent automatisch meerdere ROI-meetwaarden.",
+      "completeGuide": "ROI (Return on Investment) meet hoeveel winst u maakte ten opzichte van uw investering. Een ROI van 25% betekent dat u €0,25 winst maakte voor elke geïnvesteerde euro.",
+      "relatedTools": ["Samengestelde Rente Calculator", "Investeringscalculator", "Winstmarge Calculator", "Break-Even Calculator"],
+      "faqs": [
+        {"question": "Wat is een goede ROI?", "answer": "Een goede ROI hangt over het algemeen af van het investeringstype en marktomstandigheden. Typische goede ROI varieert van 7-15% jaarlijks, hoewel aandelenmarkten gemiddeld 10% zijn."},
+        {"question": "Kan ROI negatief zijn?", "answer": "Ja, negatieve ROI betekent dat u geld verloor op de investering. Dit treedt op wanneer de eindwaarde lager is dan de aanvankelijke investering."},
+        {"question": "Hoe wordt jaarlijkse ROI berekend?", "answer": "Jaarlijkse ROI = Totale ROI % / Aantal Jaren. Dit toont het gemiddelde jaarrendement."},
+        {"question": "Is ROI hetzelfde als winst?", "answer": "Nee. Winst is absolute verdiende euro's. ROI is winst als een percentage van investering, wat vergelijking tussen verschillende investeringen mogelijk maakt."},
+        {"question": "Moet ik ROI's van verschillende investeringen vergelijken?", "answer": "Ja, ROI is nuttig voor het vergelijken van prestaties tussen verschillende investeringen en tijdsperioden."}
+      ]
+    }
   }
 }
