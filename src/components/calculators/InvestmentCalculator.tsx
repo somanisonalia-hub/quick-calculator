@@ -119,6 +119,12 @@ const translations = {
     annually: "annually",
     quarterly: "quarterly",
     string: "string",
+  }
+};
+
+export default function InvestmentCalculator({ inputs, output, additionalOutputs, lang = 'en' }: InvestmentCalculatorProps) {
+  const t = translations[lang as keyof typeof translations] || translations.en;
+  
   // Translated labels for the performance summary
   const initialInvestment = t.initialInvestment;
   const monthlyDeposits = t.monthlyDeposits;

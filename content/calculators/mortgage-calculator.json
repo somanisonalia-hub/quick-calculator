@@ -518,5 +518,261 @@
         "explanation": "This example shows how the calculator works with smaller values."
       }
     ]
+  },
+  "de": {
+    "seoTitle": "Hypothekenrechner - Wie hoch wird meine monatliche Hypothekenzahlung?",
+    "title": "Hypothekenrechner",
+    "summary": "Berechnen Sie monatliche Hypothekenzahlungen und Gesamtzinsen.",
+    "description": "Verwenden Sie unseren Hypothekenrechner, um Ihre monatlichen Zahlungen, gezahlte Gesamtzinsen und den Tilgungsplan für Immobiliendarlehen zu schätzen.",
+    "category": "financial",
+    "difficulty": "Anfänger",
+    "slug": "mortgage-calculator",
+    "calculatorComponent": "MortgageCalculator",
+    "seoContent": {
+      "metaTitle": "Hypothekenrechner - Berechnen Sie monatliche Zahlungen und Zinsen",
+      "metaDescription": "Kostenloser Hypothekenrechner zur Schätzung monatlicher Zahlungen, Gesamtzinsen und Tilgungsplan.",
+      "keywords": [
+        "hypothekenrechner",
+        "immobiliendarlehensrechner",
+        "monatliche zahlung rechner"
+      ],
+      "h1": "Hypothekenrechner",
+      "introduction": "Unser Hypothekenrechner hilft Ihnen, Ihre monatlichen Hypothekenzahlungen, während der Laufzeit des Darlehens gezahlte Gesamtzinsen zu schätzen und einen vollständigen Tilgungsplan zu erstellen.",
+      "benefits": [
+        "Berechnen Sie exakte monatliche Hypothekenzahlungen",
+        "Sehen Sie die während der Darlehenslaufzeit gezahlten Gesamtzinsen",
+        "Erstellen Sie detaillierte Tilgungspläne",
+        "Vergleichen Sie verschiedene Darlehensszenarien",
+        "Planen Sie Ihr Hauskaufbudget effektiv"
+      ],
+      "steps": [
+        "Geben Sie den Hypothekendarlehensbetrag ein (Hauptsumme)",
+        "Geben Sie den jährlichen Zinssatz ein",
+        "Geben Sie die Darlehenslaufzeit in Jahren an",
+        "Fügen Sie optional Grundsteuern und Versicherung hinzu",
+        "Klicken Sie auf Berechnen, um Ihre Ergebnisse zu sehen"
+      ],
+      "inputsExplained": [
+        "Darlehensbetrag: Der Gesamtbetrag, den Sie leihen",
+        "Zinssatz: Jährlicher Prozentsatz des Darlehens",
+        "Darlehenslaufzeit: Anzahl der Jahre zur Rückzahlung des Darlehens",
+        "Grundsteuern: Jährlicher Grundsteuerbetrag (optional)",
+        "Wohngebäudeversicherung: Jährliche Versicherungsprämie (optional)"
+      ],
+      "formulaExplanation": "Monatliche Zahlung = P * [r(1+r)^n] / [(1+r)^n - 1] wobei P die Hauptsumme ist, r der monatliche Zinssatz und n die Anzahl der Zahlungen.",
+      "examples": [
+        "30-jährige Festhypothek mit 6,5% Zinsen auf ein Darlehen von 300.000 €",
+        "15-jährige Festhypothek mit 5,8% Zinsen auf ein Darlehen von 250.000 €",
+        "Vergleichen Sie verschiedene Anzahlungsbeträge"
+      ],
+      "resultsExplanation": [
+        "Monatliche Zahlung: Ihre regelmäßige Hypothekenzahlung",
+        "Gesamtzinsen: Während der Darlehenslaufzeit gezahlter Zinsbetrag",
+        "Gesamtkosten: Gesamtbetrag einschließlich Hauptsumme und Zinsen",
+        "Tilgungsplan: Monatliche Aufschlüsselung der Zahlungen"
+      ],
+      "whoItsFor": "Hauskäufer, Immobilienfachleute, Finanzplaner und alle, die ein Hypothekendarlehen in Betracht ziehen.",
+      "disclaimer": "Dieser Rechner liefert nur Schätzungen. Die tatsächlichen Hypothekenbedingungen hängen von den Kreditgeberanforderungen, der Kreditwürdigkeit und den aktuellen Marktbedingungen ab. Konsultieren Sie einen Hypothekenfachmann für persönliche Beratung.",
+      "howDoesWork": "Ein Hypothekenrechner verwendet die Standardformel für Darlehenszahlungen, um Ihre monatlichen Zahlungen zu bestimmen. Er nimmt Ihren Darlehensbetrag (Hauptsumme), den jährlichen Zinssatz und die Darlehenslaufzeit und berechnet dann die monatliche Zahlung mit der Formel: M = P[r(1+r)^n]/[(1+r)^n-1], wobei M die monatliche Zahlung, P die Hauptsumme, r der monatliche Zinssatz und n die Anzahl der Zahlungen ist. Der Rechner erstellt auch einen Tilgungsplan, der zeigt, wie sich jede Zahlung im Laufe der Zeit auf Hauptsumme und Zinsen aufteilt.",
+      "completeGuide": "Um diesen Hypothekenrechner effektiv zu nutzen: 1) Geben Sie Ihren Darlehensbetrag ein (die Hauptsumme, die Sie leihen möchten), 2) Geben Sie den jährlichen Zinssatz ein (prüfen Sie die aktuellen Hypothekenzinsen), 3) Geben Sie die Darlehenslaufzeit in Jahren an (typischerweise 15 oder 30 Jahre), 4) Fügen Sie optional Grundsteuern und Wohngebäudeversicherung für eine genauere Gesamtzahlung hinzu, 5) Klicken Sie auf Berechnen, um Ihre monatliche Zahlung, Gesamtzinsen und Tilgungsplan zu sehen. Verwenden Sie die Ergebnisse, um verschiedene Darlehensszenarien zu vergleichen und Ihr Hauskaufbudget zu planen.",
+      "relatedTools": [
+        "loan-calculator",
+        "home-affordability-calculator",
+        "debt-ratios-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "Was ist ein Hypothekenrechner?",
+          "answer": "Ein Hypothekenrechner ist ein Werkzeug, das Ihnen hilft, Ihre monatlichen Hypothekenzahlungen basierend auf dem Darlehensbetrag, Zinssatz und der Darlehenslaufzeit zu schätzen. Er kann auch die gezahlten Gesamtzinsen anzeigen und einen Tilgungsplan bereitstellen."
+        },
+        {
+          "question": "Wie genau sind die Ergebnisse des Hypothekenrechners?",
+          "answer": "Hypothekenrechner liefern Schätzungen basierend auf den von Ihnen eingegebenen Informationen. Die tatsächlichen Zahlungen können aufgrund von Kreditgebergebühren, Anzahlungsbeträgen, Grundsteuern, Versicherung und anderen Abschlusskosten variieren. Für genaue Angebote konsultieren Sie einen Hypothekenkreditgeber."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen 15- und 30-jährigen Hypotheken?",
+          "answer": "Eine 15-jährige Hypothek hat höhere monatliche Zahlungen, aber niedrigere Gesamtzinsen über die Laufzeit des Darlehens. Eine 30-jährige Hypothek hat niedrigere monatliche Zahlungen, aber Sie zahlen insgesamt mehr Zinsen. Die 15-jährige Option baut schneller Eigenkapital auf."
+        },
+        {
+          "question": "Wie wirken sich Zinssätze auf meine Hypothekenzahlungen aus?",
+          "answer": "Höhere Zinssätze erhöhen Ihre monatlichen Zahlungen und die gezahlten Gesamtzinsen. Selbst ein kleiner Zinsunterschied (wie 0,25%) kann Ihre Zahlungen über 30 Jahre erheblich beeinflussen. Vergleichen Sie, um die besten Zinssätze zu erhalten."
+        },
+        {
+          "question": "Was ist in meiner monatlichen Hypothekenzahlung enthalten?",
+          "answer": "Ihre monatliche Zahlung umfasst typischerweise Hauptsumme und Zinsen (P&I). Viele Kreditgeber verlangen auch ein Treuhandkonto, das Grundsteuern und Wohngebäudeversicherung umfasst. Dies wird PITI genannt (Hauptsumme, Zinsen, Steuern, Versicherung)."
+        },
+        {
+          "question": "Kann ich die Bedingungen meiner Hypothek nach Abschluss ändern?",
+          "answer": "Sie können Ihre Hypothek refinanzieren, um die Bedingungen zu ändern, aber dies beinhaltet Abschlusskosten und kann die Laufzeit Ihres Darlehens verlängern. Berücksichtigen Sie Ihre langfristigen Ziele vor der Refinanzierung. Zins- und Laufzeitrefin anzierungen ändern Ihren Zinssatz und/oder die Darlehenslaufzeit."
+        }
+      ]
+    },
+    "component": "MortgageCalculator",
+    "examples": [
+      {
+        "title": "Grundlegendes Beispiel",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "Dieses Beispiel zeigt eine typische Berechnung mit Standardwerten."
+      },
+      {
+        "title": "Hochwert-Szenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "Dieses Szenario demonstriert die Berechnung mit höheren Eingabewerten."
+      },
+      {
+        "title": "Niedrigwert-Szenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "Dieses Beispiel zeigt, wie der Rechner mit kleineren Werten funktioniert."
+      }
+    ]
+  },
+  "nl": {
+    "seoTitle": "Hypotheek Rekenmachine - Hoeveel is Mijn Maandelijkse Hypotheekbetaling?",
+    "title": "Hypotheek Rekenmachine",
+    "summary": "Bereken maandelijkse hypotheekbetalingen en totale rente.",
+    "description": "Gebruik onze hypotheekrekenmachine om uw maandelijkse betalingen, totaal betaalde rente en afschrijvingsschema voor woningkredieten te schatten.",
+    "category": "financial",
+    "difficulty": "Beginner",
+    "slug": "mortgage-calculator",
+    "calculatorComponent": "MortgageCalculator",
+    "seoContent": {
+      "metaTitle": "Hypotheek Rekenmachine - Bereken Maandelijkse Betalingen en Rente",
+      "metaDescription": "Gratis hypotheekrekenmachine om maandelijkse betalingen, totale rente en afschrijvingsschema te schatten.",
+      "keywords": [
+        "hypotheek rekenmachine",
+        "woningkrediet calculator",
+        "maandelijkse betaling rekenmachine"
+      ],
+      "h1": "Hypotheek Rekenmachine",
+      "introduction": "Onze hypotheekrekenmachine helpt u uw maandelijkse hypotheekbetalingen, gedurende de looptijd van de lening betaalde totale rente te schatten en een volledig afschrijvingsschema te maken.",
+      "benefits": [
+        "Bereken exacte maandelijkse hypotheekbetalingen",
+        "Zie de totale rente betaald over de leningtermijn",
+        "Genereer gedetailleerde afschrijvingsschema's",
+        "Vergelijk verschillende leningscenario's",
+        "Plan effectief uw huisaankoopbudget"
+      ],
+      "steps": [
+        "Voer het hypotheekleningbedrag in (hoofdsom)",
+        "Voer de jaarlijkse rentevoet in",
+        "Specificeer de leningtermijn in jaren",
+        "Voeg optioneel onroerendgoedbelasting en verzekering toe",
+        "Klik op berekenen om uw resultaten te zien"
+      ],
+      "inputsExplained": [
+        "Leningbedrag: Het totale bedrag dat u leent",
+        "Rentevoet: Jaarlijks percentage van de lening",
+        "Leningtermijn: Aantal jaren om de lening terug te betalen",
+        "Onroerendgoedbelasting: Jaarlijks belastingbedrag (optioneel)",
+        "Woningverzekering: Jaarlijkse verzekeringspremie (optioneel)"
+      ],
+      "formulaExplanation": "Maandelijkse betaling = P * [r(1+r)^n] / [(1+r)^n - 1] waarbij P de hoofdsom is, r de maandelijkse rentevoet en n het aantal betalingen.",
+      "examples": [
+        "30-jarige vaste hypotheek tegen 6,5% rente op een lening van € 300.000",
+        "15-jarige vaste hypotheek tegen 5,8% rente op een lening van € 250.000",
+        "Vergelijk verschillende aanbetalingsbedragen"
+      ],
+      "resultsExplanation": [
+        "Maandelijkse Betaling: Uw regelmatige hypotheekbetaling",
+        "Totale Rente: Bedrag betaald aan rente over de leningtermijn",
+        "Totale Kosten: Totaal betaald bedrag inclusief hoofdsom en rente",
+        "Afschrijvingsschema: Maand-tot-maand uitsplitsing van betalingen"
+      ],
+      "whoItsFor": "Huizenkopers, vastgoedprofessionals, financiële planners en iedereen die een hypotheeklening overweegt.",
+      "disclaimer": "Deze rekenmachine geeft alleen schattingen. Werkelijke hypotheekvoorwaarden zijn afhankelijk van kredietverstrekkerseisen, kredietscore en huidige marktomstandigheden. Raadpleeg een hypotheekprofessional voor persoonlijk advies.",
+      "howDoesWork": "Een hypotheekrekenmachine gebruikt de standaard leningbetalingsformule om uw maandelijkse betalingen te bepalen. Het neemt uw leningbedrag (hoofdsom), jaarlijkse rentevoet en leningtermijn en berekent vervolgens de maandelijkse betaling met de formule: M = P[r(1+r)^n]/[(1+r)^n-1], waarbij M de maandelijkse betaling is, P de hoofdsom, r de maandelijkse rentevoet en n het aantal betalingen. De rekenmachine genereert ook een afschrijvingsschema dat laat zien hoe elke betaling in de loop van de tijd wordt verdeeld tussen hoofdsom en rente.",
+      "completeGuide": "Om deze hypotheekrekenmachine effectief te gebruiken: 1) Voer uw leningbedrag in (de hoofdsom die u wilt lenen), 2) Voer de jaarlijkse rentevoet in (controleer de huidige hypotheekrentes), 3) Specificeer de leningtermijn in jaren (meestal 15 of 30 jaar), 4) Voeg optioneel onroerendgoedbelasting en woningverzekering toe voor een nauwkeuriger totale betaling, 5) Klik op berekenen om uw maandelijkse betaling, totale rente en afschrijvingsschema te zien. Gebruik de resultaten om verschillende leningscenario's te vergelijken en uw huisaankoopbudget te plannen.",
+      "relatedTools": [
+        "loan-calculator",
+        "home-affordability-calculator",
+        "debt-ratios-calculator"
+      ],
+      "faqs": [
+        {
+          "question": "Wat is een hypotheekrekenmachine?",
+          "answer": "Een hypotheekrekenmachine is een tool die u helpt uw maandelijkse hypotheekbetalingen te schatten op basis van het leningbedrag, rentevoet en leningtermijn. Het kan ook de totale betaalde rente tonen en een afschrijvingsschema verstrekken."
+        },
+        {
+          "question": "Hoe nauwkeurig zijn de resultaten van de hypotheekrekenmachine?",
+          "answer": "Hypotheekrekenmachines geven schattingen op basis van de informatie die u invoert. Werkelijke betalingen kunnen variëren vanwege kredietverstrekkerskosten, aanbetalingsbedragen, onroerendgoedbelasting, verzekering en andere afsluitkosten. Voor nauwkeurige offertes raadpleeg een hypotheekbank."
+        },
+        {
+          "question": "Wat is het verschil tussen 15- en 30-jarige hypotheken?",
+          "answer": "Een 15-jarige hypotheek heeft hogere maandelijkse betalingen maar lagere totale rente over de leningtermijn. Een 30-jarige hypotheek heeft lagere maandelijkse betalingen maar u betaalt in totaal meer rente. De 15-jarige optie bouwt sneller eigen vermogen op."
+        },
+        {
+          "question": "Hoe beïnvloeden rentevoeten mijn hypotheekbetalingen?",
+          "answer": "Hogere rentevoeten verhogen uw maandelijkse betalingen en de totaal betaalde rente. Zelfs een klein renteverschil (zoals 0,25%) kan uw betalingen over 30 jaar aanzienlijk beïnvloeden. Vergelijk om de beste rentes te krijgen."
+        },
+        {
+          "question": "Wat is inbegrepen in mijn maandelijkse hypotheekbetaling?",
+          "answer": "Uw maandelijkse betaling omvat doorgaans hoofdsom en rente (P&I). Veel kredietverstrekkers vereisen ook een borgrekening die onroerendgoedbelasting en woningverzekering omvat. Dit wordt PITI genoemd (Hoofdsom, Rente, Belastingen, Verzekering)."
+        },
+        {
+          "question": "Kan ik de voorwaarden van mijn hypotheek na afsluiting wijzigen?",
+          "answer": "U kunt uw hypotheek herfinancieren om de voorwaarden te wijzigen, maar dit brengt afsluitkosten met zich mee en kan de looptijd van uw lening verlengen. Overweeg uw langetermijndoelen voordat u herfinanciert. Rente- en termijnherfinancieringen veranderen uw rentevoet en/of de leningtermijn."
+        }
+      ]
+    },
+    "component": "MortgageCalculator",
+    "examples": [
+      {
+        "title": "Basisvoorbeeld",
+        "input": {
+          "value1": 100,
+          "value2": 50
+        },
+        "output": {
+          "result": 150,
+          "percentage": 50
+        },
+        "explanation": "Dit voorbeeld toont een typische berekening met standaardwaarden."
+      },
+      {
+        "title": "Hoge Waarde Scenario",
+        "input": {
+          "value1": 1000,
+          "value2": 250
+        },
+        "output": {
+          "result": 1250,
+          "percentage": 25
+        },
+        "explanation": "Dit scenario demonstreert de berekening met hogere invoerwaarden."
+      },
+      {
+        "title": "Lage Waarde Scenario",
+        "input": {
+          "value1": 10,
+          "value2": 5
+        },
+        "output": {
+          "result": 15,
+          "percentage": 50
+        },
+        "explanation": "Dit voorbeeld laat zien hoe de rekenmachine werkt met kleinere waarden."
+      }
+    ]
   }
 }
