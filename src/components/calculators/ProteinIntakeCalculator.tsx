@@ -267,7 +267,7 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
     },
     de: {
       title: "Proteinzufuhr-Rechner",
-      subtitle: "Berechnen Sie Ihren täglichen Proteinbedarf basierend auf Gewicht, Aktivitätsniveau und Fitnessziele".,
+      subtitle: "Berechnen Sie Ihren täglichen Proteinbedarf basierend auf Gewicht, Aktivitätsniveau und Fitnessziele",
       weight: "Körpergewicht",
       weightUnit: "Gewichtseinheit",
       gender: "Geschlecht",
