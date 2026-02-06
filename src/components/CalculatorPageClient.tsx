@@ -165,6 +165,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                           inputs={calculatorContent.calculatorComponent.inputs || []}
                           output={calculatorContent.calculatorComponent.output || {}}
                           additionalOutputs={calculatorContent.calculatorComponent.additionalOutputs || []}
+                          lang={lang}
                         />
                       );
                     }

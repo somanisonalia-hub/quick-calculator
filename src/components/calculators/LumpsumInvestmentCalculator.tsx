@@ -30,6 +30,61 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
       totalReturns: 'Expected Returns',
       finalAmount: 'Final Maturity Value',
       rupee: '₹'
+    },
+    es: {
+      title: 'Calculadora de Inversión en Una Sola Vez',
+      lumpsumAmount: 'Monto de Inversión en Una Sola Vez (₹)',
+      years: 'Período de Inversión (Años)',
+      annualReturn: 'Retorno Anual Esperado (%)',
+      calculate: 'Calcular Rendimientos',
+      initialInvestment: 'Inversión Inicial',
+      totalReturns: 'Rendimientos Esperados',
+      finalAmount: 'Valor de Vencimiento Final',
+      rupee: '₹'
+    },
+    pt: {
+      title: 'Calculadora de Investimento Único',
+      lumpsumAmount: 'Valor do Investimento Único (₹)',
+      years: 'Período de Investimento (Anos)',
+      annualReturn: 'Retorno Anual Esperado (%)',
+      calculate: 'Calcular Rendimentos',
+      initialInvestment: 'Investimento Inicial',
+      totalReturns: 'Retornos Esperados',
+      finalAmount: 'Valor Final de Vencimento',
+      rupee: '₹'
+    },
+    fr: {
+      title: 'Calculateur d\'Investissement Forfaitaire',
+      lumpsumAmount: 'Montant d\'Investissement Forfaitaire (₹)',
+      years: 'Période d\'Investissement (Années)',
+      annualReturn: 'Rendement Annuel Attendu (%)',
+      calculate: 'Calculer les Rendements',
+      initialInvestment: 'Investissement Initial',
+      totalReturns: 'Rendements Attendus',
+      finalAmount: 'Valeur Finale à l\'Échéance',
+      rupee: '₹'
+    },
+    de: {
+      title: 'Einmalinvestitionsrechner',
+      lumpsumAmount: 'Einmalinvestitionsbetrag (₹)',
+      years: 'Investitionszeitraum (Jahre)',
+      annualReturn: 'Erwartete jährliche Rendite (%)',
+      calculate: 'Rendite Berechnen',
+      initialInvestment: 'Anfängliche Investition',
+      totalReturns: 'Erwartete Rendite',
+      finalAmount: 'Endwert bei Fälligkeit',
+      rupee: '₹'
+    },
+    nl: {
+      title: 'Eenmalige Investering Rekenmachine',
+      lumpsumAmount: 'Eenmalig Investeringsbedrag (₹)',
+      years: 'Investeringsperiode (Jaren)',
+      annualReturn: 'Verwacht Jaarlijks Rendement (%)',
+      calculate: 'Rendement Berekenen',
+      initialInvestment: 'Initiële Investering',
+      totalReturns: 'Verwachte Opbrengsten',
+      finalAmount: 'Eindwaarde bij Vervaldatum',
+      rupee: '₹'
     }
   };
 

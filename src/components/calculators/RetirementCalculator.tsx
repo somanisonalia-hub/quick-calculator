@@ -39,15 +39,76 @@ interface RetirementCalculatorProps {
     investmentGrowth?: string;
     monthlyIncome?: string;
   };
+  lang?: string;
 }
 
-export default function RetirementCalculator({ inputs, output, additionalOutputs, texts }: RetirementCalculatorProps) {
-  // Default texts
-  const t = texts || {
-    retirementPlanning: 'Retirement Planning Inputs',
-    retirementProjection: 'Retirement Projections',
-    savingsBreakdown: 'Savings Breakdown',
-    currentSavings: 'Current Savings',
+export default function RetirementCalculator({ inputs, output, additionalOutputs, texts, lang = 'en' }: RetirementCalculatorProps) {
+  // Translations object for all languages
+  const translations = {
+    en: {
+      retirementPlanning: 'Retirement Planning Inputs',
+      retirementProjection: 'Retirement Projections',
+      savingsBreakdown: 'Savings Breakdown',
+      currentSavings: 'Current Savings',
+      futureContributions: 'Future Contributions',
+      investmentGrowth: 'Investment Growth',
+      monthlyIncome: 'Monthly Income',
+      yearsToRetirement: 'years to retirement'
+    },
+    es: {
+      retirementPlanning: 'Entradas de Planificación de Jubilación',
+      retirementProjection: 'Proyecciones de Jubilación',
+      savingsBreakdown: 'Desglose de Ahorros',
+      currentSavings: 'Ahorros Actuales',
+      futureContributions: 'Contribuciones Futuras',
+      investmentGrowth: 'Crecimiento de Inversión',
+      monthlyIncome: 'Ingreso Mensual',
+      yearsToRetirement: 'años hasta la jubilación'
+    },
+    pt: {
+      retirementPlanning: 'Dados de Planeamento de Aposentadoria',
+      retirementProjection: 'Projeções de Aposentadoria',
+      savingsBreakdown: 'Repartição de Economias',
+      currentSavings: 'Economias Atuais',
+      futureContributions: 'Contribuições Futuras',
+      investmentGrowth: 'Crescimento de Investimento',
+      monthlyIncome: 'Renda Mensal',
+      yearsToRetirement: 'anos até a aposentadoria'
+    },
+    fr: {
+      retirementPlanning: 'Entrées de Planification de Retraite',
+      retirementProjection: 'Projections de Retraite',
+      savingsBreakdown: 'Répartition des Économies',
+      currentSavings: 'Économies Actuelles',
+      futureContributions: 'Contributions Futures',
+      investmentGrowth: 'Croissance des Investissements',
+      monthlyIncome: 'Revenu Mensuel',
+      yearsToRetirement: 'années jusqu\'à la retraite'
+    },
+    de: {
+      retirementPlanning: 'Ruhestandsplanungseingaben',
+      retirementProjection: 'Ruhestandsprojektionen',
+      savingsBreakdown: 'Sparaufschlüsselung',
+      currentSavings: 'Aktuelle Ersparnisse',
+      futureContributions: 'Zukünftige Beiträge',
+      investmentGrowth: 'Investitionswachstum',
+      monthlyIncome: 'Monatliches Einkommen',
+      yearsToRetirement: 'Jahre bis zur Rente'
+    },
+    nl: {
+      retirementPlanning: 'Pensioenplanning Invoer',
+      retirementProjection: 'Pensioenprojecties',
+      savingsBreakdown: 'Spaargeld Uitsplitsing',
+      currentSavings: 'Huidige Besparingen',
+      futureContributions: 'Toekomstige Bijdragen',
+      investmentGrowth: 'Investeringsgroei',
+      monthlyIncome: 'Maandelijks Inkomen',
+      yearsToRetirement: 'jaar tot pensioen'
+    }
+  };
+
+  // Use translations from lang prop, or fall back to texts prop, or default to English
+  const t = texts || translations[lang as keyof typeof translations] || translations.en;
     futureContributions: 'Future Contributions',
     investmentGrowth: 'Investment Growth',
     monthlyIncome: 'Monthly Income',
@@ -154,7 +215,7 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
             </div>
             {results.yearsToRetirement && (
               <div className="text-xs text-gray-500 mt-1">
-                {results.yearsToRetirement} years to retirement
+                {results.yearsToRetirement} {t.yearsToRetirement}
               </div>
             )}
           </div>
