@@ -425,5 +425,238 @@
       ]
     },
     "component": "AverageCalculator"
+  },
+  "de": {
+    "title": "Durchschnittsrechner",
+    "seoTitle": "Durchschnittsrechner - Was ist der Durchschnitt meiner Zahlen?",
+    "metaDescription": "Kostenloser Durchschnittsrechner zur Berechnung des arithmetischen Mittels von Zahlen. Geben Sie mehrere Werte ein, um ihren Durchschnitt zu finden. Perfekt für Studenten und schnelle Berechnungen.",
+    "keywords": [
+      "durchschnittsrechner",
+      "arithmetisches mittel rechner",
+      "mittelwert rechner",
+      "durchschnitt berechnen",
+      "durchschnittsfinder"
+    ],
+    "longTailKeywords": [
+      "wie durchschnitt von zahlen berechnen",
+      "online durchschnittsrechner",
+      "arithmetisches mittel rechner",
+      "durchschnitt von datensatz finden",
+      "mittelwert berechnen"
+    ],
+    "slug": "average-calculator",
+    "category": "math",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Hauptwert",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Sekundärer Wert",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Ergebnis = Wert1 × Wert2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Berechnetes Ergebnis",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Prozentsatz",
+          "unit": "%"
+        }
+      ]
+    },
+    "difficulty": "Anfänger",
+    "tags": [
+      "durchschnitt",
+      "mittelwert",
+      "arithmetisches mittel",
+      "math",
+      "statistik"
+    ],
+    "summary": "Berechnen Sie das arithmetische Mittel einer Reihe von Zahlen schnell und einfach.",
+    "description": "Finden Sie das arithmetische Mittel (Durchschnitt) beliebiger Zahlen mit unserem kostenlosen Durchschnittsrechner. Ideal für Studenten, Lehrer und alle, die Durchschnittswerte von Noten, Daten oder numerischen Mengen berechnen müssen.",
+    "seoContent": {
+      "introduction": "Unser Durchschnittsrechner macht es einfach, das arithmetische Mittel einer beliebigen Zahlenmenge zu finden. Ob Sie Noten, Ausgaben, Testergebnisse oder andere numerische Daten berechnen, dieses Tool liefert sofortige Ergebnisse mit klaren Erklärungen.",
+      "benefits": [
+        "Berechnen Sie Durchschnitte sofort ohne manuelle mathematische Berechnungen",
+        "Verarbeiten Sie mehrere Zahlen auf einmal",
+        "Perfekt für Studenten und Pädagogen",
+        "Kostenlos und einfach zu bedienen",
+        "Funktioniert auf jedem Gerät"
+      ],
+      "steps": [
+        "Geben Sie Ihre Zahlen in das Eingabefeld ein",
+        "Trennen Sie Werte durch Kommas oder neue Zeilen",
+        "Klicken Sie auf die Schaltfläche Berechnen",
+        "Sehen Sie Ihren Durchschnitt und die Gesamtzahl"
+      ],
+      "inputsExplained": [
+        "Zahleneingabe: Geben Sie jede Zahl in einer neuen Zeile ein oder trennen Sie sie durch Kommas",
+        "Der Rechner akzeptiert Dezimalzahlen und negative Werte",
+        "Leere Zeilen und ungültige Eingaben werden automatisch ignoriert"
+      ],
+      "formulaExplanation": "Durchschnitt (Arithmetisches Mittel) = Summe aller Zahlen ÷ Anzahl der Werte. Zum Beispiel: (85 + 92 + 78 + 95 + 88) ÷ 5 = 87,6",
+      "examples": [
+        "Klassennoten: (85, 92, 78, 95, 88) = Durchschnitt 87,6",
+        "Monatliche Ausgaben: (1200, 1350, 1100, 1280, 1420) = Durchschnitt 1270",
+        "Testergebnisse: (87, 91, 84, 96, 89, 93) = Durchschnitt 90"
+      ],
+      "resultsExplanation": [
+        "Durchschnitt: Das arithmetische Mittel aller eingegebenen Zahlen",
+        "Anzahl: Gesamtzahl der verarbeiteten gültigen Zahlen",
+        "Das Ergebnis wird auf 2 Dezimalstellen gerundet für bessere Lesbarkeit"
+      ],
+      "whoItsFor": "Studenten, die Notendurchschnitte berechnen, Lehrer, die Klassenergebnisse berechnen, Geschäftsleute, die Daten analysieren, und jeder, der den Durchschnitt numerischer Werte finden muss.",
+      "disclaimer": "Dieser Rechner liefert das arithmetische Mittel (Durchschnitt) der eingegebenen Zahlen. Ergebnisse werden auf 2 Dezimalstellen gerundet. Stellen Sie sicher, dass Ihre Daten korrekt eingegeben sind, um genaue Ergebnisse zu erhalten.",
+      "faqs": [
+        {
+          "question": "Was ist der Unterschied zwischen Durchschnitt und Mittelwert?",
+          "answer": "Durchschnitt und Mittelwert sind dasselbe - beide beziehen sich auf das arithmetische Mittel, das berechnet wird, indem alle Werte addiert und durch die Anzahl der Werte geteilt werden."
+        },
+        {
+          "question": "Wie berechnet man einen gewichteten Durchschnitt?",
+          "answer": "Für gewichtete Durchschnitte benötigen Sie einen erweiterten Rechner. Dieses Tool berechnet einfache arithmetische Durchschnitte, bei denen jeder Wert das gleiche Gewicht hat."
+        },
+        {
+          "question": "Kann ich Dezimalzahlen eingeben?",
+          "answer": "Ja, der Rechner akzeptiert Dezimalzahlen. Sie können zum Beispiel 85,5, 92,3, 78,8 usw. eingeben."
+        }
+      ]
+    },
+    "component": "AverageCalculator"
+  },
+  "nl": {
+    "title": "Gemiddelde Rekenmachine",
+    "seoTitle": "Gemiddelde Rekenmachine - Wat Is Het Gemiddelde Van Mijn Getallen?",
+    "metaDescription": "Gratis gemiddelde rekenmachine om het rekenkundig gemiddelde van getallen te berekenen. Voer meerdere waarden in om hun gemiddelde te vinden. Perfect voor studenten en snelle berekeningen.",
+    "keywords": [
+      "gemiddelde rekenmachine",
+      "rekenkundig gemiddelde rekenmachine",
+      "gemiddelde calculator",
+      "gemiddelde berekenen",
+      "gemiddelde zoeker"
+    ],
+    "longTailKeywords": [
+      "hoe gemiddelde van getallen berekenen",
+      "online gemiddelde rekenmachine",
+      "rekenkundig gemiddelde rekenmachine",
+      "gemiddelde van gegevensset vinden",
+      "gemiddelde waarde berekenen"
+    ],
+    "slug": "average-calculator",
+    "category": "math",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "value1",
+          "label": "Primaire Waarde",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        },
+        {
+          "name": "value2",
+          "label": "Secondaire Waarde",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 10000,
+          "step": 1,
+          "unit": ""
+        }
+      ],
+      "formula": "Resultaat = Waarde1 × Waarde2",
+      "outputs": [
+        {
+          "name": "result",
+          "label": "Berekend Resultaat",
+          "unit": ""
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage",
+          "unit": "%"
+        }
+      ]
+    },
+    "difficulty": "Beginner",
+    "tags": [
+      "gemiddelde",
+      "rekenkundig gemiddelde",
+      "wiskunde",
+      "statistiek"
+    ],
+    "summary": "Bereken snel en eenvoudig het rekenkundig gemiddelde van een reeks getallen.",
+    "description": "Vind het rekenkundig gemiddelde (gemiddelde) van alle getallen met onze gratis gemiddelde rekenmachine. Ideaal voor studenten, docenten en iedereen die gemiddelden van cijfers, gegevens of numerieke sets moet berekenen.",
+    "seoContent": {
+      "introduction": "Onze gemiddelde rekenmachine maakt het gemakkelijk om het rekenkundig gemiddelde van elke set getallen te vinden. Of u nu cijfers, uitgaven, testscores of andere numerieke gegevens berekent, deze tool biedt directe resultaten met duidelijke uitleg.",
+      "benefits": [
+        "Bereken gemiddelden direct zonder handmatige wiskundige berekeningen",
+        "Verwerk meerdere getallen tegelijk",
+        "Perfect voor studenten en docenten",
+        "Gratis en eenvoudig te gebruiken",
+        "Werkt op elk apparaat"
+      ],
+      "steps": [
+        "Voer uw getallen in het invoerveld in",
+        "Scheid waarden door komma's of nieuwe regels",
+        "Klik op de knop berekenen",
+        "Bekijk uw gemiddelde en het totale aantal"
+      ],
+      "inputsExplained": [
+        "Getallen Invoer: Voer elk getal op een nieuwe regel in of scheid ze door komma's",
+        "De rekenmachine accepteert decimale getallen en negatieve waarden",
+        "Lege regels en ongeldige invoer worden automatisch genegeerd"
+      ],
+      "formulaExplanation": "Gemiddelde (Rekenkundig Gemiddelde) = Som van alle getallen ÷ Aantal waarden. Bijvoorbeeld: (85 + 92 + 78 + 95 + 88) ÷ 5 = 87,6",
+      "examples": [
+        "Klascijfers: (85, 92, 78, 95, 88) = gemiddelde 87,6",
+        "Maandelijkse uitgaven: (1200, 1350, 1100, 1280, 1420) = gemiddelde 1270",
+        "Testscores: (87, 91, 84, 96, 89, 93) = gemiddelde 90"
+      ],
+      "resultsExplanation": [
+        "Gemiddelde: Het rekenkundig gemiddelde van alle ingevoerde getallen",
+        "Aantal: Totaal aantal verwerkte geldige getallen",
+        "Het resultaat wordt afgerond op 2 decimalen voor betere leesbaarheid"
+      ],
+      "whoItsFor": "Studenten die cijfergemiddelden berekenen, docenten die klasresultaten berekenen, zakelijke professionals die gegevens analyseren, en iedereen die het gemiddelde van numerieke waarden moet vinden.",
+      "disclaimer": "Deze rekenmachine biedt het rekenkundig gemiddelde (gemiddelde) van de ingevoerde getallen. Resultaten worden afgerond op 2 decimalen. Zorg ervoor dat uw gegevens correct zijn ingevoerd voor nauwkeurige resultaten.",
+      "faqs": [
+        {
+          "question": "Wat is het verschil tussen gemiddelde en gemiddelde?",
+          "answer": "Gemiddelde en gemiddelde zijn hetzelfde - beide verwijzen naar het rekenkundig gemiddelde, dat wordt berekend door alle waarden bij elkaar op te tellen en door het aantal waarden te delen."
+        },
+        {
+          "question": "Hoe bereken je een gewogen gemiddelde?",
+          "answer": "Voor gewogen gemiddelden heeft u een geavanceerdere rekenmachine nodig. Deze tool berekent eenvoudige rekenkundige gemiddelden waarbij elke waarde gelijk gewicht heeft."
+        },
+        {
+          "question": "Kan ik decimale getallen invoeren?",
+          "answer": "Ja, de rekenmachine accepteert decimale getallen. U kunt bijvoorbeeld 85,5, 92,3, 78,8 enz. invoeren."
+        }
+      ]
+    },
+    "component": "AverageCalculator"
   }
 }
