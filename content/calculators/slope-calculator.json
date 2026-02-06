@@ -226,6 +226,42 @@
           "answer": "Oui! Une pente négative signifie que la ligne descend de gauche à droite. Par exemple, si vous allez du point (0, 5) au (5, 0), la pente est -1, indiquant que la ligne diminue de 1 unité verticalement pour chaque unité qu'elle se déplace horizontalement."
         }
       ]
+    },
+    "de": {
+      "introduction": "Berechnen Sie die Steigung (Gradient) zwischen zwei Punkten sofort mit unserem umfassenden Steigungsrechner. Finden Sie Steigung, Geradengleichung, Abstand zwischen Punkten, Mittelpunkt und Neigungswinkel für beliebige Koordinatenpaare.",
+      "formulaExplanation": "Steigung (m) = (y₂ - y₁) / (x₂ - x₁). Dies stellt die Änderung in y geteilt durch die Änderung in x dar, auch bekannt als 'Steigung über Lauf'. Die Geradengleichung ist y = mx + b, wobei b der y-Achsenabschnitt ist.",
+      "faqs": [
+        {
+          "question": "Was ist Steigung in der Mathematik?",
+          "answer": "Steigung ist ein Maß für die Steilheit einer Linie. Sie zeigt, wie stark sich der y-Wert für jede Einheitsänderung in x ändert. Eine positive Steigung bedeutet, dass die Linie von links nach rechts ansteigt, während eine negative Steigung bedeutet, dass sie fällt."
+        },
+        {
+          "question": "Was bedeutet undefinierte Steigung?",
+          "answer": "Eine undefinierte Steigung tritt auf, wenn Sie eine vertikale Linie haben (wobei x₁ = x₂). Da Sie durch Null teilen (x₂ - x₁ = 0), kann die Steigung nicht berechnet werden. Die Geradengleichung ist einfach x = konstant."
+        },
+        {
+          "question": "Kann die Steigung negativ sein?",
+          "answer": "Ja! Eine negative Steigung bedeutet, dass die Linie von links nach rechts abwärts geht. Zum Beispiel, wenn Sie von Punkt (0, 5) zu (5, 0) gehen, ist die Steigung -1, was anzeigt, dass die Linie um 1 Einheit vertikal für jede horizontale Einheit abnimmt."
+        }
+      ]
+    },
+    "nl": {
+      "introduction": "Bereken de helling (gradiënt) tussen twee punten direct met onze uitgebreide hellingrekenmachine. Vind helling, lijnvergelijking, afstand tussen punten, middelpunt en hellingshoek voor elk paar coördinaten.",
+      "formulaExplanation": "Helling (m) = (y₂ - y₁) / (x₂ - x₁). Dit vertegenwoordigt de verandering in y gedeeld door de verandering in x, ook bekend als 'stijging over loop'. De lijnvergelijking is y = mx + b, waarbij b het snijpunt met de y-as is.",
+      "faqs": [
+        {
+          "question": "Wat is helling in de wiskunde?",
+          "answer": "Helling is een maat voor de steilheid van een lijn. Het toont hoeveel de y-waarde verandert voor elke eenheidsverandering in x. Een positieve helling betekent dat de lijn stijgt van links naar rechts, terwijl een negatieve helling betekent dat deze daalt."
+        },
+        {
+          "question": "Wat betekent ongedefinieerde helling?",
+          "answer": "Een ongedefinieerde helling treedt op wanneer u een verticale lijn heeft (waarbij x₁ = x₂). Omdat u door nul deelt (x₂ - x₁ = 0), kan de helling niet worden berekend. De lijnvergelijking is eenvoudig x = constante."
+        },
+        {
+          "question": "Kan de helling negatief zijn?",
+          "answer": "Ja! Een negatieve helling betekent dat de lijn van links naar rechts naar beneden gaat. Bijvoorbeeld, als u van punt (0, 5) naar (5, 0) gaat, is de helling -1, wat aangeeft dat de lijn met 1 eenheid verticaal daalt voor elke horizontale eenheid."
+        }
+      ]
     }
   }
 }

@@ -255,6 +255,42 @@
           "answer": "La calculatrice effectue des calculs mathématiques exacts et affiche les résultats arrondis à deux décimales pour la lisibilité. Les calculs internes maintiennent une précision complète."
         }
       ]
+    },
+    "de": {
+      "introduction": "Berechnen Sie den Mittelpunkt zwischen zwei Punkten sofort mit unserem umfassenden Mittelpunktrechner. Funktioniert für 2D- und 3D-Koordinaten und zeigt Mittelpunktkoordinaten, Abstand zwischen Punkten und Schritt-für-Schritt-Formelerklärungen.",
+      "formulaExplanation": "Die Mittelpunktformel findet den Punkt genau auf halbem Weg zwischen zwei gegebenen Punkten. Für 2D-Punkte (x₁, y₁) und (x₂, y₂) wird der Mittelpunkt M berechnet als: M = ((x₁ + x₂)/2, (y₁ + y₂)/2).",
+      "faqs": [
+        {
+          "question": "Was ist ein Mittelpunkt?",
+          "answer": "Ein Mittelpunkt ist der Punkt, der genau auf halbem Weg zwischen zwei gegebenen Punkten liegt. Er teilt das Liniensegment, das die beiden Punkte verbindet, in zwei gleiche Teile."
+        },
+        {
+          "question": "Wie berechnet man den Mittelpunkt?",
+          "answer": "Um den Mittelpunkt zu finden, mitteln Sie die x-Koordinaten und y-Koordinaten der beiden Punkte separat. Die Formel ist M = ((x₁ + x₂)/2, (y₁ + y₂)/2)."
+        },
+        {
+          "question": "Kann dieser Rechner mit negativen Koordinaten arbeiten?",
+          "answer": "Ja, der Rechner funktioniert mit beliebigen reellen Zahlenkoordinaten, einschließlich positiver, negativer, ganzzahliger und dezimaler Werte."
+        }
+      ]
+    },
+    "nl": {
+      "introduction": "Bereken het middelpunt tussen twee punten direct met onze uitgebreide middelpuntrekenmachine. Werkt voor 2D- en 3D-coördinaten en toont middelpuntcoördinaten, afstand tussen punten en stap-voor-stap formule-uitleg.",
+      "formulaExplanation": "De middelpuntformule vindt het punt precies halverwege tussen twee gegeven punten. Voor 2D-punten (x₁, y₁) en (x₂, y₂) wordt het middelpunt M berekend als: M = ((x₁ + x₂)/2, (y₁ + y₂)/2).",
+      "faqs": [
+        {
+          "question": "Wat is een middelpunt?",
+          "answer": "Een middelpunt is het punt dat precies halverwege tussen twee gegeven punten ligt. Het verdeelt het lijnsegment dat de twee punten verbindt in twee gelijke delen."
+        },
+        {
+          "question": "Hoe bereken je het middelpunt?",
+          "answer": "Om het middelpunt te vinden, middelwaarde de x-coördinaten en y-coördinaten van de twee punten afzonderlijk. De formule is M = ((x₁ + x₂)/2, (y₁ + y₂)/2)."
+        },
+        {
+          "question": "Kan deze rekenmachine werken met negatieve coördinaten?",
+          "answer": "Ja, de rekenmachine werkt met elk reëel getalcoördinaten, inclusief positieve, negatieve, gehele en decimale waarden."
+        }
+      ]
     }
   }
 }
