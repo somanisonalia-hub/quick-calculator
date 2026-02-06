@@ -1,4 +1,4 @@
-import { loadCalculatorContent, contentRegistry } from './contentRegistry';
+import { loadCalculatorContent } from './contentRegistry';
 
 // SEO Content Generation Interface
 export interface SEOContent {
@@ -21,6 +21,8 @@ export interface CalculatorInfo {
   icon: string;
   difficulty: string;
   featured: boolean;
+  keywords?: string[];
+  tags?: string[];
 }
 
 export interface CategoryData {
@@ -84,6 +86,12 @@ export const CALCULATOR_CATEGORIES = {
   'roth-ira-calculator': 'financial',
   'investment-return': 'financial',
   'investment-planner': 'financial',
+  'sip-calculator': 'financial',
+  'lumpsum-investment-calculator': 'financial',
+  'goal-based-investment-calculator': 'financial',
+  'mutual-fund-xirr-calculator': 'financial',
+  'mutual-fund-inflation-calculator': 'financial',
+  'xirr-vs-absolute-return-calculator': 'financial',
   
   // Stocks & Bonds
   'stock-return-calculator': 'financial',
@@ -114,7 +122,6 @@ export const CALCULATOR_CATEGORIES = {
   // Salary & Payroll
   'hourly-to-salary-calculator': 'financial',
   'net-income-calculator': 'financial',
-  'salary-calculator': 'financial',
   'overtime-pay-calculator': 'financial',
   'take-home-pay-calculator': 'financial',
   'paycheck-calculator': 'financial',
@@ -141,6 +148,7 @@ export const CALCULATOR_CATEGORIES = {
   'net-worth': 'financial',
   
   // Other Financial
+  'break-even-calculator': 'financial',
   'inflation-calculator': 'financial',
   'currency-converter': 'financial',
   'social-security-calculator': 'financial',
@@ -227,7 +235,6 @@ export const CALCULATOR_CATEGORIES = {
   'word-counter': 'utility',
   'numbers-to-words-converter': 'utility',
   'unit-converter': 'utility',
-  'unit-conversion-calculator': 'utility',
   'date-calculator': 'utility',
   'speed-time': 'utility',
   'fuel-efficiency': 'utility',
@@ -294,7 +301,9 @@ export function getAllCalculatorsForHomepage(lang: string): CalculatorInfo[] {
   // Check if we're in a server environment
   if (typeof window === 'undefined') {
     try {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
       const fs = require('fs');
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
       const path = require('path');
       
       // Dynamically load ALL calculators from content directory
@@ -312,17 +321,19 @@ export function getAllCalculatorsForHomepage(lang: string): CalculatorInfo[] {
               summary: content.summary || content.description || 'Calculate various metrics',
               icon: getCalculatorIcon(slug),
               difficulty: content.difficulty || 'Beginner',
-              featured: isFeaturedCalculator(slug)
+              featured: isFeaturedCalculator(slug),
+              keywords: content.keywords || [],
+              tags: content.tags || []
             });
           }
-        } catch (error) {
+        } catch {
           // Skip calculators that fail to load
         }
       }
       
       return calculators;
-    } catch (error) {
-      console.error('Error loading calculators:', error);
+    } catch {
+      // Silently fail and use fallback
     }
   }
   
@@ -389,12 +400,12 @@ function getCalculatorsForCategory(lang: string, categorySlug: string): Calculat
             });
           }
         }
-      } catch (error) {
+      } catch {
         // Skip calculators that fail to load
       }
     }
-  } catch (error) {
-    console.warn('Error in dynamic category loading:', error);
+  } catch {
+    // Silently handle error in dynamic category loading
   }
 
   // Also add from hardcoded mapping for backward compatibility
@@ -414,7 +425,7 @@ function getCalculatorsForCategory(lang: string, categorySlug: string): Calculat
           });
         }
       }
-    } catch (error) {
+    } catch {
       // Skip calculators that fail to load
     }
   }
@@ -543,13 +554,13 @@ function generateCategoryData(lang: string, categorySlug: string, calculators: C
   };
 
   return {
-    name: (categoryNames as any)[categorySlug]?.[lang] || (categoryNames as any)[categorySlug]?.['en'] || `${categorySlug} Calculators`,
+    name: (categoryNames as Record<string, Record<string, string>>)[categorySlug]?.[lang] || (categoryNames as Record<string, Record<string, string>>)[categorySlug]?.['en'] || `${categorySlug} Calculators`,
     slug: categorySlug,
-    title: (categoryTitles as any)[categorySlug]?.[lang] || (categoryTitles as any)[categorySlug]?.['en'] || `${categorySlug} Calculators`,
-    description: (categoryDescriptions as any)[categorySlug]?.[lang] || (categoryDescriptions as any)[categorySlug]?.['en'] || `Collection of ${categorySlug} calculators.`,
-    metaDescription: (categoryDescriptions as any)[categorySlug]?.[lang] || (categoryDescriptions as any)[categorySlug]?.['en'] || `Free ${categorySlug} calculators.`,
+    title: (categoryTitles as Record<string, Record<string, string>>)[categorySlug]?.[lang] || (categoryTitles as Record<string, Record<string, string>>)[categorySlug]?.['en'] || `${categorySlug} Calculators`,
+    description: (categoryDescriptions as Record<string, Record<string, string>>)[categorySlug]?.[lang] || (categoryDescriptions as Record<string, Record<string, string>>)[categorySlug]?.['en'] || `Collection of ${categorySlug} calculators.`,
+    metaDescription: (categoryDescriptions as Record<string, Record<string, string>>)[categorySlug]?.[lang] || (categoryDescriptions as Record<string, Record<string, string>>)[categorySlug]?.['en'] || `Free ${categorySlug} calculators.`,
     keywords: [`${categorySlug} calculator`, `${categorySlug} tools`, `online ${categorySlug} calculators`],
-    hero: (heroData as any)[categorySlug]?.[lang] || (heroData as any)[categorySlug]?.['en'] || { title: `${categorySlug} Calculators`, subtitle: `Explore ${categorySlug} tools`, description: `Discover our collection of ${categorySlug} calculators.` },
+    hero: (heroData as Record<string, Record<string, { title: string; subtitle: string; description: string }>>)[categorySlug]?.[lang] || (heroData as Record<string, Record<string, { title: string; subtitle: string; description: string }>>)[categorySlug]?.['en'] || { title: `${categorySlug} Calculators`, subtitle: `Explore ${categorySlug} tools`, description: `Discover our collection of ${categorySlug} calculators.` },
     calculators
   };
 }
@@ -639,11 +650,11 @@ export function getCategoryTitle(lang: string, categorySlug: string): string {
     utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilitários', fr: 'Calculatrices Utiles' },
     lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculatrices de Style de Vie' }
   };
-  return (titles as any)[categorySlug]?.[lang] || (titles as any)[categorySlug]?.['en'] || `${categorySlug} Calculators`;
+  return (titles as Record<string, Record<string, string>>)[categorySlug]?.[lang] || (titles as Record<string, Record<string, string>>)[categorySlug]?.['en'] || `${categorySlug} Calculators`;
 }
 
 export function getRelatedCalculators(lang: string, currentCalculatorSlug: string, maxRelated: number = 8): CalculatorInfo[] {
-  const currentCategory = (CALCULATOR_CATEGORIES as any)[currentCalculatorSlug];
+  const currentCategory = (CALCULATOR_CATEGORIES as Record<string, string>)[currentCalculatorSlug];
   const relatedCalculators: CalculatorInfo[] = [];
 
   if (!currentCategory) return relatedCalculators;
@@ -666,7 +677,7 @@ export function getRelatedCalculators(lang: string, currentCalculatorSlug: strin
           featured: isFeaturedCalculator(slug)
         });
       }
-    } catch (error) {
+    } catch {
       // Skip calculators that fail to load
     }
   }
@@ -686,7 +697,7 @@ export function getRelatedCalculators(lang: string, currentCalculatorSlug: strin
 
     for (const slug of popularCalculators) {
       if (relatedCalculators.length >= maxRelated) break;
-      if (slug !== currentCalculatorSlug && (CALCULATOR_CATEGORIES as any)[slug] !== currentCategory) {
+      if (slug !== currentCalculatorSlug && (CALCULATOR_CATEGORIES as Record<string, string>)[slug] !== currentCategory) {
         try {
           const content = loadCalculatorContent(lang, slug);
           if (content && content.title) {
@@ -699,7 +710,7 @@ export function getRelatedCalculators(lang: string, currentCalculatorSlug: strin
               featured: isFeaturedCalculator(slug)
             });
           }
-        } catch (error) {
+        } catch {
           // Skip calculators that fail to load
         }
       }
@@ -712,8 +723,8 @@ export function getRelatedCalculators(lang: string, currentCalculatorSlug: strin
 /**
  * Generate structured SEO content for a calculator using the production-ready Cursor prompt approach
  */
-export function generateStructuredSEOContent(calculatorContent: any): SEOContent {
-  const content = calculatorContent;
+export function generateStructuredSEOContent(calculatorContent: Record<string, unknown>): SEOContent {
+  const content = calculatorContent as Record<string, unknown>;
   if (!content) {
     return {
       introduction: '',
@@ -729,10 +740,8 @@ export function generateStructuredSEOContent(calculatorContent: any): SEOContent
     };
   }
 
-  const keywords = content.keywords || [];
-  const longTailKeywords = content.longTailKeywords || [];
-  const primaryKeyword = keywords[0] || content.title?.toLowerCase() || 'calculator';
-
+  // Note: keywords, longTailKeywords and primaryKeyword available for future use
+  
   // Generate introduction (120-150 words)
   const introduction = `${content.summary || ''} ${content.description || ''} This comprehensive tool helps students, educators, and academic professionals track and calculate grade point averages with precision and ease. Whether you're a high school student planning your college applications, a college student monitoring your academic progress, or an educator helping students understand their performance, this GPA calculator provides accurate calculations based on standard grading systems. The tool supports multiple grading scales and both weighted and unweighted calculations, making it suitable for different educational institutions and academic requirements.`;
 
@@ -810,7 +819,7 @@ export function generateStructuredSEOContent(calculatorContent: any): SEOContent
 /**
  * Render structured SEO content as HTML for display
  */
-export function renderStructuredSEOContent(seoContent: SEOContent, lang: string = 'en', calculatorName?: string): string {
+export function renderStructuredSEOContent(seoContent: SEOContent, lang: string = 'en'): string {
   const translations = {
     howDoesWork: { en: 'How Does', es: '¿Cómo Funciona', pt: 'Como Funciona', fr: 'Comment Ça Marche' },
     introduction: { en: 'Introduction', es: 'Introducción', pt: 'Introdução', fr: 'Introduction' },
@@ -998,16 +1007,23 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
   return sections.join('');
 }
 
-export function generateCalculatorSEOContent(calculatorContent: any, relatedCalculators: CalculatorInfo[] = [], lang: string = 'en'): string {
+export function generateCalculatorSEOContent(calculatorContent: Record<string, unknown>, relatedCalculators: CalculatorInfo[] = [], lang: string = 'en'): string {
   // calculatorContent is already the language-specific content from loadCalculatorContent
-  const content = calculatorContent;
+  const content = calculatorContent as Record<string, unknown>;
   if (!content) return '';
 
   const sections: string[] = [];
 
-  // 1. Introductory Paragraph (50-70 words) - Include long-tail keywords
-  const keywords = content.keywords || [];
-  const longTailKeywords = content.longTailKeywords || [];
+  // Safe property accessors with type assertions
+  const keywords = (content.keywords as string[]) || [];
+  const longTailKeywords = (content.longTailKeywords as string[]) || [];
+  const tags = (content.tags as string[]) || [];
+  const instructions = (content.instructions as string[]) || [];
+  const title = (content.title as string) || '';
+  const summary = (content.summary as string) || '';
+  const description = (content.description as string) || '';
+  const calcComponent = content.calculatorComponent as Record<string, unknown> | undefined;
+  const examples = (content.examples as Record<string, string>[]) || [];
 
   // Translation mappings for SEO content sections
   const translations = {
@@ -1058,7 +1074,7 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
   const t = (key: string, fallback?: string) => {
     return translations[key as keyof typeof translations]?.[lang as keyof typeof translations[keyof typeof translations]] || fallback || key;
   };
-  const intro = `${content.summary || ''} ${content.description || ''}`.trim();
+  const intro = `${summary} ${description}`.trim();
 
   // Add long-tail keyword variations naturally
   let enhancedIntro = intro;
@@ -1068,7 +1084,7 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
     enhancedIntro += ` Whether you're looking for ${keywordPhrases}, this tool provides comprehensive calculations with detailed explanations.`;
   }
 
-  sections.push(`<h2>${t('howToUse')} ${content.title || 'Calculator'}</h2>`);
+  sections.push(`<h2>${t('howToUse')} ${title || 'Calculator'}</h2>`);
   sections.push(`<div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
     <p class="text-gray-800 leading-relaxed">${enhancedIntro}</p>
   </div>`);
@@ -1079,7 +1095,7 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
     <ul class="space-y-2 text-gray-800">
       <li class="flex items-start">
         <span class="inline-block w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-        <span><strong>${t('accurateCalculations')}:</strong> Get precise ${content.tags?.[0] || 'calculation'} results using proven mathematical formulas</span>
+        <span><strong>${t('accurateCalculations')}:</strong> Get precise ${tags[0] || 'calculation'} results using proven mathematical formulas</span>
       </li>
       <li class="flex items-start">
         <span class="inline-block w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -1087,7 +1103,7 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
       </li>
       <li class="flex items-start">
         <span class="inline-block w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-        <span><strong>${t('educationalValue')}:</strong> Learn about ${content.tags?.[0] || 'calculation'} concepts while getting results</span>
+        <span><strong>${t('educationalValue')}:</strong> Learn about ${tags[0] || 'calculation'} concepts while getting results</span>
       </li>
       <li class="flex items-start">
         <span class="inline-block w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -1104,7 +1120,7 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
   sections.push(`<h2>${t('stepByStepInstructions')}</h2>`);
   sections.push(`<div class="bg-gray-50 p-4 rounded-lg mb-6">
     <ol class="space-y-3 text-gray-800">
-      ${content.instructions?.map((step: string, index: number) =>
+      ${instructions.map((step, index) =>
         `<li class="flex items-start">
           <span class="inline-flex items-center justify-center w-6 h-6 bg-blue-600 text-white text-sm font-bold rounded-full mr-3 mt-0.5 flex-shrink-0">${index + 1}</span>
           <span>${step}</span>
@@ -1114,12 +1130,12 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
   </div>`);
 
   // 4. Explain Inputs (50-80 words)
-  const inputs = content.calculatorComponent?.inputs || [];
+  const inputs = (calcComponent?.inputs as Record<string, string>[]) || [];
   sections.push(`<h2>${t('calculatorInputsExplained')}</h2>`);
   sections.push(`<div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg mb-6">
     <p class="text-gray-800 mb-3">${t('ourCalculatorConsiders')} <strong>${inputs.length} ${t('keyInputs')}</strong></p>
     <div class="grid md:grid-cols-2 gap-2">
-      ${inputs.map((input: any) => `<div class="flex items-center p-2 bg-white rounded border">
+      ${inputs.map((input: Record<string, string>) => `<div class="flex items-center p-2 bg-white rounded border">
         <span class="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
         <span class="text-sm font-medium text-gray-700">${input.label || input.name}</span>
       </div>`).join('')}
@@ -1128,35 +1144,35 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
   </div>`);
 
   // 4.5. Explain Formula (40-60 words) - Include keywords
-  const formula = content.calculatorComponent?.formula || content.formula;
+  const formula = (calcComponent?.formula as string) || (content.formula as string);
   if (formula) {
     // Add keyword-rich description
-    const formulaKeywords = longTailKeywords.filter((k: string) => k.includes('how to') || k.includes('calculate')).slice(0, 2);
+    const formulaKeywords = longTailKeywords.filter(k => k.includes('how to') || k.includes('calculate')).slice(0, 2);
     const keywordText = formulaKeywords.length > 0 ? ` Whether you're wondering ${formulaKeywords.join(' or ')}, this formula provides the mathematical foundation.` : '';
 
-    sections.push(`<h2>How the ${content.title?.replace(' Calculator', '').replace('Calculadora de ', '').replace('Calculateur de ', '') || 'Calculator'} ${t('formulaWorks')}</h2>`);
+    sections.push(`<h2>How the ${title.replace(' Calculator', '').replace('Calculadora de ', '').replace('Calculateur de ', '') || 'Calculator'} ${t('formulaWorks')}</h2>`);
     sections.push(`<div class="bg-purple-50 border border-purple-200 p-4 rounded-lg mb-6">
       <div class="text-center mb-4">
         <div class="inline-block bg-white border-2 border-purple-300 px-4 py-2 rounded-lg">
           <code class="text-lg font-mono text-purple-800 font-bold">${formula}</code>
         </div>
       </div>
-      <p class="text-gray-800 text-center">${t('mathematicalFormula')} ${content.tags?.[0] || 'calculation'} ${t('principles')}${keywordText}</p>
+      <p class="text-gray-800 text-center">${t('mathematicalFormula')} ${tags[0] || 'calculation'} ${t('principles')}${keywordText}</p>
     </div>`);
   }
 
   // 5. Explain Outputs (50-70 words)
-  const outputs = content.calculatorComponent?.additionalOutputs || [];
+  const outputs = (calcComponent?.additionalOutputs as Record<string, string>[]) || [];
   sections.push(`<h2>${t('understandingYourResults')}</h2>`);
   sections.push(`<div class="bg-indigo-50 border border-indigo-200 p-4 rounded-lg mb-6">
     <div class="mb-3">
       <h4 class="font-semibold text-indigo-800 mb-2">${t('primaryResult')}</h4>
-      <p class="text-gray-800">${t('yourMainResult')} <strong>${content.calculatorComponent?.output?.format || 'standard'}</strong> ${t('format')}</p>
+      <p class="text-gray-800">${t('yourMainResult')} <strong>${((calcComponent?.output as Record<string, string>)?.format) || 'standard'}</strong> ${t('format')}</p>
     </div>
     ${outputs.length > 0 ? `<div>
       <h4 class="font-semibold text-indigo-800 mb-2">${t('additionalDetails')}</h4>
       <ul class="space-y-1 text-gray-800">
-        ${outputs.map((output: any) => `<li class="flex items-center">
+        ${outputs.map((output: Record<string, string>) => `<li class="flex items-center">
           <span class="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2"></span>
           <span><strong>${output.label}:</strong> ${t('providesDetailedInfo')}</span>
         </li>`).join('')}
@@ -1165,10 +1181,9 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
   </div>`);
 
   // 6. Give Examples (60-80 words)
-  const examples = content.examples || [];
   sections.push(`<h2>${t('exampleScenarios')}</h2>`);
   sections.push(`<div class="space-y-4 mb-6">
-    ${examples.length > 0 ? examples.slice(0, 2).map((example: any, index: number) => `
+    ${examples.length > 0 ? examples.slice(0, 2).map((example, index) => `
     <div class="border border-gray-200 rounded-lg overflow-hidden">
       <div class="bg-gray-100 px-4 py-2 border-b border-gray-200">
         <h4 class="font-semibold text-gray-800">Example ${index + 1}: ${example.title || `Scenario ${index + 1}`}</h4>
@@ -1200,13 +1215,13 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
 
     sections.push(`<h2>${t('popularSearchTerms')}</h2>`);
     sections.push(`<div class="bg-teal-50 border border-teal-200 p-4 rounded-lg mb-6">
-      <p class="text-gray-800 mb-3">${t('peopleFrequentlySearch')} ${content.title?.toLowerCase() || 'calculation tools'}:</p>
+      <p class="text-gray-800 mb-3">${t('peopleFrequentlySearch')} ${title.toLowerCase() || 'calculation tools'}:</p>
       <div class="space-y-2">
         ${keywordGroups.slice(0, 3).map((group: string[]) => `<div class="flex flex-wrap gap-2">
           ${group.map((keyword: string) => `<span class="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">${keyword}</span>`).join('')}
         </div>`).join('')}
       </div>
-      <p class="text-gray-700 text-sm mt-3">${t('ourCalculatorCovers')} ${content.tags?.[0] || 'calculation'} ${t('capabilities')}</p>
+      <p class="text-gray-700 text-sm mt-3">${t('ourCalculatorCovers')} ${tags[0] || 'calculation'} ${t('capabilities')}</p>
     </div>`);
   }
 
@@ -1225,13 +1240,12 @@ export function generateCalculatorSEOContent(calculatorContent: any, relatedCalc
   }
 
   // 8. Wrap Up (20-40 words) - Include keywords
-  const primaryKeyword = keywords.length > 0 ? keywords[0] : content.title?.toLowerCase() || 'calculator';
   sections.push(`<h2>${t('getStartedToday')}</h2>`);
   sections.push(`<div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border border-blue-200">
     <div class="text-center">
-      <p class="text-gray-800 mb-3">${t('readyToUse')} ${content.title || 'Calculator'}? ${content.title || 'This calculator'} ${t('providesClarity')}</p>
+      <p class="text-gray-800 mb-3">${t('readyToUse')} ${title || 'Calculator'}? ${title || 'This calculator'} ${t('providesClarity')}</p>
       <div class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors cursor-pointer">
-        ${t('tryNow')} ${content.title || 'Calculator'} ${t('now')}
+        ${t('tryNow')} ${title || 'Calculator'} ${t('now')}
       </div>
       <p class="text-blue-600 text-sm mt-2">${t('perfectFor')} ${longTailKeywords.slice(0, 2).join(', ')} ${t('andMore')}</p>
     </div>

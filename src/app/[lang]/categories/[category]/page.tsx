@@ -8,7 +8,7 @@ import { StructuredData } from '@/components/StructuredData';
 // Direct breadcrumb generation
 import { generateCategorySchema, CategoryData } from '@/lib/seoContentRenderer';
 import { getCategoryData } from '@/lib/categoryUtils';
-import { loadCalculatorsByCategory } from '@/lib/staticDataLoader';
+import { loadCalculatorsByCategory, loadAllCalculatorsStatic } from '@/lib/staticDataLoader';
 import CategoryPageClient from '@/app/categories/[slug]/CategoryPageClient';
 
 // Valid languages and categories
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   }
 
   // Get category data for schema generation
-  const categoryData = getCategoryData(category, lang);
+  const categoryData = getCategoryData(lang, category);
   let categorySchema = null;
 
   if (categoryData) {
@@ -123,8 +123,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   // Load ALL calculators for this category at BUILD TIME
   const categoryCalculators = loadCalculatorsByCategory(lang, category);
   
+  // Load ALL calculators from ALL categories for "Other Calculators" section
+  const allCalculators = loadAllCalculatorsStatic(lang);
+  
   // Get category data for title and description
-  const categoryData = getCategoryData(category, lang);
+  const categoryData = getCategoryData(lang, category);
   
   // Generate schema for rendering
   let categorySchema = null;
@@ -152,6 +155,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           lang={lang} 
           category={category}
           initialCalculators={categoryCalculators}
+          allCalculators={allCalculators}
           categoryData={categoryData}
         />
 

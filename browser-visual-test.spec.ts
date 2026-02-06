@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Calculator Pages Visual Test', () => {
   
-  test('Load and verify key calculator pages', async ({ browser, context }) => {
+  test('Load and verify key calculator pages', async ({ context }) => {
     const pages = [
       'http://localhost:3002/en/bmi-calculator/',
       'http://localhost:3002/en/mortgage-calculator/',
@@ -31,8 +31,8 @@ test.describe('Calculator Pages Visual Test', () => {
         
         // Check for calculator word
         const bodyText = await page.textContent('body');
-        const hasCalc = bodyText.toLowerCase().includes('calculator') || 
-                       bodyText.toLowerCase().includes('converter');
+        const hasCalc = bodyText?.toLowerCase().includes('calculator') || 
+                       bodyText?.toLowerCase().includes('converter');
         console.log(`   ✅ Has calculator content: ${hasCalc}`);
         
         // Get input count

@@ -1,0 +1,178 @@
+{
+  "en": {
+    "title": "XIRR vs Absolute Return Calculator",
+    "seoTitle": "XIRR vs Absolute Return: Which Is Better? Comparison Calculator",
+    "metaDescription": "Compare XIRR and absolute returns with our free calculator. Understand which metric is better for measuring mutual fund performance and investment success for Indian investors.",
+    "keywords": [
+      "xirr vs absolute return calculator",
+      "mutual fund return comparison",
+      "absolute return calculator",
+      "xirr vs cagr comparison",
+      "investment return calculator"
+    ],
+    "longTailKeywords": [
+      "difference between xirr and absolute return",
+      "when to use xirr vs absolute return",
+      "mutual fund return comparison xirr",
+      "xirr vs absolute return india",
+      "which is better xirr or absolute return",
+      "xirr absolute return mutual funds"
+    ],
+    "slug": "xirr-vs-absolute-return-calculator",
+    "category": "financial",
+    "subcategory": "Investment Calculators",
+    "difficulty": "Advanced",
+    "calculatorComponent": "XIRRVsAbsoluteReturnCalculator",
+    "tags": ["investment", "returns", "comparison", "XIRR", "mutual funds", "performance"],
+    "description": "Understand the difference between XIRR and absolute returns on mutual fund investments. Compare both calculation methods to see which better reflects your investment performance.",
+    "summary": "Compare XIRR time-weighted vs absolute return calculations for better investment analysis",
+    "introduction": "Different return metrics tell different stories. Absolute return shows your total profit, while XIRR accounts for timing of investments. If you invested ₹50,000, added ₹30,000 six months later, and the portfolio grew to ₹100,000, your absolute return is impressive but XIRR might be different. This calculator shows why understanding both matters.",
+    "benefits": [
+      "Clarifies difference between XIRR and absolute return metrics",
+      "Shows when each return metric gives different insights",
+      "Helps compare fund performance across different investment timings",
+      "Enables better understanding of portfolio performance",
+      "Demonstrates impact of investment timing on returns",
+      "Educates investors on proper return measurement"
+    ],
+    "steps": [
+      "Enter your investment transactions with dates",
+      "Specify current value or redemption amounts",
+      "Calculator computes both XIRR and absolute return",
+      "Compare the two metrics to understand your true performance"
+    ],
+    "inputsExplained": [
+      "XIRR (Extended Internal Rate of Return): Annualized return accounting for timing of each transaction",
+      "Absolute Return: Total percentage gain regardless of investment timeline",
+      "Time-Weighted Return: How performance varies when investments happen at different times",
+      "Total Profit: Absolute rupee gain from your investment"
+    ],
+    "formulaExplanation": "Absolute Return = [(Final Value - Total Invested) / Total Invested] × 100%. This is simple total profit percentage. XIRR solves NPV = 0 = Σ [Cash Flow / (1 + XIRR)^(days/365)], where each transaction is weighted by duration invested. Example: If you invest ₹100 in year 1 and it becomes ₹110 in year 2, absolute return is 10%. But if you invest ₹100 in year 1, then invest another ₹100 in year 2 (year 2 investment only grows from 100 to 110), XIRR will be lower because half your money only earned 10% while half earned 0% so far.",
+    "examples": [
+      {
+        "title": "SIP Investor Advantage",
+        "description": "Systematic investor starting early, market crashes mid-term, recovers",
+        "scenario": {
+          "year1": "₹100k invested, grows to ₹110k",
+          "year2": "Market crashes, value drops to ₹90k, but ₹100k more SIP added at low prices",
+          "year3": "Recovery, portfolio now ₹250k"
+        },
+        "result": "Absolute return = 25% over 3 years, XIRR = 18% (timing-weighted) - SIP investor benefits from rupee cost averaging"
+      },
+      {
+        "title": "Lucky Lumpsum Investor",
+        "description": "Perfect timing - invest at market bottom, see rapid growth",
+        "scenario": {
+          "month1": "₹1 lakh invested at market low",
+          "month3": "Market rallies, now worth ₹1.5 lakhs"
+        },
+        "result": "Absolute return = 50% in 3 months, XIRR = 200% annualized - timing creates advantage"
+      },
+      {
+        "title": "Bad Timing Investor",
+        "description": "Invested at market peak, then added more as it dropped",
+        "scenario": {
+          "month1": "₹1 lakh invested at peak, then drops to ₹80k",
+          "month6": "₹50k added at lower prices, portfolio ₹140k"
+        },
+        "result": "Absolute return = 4% (modest), XIRR = 8% (timing-adjusted lower) - shows impact of bad entry point"
+      }
+    ],
+    "resultsExplanation": [
+      "Absolute Return %: Total gain percentage on invested capital",
+      "XIRR %: Time-weighted annualized return",
+      "Difference: Shows impact of investment timing on returns",
+      "Total Profit: Actual rupee gain achieved",
+      "Recommendation: Which metric is more relevant for your situation"
+    ],
+    "whoItsFor": "This comparison tool is essential for mutual fund investors comparing fund performance, financial advisors explaining returns to clients, SIP investors understanding their advantage, lumpsum investors evaluating timing impact, and anyone wanting deeper understanding of investment return metrics.",
+    "disclaimer": "Both XIRR and absolute return are valid metrics with different purposes. XIRR better reflects actual investment skill, absolute return shows true profit. Charts are simplified for illustration - actual calculations more complex. Consult financial advisors for fund selection. This is educational only, not investment advice.",
+    "seoContent": {
+      "introduction": "Is your 50% absolute return better than 20% XIRR? Confusing? This calculator clarifies: Absolute return ignores timing (simple math), XIRR accounts for when you invested (realistic). Learn which metric matters for your funds and investments.",
+      "benefits": [
+        "Compare absolute return and XIRR side-by-side",
+        "Understand why XIRR is more accurate measure",
+        "Account for investment timing differences",
+        "Evaluate fund performance correctly",
+        "See impact of investment timing on returns",
+        "Make better fund comparison decisions"
+      ],
+      "howToUse": [
+        "Enter total amount invested",
+        "Enter current/final investment value",
+        "Enter investment period (years/months)",
+        "Calculator shows both absolute return and XIRR",
+        "Compare the two metrics",
+        "Understand which is most relevant for your situation"
+      ],
+      "formulaExplanation": "Absolute Return = (Final Value - Initial Value) / Initial Value × 100. XIRR uses IRR formula accounting for timing. Example: Invested ₹10 lakh over 2 years (₹5 lakh each year), current value ₹15 lakh. Absolute = 50%, but XIRR ≈32% (because half was invested second year). XIRR is more realistic metric.",
+      "examples": [
+        "Invested ₹10 lakh Nov 2022, current ₹15 lakh = 50% absolute, but actual XIRR depends on timing",
+        "SIP investors: ₹1 lakh total invested over years, value ₹2 lakh = 100% absolute return if all invested upfront, but XIRR lower due to staggered investment",
+        "Portfolio ₹25 lakh invested, now ₹35 lakh = 40% absolute, XIRR may be 15-20% depending on investment spread"
+      ],
+      "whoShouldUse": "Mutual fund investors comparing performance metrics, SIP investors tracking true returns, portfolio managers evaluating fund performance, individuals comparing multiple funds with different investment timelines, anyone confused about return calculations.",
+      "importantNotes": "For SIP/multiple investments: XIRR is correct metric. For single lumpsum: both give same result. Absolute return can be misleading (high absolute % doesn't mean good annualized return). Always use XIRR for performance comparisons across different time periods.",
+      "relatedTools": [
+        "Mutual Fund XIRR Calculator - Calculate detailed XIRR with multiple transactions",
+        "SIP Calculator - Project SIP returns",
+        "Lumpsum Calculator - Calculate single investment growth",
+        "Goal-Based Calculator - Plan investments for specific goals"
+      ],
+      "faqs": [
+        {
+          "question": "Why is XIRR better than absolute return?",
+          "answer": "Absolute return ignores timing. Someone investing ₹10 lakh 5 years ago vs ₹10 lakh today shouldn't have same return metric. XIRR accounts for this, showing true annualized performance."
+        },
+        {
+          "question": "If I see 60% absolute return, is it good?",
+          "answer": "Depends on timeline. 60% over 1 year = excellent (60% XIRR). 60% over 10 years = poor (4.8% XIRR). Always ask: 'How many years?' Absolute return alone is misleading."
+        },
+        {
+          "question": "Can absolute return be higher than XIRR?",
+          "answer": "For recent investments yes. If you invested ₹10 lakh 3 months ago and it's ₹11 lakh, absolute = 10%, but XIRR = ~40% annualized. XIRR extrapolates to annual rate."
+        },
+        {
+          "question": "Which metric should I use to compare funds?",
+          "answer": "Always use XIRR/CAGR for same time period. Compare funds with same 3-year, 5-year, 10-year XIRR. Absolute return can't be compared across different time periods."
+        },
+        {
+          "question": "How did my 50% absolute return become 15% XIRR?",
+          "answer": "Probably invested over longer period (5+ years) with multiple additions. Each addition compounds for different duration. XIRR accounts for this averaging effect."
+        }
+      ],
+      "steps": [
+        "Gather total investment amount and period",
+        "Note current/final fund value",
+        "Calculate using this tool",
+        "Review both absolute and XIRR",
+        "Use XIRR for comparisons and decisions",
+        "Benchmark against relevant index returns"
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Comparación XIRR vs Rendimiento Absoluto",
+    "seoTitle": "XIRR vs Rendimiento Absoluto: ¿Cuál Es Mejor? Calculadora De Comparación",
+    "metaDescription": "Compara XIRR y rendimiento absoluto en tus fondos mutuales.",
+    "slug": "xirr-vs-absolute-return-calculator",
+    "category": "financial",
+    "description": "Compara la diferencia entre XIRR y rendimiento absoluto en tus inversiones."
+  },
+  "pt": {
+    "title": "Calculadora de Comparação XIRR vs Retorno Absoluto",
+    "seoTitle": "XIRR vs Retorno Absoluto: Qual É Melhor? Calculadora De Comparação",
+    "metaDescription": "Compare XIRR e retorno absoluto em seus fundos mútuos.",
+    "slug": "xirr-vs-absolute-return-calculator",
+    "category": "financial",
+    "description": "Compare a diferença entre XIRR e retorno absoluto em seus investimentos."
+  },
+  "fr": {
+    "title": "Calculatrice de Comparaison XIRR vs Rendement Absolu",
+    "seoTitle": "XIRR vs Rendement Absolu: Lequel Est Meilleur ? Calculatrice De Comparaison",
+    "metaDescription": "Comparez XIRR et rendement absolu sur vos fonds communs.",
+    "slug": "xirr-vs-absolute-return-calculator",
+    "category": "financial",
+    "description": "Comparez la différence entre XIRR et rendement absolu dans vos investissements."
+  }
+}

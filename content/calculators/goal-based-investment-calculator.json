@@ -1,0 +1,122 @@
+{
+  "en": {
+    "title": "Goal-Based Investment Calculator",
+    "seoTitle": "How Much SIP Do I Need For My Goal? Goal-Based Investment Calculator",
+    "metaDescription": "Calculate required monthly SIP or lumpsum for your financial goals. Plan education, home purchase, retirement, or any goal with inflation adjustment for Indian investors.",
+    "keywords": [
+      "goal based investment calculator",
+      "financial goal calculator",
+      "goal planning calculator",
+      "education goal calculator",
+      "retirement goal calculator",
+      "investment goal planner"
+    ],
+    "longTailKeywords": [
+      "how much sip needed for financial goal",
+      "goal based investment planning india",
+      "calculate investment needed for child education",
+      "retirement planning goal calculator",
+      "how to calculate required investment for goal",
+      "goal based wealth planner india"
+    ],
+    "slug": "goal-based-investment-calculator",
+    "category": "financial",
+    "subcategory": "Investment Calculators",
+    "difficulty": "Intermediate",
+    "calculatorComponent": "GoalBasedInvestmentCalculator",
+    "tags": ["investment", "goal planning", "financial goals", "SIP", "wealth planning"],
+    "description": "Calculate the required investment or monthly SIP needed to achieve your financial goals. Perfect for planning education, home purchase, retirement, or any major life goals with specific target amounts and timelines.",
+    "summary": "Determine SIP or lumpsum needed to achieve your financial goals with inflation adjustment",
+    "introduction": "Every financial goal requires a plan. Whether you want to fund your child's education in 10 years, buy a home in 5 years, or retire comfortably in 25 years, our goal-based investment calculator helps you work backwards from your target amount to determine the exact investment needed. Factor in inflation to understand the real cost of your goals.",
+    "benefits": [
+      "Calculates exact monthly SIP required to meet financial goal",
+      "Determines lumpsum needed for immediate or phased investments",
+      "Accounts for inflation in goal calculations",
+      "Helps prioritize multiple financial goals",
+      "Shows impact of different return rate assumptions",
+      "Enables informed decision-making about goal feasibility"
+    ],
+    "steps": [
+      "Define your financial goal and target amount",
+      "Specify when you need the funds (years/months)",
+      "Enter expected annual return rate for your investments",
+      "Add inflation rate for realistic goal pricing",
+      "See monthly SIP or lumpsum amount needed to achieve it"
+    ],
+    "inputsExplained": [
+      "Financial Goal: The target amount you want to accumulate (e.g., ₹20 lakhs for education)",
+      "Time Horizon: Years remaining until you need the funds",
+      "Expected Return: Annual return rate from your mutual fund investments",
+      "Inflation Rate: How much costs increase yearly (typically 5-8% in India)"
+    ],
+    "formulaExplanation": "Goal-based calculation works backwards using the Future Value formula. The calculator determines: Required SIP = FV target × [r / ((1 + r)^n - 1)], or Required Lumpsum = FV target / (1 + r)^n. The inflation-adjusted goal means you're planning for what the amount will actually be worth when you need it, not today's value. This ensures your goal amount remains realistic across inflation.",
+    "examples": [
+      {
+        "title": "Child Education Goal",
+        "description": "Child entering IIT in 8 years; education cost is ₹20 lakhs today but will inflate to ₹30 lakhs",
+        "inputs": {
+          "targetGoal": 3000000,
+          "years": 8,
+          "expectedReturn": 12,
+          "inflationRate": 6
+        },
+        "result": "Required monthly SIP: ~₹28,000 to achieve inflation-adjusted education goal"
+      },
+      {
+        "title": "Home Down Payment Goal",
+        "description": "Want ₹30 lakh down payment in 5 years for home; inflation on real estate at 7%",
+        "inputs": {
+          "targetGoal": 3000000,
+          "years": 5,
+          "expectedReturn": 10,
+          "inflationRate": 7
+        },
+        "result": "Required monthly SIP: ~₹46,000 to save for down payment considering property inflation"
+      },
+      {
+        "title": "Retirement Corpus Goal",
+        "description": "Need ₹1 crore for retirement in 20 years with lifestyle inflation of 5%",
+        "inputs": {
+          "targetGoal": 10000000,
+          "years": 20,
+          "expectedReturn": 11,
+          "inflationRate": 5
+        },
+        "result": "Required monthly SIP: ~₹17,500 to create adequate retirement corpus"
+      }
+    ],
+    "resultsExplanation": [
+      "Inflation-Adjusted Goal: Real target considering cost increase over time",
+      "Required Monthly SIP: Exact amount to invest each month to reach goal",
+      "Required Lumpsum: One-time investment amount as alternative",
+      "Total Investment: Sum of all SIP contributions or the lumpsum amount",
+      "Total Returns: Growth earned from investments at target return rate"
+    ],
+    "whoItsFor": "This calculator is perfect for parents planning child education, first-time homebuyers, professionals planning retirement, young adults setting financial goals, business owners planning expansion, and anyone with specific financial targets and timelines. It's especially useful for Indians planning multiple life goals.",
+    "disclaimer": "Results are estimates based on your inputs. Actual investment returns depend on market conditions, asset allocation, and fund selection. Inflation rates vary and cannot be predicted with certainty. Consult a financial advisor for personalized guidance. This tool is for educational purposes only, not investment advice."
+  },
+  "es": {
+    "title": "Calculadora de Inversión Basada en Metas",
+    "seoTitle": "Calculadora para Planificar Objetivos Financieros",
+    "metaDescription": "Calcula el SIP o monto único necesario para lograr tus objetivos financieros.",
+    "slug": "goal-based-investment-calculator",
+    "category": "financial",
+    "description": "Determina la inversión mensual o única necesaria para alcanzar tus metas financieras específicas."
+  },
+  "pt": {
+    "title": "Calculadora de Investimento Baseado em Objetivos",
+    "seoTitle": "Calculadora para Planejar Metas Financeiras",
+    "metaDescription": "Calcula o SIP ou valor único necessário para alcançar seus objetivos financeiros.",
+    "slug": "goal-based-investment-calculator",
+    "category": "financial",
+    "description": "Determine o investimento mensal ou único necessário para atingir suas metas financeiras específicas."
+  },
+  "fr": {
+    "title": "Calculatrice d'Investissement par Objectif",
+    "seoTitle": "Combien De SIP ou D'Investissement Ai-Je Besoin Pour Atteindre Mon Objectif ?",
+    "metaDescription": "Calculez le SIP ou le montant forfaitaire nécessaire pour atteindre vos objectifs financiers.",
+    "slug": "goal-based-investment-calculator",
+    "category": "financial",
+    "description": "Déterminez l'investissement mensuel ou unique nécessaire pour atteindre vos objectifs financiers spécifiques."
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "en": {
+    "title": "Rent vs Buy Calculator",
+    "seoTitle": "Rent vs Buy Calculator - Should I Rent or Buy a Home?",
+    "summary": "Compare the financial impact of renting vs buying a home.",
+    "description": "Use our rent vs buy calculator to analyze the financial differences between renting and buying using your specific numbers, interest rates, and assumptions.",
+    "category": "financial",
+    "difficulty": "Advanced",
+    "slug": "rent-vs-buy-calculator",
+    "component": "RentVsBuyCalculator",
+    "seoContent": {
+      "metaTitle": "Rent vs Buy Calculator - Compare Renting vs Buying a Home",
+      "metaDescription": "Free rent vs buy calculator. Compare costs of renting vs buying a home. Analyze long-term financial impact with appreciation and equity.",
+      "keywords": "rent vs buy calculator, renting vs buying, home ownership cost, real estate investment, housing calculator",
+      "h1": "Rent vs Buy Calculator - Should You Rent or Buy?",
+      "introduction": "The Rent vs Buy Calculator helps you make one of life's biggest financial decisions. By comparing your rental costs against the total costs of buying (including mortgage, maintenance, taxes, and equity buildup), you'll see which option makes more financial sense for your situation. This tool accounts for home appreciation and builds a complete 7-year financial picture.",
+      "benefits": [
+        "Compare total costs of renting vs buying",
+        "Calculate long-term home equity",
+        "See impact of mortgage interest rates",
+        "Account for maintenance and property taxes",
+        "Visualize home appreciation over time",
+        "Make informed housing decisions"
+      ],
+      "steps": [
+        "Enter estimated home purchase price",
+        "Input your current/average rent",
+        "Input down payment amount",
+        "Enter mortgage interest rate",
+        "Set years to compare",
+        "View financial comparison results"
+      ],
+      "inputsExplained": [
+        "Home Price: Total purchase price of property",
+        "Monthly Rent: What you would pay in rent",
+        "Down Payment: Money you have for purchase",
+        "Mortgage Rate: Interest rate on the loan",
+        "Years: Time period to analyze"
+      ],
+      "formulaExplanation": "Buying Cost = (Monthly Payment + Maintenance + Taxes) × Months. Renting Cost = Monthly Rent × Months. Buy Value = Home Price × (1 + Appreciation%)^Years - Remaining Balance.",
+      "resultsExplanation": "Results show monthly payments, total rent paid, home value, equity built, and which option is more economical over your timeframe.",
+      "examples": "Comparing a $300k home vs $1500/month rent over 7 years shows buying advantage if home appreciates 3% annually.",
+      "whoItsFor": "Homebuyers, renters considering purchase, first-time buyers, real estate investors, and anyone deciding between renting and buying.",
+      "disclaimer": "This comparison is based on assumptions and may not reflect your actual situation. Consult with financial advisors for personalized guidance.",
+      "howDoesWork": "The calculator computes full costs of both options including rent, mortgage, taxes, maintenance, and equity to provide a comprehensive comparison.",
+      "completeGuide": "The rent vs buy decision depends on multiple factors: your timeline, local market, interest rates, and personal circumstances. This tool shows the financial comparison over a specific timeframe.",
+      "relatedTools": ["Mortgage Calculator", "ROI Calculator", "Budget Calculator", "Loan Calculator"],
+      "faqs": [
+        {"question": "How long should I plan to stay?", "answer": "Generally, buying makes sense for 5+ years. Shorter stays may favor renting due to buying/selling costs."},
+        {"question": "What costs does home ownership include?", "answer": "Mortgage payment, property taxes, insurance, maintenance, HOA fees, utilities, and property appreciation gains."},
+        {"question": "Should I include maintenance costs?", "answer": "Yes, expect 1-2% of home value annually for maintenance, repairs, and replacements."},
+        {"question": "What is property appreciation?", "answer": "Home values typically increase 2-4% annually, though this varies by location and market conditions."},
+        {"question": "When does buying make more sense?", "answer": "Buying typically makes sense for longer-term residents, when rates are favorable, and in appreciating markets."}
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora Alquilar vs Comprar",    "seoTitle": "Calculadora de Alquilar vs Comprar - ¿Debo Alquilar o Comprar una Casa?",    "summary": "Compara el impacto financiero de alquilar vs comprar una casa.",
+    "description": "Usa nuestra calculadora alquilar vs comprar para analizar las diferencias financieras entre alquilar y comprar usando tus números específicos y tasas.",
+    "category": "financial",
+    "difficulty": "Avanzado",
+    "slug": "rent-vs-buy-calculator",
+    "component": "RentVsBuyCalculator",
+    "seoContent": {
+      "metaTitle": "Calculadora Alquilar vs Comprar - Compara Alquilar vs Comprar",
+      "metaDescription": "Calculadora gratuita alquilar vs comprar. Compara costos de alquilar vs comprar una casa. Analiza impacto financiero a largo plazo.",
+      "keywords": "calculadora alquilar comprar, alquilar vs comprar, costo vivienda, inversión inmobiliaria, calculadora vivienda",
+      "h1": "Calculadora Alquilar vs Comprar - ¿Deberías Alquilar o Comprar?",
+      "introduction": "La Calculadora Alquilar vs Comprar te ayuda a tomar una de las decisiones financieras más grandes de la vida. Al comparar tus costos de alquiler contra los costos totales de compra, verás qué opción tiene más sentido financiero.",
+      "benefits": [
+        "Compara costos totales de alquilar vs comprar",
+        "Calcula patrimonio inmobiliario a largo plazo",
+        "Ve impacto de tasas hipotecarias",
+        "Incluye mantenimiento e impuestos a la propiedad",
+        "Visualiza apreciación de casa en el tiempo",
+        "Toma decisiones informadas de vivienda"
+      ],
+      "steps": [
+        "Ingresa precio estimado de compra",
+        "Introduce tu alquiler actual/promedio",
+        "Ingresa monto de enganche",
+        "Introduce tasa hipotecaria",
+        "Establece años a comparar",
+        "Ve resultados de comparación financiera"
+      ],
+      "inputsExplained": [
+        "Precio de Casa: Precio total de compra",
+        "Alquiler Mensual: Lo que pagarías en alquiler",
+        "Enganche: Dinero que tienes para compra",
+        "Tasa Hipotecaria: Tasa de interés del préstamo",
+        "Años: Período de tiempo a analizar"
+      ],
+      "formulaExplanation": "Costo Compra = (Pago Mensual + Mantenimiento + Impuestos) × Meses. Costo Alquiler = Alquiler Mensual × Meses.",
+      "resultsExplanation": "Los resultados muestran pagos mensuales, alquiler total pagado, valor de casa, patrimonio construido y qué opción es más económica.",
+      "examples": "Comparar casa de $300k vs $1500/mes alquiler durante 7 años muestra ventaja de compra si casa aprecia 3% anualmente.",
+      "whoItsFor": "Compradores de casa, arrendatarios considerando compra, compradores primerizos, inversionistas inmobiliarios y cualquiera decidiendo entre alquilar y comprar.",
+      "disclaimer": "Esta comparación se basa en suposiciones y puede no reflejar tu situación actual. Consulta con asesores financieros para orientación.",
+      "howDoesWork": "La calculadora calcula costos completos de ambas opciones incluyendo alquiler, hipoteca, impuestos, mantenimiento y patrimonio.",
+      "completeGuide": "La decisión alquilar vs comprar depende de múltiples factores: tu timeline, mercado local, tasas de interés y circunstancias personales.",
+      "relatedTools": ["Calculadora de Hipoteca", "Calculadora de ROI", "Calculadora de Presupuesto", "Calculadora de Préstamo"],
+      "faqs": [
+        {"question": "¿Cuánto tiempo debo planear quedarme?", "answer": "Generalmente, comprar tiene sentido por 5+ años. Estadías más cortas pueden favorecer alquiler."},
+        {"question": "¿Qué costos incluye propiedad de casa?", "answer": "Hipoteca, impuestos a la propiedad, seguro, mantenimiento, cuotas HOA, servicios y ganancias de apreciación."},
+        {"question": "¿Debo incluir costos de mantenimiento?", "answer": "Sí, espera 1-2% del valor de la casa anualmente para mantenimiento y reparaciones."},
+        {"question": "¿Qué es apreciación de propiedad?", "answer": "Los valores de casas típicamente aumentan 2-4% anualmente, aunque varía según ubicación y mercado."},
+        {"question": "¿Cuándo tiene más sentido comprar?", "answer": "Comprar típicamente tiene sentido para residentes a largo plazo, cuando las tasas son favorables y en mercados que aprecian."}
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora Aluguel vs Comprar",
+    "seoTitle": "Calculadora de Aluguel vs Compra - Devo Alugar ou Comprar uma Casa?",    "summary": "Compare o impacto financeiro de alugar vs comprar uma casa.",
+    "description": "Use nossa calculadora aluguel vs comprar para analisar as diferenças financeiras entre alugar e comprar usando seus números específicos e taxas.",
+    "category": "financial",
+    "difficulty": "Avançado",
+    "slug": "rent-vs-buy-calculator",
+    "component": "RentVsBuyCalculator",
+    "seoContent": {
+      "metaTitle": "Calculadora Aluguel vs Comprar - Compare Alugar vs Comprar Casa",
+      "metaDescription": "Calculadora gratuita aluguel vs comprar. Compare custos de alugar vs comprar casa. Analise impacto financeiro a longo prazo.",
+      "keywords": "calculadora aluguel compra, aluguel vs comprar, custo moradia, investimento imobiliário, calculadora habitação",
+      "h1": "Calculadora Aluguel vs Comprar - Devo Alugar ou Comprar?",
+      "introduction": "A Calculadora Aluguel vs Comprar ajuda você a tomar uma das maiores decisões financeiras da vida. Ao comparar seus custos de aluguel versus os custos totais de compra, você verá qual opção faz mais sentido financeiro.",
+      "benefits": [
+        "Compare custos totais de aluguel vs compra",
+        "Calcule patrimônio imobiliário a longo prazo",
+        "Veja impacto de taxas hipotecárias",
+        "Inclua manutenção e impostos de propriedade",
+        "Visualize apreciação de casa ao longo do tempo",
+        "Tome decisões informadas de habitação"
+      ],
+      "steps": [
+        "Insira preço estimado de compra",
+        "Introduza seu aluguel atual/médio",
+        "Insira valor de entrada",
+        "Introduza taxa hipotecária",
+        "Defina anos para comparar",
+        "Visualize resultados de comparação financeira"
+      ],
+      "inputsExplained": [
+        "Preço da Casa: Preço total de compra",
+        "Aluguel Mensal: O que você pagaria em aluguel",
+        "Entrada: Dinheiro que você tem para compra",
+        "Taxa Hipotecária: Taxa de juros do empréstimo",
+        "Anos: Período de tempo para analisar"
+      ],
+      "formulaExplanation": "Custo Compra = (Pagamento Mensal + Manutenção + Impostos) × Meses. Custo Aluguel = Aluguel Mensal × Meses.",
+      "resultsExplanation": "Os resultados mostram pagamentos mensais, aluguel total pago, valor da casa, patrimônio construído e qual opção é mais econômica.",
+      "examples": "Comparar casa de $300k vs $1500/mês aluguel durante 7 anos mostra vantagem de compra se casa aprecia 3% anualmente.",
+      "whoItsFor": "Compradores de casa, inquilinos considerando compra, compradores de primeira viagem, investidores imobiliários e qualquer pessoa decidindo entre alugar e comprar.",
+      "disclaimer": "Esta comparação é baseada em suposições e pode não refletir sua situação real. Consulte com consultores financeiros para orientação.",
+      "howDoesWork": "A calculadora calcula custos completos de ambas as opções incluindo aluguel, hipoteca, impostos, manutenção e patrimônio.",
+      "completeGuide": "A decisão aluguel vs comprar depende de múltiplos fatores: sua timeline, mercado local, taxas de juros e circunstâncias pessoais.",
+      "relatedTools": ["Calculadora de Hipoteca", "Calculadora de ROI", "Calculadora de Orçamento", "Calculadora de Empréstimo"],
+      "faqs": [
+        {"question": "Quanto tempo devo planejar ficar?", "answer": "Geralmente, comprar faz sentido por 5+ anos. Estadias mais curtas podem favorecer aluguel."},
+        {"question": "Que custos inclui propriedade de casa?", "answer": "Hipoteca, impostos sobre a propriedade, seguro, manutenção, taxas HOA, utilidades e ganhos de apreciação."},
+        {"question": "Devo incluir custos de manutenção?", "answer": "Sim, espere 1-2% do valor da casa anualmente para manutenção e reparos."},
+        {"question": "O que é apreciação de propriedade?", "answer": "Os valores das casas geralmente aumentam 2-4% anualmente, embora variem conforme localização e mercado."},
+        {"question": "Quando comprar faz mais sentido?", "answer": "Comprar geralmente faz sentido para residentes de longo prazo, quando as taxas são favoráveis e em mercados de apreciação."}
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur Location vs Achat",
+    "seoTitle": "Calculateur Location vs Achat - Dois-je Louer ou Acheter une Maison?",
+    "summary": "Comparez l'impact financier de la location vs l'achat d'une maison.",
+    "description": "Utilisez notre calculateur location vs achat pour analyser les différences financières entre louer et acheter en utilisant vos chiffres spécifiques.",
+    "category": "financial",
+    "difficulty": "Avancé",
+    "slug": "rent-vs-buy-calculator",
+    "component": "RentVsBuyCalculator",
+    "seoContent": {
+      "metaTitle": "Calculateur Location vs Achat - Comparez Location vs Achat d'une Maison",
+      "metaDescription": "Calculateur gratuit location vs achat. Comparez les coûts de location vs achat d'une maison. Analysez l'impact financier à long terme.",
+      "keywords": "calculateur location achat, location vs achat, coût logement, investissement immobilier, calculateur habitation",
+      "h1": "Calculateur Location vs Achat - Devriez-vous Louer ou Acheter?",
+      "introduction": "Le Calculateur Location vs Achat vous aide à prendre l'une des plus grandes décisions financières de la vie. En comparant vos frais de location par rapport aux coûts totaux d'achat, vous verrez quelle option a plus de sens financier.",
+      "benefits": [
+        "Comparez les coûts totaux de la location vs l'achat",
+        "Calculez l'équité immobilière à long terme",
+        "Voyez l'impact des taux d'intérêt hypothécaires",
+        "Incluez l'entretien et les taxes immobilières",
+        "Visualisez l'appréciation de la maison au fil du temps",
+        "Prenez des décisions d'habitation éclairées"
+      ],
+      "steps": [
+        "Entrez le prix estimé d'achat",
+        "Introduisez votre loyer actuel/moyen",
+        "Entrez le montant de la mise de fonds",
+        "Introduisez le taux hypothécaire",
+        "Définissez les années à comparer",
+        "Afficher les résultats de la comparaison financière"
+      ],
+      "inputsExplained": [
+        "Prix de la Maison: Prix total d'achat",
+        "Loyer Mensuel: Ce que vous paieriez en loyer",
+        "Mise de Fonds: Argent que vous avez pour l'achat",
+        "Taux Hypothécaire: Taux d'intérêt du prêt",
+        "Années: Période d'analyse"
+      ],
+      "formulaExplanation": "Coût Achat = (Paiement Mensuel + Entretien + Impôts) × Mois. Coût Location = Loyer Mensuel × Mois.",
+      "resultsExplanation": "Les résultats affichent les paiements mensuels, le loyer total payé, la valeur de la maison, l'équité générée et quelle option est la plus économique.",
+      "examples": "Comparer une maison de 300k$ vs 1500$/mois de loyer sur 7 ans montre un avantage à l'achat si la maison s'apprécie de 3% annuellement.",
+      "whoItsFor": "Acheteurs de maison, locataires envisageant un achat, nouveaux accédants à la propriété, investisseurs immobiliers et toute personne décidant entre louer et acheter.",
+      "disclaimer": "Cette comparaison est basée sur des hypothèses et peut ne pas refléter votre situation réelle. Consultez des conseillers financiers pour des conseils personnalisés.",
+      "howDoesWork": "Le calculateur calcule les coûts complets des deux options, y compris le loyer, l'hypothèque, les impôts, l'entretien et l'équité.",
+      "completeGuide": "La décision location vs achat dépend de nombreux facteurs: votre horizon temporel, le marché local, les taux d'intérêt et vos circonstances personnelles.",
+      "relatedTools": ["Calculateur d'Hypothèque", "Calculateur de ROI", "Calculateur de Budget", "Calculateur de Prêt"],
+      "faqs": [
+        {"question": "Combien de temps dois-je prévoir de rester?", "answer": "En général, l'achat a du sens pendant 5+ ans. Les séjours plus courts peuvent favoriser la location."},
+        {"question": "Quels coûts inclut la propriété?", "answer": "Hypothèque, taxes immobilières, assurance, entretien, frais HOA, services et gains d'appréciation."},
+        {"question": "Dois-je inclure les frais d'entretien?", "answer": "Oui, prévoyez 1-2% de la valeur de la maison annuellement pour l'entretien et les réparations."},
+        {"question": "Qu'est-ce que l'appréciation immobilière?", "answer": "Les valeurs des maisons augmentent généralement de 2-4% annuellement, bien que cela varie selon l'emplacement et le marché."},
+        {"question": "Quand l'achat a-t-il plus de sens?", "answer": "L'achat a généralement du sens pour les résidents à long terme, lorsque les taux sont favorables et dans les marchés d'appréciation."}
+      ]
+    }
+  },
+  "de": {
+    "title": "Miete vs Kauf Rechner",
+    "summary": "Vergleichen Sie die finanzielle Auswirkung von Miete vs Kauf eines Hauses.",
+    "description": "Verwenden Sie unseren Miete vs Kauf Rechner, um die finanziellen Unterschiede zwischen Miete und Kauf zu analysieren.",
+    "category": "financial",
+    "difficulty": "Fortgeschrittene",
+    "slug": "rent-vs-buy-calculator",
+    "component": "RentVsBuyCalculator",
+    "seoContent": {
+      "metaTitle": "Miete vs Kauf Rechner - Vergleichen Sie Mieten vs Kaufen",
+      "metaDescription": "Kostenloser Miete vs Kauf Rechner. Vergleichen Sie Miete- vs Kaufkosten für ein Haus. Analysieren Sie langfristige finanzielle Auswirkungen.",
+      "keywords": "Miete vs Kauf Rechner, Hauskosten, Immobilieninvestition, Wohnungsrechner",
+      "h1": "Miete vs Kauf Rechner - Sollten Sie Mieten oder Kaufen?",
+      "introduction": "Der Miete vs Kauf Rechner hilft Ihnen, eine der größten finanziellen Entscheidungen des Lebens zu treffen. Durch den Vergleich Ihrer Mietkosten mit den Gesamtkosten des Kaufs sehen Sie, welche Option mehr Sinn macht.",
+      "benefits": [
+        "Vergleichen Sie Gesamtkosten von Miete vs Kauf",
+        "Berechnen Sie Immobilienkapital langfristig",
+        "Sehen Sie Auswirkung von Hypothekenzinsen",
+        "Berücksichtigen Sie Wartung und Grundsteuer",
+        "Visualisieren Sie Hauswertschätzung im Laufe der Zeit",
+        "Treffen Sie fundierte Wohnentscheidungen"
+      ],
+      "steps": [
+        "Geben Sie geschätzten Kaufpreis ein",
+        "Geben Sie aktuelle/durchschnittliche Miete ein",
+        "Geben Sie Anzahlung ein",
+        "Geben Sie Hypothekenzinssatz ein",
+        "Definieren Sie Jahre zum Vergleichen",
+        "Ansicht der Finanzverglichsergebnisse"
+      ],
+      "inputsExplained": [
+        "Hauspreis: Gesamtkaufpreis",
+        "Monatliche Miete: Was Sie als Miete zahlen würden",
+        "Anzahlung: Geld, das Sie zum Kauf haben",
+        "Hypothekenzinssatz: Darlehenszinssatz",
+        "Jahre: Analysezeitraum"
+      ],
+      "formulaExplanation": "Kaufkosten = (Monatszahlung + Wartung + Steuern) × Monate. Mietkosten = Monatliche Miete × Monate.",
+      "resultsExplanation": "Die Ergebnisse zeigen monatliche Zahlungen, gezahlte Gesamtmiete, Hauswert, aufgebautes Eigenkapital und welche Option wirtschaftlicher ist.",
+      "examples": "Der Vergleich eines Hauses von 300.000 $ mit 1.500 $/Monat Miete über 7 Jahre zeigt einen Kaufvorteil, wenn das Haus jährlich um 3% an Wert gewinnt.",
+      "whoItsFor": "Hauskäufer, Mieter, die einen Kauf in Betracht ziehen, Erstkäufer, Immobilieninvestoren und alle, die zwischen Miete und Kauf entscheiden.",
+      "disclaimer": "Dieser Vergleich basiert auf Annahmen und gibt möglicherweise nicht Ihre tatsächliche Situation wider. Konsultieren Sie Finanzberater.",
+      "howDoesWork": "Der Rechner berechnet die vollständigen Kosten beider Optionen einschließlich Miete, Hypothek, Steuern, Wartung und Eigenkapital.",
+      "completeGuide": "Die Miete- vs Kaufentscheidung hängt von vielen Faktoren ab: Zeithorizont, lokaler Markt, Zinssätze und persönliche Umstände.",
+      "relatedTools": ["Hypothekenrechner", "ROI-Rechner", "Budgetrechner", "Darlehenrechner"],
+      "faqs": [
+        {"question": "Wie lange sollte ich bleiben?", "answer": "Im Allgemeinen macht der Kauf für 5+ Jahre Sinn. Kürzere Aufenthalte können Miete bevorzugen."},
+        {"question": "Welche Kosten entstehen bei Hausbesitz?", "answer": "Hypotheke, Grundsteuer, Versicherung, Wartung, HOA-Gebühren, Nebenkosten und Wertsteigerung."},
+        {"question": "Sollte ich Wartungskosten einrechnen?", "answer": "Ja, rechnen Sie mit 1-2% des Hauswerts jährlich für Wartung und Reparaturen."},
+        {"question": "Was ist Hauswertschätzung?", "answer": "Hauswerte steigen normalerweise 2-4% jährlich, variieren aber je nach Standort und Markt."},
+        {"question": "Wann macht Kauf mehr Sinn?", "answer": "Kauf macht normalerweise für Langzeitbewohner Sinn, bei günstigen Zinsen und in Wertsteigerungsmärk."}
+      ]
+    }
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "slug": "prime-factorization-calculator",
+  "category": "math",
+  "subcategory": "algebra",
+  "difficulty": "intermediate",
+  "component": "PrimeFactorizationCalculator",
+  "title": "Prime Factorization Calculator",
+  "keywords": ["prime factorization", "prime factors", "factor tree", "prime decomposition", "prime numbers", "factorization calculator", "prime factor calculator"],
+  "seoTitle": "Prime Factorization Calculator - What Are the Prime Factors?",
+  "seoContent": {
+    "en": {
+      "introduction": "Find prime factors of any positive integer instantly with our comprehensive prime factorization calculator. Displays results as a list, exponential form, and factor tree visualization for easy understanding.",
+      "benefits": [
+        "Instant prime factorization for any positive integer",
+        "Display results in multiple formats: list, exponential notation, and factor tree",
+        "Automatically detects if a number is prime",
+        "Shows complete factorization process step-by-step",
+        "Supports large numbers for advanced calculations",
+        "Educational tool for learning number theory and prime factors",
+        "Visual factor tree makes understanding factorization intuitive"
+      ],
+      "steps": [
+        "Enter a positive integer (greater than 1)",
+        "Click Calculate to find all prime factors",
+        "View the list of prime factors in ascending order",
+        "See the exponential form (e.g., 2³ × 3² × 5)",
+        "Examine the factor tree visualization",
+        "Check if the number is prime or composite"
+      ],
+      "inputsExplained": "The calculator accepts any positive integer greater than 1. Prime factorization breaks down a number into its prime factors - the prime numbers that multiply together to give the original number.",
+      "formulaExplanation": "Prime factorization is the process of expressing a composite number as a product of prime numbers. For example, 60 = 2 × 2 × 3 × 5 = 2² × 3 × 5. Every composite number has a unique prime factorization (Fundamental Theorem of Arithmetic).",
+      "examples": [
+        "12 = 2² × 3 (prime factors: 2, 2, 3)",
+        "60 = 2² × 3 × 5 (prime factors: 2, 2, 3, 5)",
+        "100 = 2² × 5² (prime factors: 2, 2, 5, 5)",
+        "17 = 17 (prime number, only factor is itself)",
+        "210 = 2 × 3 × 5 × 7 (prime factors: 2, 3, 5, 7)"
+      ],
+      "resultsExplanation": "Results show: (1) List of all prime factors in ascending order, (2) Exponential form showing each unique prime with its exponent, (3) Factor tree visualization showing the decomposition process, (4) Whether the number is prime or composite.",
+      "whoItsFor": "Perfect for students learning number theory, mathematicians working with prime numbers, educators teaching factorization, programmers implementing number theory algorithms, and anyone needing to find prime factors quickly.",
+      "disclaimer": "This calculator provides accurate mathematical calculations for prime factorization. For very large numbers (over 15 digits), calculation time may increase. Always verify critical calculations independently.",
+      "relatedTools": ["GCD Calculator", "LCM Calculator", "Divisibility Calculator", "Prime Number Checker"],
+      "faqs": [
+        {
+          "question": "What is prime factorization?",
+          "answer": "Prime factorization is the process of breaking down a composite number into the prime numbers that multiply together to give the original number. For example, 12 = 2 × 2 × 3."
+        },
+        {
+          "question": "What is a prime number?",
+          "answer": "A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Examples include 2, 3, 5, 7, 11, 13, etc."
+        },
+        {
+          "question": "How does the factor tree work?",
+          "answer": "A factor tree is a visual representation of prime factorization. You start with the original number at the top and repeatedly divide by prime factors until all branches end in prime numbers."
+        },
+        {
+          "question": "Why is prime factorization important?",
+          "answer": "Prime factorization is fundamental in number theory and has practical applications in cryptography, finding GCD and LCM, simplifying fractions, and understanding divisibility."
+        },
+        {
+          "question": "Can the calculator handle large numbers?",
+          "answer": "Yes, the calculator can handle large numbers, but for numbers with many digits or very large prime factors, calculation time may increase due to the computational complexity of factorization."
+        },
+        {
+          "question": "What if I enter a prime number?",
+          "answer": "If you enter a prime number, the calculator will identify it as prime and show that its only prime factor is itself."
+        }
+      ]
+    },
+    "seoTitle": "Calculadora de Factorización Prima - ¿Cuáles Son los Factores Primos?",
+    "es": {
+      "introduction": "Encuentra los factores primos de cualquier entero positivo instantáneamente con nuestra calculadora integral de factorización prima. Muestra resultados como lista, forma exponencial y visualización de árbol de factores para una fácil comprensión.",
+      "benefits": [
+        "Factorización prima instantánea para cualquier entero positivo",
+        "Muestra resultados en múltiples formatos: lista, notación exponencial y árbol de factores",
+        "Detecta automáticamente si un número es primo",
+        "Muestra el proceso completo de factorización paso a paso",
+        "Admite números grandes para cálculos avanzados",
+        "Herramienta educativa para aprender teoría de números y factores primos",
+        "El árbol de factores visual hace intuitiva la comprensión de la factorización"
+      ],
+      "steps": [
+        "Ingresa un entero positivo (mayor que 1)",
+        "Haz clic en Calcular para encontrar todos los factores primos",
+        "Visualiza la lista de factores primos en orden ascendente",
+        "Observa la forma exponencial (ej., 2³ × 3² × 5)",
+        "Examina la visualización del árbol de factores",
+        "Verifica si el número es primo o compuesto"
+      ],
+      "inputsExplained": "La calculadora acepta cualquier entero positivo mayor que 1. La factorización prima descompone un número en sus factores primos: los números primos que se multiplican para dar el número original.",
+      "formulaExplanation": "La factorización prima es el proceso de expresar un número compuesto como producto de números primos. Por ejemplo, 60 = 2 × 2 × 3 × 5 = 2² × 3 × 5. Todo número compuesto tiene una factorización prima única (Teorema Fundamental de la Aritmética).",
+      "examples": [
+        "12 = 2² × 3 (factores primos: 2, 2, 3)",
+        "60 = 2² × 3 × 5 (factores primos: 2, 2, 3, 5)",
+        "100 = 2² × 5² (factores primos: 2, 2, 5, 5)",
+        "17 = 17 (número primo, único factor es él mismo)",
+        "210 = 2 × 3 × 5 × 7 (factores primos: 2, 3, 5, 7)"
+      ],
+      "resultsExplanation": "Los resultados muestran: (1) Lista de todos los factores primos en orden ascendente, (2) Forma exponencial mostrando cada primo único con su exponente, (3) Visualización del árbol de factores mostrando el proceso de descomposición, (4) Si el número es primo o compuesto.",
+      "whoItsFor": "Perfecto para estudiantes que aprenden teoría de números, matemáticos que trabajan con números primos, educadores que enseñan factorización, programadores que implementan algoritmos de teoría de números y cualquiera que necesite encontrar factores primos rápidamente.",
+      "disclaimer": "Esta calculadora proporciona cálculos matemáticos precisos para la factorización prima. Para números muy grandes (más de 15 dígitos), el tiempo de cálculo puede aumentar. Siempre verifica los cálculos críticos de forma independiente.",
+      "relatedTools": ["Calculadora de MCD", "Calculadora de MCM", "Calculadora de Divisibilidad", "Verificador de Números Primos"],
+      "faqs": [
+        {
+          "question": "¿Qué es la factorización prima?",
+          "answer": "La factorización prima es el proceso de descomponer un número compuesto en los números primos que se multiplican para dar el número original. Por ejemplo, 12 = 2 × 2 × 3."
+        },
+        {
+          "question": "¿Qué es un número primo?",
+          "answer": "Un número primo es un número natural mayor que 1 que no tiene divisores positivos excepto 1 y él mismo. Ejemplos incluyen 2, 3, 5, 7, 11, 13, etc."
+        },
+        {
+          "question": "¿Cómo funciona el árbol de factores?",
+          "answer": "Un árbol de factores es una representación visual de la factorización prima. Comienzas con el número original en la parte superior y divides repetidamente por factores primos hasta que todas las ramas terminen en números primos."
+        },
+        {
+          "question": "¿Por qué es importante la factorización prima?",
+          "answer": "La factorización prima es fundamental en la teoría de números y tiene aplicaciones prácticas en criptografía, búsqueda de MCD y MCM, simplificación de fracciones y comprensión de la divisibilidad."
+        },
+        {
+          "question": "¿La calculadora puede manejar números grandes?",
+          "answer": "Sí, la calculadora puede manejar números grandes, pero para números con muchos dígitos o factores primos muy grandes, el tiempo de cálculo puede aumentar debido a la complejidad computacional de la factorización."
+        },
+        {
+          "question": "¿Qué pasa si ingreso un número primo?",
+          "answer": "Si ingresas un número primo, la calculadora lo identificará como primo y mostrará que su único factor primo es él mismo."
+        }
+      ]
+    },
+    "seoTitle": "Calculadora de Fatoração Prima - Quais São os Fatores Primos?",
+    "pt": {
+      "introduction": "Encontre fatores primos de qualquer número inteiro positivo instantaneamente com nossa calculadora abrangente de fatoração prima. Exibe resultados como lista, forma exponencial e visualização de árvore de fatores para fácil compreensão.",
+      "benefits": [
+        "Fatoração prima instantânea para qualquer número inteiro positivo",
+        "Exibe resultados em múltiplos formatos: lista, notação exponencial e árvore de fatores",
+        "Detecta automaticamente se um número é primo",
+        "Mostra o processo completo de fatoração passo a passo",
+        "Suporta números grandes para cálculos avançados",
+        "Ferramenta educacional para aprender teoria dos números e fatores primos",
+        "Árvore de fatores visual torna a compreensão da fatoração intuitiva"
+      ],
+      "steps": [
+        "Digite um número inteiro positivo (maior que 1)",
+        "Clique em Calcular para encontrar todos os fatores primos",
+        "Visualize a lista de fatores primos em ordem crescente",
+        "Veja a forma exponencial (ex., 2³ × 3² × 5)",
+        "Examine a visualização da árvore de fatores",
+        "Verifique se o número é primo ou composto"
+      ],
+      "inputsExplained": "A calculadora aceita qualquer número inteiro positivo maior que 1. A fatoração prima decompõe um número em seus fatores primos - os números primos que multiplicados resultam no número original.",
+      "formulaExplanation": "Fatoração prima é o processo de expressar um número composto como produto de números primos. Por exemplo, 60 = 2 × 2 × 3 × 5 = 2² × 3 × 5. Todo número composto tem uma fatoração prima única (Teorema Fundamental da Aritmética).",
+      "examples": [
+        "12 = 2² × 3 (fatores primos: 2, 2, 3)",
+        "60 = 2² × 3 × 5 (fatores primos: 2, 2, 3, 5)",
+        "100 = 2² × 5² (fatores primos: 2, 2, 5, 5)",
+        "17 = 17 (número primo, único fator é ele mesmo)",
+        "210 = 2 × 3 × 5 × 7 (fatores primos: 2, 3, 5, 7)"
+      ],
+      "resultsExplanation": "Os resultados mostram: (1) Lista de todos os fatores primos em ordem crescente, (2) Forma exponencial mostrando cada primo único com seu expoente, (3) Visualização da árvore de fatores mostrando o processo de decomposição, (4) Se o número é primo ou composto.",
+      "whoItsFor": "Perfeito para estudantes aprendendo teoria dos números, matemáticos trabalhando com números primos, educadores ensinando fatoração, programadores implementando algoritmos de teoria dos números e qualquer pessoa que precise encontrar fatores primos rapidamente.",
+      "disclaimer": "Esta calculadora fornece cálculos matemáticos precisos para fatoração prima. Para números muito grandes (mais de 15 dígitos), o tempo de cálculo pode aumentar. Sempre verifique cálculos críticos de forma independente.",
+      "relatedTools": ["Calculadora de MDC", "Calculadora de MMC", "Calculadora de Divisibilidade", "Verificador de Números Primos"],
+      "faqs": [
+        {
+          "question": "O que é fatoração prima?",
+          "answer": "Fatoração prima é o processo de decompor um número composto nos números primos que multiplicados resultam no número original. Por exemplo, 12 = 2 × 2 × 3."
+        },
+        {
+          "question": "O que é um número primo?",
+          "answer": "Um número primo é um número natural maior que 1 que não tem divisores positivos exceto 1 e ele mesmo. Exemplos incluem 2, 3, 5, 7, 11, 13, etc."
+        },
+        {
+          "question": "Como funciona a árvore de fatores?",
+          "answer": "Uma árvore de fatores é uma representação visual da fatoração prima. Você começa com o número original no topo e divide repetidamente por fatores primos até que todos os ramos terminem em números primos."
+        },
+        {
+          "question": "Por que a fatoração prima é importante?",
+          "answer": "A fatoração prima é fundamental na teoria dos números e tem aplicações práticas em criptografia, busca de MDC e MMC, simplificação de frações e compreensão da divisibilidade."
+        },
+        {
+          "question": "A calculadora pode lidar com números grandes?",
+          "answer": "Sim, a calculadora pode lidar com números grandes, mas para números com muitos dígitos ou fatores primos muito grandes, o tempo de cálculo pode aumentar devido à complexidade computacional da fatoração."
+        },
+        {
+          "question": "O que acontece se eu digitar um número primo?",
+          "answer": "Se você digitar um número primo, a calculadora o identificará como primo e mostrará que seu único fator primo é ele mesmo."
+        }
+      ]
+    },
+    "seoTitle": "Calculateur de Factorisation Première - Quels Sont les Facteurs Premiers?",
+    "fr": {
+      "introduction": "Trouvez les facteurs premiers de tout entier positif instantanément avec notre calculatrice complète de factorisation première. Affiche les résultats sous forme de liste, forme exponentielle et visualisation d'arbre de facteurs pour une compréhension facile.",
+      "benefits": [
+        "Factorisation première instantanée pour tout entier positif",
+        "Affiche les résultats en plusieurs formats : liste, notation exponentielle et arbre de facteurs",
+        "Détecte automatiquement si un nombre est premier",
+        "Montre le processus complet de factorisation étape par étape",
+        "Prend en charge les grands nombres pour les calculs avancés",
+        "Outil éducatif pour apprendre la théorie des nombres et les facteurs premiers",
+        "L'arbre de facteurs visuel rend la compréhension de la factorisation intuitive"
+      ],
+      "steps": [
+        "Entrez un entier positif (supérieur à 1)",
+        "Cliquez sur Calculer pour trouver tous les facteurs premiers",
+        "Visualisez la liste des facteurs premiers par ordre croissant",
+        "Voyez la forme exponentielle (ex., 2³ × 3² × 5)",
+        "Examinez la visualisation de l'arbre de facteurs",
+        "Vérifiez si le nombre est premier ou composé"
+      ],
+      "inputsExplained": "La calculatrice accepte tout entier positif supérieur à 1. La factorisation première décompose un nombre en ses facteurs premiers - les nombres premiers qui se multiplient pour donner le nombre original.",
+      "formulaExplanation": "La factorisation première est le processus d'expression d'un nombre composé comme produit de nombres premiers. Par exemple, 60 = 2 × 2 × 3 × 5 = 2² × 3 × 5. Chaque nombre composé a une factorisation première unique (Théorème Fondamental de l'Arithmétique).",
+      "examples": [
+        "12 = 2² × 3 (facteurs premiers : 2, 2, 3)",
+        "60 = 2² × 3 × 5 (facteurs premiers : 2, 2, 3, 5)",
+        "100 = 2² × 5² (facteurs premiers : 2, 2, 5, 5)",
+        "17 = 17 (nombre premier, seul facteur est lui-même)",
+        "210 = 2 × 3 × 5 × 7 (facteurs premiers : 2, 3, 5, 7)"
+      ],
+      "resultsExplanation": "Les résultats montrent : (1) Liste de tous les facteurs premiers par ordre croissant, (2) Forme exponentielle montrant chaque nombre premier unique avec son exposant, (3) Visualisation de l'arbre de facteurs montrant le processus de décomposition, (4) Si le nombre est premier ou composé.",
+      "whoItsFor": "Parfait pour les étudiants apprenant la théorie des nombres, les mathématiciens travaillant avec les nombres premiers, les éducateurs enseignant la factorisation, les programmeurs implémentant des algorithmes de théorie des nombres et toute personne ayant besoin de trouver des facteurs premiers rapidement.",
+      "disclaimer": "Cette calculatrice fournit des calculs mathématiques précis pour la factorisation première. Pour les très grands nombres (plus de 15 chiffres), le temps de calcul peut augmenter. Vérifiez toujours les calculs critiques de manière indépendante.",
+      "relatedTools": ["Calculatrice de PGCD", "Calculatrice de PPCM", "Calculatrice de Divisibilité", "Vérificateur de Nombres Premiers"],
+      "faqs": [
+        {
+          "question": "Qu'est-ce que la factorisation première ?",
+          "answer": "La factorisation première est le processus de décomposition d'un nombre composé en nombres premiers qui se multiplient pour donner le nombre original. Par exemple, 12 = 2 × 2 × 3."
+        },
+        {
+          "question": "Qu'est-ce qu'un nombre premier ?",
+          "answer": "Un nombre premier est un nombre naturel supérieur à 1 qui n'a pas de diviseurs positifs autres que 1 et lui-même. Les exemples incluent 2, 3, 5, 7, 11, 13, etc."
+        },
+        {
+          "question": "Comment fonctionne l'arbre de facteurs ?",
+          "answer": "Un arbre de facteurs est une représentation visuelle de la factorisation première. Vous commencez avec le nombre original en haut et divisez à plusieurs reprises par des facteurs premiers jusqu'à ce que toutes les branches se terminent par des nombres premiers."
+        },
+        {
+          "question": "Pourquoi la factorisation première est-elle importante ?",
+          "answer": "La factorisation première est fondamentale en théorie des nombres et a des applications pratiques en cryptographie, recherche de PGCD et PPCM, simplification de fractions et compréhension de la divisibilité."
+        },
+        {
+          "question": "La calculatrice peut-elle gérer de grands nombres ?",
+          "answer": "Oui, la calculatrice peut gérer de grands nombres, mais pour les nombres avec beaucoup de chiffres ou de très grands facteurs premiers, le temps de calcul peut augmenter en raison de la complexité computationnelle de la factorisation."
+        },
+        {
+          "question": "Que se passe-t-il si j'entre un nombre premier ?",
+          "answer": "Si vous entrez un nombre premier, la calculatrice l'identifiera comme premier et montrera que son seul facteur premier est lui-même."
+        }
+      ]
+    }
+  }
+}

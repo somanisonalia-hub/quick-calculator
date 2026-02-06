@@ -42,8 +42,8 @@ import expenseCalculator from '../../content/calculators/expense-calculator.json
 import carInsuranceCalculator from '../../content/calculators/car-insurance-calculator.json';
 import healthInsuranceCalculator from '../../content/calculators/health-insurance-calculator.json';
 import hourlyToSalaryCalculator from '../../content/calculators/hourly-to-salary-calculator.json';
-import salaryCalculator from '../../content/calculators/salary-calculator.json';
 import overtimePayCalculator from '../../content/calculators/overtime-pay-calculator.json';
+import biweeklyPayCalculator from '../../content/calculators/biweekly-pay-calculator.json';
 import cryptoRoiCalculator from '../../content/calculators/crypto-roi-calculator.json';
 import debtConsolidationCalculator from '../../content/calculators/debt-consolidation-calculator.json';
 import interestOnlyMortgageCalculator from '../../content/calculators/interest-only-mortgage-calculator.json';
@@ -51,7 +51,6 @@ import scientificCalculator from '../../content/calculators/scientific-calculato
 import percentageCalculator from '../../content/calculators/percentage-calculator.json';
 import ageCalculator from '../../content/calculators/age-calculator.json';
 import averageCalculator from '../../content/calculators/average-calculator.json';
-import unitConverter from '../../content/calculators/unit-conversion-calculator.json';
 import tipCalculator from '../../content/calculators/tip-calculator.json';
 import passwordGenerator from '../../content/calculators/password-generator.json';
 import dateCalculator from '../../content/calculators/date-calculator.json';
@@ -68,6 +67,9 @@ import leanBodyMassCalculator from '../../content/calculators/lean-body-mass-cal
 import maintenanceCaloriesCalculator from '../../content/calculators/maintenance-calories-calculator.json';
 import tdeeCalculator from '../../content/calculators/tdee-calculator.json';
 import waistToHipRatioCalculator from '../../content/calculators/waist-to-hip-ratio-calculator.json';
+import discountCalculator from '../../content/calculators/discount-calculator.json';
+import electricityCostCalculator from '../../content/calculators/electricity-cost-calculator.json';
+import calorieDeficitCalculator from '../../content/calculators/calorie-deficit-calculator.json';
 
 // Missing calculator imports
 import amortizationScheduleCalculator from '../../content/calculators/amortization-schedule-calculator.json';
@@ -94,6 +96,68 @@ import quadraticEquationCalculator from '../../content/calculators/quadratic-equ
 import surfaceAreaCalculator from '../../content/calculators/surface-area-calculator.json';
 import triangleAreaCalculator from '../../content/calculators/triangle-area-calculator.json';
 import volumeCalculator from '../../content/calculators/volume-calculator.json';
+import calculator401k from '../../content/calculators/401k-calculator.json';
+import bloodPressureCalculator from '../../content/calculators/blood-pressure-calculator.json';
+import creditCardPayoff from '../../content/calculators/credit-card-payoff.json';
+import debtPayoffCalculator from '../../content/calculators/debt-payoff-calculator.json';
+import debtToIncomeCalculator from '../../content/calculators/debt-to-income-calculator.json';
+import decimalToFractionCalculator from '../../content/calculators/decimal-to-fraction-calculator.json';
+import dueDateCalculator from '../../content/calculators/due-date-calculator.json';
+import emergencyFund from '../../content/calculators/emergency-fund.json';
+import examScorePredictor from '../../content/calculators/exam-score-predictor.json';
+import exponentCalculator from '../../content/calculators/exponent-calculator.json';
+import factorialCalculator from '../../content/calculators/factorial-calculator.json';
+import fractionDecimal from '../../content/calculators/fraction-decimal.json';
+import fuelCost from '../../content/calculators/fuel-cost.json';
+import gcdLcmCalculator from '../../content/calculators/gcd-lcm-calculator.json';
+import geometryArea from '../../content/calculators/geometry-area.json';
+import gradeCalculator from '../../content/calculators/grade-calculator.json';
+import heightCalculator from '../../content/calculators/height-calculator.json';
+import interestCalculator from '../../content/calculators/interest-calculator.json';
+import investmentPlanner from '../../content/calculators/investment-planner.json';
+import investmentReturn from '../../content/calculators/investment-return.json';
+import linearEquation from '../../content/calculators/linear-equation.json';
+import loanAffordability from '../../content/calculators/loan-affordability.json';
+import loanComparison from '../../content/calculators/loan-comparison.json';
+import loanRepayment from '../../content/calculators/loan-repayment.json';
+import logarithmCalculator from '../../content/calculators/logarithm-calculator.json';
+import longDivisionCalculator from '../../content/calculators/long-division-calculator.json';
+import loveCalculator from '../../content/calculators/love-calculator.json';
+import macroCalculator from '../../content/calculators/macro-calculator.json';
+import midpointCalculator from '../../content/calculators/midpoint-calculator.json';
+import netWorth from '../../content/calculators/net-worth.json';
+import numberBaseConverter from '../../content/calculators/number-base-converter.json';
+import ovulationCalculator from '../../content/calculators/ovulation-calculator.json';
+import paceCalculator from '../../content/calculators/pace-calculator.json';
+import percentileCalculator from '../../content/calculators/percentile-calculator.json';
+import personalBudget from '../../content/calculators/personal-budget.json';
+import pregnancyCalculator from '../../content/calculators/pregnancy-calculator.json';
+import primeFactorizationCalculator from '../../content/calculators/prime-factorization-calculator.json';
+import probabilityCalculator from '../../content/calculators/probability-calculator.json';
+import profitabilityRatiosCalculator from '../../content/calculators/profitability-ratios-calculator.json';
+import ratioProportion from '../../content/calculators/ratio-proportion.json';
+import retirementPlan from '../../content/calculators/retirement-plan.json';
+import retirementSavings from '../../content/calculators/retirement-savings.json';
+import romanNumeralConverter from '../../content/calculators/roman-numeral-converter.json';
+import rothIraCalculator from '../../content/calculators/roth-ira-calculator.json';
+import salaryPayroll from '../../content/calculators/salary-payroll.json';
+import salaryTax from '../../content/calculators/salary-tax.json';
+import savingsGoal from '../../content/calculators/savings-goal.json';
+import savingsInterest from '../../content/calculators/savings-interest.json';
+import shippingCost from '../../content/calculators/shipping-cost.json';
+import sleepCalculator from '../../content/calculators/sleep-calculator.json';
+import slopeCalculator from '../../content/calculators/slope-calculator.json';
+import socialSecurityCalculator from '../../content/calculators/social-security-calculator.json';
+import squareRootCalculator from '../../content/calculators/square-root-calculator.json';
+import stockRatiosCalculator from '../../content/calculators/stock-ratios-calculator.json';
+import studyHoursPlanner from '../../content/calculators/study-hours-planner.json';
+import tripPlanner from '../../content/calculators/trip-planner.json';
+import unitConverterTool from '../../content/calculators/unit-converter.json';
+import bodyCompositionCalculator from '../../content/calculators/body-composition-calculator.json';
+import energyExpenditureCalculator from '../../content/calculators/energy-expenditure-calculator.json';
+import fitnessMetricsCalculator from '../../content/calculators/fitness-metrics-calculator.json';
+import nutritionAnalysisCalculator from '../../content/calculators/nutrition-analysis-calculator.json';
+import wellnessTrackerCalculator from '../../content/calculators/wellness-tracker-calculator.json';
 
 export type ContentType = 'calculators' | 'categories' | 'homepage' | 'labels';
 
@@ -145,15 +209,15 @@ export const contentRegistry: Record<string, any> = {
   'calculators-car-insurance-calculator': carInsuranceCalculator,
   'calculators-health-insurance-calculator': healthInsuranceCalculator,
   'calculators-hourly-to-salary-calculator': hourlyToSalaryCalculator,
-  'calculators-salary-calculator': salaryCalculator,
   'calculators-overtime-pay-calculator': overtimePayCalculator,
+  'calculators-biweekly-pay-calculator': biweeklyPayCalculator,
   'calculators-crypto-roi-calculator': cryptoRoiCalculator,
   'calculators-debt-consolidation-calculator': debtConsolidationCalculator,
   'calculators-interest-only-mortgage-calculator': interestOnlyMortgageCalculator,
   'calculators-scientific-calculator': scientificCalculator,
   'calculators-percentage-calculator': percentageCalculator,
   'calculators-age-calculator': ageCalculator,
-  'calculators-average-calculator': averageCalculator,  'calculators-unit-converter': unitConverter,
+  'calculators-average-calculator': averageCalculator,
   'calculators-tip-calculator': tipCalculator,
   'calculators-password-generator-calculator': passwordGenerator,
   'calculators-date-calculator': dateCalculator,
@@ -170,6 +234,9 @@ export const contentRegistry: Record<string, any> = {
   'calculators-maintenance-calories-calculator': maintenanceCaloriesCalculator,
   'calculators-tdee-calculator': tdeeCalculator,
   'calculators-waist-to-hip-ratio-calculator': waistToHipRatioCalculator,
+  'calculators-discount-calculator': discountCalculator,
+  'calculators-electricity-cost-calculator': electricityCostCalculator,
+  'calculators-calorie-deficit-calculator': calorieDeficitCalculator,
   // Missing calculator entries
   'calculators-amortization-schedule-calculator': amortizationScheduleCalculator,
   'calculators-apr-calculator': aprCalculator,
@@ -194,7 +261,70 @@ export const contentRegistry: Record<string, any> = {
   'calculators-quadratic-equation-calculator': quadraticEquationCalculator,
   'calculators-surface-area-calculator': surfaceAreaCalculator,
   'calculators-triangle-area-calculator': triangleAreaCalculator,
+  
+  'calculators-401k-calculator': calculator401k,
+  'calculators-blood-pressure-calculator': bloodPressureCalculator,
+  'calculators-credit-card-payoff': creditCardPayoff,
+  'calculators-debt-payoff-calculator': debtPayoffCalculator,
+  'calculators-debt-to-income-calculator': debtToIncomeCalculator,
+  'calculators-decimal-to-fraction-calculator': decimalToFractionCalculator,
+  'calculators-due-date-calculator': dueDateCalculator,
+  'calculators-emergency-fund': emergencyFund,
+  'calculators-exam-score-predictor': examScorePredictor,
+  'calculators-exponent-calculator': exponentCalculator,
+  'calculators-factorial-calculator': factorialCalculator,
+  'calculators-fraction-decimal': fractionDecimal,
+  'calculators-fuel-cost': fuelCost,
+  'calculators-gcd-lcm-calculator': gcdLcmCalculator,
+  'calculators-geometry-area': geometryArea,
+  'calculators-grade-calculator': gradeCalculator,
+  'calculators-height-calculator': heightCalculator,
+  'calculators-interest-calculator': interestCalculator,
+  'calculators-investment-planner': investmentPlanner,
+  'calculators-investment-return': investmentReturn,
+  'calculators-linear-equation': linearEquation,
+  'calculators-loan-affordability': loanAffordability,
+  'calculators-loan-comparison': loanComparison,
+  'calculators-loan-repayment': loanRepayment,
+  'calculators-logarithm-calculator': logarithmCalculator,
+  'calculators-long-division-calculator': longDivisionCalculator,
+  'calculators-love-calculator': loveCalculator,
+  'calculators-macro-calculator': macroCalculator,
+  'calculators-midpoint-calculator': midpointCalculator,
+  'calculators-net-worth': netWorth,
+  'calculators-number-base-converter': numberBaseConverter,
+  'calculators-ovulation-calculator': ovulationCalculator,
+  'calculators-pace-calculator': paceCalculator,
+  'calculators-percentile-calculator': percentileCalculator,
+  'calculators-personal-budget': personalBudget,
+  'calculators-pregnancy-calculator': pregnancyCalculator,
+  'calculators-prime-factorization-calculator': primeFactorizationCalculator,
+  'calculators-probability-calculator': probabilityCalculator,
+  'calculators-profitability-ratios-calculator': profitabilityRatiosCalculator,
+  'calculators-ratio-proportion': ratioProportion,
+  'calculators-retirement-plan': retirementPlan,
+  'calculators-retirement-savings': retirementSavings,
+  'calculators-roman-numeral-converter': romanNumeralConverter,
+  'calculators-roth-ira-calculator': rothIraCalculator,
+  'calculators-salary-payroll': salaryPayroll,
+  'calculators-salary-tax': salaryTax,
+  'calculators-savings-goal': savingsGoal,
+  'calculators-savings-interest': savingsInterest,
+  'calculators-shipping-cost': shippingCost,
+  'calculators-sleep-calculator': sleepCalculator,
+  'calculators-slope-calculator': slopeCalculator,
+  'calculators-social-security-calculator': socialSecurityCalculator,
+  'calculators-square-root-calculator': squareRootCalculator,
+  'calculators-stock-ratios-calculator': stockRatiosCalculator,
+  'calculators-study-hours-planner': studyHoursPlanner,
+  'calculators-trip-planner': tripPlanner,
+  'calculators-unit-converter': unitConverterTool,
   'calculators-volume-calculator': volumeCalculator,
+  'calculators-body-composition-calculator': bodyCompositionCalculator,
+  'calculators-energy-expenditure-calculator': energyExpenditureCalculator,
+  'calculators-fitness-metrics-calculator': fitnessMetricsCalculator,
+  'calculators-nutrition-analysis-calculator': nutritionAnalysisCalculator,
+  'calculators-wellness-tracker-calculator': wellnessTrackerCalculator,
 };
 
 /**

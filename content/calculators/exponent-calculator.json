@@ -1,0 +1,538 @@
+{
+  "en": {
+    "title": "Exponent Calculator",
+    "seoTitle": "Exponent Calculator - How Do I Calculate Exponents?",
+    "metaDescription": "Free exponent calculator. Calculate x^y for any base and exponent including negative, fractional, and decimal powers. Get instant results with step-by-step explanations.",
+    "keywords": [
+      "exponent calculator",
+      "power calculator",
+      "x^y calculator",
+      "exponential calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate exponents",
+      "calculate power of a number",
+      "exponent calculator with negative exponents",
+      "fractional exponent calculator"
+    ],
+    "slug": "exponent-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "difficulty": "beginner",
+    "tags": [
+      "exponent",
+      "power",
+      "algebra",
+      "exponential",
+      "mathematics"
+    ],
+    "summary": "Calculate x^y for any base and exponent including positive, negative, and fractional powers.",
+    "description": "Calculate exponential expressions x^y with our powerful exponent calculator. Handles positive, negative, and fractional exponents with scientific notation for large results.",
+    "instructions": [
+      "Enter the base (x) value",
+      "Enter the exponent (y) value",
+      "Get instant result with explanation"
+    ],
+    "calculatorComponent": "ExponentCalculator",
+    "examples": [
+      {
+        "title": "Basic Exponent",
+        "input": {},
+        "output": {},
+        "explanation": "Calculate 2^3 = 8, demonstrating basic power calculation."
+      },
+      {
+        "title": "Negative Exponent",
+        "input": {},
+        "output": {},
+        "explanation": "Calculate 2^(-2) = 0.25, showing reciprocal relationship."
+      },
+      {
+        "title": "Fractional Exponent",
+        "input": {},
+        "output": {},
+        "explanation": "Calculate 4^0.5 = 2, demonstrating square root as fractional exponent."
+      }
+    ],
+    "relatedCalculators": [
+      "scientific-calculator",
+      "logarithm-calculator",
+      "quadratic-equation-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate exponents and powers accurately with our comprehensive online exponent calculator. This powerful tool helps you solve x^y calculations for any base and exponent, including positive numbers, negative exponents, and fractional powers. Whether you're a student learning exponential functions, a scientist working with scientific notation, or anyone needing quick power calculations, our calculator provides instant results with clear explanations. Built with precision algorithms and a user-friendly interface, it handles everything from simple squares to complex exponential expressions with ease.",
+      "benefits": [
+        "Calculate x^y for any base and exponent instantly",
+        "Support for negative exponents (e.g., 2^-3 = 1/8)",
+        "Handle fractional exponents for root calculations (e.g., 16^0.5 = 4)",
+        "Automatic scientific notation for very large or small results",
+        "Step-by-step explanations of exponential calculations",
+        "Learn exponent rules and properties through examples"
+      ],
+      "steps": [
+        "Enter the base value (x) - can be positive or negative",
+        "Enter the exponent value (y) - can be positive, negative, or fractional",
+        "Click calculate to get the result of x^y",
+        "Review the result in both standard and scientific notation",
+        "See the formula and explanation of the calculation"
+      ],
+      "inputsExplained": [
+        "Base (x): The number being multiplied by itself, can be any real number",
+        "Exponent (y): The power to which the base is raised, determines how many times to multiply",
+        "Positive exponents: Multiply base by itself y times (e.g., 2^3 = 2×2×2)",
+        "Negative exponents: Reciprocal of positive exponent (e.g., 2^-3 = 1/(2^3))",
+        "Fractional exponents: Represent roots (e.g., x^(1/2) is square root of x)"
+      ],
+      "formulaExplanation": "The calculator computes x^y using the exponential function. For positive integer exponents, it represents repeated multiplication: x^y = x × x × x... (y times). For negative exponents, x^-y = 1/(x^y). For fractional exponents, x^(m/n) = ⁿ√(x^m), the nth root of x to the power m. Special cases include: x^0 = 1 for any x ≠ 0, x^1 = x, and 0^0 is considered undefined. The result is displayed in scientific notation (a × 10^b) when the value is very large (>1e10) or very small (<1e-4).",
+      "examples": [
+        "Example 1: 2^3 = 8. Base is 2, exponent is 3. Result: 2 × 2 × 2 = 8",
+        "Example 2: 10^-2 = 0.01. Negative exponent means reciprocal: 1/(10^2) = 1/100 = 0.01",
+        "Example 3: 16^0.5 = 4. Fractional exponent 0.5 = 1/2, so this is the square root of 16",
+        "Example 4: 5^4 = 625. Calculate 5 × 5 × 5 × 5 = 625",
+        "Example 5: 2^10 = 1024. Shows larger power calculation, useful in computer science"
+      ],
+      "resultsExplanation": [
+        "Standard result: Shows the calculated value in decimal format",
+        "Scientific notation: Displays very large/small numbers as a × 10^b",
+        "Formula: Shows the exact calculation performed (x^y)",
+        "Special messages for edge cases like 0^0 or negative base with fractional exponent"
+      ],
+      "whoItsFor": "This calculator serves students learning algebra and exponential functions, scientists and engineers working with scientific notation and powers, computer scientists dealing with binary powers and bit calculations, finance professionals calculating compound growth, and anyone needing quick exponential calculations. It's particularly useful for homework, scientific research, programming, and practical applications requiring power calculations.",
+      "disclaimer": "This calculator provides mathematically accurate results based on standard exponential functions. Results should be verified for critical applications. While we strive for precision, floating-point calculations may have minor rounding differences for very large or very small numbers. This tool is for educational and practical purposes. For scientific or engineering applications requiring extreme precision, consult appropriate specialized software.",
+      "relatedTools": [
+        "Scientific Calculator for advanced mathematical operations",
+        "Logarithm Calculator for inverse exponential calculations",
+        "Square Root Calculator for specific root calculations",
+        "Percentage Calculator for growth rate calculations"
+      ],
+      "faqs": [
+        {
+          "question": "What is an exponent?",
+          "answer": "An exponent indicates how many times to multiply a base number by itself. In x^y, y is the exponent. For example, 2^3 means 2 × 2 × 2 = 8."
+        },
+        {
+          "question": "How do negative exponents work?",
+          "answer": "A negative exponent means the reciprocal of the positive exponent. x^-y = 1/(x^y). For example, 2^-3 = 1/(2^3) = 1/8 = 0.125."
+        },
+        {
+          "question": "What are fractional exponents?",
+          "answer": "Fractional exponents represent roots. x^(1/n) is the nth root of x. For example, 16^(1/2) is the square root of 16, which equals 4. x^(m/n) = ⁿ√(x^m)."
+        },
+        {
+          "question": "What is 0^0?",
+          "answer": "0^0 is mathematically undefined or considered indeterminate. Different contexts may treat it differently, but this calculator flags it as a special case requiring consideration."
+        },
+        {
+          "question": "Can I use negative bases?",
+          "answer": "Yes for integer exponents. For fractional exponents with negative bases, the result may be complex (imaginary), which this calculator will indicate as it only handles real numbers."
+        },
+        {
+          "question": "Why use scientific notation?",
+          "answer": "Scientific notation (a × 10^b) makes very large or very small numbers easier to read and understand. For example, 2^50 = 1.126 × 10^15 is clearer than 1,125,899,906,842,624."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Exponentes",
+    "seoTitle": "Calculadora de Exponentes - ¿Cómo Calculo Exponentes?",
+    "metaDescription": "Calculadora de exponentes gratis. Calcula x^y para cualquier base y exponente incluyendo potencias negativas, fraccionarias y decimales. Obtén resultados instantáneos con explicaciones paso a paso.",
+    "keywords": [
+      "calculadora de exponentes",
+      "calculadora de potencias",
+      "calculadora x^y",
+      "calculadora exponencial"
+    ],
+    "longTailKeywords": [
+      "cómo calcular exponentes",
+      "calcular potencia de un número",
+      "calculadora exponente negativo",
+      "calculadora exponente fraccionario"
+    ],
+    "slug": "exponent-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "difficulty": "beginner",
+    "tags": [
+      "exponente",
+      "potencia",
+      "álgebra",
+      "exponencial",
+      "matemáticas"
+    ],
+    "summary": "Calcula x^y para cualquier base y exponente incluyendo potencias positivas, negativas y fraccionarias.",
+    "description": "Calcula expresiones exponenciales x^y con nuestra potente calculadora de exponentes. Maneja exponentes positivos, negativos y fraccionarios con notación científica para resultados grandes.",
+    "instructions": [
+      "Ingresa el valor de la base (x)",
+      "Ingresa el valor del exponente (y)",
+      "Obtén resultado instantáneo con explicación"
+    ],
+    "calculatorComponent": "ExponentCalculator",
+    "examples": [
+      {
+        "title": "Exponente Básico",
+        "input": {},
+        "output": {},
+        "explanation": "Calcula 2^3 = 8, demostrando cálculo de potencia básico."
+      },
+      {
+        "title": "Exponente Negativo",
+        "input": {},
+        "output": {},
+        "explanation": "Calcula 2^(-2) = 0.25, mostrando relación recíproca."
+      },
+      {
+        "title": "Exponente Fraccionario",
+        "input": {},
+        "output": {},
+        "explanation": "Calcula 4^0.5 = 2, demostrando raíz cuadrada como exponente fraccionario."
+      }
+    ],
+    "relatedCalculators": [
+      "scientific-calculator",
+      "logarithm-calculator",
+      "quadratic-equation-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcula exponentes y potencias con precisión usando nuestra calculadora de exponentes en línea completa. Esta potente herramienta te ayuda a resolver cálculos x^y para cualquier base y exponente, incluyendo números positivos, exponentes negativos y potencias fraccionarias. Ya seas estudiante aprendiendo funciones exponenciales, científico trabajando con notación científica, o cualquiera que necesite cálculos rápidos de potencias, nuestra calculadora proporciona resultados instantáneos con explicaciones claras. Construida con algoritmos de precisión y una interfaz amigable, maneja desde cuadrados simples hasta expresiones exponenciales complejas con facilidad.",
+      "benefits": [
+        "Calcula x^y para cualquier base y exponente instantáneamente",
+        "Soporte para exponentes negativos (ej., 2^-3 = 1/8)",
+        "Maneja exponentes fraccionarios para cálculos de raíces (ej., 16^0.5 = 4)",
+        "Notación científica automática para resultados muy grandes o pequeños",
+        "Explicaciones paso a paso de cálculos exponenciales",
+        "Aprende reglas y propiedades de exponentes a través de ejemplos"
+      ],
+      "steps": [
+        "Ingresa el valor de la base (x) - puede ser positivo o negativo",
+        "Ingresa el valor del exponente (y) - puede ser positivo, negativo o fraccionario",
+        "Haz clic en calcular para obtener el resultado de x^y",
+        "Revisa el resultado en notación estándar y científica",
+        "Ve la fórmula y explicación del cálculo"
+      ],
+      "inputsExplained": [
+        "Base (x): El número que se multiplica por sí mismo, puede ser cualquier número real",
+        "Exponente (y): La potencia a la que se eleva la base, determina cuántas veces multiplicar",
+        "Exponentes positivos: Multiplica la base por sí misma y veces (ej., 2^3 = 2×2×2)",
+        "Exponentes negativos: Recíproco del exponente positivo (ej., 2^-3 = 1/(2^3))",
+        "Exponentes fraccionarios: Representan raíces (ej., x^(1/2) es raíz cuadrada de x)"
+      ],
+      "formulaExplanation": "La calculadora calcula x^y usando la función exponencial. Para exponentes enteros positivos, representa multiplicación repetida: x^y = x × x × x... (y veces). Para exponentes negativos, x^-y = 1/(x^y). Para exponentes fraccionarios, x^(m/n) = ⁿ√(x^m), la raíz n-ésima de x a la potencia m. Casos especiales incluyen: x^0 = 1 para cualquier x ≠ 0, x^1 = x, y 0^0 se considera indefinido. El resultado se muestra en notación científica (a × 10^b) cuando el valor es muy grande (>1e10) o muy pequeño (<1e-4).",
+      "examples": [
+        "Ejemplo 1: 2^3 = 8. Base es 2, exponente es 3. Resultado: 2 × 2 × 2 = 8",
+        "Ejemplo 2: 10^-2 = 0.01. Exponente negativo significa recíproco: 1/(10^2) = 1/100 = 0.01",
+        "Ejemplo 3: 16^0.5 = 4. Exponente fraccionario 0.5 = 1/2, entonces es la raíz cuadrada de 16",
+        "Ejemplo 4: 5^4 = 625. Calcula 5 × 5 × 5 × 5 = 625",
+        "Ejemplo 5: 2^10 = 1024. Muestra cálculo de potencia mayor, útil en ciencias de la computación"
+      ],
+      "resultsExplanation": [
+        "Resultado estándar: Muestra el valor calculado en formato decimal",
+        "Notación científica: Muestra números muy grandes/pequeños como a × 10^b",
+        "Fórmula: Muestra el cálculo exacto realizado (x^y)",
+        "Mensajes especiales para casos límite como 0^0 o base negativa con exponente fraccionario"
+      ],
+      "whoItsFor": "Esta calculadora sirve a estudiantes aprendiendo álgebra y funciones exponenciales, científicos e ingenieros trabajando con notación científica y potencias, científicos de la computación manejando potencias binarias y cálculos de bits, profesionales de finanzas calculando crecimiento compuesto, y cualquiera que necesite cálculos exponenciales rápidos. Es particularmente útil para tareas, investigación científica, programación y aplicaciones prácticas que requieren cálculos de potencias.",
+      "disclaimer": "Esta calculadora proporciona resultados matemáticamente precisos basados en funciones exponenciales estándar. Los resultados deben verificarse para aplicaciones críticas. Aunque nos esforzamos por la precisión, los cálculos de punto flotante pueden tener pequeñas diferencias de redondeo para números muy grandes o muy pequeños. Esta herramienta es para fines educativos y prácticos. Para aplicaciones científicas o de ingeniería que requieren precisión extrema, consulta software especializado apropiado.",
+      "relatedTools": [
+        "Calculadora Científica para operaciones matemáticas avanzadas",
+        "Calculadora de Logaritmos para cálculos exponenciales inversos",
+        "Calculadora de Raíz Cuadrada para cálculos específicos de raíces",
+        "Calculadora de Porcentaje para cálculos de tasa de crecimiento"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es un exponente?",
+          "answer": "Un exponente indica cuántas veces multiplicar un número base por sí mismo. En x^y, y es el exponente. Por ejemplo, 2^3 significa 2 × 2 × 2 = 8."
+        },
+        {
+          "question": "¿Cómo funcionan los exponentes negativos?",
+          "answer": "Un exponente negativo significa el recíproco del exponente positivo. x^-y = 1/(x^y). Por ejemplo, 2^-3 = 1/(2^3) = 1/8 = 0.125."
+        },
+        {
+          "question": "¿Qué son los exponentes fraccionarios?",
+          "answer": "Los exponentes fraccionarios representan raíces. x^(1/n) es la raíz n-ésima de x. Por ejemplo, 16^(1/2) es la raíz cuadrada de 16, que es igual a 4. x^(m/n) = ⁿ√(x^m)."
+        },
+        {
+          "question": "¿Qué es 0^0?",
+          "answer": "0^0 es matemáticamente indefinido o considerado indeterminado. Diferentes contextos pueden tratarlo de manera diferente, pero esta calculadora lo marca como un caso especial que requiere consideración."
+        },
+        {
+          "question": "¿Puedo usar bases negativas?",
+          "answer": "Sí para exponentes enteros. Para exponentes fraccionarios con bases negativas, el resultado puede ser complejo (imaginario), lo cual esta calculadora indicará ya que solo maneja números reales."
+        },
+        {
+          "question": "¿Por qué usar notación científica?",
+          "answer": "La notación científica (a × 10^b) hace que números muy grandes o muy pequeños sean más fáciles de leer y entender. Por ejemplo, 2^50 = 1.126 × 10^15 es más claro que 1,125,899,906,842,624."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Exponentes",
+    "seoTitle": "Calculadora de Exponentes - Como Calculo Exponentes?",
+    "metaDescription": "Calculadora de exponentes grátis. Calcula x^y para qualquer base e expoente incluindo potências negativas, fracionárias e decimais. Obtenha resultados instantâneos com explicações passo a passo.",
+    "keywords": [
+      "calculadora de exponentes",
+      "calculadora de potências",
+      "calculadora x^y",
+      "calculadora exponencial"
+    ],
+    "longTailKeywords": [
+      "como calcular exponentes",
+      "calcular potência de um número",
+      "calculadora exponente negativo",
+      "calculadora exponente fracionário"
+    ],
+    "slug": "exponent-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "difficulty": "beginner",
+    "tags": [
+      "exponente",
+      "potência",
+      "álgebra",
+      "exponencial",
+      "matemática"
+    ],
+    "summary": "Calcula x^y para qualquer base e expoente incluindo potências positivas, negativas e fracionárias.",
+    "description": "Calcula expressões exponenciais x^y com nossa poderosa calculadora de exponentes. Manipula exponentes positivos, negativos e fracionários com notação científica para resultados grandes.",
+    "instructions": [
+      "Digite o valor da base (x)",
+      "Digite o valor do expoente (y)",
+      "Obtenha resultado instantâneo com explicação"
+    ],
+    "calculatorComponent": "ExponentCalculator",
+    "examples": [
+      {
+        "title": "Expoente Básico",
+        "input": {},
+        "output": {},
+        "explanation": "Calcula 2^3 = 8, demonstrando cálculo de potência básico."
+      },
+      {
+        "title": "Expoente Negativo",
+        "input": {},
+        "output": {},
+        "explanation": "Calcula 2^(-2) = 0.25, mostrando relação recíproca."
+      },
+      {
+        "title": "Expoente Fracionário",
+        "input": {},
+        "output": {},
+        "explanation": "Calcula 4^0.5 = 2, demonstrando raiz quadrada como expoente fracionário."
+      }
+    ],
+    "relatedCalculators": [
+      "scientific-calculator",
+      "logarithm-calculator",
+      "quadratic-equation-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule exponentes e potências com precisão usando nossa calculadora de exponentes online completa. Esta ferramenta poderosa ajuda você a resolver cálculos x^y para qualquer base e expoente, incluindo números positivos, expoentes negativos e potências fracionárias. Seja você estudante aprendendo funções exponenciais, cientista trabalhando com notação científica, ou qualquer pessoa precisando de cálculos rápidos de potências, nossa calculadora fornece resultados instantâneos com explicações claras. Construída com algoritmos de precisão e interface amigável, ela manipula desde quadrados simples até expressões exponenciais complexas com facilidade.",
+      "benefits": [
+        "Calcula x^y para qualquer base e expoente instantaneamente",
+        "Suporte para expoentes negativos (ex., 2^-3 = 1/8)",
+        "Manipula expoentes fracionários para cálculos de raízes (ex., 16^0.5 = 4)",
+        "Notação científica automática para resultados muito grandes ou pequenos",
+        "Explicações passo a passo de cálculos exponenciais",
+        "Aprenda regras e propriedades de exponentes através de exemplos"
+      ],
+      "steps": [
+        "Digite o valor da base (x) - pode ser positivo ou negativo",
+        "Digite o valor do expoente (y) - pode ser positivo, negativo ou fracionário",
+        "Clique em calcular para obter o resultado de x^y",
+        "Revise o resultado em notação padrão e científica",
+        "Veja a fórmula e explicação do cálculo"
+      ],
+      "inputsExplained": [
+        "Base (x): O número que é multiplicado por si mesmo, pode ser qualquer número real",
+        "Expoente (y): A potência à qual a base é elevada, determina quantas vezes multiplicar",
+        "Expoentes positivos: Multiplica a base por si mesma y vezes (ex., 2^3 = 2×2×2)",
+        "Expoentes negativos: Recíproco do expoente positivo (ex., 2^-3 = 1/(2^3))",
+        "Expoentes fracionários: Representam raízes (ex., x^(1/2) é raiz quadrada de x)"
+      ],
+      "formulaExplanation": "A calculadora calcula x^y usando a função exponencial. Para expoentes inteiros positivos, representa multiplicação repetida: x^y = x × x × x... (y vezes). Para expoentes negativos, x^-y = 1/(x^y). Para expoentes fracionários, x^(m/n) = ⁿ√(x^m), a raiz n-ésima de x à potência m. Casos especiais incluem: x^0 = 1 para qualquer x ≠ 0, x^1 = x, e 0^0 é considerado indefinido. O resultado é exibido em notação científica (a × 10^b) quando o valor é muito grande (>1e10) ou muito pequeno (<1e-4).",
+      "examples": [
+        "Exemplo 1: 2^3 = 8. Base é 2, expoente é 3. Resultado: 2 × 2 × 2 = 8",
+        "Exemplo 2: 10^-2 = 0.01. Expoente negativo significa recíproco: 1/(10^2) = 1/100 = 0.01",
+        "Exemplo 3: 16^0.5 = 4. Expoente fracionário 0.5 = 1/2, então é a raiz quadrada de 16",
+        "Exemplo 4: 5^4 = 625. Calcula 5 × 5 × 5 × 5 = 625",
+        "Exemplo 5: 2^10 = 1024. Mostra cálculo de potência maior, útil em ciência da computação"
+      ],
+      "resultsExplanation": [
+        "Resultado padrão: Mostra o valor calculado em formato decimal",
+        "Notação científica: Exibe números muito grandes/pequenos como a × 10^b",
+        "Fórmula: Mostra o cálculo exato realizado (x^y)",
+        "Mensagens especiais para casos extremos como 0^0 ou base negativa com expoente fracionário"
+      ],
+      "whoItsFor": "Esta calculadora serve estudantes aprendendo álgebra e funções exponenciais, cientistas e engenheiros trabalhando com notação científica e potências, cientistas da computação lidando com potências binárias e cálculos de bits, profissionais de finanças calculando crescimento composto, e qualquer pessoa precisando de cálculos exponenciais rápidos. É particularmente útil para trabalhos escolares, pesquisa científica, programação e aplicações práticas que exigem cálculos de potências.",
+      "disclaimer": "Esta calculadora fornece resultados matematicamente precisos baseados em funções exponenciais padrão. Os resultados devem ser verificados para aplicações críticas. Embora nos esforcemos pela precisão, cálculos de ponto flutuante podem ter pequenas diferenças de arredondamento para números muito grandes ou muito pequenos. Esta ferramenta é para fins educacionais e práticos. Para aplicações científicas ou de engenharia que exigem precisão extrema, consulte software especializado apropriado.",
+      "relatedTools": [
+        "Calculadora Científica para operações matemáticas avançadas",
+        "Calculadora de Logaritmo para cálculos exponenciais inversos",
+        "Calculadora de Raiz Quadrada para cálculos específicos de raízes",
+        "Calculadora de Porcentagem para cálculos de taxa de crescimento"
+      ],
+      "faqs": [
+        {
+          "question": "O que é um expoente?",
+          "answer": "Um expoente indica quantas vezes multiplicar um número base por si mesmo. Em x^y, y é o expoente. Por exemplo, 2^3 significa 2 × 2 × 2 = 8."
+        },
+        {
+          "question": "Como funcionam os expoentes negativos?",
+          "answer": "Um expoente negativo significa o recíproco do expoente positivo. x^-y = 1/(x^y). Por exemplo, 2^-3 = 1/(2^3) = 1/8 = 0.125."
+        },
+        {
+          "question": "O que são expoentes fracionários?",
+          "answer": "Expoentes fracionários representam raízes. x^(1/n) é a raiz n-ésima de x. Por exemplo, 16^(1/2) é a raiz quadrada de 16, que é igual a 4. x^(m/n) = ⁿ√(x^m)."
+        },
+        {
+          "question": "O que é 0^0?",
+          "answer": "0^0 é matematicamente indefinido ou considerado indeterminado. Diferentes contextos podem tratá-lo de maneira diferente, mas esta calculadora o marca como um caso especial que requer consideração."
+        },
+        {
+          "question": "Posso usar bases negativas?",
+          "answer": "Sim para expoentes inteiros. Para expoentes fracionários com bases negativas, o resultado pode ser complexo (imaginário), o que esta calculadora indicará, pois ela só manipula números reais."
+        },
+        {
+          "question": "Por que usar notação científica?",
+          "answer": "A notação científica (a × 10^b) torna números muito grandes ou muito pequenos mais fáceis de ler e entender. Por exemplo, 2^50 = 1.126 × 10^15 é mais claro que 1.125.899.906.842.624."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Exposants",
+    "seoTitle": "Calculateur d'Exposants - Comment Calculer les Exposants?",
+    "metaDescription": "Calculateur d'exposants gratuit. Calculez x^y pour toute base et exposant incluant puissances négatives, fractionnaires et décimales. Obtenez résultats instantanés avec explications étape par étape.",
+    "keywords": [
+      "calculateur d'exposants",
+      "calculateur de puissances",
+      "calculateur x^y",
+      "calculateur exponentiel"
+    ],
+    "longTailKeywords": [
+      "comment calculer exposants",
+      "calculer puissance d'un nombre",
+      "calculateur exposant négatif",
+      "calculateur exposant fractionnaire"
+    ],
+    "slug": "exponent-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "difficulty": "beginner",
+    "tags": [
+      "exposant",
+      "puissance",
+      "algèbre",
+      "exponentiel",
+      "mathématiques"
+    ],
+    "summary": "Calcule x^y pour toute base et exposant incluant puissances positives, négatives et fractionnaires.",
+    "description": "Calculez expressions exponentielles x^y avec notre puissant calculateur d'exposants. Gère exposants positifs, négatifs et fractionnaires avec notation scientifique pour grands résultats.",
+    "instructions": [
+      "Entrez la valeur de la base (x)",
+      "Entrez la valeur de l'exposant (y)",
+      "Obtenez résultat instantané avec explication"
+    ],
+    "calculatorComponent": "ExponentCalculator",
+    "examples": [
+      {
+        "title": "Exposant de Base",
+        "input": {},
+        "output": {},
+        "explanation": "Calcule 2^3 = 8, démontrant calcul de puissance basique."
+      },
+      {
+        "title": "Exposant Négatif",
+        "input": {},
+        "output": {},
+        "explanation": "Calcule 2^(-2) = 0.25, montrant relation réciproque."
+      },
+      {
+        "title": "Exposant Fractionnaire",
+        "input": {},
+        "output": {},
+        "explanation": "Calcule 4^0.5 = 2, démontrant racine carrée comme exposant fractionnaire."
+      }
+    ],
+    "relatedCalculators": [
+      "scientific-calculator",
+      "logarithm-calculator",
+      "quadratic-equation-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez exposants et puissances avec précision grâce à notre calculateur d'exposants en ligne complet. Cet outil puissant vous aide à résoudre les calculs x^y pour toute base et exposant, y compris nombres positifs, exposants négatifs et puissances fractionnaires. Que vous soyez étudiant apprenant les fonctions exponentielles, scientifique travaillant avec la notation scientifique, ou toute personne ayant besoin de calculs rapides de puissances, notre calculateur fournit des résultats instantanés avec des explications claires. Construit avec des algorithmes de précision et une interface conviviale, il gère tout depuis les carrés simples jusqu'aux expressions exponentielles complexes avec facilité.",
+      "benefits": [
+        "Calcule x^y pour toute base et exposant instantanément",
+        "Support pour exposants négatifs (ex., 2^-3 = 1/8)",
+        "Gère exposants fractionnaires pour calculs de racines (ex., 16^0.5 = 4)",
+        "Notation scientifique automatique pour résultats très grands ou petits",
+        "Explications étape par étape des calculs exponentiels",
+        "Apprenez règles et propriétés des exposants à travers exemples"
+      ],
+      "steps": [
+        "Entrez la valeur de la base (x) - peut être positif ou négatif",
+        "Entrez la valeur de l'exposant (y) - peut être positif, négatif ou fractionnaire",
+        "Cliquez sur calculer pour obtenir le résultat de x^y",
+        "Examinez le résultat en notation standard et scientifique",
+        "Voir la formule et l'explication du calcul"
+      ],
+      "inputsExplained": [
+        "Base (x) : Le nombre multiplié par lui-même, peut être n'importe quel nombre réel",
+        "Exposant (y) : La puissance à laquelle la base est élevée, détermine combien de fois multiplier",
+        "Exposants positifs : Multiplie la base par elle-même y fois (ex., 2^3 = 2×2×2)",
+        "Exposants négatifs : Réciproque de l'exposant positif (ex., 2^-3 = 1/(2^3))",
+        "Exposants fractionnaires : Représentent racines (ex., x^(1/2) est racine carrée de x)"
+      ],
+      "formulaExplanation": "Le calculateur calcule x^y en utilisant la fonction exponentielle. Pour les exposants entiers positifs, il représente la multiplication répétée : x^y = x × x × x... (y fois). Pour les exposants négatifs, x^-y = 1/(x^y). Pour les exposants fractionnaires, x^(m/n) = ⁿ√(x^m), la racine n-ième de x à la puissance m. Les cas spéciaux incluent : x^0 = 1 pour tout x ≠ 0, x^1 = x, et 0^0 est considéré comme indéfini. Le résultat est affiché en notation scientifique (a × 10^b) lorsque la valeur est très grande (>1e10) ou très petite (<1e-4).",
+      "examples": [
+        "Exemple 1 : 2^3 = 8. La base est 2, l'exposant est 3. Résultat : 2 × 2 × 2 = 8",
+        "Exemple 2 : 10^-2 = 0.01. Exposant négatif signifie réciproque : 1/(10^2) = 1/100 = 0.01",
+        "Exemple 3 : 16^0.5 = 4. Exposant fractionnaire 0.5 = 1/2, donc c'est la racine carrée de 16",
+        "Exemple 4 : 5^4 = 625. Calcule 5 × 5 × 5 × 5 = 625",
+        "Exemple 5 : 2^10 = 1024. Montre calcul de puissance plus grande, utile en informatique"
+      ],
+      "resultsExplanation": [
+        "Résultat standard : Affiche la valeur calculée en format décimal",
+        "Notation scientifique : Affiche nombres très grands/petits comme a × 10^b",
+        "Formule : Montre le calcul exact effectué (x^y)",
+        "Messages spéciaux pour cas extrêmes comme 0^0 ou base négative avec exposant fractionnaire"
+      ],
+      "whoItsFor": "Ce calculateur sert les étudiants apprenant l'algèbre et les fonctions exponentielles, les scientifiques et ingénieurs travaillant avec la notation scientifique et les puissances, les informaticiens gérant les puissances binaires et les calculs de bits, les professionnels de la finance calculant la croissance composée, et toute personne ayant besoin de calculs exponentiels rapides. Il est particulièrement utile pour les devoirs, la recherche scientifique, la programmation et les applications pratiques nécessitant des calculs de puissances.",
+      "disclaimer": "Ce calculateur fournit des résultats mathématiquement précis basés sur les fonctions exponentielles standard. Les résultats doivent être vérifiés pour les applications critiques. Bien que nous nous efforcions d'assurer la précision, les calculs à virgule flottante peuvent avoir de légères différences d'arrondi pour les nombres très grands ou très petits. Cet outil est destiné à des fins éducatives et pratiques. Pour les applications scientifiques ou d'ingénierie nécessitant une précision extrême, consultez un logiciel spécialisé approprié.",
+      "relatedTools": [
+        "Calculatrice Scientifique pour opérations mathématiques avancées",
+        "Calculateur de Logarithme pour calculs exponentiels inverses",
+        "Calculateur de Racine Carrée pour calculs de racines spécifiques",
+        "Calculateur de Pourcentage pour calculs de taux de croissance"
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un exposant ?",
+          "answer": "Un exposant indique combien de fois multiplier un nombre de base par lui-même. Dans x^y, y est l'exposant. Par exemple, 2^3 signifie 2 × 2 × 2 = 8."
+        },
+        {
+          "question": "Comment fonctionnent les exposants négatifs ?",
+          "answer": "Un exposant négatif signifie le réciproque de l'exposant positif. x^-y = 1/(x^y). Par exemple, 2^-3 = 1/(2^3) = 1/8 = 0.125."
+        },
+        {
+          "question": "Que sont les exposants fractionnaires ?",
+          "answer": "Les exposants fractionnaires représentent les racines. x^(1/n) est la racine n-ième de x. Par exemple, 16^(1/2) est la racine carrée de 16, qui est égale à 4. x^(m/n) = ⁿ√(x^m)."
+        },
+        {
+          "question": "Qu'est-ce que 0^0 ?",
+          "answer": "0^0 est mathématiquement indéfini ou considéré comme indéterminé. Différents contextes peuvent le traiter différemment, mais ce calculateur le signale comme un cas spécial nécessitant considération."
+        },
+        {
+          "question": "Puis-je utiliser des bases négatives ?",
+          "answer": "Oui pour les exposants entiers. Pour les exposants fractionnaires avec des bases négatives, le résultat peut être complexe (imaginaire), ce que ce calculateur indiquera car il ne gère que les nombres réels."
+        },
+        {
+          "question": "Pourquoi utiliser la notation scientifique ?",
+          "answer": "La notation scientifique (a × 10^b) rend les nombres très grands ou très petits plus faciles à lire et à comprendre. Par exemple, 2^50 = 1.126 × 10^15 est plus clair que 1 125 899 906 842 624."
+        }
+      ]
+    }
+  }
+}

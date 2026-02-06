@@ -42,12 +42,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-interface HomePageProps {
-  params: Promise<{
-    lang: string;
-  }>;
-}
-
 export default async function DynamicHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
 

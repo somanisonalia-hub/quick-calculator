@@ -421,6 +421,126 @@ const TripPlannerCalculator = dynamic(() => import('./TripPlannerCalculator'), {
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
 
+const BreakEvenCalculator = dynamic(() => import('./BreakEvenCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const CaloriesBurnedCalculator = dynamic(() => import('./CaloriesBurnedCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const DecimalToFractionCalculator = dynamic(() => import('./DecimalToFractionCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const DiscountCalculator = dynamic(() => import('./DiscountCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const DueDateCalculator = dynamic(() => import('./DueDateCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const HeightCalculator = dynamic(() => import('./HeightCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const LoveCalculator = dynamic(() => import('./LoveCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const PaceCalculator = dynamic(() => import('./PaceCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const RentVsBuyCalculator = dynamic(() => import('./RentVsBuyCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const ROICalculator = dynamic(() => import('./ROICalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const StudentLoanCalculator = dynamic(() => import('./StudentLoanCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const BodyCompositionCalculator = dynamic(() => import('./BodyCompositionCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const EnergyExpenditureCalculator = dynamic(() => import('./EnergyExpenditureCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const ExponentCalculator = dynamic(() => import('./ExponentCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const FactorialCalculator = dynamic(() => import('./FactorialCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const FitnessMetricsCalculator = dynamic(() => import('./FitnessMetricsCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const GcdLcmCalculator = dynamic(() => import('./GcdLcmCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const LogarithmCalculator = dynamic(() => import('./LogarithmCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const LongDivisionCalculator = dynamic(() => import('./LongDivisionCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const NutritionAnalysisCalculator = dynamic(() => import('./NutritionAnalysisCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const PercentileCalculator = dynamic(() => import('./PercentileCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const ProbabilityCalculator = dynamic(() => import('./ProbabilityCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const WellnessTrackerCalculator = dynamic(() => import('./WellnessTrackerCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const ElectricityCostCalculator = dynamic(() => import('./ElectricityCostCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const SIPCalculator = dynamic(() => import('./SIPCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const LumpsumInvestmentCalculator = dynamic(() => import('./LumpsumInvestmentCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const GoalBasedInvestmentCalculator = dynamic(() => import('./GoalBasedInvestmentCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const MutualFundXIRRCalculator = dynamic(() => import('./MutualFundXIRRCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const MutualFundInflationCalculator = dynamic(() => import('./MutualFundInflationCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
+const XIRRVsAbsoluteReturnCalculator = dynamic(() => import('./XIRRVsAbsoluteReturnCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
 // Registry mapping component names to actual components
 export const calculatorComponents: Record<string, any> = {
   'AverageCalculator': AverageCalculator,
@@ -534,6 +654,37 @@ export const calculatorComponents: Record<string, any> = {
   'SavingsGoalCalculator': SavingsGoalCalculator,
   'SleepCalculator': SleepCalculator,
   'TripPlannerCalculator': TripPlannerCalculator,
+
+  'BreakEvenCalculator': BreakEvenCalculator,
+  'CaloriesBurnedCalculator': CaloriesBurnedCalculator,
+  'DecimalToFractionCalculator': DecimalToFractionCalculator,
+  'DiscountCalculator': DiscountCalculator,
+  'DueDateCalculator': DueDateCalculator,
+  'HeightCalculator': HeightCalculator,
+  'LoveCalculator': LoveCalculator,
+  'PaceCalculator': PaceCalculator,
+  'RentVsBuyCalculator': RentVsBuyCalculator,
+  'ROICalculator': ROICalculator,
+  'StudentLoanCalculator': StudentLoanCalculator,
+  'BodyCompositionCalculator': BodyCompositionCalculator,
+  'EnergyExpenditureCalculator': EnergyExpenditureCalculator,
+  'ExponentCalculator': ExponentCalculator,
+  'FactorialCalculator': FactorialCalculator,
+  'FitnessMetricsCalculator': FitnessMetricsCalculator,
+  'GcdLcmCalculator': GcdLcmCalculator,
+  'LogarithmCalculator': LogarithmCalculator,
+  'LongDivisionCalculator': LongDivisionCalculator,
+  'NutritionAnalysisCalculator': NutritionAnalysisCalculator,
+  'PercentileCalculator': PercentileCalculator,
+  'ProbabilityCalculator': ProbabilityCalculator,
+  'WellnessTrackerCalculator': WellnessTrackerCalculator,
+  'ElectricityCostCalculator': ElectricityCostCalculator,
+  'SIPCalculator': SIPCalculator,
+  'LumpsumInvestmentCalculator': LumpsumInvestmentCalculator,
+  'GoalBasedInvestmentCalculator': GoalBasedInvestmentCalculator,
+  'MutualFundXIRRCalculator': MutualFundXIRRCalculator,
+  'MutualFundInflationCalculator': MutualFundInflationCalculator,
+  'XIRRVsAbsoluteReturnCalculator': XIRRVsAbsoluteReturnCalculator,
 };
 
 export function getCalculatorComponent(componentName: string) {

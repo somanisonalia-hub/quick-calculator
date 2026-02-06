@@ -45,7 +45,7 @@ export default function BreadcrumbNavigation({ breadcrumbs, currentLang = 'en' }
                     {index > 0 && <span className="px-2 text-gray-400">›</span>}
                     {index === breadcrumbs.length - 1 ? (
                       <span className="font-bold text-gray-900">
-                        {crumb.name.length > 20 ? crumb.name.substring(0, 18) + '...' : crumb.name}
+                        {crumb.name}
                       </span>
                     ) : (
                       <a href={crumb.href} className="text-blue-600 hover:text-blue-800 no-underline">
@@ -56,20 +56,14 @@ export default function BreadcrumbNavigation({ breadcrumbs, currentLang = 'en' }
                 ))}
               </ol>
 
-              {/* Mobile Breadcrumb */}
+              {/* Mobile Breadcrumb - Hide last item to save space */}
               <ol className="md:hidden flex items-center overflow-x-auto list-none p-0 text-xs">
-                {breadcrumbs.map((crumb, index) => (
+                {breadcrumbs.slice(0, -1).map((crumb, index) => (
                   <li key={index} className="flex items-center flex-shrink-0">
                     {index > 0 && <span className="px-1 text-gray-400">›</span>}
-                    {index === breadcrumbs.length - 1 ? (
-                      <span className="font-bold text-gray-900">
-                        {crumb.name.length > 12 ? crumb.name.substring(0, 10) + '...' : crumb.name}
-                      </span>
-                    ) : (
-                      <a href={crumb.href} className="text-blue-600 hover:text-blue-800 no-underline whitespace-nowrap">
-                        {crumb.name}
-                      </a>
-                    )}
+                    <a href={crumb.href} className="text-blue-600 hover:text-blue-800 no-underline whitespace-nowrap">
+                      {crumb.name}
+                    </a>
                   </li>
                 ))}
               </ol>

@@ -140,7 +140,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="mb-6">
+        <div className="mb-6 hidden">
           <label className="block text-sm font-medium text-gray-700 mb-3">{t.mode}</label>
           <div className="flex gap-4">
             <button
@@ -158,7 +158,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
           </div>
         </div>
 
-        <div className="mb-6">
+        <div className="mb-6 hidden">
           <label className="block text-sm font-medium text-gray-700 mb-2">
             {mode === 'wake' ? t.wakeTimeLabel : t.bedTimeLabel}
           </label>

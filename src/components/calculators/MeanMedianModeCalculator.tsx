@@ -265,7 +265,7 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
 
   return (
     <div className="space-y-6">
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h1>
         <p className="text-gray-600">{t.description}</p>
       </div>

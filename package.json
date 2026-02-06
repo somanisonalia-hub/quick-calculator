@@ -9,7 +9,9 @@
     "lint": "eslint",
     "fix-duplicates": "node scripts/fix_duplicates.js",
     "test-calculators": "node scripts/test-calculators.js",
-    "validate-translations": "node scripts/validate-translations.js"
+    "validate-translations": "node scripts/validate-translations.js",
+    "validate-calculators": "node validate-calculators.js",
+    "prebuild": "npm run validate-calculators"
   },
   "dependencies": {
     "i18next": "^25.7.3",

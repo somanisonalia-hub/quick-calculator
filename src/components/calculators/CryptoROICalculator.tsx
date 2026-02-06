@@ -89,8 +89,8 @@ export default function CryptoROICalculator({ lang = 'en' }: CryptoROICalculator
   const [currentValue, setCurrentValue] = useState(15000);
   const [results, setResults] = useState<any>({});
 
-  // Calculate crypto ROI
-  const calculateROI = () => {
+  // Auto-calculate when inputs change
+  useEffect(() => {
     if (initialInvestment <= 0 || currentValue < 0) {
       setResults({});
       return;
@@ -107,6 +107,23 @@ export default function CryptoROICalculator({ lang = 'en' }: CryptoROICalculator
       roiPercentage: roiPercentage.toFixed(2) + '%',
       currentValue
     });
+  }, [initialInvestment, currentValue]);
+
+  const calculateROI = () => {
+    // This is now called only by the manual button
+    if (initialInvestment <= 0 || currentValue < 0) {
+      setResults({});
+      return;
+    }
+
+    const profitLoss = currentValue - initialInvestment;
+    const roiPercentage = (profitLoss / initialInvestment) * 100;
+
+    setResults({
+      profitLoss,
+      roiPercentage: roiPercentage.toFixed(2) + '%',
+      currentValue
+    });
   };
 
   const resetCalculator = () => {
@@ -114,11 +131,6 @@ export default function CryptoROICalculator({ lang = 'en' }: CryptoROICalculator
     setCurrentValue(15000);
     setResults({});
   };
-
-  // Auto-calculate when inputs change
-  useEffect(() => {
-    calculateROI();
-  }, [initialInvestment, currentValue]);
 
   const getROIColor = (roi: string) => {
     const value = parseFloat(roi.replace('%', ''));
@@ -138,7 +150,7 @@ export default function CryptoROICalculator({ lang = 'en' }: CryptoROICalculator
 
   return (
     <div className="space-y-6">
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h1>
         <p className="text-gray-600">{t.description}</p>
       </div>

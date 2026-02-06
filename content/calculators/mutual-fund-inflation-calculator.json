@@ -1,0 +1,184 @@
+{
+  "en": {
+    "title": "Mutual Fund Returns with Inflation Calculator",
+    "seoTitle": "What Are My Real Investment Returns After Inflation? Inflation Calculator",
+    "metaDescription": "Calculate real returns after inflation with our free calculator. Understand true purchasing power of mutual fund returns, not just nominal returns, for Indian investments.",
+    "keywords": [
+      "inflation adjusted returns calculator",
+      "mutual fund inflation calculator",
+      "real returns calculator",
+      "inflation adjusted investments",
+      "mutual fund real value calculator"
+    ],
+    "longTailKeywords": [
+      "calculate real returns after inflation",
+      "mutual fund returns adjusted for inflation",
+      "real vs nominal returns calculator",
+      "purchasing power calculator mutual funds",
+      "inflation impact on investment returns",
+      "how inflation affects mutual fund returns"
+    ],
+    "slug": "mutual-fund-inflation-calculator",
+    "category": "financial",
+    "subcategory": "Investment Calculators",
+    "difficulty": "Intermediate",
+    "calculatorComponent": "MutualFundInflationCalculator",
+    "tags": ["investment", "inflation", "real returns", "purchasing power", "financial planning"],
+    "description": "Calculate real, inflation-adjusted returns on your mutual fund investments. Understand the true growth of your wealth after accounting for inflation's impact on purchasing power.",
+    "summary": "Calculate inflation-adjusted returns to understand real growth of mutual fund investments",
+    "introduction": "A mutual fund earning 12% returns sounds impressive - but if inflation is 6%, your real return is only 6%. This crucial distinction between nominal and real returns determines actual wealth creation. Our inflation calculator shows you the true purchasing power of your investments, helping you understand if your returns are actually beating inflation.",
+    "benefits": [
+      "Shows real returns after accounting for inflation impact",
+      "Calculates actual purchasing power of investment gains",
+      "Helps assess if investments truly create wealth",
+      "Demonstrates need for higher return targets",
+      "Enables better financial planning with realistic numbers",
+      "Shows inflation impact over long-term investments"
+    ],
+    "steps": [
+      "Enter your mutual fund investment amount",
+      "Input the nominal return you earned (as percentage)",
+      "Enter the inflation rate for that period",
+      "Get your real inflation-adjusted return and purchasing power"
+    ],
+    "inputsExplained": [
+      "Initial Investment: Amount you invested in mutual fund",
+      "Nominal Return %: Raw return percentage earned (not inflation-adjusted)",
+      "Inflation Rate %: Average inflation during the investment period",
+      "Investment Period: Duration held in mutual fund (years)"
+    ],
+    "formulaExplanation": "Real return is calculated using: Real Return = [(1 + Nominal Return) / (1 + Inflation Rate)] - 1. This shows how much actual purchasing power your money gained. For example: 12% nominal return with 6% inflation gives you (1.12 / 1.06) - 1 = 5.66% real return. Over 20 years, this difference compounds significantly, showing if you truly built wealth or just kept pace with rising costs.",
+    "examples": [
+      {
+        "title": "Long-Term Stock Mutual Fund",
+        "description": "20-year investment growing at 14% annual returns with 5% inflation",
+        "inputs": {
+          "initialInvestment": 500000,
+          "nominalReturn": 14,
+          "inflationRate": 5,
+          "years": 20
+        },
+        "result": "Real return is 8.57% annually - still creates substantial real wealth"
+      },
+      {
+        "title": "Moderate Balanced Fund",
+        "description": "10-year period with 9% returns and 6% inflation",
+        "inputs": {
+          "initialInvestment": 1000000,
+          "nominalReturn": 9,
+          "inflationRate": 6,
+          "years": 10
+        },
+        "result": "Real return drops to 2.83% - barely ahead of inflation, shows need for higher returns"
+      },
+      {
+        "title": "High Inflation Period Impact",
+        "description": "5-year investment earning 10% in period with 8% inflation",
+        "inputs": {
+          "initialInvestment": 200000,
+          "nominalReturn": 10,
+          "inflationRate": 8,
+          "years": 5
+        },
+        "result": "Real return is only 1.85% - inflation significantly erodes gains"
+      }
+    ],
+    "resultsExplanation": [
+      "Nominal Return: Raw percentage return before inflation adjustment",
+      "Inflation Rate: Cost increase during investment period",
+      "Real Return %: Actual purchasing power gain after inflation",
+      "Final Amount (Nominal): What investment grew to nominally",
+      "Final Amount (Real): What investment is worth in today's buying power",
+      "Purchasing Power Loss: Money lost to inflation impact"
+    ],
+    "whoItsFor": "This calculator is essential for long-term investors, retirees planning retirement spending, those saving for education or major purchases, financial planners creating realistic projections, and investors wanting to ensure returns actually beat inflation. Anyone concerned with real wealth creation cares about inflation-adjusted returns.",
+    "disclaimer": "Results assume constant inflation rate - actual inflation varies. Mutual fund returns vary by market conditions. Tax impacts depends on investor's bracket. Consult financial advisor for personalized guidance. This is an educational tool, not investment advice.",
+    "seoContent": {
+      "introduction": "Is your 12% mutual fund return really giving you 12% growth in purchasing power? Our inflation calculator shows the truth: a 12% nominal return with 4% inflation = only 7.7% real return. Understand if your investments are actually beating inflation or lagging.",
+      "benefits": [
+        "Calculate real returns that matter for wealth growth",
+        "Understand inflation eating into nominal returns",
+        "Compare real returns across different funds",
+        "Set realistic wealth creation expectations",
+        "Plan retirement considering inflation impact",
+        "Identify if returns beat inflation (real growth)"
+      ],
+      "howToUse": [
+        "Enter your nominal fund return (12%, 15%, etc.)",
+        "Enter inflation rate (3%, 4%, 5%, etc.)",
+        "Click calculate",
+        "View real return percentage",
+        "Compare: higher real return = true wealth creation",
+        "Benchmark against inflation to assess performance"
+      ],
+      "formulaExplanation": "Real Return = [(1 + Nominal Return) / (1 + Inflation Rate)] - 1. Example: 12% nominal return, 4% inflation = [(1.12)/(1.04)] - 1 = 7.7% real return. This shows your actual purchasing power gain. If real return is negative, you're losing purchasing power despite positive nominal returns.",
+      "examples": [
+        "12% nominal return - 4% inflation = 7.7% real return (beating inflation by 3.7%)",
+        "8% nominal return - 4% inflation = 3.8% real return (barely ahead of inflation)",
+        "6% nominal return - 5% inflation = 0.95% real return (almost matched by inflation, minimal growth)"
+      ],
+      "whoShouldUse": "Retired investors focused on real income, those living on investment returns, retirees calculating how long corpus will last, individuals evaluating fund performance correctly, retirement planners accounting for inflation erosion, anyone understanding true wealth growth.",
+      "importantNotes": "India's inflation: food (6%), housing (5%), general CPI (3-4%). Debt funds earning 7% return with 4% inflation give only 2.8% real return - barely ahead. Equity funds earning 12%+ with 4% inflation give 7.7% real return - meaningful growth. For retirement, you need real returns >2-3%, not just nominal returns.",
+      "relatedTools": [
+        "SIP Calculator - Project nominal investment growth",
+        "Goal-Based Calculator - Plan inflation-adjusted goals",
+        "Lumpsum Calculator - Calculate inflation impact on lumpsum",
+        "Retirement Calculator - Plan inflation-adjusted retirement corpus"
+      ],
+      "faqs": [
+        {
+          "question": "Is 12% fund return good if inflation is 4%?",
+          "answer": "Yes. Real return = 7.7%, beating inflation by 3.7%. For long-term wealth creation (10+ years), aim for real returns >3-5%. This ensures genuine purchasing power growth."
+        },
+        {
+          "question": "Why is inflation important for investments?",
+          "answer": "Money loses purchasing power. ₹100 today ≠ ₹100 in 10 years. Inflation makes future expenses higher. If return doesn't beat inflation, you're losing real wealth despite gaining nominal rupees."
+        },
+        {
+          "question": "What inflation rate should I use for calculations?",
+          "answer": "Historical India CPI: 3-4% average. For conservative planning, use 5%. For optimistic, 3%. Different items inflate differently: education (7%), housing (5%), food (6%), general (4%)."
+        },
+        {
+          "question": "If real return is negative, should I stop investing?",
+          "answer": "No. Negative real return only happens in rare cases (recession) or with very low-return products. Check: Are you in debt funds during high inflation? Switch to equity. Are returns below inflation consistently? Change strategy."
+        },
+        {
+          "question": "How does inflation affect retirement planning?",
+          "answer": "Major impact. ₹50,000/month expenses today = ₹1.05 lakh in 15 years (at 4% inflation). If you planned for ₹50,000, you'll fall short. Always account for inflation in retirement corpus calculation."
+        }
+      ],
+      "steps": [
+        "Enter your fund's nominal return rate",
+        "Input expected (or average) inflation rate",
+        "Calculate real return",
+        "Assess if real return meets your goals",
+        "Adjust fund allocation if needed",
+        "Recheck annually with latest inflation data"
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Fondos Mutuales Ajustada por Inflación",
+    "seoTitle": "¿Cuáles Son Mis Rendimientos Reales Después De La Inflación? Calculadora",
+    "metaDescription": "Calcula los rendimientos reales de fondos mutuales considerando inflación.",
+    "slug": "mutual-fund-inflation-calculator",
+    "category": "financial",
+    "description": "Calcula los rendimientos reales de tus fondos mutuales ajustados por inflación."
+  },
+  "pt": {
+    "title": "Calculadora de Fundos Mútuos Ajustada pela Inflação",
+    "seoTitle": "Quais São Meus Retornos Reais Após Inflação? Calculadora",
+    "metaDescription": "Calcula os retornos reais de fundos mútuos considerando inflação.",
+    "slug": "mutual-fund-inflation-calculator",
+    "category": "financial",
+    "description": "Calcule os retornos reais de seus fundos mútuos ajustados pela inflação."
+  },
+  "fr": {
+    "title": "Calculatrice de Fonds Communs Ajustée à l'Inflation",
+    "seoTitle": "Quels Sont Mes Rendements Réels Après Inflation ? Calculatrice",
+    "metaDescription": "Calculez les rendements réels des fonds communs en tenant compte de l'inflation.",
+    "slug": "mutual-fund-inflation-calculator",
+    "category": "financial",
+    "description": "Calculez les rendements réels de vos fonds communs ajustés à l'inflation."
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "en": {
+    "title": "Due Date Calculator",
+    "seoTitle": "Due Date Calculator - When Is My Baby Due?",
+    "metaDescription": "Free pregnancy due date calculator. Estimate your baby's arrival date based on your last menstrual period or conception date. Track your pregnancy timeline.",
+    "slug": "due-date-calculator",
+    "category": "health",
+    "description": "Calculate your estimated pregnancy due date based on your last menstrual period or conception date.",
+    "instructions": [
+      "Enter your last menstrual period date",
+      "Optionally adjust cycle length",
+      "Click Calculate",
+      "View your estimated due date"
+    ],
+    "calculatorComponent": "DueDateCalculator",
+    "seoContent": {
+      "introduction": "Our Due Date Calculator helps you estimate when your baby will arrive based on the date of your last menstrual period or conception date.",
+      "benefits": [
+        {
+          "icon": "📅",
+          "title": "Accurate Estimation",
+          "description": "Uses Naegele's Rule for reliable results"
+        },
+        {
+          "icon": "🔄",
+          "title": "Cycle Adjustment",
+          "description": "Accounts for irregular cycle lengths"
+        },
+        {
+          "icon": "📊",
+          "title": "Trimester Tracking",
+          "description": "Shows your current trimester"
+        },
+        {
+          "icon": "🆓",
+          "title": "Completely Free",
+          "description": "No signup or payment required"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Enter LMP Date",
+          "description": "Enter the first day of your last period"
+        },
+        {
+          "step": 2,
+          "title": "Adjust Cycle Length",
+          "description": "Set your average cycle length if not 28 days"
+        },
+        {
+          "step": 3,
+          "title": "Calculate",
+          "description": "Click the Calculate button"
+        },
+        {
+          "step": 4,
+          "title": "View Results",
+          "description": "See your due date and pregnancy timeline"
+        }
+      ],
+      "formulaExplanation": "Naegele's Rule: Add 280 days (40 weeks) to the first day of your last menstrual period, adjusted for cycle length.",
+      "examples": [
+        {
+          "title": "Standard Cycle",
+          "description": "LMP January 1 with 28-day cycle = Due October 8"
+        },
+        {
+          "title": "Longer Cycle",
+          "description": "35-day cycle adds 7 days to the standard calculation"
+        }
+      ],
+      "whoItsFor": "Pregnant women and their families wanting to estimate their baby's arrival date.",
+      "disclaimer": "This calculator provides estimates only. Consult your healthcare provider for medical advice.",
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "Most babies are born within 2 weeks of their due date."
+        },
+        {
+          "question": "What is Naegele's Rule?",
+          "answer": "A standard method adding 280 days to the first day of your last period."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Fecha de Parto",
+    "seoTitle": "Calculadora de Fecha de Parto - ¿Cuándo Nacerá Mi Bebé?",
+    "metaDescription": "Calculadora de fecha de parto gratis. Estima la fecha de llegada de tu bebé basándote en tu último período menstrual.",
+    "slug": "due-date-calculator",
+    "category": "health",
+    "description": "Calcula tu fecha estimada de parto basándote en tu último período menstrual o fecha de concepción.",
+    "instructions": [
+      "Ingresa la fecha de tu último período",
+      "Ajusta la duración del ciclo",
+      "Haz clic en Calcular",
+      "Ve tu fecha estimada de parto"
+    ],
+    "calculatorComponent": "DueDateCalculator",
+    "seoContent": {
+      "introduction": "Nuestra Calculadora de Fecha de Parto te ayuda a estimar cuándo llegará tu bebé.",
+      "benefits": [
+        {
+          "icon": "📅",
+          "title": "Estimación Precisa",
+          "description": "Usa la Regla de Naegele para resultados confiables"
+        },
+        {
+          "icon": "🔄",
+          "title": "Ajuste de Ciclo",
+          "description": "Considera ciclos irregulares"
+        },
+        {
+          "icon": "📊",
+          "title": "Seguimiento de Trimestre",
+          "description": "Muestra tu trimestre actual"
+        },
+        {
+          "icon": "🆓",
+          "title": "Completamente Gratis",
+          "description": "Sin registro ni pago"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Ingresa Fecha FUM",
+          "description": "Ingresa el primer día de tu último período"
+        },
+        {
+          "step": 2,
+          "title": "Ajusta Duración de Ciclo",
+          "description": "Establece tu duración promedio de ciclo"
+        },
+        {
+          "step": 3,
+          "title": "Calcular",
+          "description": "Haz clic en Calcular"
+        },
+        {
+          "step": 4,
+          "title": "Ver Resultados",
+          "description": "Ve tu fecha de parto y línea de tiempo"
+        }
+      ],
+      "formulaExplanation": "Regla de Naegele: Suma 280 días al primer día de tu último período menstrual.",
+      "examples": [
+        {
+          "title": "Ciclo Estándar",
+          "description": "FUM 1 de enero con ciclo de 28 días = Fecha 8 de octubre"
+        }
+      ],
+      "whoItsFor": "Mujeres embarazadas y sus familias que desean estimar la fecha de llegada del bebé.",
+      "disclaimer": "Esta calculadora proporciona solo estimaciones. Consulta a tu médico.",
+      "faqs": [
+        {
+          "question": "¿Qué tan precisa es?",
+          "answer": "La mayoría de bebés nacen dentro de 2 semanas de la fecha estimada."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Data Prevista",
+    "seoTitle": "Calculadora de Data Prevista - Quando Meu Bebê Nascerá?",
+    "metaDescription": "Calculadora de data prevista grátis. Estime a data de chegada do seu bebê baseando-se no seu último período menstrual.",
+    "slug": "due-date-calculator",
+    "category": "health",
+    "description": "Calcule sua data prevista de parto baseando-se no seu último período menstrual ou data de concepção.",
+    "instructions": [
+      "Digite a data do seu último período",
+      "Ajuste a duração do ciclo",
+      "Clique em Calcular",
+      "Veja sua data prevista de parto"
+    ],
+    "calculatorComponent": "DueDateCalculator",
+    "seoContent": {
+      "introduction": "Nossa Calculadora de Data Prevista ajuda você a estimar quando seu bebê chegará.",
+      "benefits": [
+        {
+          "icon": "📅",
+          "title": "Estimativa Precisa",
+          "description": "Usa a Regra de Naegele para resultados confiáveis"
+        },
+        {
+          "icon": "🔄",
+          "title": "Ajuste de Ciclo",
+          "description": "Considera ciclos irregulares"
+        },
+        {
+          "icon": "📊",
+          "title": "Acompanhamento de Trimestre",
+          "description": "Mostra seu trimestre atual"
+        },
+        {
+          "icon": "🆓",
+          "title": "Completamente Grátis",
+          "description": "Sem cadastro ou pagamento"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Digite Data DUM",
+          "description": "Digite o primeiro dia do seu último período"
+        },
+        {
+          "step": 2,
+          "title": "Ajuste Duração do Ciclo",
+          "description": "Defina sua duração média de ciclo"
+        },
+        {
+          "step": 3,
+          "title": "Calcular",
+          "description": "Clique em Calcular"
+        },
+        {
+          "step": 4,
+          "title": "Ver Resultados",
+          "description": "Veja sua data prevista e linha do tempo"
+        }
+      ],
+      "formulaExplanation": "Regra de Naegele: Some 280 dias ao primeiro dia do seu último período menstrual.",
+      "examples": [
+        {
+          "title": "Ciclo Padrão",
+          "description": "DUM 1 de janeiro com ciclo de 28 dias = Data 8 de outubro"
+        }
+      ],
+      "whoItsFor": "Mulheres grávidas e suas famílias que desejam estimar a data de chegada do bebê.",
+      "disclaimer": "Esta calculadora fornece apenas estimativas. Consulte seu médico.",
+      "faqs": [
+        {
+          "question": "Quão precisa é?",
+          "answer": "A maioria dos bebês nasce dentro de 2 semanas da data estimada."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Date d'Accouchement",
+    "seoTitle": "Calculateur de Date d'Accouchement - Quand Mon Bébé Arrivera-t-il?",
+    "metaDescription": "Calculateur de date d'accouchement gratuit. Estimez la date d'arrivée de votre bébé basée sur vos dernières règles.",
+    "slug": "due-date-calculator",
+    "category": "health",
+    "description": "Calculez votre date d'accouchement prévue basée sur vos dernières règles ou date de conception.",
+    "instructions": [
+      "Entrez la date de vos dernières règles",
+      "Ajustez la durée du cycle",
+      "Cliquez sur Calculer",
+      "Voyez votre date d'accouchement prévue"
+    ],
+    "calculatorComponent": "DueDateCalculator",
+    "seoContent": {
+      "introduction": "Notre Calculateur de Date d'Accouchement vous aide à estimer quand votre bébé arrivera.",
+      "benefits": [
+        {
+          "icon": "📅",
+          "title": "Estimation Précise",
+          "description": "Utilise la règle de Naegele pour des résultats fiables"
+        },
+        {
+          "icon": "🔄",
+          "title": "Ajustement de Cycle",
+          "description": "Prend en compte les cycles irréguliers"
+        },
+        {
+          "icon": "📊",
+          "title": "Suivi de Trimestre",
+          "description": "Affiche votre trimestre actuel"
+        },
+        {
+          "icon": "🆓",
+          "title": "Entièrement Gratuit",
+          "description": "Sans inscription ni paiement"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Entrez Date DDR",
+          "description": "Entrez le premier jour de vos dernières règles"
+        },
+        {
+          "step": 2,
+          "title": "Ajustez Durée du Cycle",
+          "description": "Définissez votre durée moyenne de cycle"
+        },
+        {
+          "step": 3,
+          "title": "Calculer",
+          "description": "Cliquez sur Calculer"
+        },
+        {
+          "step": 4,
+          "title": "Voir les Résultats",
+          "description": "Voyez votre date d'accouchement et chronologie"
+        }
+      ],
+      "formulaExplanation": "Règle de Naegele: Ajoutez 280 jours au premier jour de vos dernières règles.",
+      "examples": [
+        {
+          "title": "Cycle Standard",
+          "description": "DDR 1er janvier avec cycle de 28 jours = Date 8 octobre"
+        }
+      ],
+      "whoItsFor": "Femmes enceintes et leurs familles souhaitant estimer la date d'arrivée du bébé.",
+      "disclaimer": "Ce calculateur fournit uniquement des estimations. Consultez votre médecin.",
+      "faqs": [
+        {
+          "question": "Est-ce précis?",
+          "answer": "La plupart des bébés naissent dans les 2 semaines de la date estimée."
+        }
+      ]
+    }
+  }
+}

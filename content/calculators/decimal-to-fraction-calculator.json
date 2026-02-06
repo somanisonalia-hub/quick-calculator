@@ -1,0 +1,538 @@
+{
+  "en": {
+    "title": "Decimal to Fraction Calculator",
+    "seoTitle": "Decimal to Fraction Calculator - How Do I Convert Decimal to Fraction?",
+    "metaDescription": "Free decimal to fraction calculator. Convert any decimal number to simplified fraction including repeating decimals. Get instant results with step-by-step explanations.",
+    "keywords": [
+      "decimal to fraction",
+      "convert decimal to fraction",
+      "decimal fraction converter",
+      "fraction calculator"
+    ],
+    "longTailKeywords": [
+      "how to convert decimal to fraction",
+      "decimal to fraction calculator with steps",
+      "repeating decimal to fraction converter",
+      "simplify decimal to fraction"
+    ],
+    "slug": "decimal-to-fraction-calculator",
+    "category": "math",
+    "subcategory": "general",
+    "difficulty": "beginner",
+    "tags": [
+      "decimal",
+      "fraction",
+      "conversion",
+      "mathematics",
+      "simplification"
+    ],
+    "summary": "Convert decimal numbers to simplified fractions including mixed numbers and repeating decimals.",
+    "description": "Convert decimal numbers to fractions with our easy-to-use decimal to fraction calculator. Automatically simplifies to lowest terms and handles repeating decimals.",
+    "instructions": [
+      "Enter a decimal number (e.g., 0.75, 0.333, 1.5)",
+      "Get the simplified fraction instantly",
+      "View mixed number format if applicable"
+    ],
+    "calculatorComponent": "DecimalToFractionCalculator",
+    "examples": [
+      {
+        "title": "Simple Decimal",
+        "input": {},
+        "output": {},
+        "explanation": "Convert 0.75 to 3/4, demonstrating basic decimal to fraction conversion."
+      },
+      {
+        "title": "Repeating Decimal",
+        "input": {},
+        "output": {},
+        "explanation": "Convert 0.333... to 1/3, showing repeating decimal handling."
+      },
+      {
+        "title": "Mixed Number",
+        "input": {},
+        "output": {},
+        "explanation": "Convert 1.5 to 1 1/2, demonstrating conversion to mixed number."
+      }
+    ],
+    "relatedCalculators": [
+      "fraction-calculator",
+      "scientific-calculator",
+      "percentage-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Convert decimal numbers to fractions effortlessly with our comprehensive online decimal to fraction calculator. This powerful tool helps you transform any decimal number into its equivalent fraction form, automatically simplifying to the lowest terms. Whether you're a student learning fractions, a teacher creating materials, or anyone needing quick conversions, our calculator provides instant results with clear step-by-step explanations. Built with precision algorithms, it handles simple decimals, repeating decimals, and converts results to mixed numbers when appropriate, making fraction conversions easy and accurate.",
+      "benefits": [
+        "Convert any decimal to simplified fraction instantly",
+        "Handle repeating decimals (e.g., 0.333... = 1/3)",
+        "Automatic simplification to lowest terms using GCD",
+        "Display results as improper fractions and mixed numbers",
+        "Step-by-step calculation explanations",
+        "Learn fraction concepts through practical examples"
+      ],
+      "steps": [
+        "Enter the decimal number you want to convert",
+        "The calculator identifies decimal places and repeating patterns",
+        "Converts to fraction using place value method",
+        "Simplifies the fraction using Greatest Common Divisor (GCD)",
+        "Displays both improper fraction and mixed number format"
+      ],
+      "inputsExplained": [
+        "Decimal Number: Any decimal value you want to convert to fraction format",
+        "Simple decimals: Numbers like 0.5, 0.75, 2.25 with finite decimal places",
+        "Repeating decimals: Numbers like 0.333..., 0.666... with infinite repeating patterns",
+        "Mixed decimals: Numbers greater than 1 that will be shown as mixed numbers",
+        "The calculator accepts positive and negative decimal values"
+      ],
+      "formulaExplanation": "The calculator converts decimals to fractions using the place value method. For a decimal with n digits after the decimal point, multiply both numerator and denominator by 10^n. For example, 0.75 becomes 75/100. Then, the Greatest Common Divisor (GCD) is found using the Euclidean algorithm to simplify the fraction to its lowest terms: 75/100 simplifies to 3/4 (GCD = 25). For repeating decimals like 0.333..., the calculator recognizes the pattern and converts it algebraically (0.333... = 1/3). For mixed numbers, if the numerator is greater than the denominator, it separates the whole number part from the fractional part.",
+      "examples": [
+        "Example 1: 0.5 = 1/2. Multiply by 10: 5/10, then simplify by GCD(5,10)=5 to get 1/2",
+        "Example 2: 0.75 = 3/4. Multiply by 100: 75/100, then simplify by GCD(75,100)=25 to get 3/4",
+        "Example 3: 0.333... = 1/3. Recognize repeating pattern and convert algebraically",
+        "Example 4: 1.5 = 3/2 = 1 1/2. Convert to 15/10, simplify to 3/2, display as mixed number",
+        "Example 5: 0.125 = 1/8. Multiply by 1000: 125/1000, simplify by GCD(125,1000)=125 to get 1/8"
+      ],
+      "resultsExplanation": [
+        "Simplified Fraction: The fraction reduced to lowest terms using GCD",
+        "Mixed Number: For improper fractions, shows whole number and proper fraction",
+        "Calculation Steps: Detailed explanation of the conversion process",
+        "Both numerator and denominator are displayed clearly for easy understanding"
+      ],
+      "whoItsFor": "This calculator serves students learning fractions and decimal conversions, teachers preparing educational materials, cooks and bakers converting recipe measurements, engineers and craftspeople working with precise measurements, and anyone needing to convert decimals to fractions for practical applications. It's particularly useful for homework, recipe adjustments, construction projects, and mathematical understanding.",
+      "disclaimer": "This calculator provides mathematically accurate conversions based on standard fraction algorithms. For repeating decimals, the calculator uses pattern recognition which works for common repeating patterns. Results should be verified for critical applications. While we strive for precision, extremely long decimal numbers may have minor rounding differences. This tool is for educational and practical purposes.",
+      "relatedTools": [
+        "Fraction Calculator for adding, subtracting, multiplying fractions",
+        "Percentage Calculator for percentage to fraction conversions",
+        "Scientific Calculator for advanced mathematical operations",
+        "Simplify Fraction Calculator for reducing fractions to lowest terms"
+      ],
+      "faqs": [
+        {
+          "question": "How do you convert a decimal to a fraction?",
+          "answer": "To convert a decimal to a fraction: count the decimal places, write the decimal as a fraction over 10, 100, 1000, etc., then simplify. For example, 0.75 has 2 decimal places, so it becomes 75/100, which simplifies to 3/4."
+        },
+        {
+          "question": "What is a repeating decimal?",
+          "answer": "A repeating decimal is a decimal number that has digits that repeat infinitely. For example, 0.333... (where 3 repeats forever) equals 1/3. Common repeating decimals include 0.666... = 2/3 and 0.142857... = 1/7."
+        },
+        {
+          "question": "How do you simplify a fraction?",
+          "answer": "To simplify a fraction, divide both the numerator and denominator by their Greatest Common Divisor (GCD). For example, 75/100 has GCD of 25, so dividing both by 25 gives 3/4."
+        },
+        {
+          "question": "What is a mixed number?",
+          "answer": "A mixed number combines a whole number and a proper fraction. For example, 1 1/2 means one and one-half. It's used when the numerator is larger than the denominator (improper fraction like 3/2)."
+        },
+        {
+          "question": "Can all decimals be converted to fractions?",
+          "answer": "Yes, all terminating decimals and repeating decimals can be expressed as fractions. However, irrational decimals (like π = 3.14159...) that neither terminate nor repeat cannot be expressed as exact fractions."
+        },
+        {
+          "question": "How do you convert 0.5 to a fraction?",
+          "answer": "0.5 has 1 decimal place, so write it as 5/10. Then simplify by dividing both numerator and denominator by 5, giving you 1/2."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Decimal a Fracción",
+    "seoTitle": "Calculadora de Decimal a Fracción - ¿Cómo Convierto Decimal a Fracción?",
+    "metaDescription": "Calculadora gratis de decimal a fracción. Convierte cualquier número decimal a fracción simplificada incluyendo decimales periódicos. Obtén resultados instantáneos con explicaciones paso a paso.",
+    "keywords": [
+      "decimal a fracción",
+      "convertir decimal a fracción",
+      "convertidor decimal fracción",
+      "calculadora de fracciones"
+    ],
+    "longTailKeywords": [
+      "cómo convertir decimal a fracción",
+      "calculadora decimal a fracción con pasos",
+      "convertidor decimal periódico a fracción",
+      "simplificar decimal a fracción"
+    ],
+    "slug": "decimal-to-fraction-calculator",
+    "category": "math",
+    "subcategory": "general",
+    "difficulty": "beginner",
+    "tags": [
+      "decimal",
+      "fracción",
+      "conversión",
+      "matemáticas",
+      "simplificación"
+    ],
+    "summary": "Convierte números decimales a fracciones simplificadas incluyendo números mixtos y decimales periódicos.",
+    "description": "Convierte números decimales a fracciones con nuestra calculadora fácil de usar. Simplifica automáticamente a términos mínimos y maneja decimales periódicos.",
+    "instructions": [
+      "Ingresa un número decimal (ej., 0.75, 0.333, 1.5)",
+      "Obtén la fracción simplificada instantáneamente",
+      "Ve el formato de número mixto si aplica"
+    ],
+    "calculatorComponent": "DecimalToFractionCalculator",
+    "examples": [
+      {
+        "title": "Decimal Simple",
+        "input": {},
+        "output": {},
+        "explanation": "Convierte 0.75 a 3/4, demostrando conversión básica de decimal a fracción."
+      },
+      {
+        "title": "Decimal Periódico",
+        "input": {},
+        "output": {},
+        "explanation": "Convierte 0.333... a 1/3, mostrando manejo de decimal periódico."
+      },
+      {
+        "title": "Número Mixto",
+        "input": {},
+        "output": {},
+        "explanation": "Convierte 1.5 a 1 1/2, demostrando conversión a número mixto."
+      }
+    ],
+    "relatedCalculators": [
+      "fraction-calculator",
+      "scientific-calculator",
+      "percentage-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Convierte números decimales a fracciones sin esfuerzo con nuestra calculadora integral en línea de decimal a fracción. Esta potente herramienta te ayuda a transformar cualquier número decimal en su forma de fracción equivalente, simplificando automáticamente a los términos mínimos. Ya seas estudiante aprendiendo fracciones, profesor creando materiales, o cualquiera que necesite conversiones rápidas, nuestra calculadora proporciona resultados instantáneos con explicaciones paso a paso claras. Construida con algoritmos de precisión, maneja decimales simples, decimales periódicos y convierte resultados a números mixtos cuando sea apropiado, haciendo las conversiones de fracciones fáciles y precisas.",
+      "benefits": [
+        "Convierte cualquier decimal a fracción simplificada instantáneamente",
+        "Maneja decimales periódicos (ej., 0.333... = 1/3)",
+        "Simplificación automática a términos mínimos usando MCD",
+        "Muestra resultados como fracciones impropias y números mixtos",
+        "Explicaciones de cálculo paso a paso",
+        "Aprende conceptos de fracciones a través de ejemplos prácticos"
+      ],
+      "steps": [
+        "Ingresa el número decimal que deseas convertir",
+        "La calculadora identifica lugares decimales y patrones periódicos",
+        "Convierte a fracción usando el método de valor posicional",
+        "Simplifica la fracción usando el Máximo Común Divisor (MCD)",
+        "Muestra formato de fracción impropia y número mixto"
+      ],
+      "inputsExplained": [
+        "Número Decimal: Cualquier valor decimal que desees convertir a formato de fracción",
+        "Decimales simples: Números como 0.5, 0.75, 2.25 con lugares decimales finitos",
+        "Decimales periódicos: Números como 0.333..., 0.666... con patrones infinitos repetidos",
+        "Decimales mixtos: Números mayores que 1 que se mostrarán como números mixtos",
+        "La calculadora acepta valores decimales positivos y negativos"
+      ],
+      "formulaExplanation": "La calculadora convierte decimales a fracciones usando el método de valor posicional. Para un decimal con n dígitos después del punto decimal, multiplica numerador y denominador por 10^n. Por ejemplo, 0.75 se convierte en 75/100. Luego, se encuentra el Máximo Común Divisor (MCD) usando el algoritmo euclidiano para simplificar la fracción a sus términos mínimos: 75/100 se simplifica a 3/4 (MCD = 25). Para decimales periódicos como 0.333..., la calculadora reconoce el patrón y lo convierte algebraicamente (0.333... = 1/3). Para números mixtos, si el numerador es mayor que el denominador, separa la parte entera de la parte fraccionaria.",
+      "examples": [
+        "Ejemplo 1: 0.5 = 1/2. Multiplica por 10: 5/10, luego simplifica por MCD(5,10)=5 para obtener 1/2",
+        "Ejemplo 2: 0.75 = 3/4. Multiplica por 100: 75/100, luego simplifica por MCD(75,100)=25 para obtener 3/4",
+        "Ejemplo 3: 0.333... = 1/3. Reconoce patrón repetido y convierte algebraicamente",
+        "Ejemplo 4: 1.5 = 3/2 = 1 1/2. Convierte a 15/10, simplifica a 3/2, muestra como número mixto",
+        "Ejemplo 5: 0.125 = 1/8. Multiplica por 1000: 125/1000, simplifica por MCD(125,1000)=125 para obtener 1/8"
+      ],
+      "resultsExplanation": [
+        "Fracción Simplificada: La fracción reducida a términos mínimos usando MCD",
+        "Número Mixto: Para fracciones impropias, muestra número entero y fracción propia",
+        "Pasos de Cálculo: Explicación detallada del proceso de conversión",
+        "Numerador y denominador se muestran claramente para fácil comprensión"
+      ],
+      "whoItsFor": "Esta calculadora sirve a estudiantes aprendiendo fracciones y conversiones decimales, profesores preparando materiales educativos, cocineros y panaderos convirtiendo medidas de recetas, ingenieros y artesanos trabajando con medidas precisas, y cualquiera que necesite convertir decimales a fracciones para aplicaciones prácticas. Es particularmente útil para tareas, ajustes de recetas, proyectos de construcción y comprensión matemática.",
+      "disclaimer": "Esta calculadora proporciona conversiones matemáticamente precisas basadas en algoritmos de fracción estándar. Para decimales periódicos, la calculadora usa reconocimiento de patrones que funciona para patrones repetidos comunes. Los resultados deben verificarse para aplicaciones críticas. Aunque nos esforzamos por la precisión, números decimales extremadamente largos pueden tener pequeñas diferencias de redondeo. Esta herramienta es para fines educativos y prácticos.",
+      "relatedTools": [
+        "Calculadora de Fracciones para sumar, restar, multiplicar fracciones",
+        "Calculadora de Porcentaje para conversiones de porcentaje a fracción",
+        "Calculadora Científica para operaciones matemáticas avanzadas",
+        "Calculadora Simplificar Fracción para reducir fracciones a términos mínimos"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo se convierte un decimal a fracción?",
+          "answer": "Para convertir un decimal a fracción: cuenta los lugares decimales, escribe el decimal como fracción sobre 10, 100, 1000, etc., luego simplifica. Por ejemplo, 0.75 tiene 2 lugares decimales, entonces se convierte en 75/100, que simplifica a 3/4."
+        },
+        {
+          "question": "¿Qué es un decimal periódico?",
+          "answer": "Un decimal periódico es un número decimal que tiene dígitos que se repiten infinitamente. Por ejemplo, 0.333... (donde 3 se repite para siempre) es igual a 1/3. Decimales periódicos comunes incluyen 0.666... = 2/3 y 0.142857... = 1/7."
+        },
+        {
+          "question": "¿Cómo se simplifica una fracción?",
+          "answer": "Para simplificar una fracción, divide el numerador y denominador por su Máximo Común Divisor (MCD). Por ejemplo, 75/100 tiene MCD de 25, entonces dividir ambos por 25 da 3/4."
+        },
+        {
+          "question": "¿Qué es un número mixto?",
+          "answer": "Un número mixto combina un número entero y una fracción propia. Por ejemplo, 1 1/2 significa uno y medio. Se usa cuando el numerador es mayor que el denominador (fracción impropia como 3/2)."
+        },
+        {
+          "question": "¿Se pueden convertir todos los decimales a fracciones?",
+          "answer": "Sí, todos los decimales finitos y decimales periódicos pueden expresarse como fracciones. Sin embargo, decimales irracionales (como π = 3.14159...) que no terminan ni se repiten no pueden expresarse como fracciones exactas."
+        },
+        {
+          "question": "¿Cómo se convierte 0.5 a fracción?",
+          "answer": "0.5 tiene 1 lugar decimal, entonces escríbelo como 5/10. Luego simplifica dividiendo numerador y denominador por 5, dándote 1/2."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Decimal para Fração",
+    "seoTitle": "Calculadora de Decimal para Fração - Como Converto Decimal para Fração?",
+    "metaDescription": "Calculadora grátis de decimal para fração. Converta qualquer número decimal para fração simplificada incluindo decimais periódicos. Obtenha resultados instantâneos com explicações passo a passo.",
+    "keywords": [
+      "decimal para fração",
+      "converter decimal para fração",
+      "conversor decimal fração",
+      "calculadora de frações"
+    ],
+    "longTailKeywords": [
+      "como converter decimal para fração",
+      "calculadora decimal para fração com passos",
+      "conversor decimal periódico para fração",
+      "simplificar decimal para fração"
+    ],
+    "slug": "decimal-to-fraction-calculator",
+    "category": "math",
+    "subcategory": "general",
+    "difficulty": "beginner",
+    "tags": [
+      "decimal",
+      "fração",
+      "conversão",
+      "matemática",
+      "simplificação"
+    ],
+    "summary": "Converta números decimais para frações simplificadas incluindo números mistos e decimais periódicos.",
+    "description": "Converta números decimais para frações com nossa calculadora fácil de usar. Simplifica automaticamente para termos mínimos e lida com decimais periódicos.",
+    "instructions": [
+      "Digite um número decimal (ex., 0.75, 0.333, 1.5)",
+      "Obtenha a fração simplificada instantaneamente",
+      "Veja o formato de número misto se aplicável"
+    ],
+    "calculatorComponent": "DecimalToFractionCalculator",
+    "examples": [
+      {
+        "title": "Decimal Simples",
+        "input": {},
+        "output": {},
+        "explanation": "Converte 0.75 para 3/4, demonstrando conversão básica de decimal para fração."
+      },
+      {
+        "title": "Decimal Periódico",
+        "input": {},
+        "output": {},
+        "explanation": "Converte 0.333... para 1/3, mostrando manipulação de decimal periódico."
+      },
+      {
+        "title": "Número Misto",
+        "input": {},
+        "output": {},
+        "explanation": "Converte 1.5 para 1 1/2, demonstrando conversão para número misto."
+      }
+    ],
+    "relatedCalculators": [
+      "fraction-calculator",
+      "scientific-calculator",
+      "percentage-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Converta números decimais para frações sem esforço com nossa calculadora online abrangente de decimal para fração. Esta ferramenta poderosa ajuda você a transformar qualquer número decimal em sua forma de fração equivalente, simplificando automaticamente para os termos mínimos. Seja você estudante aprendendo frações, professor criando materiais, ou qualquer pessoa precisando de conversões rápidas, nossa calculadora fornece resultados instantâneos com explicações passo a passo claras. Construída com algoritmos de precisão, ela lida com decimais simples, decimais periódicos e converte resultados para números mistos quando apropriado, tornando conversões de frações fáceis e precisas.",
+      "benefits": [
+        "Converte qualquer decimal para fração simplificada instantaneamente",
+        "Lida com decimais periódicos (ex., 0.333... = 1/3)",
+        "Simplificação automática para termos mínimos usando MDC",
+        "Exibe resultados como frações impróprias e números mistos",
+        "Explicações de cálculo passo a passo",
+        "Aprenda conceitos de frações através de exemplos práticos"
+      ],
+      "steps": [
+        "Digite o número decimal que você deseja converter",
+        "A calculadora identifica casas decimais e padrões periódicos",
+        "Converte para fração usando o método de valor posicional",
+        "Simplifica a fração usando o Máximo Divisor Comum (MDC)",
+        "Exibe formato de fração imprópria e número misto"
+      ],
+      "inputsExplained": [
+        "Número Decimal: Qualquer valor decimal que você deseja converter para formato de fração",
+        "Decimais simples: Números como 0.5, 0.75, 2.25 com casas decimais finitas",
+        "Decimais periódicos: Números como 0.333..., 0.666... com padrões infinitos repetidos",
+        "Decimais mistos: Números maiores que 1 que serão mostrados como números mistos",
+        "A calculadora aceita valores decimais positivos e negativos"
+      ],
+      "formulaExplanation": "A calculadora converte decimais para frações usando o método de valor posicional. Para um decimal com n dígitos após o ponto decimal, multiplique numerador e denominador por 10^n. Por exemplo, 0.75 se torna 75/100. Então, o Máximo Divisor Comum (MDC) é encontrado usando o algoritmo euclidiano para simplificar a fração para seus termos mínimos: 75/100 simplifica para 3/4 (MDC = 25). Para decimais periódicos como 0.333..., a calculadora reconhece o padrão e converte algebraicamente (0.333... = 1/3). Para números mistos, se o numerador é maior que o denominador, ela separa a parte inteira da parte fracionária.",
+      "examples": [
+        "Exemplo 1: 0.5 = 1/2. Multiplica por 10: 5/10, então simplifica por MDC(5,10)=5 para obter 1/2",
+        "Exemplo 2: 0.75 = 3/4. Multiplica por 100: 75/100, então simplifica por MDC(75,100)=25 para obter 3/4",
+        "Exemplo 3: 0.333... = 1/3. Reconhece padrão repetido e converte algebraicamente",
+        "Exemplo 4: 1.5 = 3/2 = 1 1/2. Converte para 15/10, simplifica para 3/2, exibe como número misto",
+        "Exemplo 5: 0.125 = 1/8. Multiplica por 1000: 125/1000, simplifica por MDC(125,1000)=125 para obter 1/8"
+      ],
+      "resultsExplanation": [
+        "Fração Simplificada: A fração reduzida a termos mínimos usando MDC",
+        "Número Misto: Para frações impróprias, mostra número inteiro e fração própria",
+        "Passos de Cálculo: Explicação detalhada do processo de conversão",
+        "Numerador e denominador são exibidos claramente para fácil compreensão"
+      ],
+      "whoItsFor": "Esta calculadora serve estudantes aprendendo frações e conversões decimais, professores preparando materiais educacionais, cozinheiros e padeiros convertendo medidas de receitas, engenheiros e artesãos trabalhando com medidas precisas, e qualquer pessoa precisando converter decimais para frações para aplicações práticas. É particularmente útil para trabalhos escolares, ajustes de receitas, projetos de construção e compreensão matemática.",
+      "disclaimer": "Esta calculadora fornece conversões matematicamente precisas baseadas em algoritmos de fração padrão. Para decimais periódicos, a calculadora usa reconhecimento de padrões que funciona para padrões repetidos comuns. Os resultados devem ser verificados para aplicações críticas. Embora nos esforcemos pela precisão, números decimais extremamente longos podem ter pequenas diferenças de arredondamento. Esta ferramenta é para fins educacionais e práticos.",
+      "relatedTools": [
+        "Calculadora de Frações para somar, subtrair, multiplicar frações",
+        "Calculadora de Porcentagem para conversões de porcentagem para fração",
+        "Calculadora Científica para operações matemáticas avançadas",
+        "Calculadora Simplificar Fração para reduzir frações a termos mínimos"
+      ],
+      "faqs": [
+        {
+          "question": "Como converter um decimal para fração?",
+          "answer": "Para converter um decimal para fração: conte as casas decimais, escreva o decimal como fração sobre 10, 100, 1000, etc., então simplifique. Por exemplo, 0.75 tem 2 casas decimais, então se torna 75/100, que simplifica para 3/4."
+        },
+        {
+          "question": "O que é um decimal periódico?",
+          "answer": "Um decimal periódico é um número decimal que tem dígitos que se repetem infinitamente. Por exemplo, 0.333... (onde 3 se repete para sempre) é igual a 1/3. Decimais periódicos comuns incluem 0.666... = 2/3 e 0.142857... = 1/7."
+        },
+        {
+          "question": "Como simplificar uma fração?",
+          "answer": "Para simplificar uma fração, divida numerador e denominador pelo seu Máximo Divisor Comum (MDC). Por exemplo, 75/100 tem MDC de 25, então dividir ambos por 25 dá 3/4."
+        },
+        {
+          "question": "O que é um número misto?",
+          "answer": "Um número misto combina um número inteiro e uma fração própria. Por exemplo, 1 1/2 significa um e meio. É usado quando o numerador é maior que o denominador (fração imprópria como 3/2)."
+        },
+        {
+          "question": "Todos os decimais podem ser convertidos para frações?",
+          "answer": "Sim, todos os decimais finitos e decimais periódicos podem ser expressos como frações. No entanto, decimais irracionais (como π = 3.14159...) que não terminam nem se repetem não podem ser expressos como frações exatas."
+        },
+        {
+          "question": "Como converter 0.5 para fração?",
+          "answer": "0.5 tem 1 casa decimal, então escreva como 5/10. Então simplifique dividindo numerador e denominador por 5, dando 1/2."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Décimal en Fraction",
+    "seoTitle": "Calculateur de Décimal en Fraction - Comment Convertir Décimal en Fraction?",
+    "metaDescription": "Calculateur gratuit de décimal en fraction. Convertissez n'importe quel nombre décimal en fraction simplifiée y compris décimaux périodiques. Obtenez résultats instantanés avec explications étape par étape.",
+    "keywords": [
+      "décimal en fraction",
+      "convertir décimal en fraction",
+      "convertisseur décimal fraction",
+      "calculateur de fractions"
+    ],
+    "longTailKeywords": [
+      "comment convertir décimal en fraction",
+      "calculateur décimal en fraction avec étapes",
+      "convertisseur décimal périodique en fraction",
+      "simplifier décimal en fraction"
+    ],
+    "slug": "decimal-to-fraction-calculator",
+    "category": "math",
+    "subcategory": "general",
+    "difficulty": "beginner",
+    "tags": [
+      "décimal",
+      "fraction",
+      "conversion",
+      "mathématiques",
+      "simplification"
+    ],
+    "summary": "Convertissez nombres décimaux en fractions simplifiées incluant nombres mixtes et décimaux périodiques.",
+    "description": "Convertissez nombres décimaux en fractions avec notre calculateur facile à utiliser. Simplifie automatiquement aux termes les plus bas et gère les décimaux périodiques.",
+    "instructions": [
+      "Entrez un nombre décimal (ex., 0.75, 0.333, 1.5)",
+      "Obtenez la fraction simplifiée instantanément",
+      "Voir le format de nombre mixte si applicable"
+    ],
+    "calculatorComponent": "DecimalToFractionCalculator",
+    "examples": [
+      {
+        "title": "Décimal Simple",
+        "input": {},
+        "output": {},
+        "explanation": "Convertit 0.75 en 3/4, démontrant conversion basique de décimal en fraction."
+      },
+      {
+        "title": "Décimal Périodique",
+        "input": {},
+        "output": {},
+        "explanation": "Convertit 0.333... en 1/3, montrant gestion de décimal périodique."
+      },
+      {
+        "title": "Nombre Mixte",
+        "input": {},
+        "output": {},
+        "explanation": "Convertit 1.5 en 1 1/2, démontrant conversion en nombre mixte."
+      }
+    ],
+    "relatedCalculators": [
+      "fraction-calculator",
+      "scientific-calculator",
+      "percentage-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Convertissez nombres décimaux en fractions sans effort avec notre calculateur en ligne complet de décimal en fraction. Cet outil puissant vous aide à transformer n'importe quel nombre décimal en sa forme de fraction équivalente, en simplifiant automatiquement aux termes les plus bas. Que vous soyez étudiant apprenant les fractions, enseignant créant des matériaux, ou toute personne ayant besoin de conversions rapides, notre calculateur fournit des résultats instantanés avec des explications étape par étape claires. Construit avec des algorithmes de précision, il gère les décimaux simples, les décimaux périodiques et convertit les résultats en nombres mixtes lorsque approprié, rendant les conversions de fractions faciles et précises.",
+      "benefits": [
+        "Convertit n'importe quel décimal en fraction simplifiée instantanément",
+        "Gère les décimaux périodiques (ex., 0.333... = 1/3)",
+        "Simplification automatique aux termes les plus bas en utilisant PGCD",
+        "Affiche les résultats comme fractions impropres et nombres mixtes",
+        "Explications de calcul étape par étape",
+        "Apprenez les concepts de fractions à travers des exemples pratiques"
+      ],
+      "steps": [
+        "Entrez le nombre décimal que vous souhaitez convertir",
+        "Le calculateur identifie les décimales et les motifs périodiques",
+        "Convertit en fraction en utilisant la méthode de valeur de position",
+        "Simplifie la fraction en utilisant le Plus Grand Commun Diviseur (PGCD)",
+        "Affiche le format de fraction impropre et de nombre mixte"
+      ],
+      "inputsExplained": [
+        "Nombre Décimal : N'importe quelle valeur décimale que vous souhaitez convertir en format de fraction",
+        "Décimaux simples : Nombres comme 0.5, 0.75, 2.25 avec des décimales finies",
+        "Décimaux périodiques : Nombres comme 0.333..., 0.666... avec des motifs infinis répétés",
+        "Décimaux mixtes : Nombres supérieurs à 1 qui seront affichés comme nombres mixtes",
+        "Le calculateur accepte les valeurs décimales positives et négatives"
+      ],
+      "formulaExplanation": "Le calculateur convertit les décimaux en fractions en utilisant la méthode de valeur de position. Pour un décimal avec n chiffres après la virgule, multipliez le numérateur et le dénominateur par 10^n. Par exemple, 0.75 devient 75/100. Ensuite, le Plus Grand Commun Diviseur (PGCD) est trouvé en utilisant l'algorithme euclidien pour simplifier la fraction à ses termes les plus bas : 75/100 se simplifie en 3/4 (PGCD = 25). Pour les décimaux périodiques comme 0.333..., le calculateur reconnaît le motif et le convertit algébriquement (0.333... = 1/3). Pour les nombres mixtes, si le numérateur est supérieur au dénominateur, il sépare la partie entière de la partie fractionnaire.",
+      "examples": [
+        "Exemple 1 : 0.5 = 1/2. Multiplie par 10 : 5/10, puis simplifie par PGCD(5,10)=5 pour obtenir 1/2",
+        "Exemple 2 : 0.75 = 3/4. Multiplie par 100 : 75/100, puis simplifie par PGCD(75,100)=25 pour obtenir 3/4",
+        "Exemple 3 : 0.333... = 1/3. Reconnaît le motif répété et convertit algébriquement",
+        "Exemple 4 : 1.5 = 3/2 = 1 1/2. Convertit en 15/10, simplifie en 3/2, affiche comme nombre mixte",
+        "Exemple 5 : 0.125 = 1/8. Multiplie par 1000 : 125/1000, simplifie par PGCD(125,1000)=125 pour obtenir 1/8"
+      ],
+      "resultsExplanation": [
+        "Fraction Simplifiée : La fraction réduite aux termes les plus bas en utilisant PGCD",
+        "Nombre Mixte : Pour les fractions impropres, affiche le nombre entier et la fraction propre",
+        "Étapes de Calcul : Explication détaillée du processus de conversion",
+        "Le numérateur et le dénominateur sont affichés clairement pour une compréhension facile"
+      ],
+      "whoItsFor": "Ce calculateur sert les étudiants apprenant les fractions et les conversions décimales, les enseignants préparant des matériaux éducatifs, les cuisiniers et boulangers convertissant les mesures de recettes, les ingénieurs et artisans travaillant avec des mesures précises, et toute personne ayant besoin de convertir des décimaux en fractions pour des applications pratiques. Il est particulièrement utile pour les devoirs, les ajustements de recettes, les projets de construction et la compréhension mathématique.",
+      "disclaimer": "Ce calculateur fournit des conversions mathématiquement précises basées sur des algorithmes de fraction standard. Pour les décimaux périodiques, le calculateur utilise la reconnaissance de motifs qui fonctionne pour les motifs répétés courants. Les résultats doivent être vérifiés pour les applications critiques. Bien que nous nous efforcions d'assurer la précision, les nombres décimaux extrêmement longs peuvent avoir de légères différences d'arrondi. Cet outil est destiné à des fins éducatives et pratiques.",
+      "relatedTools": [
+        "Calculateur de Fractions pour additionner, soustraire, multiplier les fractions",
+        "Calculateur de Pourcentage pour conversions de pourcentage en fraction",
+        "Calculatrice Scientifique pour opérations mathématiques avancées",
+        "Calculateur Simplifier Fraction pour réduire les fractions aux termes les plus bas"
+      ],
+      "faqs": [
+        {
+          "question": "Comment convertir un décimal en fraction ?",
+          "answer": "Pour convertir un décimal en fraction : comptez les décimales, écrivez le décimal comme fraction sur 10, 100, 1000, etc., puis simplifiez. Par exemple, 0.75 a 2 décimales, donc il devient 75/100, qui se simplifie en 3/4."
+        },
+        {
+          "question": "Qu'est-ce qu'un décimal périodique ?",
+          "answer": "Un décimal périodique est un nombre décimal qui a des chiffres qui se répètent infiniment. Par exemple, 0.333... (où 3 se répète indéfiniment) est égal à 1/3. Les décimaux périodiques courants incluent 0.666... = 2/3 et 0.142857... = 1/7."
+        },
+        {
+          "question": "Comment simplifier une fraction ?",
+          "answer": "Pour simplifier une fraction, divisez le numérateur et le dénominateur par leur Plus Grand Commun Diviseur (PGCD). Par exemple, 75/100 a un PGCD de 25, donc diviser les deux par 25 donne 3/4."
+        },
+        {
+          "question": "Qu'est-ce qu'un nombre mixte ?",
+          "answer": "Un nombre mixte combine un nombre entier et une fraction propre. Par exemple, 1 1/2 signifie un et demi. Il est utilisé lorsque le numérateur est plus grand que le dénominateur (fraction impropre comme 3/2)."
+        },
+        {
+          "question": "Tous les décimaux peuvent-ils être convertis en fractions ?",
+          "answer": "Oui, tous les décimaux finis et les décimaux périodiques peuvent être exprimés comme fractions. Cependant, les décimaux irrationnels (comme π = 3.14159...) qui ne se terminent ni ne se répètent ne peuvent pas être exprimés comme fractions exactes."
+        },
+        {
+          "question": "Comment convertir 0.5 en fraction ?",
+          "answer": "0.5 a 1 décimale, donc écrivez-le comme 5/10. Puis simplifiez en divisant le numérateur et le dénominateur par 5, vous donnant 1/2."
+        }
+      ]
+    }
+  }
+}

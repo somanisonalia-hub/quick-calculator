@@ -299,7 +299,7 @@ export const MacroCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) =>
           <div className="bg-gradient-to-br from-purple-100 to-pink-100 border-2 border-purple-300 rounded-lg p-6">
             <h3 className="text-2xl font-bold text-purple-900 mb-4">Your Macros</h3>
             
-            <div className="mb-6">
+            <div className="mb-6 hidden">
               <p className="text-sm text-purple-700 font-medium">{t.tdee}</p>
               <p className="text-4xl font-bold text-purple-900">{results.tdee}</p>
               <p className="text-xs text-purple-600">kcal/day</p>

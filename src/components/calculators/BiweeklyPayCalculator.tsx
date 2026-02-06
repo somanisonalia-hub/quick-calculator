@@ -155,7 +155,7 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
 
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h2>
         <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
           <p className="text-sm text-blue-800">
@@ -165,7 +165,7 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
       </div>
 
       {/* Salary Type Selection */}
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <label className="block text-sm font-medium text-gray-700 mb-3">
           {t.salaryType}
         </label>

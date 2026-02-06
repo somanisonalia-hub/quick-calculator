@@ -1,0 +1,32 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="440" y="80" width="320" height="400" rx="24" fill="#fff"/>
+  <rect x="460" y="100" width="280" height="70" rx="12" fill="#1a1a2e"/>
+  <text x="720" y="150" fill="#4ade80" font-size="40" font-weight="bold" text-anchor="end" font-family="system-ui">123.45</text>
+  <g font-family="system-ui" font-weight="bold" font-size="22">
+    <rect x="470" y="190" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="499" y="222" fill="#1f2937" text-anchor="middle">7</text>
+    <rect x="538" y="190" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="567" y="222" fill="#1f2937" text-anchor="middle">8</text>
+    <rect x="606" y="190" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="635" y="222" fill="#1f2937" text-anchor="middle">9</text>
+    <rect x="674" y="190" width="58" height="48" rx="10" fill="#667eea"/><text x="703" y="222" fill="#fff" text-anchor="middle">÷</text>
+    <rect x="470" y="248" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="499" y="280" fill="#1f2937" text-anchor="middle">4</text>
+    <rect x="538" y="248" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="567" y="280" fill="#1f2937" text-anchor="middle">5</text>
+    <rect x="606" y="248" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="635" y="280" fill="#1f2937" text-anchor="middle">6</text>
+    <rect x="674" y="248" width="58" height="48" rx="10" fill="#667eea"/><text x="703" y="280" fill="#fff" text-anchor="middle">×</text>
+    <rect x="470" y="306" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="499" y="338" fill="#1f2937" text-anchor="middle">1</text>
+    <rect x="538" y="306" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="567" y="338" fill="#1f2937" text-anchor="middle">2</text>
+    <rect x="606" y="306" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="635" y="338" fill="#1f2937" text-anchor="middle">3</text>
+    <rect x="674" y="306" width="58" height="48" rx="10" fill="#667eea"/><text x="703" y="338" fill="#fff" text-anchor="middle">−</text>
+    <rect x="470" y="364" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="499" y="396" fill="#1f2937" text-anchor="middle">0</text>
+    <rect x="538" y="364" width="58" height="48" rx="10" fill="#f3f4f6"/><text x="567" y="396" fill="#1f2937" text-anchor="middle">.</text>
+    <rect x="606" y="364" width="58" height="48" rx="10" fill="#667eea"/><text x="635" y="396" fill="#fff" text-anchor="middle">=</text>
+    <rect x="674" y="364" width="58" height="48" rx="10" fill="#667eea"/><text x="703" y="396" fill="#fff" text-anchor="middle">+</text>
+  </g>
+  <text x="600" y="540" fill="#fff" font-size="56" font-weight="bold" text-anchor="middle" font-family="system-ui">Quick Calculator</text>
+  <text x="600" y="590" fill="rgba(255,255,255,0.9)" font-size="24" text-anchor="middle" font-family="system-ui">Free Online Calculators for Math, Finance &amp; Health</text>
+</svg>

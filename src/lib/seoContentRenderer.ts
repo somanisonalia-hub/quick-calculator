@@ -37,7 +37,7 @@ export interface CategoryData {
 /**
  * Render structured SEO content as HTML for display
  */
-export function renderStructuredSEOContent(seoContent: SEOContent, lang: string = 'en', calculatorName?: string): string {
+export function renderStructuredSEOContent(seoContent: SEOContent, lang: string = 'en'): string {
   const translations = {
     howDoesWork: { en: 'How Does', es: '¿Cómo Funciona', pt: 'Como Funciona', fr: 'Comment Ça Marche' },
     introduction: { en: 'Introduction', es: 'Introducción', pt: 'Introdução', fr: 'Introduction' },
@@ -230,7 +230,7 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
         Frequently Asked Questions
       </h3>
       <div class="space-y-4">
-        ${seoContent.faqs.map((faq, index) => `
+        ${seoContent.faqs.map((faq) => `
           <div class="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg border border-purple-200">
             <h4 class="font-semibold text-gray-900 mb-3 text-lg">${faq.question}</h4>
             <p class="text-gray-800 leading-relaxed">${faq.answer}</p>
@@ -478,7 +478,7 @@ export function generateCalculatorSchema(calculatorData: CalculatorData, lang: s
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",
-            "ratingCount": "1000+"
+            "ratingCount": 1000
           }
         }
       ]
@@ -513,7 +513,7 @@ export function generateCalculatorSchema(calculatorData: CalculatorData, lang: s
           "text": faq.answer
         }
       }))
-    } as any);
+    } as never);
   }
 
   return schemas.length === 1 ? schemas[0] : { "@context": "https://schema.org", "@graph": schemas };

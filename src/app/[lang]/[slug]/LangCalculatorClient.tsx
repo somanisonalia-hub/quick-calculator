@@ -2,7 +2,7 @@ import CalculatorPageClient from '@/components/CalculatorPageClient';
 import fs from 'fs';
 import path from 'path';
 import { CALCULATOR_CATEGORIES } from '@/lib/categoryUtils';
-import { getFilenameForSlug } from '@/lib/staticDataLoader';
+import { getFilenameForSlug, loadAllCalculatorsStatic } from '@/lib/staticDataLoader';
 // Direct breadcrumb generation
 
 interface LangCalculatorClientProps {
@@ -27,31 +27,29 @@ export default function LangCalculatorClient({ lang, slug }: LangCalculatorClien
     const data = JSON.parse(fileContent);
     calculatorContent = data[lang];
     seoContent = calculatorContent?.seoContent;
-    console.log(`LangCalculatorClient: Loaded seoContent for ${slug} (${lang}):`, !!seoContent, 'Keys:', seoContent ? Object.keys(seoContent) : 'none');
 
-    // Load related calculators (simple implementation)
-    const relatedSlugs = calculatorContent?.relatedCalculators || [];
-    for (const relatedSlug of relatedSlugs.slice(0, 6)) { // Limit to 6
-      try {
-        const relatedFilename = getFilenameForSlug(relatedSlug);
-        const relatedFilePath = path.join(process.cwd(), 'content', 'calculators', `${relatedFilename}.json`);
-        const relatedFileContent = fs.readFileSync(relatedFilePath, 'utf-8');
-        const relatedData = JSON.parse(relatedFileContent);
-        const relatedContent = relatedData[lang];
-        if (relatedContent && relatedContent.title) {
-          relatedCalculators.push({
-            name: relatedContent.title,
-            slug: relatedContent.slug || relatedSlug,
-            summary: relatedContent.summary || relatedContent.description || 'Calculate various metrics',
-            icon: 'calculator', // Default icon
-            difficulty: relatedContent.difficulty || 'basic',
-            featured: false
-          });
-        }
-      } catch (error) {
-        // Skip if related calculator can't be loaded
+    // Load ALL calculators instead of just related ones
+    const allCalculators = loadAllCalculatorsStatic(lang);
+    const uniqueCalculators: any[] = [];
+    const seenSlugs = new Set<string>();
+
+    // Add all calculators from all categories to show variety
+    for (const calculator of allCalculators) {
+      if (calculator.slug !== slug && !seenSlugs.has(calculator.slug)) {
+        uniqueCalculators.push({
+          name: calculator.name,
+          slug: calculator.slug,
+          summary: calculator.summary || 'Calculate various metrics',
+          icon: 'calculator',
+          difficulty: 'basic',
+          featured: false
+        });
+        seenSlugs.add(calculator.slug);
+        if (uniqueCalculators.length >= 20) break; // Take first 20 of all calculators
       }
     }
+
+    relatedCalculators.push(...uniqueCalculators);
   } catch (error) {
     console.error('Failed to load calculator content:', error);
   }

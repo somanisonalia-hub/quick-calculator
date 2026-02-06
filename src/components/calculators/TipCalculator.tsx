@@ -70,7 +70,7 @@ export default function TipCalculator({ lang = 'en' }: TipCalculatorProps) {
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h1>
         <p className="text-gray-600">{t.description}</p>
       </div>

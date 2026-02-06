@@ -1,0 +1,260 @@
+{
+  "slug": "midpoint-calculator",
+  "category": "math",
+  "subcategory": "geometry",
+  "difficulty": "beginner",
+  "component": "MidpointCalculator",
+  "title": "Midpoint Calculator",
+  "seoTitle": "Midpoint Calculator - What Is the Center Point Between Two Coordinates?",
+  "keywords": ["midpoint calculator", "midpoint formula", "center point", "midpoint between two points", "coordinate geometry", "2D midpoint", "3D midpoint", "point calculator"],
+  "seoTitle": "Midpoint Calculator - Find the Center Point Between Two Coordinates",
+  "seoContent": {
+    "en": {
+      "introduction": "Calculate the midpoint between two points instantly with our comprehensive midpoint calculator. Works for both 2D and 3D coordinates, showing the center point coordinates, distance between points, and step-by-step formula explanations.",
+      "benefits": [
+        "Instant midpoint calculation for 2D and 3D coordinates",
+        "Calculate distance between two points automatically",
+        "Clear display of midpoint coordinates",
+        "Step-by-step formula explanation",
+        "Support for positive and negative coordinates",
+        "Decimal precision for accurate results",
+        "Educational tool for learning coordinate geometry",
+        "Useful for finding center points in graphics and design"
+      ],
+      "steps": [
+        "Enter the x and y coordinates for Point 1",
+        "Enter the x and y coordinates for Point 2",
+        "Optional: Enable 3D mode and enter z coordinates",
+        "Click Calculate to find the midpoint",
+        "View the midpoint coordinates",
+        "See the distance between the two points",
+        "Review the formula used for calculation"
+      ],
+      "inputsExplained": "The calculator accepts x and y coordinates for two points in a 2D plane. For 3D calculations, you can also provide z coordinates. Coordinates can be positive, negative, integers, or decimals representing any location in the coordinate system.",
+      "formulaExplanation": "The midpoint formula finds the point exactly halfway between two given points. For 2D points (x₁, y₁) and (x₂, y₂), the midpoint M is calculated as: M = ((x₁ + x₂)/2, (y₁ + y₂)/2). For 3D points, it extends to: M = ((x₁ + x₂)/2, (y₁ + y₂)/2, (z₁ + z₂)/2). The distance is calculated using the distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²] for 2D, or d = √[(x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²] for 3D.",
+      "examples": [
+        "Points (0, 0) and (4, 6): Midpoint = (2, 3), Distance = 7.21",
+        "Points (-2, 3) and (4, -1): Midpoint = (1, 1), Distance = 7.21",
+        "Points (1, 2) and (7, 8): Midpoint = (4, 5), Distance = 8.49",
+        "Points (0, 0, 0) and (6, 8, 10): Midpoint = (3, 4, 5), Distance = 14.14 (3D)",
+        "Points (-5, -3) and (5, 3): Midpoint = (0, 0), Distance = 11.66"
+      ],
+      "resultsExplanation": "Results display the midpoint coordinates that represent the exact center point between your two input points, the distance between the points showing how far apart they are, and the formulas used for both calculations.",
+      "whoItsFor": "Perfect for students learning coordinate geometry, mathematicians working with spatial calculations, graphic designers finding center points, game developers calculating positions, architects planning layouts, and anyone needing to find the middle point between two locations.",
+      "disclaimer": "This calculator provides accurate mathematical calculations for midpoint and distance. Results are rounded to two decimal places for display. Always verify critical calculations independently for professional applications.",
+      "relatedTools": ["Distance Calculator", "Slope Calculator", "Triangle Calculator", "Circle Calculator"],
+      "faqs": [
+        {
+          "question": "What is a midpoint?",
+          "answer": "A midpoint is the point that is exactly halfway between two given points. It divides the line segment connecting the two points into two equal parts."
+        },
+        {
+          "question": "How do you calculate the midpoint?",
+          "answer": "To find the midpoint, average the x-coordinates and y-coordinates of the two points separately. The formula is M = ((x₁ + x₂)/2, (y₁ + y₂)/2)."
+        },
+        {
+          "question": "Can this calculator work with negative coordinates?",
+          "answer": "Yes, the calculator works with any real number coordinates, including positive, negative, integers, and decimals."
+        },
+        {
+          "question": "What is the difference between 2D and 3D midpoint?",
+          "answer": "2D midpoint uses x and y coordinates on a plane, while 3D midpoint includes a z-coordinate for depth, extending the calculation into three-dimensional space."
+        },
+        {
+          "question": "Why is the distance also calculated?",
+          "answer": "The distance between two points is often needed alongside the midpoint. It tells you how far apart the points are, which is useful for many geometric and practical applications."
+        },
+        {
+          "question": "How accurate are the calculations?",
+          "answer": "The calculator performs exact mathematical calculations and displays results rounded to two decimal places for readability. Internal calculations maintain full precision."
+        }
+      ]
+    },
+    "seoTitle": "Calculadora de Punto Medio - ¿Cuál Es el Punto Central Entre Dos Coordenadas?",
+    "es": {
+      "introduction": "Calcula el punto medio entre dos puntos instantáneamente con nuestra calculadora integral de punto medio. Funciona para coordenadas 2D y 3D, mostrando las coordenadas del punto central, la distancia entre puntos y explicaciones paso a paso de las fórmulas.",
+      "benefits": [
+        "Cálculo instantáneo del punto medio para coordenadas 2D y 3D",
+        "Calcula automáticamente la distancia entre dos puntos",
+        "Visualización clara de las coordenadas del punto medio",
+        "Explicación paso a paso de la fórmula",
+        "Soporte para coordenadas positivas y negativas",
+        "Precisión decimal para resultados exactos",
+        "Herramienta educativa para aprender geometría de coordenadas",
+        "Útil para encontrar puntos centrales en gráficos y diseño"
+      ],
+      "steps": [
+        "Ingresa las coordenadas x e y para el Punto 1",
+        "Ingresa las coordenadas x e y para el Punto 2",
+        "Opcional: Habilita el modo 3D e ingresa las coordenadas z",
+        "Haz clic en Calcular para encontrar el punto medio",
+        "Visualiza las coordenadas del punto medio",
+        "Observa la distancia entre los dos puntos",
+        "Revisa la fórmula utilizada para el cálculo"
+      ],
+      "inputsExplained": "La calculadora acepta coordenadas x e y para dos puntos en un plano 2D. Para cálculos 3D, también puedes proporcionar coordenadas z. Las coordenadas pueden ser positivas, negativas, enteros o decimales que representan cualquier ubicación en el sistema de coordenadas.",
+      "formulaExplanation": "La fórmula del punto medio encuentra el punto exactamente a la mitad entre dos puntos dados. Para puntos 2D (x₁, y₁) y (x₂, y₂), el punto medio M se calcula como: M = ((x₁ + x₂)/2, (y₁ + y₂)/2). Para puntos 3D, se extiende a: M = ((x₁ + x₂)/2, (y₁ + y₂)/2, (z₁ + z₂)/2). La distancia se calcula usando la fórmula de distancia: d = √[(x₂ - x₁)² + (y₂ - y₁)²] para 2D, o d = √[(x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²] para 3D.",
+      "examples": [
+        "Puntos (0, 0) y (4, 6): Punto medio = (2, 3), Distancia = 7.21",
+        "Puntos (-2, 3) y (4, -1): Punto medio = (1, 1), Distancia = 7.21",
+        "Puntos (1, 2) y (7, 8): Punto medio = (4, 5), Distancia = 8.49",
+        "Puntos (0, 0, 0) y (6, 8, 10): Punto medio = (3, 4, 5), Distancia = 14.14 (3D)",
+        "Puntos (-5, -3) y (5, 3): Punto medio = (0, 0), Distancia = 11.66"
+      ],
+      "resultsExplanation": "Los resultados muestran las coordenadas del punto medio que representan el punto central exacto entre tus dos puntos de entrada, la distancia entre los puntos mostrando qué tan separados están, y las fórmulas utilizadas para ambos cálculos.",
+      "whoItsFor": "Perfecto para estudiantes que aprenden geometría de coordenadas, matemáticos que trabajan con cálculos espaciales, diseñadores gráficos que encuentran puntos centrales, desarrolladores de juegos que calculan posiciones, arquitectos que planifican diseños y cualquiera que necesite encontrar el punto medio entre dos ubicaciones.",
+      "disclaimer": "Esta calculadora proporciona cálculos matemáticos precisos para el punto medio y la distancia. Los resultados se redondean a dos decimales para la visualización. Siempre verifica los cálculos críticos de forma independiente para aplicaciones profesionales.",
+      "relatedTools": ["Calculadora de Distancia", "Calculadora de Pendiente", "Calculadora de Triángulos", "Calculadora de Círculos"],
+      "faqs": [
+        {
+          "question": "¿Qué es un punto medio?",
+          "answer": "Un punto medio es el punto que está exactamente a la mitad entre dos puntos dados. Divide el segmento de línea que conecta los dos puntos en dos partes iguales."
+        },
+        {
+          "question": "¿Cómo se calcula el punto medio?",
+          "answer": "Para encontrar el punto medio, promedia las coordenadas x y las coordenadas y de los dos puntos por separado. La fórmula es M = ((x₁ + x₂)/2, (y₁ + y₂)/2)."
+        },
+        {
+          "question": "¿Puede esta calculadora trabajar con coordenadas negativas?",
+          "answer": "Sí, la calculadora funciona con cualquier número real de coordenadas, incluyendo positivos, negativos, enteros y decimales."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre punto medio 2D y 3D?",
+          "answer": "El punto medio 2D usa coordenadas x e y en un plano, mientras que el punto medio 3D incluye una coordenada z para la profundidad, extendiendo el cálculo al espacio tridimensional."
+        },
+        {
+          "question": "¿Por qué también se calcula la distancia?",
+          "answer": "La distancia entre dos puntos a menudo se necesita junto con el punto medio. Te dice qué tan separados están los puntos, lo cual es útil para muchas aplicaciones geométricas y prácticas."
+        },
+        {
+          "question": "¿Qué tan precisos son los cálculos?",
+          "answer": "La calculadora realiza cálculos matemáticos exactos y muestra resultados redondeados a dos decimales para legibilidad. Los cálculos internos mantienen precisión completa."
+        }
+      ]
+    },
+    "seoTitle": "Calculadora de Ponto Médio - Qual É o Ponto Central Entre Duas Coordenadas?",
+    "pt": {
+      "introduction": "Calcule o ponto médio entre dois pontos instantaneamente com nossa calculadora abrangente de ponto médio. Funciona para coordenadas 2D e 3D, mostrando as coordenadas do ponto central, distância entre pontos e explicações passo a passo das fórmulas.",
+      "benefits": [
+        "Cálculo instantâneo do ponto médio para coordenadas 2D e 3D",
+        "Calcula automaticamente a distância entre dois pontos",
+        "Exibição clara das coordenadas do ponto médio",
+        "Explicação passo a passo da fórmula",
+        "Suporte para coordenadas positivas e negativas",
+        "Precisão decimal para resultados exatos",
+        "Ferramenta educacional para aprender geometria de coordenadas",
+        "Útil para encontrar pontos centrais em gráficos e design"
+      ],
+      "steps": [
+        "Digite as coordenadas x e y para o Ponto 1",
+        "Digite as coordenadas x e y para o Ponto 2",
+        "Opcional: Ative o modo 3D e digite as coordenadas z",
+        "Clique em Calcular para encontrar o ponto médio",
+        "Visualize as coordenadas do ponto médio",
+        "Veja a distância entre os dois pontos",
+        "Revise a fórmula usada para o cálculo"
+      ],
+      "inputsExplained": "A calculadora aceita coordenadas x e y para dois pontos em um plano 2D. Para cálculos 3D, você também pode fornecer coordenadas z. As coordenadas podem ser positivas, negativas, inteiros ou decimais representando qualquer localização no sistema de coordenadas.",
+      "formulaExplanation": "A fórmula do ponto médio encontra o ponto exatamente no meio entre dois pontos dados. Para pontos 2D (x₁, y₁) e (x₂, y₂), o ponto médio M é calculado como: M = ((x₁ + x₂)/2, (y₁ + y₂)/2). Para pontos 3D, estende-se para: M = ((x₁ + x₂)/2, (y₁ + y₂)/2, (z₁ + z₂)/2). A distância é calculada usando a fórmula de distância: d = √[(x₂ - x₁)² + (y₂ - y₁)²] para 2D, ou d = √[(x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²] para 3D.",
+      "examples": [
+        "Pontos (0, 0) e (4, 6): Ponto médio = (2, 3), Distância = 7.21",
+        "Pontos (-2, 3) e (4, -1): Ponto médio = (1, 1), Distância = 7.21",
+        "Pontos (1, 2) e (7, 8): Ponto médio = (4, 5), Distância = 8.49",
+        "Pontos (0, 0, 0) e (6, 8, 10): Ponto médio = (3, 4, 5), Distância = 14.14 (3D)",
+        "Pontos (-5, -3) e (5, 3): Ponto médio = (0, 0), Distância = 11.66"
+      ],
+      "resultsExplanation": "Os resultados exibem as coordenadas do ponto médio que representam o ponto central exato entre seus dois pontos de entrada, a distância entre os pontos mostrando o quão distantes estão, e as fórmulas usadas para ambos os cálculos.",
+      "whoItsFor": "Perfeito para estudantes aprendendo geometria de coordenadas, matemáticos trabalhando com cálculos espaciais, designers gráficos encontrando pontos centrais, desenvolvedores de jogos calculando posições, arquitetos planejando layouts e qualquer pessoa que precise encontrar o ponto médio entre duas localizações.",
+      "disclaimer": "Esta calculadora fornece cálculos matemáticos precisos para ponto médio e distância. Os resultados são arredondados para duas casas decimais para exibição. Sempre verifique cálculos críticos independentemente para aplicações profissionais.",
+      "relatedTools": ["Calculadora de Distância", "Calculadora de Inclinação", "Calculadora de Triângulos", "Calculadora de Círculos"],
+      "faqs": [
+        {
+          "question": "O que é um ponto médio?",
+          "answer": "Um ponto médio é o ponto que está exatamente no meio entre dois pontos dados. Ele divide o segmento de linha conectando os dois pontos em duas partes iguais."
+        },
+        {
+          "question": "Como você calcula o ponto médio?",
+          "answer": "Para encontrar o ponto médio, faça a média das coordenadas x e das coordenadas y dos dois pontos separadamente. A fórmula é M = ((x₁ + x₂)/2, (y₁ + y₂)/2)."
+        },
+        {
+          "question": "Esta calculadora pode trabalhar com coordenadas negativas?",
+          "answer": "Sim, a calculadora funciona com qualquer número real de coordenadas, incluindo positivos, negativos, inteiros e decimais."
+        },
+        {
+          "question": "Qual é a diferença entre ponto médio 2D e 3D?",
+          "answer": "O ponto médio 2D usa coordenadas x e y em um plano, enquanto o ponto médio 3D inclui uma coordenada z para profundidade, estendendo o cálculo para o espaço tridimensional."
+        },
+        {
+          "question": "Por que a distância também é calculada?",
+          "answer": "A distância entre dois pontos é frequentemente necessária junto com o ponto médio. Ela informa o quão distantes os pontos estão, o que é útil para muitas aplicações geométricas e práticas."
+        },
+        {
+          "question": "Quão precisos são os cálculos?",
+          "answer": "A calculadora realiza cálculos matemáticos exatos e exibe resultados arredondados para duas casas decimais para legibilidade. Os cálculos internos mantêm precisão completa."
+        }
+      ]
+    },
+    "seoTitle": "Calculateur de Point Médian - Quel Est le Point Central Entre Deux Coordonnées?",
+    "fr": {
+      "introduction": "Calculez le point milieu entre deux points instantanément avec notre calculatrice complète de point milieu. Fonctionne pour les coordonnées 2D et 3D, affichant les coordonnées du point central, la distance entre les points et les explications des formules étape par étape.",
+      "benefits": [
+        "Calcul instantané du point milieu pour les coordonnées 2D et 3D",
+        "Calcule automatiquement la distance entre deux points",
+        "Affichage clair des coordonnées du point milieu",
+        "Explication de la formule étape par étape",
+        "Support pour les coordonnées positives et négatives",
+        "Précision décimale pour des résultats exacts",
+        "Outil éducatif pour apprendre la géométrie des coordonnées",
+        "Utile pour trouver des points centraux en graphiques et design"
+      ],
+      "steps": [
+        "Entrez les coordonnées x et y pour le Point 1",
+        "Entrez les coordonnées x et y pour le Point 2",
+        "Optionnel : Activez le mode 3D et entrez les coordonnées z",
+        "Cliquez sur Calculer pour trouver le point milieu",
+        "Visualisez les coordonnées du point milieu",
+        "Voyez la distance entre les deux points",
+        "Examinez la formule utilisée pour le calcul"
+      ],
+      "inputsExplained": "La calculatrice accepte les coordonnées x et y pour deux points dans un plan 2D. Pour les calculs 3D, vous pouvez également fournir des coordonnées z. Les coordonnées peuvent être positives, négatives, entières ou décimales représentant n'importe quel emplacement dans le système de coordonnées.",
+      "formulaExplanation": "La formule du point milieu trouve le point exactement à mi-chemin entre deux points donnés. Pour les points 2D (x₁, y₁) et (x₂, y₂), le point milieu M est calculé comme : M = ((x₁ + x₂)/2, (y₁ + y₂)/2). Pour les points 3D, il s'étend à : M = ((x₁ + x₂)/2, (y₁ + y₂)/2, (z₁ + z₂)/2). La distance est calculée en utilisant la formule de distance : d = √[(x₂ - x₁)² + (y₂ - y₁)²] pour 2D, ou d = √[(x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²] pour 3D.",
+      "examples": [
+        "Points (0, 0) et (4, 6) : Point milieu = (2, 3), Distance = 7.21",
+        "Points (-2, 3) et (4, -1) : Point milieu = (1, 1), Distance = 7.21",
+        "Points (1, 2) et (7, 8) : Point milieu = (4, 5), Distance = 8.49",
+        "Points (0, 0, 0) et (6, 8, 10) : Point milieu = (3, 4, 5), Distance = 14.14 (3D)",
+        "Points (-5, -3) et (5, 3) : Point milieu = (0, 0), Distance = 11.66"
+      ],
+      "resultsExplanation": "Les résultats affichent les coordonnées du point milieu qui représentent le point central exact entre vos deux points d'entrée, la distance entre les points montrant à quel point ils sont éloignés, et les formules utilisées pour les deux calculs.",
+      "whoItsFor": "Parfait pour les étudiants apprenant la géométrie des coordonnées, les mathématiciens travaillant avec des calculs spatiaux, les designers graphiques trouvant des points centraux, les développeurs de jeux calculant des positions, les architectes planifiant des aménagements et toute personne ayant besoin de trouver le point milieu entre deux emplacements.",
+      "disclaimer": "Cette calculatrice fournit des calculs mathématiques précis pour le point milieu et la distance. Les résultats sont arrondis à deux décimales pour l'affichage. Vérifiez toujours les calculs critiques indépendamment pour les applications professionnelles.",
+      "relatedTools": ["Calculatrice de Distance", "Calculatrice de Pente", "Calculatrice de Triangles", "Calculatrice de Cercles"],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un point milieu ?",
+          "answer": "Un point milieu est le point qui se trouve exactement à mi-chemin entre deux points donnés. Il divise le segment de ligne reliant les deux points en deux parties égales."
+        },
+        {
+          "question": "Comment calcule-t-on le point milieu ?",
+          "answer": "Pour trouver le point milieu, faites la moyenne des coordonnées x et des coordonnées y des deux points séparément. La formule est M = ((x₁ + x₂)/2, (y₁ + y₂)/2)."
+        },
+        {
+          "question": "Cette calculatrice peut-elle fonctionner avec des coordonnées négatives ?",
+          "answer": "Oui, la calculatrice fonctionne avec n'importe quel nombre réel de coordonnées, y compris positifs, négatifs, entiers et décimaux."
+        },
+        {
+          "question": "Quelle est la différence entre un point milieu 2D et 3D ?",
+          "answer": "Le point milieu 2D utilise des coordonnées x et y sur un plan, tandis que le point milieu 3D inclut une coordonnée z pour la profondeur, étendant le calcul dans l'espace tridimensionnel."
+        },
+        {
+          "question": "Pourquoi la distance est-elle également calculée ?",
+          "answer": "La distance entre deux points est souvent nécessaire avec le point milieu. Elle vous indique à quelle distance les points sont séparés, ce qui est utile pour de nombreuses applications géométriques et pratiques."
+        },
+        {
+          "question": "Quelle est la précision des calculs ?",
+          "answer": "La calculatrice effectue des calculs mathématiques exacts et affiche les résultats arrondis à deux décimales pour la lisibilité. Les calculs internes maintiennent une précision complète."
+        }
+      ]
+    }
+  }
+}

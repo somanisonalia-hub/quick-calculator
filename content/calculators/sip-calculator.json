@@ -1,0 +1,185 @@
+{
+  "en": {
+    "title": "SIP Calculator",
+    "seoTitle": "How Much Returns Will My SIP Generate? Free SIP Calculator India",
+    "metaDescription": "Calculate SIP returns with our free calculator. Find out how much wealth your monthly SIP will create with compound growth, inflation adjustment, and detailed projections for Indian mutual fund investors.",
+    "keywords": [
+      "sip calculator",
+      "systematic investment plan calculator",
+      "sip mutual fund calculator",
+      "monthly investment calculator",
+      "sip returns calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate sip returns",
+      "sip calculator for mutual funds",
+      "systematic investment plan formula",
+      "calculate sip investment growth",
+      "sip calculator with inflation",
+      "monthly sip returns calculator india"
+    ],
+    "slug": "sip-calculator",
+    "category": "financial",
+    "subcategory": "Investment Calculators",
+    "difficulty": "Beginner",
+    "calculatorComponent": "SIPCalculator",
+    "tags": ["investment", "SIP", "mutual funds", "compound returns", "systematic planning"],
+    "description": "Calculate your Systematic Investment Plan (SIP) returns with our comprehensive calculator. Perfect for mutual fund investors planning long-term wealth creation through monthly investments. Get instant projections for your SIP with various rate of return scenarios.",
+    "summary": "Calculate SIP returns, growth projections, and future value with inflation adjustment",
+    "introduction": "Start your wealth creation journey with SIP (Systematic Investment Plan) - the most popular investment method among Indian retail investors. Our SIP calculator helps you understand how regular monthly investments compound over time to create substantial wealth. Whether you're investing ₹500 or ₹50,000 monthly, this calculator shows you the power of disciplined investing combined with market returns.",
+    "benefits": [
+      "Accurately calculates future value of your monthly SIP investments",
+      "Shows the power of compound returns over time",
+      "Helps you plan for financial goals like education, marriage, or retirement",
+      "Compares different investment amounts and time periods",
+      "Includes inflation adjustment for realistic value estimation",
+      "Demonstrates why starting early benefits from compound growth"
+    ],
+    "steps": [
+      "Enter your monthly SIP amount (starting investment)",
+      "Specify the number of years or months you plan to invest",
+      "Enter the expected annual rate of return (typical 8-15% for stocks)",
+      "View your projected investment value and wealth creation"
+    ],
+    "inputsExplained": [
+      "Monthly SIP Amount: The fixed amount you invest every month in your mutual fund",
+      "Investment Period: Duration in years or months for which you'll continue SIP",
+      "Expected Rate of Return: Annual percentage return you expect (conservative: 8%, moderate: 12%, aggressive: 15%)",
+      "Inflation Rate: Optional - accounts for purchasing power of your returns"
+    ],
+    "formulaExplanation": "SIP calculation uses the Future Value formula accounting for regular monthly investments. Your first month's investment gets full compounding time while later investments get progressively less compounding time. The formula considers: FV = P × [((1 + r)^n - 1) / r] × (1 + r), where P is monthly payment, r is monthly return rate, and n is number of months. This ensures each payment compounds at the appropriate rate based on when it's invested.",
+    "examples": [
+      {
+        "title": "Young Professional - 20 Year Goal",
+        "description": "A 30-year-old invests ₹5,000 monthly for 20 years expecting 12% annual returns",
+        "inputs": {
+          "monthlyAmount": 5000,
+          "years": 20,
+          "annualReturn": 12
+        },
+        "result": "Approximately ₹38.4 lakhs - demonstrating how consistent investing creates wealth"
+      },
+      {
+        "title": "Student Planning Education - 10 Year Goal",
+        "description": "Parents invest ₹3,000 monthly for 10 years for child's higher education (expecting 10% returns)",
+        "inputs": {
+          "monthlyAmount": 3000,
+          "years": 10,
+          "annualReturn": 10
+        },
+        "result": "Approximately ₹5.1 lakhs - sufficient for quality higher education"
+      },
+      {
+        "title": "Retiree Supplement - 15 Year Goal",
+        "description": "Someone investing ₹10,000 monthly for 15 years post-retirement with 8% expected returns",
+        "inputs": {
+          "monthlyAmount": 10000,
+          "years": 15,
+          "annualReturn": 8
+        },
+        "result": "Approximately ₹25 lakhs - stable income supplement in retirement"
+      }
+    ],
+    "resultsExplanation": [
+      "Total Investment: Sum of all your monthly SIP contributions",
+      "Expected Returns: Profit earned through compound growth",
+      "Final Amount: Your total wealth created (investment + returns)",
+      "XIRR: Extended Internal Rate of Return - actual annualized returns from your investments",
+      "Annual Breakdown: Year-by-year wealth accumulation pattern"
+    ],
+    "whoItsFor": "This SIP calculator is designed for Indian mutual fund investors, first-time investors starting their wealth journey, students planning education funds, parents saving for children's future, professionals building retirement corpus, and anyone wanting to understand the power of regular investing. It's particularly useful for those between 25-50 years old planning long-term financial goals.",
+    "disclaimer": "This SIP calculator provides estimates based on your inputs. Actual mutual fund returns vary based on market conditions, fund selection, and economic factors. Past performance is not indicative of future returns. Consult a financial advisor before making investment decisions. This calculator is for educational purposes only, not financial advice.",
+    "seoContent": {
+      "introduction": "Discover how much wealth you can create with a Systematic Investment Plan (SIP). Our SIP calculator shows you exactly how monthly investments of ₹500, ₹5,000, ₹10,000, or any amount compounds over time to build substantial wealth for your future goals.",
+      "benefits": [
+        "Calculate exact future value of your monthly SIP investments",
+        "Visualize compound growth power over 5, 10, 15+ years",
+        "Plan for major life goals: home, education, marriage, retirement",
+        "Compare different SIP amounts to fit your budget",
+        "Include inflation to understand real purchasing power",
+        "See year-by-year wealth accumulation breakdown",
+        "Ideal for first-time mutual fund investors in India"
+      ],
+      "howToUse": [
+        "Enter your monthly investment amount (₹500 to ₹1 lakh+)",
+        "Select investment duration (5 years to 40+ years)",
+        "Enter expected return rate (8% for debt, 12% for balanced, 15% for equity)",
+        "Choose inflation rate to see real value of returns",
+        "Review projections for total investment, returns, and final amount",
+        "Export or share results for investment planning"
+      ],
+      "formulaExplanation": "SIP uses the Future Value of Annuity formula: FV = P × [((1+r)^n - 1) / r] × (1+r). Each monthly investment compounds for different periods - your first payment gets full compounding while last payments compound minimally. This creates the powerful wealth multiplication effect that makes SIP India's most popular investment method among retail investors.",
+      "examples": [
+        "₹5,000/month for 20 years at 12% returns = ₹38.4 lakh (₹12 lakh invested + ₹26.4 lakh returns)",
+        "₹10,000/month for 15 years at 10% returns = ₹25 lakh for retirement corpus",
+        "₹3,000/month for 10 years at 10% returns = ₹5.1 lakh for child's education"
+      ],
+      "whoShouldUse": "First-time mutual fund investors, young professionals (25-35 years), parents saving for children's education (JEE coaching, engineering fees, abroad studies), individuals building retirement corpus, those with irregular bonuses planning regular investments, anyone wanting to understand compound growth power.",
+      "importantNotes": "SIP returns depend on actual fund performance - past returns are not guaranteed. Stock market volatility may affect short-term returns but benefits from averaging in during downturns. Start SIP early to maximize compound growth (₹500/month at age 25 beats ₹5,000/month at age 35). Review and adjust SIP amount annually based on income growth.",
+      "relatedTools": [
+        "Lumpsum Investment Calculator - Compare lumpsum vs SIP",
+        "Goal-Based Investment Calculator - Plan specific financial targets",
+        "Mutual Fund XIRR Calculator - Calculate actual fund returns",
+        "Inflation Calculator - Understand real purchasing power"
+      ],
+      "faqs": [
+        {
+          "question": "Can I change my SIP amount after starting?",
+          "answer": "Yes! Most mutual fund companies allow you to increase SIP amount (Step-up SIP) annually. Some offer flexibility to decrease temporarily during financial hardship. This calculator shows fixed SIP - consult your fund provider for variable SIP options."
+        },
+        {
+          "question": "What is a good expected return rate for SIP calculation?",
+          "answer": "Debt funds: 6-8% | Balanced/Hybrid: 10-12% | Equity/Growth: 12-15%. Conservative estimate is 10% for long-term equity SIP. Use higher rates for aggressive portfolios (small-cap funds) and lower for debt-heavy portfolios."
+        },
+        {
+          "question": "Is ₹500/month SIP worth it?",
+          "answer": "Absolutely! ₹500/month is perfect starting point. Over 20 years at 12% returns, ₹500 SIP becomes ₹3.84 lakh. Starting is more important than amount. You can increase as income grows."
+        },
+        {
+          "question": "What's the difference between SIP and mutual funds?",
+          "answer": "Mutual fund is investment product; SIP is method of investing in mutual funds. You can invest lumpsum OR via SIP into same mutual fund. SIP's advantage is disciplined regular investing and rupee-cost averaging."
+        },
+        {
+          "question": "Can I withdraw from SIP anytime?",
+          "answer": "Yes, but check exit load. Most equity funds have 1% exit load within 1 year. After 1 year, exit is free. Long-term gains (>1 year) get indexation benefits for tax savings in India."
+        },
+        {
+          "question": "Is SIP better than fixed deposits (FDs)?",
+          "answer": "For wealth creation over 10+ years, equity SIP historically beats FDs. FDs give ≈6% returns (±2%) while equity SIP averages 12%+ long-term. SIP is better for wealth building; FD is better for capital preservation."
+        }
+      ],
+      "steps": [
+        "Enter SIP values in calculator",
+        "Review monthly investment breakdown",
+        "Check final wealth accumulation",
+        "Compare different return scenarios",
+        "Note taxation implications",
+        "Consult financial advisor for fund selection"
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora SIP",
+    "seoTitle": "¿Cuánto Rendimiento Generará Mi SIP? Calculadora De Fondos Mutuos",
+    "metaDescription": "Calcula tus retornos de SIP (Plan de Inversión Sistemática) con nuestra calculadora gratuita.",
+    "slug": "sip-calculator",
+    "category": "financial",
+    "description": "Calcula los retornos de tu Plan de Inversión Sistemática (SIP) para fondos mutuales."
+  },
+  "pt": {
+    "title": "Calculadora SIP",
+    "seoTitle": "Quanto Retorno Meu SIP Gerará? Calculadora De Fundos Mútuos",
+    "metaDescription": "Calcula seus retornos de SIP com nossa calculadora gratuita.",
+    "slug": "sip-calculator",
+    "category": "financial",
+    "description": "Calcule os retornos do seu Plano de Investimento Sistemático (SIP) para fundos mútuos."
+  },
+  "fr": {
+    "title": "Calculatrice SIP",
+    "seoTitle": "Combien De Rendement Mon SIP Générera-T-Il ? Calculatrice De Fonds Communs",
+    "metaDescription": "Calculez vos rendements SIP avec notre calculatrice gratuite.",
+    "slug": "sip-calculator",
+    "category": "financial",
+    "description": "Calculez les rendements de votre Plan d'Investissement Systématique (SIP) pour fonds communs de placement."
+  }
+}

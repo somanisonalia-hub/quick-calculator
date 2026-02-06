@@ -1,0 +1,297 @@
+{
+  "en": {
+    "title": "Discount Calculator",
+    "description": "Calculate discounts on sales, promotions, and coupons instantly. Find final prices with tax and savings breakdown.",
+    "component": "DiscountCalculator",
+    "seoTitle": "Discount Calculator - How Much Will I Save on This Discount?",
+    "metaDescription": "Free online discount calculator. Calculate discounts, sale prices, and total savings on purchases. Works with percentages and multiple items.",
+    "keywords": [
+      "discount calculator",
+      "sale price calculator",
+      "percent off calculator",
+      "discount percentage",
+      "coupon calculator"
+    ],
+    "longTailKeywords": [
+      "how much will I save calculator",
+      "percentage off price calculator",
+      "calculate discount on purchase",
+      "multi item discount calculator",
+      "bulk discount savings calculator"
+    ],
+    "seoContent": {
+      "introduction": "A discount calculator helps you quickly determine how much money you'll save on a purchase when a discount is applied. Whether you're shopping online or in-store, calculating the final price after discounts becomes essential, especially during sales, holiday seasons, and promotional events. Our free discount calculator instantly shows you the discounted price, total savings, and final amount you need to pay.",
+      "benefits": [
+        "Instantly calculate final prices on discounted items",
+        "See exact savings amount in currency",
+        "Calculate multiple items with same discount",
+        "Plan your budget for purchases",
+        "Make better shopping decisions",
+        "Find best deals during sales"
+      ],
+      "steps": [
+        "Enter the original price of the item in the 'Original Price' field",
+        "Input the discount percentage in the 'Discount (%)' field",
+        "Specify the quantity if buying multiple items",
+        "View the instant calculations showing discount amount and final price",
+        "Toggle 'Show Breakdown' to see detailed calculations"
+      ],
+      "inputsExplained": {
+        "originalPrice": "The full retail price of a single item before any discount is applied. Enter the price in dollars.",
+        "discountPercent": "The discount percentage offered. For example, 20% off or 50% off. Can be any value from 0-100.",
+        "quantity": "The number of items you're purchasing at the same discount rate. Default is 1 item."
+      },
+      "formulaExplanation": "The discount calculation uses a straightforward formula: Discount Amount = (Original Price × Discount Percentage) ÷ 100. The Final Price = Original Price - Discount Amount. For multiple items: Total Original Price = Original Price × Quantity, and Total Savings = Discount Amount × Quantity.",
+      "examples": [
+        {
+          "scenario": "Single Item at 20% Off",
+          "price": "$100 item with 20% discount",
+          "calculation": "$100 × 20% = $20 discount, Final Price = $80"
+        },
+        {
+          "scenario": "Multiple Items with Bulk Discount",
+          "price": "Buy 5 shirts at $30 each, 30% off",
+          "calculation": "Total: $150 × 30% = $45 saved, Pay $105"
+        },
+        {
+          "scenario": "Stacked Discounts (Sequential)",
+          "price": "$200 item, apply 20% then 10% off",
+          "calculation": "After 20%: $160, After 10% on $160: $144 final price"
+        }
+      ],
+      "resultsExplanation": "The calculator displays results in two sections: Per Item shows the individual price after discount, and Totals show the cumulative savings and final amount for the quantity entered. The 'You Save' section prominently highlights your total savings in green, making it easy to see the value of the discount.",
+      "whoItsFor": "The discount calculator is perfect for shoppers looking to calculate savings before purchasing, students on budgets, business owners calculating cost savings on bulk orders, accountants verifying promotional pricing, and anyone comparing deals during holiday sales.",
+      "disclaimer": "This calculator provides estimates based on the discount percentage entered. Actual final prices may vary due to taxes, shipping fees, additional discounts, or store-specific policies. Always verify the final price at checkout.",
+      "relatedTools": [
+        { "name": "Tax Calculator", "slug": "tax-calculator" },
+        { "name": "Percentage Calculator", "slug": "percentage-calculator" },
+        { "name": "Budget Calculator", "slug": "budget-calculator" },
+        { "name": "Tip Calculator", "slug": "tip-calculator" }
+      ],
+      "faqs": [
+        {
+          "question": "How do I calculate a percentage off a price?",
+          "answer": "Multiply the original price by the discount percentage divided by 100. For example, 20% off $100 = (100 × 20) ÷ 100 = $20 discount, so the final price is $80."
+        },
+        {
+          "question": "Can I calculate multiple discounts at once?",
+          "answer": "If you have stacked discounts (like 20% off then an additional 10% off), you need to apply them sequentially. First apply the 20% discount, then apply the 10% discount to the reduced price."
+        },
+        {
+          "question": "How do I calculate bulk or quantity discounts?",
+          "answer": "Simply enter the quantity of items in the 'Quantity' field. The calculator will multiply the discounted price per item by the quantity to show your total savings and final payment."
+        },
+        {
+          "question": "What does the breakdown section show?",
+          "answer": "The breakdown shows detailed calculations including original price × quantity, discount amount deducted, and the final total. It helps verify that the discount was calculated correctly."
+        },
+        {
+          "question": "Does this calculator account for sales tax?",
+          "answer": "No, this calculator focuses on the discount itself. Sales tax varies by location and should be added separately using our Tax Calculator."
+        },
+        {
+          "question": "How accurate is the discount calculator?",
+          "answer": "The calculator is 100% accurate for basic discount calculations. However, real-world scenarios may include additional fees, taxes, or terms, so always verify at checkout."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Descuentos",
+    "description": "Calcula descuentos en ventas, promociones y cupones al instante. Encuentra precios finales con desglose de ahorros.",
+    "component": "DiscountCalculator",
+    "seoTitle": "Calculadora de Descuentos - ¿Cuánto Ahorraré con Este Descuento?",
+    "metaDescription": "Calculadora de descuentos en línea gratis. Calcula descuentos, precios de venta y ahorros totales. Funciona con porcentajes y múltiples artículos.",
+    "keywords": [
+      "calculadora de descuentos",
+      "calculadora de precio de venta",
+      "descuento porcentaje",
+      "calculadora cupón",
+      "rebaja calculadora"
+    ],
+    "longTailKeywords": [
+      "cuánto ahorraré calculadora",
+      "calcular porcentaje de descuento",
+      "descuento en compra calculadora",
+      "descuento múltiples artículos",
+      "calculadora descuento mayorista"
+    ],
+    "seoContent": {
+      "introduction": "Una calculadora de descuentos te ayuda a determinar rápidamente cuánto dinero ahorrarás en una compra cuando se aplica un descuento. Ya sea que compres en línea o en una tienda física, calcular el precio final después de descuentos es esencial, especialmente durante rebajas, temporadas festivas y eventos promocionales. Nuestra calculadora de descuentos gratuita te muestra instantáneamente el precio rebajado, ahorros totales y la cantidad final que necesitas pagar.",
+      "benefits": [
+        "Calcula precios finales en artículos rebajados al instante",
+        "Ve el monto exacto de ahorros en moneda",
+        "Calcula múltiples artículos con el mismo descuento",
+        "Planifica tu presupuesto para compras",
+        "Toma mejores decisiones de compra",
+        "Encuentra las mejores ofertas durante rebajas"
+      ],
+      "steps": [
+        "Ingresa el precio original del artículo en el campo 'Precio Original'",
+        "Introduce el porcentaje de descuento en el campo 'Descuento (%)'",
+        "Especifica la cantidad si compras múltiples artículos",
+        "Ve los cálculos instantáneos con el monto de descuento y precio final",
+        "Alterna 'Mostrar Desglose' para ver cálculos detallados"
+      ],
+      "inputsExplained": {
+        "originalPrice": "El precio minorista completo de un artículo único antes de cualquier descuento. Ingresa el precio en dólares.",
+        "discountPercent": "El porcentaje de descuento ofrecido. Por ejemplo, 20% de descuento o 50% de descuento.",
+        "quantity": "El número de artículos que compras con la misma tasa de descuento."
+      },
+      "formulaExplanation": "El cálculo del descuento utiliza una fórmula sencilla: Monto de Descuento = (Precio Original × Porcentaje de Descuento) ÷ 100. Precio Final = Precio Original - Monto de Descuento.",
+      "examples": [
+        {
+          "scenario": "Un artículo con 20% de descuento",
+          "price": "Artículo de $100 con 20% de descuento",
+          "calculation": "$100 × 20% = $20 de descuento, Precio Final = $80"
+        }
+      ],
+      "resultsExplanation": "La calculadora muestra resultados en dos secciones: Por Artículo muestra el precio individual después del descuento, y Totales muestran ahorros acumulados y monto final.",
+      "whoItsFor": "La calculadora de descuentos es perfecta para compradores que desean calcular ahorros antes de comprar, estudiantes con presupuesto limitado, dueños de negocios que calculan ahorros en órdenes al por mayor.",
+      "disclaimer": "Esta calculadora proporciona estimaciones basadas en el porcentaje de descuento ingresado. Los precios finales reales pueden variar debido a impuestos, gastos de envío u otras políticas.",
+      "relatedTools": [
+        { "name": "Calculadora de Impuestos", "slug": "tax-calculator" },
+        { "name": "Calculadora de Porcentajes", "slug": "percentage-calculator" },
+        { "name": "Calculadora de Presupuesto", "slug": "budget-calculator" }
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo calculo un porcentaje de descuento?",
+          "answer": "Multiplica el precio original por el porcentaje de descuento dividido por 100. Por ejemplo, 20% de $100 = (100 × 20) ÷ 100 = $20 de descuento."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Desconto",
+    "description": "Calcule descontos em vendas, promoções e cupons instantaneamente. Encontre preços finais com economia de detalhes.",
+    "component": "DiscountCalculator",
+    "seoTitle": "Calculadora de Desconto - Quanto Vou Economizar com Este Desconto?",
+    "metaDescription": "Calculadora de desconto online gratuita. Calcule descontos, preços de venda e economia total. Funciona com porcentagens e múltiplos itens.",
+    "keywords": [
+      "calculadora de desconto",
+      "calculadora de preço de venda",
+      "desconto percentual",
+      "calculadora cupom",
+      "desconto cálculo"
+    ],
+    "longTailKeywords": [
+      "quanto vou economizar calculadora",
+      "calcular percentual de desconto",
+      "desconto na compra calculadora",
+      "desconto múltiplos itens",
+      "calculadora desconto atacado"
+    ],
+    "seoContent": {
+      "introduction": "Uma calculadora de desconto ajuda você a determinar rapidamente quanto dinheiro economizará em uma compra quando um desconto é aplicado. Quer você compre online ou em loja física, calcular o preço final após descontos é essencial, especialmente em liquidações, épocas festivas e eventos promocionais. Nossa calculadora de desconto gratuita mostra instantaneamente o preço com desconto, economia total e o valor final que você precisa pagar.",
+      "benefits": [
+        "Calcula preços finais em artigos com desconto instantaneamente",
+        "Vê o valor exato de economia em moeda",
+        "Calcula múltiplos itens com o mesmo desconto",
+        "Planeja seu orçamento para compras",
+        "Toma melhores decisões de compra",
+        "Encontra as melhores ofertas em liquidações"
+      ],
+      "steps": [
+        "Digite o preço original do item no campo 'Preço Original'",
+        "Insira o percentual de desconto no campo 'Desconto (%)'",
+        "Especifique a quantidade se estiver comprando múltiplos itens",
+        "Veja os cálculos instantâneos com valor de desconto e preço final",
+        "Alterne 'Mostrar Detalhamento' para ver cálculos detalhados"
+      ],
+      "inputsExplained": {
+        "originalPrice": "O preço de varejo completo de um único item antes de qualquer desconto. Digite o preço em dólares.",
+        "discountPercent": "O percentual de desconto oferecido. Por exemplo, 20% de desconto ou 50% de desconto.",
+        "quantity": "O número de itens que você está comprando com a mesma taxa de desconto."
+      },
+      "formulaExplanation": "O cálculo de desconto usa uma fórmula simples: Valor de Desconto = (Preço Original × Percentual de Desconto) ÷ 100. Preço Final = Preço Original - Valor de Desconto.",
+      "examples": [
+        {
+          "scenario": "Um item com 20% de desconto",
+          "price": "Item de $100 com 20% de desconto",
+          "calculation": "$100 × 20% = $20 de desconto, Preço Final = $80"
+        }
+      ],
+      "resultsExplanation": "A calculadora mostra resultados em duas seções: Por Item mostra o preço individual após desconto, e Totais mostram economia acumulada e valor final.",
+      "whoItsFor": "A calculadora de desconto é perfeita para compradores que desejam calcular economia antes de comprar, estudantes com orçamento limitado, proprietários de negócios que calculam economia em pedidos em atacado.",
+      "disclaimer": "Esta calculadora fornece estimativas com base no percentual de desconto inserido. Os preços finais reais podem variar debido a impostos, taxas de envio ou outras políticas.",
+      "relatedTools": [
+        { "name": "Calculadora de Impostos", "slug": "tax-calculator" },
+        { "name": "Calculadora de Percentual", "slug": "percentage-calculator" },
+        { "name": "Calculadora de Orçamento", "slug": "budget-calculator" }
+      ],
+      "faqs": [
+        {
+          "question": "Como calculo um percentual de desconto?",
+          "answer": "Multiplique o preço original pelo percentual de desconto dividido por 100. Por exemplo, 20% de $100 = (100 × 20) ÷ 100 = $20 de desconto."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculatrice de Remise",
+    "description": "Calculez les remises sur les ventes, les promotions et les coupons instantanément. Trouvez les prix finaux avec détails d'économies.",
+    "component": "DiscountCalculator",
+    "seoTitle": "Calculatrice de Remise - Combien Vais-je Économiser sur Cette Remise?",
+    "metaDescription": "Calculatrice de remise en ligne gratuite. Calculez les remises, les prix de vente et les économies totales. Fonctionne avec les pourcentages et les articles multiples.",
+    "keywords": [
+      "calculatrice de remise",
+      "calculatrice de prix de vente",
+      "remise pourcentage",
+      "calculatrice coupon",
+      "calcul remise"
+    ],
+    "longTailKeywords": [
+      "combien économiserai-je calculatrice",
+      "calculer pourcentage de remise",
+      "remise sur achat calculatrice",
+      "remise articles multiples",
+      "calculatrice remise gros"
+    ],
+    "seoContent": {
+      "introduction": "Une calculatrice de remise vous aide à déterminer rapidement combien d'argent vous économiserez sur un achat lorsqu'une remise est appliquée. Que vous fassiez vos achats en ligne ou en magasin physique, calculer le prix final après les remises est essentiel, surtout pendant les soldes, les périodes festives et les événements promotionnels. Notre calculatrice de remise gratuite vous montre instantanément le prix réduit, les économies totales et le montant final que vous devez payer.",
+      "benefits": [
+        "Calcule les prix finaux sur les articles en solde instantanément",
+        "Voir le montant exact des économies en devises",
+        "Calcule plusieurs articles avec la même remise",
+        "Planifiez votre budget pour les achats",
+        "Prenez de meilleures décisions d'achat",
+        "Trouvez les meilleures offres pendant les soldes"
+      ],
+      "steps": [
+        "Entrez le prix original de l'article dans le champ 'Prix Original'",
+        "Saisissez le pourcentage de remise dans le champ 'Remise (%)'",
+        "Spécifiez la quantité si vous achetez plusieurs articles",
+        "Consultez les calculs instantanés montrant le montant de la remise et le prix final",
+        "Basculez 'Afficher les Détails' pour voir les calculs détaillés"
+      ],
+      "inputsExplained": {
+        "originalPrice": "Le prix de détail complet d'un seul article avant toute remise. Entrez le prix en dollars.",
+        "discountPercent": "Le pourcentage de remise offert. Par exemple, 20% de remise ou 50% de remise.",
+        "quantity": "Le nombre d'articles que vous achetez avec le même taux de remise."
+      },
+      "formulaExplanation": "Le calcul de la remise utilise une formule simple: Montant de Remise = (Prix Original × Pourcentage de Remise) ÷ 100. Prix Final = Prix Original - Montant de Remise.",
+      "examples": [
+        {
+          "scenario": "Un article avec 20% de remise",
+          "price": "Article de $100 avec 20% de remise",
+          "calculation": "$100 × 20% = $20 de remise, Prix Final = $80"
+        }
+      ],
+      "resultsExplanation": "La calculatrice affiche les résultats dans deux sections: Par Article affiche le prix individuel après remise, et Totaux affichent les économies cumulées et le montant final.",
+      "whoItsFor": "La calculatrice de remise est parfaite pour les acheteurs qui souhaitent calculer les économies avant d'acheter, les étudiants avec un budget limité, les propriétaires d'entreprises qui calculent les économies sur les commandes en gros.",
+      "disclaimer": "Cette calculatrice fournit des estimations basées sur le pourcentage de remise saisi. Les prix finaux réels peuvent varier en raison des taxes, des frais d'expédition ou d'autres politiques.",
+      "relatedTools": [
+        { "name": "Calculatrice d'Impôts", "slug": "tax-calculator" },
+        { "name": "Calculatrice de Pourcentage", "slug": "percentage-calculator" },
+        { "name": "Calculatrice de Budget", "slug": "budget-calculator" }
+      ],
+      "faqs": [
+        {
+          "question": "Comment calculer un pourcentage de remise?",
+          "answer": "Multipliez le prix original par le pourcentage de remise divisé par 100. Par exemple, 20% de $100 = (100 × 20) ÷ 100 = $20 de remise."
+        }
+      ]
+    }
+  }
+}

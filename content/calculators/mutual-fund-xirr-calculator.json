@@ -1,0 +1,180 @@
+{
+  "en": {
+    "title": "Mutual Fund XIRR Calculator",
+    "seoTitle": "What Is My Actual Mutual Fund Return? XIRR Calculator",
+    "metaDescription": "Calculate mutual fund XIRR returns with our free calculator. Measure actual performance of multi-transaction investments with exact dates, amounts, and time-weighted returns for Indian investors.",
+    "keywords": [
+      "xirr calculator",
+      "mutual fund xirr calculator",
+      "extended internal rate of return calculator",
+      "mutual fund return calculator",
+      "investment return calculator xirr"
+    ],
+    "longTailKeywords": [
+      "how to calculate xirr for mutual funds",
+      "xirr vs cagr calculator india",
+      "mutual fund xirr calculation",
+      "xirr calculator for sip investments",
+      "calculate actual returns using xirr",
+      "mutual fund performance xirr india"
+    ],
+    "slug": "mutual-fund-xirr-calculator",
+    "category": "financial",
+    "subcategory": "Investment Calculators",
+    "difficulty": "Intermediate",
+    "calculatorComponent": "MutualFundXIRRCalculator",
+    "tags": ["investment", "XIRR", "mutual funds", "returns", "performance tracking"],
+    "description": "Calculate your mutual fund XIRR (Extended Internal Rate of Return) with our advanced calculator. Perfect for investors with multiple transactions, SIP entries, and varying investment amounts. Get accurate time-weighted returns for your portfolio.",
+    "summary": "Calculate XIRR returns on mutual fund investments accounting for transaction timing",
+    "introduction": "XIRR (Extended Internal Rate of Return) is the most accurate way to measure your investment returns when you have irregular transactions or multiple SIP entries. Unlike simple CAGR, XIRR accounts for the timing of each transaction, giving you the true rate of return. Our calculator helps you understand your actual investment performance and compare it against benchmarks.",
+    "benefits": [
+      "Calculates accurate time-weighted returns using XIRR method",
+      "Handles multiple irregular transactions and SIP entries",
+      "Accounts for timing of investments and withdrawals",
+      "Shows actual performance vs expected returns",
+      "Perfect for comparing different mutual funds",
+      "Helps identify best performing schemes in your portfolio"
+    ],
+    "steps": [
+      "Enter your investment amounts and transaction dates (all SIP entries)",
+      "Add any lumpsum investments with their respective dates",
+      "Enter current value or redemption amounts with dates",
+      "The calculator computes your XIRR percentage return"
+    ],
+    "inputsExplained": [
+      "Transaction Date: The exact date of investment, SIP entry, or redemption",
+      "Transaction Amount: Investment amount (positive) or redemption/current value (negative for exit)",
+      "Net Investment: Sum of all amounts invested over time",
+      "Current Value: Current portfolio value (or final redemption amount if scheme sold)"
+    ],
+    "formulaExplanation": "XIRR uses the Internal Rate of Return formula with daily compounding. It solves: NPV = 0 = Σ [Cash Flow / (1 + XIRR)^(days/365)]. Each transaction is weighted by how long money remained invested. This method is superior to CAGR when you have timing variations in investments - it gives you the actual annualized return your money earned regardless of when you invested.",
+    "examples": [
+      {
+        "title": "SIP with Growth",
+        "description": "Investor with 5-year SIP of ₹5,000/month, now worth ₹4 lakhs",
+        "inputs": [
+          { "date": "2019-01-01", "amount": 5000 },
+          { "date": "2019-02-01", "amount": 5000 },
+          { "repeats": "monthly", "until": "2024-01-01" }
+        ],
+        "result": "XIRR approximately 15-18% depending on market performance"
+      },
+      {
+        "title": "Lumpsum Investment",
+        "description": "₹5 lakh invested in 2020, now worth ₹10 lakhs in 4 years",
+        "inputs": [
+          { "date": "2020-01-15", "amount": -500000 },
+          { "date": "2024-01-15", "amount": 1000000 }
+        ],
+        "result": "XIRR approximately 18.9% annually - strong fund performance"
+      },
+      {
+        "title": "Multiple Transactions",
+        "description": "Mixed SIP and lumpsum with partial redemptions over time",
+        "inputs": [
+          { "date": "2021-06-01", "amount": -100000 },
+          { "date": "2022-01-01", "amount": -3000, "repeats": "monthly until 2024" },
+          { "date": "2023-06-01", "amount": 50000 },
+          { "date": "2024-01-01", "amount": 250000 }
+        ],
+        "result": "XIRR shows true return accounting for all activities"
+      }
+    ],
+    "resultsExplanation": [
+      "XIRR %: Your annualized return percentage on invested capital",
+      "Absolute Return: Total profit or loss in rupees",
+      "Annualized Return: Year-over-year return rate",
+      "Performance vs Benchmark: Comparison with Nifty 50 or category average",
+      "Recommendation: Whether this fund outperformed alternatives"
+    ],
+    "whoItsFor": "XIRR calculator is essential for active mutual fund investors, portfolio managers tracking multiple holdings, investors comparing fund performance, those with irregular investment patterns, financial advisors evaluating client returns, and anyone wanting accurate investment performance measurement.",
+    "disclaimer": "This XIRR calculator helps analyze past investment performance. Actual mathematical XIRR calculation may vary slightly based on methodology. Use this for financial planning and analysis. Past performance is not indicative of future results. Consult financial advisor for investment decisions.",
+    "seoContent": {
+      "introduction": "Know exactly how well your mutual fund investments are performing. XIRR (Extended Internal Rate of Return) measures your actual returns accounting for timing of investments and withdrawals. Whether you've been investing ₹5,000 monthly for 5 years or made multiple lumpsum investments, this calculator shows your true performance.",
+      "benefits": [
+        "Calculate true XIRR accounting for investment timing",
+        "Compare fund performance against benchmarks",
+        "Measure returns better than simple percentage gains",
+        "Track multiple investments in same fund over time",
+        "Include additions and withdrawals in calculation",
+        "Understand effect of rupee-cost averaging on returns"
+      ],
+      "howToUse": [
+        "Add investment transaction: date, amount, type (buy/sell)",
+        "Include all additions, withdrawals, redemptions",
+        "Enter current fund value and today's date",
+        "Calculator computes XIRR automatically",
+        "Compare with benchmark return (NIFTY 50, Sensex, Bond Index)",
+        "Review annual XIRR tracking vs goals"
+      ],
+      "formulaExplanation": "XIRR uses Internal Rate of Return formula accounting for cash flows at different times. It finds the rate that makes NPV (Net Present Value) of all cash flows = 0. Example: Invested ₹10,000 in Jan 2020, ₹10,000 in Jan 2021, current value ₹25,000 in 2024 = 30% XIRR. Better than simple return (25,000-20,000)/20,000 = 25%) because it accounts for timing.",
+      "examples": [
+        "SIP ₹5,000/month for 5 years (total ₹3 lakh), current value ₹4 lakh = ~15-18% XIRR",
+        "Lumpsum ₹10 lakh in Jan 2020, current value ₹18 lakh in 2024 = ~16% XIRR",
+        "Multiple investments: ₹5 lakh (2020), ₹8 lakh (2021), withdrawn ₹2 lakh (2022), current ₹15 lakh = XIRR calculation accounts for all timings"
+      ],
+      "whoShouldUse": "SIP investors tracking portfolio performance, mutual fund investors with multiple transactions, those comparing fund performance against benchmarks, individuals evaluating advisor performance, anyone wanting to understand true investment returns vs simple percentage gains.",
+      "importantNotes": "XIRR is superior to CAGR for measuring actual investment performance. Benchmark comparison: Equity funds typically return 10-15% XIRR, Balanced: 8-12%, Debt: 6-8%. Consider expense ratio (1-2% annually) when interpreting XIRR vs benchmark. Tax impact: XIRR shown as pre-tax; actual returns after 20% TCS/capital gains tax will be lower.",
+      "relatedTools": [
+        "SIP Calculator - Project future SIP returns",
+        "Lumpsum Calculator - Calculate lumpsum growth",
+        "Goal-Based Calculator - Plan investment needs",
+        "Tax Calculator - Estimate capital gains tax impact"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between XIRR and CAGR?",
+          "answer": "CAGR is simple annualized return. XIRR accounts for when each investment was made. SIP ₹5,000/month for 5 years: CAGR ignores timing (wrong), XIRR accounts for it (correct). Use XIRR for actual fund performance."
+        },
+        {
+          "question": "Should I switch funds if XIRR is below 12%?",
+          "answer": "Not immediately. Consider: underperformance might be short-term (1-2 years). Check 3-5 year XIRR vs benchmark. High exit loads reduce returns. Switching incurs taxes. Review fund strategy before exiting."
+        },
+        {
+          "question": "Is 15% XIRR good?",
+          "answer": "Very good! Equity funds average 10-12% long-term. 15% beats most advisors/funds. Debt funds at 7-8% are good. Mixed above benchmark by 2-3% = good performance."
+        },
+        {
+          "question": "How often should I check XIRR?",
+          "answer": "Quarterly check is fine (don't obsess). Annual review recommended. During market crashes, checking daily is counter-productive. Focus on 3-5 year XIRR, not quarterly volatility."
+        },
+        {
+          "question": "Can XIRR be negative?",
+          "answer": "Yes, if current value < total invested. Market correction can cause negative XIRR short-term. Stay invested - historically all corrections reverse. Panic selling locks in losses."
+        }
+      ],
+      "steps": [
+        "List all investment transactions chronologically",
+        "Enter dates of each investment/withdrawal",
+        "Input amounts for each transaction",
+        "Enter current fund value",
+        "Review calculated XIRR",
+        "Compare against benchmark and goals"
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora XIRR de Fondos Mutuales",
+    "seoTitle": "¿Cuál Es Mi Rendimiento Real De Fondos Mutuos? Calculadora XIRR",
+    "metaDescription": "Calcula el XIRR de tus inversiones en fondos mutuales con múltiples transacciones.",
+    "slug": "mutual-fund-xirr-calculator",
+    "category": "financial",
+    "description": "Calcula la tasa interna de retorno extendida de tus inversiones en fondos mutuales."
+  },
+  "pt": {
+    "title": "Calculadora XIRR de Fundos Mútuos",
+    "seoTitle": "Qual É Meu Rendimento Real De Fundos Mútuos? Calculadora XIRR",
+    "metaDescription": "Calcula o XIRR de seus investimentos em fundos mútuos com múltiplas transações.",
+    "slug": "mutual-fund-xirr-calculator",
+    "category": "financial",
+    "description": "Calcule a taxa interna de retorno estendida de seus investimentos em fundos mútuos."
+  },
+  "fr": {
+    "title": "Calculatrice XIRR de Fonds Communs",
+    "seoTitle": "Quel Est Mon Rendement Réel Des Fonds Communs ? Calculatrice XIRR",
+    "metaDescription": "Calculez le XIRR de vos investissements en fonds communs avec plusieurs transactions.",
+    "slug": "mutual-fund-xirr-calculator",
+    "category": "financial",
+    "description": "Calculez le taux interne de retour étendu de vos investissements en fonds communs."
+  }
+}

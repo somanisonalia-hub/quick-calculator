@@ -1,0 +1,334 @@
+{
+  "en": {
+    "title": "Pace Calculator",
+    "seoTitle": "Pace Calculator - What Is My Running Pace?",
+    "metaDescription": "Free pace calculator for running and walking. Calculate pace, finish time, or distance. Perfect for marathon training, 5K, 10K runners.",
+    "slug": "pace-calculator",
+    "category": "health",
+    "description": "Calculate running or walking pace, predicted finish time, or distance covered.",
+    "instructions": [
+      "Select units",
+      "Choose calculation mode",
+      "Enter known values",
+      "Calculate",
+      "View results with splits"
+    ],
+    "calculatorComponent": "PaceCalculator",
+    "seoContent": {
+      "introduction": "Our Pace Calculator helps runners and walkers calculate their pace, predicted finish time, or distance covered.",
+      "benefits": [
+        {
+          "icon": "🏃",
+          "title": "Three-Way Calculator",
+          "description": "Calculate pace, time, or distance"
+        },
+        {
+          "icon": "📊",
+          "title": "Split Times",
+          "description": "Get per-mile or per-km splits"
+        },
+        {
+          "icon": "🏅",
+          "title": "Race Distances",
+          "description": "Quick buttons for 5K, 10K, half, full marathon"
+        },
+        {
+          "icon": "🆓",
+          "title": "Completely Free",
+          "description": "No signup or payment required"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Select Units",
+          "description": "Choose km or miles"
+        },
+        {
+          "step": 2,
+          "title": "Select Mode",
+          "description": "Choose to calculate pace, time, or distance"
+        },
+        {
+          "step": 3,
+          "title": "Enter Values",
+          "description": "Input the values you know"
+        },
+        {
+          "step": 4,
+          "title": "Calculate",
+          "description": "Click Calculate"
+        }
+      ],
+      "formulaExplanation": "Pace = Time / Distance. Time = Pace × Distance. Distance = Time / Pace.",
+      "examples": [
+        {
+          "title": "5K Goal Pace",
+          "description": "5K in 25 min = 5:00/km pace"
+        },
+        {
+          "title": "Marathon Pace",
+          "description": "4:00:00 marathon = 5:41/km pace"
+        }
+      ],
+      "whoItsFor": "Runners training for races, joggers tracking progress, coaches.",
+      "disclaimer": "This calculator provides mathematical conversions. Actual race times depend on many factors.",
+      "faqs": [
+        {
+          "question": "What is a good running pace?",
+          "answer": "It varies by fitness level. Beginners: 10-12 min/mile, experienced: 7-9 min/mile."
+        },
+        {
+          "question": "What pace for sub-4 marathon?",
+          "answer": "You need 5:41/km (9:09/mile) or faster."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de Ritmo",
+    "seoTitle": "Calculadora de Ritmo - ¿Cuál Es Mi Ritmo de Carrera?",
+    "metaDescription": "Calculadora de ritmo gratis para correr. Calcula ritmo, tiempo de llegada o distancia.",
+    "slug": "pace-calculator",
+    "category": "health",
+    "description": "Calcula tu ritmo de carrera, tiempo de llegada predicho o distancia recorrida.",
+    "instructions": [
+      "Selecciona unidades",
+      "Elige modo de cálculo",
+      "Ingresa valores conocidos",
+      "Calcular",
+      "Ver resultados con parciales"
+    ],
+    "calculatorComponent": "PaceCalculator",
+    "seoContent": {
+      "introduction": "Nuestra Calculadora de Ritmo ayuda a corredores a calcular su ritmo, tiempo de llegada o distancia.",
+      "benefits": [
+        {
+          "icon": "🏃",
+          "title": "Calculadora Triple",
+          "description": "Calcula ritmo, tiempo o distancia"
+        },
+        {
+          "icon": "📊",
+          "title": "Tiempos Parciales",
+          "description": "Obtén parciales por km o milla"
+        },
+        {
+          "icon": "🏅",
+          "title": "Distancias de Carrera",
+          "description": "Botones rápidos para 5K, 10K, maratón"
+        },
+        {
+          "icon": "🆓",
+          "title": "Completamente Gratis",
+          "description": "Sin registro ni pago"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Selecciona Unidades",
+          "description": "Elige km o millas"
+        },
+        {
+          "step": 2,
+          "title": "Selecciona Modo",
+          "description": "Elige calcular ritmo, tiempo o distancia"
+        },
+        {
+          "step": 3,
+          "title": "Ingresa Valores",
+          "description": "Ingresa los valores que conoces"
+        },
+        {
+          "step": 4,
+          "title": "Calcular",
+          "description": "Haz clic en Calcular"
+        }
+      ],
+      "formulaExplanation": "Ritmo = Tiempo / Distancia. Tiempo = Ritmo × Distancia. Distancia = Tiempo / Ritmo.",
+      "examples": [
+        {
+          "title": "Ritmo Objetivo 5K",
+          "description": "5K en 25 min = 5:00/km"
+        },
+        {
+          "title": "Ritmo de Maratón",
+          "description": "Maratón en 4:00:00 = 5:41/km"
+        }
+      ],
+      "whoItsFor": "Corredores entrenando para carreras, trotadores, entrenadores.",
+      "disclaimer": "Esta calculadora proporciona conversiones matemáticas.",
+      "faqs": [
+        {
+          "question": "¿Cuál es un buen ritmo?",
+          "answer": "Varía según el nivel. Principiantes: 10-12 min/milla, experimentados: 7-9 min/milla."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Ritmo",
+    "seoTitle": "Calculadora de Ritmo - Qual É Meu Ritmo de Corrida?",
+    "metaDescription": "Calculadora de ritmo grátis para corrida. Calcule ritmo, tempo de chegada ou distância.",
+    "slug": "pace-calculator",
+    "category": "health",
+    "description": "Calcule seu ritmo de corrida, tempo de chegada previsto ou distância percorrida.",
+    "instructions": [
+      "Selecione unidades",
+      "Escolha modo de cálculo",
+      "Digite valores conhecidos",
+      "Calcular",
+      "Ver resultados com parciais"
+    ],
+    "calculatorComponent": "PaceCalculator",
+    "seoContent": {
+      "introduction": "Nossa Calculadora de Ritmo ajuda corredores a calcular seu ritmo, tempo de chegada ou distância.",
+      "benefits": [
+        {
+          "icon": "🏃",
+          "title": "Calculadora Tripla",
+          "description": "Calcule ritmo, tempo ou distância"
+        },
+        {
+          "icon": "📊",
+          "title": "Tempos Parciais",
+          "description": "Obtenha parciais por km ou milha"
+        },
+        {
+          "icon": "🏅",
+          "title": "Distâncias de Corrida",
+          "description": "Botões rápidos para 5K, 10K, maratona"
+        },
+        {
+          "icon": "🆓",
+          "title": "Completamente Grátis",
+          "description": "Sem cadastro ou pagamento"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Selecione Unidades",
+          "description": "Escolha km ou milhas"
+        },
+        {
+          "step": 2,
+          "title": "Selecione Modo",
+          "description": "Escolha calcular ritmo, tempo ou distância"
+        },
+        {
+          "step": 3,
+          "title": "Digite Valores",
+          "description": "Digite os valores que você conhece"
+        },
+        {
+          "step": 4,
+          "title": "Calcular",
+          "description": "Clique em Calcular"
+        }
+      ],
+      "formulaExplanation": "Ritmo = Tempo / Distância. Tempo = Ritmo × Distância. Distância = Tempo / Ritmo.",
+      "examples": [
+        {
+          "title": "Ritmo Objetivo 5K",
+          "description": "5K em 25 min = 5:00/km"
+        },
+        {
+          "title": "Ritmo de Maratona",
+          "description": "Maratona em 4:00:00 = 5:41/km"
+        }
+      ],
+      "whoItsFor": "Corredores treinando para corridas, praticantes de jogging, treinadores.",
+      "disclaimer": "Esta calculadora fornece conversões matemáticas.",
+      "faqs": [
+        {
+          "question": "Qual é um bom ritmo?",
+          "answer": "Varia conforme o nível. Iniciantes: 10-12 min/milha, experientes: 7-9 min/milha."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur d'Allure",
+    "seoTitle": "Calculateur d'Allure - Quelle Est Mon Allure de Course?",
+    "metaDescription": "Calculateur d'allure gratuit pour la course. Calculez allure, temps d'arrivée ou distance.",
+    "slug": "pace-calculator",
+    "category": "health",
+    "description": "Calculez votre allure de course, temps d'arrivée prévu ou distance parcourue.",
+    "instructions": [
+      "Sélectionnez les unités",
+      "Choisissez le mode de calcul",
+      "Entrez les valeurs connues",
+      "Calculer",
+      "Voir les résultats avec fractionnés"
+    ],
+    "calculatorComponent": "PaceCalculator",
+    "seoContent": {
+      "introduction": "Notre Calculateur d'Allure aide les coureurs à calculer leur allure, temps d'arrivée ou distance.",
+      "benefits": [
+        {
+          "icon": "🏃",
+          "title": "Calculateur Triple",
+          "description": "Calculez allure, temps ou distance"
+        },
+        {
+          "icon": "📊",
+          "title": "Temps Intermédiaires",
+          "description": "Obtenez des fractionnés par km ou mile"
+        },
+        {
+          "icon": "🏅",
+          "title": "Distances de Course",
+          "description": "Boutons rapides pour 5K, 10K, marathon"
+        },
+        {
+          "icon": "🆓",
+          "title": "Entièrement Gratuit",
+          "description": "Sans inscription ni paiement"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Sélectionnez les Unités",
+          "description": "Choisissez km ou miles"
+        },
+        {
+          "step": 2,
+          "title": "Sélectionnez le Mode",
+          "description": "Choisissez de calculer allure, temps ou distance"
+        },
+        {
+          "step": 3,
+          "title": "Entrez les Valeurs",
+          "description": "Entrez les valeurs que vous connaissez"
+        },
+        {
+          "step": 4,
+          "title": "Calculer",
+          "description": "Cliquez sur Calculer"
+        }
+      ],
+      "formulaExplanation": "Allure = Temps / Distance. Temps = Allure × Distance. Distance = Temps / Allure.",
+      "examples": [
+        {
+          "title": "Allure Objectif 5K",
+          "description": "5K en 25 min = 5:00/km"
+        },
+        {
+          "title": "Allure de Marathon",
+          "description": "Marathon en 4:00:00 = 5:41/km"
+        }
+      ],
+      "whoItsFor": "Coureurs s'entraînant pour des courses, joggeurs, entraîneurs.",
+      "disclaimer": "Ce calculateur fournit des conversions mathématiques.",
+      "faqs": [
+        {
+          "question": "Quelle est une bonne allure?",
+          "answer": "Cela varie selon le niveau. Débutants: 10-12 min/mile, expérimentés: 7-9 min/mile."
+        }
+      ]
+    }
+  }
+}

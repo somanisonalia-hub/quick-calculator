@@ -1,0 +1,231 @@
+{
+  "slug": "slope-calculator",
+  "category": "math",
+  "subcategory": "geometry",
+  "difficulty": "intermediate",
+  "component": "SlopeCalculator",
+  "title": "Slope Calculator",
+  "keywords": ["slope calculator", "gradient calculator", "slope between two points", "line slope", "slope formula", "linear equation calculator"],
+  "seoTitle": "Slope Calculator - What Is the Slope Between Two Points?",
+  "seoContent": {
+    "en": {
+      "introduction": "Calculate the slope (gradient) between two points instantly with our comprehensive slope calculator. Find the slope, line equation, distance between points, midpoint, and angle of inclination for any two coordinate pairs.",
+      "benefits": [
+        "Instant slope calculation from two points (x₁, y₁) and (x₂, y₂)",
+        "Display line equation in slope-intercept form (y = mx + b)",
+        "Calculate distance between the two points",
+        "Find midpoint coordinates automatically",
+        "Calculate angle of inclination in degrees",
+        "Handle vertical lines (undefined slope) and horizontal lines (zero slope)",
+        "Visual representation of the slope and line",
+        "Step-by-step explanation of calculations"
+      ],
+      "steps": [
+        "Enter the coordinates of the first point (x₁, y₁)",
+        "Enter the coordinates of the second point (x₂, y₂)",
+        "Click Calculate to see all results",
+        "View the slope value, line equation, distance, midpoint, and angle",
+        "Observe the visual graph showing the line and points"
+      ],
+      "inputsExplained": "The calculator requires two points in a coordinate plane. Each point consists of an x-coordinate (horizontal position) and a y-coordinate (vertical position). You can enter positive or negative numbers, including decimals.",
+      "formulaExplanation": "Slope (m) = (y₂ - y₁) / (x₂ - x₁). This represents the change in y divided by the change in x, also known as 'rise over run'. The line equation is y = mx + b, where b is the y-intercept. Distance = √[(x₂-x₁)² + (y₂-y₁)²]. Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2). Angle = arctan(m) converted to degrees.",
+      "examples": [
+        "Points (2, 3) and (5, 11): Slope = (11-3)/(5-2) = 8/3 ≈ 2.667",
+        "Points (0, 0) and (4, 4): Slope = 1 (45° angle, y = x)",
+        "Points (1, 5) and (1, 8): Undefined slope (vertical line, x = 1)",
+        "Points (2, 3) and (7, 3): Slope = 0 (horizontal line, y = 3)"
+      ],
+      "resultsExplanation": "Results include: Slope (m) - the steepness of the line; Line equation in y = mx + b form; Distance - the length between the two points; Midpoint - the center point between the two coordinates; Angle - the angle of inclination from the positive x-axis in degrees (0° to 180°).",
+      "whoItsFor": "This calculator is perfect for students learning coordinate geometry, engineers working with linear relationships, architects designing slopes, surveyors calculating terrain gradients, and anyone needing to analyze linear relationships between two points.",
+      "disclaimer": "This calculator provides accurate mathematical calculations. For vertical lines (x₁ = x₂), the slope is undefined. Results are rounded to appropriate decimal places for display purposes. Always verify critical calculations independently.",
+      "relatedTools": ["Distance Calculator", "Midpoint Calculator", "Line Equation Calculator", "Coordinate Geometry Calculator"],
+      "faqs": [
+        {
+          "question": "What is slope in mathematics?",
+          "answer": "Slope is a measure of the steepness of a line. It represents how much the y-value changes for each unit change in x. A positive slope means the line rises from left to right, while a negative slope means it falls."
+        },
+        {
+          "question": "What does undefined slope mean?",
+          "answer": "An undefined slope occurs when you have a vertical line (where x₁ = x₂). Since you're dividing by zero (x₂ - x₁ = 0), the slope cannot be calculated. The line equation is simply x = constant."
+        },
+        {
+          "question": "What is the difference between slope and gradient?",
+          "answer": "Slope and gradient are the same thing - they both measure the steepness of a line. 'Slope' is more commonly used in the US, while 'gradient' is often used in other English-speaking countries."
+        },
+        {
+          "question": "How do I interpret the slope value?",
+          "answer": "A slope of 1 means a 45° line (rise = run). Slope > 1 is steeper than 45°. Slope between 0 and 1 is less steep. Slope = 0 is horizontal. Negative slopes indicate lines falling from left to right."
+        },
+        {
+          "question": "Can slope be negative?",
+          "answer": "Yes! A negative slope means the line goes downward from left to right. For example, if you go from point (0, 5) to (5, 0), the slope is -1, indicating the line decreases by 1 unit vertically for each unit it moves horizontally."
+        }
+      ]
+    },
+    "seoTitle": "Calculadora de Pendiente - ¿Cuál Es la Pendiente Entre Dos Puntos?",
+    "es": {
+      "introduction": "Calcula la pendiente (gradiente) entre dos puntos instantáneamente con nuestra calculadora integral de pendiente. Encuentra la pendiente, ecuación de la recta, distancia entre puntos, punto medio y ángulo de inclinación para cualquier par de coordenadas.",
+      "benefits": [
+        "Cálculo instantáneo de pendiente desde dos puntos (x₁, y₁) y (x₂, y₂)",
+        "Muestra la ecuación de la recta en forma pendiente-intersección (y = mx + b)",
+        "Calcula la distancia entre los dos puntos",
+        "Encuentra las coordenadas del punto medio automáticamente",
+        "Calcula el ángulo de inclinación en grados",
+        "Maneja líneas verticales (pendiente indefinida) y horizontales (pendiente cero)",
+        "Representación visual de la pendiente y la recta",
+        "Explicación paso a paso de los cálculos"
+      ],
+      "steps": [
+        "Ingresa las coordenadas del primer punto (x₁, y₁)",
+        "Ingresa las coordenadas del segundo punto (x₂, y₂)",
+        "Haz clic en Calcular para ver todos los resultados",
+        "Visualiza el valor de la pendiente, ecuación de la recta, distancia, punto medio y ángulo",
+        "Observa el gráfico visual que muestra la recta y los puntos"
+      ],
+      "inputsExplained": "La calculadora requiere dos puntos en un plano de coordenadas. Cada punto consiste en una coordenada x (posición horizontal) y una coordenada y (posición vertical). Puedes ingresar números positivos o negativos, incluidos decimales.",
+      "formulaExplanation": "Pendiente (m) = (y₂ - y₁) / (x₂ - x₁). Esto representa el cambio en y dividido por el cambio en x, también conocido como 'elevación sobre recorrido'. La ecuación de la recta es y = mx + b, donde b es la intersección con el eje y. Distancia = √[(x₂-x₁)² + (y₂-y₁)²]. Punto medio = ((x₁+x₂)/2, (y₁+y₂)/2). Ángulo = arctan(m) convertido a grados.",
+      "examples": [
+        "Puntos (2, 3) y (5, 11): Pendiente = (11-3)/(5-2) = 8/3 ≈ 2.667",
+        "Puntos (0, 0) y (4, 4): Pendiente = 1 (ángulo de 45°, y = x)",
+        "Puntos (1, 5) y (1, 8): Pendiente indefinida (línea vertical, x = 1)",
+        "Puntos (2, 3) y (7, 3): Pendiente = 0 (línea horizontal, y = 3)"
+      ],
+      "resultsExplanation": "Los resultados incluyen: Pendiente (m) - la inclinación de la recta; Ecuación de la recta en forma y = mx + b; Distancia - la longitud entre los dos puntos; Punto medio - el punto central entre las dos coordenadas; Ángulo - el ángulo de inclinación desde el eje x positivo en grados (0° a 180°).",
+      "whoItsFor": "Esta calculadora es perfecta para estudiantes que aprenden geometría de coordenadas, ingenieros que trabajan con relaciones lineales, arquitectos que diseñan pendientes, topógrafos que calculan gradientes de terreno y cualquiera que necesite analizar relaciones lineales entre dos puntos.",
+      "disclaimer": "Esta calculadora proporciona cálculos matemáticos precisos. Para líneas verticales (x₁ = x₂), la pendiente es indefinida. Los resultados se redondean a decimales apropiados para fines de visualización. Siempre verifica los cálculos críticos de forma independiente.",
+      "relatedTools": ["Calculadora de Distancia", "Calculadora de Punto Medio", "Calculadora de Ecuación de Recta", "Calculadora de Geometría de Coordenadas"],
+      "faqs": [
+        {
+          "question": "¿Qué es la pendiente en matemáticas?",
+          "answer": "La pendiente es una medida de la inclinación de una recta. Representa cuánto cambia el valor y por cada unidad de cambio en x. Una pendiente positiva significa que la recta sube de izquierda a derecha, mientras que una pendiente negativa significa que baja."
+        },
+        {
+          "question": "¿Qué significa pendiente indefinida?",
+          "answer": "Una pendiente indefinida ocurre cuando tienes una línea vertical (donde x₁ = x₂). Como estás dividiendo por cero (x₂ - x₁ = 0), la pendiente no se puede calcular. La ecuación de la recta es simplemente x = constante."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre pendiente y gradiente?",
+          "answer": "Pendiente y gradiente son lo mismo - ambos miden la inclinación de una recta. 'Pendiente' es más común en español, mientras que 'gradiente' también se usa en contextos técnicos."
+        },
+        {
+          "question": "¿Cómo interpreto el valor de la pendiente?",
+          "answer": "Una pendiente de 1 significa una línea de 45° (elevación = recorrido). Pendiente > 1 es más inclinada que 45°. Pendiente entre 0 y 1 es menos inclinada. Pendiente = 0 es horizontal. Las pendientes negativas indican líneas que bajan de izquierda a derecha."
+        },
+        {
+          "question": "¿Puede la pendiente ser negativa?",
+          "answer": "¡Sí! Una pendiente negativa significa que la línea va hacia abajo de izquierda a derecha. Por ejemplo, si vas del punto (0, 5) al (5, 0), la pendiente es -1, indicando que la línea disminuye 1 unidad verticalmente por cada unidad que se mueve horizontalmente."
+        }
+      ]
+    },
+    "seoTitle": "Calculadora de Inclinação - Qual É a Inclinação Entre Dois Pontos?",
+    "pt": {
+      "introduction": "Calcule a inclinação (gradiente) entre dois pontos instantaneamente com nossa calculadora abrangente de inclinação. Encontre a inclinação, equação da reta, distância entre pontos, ponto médio e ângulo de inclinação para qualquer par de coordenadas.",
+      "benefits": [
+        "Cálculo instantâneo de inclinação a partir de dois pontos (x₁, y₁) e (x₂, y₂)",
+        "Exibe a equação da reta na forma inclinação-intercepto (y = mx + b)",
+        "Calcula a distância entre os dois pontos",
+        "Encontra as coordenadas do ponto médio automaticamente",
+        "Calcula o ângulo de inclinação em graus",
+        "Lida com linhas verticais (inclinação indefinida) e horizontais (inclinação zero)",
+        "Representação visual da inclinação e da reta",
+        "Explicação passo a passo dos cálculos"
+      ],
+      "steps": [
+        "Digite as coordenadas do primeiro ponto (x₁, y₁)",
+        "Digite as coordenadas do segundo ponto (x₂, y₂)",
+        "Clique em Calcular para ver todos os resultados",
+        "Visualize o valor da inclinação, equação da reta, distância, ponto médio e ângulo",
+        "Observe o gráfico visual mostrando a reta e os pontos"
+      ],
+      "inputsExplained": "A calculadora requer dois pontos em um plano de coordenadas. Cada ponto consiste em uma coordenada x (posição horizontal) e uma coordenada y (posição vertical). Você pode inserir números positivos ou negativos, incluindo decimais.",
+      "formulaExplanation": "Inclinação (m) = (y₂ - y₁) / (x₂ - x₁). Isso representa a mudança em y dividida pela mudança em x, também conhecida como 'subida sobre percurso'. A equação da reta é y = mx + b, onde b é a interceptação com o eixo y. Distância = √[(x₂-x₁)² + (y₂-y₁)²]. Ponto médio = ((x₁+x₂)/2, (y₁+y₂)/2). Ângulo = arctan(m) convertido para graus.",
+      "examples": [
+        "Pontos (2, 3) e (5, 11): Inclinação = (11-3)/(5-2) = 8/3 ≈ 2.667",
+        "Pontos (0, 0) e (4, 4): Inclinação = 1 (ângulo de 45°, y = x)",
+        "Pontos (1, 5) e (1, 8): Inclinação indefinida (linha vertical, x = 1)",
+        "Pontos (2, 3) e (7, 3): Inclinação = 0 (linha horizontal, y = 3)"
+      ],
+      "resultsExplanation": "Os resultados incluem: Inclinação (m) - a inclinação da reta; Equação da reta na forma y = mx + b; Distância - o comprimento entre os dois pontos; Ponto médio - o ponto central entre as duas coordenadas; Ângulo - o ângulo de inclinação a partir do eixo x positivo em graus (0° a 180°).",
+      "whoItsFor": "Esta calculadora é perfeita para estudantes aprendendo geometria de coordenadas, engenheiros trabalhando com relações lineares, arquitetos projetando inclinações, agrimensores calculando gradientes de terreno e qualquer pessoa que precise analisar relações lineares entre dois pontos.",
+      "disclaimer": "Esta calculadora fornece cálculos matemáticos precisos. Para linhas verticais (x₁ = x₂), a inclinação é indefinida. Os resultados são arredondados para casas decimais apropriadas para fins de exibição. Sempre verifique cálculos críticos de forma independente.",
+      "relatedTools": ["Calculadora de Distância", "Calculadora de Ponto Médio", "Calculadora de Equação de Reta", "Calculadora de Geometria de Coordenadas"],
+      "faqs": [
+        {
+          "question": "O que é inclinação em matemática?",
+          "answer": "Inclinação é uma medida da inclinação de uma reta. Representa quanto o valor y muda para cada unidade de mudança em x. Uma inclinação positiva significa que a reta sobe da esquerda para a direita, enquanto uma inclinação negativa significa que desce."
+        },
+        {
+          "question": "O que significa inclinação indefinida?",
+          "answer": "Uma inclinação indefinida ocorre quando você tem uma linha vertical (onde x₁ = x₂). Como você está dividindo por zero (x₂ - x₁ = 0), a inclinação não pode ser calculada. A equação da reta é simplesmente x = constante."
+        },
+        {
+          "question": "Qual é a diferença entre inclinação e gradiente?",
+          "answer": "Inclinação e gradiente são a mesma coisa - ambos medem a inclinação de uma reta. Os termos são usados de forma intercambiável em matemática."
+        },
+        {
+          "question": "Como interpreto o valor da inclinação?",
+          "answer": "Uma inclinação de 1 significa uma linha de 45° (subida = percurso). Inclinação > 1 é mais íngreme que 45°. Inclinação entre 0 e 1 é menos íngreme. Inclinação = 0 é horizontal. Inclinações negativas indicam linhas que descem da esquerda para a direita."
+        },
+        {
+          "question": "A inclinação pode ser negativa?",
+          "answer": "Sim! Uma inclinação negativa significa que a linha vai para baixo da esquerda para a direita. Por exemplo, se você vai do ponto (0, 5) para (5, 0), a inclinação é -1, indicando que a linha diminui 1 unidade verticalmente para cada unidade que se move horizontalmente."
+        }
+      ]
+    },
+    "seoTitle": "Calculateur de Pente - Quelle Est la Pente Entre Deux Points?",
+    "fr": {
+      "introduction": "Calculez la pente (gradient) entre deux points instantanément avec notre calculatrice complète de pente. Trouvez la pente, l'équation de la ligne, la distance entre les points, le point médian et l'angle d'inclinaison pour toute paire de coordonnées.",
+      "benefits": [
+        "Calcul instantané de la pente à partir de deux points (x₁, y₁) et (x₂, y₂)",
+        "Affiche l'équation de la ligne sous forme pente-ordonnée (y = mx + b)",
+        "Calcule la distance entre les deux points",
+        "Trouve les coordonnées du point médian automatiquement",
+        "Calcule l'angle d'inclinaison en degrés",
+        "Gère les lignes verticales (pente indéfinie) et horizontales (pente nulle)",
+        "Représentation visuelle de la pente et de la ligne",
+        "Explication étape par étape des calculs"
+      ],
+      "steps": [
+        "Entrez les coordonnées du premier point (x₁, y₁)",
+        "Entrez les coordonnées du deuxième point (x₂, y₂)",
+        "Cliquez sur Calculer pour voir tous les résultats",
+        "Visualisez la valeur de la pente, l'équation de la ligne, la distance, le point médian et l'angle",
+        "Observez le graphique visuel montrant la ligne et les points"
+      ],
+      "inputsExplained": "La calculatrice nécessite deux points dans un plan de coordonnées. Chaque point se compose d'une coordonnée x (position horizontale) et d'une coordonnée y (position verticale). Vous pouvez entrer des nombres positifs ou négatifs, y compris des décimales.",
+      "formulaExplanation": "Pente (m) = (y₂ - y₁) / (x₂ - x₁). Cela représente le changement en y divisé par le changement en x, également connu sous le nom de 'montée sur course'. L'équation de la ligne est y = mx + b, où b est l'ordonnée à l'origine. Distance = √[(x₂-x₁)² + (y₂-y₁)²]. Point médian = ((x₁+x₂)/2, (y₁+y₂)/2). Angle = arctan(m) converti en degrés.",
+      "examples": [
+        "Points (2, 3) et (5, 11): Pente = (11-3)/(5-2) = 8/3 ≈ 2.667",
+        "Points (0, 0) et (4, 4): Pente = 1 (angle de 45°, y = x)",
+        "Points (1, 5) et (1, 8): Pente indéfinie (ligne verticale, x = 1)",
+        "Points (2, 3) et (7, 3): Pente = 0 (ligne horizontale, y = 3)"
+      ],
+      "resultsExplanation": "Les résultats incluent: Pente (m) - l'inclinaison de la ligne; Équation de la ligne sous forme y = mx + b; Distance - la longueur entre les deux points; Point médian - le point central entre les deux coordonnées; Angle - l'angle d'inclinaison à partir de l'axe x positif en degrés (0° à 180°).",
+      "whoItsFor": "Cette calculatrice est parfaite pour les étudiants apprenant la géométrie des coordonnées, les ingénieurs travaillant avec des relations linéaires, les architectes concevant des pentes, les géomètres calculant les gradients de terrain et toute personne ayant besoin d'analyser des relations linéaires entre deux points.",
+      "disclaimer": "Cette calculatrice fournit des calculs mathématiques précis. Pour les lignes verticales (x₁ = x₂), la pente est indéfinie. Les résultats sont arrondis à des décimales appropriées à des fins d'affichage. Vérifiez toujours les calculs critiques de manière indépendante.",
+      "relatedTools": ["Calculateur de Distance", "Calculateur de Point Médian", "Calculateur d'Équation de Ligne", "Calculateur de Géométrie des Coordonnées"],
+      "faqs": [
+        {
+          "question": "Qu'est-ce que la pente en mathématiques?",
+          "answer": "La pente est une mesure de l'inclinaison d'une ligne. Elle représente combien la valeur y change pour chaque unité de changement en x. Une pente positive signifie que la ligne monte de gauche à droite, tandis qu'une pente négative signifie qu'elle descend."
+        },
+        {
+          "question": "Que signifie pente indéfinie?",
+          "answer": "Une pente indéfinie se produit lorsque vous avez une ligne verticale (où x₁ = x₂). Comme vous divisez par zéro (x₂ - x₁ = 0), la pente ne peut pas être calculée. L'équation de la ligne est simplement x = constante."
+        },
+        {
+          "question": "Quelle est la différence entre pente et gradient?",
+          "answer": "Pente et gradient sont la même chose - ils mesurent tous deux l'inclinaison d'une ligne. Les termes sont utilisés de manière interchangeable en mathématiques."
+        },
+        {
+          "question": "Comment interpréter la valeur de la pente?",
+          "answer": "Une pente de 1 signifie une ligne de 45° (montée = course). Pente > 1 est plus raide que 45°. Pente entre 0 et 1 est moins raide. Pente = 0 est horizontal. Les pentes négatives indiquent des lignes qui descendent de gauche à droite."
+        },
+        {
+          "question": "La pente peut-elle être négative?",
+          "answer": "Oui! Une pente négative signifie que la ligne descend de gauche à droite. Par exemple, si vous allez du point (0, 5) au (5, 0), la pente est -1, indiquant que la ligne diminue de 1 unité verticalement pour chaque unité qu'elle se déplace horizontalement."
+        }
+      ]
+    }
+  }
+}

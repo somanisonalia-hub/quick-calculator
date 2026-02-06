@@ -48,7 +48,11 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       higherPayments: "Higher payments",
       higherReturns: "Higher returns",
       smallDifferences: "Small differences can have big financial impacts",
-      alwaysCompare: "Always compare total costs or returns, not just rates"
+      alwaysCompare: "Always compare total costs or returns, not just rates",
+      calculationFormulas: "Calculation Formulas",
+      formulaNote: "Where: P = principal, r = monthly rate, n = number of payments",
+      understandingComparisons: "Understanding Rate Comparisons",
+      enterAbove: "Enter your principal amount, term, and interest rates above"
     },
     es: {
       title: "Calculadora de Tabla de Tasas de Interés",
@@ -82,7 +86,11 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       higherPayments: "Pagos más altos",
       higherReturns: "Retornos más altos",
       smallDifferences: "Pequeñas diferencias pueden tener grandes impactos financieros",
-      alwaysCompare: "Siempre compara costos o retornos totales, no solo tasas"
+      alwaysCompare: "Siempre compara costos o retornos totales, no solo tasas",
+      calculationFormulas: "Fórmulas de Cálculo",
+      formulaNote: "Donde: P = principal, r = tasa mensual, n = número de pagos",
+      understandingComparisons: "Entender Comparaciones de Tasas",
+      enterAbove: "Ingresa tu monto principal, plazo y tasas de interés arriba"
     },
     pt: {
       title: "Calculadora de Tabela de Taxas de Juros",
@@ -116,7 +124,11 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       higherPayments: "Pagamentos mais altos",
       higherReturns: "Retornos mais altos",
       smallDifferences: "Pequenas diferenças podem ter grandes impactos financeiros",
-      alwaysCompare: "Sempre compare custos ou retornos totais, não apenas taxas"
+      alwaysCompare: "Sempre compare os custos ou retornos totais, não apenas as taxas",
+      calculationFormulas: "Fórmulas de Cálculo",
+      formulaNote: "Onde: P = principal, r = taxa mensal, n = número de pagamentos",
+      understandingComparisons: "Entender Comparações de Taxas",
+      enterAbove: "Digite o valor principal, prazo e taxas de juros acima"
     },
     fr: {
       title: "Calculateur de Tableau de Taux d'Intérêt",
@@ -150,7 +162,11 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       higherPayments: "Paiements supérieurs",
       higherReturns: "Rendements supérieurs",
       smallDifferences: "Petites différences peuvent avoir de grands impacts financiers",
-      alwaysCompare: "Toujours comparer coûts ou rendements totaux, pas seulement taux"
+      alwaysCompare: "Toujours comparer coûts ou rendements totaux, pas seulement taux",
+      calculationFormulas: "Formules de Calcul",
+      formulaNote: "Où: P = principal, r = taux mensuel, n = nombre de paiements",
+      understandingComparisons: "Comprendre les Comparaisons de Taux",
+      enterAbove: "Entrez votre montant principal, durée et taux d'intérêt ci-dessus"
     }
   };
 
@@ -162,6 +178,34 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
   const [calculationType, setCalculationType] = useState<'loan' | 'investment'>('loan');
   const [tableData, setTableData] = useState<TableRow[]>([]);
   const [summary, setSummary] = useState<any>({});
+
+  // CRITICAL: formatCurrency MUST be defined BEFORE it's used in generateTable()
+  const formatCurrency = (amount: number) => {
+    const currencyMap: { [key: string]: string } = {
+      en: 'USD',
+      es: 'USD',
+      pt: 'BRL',
+      fr: 'EUR'
+    };
+    
+    const localeMap: { [key: string]: string } = {
+      en: 'en-US',
+      es: 'es-ES',
+      pt: 'pt-BR',
+      fr: 'fr-FR'
+    };
+
+    const selectedLang = lang as keyof typeof currencyMap;
+    const currency = currencyMap[selectedLang] || 'USD';
+    const locale = localeMap[selectedLang] || 'en-US';
+
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency,
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(amount);
+  };
 
   const calculateMonthlyPayment = (principal: number, annualRate: number, years: number) => {
     const monthlyRate = annualRate / 100 / 12;
@@ -281,22 +325,8 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
     generateTable();
   }, [principal, term, rates, calculationType]);
 
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(amount);
-  };
-
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h1>
-        <p className="text-gray-600">{t.description}</p>
-      </div>
-
       <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-4">
@@ -370,11 +400,11 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
 
           {/* Formula Display */}
           <div className="bg-green-50 p-4 rounded-lg">
-            <h4 className="text-sm font-semibold text-green-900 mb-2">Calculation Formulas</h4>
+            <h4 className="text-sm font-semibold text-green-900 mb-2">{t.calculationFormulas}</h4>
             <div className="text-xs text-green-700 space-y-1">
               <div>{t.loanPaymentFormula}</div>
               <div>{t.futureValueFormula}</div>
-              <div>Where: P = principal, r = monthly rate, n = number of payments</div>
+              <div>{t.formulaNote}</div>
             </div>
           </div>
         </div>
@@ -442,7 +472,7 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
 
               {/* Educational Info */}
               <div className="bg-indigo-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-indigo-900 mb-2">Understanding Rate Comparisons</h4>
+                <h4 className="text-sm font-semibold text-indigo-900 mb-2">{t.understandingComparisons}</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
                   <div>{t.lowerRates} = {calculationType === 'loan' ? t.lowerPayments : t.lowerReturns}</div>
                   <div>{t.higherRates} = {calculationType === 'loan' ? t.higherPayments : t.higherReturns}</div>
@@ -459,7 +489,7 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
                 </svg>
               </div>
               <h3 className="text-lg font-medium text-gray-900 mb-1">{t.enterDetails}</h3>
-              <p className="text-gray-500">Enter your principal amount, term, and interest rates above</p>
+              <p className="text-gray-500">{t.enterAbove}</p>
             </div>
           )}
         </div>

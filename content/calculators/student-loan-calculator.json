@@ -1,0 +1,271 @@
+{
+  "en": {
+    "title": "Student Loan Calculator",
+    "seoTitle": "Student Loan Calculator - How Much Will My Student Loan Payments Be?",
+    "summary": "Calculate monthly payments and total cost for student loans.",
+    "description": "Use our student loan calculator to estimate monthly payments, total interest, and loan payoff timeline with grace period considerations.",
+    "category": "financial",
+    "difficulty": "Intermediate",
+    "slug": "student-loan-calculator",
+    "component": "StudentLoanCalculator",
+    "seoContent": {
+      "metaTitle": "Student Loan Calculator - Calculate Monthly Payments",
+      "metaDescription": "Free student loan calculator to estimate monthly payments, total interest, and loan repayment timeline. Plan your student loan payoff strategy.",
+      "keywords": "student loan calculator, loan payment calculator, monthly payment, student loan repayment, loan interest",
+      "h1": "Student Loan Calculator - Calculate Student Loan Payments",
+      "introduction": "The Student Loan Calculator helps you understand the true cost of student loans and plan your repayment strategy. By entering your loan amount, interest rate, term, and grace period, you'll see your monthly payment, total interest paid, and effective interest rate. This tool is essential for students and graduates planning their finances.",
+      "benefits": [
+        "Calculate accurate monthly loan payments",
+        "Understand total interest paid over loan term",
+        "Plan repayment strategy with grace period",
+        "Compare different loan scenarios",
+        "See effective interest rate impact",
+        "Make informed borrowing decisions"
+      ],
+      "steps": [
+        "Enter your total loan amount",
+        "Input annual interest rate",
+        "Specify loan term in years",
+        "Enter grace period in months",
+        "View calculated monthly payment",
+        "Review total interest and repayment timeline"
+      ],
+      "inputsExplained": [
+        "Loan Amount: Total amount borrowed",
+        "Interest Rate: Annual percentage rate on the loan",
+        "Loan Term: Number of years to repay",
+        "Grace Period: Months before payments begin"
+      ],
+      "formulaExplanation": "Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1], where P = principal, r = monthly rate, n = number of payments.",
+      "resultsExplanation": "Results show monthly payment, total amount paid, total interest, effective interest rate, and payment after grace period.",
+      "examples": "A $50,000 loan at 5.5% for 10 years with 6-month grace has approximately $533 monthly payment.",
+      "whoItsFor": "Students, college graduates, parents planning student loans, and anyone comparing loan options and repayment strategies.",
+      "disclaimer": "Calculations are estimates based on entered values. Actual payments may vary based on loan terms, deferment, or income-driven repayment plans.",
+      "howDoesWork": "The calculator uses standard amortization formulas and accounts for grace periods to project payment amounts and total interest.",
+      "completeGuide": "Understanding your student loan payments helps with budget planning. Use this calculator to compare different loan amounts and terms.",
+      "relatedTools": ["Loan Calculator", "Debt Calculator", "Budget Calculator", "Salary Calculator"],
+      "faqs": [
+        {"question": "What is a grace period?", "answer": "A grace period is the time after graduation or leaving school before you must start making loan payments, typically 6 months."},
+        {"question": "Does interest accrue during grace period?", "answer": "Interest may accrue on unsubsidized loans during grace period but not on subsidized federal loans."},
+        {"question": "Can I pay extra toward my loan?", "answer": "Yes, extra payments reduce principal faster, decreasing total interest paid over the life of the loan."},
+        {"question": "What are income-driven repayment plans?", "answer": "Income-driven plans adjust your monthly payment based on your income, potentially lowering payments for low-income graduates."},
+        {"question": "How do I calculate total interest?", "answer": "Total Interest = (Monthly Payment × Number of Payments) - Loan Amount."}
+      ]
+    }
+  },
+  "es": {
+    "seoTitle": "Calculadora de Préstamo Estudiantil - ¿Cuánto Serán Mis Pagos de Préstamo Estudiantil?",
+    "title": "Calculadora de Préstamo para Estudiantes",
+    "summary": "Calcula pagos mensuales y costo total para préstamos de estudiantes.",
+    "description": "Usa nuestra calculadora de préstamo para estudiantes para estimar pagos mensuales, interés total y cronograma de pago con consideraciones de período de gracia.",
+    "category": "financial",
+    "difficulty": "Intermedio",
+    "slug": "student-loan-calculator",
+    "component": "StudentLoanCalculator",
+    "seoContent": {
+      "metaTitle": "Calculadora de Préstamo para Estudiantes - Calcula Pagos Mensuales",
+      "metaDescription": "Calculadora gratuita de préstamo para estudiantes para estimar pagos mensuales, interés total y cronograma de reembolso del préstamo.",
+      "keywords": "calculadora préstamo estudiantes, calculadora pagos, pago mensual, reembolso préstamo, interés préstamo",
+      "h1": "Calculadora de Préstamo para Estudiantes - Calcula Pagos de Préstamo",
+      "introduction": "La Calculadora de Préstamo para Estudiantes te ayuda a entender el costo real de los préstamos y planificar tu estrategia de reembolso.",
+      "benefits": [
+        "Calcula pagos mensuales precisos de préstamo",
+        "Comprende interés total pagado",
+        "Planifica estrategia de reembolso con período de gracia",
+        "Compara diferentes escenarios de préstamo",
+        "Ve impacto de tasa de interés efectiva",
+        "Toma decisiones informadas sobre préstamos"
+      ],
+      "steps": [
+        "Ingresa monto total del préstamo",
+        "Introduce tasa de interés anual",
+        "Especifica plazo del préstamo en años",
+        "Ingresa período de gracia en meses",
+        "Ver pago mensual calculado",
+        "Revisa interés total y cronograma de reembolso"
+      ],
+      "inputsExplained": [
+        "Monto del Préstamo: Cantidad total prestada",
+        "Tasa de Interés: Porcentaje anual del préstamo",
+        "Plazo del Préstamo: Años para reembolsar",
+        "Período de Gracia: Meses antes que comiencen pagos"
+      ],
+      "formulaExplanation": "Pago Mensual = P × [r(1+r)^n] / [(1+r)^n - 1], donde P = principal, r = tasa mensual, n = número de pagos.",
+      "resultsExplanation": "Los resultados muestran pago mensual, monto total pagado, interés total, tasa de interés efectiva y pago después de período de gracia.",
+      "examples": "Un préstamo de $50,000 a 5.5% durante 10 años con 6 meses de gracia tiene aproximadamente $533 de pago mensual.",
+      "whoItsFor": "Estudiantes, graduados universitarios, padres planificando préstamos de estudiantes y cualquiera comparando opciones de préstamos.",
+      "disclaimer": "Los cálculos son estimaciones basadas en valores ingresados. Los pagos reales pueden variar según términos del préstamo.",
+      "howDoesWork": "La calculadora utiliza fórmulas estándar de amortización y cuenta períodos de gracia para proyectar montos de pago e interés total.",
+      "completeGuide": "Entender tus pagos de préstamo de estudiante ayuda con planificación de presupuesto. Usa esta calculadora para comparar diferentes montos y términos.",
+      "relatedTools": ["Calculadora de Préstamo", "Calculadora de Deuda", "Calculadora de Presupuesto", "Calculadora de Salario"],
+      "faqs": [
+        {"question": "¿Qué es un período de gracia?", "answer": "Un período de gracia es el tiempo después de graduarte antes de comenzar a hacer pagos, típicamente 6 meses."},
+        {"question": "¿Se acumula interés durante período de gracia?", "answer": "El interés puede acumularse en préstamos no subsidiados durante período de gracia pero no en préstamos federales subsidiados."},
+        {"question": "¿Puedo pagar extra hacia mi préstamo?", "answer": "Sí, pagos extra reducen el principal más rápido, disminuyendo interés total pagado."},
+        {"question": "¿Qué son planes de reembolso basados en ingresos?", "answer": "Planes de ingresos ajustan tu pago mensual basado en tu ingreso, potencialmente bajando pagos para graduados de bajos ingresos."},
+        {"question": "¿Cómo calculo interés total?", "answer": "Interés Total = (Pago Mensual × Número de Pagos) - Monto del Préstamo."}
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de Empréstimo para Estudantes",
+    "seoTitle": "Calculadora de Empréstimo para Estudantes - Quanto Serão Meus Pagamentos de Empréstimo Estudantil?",
+    "summary": "Calcule pagamentos mensais e custo total para empréstimos de estudantes.",
+    "description": "Use nossa calculadora de empréstimo para estudantes para estimar pagamentos mensais, juros totais e cronograma com considerações de período de carência.",
+    "category": "financial",
+    "difficulty": "Intermediário",
+    "slug": "student-loan-calculator",
+    "component": "StudentLoanCalculator",
+    "seoContent": {
+      "metaTitle": "Calculadora de Empréstimo para Estudantes - Calcule Pagamentos Mensais",
+      "metaDescription": "Calculadora gratuita de empréstimo para estudantes para estimar pagamentos mensais, juros totais e cronograma de reembolso.",
+      "keywords": "calculadora empréstimo estudantes, calculadora pagamentos, pagamento mensal, reembolso empréstimo, juros empréstimo",
+      "h1": "Calculadora de Empréstimo para Estudantes - Calcule Pagamentos de Empréstimo",
+      "introduction": "A Calculadora de Empréstimo para Estudantes ajuda você a entender o custo real dos empréstimos e planejar sua estratégia de reembolso.",
+      "benefits": [
+        "Calcule pagamentos precisos de empréstimo mensal",
+        "Compreenda juros totais pagos",
+        "Planeje estratégia de reembolso com período de carência",
+        "Compare diferentes cenários de empréstimo",
+        "Veja impacto de taxa de juros efetiva",
+        "Tome decisões informadas sobre empréstimos"
+      ],
+      "steps": [
+        "Insira valor total do empréstimo",
+        "Introduza taxa de juros anual",
+        "Especifique período do empréstimo em anos",
+        "Insira período de carência em meses",
+        "Visualize pagamento mensal calculado",
+        "Revise juros totais e cronograma de reembolso"
+      ],
+      "inputsExplained": [
+        "Valor do Empréstimo: Valor total emprestado",
+        "Taxa de Juros: Percentual anual do empréstimo",
+        "Período do Empréstimo: Anos para reembolsar",
+        "Período de Carência: Meses antes que pagamentos comecem"
+      ],
+      "formulaExplanation": "Pagamento Mensal = P × [r(1+r)^n] / [(1+r)^n - 1], onde P = principal, r = taxa mensal, n = número de pagamentos.",
+      "resultsExplanation": "Os resultados mostram pagamento mensal, valor total pago, juros totais, taxa de juros efetiva e pagamento após período de carência.",
+      "examples": "Um empréstimo de $50.000 a 5.5% durante 10 anos com 6 meses de carência tem aproximadamente $533 de pagamento mensal.",
+      "whoItsFor": "Estudantes, graduados universitários, pais planejando empréstimos de estudantes e qualquer pessoa comparando opções de empréstimos.",
+      "disclaimer": "Os cálculos são estimativas baseadas em valores inseridos. Os pagamentos reais podem variar com base nos termos do empréstimo.",
+      "howDoesWork": "A calculadora usa fórmulas padrão de amortização e leva em conta períodos de carência para projetar valores de pagamento e juros totais.",
+      "completeGuide": "Entender seus pagamentos de empréstimo de estudante ajuda no planejamento orçamentário. Use esta calculadora para comparar diferentes valores e períodos.",
+      "relatedTools": ["Calculadora de Empréstimo", "Calculadora de Dívida", "Calculadora de Orçamento", "Calculadora de Salário"],
+      "faqs": [
+        {"question": "O que é um período de carência?", "answer": "Um período de carência é o tempo após formar-se antes de começar a fazer pagamentos, tipicamente 6 meses."},
+        {"question": "Os juros acumulam durante período de carência?", "answer": "Juros podem acumular em empréstimos não subsidiados durante período de carência mas não em empréstimos federais subsidiados."},
+        {"question": "Posso pagar extra em meu empréstimo?", "answer": "Sim, pagamentos extras reduzem o principal mais rápido, diminuindo juros totais pagos."},
+        {"question": "Quais são planos de reembolso baseados em renda?", "answer": "Planos de renda ajustam seu pagamento mensal com base em sua renda, potencialmente baixando pagamentos para graduados de baixa renda."},
+        {"question": "Como calculo juros totais?", "answer": "Juros Totais = (Pagamento Mensal × Número de Pagamentos) - Valor do Empréstimo."}
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de Prêt Étudiant",
+    "seoTitle": "Calculateur de Prêt Étudiant - Combien Seront Mes Paiements de Prêt Étudiant?",
+    "summary": "Calculez les paiements mensuels et le coût total des prêts étudiants.",
+    "description": "Utilisez notre calculateur de prêt étudiant pour estimer les paiements mensuels, les intérêts totaux et le calendrier de remboursement avec les considérations de période de grâce.",
+    "category": "financial",
+    "difficulty": "Intermédiaire",
+    "slug": "student-loan-calculator",
+    "component": "StudentLoanCalculator",
+    "seoContent": {
+      "metaTitle": "Calculateur de Prêt Étudiant - Calculez les Paiements Mensuels",
+      "metaDescription": "Calculateur de prêt étudiant gratuit pour estimer les paiements mensuels, les intérêts totaux et le calendrier de remboursement.",
+      "keywords": "calculateur prêt étudiant, calculateur paiements, paiement mensuel, remboursement prêt, intérêts prêt",
+      "h1": "Calculateur de Prêt Étudiant - Calculez les Paiements de Prêt",
+      "introduction": "Le Calculateur de Prêt Étudiant vous aide à comprendre le vrai coût des prêts étudiants et à planifier votre stratégie de remboursement.",
+      "benefits": [
+        "Calculez les paiements mensuels précis du prêt",
+        "Comprenez les intérêts totaux payés",
+        "Planifiez la stratégie de remboursement avec période de grâce",
+        "Comparez différents scénarios de prêt",
+        "Voir l'impact du taux d'intérêt effectif",
+        "Prenez des décisions éclairées sur les emprunts"
+      ],
+      "steps": [
+        "Entrez le montant total du prêt",
+        "Introduisez le taux d'intérêt annuel",
+        "Spécifiez la durée du prêt en années",
+        "Entrez la période de grâce en mois",
+        "Afficher le paiement mensuel calculé",
+        "Examinez les intérêts totaux et le calendrier de remboursement"
+      ],
+      "inputsExplained": [
+        "Montant du Prêt: Montant total emprunté",
+        "Taux d'Intérêt: Pourcentage annuel du prêt",
+        "Durée du Prêt: Années pour rembourser",
+        "Période de Grâce: Mois avant que les paiements commencent"
+      ],
+      "formulaExplanation": "Paiement Mensuel = P × [r(1+r)^n] / [(1+r)^n - 1], où P = principal, r = taux mensuel, n = nombre de paiements.",
+      "resultsExplanation": "Les résultats affichent le paiement mensuel, le montant total payé, les intérêts totaux, le taux d'intérêt effectif et le paiement après la période de grâce.",
+      "examples": "Un prêt de 50 000 $ à 5,5% pendant 10 ans avec 6 mois de grâce a environ 533 $ de paiement mensuel.",
+      "whoItsFor": "Étudiants, diplômés universitaires, parents planifiant des prêts étudiants et toute personne comparant les options de prêt.",
+      "disclaimer": "Les calculs sont des estimations basées sur les valeurs entrées. Les paiements réels peuvent varier selon les conditions du prêt.",
+      "howDoesWork": "Le calculateur utilise des formules d'amortissement standard et tient compte des périodes de grâce pour projeter les montants de paiement et les intérêts totaux.",
+      "completeGuide": "Comprendre vos paiements de prêt étudiant aide à la planification budgétaire. Utilisez ce calculateur pour comparer différents montants et durées.",
+      "relatedTools": ["Calculateur de Prêt", "Calculateur de Dette", "Calculateur de Budget", "Calculateur de Salaire"],
+      "faqs": [
+        {"question": "Qu'est-ce qu'une période de grâce?", "answer": "Une période de grâce est le temps après la graduation avant de commencer à faire des paiements, généralement 6 mois."},
+        {"question": "Les intérêts s'accumulent-ils pendant la période de grâce?", "answer": "Les intérêts peuvent s'accumuler sur les prêts non subventionnés pendant la période de grâce mais pas sur les prêts fédéraux subventionnés."},
+        {"question": "Puis-je payer davantage pour mon prêt?", "answer": "Oui, les paiements supplémentaires réduisent le principal plus rapidement, diminuant les intérêts totaux payés."},
+        {"question": "Quels sont les plans de remboursement basés sur le revenu?", "answer": "Les plans basés sur le revenu ajustent votre paiement mensuel en fonction de votre revenu, abaissant potentiellement les paiements pour les diplômés à faible revenu."},
+        {"question": "Comment calculer les intérêts totaux?", "answer": "Intérêts Totaux = (Paiement Mensuel × Nombre de Paiements) - Montant du Prêt."}
+      ]
+    }
+  },
+  "de": {
+    "title": "Studentendarlehen-Rechner",
+    "summary": "Berechnen Sie monatliche Zahlungen und Gesamtkosten für Studentendarlehen.",
+    "description": "Verwenden Sie unseren Studentendarlehen-Rechner, um monatliche Zahlungen, Gesamtzinsen und Rückzahlungszeitplan zu schätzen.",
+    "category": "financial",
+    "difficulty": "Mittelstufe",
+    "slug": "student-loan-calculator",
+    "component": "StudentLoanCalculator",
+    "seoContent": {
+      "metaTitle": "Studentendarlehen-Rechner - Berechnen Sie monatliche Zahlungen",
+      "metaDescription": "Kostenloser Studentendarlehen-Rechner zur Schätzung monatlicher Zahlungen, Gesamtzinsen und Rückzahlungszeitplan.",
+      "keywords": "Studentendarlehen-Rechner, Darlehenszahlungsrechner, monatliche Zahlung, Darlehenszinsen, Rückzahlung",
+      "h1": "Studentendarlehen-Rechner - Berechnen Sie Studentendarlehenszahlungen",
+      "introduction": "Der Studentendarlehen-Rechner hilft Ihnen, die wahren Kosten von Studentendarlehen zu verstehen und Ihre Rückzahlungsstrategie zu planen.",
+      "benefits": [
+        "Berechnen Sie genaue monatliche Darlehenszahlungen",
+        "Verstehen Sie gezahlte Gesamtzinsen",
+        "Planen Sie Rückzahlungsstrategie mit Karenzzeit",
+        "Vergleichen Sie verschiedene Darlehensszenarios",
+        "Sehen Sie effektive Zinsauswirkung",
+        "Treffen Sie fundierte Kreditentscheidungen"
+      ],
+      "steps": [
+        "Geben Sie Ihren Gesamtdarlehensantrag ein",
+        "Geben Sie den jährlichen Zinssatz ein",
+        "Geben Sie die Darlehenslaufzeit in Jahren an",
+        "Geben Sie die Karenzzeit in Monaten ein",
+        "Sehen Sie die berechnete monatliche Zahlung an",
+        "Überprüfen Sie Gesamtzinsen und Rückzahlungszeitplan"
+      ],
+      "inputsExplained": [
+        "Darlehensbetrag: Gesamtbetrag, der geliehen wurde",
+        "Zinssatz: Jährlicher Prozentsatz des Darlehens",
+        "Darlehenslaufzeit: Anzahl der Jahre zur Rückzahlung",
+        "Karenzzeit: Monate vor Zahlungsbeginn"
+      ],
+      "formulaExplanation": "Monatliche Zahlung = P × [r(1+r)^n] / [(1+r)^n - 1], wobei P = Kapital, r = Monatssatz, n = Anzahl der Zahlungen.",
+      "resultsExplanation": "Die Ergebnisse zeigen monatliche Zahlung, Gesamtzahlungssum, Gesamtzinsen, effektiven Zinssatz und Zahlung nach Karenzzeit.",
+      "examples": "Ein Darlehen von 50.000 $ bei 5,5% für 10 Jahre mit 6 Monaten Karenzfrist hat ungefähr 533 $ monatliche Zahlung.",
+      "whoItsFor": "Studenten, Hochschulabsolventen, Eltern, die Studentendarlehen planen, und alle, die Darlehensoptionen vergleichen.",
+      "disclaimer": "Berechnungen sind Schätzungen basierend auf eingegebenen Werten. Tatsächliche Zahlungen können je nach Darlehensbedingungen variieren.",
+      "howDoesWork": "Der Rechner verwendet Standardamortisationsformeln und berücksichtigt Karenzzeiten, um Zahlungsbeträge und Gesamtzinsen zu projizieren.",
+      "completeGuide": "Das Verstehen Ihrer Studentendarlehenszahlungen hilft bei der Budgetplanung. Verwenden Sie diesen Rechner, um verschiedene Beträge und Laufzeiten zu vergleichen.",
+      "relatedTools": ["Darlehenrechner", "Schuldenrechner", "Budgetrechner", "Gehaltsrechner"],
+      "faqs": [
+        {"question": "Was ist eine Karenzzeit?", "answer": "Eine Karenzzeit ist die Zeit nach dem Abschluss, bevor Sie Zahlungen tätigen müssen, normalerweise 6 Monate."},
+        {"question": "Werden Zinsen während der Karenzzeit fällig?", "answer": "Zinsen können auf nicht subventionierten Darlehen während der Karenzzeit anfallen, aber nicht auf subventionierten Bundesdarlehen."},
+        {"question": "Kann ich zusätzlich für mein Darlehen zahlen?", "answer": "Ja, zusätzliche Zahlungen reduzieren das Kapital schneller und verringern die über die Laufzeit gezahlten Gesamtzinsen."},
+        {"question": "Was sind einkommensabhängige Rückzahlungspläne?", "answer": "Einkommensbasierte Pläne passen Ihre monatliche Zahlung an Ihr Einkommen an und können Zahlungen für Geringverdiener senken."},
+        {"question": "Wie berechne ich Gesamtzinsen?", "answer": "Gesamtzinsen = (Monatliche Zahlung × Anzahl der Zahlungen) - Darlehensbetrag."}
+      ]
+    }
+  }
+}

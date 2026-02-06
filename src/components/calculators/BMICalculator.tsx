@@ -198,9 +198,8 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
   };
 
   useEffect(() => {
-    const results = calculateBMI();
-    setResults(results);
-  }, [inputs]);
+    setResults(calculateBMI());
+  }, [inputs, t]);
 
   const handleInputChange = (field: string, value: any) => {
     setInputs(prev => ({
@@ -218,7 +217,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
 
   return (
     <div className="space-y-6">
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h1>
         <p className="text-gray-600">{t.description}</p>
       </div>

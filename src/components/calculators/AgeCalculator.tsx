@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface AgeCalculatorProps {
   lang?: string;
@@ -23,6 +23,11 @@ export default function AgeCalculator({ lang = 'en' }: AgeCalculatorProps) {
       calculateAge: "Calculate Age",
       yourAge: "Your Age",
       birthDateFutureError: "Birth date cannot be in the future",
+      useTodayDate: "Use Today's Date",
+      customDate: "Custom Date",
+      month: "Month",
+      day: "Day",
+      year: "Year",
   },
     es: {
       title: "AgeCalculator (ES)",
@@ -38,6 +43,11 @@ export default function AgeCalculator({ lang = 'en' }: AgeCalculatorProps) {
       calculateAge: "Calcular Edad",
       yourAge: "Tu Edad",
       birthDateFutureError: "La fecha de nacimiento no puede ser en el futuro",
+      useTodayDate: "Usar Fecha de Hoy",
+      customDate: "Fecha Personalizada",
+      month: "Mes",
+      day: "Día",
+      year: "Año",
   },
     pt: {
       title: "AgeCalculator (PT)",
@@ -53,6 +63,11 @@ export default function AgeCalculator({ lang = 'en' }: AgeCalculatorProps) {
       calculateAge: "Calcular Idade",
       yourAge: "Sua Idade",
       birthDateFutureError: "A data de nascimento não pode ser no futuro",
+      useTodayDate: "Usar Data de Hoje",
+      customDate: "Data Personalizada",
+      month: "Mês",
+      day: "Dia",
+      year: "Ano",
   },
     fr: {
       title: "AgeCalculator (FR)",
@@ -68,32 +83,56 @@ export default function AgeCalculator({ lang = 'en' }: AgeCalculatorProps) {
       calculateAge: "Calculer l'Âge",
       yourAge: "Votre Âge",
       birthDateFutureError: "La date de naissance ne peut pas être dans le futur",
+      useTodayDate: "Utiliser la Date du Jour",
+      customDate: "Date Personnalisée",
+      month: "Mois",
+      day: "Jour",
+      year: "Année",
   }
 };
 
   const t = translations[lang as keyof typeof translations] || translations.en;
   const [birthDate, setBirthDate] = useState('');
   const [age, setAge] = useState('');
+  const [useToday, setUseToday] = useState(true);
+  
+  // Initialize with today's date
+  const today = new Date();
+  const [customMonth, setCustomMonth] = useState(today.getMonth() + 1);
+  const [customDay, setCustomDay] = useState(today.getDate());
+  const [customYear, setCustomYear] = useState(today.getFullYear());
+
+  // Update custom date fields when toggling back to manual entry
+  useEffect(() => {
+    if (!useToday) {
+      const now = new Date();
+      setCustomMonth(now.getMonth() + 1);
+      setCustomDay(now.getDate());
+      setCustomYear(now.getFullYear());
+    }
+  }, [useToday]);
 
   const calculateAge = () => {
     if (!birthDate) return;
 
     const birth = new Date(birthDate);
-    const today = new Date();
+    const compareDate = useToday 
+      ? new Date() 
+      : new Date(customYear, customMonth - 1, customDay);
 
     // Validate birth date is not in future
-    if (birth > today) {
+    if (birth > compareDate) {
       setAge(t.error + ': ' + t.birthDateFutureError);
       return;
     }
 
-    let years = today.getFullYear() - birth.getFullYear();
-    let months = today.getMonth() - birth.getMonth();
-    let days = today.getDate() - birth.getDate();
+    let years = compareDate.getFullYear() - birth.getFullYear();
+    let months = compareDate.getMonth() - birth.getMonth();
+    let days = compareDate.getDate() - birth.getDate();
 
     if (days < 0) {
       months--;
-      days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+      days += new Date(compareDate.getFullYear(), compareDate.getMonth(), 0).getDate();
     }
 
     if (months < 0) {
@@ -107,11 +146,16 @@ export default function AgeCalculator({ lang = 'en' }: AgeCalculatorProps) {
   const resetCalculator = () => {
     setBirthDate('');
     setAge('');
+    setUseToday(true);
+    const now = new Date();
+    setCustomMonth(now.getMonth() + 1);
+    setCustomDay(now.getDate());
+    setCustomYear(now.getFullYear());
   };
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.pageTitle}</h1>
         <p className="text-gray-600">{t.pageDescription}</p>
       </div>
@@ -127,6 +171,64 @@ export default function AgeCalculator({ lang = 'en' }: AgeCalculatorProps) {
             onChange={(e) => setBirthDate(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+        </div>
+
+        <div className="border-t pt-4">
+          <div className="flex items-center mb-3">
+            <input
+              type="checkbox"
+              id="useToday"
+              checked={useToday}
+              onChange={(e) => setUseToday(e.target.checked)}
+              className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+            />
+            <label htmlFor="useToday" className="ml-2 text-sm font-medium text-gray-700">
+              {t.useTodayDate}
+            </label>
+          </div>
+
+          {!useToday && (
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <label className="block text-sm font-medium text-gray-700 mb-3">
+                {t.customDate}
+              </label>
+              <div className="grid grid-cols-3 gap-3">
+                <div>
+                  <label className="block text-xs text-gray-600 mb-1">{t.month}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="12"
+                    value={customMonth}
+                    onChange={(e) => setCustomMonth(parseInt(e.target.value) || 1)}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-600 mb-1">{t.day}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="31"
+                    value={customDay}
+                    onChange={(e) => setCustomDay(parseInt(e.target.value) || 1)}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-600 mb-1">{t.year}</label>
+                  <input
+                    type="number"
+                    min="1900"
+                    max="2100"
+                    value={customYear}
+                    onChange={(e) => setCustomYear(parseInt(e.target.value) || new Date().getFullYear())}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="flex gap-2">

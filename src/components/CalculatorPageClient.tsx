@@ -4,7 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { renderStructuredSEOContent, SEOContent } from '@/lib/seoContentRenderer';
 import { getCalculatorComponent } from '@/components/calculators/CalculatorRegistry';
+import { getRelatedCalculators } from '@/lib/calculatorRelationships';
 import BreadcrumbNavigation from './BreadcrumbNavigation';
+// import AdSenseUnit from './AdSenseUnit'; // TODO: Enable after AdSense approval
+import RelatedCalculatorsWidget from './RelatedCalculatorsWidget';
 
 interface CalculatorPageClientProps {
   lang: string;
@@ -49,10 +52,6 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
   useEffect(() => {
     if (lang && i18n.language !== lang) {
       i18n.changeLanguage(lang);
-      // Clear content when language changes so it reloads for the new language
-      setCalculatorContent(null);
-      setLoading(true);
-      setError(null);
     }
   }, [lang, i18n]);
 
@@ -62,8 +61,13 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
 
     try {
       // Use initialCalculatorContent and initialRelatedCalculators (should always be provided now)
-      const content = initialCalculatorContent;
-      const related = initialRelatedCalculators || [];
+      let content = initialCalculatorContent;
+      let related = initialRelatedCalculators || [];
+
+      // If no related calculators provided, get them from the relationships mapping
+      if (related.length === 0) {
+        related = getRelatedCalculators(slug, lang, 6) as any[];
+      }
 
       if (content && content.title) {
         setCalculatorContent(content);
@@ -122,7 +126,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-xl sm:text-2xl font-bold mb-1 leading-tight">
-              {calculatorContent.title}
+              {calculatorContent.seoTitle || calculatorContent.title}
             </h1>
           </div>
         </div>
@@ -233,7 +237,7 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
                         </h2>
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: renderStructuredSEOContent(seoContent, lang, calculatorContent?.title)
+                            __html: renderStructuredSEOContent(seoContent, lang)
                           }}
                         />
                       </div>
@@ -254,40 +258,12 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
             </section>
             
 
-            {/* Related Calculators */}
-            {relatedCalculators.length > 0 && (
-              <section id="related-section" className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden mb-6">
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 px-4 py-3 border-b border-gray-100">
-                  <h2 className="text-lg font-bold text-gray-900 flex items-center">
-                    <svg className="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                    {tLang('calculator.relatedCalculators')}
-                  </h2>
-                </div>
-                <div className="p-4">
-                  <div className="space-y-2">
-                    {relatedCalculators.map((calc: any, index: number) => (
-                      <a
-                        key={index}
-                        href={getCalculatorUrl(calc.slug)}
-                        className="block p-3 bg-gradient-to-r from-white to-gray-50 border border-gray-200 rounded-lg hover:shadow-md hover:border-purple-300 transition-all duration-200 hover:bg-purple-50"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div className="flex-1">
-                            <h3 className="font-medium text-gray-900 text-sm">{calc.name}</h3>
-                            <p className="text-gray-600 text-xs mt-1 line-clamp-2">{calc.summary}</p>
-                          </div>
-                          <svg className="w-4 h-4 text-gray-400 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            )}
+            {/* Related Calculators Widget */}
+            <RelatedCalculatorsWidget 
+              calculators={relatedCalculators} 
+              currentCalculatorName={calculatorContent?.title}
+              lang={lang}
+            />
 
         </div>
       </main>

@@ -228,7 +228,7 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
 
   return (
     <div className="space-y-6">
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h1>
         <p className="text-gray-600">Calculate your body fat percentage using scientifically validated methods</p>
       </div>

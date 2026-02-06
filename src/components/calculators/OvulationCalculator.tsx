@@ -147,7 +147,7 @@ export default function OvulationCalculator({ lang = 'en' }: OvulationCalculator
 
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h2>
         <div className="bg-purple-50 border-l-4 border-purple-500 p-4 mb-6">
           <p className="text-sm text-purple-800">

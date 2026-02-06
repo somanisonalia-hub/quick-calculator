@@ -1,4 +1,4 @@
-import { test, expect, chromium } from '@playwright/test';
+import { test, expect, chromium, Browser } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
 
@@ -16,7 +16,7 @@ function getAllCalculatorSlugs() {
       const content = JSON.parse(fs.readFileSync(path.join(calculatorsDir, file), 'utf-8'));
       const slug = content.en?.slug || file.replace('.json', '');
       slugs.push(slug);
-    } catch (err) {
+    } catch {
       // skip
     }
   }
@@ -27,7 +27,7 @@ function getAllCalculatorSlugs() {
 const allSlugs = getAllCalculatorSlugs();
 
 test.describe('Real Browser UI Test - All Calculator Pages', () => {
-  let browser;
+  let browser: Browser | null = null;
 
   test.beforeAll(async () => {
     browser = await chromium.launch();
@@ -56,25 +56,22 @@ test.describe('Real Browser UI Test - All Calculator Pages', () => {
         // Wait for calculator content to load
         await page.waitForSelector('input, select', { timeout: 5000 });
         
-        // Get page title
-        const title = await page.title();
-        
         // Check for "Calculator" or "Converter" in page
         const bodyText = await page.textContent('body');
-        const hasCalculatorWord = bodyText.toLowerCase().includes('calculator') || 
-                                  bodyText.includes('Convert');
+        const hasCalculatorWord = bodyText?.toLowerCase().includes('calculator') || 
+                                  bodyText?.includes('Convert');
         
         // Check console for errors
-        const consoleMessages = [];
-        page.on('console', msg => {
+        const consoleMessages: string[] = [];
+        page.on('console', (msg: { type: () => string; text: () => string }) => {
           if (msg.type() === 'error') {
             consoleMessages.push(msg.text());
           }
         });
         
         // Get page errors
-        const errors = [];
-        page.on('pageerror', error => {
+        const errors: string[] = [];
+        page.on('pageerror', (error: Error) => {
           errors.push(error.message);
         });
         
@@ -94,9 +91,10 @@ test.describe('Real Browser UI Test - All Calculator Pages', () => {
         failCount++;
         failedPages.push({
           slug,
-          error: error.message
+          error: (error instanceof Error) ? error.message : String(error)
         });
-        console.log(`❌ [${i+1}/${allSlugs.length}] ${slug} - ${error.message.split('\n')[0]}`);
+        const errorMsg = (error instanceof Error) ? error.message.split('\n')[0] : String(error);
+        console.log(`❌ [${i+1}/${allSlugs.length}] ${slug} - ${errorMsg}`);
       }
     }
 

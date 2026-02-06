@@ -168,7 +168,7 @@ export default function GradeCalculator({ lang = 'en' }: GradeCalculatorProps) {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h2>
         <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
           <p className="text-sm text-blue-800">
@@ -178,7 +178,7 @@ export default function GradeCalculator({ lang = 'en' }: GradeCalculatorProps) {
       </div>
 
       {/* Assignments Section */}
-      <div className="mb-6">
+      <div className="mb-6 hidden">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">{t.assignments}</h3>
         <div className="space-y-3">
           {assignments.map((assignment, index) => (

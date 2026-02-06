@@ -42,9 +42,12 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
     }
 
     const allCalcs = getAllCalculatorsForHomepage(currentLang);
+    const query = searchQuery.toLowerCase();
     const filtered = allCalcs.filter(calc =>
-      calc.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      calc.summary.toLowerCase().includes(searchQuery.toLowerCase())
+      calc.name.toLowerCase().includes(query) ||
+      calc.summary.toLowerCase().includes(query) ||
+      calc.keywords?.some(keyword => keyword.toLowerCase().includes(query)) ||
+      calc.tags?.some(tag => tag.toLowerCase().includes(query))
     );
     setFilteredCalculators(filtered);
     setShowResults(true);
@@ -674,7 +677,13 @@ export default function HomePage({ language, initialCalculators }: HomePageProps
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                   {categoryGroup.calculators.map((calc, index) => (
-                    <Link key={index} href={createLink(`/${calc.slug}`)} className="block">
+                    <Link 
+                      key={index} 
+                      href={createLink(`/${calc.slug}`)} 
+                      className="block"
+                      aria-label={`${calc.name} - ${calc.summary}`}
+                      title={`${calc.name} - ${calc.summary}`}
+                    >
                       <div className={`${colors.bg} rounded-lg p-3 border ${colors.border} ${colors.hover} transition-all cursor-pointer h-full`}>
                         <div className="flex items-start">
                           <span className="text-xl mr-2 flex-shrink-0">{calc.icon}</span>

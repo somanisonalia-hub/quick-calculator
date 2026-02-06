@@ -1,0 +1,503 @@
+{
+  "en": {
+    "title": "LCM and GCD Calculator",
+    "seoTitle": "GCD LCM Calculator - What Are the GCD and LCM of These Numbers?",
+    "metaDescription": "Free GCD and LCM calculator. Calculate Greatest Common Divisor (GCD/HCF) and Least Common Multiple (LCM) with prime factorization and step-by-step solutions.",
+    "keywords": [
+      "gcd calculator",
+      "lcm calculator",
+      "greatest common divisor",
+      "least common multiple",
+      "hcf calculator"
+    ],
+    "longTailKeywords": [
+      "how to calculate gcd and lcm",
+      "gcd lcm calculator with steps",
+      "prime factorization calculator",
+      "euclidean algorithm calculator"
+    ],
+    "slug": "gcd-lcm-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "difficulty": "intermediate",
+    "tags": [
+      "gcd",
+      "lcm",
+      "hcf",
+      "prime factorization",
+      "euclidean algorithm"
+    ],
+    "summary": "Calculate Greatest Common Divisor (GCD) and Least Common Multiple (LCM) of numbers with prime factorization.",
+    "description": "Calculate GCD (Greatest Common Divisor / HCF) and LCM (Least Common Multiple) of two or more numbers. Shows prime factorization and step-by-step solutions using the Euclidean algorithm.",
+    "instructions": [
+      "Enter two or more numbers (comma-separated)",
+      "Get instant GCD and LCM results",
+      "View prime factorization and calculation steps"
+    ],
+    "calculatorComponent": "GcdLcmCalculator",
+    "examples": [
+      {
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
+      },
+      {
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
+      }
+    ],
+    "relatedCalculators": [
+      "scientific-calculator",
+      "ratio-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculate GCD (Greatest Common Divisor) and LCM (Least Common Multiple) accurately with our comprehensive online calculator. This powerful tool helps you find the GCD, also known as HCF (Highest Common Factor), and LCM of two or more numbers using the Euclidean algorithm and prime factorization methods. Whether you're a student learning number theory, a teacher preparing lessons, or anyone working with fractions and ratios, our calculator provides instant results with detailed step-by-step explanations.",
+      "benefits": [
+        "Calculate GCD and LCM for multiple numbers instantly",
+        "Get accurate results with step-by-step Euclidean algorithm explanation",
+        "View prime factorization for each input number",
+        "Mobile-friendly design for calculations on the go",
+        "Understand the relationship between GCD and LCM",
+        "Learn number theory concepts with clear visual explanations"
+      ],
+      "steps": [
+        "Enter two or more numbers separated by commas",
+        "Click calculate to get instant GCD and LCM results",
+        "Review the prime factorization for each number",
+        "Follow the step-by-step Euclidean algorithm process",
+        "Use results for simplifying fractions, ratios, or other calculations"
+      ],
+      "inputsExplained": [
+        "Numbers: Enter two or more positive integers separated by commas",
+        "The calculator accepts any positive integers greater than 0",
+        "You can input as many numbers as needed for calculation",
+        "Spaces around commas are automatically handled"
+      ],
+      "formulaExplanation": "The calculator uses the Euclidean algorithm to find GCD: repeatedly divide the larger number by the smaller and replace the larger with the remainder until the remainder is 0. The last non-zero remainder is the GCD. For LCM, we use the formula: LCM(a,b) = (a × b) / GCD(a,b). For multiple numbers, we apply these operations iteratively. Prime factorization is used to verify results and show the mathematical structure of each number.",
+      "examples": [
+        "Example 1: Numbers 12, 18. GCD = 6 (using Euclidean: 18 = 12×1 + 6, 12 = 6×2 + 0). LCM = 36. Prime factors: 12 = 2² × 3, 18 = 2 × 3²",
+        "Example 2: Numbers 24, 36, 48. GCD = 12. LCM = 144. Common factors used to determine GCD, LCM uses highest powers",
+        "Example 3: Numbers 15, 25. GCD = 5 (both divisible by 5). LCM = 75. Prime factors: 15 = 3 × 5, 25 = 5²"
+      ],
+      "resultsExplanation": [
+        "GCD shows the largest number that divides all input numbers evenly",
+        "LCM shows the smallest number that is a multiple of all input numbers",
+        "Prime factorization breaks each number into its prime components",
+        "Steps show the Euclidean algorithm process for finding GCD"
+      ],
+      "whoItsFor": "This calculator serves students learning number theory and basic algebra, teachers preparing math lessons, professionals working with fractions and ratios, programmers implementing algorithms, and anyone needing to simplify fractions or find common denominators. It's particularly useful for homework, reducing fractions to lowest terms, solving ratio problems, and understanding divisibility.",
+      "disclaimer": "This calculator provides mathematically accurate results based on standard GCD and LCM algorithms. Results are exact for positive integers. While we strive for accuracy, please verify critical calculations. This tool is for educational and practical purposes. The Euclidean algorithm is a proven method that guarantees correct results for all positive integer inputs.",
+      "relatedTools": [
+        "Scientific calculator for advanced mathematical operations",
+        "Ratio calculator for proportion calculations",
+        "Prime factorization calculator for number theory"
+      ],
+      "faqs": [
+        {
+          "question": "What is the difference between GCD and LCM?",
+          "answer": "GCD (Greatest Common Divisor) is the largest number that divides all given numbers evenly, while LCM (Least Common Multiple) is the smallest number that all given numbers divide into evenly."
+        },
+        {
+          "question": "What is the Euclidean algorithm?",
+          "answer": "The Euclidean algorithm is an efficient method for finding GCD by repeatedly dividing and taking remainders until reaching zero. It's one of the oldest algorithms still in common use."
+        },
+        {
+          "question": "Can I calculate GCD and LCM for more than two numbers?",
+          "answer": "Yes, the calculator handles multiple numbers by applying the algorithms iteratively to find the GCD and LCM of all inputs."
+        },
+        {
+          "question": "What is HCF and how does it relate to GCD?",
+          "answer": "HCF (Highest Common Factor) is another name for GCD. They refer to the same concept - the largest number that divides all given numbers."
+        },
+        {
+          "question": "How is prime factorization used in finding GCD and LCM?",
+          "answer": "For GCD, take the lowest power of common prime factors. For LCM, take the highest power of all prime factors present in any number."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Calculadora de MCD y MCM",
+    "seoTitle": "Calculadora de MCD y MCM - ¿Cuáles Son el MCD y MCM de Estos Números?",
+    "metaDescription": "Calculadora gratuita de MCD y MCM. Calcula el Máximo Común Divisor (MCD) y Mínimo Común Múltiplo (MCM) con factorización prima y soluciones paso a paso.",
+    "keywords": [
+      "calculadora mcd",
+      "calculadora mcm",
+      "máximo común divisor",
+      "mínimo común múltiplo",
+      "calculadora mcd mcm"
+    ],
+    "longTailKeywords": [
+      "cómo calcular mcd y mcm",
+      "calculadora mcd mcm con pasos",
+      "calculadora factorización prima",
+      "calculadora algoritmo euclidiano"
+    ],
+    "slug": "gcd-lcm-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "difficulty": "intermediate",
+    "tags": [
+      "mcd",
+      "mcm",
+      "factorización prima",
+      "algoritmo euclidiano"
+    ],
+    "summary": "Calcula el Máximo Común Divisor (MCD) y Mínimo Común Múltiplo (MCM) de números con factorización prima.",
+    "description": "Calcula MCD (Máximo Común Divisor) y MCM (Mínimo Común Múltiplo) de dos o más números. Muestra factorización prima y soluciones paso a paso usando el algoritmo euclidiano.",
+    "instructions": [
+      "Ingresa dos o más números (separados por comas)",
+      "Obtén resultados instantáneos de MCD y MCM",
+      "Ve la factorización prima y los pasos del cálculo"
+    ],
+    "calculatorComponent": "GcdLcmCalculator",
+    "examples": [
+      {
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
+      },
+      {
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
+      }
+    ],
+    "relatedCalculators": [
+      "scientific-calculator",
+      "ratio-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcula el MCD (Máximo Común Divisor) y MCM (Mínimo Común Múltiplo) con precisión usando nuestra calculadora en línea completa. Esta poderosa herramienta te ayuda a encontrar el MCD y MCM de dos o más números usando el algoritmo euclidiano y métodos de factorización prima. Ya seas estudiante aprendiendo teoría de números, profesor preparando lecciones, o cualquier persona trabajando con fracciones y proporciones, nuestra calculadora proporciona resultados instantáneos con explicaciones detalladas paso a paso.",
+      "benefits": [
+        "Calcula MCD y MCM para múltiples números instantáneamente",
+        "Obtén resultados precisos con explicación paso a paso del algoritmo euclidiano",
+        "Visualiza la factorización prima de cada número ingresado",
+        "Diseño adaptable a móviles para cálculos en cualquier lugar",
+        "Comprende la relación entre MCD y MCM",
+        "Aprende conceptos de teoría de números con explicaciones visuales claras"
+      ],
+      "steps": [
+        "Ingresa dos o más números separados por comas",
+        "Haz clic en calcular para obtener resultados instantáneos de MCD y MCM",
+        "Revisa la factorización prima de cada número",
+        "Sigue el proceso paso a paso del algoritmo euclidiano",
+        "Usa los resultados para simplificar fracciones, proporciones u otros cálculos"
+      ],
+      "inputsExplained": [
+        "Números: Ingresa dos o más números enteros positivos separados por comas",
+        "La calculadora acepta cualquier número entero positivo mayor que 0",
+        "Puedes ingresar tantos números como necesites para el cálculo",
+        "Los espacios alrededor de las comas se manejan automáticamente"
+      ],
+      "formulaExplanation": "La calculadora usa el algoritmo euclidiano para encontrar el MCD: divide repetidamente el número mayor por el menor y reemplaza el mayor con el resto hasta que el resto sea 0. El último resto no cero es el MCD. Para el MCM, usamos la fórmula: MCM(a,b) = (a × b) / MCD(a,b). Para múltiples números, aplicamos estas operaciones iterativamente. La factorización prima se usa para verificar resultados y mostrar la estructura matemática de cada número.",
+      "examples": [
+        "Ejemplo 1: Números 12, 18. MCD = 6 (usando euclidiano: 18 = 12×1 + 6, 12 = 6×2 + 0). MCM = 36. Factores primos: 12 = 2² × 3, 18 = 2 × 3²",
+        "Ejemplo 2: Números 24, 36, 48. MCD = 12. MCM = 144. Se usan factores comunes para determinar MCD, MCM usa las potencias más altas",
+        "Ejemplo 3: Números 15, 25. MCD = 5 (ambos divisibles por 5). MCM = 75. Factores primos: 15 = 3 × 5, 25 = 5²"
+      ],
+      "resultsExplanation": [
+        "El MCD muestra el número más grande que divide todos los números de entrada uniformemente",
+        "El MCM muestra el número más pequeño que es múltiplo de todos los números de entrada",
+        "La factorización prima descompone cada número en sus componentes primos",
+        "Los pasos muestran el proceso del algoritmo euclidiano para encontrar el MCD"
+      ],
+      "whoItsFor": "Esta calculadora sirve a estudiantes que aprenden teoría de números y álgebra básica, profesores que preparan lecciones de matemáticas, profesionales que trabajan con fracciones y proporciones, programadores que implementan algoritmos, y cualquier persona que necesite simplificar fracciones o encontrar denominadores comunes. Es particularmente útil para tareas escolares, reducir fracciones a su mínima expresión, resolver problemas de proporciones y comprender divisibilidad.",
+      "disclaimer": "Esta calculadora proporciona resultados matemáticamente precisos basados en algoritmos estándar de MCD y MCM. Los resultados son exactos para números enteros positivos. Aunque nos esforzamos por la precisión, por favor verifica cálculos críticos. Esta herramienta es para fines educativos y prácticos. El algoritmo euclidiano es un método probado que garantiza resultados correctos para todas las entradas de números enteros positivos.",
+      "relatedTools": [
+        "Calculadora científica para operaciones matemáticas avanzadas",
+        "Calculadora de proporciones para cálculos de proporción",
+        "Calculadora de factorización prima para teoría de números"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre MCD y MCM?",
+          "answer": "El MCD (Máximo Común Divisor) es el número más grande que divide todos los números dados uniformemente, mientras que el MCM (Mínimo Común Múltiplo) es el número más pequeño en el que todos los números dados se dividen uniformemente."
+        },
+        {
+          "question": "¿Qué es el algoritmo euclidiano?",
+          "answer": "El algoritmo euclidiano es un método eficiente para encontrar el MCD mediante divisiones y restos repetidos hasta llegar a cero. Es uno de los algoritmos más antiguos que todavía se usa comúnmente."
+        },
+        {
+          "question": "¿Puedo calcular MCD y MCM para más de dos números?",
+          "answer": "Sí, la calculadora maneja múltiples números aplicando los algoritmos iterativamente para encontrar el MCD y MCM de todas las entradas."
+        },
+        {
+          "question": "¿Cómo se usa la factorización prima para encontrar MCD y MCM?",
+          "answer": "Para el MCD, toma la potencia más baja de los factores primos comunes. Para el MCM, toma la potencia más alta de todos los factores primos presentes en cualquier número."
+        },
+        {
+          "question": "¿Por qué es importante el MCD para simplificar fracciones?",
+          "answer": "El MCD del numerador y denominador es el número por el que debes dividir ambos para obtener la fracción en su forma más simple o mínima expresión."
+        }
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de MDC e MMC",
+    "seoTitle": "Calculadora de MDC e MMC - Quais São o MDC e MMC Destes Números?",
+    "metaDescription": "Calculadora gratuita de MDC e MMC. Calcule o Máximo Divisor Comum (MDC) e Mínimo Múltiplo Comum (MMC) com fatoração prima e soluções passo a passo.",
+    "keywords": [
+      "calculadora mdc",
+      "calculadora mmc",
+      "máximo divisor comum",
+      "mínimo múltiplo comum",
+      "calculadora mdc mmc"
+    ],
+    "longTailKeywords": [
+      "como calcular mdc e mmc",
+      "calculadora mdc mmc com passos",
+      "calculadora fatoração prima",
+      "calculadora algoritmo euclidiano"
+    ],
+    "slug": "gcd-lcm-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "difficulty": "intermediate",
+    "tags": [
+      "mdc",
+      "mmc",
+      "fatoração prima",
+      "algoritmo euclidiano"
+    ],
+    "summary": "Calcule o Máximo Divisor Comum (MDC) e Mínimo Múltiplo Comum (MMC) de números com fatoração prima.",
+    "description": "Calcule MDC (Máximo Divisor Comum) e MMC (Mínimo Múltiplo Comum) de dois ou mais números. Mostra fatoração prima e soluções passo a passo usando o algoritmo euclidiano.",
+    "instructions": [
+      "Digite dois ou mais números (separados por vírgulas)",
+      "Obtenha resultados instantâneos de MDC e MMC",
+      "Veja a fatoração prima e os passos do cálculo"
+    ],
+    "calculatorComponent": "GcdLcmCalculator",
+    "examples": [
+      {
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
+      },
+      {
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
+      }
+    ],
+    "relatedCalculators": [
+      "scientific-calculator",
+      "ratio-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calcule o MDC (Máximo Divisor Comum) e MMC (Mínimo Múltiplo Comum) com precisão usando nossa calculadora online completa. Esta ferramenta poderosa ajuda você a encontrar o MDC e MMC de dois ou mais números usando o algoritmo euclidiano e métodos de fatoração prima. Seja você estudante aprendendo teoria dos números, professor preparando aulas, ou qualquer pessoa trabalhando com frações e proporções, nossa calculadora fornece resultados instantâneos com explicações detalhadas passo a passo.",
+      "benefits": [
+        "Calcule MDC e MMC para múltiplos números instantaneamente",
+        "Obtenha resultados precisos com explicação passo a passo do algoritmo euclidiano",
+        "Visualize a fatoração prima de cada número inserido",
+        "Design responsivo para cálculos em qualquer lugar",
+        "Compreenda a relação entre MDC e MMC",
+        "Aprenda conceitos de teoria dos números com explicações visuais claras"
+      ],
+      "steps": [
+        "Digite dois ou mais números separados por vírgulas",
+        "Clique em calcular para obter resultados instantâneos de MDC e MMC",
+        "Revise a fatoração prima de cada número",
+        "Siga o processo passo a passo do algoritmo euclidiano",
+        "Use os resultados para simplificar frações, proporções ou outros cálculos"
+      ],
+      "inputsExplained": [
+        "Números: Digite dois ou mais números inteiros positivos separados por vírgulas",
+        "A calculadora aceita qualquer número inteiro positivo maior que 0",
+        "Você pode inserir quantos números forem necessários para o cálculo",
+        "Espaços ao redor das vírgulas são tratados automaticamente"
+      ],
+      "formulaExplanation": "A calculadora usa o algoritmo euclidiano para encontrar o MDC: divide repetidamente o número maior pelo menor e substitui o maior pelo resto até que o resto seja 0. O último resto não zero é o MDC. Para o MMC, usamos a fórmula: MMC(a,b) = (a × b) / MDC(a,b). Para múltiplos números, aplicamos essas operações iterativamente. A fatoração prima é usada para verificar resultados e mostrar a estrutura matemática de cada número.",
+      "examples": [
+        "Exemplo 1: Números 12, 18. MDC = 6 (usando euclidiano: 18 = 12×1 + 6, 12 = 6×2 + 0). MMC = 36. Fatores primos: 12 = 2² × 3, 18 = 2 × 3²",
+        "Exemplo 2: Números 24, 36, 48. MDC = 12. MMC = 144. Fatores comuns usados para determinar MDC, MMC usa as potências mais altas",
+        "Exemplo 3: Números 15, 25. MDC = 5 (ambos divisíveis por 5). MMC = 75. Fatores primos: 15 = 3 × 5, 25 = 5²"
+      ],
+      "resultsExplanation": [
+        "O MDC mostra o maior número que divide todos os números de entrada uniformemente",
+        "O MMC mostra o menor número que é múltiplo de todos os números de entrada",
+        "A fatoração prima decompõe cada número em seus componentes primos",
+        "Os passos mostram o processo do algoritmo euclidiano para encontrar o MDC"
+      ],
+      "whoItsFor": "Esta calculadora serve estudantes que aprendem teoria dos números e álgebra básica, professores que preparam aulas de matemática, profissionais que trabalham com frações e proporções, programadores que implementam algoritmos, e qualquer pessoa que precise simplificar frações ou encontrar denominadores comuns. É particularmente útil para lições de casa, reduzir frações à forma mais simples, resolver problemas de proporção e compreender divisibilidade.",
+      "disclaimer": "Esta calculadora fornece resultados matematicamente precisos baseados em algoritmos padrão de MDC e MMC. Os resultados são exatos para números inteiros positivos. Embora nos esforcemos pela precisão, por favor verifique cálculos críticos. Esta ferramenta é para fins educacionais e práticos. O algoritmo euclidiano é um método comprovado que garante resultados corretos para todas as entradas de números inteiros positivos.",
+      "relatedTools": [
+        "Calculadora científica para operações matemáticas avançadas",
+        "Calculadora de proporção para cálculos de proporção",
+        "Calculadora de fatoração prima para teoria dos números"
+      ],
+      "faqs": [
+        {
+          "question": "Qual é a diferença entre MDC e MMC?",
+          "answer": "O MDC (Máximo Divisor Comum) é o maior número que divide todos os números dados uniformemente, enquanto o MMC (Mínimo Múltiplo Comum) é o menor número no qual todos os números dados se dividem uniformemente."
+        },
+        {
+          "question": "O que é o algoritmo euclidiano?",
+          "answer": "O algoritmo euclidiano é um método eficiente para encontrar o MDC através de divisões e restos repetidos até chegar a zero. É um dos algoritmos mais antigos ainda em uso comum."
+        },
+        {
+          "question": "Posso calcular MDC e MMC para mais de dois números?",
+          "answer": "Sim, a calculadora lida com múltiplos números aplicando os algoritmos iterativamente para encontrar o MDC e MMC de todas as entradas."
+        },
+        {
+          "question": "Como a fatoração prima é usada para encontrar MDC e MMC?",
+          "answer": "Para o MDC, pegue a menor potência dos fatores primos comuns. Para o MMC, pegue a maior potência de todos os fatores primos presentes em qualquer número."
+        },
+        {
+          "question": "Por que o MDC é importante para simplificar frações?",
+          "answer": "O MDC do numerador e denominador é o número pelo qual você deve dividir ambos para obter a fração em sua forma mais simples ou irredutível."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur PGCD PPCM",
+    "seoTitle": "Calculateur PGCD PPCM - Quels Sont le PGCD et PPCM de Ces Nombres?",
+    "metaDescription": "Calculateur gratuit de PGCD et PPCM. Calculez le Plus Grand Commun Diviseur (PGCD) et Plus Petit Commun Multiple (PPCM) avec factorisation première et solutions étape par étape.",
+    "keywords": [
+      "calculateur pgcd",
+      "calculateur ppcm",
+      "plus grand commun diviseur",
+      "plus petit commun multiple",
+      "calculateur pgcd ppcm"
+    ],
+    "longTailKeywords": [
+      "comment calculer pgcd et ppcm",
+      "calculateur pgcd ppcm avec étapes",
+      "calculateur factorisation première",
+      "calculateur algorithme euclidien"
+    ],
+    "slug": "gcd-lcm-calculator",
+    "category": "math",
+    "subcategory": "algebra",
+    "difficulty": "intermediate",
+    "tags": [
+      "pgcd",
+      "ppcm",
+      "factorisation première",
+      "algorithme euclidien"
+    ],
+    "summary": "Calculez le Plus Grand Commun Diviseur (PGCD) et Plus Petit Commun Multiple (PPCM) de nombres avec factorisation première.",
+    "description": "Calculez PGCD (Plus Grand Commun Diviseur) et PPCM (Plus Petit Commun Multiple) de deux nombres ou plus. Affiche la factorisation première et solutions étape par étape utilisant l'algorithme euclidien.",
+    "instructions": [
+      "Entrez deux nombres ou plus (séparés par des virgules)",
+      "Obtenez résultats instantanés de PGCD et PPCM",
+      "Voir la factorisation première et les étapes du calcul"
+    ],
+    "calculatorComponent": "GcdLcmCalculator",
+    "examples": [
+      {
+        "title": "Basic Calculation",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates a typical calculation with standard values."
+      },
+      {
+        "title": "Advanced Scenario",
+        "input": {},
+        "output": {},
+        "explanation": "This scenario shows the calculation with higher input values."
+      },
+      {
+        "title": "Minimum Values",
+        "input": {},
+        "output": {},
+        "explanation": "This example demonstrates how the calculator works with smaller values."
+      }
+    ],
+    "relatedCalculators": [
+      "scientific-calculator",
+      "ratio-calculator"
+    ],
+    "seoContent": {
+      "introduction": "Calculez le PGCD (Plus Grand Commun Diviseur) et PPCM (Plus Petit Commun Multiple) avec précision grâce à notre calculateur en ligne complet. Cet outil puissant vous aide à trouver le PGCD et PPCM de deux nombres ou plus en utilisant l'algorithme euclidien et les méthodes de factorisation première. Que vous soyez étudiant apprenant la théorie des nombres, enseignant préparant des cours, ou toute personne travaillant avec des fractions et des proportions, notre calculateur fournit des résultats instantanés avec des explications détaillées étape par étape.",
+      "benefits": [
+        "Calculez PGCD et PPCM pour plusieurs nombres instantanément",
+        "Obtenez des résultats précis avec explication étape par étape de l'algorithme euclidien",
+        "Visualisez la factorisation première de chaque nombre saisi",
+        "Design responsive pour calculs n'importe où",
+        "Comprenez la relation entre PGCD et PPCM",
+        "Apprenez les concepts de théorie des nombres avec des explications visuelles claires"
+      ],
+      "steps": [
+        "Entrez deux nombres ou plus séparés par des virgules",
+        "Cliquez sur calculer pour obtenir des résultats instantanés de PGCD et PPCM",
+        "Examinez la factorisation première de chaque nombre",
+        "Suivez le processus étape par étape de l'algorithme euclidien",
+        "Utilisez les résultats pour simplifier des fractions, proportions ou autres calculs"
+      ],
+      "inputsExplained": [
+        "Nombres : Entrez deux entiers positifs ou plus séparés par des virgules",
+        "Le calculateur accepte tout entier positif supérieur à 0",
+        "Vous pouvez saisir autant de nombres que nécessaire pour le calcul",
+        "Les espaces autour des virgules sont automatiquement gérés"
+      ],
+      "formulaExplanation": "Le calculateur utilise l'algorithme euclidien pour trouver le PGCD : divise répétitivement le plus grand nombre par le plus petit et remplace le plus grand par le reste jusqu'à ce que le reste soit 0. Le dernier reste non nul est le PGCD. Pour le PPCM, nous utilisons la formule : PPCM(a,b) = (a × b) / PGCD(a,b). Pour plusieurs nombres, nous appliquons ces opérations de manière itérative. La factorisation première est utilisée pour vérifier les résultats et montrer la structure mathématique de chaque nombre.",
+      "examples": [
+        "Exemple 1 : Nombres 12, 18. PGCD = 6 (utilisant euclidien : 18 = 12×1 + 6, 12 = 6×2 + 0). PPCM = 36. Facteurs premiers : 12 = 2² × 3, 18 = 2 × 3²",
+        "Exemple 2 : Nombres 24, 36, 48. PGCD = 12. PPCM = 144. Facteurs communs utilisés pour déterminer PGCD, PPCM utilise les puissances les plus élevées",
+        "Exemple 3 : Nombres 15, 25. PGCD = 5 (tous deux divisibles par 5). PPCM = 75. Facteurs premiers : 15 = 3 × 5, 25 = 5²"
+      ],
+      "resultsExplanation": [
+        "Le PGCD montre le plus grand nombre qui divise tous les nombres d'entrée uniformément",
+        "Le PPCM montre le plus petit nombre qui est un multiple de tous les nombres d'entrée",
+        "La factorisation première décompose chaque nombre en ses composants premiers",
+        "Les étapes montrent le processus de l'algorithme euclidien pour trouver le PGCD"
+      ],
+      "whoItsFor": "Ce calculateur sert les étudiants apprenant la théorie des nombres et l'algèbre de base, les enseignants préparant des cours de mathématiques, les professionnels travaillant avec des fractions et des proportions, les programmeurs implémentant des algorithmes, et toute personne ayant besoin de simplifier des fractions ou de trouver des dénominateurs communs. Il est particulièrement utile pour les devoirs, réduire les fractions à leur forme la plus simple, résoudre des problèmes de proportion et comprendre la divisibilité.",
+      "disclaimer": "Ce calculateur fournit des résultats mathématiquement précis basés sur des algorithmes standard de PGCD et PPCM. Les résultats sont exacts pour les entiers positifs. Bien que nous nous efforcions d'assurer la précision, veuillez vérifier les calculs critiques. Cet outil est destiné à des fins éducatives et pratiques. L'algorithme euclidien est une méthode éprouvée qui garantit des résultats corrects pour toutes les entrées d'entiers positifs.",
+      "relatedTools": [
+        "Calculatrice scientifique pour opérations mathématiques avancées",
+        "Calculatrice de proportion pour calculs de proportion",
+        "Calculatrice de factorisation première pour théorie des nombres"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre PGCD et PPCM ?",
+          "answer": "Le PGCD (Plus Grand Commun Diviseur) est le plus grand nombre qui divise tous les nombres donnés uniformément, tandis que le PPCM (Plus Petit Commun Multiple) est le plus petit nombre dans lequel tous les nombres donnés se divisent uniformément."
+        },
+        {
+          "question": "Qu'est-ce que l'algorithme euclidien ?",
+          "answer": "L'algorithme euclidien est une méthode efficace pour trouver le PGCD par divisions et restes répétés jusqu'à atteindre zéro. C'est l'un des algorithmes les plus anciens encore couramment utilisés."
+        },
+        {
+          "question": "Puis-je calculer PGCD et PPCM pour plus de deux nombres ?",
+          "answer": "Oui, le calculateur gère plusieurs nombres en appliquant les algorithmes de manière itérative pour trouver le PGCD et PPCM de toutes les entrées."
+        },
+        {
+          "question": "Comment la factorisation première est-elle utilisée pour trouver PGCD et PPCM ?",
+          "answer": "Pour le PGCD, prenez la plus faible puissance des facteurs premiers communs. Pour le PPCM, prenez la plus haute puissance de tous les facteurs premiers présents dans n'importe quel nombre."
+        },
+        {
+          "question": "Pourquoi le PGCD est-il important pour simplifier les fractions ?",
+          "answer": "Le PGCD du numérateur et du dénominateur est le nombre par lequel vous devez diviser les deux pour obtenir la fraction sous sa forme la plus simple ou irréductible."
+        }
+      ]
+    }
+  }
+}

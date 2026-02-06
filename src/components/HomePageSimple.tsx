@@ -29,10 +29,13 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
 
   // Filter calculators based on search
   const filteredBySearch = searchQuery.trim()
-    ? initialCalculators.filter(calc =>
-        calc.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        calc.summary.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+    ? initialCalculators.filter(calc => {
+        const query = searchQuery.toLowerCase();
+        return calc.name.toLowerCase().includes(query) ||
+          calc.summary.toLowerCase().includes(query) ||
+          calc.keywords?.some(keyword => keyword.toLowerCase().includes(query)) ||
+          calc.tags?.some(tag => tag.toLowerCase().includes(query));
+      })
     : null;
 
   const content = {
@@ -231,12 +234,12 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
             {filteredBySearch.length === 0 ? (
               <p className="text-gray-600">{t.noResults}</p>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-2">
                 {filteredBySearch.map((calc) => (
                   <Link
                     key={calc.slug}
                     href={`/${language}/${calc.slug}`}
-                    className="text-blue-600 hover:underline"
+                    className="text-blue-600 hover:underline text-xs sm:text-sm"
                   >
                     {calc.name}
                   </Link>
@@ -280,12 +283,14 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
                     </p>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-2">
                     {calcs.map((calc) => (
                       <Link
                         key={calc.slug}
                         href={`/${language}/${calc.slug}`}
-                        className="text-blue-600 hover:underline text-base"
+                        className="text-blue-600 hover:underline text-xs sm:text-sm"
+                        aria-label={`${calc.name} - ${calc.summary}`}
+                        title={`${calc.name} - ${calc.summary}`}
                       >
                         {calc.name}
                       </Link>
@@ -301,7 +306,7 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
                 {t.allCalculators}
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-2">
                 {initialCalculators
                   .filter((calc, index, self) => 
                     index === self.findIndex(c => c.slug === calc.slug)
@@ -311,7 +316,9 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
                     <Link
                       key={calc.slug}
                       href={`/${language}/${calc.slug}`}
-                      className="text-blue-600 hover:underline text-sm"
+                      className="text-blue-600 hover:underline text-xs sm:text-sm"
+                      aria-label={`${calc.name} - ${calc.summary}`}
+                      title={`${calc.name} - ${calc.summary}`}
                     >
                       {calc.name}
                     </Link>

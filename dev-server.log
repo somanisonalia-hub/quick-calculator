@@ -1,0 +1,87 @@
+
+> quick-calculator-v1@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.178.46:3000
+
+✓ Starting...
+✓ Ready in 391ms
+i18next: languageChanged en
+i18next: initialized {
+  debug: true,
+  initAsync: false,
+  ns: [ 'common' ],
+  defaultNS: 'common',
+  fallbackLng: [ 'en' ],
+  fallbackNS: false,
+  supportedLngs: false,
+  nonExplicitSupportedLngs: false,
+  load: 'all',
+  preload: false,
+  simplifyPluralSuffix: true,
+  keySeparator: '.',
+  nsSeparator: ':',
+  pluralSeparator: '_',
+  contextSeparator: '_',
+  partialBundledLanguages: false,
+  saveMissing: false,
+  updateMissing: false,
+  saveMissingTo: 'fallback',
+  saveMissingPlurals: true,
+  missingKeyHandler: false,
+  missingInterpolationHandler: false,
+  postProcess: false,
+  postProcessPassResolved: false,
+  returnNull: false,
+  returnEmptyString: true,
+  returnObjects: false,
+  joinArrays: false,
+  returnedObjectHandler: false,
+  parseMissingKeyHandler: false,
+  appendNamespaceToMissingKey: false,
+  appendNamespaceToCIMode: false,
+  overloadTranslationOptionHandler: [Function: overloadTranslationOptionHandler],
+  interpolation: {
+    escapeValue: false,
+    format: [Function: bound format],
+    prefix: '{{',
+    suffix: '}}',
+    formatSeparator: ',',
+    unescapePrefix: '-',
+    nestingPrefix: '$t(',
+    nestingSuffix: ')',
+    nestingOptionsSeparator: ',',
+    maxReplaces: 1000,
+    skipOnVariables: true
+  },
+  cacheInBuiltFormats: true,
+  resources: {
+    en: { common: [Object] },
+    es: { common: [Object] },
+    pt: { common: [Object] },
+    fr: { common: [Object] }
+  },
+  initImmediate: false,
+  ignoreJSONStructure: true,
+  lng: 'en'
+}
+DEBUG: calculatorsToGroup.length = 155
+DEBUG: category = math
+DEBUG: calculatorsByCategory breakdown: { financial: 73, health: 15, math: 22, utility: 33, lifestyle: 12 }
+DEBUG: calculatorsToGroup.length = 155
+DEBUG: category = financial
+DEBUG: calculatorsByCategory breakdown: { financial: 73, health: 15, math: 22, utility: 33, lifestyle: 12 }
+ GET /en/categories/math/ 200 in 6.6s (compile: 411ms, generate-params: 237ms, render: 6.2s)
+ GET /en/categories/financial/?id=183af372-d677-46d9-839e-7b01eff14e92&vscodeBrowserReqId=1770379070134 200 in 6.6s (compile: 3.4s, generate-params: 3.2s, render: 3.2s)
+DEBUG: calculatorsToGroup.length = 155
+DEBUG: category = financial
+DEBUG: calculatorsByCategory breakdown: { financial: 73, health: 15, math: 22, utility: 33, lifestyle: 12 }
+ GET /en/categories/financial/ 200 in 2.9s (compile: 5ms, generate-params: 1806µs, render: 2.9s)
+DEBUG: calculatorsToGroup.length = 155
+DEBUG: category = financial
+DEBUG: calculatorsByCategory breakdown: { financial: 73, health: 15, math: 22, utility: 33, lifestyle: 12 }
+ GET /en/categories/financial/ 200 in 2.8s (compile: 4ms, generate-params: 1848µs, render: 2.8s)
+✓ Compiled in 828ms
+[?25h

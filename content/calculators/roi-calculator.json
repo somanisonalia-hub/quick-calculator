@@ -1,0 +1,278 @@
+{
+  "en": {
+    "title": "ROI Calculator",
+    "seoTitle": "ROI Calculator - What Is My Return on Investment?",
+    "summary": "Calculate your Return on Investment and analyze investment performance.",
+    "description": "Use our ROI calculator to determine the return on your investments and understand the effectiveness of your financial decisions.",
+    "category": "financial",
+    "difficulty": "Intermediate",
+    "slug": "roi-calculator",
+    "component": "ROICalculator",
+    "seoContent": {
+      "metaTitle": "ROI Calculator - Calculate Return on Investment",
+      "metaDescription": "Free ROI calculator to measure returns on investments. Calculate profit percentage, annual ROI, and investment performance instantly.",
+      "keywords": "ROI calculator, return on investment, investment calculator, profit calculator, investment analysis",
+      "h1": "ROI Calculator - Measure Your Investment Returns",
+      "introduction": "The ROI Calculator helps you quickly measure the return on your investments. By entering your initial investment amount and final value, you'll instantly see your return percentage, profit, and annual returns. This tool is essential for any investor looking to track and compare investment performance.",
+      "benefits": [
+        "Instantly calculate return on investment percentage",
+        "Compare multiple investment scenarios",
+        "Track investment performance over time",
+        "Make data-driven investment decisions",
+        "Understand profit margins and returns",
+        "Evaluate investment effectiveness"
+      ],
+      "steps": [
+        "Enter your initial investment amount",
+        "Input the final value of your investment",
+        "Specify the time period in years",
+        "View your calculated ROI percentage",
+        "Adjust values to compare scenarios",
+        "Use results for investment decisions"
+      ],
+      "inputsExplained": [
+        "Initial Investment: The amount you initially invested",
+        "Final Value: The current or final value of your investment",
+        "Time Frame: The number of years for the investment period"
+      ],
+      "formulaExplanation": "ROI is calculated as: ((Final Value - Initial Investment) / Initial Investment) × 100. This gives you the percentage return on your investment.",
+      "resultsExplanation": "The results show your total ROI percentage, annual ROI, net profit, and total return percentage over your specified time period.",
+      "examples": "For a $10,000 investment that grew to $12,500 in 1 year, your ROI is 25%. Over 2 years, annual ROI would be 12.5%.",
+      "whoItsFor": "This calculator is ideal for investors, business owners, and anyone analyzing investment performance. Whether you're evaluating stocks, real estate, or business ventures, this tool provides clear metrics.",
+      "disclaimer": "ROI calculations are estimates based on provided values. Actual returns may vary based on market conditions and other factors.",
+      "howDoesWork": "The calculator uses the standard ROI formula to compute returns. Simply enter your investment figures, and it automatically calculates multiple ROI metrics.",
+      "completeGuide": "ROI (Return on Investment) measures how much profit you made relative to your investment. A 25% ROI means you made $0.25 profit for every dollar invested.",
+      "relatedTools": ["Compound Interest Calculator", "Investment Calculator", "Profit Margin Calculator", "Break-Even Calculator"],
+      "faqs": [
+        {"question": "What is a good ROI?", "answer": "A good ROI generally depends on investment type and market conditions. Typical good ROI ranges from 7-15% annually, though stock markets average 10%."},
+        {"question": "Can ROI be negative?", "answer": "Yes, negative ROI means you lost money on the investment. This occurs when final value is less than initial investment."},
+        {"question": "How is annual ROI calculated?", "answer": "Annual ROI = Total ROI % / Number of Years. This shows average yearly return."},
+        {"question": "Is ROI the same as profit?", "answer": "No. Profit is absolute dollars made. ROI is profit as a percentage of investment, which allows comparison across different investments."},
+        {"question": "Should I compare ROIs of different investments?", "answer": "Yes, ROI is useful for comparing performance across different investments and time periods."}
+      ]
+    },
+    "examples": [
+      {
+        "title": "Stock Investment",
+        "input": {"initialInvestment": 10000, "finalValue": 12500, "timeFrame": 1},
+        "output": {"roiPercentage": 25, "netProfit": 2500},
+        "explanation": "A stock investment that grew from $10,000 to $12,500 in one year represents a 25% return."
+      },
+      {
+        "title": "Long-term Investment",
+        "input": {"initialInvestment": 50000, "finalValue": 75000, "timeFrame": 5},
+        "output": {"roiPercentage": 50, "annualROI": 10},
+        "explanation": "A five-year investment doubling to $75,000 shows 50% total ROI or 10% annually."
+      }
+    ]
+  },
+  "es": {
+    "seoTitle": "Calculadora de ROI - ¿Cuál Es Mi Retorno de Inversión?",
+    "title": "Calculadora de ROI",
+    "summary": "Calcula tu Rendimiento sobre la Inversión y analiza el desempeño de tu inversión.",
+    "description": "Usa nuestra calculadora de ROI para determinar el rendimiento de tus inversiones y entender la efectividad de tus decisiones financieras.",
+    "category": "financial",
+    "difficulty": "Intermedio",
+    "slug": "roi-calculator",
+    "component": "ROICalculator",
+    "seoContent": {
+      "metaTitle": "Calculadora de ROI - Calcula tu Rendimiento sobre la Inversión",
+      "metaDescription": "Calculadora de ROI gratuita para medir el rendimiento de inversiones. Calcula porcentaje de ganancia, ROI anual y desempeño de inversión al instante.",
+      "keywords": "calculadora ROI, rendimiento sobre inversión, calculadora de inversión, calculadora de ganancias, análisis de inversión",
+      "h1": "Calculadora de ROI - Mide tu Rendimiento de Inversión",
+      "introduction": "La Calculadora de ROI te ayuda a medir rápidamente el rendimiento de tus inversiones. Al ingresar tu cantidad inicial invertida y valor final, verás instantáneamente tu porcentaje de rendimiento, ganancia y rendimientos anuales.",
+      "benefits": [
+        "Calcula instantáneamente el porcentaje de rendimiento sobre la inversión",
+        "Compara múltiples escenarios de inversión",
+        "Rastrea el desempeño de la inversión en el tiempo",
+        "Toma decisiones de inversión basadas en datos",
+        "Comprende márgenes de ganancia y rendimientos",
+        "Evalúa la efectividad de la inversión"
+      ],
+      "steps": [
+        "Ingresa tu monto inicial de inversión",
+        "Introduce el valor final de tu inversión",
+        "Especifica el período de tiempo en años",
+        "Ver tu porcentaje de ROI calculado",
+        "Ajusta valores para comparar escenarios",
+        "Usa los resultados para decisiones de inversión"
+      ],
+      "inputsExplained": [
+        "Inversión Inicial: La cantidad que invertiste inicialmente",
+        "Valor Final: El valor actual o final de tu inversión",
+        "Período de Tiempo: El número de años del período de inversión"
+      ],
+      "formulaExplanation": "ROI se calcula como: ((Valor Final - Inversión Inicial) / Inversión Inicial) × 100. Esto te da el porcentaje de rendimiento de tu inversión.",
+      "resultsExplanation": "Los resultados muestran tu porcentaje de ROI total, ROI anual, ganancia neta y porcentaje de rendimiento total durante tu período especificado.",
+      "examples": "Para una inversión de $10,000 que creció a $12,500 en 1 año, tu ROI es 25%. Durante 2 años, el ROI anual sería 12.5%.",
+      "whoItsFor": "Esta calculadora es ideal para inversores, dueños de negocios y cualquiera que analice el desempeño de inversiones. Ya sea evaluando acciones, bienes raíces o empresas.",
+      "disclaimer": "Los cálculos de ROI son estimaciones basadas en valores proporcionados. Los rendimientos reales pueden variar según las condiciones del mercado.",
+      "howDoesWork": "La calculadora utiliza la fórmula estándar de ROI para calcular rendimientos. Solo ingresa tus cifras de inversión y calcula automáticamente múltiples métricas.",
+      "completeGuide": "ROI mide cuánta ganancia obtuviste en relación a tu inversión. Un ROI de 25% significa que ganaste $0.25 de ganancia por cada dólar invertido.",
+      "relatedTools": ["Calculadora de Interés Compuesto", "Calculadora de Inversión", "Calculadora de Margen de Ganancia", "Calculadora de Punto de Equilibrio"],
+      "faqs": [
+        {"question": "¿Cuál es un buen ROI?", "answer": "Un buen ROI generalmente depende del tipo de inversión y condiciones del mercado. El ROI típicamente bueno oscila entre 7-15% anualmente."},
+        {"question": "¿Puede el ROI ser negativo?", "answer": "Sí, el ROI negativo significa que perdiste dinero en la inversión. Esto ocurre cuando el valor final es menor que la inversión inicial."},
+        {"question": "¿Cómo se calcula el ROI anual?", "answer": "ROI Anual = ROI Total % / Número de Años. Esto muestra el rendimiento promedio anual."},
+        {"question": "¿Es el ROI lo mismo que ganancia?", "answer": "No. La ganancia son dólares absolutos ganados. El ROI es ganancia como porcentaje de la inversión."},
+        {"question": "¿Debo comparar ROIs de diferentes inversiones?", "answer": "Sí, el ROI es útil para comparar rendimiento entre diferentes inversiones y períodos de tiempo."}
+      ]
+    }
+  },
+  "pt": {
+    "title": "Calculadora de ROI",    "seoTitle": "Calculadora de ROI - Qual É Meu Retorno de Investimento?",    "summary": "Calcule seu Retorno sobre o Investimento e analise o desempenho do seu investimento.",
+    "description": "Use nossa calculadora de ROI para determinar o retorno de seus investimentos e compreender a efetividade de suas decisões financeiras.",
+    "category": "financial",
+    "difficulty": "Intermediário",
+    "slug": "roi-calculator",
+    "component": "ROICalculator",
+    "seoContent": {
+      "metaTitle": "Calculadora de ROI - Calcule seu Retorno sobre o Investimento",
+      "metaDescription": "Calculadora de ROI gratuita para medir retornos de investimentos. Calcule percentual de lucro, ROI anual e desempenho de investimento instantaneamente.",
+      "keywords": "calculadora ROI, retorno sobre investimento, calculadora de investimento, calculadora de lucro, análise de investimento",
+      "h1": "Calculadora de ROI - Meça seu Retorno de Investimento",
+      "introduction": "A Calculadora de ROI ajuda você a medir rapidamente o retorno de seus investimentos. Ao inserir seu valor inicial investido e valor final, você verá instantaneamente seu percentual de retorno, lucro e retornos anuais.",
+      "benefits": [
+        "Calcule instantaneamente o percentual de retorno sobre investimento",
+        "Compare múltiplos cenários de investimento",
+        "Rastreie o desempenho do investimento ao longo do tempo",
+        "Tome decisões de investimento baseadas em dados",
+        "Compreenda margens de lucro e retornos",
+        "Avalie a efetividade do investimento"
+      ],
+      "steps": [
+        "Insira seu valor inicial de investimento",
+        "Introduza o valor final de seu investimento",
+        "Especifique o período de tempo em anos",
+        "Visualize seu percentual de ROI calculado",
+        "Ajuste valores para comparar cenários",
+        "Use os resultados para decisões de investimento"
+      ],
+      "inputsExplained": [
+        "Investimento Inicial: O valor que você investiu inicialmente",
+        "Valor Final: O valor atual ou final de seu investimento",
+        "Período de Tempo: O número de anos do período de investimento"
+      ],
+      "formulaExplanation": "ROI é calculado como: ((Valor Final - Investimento Inicial) / Investimento Inicial) × 100. Isso lhe dá o percentual de retorno de seu investimento.",
+      "resultsExplanation": "Os resultados mostram seu percentual de ROI total, ROI anual, lucro líquido e percentual de retorno total durante seu período especificado.",
+      "examples": "Para um investimento de $10.000 que cresceu para $12.500 em 1 ano, seu ROI é 25%. Durante 2 anos, o ROI anual seria 12,5%.",
+      "whoItsFor": "Esta calculadora é ideal para investidores, proprietários de empresas e qualquer pessoa analisando desempenho de investimentos.",
+      "disclaimer": "Os cálculos de ROI são estimativas baseadas em valores fornecidos. Os retornos reais podem variar com base nas condições de mercado.",
+      "howDoesWork": "A calculadora usa a fórmula padrão de ROI para calcular retornos. Simplesmente insira seus valores de investimento e calcule automaticamente múltiplas métricas.",
+      "completeGuide": "ROI mede quanto lucro você obteve em relação ao seu investimento. Um ROI de 25% significa que você ganhou $0,25 de lucro para cada dólar investido.",
+      "relatedTools": ["Calculadora de Juros Compostos", "Calculadora de Investimento", "Calculadora de Margem de Lucro", "Calculadora de Ponto de Equilíbrio"],
+      "faqs": [
+        {"question": "Qual é um bom ROI?", "answer": "Um bom ROI geralmente depende do tipo de investimento e condições de mercado. O ROI típico bom varia de 7-15% anualmente."},
+        {"question": "O ROI pode ser negativo?", "answer": "Sim, ROI negativo significa que você perdeu dinheiro no investimento. Isso ocorre quando o valor final é menor que o investimento inicial."},
+        {"question": "Como o ROI anual é calculado?", "answer": "ROI Anual = ROI Total % / Número de Anos. Isso mostra o retorno médio anual."},
+        {"question": "ROI é o mesmo que lucro?", "answer": "Não. Lucro são dólares absolutos ganhos. ROI é lucro como percentual do investimento."},
+        {"question": "Devo comparar ROIs de diferentes investimentos?", "answer": "Sim, ROI é útil para comparar desempenho entre diferentes investimentos e períodos de tempo."}
+      ]
+    }
+  },
+  "fr": {
+    "title": "Calculateur de ROI",
+    "seoTitle": "Calculateur de ROI - Quel Est Mon Retour sur Investissement?",
+    "summary": "Calculez votre Retour sur Investissement et analysez la performance de votre investissement.",
+    "description": "Utilisez notre calculateur de ROI pour déterminer le rendement de vos investissements et comprendre l'efficacité de vos décisions financières.",
+    "category": "financial",
+    "difficulty": "Intermédiaire",
+    "slug": "roi-calculator",
+    "component": "ROICalculator",
+    "seoContent": {
+      "metaTitle": "Calculateur de ROI - Calculez votre Retour sur Investissement",
+      "metaDescription": "Calculateur de ROI gratuit pour mesurer les rendements des investissements. Calculez le pourcentage de profit, le ROI annuel et les performances d'investissement instantanément.",
+      "keywords": "calculateur ROI, retour sur investissement, calculateur d'investissement, calculateur de profit, analyse d'investissement",
+      "h1": "Calculateur de ROI - Mesurez votre Rendement d'Investissement",
+      "introduction": "Le Calculateur de ROI vous aide à mesurer rapidement le rendement de vos investissements. En entrant votre montant initial investi et votre valeur finale, vous verrez instantanément votre pourcentage de rendement, votre profit et vos rendements annuels.",
+      "benefits": [
+        "Calculez instantanément le pourcentage de retour sur investissement",
+        "Comparez plusieurs scénarios d'investissement",
+        "Suivez la performance de l'investissement au fil du temps",
+        "Prenez des décisions d'investissement basées sur les données",
+        "Comprenez les marges de profit et les rendements",
+        "Évaluez l'efficacité de l'investissement"
+      ],
+      "steps": [
+        "Entrez votre montant initial d'investissement",
+        "Introduisez la valeur finale de votre investissement",
+        "Spécifiez la période en années",
+        "Afficher votre pourcentage de ROI calculé",
+        "Ajustez les valeurs pour comparer les scénarios",
+        "Utilisez les résultats pour les décisions d'investissement"
+      ],
+      "inputsExplained": [
+        "Investissement Initial: Le montant que vous avez initialement investi",
+        "Valeur Finale: La valeur actuelle ou finale de votre investissement",
+        "Période: Le nombre d'années de la période d'investissement"
+      ],
+      "formulaExplanation": "Le ROI est calculé comme: ((Valeur Finale - Investissement Initial) / Investissement Initial) × 100. Cela vous donne le pourcentage de rendement de votre investissement.",
+      "resultsExplanation": "Les résultats affichent votre pourcentage de ROI total, votre ROI annuel, votre profit net et votre pourcentage de rendement total pour votre période spécifiée.",
+      "examples": "Pour un investissement de 10 000 $ qui est passé à 12 500 $ en 1 an, votre ROI est 25%. Sur 2 ans, le ROI annuel serait 12,5%.",
+      "whoItsFor": "Ce calculateur est idéal pour les investisseurs, les propriétaires d'entreprises et toute personne analysant la performance des investissements.",
+      "disclaimer": "Les calculs de ROI sont des estimations basées sur les valeurs fournies. Les rendements réels peuvent varier selon les conditions du marché.",
+      "howDoesWork": "Le calculateur utilise la formule ROI standard pour calculer les rendements. Il suffit d'entrer vos chiffres d'investissement et il calcule automatiquement plusieurs mesures.",
+      "completeGuide": "Le ROI mesure le profit que vous avez réalisé par rapport à votre investissement. Un ROI de 25% signifie que vous avez gagné 0,25 $ de profit pour chaque dollar investi.",
+      "relatedTools": ["Calculateur d'Intérêt Composé", "Calculateur d'Investissement", "Calculateur de Marge de Profit", "Calculateur de Seuil de Rentabilité"],
+      "faqs": [
+        {"question": "Qu'est-ce qu'un bon ROI?", "answer": "Un bon ROI dépend généralement du type d'investissement et des conditions du marché. Un bon ROI typique varie de 7-15% annuellement."},
+        {"question": "Le ROI peut-il être négatif?", "answer": "Oui, un ROI négatif signifie que vous avez perdu de l'argent sur l'investissement. Cela se produit lorsque la valeur finale est inférieure à l'investissement initial."},
+        {"question": "Comment le ROI annuel est-il calculé?", "answer": "ROI Annuel = ROI Total % / Nombre d'Années. Cela montre le rendement annuel moyen."},
+        {"question": "Le ROI est-il la même chose que le profit?", "answer": "Non. Le profit est des dollars absolus gagnés. Le ROI est le profit en pourcentage de l'investissement."},
+        {"question": "Dois-je comparer les ROI de différents investissements?", "answer": "Oui, le ROI est utile pour comparer les performances entre les différents investissements et les périodes de temps."}
+      ]
+    }
+  },
+  "de": {
+    "title": "ROI-Rechner",
+    "summary": "Berechnen Sie Ihre Kapitalrendite und analysieren Sie die Investitionsleistung.",
+    "description": "Verwenden Sie unseren ROI-Rechner, um die Rendite Ihrer Investitionen zu bestimmen und die Effektivität Ihrer finanziellen Entscheidungen zu verstehen.",
+    "category": "financial",
+    "difficulty": "Mittelstufe",
+    "slug": "roi-calculator",
+    "component": "ROICalculator",
+    "seoContent": {
+      "metaTitle": "ROI-Rechner - Berechnen Sie Ihre Kapitalrendite",
+      "metaDescription": "Kostenloser ROI-Rechner zur Messung von Investitionsrenditen. Berechnen Sie Gewinnprozentsatz, jährliche ROI und Investitionsleistung sofort.",
+      "keywords": "ROI-Rechner, Kapitalrendite, Investitionsrechner, Gewinnrechner, Investitionsanalyse",
+      "h1": "ROI-Rechner - Messen Sie Ihre Investitionsrenditen",
+      "introduction": "Der ROI-Rechner hilft Ihnen, die Rendite Ihrer Investitionen schnell zu messen. Durch Eingabe Ihres ursprünglichen Investitionsbetrags und des Endwerts sehen Sie sofort Ihren Rentenprozentsatz, Gewinn und Jahresrenditen.",
+      "benefits": [
+        "Berechnen Sie sofort den Rentenprozentsatz Ihrer Investition",
+        "Vergleichen Sie mehrere Investitionsszenarien",
+        "Verfolgen Sie die Investitionsleistung im Laufe der Zeit",
+        "Treffen Sie datengestützte Investitionsentscheidungen",
+        "Verstehen Sie Gewinnmargen und Renditen",
+        "Bewerten Sie die Effizienz der Investition"
+      ],
+      "steps": [
+        "Geben Sie Ihren ursprünglichen Investitionsbetrag ein",
+        "Geben Sie den Endwert Ihrer Investition ein",
+        "Geben Sie den Zeitraum in Jahren an",
+        "Sehen Sie Ihren berechneten ROI-Prozentsatz an",
+        "Passen Sie Werte an, um Szenarien zu vergleichen",
+        "Verwenden Sie Ergebnisse für Investitionsentscheidungen"
+      ],
+      "inputsExplained": [
+        "Anfangsinvestition: Der Betrag, den Sie ursprünglich investiert haben",
+        "Endwert: Der aktuelle oder finale Wert Ihrer Investition",
+        "Zeitrahmen: Die Anzahl der Jahre für den Investitionszeitraum"
+      ],
+      "formulaExplanation": "ROI wird berechnet als: ((Endwert - Anfangsinvestition) / Anfangsinvestition) × 100. Dies gibt Ihnen den Rentenprozentsatz Ihrer Investition.",
+      "resultsExplanation": "Die Ergebnisse zeigen Ihren gesamten ROI-Prozentsatz, jährlichen ROI, Nettogewinn und Gesamtrenditeprozentsatz über Ihren angegebenen Zeitraum.",
+      "examples": "Für eine Investition von 10.000 $, die in 1 Jahr auf 12.500 $ wuchs, beträgt Ihre ROI 25%. Über 2 Jahre wäre die jährliche ROI 12,5%.",
+      "whoItsFor": "Dieser Rechner ist ideal für Investoren, Geschäftsinhaber und alle, die die Investitionsleistung analysieren.",
+      "disclaimer": "ROI-Berechnungen sind Schätzungen basierend auf bereitgestellten Werten. Tatsächliche Renditen können je nach Marktbedingungen variieren.",
+      "howDoesWork": "Der Rechner verwendet die Standard-ROI-Formel zur Berechnung der Renditen. Geben Sie einfach Ihre Investitionszahlen ein und berechnet automatisch mehrere ROI-Metriken.",
+      "completeGuide": "ROI misst, wie viel Gewinn Sie im Verhältnis zu Ihrer Investition gemacht haben. Eine ROI von 25% bedeutet, dass Sie 0,25 $ Gewinn pro Dollar investiert verdient haben.",
+      "relatedTools": ["Zinseszinsrechner", "Investitionsrechner", "Gewinnmargenrechner", "Break-Even-Rechner"],
+      "faqs": [
+        {"question": "Was ist eine gute ROI?", "answer": "Eine gute ROI hängt in der Regel von der Art der Investition und den Marktbedingungen ab. Eine typisch gute ROI liegt zwischen 7-15% pro Jahr."},
+        {"question": "Kann die ROI negativ sein?", "answer": "Ja, negative ROI bedeutet, dass Sie bei der Investition Geld verloren haben. Dies tritt auf, wenn der Endwert unter der ursprünglichen Investition liegt."},
+        {"question": "Wie wird die jährliche ROI berechnet?", "answer": "Jährliche ROI = Gesamt-ROI % / Anzahl der Jahre. Dies zeigt die durchschnittliche jährliche Rendite."},
+        {"question": "Ist ROI dasselbe wie Gewinn?", "answer": "Nein. Gewinn sind absolute verdiente Dollar. ROI ist der Gewinn als Prozentsatz der Investition."},
+        {"question": "Sollte ich ROIs verschiedener Investitionen vergleichen?", "answer": "Ja, ROI ist nützlich zum Vergleichen der Leistung über verschiedene Investitionen und Zeiträume hinweg."}
+      ]
+    }
+  }
+}
