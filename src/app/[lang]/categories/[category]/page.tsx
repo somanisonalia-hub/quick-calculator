@@ -12,7 +12,7 @@ import { loadCalculatorsByCategory, loadAllCalculatorsStatic } from '@/lib/stati
 import CategoryPageClient from '@/app/categories/[slug]/CategoryPageClient';
 
 // Valid languages and categories
-const validLanguages = ['en', 'es', 'pt', 'fr'];
+const validLanguages = ['en', 'es', 'pt', 'fr', 'de', 'nl'];
 const validCategories = ['financial', 'health', 'math', 'utility', 'lifestyle'];
 
 export async function generateStaticParams() {

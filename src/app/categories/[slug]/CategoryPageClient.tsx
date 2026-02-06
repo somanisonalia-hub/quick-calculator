@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getCategoryData, CategoryData, CalculatorInfo, CALCULATOR_CATEGORIES } from '@/lib/categoryUtils';
 import { getPopularCalculatorsForCategory } from '@/lib/popularCalculators';
+import DE_NL_SELECTED_CALCULATORS from '@/lib/DE_NL_SELECTED_CALCULATORS.json';
 
 interface CategoryPageClientProps {
   lang: string;
@@ -61,10 +62,17 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
     );
   }
 
-  const categoryCalcs = currentCategoryCalcs.filter(calc => {
+  let categoryCalcs = currentCategoryCalcs.filter(calc => {
     const calcCategory = (CALCULATOR_CATEGORIES as any)[calc.slug] || 'utility';
     return calcCategory === category;
   });
+
+  // Filter to only selected calculators for DE/NL pages
+  if (['de', 'nl'].includes(lang)) {
+    categoryCalcs = categoryCalcs.filter(calc => 
+      DE_NL_SELECTED_CALCULATORS.calculators.includes(calc.slug)
+    );
+  }
 
   const categoryColors: Record<string, { bg: string; border: string; text: string; buttonBg: string; buttonHover: string }> = {
     financial: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', buttonBg: 'bg-blue-600', buttonHover: 'hover:bg-blue-700' },
@@ -81,21 +89,30 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
     es: { popular: 'Calculadoras Populares', otherCalculators: 'Otras Calculadoras', backHome: 'Volver a la página de inicio', mostUsed: 'Calculadoras más utilizadas y confiables en la', category: 'categoría para cálculos rápidos y precisos.', essential: 'Herramientas esenciales de la', calculator: 'calculadora', calculators: 'calculadoras', explore: 'Explora calculadoras de otras categorías para encontrar más herramientas para tus necesidades de cálculo.' },
     pt: { popular: 'Calculadoras Populares', otherCalculators: 'Outras Calculadoras', backHome: 'Voltar para a página inicial', mostUsed: 'Calculadoras mais usadas e confiáveis na', category: 'categoria para cálculos rápidos e precisos.', essential: 'Ferramentas essenciais da', calculator: 'calculadora', calculators: 'calculadoras', explore: 'Explore calculadoras de outras categorias para encontrar mais ferramentas para suas necessidades de cálculo.' },
     fr: { popular: 'Calculatrices Populaires', otherCalculators: 'Autres Calculatrices', backHome: 'Retour à l\'accueil', mostUsed: 'Calculatrices les plus utilisées et fiables de la', category: 'catégorie pour des calculs rapides et précis.', essential: 'Outils essentiels de la', calculator: 'calculatrice', calculators: 'calculatrices', explore: 'Explorez des calculatrices d\'autres catégories pour trouver plus d\'outils pour vos besoins de calcul.' },
+    de: { popular: 'Beliebte Rechner', otherCalculators: 'Weitere Rechner', backHome: 'Zurück zur Startseite', mostUsed: 'Die am meisten genutzten und vertrauenswürdigen Rechner in der', category: 'Kategorie für schnelle und genaue Berechnungen.', essential: 'Wichtige Werkzeuge aus der', calculator: 'Rechner', calculators: 'Rechner', explore: 'Erkunde Rechner aus anderen Kategorien, um mehr Werkzeuge für deine Rechenbedürfnisse zu finden.' },
+    nl: { popular: 'Populaire Rekenmachines', otherCalculators: 'Andere Rekenmachines', backHome: 'Terug naar startpagina', mostUsed: 'De meest gebruikte en betrouwbare rekenmachines in de', category: 'categorie voor snelle en nauwkeurige berekeningen.', essential: 'Essentiële hulpmiddelen uit de', calculator: 'rekenmachine', calculators: 'rekenmachines', explore: 'Verken rekenmachines uit andere categorieën om meer hulpmiddelen voor je rekenbehoeften te vinden.' },
   } as Record<string, { popular: string; otherCalculators: string; backHome: string; mostUsed: string; category: string; essential: string; calculator: string; calculators: string; explore: string }>;
   
   const t = translations[lang] || translations.en;
 
   // Category names for grouping
   const categoryNames: Record<string, Record<string, string>> = {
-    financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculateurs Financiers' },
-    health: { en: 'Health & Fitness Calculators', es: 'Calculadoras de Salud y Fitness', pt: 'Calculadoras de Saúde e Fitness', fr: 'Calculateurs Santé et Fitness' },
-    math: { en: 'Math Calculators', es: 'Calculadoras Matemáticas', pt: 'Calculadoras Matemáticas', fr: 'Calculateurs Mathématiques' },
-    utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilitários', fr: 'Calculateurs Utilitaires' },
-    lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculateurs Style de Vie' }
+    financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculateurs Financiers', de: 'Finanzrechner', nl: 'Financiële Rekenmachines' },
+    health: { en: 'Health & Fitness Calculators', es: 'Calculadoras de Salud y Fitness', pt: 'Calculadoras de Saúde e Fitness', fr: 'Calculateurs Santé et Fitness', de: 'Gesundheits- & Fitness-Rechner', nl: 'Gezondheids- & Fitness-Rekenmachines' },
+    math: { en: 'Math Calculators', es: 'Calculadoras Matemáticas', pt: 'Calculadoras Matemáticas', fr: 'Calculateurs Mathématiques', de: 'Mathematikrechner', nl: 'Wiskundige Rekenmachines' },
+    utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilitários', fr: 'Calculateurs Utilitaires', de: 'Dienstprogrammrechner', nl: 'Hulpprogramma\'s-Rekenmachines' },
+    lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculateurs Style de Vie', de: 'Lifestyle-Rechner', nl: 'Lifestyle-Rekenmachines' }
   };
 
   // Group all calculators by category  
-  const calculatorsToGroup = allCalculators || currentCategoryCalcs;
+  let calculatorsToGroup = allCalculators || currentCategoryCalcs;
+  
+  // Filter to only selected calculators for DE/NL pages
+  if (['de', 'nl'].includes(lang)) {
+    calculatorsToGroup = calculatorsToGroup.filter(calc => 
+      DE_NL_SELECTED_CALCULATORS.calculators.includes(calc.slug)
+    );
+  }
   
   const calulatorsByCategory: Record<string, CalculatorInfo[]> = {
     financial: [],
