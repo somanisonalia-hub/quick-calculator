@@ -1,0 +1,272 @@
+
+> quick-calculator-v1@0.1.0 prebuild
+> npm run validate-calculators
+
+
+> quick-calculator-v1@0.1.0 validate-calculators
+> node validate-calculators.js
+
+
+╔═══════════════════════════════════════════════════════════════╗
+║         CALCULATOR COMPONENT VALIDATION REPORT               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📊 Total calculators checked: 132
+📁 Existing component files: 155
+📋 Registered in CalculatorRegistry: 147
+
+✅ All calculators are properly configured!
+
+   • All referenced components exist
+   • All components are registered
+   • All component names are specified
+
+
+> quick-calculator-v1@0.1.0 build
+> next build
+
+▲ Next.js 16.1.1 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.7s
+  Running TypeScript ...
+  Collecting page data using 13 workers ...
+⚠ Page "/opengraph-image" is using runtime = 'edge' which is currently incompatible with dynamic = 'force-static'. Please remove either "runtime" or "force-static" for correct behavior
+⚠ Using edge runtime on a page currently disables static generation for that page
+⚠ Page "/twitter-image" is using runtime = 'edge' which is currently incompatible with dynamic = 'force-static'. Please remove either "runtime" or "force-static" for correct behavior
+  Generating static pages using 13 workers (0/1267) ...
+  Generating static pages using 13 workers (316/1267) 
+  Generating static pages using 13 workers (630/1267) 
+  Generating static pages using 13 workers (633/1267) 
+  Generating static pages using 13 workers (950/1267) 
+  Generating static pages using 13 workers (1240/1267) 
+✓ Generating static pages using 13 workers (1267/1267) in 3.9min
+  Finalizing page optimization ...
+⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
+This command is meant for static-only hosts, and is not necessary to make your application static.
+Pages in your application without server-side data dependencies will be automatically statically exported by `next build`, including pages powered by `getStaticProps`.
+Learn more: https://nextjs.org/docs/messages/api-routes-static-export
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ● /[lang]
+│ ├ /en
+│ ├ /es
+│ ├ /pt
+│ └ [+3 more paths]
+├ ● /[lang]/[slug]
+│ ├ /en/401k-calculator
+│ ├ /en/advanced-loan-calculator
+│ ├ /en/age-calculator
+│ └ [+1023 more paths]
+├ ● /[lang]/about-us
+│ ├ /en/about-us
+│ ├ /es/about-us
+│ ├ /pt/about-us
+│ └ [+3 more paths]
+├ ● /[lang]/categories/[category]
+│ ├ /en/categories/financial
+│ ├ /en/categories/health
+│ ├ /en/categories/math
+│ └ [+27 more paths]
+├ ● /[lang]/contact
+│ ├ /en/contact
+│ ├ /es/contact
+│ ├ /pt/contact
+│ └ [+3 more paths]
+├ ● /[lang]/cookie-policy
+│ ├ /en/cookie-policy
+│ ├ /es/cookie-policy
+│ ├ /pt/cookie-policy
+│ └ [+3 more paths]
+├ ● /[lang]/disclaimer
+│ ├ /en/disclaimer
+│ ├ /es/disclaimer
+│ ├ /pt/disclaimer
+│ └ [+3 more paths]
+├ ● /[lang]/privacy-policy
+│ ├ /en/privacy-policy
+│ ├ /es/privacy-policy
+│ ├ /pt/privacy-policy
+│ └ [+3 more paths]
+├ ● /[lang]/sitemap.xml
+│ ├ /en/sitemap.xml
+│ ├ /es/sitemap.xml
+│ ├ /pt/sitemap.xml
+│ └ [+3 more paths]
+├ ● /[lang]/terms-of-service
+│ ├ /en/terms-of-service
+│ ├ /es/terms-of-service
+│ ├ /pt/terms-of-service
+│ └ [+3 more paths]
+├ ○ /401k-calculator
+├ ○ /about-us
+├ ○ /advanced-loan-calculator
+├ ○ /age-calculator
+├ ○ /amortization-schedule-calculator
+├ ○ /apr-calculator
+├ ○ /average-calculator
+├ ○ /basic-apr-calculator
+├ ○ /biweekly-pay-calculator
+├ ○ /blood-pressure-calculator
+├ ○ /bmi-calculator
+├ ○ /bmr-calculator
+├ ○ /body-fat-calculator
+├ ○ /budget-calculator
+├ ○ /calorie-calculator
+├ ○ /car-affordability-calculator
+├ ○ /car-insurance-calculator
+├ ○ /car-loan-calculator
+├ ● /categories/[slug]
+│ ├ /categories/financial
+│ ├ /categories/health
+│ ├ /categories/math
+│ └ [+2 more paths]
+├ ○ /circle-area-calculator
+├ ○ /circle-circumference-calculator
+├ ○ /compound-interest-calculator
+├ ○ /concrete-calculator
+├ ○ /contact
+├ ○ /conversion-tools
+├ ○ /cookie-policy
+├ ○ /credit-card-calculator
+├ ○ /credit-card-payoff
+├ ○ /crypto-roi-calculator
+├ ○ /currency-converter
+├ ○ /date-calculator
+├ ○ /debt-consolidation-calculator
+├ ○ /debt-payoff-calculator
+├ ○ /debt-ratios-calculator
+├ ○ /debt-to-income-calculator
+├ ○ /disclaimer
+├ ○ /due-date-calculator
+├ ○ /ear-calculator
+├ ○ /effective-interest-rate-calculator
+├ ○ /emergency-fund
+├ ○ /emi-calculator
+├ ○ /equal-principal-amortization-calculator
+├ ○ /equivalent-interest-rate-calculator
+├ ○ /exam-score-predictor
+├ ○ /expense-calculator
+├ ○ /feet-inches-calculator
+├ ○ /financial-calculators
+├ ○ /fraction-calculator
+├ ○ /fraction-decimal
+├ ○ /fuel-cost
+├ ○ /future-value-calculator
+├ ○ /geometry-area
+├ ○ /gpa-calculator
+├ ○ /grade-calculator
+├ ○ /health-calculators
+├ ○ /health-insurance-calculator
+├ ○ /height-calculator
+├ ○ /home-affordability-calculator
+├ ○ /hourly-to-salary-calculator
+├ ○ /ideal-weight-calculator
+├ ○ /income-tax-calculator
+├ ○ /inflation-calculator
+├ ○ /interest-calculator
+├ ○ /interest-only-mortgage-calculator
+├ ○ /interest-rate-table-calculator
+├ ○ /investment-calculator
+├ ○ /investment-planner
+├ ○ /investment-return
+├ ○ /lean-body-mass-calculator
+├ ○ /life-insurance-calculator
+├ ○ /linear-equation
+├ ○ /liquidity-ratios-calculator
+├ ○ /loan-affordability
+├ ○ /loan-affordability-calculator
+├ ○ /loan-calculator
+├ ○ /loan-comparison
+├ ○ /loan-payment-table-generator
+├ ○ /loan-repayment
+├ ○ /logarithm-calculator
+├ ○ /love-calculator
+├ ○ /macro-calculator
+├ ○ /maintenance-calories-calculator
+├ ○ /math-calculators
+├ ○ /mean-median-mode-calculator
+├ ○ /mortgage-calculator
+├ ○ /net-income-calculator
+├ ○ /net-worth
+├ ○ /nominal-interest-rate-calculator
+├ ○ /number-base-converter
+├ ○ /numbers-to-words-converter
+├ ƒ /opengraph-image
+├ ○ /operations-ratios-calculator
+├ ○ /overtime-pay-calculator
+├ ○ /ovulation-calculator
+├ ○ /pace-calculator
+├ ○ /password-generator
+├ ○ /password-generator-calculator
+├ ○ /paycheck-calculator
+├ ○ /percent-calculator
+├ ○ /percentage-calculator
+├ ○ /percentage-change-calculator
+├ ○ /percentile-calculator
+├ ○ /periodic-interest-rate-calculator
+├ ○ /personal-budget
+├ ○ /pregnancy-calculator
+├ ○ /privacy
+├ ○ /privacy-policy
+├ ○ /probability-calculator
+├ ○ /profitability-ratios-calculator
+├ ○ /property-tax-calculator
+├ ○ /protein-intake-calculator
+├ ○ /pythagorean-theorem-calculator
+├ ○ /quadratic-equation-calculator
+├ ○ /ratio-calculator
+├ ○ /ratio-proportion
+├ ○ /retirement-calculator
+├ ○ /retirement-plan
+├ ○ /retirement-savings
+├ ○ /roman-numeral-converter
+├ ○ /roth-ira-calculator
+├ ○ /salary-calculator
+├ ○ /salary-payroll
+├ ○ /salary-tax
+├ ○ /sales-tax-calculator
+├ ○ /savings-calculator
+├ ○ /savings-goal
+├ ○ /savings-interest
+├ ○ /scientific-calculator
+├ ○ /shipping-cost
+├ ○ /simple-interest-calculator
+├ ○ /sitemap.xml
+├ ○ /sleep-calculator
+├ ○ /social-security-calculator
+├ ○ /square-footage-calculator
+├ ○ /standard-deviation-calculator
+├ ○ /stock-ratios-calculator
+├ ○ /stock-return-calculator
+├ ○ /study-hours-planner
+├ ○ /surface-area-calculator
+├ ○ /take-home-pay-calculator
+├ ○ /tank-volume-calculator
+├ ○ /tax-calculator
+├ ○ /tdee-calculator
+├ ○ /terms
+├ ○ /terms-of-service
+├ ○ /test-financial
+├ ○ /test-page
+├ ○ /tip-calculator
+├ ○ /triangle-area-calculator
+├ ○ /trip-planner
+├ ƒ /twitter-image
+├ ○ /unit-conversion-calculator
+├ ○ /unit-converter
+├ ○ /volume-calculator
+├ ○ /waist-to-hip-ratio-calculator
+├ ○ /water-intake-calculator
+├ ○ /word-counter
+└ ○ /word-counter-calculator
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

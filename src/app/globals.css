@@ -50,3 +50,34 @@ body {
   font-size: 0.8em;
   line-height: 1;
 }
+
+/* Print Styles */
+@media print {
+  /* Hide non-essential elements */
+  nav, footer, button, .search-button, .search-modal, [role="banner"], [aria-label="Search"] {
+    display: none !important;
+  }
+  
+  /* Optimize layout for printing */
+  body {
+    background: white;
+    color: black;
+  }
+  
+  /* Show URLs for links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  /* Prevent page breaks inside important content */
+  section, .calculator-section, .formula-display {
+    page-break-inside: avoid;
+  }
+  
+  /* Ensure calculator forms are visible */
+  #calculator-section, #calculator-main {
+    display: block !important;
+  }
+}

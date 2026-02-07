@@ -79,6 +79,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Resource Hints for Performance */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
         {/* Google Analytics - Defer to improve FCP/LCP */}
         <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-WJ29X5ZT2M"></script>
         <script
@@ -96,6 +101,10 @@ export default function RootLayout({
         className={`${poppins.variable} font-sans antialiased min-h-screen flex flex-col`}
         suppressHydrationWarning
       >
+        {/* Skip to main content for accessibility */}
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded">
+          Skip to main content
+        </a>
         <HtmlLangSetter />
         <I18nProvider>
           <LangProvider>

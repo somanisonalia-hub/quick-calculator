@@ -1,4 +1,5 @@
 import CalculatorPageClient from '@/components/CalculatorPageClient';
+import CalculatorFormSSR from '@/components/CalculatorFormSSR';
 import fs from 'fs';
 import path from 'path';
 import { CALCULATOR_CATEGORIES } from '@/lib/categoryUtils';
@@ -82,6 +83,18 @@ export default function LangCalculatorClient({ lang, slug }: LangCalculatorClien
       seoContent={seoContent}
       initialRelatedCalculators={relatedCalculators}
       breadcrumbs={breadcrumbs}
+      serverRenderedForm={
+        calculatorContent?.calculatorComponent ? (
+          <CalculatorFormSSR
+            inputs={calculatorContent.calculatorComponent.inputs || []}
+            formula={calculatorContent.calculatorComponent.formula}
+            output={calculatorContent.calculatorComponent.output}
+            additionalOutputs={calculatorContent.calculatorComponent.additionalOutputs}
+            lang={lang}
+            calculatorName={calculatorContent.title}
+          />
+        ) : null
+      }
     />
   );
 }

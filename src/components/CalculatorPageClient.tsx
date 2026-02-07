@@ -19,9 +19,10 @@ interface CalculatorPageClientProps {
   initialCalculatorContent?: any;
   initialRelatedCalculators?: any[];
   breadcrumbs?: Array<{ name: string; href: string }>;
+  serverRenderedForm?: React.ReactNode;
 }
 
-export default function CalculatorPageClient({ lang, slug, seoContent, initialCalculatorContent, initialRelatedCalculators, breadcrumbs }: CalculatorPageClientProps) {
+export default function CalculatorPageClient({ lang, slug, seoContent, initialCalculatorContent, initialRelatedCalculators, breadcrumbs, serverRenderedForm }: CalculatorPageClientProps) {
   const { t, i18n } = useTranslation('common');
 
   const [calculatorContent, setCalculatorContent] = useState<any>(null);
@@ -31,6 +32,106 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isClient, setIsClient] = useState(false);
+
+  // Generate FAQ schema for SEO
+  const generateFAQSchema = () => {
+    const faqTranslations: Record<string, any> = {
+      en: {
+        q1: `How do I use the ${calculatorContent?.title}?`,
+        a1: `Enter your values in the input fields above, and the calculator will automatically compute the results. All calculations are performed instantly in your browser.`,
+        q2: `Is this calculator free to use?`,
+        a2: `Yes, all our calculators are completely free to use. No registration or payment required.`,
+        q3: `Are the calculations accurate?`,
+        a3: `Our calculators use industry-standard formulas and are thoroughly tested for accuracy. However, results should be used for informational purposes only.`
+      },
+      es: {
+        q1: `¿Cómo uso la ${calculatorContent?.title}?`,
+        a1: `Ingrese sus valores en los campos de entrada de arriba, y la calculadora calculará automáticamente los resultados. Todos los cálculos se realizan instantáneamente en su navegador.`,
+        q2: `¿Es gratis usar esta calculadora?`,
+        a2: `Sí, todas nuestras calculadoras son completamente gratuitas. No se requiere registro ni pago.`,
+        q3: `¿Son precisos los cálculos?`,
+        a3: `Nuestras calculadoras utilizan fórmulas estándar de la industria y están exhaustivamente probadas para precisión. Sin embargo, los resultados deben usarse solo con fines informativos.`
+      },
+      pt: {
+        q1: `Como uso a ${calculatorContent?.title}?`,
+        a1: `Digite seus valores nos campos de entrada acima, e a calculadora computará automaticamente os resultados. Todos os cálculos são realizados instantaneamente no seu navegador.`,
+        q2: `Esta calculadora é gratuita?`,
+        a2: `Sim, todas as nossas calculadoras são completamente gratuitas. Nenhum registro ou pagamento necessário.`,
+        q3: `Os cálculos são precisos?`,
+        a3: `Nossas calculadoras usam fórmulas padrão da indústria e são minuciosamente testadas para precisão. No entanto, os resultados devem ser usados apenas para fins informativos.`
+      },
+      fr: {
+        q1: `Comment utiliser la ${calculatorContent?.title}?`,
+        a1: `Entrez vos valeurs dans les champs de saisie ci-dessus, et la calculatrice calculera automatiquement les résultats. Tous les calculs sont effectués instantanément dans votre navigateur.`,
+        q2: `Cette calculatrice est-elle gratuite?`,
+        a2: `Oui, toutes nos calculatrices sont entièrement gratuites. Aucune inscription ou paiement requis.`,
+        q3: `Les calculs sont-ils précis?`,
+        a3: `Nos calculatrices utilisent des formules standard de l'industrie et sont rigoureusement testées pour la précision. Cependant, les résultats doivent être utilisés à titre informatif uniquement.`
+      },
+      de: {
+        q1: `Wie verwende ich den ${calculatorContent?.title}?`,
+        a1: `Geben Sie Ihre Werte in die Eingabefelder oben ein, und der Rechner berechnet automatisch die Ergebnisse. Alle Berechnungen werden sofort in Ihrem Browser durchgeführt.`,
+        q2: `Ist dieser Rechner kostenlos?`,
+        a2: `Ja, alle unsere Rechner sind völlig kostenlos. Keine Registrierung oder Zahlung erforderlich.`,
+        q3: `Sind die Berechnungen genau?`,
+        a3: `Unsere Rechner verwenden branchenübliche Formeln und sind gründlich auf Genauigkeit getestet. Die Ergebnisse sollten jedoch nur zu Informationszwecken verwendet werden.`
+      },
+      nl: {
+        q1: `Hoe gebruik ik de ${calculatorContent?.title}?`,
+        a1: `Voer uw waarden in de invoervelden hierboven in, en de rekenmachine berekent automatisch de resultaten. Alle berekeningen worden direct in uw browser uitgevoerd.`,
+        q2: `Is deze rekenmachine gratis?`,
+        a2: `Ja, al onze rekenmachines zijn volledig gratis. Geen registratie of betaling vereist.`,
+        q3: `Zijn de berekeningen nauwkeurig?`,
+        a3: `Onze rekenmachines gebruiken industriestandaard formules en zijn grondig getest op nauwkeurigheid. Resultaten moeten echter alleen voor informatieve doeleinden worden gebruikt.`
+      }
+    };
+
+    const faq = faqTranslations[lang] || faqTranslations.en;
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": faq.q1,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a1
+          }
+        },
+        {
+          "@type": "Question",
+          "name": faq.q2,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a2
+          }
+        },
+        {
+          "@type": "Question",
+          "name": faq.q3,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a3
+          }
+        }
+      ]
+    };
+  };
+
+  // Get category label for internal linking
+  const getCategoryLabel = (category: string) => {
+    const labels: Record<string, Record<string, string>> = {
+      financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculateurs Financiers', de: 'Finanzrechner', nl: 'Financiële Rekenmachines' },
+      health: { en: 'Health Calculators', es: 'Calculadoras de Salud', pt: 'Calculadoras de Saúde', fr: 'Calculateurs de Santé', de: 'Gesundheitsrechner', nl: 'Gezondheidsrekenmachines' },
+      math: { en: 'Math Calculators', es: 'Calculadoras Matemáticas', pt: 'Calculadoras Matemáticas', fr: 'Calculateurs Mathématiques', de: 'Mathematikrechner', nl: 'Wiskunderekenmachines' },
+      utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilidade', fr: 'Calculateurs Utilitaires', de: 'Nützlichkeitsrechner', nl: 'Hulpmiddelrekenmachines' },
+      lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculateurs de Style de Vie', de: 'Lebensstilrechner', nl: 'Levensstijlrekenmachines' }
+    };
+    return labels[category]?.[lang] || labels[category]?.en || category;
+  };
 
   // Create a translation function that uses the lang prop
   const tLang = (key: string, fallback?: string) => {
@@ -61,6 +162,11 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
       i18n.changeLanguage(lang);
     }
   }, [lang, i18n]);
+
+  // Track when client-side JavaScript has loaded
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Search functionality
   useEffect(() => {
@@ -288,7 +394,27 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
             {/* Calculator Component */}
             <section id="calculator-section" className="overflow-hidden mb-6">
               <div>
-                {(() => {
+                {/* Server-rendered form for SEO - visible until JS loads */}
+                {!isClient && serverRenderedForm && (
+                  <div className="calculator-ssr-wrapper">
+                    {serverRenderedForm}
+                    <noscript>
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4 text-center">
+                        <p className="text-blue-800 text-sm">
+                          {lang === 'en' ? 'Enable JavaScript for interactive calculations' : 
+                           lang === 'es' ? 'Habilite JavaScript para cálculos interactivos' :
+                           lang === 'pt' ? 'Ative o JavaScript para cálculos interativos' :
+                           lang === 'fr' ? 'Activez JavaScript pour les calculs interactifs' :
+                           lang === 'de' ? 'Aktivieren Sie JavaScript für interaktive Berechnungen' :
+                           'Schakel JavaScript in voor interactieve berekeningen'}
+                        </p>
+                      </div>
+                    </noscript>
+                  </div>
+                )}
+                
+                {/* Client-side interactive calculator - only after JS loads */}
+                {isClient && (() => {
                   // Handle both old object format and new string format
                   // Check for 'component' field first (new standard), then 'calculatorComponent' (legacy)
                   const componentName = calculatorContent.component 
@@ -407,8 +533,71 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
               lang={lang}
             />
 
+            {/* Internal Linking - Explore More Calculators */}
+            {calculatorContent && (
+              <section className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden mb-6">
+                <div className="bg-gradient-to-r from-indigo-50 to-blue-50 px-6 py-4 border-b border-gray-100">
+                  <h2 className="text-lg font-bold text-gray-900 flex items-center">
+                    <svg className="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                    {lang === 'en' ? 'Explore More Calculators' : 
+                     lang === 'es' ? 'Explorar Más Calculadoras' :
+                     lang === 'pt' ? 'Explorar Mais Calculadoras' :
+                     lang === 'fr' ? 'Explorer Plus de Calculateurs' :
+                     lang === 'de' ? 'Weitere Rechner entdecken' :
+                     'Ontdek meer rekenmachines'}
+                  </h2>
+                </div>
+                <div className="p-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {/* Current Category */}
+                    {calculatorContent.category && (
+                      <Link
+                        href={`/${lang}/categories/${calculatorContent.category}`}
+                        className="flex items-center p-4 bg-blue-50 border-2 border-blue-200 rounded-lg hover:bg-blue-100 transition-colors group"
+                      >
+                        <div className="flex-1">
+                          <div className="text-sm font-semibold text-blue-900 group-hover:text-blue-700">
+                            {getCategoryLabel(calculatorContent.category)}
+                          </div>
+                          <div className="text-xs text-blue-600 mt-1">
+                            {lang === 'en' ? 'View all' : lang === 'es' ? 'Ver todo' : lang === 'pt' ? 'Ver tudo' : lang === 'fr' ? 'Voir tout' : lang === 'de' ? 'Alle anzeigen' : 'Bekijk alles'} →
+                          </div>
+                        </div>
+                      </Link>
+                    )}
+                    {/* All Calculators */}
+                    <Link
+                      href={`/${lang}`}
+                      className="flex items-center p-4 bg-gray-50 border-2 border-gray-200 rounded-lg hover:bg-gray-100 transition-colors group"
+                    >
+                      <div className="flex-1">
+                        <div className="text-sm font-semibold text-gray-900 group-hover:text-gray-700">
+                          {lang === 'en' ? 'All Calculators' : lang === 'es' ? 'Todas las Calculadoras' : lang === 'pt' ? 'Todas as Calculadoras' : lang === 'fr' ? 'Tous les Calculateurs' : lang === 'de' ? 'Alle Rechner' : 'Alle rekenmachines'}
+                        </div>
+                        <div className="text-xs text-gray-600 mt-1">
+                          {lang === 'en' ? 'Browse all →' : lang === 'es' ? 'Explorar →' : lang === 'pt' ? 'Navegar →' : lang === 'fr' ? 'Parcourir →' : lang === 'de' ? 'Durchsuchen →' : 'Bladeren →'}
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </section>
+            )}
+
         </div>
       </main>
+
+      {/* FAQ Schema for SEO */}
+      {calculatorContent && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema())
+          }}
+        />
+      )}
 
     </div>
   );

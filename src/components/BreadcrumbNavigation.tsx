@@ -41,31 +41,33 @@ export default function BreadcrumbNavigation({ breadcrumbs, currentLang = 'en' }
             {/* Breadcrumbs - Left Side */}
             <div className="flex-1 min-w-0">
               {/* Desktop Breadcrumb */}
-              <ol className="hidden md:flex items-center list-none p-0 text-sm">
+              <ol className="hidden md:flex items-center list-none p-0 text-sm" itemScope itemType="https://schema.org/BreadcrumbList">
                 {breadcrumbs.map((crumb, index) => (
-                  <li key={index} className="flex items-center">
+                  <li key={index} className="flex items-center" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
                     {index > 0 && <span className="px-2 text-gray-400">›</span>}
                     {index === breadcrumbs.length - 1 ? (
-                      <span className="font-bold text-gray-900">
+                      <span className="font-bold text-gray-900" itemProp="name">
                         {crumb.name}
                       </span>
                     ) : (
-                      <a href={crumb.href} className="text-blue-600 hover:text-blue-800 no-underline">
-                        {crumb.name}
+                      <a href={crumb.href} className="text-blue-600 hover:text-blue-800 no-underline" itemProp="item">
+                        <span itemProp="name">{crumb.name}</span>
                       </a>
                     )}
+                    <meta itemProp="position" content={(index + 1).toString()} />
                   </li>
                 ))}
               </ol>
 
               {/* Mobile Breadcrumb - Hide last item to save space */}
-              <ol className="md:hidden flex items-center overflow-x-auto list-none p-0 text-xs">
+              <ol className="md:hidden flex items-center overflow-x-auto list-none p-0 text-xs" itemScope itemType="https://schema.org/BreadcrumbList">
                 {breadcrumbs.slice(0, -1).map((crumb, index) => (
-                  <li key={index} className="flex items-center flex-shrink-0">
+                  <li key={index} className="flex items-center flex-shrink-0" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
                     {index > 0 && <span className="px-1 text-gray-400">›</span>}
-                    <a href={crumb.href} className="text-blue-600 hover:text-blue-800 no-underline whitespace-nowrap">
-                      {crumb.name}
+                    <a href={crumb.href} className="text-blue-600 hover:text-blue-800 no-underline whitespace-nowrap" itemProp="item">
+                      <span itemProp="name">{crumb.name}</span>
                     </a>
+                    <meta itemProp="position" content={(index + 1).toString()} />
                   </li>
                 ))}
               </ol>
