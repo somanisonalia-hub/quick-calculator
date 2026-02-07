@@ -802,5 +802,305 @@
       ]
     },
     "component": "IdealWeightCalculator"
+  },
+  "de": {
+    "title": "Idealgewicht Rechner",
+    "seoTitle": "Ideal Weight Rechner - What Is My Ideal Weight?",
+    "summary": "Calculate your ideal weight range using scientifically validated formulas to determine healthy weight targets.",
+    "description": "Our comprehensive ideal weight calculator uses multiple scientifically validated methods including BMI-based calculations, Devine formula, Hamwi method, and Healthy BMI approach to provide personalized healthy weight ranges based on your height, gender, and body frame.",
+    "category": "health",
+    "difficulty": "grundlagen",
+    "slug": "ideal-weight-calculator",
+    "calculatorComponent": {
+      "componentName": "IdealWeightCalculator",
+      "inputs": [
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Height (cm)",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1
+        },
+        {
+          "name": "method",
+          "label": "Calculation Method",
+          "type": "select",
+          "default": "healthy_bmi",
+          "options": [
+            "healthy_bmi",
+            "devine",
+            "hamwi",
+            "miller",
+            "robinson"
+          ]
+        },
+        {
+          "name": "bodyFrame",
+          "label": "Body Frame Size",
+          "type": "select",
+          "default": "medium",
+          "options": [
+            "small",
+            "medium",
+            "large"
+          ]
+        }
+      ],
+      "formula": "Healthy BMI: Weight = BMI × (Height(m))²; Devine: Male = 50 + 2.3×(Height(inches)-60); Female = 45.5 + 2.3×(Height(inches)-60)",
+      "output": {
+        "label": "Ideal Weight Range",
+        "default": "Enter your details above",
+        "format": "text"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Minimum Healthy Weight",
+          "field": "minWeight",
+          "format": "number",
+          "unit": "kg"
+        },
+        {
+          "label": "Maximum Healthy Weight",
+          "field": "maxWeight",
+          "format": "number",
+          "unit": "kg"
+        },
+        {
+          "label": "BMI Category",
+          "field": "bmiCategory",
+          "format": "text"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate your ideal weight range with precision using our comprehensive health calculator. This essential tool uses multiple scientifically validated methods to determine healthy weight targets based on your height, gender, and body frame size. Understanding your ideal weight range is crucial for setting realistic health goals, whether you're aiming to lose weight, gain muscle, or maintain optimal health. Our calculator combines Devine formula, Hamwi method, Miller formula, and Robinson approach to provide personalized weight recommendations that account for individual differences in body composition and structure.",
+      "benefits": [
+        "Calculate ideal weight using multiple scientifically validated formulas",
+        "Get personalized weight ranges based on height, gender, and body frame",
+        "Compare results across different calculation methods for accuracy",
+        "Understand healthy weight targets for optimal health outcomes",
+        "Account for body frame size differences in weight calculations",
+        "Essential tool for setting realistic fitness and health goals"
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
+      ],
+      "inputsExplained": [
+        "Gender selection accounts for natural differences in body composition between men and women",
+        "Height measurement forms the foundation for all weight calculations",
+        "Calculation method determines which scientific formula to apply",
+        "Body frame size adjusts calculations for small, medium, or large bone structures",
+        "All inputs work together to provide personalized, accurate weight recommendations"
+      ],
+      "formulaExplanation": "The Devine formula calculates ideal body weight using the equation: For men = 50kg + 2.3kg per inch over 5 feet; For women = 45.5kg + 2.3kg per inch over 5 feet. The Hamwi method uses: For men = 48kg + 2.7kg per inch over 5 feet; For women = 45.5kg + 2.2kg per inch over 5 feet. BMI-based calculations determine weight ranges that maintain healthy BMI values (18.5-24.9). Body frame adjustments account for wrist circumference differences, with small frames reducing ideal weight by 10% and large frames increasing it by 10%.",
+      "examples": [
+        "A 175cm tall man using Devine formula with medium frame calculates ideal weight of 67.3kg, providing a healthy target range of 64-70.6kg",
+        "A 165cm tall woman using Hamwi method with small frame calculates ideal weight of 54.9kg, adjusted down to 49.4kg for her smaller bone structure",
+        "A 180cm tall man using healthy BMI approach calculates ideal weight range of 59.9-74.8kg to maintain BMI between 18.5-24.9"
+      ],
+      "resultsExplanation": [
+        "Ideal weight range shows healthy weight targets for your height and build",
+        "Minimum and maximum weights define safe weight boundaries",
+        "Body frame adjustments ensure calculations match your bone structure",
+        "Different methods provide comparison points for personalized recommendations",
+        "Results account for gender differences in body composition and weight distribution"
+      ],
+      "whoItsFor": "This calculator serves individuals seeking to establish healthy weight goals, healthcare professionals advising patients on weight targets, fitness enthusiasts planning body composition changes, nutritionists creating meal plans, athletes optimizing performance weight, and anyone interested in maintaining optimal health through appropriate weight ranges. It's particularly valuable for those with specific body types, medical conditions requiring weight management, or individuals following structured diet and exercise programs.",
+      "disclaimer": "Ideal weight calculations provide general guidance based on population averages and may not be suitable for all individuals. Athletes, bodybuilders, pregnant women, and those with certain medical conditions may have different ideal weight ranges. Body frame assessments should be professionally measured using wrist circumference. For comprehensive health assessment including body composition analysis, consult healthcare professionals who can consider your complete medical history and individual circumstances. This tool provides estimates for educational purposes only.",
+      "relatedTools": [
+        "BMI calculators for body mass index assessment and weight status",
+        "Body fat calculators for detailed body composition analysis",
+        "BMR calculators for understanding metabolic rate and calorie needs"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between ideal weight and healthy weight range?",
+          "answer": "Ideal weight typically refers to a single target weight, while healthy weight range provides a spectrum of weights that maintain good health. The range accounts for individual variations in body composition, muscle mass, and personal health goals. Most people aim to stay within their healthy weight range rather than targeting a single 'ideal' number."
+        },
+        {
+          "question": "How do I determine my body frame size?",
+          "answer": "Body frame size is determined by measuring wrist circumference. For women: small frame < 5.75 inches (14.6cm), medium frame 5.75-6.25 inches (14.6-15.9cm), large frame > 6.25 inches (15.9cm). For men: small frame < 6.5 inches (16.5cm), medium frame 6.5-7.5 inches (16.5-19cm), large frame > 7.5 inches (19cm). Professional measurement provides the most accurate assessment."
+        },
+        {
+          "question": "Which calculation method should I use?",
+          "answer": "The choice depends on your goals and body type. Healthy BMI method works well for general health maintenance. Devine and Hamwi formulas are good for medical settings. Try multiple methods and use the range that best fits your health goals and body composition. No single method is perfect for everyone."
+        },
+        {
+          "question": "Can ideal weight change with age?",
+          "answer": "While height remains constant, ideal weight can shift with age due to changes in muscle mass, metabolism, and body composition. Older adults may have slightly higher BMI ranges due to decreased muscle mass. Focus on maintaining healthy body composition rather than specific weight numbers as you age."
+        },
+        {
+          "question": "Is it better to be at the low end or high end of my ideal weight range?",
+          "answer": "The ideal position depends on your health status, body composition goals, and personal preferences. For general health, anywhere within the healthy range is acceptable. Athletes may prefer the higher end for muscle mass, while others may choose the lower end for different reasons. Consult healthcare providers for personalized recommendations."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Ideaal Gewicht Rekenmachine",
+    "seoTitle": "Ideal Weight Calculator - What Is My Ideal Weight?",
+    "summary": "Calculate your ideal weight range using scientifically validated formulas to determine healthy weight targets.",
+    "description": "Our comprehensive ideal weight calculator uses multiple scientifically validated methods including BMI-based calculations, Devine formula, Hamwi method, and Healthy BMI approach to provide personalized healthy weight ranges based on your height, gender, and body frame.",
+    "category": "health",
+    "difficulty": "basis",
+    "slug": "ideal-weight-calculator",
+    "calculatorComponent": {
+      "componentName": "IdealWeightCalculator",
+      "inputs": [
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "height",
+          "label": "Height (cm)",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1
+        },
+        {
+          "name": "method",
+          "label": "Calculation Method",
+          "type": "select",
+          "default": "healthy_bmi",
+          "options": [
+            "healthy_bmi",
+            "devine",
+            "hamwi",
+            "miller",
+            "robinson"
+          ]
+        },
+        {
+          "name": "bodyFrame",
+          "label": "Body Frame Size",
+          "type": "select",
+          "default": "medium",
+          "options": [
+            "small",
+            "medium",
+            "large"
+          ]
+        }
+      ],
+      "formula": "Healthy BMI: Weight = BMI × (Height(m))²; Devine: Male = 50 + 2.3×(Height(inches)-60); Female = 45.5 + 2.3×(Height(inches)-60)",
+      "output": {
+        "label": "Ideal Weight Range",
+        "default": "Enter your details above",
+        "format": "text"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Minimum Healthy Weight",
+          "field": "minWeight",
+          "format": "number",
+          "unit": "kg"
+        },
+        {
+          "label": "Maximum Healthy Weight",
+          "field": "maxWeight",
+          "format": "number",
+          "unit": "kg"
+        },
+        {
+          "label": "BMI Category",
+          "field": "bmiCategory",
+          "format": "text"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate your ideal weight range with precision using our comprehensive health calculator. This essential tool uses multiple scientifically validated methods to determine healthy weight targets based on your height, gender, and body frame size. Understanding your ideal weight range is crucial for setting realistic health goals, whether you're aiming to lose weight, gain muscle, or maintain optimal health. Our calculator combines Devine formula, Hamwi method, Miller formula, and Robinson approach to provide personalized weight recommendations that account for individual differences in body composition and structure.",
+      "benefits": [
+        "Calculate ideal weight using multiple scientifically validated formulas",
+        "Get personalized weight ranges based on height, gender, and body frame",
+        "Compare results across different calculation methods for accuracy",
+        "Understand healthy weight targets for optimal health outcomes",
+        "Account for body frame size differences in weight calculations",
+        "Essential tool for setting realistic fitness and health goals"
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
+      ],
+      "inputsExplained": [
+        "Gender selection accounts for natural differences in body composition between men and women",
+        "Height measurement forms the foundation for all weight calculations",
+        "Calculation method determines which scientific formula to apply",
+        "Body frame size adjusts calculations for small, medium, or large bone structures",
+        "All inputs work together to provide personalized, accurate weight recommendations"
+      ],
+      "formulaExplanation": "The Devine formula calculates ideal body weight using the equation: For men = 50kg + 2.3kg per inch over 5 feet; For women = 45.5kg + 2.3kg per inch over 5 feet. The Hamwi method uses: For men = 48kg + 2.7kg per inch over 5 feet; For women = 45.5kg + 2.2kg per inch over 5 feet. BMI-based calculations determine weight ranges that maintain healthy BMI values (18.5-24.9). Body frame adjustments account for wrist circumference differences, with small frames reducing ideal weight by 10% and large frames increasing it by 10%.",
+      "examples": [
+        "A 175cm tall man using Devine formula with medium frame calculates ideal weight of 67.3kg, providing a healthy target range of 64-70.6kg",
+        "A 165cm tall woman using Hamwi method with small frame calculates ideal weight of 54.9kg, adjusted down to 49.4kg for her smaller bone structure",
+        "A 180cm tall man using healthy BMI approach calculates ideal weight range of 59.9-74.8kg to maintain BMI between 18.5-24.9"
+      ],
+      "resultsExplanation": [
+        "Ideal weight range shows healthy weight targets for your height and build",
+        "Minimum and maximum weights define safe weight boundaries",
+        "Body frame adjustments ensure calculations match your bone structure",
+        "Different methods provide comparison points for personalized recommendations",
+        "Results account for gender differences in body composition and weight distribution"
+      ],
+      "whoItsFor": "This calculator serves individuals seeking to establish healthy weight goals, healthcare professionals advising patients on weight targets, fitness enthusiasts planning body composition changes, nutritionists creating meal plans, athletes optimizing performance weight, and anyone interested in maintaining optimal health through appropriate weight ranges. It's particularly valuable for those with specific body types, medical conditions requiring weight management, or individuals following structured diet and exercise programs.",
+      "disclaimer": "Ideal weight calculations provide general guidance based on population averages and may not be suitable for all individuals. Athletes, bodybuilders, pregnant women, and those with certain medical conditions may have different ideal weight ranges. Body frame assessments should be professionally measured using wrist circumference. For comprehensive health assessment including body composition analysis, consult healthcare professionals who can consider your complete medical history and individual circumstances. This tool provides estimates for educational purposes only.",
+      "relatedTools": [
+        "BMI calculators for body mass index assessment and weight status",
+        "Body fat calculators for detailed body composition analysis",
+        "BMR calculators for understanding metabolic rate and calorie needs"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between ideal weight and healthy weight range?",
+          "answer": "Ideal weight typically refers to a single target weight, while healthy weight range provides a spectrum of weights that maintain good health. The range accounts for individual variations in body composition, muscle mass, and personal health goals. Most people aim to stay within their healthy weight range rather than targeting a single 'ideal' number."
+        },
+        {
+          "question": "How do I determine my body frame size?",
+          "answer": "Body frame size is determined by measuring wrist circumference. For women: small frame < 5.75 inches (14.6cm), medium frame 5.75-6.25 inches (14.6-15.9cm), large frame > 6.25 inches (15.9cm). For men: small frame < 6.5 inches (16.5cm), medium frame 6.5-7.5 inches (16.5-19cm), large frame > 7.5 inches (19cm). Professional measurement provides the most accurate assessment."
+        },
+        {
+          "question": "Which calculation method should I use?",
+          "answer": "The choice depends on your goals and body type. Healthy BMI method works well for general health maintenance. Devine and Hamwi formulas are good for medical settings. Try multiple methods and use the range that best fits your health goals and body composition. No single method is perfect for everyone."
+        },
+        {
+          "question": "Can ideal weight change with age?",
+          "answer": "While height remains constant, ideal weight can shift with age due to changes in muscle mass, metabolism, and body composition. Older adults may have slightly higher BMI ranges due to decreased muscle mass. Focus on maintaining healthy body composition rather than specific weight numbers as you age."
+        },
+        {
+          "question": "Is it better to be at the low end or high end of my ideal weight range?",
+          "answer": "The ideal position depends on your health status, body composition goals, and personal preferences. For general health, anywhere within the healthy range is acceptable. Athletes may prefer the higher end for muscle mass, while others may choose the lower end for different reasons. Consult healthcare providers for personalized recommendations."
+        }
+      ]
+    }
   }
 }

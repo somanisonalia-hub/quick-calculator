@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-const validLanguages = ['en', 'es', 'pt', 'fr'];
+const validLanguages = ['en', 'es', 'pt', 'fr', 'de', 'nl'];
 
 const translations = {
   en: {
@@ -79,6 +79,44 @@ const translations = {
       contactEmail: 'Email: support@quick-calculator.org',
       lastUpdated: 'Dernière Mise à Jour: Janvier 2026'
     }
+  },
+  de: {
+    title: 'Nutzungsbedingungen | Quick Calculator',
+    description: 'Geschäftsbedingungen für die Nutzung von Quick Calculator-Diensten.',
+    heading: 'Nutzungsbedingungen',
+    intro: 'Durch den Zugriff auf die Quick Calculator-Website (quick-calculator.org) und deren Nutzung akzeptieren Sie die Bedingungen und Bestimmungen dieser Vereinbarung.',
+    sections: {
+      agreement: 'Vereinbarung mit den Bedingungen',
+      license: 'Nutzungslizenz',
+      disclaimer: 'Haftungsausschluss',
+      limitations: 'Einschränkungen',
+      revisions: 'Überarbeitungen und Errata',
+      links: 'Links',
+      modifications: 'Änderungen',
+      governing: 'Anwendbares Recht',
+      contact: 'Kontakt',
+      contactEmail: 'E-Mail: support@quick-calculator.org',
+      lastUpdated: 'Zuletzt aktualisiert: Januar 2026'
+    }
+  },
+  nl: {
+    title: 'Servicevoorwaarden | Quick Calculator',
+    description: 'Voorwaarden voor het gebruik van Quick Calculator-services.',
+    heading: 'Servicevoorwaarden',
+    intro: 'Door de Quick Calculator-website (quick-calculator.org) te openen en te gebruiken, accepteert u de voorwaarden en bepalingen van deze overeenkomst.',
+    sections: {
+      agreement: 'Akkoord met de Voorwaarden',
+      license: 'Gebruikslicentie',
+      disclaimer: 'Disclaimer',
+      limitations: 'Beperkingen',
+      revisions: 'Revisies en Errata',
+      links: 'Links',
+      modifications: 'Wijzigingen',
+      governing: 'Toepasselijk Recht',
+      contact: 'Contacteer Ons',
+      contactEmail: 'E-mail: support@quick-calculator.org',
+      lastUpdated: 'Laatst bijgewerkt: januari 2026'
+    }
   }
 };
 
@@ -99,12 +137,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.title,
     description: t.description,
     alternates: {
-      canonical: `https://quick-calculator.org/${lang}/terms-of-service`,
+      canonical: lang === 'en' ? 'https://quick-calculator.org/terms-of-service' : `https://quick-calculator.org/${lang}/terms-of-service`,
       languages: {
         'en': 'https://quick-calculator.org/en/terms-of-service',
         'es': 'https://quick-calculator.org/es/terms-of-service',
-        'fr': 'https://quick-calculator.org/fr/terms-of-service',
         'pt': 'https://quick-calculator.org/pt/terms-of-service',
+        'fr': 'https://quick-calculator.org/fr/terms-of-service',
+        'de': 'https://quick-calculator.org/de/terms-of-service',
+        'nl': 'https://quick-calculator.org/nl/terms-of-service',
         'x-default': 'https://quick-calculator.org/en/terms-of-service',
       }
     }

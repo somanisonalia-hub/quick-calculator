@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-const validLanguages = ['en', 'es', 'pt', 'fr'];
+const validLanguages = ['en', 'es', 'pt', 'fr', 'de', 'nl'];
 
 const translations = {
   en: {
@@ -51,6 +51,30 @@ const translations = {
     commitment: 'Notre Engagement',
     commitmentText: 'Nous nous engageons à maintenir des calculatrices précises, à protéger votre vie privée et à améliorer continuellement nos services en fonction des commentaires des utilisateurs.',
     lastUpdated: 'Dernière Mise à Jour: Janvier 2026'
+  },
+  de: {
+    title: 'Über Uns | Quick Calculator',
+    description: 'Mehr über Quick Calculator und unsere Mission, kostenlose und benutzerfreundliche Rechner bereitzustellen.',
+    heading: 'Über Uns',
+    mission: 'Unsere Mission',
+    missionText: 'Quick Calculator widmet sich der Bereitstellung kostenloser, genauer und benutzerfreundlicher Rechner für alle. Egal ob Sie Finanzrechner, Gesundheitswerkzeuge oder mathematische Hilfsprogramme benötigen, unser Ziel ist es, komplexe Berechnungen einfach und zugänglich zu machen.',
+    what: 'Was Wir Anbieten',
+    whatText: 'Wir bieten eine breite Palette von Rechnern in mehreren Kategorien an, darunter Finanz-, Gesundheits-, Mathematik-, Dienstprogramm- und Lifestyle-Rechner. Alle unsere Tools sind kostenlos und erfordern keine Registrierung.',
+    commitment: 'Unser Engagement',
+    commitmentText: 'Wir verpflichten uns, genaue Rechner zu pflegen, Ihre Privatsphäre zu schützen und unsere Dienste kontinuierlich auf der Grundlage von Benutzererbfeedback zu verbessern.',
+    lastUpdated: 'Zuletzt aktualisiert: Januar 2026'
+  },
+  nl: {
+    title: 'Over Ons | Quick Calculator',
+    description: 'Meer informatie over Quick Calculator en onze missie om gratis, gebruiksvriendelijke rekenmachines te bieden.',
+    heading: 'Over Ons',
+    mission: 'Onze Missie',
+    missionText: 'Quick Calculator is gericht op het bieden van gratis, nauwkeurige en gemakkelijk te gebruiken rekenmachines voor iedereen. Of u nu financiële rekenmachines, gezondheidsinstrumenten of wiskundige hulpprogramma\'s nodig heeft, ons doel is om complexe berekeningen eenvoudig en toegankelijk te maken.',
+    what: 'Wat We Aanbieden',
+    whatText: 'We bieden een breed scala aan rekenmachines in meerdere categorieën, waaronder financiële, gezondheids-, wiskunde-, hulpprogramma- en lifestylerekenmachines. Al onze tools zijn gratis en vereisen geen registratie.',
+    commitment: 'Onze Toezegging',
+    commitmentText: 'We stellen ons voor om nauwkeurige rekenmachines te onderhouden, uw privacy te beschermen en onze diensten voortdurend te verbeteren op basis van gebruikersfeedback.',
+    lastUpdated: 'Laatst bijgewerkt: januari 2026'
   }
 };
 
@@ -71,12 +95,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.title,
     description: t.description,
     alternates: {
-      canonical: `https://quick-calculator.org/${lang}/about-us`,
+      canonical: lang === 'en' ? 'https://quick-calculator.org/about-us' : `https://quick-calculator.org/${lang}/about-us`,
       languages: {
         'en': 'https://quick-calculator.org/en/about-us',
         'es': 'https://quick-calculator.org/es/about-us',
-        'fr': 'https://quick-calculator.org/fr/about-us',
         'pt': 'https://quick-calculator.org/pt/about-us',
+        'fr': 'https://quick-calculator.org/fr/about-us',
+        'de': 'https://quick-calculator.org/de/about-us',
+        'nl': 'https://quick-calculator.org/nl/about-us',
         'x-default': 'https://quick-calculator.org/en/about-us',
       }
     }

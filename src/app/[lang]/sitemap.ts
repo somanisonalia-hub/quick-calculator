@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAvailableCalculators } from '@/lib/contentRegistry';
+import DE_NL_SELECTED_CALCULATORS from '@/lib/DE_NL_SELECTED_CALCULATORS.json';
 
 export const dynamic = 'force-static';
 
@@ -9,6 +10,8 @@ export async function generateStaticParams() {
     { lang: 'es' },
     { lang: 'pt' },
     { lang: 'fr' },
+    { lang: 'de' },
+    { lang: 'nl' },
   ];
 }
 
@@ -36,11 +39,18 @@ export default async function sitemap(props?: {
 
   // Add all calculator pages
   try {
-    const calculators = getAvailableCalculators(lang);
+    let calculators = getAvailableCalculators(lang);
+    
+    // Filter to only selected calculators for DE/NL pages
+    if (['de', 'nl'].includes(lang)) {
+      calculators = calculators.filter(slug =>
+        DE_NL_SELECTED_CALCULATORS.calculators.includes(slug)
+      );
+    }
     
     calculators.forEach(slug => {
       sitemap.push({
-        url: `${baseUrl}${langPrefix}/calculators/${slug}`,
+        url: `${baseUrl}${langPrefix}/${slug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.8,

@@ -810,5 +810,307 @@
       ]
     },
     "component": "TipCalculator"
+  },
+  "de": {
+    "title": "Trinkgeldrechner",
+    "seoTitle": "Tip Rechner - How Much Should I Tip?",
+    "summary": "Calculate tips, split bills, and determine total amounts including tax for restaurant and service bills.",
+    "description": "Our tip calculator helps you calculate appropriate gratuity amounts based on service quality, split bills among multiple people, and determine total costs including tax. Perfect for restaurants, bars, delivery services, and any situation requiring tip calculations.",
+    "category": "lifestyle",
+    "difficulty": "grundlagen",
+    "slug": "tip-calculator",
+    "calculatorComponent": {
+      "componentName": "TipCalculator",
+      "inputs": [
+        {
+          "name": "billAmount",
+          "label": "Bill Amount (Before Tax)",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "taxAmount",
+          "label": "Tax Amount",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "tipPercentage",
+          "label": "Tip Percentage",
+          "type": "select",
+          "default": "15",
+          "options": [
+            "10",
+            "12",
+            "15",
+            "18",
+            "20",
+            "25",
+            "custom"
+          ]
+        },
+        {
+          "name": "customTip",
+          "label": "Custom Tip %",
+          "type": "number",
+          "default": 15,
+          "min": 0,
+          "max": 100,
+          "step": 0.1
+        },
+        {
+          "name": "numPeople",
+          "label": "Split Between",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        }
+      ],
+      "formula": "Tip Amount = Bill Amount × (Tip Percentage / 100); Total = Bill + Tax + Tip; Per Person = Total ÷ Number of People",
+      "output": {
+        "label": "Total Amount",
+        "default": "Enter bill amount above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Tip Amount",
+          "field": "tipAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Amount Per Person",
+          "field": "perPerson",
+          "format": "currency"
+        },
+        {
+          "label": "Total Per Person",
+          "field": "totalPerPerson",
+          "format": "currency"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate tips and split bills effortlessly with our comprehensive tip calculator. This essential dining companion helps you determine appropriate gratuity amounts based on service quality, calculate totals including tax, and fairly divide bills among multiple people. Whether you're dining at restaurants, bars, cafes, or receiving delivery services, this calculator ensures you tip appropriately while managing your budget effectively. The tool supports standard tip percentages and custom amounts to match different service experiences and cultural expectations.",
+      "benefits": [
+        "Quickly calculates appropriate tip amounts based on standard percentages and service quality",
+        "Handles tax calculations automatically to determine true total costs",
+        "Easily splits bills among any number of people with precise per-person amounts",
+        "Supports custom tip percentages for unique service situations",
+        "Provides clear breakdowns of tip amounts, taxes, and totals",
+        "Helps maintain good relationships with service industry workers"
+      ],
+      "steps": [
+        "Enter the bill amount before any taxes are applied",
+        "Input the tax amount or let the calculator handle percentage-based taxes",
+        "Select a standard tip percentage or enter a custom amount",
+        "Specify how many people are splitting the bill",
+        "Review the complete breakdown including tip, total, and per-person amounts"
+      ],
+      "inputsExplained": [
+        "Bill amount represents the pre-tax cost of goods and services received",
+        "Tax amount includes any applicable sales tax, VAT, or service charges added to the bill",
+        "Tip percentage determines the gratuity amount based on service quality and local customs",
+        "Number of people allows fair division of the total bill among dining companions"
+      ],
+      "formulaExplanation": "Tip calculation follows a straightforward percentage-based approach where the tip amount equals the bill amount multiplied by the tip percentage divided by 100. The total bill combines the original bill amount, applicable taxes, and calculated tip. When splitting bills, the total amount gets divided equally among the specified number of people, ensuring each person pays their fair share including proportional tip and tax amounts.",
+      "examples": [
+        "A $75 restaurant bill with 8.25% tax and 18% tip calculates: Tip = $75 × 0.18 = $13.50, Tax = $75 × 0.0825 = $6.19, Total = $75 + $6.19 + $13.50 = $94.69",
+        "Splitting a $120 bar tab with 10% tax and 15% tip among 4 people: Total = $120 + $12 + $18 = $150, Per person = $150 ÷ 4 = $37.50 each",
+        "Delivery order of $35 with no tax and 20% tip: Tip = $35 × 0.20 = $7, Total = $35 + $7 = $42 for the delivery person"
+      ],
+      "resultsExplanation": [
+        "Tip amount shows the calculated gratuity based on your selected percentage",
+        "Total amount represents the complete bill including bill, tax, and tip",
+        "Per person breakdown shows what each individual owes when splitting the bill",
+        "All amounts are clearly separated for easy budget tracking and payment"
+      ],
+      "whoItsFor": "This calculator serves diners at restaurants and bars, delivery service customers, event planners organizing group meals, business travelers managing expense accounts, hospitality industry workers calculating their own tips, and anyone wanting to ensure fair compensation for service industry professionals. It's particularly valuable for tourists unfamiliar with local tipping customs and groups needing to split complex bills fairly.",
+      "disclaimer": "This calculator provides tip suggestions based on common industry standards and should not replace your judgment about service quality. Tipping practices vary by country, region, and establishment type. Always consider the level of service received, local customs, and your ability to pay when determining tip amounts. This tool is for informational purposes and does not constitute financial advice.",
+      "relatedTools": [
+        "Percentage calculators for understanding tip percentages and calculations",
+        "Currency converters for international tipping when traveling abroad",
+        "Budget calculators for managing overall dining and entertainment expenses"
+      ],
+      "faqs": [
+        {
+          "question": "What is the standard tipping percentage for restaurants?",
+          "answer": "Standard tipping percentages vary by country and service type. In the United States, 15-20% is typical for restaurants, with 18% being most common for good service. Bars and casual dining often receive 15%, while fine dining may warrant 20% or more. Always consider service quality and local customs when deciding on tip amounts."
+        },
+        {
+          "question": "Should I tip on the tax amount or just the bill?",
+          "answer": "Tipping on the pre-tax amount is standard practice in most countries. The tip is calculated as a percentage of the service cost before taxes are added. This ensures the tip reflects the value of service received rather than being influenced by varying tax rates in different locations."
+        },
+        {
+          "question": "How do I calculate tip for large groups or split bills?",
+          "answer": "For groups, calculate the total bill including tax, add the appropriate tip percentage to the pre-tax amount, then divide the entire total equally among group members. This ensures each person contributes proportionally to both the bill and the service staff's compensation, maintaining fairness for everyone involved."
+        },
+        {
+          "question": "Is there a difference between gratuity and tip?",
+          "answer": "Gratuity and tip are essentially the same thing - voluntary payment for service beyond the basic cost of goods. Some establishments include automatic gratuity for large groups (typically 18-20%), while tips are always at the customer's discretion. Always check your bill for any automatic service charges before adding additional tip."
+        },
+        {
+          "question": "How much should I tip for delivery and takeout orders?",
+          "answer": "Delivery tipping typically ranges from $2-5 for standard orders, or 10-20% of the order total. Consider order size, distance traveled, and service quality. For takeout where no delivery service is provided, a small tip ($1-2) is appreciated but not always expected. Weather conditions and special requests can justify higher tip amounts."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Fooi Rekenmachine",
+    "seoTitle": "Tip Calculator - How Much Should I Tip?",
+    "summary": "Calculate tips, split bills, and determine total amounts including tax for restaurant and service bills.",
+    "description": "Our tip calculator helps you calculate appropriate gratuity amounts based on service quality, split bills among multiple people, and determine total costs including tax. Perfect for restaurants, bars, delivery services, and any situation requiring tip calculations.",
+    "category": "lifestyle",
+    "difficulty": "basis",
+    "slug": "tip-calculator",
+    "calculatorComponent": {
+      "componentName": "TipCalculator",
+      "inputs": [
+        {
+          "name": "billAmount",
+          "label": "Bill Amount (Before Tax)",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "taxAmount",
+          "label": "Tax Amount",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 0.01
+        },
+        {
+          "name": "tipPercentage",
+          "label": "Tip Percentage",
+          "type": "select",
+          "default": "15",
+          "options": [
+            "10",
+            "12",
+            "15",
+            "18",
+            "20",
+            "25",
+            "custom"
+          ]
+        },
+        {
+          "name": "customTip",
+          "label": "Custom Tip %",
+          "type": "number",
+          "default": 15,
+          "min": 0,
+          "max": 100,
+          "step": 0.1
+        },
+        {
+          "name": "numPeople",
+          "label": "Split Between",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        }
+      ],
+      "formula": "Tip Amount = Bill Amount × (Tip Percentage / 100); Total = Bill + Tax + Tip; Per Person = Total ÷ Number of People",
+      "output": {
+        "label": "Total Amount",
+        "default": "Enter bill amount above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Tip Amount",
+          "field": "tipAmount",
+          "format": "currency"
+        },
+        {
+          "label": "Amount Per Person",
+          "field": "perPerson",
+          "format": "currency"
+        },
+        {
+          "label": "Total Per Person",
+          "field": "totalPerPerson",
+          "format": "currency"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate tips and split bills effortlessly with our comprehensive tip calculator. This essential dining companion helps you determine appropriate gratuity amounts based on service quality, calculate totals including tax, and fairly divide bills among multiple people. Whether you're dining at restaurants, bars, cafes, or receiving delivery services, this calculator ensures you tip appropriately while managing your budget effectively. The tool supports standard tip percentages and custom amounts to match different service experiences and cultural expectations.",
+      "benefits": [
+        "Quickly calculates appropriate tip amounts based on standard percentages and service quality",
+        "Handles tax calculations automatically to determine true total costs",
+        "Easily splits bills among any number of people with precise per-person amounts",
+        "Supports custom tip percentages for unique service situations",
+        "Provides clear breakdowns of tip amounts, taxes, and totals",
+        "Helps maintain good relationships with service industry workers"
+      ],
+      "steps": [
+        "Enter the bill amount before any taxes are applied",
+        "Input the tax amount or let the calculator handle percentage-based taxes",
+        "Select a standard tip percentage or enter a custom amount",
+        "Specify how many people are splitting the bill",
+        "Review the complete breakdown including tip, total, and per-person amounts"
+      ],
+      "inputsExplained": [
+        "Bill amount represents the pre-tax cost of goods and services received",
+        "Tax amount includes any applicable sales tax, VAT, or service charges added to the bill",
+        "Tip percentage determines the gratuity amount based on service quality and local customs",
+        "Number of people allows fair division of the total bill among dining companions"
+      ],
+      "formulaExplanation": "Tip calculation follows a straightforward percentage-based approach where the tip amount equals the bill amount multiplied by the tip percentage divided by 100. The total bill combines the original bill amount, applicable taxes, and calculated tip. When splitting bills, the total amount gets divided equally among the specified number of people, ensuring each person pays their fair share including proportional tip and tax amounts.",
+      "examples": [
+        "A $75 restaurant bill with 8.25% tax and 18% tip calculates: Tip = $75 × 0.18 = $13.50, Tax = $75 × 0.0825 = $6.19, Total = $75 + $6.19 + $13.50 = $94.69",
+        "Splitting a $120 bar tab with 10% tax and 15% tip among 4 people: Total = $120 + $12 + $18 = $150, Per person = $150 ÷ 4 = $37.50 each",
+        "Delivery order of $35 with no tax and 20% tip: Tip = $35 × 0.20 = $7, Total = $35 + $7 = $42 for the delivery person"
+      ],
+      "resultsExplanation": [
+        "Tip amount shows the calculated gratuity based on your selected percentage",
+        "Total amount represents the complete bill including bill, tax, and tip",
+        "Per person breakdown shows what each individual owes when splitting the bill",
+        "All amounts are clearly separated for easy budget tracking and payment"
+      ],
+      "whoItsFor": "This calculator serves diners at restaurants and bars, delivery service customers, event planners organizing group meals, business travelers managing expense accounts, hospitality industry workers calculating their own tips, and anyone wanting to ensure fair compensation for service industry professionals. It's particularly valuable for tourists unfamiliar with local tipping customs and groups needing to split complex bills fairly.",
+      "disclaimer": "This calculator provides tip suggestions based on common industry standards and should not replace your judgment about service quality. Tipping practices vary by country, region, and establishment type. Always consider the level of service received, local customs, and your ability to pay when determining tip amounts. This tool is for informational purposes and does not constitute financial advice.",
+      "relatedTools": [
+        "Percentage calculators for understanding tip percentages and calculations",
+        "Currency converters for international tipping when traveling abroad",
+        "Budget calculators for managing overall dining and entertainment expenses"
+      ],
+      "faqs": [
+        {
+          "question": "What is the standard tipping percentage for restaurants?",
+          "answer": "Standard tipping percentages vary by country and service type. In the United States, 15-20% is typical for restaurants, with 18% being most common for good service. Bars and casual dining often receive 15%, while fine dining may warrant 20% or more. Always consider service quality and local customs when deciding on tip amounts."
+        },
+        {
+          "question": "Should I tip on the tax amount or just the bill?",
+          "answer": "Tipping on the pre-tax amount is standard practice in most countries. The tip is calculated as a percentage of the service cost before taxes are added. This ensures the tip reflects the value of service received rather than being influenced by varying tax rates in different locations."
+        },
+        {
+          "question": "How do I calculate tip for large groups or split bills?",
+          "answer": "For groups, calculate the total bill including tax, add the appropriate tip percentage to the pre-tax amount, then divide the entire total equally among group members. This ensures each person contributes proportionally to both the bill and the service staff's compensation, maintaining fairness for everyone involved."
+        },
+        {
+          "question": "Is there a difference between gratuity and tip?",
+          "answer": "Gratuity and tip are essentially the same thing - voluntary payment for service beyond the basic cost of goods. Some establishments include automatic gratuity for large groups (typically 18-20%), while tips are always at the customer's discretion. Always check your bill for any automatic service charges before adding additional tip."
+        },
+        {
+          "question": "How much should I tip for delivery and takeout orders?",
+          "answer": "Delivery tipping typically ranges from $2-5 for standard orders, or 10-20% of the order total. Consider order size, distance traveled, and service quality. For takeout where no delivery service is provided, a small tip ($1-2) is appreciated but not always expected. Weather conditions and special requests can justify higher tip amounts."
+        }
+      ]
+    }
   }
 }

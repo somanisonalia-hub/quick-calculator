@@ -52,7 +52,7 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
       <main className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading...</p>
+          <p className="text-gray-600">{t.loading}</p>
         </div>
       </main>
     );
@@ -62,7 +62,7 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
     return (
       <main className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Category Not Found</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">{t.notFound}</h1>
           <p className="text-gray-600 mb-6">The category "{category}" could not be loaded.</p>
         </div>
       </main>
@@ -92,13 +92,13 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
   const colors = categoryColors[category] || categoryColors.utility;
   
   const translations = {
-    en: { popular: 'Popular Calculators', otherCalculators: 'Other Calculators', backHome: 'Back to Homepage', mostUsed: 'Most used and trusted calculators in the', category: 'category for quick and accurate calculations.', essential: 'Essential tools from the', calculator: 'calculator', calculators: 'calculators', explore: 'Explore calculators from other categories to find more tools for your calculation needs.' },
-    es: { popular: 'Calculadoras Populares', otherCalculators: 'Otras Calculadoras', backHome: 'Volver a la página de inicio', mostUsed: 'Calculadoras más utilizadas y confiables en la', category: 'categoría para cálculos rápidos y precisos.', essential: 'Herramientas esenciales de la', calculator: 'calculadora', calculators: 'calculadoras', explore: 'Explora calculadoras de otras categorías para encontrar más herramientas para tus necesidades de cálculo.' },
-    pt: { popular: 'Calculadoras Populares', otherCalculators: 'Outras Calculadoras', backHome: 'Voltar para a página inicial', mostUsed: 'Calculadoras mais usadas e confiáveis na', category: 'categoria para cálculos rápidos e precisos.', essential: 'Ferramentas essenciais da', calculator: 'calculadora', calculators: 'calculadoras', explore: 'Explore calculadoras de outras categorias para encontrar mais ferramentas para suas necessidades de cálculo.' },
-    fr: { popular: 'Calculatrices Populaires', otherCalculators: 'Autres Calculatrices', backHome: 'Retour à l\'accueil', mostUsed: 'Calculatrices les plus utilisées et fiables de la', category: 'catégorie pour des calculs rapides et précis.', essential: 'Outils essentiels de la', calculator: 'calculatrice', calculators: 'calculatrices', explore: 'Explorez des calculatrices d\'autres catégories pour trouver plus d\'outils pour vos besoins de calcul.' },
-    de: { popular: 'Beliebte Rechner', otherCalculators: 'Weitere Rechner', backHome: 'Zurück zur Startseite', mostUsed: 'Die am meisten genutzten und vertrauenswürdigen Rechner in der', category: 'Kategorie für schnelle und genaue Berechnungen.', essential: 'Wichtige Werkzeuge aus der', calculator: 'Rechner', calculators: 'Rechner', explore: 'Erkunde Rechner aus anderen Kategorien, um mehr Werkzeuge für deine Rechenbedürfnisse zu finden.' },
-    nl: { popular: 'Populaire Rekenmachines', otherCalculators: 'Andere Rekenmachines', backHome: 'Terug naar startpagina', mostUsed: 'De meest gebruikte en betrouwbare rekenmachines in de', category: 'categorie voor snelle en nauwkeurige berekeningen.', essential: 'Essentiële hulpmiddelen uit de', calculator: 'rekenmachine', calculators: 'rekenmachines', explore: 'Verken rekenmachines uit andere categorieën om meer hulpmiddelen voor je rekenbehoeften te vinden.' },
-  } as Record<string, { popular: string; otherCalculators: string; backHome: string; mostUsed: string; category: string; essential: string; calculator: string; calculators: string; explore: string }>;
+    en: { popular: 'Popular Calculators', otherCalculators: 'Other Calculators', backHome: 'Back to Homepage', mostUsed: 'Most used and trusted calculators in the', category: 'category for quick and accurate calculations.', essential: 'Essential tools from the', calculator: 'calculator', calculators: 'calculators', explore: 'Explore calculators from other categories to find more tools for your calculation needs.', loading: 'Loading...', notFound: 'Category Not Found', searchAria: 'Search calculators', searchPlaceholder: 'Search calculators...', notFoundSearch: 'No calculators found for' },
+    es: { popular: 'Calculadoras Populares', otherCalculators: 'Otras Calculadoras', backHome: 'Volver a la página de inicio', mostUsed: 'Calculadoras más utilizadas y confiables en la', category: 'categoría para cálculos rápidos y precisos.', essential: 'Herramientas esenciales de la', calculator: 'calculadora', calculators: 'calculadoras', explore: 'Explora calculadoras de otras categorías para encontrar más herramientas para tus necesidades de cálculo.', loading: 'Cargando...', notFound: 'Categoría no encontrada', searchAria: 'Buscar calculadoras', searchPlaceholder: 'Buscar calculadoras...', notFoundSearch: 'No se encontraron calculadoras para' },
+    pt: { popular: 'Calculadoras Populares', otherCalculators: 'Outras Calculadoras', backHome: 'Voltar para a página inicial', mostUsed: 'Calculadoras mais usadas e confiáveis na', category: 'categoria para cálculos rápidos e precisos.', essential: 'Ferramentas essenciais da', calculator: 'calculadora', calculators: 'calculadoras', explore: 'Explore calculadoras de outras categorias para encontrar mais ferramentas para suas necessidades de cálculo.', loading: 'Carregando...', notFound: 'Categoria não encontrada', searchAria: 'Buscar calculadoras', searchPlaceholder: 'Buscar calculadoras...', notFoundSearch: 'Nenhuma calculadora encontrada para' },
+    fr: { popular: 'Calculatrices Populaires', otherCalculators: 'Autres Calculatrices', backHome: 'Retour à l\'accueil', mostUsed: 'Calculatrices les plus utilisées et fiables de la', category: 'catégorie pour des calculs rapides et précis.', essential: 'Outils essentiels de la', calculator: 'calculatrice', calculators: 'calculatrices', explore: 'Explorez des calculatrices d\'autres catégories pour trouver plus d\'outils pour vos besoins de calcul.', loading: 'Chargement...', notFound: 'Catégorie non trouvée', searchAria: 'Rechercher des calculatrices', searchPlaceholder: 'Rechercher des calculatrices...', notFoundSearch: 'Aucune calculatrice trouvée pour' },
+    de: { popular: 'Beliebte Rechner', otherCalculators: 'Weitere Rechner', backHome: 'Zurück zur Startseite', mostUsed: 'Die am meisten genutzten und vertrauenswürdigen Rechner in der', category: 'Kategorie für schnelle und genaue Berechnungen.', essential: 'Wichtige Werkzeuge aus der', calculator: 'Rechner', calculators: 'Rechner', explore: 'Erkunde Rechner aus anderen Kategorien, um mehr Werkzeuge für deine Rechenbedürfnisse zu finden.', loading: 'Wird geladen...', notFound: 'Kategorie nicht gefunden', searchAria: 'Rechner suchen', searchPlaceholder: 'Rechner suchen...', notFoundSearch: 'Keine Rechner gefunden für' },
+    nl: { popular: 'Populaire Rekenmachines', otherCalculators: 'Andere Rekenmachines', backHome: 'Terug naar startpagina', mostUsed: 'De meest gebruikte en betrouwbare rekenmachines in de', category: 'categorie voor snelle en nauwkeurige berekeningen.', essential: 'Essentiële hulpmiddelen uit de', calculator: 'rekenmachine', calculators: 'rekenmachines', explore: 'Verken rekenmachines uit andere categorieën om meer hulpmiddelen voor je rekenbehoeften te vinden.', loading: 'Laden...', notFound: 'Categorie niet gevonden', searchAria: 'Rekenmachines zoeken', searchPlaceholder: 'Rekenmachines zoeken...', notFoundSearch: 'Geen rekenmachines gevonden voor' },
+  } as Record<string, { popular: string; otherCalculators: string; backHome: string; mostUsed: string; category: string; essential: string; calculator: string; calculators: string; explore: string; loading: string; notFound: string; searchAria: string; searchPlaceholder: string; notFoundSearch: string }>;
   
   const t = translations[lang] || translations.en;
 
@@ -189,7 +189,7 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
       <button
         onClick={() => setSearchOpen(!searchOpen)}
         className="search-button fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-40 transition-all"
-        aria-label="Search calculators"
+        aria-label={t.searchAria}
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -209,7 +209,7 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
                   type="text"
                   value={floatingSearchQuery}
                   onChange={(e) => setFloatingSearchQuery(e.target.value)}
-                  placeholder="Search calculators..."
+                  placeholder={t.searchPlaceholder}
                   className="flex-1 text-lg border-0 focus:ring-0 outline-none"
                   autoFocus
                 />
@@ -285,7 +285,7 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
                       type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder={`🔍 Search ${category} calculators...`}
+                      placeholder={`🔍 ${t.searchPlaceholder}`}
                       className="w-full px-4 py-2 pl-10 text-gray-900 bg-white border-0 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-md text-sm"
                     />
                     {showResults && filteredCalculators.length > 0 && (
@@ -316,7 +316,7 @@ export default function CategoryPageClient({ lang, category, initialCalculators,
                     )}
                     {showResults && filteredCalculators.length === 0 && searchQuery.trim() !== '' && (
                       <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">
-                        <p className="text-gray-600 text-sm">No calculators found for "{searchQuery}"</p>
+                        <p className="text-gray-600 text-sm">{t.notFoundSearch} "{searchQuery}"</p>
                       </div>
                     )}
                   </div>

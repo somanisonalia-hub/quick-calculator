@@ -538,5 +538,171 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "Exponentenrechner",
+    "seoTitle": "Exponent Rechner - How Do I Calculate Exponents?",
+    "summary": "Calculate x^y for any base and exponent including positive, negative, and fractional powers.",
+    "description": "Calculate exponential expressions x^y with our powerful exponent calculator. Handles positive, negative, and fractional exponents with scientific notation for large results.",
+    "category": "math",
+    "difficulty": "anfänger",
+    "slug": "exponent-calculator",
+    "calculatorComponent": "ExponentCalculator",
+    "seoContent": {
+      "introduction": "Calculate exponents and powers accurately with our comprehensive online exponent calculator. This powerful tool helps you solve x^y calculations for any base and exponent, including positive numbers, negative exponents, and fractional powers. Whether you're a student learning exponential functions, a scientist working with scientific notation, or anyone needing quick power calculations, our calculator provides instant results with clear explanations. Built with precision algorithms and a user-friendly interface, it handles everything from simple squares to complex exponential expressions with ease.",
+      "benefits": [
+        "Calculate x^y for any base and exponent instantly",
+        "Support for negative exponents (e.g., 2^-3 = 1/8)",
+        "Handle fractional exponents for root calculations (e.g., 16^0.5 = 4)",
+        "Automatic scientific notation for very large or small results",
+        "Step-by-step explanations of exponential calculations",
+        "Learn exponent rules and properties through examples"
+      ],
+      "steps": [
+        "Enter the base value (x) - can be positive or negative",
+        "Enter the exponent value (y) - can be positive, negative, or fractional",
+        "Click calculate to get the result of x^y",
+        "Review the result in both standard and scientific notation",
+        "See the formula and explanation of the calculation"
+      ],
+      "inputsExplained": [
+        "Base (x): The number being multiplied by itself, can be any real number",
+        "Exponent (y): The power to which the base is raised, determines how many times to multiply",
+        "Positive exponents: Multiply base by itself y times (e.g., 2^3 = 2×2×2)",
+        "Negative exponents: Reciprocal of positive exponent (e.g., 2^-3 = 1/(2^3))",
+        "Fractional exponents: Represent roots (e.g., x^(1/2) is square root of x)"
+      ],
+      "formulaExplanation": "The calculator computes x^y using the exponential function. For positive integer exponents, it represents repeated multiplication: x^y = x × x × x... (y times). For negative exponents, x^-y = 1/(x^y). For fractional exponents, x^(m/n) = ⁿ√(x^m), the nth root of x to the power m. Special cases include: x^0 = 1 for any x ≠ 0, x^1 = x, and 0^0 is considered undefined. The result is displayed in scientific notation (a × 10^b) when the value is very large (>1e10) or very small (<1e-4).",
+      "examples": [
+        "Example 1: 2^3 = 8. Base is 2, exponent is 3. Result: 2 × 2 × 2 = 8",
+        "Example 2: 10^-2 = 0.01. Negative exponent means reciprocal: 1/(10^2) = 1/100 = 0.01",
+        "Example 3: 16^0.5 = 4. Fractional exponent 0.5 = 1/2, so this is the square root of 16",
+        "Example 4: 5^4 = 625. Calculate 5 × 5 × 5 × 5 = 625",
+        "Example 5: 2^10 = 1024. Shows larger power calculation, useful in computer science"
+      ],
+      "resultsExplanation": [
+        "Standard result: Shows the calculated value in decimal format",
+        "Scientific notation: Displays very large/small numbers as a × 10^b",
+        "Formula: Shows the exact calculation performed (x^y)",
+        "Special messages for edge cases like 0^0 or negative base with fractional exponent"
+      ],
+      "whoItsFor": "This calculator serves students learning algebra and exponential functions, scientists and engineers working with scientific notation and powers, computer scientists dealing with binary powers and bit calculations, finance professionals calculating compound growth, and anyone needing quick exponential calculations. It's particularly useful for homework, scientific research, programming, and practical applications requiring power calculations.",
+      "disclaimer": "This calculator provides mathematically accurate results based on standard exponential functions. Results should be verified for critical applications. While we strive for precision, floating-point calculations may have minor rounding differences for very large or very small numbers. This tool is for educational and practical purposes. For scientific or engineering applications requiring extreme precision, consult appropriate specialized software.",
+      "relatedTools": [
+        "Scientific Calculator for advanced mathematical operations",
+        "Logarithm Calculator for inverse exponential calculations",
+        "Square Root Calculator for specific root calculations",
+        "Percentage Calculator for growth rate calculations"
+      ],
+      "faqs": [
+        {
+          "question": "What is an exponent?",
+          "answer": "An exponent indicates how many times to multiply a base number by itself. In x^y, y is the exponent. For example, 2^3 means 2 × 2 × 2 = 8."
+        },
+        {
+          "question": "How do negative exponents work?",
+          "answer": "A negative exponent means the reciprocal of the positive exponent. x^-y = 1/(x^y). For example, 2^-3 = 1/(2^3) = 1/8 = 0.125."
+        },
+        {
+          "question": "What are fractional exponents?",
+          "answer": "Fractional exponents represent roots. x^(1/n) is the nth root of x. For example, 16^(1/2) is the square root of 16, which equals 4. x^(m/n) = ⁿ√(x^m)."
+        },
+        {
+          "question": "What is 0^0?",
+          "answer": "0^0 is mathematically undefined or considered indeterminate. Different contexts may treat it differently, but this calculator flags it as a special case requiring consideration."
+        },
+        {
+          "question": "Can I use negative bases?",
+          "answer": "Yes for integer exponents. For fractional exponents with negative bases, the result may be complex (imaginary), which this calculator will indicate as it only handles real numbers."
+        },
+        {
+          "question": "Why use scientific notation?",
+          "answer": "Scientific notation (a × 10^b) makes very large or very small numbers easier to read and understand. For example, 2^50 = 1.126 × 10^15 is clearer than 1,125,899,906,842,624."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Exponent Rekenmachine",
+    "seoTitle": "Exponent Calculator - How Do I Calculate Exponents?",
+    "summary": "Calculate x^y for any base and exponent including positive, negative, and fractional powers.",
+    "description": "Calculate exponential expressions x^y with our powerful exponent calculator. Handles positive, negative, and fractional exponents with scientific notation for large results.",
+    "category": "math",
+    "difficulty": "beginner",
+    "slug": "exponent-calculator",
+    "calculatorComponent": "ExponentCalculator",
+    "seoContent": {
+      "introduction": "Calculate exponents and powers accurately with our comprehensive online exponent calculator. This powerful tool helps you solve x^y calculations for any base and exponent, including positive numbers, negative exponents, and fractional powers. Whether you're a student learning exponential functions, a scientist working with scientific notation, or anyone needing quick power calculations, our calculator provides instant results with clear explanations. Built with precision algorithms and a user-friendly interface, it handles everything from simple squares to complex exponential expressions with ease.",
+      "benefits": [
+        "Calculate x^y for any base and exponent instantly",
+        "Support for negative exponents (e.g., 2^-3 = 1/8)",
+        "Handle fractional exponents for root calculations (e.g., 16^0.5 = 4)",
+        "Automatic scientific notation for very large or small results",
+        "Step-by-step explanations of exponential calculations",
+        "Learn exponent rules and properties through examples"
+      ],
+      "steps": [
+        "Enter the base value (x) - can be positive or negative",
+        "Enter the exponent value (y) - can be positive, negative, or fractional",
+        "Click calculate to get the result of x^y",
+        "Review the result in both standard and scientific notation",
+        "See the formula and explanation of the calculation"
+      ],
+      "inputsExplained": [
+        "Base (x): The number being multiplied by itself, can be any real number",
+        "Exponent (y): The power to which the base is raised, determines how many times to multiply",
+        "Positive exponents: Multiply base by itself y times (e.g., 2^3 = 2×2×2)",
+        "Negative exponents: Reciprocal of positive exponent (e.g., 2^-3 = 1/(2^3))",
+        "Fractional exponents: Represent roots (e.g., x^(1/2) is square root of x)"
+      ],
+      "formulaExplanation": "The calculator computes x^y using the exponential function. For positive integer exponents, it represents repeated multiplication: x^y = x × x × x... (y times). For negative exponents, x^-y = 1/(x^y). For fractional exponents, x^(m/n) = ⁿ√(x^m), the nth root of x to the power m. Special cases include: x^0 = 1 for any x ≠ 0, x^1 = x, and 0^0 is considered undefined. The result is displayed in scientific notation (a × 10^b) when the value is very large (>1e10) or very small (<1e-4).",
+      "examples": [
+        "Example 1: 2^3 = 8. Base is 2, exponent is 3. Result: 2 × 2 × 2 = 8",
+        "Example 2: 10^-2 = 0.01. Negative exponent means reciprocal: 1/(10^2) = 1/100 = 0.01",
+        "Example 3: 16^0.5 = 4. Fractional exponent 0.5 = 1/2, so this is the square root of 16",
+        "Example 4: 5^4 = 625. Calculate 5 × 5 × 5 × 5 = 625",
+        "Example 5: 2^10 = 1024. Shows larger power calculation, useful in computer science"
+      ],
+      "resultsExplanation": [
+        "Standard result: Shows the calculated value in decimal format",
+        "Scientific notation: Displays very large/small numbers as a × 10^b",
+        "Formula: Shows the exact calculation performed (x^y)",
+        "Special messages for edge cases like 0^0 or negative base with fractional exponent"
+      ],
+      "whoItsFor": "This calculator serves students learning algebra and exponential functions, scientists and engineers working with scientific notation and powers, computer scientists dealing with binary powers and bit calculations, finance professionals calculating compound growth, and anyone needing quick exponential calculations. It's particularly useful for homework, scientific research, programming, and practical applications requiring power calculations.",
+      "disclaimer": "This calculator provides mathematically accurate results based on standard exponential functions. Results should be verified for critical applications. While we strive for precision, floating-point calculations may have minor rounding differences for very large or very small numbers. This tool is for educational and practical purposes. For scientific or engineering applications requiring extreme precision, consult appropriate specialized software.",
+      "relatedTools": [
+        "Scientific Calculator for advanced mathematical operations",
+        "Logarithm Calculator for inverse exponential calculations",
+        "Square Root Calculator for specific root calculations",
+        "Percentage Calculator for growth rate calculations"
+      ],
+      "faqs": [
+        {
+          "question": "What is an exponent?",
+          "answer": "An exponent indicates how many times to multiply a base number by itself. In x^y, y is the exponent. For example, 2^3 means 2 × 2 × 2 = 8."
+        },
+        {
+          "question": "How do negative exponents work?",
+          "answer": "A negative exponent means the reciprocal of the positive exponent. x^-y = 1/(x^y). For example, 2^-3 = 1/(2^3) = 1/8 = 0.125."
+        },
+        {
+          "question": "What are fractional exponents?",
+          "answer": "Fractional exponents represent roots. x^(1/n) is the nth root of x. For example, 16^(1/2) is the square root of 16, which equals 4. x^(m/n) = ⁿ√(x^m)."
+        },
+        {
+          "question": "What is 0^0?",
+          "answer": "0^0 is mathematically undefined or considered indeterminate. Different contexts may treat it differently, but this calculator flags it as a special case requiring consideration."
+        },
+        {
+          "question": "Can I use negative bases?",
+          "answer": "Yes for integer exponents. For fractional exponents with negative bases, the result may be complex (imaginary), which this calculator will indicate as it only handles real numbers."
+        },
+        {
+          "question": "Why use scientific notation?",
+          "answer": "Scientific notation (a × 10^b) makes very large or very small numbers easier to read and understand. For example, 2^50 = 1.126 × 10^15 is clearer than 1,125,899,906,842,624."
+        }
+      ]
+    }
   }
 }

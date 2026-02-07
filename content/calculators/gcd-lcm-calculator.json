@@ -503,5 +503,155 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "LCM and GCD Calculator",
+    "seoTitle": "GCD LCM Rechner - What Are the GCD and LCM of These Numbers?",
+    "summary": "Calculate Greatest Common Divisor (GCD) and Least Common Multiple (LCM) of numbers with prime factorization.",
+    "description": "Calculate GCD (Greatest Common Divisor / HCF) and LCM (Least Common Multiple) of two or more numbers. Shows prime factorization and step-by-step solutions using the Euclidean algorithm.",
+    "category": "math",
+    "difficulty": "mittelstufe",
+    "slug": "gcd-lcm-calculator",
+    "calculatorComponent": "GcdLcmCalculator",
+    "seoContent": {
+      "introduction": "Calculate GCD (Greatest Common Divisor) and LCM (Least Common Multiple) accurately with our comprehensive online calculator. This powerful tool helps you find the GCD, also known as HCF (Highest Common Factor), and LCM of two or more numbers using the Euclidean algorithm and prime factorization methods. Whether you're a student learning number theory, a teacher preparing lessons, or anyone working with fractions and ratios, our calculator provides instant results with detailed step-by-step explanations.",
+      "benefits": [
+        "Calculate GCD and LCM for multiple numbers instantly",
+        "Get accurate results with step-by-step Euclidean algorithm explanation",
+        "View prime factorization for each input number",
+        "Mobile-friendly design for calculations on the go",
+        "Understand the relationship between GCD and LCM",
+        "Learn number theory concepts with clear visual explanations"
+      ],
+      "steps": [
+        "Enter two or more numbers separated by commas",
+        "Click calculate to get instant GCD and LCM results",
+        "Review the prime factorization for each number",
+        "Follow the step-by-step Euclidean algorithm process",
+        "Use results for simplifying fractions, ratios, or other calculations"
+      ],
+      "inputsExplained": [
+        "Numbers: Enter two or more positive integers separated by commas",
+        "The calculator accepts any positive integers greater than 0",
+        "You can input as many numbers as needed for calculation",
+        "Spaces around commas are automatically handled"
+      ],
+      "formulaExplanation": "The calculator uses the Euclidean algorithm to find GCD: repeatedly divide the larger number by the smaller and replace the larger with the remainder until the remainder is 0. The last non-zero remainder is the GCD. For LCM, we use the formula: LCM(a,b) = (a × b) / GCD(a,b). For multiple numbers, we apply these operations iteratively. Prime factorization is used to verify results and show the mathematical structure of each number.",
+      "examples": [
+        "Example 1: Numbers 12, 18. GCD = 6 (using Euclidean: 18 = 12×1 + 6, 12 = 6×2 + 0). LCM = 36. Prime factors: 12 = 2² × 3, 18 = 2 × 3²",
+        "Example 2: Numbers 24, 36, 48. GCD = 12. LCM = 144. Common factors used to determine GCD, LCM uses highest powers",
+        "Example 3: Numbers 15, 25. GCD = 5 (both divisible by 5). LCM = 75. Prime factors: 15 = 3 × 5, 25 = 5²"
+      ],
+      "resultsExplanation": [
+        "GCD shows the largest number that divides all input numbers evenly",
+        "LCM shows the smallest number that is a multiple of all input numbers",
+        "Prime factorization breaks each number into its prime components",
+        "Steps show the Euclidean algorithm process for finding GCD"
+      ],
+      "whoItsFor": "This calculator serves students learning number theory and basic algebra, teachers preparing math lessons, professionals working with fractions and ratios, programmers implementing algorithms, and anyone needing to simplify fractions or find common denominators. It's particularly useful for homework, reducing fractions to lowest terms, solving ratio problems, and understanding divisibility.",
+      "disclaimer": "This calculator provides mathematically accurate results based on standard GCD and LCM algorithms. Results are exact for positive integers. While we strive for accuracy, please verify critical calculations. This tool is for educational and practical purposes. The Euclidean algorithm is a proven method that guarantees correct results for all positive integer inputs.",
+      "relatedTools": [
+        "Scientific calculator for advanced mathematical operations",
+        "Ratio calculator for proportion calculations",
+        "Prime factorization calculator for number theory"
+      ],
+      "faqs": [
+        {
+          "question": "What is the difference between GCD and LCM?",
+          "answer": "GCD (Greatest Common Divisor) is the largest number that divides all given numbers evenly, while LCM (Least Common Multiple) is the smallest number that all given numbers divide into evenly."
+        },
+        {
+          "question": "What is the Euclidean algorithm?",
+          "answer": "The Euclidean algorithm is an efficient method for finding GCD by repeatedly dividing and taking remainders until reaching zero. It's one of the oldest algorithms still in common use."
+        },
+        {
+          "question": "Can I calculate GCD and LCM for more than two numbers?",
+          "answer": "Yes, the calculator handles multiple numbers by applying the algorithms iteratively to find the GCD and LCM of all inputs."
+        },
+        {
+          "question": "What is HCF and how does it relate to GCD?",
+          "answer": "HCF (Highest Common Factor) is another name for GCD. They refer to the same concept - the largest number that divides all given numbers."
+        },
+        {
+          "question": "How is prime factorization used in finding GCD and LCM?",
+          "answer": "For GCD, take the lowest power of common prime factors. For LCM, take the highest power of all prime factors present in any number."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "LCM and GCD Calculator",
+    "seoTitle": "GCD LCM Calculator - What Are the GCD and LCM of These Numbers?",
+    "summary": "Calculate Greatest Common Divisor (GCD) and Least Common Multiple (LCM) of numbers with prime factorization.",
+    "description": "Calculate GCD (Greatest Common Divisor / HCF) and LCM (Least Common Multiple) of two or more numbers. Shows prime factorization and step-by-step solutions using the Euclidean algorithm.",
+    "category": "math",
+    "difficulty": "gemiddeld",
+    "slug": "gcd-lcm-calculator",
+    "calculatorComponent": "GcdLcmCalculator",
+    "seoContent": {
+      "introduction": "Calculate GCD (Greatest Common Divisor) and LCM (Least Common Multiple) accurately with our comprehensive online calculator. This powerful tool helps you find the GCD, also known as HCF (Highest Common Factor), and LCM of two or more numbers using the Euclidean algorithm and prime factorization methods. Whether you're a student learning number theory, a teacher preparing lessons, or anyone working with fractions and ratios, our calculator provides instant results with detailed step-by-step explanations.",
+      "benefits": [
+        "Calculate GCD and LCM for multiple numbers instantly",
+        "Get accurate results with step-by-step Euclidean algorithm explanation",
+        "View prime factorization for each input number",
+        "Mobile-friendly design for calculations on the go",
+        "Understand the relationship between GCD and LCM",
+        "Learn number theory concepts with clear visual explanations"
+      ],
+      "steps": [
+        "Enter two or more numbers separated by commas",
+        "Click calculate to get instant GCD and LCM results",
+        "Review the prime factorization for each number",
+        "Follow the step-by-step Euclidean algorithm process",
+        "Use results for simplifying fractions, ratios, or other calculations"
+      ],
+      "inputsExplained": [
+        "Numbers: Enter two or more positive integers separated by commas",
+        "The calculator accepts any positive integers greater than 0",
+        "You can input as many numbers as needed for calculation",
+        "Spaces around commas are automatically handled"
+      ],
+      "formulaExplanation": "The calculator uses the Euclidean algorithm to find GCD: repeatedly divide the larger number by the smaller and replace the larger with the remainder until the remainder is 0. The last non-zero remainder is the GCD. For LCM, we use the formula: LCM(a,b) = (a × b) / GCD(a,b). For multiple numbers, we apply these operations iteratively. Prime factorization is used to verify results and show the mathematical structure of each number.",
+      "examples": [
+        "Example 1: Numbers 12, 18. GCD = 6 (using Euclidean: 18 = 12×1 + 6, 12 = 6×2 + 0). LCM = 36. Prime factors: 12 = 2² × 3, 18 = 2 × 3²",
+        "Example 2: Numbers 24, 36, 48. GCD = 12. LCM = 144. Common factors used to determine GCD, LCM uses highest powers",
+        "Example 3: Numbers 15, 25. GCD = 5 (both divisible by 5). LCM = 75. Prime factors: 15 = 3 × 5, 25 = 5²"
+      ],
+      "resultsExplanation": [
+        "GCD shows the largest number that divides all input numbers evenly",
+        "LCM shows the smallest number that is a multiple of all input numbers",
+        "Prime factorization breaks each number into its prime components",
+        "Steps show the Euclidean algorithm process for finding GCD"
+      ],
+      "whoItsFor": "This calculator serves students learning number theory and basic algebra, teachers preparing math lessons, professionals working with fractions and ratios, programmers implementing algorithms, and anyone needing to simplify fractions or find common denominators. It's particularly useful for homework, reducing fractions to lowest terms, solving ratio problems, and understanding divisibility.",
+      "disclaimer": "This calculator provides mathematically accurate results based on standard GCD and LCM algorithms. Results are exact for positive integers. While we strive for accuracy, please verify critical calculations. This tool is for educational and practical purposes. The Euclidean algorithm is a proven method that guarantees correct results for all positive integer inputs.",
+      "relatedTools": [
+        "Scientific calculator for advanced mathematical operations",
+        "Ratio calculator for proportion calculations",
+        "Prime factorization calculator for number theory"
+      ],
+      "faqs": [
+        {
+          "question": "What is the difference between GCD and LCM?",
+          "answer": "GCD (Greatest Common Divisor) is the largest number that divides all given numbers evenly, while LCM (Least Common Multiple) is the smallest number that all given numbers divide into evenly."
+        },
+        {
+          "question": "What is the Euclidean algorithm?",
+          "answer": "The Euclidean algorithm is an efficient method for finding GCD by repeatedly dividing and taking remainders until reaching zero. It's one of the oldest algorithms still in common use."
+        },
+        {
+          "question": "Can I calculate GCD and LCM for more than two numbers?",
+          "answer": "Yes, the calculator handles multiple numbers by applying the algorithms iteratively to find the GCD and LCM of all inputs."
+        },
+        {
+          "question": "What is HCF and how does it relate to GCD?",
+          "answer": "HCF (Highest Common Factor) is another name for GCD. They refer to the same concept - the largest number that divides all given numbers."
+        },
+        {
+          "question": "How is prime factorization used in finding GCD and LCM?",
+          "answer": "For GCD, take the lowest power of common prime factors. For LCM, take the highest power of all prime factors present in any number."
+        }
+      ]
+    }
   }
 }

@@ -16,7 +16,9 @@ const translations = {
       en: 'English',
       es: 'Spanish',
       pt: 'Portuguese',
-      fr: 'French'
+      fr: 'French',
+      de: 'German',
+      nl: 'Dutch'
     },
     menu: {
       financial: '💰 Financial',
@@ -31,7 +33,9 @@ const translations = {
       en: 'Inglés',
       es: 'Español',
       pt: 'Portugués',
-      fr: 'Francés'
+      fr: 'Francés',
+      de: 'Alemán',
+      nl: 'Holandés'
     },
     menu: {
       financial: '💰 Financiero',
@@ -46,7 +50,9 @@ const translations = {
       en: 'Inglês',
       es: 'Espanhol',
       pt: 'Português',
-      fr: 'Francês'
+      fr: 'Francês',
+      de: 'Alemão',
+      nl: 'Holandês'
     },
     menu: {
       financial: '💰 Financeiro',
@@ -61,7 +67,9 @@ const translations = {
       en: 'Anglais',
       es: 'Espagnol',
       pt: 'Portugais',
-      fr: 'Français'
+      fr: 'Français',
+      de: 'Allemand',
+      nl: 'Néerlandais'
     },
     menu: {
       financial: '💰 Financier',
@@ -69,6 +77,40 @@ const translations = {
       math: '🧮 Mathématiques',
       utility: '🛠️ Utilitaire',
       lifestyle: '🏠 Style de Vie'
+    }
+  },
+  de: {
+    languageNames: {
+      en: 'Englisch',
+      es: 'Spanisch',
+      pt: 'Portugiesisch',
+      fr: 'Französisch',
+      de: 'Deutsch',
+      nl: 'Niederländisch'
+    },
+    menu: {
+      financial: '💰 Finanziell',
+      health: '🏥 Gesundheit',
+      math: '🧮 Mathematik',
+      utility: '🛠️ Nützlichkeit',
+      lifestyle: '🏠 Lebensstil'
+    }
+  },
+  nl: {
+    languageNames: {
+      en: 'Engels',
+      es: 'Spaans',
+      pt: 'Portugees',
+      fr: 'Frans',
+      de: 'Duits',
+      nl: 'Nederlands'
+    },
+    menu: {
+      financial: '💰 Financieel',
+      health: '🏥 Gezondheid',
+      math: '🧮 Wiskunde',
+      utility: '🛠️ Hulpmiddel',
+      lifestyle: '🏠 Levensstijl'
     }
   }
 };
@@ -85,8 +127,8 @@ export default function Header({ currentLang = 'en', showLanguageSwitcher = true
     // Extract the path without any language prefix
     let pathWithoutLang = currentPath;
 
-    // Remove any existing language prefix (es, pt, fr, en)
-    pathWithoutLang = pathWithoutLang.replace(/^\/(es|pt|fr|en)/, '');
+    // Remove any existing language prefix (es, pt, fr, en, de, nl)
+    pathWithoutLang = pathWithoutLang.replace(/^\/(es|pt|fr|en|de|nl)/, '');
 
     // Ensure we have a leading slash
     if (!pathWithoutLang.startsWith('/')) {
@@ -139,19 +181,6 @@ export default function Header({ currentLang = 'en', showLanguageSwitcher = true
             </Link>
           </div>
 
-          {/* Navigation Menu - Hidden on mobile, visible on md and up */}
-          <nav className="hidden lg:flex items-center space-x-6">
-            {menuItems.map((item) => (
-              <Link
-                key={item.slug}
-                href={`/${currentLang}/categories/${item.slug}`}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
           {/* Language Switcher */}
           {showLanguageSwitcher && (
             <div className="flex items-center space-x-1">
@@ -159,7 +188,9 @@ export default function Header({ currentLang = 'en', showLanguageSwitcher = true
                 { code: 'en', name: t.languageNames.en, flag: '🇺🇸' },
                 { code: 'es', name: t.languageNames.es, flag: '🇪🇸' },
                 { code: 'pt', name: t.languageNames.pt, flag: '🇵🇹' },
-                { code: 'fr', name: t.languageNames.fr, flag: '🇫🇷' }
+                { code: 'fr', name: t.languageNames.fr, flag: '🇫🇷' },
+                { code: 'de', name: t.languageNames.de, flag: '🇩🇪' },
+                { code: 'nl', name: t.languageNames.nl, flag: '🇳🇱' }
               ].map((lang) => (
                 <button
                   key={lang.code}

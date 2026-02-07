@@ -55,13 +55,13 @@ export default function LangCalculatorClient({ lang, slug }: LangCalculatorClien
   }
 
   // Generate breadcrumbs directly - Home → Category → Calculator
-  const homeNames = { en: 'Home', es: 'Inicio', pt: 'Início', fr: 'Accueil' };
+  const homeNames = { en: 'Home', es: 'Inicio', pt: 'Início', fr: 'Accueil', de: 'Startseite', nl: 'Home' };
   const categoryNames = {
-    financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculateurs Financiers' },
-    health: { en: 'Health & Fitness Calculators', es: 'Calculadoras de Salud y Fitness', pt: 'Calculadoras de Saúde e Fitness', fr: 'Calculateurs Santé et Fitness' },
-    math: { en: 'Math Calculators', es: 'Calculadoras Matemáticas', pt: 'Calculadoras Matemáticas', fr: 'Calculateurs Mathématiques' },
-    utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilitários', fr: 'Calculateurs Utilitaires' },
-    lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculateurs Style de Vie' }
+    financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculateurs Financiers', de: 'Finanzrechner', nl: 'Financiële Rekenmachines' },
+    health: { en: 'Health & Fitness Calculators', es: 'Calculadoras de Salud y Fitness', pt: 'Calculadoras de Saúde e Fitness', fr: 'Calculateurs Santé et Fitness', de: 'Gesundheits- und Fitnessrechner', nl: 'Gezondheids- en Fitness Rekenmachines' },
+    math: { en: 'Math Calculators', es: 'Calculadoras Matemáticas', pt: 'Calculadoras Matemáticas', fr: 'Calculateurs Mathématiques', de: 'Mathematische Rechner', nl: 'Wiskundige Rekenmachines' },
+    utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilitários', fr: 'Calculateurs Utilitaires', de: 'Nützliche Rechner', nl: 'Hulpmiddel Rekenmachines' },
+    lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculateurs Style de Vie', de: 'Lebensstil Rechner', nl: 'Levensstijl Rekenmachines' }
   };
 
   const homeName = homeNames[lang as keyof typeof homeNames] || 'Home';

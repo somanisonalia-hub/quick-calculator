@@ -874,5 +874,335 @@
       ]
     },
     "component": "CurrencyConverter"
+  },
+  "de": {
+    "title": "Währungsumrechner",
+    "seoTitle": "Currency Converter - Convert Money Between Currencies Online",
+    "summary": "Convert between all major world currencies with live exchange rates for accurate international money calculations.",
+    "description": "Our comprehensive currency converter provides real-time exchange rates for all major world currencies. Perfect for travelers, international business professionals, and anyone dealing with foreign currency. Get accurate conversions with historical rates and currency charts for better financial planning.",
+    "category": "financial",
+    "difficulty": "grundlagen",
+    "slug": "currency-converter",
+    "calculatorComponent": {
+      "componentName": "CurrencyConverter",
+      "inputs": [
+        {
+          "name": "amount",
+          "label": "Amount",
+          "type": "number",
+          "default": 1000,
+          "min": 0.01,
+          "max": 10000000,
+          "step": 0.01
+        },
+        {
+          "name": "fromCurrency",
+          "label": "From Currency",
+          "type": "select",
+          "default": "USD",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        },
+        {
+          "name": "toCurrency",
+          "label": "To Currency",
+          "type": "select",
+          "default": "EUR",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        }
+      ],
+      "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
+      "output": {
+        "label": "Converted Amount",
+        "default": "Enter amount and currencies above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Exchange Rate",
+          "field": "exchangeRate",
+          "format": "number"
+        },
+        {
+          "label": "Inverse Rate",
+          "field": "inverseRate",
+          "format": "number"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Navigate the global economy with confidence using our comprehensive currency converter that provides accurate, real-time exchange rates for all major world currencies. Whether you're planning international travel, conducting business across borders, or simply curious about foreign money values, this essential financial tool ensures you always know the true value of your money in any currency. Stay informed about currency fluctuations and make smarter decisions for international transactions, travel budgets, and cross-border investments.",
+      "benefits": [
+        "Convert between all major world currencies instantly",
+        "Access real-time exchange rates updated regularly",
+        "Plan international travel budgets accurately",
+        "Make informed business decisions for global transactions",
+        "Understand currency fluctuations and market trends",
+        "Compare prices across different countries and currencies",
+        "Calculate foreign transaction fees and costs",
+        "Track currency strength for investment opportunities"
+      ],
+      "steps": [
+        "Select the currency you want to convert from (source currency)",
+        "Choose the currency you want to convert to (target currency)",
+        "Enter the amount you want to convert",
+        "View the instant conversion result with current exchange rate",
+        "Check the inverse rate for reverse calculations",
+        "Use the result for your financial planning or transaction"
+      ],
+      "inputsExplained": [
+        "Amount is the monetary value you want to convert - can be any positive number",
+        "From currency is the original currency you're converting from - choose from major global currencies",
+        "To currency is the target currency you want to convert to - select from the same list of major currencies",
+        "Exchange rates are updated regularly to reflect current market conditions"
+      ],
+      "formulaExplanation": "Currency conversion uses a simple but crucial formula: Converted Amount = Original Amount × Exchange Rate. The exchange rate represents how much of the target currency you get for one unit of the source currency. For example, if the USD to EUR rate is 0.85, then $100 USD = €85 EUR. Exchange rates fluctuate constantly based on economic factors, interest rates, political events, and market sentiment. Understanding these rates helps you avoid poor conversion timing and minimize foreign transaction costs.",
+      "examples": [
+        "A $2,000 vacation budget converts to approximately €1,840 at current rates, helping you set realistic spending limits while traveling in Europe.",
+        "Importing goods costing €50,000 would be approximately $55,500 USD at current exchange rates, affecting your business cost calculations.",
+        "A $10,000 investment in GBP would be worth about £7,800 at current rates, showing the impact of currency fluctuations on international investments.",
+        "Monthly remittances of $500 USD to family abroad convert to approximately ₱27,000 PHP, helping you budget for regular international transfers."
+      ],
+      "resultsExplanation": [
+        "Converted amount shows the exact value in the target currency",
+        "Exchange rate displays the current rate used for conversion",
+        "Inverse rate shows the reverse conversion rate for reference"
+      ],
+      "whoItsFor": "This currency converter serves travelers planning international trips, international business professionals, students studying abroad, families sending money overseas, online shoppers comparing prices globally, forex traders monitoring currency movements, and anyone dealing with international finances. It's particularly valuable for expatriates managing dual currencies, importers and exporters calculating costs, tourists avoiding ATM fees, and investors considering international opportunities. The tool works for anyone who needs accurate currency conversions for personal or business purposes.",
+      "disclaimer": "Exchange rates are subject to constant fluctuation and can change rapidly due to economic conditions, political events, and market forces. The rates shown are for informational purposes and may not reflect the exact rates available through banks, currency exchange services, or payment processors. Always check with your financial institution for current rates and fees. This tool does not account for transaction fees, commissions, or special rates that may apply to large transactions. For official exchange rates, consult central banks or authorized financial institutions.",
+      "relatedTools": [
+        "Inflation calculators for understanding currency purchasing power changes",
+        "Budget calculators for incorporating international expenses",
+        "Investment calculators for evaluating global investment opportunities"
+      ],
+      "faqs": [
+        {
+          "question": "How often are exchange rates updated?",
+          "answer": "Exchange rates are typically updated every few minutes to hourly, depending on market volatility and data source reliability. Major currency pairs update more frequently during active trading hours. However, for the most accurate rates for transactions, always check with your bank or currency exchange service at the time of conversion, as rates can change between updates. Weekend and holiday rates may be less current due to reduced market activity."
+        },
+        {
+          "question": "Why do exchange rates change so frequently?",
+          "answer": "Exchange rates fluctuate constantly due to economic factors like interest rates, inflation, GDP growth, and employment data. Political events, trade agreements, and geopolitical tensions also impact currency values. Market sentiment, investor confidence, and global events like elections or natural disasters can cause rapid rate changes. During major news events, rates can swing dramatically within minutes. Understanding these factors helps explain why yesterday's rate differs from today's."
+        },
+        {
+          "question": "What are the best times to convert currency for travel?",
+          "answer": "Convert currency when your home currency is strong relative to your destination currency. Monitor rates for 1-2 weeks before travel and convert when you get a favorable rate. Tuesday through Thursday often have better rates than Monday (post-weekend adjustments) or Friday (position squaring). Avoid converting at airports or hotels where rates are typically 5-10% worse. Use ATMs for local currency when abroad, but compare rates with currency exchange bureaus."
+        },
+        {
+          "question": "How do I avoid losing money on currency conversions?",
+          "answer": "Compare rates across multiple sources including banks, credit unions, online bureaus, and apps. Watch for hidden fees like commissions or poor rates disguised as 'no fee' services. Convert larger amounts at better rates rather than small amounts frequently. Use credit cards abroad for purchases (often better than cash rates) but check foreign transaction fees. Consider multi-currency accounts or travel cards for better rates. Time conversions when your currency is strong."
+        },
+        {
+          "question": "What's the difference between buying and selling rates?",
+          "answer": "Banks and exchange services offer different rates for buying (when you buy foreign currency) and selling (when you sell foreign currency back). The difference creates a 'spread' that represents their profit margin, typically 3-5% for retail customers. Buying rates are worse for you (you get less foreign currency for your money), while selling rates are better for you (you get more home currency when selling foreign currency). Always ask for both rates when comparing services."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Valuta Converter",
+    "seoTitle": "Currency Converter - Convert Money Between Currencies Online",
+    "summary": "Convert between all major world currencies with live exchange rates for accurate international money calculations.",
+    "description": "Our comprehensive currency converter provides real-time exchange rates for all major world currencies. Perfect for travelers, international business professionals, and anyone dealing with foreign currency. Get accurate conversions with historical rates and currency charts for better financial planning.",
+    "category": "financial",
+    "difficulty": "basis",
+    "slug": "currency-converter",
+    "calculatorComponent": {
+      "componentName": "CurrencyConverter",
+      "inputs": [
+        {
+          "name": "amount",
+          "label": "Amount",
+          "type": "number",
+          "default": 1000,
+          "min": 0.01,
+          "max": 10000000,
+          "step": 0.01
+        },
+        {
+          "name": "fromCurrency",
+          "label": "From Currency",
+          "type": "select",
+          "default": "USD",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        },
+        {
+          "name": "toCurrency",
+          "label": "To Currency",
+          "type": "select",
+          "default": "EUR",
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "CAD",
+            "AUD",
+            "CHF",
+            "CNY",
+            "SEK",
+            "NZD",
+            "MXN",
+            "SGD",
+            "HKD",
+            "NOK",
+            "KRW",
+            "TRY",
+            "RUB",
+            "INR",
+            "BRL",
+            "ZAR"
+          ]
+        }
+      ],
+      "formula": "Converted Amount = Input Amount × Exchange Rate (From → To)",
+      "output": {
+        "label": "Converted Amount",
+        "default": "Enter amount and currencies above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Exchange Rate",
+          "field": "exchangeRate",
+          "format": "number"
+        },
+        {
+          "label": "Inverse Rate",
+          "field": "inverseRate",
+          "format": "number"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Navigate the global economy with confidence using our comprehensive currency converter that provides accurate, real-time exchange rates for all major world currencies. Whether you're planning international travel, conducting business across borders, or simply curious about foreign money values, this essential financial tool ensures you always know the true value of your money in any currency. Stay informed about currency fluctuations and make smarter decisions for international transactions, travel budgets, and cross-border investments.",
+      "benefits": [
+        "Convert between all major world currencies instantly",
+        "Access real-time exchange rates updated regularly",
+        "Plan international travel budgets accurately",
+        "Make informed business decisions for global transactions",
+        "Understand currency fluctuations and market trends",
+        "Compare prices across different countries and currencies",
+        "Calculate foreign transaction fees and costs",
+        "Track currency strength for investment opportunities"
+      ],
+      "steps": [
+        "Select the currency you want to convert from (source currency)",
+        "Choose the currency you want to convert to (target currency)",
+        "Enter the amount you want to convert",
+        "View the instant conversion result with current exchange rate",
+        "Check the inverse rate for reverse calculations",
+        "Use the result for your financial planning or transaction"
+      ],
+      "inputsExplained": [
+        "Amount is the monetary value you want to convert - can be any positive number",
+        "From currency is the original currency you're converting from - choose from major global currencies",
+        "To currency is the target currency you want to convert to - select from the same list of major currencies",
+        "Exchange rates are updated regularly to reflect current market conditions"
+      ],
+      "formulaExplanation": "Currency conversion uses a simple but crucial formula: Converted Amount = Original Amount × Exchange Rate. The exchange rate represents how much of the target currency you get for one unit of the source currency. For example, if the USD to EUR rate is 0.85, then $100 USD = €85 EUR. Exchange rates fluctuate constantly based on economic factors, interest rates, political events, and market sentiment. Understanding these rates helps you avoid poor conversion timing and minimize foreign transaction costs.",
+      "examples": [
+        "A $2,000 vacation budget converts to approximately €1,840 at current rates, helping you set realistic spending limits while traveling in Europe.",
+        "Importing goods costing €50,000 would be approximately $55,500 USD at current exchange rates, affecting your business cost calculations.",
+        "A $10,000 investment in GBP would be worth about £7,800 at current rates, showing the impact of currency fluctuations on international investments.",
+        "Monthly remittances of $500 USD to family abroad convert to approximately ₱27,000 PHP, helping you budget for regular international transfers."
+      ],
+      "resultsExplanation": [
+        "Converted amount shows the exact value in the target currency",
+        "Exchange rate displays the current rate used for conversion",
+        "Inverse rate shows the reverse conversion rate for reference"
+      ],
+      "whoItsFor": "This currency converter serves travelers planning international trips, international business professionals, students studying abroad, families sending money overseas, online shoppers comparing prices globally, forex traders monitoring currency movements, and anyone dealing with international finances. It's particularly valuable for expatriates managing dual currencies, importers and exporters calculating costs, tourists avoiding ATM fees, and investors considering international opportunities. The tool works for anyone who needs accurate currency conversions for personal or business purposes.",
+      "disclaimer": "Exchange rates are subject to constant fluctuation and can change rapidly due to economic conditions, political events, and market forces. The rates shown are for informational purposes and may not reflect the exact rates available through banks, currency exchange services, or payment processors. Always check with your financial institution for current rates and fees. This tool does not account for transaction fees, commissions, or special rates that may apply to large transactions. For official exchange rates, consult central banks or authorized financial institutions.",
+      "relatedTools": [
+        "Inflation calculators for understanding currency purchasing power changes",
+        "Budget calculators for incorporating international expenses",
+        "Investment calculators for evaluating global investment opportunities"
+      ],
+      "faqs": [
+        {
+          "question": "How often are exchange rates updated?",
+          "answer": "Exchange rates are typically updated every few minutes to hourly, depending on market volatility and data source reliability. Major currency pairs update more frequently during active trading hours. However, for the most accurate rates for transactions, always check with your bank or currency exchange service at the time of conversion, as rates can change between updates. Weekend and holiday rates may be less current due to reduced market activity."
+        },
+        {
+          "question": "Why do exchange rates change so frequently?",
+          "answer": "Exchange rates fluctuate constantly due to economic factors like interest rates, inflation, GDP growth, and employment data. Political events, trade agreements, and geopolitical tensions also impact currency values. Market sentiment, investor confidence, and global events like elections or natural disasters can cause rapid rate changes. During major news events, rates can swing dramatically within minutes. Understanding these factors helps explain why yesterday's rate differs from today's."
+        },
+        {
+          "question": "What are the best times to convert currency for travel?",
+          "answer": "Convert currency when your home currency is strong relative to your destination currency. Monitor rates for 1-2 weeks before travel and convert when you get a favorable rate. Tuesday through Thursday often have better rates than Monday (post-weekend adjustments) or Friday (position squaring). Avoid converting at airports or hotels where rates are typically 5-10% worse. Use ATMs for local currency when abroad, but compare rates with currency exchange bureaus."
+        },
+        {
+          "question": "How do I avoid losing money on currency conversions?",
+          "answer": "Compare rates across multiple sources including banks, credit unions, online bureaus, and apps. Watch for hidden fees like commissions or poor rates disguised as 'no fee' services. Convert larger amounts at better rates rather than small amounts frequently. Use credit cards abroad for purchases (often better than cash rates) but check foreign transaction fees. Consider multi-currency accounts or travel cards for better rates. Time conversions when your currency is strong."
+        },
+        {
+          "question": "What's the difference between buying and selling rates?",
+          "answer": "Banks and exchange services offer different rates for buying (when you buy foreign currency) and selling (when you sell foreign currency back). The difference creates a 'spread' that represents their profit margin, typically 3-5% for retail customers. Buying rates are worse for you (you get less foreign currency for your money), while selling rates are better for you (you get more home currency when selling foreign currency). Always ask for both rates when comparing services."
+        }
+      ]
+    }
   }
 }

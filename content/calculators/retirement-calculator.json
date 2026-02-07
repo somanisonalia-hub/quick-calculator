@@ -1086,5 +1086,339 @@
       ]
     },
     "component": "RetirementCalculator"
+  },
+  "de": {
+    "title": "Ruhestandsrechner",
+    "seoTitle": "Retirement Rechner 2026 - How Much Do I Need to Retire?",
+    "summary": "Plan your retirement savings and calculate future needs.",
+    "description": "Plan your retirement with confidence using our comprehensive retirement calculator. Calculate how much you need to save, project your 401k growth with compound interest, estimate Social Security benefits, and determine if you'll reach your retirement goals. This powerful tool helps you make informed decisions about your financial future.",
+    "category": "financial",
+    "difficulty": "Fortgeschritten",
+    "slug": "retirement-calculator",
+    "calculatorComponent": {
+      "componentName": "RetirementCalculator",
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Current Age",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Retirement Age",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Current Retirement Savings ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "annualContribution",
+          "label": "Annual Contribution ($)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 500000,
+          "step": 500
+        },
+        {
+          "name": "expectedReturn",
+          "label": "Expected Annual Return (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "socialSecurity",
+          "label": "Monthly Social Security Benefit ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 100
+        }
+      ],
+      "formula": "Future Value = Current Savings × (1 + r)^n + Annual Contribution × [(1 + r)^n - 1] / r; Monthly Income = (Future Value × Withdrawal Rate) / 12 + Social Security",
+      "output": {
+        "label": "Projected Retirement Savings",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Years Until Retirement",
+          "field": "yearsToRetirement",
+          "format": "number"
+        },
+        {
+          "label": "Total Contributions",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Interest Earned",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Monthly Retirement Income",
+          "field": "monthlyIncome",
+          "format": "currency"
+        },
+        {
+          "label": "Savings Goal Achievement",
+          "field": "goalProgress",
+          "format": "percentage"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Secure your financial future with our comprehensive retirement calculator that projects your savings growth and helps you plan for a comfortable retirement. This powerful planning tool combines compound interest calculations with Social Security benefits to show you exactly how much you'll have saved and what your monthly retirement income will look like. Whether you're just starting your career or approaching retirement age, understanding your retirement projections is essential for making informed decisions about 401k contributions, investment strategies, and lifestyle choices that will impact your golden years.",
+      "benefits": [
+        "Project your retirement savings growth with accurate compound interest calculations",
+        "Estimate monthly retirement income including Social Security benefits",
+        "Determine if you're on track to meet your retirement goals",
+        "Compare different contribution amounts and investment returns",
+        "Understand the impact of starting to save earlier vs. later",
+        "Plan for a sustainable withdrawal rate that lasts throughout retirement"
+      ],
+      "steps": [
+        "Enter your current age and desired retirement age to establish your timeline",
+        "Input your current retirement savings balance from 401k, IRA, and other accounts",
+        "Specify your annual contribution amount to retirement accounts",
+        "Set your expected annual investment return rate based on your risk tolerance",
+        "Include estimated monthly Social Security benefits if applicable",
+        "Review projections and adjust contributions or retirement age as needed"
+      ],
+      "inputsExplained": [
+        "Current and retirement age determine how many years your money has to grow",
+        "Current savings balance represents all retirement accounts combined",
+        "Annual contribution shows how much you plan to add to retirement accounts yearly",
+        "Expected return rate reflects your investment portfolio's projected growth",
+        "Social Security benefit estimates monthly government retirement payments"
+      ],
+      "formulaExplanation": "The retirement calculator uses compound interest formulas to project savings growth: Future Value = Current Balance × (1 + r)^n + Annual Contribution × [(1 + r)^n - 1] / r, where r is the annual return rate and n is years until retirement. Monthly retirement income combines investment withdrawals (typically 4% annually) with Social Security benefits. This comprehensive approach accounts for both accumulation during working years and sustainable withdrawal during retirement, ensuring your money lasts as long as you do.",
+      "examples": [
+        "A 30-year-old saving $6,000 annually with $50,000 current balance at 7% returns will have $1.2 million by age 65, providing $4,800 monthly ($48,000 annually) plus Social Security benefits.",
+        "Someone starting at age 45 with same contributions reaches only $680,000 by age 65, showing how delaying savings by 15 years costs over $500,000 in retirement security."
+      ],
+      "resultsExplanation": [
+        "Projected retirement savings shows total accumulated at retirement age",
+        "Monthly retirement income estimates sustainable withdrawal amount",
+        "Years to retirement displays timeline remaining",
+        "Total contributions reveals your cumulative investment amount"
+      ],
+      "whoItsFor": "This retirement calculator serves young professionals starting retirement planning, mid-career individuals assessing progress, pre-retirees evaluating readiness, financial advisors providing client projections, couples planning joint retirement income, and anyone wanting to understand retirement savings requirements. It's particularly valuable for those changing jobs, receiving windfalls, or experiencing life changes that affect retirement planning.",
+      "disclaimer": "This calculator provides estimates based on compound interest and Social Security benefit assumptions. Actual investment returns fluctuate with market conditions and cannot be guaranteed. Social Security benefits depend on earnings history and may change with legislation. Inflation, taxes, healthcare costs, and personal circumstances affect retirement needs. This tool is for educational purposes only and should not replace professional financial advice. Consult certified financial planners for personalized retirement strategies.",
+      "relatedTools": [
+        "Savings calculators for understanding compound interest growth rates",
+        "Investment calculators for comparing different portfolio returns",
+        "Social Security calculators for estimating government benefit amounts"
+      ],
+      "faqs": [
+        {
+          "question": "How much do I need to save for retirement?",
+          "answer": "Most financial experts recommend saving 15-20 times your pre-retirement annual income. For a $60,000 salary, you'd need $900,000-$1.2 million. This provides 4% annual withdrawal ($3,000-$4,800 monthly) plus Social Security. Use our calculator to determine your specific target based on desired retirement income and expected returns."
+        },
+        {
+          "question": "What's the best age to start saving for retirement?",
+          "answer": "The earlier, the better. Starting at age 25 with $300 monthly at 7% returns accumulates $1.2 million by age 65. Waiting until age 35 reduces this to $680,000 - losing over $500,000. Even small amounts early provide compound interest time to work, making retirement goals much more achievable."
+        },
+        {
+          "question": "How do I know what withdrawal rate is safe in retirement?",
+          "answer": "The 4% rule suggests withdrawing 4% annually (plus inflation adjustments) from retirement savings. For $500,000 saved, this provides $20,000 yearly initially. This rate historically sustained 30+ year retirements through market fluctuations. Conservative investors use 3%, aggressive investors might use 5%, but personal risk tolerance and life expectancy matter."
+        },
+        {
+          "question": "Should I max out my 401k or pay off debt first?",
+          "answer": "Compare interest rates: if mortgage is 4% but 401k earns 7% pre-tax, investing wins. But if credit card debt costs 18%, pay that first. Generally, prioritize emergency fund, then high-interest debt, then max tax-advantaged retirement accounts. Use the calculator to see how different contribution levels affect your retirement security."
+        },
+        {
+          "question": "How does Social Security factor into retirement planning?",
+          "answer": "Social Security replaces about 40% of pre-retirement income for average earners, but less for high earners. Full benefits start at age 67, with reduced benefits from age 62. Delaying benefits to age 70 increases payments by 8% annually. Include estimated benefits in planning, but don't rely solely on them - plan as if they'll be 20-30% lower than promised."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Pensioen Rekenmachine",
+    "seoTitle": "Retirement Calculator 2026 - How Much Do I Need to Retire?",
+    "summary": "Plan your retirement savings and calculate future needs.",
+    "description": "Plan your retirement with confidence using our comprehensive retirement calculator. Calculate how much you need to save, project your 401k growth with compound interest, estimate Social Security benefits, and determine if you'll reach your retirement goals. This powerful tool helps you make informed decisions about your financial future.",
+    "category": "financial",
+    "difficulty": "Gevorderd",
+    "slug": "retirement-calculator",
+    "calculatorComponent": {
+      "componentName": "RetirementCalculator",
+      "inputs": [
+        {
+          "name": "currentAge",
+          "label": "Current Age",
+          "type": "number",
+          "default": 30,
+          "min": 18,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "retirementAge",
+          "label": "Retirement Age",
+          "type": "number",
+          "default": 65,
+          "min": 50,
+          "max": 80,
+          "step": 1
+        },
+        {
+          "name": "currentSavings",
+          "label": "Current Retirement Savings ($)",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "annualContribution",
+          "label": "Annual Contribution ($)",
+          "type": "number",
+          "default": 6000,
+          "min": 0,
+          "max": 500000,
+          "step": 500
+        },
+        {
+          "name": "expectedReturn",
+          "label": "Expected Annual Return (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 20,
+          "step": 0.1
+        },
+        {
+          "name": "socialSecurity",
+          "label": "Monthly Social Security Benefit ($)",
+          "type": "number",
+          "default": 1500,
+          "min": 0,
+          "max": 10000,
+          "step": 100
+        }
+      ],
+      "formula": "Future Value = Current Savings × (1 + r)^n + Annual Contribution × [(1 + r)^n - 1] / r; Monthly Income = (Future Value × Withdrawal Rate) / 12 + Social Security",
+      "output": {
+        "label": "Projected Retirement Savings",
+        "default": "Enter your details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Years Until Retirement",
+          "field": "yearsToRetirement",
+          "format": "number"
+        },
+        {
+          "label": "Total Contributions",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Interest Earned",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Monthly Retirement Income",
+          "field": "monthlyIncome",
+          "format": "currency"
+        },
+        {
+          "label": "Savings Goal Achievement",
+          "field": "goalProgress",
+          "format": "percentage"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Secure your financial future with our comprehensive retirement calculator that projects your savings growth and helps you plan for a comfortable retirement. This powerful planning tool combines compound interest calculations with Social Security benefits to show you exactly how much you'll have saved and what your monthly retirement income will look like. Whether you're just starting your career or approaching retirement age, understanding your retirement projections is essential for making informed decisions about 401k contributions, investment strategies, and lifestyle choices that will impact your golden years.",
+      "benefits": [
+        "Project your retirement savings growth with accurate compound interest calculations",
+        "Estimate monthly retirement income including Social Security benefits",
+        "Determine if you're on track to meet your retirement goals",
+        "Compare different contribution amounts and investment returns",
+        "Understand the impact of starting to save earlier vs. later",
+        "Plan for a sustainable withdrawal rate that lasts throughout retirement"
+      ],
+      "steps": [
+        "Enter your current age and desired retirement age to establish your timeline",
+        "Input your current retirement savings balance from 401k, IRA, and other accounts",
+        "Specify your annual contribution amount to retirement accounts",
+        "Set your expected annual investment return rate based on your risk tolerance",
+        "Include estimated monthly Social Security benefits if applicable",
+        "Review projections and adjust contributions or retirement age as needed"
+      ],
+      "inputsExplained": [
+        "Current and retirement age determine how many years your money has to grow",
+        "Current savings balance represents all retirement accounts combined",
+        "Annual contribution shows how much you plan to add to retirement accounts yearly",
+        "Expected return rate reflects your investment portfolio's projected growth",
+        "Social Security benefit estimates monthly government retirement payments"
+      ],
+      "formulaExplanation": "The retirement calculator uses compound interest formulas to project savings growth: Future Value = Current Balance × (1 + r)^n + Annual Contribution × [(1 + r)^n - 1] / r, where r is the annual return rate and n is years until retirement. Monthly retirement income combines investment withdrawals (typically 4% annually) with Social Security benefits. This comprehensive approach accounts for both accumulation during working years and sustainable withdrawal during retirement, ensuring your money lasts as long as you do.",
+      "examples": [
+        "A 30-year-old saving $6,000 annually with $50,000 current balance at 7% returns will have $1.2 million by age 65, providing $4,800 monthly ($48,000 annually) plus Social Security benefits.",
+        "Someone starting at age 45 with same contributions reaches only $680,000 by age 65, showing how delaying savings by 15 years costs over $500,000 in retirement security."
+      ],
+      "resultsExplanation": [
+        "Projected retirement savings shows total accumulated at retirement age",
+        "Monthly retirement income estimates sustainable withdrawal amount",
+        "Years to retirement displays timeline remaining",
+        "Total contributions reveals your cumulative investment amount"
+      ],
+      "whoItsFor": "This retirement calculator serves young professionals starting retirement planning, mid-career individuals assessing progress, pre-retirees evaluating readiness, financial advisors providing client projections, couples planning joint retirement income, and anyone wanting to understand retirement savings requirements. It's particularly valuable for those changing jobs, receiving windfalls, or experiencing life changes that affect retirement planning.",
+      "disclaimer": "This calculator provides estimates based on compound interest and Social Security benefit assumptions. Actual investment returns fluctuate with market conditions and cannot be guaranteed. Social Security benefits depend on earnings history and may change with legislation. Inflation, taxes, healthcare costs, and personal circumstances affect retirement needs. This tool is for educational purposes only and should not replace professional financial advice. Consult certified financial planners for personalized retirement strategies.",
+      "relatedTools": [
+        "Savings calculators for understanding compound interest growth rates",
+        "Investment calculators for comparing different portfolio returns",
+        "Social Security calculators for estimating government benefit amounts"
+      ],
+      "faqs": [
+        {
+          "question": "How much do I need to save for retirement?",
+          "answer": "Most financial experts recommend saving 15-20 times your pre-retirement annual income. For a $60,000 salary, you'd need $900,000-$1.2 million. This provides 4% annual withdrawal ($3,000-$4,800 monthly) plus Social Security. Use our calculator to determine your specific target based on desired retirement income and expected returns."
+        },
+        {
+          "question": "What's the best age to start saving for retirement?",
+          "answer": "The earlier, the better. Starting at age 25 with $300 monthly at 7% returns accumulates $1.2 million by age 65. Waiting until age 35 reduces this to $680,000 - losing over $500,000. Even small amounts early provide compound interest time to work, making retirement goals much more achievable."
+        },
+        {
+          "question": "How do I know what withdrawal rate is safe in retirement?",
+          "answer": "The 4% rule suggests withdrawing 4% annually (plus inflation adjustments) from retirement savings. For $500,000 saved, this provides $20,000 yearly initially. This rate historically sustained 30+ year retirements through market fluctuations. Conservative investors use 3%, aggressive investors might use 5%, but personal risk tolerance and life expectancy matter."
+        },
+        {
+          "question": "Should I max out my 401k or pay off debt first?",
+          "answer": "Compare interest rates: if mortgage is 4% but 401k earns 7% pre-tax, investing wins. But if credit card debt costs 18%, pay that first. Generally, prioritize emergency fund, then high-interest debt, then max tax-advantaged retirement accounts. Use the calculator to see how different contribution levels affect your retirement security."
+        },
+        {
+          "question": "How does Social Security factor into retirement planning?",
+          "answer": "Social Security replaces about 40% of pre-retirement income for average earners, but less for high earners. Full benefits start at age 67, with reduced benefits from age 62. Delaying benefits to age 70 increases payments by 8% annually. Include estimated benefits in planning, but don't rely solely on them - plan as if they'll be 20-30% lower than promised."
+        }
+      ]
+    }
   }
 }

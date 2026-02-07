@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import { CalculatorInfo, CALCULATOR_CATEGORIES, getAllCalculatorsForHomepage } from '@/lib/categoryUtils';
 import { isPopularCalculator } from '@/lib/popularCalculators';
 import CategoryNavigation from '@/components/CategoryNavigation';
+import DE_NL_SELECTED_CALCULATORS from '@/lib/DE_NL_SELECTED_CALCULATORS.json';
 
 interface HomePageSimpleProps {
   language?: string;
@@ -22,6 +23,13 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
 
   // Group calculators by category
   const categorizedCalculators = initialCalculators.reduce((acc, calc) => {
+    // Filter to only selected calculators for DE/NL pages
+    if (['de', 'nl'].includes(language)) {
+      if (!DE_NL_SELECTED_CALCULATORS.calculators.includes(calc.slug)) {
+        return acc; // Skip this calculator
+      }
+    }
+    
     const category = CALCULATOR_CATEGORIES[calc.slug as keyof typeof CALCULATOR_CATEGORIES] || 'utility';
     if (!acc[category]) {
       acc[category] = [];
@@ -36,6 +44,13 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
   // Filter calculators based on search
   const filteredBySearch = searchQuery.trim()
     ? initialCalculators.filter(calc => {
+        // Filter to only selected calculators for DE/NL pages
+        if (['de', 'nl'].includes(language)) {
+          if (!DE_NL_SELECTED_CALCULATORS.calculators.includes(calc.slug)) {
+            return false;
+          }
+        }
+        
         const query = searchQuery.toLowerCase();
         return calc.name.toLowerCase().includes(query) ||
           calc.summary.toLowerCase().includes(query) ||
@@ -76,10 +91,16 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
 
     const allCalcs = getAllCalculatorsForHomepage(language);
     const query = floatingSearchQuery.toLowerCase();
-    const filtered = allCalcs.filter(calc =>
-      calc.name.toLowerCase().includes(query) ||
-      calc.summary.toLowerCase().includes(query)
-    );
+    const filtered = allCalcs.filter(calc => {
+      // Filter to only selected calculators for DE/NL pages
+      if (['de', 'nl'].includes(language)) {
+        if (!DE_NL_SELECTED_CALCULATORS.calculators.includes(calc.slug)) {
+          return false;
+        }
+      }
+      return calc.name.toLowerCase().includes(query) ||
+        calc.summary.toLowerCase().includes(query);
+    });
     setFloatingSearchResults(filtered);
   }, [floatingSearchQuery, language]);
 
@@ -250,6 +271,84 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
         math: 'Calculs scientifiques, calculs de pourcentage, géométrie, algèbre et statistiques.',
         utility: 'Conversions d\'unités, calculs de fuseau horaire, calculs de date et outils de mesure.',
         lifestyle: 'Calculs d\'âge, calculateurs de pourboire, calculs de réduction et aides pour la vie quotidienne.'
+      }
+    },
+    de: {
+      title: 'Rechner',
+      heroTitle: 'Kostenlose Online-Rechner',
+      heroDescription: 'Schnelle und genaue Rechner für Ihre täglichen Bedürfnisse. Von der Finanzplanung bis zur Gesundheitsverfolgung finden Sie den perfekten Rechner für jede Berechnung.',
+      search: 'Rechner suchen...',
+      categories: {
+        financial: 'Finanzrechner',
+        health: 'Gesundheits- und Fitnessrechner',
+        math: 'Mathematische Rechner',
+        utility: 'Nützliche Rechner',
+        lifestyle: 'Lebensstil Rechner'
+      },
+      categoryDescriptions: {
+        financial: 'Verwalten Sie Ihr Geld mit Rechnern für Budgetierung, Kredite, Hypotheken, Steuern, Gehaltsumrechnungen und Investitionen',
+        health: 'Verfolgen Sie Ihre Fitnessziele mit BMI-, Kalorien- und Körperzusammensetzungsrechnern',
+        math: 'Lösen Sie mathematische Probleme mit unseren wissenschaftlichen und statistischen Rechnern',
+        utility: 'Konvertieren Sie Einheiten, berechnen Sie Zeit und handhaben Sie alltägliche Messungen',
+        lifestyle: 'Hilfreiche Tools für den Alltag einschließlich Alter, Trinkgeld und Rabattrechner'
+      },
+      allCalculators: 'Alle Rechner',
+      results: 'Ergebnisse',
+      noResults: 'Keine Rechner gefunden, die Ihrer Suche entsprechen.',
+      whyUse: 'Warum Unsere Kostenlosen Online-Rechner Verwenden?',
+      benefits: {
+        fast: { title: 'Schnelle & Genave Berechnungen', desc: 'Erhalten Sie sofortige, präzise Ergebnisse mit unseren professionell programmierten Online-Rechnern. Jeder Rechner verwendet verifizierte Formeln und Algorithmen für Genauigkeit. Kein Download von Apps, keine Softwareinstallation, keine Kontoregistrierung erforderlich - öffnen Sie einfach Ihren Browser und beginnen Sie sofort mit der Berechnung.' },
+        mobile: { title: 'Mobilfreundlich & Plattformübergreifend', desc: 'Alle unsere Rechner sind vollständig responsiv und funktionieren nahtlos auf jedem Gerät - Smartphones (iPhone, Android), Tablets (iPad, Samsung), Laptops und Desktop-Computer. Egal ob Sie Chrome, Safari, Firefox oder Edge verwenden, unsere Rechner bieten die gleiche reibungslose Erfahrung.' },
+        free: { title: '100% Kostenlos - Keine Versteckten Kosten', desc: 'Vollständig kostenlos zu verwenden ohne versteckte Gebühren, Premium-Abonnements oder Paywalls. Keine lästigen Werbeanzeigen, die Ihre Berechnungen blockieren oder Ihren Arbeitsablauf unterbrechen. Unbegrenzter Zugriff auf alle Rechner - verwenden Sie sie so oft wie nötig für persönliche, pädagogische oder berufliche Zwecke.' },
+        privacy: { title: 'Datenschutzfokussiert & Sicher', desc: 'Ihr Datenschutz hat für uns Priorität. Wir speichern, sichern oder verfolgen Ihre Berechnungseingaben oder -ergebnisse nicht. Keine Registrierung bedeutet, dass Ihre persönlichen Informationen privat bleiben. Alle Berechnungen werden lokal in Ihrem Browser für maximale Sicherheit durchgeführt.' }
+      },
+      popularCategories: 'Beliebte Rechner-Kategorien für Jeden Bedarf',
+      popularCategoriesDesc: 'Unsere umfassende Online-Rechner-Sammlung deckt jeden Aspekt des täglichen Lebens, der Arbeit und Bildung ab:',
+      categoryDetails: {
+        financial: 'Finanzplanungstools einschließlich Hypothekenrechner, Kredit-Zahlungsrechner, Zinseszinsrechner, Investment-Rendite-Rechner, Ruhestandsplanung, Budgetverwaltung, Steuerschätzung, Gehalts- und Einkommensrechner, EMI-Rechner und ROI-Rechner.',
+        health: 'Gesundheits- und Fitnessrechner einschließlich BMI (Body Mass Index), BMR (Basal Metabolic Rate), TDEE (Total Daily Energy Expenditure), Kalorienzähler, Makrorechner, Körperfettprozentsatz, Idealgewicht, Schwangerschaftstermin, Wasseraufnahme und Ernährungsverfolgungstools.',
+        math: 'Mathematische Tools für Schüler und Fachleute einschließlich wissenschaftlicher Rechner, Prozentrechner, Bruchrechner, Algebra-Löser, Geometrierechner (Fläche, Volumen, Umfang), Statistikrechner (Mittelwert, Median, Modus, Standardabweichung) und Trigonometrierechner.',
+        utility: 'Alltägliche Hilfstools einschließlich Einheitenumrechner (Länge, Gewicht, Temperatur, Währung), Zeitzonen-Umrechner, Datumsrechner, Altersrechner, Wortzähler, Zahlenumrechner und Messumrechnungstools.',
+        lifestyle: 'Hilfen für den Alltag einschließlich Altersrechner, Trinkgeldrechner, Rabattrechner, GPA-Rechner, Liebesrechner und andere praktische Tools für alltägliche Situationen und schnelle Berechnungen.'
+      }
+    },
+    nl: {
+      title: 'Rekenmachines',
+      heroTitle: 'Gratis Online Rekenmachines',
+      heroDescription: 'Snelle en nauwkeurige rekenmachines voor uw dagelijkse behoeften. Van financiële planning tot gezondheidsmonitoring, vind de perfecte rekenmachine voor elke berekening.',
+      search: 'Zoek rekenmachines...',
+      categories: {
+        financial: 'Financiële Rekenmachines',
+        health: 'Gezondheids- en Fitness Rekenmachines',
+        math: 'Wiskundige Rekenmachines',
+        utility: 'Hulpmiddel Rekenmachines',
+        lifestyle: 'Levensstijl Rekenmachines'
+      },
+      categoryDescriptions: {
+        financial: 'Beheer uw geld met rekenmachines voor budgettering, leningen, hypotheken, belastingen, salarisconversies en investeringen',
+        health: 'Volg uw fitnessdoelen met BMI-, calorie- en lichaamsamenstellingsrekenmachines',
+        math: 'Los wiskundige problemen op met onze wetenschappelijke en statistische rekenmachines',
+        utility: 'Converteer eenheden, bereken tijd en handel dagelijkse metingen af',
+        lifestyle: 'Handige tools voor dagelijks leven inclusief leeftijd, fooi en kortingsrekenmachines'
+      },
+      allCalculators: 'Alle Rekenmachines',
+      results: 'resultaten',
+      noResults: 'Geen rekenmachines gevonden die overeenkomen met uw zoekopdracht.',
+      whyUse: 'Waarom Onze Gratis Online Rekenmachines Gebruiken?',
+      benefits: {
+        fast: { title: 'Snelle & Nauwkeurige Berekeningen', desc: 'Krijg directe, nauwkeurige resultaten met onze professioneel geprogrammeerde online rekenmachines. Elke rekenmachine gebruikt geverifieerde formules en algoritmen voor nauwkeurigheid. Geen apps downloaden, geen software installeren, geen accounts aanmaken - open gewoon uw browser en begin direct met berekenen.' },
+        mobile: { title: 'Mobielvriendelijk & Cross-Platform', desc: 'Al onze rekenmachines zijn volledig responsief en werken naadloos op elk apparaat - smartphones (iPhone, Android), tablets (iPad, Samsung), laptops en desktopcomputers. Of u nu Chrome, Safari, Firefox of Edge gebruikt, onze rekenmachines bieden dezelfde soepele ervaring.' },
+        free: { title: '100% Gratis - Geen Verborgen Kosten', desc: 'Volledig gratis te gebruiken zonder verborgen kosten, premium abonnementen of paywalls. Geen irritante advertenties die uw berekeningen blokkeren of uw workflow onderbreken. Onbeperkte toegang tot alle rekenmachines - gebruik ze zo vaak als u nodig heeft voor persoonlijke, educatieve of professionele doeleinden.' },
+        privacy: { title: 'Privacygericht & Veilig', desc: 'Uw gegevensprivacy heeft onze prioriteit. Wij slaan, beveiligen of volgen uw berekening invoeren of resultaten niet op. Geen registratie betekent dat uw persoonlijke informatie privé blijft. Alle berekeningen worden lokaal in uw browser uitgevoerd voor maximale veiligheid.' }
+      },
+      popularCategories: 'Populaire Rekenmachine Categorieën voor Elke Behoefte',
+      popularCategoriesDesc: 'Onze uitgebreide online rekenmachine collectie dekt elk aspect van dagelijks leven, werk en onderwijs:',
+      categoryDetails: {
+        financial: 'Financiële planningstools inclusief hypotheekrekenmachines, leningbetalingsrekenmachines, samengestelde rente rekenmachines, investeringsrendement rekenmachines, pensioenplanning, budgetbeheer, belastingsschatting, salaris- en inkomensrekenmachines, EMI-rekenmachines en ROI-rekenmachines.',
+        health: 'Gezondheids- en fitness rekenmachines inclusief BMI (Body Mass Index), BMR (Basal Metabolic Rate), TDEE (Total Daily Energy Expenditure), calorietellers, macro rekenmachines, lichaamsvetpercentage, ideaal gewicht, zwangerschapstermijn, waterinname en voedingsvolgingstools.',
+        math: 'Wiskundige tools voor studenten en professionals inclusief wetenschappelijke rekenmachines, percentage rekenmachines, breuken rekenmachines, algebra oplosser, meetkunderekenmachines (oppervlakte, volume, omtrek), statistiek rekenmachines (gemiddelde, mediaan, modus, standaardafwijking) en trigonometrie rekenmachines.',
+        utility: 'Dagelijkse hulpmiddelen inclusief eenhedenconverters (lengte, gewicht, temperatuur, valuta), tijdzone converters, datum rekenmachines, leeftijd rekenmachines, woordentellers, getallenconverters en meetconversie tools.',
+        lifestyle: 'Dagelijkse leven helpers inclusief leeftijd rekenmachines, fooi rekenmachines, korting rekenmachines, GPA rekenmachines, liefdes rekenmachines en andere praktische tools voor dagelijkse situaties en snelle berekeningen.'
       }
     }
   };
@@ -471,9 +570,15 @@ export default function HomePageSimple({ language = 'en', initialCalculators = [
               
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-2">
                 {initialCalculators
-                  .filter((calc, index, self) => 
-                    index === self.findIndex(c => c.slug === calc.slug)
-                  )
+                  .filter((calc, index, self) => {
+                    // Filter to only selected calculators for DE/NL pages
+                    if (['de', 'nl'].includes(language)) {
+                      if (!DE_NL_SELECTED_CALCULATORS.calculators.includes(calc.slug)) {
+                        return false;
+                      }
+                    }
+                    return index === self.findIndex(c => c.slug === calc.slug);
+                  })
                   .sort((a, b) => a.name.localeCompare(b.name))
                   .map((calc) => {
                     const category = CALCULATOR_CATEGORIES[calc.slug as keyof typeof CALCULATOR_CATEGORIES] || 'utility';

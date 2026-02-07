@@ -1268,5 +1268,435 @@
       ]
     },
     "component": "TaxCalculator"
+  },
+  "de": {
+    "title": "Steuerrechner",
+    "seoTitle": "Tax Rechner 2026 - How Much Is My Tax?",
+    "summary": "Estimate income tax liability and take-home pay.",
+    "description": "Calculate your income tax liability and take-home pay with our comprehensive tax calculator. This tool helps you estimate federal income taxes, state taxes, and Social Security/Medicare contributions to determine your net pay after taxes. Perfect for salary planning, tax preparation, and understanding your overall tax burden.",
+    "category": "financial",
+    "difficulty": "Fortgeschritten",
+    "slug": "tax-calculator",
+    "calculatorComponent": {
+      "componentName": "TaxCalculator",
+      "inputs": [
+        {
+          "name": "filingStatus",
+          "label": "Filing Status",
+          "type": "select",
+          "options": [
+            {
+              "value": "single",
+              "label": "Single"
+            },
+            {
+              "value": "married-joint",
+              "label": "Married Filing Jointly"
+            },
+            {
+              "value": "married-separate",
+              "label": "Married Filing Separately"
+            },
+            {
+              "value": "head-household",
+              "label": "Head of Household"
+            }
+          ],
+          "default": "single"
+        },
+        {
+          "name": "annualIncome",
+          "label": "Annual Income ($)",
+          "type": "number",
+          "default": 75000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "dependents",
+          "label": "Number of Dependents",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "state",
+          "label": "State (Optional)",
+          "type": "select",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "No State Tax"
+            },
+            {
+              "value": "california",
+              "label": "California (13.3%)"
+            },
+            {
+              "value": "new-york",
+              "label": "New York (8.82%)"
+            },
+            {
+              "value": "texas",
+              "label": "Texas (No State Income Tax)"
+            },
+            {
+              "value": "florida",
+              "label": "Florida (No State Income Tax)"
+            }
+          ]
+        },
+        {
+          "name": "payPeriods",
+          "label": "Pay Periods per Year",
+          "type": "select",
+          "options": [
+            {
+              "value": "52",
+              "label": "Weekly (52)"
+            },
+            {
+              "value": "26",
+              "label": "Bi-weekly (26)"
+            },
+            {
+              "value": "24",
+              "label": "Semi-monthly (24)"
+            },
+            {
+              "value": "12",
+              "label": "Monthly (12)"
+            }
+          ],
+          "default": "26"
+        },
+        {
+          "name": "pretaxDeductions",
+          "label": "Pre-tax Deductions ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 50
+        }
+      ],
+      "formula": "Federal Tax = (Taxable Income × Tax Rate) - Standard Deduction; State Tax = Federal Tax × State Rate; Take-Home Pay = Gross Pay - Federal Tax - State Tax - FICA",
+      "output": {
+        "label": "Annual Take-Home Pay",
+        "default": "Enter income details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Federal Income Tax",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "State Income Tax",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "FICA Taxes (SS + Medicare)",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "Net Pay per Pay Period",
+          "field": "netPerPeriod",
+          "format": "currency"
+        },
+        {
+          "label": "Effective Tax Rate",
+          "field": "effectiveRate",
+          "format": "percentage"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate your income tax liability and take-home pay with precision using our comprehensive tax calculator. Understanding your tax obligations is essential for financial planning, salary negotiations, and budgeting. Our calculator estimates federal income taxes, state taxes, FICA contributions (Social Security and Medicare), and determines your net pay after all withholdings. Whether you're planning a career move, negotiating salary, or simply want to understand where your paycheck goes, this calculator provides the clarity you need to make informed financial decisions.",
+      "benefits": [
+        "Estimate federal and state income tax liability accurately",
+        "Calculate take-home pay after all tax withholdings",
+        "Compare different filing statuses to optimize tax strategy",
+        "Plan salary negotiations with accurate net pay projections",
+        "Understand FICA contributions (Social Security and Medicare)",
+        "Account for pre-tax deductions like 401(k) and health insurance"
+      ],
+      "steps": [
+        "Select your tax filing status (Single, Married Filing Jointly, etc.)",
+        "Enter your gross annual income or hourly wage",
+        "Add state tax rate if applicable to your location",
+        "Include pre-tax deductions such as 401(k) contributions",
+        "Review estimated tax liability and take-home pay breakdown"
+      ],
+      "inputsExplained": [
+        "Filing status affects tax brackets and standard deduction amounts",
+        "Gross income is your total earnings before any deductions or taxes",
+        "State tax rates vary significantly by location, from 0% to over 13%",
+        "Pre-tax deductions reduce your taxable income, lowering overall tax burden"
+      ],
+      "formulaExplanation": "Tax calculation uses progressive tax brackets where different portions of income are taxed at increasing rates. Federal tax applies graduated rates to taxable income after deducting standard or itemized deductions. FICA taxes are flat percentages: 6.2% for Social Security (up to wage base limit) and 1.45% for Medicare. State taxes vary by location with some states having no income tax while others have rates exceeding 10%. The calculator combines all these components to determine total tax liability and net take-home pay.",
+      "examples": [
+        "Single filer earning $60,000 annually pays approximately $8,000 in federal tax and $4,590 in FICA, taking home about $47,410",
+        "Married couple filing jointly with $100,000 combined income pays approximately $10,000 in federal tax, resulting in $82,000 take-home after FICA",
+        "High earner at $150,000 in California faces federal tax of $26,000 plus state tax of $10,000, taking home approximately $106,000"
+      ],
+      "resultsExplanation": [
+        "Federal tax shows amount owed to federal government based on progressive brackets",
+        "State tax displays state income tax obligations if applicable",
+        "FICA contributions cover Social Security and Medicare benefits",
+        "Take-home pay is your net salary after all tax withholdings",
+        "Effective tax rate shows your average tax percentage across all brackets"
+      ],
+      "whoItsFor": "This calculator serves employees planning salary negotiations, job seekers comparing offer packages, freelancers estimating quarterly tax payments, financial planners advising clients, individuals relocating to different states, recent graduates entering workforce, and anyone wanting to understand their tax obligations. It's particularly valuable for those comparing job offers in different locations, planning major purchases or investments, optimizing retirement contributions, or simply budgeting household expenses based on accurate net income.",
+      "disclaimer": "This tax calculator provides estimates based on standard tax rates and deductions. Actual tax liability depends on specific circumstances including itemized deductions, tax credits, alternative minimum tax considerations, and state-specific rules. Tax laws change annually and vary significantly by state and filing status. This tool does not constitute tax advice. Consult qualified tax professionals or CPAs for accurate tax planning and preparation. Results are educational estimates only.",
+      "relatedTools": [
+        "Paycheck calculator for detailed pay period breakdowns",
+        "Salary calculator for annual compensation analysis",
+        "Income tax calculator for federal tax-specific calculations"
+      ],
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Belastingcalculator",
+    "seoTitle": "Tax Calculator 2026 - How Much Is My Tax?",
+    "summary": "Estimate income tax liability and take-home pay.",
+    "description": "Calculate your income tax liability and take-home pay with our comprehensive tax calculator. This tool helps you estimate federal income taxes, state taxes, and Social Security/Medicare contributions to determine your net pay after taxes. Perfect for salary planning, tax preparation, and understanding your overall tax burden.",
+    "category": "financial",
+    "difficulty": "Gevorderd",
+    "slug": "tax-calculator",
+    "calculatorComponent": {
+      "componentName": "TaxCalculator",
+      "inputs": [
+        {
+          "name": "filingStatus",
+          "label": "Filing Status",
+          "type": "select",
+          "options": [
+            {
+              "value": "single",
+              "label": "Single"
+            },
+            {
+              "value": "married-joint",
+              "label": "Married Filing Jointly"
+            },
+            {
+              "value": "married-separate",
+              "label": "Married Filing Separately"
+            },
+            {
+              "value": "head-household",
+              "label": "Head of Household"
+            }
+          ],
+          "default": "single"
+        },
+        {
+          "name": "annualIncome",
+          "label": "Annual Income ($)",
+          "type": "number",
+          "default": 75000,
+          "min": 0,
+          "max": 10000000,
+          "step": 1000
+        },
+        {
+          "name": "dependents",
+          "label": "Number of Dependents",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "name": "state",
+          "label": "State (Optional)",
+          "type": "select",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "No State Tax"
+            },
+            {
+              "value": "california",
+              "label": "California (13.3%)"
+            },
+            {
+              "value": "new-york",
+              "label": "New York (8.82%)"
+            },
+            {
+              "value": "texas",
+              "label": "Texas (No State Income Tax)"
+            },
+            {
+              "value": "florida",
+              "label": "Florida (No State Income Tax)"
+            }
+          ]
+        },
+        {
+          "name": "payPeriods",
+          "label": "Pay Periods per Year",
+          "type": "select",
+          "options": [
+            {
+              "value": "52",
+              "label": "Weekly (52)"
+            },
+            {
+              "value": "26",
+              "label": "Bi-weekly (26)"
+            },
+            {
+              "value": "24",
+              "label": "Semi-monthly (24)"
+            },
+            {
+              "value": "12",
+              "label": "Monthly (12)"
+            }
+          ],
+          "default": "26"
+        },
+        {
+          "name": "pretaxDeductions",
+          "label": "Pre-tax Deductions ($)",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "step": 50
+        }
+      ],
+      "formula": "Federal Tax = (Taxable Income × Tax Rate) - Standard Deduction; State Tax = Federal Tax × State Rate; Take-Home Pay = Gross Pay - Federal Tax - State Tax - FICA",
+      "output": {
+        "label": "Annual Take-Home Pay",
+        "default": "Enter income details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Federal Income Tax",
+          "field": "federalTax",
+          "format": "currency"
+        },
+        {
+          "label": "State Income Tax",
+          "field": "stateTax",
+          "format": "currency"
+        },
+        {
+          "label": "FICA Taxes (SS + Medicare)",
+          "field": "ficaTax",
+          "format": "currency"
+        },
+        {
+          "label": "Net Pay per Pay Period",
+          "field": "netPerPeriod",
+          "format": "currency"
+        },
+        {
+          "label": "Effective Tax Rate",
+          "field": "effectiveRate",
+          "format": "percentage"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate your income tax liability and take-home pay with precision using our comprehensive tax calculator. Understanding your tax obligations is essential for financial planning, salary negotiations, and budgeting. Our calculator estimates federal income taxes, state taxes, FICA contributions (Social Security and Medicare), and determines your net pay after all withholdings. Whether you're planning a career move, negotiating salary, or simply want to understand where your paycheck goes, this calculator provides the clarity you need to make informed financial decisions.",
+      "benefits": [
+        "Estimate federal and state income tax liability accurately",
+        "Calculate take-home pay after all tax withholdings",
+        "Compare different filing statuses to optimize tax strategy",
+        "Plan salary negotiations with accurate net pay projections",
+        "Understand FICA contributions (Social Security and Medicare)",
+        "Account for pre-tax deductions like 401(k) and health insurance"
+      ],
+      "steps": [
+        "Select your tax filing status (Single, Married Filing Jointly, etc.)",
+        "Enter your gross annual income or hourly wage",
+        "Add state tax rate if applicable to your location",
+        "Include pre-tax deductions such as 401(k) contributions",
+        "Review estimated tax liability and take-home pay breakdown"
+      ],
+      "inputsExplained": [
+        "Filing status affects tax brackets and standard deduction amounts",
+        "Gross income is your total earnings before any deductions or taxes",
+        "State tax rates vary significantly by location, from 0% to over 13%",
+        "Pre-tax deductions reduce your taxable income, lowering overall tax burden"
+      ],
+      "formulaExplanation": "Tax calculation uses progressive tax brackets where different portions of income are taxed at increasing rates. Federal tax applies graduated rates to taxable income after deducting standard or itemized deductions. FICA taxes are flat percentages: 6.2% for Social Security (up to wage base limit) and 1.45% for Medicare. State taxes vary by location with some states having no income tax while others have rates exceeding 10%. The calculator combines all these components to determine total tax liability and net take-home pay.",
+      "examples": [
+        "Single filer earning $60,000 annually pays approximately $8,000 in federal tax and $4,590 in FICA, taking home about $47,410",
+        "Married couple filing jointly with $100,000 combined income pays approximately $10,000 in federal tax, resulting in $82,000 take-home after FICA",
+        "High earner at $150,000 in California faces federal tax of $26,000 plus state tax of $10,000, taking home approximately $106,000"
+      ],
+      "resultsExplanation": [
+        "Federal tax shows amount owed to federal government based on progressive brackets",
+        "State tax displays state income tax obligations if applicable",
+        "FICA contributions cover Social Security and Medicare benefits",
+        "Take-home pay is your net salary after all tax withholdings",
+        "Effective tax rate shows your average tax percentage across all brackets"
+      ],
+      "whoItsFor": "This calculator serves employees planning salary negotiations, job seekers comparing offer packages, freelancers estimating quarterly tax payments, financial planners advising clients, individuals relocating to different states, recent graduates entering workforce, and anyone wanting to understand their tax obligations. It's particularly valuable for those comparing job offers in different locations, planning major purchases or investments, optimizing retirement contributions, or simply budgeting household expenses based on accurate net income.",
+      "disclaimer": "This tax calculator provides estimates based on standard tax rates and deductions. Actual tax liability depends on specific circumstances including itemized deductions, tax credits, alternative minimum tax considerations, and state-specific rules. Tax laws change annually and vary significantly by state and filing status. This tool does not constitute tax advice. Consult qualified tax professionals or CPAs for accurate tax planning and preparation. Results are educational estimates only.",
+      "relatedTools": [
+        "Paycheck calculator for detailed pay period breakdowns",
+        "Salary calculator for annual compensation analysis",
+        "Income tax calculator for federal tax-specific calculations"
+      ],
+      "faqs": [
+        {
+          "question": "How accurate is this calculator?",
+          "answer": "This calculator uses industry-standard formulas to provide accurate results based on your inputs. Results are estimates and may vary."
+        },
+        {
+          "question": "What information do I need?",
+          "answer": "You'll need the specific input values required by the calculator. All required fields are clearly labeled."
+        },
+        {
+          "question": "Can I save my results?",
+          "answer": "Yes, you can save results by taking a screenshot or noting the values for future reference."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes, all calculations are performed locally in your browser. We don't store your data."
+        },
+        {
+          "question": "How often should I use this?",
+          "answer": "Use the calculator whenever you need to make calculations or when your situation changes."
+        }
+      ]
+    }
   }
 }

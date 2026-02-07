@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-const validLanguages = ['en', 'es', 'pt', 'fr'];
+const validLanguages = ['en', 'es', 'pt', 'fr', 'de', 'nl'];
 
 const translations = {
   en: {
@@ -55,6 +55,32 @@ const translations = {
     response: 'Temps de Réponse',
     responseText: 'Nous répondons généralement à toutes les demandes dans les 24 à 48 heures pendant les jours ouvrables.',
     lastUpdated: 'Dernière Mise à Jour: Janvier 2026'
+  },
+  de: {
+    title: 'Kontakt | Quick Calculator',
+    description: 'Kontaktieren Sie das Quick Calculator-Team.',
+    heading: 'Kontakt',
+    intro: 'Wir würden gerne von Ihnen hören! Wenn Sie Fragen, Vorschläge oder Feedback haben, wenden Sie sich bitte an uns.',
+    email: 'E-Mail',
+    generalEmail: 'Allgemeine Anfragen: contact@quick-calculator.org',
+    supportEmail: 'Unterstützung: support@quick-calculator.org',
+    privacyEmail: 'Datenschutzbedenken: privacy@quick-calculator.org',
+    response: 'Antwortzeit',
+    responseText: 'Wir antworten normalerweise auf alle Anfragen innerhalb von 24-48 Stunden an Arbeitstagen.',
+    lastUpdated: 'Zuletzt aktualisiert: Januar 2026'
+  },
+  nl: {
+    title: 'Contact | Quick Calculator',
+    description: 'Neem contact op met het Quick Calculator-team.',
+    heading: 'Contact',
+    intro: 'Wij horen graag van u! Heeft u vragen, suggesties of feedback, neem dan gerust contact met ons op.',
+    email: 'E-mail',
+    generalEmail: 'Algemene Vragen: contact@quick-calculator.org',
+    supportEmail: 'Ondersteuning: support@quick-calculator.org',
+    privacyEmail: 'Privacybedenken: privacy@quick-calculator.org',
+    response: 'Reactietijd',
+    responseText: 'We reageren normaal op alle verzoeken binnen 24-48 uur op werkdagen.',
+    lastUpdated: 'Laatst bijgewerkt: januari 2026'
   }
 };
 
@@ -75,12 +101,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.title,
     description: t.description,
     alternates: {
-      canonical: `https://quick-calculator.org/${lang}/contact`,
+      canonical: lang === 'en' ? 'https://quick-calculator.org/contact' : `https://quick-calculator.org/${lang}/contact`,
       languages: {
         'en': 'https://quick-calculator.org/en/contact',
         'es': 'https://quick-calculator.org/es/contact',
-        'fr': 'https://quick-calculator.org/fr/contact',
         'pt': 'https://quick-calculator.org/pt/contact',
+        'fr': 'https://quick-calculator.org/fr/contact',
+        'de': 'https://quick-calculator.org/de/contact',
+        'nl': 'https://quick-calculator.org/nl/contact',
         'x-default': 'https://quick-calculator.org/en/contact',
       }
     }

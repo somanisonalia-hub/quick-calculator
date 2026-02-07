@@ -786,5 +786,297 @@
       ]
     },
     "component": "DateCalculator"
+  },
+  "de": {
+    "title": "Datumsrechner",
+    "seoTitle": "Date Rechner - How Many Days Between Two Dates?",
+    "summary": "Calculate days between dates, add or subtract time periods, and perform date arithmetic operations.",
+    "description": "Our date calculator helps you calculate the number of days between two dates, add or subtract days, weeks, months, or years from any date, and perform various date-related calculations. Perfect for event planning, deadline tracking, and understanding time periods.",
+    "category": "utility",
+    "difficulty": "grundlagen",
+    "slug": "date-calculator",
+    "calculatorComponent": {
+      "componentName": "DateCalculator",
+      "inputs": [
+        {
+          "name": "calculationType",
+          "label": "Calculation Type",
+          "type": "select",
+          "default": "difference",
+          "options": [
+            "difference",
+            "add",
+            "subtract"
+          ]
+        },
+        {
+          "name": "startDate",
+          "label": "Start Date",
+          "type": "date",
+          "default": "2024-01-01"
+        },
+        {
+          "name": "endDate",
+          "label": "End Date",
+          "type": "date",
+          "default": "2024-01-31"
+        },
+        {
+          "name": "addSubtractValue",
+          "label": "Value to Add/Subtract",
+          "type": "number",
+          "default": 30,
+          "min": 1,
+          "max": 10000
+        },
+        {
+          "name": "addSubtractUnit",
+          "label": "Unit",
+          "type": "select",
+          "default": "days",
+          "options": [
+            "days",
+            "weeks",
+            "months",
+            "years"
+          ]
+        }
+      ],
+      "formula": "Date Difference = End Date - Start Date; New Date = Start Date ± (Value × Unit)",
+      "output": {
+        "label": "Result",
+        "default": "Enter dates above",
+        "format": "text"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Total Days",
+          "field": "totalDays",
+          "format": "number"
+        },
+        {
+          "label": "Weeks",
+          "field": "weeks",
+          "format": "number"
+        },
+        {
+          "label": "Months",
+          "field": "months",
+          "format": "number"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate dates and time periods with precision using our comprehensive date calculator. This essential planning tool helps you determine days between dates, add or subtract time periods, and perform complex date arithmetic operations. Whether you're planning project deadlines, tracking important events, calculating ages in days, or managing schedules, our calculator handles all date calculations with accuracy. The tool accounts for leap years, varying month lengths, and calendar irregularities to ensure reliable results for any date calculation needs.",
+      "benefits": [
+        "Provides accurate date calculations accounting for leap years and calendar irregularities",
+        "Supports multiple calculation types including differences, additions, and subtractions",
+        "Handles various time units from days to years for comprehensive date math",
+        "Perfect for planning events, deadlines, and project timelines",
+        "Includes business day calculations for professional scheduling",
+        "User-friendly interface suitable for all planning and calculation needs"
+      ],
+      "steps": [
+        "Select your calculation type (find difference between dates or add/subtract time)",
+        "Enter the starting date for your calculation",
+        "Specify the ending date or time period to add/subtract",
+        "Choose the time unit for your calculation (days, weeks, months, or years)",
+        "Review the calculated result and breakdown of time periods"
+      ],
+      "inputsExplained": [
+        "Start date establishes the beginning point for your date calculation",
+        "End date defines the conclusion point when calculating differences between dates",
+        "Time value specifies the quantity of time units to add or subtract",
+        "Time unit determines whether you're working with days, weeks, months, or years"
+      ],
+      "formulaExplanation": "Date calculations follow precise calendar mathematics that account for varying month lengths (28-31 days) and leap year rules. The calculator uses standard date arithmetic where differences are calculated by counting days between dates, and additions/subtractions apply the specified time periods while maintaining calendar accuracy. For example, adding one month to January 31st results in February 28th or 29th depending on leap year status, ensuring realistic date calculations.",
+      "examples": [
+        "Project deadline calculation: From June 1st to August 15th equals 75 days total",
+        "Event planning: Adding 90 days to March 1st gives May 30th for proper scheduling",
+        "Age in days calculation: From birth date January 1, 2000 to January 1, 2024 equals 8,766 days",
+        "Contract period: Subtracting 6 months from December 31st gives June 30th of the previous year"
+      ],
+      "resultsExplanation": [
+        "Total days shows the exact number of days between or added to dates",
+        "Calculated date displays the result of addition or subtraction operations",
+        "Time breakdown provides weeks, months, or other unit conversions for context",
+        "All calculations account for calendar irregularities and leap years"
+      ],
+      "whoItsFor": "This date calculator serves project managers tracking deadlines, event planners organizing timelines, students calculating historical periods, legal professionals working with contract dates, HR departments managing employee schedules, and anyone needing precise date calculations. It's particularly valuable for business professionals calculating delivery times, educators teaching about historical timelines, and individuals planning important life events or managing personal schedules.",
+      "disclaimer": "This calculator provides date calculations based on standard Gregorian calendar rules and current leap year definitions. Results are estimates for planning purposes and should be verified against official calendars or scheduling systems. For legal contracts, official deadlines, or critical business dates, consult with appropriate professionals or use certified calendar systems. Time zone differences and daylight saving time are not factored into calculations.",
+      "relatedTools": [
+        "Age calculators for determining exact ages in various time units",
+        "Time zone converters for coordinating schedules across different regions",
+        "Percentage calculators for determining completion rates and time allocation"
+      ],
+      "faqs": [
+        {
+          "question": "How does the date calculator handle leap years?",
+          "answer": "The calculator automatically accounts for leap years according to Gregorian calendar rules. Years divisible by 4 are leap years, except for years divisible by 100 but not by 400. This ensures accurate calculations for dates spanning February 29th and maintains proper calendar alignment across all date operations."
+        },
+        {
+          "question": "Can I calculate business days excluding weekends?",
+          "answer": "Yes, the calculator includes options for business day calculations that automatically exclude Saturdays and Sundays. This is particularly useful for project planning, contract deadlines, and business scheduling where only weekdays are counted as working days."
+        },
+        {
+          "question": "What happens when adding months to dates like January 31st?",
+          "answer": "The calculator handles irregular month endings intelligently. Adding one month to January 31st results in February 28th or 29th (depending on leap year), not March 3rd. This ensures realistic date calculations that match how people naturally think about monthly periods."
+        },
+        {
+          "question": "Can I calculate dates in the past or future?",
+          "answer": "Yes, the calculator works with any valid dates in the past or future. You can calculate historical date differences, plan far-future events, or determine dates relative to any starting point. The tool handles dates across different centuries and millennia accurately."
+        },
+        {
+          "question": "How accurate are the date calculations for long time periods?",
+          "answer": "Date calculations are highly accurate for any time period within the Gregorian calendar system. The calculator accounts for all calendar irregularities and maintains precision even for calculations spanning multiple decades or centuries. However, extremely long-term calculations may be affected by potential future calendar reforms."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Datum Rekenmachine",
+    "seoTitle": "Date Calculator - How Many Days Between Two Dates?",
+    "summary": "Calculate days between dates, add or subtract time periods, and perform date arithmetic operations.",
+    "description": "Our date calculator helps you calculate the number of days between two dates, add or subtract days, weeks, months, or years from any date, and perform various date-related calculations. Perfect for event planning, deadline tracking, and understanding time periods.",
+    "category": "utility",
+    "difficulty": "basis",
+    "slug": "date-calculator",
+    "calculatorComponent": {
+      "componentName": "DateCalculator",
+      "inputs": [
+        {
+          "name": "calculationType",
+          "label": "Calculation Type",
+          "type": "select",
+          "default": "difference",
+          "options": [
+            "difference",
+            "add",
+            "subtract"
+          ]
+        },
+        {
+          "name": "startDate",
+          "label": "Start Date",
+          "type": "date",
+          "default": "2024-01-01"
+        },
+        {
+          "name": "endDate",
+          "label": "End Date",
+          "type": "date",
+          "default": "2024-01-31"
+        },
+        {
+          "name": "addSubtractValue",
+          "label": "Value to Add/Subtract",
+          "type": "number",
+          "default": 30,
+          "min": 1,
+          "max": 10000
+        },
+        {
+          "name": "addSubtractUnit",
+          "label": "Unit",
+          "type": "select",
+          "default": "days",
+          "options": [
+            "days",
+            "weeks",
+            "months",
+            "years"
+          ]
+        }
+      ],
+      "formula": "Date Difference = End Date - Start Date; New Date = Start Date ± (Value × Unit)",
+      "output": {
+        "label": "Result",
+        "default": "Enter dates above",
+        "format": "text"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Total Days",
+          "field": "totalDays",
+          "format": "number"
+        },
+        {
+          "label": "Weeks",
+          "field": "weeks",
+          "format": "number"
+        },
+        {
+          "label": "Months",
+          "field": "months",
+          "format": "number"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate dates and time periods with precision using our comprehensive date calculator. This essential planning tool helps you determine days between dates, add or subtract time periods, and perform complex date arithmetic operations. Whether you're planning project deadlines, tracking important events, calculating ages in days, or managing schedules, our calculator handles all date calculations with accuracy. The tool accounts for leap years, varying month lengths, and calendar irregularities to ensure reliable results for any date calculation needs.",
+      "benefits": [
+        "Provides accurate date calculations accounting for leap years and calendar irregularities",
+        "Supports multiple calculation types including differences, additions, and subtractions",
+        "Handles various time units from days to years for comprehensive date math",
+        "Perfect for planning events, deadlines, and project timelines",
+        "Includes business day calculations for professional scheduling",
+        "User-friendly interface suitable for all planning and calculation needs"
+      ],
+      "steps": [
+        "Select your calculation type (find difference between dates or add/subtract time)",
+        "Enter the starting date for your calculation",
+        "Specify the ending date or time period to add/subtract",
+        "Choose the time unit for your calculation (days, weeks, months, or years)",
+        "Review the calculated result and breakdown of time periods"
+      ],
+      "inputsExplained": [
+        "Start date establishes the beginning point for your date calculation",
+        "End date defines the conclusion point when calculating differences between dates",
+        "Time value specifies the quantity of time units to add or subtract",
+        "Time unit determines whether you're working with days, weeks, months, or years"
+      ],
+      "formulaExplanation": "Date calculations follow precise calendar mathematics that account for varying month lengths (28-31 days) and leap year rules. The calculator uses standard date arithmetic where differences are calculated by counting days between dates, and additions/subtractions apply the specified time periods while maintaining calendar accuracy. For example, adding one month to January 31st results in February 28th or 29th depending on leap year status, ensuring realistic date calculations.",
+      "examples": [
+        "Project deadline calculation: From June 1st to August 15th equals 75 days total",
+        "Event planning: Adding 90 days to March 1st gives May 30th for proper scheduling",
+        "Age in days calculation: From birth date January 1, 2000 to January 1, 2024 equals 8,766 days",
+        "Contract period: Subtracting 6 months from December 31st gives June 30th of the previous year"
+      ],
+      "resultsExplanation": [
+        "Total days shows the exact number of days between or added to dates",
+        "Calculated date displays the result of addition or subtraction operations",
+        "Time breakdown provides weeks, months, or other unit conversions for context",
+        "All calculations account for calendar irregularities and leap years"
+      ],
+      "whoItsFor": "This date calculator serves project managers tracking deadlines, event planners organizing timelines, students calculating historical periods, legal professionals working with contract dates, HR departments managing employee schedules, and anyone needing precise date calculations. It's particularly valuable for business professionals calculating delivery times, educators teaching about historical timelines, and individuals planning important life events or managing personal schedules.",
+      "disclaimer": "This calculator provides date calculations based on standard Gregorian calendar rules and current leap year definitions. Results are estimates for planning purposes and should be verified against official calendars or scheduling systems. For legal contracts, official deadlines, or critical business dates, consult with appropriate professionals or use certified calendar systems. Time zone differences and daylight saving time are not factored into calculations.",
+      "relatedTools": [
+        "Age calculators for determining exact ages in various time units",
+        "Time zone converters for coordinating schedules across different regions",
+        "Percentage calculators for determining completion rates and time allocation"
+      ],
+      "faqs": [
+        {
+          "question": "How does the date calculator handle leap years?",
+          "answer": "The calculator automatically accounts for leap years according to Gregorian calendar rules. Years divisible by 4 are leap years, except for years divisible by 100 but not by 400. This ensures accurate calculations for dates spanning February 29th and maintains proper calendar alignment across all date operations."
+        },
+        {
+          "question": "Can I calculate business days excluding weekends?",
+          "answer": "Yes, the calculator includes options for business day calculations that automatically exclude Saturdays and Sundays. This is particularly useful for project planning, contract deadlines, and business scheduling where only weekdays are counted as working days."
+        },
+        {
+          "question": "What happens when adding months to dates like January 31st?",
+          "answer": "The calculator handles irregular month endings intelligently. Adding one month to January 31st results in February 28th or 29th (depending on leap year), not March 3rd. This ensures realistic date calculations that match how people naturally think about monthly periods."
+        },
+        {
+          "question": "Can I calculate dates in the past or future?",
+          "answer": "Yes, the calculator works with any valid dates in the past or future. You can calculate historical date differences, plan far-future events, or determine dates relative to any starting point. The tool handles dates across different centuries and millennia accurately."
+        },
+        {
+          "question": "How accurate are the date calculations for long time periods?",
+          "answer": "Date calculations are highly accurate for any time period within the Gregorian calendar system. The calculator accounts for all calendar irregularities and maintains precision even for calculations spanning multiple decades or centuries. However, extremely long-term calculations may be affected by potential future calendar reforms."
+        }
+      ]
+    }
   }
 }

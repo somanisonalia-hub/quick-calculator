@@ -443,31 +443,41 @@ function generateCategoryData(lang: string, categorySlug: string, calculators: C
       en: 'Financial Calculators',
       es: 'Calculadoras Financieras',
       pt: 'Calculadoras Financeiras',
-      fr: 'Calculatrices Financières'
+      fr: 'Calculatrices Financières',
+      de: 'Finanzrechner',
+      nl: 'Financiële Rekenmachines'
     },
     health: {
       en: 'Health Calculators',
       es: 'Calculadoras de Salud',
       pt: 'Calculadoras de Saúde',
-      fr: 'Calculatrices de Santé'
+      fr: 'Calculatrices de Santé',
+      de: 'Gesundheitsrechner',
+      nl: 'Gezondheidsrekenmachines'
     },
     math: {
       en: 'Math Calculators',
       es: 'Calculadoras Matemáticas',
       pt: 'Calculadoras Matemáticas',
-      fr: 'Calculatrices Mathématiques'
+      fr: 'Calculatrices Mathématiques',
+      de: 'Mathematikrechner',
+      nl: 'Wiskundige Rekenmachines'
     },
     utility: {
       en: 'Utility Calculators',
       es: 'Calculadoras de Utilidad',
       pt: 'Calculadoras de Utilitários',
-      fr: 'Calculatrices Utiles'
+      fr: 'Calculatrices Utiles',
+      de: 'Nützlichkeitsrechner',
+      nl: 'Hulpmiddel Rekenmachines'
     },
     lifestyle: {
       en: 'Lifestyle Calculators',
       es: 'Calculadoras de Estilo de Vida',
       pt: 'Calculadoras de Estilo de Vida',
-      fr: 'Calculatrices de Style de Vie'
+      fr: 'Calculatrices de Style de Vie',
+      de: 'Lebensstil-Rechner',
+      nl: 'Levensstijl Rekenmachines'
     }
   };
 
@@ -476,31 +486,41 @@ function generateCategoryData(lang: string, categorySlug: string, calculators: C
       en: 'Financial Calculators - Money Management Tools',
       es: 'Calculadoras Financieras - Herramientas de Gestión del Dinero',
       pt: 'Calculadoras Financeiras - Ferramentas de Gestão de Dinheiro',
-      fr: 'Calculatrices Financières - Outils de Gestion d\'Argent'
+      fr: 'Calculatrices Financières - Outils de Gestion d\'Argent',
+      de: 'Finanzrechner - Geldverwaltungswerkzeuge',
+      nl: 'Financiële Rekenmachines - Geldbeheerstools'
     },
     health: {
       en: 'Health Calculators - Wellness and Fitness Tools',
       es: 'Calculadoras de Salud - Herramientas de Bienestar y Fitness',
       pt: 'Calculadoras de Saúde - Ferramentas de Bem-Estar e Fitness',
-      fr: 'Calculatrices de Santé - Outils de Bien-être et Fitness'
+      fr: 'Calculatrices de Santé - Outils de Bien-être et Fitness',
+      de: 'Gesundheitsrechner - Wellness- und Fitness-Tools',
+      nl: 'Gezondheidsrekenmachines - Wellness- en Fitness-Tools'
     },
     math: {
       en: 'Math Calculators - Everyday Problem Solving',
       es: 'Calculadoras Matemáticas - Resolución de Problemas Cotidianos',
       pt: 'Calculadoras Matemáticas - Resolução de Problemas Cotidianos',
-      fr: 'Calculatrices Mathématiques - Résolution de Problèmes Quotidiens'
+      fr: 'Calculatrices Mathématiques - Résolution de Problèmes Quotidiens',
+      de: 'Mathematikrechner - Problemlösung im Alltag',
+      nl: 'Wiskundige Rekenmachines - Dagelijkse Probleemoplossing'
     },
     utility: {
       en: 'Utility Calculators - Productivity and Daily Tasks',
       es: 'Calculadoras de Utilidad - Productividad y Tareas Diarias',
       pt: 'Calculadoras de Utilitários - Produtividade e Tarefas Diárias',
-      fr: 'Calculatrices Utilitaires - Productivité et Tâches Quotidiennes'
+      fr: 'Calculatrices Utilitaires - Productivité et Tâches Quotidiennes',
+      de: 'Nützlichkeitsrechner - Produktivität und tägliche Aufgaben',
+      nl: 'Hulpmiddel Rekenmachines - Productiviteit en Dagelijkse Taken'
     },
     lifestyle: {
       en: 'Lifestyle Calculators - Personal Planning Tools',
       es: 'Calculadoras de Estilo de Vida - Herramientas de Planificación Personal',
       pt: 'Calculadoras de Estilo de Vida - Ferramentas de Planejamento Pessoal',
-      fr: 'Calculatrices de Style de Vie - Outils de Planification Personnelle'
+      fr: 'Calculatrices de Style de Vie - Outils de Planification Personnelle',
+      de: 'Lebensstil-Rechner - Persönliche Planungstools',
+      nl: 'Levensstijl Rekenmachines - Persoonlijke Planningstools'
     }
   };
 
@@ -509,31 +529,41 @@ function generateCategoryData(lang: string, categorySlug: string, calculators: C
       en: 'Comprehensive collection of financial calculators for loans, savings, investments, taxes, and debt management. Make informed financial decisions with our accurate calculation tools.',
       es: 'Colección completa de calculadoras financieras para préstamos, ahorros, inversiones, impuestos y gestión de deudas. Tome decisiones financieras informadas con nuestras herramientas de cálculo precisas.',
       pt: 'Coleção completa de calculadoras financeiras para empréstimos, poupanças, investimentos, impostos e gestão de dívidas. Tome decisões financeiras informadas com nossas ferramentas de cálculo precisas.',
-      fr: 'Collection complète de calculatrices financières pour les prêts, épargnes, investissements, impôts et gestion de dettes. Prenez des décisions financières éclairées avec nos outils de calcul précis.'
+      fr: 'Collection complète de calculatrices financières pour les prêts, épargnes, investissements, impôts et gestion de dettes. Prenez des décisions financières éclairées avec nos outils de calcul précis.',
+      de: 'Umfassende Sammlung von Finanzrechnern für Darlehen, Ersparnisse, Investitionen, Steuern und Schuldenverwaltung. Treffen Sie mit unseren genauen Berechnungswerkzeugen fundierte Finanzentscheidungen.',
+      nl: 'Uitgebreide verzameling financiële rekenmachines voor leningen, besparingen, investeringen, belastingen en schuldbeheer. Neem gefundeerde financiële beslissingen met onze nauwkeurige berekeningstools.'
     },
     health: {
       en: 'Track your health metrics with our collection of wellness calculators. Calculate BMI, calorie needs, and other important health indicators for optimal fitness and well-being.',
       es: 'Rastree sus métricas de salud con nuestra colección de calculadoras de bienestar. Calcule IMC, necesidades calóricas y otros indicadores importantes de salud para un fitness y bienestar óptimos.',
       pt: 'Acompanhe suas métricas de saúde com nossa coleção de calculadoras de bem-estar. Calcule IMC, necessidades calóricas e outros indicadores importantes de saúde para fitness e bem-estar ótimos.',
-      fr: 'Suivez vos métriques de santé avec notre collection de calculatrices de bien-être. Calculez l\'IMC, les besoins caloriques et d\'autres indicateurs importants de santé pour un fitness et bien-être optimaux.'
+      fr: 'Suivez vos métriques de santé avec notre collection de calculatrices de bien-être. Calculez l\'IMC, les besoins caloriques et d\'autres indicateurs importants de santé pour un fitness et bien-être optimaux.',
+      de: 'Verfolgen Sie Ihre Gesundheitsmetriken mit unserer Sammlung von Wellness-Rechnern. Berechnen Sie BMI, Kalorienbedarf und andere wichtige Gesundheitsindikatoren für optimale Fitness und Wohlbefinden.',
+      nl: 'Volg uw gezondheidsstatistieken met onze verzameling wellness-rekenmachines. Bereken BMI, caloriebehoeften en andere belangrijke gezondheidsindicatoren voor optimale fitness en welzijn.'
     },
     math: {
       en: 'Solve everyday math problems with our comprehensive collection of mathematical calculators. From percentages and fractions to unit conversions and averages, get accurate results instantly.',
       es: 'Resuelva problemas matemáticos cotidianos con nuestra completa colección de calculadoras matemáticas. Desde porcentajes y fracciones hasta conversiones de unidades y promedios, obtenga resultados precisos al instante.',
       pt: 'Resolva problemas matemáticos cotidianos com nossa coleção completa de calculadoras matemáticas. De porcentagens e frações até conversões de unidades e médias, obtenha resultados precisos instantaneamente.',
-      fr: 'Résolvez les problèmes mathématiques quotidiens avec notre collection complète de calculatrices mathématiques. Des pourcentages et fractions aux conversions d\'unités et moyennes, obtenez des résultats précis instantanément.'
+      fr: 'Résolvez les problèmes mathématiques quotidiens avec notre collection complète de calculatrices mathématiques. Des pourcentages et fractions aux conversions d\'unités et moyennes, obtenez des résultats précis instantanément.',
+      de: 'Lösen Sie alltägliche Mathematik-Probleme mit unserer umfassenden Sammlung mathematischer Rechner. Von Prozentsätzen und Brüchen bis zu Einheitskonvertierungen und Durchschnittswerten erhalten Sie sofort genaue Ergebnisse.',
+      nl: 'Los alledaagse wiskundeproblemen op met onze uitgebreide verzameling wiskundige rekenmachines. Van percentages en breuken tot eenheidconversies en gemiddelden, krijg direct nauwkeurige resultaten.'
     },
     utility: {
       en: 'Essential utility calculators for everyday tasks and productivity. From age calculations and GPA tracking to tip calculations and word counting, streamline your daily activities with accurate results.',
       es: 'Calculadoras de utilidad esenciales para tareas cotidianas y productividad. Desde cálculos de edad y seguimiento de GPA hasta cálculos de propinas y conteo de palabras, optimice sus actividades diarias con resultados precisos.',
       pt: 'Calculadoras de utilitários essenciais para tarefas cotidianas e produtividade. De cálculos de idade e acompanhamento de GPA até cálculos de gorjetas e contagem de palavras, otimize suas atividades diárias com resultados precisos.',
-      fr: 'Calculatrices utilitaires essentielles pour les tâches quotidiennes et la productivité. Des calculs d\'âge et du suivi GPA aux calculs de pourboires et au comptage de mots, rationalisez vos activités quotidiennes avec des résultats précis.'
+      fr: 'Calculatrices utilitaires essentielles pour les tâches quotidiennes et la productivité. Des calculs d\'âge et du suivi GPA aux calculs de pourboires et au comptage de mots, rationalisez vos activités quotidiennes avec des résultats précis.',
+      de: 'Wichtige Utility-Rechner für alltägliche Aufgaben und Produktivität. Von Altersberechnungen und GPA-Verfolgung bis zu Trinkgeldberechnungen und Wortanzahl, optimieren Sie Ihre täglichen Aktivitäten mit genauen Ergebnissen.',
+      nl: 'Essentiële hulpprogrammarekenmachines voor alledaagse taken en productiviteit. Van leeftijdsberekeningen en GPA-tracking tot fooi-berekeningen en woordtelling, stroomlijn uw dagelijkse activiteiten met nauwkeurige resultaten.'
     },
     lifestyle: {
       en: 'Lifestyle calculators for personal and everyday planning. From budgeting and tipping to academic performance tracking, make informed decisions about your personal finances and daily activities.',
       es: 'Calculadoras de estilo de vida para planificación personal y cotidiana. Desde presupuestos y propinas hasta seguimiento del rendimiento académico, tome decisiones informadas sobre sus finanzas personales y actividades diarias.',
       pt: 'Calculadoras de estilo de vida para planejamento pessoal e cotidiano. De orçamentos e gorjetas até acompanhamento do desempenho acadêmico, tome decisões informadas sobre suas finanças pessoais e atividades diárias.',
-      fr: 'Calculatrices de style de vie pour la planification personnelle et quotidienne. Des budgets et pourboires au suivi des performances académiques, prenez des décisions éclairées concernant vos finances personnelles et vos activités quotidiennes.'
+      fr: 'Calculatrices de style de vie pour la planification personnelle et quotidienne. Des budgets et pourboires au suivi des performances académiques, prenez des décisions éclairées concernant vos finances personnelles et vos activités quotidiennes.',
+      de: 'Lifestyle-Rechner für persönliche und alltägliche Planung. Von Budget und Trinkgeld bis zur Verfolgung der akademischen Leistung treffen Sie fundierte Entscheidungen über Ihre persönlichen Finanzen und täglichen Aktivitäten.',
+      nl: 'Lifestyle-rekenmachines voor persoonlijke en dagelijkse planning. Van budgettering en fooi tot universitaire prestatiebewaking, neem weloverwogen beslissingen over uw persoonlijke financiën en dagelijkse activiteiten.'
     }
   };
 
@@ -542,13 +572,17 @@ function generateCategoryData(lang: string, categorySlug: string, calculators: C
       en: { title: 'Financial Calculators', subtitle: 'Plan your finances with confidence', description: 'From mortgages to retirement planning, our financial calculators help you make smart money decisions.' },
       es: { title: 'Calculadoras Financieras', subtitle: 'Planee sus finanzas con confianza', description: 'Desde hipotecas hasta planificación de jubilación, nuestras calculadoras financieras le ayudan a tomar decisiones inteligentes sobre el dinero.' },
       pt: { title: 'Calculadoras Financeiras', subtitle: 'Planeje suas finanças com confiança', description: 'De hipotecas ao planejamento de aposentadoria, nossas calculadoras financeiras ajudam você a tomar decisões inteligentes sobre dinheiro.' },
-      fr: { title: 'Calculatrices Financières', subtitle: 'Planifiez vos finances avec confiance', description: 'Des hypothèques à la planification de retraite, nos calculatrices financières vous aident à prendre des décisions intelligentes sur l\'argent.' }
+      fr: { title: 'Calculatrices Financières', subtitle: 'Planifiez vos finances avec confiance', description: 'Des hypothèques à la planification de retraite, nos calculatrices financières vous aident à prendre des décisions intelligentes sur l\'argent.' },
+      de: { title: 'Finanzrechner', subtitle: 'Planen Sie Ihre Finanzen mit Zuversicht', description: 'Von Hypotheken bis zur Ruhestandsplanung helfen Ihnen unsere Finanzrechner, intelligente Geldentscheidungen zu treffen.' },
+      nl: { title: 'Financiële Rekenmachines', subtitle: 'Plan uw financiën met vertrouwen', description: 'Van hypotheken tot pensioenplanning helpen onze financiële rekenmachines u intelligente geldrentscheidingen te nemen.' }
     },
     health: {
       en: { title: 'Health Calculators', subtitle: 'Track your wellness journey', description: 'Monitor your health metrics and make informed decisions about fitness, nutrition, and overall well-being.' },
       es: { title: 'Calculadoras de Salud', subtitle: 'Rastree su viaje de bienestar', description: 'Monitoree sus métricas de salud y tome decisiones informadas sobre fitness, nutrición y bienestar general.' },
       pt: { title: 'Calculadoras de Saúde', subtitle: 'Acompanhe sua jornada de bem-estar', description: 'Monitore suas métricas de saúde e tome decisões informadas sobre fitness, nutrição e bem-estar geral.' },
-      fr: { title: 'Calculatrices de Santé', subtitle: 'Suivez votre voyage de bien-être', description: 'Surveillez vos métriques de santé et prenez des décisions éclairées concernant le fitness, la nutrition et le bien-être général.' }
+      fr: { title: 'Calculatrices de Santé', subtitle: 'Suivez votre voyage de bien-être', description: 'Surveillez vos métriques de santé et prenez des décisions éclairées concernant le fitness, la nutrition et le bien-être général.' },
+      de: { title: 'Gesundheitsrechner', subtitle: 'Verfolgen Sie Ihre Wellness-Reise', description: 'Überwachen Sie Ihre Gesundheitsmetriken und treffen Sie informierte Entscheidungen über Fitness, Ernährung und allgemeines Wohlbefinden.' },
+      nl: { title: 'Gezondheidsrekenmachines', subtitle: 'Volg uw wellnessreis', description: 'Controleer uw gezondheidsgegevens en neem geïnformeerde beslissingen over fitness, voeding en algemeen welzijn.' }
     }
   };
 
@@ -643,11 +677,11 @@ export function getAvailableCategories(): string[] {
 
 export function getCategoryTitle(lang: string, categorySlug: string): string {
   const titles = {
-    financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculatrices Financières' },
-    health: { en: 'Health Calculators', es: 'Calculadoras de Salud', pt: 'Calculadoras de Saúde', fr: 'Calculatrices de Santé' },
-    math: { en: 'Math Calculators', es: 'Calculadoras Matemáticas', pt: 'Calculadoras Matemáticas', fr: 'Calculatrices Mathématiques' },
-    utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilitários', fr: 'Calculatrices Utiles' },
-    lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculatrices de Style de Vie' }
+    financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculatrices Financières', de: 'Finanzrechner', nl: 'Financiële Rekenmachines' },
+    health: { en: 'Health Calculators', es: 'Calculadoras de Salud', pt: 'Calculadoras de Saúde', fr: 'Calculatrices de Santé', de: 'Gesundheitsrechner', nl: 'Gezondheidsrekenmachines' },
+    math: { en: 'Math Calculators', es: 'Calculadoras Matemáticas', pt: 'Calculadoras Matemáticas', fr: 'Calculatrices Mathématiques', de: 'Mathematikrechner', nl: 'Wiskundige Rekenmachines' },
+    utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilitários', fr: 'Calculatrices Utiles', de: 'Nützlichkeitsrechner', nl: 'Hulpmiddel Rekenmachines' },
+    lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculatrices de Style de Vie', de: 'Lebensstil-Rechner', nl: 'Levensstijl Rekenmachines' }
   };
   return (titles as Record<string, Record<string, string>>)[categorySlug]?.[lang] || (titles as Record<string, Record<string, string>>)[categorySlug]?.['en'] || `${categorySlug} Calculators`;
 }
@@ -830,7 +864,7 @@ export function renderStructuredSEOContent(seoContent: SEOContent, lang: string 
     understandingResults: { en: 'Understanding Your Results', es: 'Entendiendo Tus Resultados', pt: 'Entendendo Seus Resultados', fr: 'Comprendre Vos Résultats' },
     whoItsFor: { en: 'Who Should Use This Calculator', es: 'Quién Debería Usar Esta Calculadora', pt: 'Quem Deve Usar Esta Calculadora', fr: 'Qui Devrait Utiliser Cette Calculatrice' },
     importantNotes: { en: 'Important Notes & Disclaimer', es: 'Notas Importantes y Descargo de Responsabilidad', pt: 'Notas Importantes e Isenção de Responsabilidade', fr: 'Notes Importantes et Avis de Non-Responsabilité' },
-    relatedTools: { en: 'Related Calculators', es: 'Calculadoras Relacionadas', pt: 'Calculadoras Relacionadas', fr: 'Calculatrices Connexes' }
+    relatedTools: { en: 'Related Calculators', es: 'Calculadoras Relacionadas', pt: 'Calculadoras Relacionadas', fr: 'Calculatrices Connexes', de: 'Verwandte Tools', nl: 'Gerelateerde Hulpmiddelen' }
   };
 
   const t = (key: string) => translations[key as keyof typeof translations]?.[lang as keyof typeof translations[keyof typeof translations]] || key;
@@ -1031,43 +1065,43 @@ export function generateCalculatorSEOContent(calculatorContent: Record<string, u
     purposeAndBenefits: { en: 'Purpose and Benefits', es: 'Propósito y Beneficios', pt: 'Propósito e Benefícios', fr: 'Objectif et Avantages' },
     stepByStepInstructions: { en: 'Step-by-Step Instructions', es: 'Instrucciones Paso a Paso', pt: 'Instruções Passo a Passo', fr: 'Instructions Étape par Étape' },
     calculatorInputsExplained: { en: 'Calculator Inputs Explained', es: 'Entradas de la Calculadora Explicadas', pt: 'Entradas da Calculadora Explicadas', fr: 'Entrées de la Calculatrice Expliquées' },
-    formulaWorks: { en: 'Formula Works', es: 'Funciona la Fórmula', pt: 'Funciona a Fórmula', fr: 'Fonctionne la Formule' },
-    understandingYourResults: { en: 'Understanding Your Results', es: 'Entendiendo Tus Resultados', pt: 'Entendendo Seus Resultados', fr: 'Comprendre Vos Résultats' },
+    formulaWorks: { en: 'Formula Works', es: 'Funciona la Fórmula', pt: 'Funciona a Fórmula', fr: 'Fonctionne la Formule', de: 'Wie die Formel funktioniert', nl: 'Hoe de Formule Werkt' },
+    understandingYourResults: { en: 'Understanding Your Results', es: 'Entendiendo Tus Resultados', pt: 'Entendendo Seus Resultados', fr: 'Comprendre Vos Résultats', de: 'Ihre Ergebnisse Verstehen', nl: 'Uw Resultaten Begrijpen' },
     exampleScenarios: { en: 'Example Scenarios', es: 'Escenarios de Ejemplo', pt: 'Cenários de Exemplo', fr: 'Scénarios d\'Exemple' },
-    popularSearchTerms: { en: 'Popular Search Terms', es: 'Términos de Búsqueda Populares', pt: 'Termos de Pesquisa Populares', fr: 'Termes de Recherche Populaires' },
-    relatedTools: { en: 'Related Tools', es: 'Herramientas Relacionadas', pt: 'Ferramentas Relacionadas', fr: 'Outils Connexes' },
+    popularSearchTerms: { en: 'Popular Search Terms', es: 'Términos de Búsqueda Populares', pt: 'Termos de Pesquisa Populares', fr: 'Termes de Recherche Populaires', de: 'Beliebte Suchbegriffe', nl: 'Populaire Zoektermen' },
+    relatedTools: { en: 'Related Tools', es: 'Herramientas Relacionadas', pt: 'Ferramentas Relacionadas', fr: 'Outils Connexes', de: 'Verwandte Tools', nl: 'Gerelateerde Hulpmiddelen' },
     getStartedToday: { en: 'Get Started Today', es: 'Comienza Hoy', pt: 'Comece Hoje', fr: 'Commencez Aujourd\'hui' },
 
     // Benefit labels
-    accurateCalculations: { en: 'Accurate Calculations', es: 'Cálculos Precisos', pt: 'Cálculos Precisos', fr: 'Calculs Précis' },
-    timeSaving: { en: 'Time-Saving', es: 'Ahorro de Tiempo', pt: 'Economia de Tempo', fr: 'Gain de Temps' },
-    educationalValue: { en: 'Educational Value', es: 'Valor Educativo', pt: 'Valor Educativo', fr: 'Valeur Éducative' },
-    seoOptimized: { en: 'SEO Optimized', es: 'Optimizado para SEO', pt: 'Otimizado para SEO', fr: 'Optimisé pour le SEO' },
-    decisionSupport: { en: 'Decision Support', es: 'Apoyo en Decisiones', pt: 'Suporte de Decisão', fr: 'Support de Décision' },
+    accurateCalculations: { en: 'Accurate Calculations', es: 'Cálculos Precisos', pt: 'Cálculos Precisos', fr: 'Calculs Précis', de: 'Genaue Berechnungen', nl: 'Nauwkeurige Berekeningen' },
+    timeSaving: { en: 'Time-Saving', es: 'Ahorro de Tiempo', pt: 'Economia de Tempo', fr: 'Gain de Temps', de: 'Zeitsparend', nl: 'Tijdbesparing' },
+    educationalValue: { en: 'Educational Value', es: 'Valor Educativo', pt: 'Valor Educativo', fr: 'Valeur Éducative', de: 'Pädagogischer Wert', nl: 'Educatieve Waarde' },
+    seoOptimized: { en: 'SEO Optimized', es: 'Optimizado para SEO', pt: 'Otimizado para SEO', fr: 'Optimisé pour le SEO', de: 'SEO-optimiert', nl: 'SEO-geoptimaliseerd' },
+    decisionSupport: { en: 'Decision Support', es: 'Apoyo en Decisiones', pt: 'Suporte de Decisão', fr: 'Support de Décision', de: 'Entscheidungsunterstützung', nl: 'Beslissingsondersteuning' },
 
     // Explanatory text
-    ourCalculatorConsiders: { en: 'Our calculator considers', es: 'Nuestra calculadora considera', pt: 'Nossa calculadora considera', fr: 'Notre calculatrice considère' },
-    keyInputs: { en: 'key inputs to provide accurate results:', es: 'entradas clave para proporcionar resultados precisos:', pt: 'entradas-chave para fornecer resultados precisos:', fr: 'entrées clés pour fournir des résultats précis:' },
-    theseFactors: { en: 'These factors are carefully considered to ensure your calculations reflect real-world conditions.', es: 'Estos factores se consideran cuidadosamente para asegurar que tus cálculos reflejen condiciones del mundo real.', pt: 'Estes fatores são cuidadosamente considerados para garantir que seus cálculos reflitam condições do mundo real.', fr: 'Ces facteurs sont soigneusement pris en compte pour garantir que vos calculs reflètent les conditions du monde réel.' },
-    mathematicalFormula: { en: 'This mathematical formula ensures accurate results based on established', es: 'Esta fórmula matemática asegura resultados precisos basados en principios establecidos de', pt: 'Esta fórmula matemática garante resultados precisos baseados em princípios estabelecidos de', fr: 'Cette formule mathématique garantit des résultats précis basés sur des principes établis de' },
-    principles: { en: 'principles and industry standards.', es: 'y estándares de la industria.', pt: 'e padrões da indústria.', fr: 'et normes de l\'industrie.' },
-    primaryResult: { en: 'Primary Result:', es: 'Resultado Principal:', pt: 'Resultado Principal:', fr: 'Résultat Principal:' },
-    yourMainResult: { en: 'Your main result is displayed in', es: 'Tu resultado principal se muestra en', pt: 'Seu resultado principal é exibido em', fr: 'Votre résultat principal est affiché en' },
-    format: { en: 'format for easy interpretation.', es: 'formato para fácil interpretación.', pt: 'formato para fácil interpretação.', fr: 'format pour une interprétation facile.' },
-    additionalDetails: { en: 'Additional Details:', es: 'Detalles Adicionales:', pt: 'Detalhes Adicionais:', fr: 'Détails Supplémentaires:' },
-    providesDetailedInfo: { en: 'Provides detailed breakdown information', es: 'Proporciona información detallada del desglose', pt: 'Fornece informações detalhadas da análise', fr: 'Fournit des informations détaillées de ventilation' },
+    ourCalculatorConsiders: { en: 'Our calculator considers', es: 'Nuestra calculadora considera', pt: 'Nossa calculadora considera', fr: 'Notre calculatrice considère', de: 'Unser Rechner berücksichtigt', nl: 'Onze rekenmachine overweegt' },
+    keyInputs: { en: 'key inputs to provide accurate results:', es: 'entradas clave para proporcionar resultados precisos:', pt: 'entradas-chave para fornecer resultados precisos:', fr: 'entrées clés pour fournir des résultats précis:', de: 'Schlüsseleingaben, um genaue Ergebnisse zu liefern:', nl: 'sleutelingangen om nauwkeurige resultaten te leveren:' },
+    theseFactors: { en: 'These factors are carefully considered to ensure your calculations reflect real-world conditions.', es: 'Estos factores se consideran cuidadosamente para asegurar que tus cálculos reflejen condiciones del mundo real.', pt: 'Estes fatores são cuidadosamente considerados para garantir que seus cálculos reflitam condições do mundo real.', fr: 'Ces facteurs sont soigneusement pris en compte pour garantir que vos calculs reflètent les conditions du monde réel.', de: 'Diese Faktoren werden sorgfältig berücksichtigt, um sicherzustellen, dass Ihre Berechnungen Bedingungen der realen Welt widerspiegeln.', nl: 'Deze factoren worden zorgvuldig overwogen om ervoor te zorgen dat uw berekeningen real-world omstandigheden weerspiegelen.' },
+    mathematicalFormula: { en: 'This mathematical formula ensures accurate results based on established', es: 'Esta fórmula matemática asegura resultados precisos basados en principios establecidos de', pt: 'Esta fórmula matemática garante resultados precisos baseados em princípios estabelecidos de', fr: 'Cette formule mathématique garantit des résultats précis basés sur des principes établis de', de: 'Diese mathematische Formel gewährleistet genaue Ergebnisse basierend auf etablierten', nl: 'Deze wiskundige formule garandeert nauwkeurige resultaten op basis van gevestigde' },
+    principles: { en: 'principles and industry standards.', es: 'y estándares de la industria.', pt: 'e padrões da indústria.', fr: 'et normes de l\'industrie.', de: 'Prinzipien und Industriestandards.', nl: 'principes en industrienormen.' },
+    primaryResult: { en: 'Primary Result:', es: 'Resultado Principal:', pt: 'Resultado Principal:', fr: 'Résultat Principal:', de: 'Primäres Ergebnis:', nl: 'Primair Resultaat:' },
+    yourMainResult: { en: 'Your main result is displayed in', es: 'Tu resultado principal se muestra en', pt: 'Seu resultado principal é exibido em', fr: 'Votre résultat principal est affiché en', de: 'Ihr Hauptergebnis wird angezeigt in', nl: 'Uw hoofdresultaat wordt weergegeven in' },
+    format: { en: 'format for easy interpretation.', es: 'formato para fácil interpretación.', pt: 'formato para fácil interpretação.', fr: 'format pour une interprétation facile.', de: 'Format zur einfachen Interpretation.', nl: 'formaat voor gemakkelijke interpretatie.' },
+    additionalDetails: { en: 'Additional Details:', es: 'Detalles Adicionales:', pt: 'Detalhes Adicionais:', fr: 'Détails Supplémentaires:', de: 'Zusätzliche Details:', nl: 'Aanvullende Details:' },
+    providesDetailedInfo: { en: 'Provides detailed breakdown information', es: 'Proporciona información detallada del desglose', pt: 'Fornece informações detalhadas da análise', fr: 'Fournit des informations détaillées de ventilation', de: 'Bietet detaillierte Aufschlüsselungsinformationen', nl: 'Biedt gedetailleerde uitsplitsingsinformatie' },
 
     // Popular search terms and related tools
-    peopleFrequentlySearch: { en: 'People frequently search for these related terms when looking for', es: 'Las personas buscan con frecuencia estos términos relacionados cuando buscan', pt: 'As pessoas frequentemente pesquisam estes termos relacionados ao procurar por', fr: 'Les gens recherchent fréquemment ces termes connexes lorsqu\'ils cherchent' },
-    ourCalculatorCovers: { en: 'Our calculator covers all these search queries and more, providing comprehensive', es: 'Nuestra calculadora cubre todas estas consultas de búsqueda y más, proporcionando capacidades integrales de', pt: 'Nossa calculadora cobre todas essas consultas de pesquisa e mais, fornecendo capacidades abrangentes de', fr: 'Notre calculatrice couvre toutes ces requêtes de recherche et plus, offrant des capacités complètes de' },
-    capabilities: { en: 'capabilities.', es: '.', pt: '.', fr: '.' },
-    youMayAlsoFind: { en: 'You may also find these related calculators useful:', es: 'También puedes encontrar útiles estas calculadoras relacionadas:', pt: 'Você também pode achar úteis estas calculadoras relacionadas:', fr: 'Vous pouvez également trouver utiles ces calculatrices connexes:' },
-    readyToUse: { en: 'Ready to use our', es: '¿Listo para usar nuestra', pt: 'Pronto para usar nossa', fr: 'Prêt à utiliser notre' },
-    providesClarity: { en: 'provides clarity and accurate calculations to help you make informed decisions.', es: 'proporciona claridad y cálculos precisos para ayudarte a tomar decisiones informadas.', pt: 'fornece clareza e cálculos precisos para ajudá-lo a tomar decisões informadas.', fr: 'fournit clarté et calculs précis pour vous aider à prendre des décisions éclairées.' },
-    tryNow: { en: 'Try', es: 'Prueba', pt: 'Experimente', fr: 'Essayez' },
-    now: { en: 'Now', es: 'Ahora', pt: 'Agora', fr: 'Maintenant' },
-    perfectFor: { en: 'Perfect for', es: 'Perfecto para', pt: 'Perfeito para', fr: 'Parfait pour' },
-    andMore: { en: 'and more!', es: '¡y más!', pt: 'e muito mais!', fr: 'et plus!' }
+    peopleFrequentlySearch: { en: 'People frequently search for these related terms when looking for', es: 'Las personas buscan con frecuencia estos términos relacionados cuando buscan', pt: 'As pessoas frequentemente pesquisam estes termos relacionados ao procurar por', fr: 'Les gens recherchent fréquemment ces termes connexes lorsqu\'ils cherchent', de: 'Menschen suchen häufig nach verwandten Begriffen, wenn sie nach', nl: 'Mensen zoeken frequent naar deze gerelateerde termen wanneer ze zoeken naar' },
+    ourCalculatorCovers: { en: 'Our calculator covers all these search queries and more, providing comprehensive', es: 'Nuestra calculadora cubre todas estas consultas de búsqueda y más, proporcionando capacidades integrales de', pt: 'Nossa calculadora cobre todas essas consultas de pesquisa e mais, fornecendo capacidades abrangentes de', fr: 'Notre calculatrice couvre toutes ces requêtes de recherche et plus, offrant des capacités complètes de', de: 'Unser Rechner deckt alle diese Suchanfragen und mehr ab und bietet umfassende', nl: 'Onze rekenmachine dekt al deze zoekopdrachten en meer af en biedt uitgebreide' },
+    capabilities: { en: 'capabilities.', es: '.', pt: '.', fr: '.', de: 'Fähigkeiten.', nl: 'mogelijkheden.' },
+    youMayAlsoFind: { en: 'You may also find these related calculators useful:', es: 'También puedes encontrar útiles estas calculadoras relacionadas:', pt: 'Você também pode achar úteis estas calculadoras relacionadas:', fr: 'Vous pouvez également trouver utiles ces calculatrices connexes:', de: 'Sie könnten auch diese verwandten Rechner hilfreich finden:', nl: 'U kunt deze gerelateerde rekenmachines ook nuttig vinden:' },
+    readyToUse: { en: 'Ready to use our', es: '¿Listo para usar nuestra', pt: 'Pronto para usar nossa', fr: 'Prêt à utiliser notre', de: 'Bereit, unseren', nl: 'Klaar om onze' },
+    providesClarity: { en: 'provides clarity and accurate calculations to help you make informed decisions.', es: 'proporciona claridad y cálculos precisos para ayudarte a tomar decisiones informadas.', pt: 'fornece clareza e cálculos precisos para ajudá-lo a tomar decisões informadas.', fr: 'fournit clarté et calculs précis pour vous aider à prendre des décisions éclairées.', de: 'bietet Klarheit und genaue Berechnungen, um Ihnen fundierten Entscheidungen zu helfen.', nl: 'biedt duidelijkheid en nauwkeurige berekeningen om u weloverwogen beslissingen te helpen nemen.' },
+    tryNow: { en: 'Try', es: 'Prueba', pt: 'Experimente', fr: 'Essayez', de: 'Versuchen', nl: 'Probeer' },
+    now: { en: 'Now', es: 'Ahora', pt: 'Agora', fr: 'Maintenant', de: 'Jetzt', nl: 'Nu' },
+    perfectFor: { en: 'Perfect for', es: 'Perfecto para', pt: 'Perfeito para', fr: 'Parfait pour', de: 'Perfekt für', nl: 'Perfect voor' },
+    andMore: { en: 'and more!', es: '¡y más!', pt: 'e muito mais!', fr: 'et plus!', de: 'und mehr!', nl: 'en nog veel meer!' }
   };
 
   const t = (key: string, fallback?: string) => {

@@ -17,6 +17,8 @@ export default function NotFound() {
     if (path.startsWith('/es/') || path === '/es') return 'es';
     if (path.startsWith('/pt/') || path === '/pt') return 'pt';
     if (path.startsWith('/fr/') || path === '/fr') return 'fr';
+    if (path.startsWith('/de/') || path === '/de') return 'de';
+    if (path.startsWith('/nl/') || path === '/nl') return 'nl';
     if (path.startsWith('/en/') || path === '/en') return 'en';
     return 'en'; // Default to English
   };
@@ -76,8 +78,8 @@ export default function NotFound() {
     // Extract the path without any language prefix
     let pathWithoutLang = pathname;
 
-    // Remove any existing language prefix (es, pt, fr, en)
-    pathWithoutLang = pathWithoutLang.replace(/^\/(es|pt|fr|en)/, '');
+    // Remove any existing language prefix (es, pt, fr, en, de, nl)
+    pathWithoutLang = pathWithoutLang.replace(/^\/(es|pt|fr|en|de|nl)/, '');
 
     // Ensure we have a leading slash
     if (!pathWithoutLang.startsWith('/')) {
@@ -126,7 +128,9 @@ export default function NotFound() {
                 { code: 'en', name: 'English', flag: '🇺🇸' },
                 { code: 'es', name: 'Spanish', flag: '🇪🇸' },
                 { code: 'pt', name: 'Portuguese', flag: '🇵🇹' },
-                { code: 'fr', name: 'French', flag: '🇫🇷' }
+                { code: 'fr', name: 'French', flag: '🇫🇷' },
+                { code: 'de', name: 'German', flag: '🇩🇪' },
+                { code: 'nl', name: 'Dutch', flag: '🇳🇱' }
               ].map((lang) => (
                 <button
                   key={lang.code}

@@ -1334,5 +1334,367 @@
       ]
     },
     "component": "CompoundInterestCalculator"
+  },
+  "de": {
+    "title": "Zinseszins Rechner",
+    "seoTitle": "Compound Interest Rechner - How Much Will My Investment Grow?",
+    "summary": "Calculate compound interest and investment growth over time.",
+    "description": "Master the power of compound interest with our comprehensive calculator. Calculate investment growth, savings accumulation, and the difference between simple and compound interest. Perfect for investors, savers, and anyone planning for financial growth over time.",
+    "category": "financial",
+    "difficulty": "Mittelstufe",
+    "slug": "compound-interest-calculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "annualRate",
+          "label": "Annual Interest Rate (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "years",
+          "label": "Investment Period (Years)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundingFrequency",
+          "label": "Compounding Frequency",
+          "type": "select",
+          "options": [
+            "annually",
+            "semiannually",
+            "quarterly",
+            "monthly",
+            "daily"
+          ],
+          "default": "annually"
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Monthly Contribution ($)",
+          "type": "number",
+          "default": 0,
+          "min": -10000,
+          "max": 10000,
+          "step": 50,
+          "optional": true
+        },
+        {
+          "name": "contributionTiming",
+          "label": "Contribution Timing",
+          "type": "select",
+          "options": [
+            "beginning",
+            "end"
+          ],
+          "default": "end",
+          "conditional": "monthlyContribution !== 0"
+        }
+      ],
+      "formula": "Future Value = P(1 + r/n)^(nt) + PMT × (((1 + r/n)^(nt) - 1) / (r/n)) where P = Principal, r = Annual Rate, n = Compounding Frequency, t = Years, PMT = Monthly Contribution",
+      "output": {
+        "label": "Future Value",
+        "default": "Enter investment details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Total Contributions",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Total Interest Earned",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Initial Investment",
+          "field": "initialInvestment",
+          "format": "currency"
+        },
+        {
+          "label": "Growth Breakdown",
+          "field": "growthBreakdown",
+          "format": "text"
+        },
+        {
+          "label": "Annual Growth Rate",
+          "field": "annualGrowthRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Final Amount vs Simple Interest",
+          "field": "vsSimpleInterest",
+          "format": "currency"
+        }
+      ],
+      "componentName": "CompoundInterestCalculator"
+    },
+    "seoContent": {
+      "introduction": "Unlock the incredible power of compound interest with our comprehensive compound interest calculator that demonstrates how money grows exponentially over time. Compound interest is often called the eighth wonder of the world, and understanding it can transform your financial future. Whether you're saving for retirement, investing in stocks, or simply curious about how interest accumulates, this calculator shows you exactly how compounding turns small, consistent investments into substantial wealth. Discover the dramatic difference between simple and compound interest, and learn why starting early and being consistent are the keys to financial success.",
+      "benefits": [
+        "Calculate compound interest growth for any investment scenario",
+        "Compare simple vs. compound interest to see the difference",
+        "Understand how compounding frequency affects your returns",
+        "Project future value of investments with regular contributions",
+        "See the impact of starting early vs. starting late",
+        "Learn the mathematical principles behind wealth building",
+        "Make informed decisions about savings and investment strategies",
+        "Visualize the exponential growth potential of consistent investing"
+      ],
+      "steps": [
+        "Enter your initial investment or principal amount",
+        "Input the annual interest rate as a percentage",
+        "Specify the time period in years",
+        "Select compounding frequency (daily, monthly, quarterly, or annually)",
+        "Optionally add regular contributions for dollar-cost averaging",
+        "Click calculate to see future value and total interest earned"
+      ],
+      "inputsExplained": [
+        "Principal is the initial amount you're investing or saving",
+        "Annual interest rate is the percentage return you expect to earn",
+        "Time period determines how long your money will grow and compound",
+        "Compounding frequency shows how often interest is calculated and added",
+        "Regular contributions simulate consistent investing (like monthly deposits)"
+      ],
+      "formulaExplanation": "The compound interest formula is: Future Value = Principal × (1 + r/n)^(n×t) + PMT × [((1 + r/n)^(n×t) - 1) / (r/n)], where r is annual interest rate, n is compounding frequency, t is years, and PMT is regular payment. This formula reveals why compound interest creates exponential growth - each period's interest earns interest on itself. The more frequent the compounding (daily > monthly > quarterly > annual), the higher the final amount. Understanding this formula explains why small differences in rates or frequencies create large differences over time.",
+      "examples": [
+        "$10,000 invested at 7% annual return compounded monthly grows to $40,544 in 20 years - more than quadrupling your money.",
+        "Starting with $5,000 at age 25 vs. $5,000 at age 35 (both at 8% return) results in $86,000 vs. $46,000 by age 65 - showing the power of time.",
+        "$200 monthly contributions at 6% annual return grow to $144,000 in 30 years, while the same amount invested as one lump sum grows to only $107,000 - demonstrating consistent investing beats timing the market."
+      ],
+      "resultsExplanation": [
+        "Future value shows the total amount your investment will grow to",
+        "Total interest earned reveals how much of the growth comes from compounding",
+        "Growth breakdown shows the portion from principal vs. earned interest",
+        "Regular contribution impact demonstrates the power of consistent investing"
+      ],
+      "whoItsFor": "This compound interest calculator serves savers planning retirement accounts, investors learning about portfolio growth, students understanding financial principles, parents saving for children's education, entrepreneurs projecting business growth, financial advisors teaching clients, and anyone interested in wealth building. It's particularly valuable for those comparing savings accounts vs. investments, understanding loan costs, projecting retirement savings, and learning why consistent, long-term investing outperforms market timing. The calculator works for any financial scenario involving interest accumulation over time.",
+      "disclaimer": "This calculator provides estimates based on compound interest assumptions and does not account for taxes, fees, inflation, market volatility, or changing interest rates. Investment returns are not guaranteed and past performance doesn't predict future results. Actual results may vary significantly based on market conditions and individual circumstances. This tool is for educational purposes only and doesn't constitute investment advice. Consult qualified financial professionals for personalized investment recommendations. Remember that all investing involves risk, including potential loss of principal.",
+      "relatedTools": [
+        "Investment calculators for comparing different asset classes",
+        "Savings calculators for emergency fund planning",
+        "Loan calculators for understanding debt costs"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between simple interest and compound interest?",
+          "answer": "Simple interest earns interest only on the original principal amount. For example, $1,000 at 5% simple interest earns $50/year every year. Compound interest earns 'interest on interest' - the same $1,000 at 5% compounded annually earns $50 the first year, but $52.50 the second year ($50 on original + $2.50 on earned interest). Over time, this creates exponential growth. Compound interest is how wealth is built through investing and saving."
+        },
+        {
+          "question": "Why is compounding frequency important?",
+          "answer": "More frequent compounding accelerates growth because interest is calculated and added more often. $10,000 at 6% annual return grows to $17,908 in 10 years with annual compounding, but $18,174 with monthly compounding - a $266 difference. Daily compounding maximizes this effect. This explains why high-yield savings accounts and investment accounts with frequent compounding provide better returns than those compounded annually."
+        },
+        {
+          "question": "How much does starting early really matter?",
+          "answer": "Time is the most powerful factor in compound interest. $5,000 invested at age 25 growing at 8% annually becomes $86,000 by age 65. The same $5,000 invested at age 35 becomes only $46,000 by age 65 - less than half as much despite the same investment and return. Starting just 10 years earlier can double or triple your retirement savings due to the extra time for compounding to work."
+        },
+        {
+          "question": "Should I focus on higher returns or more frequent contributions?",
+          "answer": "Both are important, but consistency often matters more than chasing high returns. $300 monthly at 6% return grows to $144,000 in 30 years. $500 monthly at 8% return grows to $246,000 - showing higher contributions create more wealth than higher returns. However, the combination is ideal. Focus on maximizing contributions first, then optimize returns through smart investing. Small increases in contributions compound dramatically over time."
+        },
+        {
+          "question": "How do taxes affect compound interest calculations?",
+          "answer": "Taxes reduce compounding power by taking a portion of earnings each year. Pre-tax returns of 8% might become 5-6% after taxes depending on your tax bracket and account type. Tax-advantaged accounts (401k, IRA) allow pre-tax contributions and tax-deferred growth. Consider after-tax returns when comparing investments. The tax drag is why long-term investors often prefer tax-efficient investments and accounts designed for compounding without annual tax interruptions."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Samengestelde Rente Rekenmachine",
+    "seoTitle": "Compound Interest Calculator - How Much Will My Investment Grow?",
+    "summary": "Calculate compound interest and investment growth over time.",
+    "description": "Master the power of compound interest with our comprehensive calculator. Calculate investment growth, savings accumulation, and the difference between simple and compound interest. Perfect for investors, savers, and anyone planning for financial growth over time.",
+    "category": "financial",
+    "difficulty": "Gemiddeld",
+    "slug": "compound-interest-calculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "principal",
+          "label": "Initial Investment ($)",
+          "type": "number",
+          "default": 10000,
+          "min": 0,
+          "step": 100
+        },
+        {
+          "name": "annualRate",
+          "label": "Annual Interest Rate (%)",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 30,
+          "step": 0.1
+        },
+        {
+          "name": "years",
+          "label": "Investment Period (Years)",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "name": "compoundingFrequency",
+          "label": "Compounding Frequency",
+          "type": "select",
+          "options": [
+            "annually",
+            "semiannually",
+            "quarterly",
+            "monthly",
+            "daily"
+          ],
+          "default": "annually"
+        },
+        {
+          "name": "monthlyContribution",
+          "label": "Monthly Contribution ($)",
+          "type": "number",
+          "default": 0,
+          "min": -10000,
+          "max": 10000,
+          "step": 50,
+          "optional": true
+        },
+        {
+          "name": "contributionTiming",
+          "label": "Contribution Timing",
+          "type": "select",
+          "options": [
+            "beginning",
+            "end"
+          ],
+          "default": "end",
+          "conditional": "monthlyContribution !== 0"
+        }
+      ],
+      "formula": "Future Value = P(1 + r/n)^(nt) + PMT × (((1 + r/n)^(nt) - 1) / (r/n)) where P = Principal, r = Annual Rate, n = Compounding Frequency, t = Years, PMT = Monthly Contribution",
+      "output": {
+        "label": "Future Value",
+        "default": "Enter investment details above",
+        "format": "currency"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Total Contributions",
+          "field": "totalContributions",
+          "format": "currency"
+        },
+        {
+          "label": "Total Interest Earned",
+          "field": "totalInterest",
+          "format": "currency"
+        },
+        {
+          "label": "Initial Investment",
+          "field": "initialInvestment",
+          "format": "currency"
+        },
+        {
+          "label": "Growth Breakdown",
+          "field": "growthBreakdown",
+          "format": "text"
+        },
+        {
+          "label": "Annual Growth Rate",
+          "field": "annualGrowthRate",
+          "format": "percentage"
+        },
+        {
+          "label": "Final Amount vs Simple Interest",
+          "field": "vsSimpleInterest",
+          "format": "currency"
+        }
+      ],
+      "componentName": "CompoundInterestCalculator"
+    },
+    "seoContent": {
+      "introduction": "Unlock the incredible power of compound interest with our comprehensive compound interest calculator that demonstrates how money grows exponentially over time. Compound interest is often called the eighth wonder of the world, and understanding it can transform your financial future. Whether you're saving for retirement, investing in stocks, or simply curious about how interest accumulates, this calculator shows you exactly how compounding turns small, consistent investments into substantial wealth. Discover the dramatic difference between simple and compound interest, and learn why starting early and being consistent are the keys to financial success.",
+      "benefits": [
+        "Calculate compound interest growth for any investment scenario",
+        "Compare simple vs. compound interest to see the difference",
+        "Understand how compounding frequency affects your returns",
+        "Project future value of investments with regular contributions",
+        "See the impact of starting early vs. starting late",
+        "Learn the mathematical principles behind wealth building",
+        "Make informed decisions about savings and investment strategies",
+        "Visualize the exponential growth potential of consistent investing"
+      ],
+      "steps": [
+        "Enter your initial investment or principal amount",
+        "Input the annual interest rate as a percentage",
+        "Specify the time period in years",
+        "Select compounding frequency (daily, monthly, quarterly, or annually)",
+        "Optionally add regular contributions for dollar-cost averaging",
+        "Click calculate to see future value and total interest earned"
+      ],
+      "inputsExplained": [
+        "Principal is the initial amount you're investing or saving",
+        "Annual interest rate is the percentage return you expect to earn",
+        "Time period determines how long your money will grow and compound",
+        "Compounding frequency shows how often interest is calculated and added",
+        "Regular contributions simulate consistent investing (like monthly deposits)"
+      ],
+      "formulaExplanation": "The compound interest formula is: Future Value = Principal × (1 + r/n)^(n×t) + PMT × [((1 + r/n)^(n×t) - 1) / (r/n)], where r is annual interest rate, n is compounding frequency, t is years, and PMT is regular payment. This formula reveals why compound interest creates exponential growth - each period's interest earns interest on itself. The more frequent the compounding (daily > monthly > quarterly > annual), the higher the final amount. Understanding this formula explains why small differences in rates or frequencies create large differences over time.",
+      "examples": [
+        "$10,000 invested at 7% annual return compounded monthly grows to $40,544 in 20 years - more than quadrupling your money.",
+        "Starting with $5,000 at age 25 vs. $5,000 at age 35 (both at 8% return) results in $86,000 vs. $46,000 by age 65 - showing the power of time.",
+        "$200 monthly contributions at 6% annual return grow to $144,000 in 30 years, while the same amount invested as one lump sum grows to only $107,000 - demonstrating consistent investing beats timing the market."
+      ],
+      "resultsExplanation": [
+        "Future value shows the total amount your investment will grow to",
+        "Total interest earned reveals how much of the growth comes from compounding",
+        "Growth breakdown shows the portion from principal vs. earned interest",
+        "Regular contribution impact demonstrates the power of consistent investing"
+      ],
+      "whoItsFor": "This compound interest calculator serves savers planning retirement accounts, investors learning about portfolio growth, students understanding financial principles, parents saving for children's education, entrepreneurs projecting business growth, financial advisors teaching clients, and anyone interested in wealth building. It's particularly valuable for those comparing savings accounts vs. investments, understanding loan costs, projecting retirement savings, and learning why consistent, long-term investing outperforms market timing. The calculator works for any financial scenario involving interest accumulation over time.",
+      "disclaimer": "This calculator provides estimates based on compound interest assumptions and does not account for taxes, fees, inflation, market volatility, or changing interest rates. Investment returns are not guaranteed and past performance doesn't predict future results. Actual results may vary significantly based on market conditions and individual circumstances. This tool is for educational purposes only and doesn't constitute investment advice. Consult qualified financial professionals for personalized investment recommendations. Remember that all investing involves risk, including potential loss of principal.",
+      "relatedTools": [
+        "Investment calculators for comparing different asset classes",
+        "Savings calculators for emergency fund planning",
+        "Loan calculators for understanding debt costs"
+      ],
+      "faqs": [
+        {
+          "question": "What's the difference between simple interest and compound interest?",
+          "answer": "Simple interest earns interest only on the original principal amount. For example, $1,000 at 5% simple interest earns $50/year every year. Compound interest earns 'interest on interest' - the same $1,000 at 5% compounded annually earns $50 the first year, but $52.50 the second year ($50 on original + $2.50 on earned interest). Over time, this creates exponential growth. Compound interest is how wealth is built through investing and saving."
+        },
+        {
+          "question": "Why is compounding frequency important?",
+          "answer": "More frequent compounding accelerates growth because interest is calculated and added more often. $10,000 at 6% annual return grows to $17,908 in 10 years with annual compounding, but $18,174 with monthly compounding - a $266 difference. Daily compounding maximizes this effect. This explains why high-yield savings accounts and investment accounts with frequent compounding provide better returns than those compounded annually."
+        },
+        {
+          "question": "How much does starting early really matter?",
+          "answer": "Time is the most powerful factor in compound interest. $5,000 invested at age 25 growing at 8% annually becomes $86,000 by age 65. The same $5,000 invested at age 35 becomes only $46,000 by age 65 - less than half as much despite the same investment and return. Starting just 10 years earlier can double or triple your retirement savings due to the extra time for compounding to work."
+        },
+        {
+          "question": "Should I focus on higher returns or more frequent contributions?",
+          "answer": "Both are important, but consistency often matters more than chasing high returns. $300 monthly at 6% return grows to $144,000 in 30 years. $500 monthly at 8% return grows to $246,000 - showing higher contributions create more wealth than higher returns. However, the combination is ideal. Focus on maximizing contributions first, then optimize returns through smart investing. Small increases in contributions compound dramatically over time."
+        },
+        {
+          "question": "How do taxes affect compound interest calculations?",
+          "answer": "Taxes reduce compounding power by taking a portion of earnings each year. Pre-tax returns of 8% might become 5-6% after taxes depending on your tax bracket and account type. Tax-advantaged accounts (401k, IRA) allow pre-tax contributions and tax-deferred growth. Consider after-tax returns when comparing investments. The tax drag is why long-term investors often prefer tax-efficient investments and accounts designed for compounding without annual tax interruptions."
+        }
+      ]
+    }
   }
 }

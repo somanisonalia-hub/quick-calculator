@@ -1210,5 +1210,345 @@
       ]
     },
     "component": "PercentCalculator"
+  },
+  "de": {
+    "title": "Prozentrechner",
+    "seoTitle": "Percent Rechner - How Do I Calculate Percentages?",
+    "summary": "Calculate percentages, percent change, and percentage of numbers.",
+    "description": "Master percentage calculations with our comprehensive percent calculator. Calculate percentage of a number, find what percent one number is of another, determine percentage change between two values, and solve percentage increase or decrease problems. Perfect for students, teachers, business professionals, and anyone working with percentages.",
+    "category": "Math",
+    "difficulty": "Anfänger",
+    "slug": "percent-calculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "calculationType",
+          "label": "Calculation Type",
+          "type": "select",
+          "options": [
+            "percentOfNumber",
+            "whatPercent",
+            "percentChange"
+          ],
+          "default": "percentOfNumber"
+        },
+        {
+          "name": "number",
+          "label": "Number",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'percentOfNumber'"
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage (%)",
+          "type": "number",
+          "default": 20,
+          "min": 0,
+          "max": 100,
+          "step": 0.01,
+          "conditional": "calculationType === 'percentOfNumber'"
+        },
+        {
+          "name": "part",
+          "label": "Part",
+          "type": "number",
+          "default": 25,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'whatPercent'"
+        },
+        {
+          "name": "whole",
+          "label": "Whole",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'whatPercent'"
+        },
+        {
+          "name": "originalValue",
+          "label": "Original Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'percentChange'"
+        },
+        {
+          "name": "newValue",
+          "label": "New Value",
+          "type": "number",
+          "default": 120,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'percentChange'"
+        }
+      ],
+      "formula": "Percent of Number: (Percentage × Number) ÷ 100; What Percent: (Part ÷ Whole) × 100; Percent Change: ((New - Original) ÷ Original) × 100",
+      "output": {
+        "label": "Result",
+        "default": "Select calculation type and enter values above",
+        "format": "dynamic"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Step-by-Step Solution",
+          "field": "stepByStep",
+          "format": "text"
+        },
+        {
+          "label": "Formula Used",
+          "field": "formulaUsed",
+          "format": "text"
+        },
+        {
+          "label": "Alternative Format",
+          "field": "alternativeFormat",
+          "format": "text"
+        }
+      ],
+      "componentName": "PercentCalculator"
+    },
+    "seoContent": {
+      "introduction": "Master percentage calculations with our comprehensive percent calculator that handles all types of percentage problems. Whether you need to find what percent one number is of another, calculate percentage change between two values, or determine percentage increase and decrease, our calculator provides instant results with clear, step-by-step explanations. Perfect for students learning percentage concepts, teachers demonstrating calculations, business professionals analyzing data, and anyone working with percentages in daily life or professional settings.",
+      "benefits": [
+        "Calculate three different types of percentage problems in one tool",
+        "Get instant results with detailed step-by-step explanations",
+        "Understand percentage concepts through clear, educational breakdowns",
+        "Handle both simple and complex percentage calculations accurately",
+        "Learn percentage formulas and methods through worked examples",
+        "Verify manual calculations and check homework answers"
+      ],
+      "steps": [
+        "Select the type of percentage calculation you need",
+        "Enter the required values based on your calculation type",
+        "For percentage of a number: enter the number and percentage",
+        "For what percent: enter the part and whole numbers",
+        "For percent change: enter original and new values",
+        "Review the result and step-by-step explanation provided"
+      ],
+      "inputsExplained": [
+        "Calculation type determines which percentage formula to use",
+        "For percentage of a number, enter the base number and desired percentage",
+        "For what percent calculations, enter the part (numerator) and whole (denominator)",
+        "For percentage change, enter the original value and the new value to compare",
+        "All inputs accept decimal values for precise calculations"
+      ],
+      "formulaExplanation": "Our calculator uses standard percentage formulas: 1) Percentage of a number: (Percentage × Number) ÷ 100, 2) What percent: (Part ÷ Whole) × 100, 3) Percentage change: ((New Value - Original Value) ÷ Original Value) × 100. These formulas provide consistent, mathematically accurate results across all percentage calculations. Understanding these relationships helps you work with percentages confidently in any context, from grades and finances to data analysis and everyday calculations.",
+      "examples": [
+        "What is 25% of 200? Calculation: (25 × 200) ÷ 100 = 50. Answer: 25% of 200 is 50.",
+        "What percent is 15 of 60? Calculation: (15 ÷ 60) × 100 = 25%. Answer: 15 is 25% of 60.",
+        "What is the percentage change from 50 to 75? Calculation: ((75 - 50) ÷ 50) × 100 = 50%. Answer: 50% increase."
+      ],
+      "resultsExplanation": [
+        "Result shows the final percentage calculation answer",
+        "Step-by-step explanation breaks down the calculation process",
+        "Formula used indicates which percentage method was applied",
+        "Clear formatting makes it easy to understand and verify results"
+      ],
+      "whoItsFor": "This percentage calculator serves students learning math concepts, teachers demonstrating percentage calculations, business professionals analyzing sales data and financial percentages, retailers calculating discounts and markups, data analysts working with percentage changes, and anyone needing to work with percentages in daily life. It's particularly valuable for those studying math, working in finance, retail, or data analysis, or anyone wanting to understand percentage relationships more deeply.",
+      "disclaimer": "This calculator provides accurate percentage calculations based on standard mathematical formulas. Results are for educational and informational purposes only. While calculations are mathematically correct, real-world applications may involve additional factors such as rounding, taxes, or specific business rules. This tool is not a substitute for professional financial or mathematical advice. Always verify critical calculations through multiple methods when accuracy is essential.",
+      "relatedTools": [
+        "Basic math calculators for fundamental arithmetic operations",
+        "Fraction calculators for working with fractional percentages",
+        "Financial calculators for interest rate and investment percentage calculations"
+      ],
+      "faqs": [
+        {
+          "question": "How do I calculate percentage of a number?",
+          "answer": "To find what percent one number is of another, use the formula: (Part ÷ Whole) × 100. For example, to find what percent 25 is of 200: (25 ÷ 200) × 100 = 12.5%. This tells you 25 is 12.5% of 200. The calculator handles this automatically - just enter your part and whole numbers."
+        },
+        {
+          "question": "What's the difference between percentage increase and decrease?",
+          "answer": "Both use the same formula: ((New Value - Original Value) ÷ Original Value) × 100. If the result is positive, it's a percentage increase. If negative, it's a percentage decrease. For example, from 100 to 120 is +20% increase. From 100 to 80 is -20% decrease. The sign indicates the direction of change."
+        },
+        {
+          "question": "How do I calculate percentage change between two numbers?",
+          "answer": "Use the percentage change formula: ((New Value - Original Value) ÷ Original Value) × 100. Subtract the original from the new, divide by the original, then multiply by 100. This gives you the percentage change. For example, if sales went from $1,000 to $1,200: (($1,200 - $1,000) ÷ $1,000) × 100 = 20% increase."
+        },
+        {
+          "question": "Can I calculate reverse percentages?",
+          "answer": "Yes, the 'what percent' calculation does this. Enter the part and whole, and it tells you what percentage the part represents. For example, if you scored 85 out of 100, enter 85 as part and 100 as whole to find you got 85%. This is useful for grades, test scores, and proportions."
+        },
+        {
+          "question": "How do percentages work in real life?",
+          "answer": "Percentages appear everywhere: sales tax (8%), discounts (20% off), grades (95%), interest rates (5%), growth rates (10% increase), and proportions (30% of the population). Understanding percentage calculations helps with budgeting, shopping, investing, and analyzing data. The calculator helps you master these essential real-world math skills."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Percentage Rekenmachine",
+    "seoTitle": "Percent Calculator - How Do I Calculate Percentages?",
+    "summary": "Calculate percentages, percent change, and percentage of numbers.",
+    "description": "Master percentage calculations with our comprehensive percent calculator. Calculate percentage of a number, find what percent one number is of another, determine percentage change between two values, and solve percentage increase or decrease problems. Perfect for students, teachers, business professionals, and anyone working with percentages.",
+    "category": "Math",
+    "difficulty": "Beginner",
+    "slug": "percent-calculator",
+    "calculatorComponent": {
+      "inputs": [
+        {
+          "name": "calculationType",
+          "label": "Calculation Type",
+          "type": "select",
+          "options": [
+            "percentOfNumber",
+            "whatPercent",
+            "percentChange"
+          ],
+          "default": "percentOfNumber"
+        },
+        {
+          "name": "number",
+          "label": "Number",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'percentOfNumber'"
+        },
+        {
+          "name": "percentage",
+          "label": "Percentage (%)",
+          "type": "number",
+          "default": 20,
+          "min": 0,
+          "max": 100,
+          "step": 0.01,
+          "conditional": "calculationType === 'percentOfNumber'"
+        },
+        {
+          "name": "part",
+          "label": "Part",
+          "type": "number",
+          "default": 25,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'whatPercent'"
+        },
+        {
+          "name": "whole",
+          "label": "Whole",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'whatPercent'"
+        },
+        {
+          "name": "originalValue",
+          "label": "Original Value",
+          "type": "number",
+          "default": 100,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'percentChange'"
+        },
+        {
+          "name": "newValue",
+          "label": "New Value",
+          "type": "number",
+          "default": 120,
+          "min": 0,
+          "step": 0.01,
+          "conditional": "calculationType === 'percentChange'"
+        }
+      ],
+      "formula": "Percent of Number: (Percentage × Number) ÷ 100; What Percent: (Part ÷ Whole) × 100; Percent Change: ((New - Original) ÷ Original) × 100",
+      "output": {
+        "label": "Result",
+        "default": "Select calculation type and enter values above",
+        "format": "dynamic"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Step-by-Step Solution",
+          "field": "stepByStep",
+          "format": "text"
+        },
+        {
+          "label": "Formula Used",
+          "field": "formulaUsed",
+          "format": "text"
+        },
+        {
+          "label": "Alternative Format",
+          "field": "alternativeFormat",
+          "format": "text"
+        }
+      ],
+      "componentName": "PercentCalculator"
+    },
+    "seoContent": {
+      "introduction": "Master percentage calculations with our comprehensive percent calculator that handles all types of percentage problems. Whether you need to find what percent one number is of another, calculate percentage change between two values, or determine percentage increase and decrease, our calculator provides instant results with clear, step-by-step explanations. Perfect for students learning percentage concepts, teachers demonstrating calculations, business professionals analyzing data, and anyone working with percentages in daily life or professional settings.",
+      "benefits": [
+        "Calculate three different types of percentage problems in one tool",
+        "Get instant results with detailed step-by-step explanations",
+        "Understand percentage concepts through clear, educational breakdowns",
+        "Handle both simple and complex percentage calculations accurately",
+        "Learn percentage formulas and methods through worked examples",
+        "Verify manual calculations and check homework answers"
+      ],
+      "steps": [
+        "Select the type of percentage calculation you need",
+        "Enter the required values based on your calculation type",
+        "For percentage of a number: enter the number and percentage",
+        "For what percent: enter the part and whole numbers",
+        "For percent change: enter original and new values",
+        "Review the result and step-by-step explanation provided"
+      ],
+      "inputsExplained": [
+        "Calculation type determines which percentage formula to use",
+        "For percentage of a number, enter the base number and desired percentage",
+        "For what percent calculations, enter the part (numerator) and whole (denominator)",
+        "For percentage change, enter the original value and the new value to compare",
+        "All inputs accept decimal values for precise calculations"
+      ],
+      "formulaExplanation": "Our calculator uses standard percentage formulas: 1) Percentage of a number: (Percentage × Number) ÷ 100, 2) What percent: (Part ÷ Whole) × 100, 3) Percentage change: ((New Value - Original Value) ÷ Original Value) × 100. These formulas provide consistent, mathematically accurate results across all percentage calculations. Understanding these relationships helps you work with percentages confidently in any context, from grades and finances to data analysis and everyday calculations.",
+      "examples": [
+        "What is 25% of 200? Calculation: (25 × 200) ÷ 100 = 50. Answer: 25% of 200 is 50.",
+        "What percent is 15 of 60? Calculation: (15 ÷ 60) × 100 = 25%. Answer: 15 is 25% of 60.",
+        "What is the percentage change from 50 to 75? Calculation: ((75 - 50) ÷ 50) × 100 = 50%. Answer: 50% increase."
+      ],
+      "resultsExplanation": [
+        "Result shows the final percentage calculation answer",
+        "Step-by-step explanation breaks down the calculation process",
+        "Formula used indicates which percentage method was applied",
+        "Clear formatting makes it easy to understand and verify results"
+      ],
+      "whoItsFor": "This percentage calculator serves students learning math concepts, teachers demonstrating percentage calculations, business professionals analyzing sales data and financial percentages, retailers calculating discounts and markups, data analysts working with percentage changes, and anyone needing to work with percentages in daily life. It's particularly valuable for those studying math, working in finance, retail, or data analysis, or anyone wanting to understand percentage relationships more deeply.",
+      "disclaimer": "This calculator provides accurate percentage calculations based on standard mathematical formulas. Results are for educational and informational purposes only. While calculations are mathematically correct, real-world applications may involve additional factors such as rounding, taxes, or specific business rules. This tool is not a substitute for professional financial or mathematical advice. Always verify critical calculations through multiple methods when accuracy is essential.",
+      "relatedTools": [
+        "Basic math calculators for fundamental arithmetic operations",
+        "Fraction calculators for working with fractional percentages",
+        "Financial calculators for interest rate and investment percentage calculations"
+      ],
+      "faqs": [
+        {
+          "question": "How do I calculate percentage of a number?",
+          "answer": "To find what percent one number is of another, use the formula: (Part ÷ Whole) × 100. For example, to find what percent 25 is of 200: (25 ÷ 200) × 100 = 12.5%. This tells you 25 is 12.5% of 200. The calculator handles this automatically - just enter your part and whole numbers."
+        },
+        {
+          "question": "What's the difference between percentage increase and decrease?",
+          "answer": "Both use the same formula: ((New Value - Original Value) ÷ Original Value) × 100. If the result is positive, it's a percentage increase. If negative, it's a percentage decrease. For example, from 100 to 120 is +20% increase. From 100 to 80 is -20% decrease. The sign indicates the direction of change."
+        },
+        {
+          "question": "How do I calculate percentage change between two numbers?",
+          "answer": "Use the percentage change formula: ((New Value - Original Value) ÷ Original Value) × 100. Subtract the original from the new, divide by the original, then multiply by 100. This gives you the percentage change. For example, if sales went from $1,000 to $1,200: (($1,200 - $1,000) ÷ $1,000) × 100 = 20% increase."
+        },
+        {
+          "question": "Can I calculate reverse percentages?",
+          "answer": "Yes, the 'what percent' calculation does this. Enter the part and whole, and it tells you what percentage the part represents. For example, if you scored 85 out of 100, enter 85 as part and 100 as whole to find you got 85%. This is useful for grades, test scores, and proportions."
+        },
+        {
+          "question": "How do percentages work in real life?",
+          "answer": "Percentages appear everywhere: sales tax (8%), discounts (20% off), grades (95%), interest rates (5%), growth rates (10% increase), and proportions (30% of the population). Understanding percentage calculations helps with budgeting, shopping, investing, and analyzing data. The calculator helps you master these essential real-world math skills."
+        }
+      ]
+    }
   }
 }

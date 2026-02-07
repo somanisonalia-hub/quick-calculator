@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-const validLanguages = ['en', 'es', 'pt', 'fr'];
+const validLanguages = ['en', 'es', 'pt', 'fr', 'de', 'nl'];
 
 const translations = {
   en: {
@@ -27,6 +27,18 @@ const translations = {
     description: 'Avis de non-responsabilité et limitations importantes concernant l\'utilisation de Quick Calculator.',
     heading: 'Avis de Non-Responsabilité',
     lastUpdated: 'Dernière Mise à Jour: Janvier 2026'
+  },
+  de: {
+    title: 'Haftungsausschluss | Quick Calculator',
+    description: 'Wichtige Haftungsausschlüsse und Einschränkungen bezüglich der Nutzung von Quick Calculator.',
+    heading: 'Haftungsausschluss',
+    lastUpdated: 'Zuletzt aktualisiert: Januar 2026'
+  },
+  nl: {
+    title: 'Disclaimer | Quick Calculator',
+    description: 'Belangrijke disclaimers en beperkingen met betrekking tot het gebruik van Quick Calculator.',
+    heading: 'Disclaimer',
+    lastUpdated: 'Laatst bijgewerkt: januari 2026'
   }
 };
 
@@ -47,12 +59,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.title,
     description: t.description,
     alternates: {
-      canonical: `https://quick-calculator.org/${lang}/disclaimer`,
+      canonical: lang === 'en' ? 'https://quick-calculator.org/disclaimer' : `https://quick-calculator.org/${lang}/disclaimer`,
       languages: {
         'en': 'https://quick-calculator.org/en/disclaimer',
         'es': 'https://quick-calculator.org/es/disclaimer',
-        'fr': 'https://quick-calculator.org/fr/disclaimer',
         'pt': 'https://quick-calculator.org/pt/disclaimer',
+        'fr': 'https://quick-calculator.org/fr/disclaimer',
+        'de': 'https://quick-calculator.org/de/disclaimer',
+        'nl': 'https://quick-calculator.org/nl/disclaimer',
         'x-default': 'https://quick-calculator.org/en/disclaimer',
       }
     }

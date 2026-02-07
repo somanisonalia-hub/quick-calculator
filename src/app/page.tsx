@@ -10,8 +10,10 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://quick-calculator.org',
       'es': 'https://quick-calculator.org/es',
-      'fr': 'https://quick-calculator.org/fr',
       'pt': 'https://quick-calculator.org/pt',
+      'fr': 'https://quick-calculator.org/fr',
+      'de': 'https://quick-calculator.org/de',
+      'nl': 'https://quick-calculator.org/nl',
       'x-default': 'https://quick-calculator.org',
     },
   },

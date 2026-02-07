@@ -12,13 +12,14 @@ import { loadCalculatorsByCategory, loadAllCalculatorsStatic } from '@/lib/stati
 import CategoryPageClient from '@/app/categories/[slug]/CategoryPageClient';
 
 // Valid languages and categories
+// Generate for all languages: en, es, pt, fr (with all calculators) and de, nl (with selected calculators)
 const validLanguages = ['en', 'es', 'pt', 'fr', 'de', 'nl'];
 const validCategories = ['financial', 'health', 'math', 'utility', 'lifestyle'];
 
 export async function generateStaticParams() {
   const params = [];
 
-  // Generate all combinations of languages and categories
+  // Generate all combinations of languages and categories (all 6 languages)
   for (const lang of validLanguages) {
     for (const category of validCategories) {
       params.push({
@@ -31,7 +32,6 @@ export async function generateStaticParams() {
   return params;
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const { lang, category } = await params;
 
@@ -66,8 +66,10 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       languages: {
         'en': `https://quick-calculator.org/categories/${category}`,
         'es': `https://quick-calculator.org/es/categories/${category}`,
-        'fr': `https://quick-calculator.org/fr/categories/${category}`,
         'pt': `https://quick-calculator.org/pt/categories/${category}`,
+        'fr': `https://quick-calculator.org/fr/categories/${category}`,
+        'de': `https://quick-calculator.org/de/categories/${category}`,
+        'nl': `https://quick-calculator.org/nl/categories/${category}`,
         'x-default': `https://quick-calculator.org/categories/${category}`,
       },
     }
@@ -103,13 +105,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   }
 
   // Generate breadcrumbs directly - Home → Category
-  const homeNames = { en: 'Home', es: 'Inicio', pt: 'Início', fr: 'Accueil' };
+  const homeNames = { en: 'Home', es: 'Inicio', pt: 'Início', fr: 'Accueil', de: 'Startseite', nl: 'Home' };
   const categoryNames = {
-    financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculateurs Financiers' },
-    health: { en: 'Health & Fitness Calculators', es: 'Calculadoras de Salud y Fitness', pt: 'Calculadoras de Saúde e Fitness', fr: 'Calculateurs Santé et Fitness' },
-    math: { en: 'Math Calculators', es: 'Calculadoras Matemáticas', pt: 'Calculadoras Matemáticas', fr: 'Calculateurs Mathématiques' },
-    utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilitários', fr: 'Calculateurs Utilitaires' },
-    lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculateurs Style de Vie' }
+    financial: { en: 'Financial Calculators', es: 'Calculadoras Financieras', pt: 'Calculadoras Financeiras', fr: 'Calculateurs Financiers', de: 'Finanzrechner', nl: 'Financiële Rekenmachines' },
+    health: { en: 'Health & Fitness Calculators', es: 'Calculadoras de Salud y Fitness', pt: 'Calculadoras de Saúde e Fitness', fr: 'Calculateurs Santé et Fitness', de: 'Gesundheits- & Fitness-Rechner', nl: 'Gezondheids- & Fitness-Rekenmachines' },
+    math: { en: 'Math Calculators', es: 'Calculadoras Matemáticas', pt: 'Calculadoras Matemáticas', fr: 'Calculateurs Mathématiques', de: 'Mathematikrechner', nl: 'Wiskundige Rekenmachines' },
+    utility: { en: 'Utility Calculators', es: 'Calculadoras de Utilidad', pt: 'Calculadoras de Utilitários', fr: 'Calculateurs Utilitaires', de: 'Nützlichkeitsrechner', nl: 'Hulpmiddel Rekenmachines' },
+    lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculateurs Style de Vie', de: 'Lebensstil-Rechner', nl: 'Levensstijl Rekenmachines' }
   };
 
   const homeName = homeNames[lang as keyof typeof homeNames] || 'Home';

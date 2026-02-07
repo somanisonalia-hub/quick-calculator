@@ -934,5 +934,371 @@
       ]
     },
     "component": "BodyFatCalculator"
+  },
+  "de": {
+    "title": "Körperfett Rechner",
+    "seoTitle": "Body Fat Rechner - What Is My Body Fat Percentage?",
+    "summary": "Calculate your body fat percentage using multiple scientifically validated methods including Navy formula and skinfold measurements.",
+    "description": "Our comprehensive body fat calculator uses several scientifically validated methods to estimate your body fat percentage. Choose from Navy method, BMI-based calculations, or skinfold measurements for accurate body composition analysis.",
+    "category": "health",
+    "difficulty": "grundlagen",
+    "slug": "body-fat-calculator",
+    "calculatorComponent": {
+      "componentName": "BodyFatCalculator",
+      "inputs": [
+        {
+          "name": "method",
+          "label": "Calculation Method",
+          "type": "select",
+          "default": "navy",
+          "options": [
+            "navy",
+            "bmi",
+            "skinfold"
+          ]
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "height",
+          "label": "Height (cm)",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1
+        },
+        {
+          "name": "weight",
+          "label": "Weight (kg)",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1
+        },
+        {
+          "name": "waist",
+          "label": "Waist Circumference (cm)",
+          "type": "number",
+          "default": 80,
+          "min": 50,
+          "max": 200,
+          "step": 0.1
+        },
+        {
+          "name": "neck",
+          "label": "Neck Circumference (cm)",
+          "type": "number",
+          "default": 38,
+          "min": 25,
+          "max": 60,
+          "step": 0.1
+        },
+        {
+          "name": "hips",
+          "label": "Hip Circumference (cm)",
+          "type": "number",
+          "default": 95,
+          "min": 60,
+          "max": 200,
+          "step": 0.1
+        }
+      ],
+      "formula": "Navy Method (Men): BF% = 495 / (1.0324 - 0.19077×log(waist-neck) + 0.15456×log(height)) - 450; Navy Method (Women): BF% = 495 / (1.29579 - 0.35004×log(waist+hips-neck) + 0.22100×log(height)) - 450",
+      "output": {
+        "label": "Body Fat Percentage",
+        "default": "Enter measurements above",
+        "format": "percentage"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Lean Body Mass",
+          "field": "leanMass",
+          "format": "number",
+          "unit": "kg"
+        },
+        {
+          "label": "Body Fat Mass",
+          "field": "fatMass",
+          "format": "number",
+          "unit": "kg"
+        },
+        {
+          "label": "Fitness Category",
+          "field": "category",
+          "format": "text"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate your body fat percentage with precision using our comprehensive body fat calculator. This essential fitness tool uses scientifically validated methods including the U.S. Navy formula, BMI-based calculations, and skinfold measurements to provide accurate body composition analysis. Understanding your body fat percentage is crucial for effective fitness planning, whether you're aiming to lose fat, build muscle, or track your health progress. Our calculator combines multiple proven methodologies to give you reliable results based on your measurements and personal data.",
+      "benefits": [
+        "Calculate body fat percentage using scientifically validated methods",
+        "Compare results across different calculation approaches for accuracy",
+        "Understand your fitness category and health status",
+        "Track changes in body composition over time",
+        "Get personalized insights into lean mass and fat mass distribution",
+        "Essential tool for fitness enthusiasts, athletes, and health-conscious individuals"
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
+      ],
+      "inputsExplained": [
+        "Calculation method determines which scientific formula to use for estimation",
+        "Gender affects body fat distribution patterns and formula calculations",
+        "Age influences metabolic factors that impact body composition",
+        "Height and weight provide baseline body size measurements",
+        "Circumference measurements (waist, neck, hips) are used in Navy method calculations",
+        "All measurements work together to provide comprehensive body fat analysis"
+      ],
+      "formulaExplanation": "The U.S. Navy method uses circumference measurements and logarithmic calculations to estimate body density, then converts this to body fat percentage. The formula for men is: BF% = 495 / (1.0324 - 0.19077×log(waist-neck) + 0.15456×log(height)) - 450. For women it includes hip measurements: BF% = 495 / (1.29579 - 0.35004×log(waist+hips-neck) + 0.22100×log(height)) - 450. BMI-based methods use correlations between BMI values and typical body fat percentages for age and gender groups.",
+      "examples": [
+        "A 30-year-old man, 175cm tall, weighing 75kg with 85cm waist and 38cm neck calculates 18.5% body fat using Navy method, placing him in the 'Fitness' category with 61.1kg lean mass",
+        "A 25-year-old woman, 165cm tall, weighing 60kg with 70cm waist, 32cm neck, and 95cm hips calculates 22.3% body fat using Navy method, indicating athletic fitness level",
+        "A 35-year-old man using BMI method (180cm, 85kg) estimates 20.1% body fat, providing baseline comparison for other measurement methods"
+      ],
+      "resultsExplanation": [
+        "Body fat percentage shows proportion of body weight that is fat tissue",
+        "Lean body mass indicates muscle, bone, and organ weight",
+        "Body fat mass represents actual weight of fat tissue in kilograms",
+        "Fitness category provides health context based on standard ranges",
+        "Results vary by calculation method and should be interpreted accordingly"
+      ],
+      "whoItsFor": "This calculator serves fitness enthusiasts tracking body composition changes, athletes monitoring performance metrics, healthcare professionals assessing patient health, nutritionists planning dietary interventions, personal trainers setting client goals, and individuals pursuing weight loss or muscle gain objectives. It's particularly valuable for those following structured fitness programs, monitoring health changes, or seeking to understand their body composition beyond simple weight measurements.",
+      "disclaimer": "Body fat calculations provide estimates based on population averages and measurement correlations. Individual results may vary based on factors like muscle distribution, hydration levels, and body shape variations. For precise body composition analysis, consult healthcare professionals using methods like DEXA scans, hydrostatic weighing, or bioelectrical impedance. This tool is for educational purposes and should not replace professional medical assessment.",
+      "relatedTools": [
+        "BMI calculators for basic weight status assessment",
+        "BMR calculators for metabolic rate and calorie needs",
+        "Calorie tracking tools for nutrition management"
+      ],
+      "faqs": [
+        {
+          "question": "What's the most accurate method for calculating body fat percentage?",
+          "answer": "The U.S. Navy method is generally considered most accurate for home use, providing results within 3-4% of professional methods. However, for precise measurements, professional methods like DEXA scans, hydrostatic weighing, or bioelectrical impedance analysis are more accurate but require specialized equipment and professional administration."
+        },
+        {
+          "question": "How often should I measure my body fat percentage?",
+          "answer": "For tracking progress, measure every 4-6 weeks during fitness programs. More frequent measurements may show daily fluctuations due to hydration, digestion, and other factors. Use the same method and conditions each time for consistent, comparable results."
+        },
+        {
+          "question": "What are healthy body fat percentage ranges?",
+          "answer": "For men: Essential fat (2-5%), Athletes (6-13%), Fitness (14-17%), Average (18-24%), Obese (25%+). For women: Essential fat (10-13%), Athletes (14-20%), Fitness (21-24%), Average (25-31%), Obese (32%+). These ranges vary by age and individual health factors."
+        },
+        {
+          "question": "Why do men and women have different body fat calculations?",
+          "answer": "Men and women have different fat distribution patterns. Men typically carry more fat in the abdominal area, while women distribute fat more evenly including hips and thighs. Gender-specific formulas account for these differences to provide more accurate results."
+        },
+        {
+          "question": "Can body fat percentage be too low?",
+          "answer": "Yes, extremely low body fat percentages (below essential levels) can be unhealthy. Essential fat is necessary for hormone production, organ protection, and basic physiological functions. Men need at least 2-5% essential fat, women need 10-13%. Going below these levels can cause health issues including hormonal imbalances and weakened immune function."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Lichaamsvet Rekenmachine",
+    "seoTitle": "Body Fat Calculator - What Is My Body Fat Percentage?",
+    "summary": "Calculate your body fat percentage using multiple scientifically validated methods including Navy formula and skinfold measurements.",
+    "description": "Our comprehensive body fat calculator uses several scientifically validated methods to estimate your body fat percentage. Choose from Navy method, BMI-based calculations, or skinfold measurements for accurate body composition analysis.",
+    "category": "health",
+    "difficulty": "basis",
+    "slug": "body-fat-calculator",
+    "calculatorComponent": {
+      "componentName": "BodyFatCalculator",
+      "inputs": [
+        {
+          "name": "method",
+          "label": "Calculation Method",
+          "type": "select",
+          "default": "navy",
+          "options": [
+            "navy",
+            "bmi",
+            "skinfold"
+          ]
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "default": "male",
+          "options": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "default": 30,
+          "min": 10,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "height",
+          "label": "Height (cm)",
+          "type": "number",
+          "default": 170,
+          "min": 100,
+          "max": 250,
+          "step": 0.1
+        },
+        {
+          "name": "weight",
+          "label": "Weight (kg)",
+          "type": "number",
+          "default": 70,
+          "min": 30,
+          "max": 300,
+          "step": 0.1
+        },
+        {
+          "name": "waist",
+          "label": "Waist Circumference (cm)",
+          "type": "number",
+          "default": 80,
+          "min": 50,
+          "max": 200,
+          "step": 0.1
+        },
+        {
+          "name": "neck",
+          "label": "Neck Circumference (cm)",
+          "type": "number",
+          "default": 38,
+          "min": 25,
+          "max": 60,
+          "step": 0.1
+        },
+        {
+          "name": "hips",
+          "label": "Hip Circumference (cm)",
+          "type": "number",
+          "default": 95,
+          "min": 60,
+          "max": 200,
+          "step": 0.1
+        }
+      ],
+      "formula": "Navy Method (Men): BF% = 495 / (1.0324 - 0.19077×log(waist-neck) + 0.15456×log(height)) - 450; Navy Method (Women): BF% = 495 / (1.29579 - 0.35004×log(waist+hips-neck) + 0.22100×log(height)) - 450",
+      "output": {
+        "label": "Body Fat Percentage",
+        "default": "Enter measurements above",
+        "format": "percentage"
+      },
+      "additionalOutputs": [
+        {
+          "label": "Lean Body Mass",
+          "field": "leanMass",
+          "format": "number",
+          "unit": "kg"
+        },
+        {
+          "label": "Body Fat Mass",
+          "field": "fatMass",
+          "format": "number",
+          "unit": "kg"
+        },
+        {
+          "label": "Fitness Category",
+          "field": "category",
+          "format": "text"
+        }
+      ]
+    },
+    "seoContent": {
+      "introduction": "Calculate your body fat percentage with precision using our comprehensive body fat calculator. This essential fitness tool uses scientifically validated methods including the U.S. Navy formula, BMI-based calculations, and skinfold measurements to provide accurate body composition analysis. Understanding your body fat percentage is crucial for effective fitness planning, whether you're aiming to lose fat, build muscle, or track your health progress. Our calculator combines multiple proven methodologies to give you reliable results based on your measurements and personal data.",
+      "benefits": [
+        "Calculate body fat percentage using scientifically validated methods",
+        "Compare results across different calculation approaches for accuracy",
+        "Understand your fitness category and health status",
+        "Track changes in body composition over time",
+        "Get personalized insights into lean mass and fat mass distribution",
+        "Essential tool for fitness enthusiasts, athletes, and health-conscious individuals"
+      ],
+      "steps": [
+        "Enter your values in the input fields provided",
+        "Review the automatic calculations and results",
+        "Adjust inputs to explore different scenarios",
+        "Use the results for your planning and decision-making",
+        "Save or share your calculations as needed",
+        "Consult professionals for personalized advice"
+      ],
+      "inputsExplained": [
+        "Calculation method determines which scientific formula to use for estimation",
+        "Gender affects body fat distribution patterns and formula calculations",
+        "Age influences metabolic factors that impact body composition",
+        "Height and weight provide baseline body size measurements",
+        "Circumference measurements (waist, neck, hips) are used in Navy method calculations",
+        "All measurements work together to provide comprehensive body fat analysis"
+      ],
+      "formulaExplanation": "The U.S. Navy method uses circumference measurements and logarithmic calculations to estimate body density, then converts this to body fat percentage. The formula for men is: BF% = 495 / (1.0324 - 0.19077×log(waist-neck) + 0.15456×log(height)) - 450. For women it includes hip measurements: BF% = 495 / (1.29579 - 0.35004×log(waist+hips-neck) + 0.22100×log(height)) - 450. BMI-based methods use correlations between BMI values and typical body fat percentages for age and gender groups.",
+      "examples": [
+        "A 30-year-old man, 175cm tall, weighing 75kg with 85cm waist and 38cm neck calculates 18.5% body fat using Navy method, placing him in the 'Fitness' category with 61.1kg lean mass",
+        "A 25-year-old woman, 165cm tall, weighing 60kg with 70cm waist, 32cm neck, and 95cm hips calculates 22.3% body fat using Navy method, indicating athletic fitness level",
+        "A 35-year-old man using BMI method (180cm, 85kg) estimates 20.1% body fat, providing baseline comparison for other measurement methods"
+      ],
+      "resultsExplanation": [
+        "Body fat percentage shows proportion of body weight that is fat tissue",
+        "Lean body mass indicates muscle, bone, and organ weight",
+        "Body fat mass represents actual weight of fat tissue in kilograms",
+        "Fitness category provides health context based on standard ranges",
+        "Results vary by calculation method and should be interpreted accordingly"
+      ],
+      "whoItsFor": "This calculator serves fitness enthusiasts tracking body composition changes, athletes monitoring performance metrics, healthcare professionals assessing patient health, nutritionists planning dietary interventions, personal trainers setting client goals, and individuals pursuing weight loss or muscle gain objectives. It's particularly valuable for those following structured fitness programs, monitoring health changes, or seeking to understand their body composition beyond simple weight measurements.",
+      "disclaimer": "Body fat calculations provide estimates based on population averages and measurement correlations. Individual results may vary based on factors like muscle distribution, hydration levels, and body shape variations. For precise body composition analysis, consult healthcare professionals using methods like DEXA scans, hydrostatic weighing, or bioelectrical impedance. This tool is for educational purposes and should not replace professional medical assessment.",
+      "relatedTools": [
+        "BMI calculators for basic weight status assessment",
+        "BMR calculators for metabolic rate and calorie needs",
+        "Calorie tracking tools for nutrition management"
+      ],
+      "faqs": [
+        {
+          "question": "What's the most accurate method for calculating body fat percentage?",
+          "answer": "The U.S. Navy method is generally considered most accurate for home use, providing results within 3-4% of professional methods. However, for precise measurements, professional methods like DEXA scans, hydrostatic weighing, or bioelectrical impedance analysis are more accurate but require specialized equipment and professional administration."
+        },
+        {
+          "question": "How often should I measure my body fat percentage?",
+          "answer": "For tracking progress, measure every 4-6 weeks during fitness programs. More frequent measurements may show daily fluctuations due to hydration, digestion, and other factors. Use the same method and conditions each time for consistent, comparable results."
+        },
+        {
+          "question": "What are healthy body fat percentage ranges?",
+          "answer": "For men: Essential fat (2-5%), Athletes (6-13%), Fitness (14-17%), Average (18-24%), Obese (25%+). For women: Essential fat (10-13%), Athletes (14-20%), Fitness (21-24%), Average (25-31%), Obese (32%+). These ranges vary by age and individual health factors."
+        },
+        {
+          "question": "Why do men and women have different body fat calculations?",
+          "answer": "Men and women have different fat distribution patterns. Men typically carry more fat in the abdominal area, while women distribute fat more evenly including hips and thighs. Gender-specific formulas account for these differences to provide more accurate results."
+        },
+        {
+          "question": "Can body fat percentage be too low?",
+          "answer": "Yes, extremely low body fat percentages (below essential levels) can be unhealthy. Essential fat is necessary for hormone production, organ protection, and basic physiological functions. Men need at least 2-5% essential fat, women need 10-13%. Going below these levels can cause health issues including hormonal imbalances and weakened immune function."
+        }
+      ]
+    }
   }
 }

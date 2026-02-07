@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-const validLanguages = ['en', 'es', 'pt', 'fr'];
+const validLanguages = ['en', 'es', 'pt', 'fr', 'de', 'nl'];
 
 const translations = {
   en: {
@@ -103,6 +103,56 @@ const translations = {
       lastUpdated: 'Dernière Mise à Jour: Janvier 2026'
     },
     contactEmail: 'Email: privacy@quick-calculator.org'
+  },
+  de: {
+    title: 'Datenschutzrichtlinie | Quick Calculator',
+    description: 'Unsere Datenschutzrichtlinie beschreibt, wie wir Ihre Daten erfassen, verwenden und schützen.',
+    heading: 'Datenschutzrichtlinie',
+    intro: 'Quick Calculator ("wir", "unser" oder "uns") betreibt die Website quick-calculator.org (die "Website"). Diese Seite informiert Sie über unsere Richtlinien bezüglich der Erfassung, Verwendung und Offenlegung personenbezogener Daten, wenn Sie unseren Service nutzen, und die Wahlmöglichkeiten, die Sie mit diesen Daten haben.',
+    sections: {
+      collection: {
+        title: 'Informationserfassung und -verwendung',
+        cookies: 'Cookies',
+        cookiesDesc: 'Wir verwenden Cookies und ähnliche Nachverfolgungstechnologien, um die Aktivität auf unserer Website zu verfolgen und bestimmte Informationen zu speichern. Cookies sind Dateien mit einer kleinen Menge von Daten, die eine anonyme eindeutige Kennung enthalten können.',
+        logData: 'Protokolldaten',
+        logDataDesc: 'Wir erfassen Informationen, die Ihr Browser jedes Mal sendet, wenn Sie unsere Website besuchen ("Protokolldaten"). Dies kann die Internetprotokoll-Adresse ("IP") Ihres Computers, den Browsertyp, die Browserversion, die besuchten Seiten, die Uhrzeit und das Datum Ihres Besuchs und andere Statistiken enthalten.',
+      },
+      use: 'Datennutzung',
+      security: 'Datensicherheit',
+      rights: 'Ihre Datenschutzrechte',
+      cookies: 'Cookie-Verwaltung',
+      thirdParty: 'Drittanbieter-Services',
+      children: 'Datenschutz für Kinder',
+      changes: 'Änderungen dieser Datenschutzrichtlinie',
+      contact: 'Kontaktieren Sie uns',
+      lastUpdated: 'Letzte Aktualisierung: Januar 2026'
+    },
+    contactEmail: 'Email: privacy@quick-calculator.org'
+  },
+  nl: {
+    title: 'Privacybeleid | Quick Calculator',
+    description: 'Ons privacybeleid beschrijft hoe we uw gegevens verzamelen, gebruiken en beschermen.',
+    heading: 'Privacybeleid',
+    intro: 'Quick Calculator ("wij", "onze" of "ons") exploiteert de website quick-calculator.org (de "Website"). Deze pagina informeert u over ons beleid met betrekking tot het verzamelen, gebruiken en openbaar maken van persoonlijke gegevens wanneer u onze Service gebruikt en de keuzes die u met die gegevens kunt maken.',
+    sections: {
+      collection: {
+        title: 'Informatieverwerving en -gebruik',
+        cookies: 'Cookies',
+        cookiesDesc: 'We gebruiken cookies en vergelijkbare traceertechnologieën om activiteiten op onze Website bij te houden en bepaalde informatie op te slaan. Cookies zijn bestanden met een kleine hoeveelheid gegevens die een anonieme unieke identifier kunnen bevatten.',
+        logData: 'Loggegevens',
+        logDataDesc: 'We verzamelen informatie die uw browser telkens naar onze Website stuurt wanneer u deze bezoekt ("Loggegevens"). Dit kan het internetprotocoladres ("IP") van uw computer, het browsertype, de browserversie, de pagina\'s die u bezoekt, het moment en de datum van uw bezoek en andere statistieken bevatten.',
+      },
+      use: 'Gegevensgebruik',
+      security: 'Gegevensbeveiliging',
+      rights: 'Uw gegevensbeschermingsrechten',
+      cookies: 'Cookiebeheer',
+      thirdParty: 'Diensten van Derden',
+      children: 'Privacy van Kinderen',
+      changes: 'Wijzigingen in dit Privacybeleid',
+      contact: 'Neem contact op',
+      lastUpdated: 'Laatst bijgewerkt: januari 2026'
+    },
+    contactEmail: 'Email: privacy@quick-calculator.org'
   }
 };
 
@@ -123,12 +173,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.title,
     description: t.description,
     alternates: {
-      canonical: `https://quick-calculator.org/${lang}/privacy-policy`,
+      canonical: lang === 'en' ? 'https://quick-calculator.org/privacy-policy' : `https://quick-calculator.org/${lang}/privacy-policy`,
       languages: {
         'en': 'https://quick-calculator.org/en/privacy-policy',
         'es': 'https://quick-calculator.org/es/privacy-policy',
-        'fr': 'https://quick-calculator.org/fr/privacy-policy',
         'pt': 'https://quick-calculator.org/pt/privacy-policy',
+        'fr': 'https://quick-calculator.org/fr/privacy-policy',
+        'de': 'https://quick-calculator.org/de/privacy-policy',
+        'nl': 'https://quick-calculator.org/nl/privacy-policy',
         'x-default': 'https://quick-calculator.org/en/privacy-policy',
       }
     }
@@ -166,7 +218,9 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
             <p>{lang === 'en' ? 'Quick Calculator uses the collected data for various purposes including providing and maintaining our Service, notifying you about changes, providing customer support, gathering analysis or valuable information to improve our Service, monitoring usage, detecting and preventing technical issues, and providing you with news and special offers.' : 
                lang === 'es' ? 'Quick Calculator utiliza los datos recopilados para diversos propósitos, incluyendo proporcionar y mantener nuestro Servicio, notificarle sobre cambios, proporcionar atención al cliente, recopilar análisis o información valiosa para mejorar nuestro Servicio, monitorear el uso, detectar y prevenir problemas técnicos, y proporcionarle noticias y ofertas especiales.' :
                lang === 'pt' ? 'Quick Calculator usa os dados coletados para vários propósitos, incluindo fornecer e manter nosso Serviço, notificá-lo sobre mudanças, fornecer suporte ao cliente, coletar análises ou informações valiosas para melhorar nosso Serviço, monitorar o uso, detectar e prevenir problemas técnicos e fornecer notícias e ofertas especiais.' :
-               'Quick Calculator utilise les données collectées à diverses fins, notamment pour fournir et maintenir notre Service, vous informer des changements, fournir un support client, recueillir des analyses ou des informations précieuses pour améliorer notre Service, surveiller l\'utilisation, détecter et prévenir les problèmes techniques et vous fournir des nouvelles et des offres spéciales.'}</p>
+               lang === 'fr' ? 'Quick Calculator utilise les données collectées à diverses fins, notamment pour fournir et maintenir notre Service, vous informer des changements, fournir un support client, recueillir des analyses ou des informations précieuses pour améliorer notre Service, surveiller l\'utilisation, détecter et prévenir les problèmes techniques et vous fournir des nouvelles et des offres spéciales.' :
+               lang === 'de' ? 'Quick Calculator nutzt die erfassten Daten für verschiedene Zwecke, einschließlich Bereitstellung und Wartung unseres Service, Benachrichtigung über Änderungen, Kundenunterstützung, Erfassung von Erkenntnissen zur Verbesserung unseres Service, Überwachung der Nutzung, Erkennung und Verhinderung technischer Probleme sowie Bereitstellung von Nachrichten und Spezialangeboten.' :
+               'Quick Calculator gebruikt de verzamelde gegevens voor verschillende doeleinden, waaronder het verstrekken en onderhouden van onze Service, u op de hoogte stellen van wijzigingen, het bieden van klantenondersteuning, het verzamelen van analyses ter verbetering van onze Service, het controleren van het gebruik, het detecteren en voorkomen van technische problemen en het bezorgen van nieuws en speciale aanbiedingen.'}</p>
           </section>
 
           <section>
@@ -174,7 +228,9 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
             <p>{lang === 'en' ? 'The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal data, we cannot guarantee its absolute security.' :
                lang === 'es' ? 'La seguridad de sus datos es importante para nosotros, pero recuerde que ningún método de transmisión por Internet o método de almacenamiento electrónico es 100% seguro. Si bien nos esforzamos por usar medios comercialmente aceptables para proteger sus datos personales, no podemos garantizar su seguridad absoluta.' :
                lang === 'pt' ? 'A segurança dos seus dados é importante para nós, mas lembre-se de que nenhum método de transmissão pela Internet ou método de armazenamento eletrônico é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis para proteger seus dados pessoais, não podemos garantir sua segurança absoluta.' :
-               'La sécurité de vos données est importante pour nous, mais rappelez-vous qu\'aucune méthode de transmission sur Internet ou méthode de stockage électronique n\'est sûre à 100%. Bien que nous nous efforcions d\'utiliser des moyens commercialement acceptables pour protéger vos données personnelles, nous ne pouvons garantir leur sécurité absolue.'}</p>
+               lang === 'fr' ? 'La sécurité de vos données est importante pour nous, mais rappelez-vous qu\'aucune méthode de transmission sur Internet ou méthode de stockage électronique n\'est sûre à 100%. Bien que nous nous efforcions d\'utiliser des moyens commercialement acceptables pour protéger vos données personnelles, nous ne pouvons garantir leur sécurité absolue.' :
+               lang === 'de' ? 'Die Sicherheit Ihrer Daten ist uns wichtig, aber denken Sie daran, dass keine Übertragungsmethode über das Internet oder elektronische Speichermethode 100% sicher ist. Obwohl wir uns bemühen, kommerziell akzeptable Mittel zum Schutz Ihrer personenbezogenen Daten zu verwenden, können wir deren absolute Sicherheit nicht garantieren.' :
+               'De beveiliging van uw gegevens is belangrijk voor ons, maar onthoud dat geen verzendingsmethode via internet of elektronische opslagmethode 100% veilig is. Hoewel we streven naar commercieel aanvaardbare middelen ter bescherming van uw persoonlijke gegevens, kunnen we de absolute veiligheid ervan niet garanderen.'}</p>
           </section>
 
           <section>

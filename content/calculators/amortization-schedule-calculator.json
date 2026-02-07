@@ -558,5 +558,167 @@
       ]
     },
     "component": "AmortizationScheduleCalculator"
+  },
+  "de": {
+    "title": "Tilgungsplan Rechner",
+    "seoTitle": "Amortization Schedule Rechner - How Will My Loan Payments Break Down?",
+    "summary": "Generate detailed amortization schedules showing principal and interest breakdown",
+    "description": "Generate detailed amortization schedules for any loan, showing exactly how each payment is split between principal and interest over time. Perfect for understanding loan repayment, mortgage analysis, and financial planning. View year-by-year summaries or detailed month-by-month breakdowns.",
+    "category": "financial",
+    "difficulty": "Mittelstufe",
+    "slug": "amortization-schedule-calculator",
+    "calculatorComponent": "AmortizationScheduleCalculator",
+    "seoContent": {
+      "introduction": "Understanding how your loan payments work is crucial for financial planning, and our comprehensive amortization schedule calculator makes it easy to see exactly how your payments are allocated. This powerful tool generates detailed amortization schedules that break down every payment, showing you how much goes toward interest versus principal reduction. Whether you're planning a mortgage, auto loan, or personal loan, this calculator helps you understand the true cost of borrowing and how your equity builds over time.",
+      "benefits": [
+        "See exactly how each loan payment is split between interest and principal",
+        "Understand how your loan balance decreases over time",
+        "Plan extra payments to reduce interest and payoff time",
+        "Compare different loan terms and interest rates",
+        "Track equity building for mortgages and investment properties",
+        "Make informed decisions about loan refinancing opportunities"
+      ],
+      "steps": [
+        "Enter your loan amount (the principal you want to borrow)",
+        "Input the annual interest rate for your loan",
+        "Specify the loan term in years",
+        "Optionally set a loan start date to see specific payment dates",
+        "Choose between year-by-year summary or detailed month-by-month view",
+        "Click 'Generate Schedule' to create your amortization table",
+        "Review the payment breakdown and export if needed"
+      ],
+      "inputsExplained": [
+        "Loan amount is the total principal you want to borrow",
+        "Interest rate affects how much interest you pay and payment distribution",
+        "Loan term determines the number of payments and total interest paid",
+        "Start date helps you see specific payment dates in your schedule",
+        "View mode lets you choose between summary or detailed breakdown"
+      ],
+      "formulaExplanation": "The calculator uses the standard loan payment formula to determine your monthly payment, then creates an amortization schedule by applying each payment to interest first, then principal. Early payments consist mostly of interest, while later payments are mostly principal. This shows why paying down principal early through extra payments can save significant interest.",
+      "examples": [
+        "A $200,000 mortgage at 6.5% over 30 years shows that in year 1, $12,800 goes to interest and only $2,700 to principal, while in year 30, only $100 goes to interest and $12,400 to principal",
+        "The same loan with a 15-year term shows much faster equity building - in year 5, $8,200 goes to principal compared to just $4,800 in the 30-year loan"
+      ],
+      "resultsExplanation": [
+        "Monthly payment shows your total payment amount including principal and interest",
+        "Total payments include all payments made over the life of the loan",
+        "Total interest shows how much extra you pay beyond the loan amount",
+        "Payoff date shows exactly when your loan will be paid off",
+        "Interest to principal ratio shows total interest as a percentage of the loan amount",
+        "The amortization table shows how each payment breaks down over time"
+      ],
+      "whoItsFor": "This amortization schedule calculator is essential for homeowners, prospective homebuyers, car buyers, small business owners, and anyone taking out installment loans. It's particularly valuable for understanding mortgage payments, comparing loan options, and planning extra payment strategies to save on interest costs.",
+      "disclaimer": "This calculator provides amortization schedules based on standard loan formulas. Actual payment amounts and schedules may vary based on your specific loan terms, lender fees, and payment timing. Consult with your lender for official amortization schedules.",
+      "relatedTools": [
+        "mortgage calculator",
+        "loan calculator",
+        "extra payment calculator",
+        "loan affordability calculator",
+        "debt consolidation calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is an amortization schedule?",
+          "answer": "An amortization schedule is a table that shows how each loan payment is split between interest and principal, and how your loan balance decreases over time. It helps you understand exactly how your loan is being paid off."
+        },
+        {
+          "question": "Why do early loan payments have more interest?",
+          "answer": "In the early years of a loan, most of your payment goes toward interest because you're paying interest on the full loan balance. As you pay down the principal, less interest accrues, so more of each payment goes toward principal."
+        },
+        {
+          "question": "How can I use an amortization schedule to save money?",
+          "answer": "You can use the schedule to plan extra payments toward principal, which reduces the loan balance faster and saves interest. The schedule shows exactly how much extra principal payment would affect your payoff date and total interest."
+        },
+        {
+          "question": "What's the difference between amortizing and non-amortizing loans?",
+          "answer": "Amortizing loans have fixed payments that include both principal and interest, with the proportion changing over time. Non-amortizing loans (like interest-only loans) only require interest payments initially, with a large principal payment due at the end."
+        },
+        {
+          "question": "Can I modify the amortization schedule?",
+          "answer": "While the calculator shows the standard schedule, you can modify your actual payments by making extra principal payments. Use the schedule to see how additional payments reduce your total interest and payoff time."
+        }
+      ]
+    }
+  },
+  "nl": {
+    "title": "Aflossingsschema Rekenmachine",
+    "seoTitle": "Amortization Schedule Calculator - How Will My Loan Payments Break Down?",
+    "summary": "Generate detailed amortization schedules showing principal and interest breakdown",
+    "description": "Generate detailed amortization schedules for any loan, showing exactly how each payment is split between principal and interest over time. Perfect for understanding loan repayment, mortgage analysis, and financial planning. View year-by-year summaries or detailed month-by-month breakdowns.",
+    "category": "financial",
+    "difficulty": "Gemiddeld",
+    "slug": "amortization-schedule-calculator",
+    "calculatorComponent": "AmortizationScheduleCalculator",
+    "seoContent": {
+      "introduction": "Understanding how your loan payments work is crucial for financial planning, and our comprehensive amortization schedule calculator makes it easy to see exactly how your payments are allocated. This powerful tool generates detailed amortization schedules that break down every payment, showing you how much goes toward interest versus principal reduction. Whether you're planning a mortgage, auto loan, or personal loan, this calculator helps you understand the true cost of borrowing and how your equity builds over time.",
+      "benefits": [
+        "See exactly how each loan payment is split between interest and principal",
+        "Understand how your loan balance decreases over time",
+        "Plan extra payments to reduce interest and payoff time",
+        "Compare different loan terms and interest rates",
+        "Track equity building for mortgages and investment properties",
+        "Make informed decisions about loan refinancing opportunities"
+      ],
+      "steps": [
+        "Enter your loan amount (the principal you want to borrow)",
+        "Input the annual interest rate for your loan",
+        "Specify the loan term in years",
+        "Optionally set a loan start date to see specific payment dates",
+        "Choose between year-by-year summary or detailed month-by-month view",
+        "Click 'Generate Schedule' to create your amortization table",
+        "Review the payment breakdown and export if needed"
+      ],
+      "inputsExplained": [
+        "Loan amount is the total principal you want to borrow",
+        "Interest rate affects how much interest you pay and payment distribution",
+        "Loan term determines the number of payments and total interest paid",
+        "Start date helps you see specific payment dates in your schedule",
+        "View mode lets you choose between summary or detailed breakdown"
+      ],
+      "formulaExplanation": "The calculator uses the standard loan payment formula to determine your monthly payment, then creates an amortization schedule by applying each payment to interest first, then principal. Early payments consist mostly of interest, while later payments are mostly principal. This shows why paying down principal early through extra payments can save significant interest.",
+      "examples": [
+        "A $200,000 mortgage at 6.5% over 30 years shows that in year 1, $12,800 goes to interest and only $2,700 to principal, while in year 30, only $100 goes to interest and $12,400 to principal",
+        "The same loan with a 15-year term shows much faster equity building - in year 5, $8,200 goes to principal compared to just $4,800 in the 30-year loan"
+      ],
+      "resultsExplanation": [
+        "Monthly payment shows your total payment amount including principal and interest",
+        "Total payments include all payments made over the life of the loan",
+        "Total interest shows how much extra you pay beyond the loan amount",
+        "Payoff date shows exactly when your loan will be paid off",
+        "Interest to principal ratio shows total interest as a percentage of the loan amount",
+        "The amortization table shows how each payment breaks down over time"
+      ],
+      "whoItsFor": "This amortization schedule calculator is essential for homeowners, prospective homebuyers, car buyers, small business owners, and anyone taking out installment loans. It's particularly valuable for understanding mortgage payments, comparing loan options, and planning extra payment strategies to save on interest costs.",
+      "disclaimer": "This calculator provides amortization schedules based on standard loan formulas. Actual payment amounts and schedules may vary based on your specific loan terms, lender fees, and payment timing. Consult with your lender for official amortization schedules.",
+      "relatedTools": [
+        "mortgage calculator",
+        "loan calculator",
+        "extra payment calculator",
+        "loan affordability calculator",
+        "debt consolidation calculator"
+      ],
+      "faqs": [
+        {
+          "question": "What is an amortization schedule?",
+          "answer": "An amortization schedule is a table that shows how each loan payment is split between interest and principal, and how your loan balance decreases over time. It helps you understand exactly how your loan is being paid off."
+        },
+        {
+          "question": "Why do early loan payments have more interest?",
+          "answer": "In the early years of a loan, most of your payment goes toward interest because you're paying interest on the full loan balance. As you pay down the principal, less interest accrues, so more of each payment goes toward principal."
+        },
+        {
+          "question": "How can I use an amortization schedule to save money?",
+          "answer": "You can use the schedule to plan extra payments toward principal, which reduces the loan balance faster and saves interest. The schedule shows exactly how much extra principal payment would affect your payoff date and total interest."
+        },
+        {
+          "question": "What's the difference between amortizing and non-amortizing loans?",
+          "answer": "Amortizing loans have fixed payments that include both principal and interest, with the proportion changing over time. Non-amortizing loans (like interest-only loans) only require interest payments initially, with a large principal payment due at the end."
+        },
+        {
+          "question": "Can I modify the amortization schedule?",
+          "answer": "While the calculator shows the standard schedule, you can modify your actual payments by making extra principal payments. Use the schedule to see how additional payments reduce your total interest and payoff time."
+        }
+      ]
+    }
   }
 }

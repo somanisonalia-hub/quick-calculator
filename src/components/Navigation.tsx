@@ -14,15 +14,22 @@ export default function Navigation() {
     if (path.startsWith('/es/') || path === '/es') return 'es';
     if (path.startsWith('/pt/') || path === '/pt') return 'pt';
     if (path.startsWith('/fr/') || path === '/fr') return 'fr';
+    if (path.startsWith('/de/') || path === '/de') return 'de';
+    if (path.startsWith('/nl/') || path === '/nl') return 'nl';
     if (path.startsWith('/en/') || path === '/en') return 'en';
     return 'en'; // Default to English
   };
 
   const currentLang = getCurrentLang(pathname);
 
-  // Languages available (English only for now)
+  // Languages available
   const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' }
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'pt', name: 'Português', flag: '🇵🇹' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' }
   ];
 
   const changeLanguage = (langCode: string) => {
@@ -31,8 +38,8 @@ export default function Navigation() {
     // Extract the path without any language prefix
     let pathWithoutLang = pathname;
 
-    // Remove any existing language prefix (es, pt, fr, en)
-    pathWithoutLang = pathWithoutLang.replace(/^\/(es|pt|fr|en)/, '');
+    // Remove any existing language prefix (es, pt, fr, en, de, nl)
+    pathWithoutLang = pathWithoutLang.replace(/^\/(es|pt|fr|en|de|nl)/, '');
 
     // Ensure we have a leading slash
     if (!pathWithoutLang.startsWith('/')) {

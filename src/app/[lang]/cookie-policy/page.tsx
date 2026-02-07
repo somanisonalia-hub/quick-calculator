@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-const validLanguages = ['en', 'es', 'pt', 'fr'];
+const validLanguages = ['en', 'es', 'pt', 'fr', 'de', 'nl'];
 
 const translations = {
   en: {
@@ -27,6 +27,18 @@ const translations = {
     description: 'Découvrez comment Quick Calculator utilise les cookies et technologies similaires.',
     heading: 'Politique des Cookies',
     lastUpdated: 'Dernière Mise à Jour: Janvier 2026'
+  },
+  de: {
+    title: 'Cookie-Richtlinie | Quick Calculator',
+    description: 'Erfahren Sie, wie Quick Calculator Cookies und ähnliche Technologien verwendet.',
+    heading: 'Cookie-Richtlinie',
+    lastUpdated: 'Zuletzt aktualisiert: Januar 2026'
+  },
+  nl: {
+    title: 'Cookiebeleid | Quick Calculator',
+    description: 'Meer informatie over hoe Quick Calculator cookies en soortgelijke technologieën gebruikt.',
+    heading: 'Cookiebeleid',
+    lastUpdated: 'Laatst bijgewerkt: januari 2026'
   }
 };
 
@@ -47,12 +59,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.title,
     description: t.description,
     alternates: {
-      canonical: `https://quick-calculator.org/${lang}/cookie-policy`,
+      canonical: lang === 'en' ? 'https://quick-calculator.org/cookie-policy' : `https://quick-calculator.org/${lang}/cookie-policy`,
       languages: {
         'en': 'https://quick-calculator.org/en/cookie-policy',
         'es': 'https://quick-calculator.org/es/cookie-policy',
-        'fr': 'https://quick-calculator.org/fr/cookie-policy',
         'pt': 'https://quick-calculator.org/pt/cookie-policy',
+        'fr': 'https://quick-calculator.org/fr/cookie-policy',
+        'de': 'https://quick-calculator.org/de/cookie-policy',
+        'nl': 'https://quick-calculator.org/nl/cookie-policy',
         'x-default': 'https://quick-calculator.org/en/cookie-policy',
       }
     }

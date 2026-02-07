@@ -330,17 +330,25 @@ export default function Footer({ currentLang = 'en' }: FooterProps) {
               {t.popularCalculators}
             </h3>
             <div className="flex flex-wrap gap-2 text-sm">
-              {popularCalculators.slice(0, 8).map((calc, index) => (
-                <span key={index} className="flex items-center">
-                  <Link
-                    href={`/${currentLang}/${calc.slug}`}
-                    className="text-gray-600 hover:text-blue-600 transition-colors"
-                  >
-                    {calc.name}
-                  </Link>
-                  {index < 7 && <span className="ml-2 text-gray-400">|</span>}
-                </span>
-              ))}
+              {popularCalculators.slice(0, 8).map((calc, index) => {
+                // Only show calculator links for languages with content (en, es, pt, fr)
+                const supportedLanguages = ['en', 'es', 'pt', 'fr'];
+                const href = supportedLanguages.includes(currentLang) 
+                  ? `/${currentLang}/${calc.slug}`
+                  : `/en/${calc.slug}`;
+                
+                return (
+                  <span key={index} className="flex items-center">
+                    <Link
+                      href={href}
+                      className="text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      {calc.name}
+                    </Link>
+                    {index < 7 && <span className="ml-2 text-gray-400">|</span>}
+                  </span>
+                );
+              })}
             </div>
           </div>
 
@@ -350,17 +358,25 @@ export default function Footer({ currentLang = 'en' }: FooterProps) {
               {t.categories}
             </h3>
             <div className="flex flex-wrap gap-2 text-sm">
-              {categories.map((category, index) => (
-                <span key={index} className="flex items-center">
-                  <Link
-                    href={`/${currentLang}/categories/${category.slug}`}
-                    className="text-gray-600 hover:text-blue-600 transition-colors"
-                  >
-                    {category.name}
-                  </Link>
-                  {index < categories.length - 1 && <span className="ml-2 text-gray-400">|</span>}
-                </span>
-              ))}
+              {categories.map((category, index) => {
+                // Only show category links for languages with content (en, es, pt, fr)
+                const supportedLanguages = ['en', 'es', 'pt', 'fr'];
+                const href = supportedLanguages.includes(currentLang)
+                  ? `/${currentLang}/categories/${category.slug}`
+                  : `/en/categories/${category.slug}`;
+                
+                return (
+                  <span key={index} className="flex items-center">
+                    <Link
+                      href={href}
+                      className="text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      {category.name}
+                    </Link>
+                    {index < categories.length - 1 && <span className="ml-2 text-gray-400">|</span>}
+                  </span>
+                );
+              })}
             </div>
           </div>
 

@@ -47,8 +47,9 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
       'calculator.output': { es: 'Salida', pt: 'Saída', fr: 'Sortie', en: 'Output' },
       'calculator.comingSoon': { es: 'Esta calculadora está actualmente en desarrollo y estará disponible pronto.', pt: 'Esta calculadora está atualmente em desenvolvimento e estará disponível em breve.', fr: 'Cette calculatrice est actuellement en développement et sera disponible bientôt.', en: 'This calculator is currently under development and will be available soon.' },
       'calculator.guideComingSoon': { es: 'La guía detallada y explicación de fórmula estarán disponibles pronto.', pt: 'O guia detalhado e explicação da fórmula estarão disponíveis em breve.', fr: 'Le guide détaillé et l\'explication de formule seront disponibles bientôt.', en: 'Detailed guide and formula explanation will be available soon.' },
-      'calculator.notFound': { es: 'Calculadora no encontrada', pt: 'Calculadora não encontrada', fr: 'Calculatrice introuvable', en: 'Calculator not found' },
-      'calculator.loading': { es: 'Cargando calculadora...', pt: 'Carregando calculadora...', fr: 'Chargement de la calculatrice...', en: 'Loading calculator...' }
+      'calculator.notFound': { es: 'Calculadora no encontrada', pt: 'Calculadora não encontrada', fr: 'Calculatrice introuvable', de: 'Rechner nicht gefunden', nl: 'Rekenmachine niet gevonden', en: 'Calculator not found' },
+      'calculator.loading': { es: 'Cargando calculadora...', pt: 'Carregando calculadora...', fr: 'Chargement de la calculatrice...', de: 'Rechner wird geladen...', nl: 'Rekenmachine laden...', en: 'Loading calculator...' },
+      'calculator.backToHomepage': { es: '← Volver a la página de inicio', pt: '← Voltar à página inicial', fr: '← Retour à la page d\'accueil', de: '← Zurück zur Startseite', nl: '← Terug naar startpagina', en: '← Back to homepage' }
     };
 
     return translations[key]?.[lang] || fallback || key;
@@ -139,13 +140,19 @@ export default function CalculatorPageClient({ lang, slug, seoContent, initialCa
 
   if (error || !calculatorContent) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">{error || '{t("calculator.notFound", "Calculator not found")}'}</p>
-          <a href="/" className="text-blue-600 hover:text-blue-800 mt-4 inline-block">
-            {t("calculator.backToHomepage", "← Back to homepage")}
-          </a>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+        <div className="text-center max-w-md">
+          <div className="text-6xl mb-4">🔍</div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">{tLang('calculator.notFound', 'Calculator not found')}</h1>
+          <p className="text-gray-600 mb-8">{lang === 'en' ? 'The calculator you\'re looking for doesn\'t exist or may have been moved.' : lang === 'es' ? 'La calculadora que buscas no existe o puede haber sido movida.' : lang === 'pt' ? 'A calculadora que você está procurando não existe ou pode ter sido movida.' : lang === 'fr' ? 'La calculatrice que vous recherchez n\'existe pas ou peut avoir été déplacée.' : lang === 'de' ? 'Der gesuchte Rechner existiert nicht oder wurde möglicherweise verschoben.' : 'De rekenmachine die je zoekt bestaat niet of is mogelijk verplaatst.'}</p>
+          <div className="flex flex-col gap-3">
+            <a href={`/${lang}`} className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+              {tLang('calculator.backToHomepage', '← Back to homepage')}
+            </a>
+            <a href={`/${lang}/categories/financial`} className="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-6 rounded-lg transition-colors">
+              {lang === 'en' ? 'Browse Calculators' : lang === 'es' ? 'Explorar Calculadoras' : lang === 'pt' ? 'Procurar Calculadoras' : lang === 'fr' ? 'Parcourir les Calculatrices' : lang === 'de' ? 'Rechner durchsuchen' : 'Rekenmachines bekijken'}
+            </a>
+          </div>
         </div>
       </div>
     );
