@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface SIPCalculatorProps {
   lang?: string;
@@ -108,9 +108,24 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
     });
   };
 
+  // Auto-calculate when inputs change
+  useEffect(() => {
+    calculateSIP();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inputs.monthlyAmount, inputs.years, inputs.annualReturn]);
+
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-4 sm:p-8 max-w-2xl mx-auto">
       <div className="space-y-6">
+        {/* Auto-calculation indicator for mobile */}
+        <div className="sm:hidden text-center">
+          <div className="inline-flex items-center gap-2 text-xs text-gray-500 bg-blue-50 dark:bg-blue-900 px-3 py-1 rounded-full border border-blue-200 dark:border-blue-800">
+            <svg className="w-3 h-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Auto-calculates as you type
+          </div>
+        </div>
         <div>
           <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
             {t.monthlyAmount}
@@ -155,29 +170,29 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
 
         <button
           onClick={calculateSIP}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          className="hidden sm:block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
         >
           {t.calculate}
         </button>
 
         {results.finalAmount > 0 && (
-          <div className="mt-8 bg-blue-50 dark:bg-blue-900 p-6 rounded-lg">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="mt-6 sm:mt-8 bg-blue-50 dark:bg-blue-900 p-4 sm:p-6 rounded-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div className="text-center">
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.totalInvestment}</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                <p className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white">
                   {t.rupee} {results.totalInvestment.toLocaleString('en-IN', {maximumFractionDigits: 0})}
                 </p>
               </div>
               <div className="text-center">
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.totalReturns}</p>
-                <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+                <p className="text-lg sm:text-2xl font-bold text-green-600 dark:text-green-400">
                   {t.rupee} {results.totalReturns.toLocaleString('en-IN', {maximumFractionDigits: 0})}
                 </p>
               </div>
               <div className="text-center">
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.finalAmount}</p>
-                <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                <p className="text-lg sm:text-2xl font-bold text-blue-600 dark:text-blue-400">
                   {t.rupee} {results.finalAmount.toLocaleString('en-IN', {maximumFractionDigits: 0})}
                 </p>
               </div>

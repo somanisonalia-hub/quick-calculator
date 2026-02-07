@@ -9,7 +9,7 @@ interface CalculatorInput {
   label: string;
   type: string;
   default?: any;
-  options?: string[];
+  options?: (string | { value: string; label: string })[];
   min?: number;
   max?: number;
   step?: number;
@@ -78,16 +78,26 @@ export default function CalculatorFormSSR({
                 <select
                   id={`calc-input-${input.name}`}
                   name={input.name}
-                  defaultValue={input.default || (input.options && input.options[0])}
+                  defaultValue={
+                    input.default || 
+                    (input.options && input.options[0] && 
+                      (typeof input.options[0] === 'string' 
+                        ? input.options[0] 
+                        : input.options[0].value))
+                  }
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                   itemProp="object"
                   aria-label={input.label}
                 >
-                  {input.options?.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
+                  {input.options?.map((option, idx) => {
+                    const optionValue = typeof option === 'string' ? option : option.value;
+                    const optionLabel = typeof option === 'string' ? option : option.label;
+                    return (
+                      <option key={`${optionValue}-${idx}`} value={optionValue}>
+                        {optionLabel}
+                      </option>
+                    );
+                  })}
                 </select>
               ) : (
                 <input

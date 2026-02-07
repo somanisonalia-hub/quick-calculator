@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface UnitConverterProps {
   lang?: string;
@@ -601,7 +601,10 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
 
   const convert = () => {
     const numValue = parseFloat(value);
-    if (isNaN(numValue)) return;
+    if (isNaN(numValue)) {
+      setResult('');
+      return;
+    }
 
     const converted = convertValue(numValue, fromUnit, toUnit, category);
     const fromLabel = categories[category as keyof typeof categories].units[fromUnit as keyof typeof categories[keyof typeof categories]['units']];
@@ -610,12 +613,19 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
     setResult(`${numValue} ${fromLabel} = ${converted.toFixed(6).replace(/\.?0+$/, '')} ${toLabel}`);
   };
 
+  // Auto-calculate when inputs change
+  useEffect(() => {
+    convert();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value, fromUnit, toUnit, category]);
+
   // Update default units when category changes
-  useState(() => {
+  useEffect(() => {
     const categoryUnits = Object.keys(categories[category as keyof typeof categories].units);
     setFromUnit(categoryUnits[0]);
     setToUnit(categoryUnits[1] || categoryUnits[0]);
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category]);
 
   return (
     <div className="space-y-6">
@@ -624,10 +634,10 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      {/* Category Tabs */}
-      <div className="mb-8">
+      {/* Category Tabs - Mobile optimized */}
+      <div className="mb-6 sm:mb-8">
         <div className="border-b border-gray-200">
-          <nav className="-mb-px flex space-x-8 overflow-x-auto" aria-label="Unit Categories">
+          <nav className="-mb-px flex space-x-2 sm:space-x-8 overflow-x-auto scrollbar-hide" aria-label="Unit Categories">
             {Object.entries(categories).map(([key, cat]) => (
               <button
                 key={key}
@@ -637,7 +647,7 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
                   setFromUnit(categoryUnits[0]);
                   setToUnit(categoryUnits[1] || categoryUnits[0]);
                 }}
-                className={`whitespace-nowrap py-3 px-4 border-b-2 font-medium text-sm transition-all rounded-t-md ${
+                className={`whitespace-nowrap py-2 px-2 sm:py-3 sm:px-4 border-b-2 font-medium text-xs sm:text-sm transition-all rounded-t-md flex-shrink-0 ${
                   category === key
                     ? 'border-blue-500 text-blue-600 bg-blue-50 shadow-sm'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 hover:bg-gray-50'
@@ -650,74 +660,89 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
         </div>
 
         {/* Active Category Indicator */}
-        <div className="mt-2 text-sm text-gray-600">
+        <div className="mt-2 text-xs sm:text-sm text-gray-600">
           <span className="font-medium">{categories[category as keyof typeof categories].label}</span> conversion
         </div>
       </div>
 
       <div className="space-y-6">
         {/* Conversion Interface */}
-        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
-            <div>
+        <div className="bg-gray-50 p-4 sm:p-6 rounded-lg border border-gray-200">
+          {/* Auto-calculation indicator for mobile */}
+          <div className="sm:hidden text-center mb-4">
+            <div className="inline-flex items-center gap-2 text-xs text-gray-500 bg-white px-3 py-1 rounded-full border border-gray-200">
+              <svg className="w-3 h-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              Auto-calculates as you type
+            </div>
+          </div>
+          {/* Mobile: Stacked layout, Desktop: Side-by-side */}
+          <div className="space-y-4 sm:space-y-6">
+            {/* Value Input - Full width on mobile, 1/3 on desktop */}
+            <div className="w-full">
               <label className="block text-sm font-medium text-gray-700 mb-2">{t.value}</label>
               <input
                 type="number"
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 placeholder="Enter value"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base sm:text-lg"
               />
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">{t.from}</label>
-              <select
-                value={fromUnit}
-                onChange={(e) => setFromUnit(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
-              >
-                {Object.entries(categories[category as keyof typeof categories].units).map(([key, label]) => (
-                  <option key={key} value={key}>{label}</option>
-                ))}
-              </select>
+            {/* From/To Selectors - Side by side on mobile, stacked on very small screens */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{t.from}</label>
+                <select
+                  value={fromUnit}
+                  onChange={(e) => setFromUnit(e.target.value)}
+                  className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-sm sm:text-base"
+                >
+                  {Object.entries(categories[category as keyof typeof categories].units).map(([key, label]) => (
+                    <option key={key} value={key}>{label}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{t.to}</label>
+                <select
+                  value={toUnit}
+                  onChange={(e) => setToUnit(e.target.value)}
+                  className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-sm sm:text-base"
+                >
+                  {Object.entries(categories[category as keyof typeof categories].units).map(([key, label]) => (
+                    <option key={key} value={key}>{label}</option>
+                  ))}
+                </select>
+              </div>
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">{t.to}</label>
-              <select
-                value={toUnit}
-                onChange={(e) => setToUnit(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
+            {/* Convert Button - Hidden on mobile since we have auto-calculation */}
+            <div className="hidden sm:block text-center">
+              <button
+                onClick={convert}
+                className="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors text-base shadow-sm"
               >
-                {Object.entries(categories[category as keyof typeof categories].units).map(([key, label]) => (
-                  <option key={key} value={key}>{label}</option>
-                ))}
-              </select>
+                {t.convert}
+              </button>
             </div>
-          </div>
-
-          <div className="mt-6 text-center">
-            <button
-              onClick={convert}
-              className="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors text-lg shadow-sm"
-            >
-              {t.convert}
-            </button>
           </div>
         </div>
 
         {result && (
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border border-green-200 shadow-sm">
-            <div className="flex items-center justify-center mb-3">
-              <div className="bg-green-100 rounded-full p-2">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 sm:p-6 rounded-lg border border-green-200 shadow-sm">
+            <div className="flex items-center justify-center mb-2 sm:mb-3">
+              <div className="bg-green-100 rounded-full p-1.5 sm:p-2">
+                <svg className="w-4 h-4 sm:w-6 sm:h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3 text-center">{t.result}</h3>
-            <div className="text-2xl font-bold text-center text-gray-800 bg-white px-4 py-3 rounded-lg border border-gray-200 shadow-inner">
+            <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3 text-center">{t.result}</h3>
+            <div className="text-lg sm:text-2xl font-bold text-center text-gray-800 bg-white px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-200 shadow-inner break-words">
               {result}
             </div>
           </div>
