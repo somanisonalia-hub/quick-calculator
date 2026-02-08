@@ -15,13 +15,14 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
       currentSavings: "Current Savings ($)",
       monthlyContribution: "Monthly Contribution ($)",
       annualReturn: "Expected Annual Return (%)",
-      calculate: "Calculate Retirement Savings",
+      calculate: "🔄 Recalculate",
       results: "Results",
       totalSavings: "Total Savings at Retirement",
       totalContributions: "Total Contributions",
       totalEarnings: "Investment Earnings",
       yearsToRetirement: "Years to Retirement",
       monthlyIncome: "Estimated Monthly Income",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Ahorro para Jubilación",
@@ -30,13 +31,14 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
       currentSavings: "Ahorros Actuales ($)",
       monthlyContribution: "Contribución Mensual ($)",
       annualReturn: "Rendimiento Anual Esperado (%)",
-      calculate: "Calcular Ahorro para Jubilación",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       totalSavings: "Ahorro Total al Jubilarse",
       totalContributions: "Contribuciones Totales",
       totalEarnings: "Ganancias de Inversión",
       yearsToRetirement: "Años hasta la Jubilación",
       monthlyIncome: "Ingreso Mensual Estimado",
+      reset: "Restablecer"
     },
     fr: {
       title: "Calculateur d'Épargne Retraite",
@@ -45,13 +47,14 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
       currentSavings: "Épargne Actuelle ($)",
       monthlyContribution: "Cotisation Mensuelle ($)",
       annualReturn: "Rendement Annuel Prévu (%)",
-      calculate: "Calculer l'Épargne Retraite",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       totalSavings: "Épargne Totale à la Retraite",
       totalContributions: "Cotisations Totales",
       totalEarnings: "Gains d'Investissement",
       yearsToRetirement: "Années jusqu'à la Retraite",
       monthlyIncome: "Revenu Mensuel Estimé",
+      reset: "Réinitialiser"
     },
     pt: {
       title: "Calculadora de Poupança para Aposentadoria",
@@ -60,13 +63,14 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
       currentSavings: "Poupança Atual ($)",
       monthlyContribution: "Contribuição Mensal ($)",
       annualReturn: "Retorno Anual Esperado (%)",
-      calculate: "Calcular Poupança para Aposentadoria",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       totalSavings: "Poupança Total na Aposentadoria",
       totalContributions: "Contribuições Totais",
       totalEarnings: "Ganhos de Investimento",
       yearsToRetirement: "Anos até a Aposentadoria",
       monthlyIncome: "Renda Mensal Estimada",
+      reset: "Redefinir"
     },
   };
 
@@ -103,6 +107,16 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
       years,
       monthlyIncome,
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
   };
 
   const results = calculateRetirement();
@@ -110,7 +124,7 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.currentAge}
@@ -183,9 +197,19 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
 
       {calculated && (
         <div className="bg-white rounded-lg shadow-md p-6">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
           <h3 className="text-2xl font-bold mb-6 text-gray-800">{t.results}</h3>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="grid lg:grid-cols-2 gap-4 mb-6">
             <div className="bg-blue-50 p-4 rounded-lg">
               <div className="text-sm text-gray-600 mb-1">{t.totalSavings}</div>
               <div className="text-3xl font-bold text-blue-600">

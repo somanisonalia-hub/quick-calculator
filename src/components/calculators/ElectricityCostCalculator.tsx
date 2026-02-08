@@ -36,7 +36,8 @@ const translations = {
     lightbulb: 'LED Bulb (0.01 kWh/hour)',
     disclaimer: 'This is an estimate. Your actual bill may vary based on usage patterns and utility rates.',
     enterValues: 'Enter monthly usage and rate to calculate',
-    totalCost: 'Total Cost'
+    totalCost: 'Total Cost',
+      reset: "Reset"
   },
   es: {
     title: 'Calculadora de Costo de Electricidad',
@@ -67,7 +68,8 @@ const translations = {
     lightbulb: 'Bombilla LED (0.01 kWh/hora)',
     disclaimer: 'Esta es una estimación. Tu factura real puede variar según los patrones de uso y las tarifas de servicios.',
     enterValues: 'Ingresa uso mensual y tarifa para calcular',
-    totalCost: 'Costo Total'
+    totalCost: 'Costo Total',
+      reset: "Restablecer"
   },
   pt: {
     title: 'Calculadora de Custo de Eletricidade',
@@ -98,7 +100,8 @@ const translations = {
     lightbulb: 'Lâmpada LED (0.01 kWh/hora)',
     disclaimer: 'Esta é uma estimativa. Sua fatura real pode variar dependendo dos padrões de uso e das tarifas de serviços.',
     enterValues: 'Digite uso mensal e taxa para calcular',
-    totalCost: 'Custo Total'
+    totalCost: 'Custo Total',
+      reset: "Redefinir"
   },
   fr: {
     title: 'Calculatrice des Coûts d\'Électricité',
@@ -129,7 +132,8 @@ const translations = {
     lightbulb: 'Ampoule LED (0,01 kWh/heure)',
     disclaimer: 'Ceci est une estimation. Votre facture réelle peut varier en fonction des habitudes de consommation et des tarifs des services.',
     enterValues: 'Entrez la consommation mensuelle et le tarif pour calculer',
-    totalCost: 'Coût Total'
+    totalCost: 'Coût Total',
+      reset: "Réinitialiser"
   }
 };
 
@@ -158,6 +162,16 @@ export default function ElectricityCostCalculator({ lang = 'en' }: ElectricityCo
       weekly,
       yearly
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
   };
 
   const calculateSavings = () => {
@@ -194,7 +208,7 @@ export default function ElectricityCostCalculator({ lang = 'en' }: ElectricityCo
       <div className="space-y-6">
         {/* Input Section */}
         <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t.monthlyUsageLabel}
@@ -221,7 +235,24 @@ export default function ElectricityCostCalculator({ lang = 'en' }: ElectricityCo
                 placeholder={t.ratePlaceholder}
                 step="0.01"
               />
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateCost}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 

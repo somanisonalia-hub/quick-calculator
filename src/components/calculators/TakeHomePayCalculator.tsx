@@ -128,7 +128,7 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
       healthInsurance: "Health Insurance Premium ($)",
       retirement401k: "401(k) Retirement Contribution ($)",
       otherDeductions: "Other Deductions ($)",
-      calculate: "Calculate Take-Home Pay",
+      calculate: "🔄 Recalculate",
       results: "Paycheck Breakdown",
       netTakeHome: "Net Take-Home Pay",
       federalTax: "Federal Income Tax",
@@ -141,7 +141,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Weekly",
         biweekly: "Biweekly (every 2 weeks)",
         semimonthly: "Semimonthly (twice a month)",
-        monthly: "Monthly"
+        monthly: "Monthly",
+      reset: "Reset"
       },
       filingStatusOptions: {
         single: "Single",
@@ -218,7 +219,7 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
       healthInsurance: "Prima de Seguro Médico ($)",
       retirement401k: "Contribución Jubilación 401(k) ($)",
       otherDeductions: "Otras Deducciones ($)",
-      calculate: "Calcular Salario Neto",
+      calculate: "🔄 Recalcular",
       results: "Desglose de Nómina",
       netTakeHome: "Salario Neto",
       federalTax: "Impuesto Federal a la Renta",
@@ -231,7 +232,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Semanal",
         biweekly: "Quincenal (cada 2 semanas)",
         semimonthly: "Semimensual (dos veces al mes)",
-        monthly: "Mensual"
+        monthly: "Mensual",
+      reset: "Restablecer"
       },
       filingStatusOptions: {
         single: "Soltero",
@@ -308,7 +310,7 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
       healthInsurance: "Prêmio Plano de Saúde (R$)",
       retirement401k: "Contribuição Aposentadoria 401(k) (R$)",
       otherDeductions: "Outras Deduções (R$)",
-      calculate: "Calcular Salário Líquido",
+      calculate: "🔄 Recalcular",
       results: "Quebra de Contracheque",
       netTakeHome: "Salário Líquido",
       federalTax: "Imposto Federal de Renda",
@@ -321,7 +323,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Semanal",
         biweekly: "Quinzenal (cada 2 semanas)",
         semimonthly: "Semimensal (duas vezes ao mês)",
-        monthly: "Mensal"
+        monthly: "Mensal",
+      reset: "Redefinir"
       },
       filingStatusOptions: {
         single: "Solteiro",
@@ -398,7 +401,7 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
       healthInsurance: "Prime Assurance Santé (€)",
       retirement401k: "Contribution Retraite 401(k) (€)",
       otherDeductions: "Autres Déductions (€)",
-      calculate: "Calculer Salaire Net",
+      calculate: "🔄 Recalculer",
       results: "Ventilation de Paie",
       netTakeHome: "Salaire Net",
       federalTax: "Impôt Fédéral sur le Revenu",
@@ -411,7 +414,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Hebdomadaire",
         biweekly: "Bihebdomadaire (toutes les 2 semaines)",
         semimonthly: "Semi-mensuelle (deux fois par mois)",
-        monthly: "Mensuelle"
+        monthly: "Mensuelle",
+      reset: "Réinitialiser"
       },
       filingStatusOptions: {
         single: "Célibataire",
@@ -501,7 +505,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Wöchentlich",
         biweekly: "Zweiwöchentlich (alle 2 Wochen)",
         semimonthly: "Halbmonatlich (zweimal im Monat)",
-        monthly: "Monatlich"
+        monthly: "Monatlich",
+      reset: "Zurücksetzen"
       },
       filingStatusOptions: {
         single: "Ledig",
@@ -590,7 +595,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Wekelijks",
         biweekly: "Tweewekelijks (elke 2 weken)",
         semimonthly: "Halfmaandelijks (twee keer per maand)",
-        monthly: "Maandelijks"
+        monthly: "Maandelijks",
+      reset: "Resetten"
       },
       filingStatusOptions: {
         single: "Alleenstaand",
@@ -700,6 +706,16 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
 
     // Convert back to per-pay-period amount
     return tax / periodsPerYear;
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   const calculateStateTax = (grossPay: number, payFrequency: string, state: string): number => {
@@ -938,7 +954,24 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
                 max="10000"
                 step="5"
               />
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateFederalWithholding}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 

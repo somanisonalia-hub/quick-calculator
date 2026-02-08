@@ -52,7 +52,8 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       calculationFormulas: "Calculation Formulas",
       formulaNote: "Where: P = principal, r = monthly rate, n = number of payments",
       understandingComparisons: "Understanding Rate Comparisons",
-      enterAbove: "Enter your principal amount, term, and interest rates above"
+      enterAbove: "Enter your principal amount, term, and interest rates above",
+      calculate: "🔄 Recalculate"
     },
     es: {
       title: "Calculadora de Tabla de Tasas de Interés",
@@ -90,7 +91,8 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       calculationFormulas: "Fórmulas de Cálculo",
       formulaNote: "Donde: P = principal, r = tasa mensual, n = número de pagos",
       understandingComparisons: "Entender Comparaciones de Tasas",
-      enterAbove: "Ingresa tu monto principal, plazo y tasas de interés arriba"
+      enterAbove: "Ingresa tu monto principal, plazo y tasas de interés arriba",
+      calculate: "🔄 Recalcular"
     },
     pt: {
       title: "Calculadora de Tabela de Taxas de Juros",
@@ -128,7 +130,8 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       calculationFormulas: "Fórmulas de Cálculo",
       formulaNote: "Onde: P = principal, r = taxa mensal, n = número de pagamentos",
       understandingComparisons: "Entender Comparações de Taxas",
-      enterAbove: "Digite o valor principal, prazo e taxas de juros acima"
+      enterAbove: "Digite o valor principal, prazo e taxas de juros acima",
+      calculate: "🔄 Recalcular"
     },
     fr: {
       title: "Calculateur de Tableau de Taux d'Intérêt",
@@ -166,7 +169,8 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
       calculationFormulas: "Formules de Calcul",
       formulaNote: "Où: P = principal, r = taux mensuel, n = nombre de paiements",
       understandingComparisons: "Comprendre les Comparaisons de Taux",
-      enterAbove: "Entrez votre montant principal, durée et taux d'intérêt ci-dessus"
+      enterAbove: "Entrez votre montant principal, durée et taux d'intérêt ci-dessus",
+      calculate: "🔄 Recalculer"
     }
   };
 
@@ -405,7 +409,18 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
               <div>{t.loanPaymentFormula}</div>
               <div>{t.futureValueFormula}</div>
               <div>{t.formulaNote}</div>
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateMonthlyPayment}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 

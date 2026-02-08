@@ -13,6 +13,7 @@ interface CalculatorStaticContentProps {
   seoContent?: SEOContent | null;
   breadcrumbs?: Array<{ name: string; href: string }>;
   serverRenderedForm: React.ReactNode;
+  calculatorInteractive?: React.ReactNode;
 }
 
 export default function CalculatorStaticContent({ 
@@ -20,7 +21,8 @@ export default function CalculatorStaticContent({
   calculatorContent,
   seoContent,
   breadcrumbs,
-  serverRenderedForm
+  serverRenderedForm,
+  calculatorInteractive
 }: CalculatorStaticContentProps) {
   
   return (
@@ -64,10 +66,13 @@ export default function CalculatorStaticContent({
 
       {/* Main Calculator Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4 sm:pb-8" id="calculator-main">
-        {/* Calculator Form - Visible to Google */}
+        {/* Calculator Form - Visible to Google, hidden when interactive loads */}
         <section id="calculator-section" className="bg-white rounded-lg shadow-lg p-6 mb-8">
           {serverRenderedForm}
         </section>
+
+        {/* Interactive Calculator - Replaces static when JS loads */}
+        {calculatorInteractive}
 
         {/* SEO Content - How to Use, Examples, etc. */}
         {seoContent && (

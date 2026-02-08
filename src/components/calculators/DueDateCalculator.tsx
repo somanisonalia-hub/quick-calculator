@@ -26,7 +26,8 @@ const translations = {
     heartbeat: 'First Heartbeat (6 weeks)',
     movement: 'First Movement (16-20 weeks)',
     viability: 'Viability (24 weeks)',
-    fullTerm: 'Full Term (37 weeks)'
+    fullTerm: 'Full Term (37 weeks)',
+      reset: "Reset"
   },
   es: {
     title: 'Calculadora de Fecha de Parto',
@@ -47,7 +48,8 @@ const translations = {
     heartbeat: 'Primer Latido (6 semanas)',
     movement: 'Primer Movimiento (16-20 semanas)',
     viability: 'Viabilidad (24 semanas)',
-    fullTerm: 'Término Completo (37 semanas)'
+    fullTerm: 'Término Completo (37 semanas)',
+      reset: "Restablecer"
   },
   pt: {
     title: 'Calculadora de Data Prevista',
@@ -68,7 +70,8 @@ const translations = {
     heartbeat: 'Primeiro Batimento (6 semanas)',
     movement: 'Primeiro Movimento (16-20 semanas)',
     viability: 'Viabilidade (24 semanas)',
-    fullTerm: 'Termo Completo (37 semanas)'
+    fullTerm: 'Termo Completo (37 semanas)',
+      reset: "Redefinir"
   },
   fr: {
     title: "Calculateur de Date d'Accouchement",
@@ -89,7 +92,8 @@ const translations = {
     heartbeat: 'Premier Battement (6 semaines)',
     movement: 'Premier Mouvement (16-20 semaines)',
     viability: 'Viabilité (24 semaines)',
-    fullTerm: 'Terme Complet (37 semaines)'
+    fullTerm: 'Terme Complet (37 semaines)',
+      reset: "Réinitialiser"
   }
 };
 
@@ -143,6 +147,16 @@ export default function DueDateCalculator({ lang = 'en' }: DueDateCalculatorProp
       weeksPregnant,
       daysPregnant
     });
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   const formatDate = (date: Date) => {
@@ -225,7 +239,7 @@ export default function DueDateCalculator({ lang = 'en' }: DueDateCalculatorProp
           </div>
 
           {/* Key Dates Grid */}
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
               <p className="text-sm text-gray-500 dark:text-gray-400">{t.conception}</p>
               <p className="font-semibold text-gray-800 dark:text-white">{formatDate(results.conception)}</p>
@@ -244,6 +258,16 @@ export default function DueDateCalculator({ lang = 'en' }: DueDateCalculatorProp
                 {formatDate(new Date(new Date(lastPeriod).setDate(new Date(lastPeriod).getDate() + 259)))}
               </p>
             </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
   </div>
 
           <p className="text-xs text-gray-500 dark:text-gray-400 text-center">

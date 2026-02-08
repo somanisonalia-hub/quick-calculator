@@ -13,52 +13,56 @@ export default function ExamScorePredictorCalculator({ lang = 'en' }: ExamScoreP
       currentAverage: "Current Average (%)",
       examWeight: "Final Exam Weight (%)",
       desiredGrade: "Desired Final Grade (%)",
-      calculate: "Calculate Required Score",
+      calculate: "🔄 Recalculate",
       results: "Results",
       requiredScore: "Required Exam Score",
       achievable: "Goal is achievable!",
       difficult: "Goal is challenging - aim for 100%!",
       impossible: "Goal is mathematically impossible with this exam weight.",
       tip: "Study hard and you can achieve your goal!",
+      reset: "Reset"
     },
     es: {
       title: "Predictor de Puntuación de Examen",
       currentAverage: "Promedio Actual (%)",
       examWeight: "Peso del Examen Final (%)",
       desiredGrade: "Calificación Final Deseada (%)",
-      calculate: "Calcular Puntuación Requerida",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       requiredScore: "Puntuación de Examen Requerida",
       achievable: "¡El objetivo es alcanzable!",
       difficult: "¡El objetivo es desafiante - apunta al 100%!",
       impossible: "El objetivo es matemáticamente imposible con este peso de examen.",
       tip: "¡Estudia mucho y puedes lograr tu objetivo!",
+      reset: "Restablecer"
     },
     fr: {
       title: "Prédicteur de Score d'Examen",
       currentAverage: "Moyenne Actuelle (%)",
       examWeight: "Poids de l'Examen Final (%)",
       desiredGrade: "Note Finale Souhaitée (%)",
-      calculate: "Calculer le Score Requis",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       requiredScore: "Score d'Examen Requis",
       achievable: "L'objectif est réalisable !",
       difficult: "L'objectif est difficile - visez 100% !",
       impossible: "L'objectif est mathématiquement impossible avec ce poids d'examen.",
       tip: "Étudiez dur et vous pouvez atteindre votre objectif !",
+      reset: "Réinitialiser"
     },
     pt: {
       title: "Preditor de Pontuação de Exame",
       currentAverage: "Média Atual (%)",
       examWeight: "Peso do Exame Final (%)",
       desiredGrade: "Nota Final Desejada (%)",
-      calculate: "Calcular Pontuação Necessária",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       requiredScore: "Pontuação de Exame Necessária",
       achievable: "O objetivo é alcançável!",
       difficult: "O objetivo é desafiador - mire em 100%!",
       impossible: "O objetivo é matematicamente impossível com este peso de exame.",
       tip: "Estude muito e você pode alcançar seu objetivo!",
+      reset: "Redefinir"
     },
   };
 
@@ -81,6 +85,16 @@ export default function ExamScorePredictorCalculator({ lang = 'en' }: ExamScoreP
       difficult: requiredScore > 100,
       impossible: requiredScore > 120,
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
   };
 
   const results = calculateRequiredScore();
@@ -88,7 +102,7 @@ export default function ExamScorePredictorCalculator({ lang = 'en' }: ExamScoreP
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.currentAverage}
@@ -139,6 +153,16 @@ export default function ExamScorePredictorCalculator({ lang = 'en' }: ExamScoreP
 
       {calculated && (
         <div className="bg-white rounded-lg shadow-md p-6">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
           <h3 className="text-2xl font-bold mb-6 text-gray-800">{t.results}</h3>
 
           <div className={`${results.achievable ? 'bg-green-50' : results.impossible ? 'bg-red-50' : 'bg-yellow-50'} p-6 rounded-lg mb-6`}>

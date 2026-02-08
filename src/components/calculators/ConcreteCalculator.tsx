@@ -49,7 +49,7 @@ export default function ConcreteCalculator({ lang = 'en' }: ConcreteCalculatorPr
       bags40lb: "40 lb Bags Needed",
       readyMixEstimate: "Ready-Mix Estimate ($)",
       totalEstimate: "Total Estimate ($)",
-      calculate: "Calculate Concrete",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       instructions: "Enter dimensions and select concrete type to calculate volume and material requirements."
     },
@@ -76,7 +76,7 @@ export default function ConcreteCalculator({ lang = 'en' }: ConcreteCalculatorPr
       bags40lb: "Bolsas de 40 lb Necesarias",
       readyMixEstimate: "Estimado Ready-Mix ($)",
       totalEstimate: "Estimado Total ($)",
-      calculate: "Calcular Concreto",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       instructions: "Ingresa dimensiones y selecciona tipo de concreto para calcular volumen y requerimientos de materiales."
     },
@@ -103,7 +103,7 @@ export default function ConcreteCalculator({ lang = 'en' }: ConcreteCalculatorPr
       bags40lb: "Sacos de 40 lb Necessários",
       readyMixEstimate: "Estimativa Ready-Mix ($)",
       totalEstimate: "Estimativa Total ($)",
-      calculate: "Calcular Concreto",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       instructions: "Digite dimensões e selecione tipo de concreto para calcular volume e requisitos de materiais."
     },
@@ -130,7 +130,7 @@ export default function ConcreteCalculator({ lang = 'en' }: ConcreteCalculatorPr
       bags40lb: "Sacs de 40 lb Nécessaires",
       readyMixEstimate: "Estimation Ready-Mix ($)",
       totalEstimate: "Estimation Totale ($)",
-      calculate: "Calculer Béton",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       instructions: "Entrez dimensions et sélectionnez type de béton pour calculer volume et exigences de matériaux."
     }

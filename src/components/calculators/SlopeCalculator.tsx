@@ -12,6 +12,14 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
   const [x2, setX2] = useState<number>(4);
   const [y2, setY2] = useState<number>(4);
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setX1(0);
+    setY1(0);
+    setX2(0);
+    // Additional state resets may be needed
+  };
+
   const translations = {
     en: {
       title: "Slope Calculator",
@@ -20,6 +28,8 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
       point2: "Point 2",
       xCoord: "x-coordinate",
       yCoord: "y-coordinate",
+      calculate: "🔄 Recalculate",
+      reset: "Reset",
       results: "Results",
       slope: "Slope (m)",
       lineEquation: "Line Equation",
@@ -70,6 +80,8 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
       point2: "Ponto 2",
       xCoord: "coordenada x",
       yCoord: "coordenada y",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir",
       results: "Resultados",
       slope: "Inclinação (m)",
       lineEquation: "Equação da Reta",
@@ -95,6 +107,8 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
       point2: "Point 2",
       xCoord: "coordonnée x",
       yCoord: "coordonnée y",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser",
       results: "Résultats",
       slope: "Pente (m)",
       lineEquation: "Équation de la Ligne",
@@ -272,7 +286,7 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
         <p className="text-gray-600 mb-6">{t.description}</p>
 
         {/* Input Section */}
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="grid lg:grid-cols-2 gap-6 mb-6">
           {/* Point 1 */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-700">{t.point1}</h3>
@@ -331,12 +345,28 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
             </div>
           </div>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={() => setX1(x1)}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
         {/* Results Section */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 mb-6">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">{t.results}</h2>
           
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <div className="bg-white rounded-lg p-4 shadow">
               <div className="text-sm text-gray-600 mb-1">{t.slope}</div>
               <div className="text-2xl font-bold text-blue-600">{results.slope}</div>

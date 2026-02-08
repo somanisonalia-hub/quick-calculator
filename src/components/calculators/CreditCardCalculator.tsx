@@ -51,6 +51,8 @@ export default function CreditCardCalculator({ inputs, output, additionalOutputs
       interestasofbalance: "Interest as % of Balance:",
       monthlyinterestcost: "Monthly Interest Cost:",
       breakevenpayment: "Break-even Payment:",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
   },
     es: {
       creditCardDetails: "Detalles de Tarjeta de Crédito",
@@ -68,6 +70,8 @@ export default function CreditCardCalculator({ inputs, output, additionalOutputs
       interestasofbalance: "Interés como % del Saldo:",
       monthlyinterestcost: "Costo de Interés Mensual:",
       breakevenpayment: "Pago de Punto de Equilibrio:",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
   },
     pt: {
       creditCardDetails: "Detalhes do Cartão de Crédito",
@@ -85,6 +89,8 @@ export default function CreditCardCalculator({ inputs, output, additionalOutputs
       interestasofbalance: "Juros como % do Saldo:",
       monthlyinterestcost: "Custo de Juros Mensal:",
       breakevenpayment: "Pagamento de Ponto de Equilíbrio:",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
   },
     fr: {
       creditCardDetails: "Détails de Carte de Crédit",
@@ -102,6 +108,8 @@ export default function CreditCardCalculator({ inputs, output, additionalOutputs
       interestasofbalance: "Intérêt en % du Solde:",
       monthlyinterestcost: "Coût d'Intérêt Mensuel:",
       breakevenpayment: "Paiement d'Équilibre:",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
   }
   };
 
@@ -117,12 +125,10 @@ export default function CreditCardCalculator({ inputs, output, additionalOutputs
 
   const [results, setResults] = useState<Record<string, string | number | boolean>>({});
 
-  // Calculate credit card payoff
-  useEffect(() => {
-    const calculatePayoff = () => {
-      const balance = values.balance || 0;
-      const interestRate = values.interestRate || 0;
-      const monthlyPayment = values.monthlyPayment || 0;
+  const calculatePayoff = () => {
+    const balance = values.balance || 0;
+    const interestRate = values.interestRate || 0;
+    const monthlyPayment = values.monthlyPayment || 0;
 
       if (balance <= 0 || monthlyPayment <= 0) {
         setResults({});
@@ -180,8 +186,18 @@ export default function CreditCardCalculator({ inputs, output, additionalOutputs
           minPaymentNeeded: minPaymentRequired.toFixed(2)
         });
       }
-    };
+  };
 
+  const resetCalculator = () => {
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
+  useEffect(() => {
     calculatePayoff();
   }, [values]);
 
@@ -208,7 +224,7 @@ export default function CreditCardCalculator({ inputs, output, additionalOutputs
 
   return (
     <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-200">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
           <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{t.creditCardDetails}</h3>
@@ -239,6 +255,23 @@ export default function CreditCardCalculator({ inputs, output, additionalOutputs
             </div>
           )}
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculatePayoff}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">

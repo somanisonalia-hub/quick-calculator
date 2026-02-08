@@ -14,6 +14,11 @@ export default function BodyCompositionCalculator({ lang = 'en' }: BodyCompositi
     gender: 'male'
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Body Composition Calculator",
@@ -24,11 +29,12 @@ export default function BodyCompositionCalculator({ lang = 'en' }: BodyCompositi
       gender: "Gender",
       male: "Male",
       female: "Female",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       results: "Results",
       bodyFat: "Body Fat %",
       leanMass: "Lean Mass",
-      fatMass: "Fat Mass"
+      fatMass: "Fat Mass",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Composición Corporal",
@@ -39,11 +45,12 @@ export default function BodyCompositionCalculator({ lang = 'en' }: BodyCompositi
       gender: "Género",
       male: "Masculino",
       female: "Femenino",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       bodyFat: "Grasa Corporal %",
       leanMass: "Masa Magra",
-      fatMass: "Masa Grasa"
+      fatMass: "Masa Grasa",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Composição Corporal",
@@ -54,11 +61,12 @@ export default function BodyCompositionCalculator({ lang = 'en' }: BodyCompositi
       gender: "Gênero",
       male: "Masculino",
       female: "Feminino",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       bodyFat: "Gordura Corporal %",
       leanMass: "Massa Magra",
-      fatMass: "Massa Gorda"
+      fatMass: "Massa Gorda",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Composition Corporelle",
@@ -69,11 +77,12 @@ export default function BodyCompositionCalculator({ lang = 'en' }: BodyCompositi
       gender: "Genre",
       male: "Homme",
       female: "Femme",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       bodyFat: "Graisse Corporelle %",
       leanMass: "Masse Maigre",
-      fatMass: "Masse Grasse"
+      fatMass: "Masse Grasse",
+      reset: "Réinitialiser"
     }
   };
 
@@ -95,6 +104,16 @@ export default function BodyCompositionCalculator({ lang = 'en' }: BodyCompositi
             onChange={(e) => setInputs({ ...inputs, weight: Number(e.target.value) })}
             className="w-full px-4 py-2 border rounded-lg"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

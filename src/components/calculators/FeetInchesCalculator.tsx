@@ -39,8 +39,9 @@ export default function FeetInchesCalculator({ lang = 'en' }: FeetInchesCalculat
       feetSymbol: "'",
       inchesSymbol: '"',
       totalFeet: "Total Feet",
-      calculate: "Calculate",
-      clear: "Clear All"
+      calculate: "🔄 Recalculate",
+      clear: "Clear All",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Pies y Pulgadas",
@@ -60,8 +61,9 @@ export default function FeetInchesCalculator({ lang = 'en' }: FeetInchesCalculat
       feetSymbol: "'",
       inchesSymbol: '"',
       totalFeet: "Pies Totales",
-      calculate: "Calcular",
-      clear: "Limpiar Todo"
+      calculate: "🔄 Recalcular",
+      clear: "Limpiar Todo",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Pés e Polegadas",
@@ -81,8 +83,9 @@ export default function FeetInchesCalculator({ lang = 'en' }: FeetInchesCalculat
       feetSymbol: "'",
       inchesSymbol: '"',
       totalFeet: "Pés Totais",
-      calculate: "Calcular",
-      clear: "Limpar Tudo"
+      calculate: "🔄 Recalcular",
+      clear: "Limpar Tudo",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur Pieds et Pouces",
@@ -102,8 +105,9 @@ export default function FeetInchesCalculator({ lang = 'en' }: FeetInchesCalculat
       feetSymbol: "'",
       inchesSymbol: '"',
       totalFeet: "Pieds Totaux",
-      calculate: "Calculer",
-      clear: "Tout Effacer"
+      calculate: "🔄 Recalculer",
+      clear: "Tout Effacer",
+      reset: "Réinitialiser"
     }
   };
 
@@ -153,6 +157,16 @@ export default function FeetInchesCalculator({ lang = 'en' }: FeetInchesCalculat
     const resultMeasurement = fromTotalInches(totalInches);
     setResult(resultMeasurement);
     setDecimalResult(totalInches / 12); // Convert to decimal feet
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   useEffect(() => {
@@ -289,6 +303,16 @@ export default function FeetInchesCalculator({ lang = 'en' }: FeetInchesCalculat
         {/* Results Section */}
         <div className="space-y-4">
           <div className="bg-blue-50 p-4 rounded-lg">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
             <h3 className="text-lg font-semibold text-blue-900 mb-2">{t.result}</h3>
             <div className="text-3xl font-bold text-blue-600 min-h-[48px] flex items-center">
               {formatMeasurement(result)}

@@ -53,7 +53,9 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
       futureContributions: 'Future Contributions',
       investmentGrowth: 'Investment Growth',
       monthlyIncome: 'Monthly Income',
-      yearsToRetirement: 'years to retirement'
+      yearsToRetirement: 'years to retirement',
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
     },
     es: {
       retirementPlanning: 'Entradas de Planificación de Jubilación',
@@ -63,7 +65,9 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
       futureContributions: 'Contribuciones Futuras',
       investmentGrowth: 'Crecimiento de Inversión',
       monthlyIncome: 'Ingreso Mensual',
-      yearsToRetirement: 'años hasta la jubilación'
+      yearsToRetirement: 'años hasta la jubilación',
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       retirementPlanning: 'Dados de Planeamento de Aposentadoria',
@@ -73,7 +77,9 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
       futureContributions: 'Contribuições Futuras',
       investmentGrowth: 'Crescimento de Investimento',
       monthlyIncome: 'Renda Mensal',
-      yearsToRetirement: 'anos até a aposentadoria'
+      yearsToRetirement: 'anos até a aposentadoria',
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
     },
     fr: {
       retirementPlanning: 'Entrées de Planification de Retraite',
@@ -83,7 +89,9 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
       futureContributions: 'Contributions Futures',
       investmentGrowth: 'Croissance des Investissements',
       monthlyIncome: 'Revenu Mensuel',
-      yearsToRetirement: 'années jusqu\'à la retraite'
+      yearsToRetirement: 'années jusqu\'à la retraite',
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     },
     de: {
       retirementPlanning: 'Ruhestandsplanungseingaben',
@@ -93,7 +101,9 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
       futureContributions: 'Zukünftige Beiträge',
       investmentGrowth: 'Investitionswachstum',
       monthlyIncome: 'Monatliches Einkommen',
-      yearsToRetirement: 'Jahre bis zur Rente'
+      yearsToRetirement: 'Jahre bis zur Rente',
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen"
     },
     nl: {
       retirementPlanning: 'Pensioenplanning Invoer',
@@ -103,7 +113,9 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
       futureContributions: 'Toekomstige Bijdragen',
       investmentGrowth: 'Investeringsgroei',
       monthlyIncome: 'Maandelijks Inkomen',
-      yearsToRetirement: 'jaar tot pensioen'
+      yearsToRetirement: 'jaar tot pensioen',
+      calculate: "🔄 Herberekenen",
+      reset: "Resetten"
     }
   };
 
@@ -120,50 +132,60 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
 
   const [results, setResults] = useState<Record<string, any>>({});
 
+  const calculateRetirement = () => {
+    const currentAge = values.currentAge || 0;
+    const retirementAge = values.retirementAge || 0;
+    const currentSavings = values.currentSavings || 0;
+    const annualContribution = values.annualContribution || 0;
+    const expectedReturn = values.expectedReturn || 0;
+    const socialSecurity = values.socialSecurity || 0;
+
+    if (retirementAge <= currentAge) {
+      setResults({});
+      return;
+    }
+
+    const yearsToRetirement = retirementAge - currentAge;
+    const annualRate = expectedReturn / 100;
+
+    // Future value of current savings
+    const futureValueCurrent = currentSavings * Math.pow(1 + annualRate, yearsToRetirement);
+
+    // Future value of annual contributions
+    const futureValueContributions = annualContribution *
+      (Math.pow(1 + annualRate, yearsToRetirement) - 1) / annualRate;
+
+    const totalSavings = futureValueCurrent + futureValueContributions;
+
+    // Estimate monthly income (4% safe withdrawal rate)
+    const annualWithdrawal = totalSavings * 0.04;
+    const monthlyWithdrawal = annualWithdrawal / 12;
+    const totalMonthlyIncome = monthlyWithdrawal + socialSecurity;
+
+    const totalContributions = currentSavings + (annualContribution * yearsToRetirement);
+    const totalGrowth = totalSavings - totalContributions;
+
+    setResults({
+      totalSavings: `${totalSavings.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+      monthlyIncome: `${totalMonthlyIncome.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+      totalContributions: `${totalContributions.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+      totalGrowth: `${totalGrowth.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+      yearsToRetirement: yearsToRetirement
+    });
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   // Calculate retirement savings
   useEffect(() => {
-    const calculateRetirement = () => {
-      const currentAge = values.currentAge || 0;
-      const retirementAge = values.retirementAge || 0;
-      const currentSavings = values.currentSavings || 0;
-      const annualContribution = values.annualContribution || 0;
-      const expectedReturn = values.expectedReturn || 0;
-      const socialSecurity = values.socialSecurity || 0;
-
-      if (retirementAge <= currentAge) {
-        setResults({});
-        return;
-      }
-
-      const yearsToRetirement = retirementAge - currentAge;
-      const annualRate = expectedReturn / 100;
-
-      // Future value of current savings
-      const futureValueCurrent = currentSavings * Math.pow(1 + annualRate, yearsToRetirement);
-
-      // Future value of annual contributions
-      const futureValueContributions = annualContribution *
-        (Math.pow(1 + annualRate, yearsToRetirement) - 1) / annualRate;
-
-      const totalSavings = futureValueCurrent + futureValueContributions;
-
-      // Estimate monthly income (4% safe withdrawal rate)
-      const annualWithdrawal = totalSavings * 0.04;
-      const monthlyWithdrawal = annualWithdrawal / 12;
-      const totalMonthlyIncome = monthlyWithdrawal + socialSecurity;
-
-      const totalContributions = currentSavings + (annualContribution * yearsToRetirement);
-      const totalGrowth = totalSavings - totalContributions;
-
-      setResults({
-        totalSavings: `$${totalSavings.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-        monthlyIncome: `$${totalMonthlyIncome.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-        totalContributions: `$${totalContributions.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-        totalGrowth: `$${totalGrowth.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-        yearsToRetirement: yearsToRetirement
-      });
-    };
-
     calculateRetirement();
   }, [values]);
 
@@ -176,7 +198,7 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
 
   return (
     <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-200">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
           <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{t.retirementPlanning}</h3>
@@ -198,6 +220,23 @@ export default function RetirementCalculator({ inputs, output, additionalOutputs
             </div>
           ))}
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateRetirement}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">

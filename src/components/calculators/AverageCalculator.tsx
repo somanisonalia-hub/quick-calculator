@@ -30,48 +30,52 @@ export default function AverageCalculator({ inputs, output, additionalOutputs, l
       description: "Calculate the arithmetic mean of a list of numbers",
       inputLabel: "Enter numbers (one per line or comma-separated)",
       inputPlaceholder: "85, 92, 78, 95, 88\nor\n85\n92\n78\n95\n88",
-      calculate: "Calculate Average",
+      calculate: "🔄 Recalculate",
       result: "Average",
       count: "Count",
       clear: "Clear",
       error: "Please enter valid numbers",
-      instructions: "Enter each number on a new line, or separate with commas"
+      instructions: "Enter each number on a new line, or separate with commas",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Promedio",
       description: "Calcula la media aritmética de una lista de números",
       inputLabel: "Ingresa números (uno por línea o separados por comas)",
       inputPlaceholder: "85, 92, 78, 95, 88\no\n85\n92\n78\n95\n88",
-      calculate: "Calcular Promedio",
+      calculate: "🔄 Recalcular",
       result: "Promedio",
       count: "Conteo",
       clear: "Limpiar",
       error: "Por favor ingresa números válidos",
-      instructions: "Ingresa cada número en una nueva línea, o sepáralos con comas"
+      instructions: "Ingresa cada número en una nueva línea, o sepáralos con comas",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Média",
       description: "Calcula a média aritmética de uma lista de números",
       inputLabel: "Digite números (um por linha ou separados por vírgulas)",
       inputPlaceholder: "85, 92, 78, 95, 88\nou\n85\n92\n78\n95\n88",
-      calculate: "Calcular Média",
+      calculate: "🔄 Recalcular",
       result: "Média",
       count: "Contagem",
       clear: "Limpar",
       error: "Por favor digite números válidos",
-      instructions: "Digite cada número em uma nova linha, ou separe com vírgulas"
+      instructions: "Digite cada número em uma nova linha, ou separe com vírgulas",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Moyenne",
       description: "Calculez la moyenne arithmétique d'une liste de nombres",
       inputLabel: "Saisissez des nombres (un par ligne ou séparés par des virgules)",
       inputPlaceholder: "85, 92, 78, 95, 88\nou\n85\n92\n78\n95\n88",
-      calculate: "Calculer la Moyenne",
+      calculate: "🔄 Recalculer",
       result: "Moyenne",
       count: "Nombre",
       clear: "Effacer",
       error: "Veuillez saisir des nombres valides",
-      instructions: "Saisissez chaque nombre sur une nouvelle ligne, ou séparez-les par des virgules"
+      instructions: "Saisissez chaque nombre sur une nouvelle ligne, ou séparez-les par des virgules",
+      reset: "Réinitialiser"
     },
     de: {
       title: "Durchschnittrechner",
@@ -83,7 +87,8 @@ export default function AverageCalculator({ inputs, output, additionalOutputs, l
       count: "Anzahl",
       clear: "Löschen",
       error: "Bitte geben Sie gültige Zahlen ein",
-      instructions: "Geben Sie jede Zahl in einer neuen Zeile ein, oder trennen Sie sie mit Kommas"
+      instructions: "Geben Sie jede Zahl in einer neuen Zeile ein, oder trennen Sie sie mit Kommas",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Gemiddelde Calculator",
@@ -95,7 +100,8 @@ export default function AverageCalculator({ inputs, output, additionalOutputs, l
       count: "Aantal",
       clear: "Wissen",
       error: "Voer alstublieft geldige getallen in",
-      instructions: "Voer elk getal op een nieuwe regel in, of scheid deze met komma's"
+      instructions: "Voer elk getal op een nieuwe regel in, of scheid deze met komma's",
+      reset: "Resetten"
     }
   };
 
@@ -129,6 +135,13 @@ export default function AverageCalculator({ inputs, output, additionalOutputs, l
 
     setAverage(avg);
     setCount(numbers.length);
+  };
+
+  const resetCalculator = () => {
+    setInputText('');
+    setAverage(null);
+    setCount(0);
+    setError('');
   };
 
   // Auto-calculate when input changes
@@ -183,21 +196,18 @@ export default function AverageCalculator({ inputs, output, additionalOutputs, l
           </div>
 
           {/* Buttons */}
-          <div className="pt-3 flex gap-3">
+          <div className="flex gap-3 pt-4">
             <button
-              onClick={() => {
-                // Force recalculation (though auto-calc handles this)
-                calculateAverage();
-              }}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200 shadow-sm"
+              onClick={calculateAverage}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
-              🔄 Recalculate
+              {t.calculate}
             </button>
             <button
-              onClick={clearAll}
-              className="flex-1 bg-gray-500 text-white py-2.5 px-4 rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200 shadow-sm"
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
-              {t.clear}
+              {t.reset}
             </button>
           </div>
         </div>
@@ -208,7 +218,7 @@ export default function AverageCalculator({ inputs, output, additionalOutputs, l
         <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Results</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <div className="text-sm font-medium text-blue-800 mb-1">{t.result}</div>
               <div className="text-2xl font-bold text-blue-900">

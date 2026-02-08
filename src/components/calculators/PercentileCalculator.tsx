@@ -12,42 +12,51 @@ export default function PercentileCalculator({ lang = 'en' }: PercentileCalculat
     percentile: 75
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Percentile Calculator",
       description: "Calculate percentiles from a data set",
       values: "Values (comma-separated)",
       percentile: "Percentile (%)",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       result: "Result",
-      percentileValue: "Percentile Value"
+      percentileValue: "Percentile Value",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Percentiles",
       description: "Calcular percentiles de un conjunto de datos",
       values: "Valores (separados por comas)",
       percentile: "Percentil (%)",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
-      percentileValue: "Valor del Percentil"
+      percentileValue: "Valor del Percentil",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Percentis",
       description: "Calcular percentis de um conjunto de dados",
       values: "Valores (separados por vírgulas)",
       percentile: "Percentil (%)",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
-      percentileValue: "Valor do Percentil"
+      percentileValue: "Valor do Percentil",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Percentiles",
       description: "Calculer les percentiles d'un ensemble de données",
       values: "Valeurs (séparées par des virgules)",
       percentile: "Percentile (%)",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       result: "Résultat",
-      percentileValue: "Valeur du Percentile"
+      percentileValue: "Valeur du Percentile",
+      reset: "Réinitialiser"
     }
   };
 
@@ -69,6 +78,16 @@ export default function PercentileCalculator({ lang = 'en' }: PercentileCalculat
             className="w-full px-4 py-2 border rounded-lg"
             rows={3}
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

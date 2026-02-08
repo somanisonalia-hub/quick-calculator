@@ -45,97 +45,103 @@ export default function HealthInsuranceCalculator({ inputs, output, additionalOu
 
   const [results, setResults] = useState<Record<string, string | number>>({});
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setValues({});
+    setResults('');
+  };
+
+  const calculateInsurance = () => {
+    const annualIncome = values.annualIncome as number || 50000;
+    const householdSize = values.householdSize as number || 1;
+    const planType = values.planType as string || 'silver';
+    const location = values.location as string || 'urban';
+    const age = values.age as number || 35;
+
+    // Base premium calculation (simplified ACA marketplace rates)
+    let baseMonthlyPremium = 300; // Base for individual
+
+    // Household size adjustment
+    const householdMultiplier = Math.sqrt(householdSize); // Family plans cost more but not linearly
+
+    // Plan type multiplier (metal levels)
+    let planMultiplier = 1;
+    switch (planType) {
+      case 'bronze':
+        planMultiplier = 0.85;
+        break;
+      case 'silver':
+        planMultiplier = 1.0;
+        break;
+      case 'gold':
+        planMultiplier = 1.15;
+        break;
+      case 'platinum':
+        planMultiplier = 1.35;
+        break;
+    }
+
+    // Age factor (older = higher premiums)
+    let ageFactor = 1;
+    if (age < 25) ageFactor = 0.8;
+    else if (age < 35) ageFactor = 1.0;
+    else if (age < 45) ageFactor = 1.3;
+    else if (age < 55) ageFactor = 1.8;
+    else if (age < 65) ageFactor = 2.5;
+    else ageFactor = 3.0; // 65+ (Medicare eligible, but showing marketplace rates)
+
+    // Location factor
+    let locationFactor = 1;
+    switch (location) {
+      case 'urban':
+        locationFactor = 1.2; // Higher costs in cities
+        break;
+      case 'suburban':
+        locationFactor = 1.0;
+        break;
+      case 'rural':
+        locationFactor = 0.8; // Lower costs in rural areas
+        break;
+    }
+
+    // Calculate gross premium
+    const monthlyPremium = Math.round(baseMonthlyPremium * householdMultiplier * planMultiplier * ageFactor * locationFactor);
+    const annualPremium = monthlyPremium * 12;
+
+    // Calculate ACA subsidy (simplified - based on income % of FPL)
+    const federalPovertyLine = 14060; // 2024 FPL for individual
+    const householdPovertyLine = federalPovertyLine * householdSize;
+    const incomeRatio = annualIncome / householdPovertyLine;
+
+    let subsidy = 0;
+    if (incomeRatio <= 1.5) {
+      subsidy = annualPremium * 0.95; // 95% subsidy for low income
+    } else if (incomeRatio <= 2.0) {
+      subsidy = annualPremium * 0.87; // 87% subsidy
+    } else if (incomeRatio <= 2.5) {
+      subsidy = annualPremium * 0.73; // 73% subsidy
+    } else if (incomeRatio <= 4.0) {
+      subsidy = annualPremium * 0.60; // 60% subsidy
+    } else if (incomeRatio <= 6.0) {
+      subsidy = annualPremium * 0.50; // 50% subsidy
+    }
+
+    const netAnnualCost = annualPremium - subsidy;
+    const netMonthlyCost = Math.round(netAnnualCost / 12);
+
+    setResults({
+      monthlyPremium: monthlyPremium,
+      annualPremium: annualPremium,
+      subsidy: subsidy,
+      netAnnual: netAnnualCost,
+      netMonthly: netMonthlyCost,
+      subsidyPercentage: ((subsidy / annualPremium) * 100),
+      planLevel: planType.charAt(0).toUpperCase() + planType.slice(1)
+    });
+  };
+
   // Calculate health insurance premium
   useEffect(() => {
-    const calculateInsurance = () => {
-      const annualIncome = values.annualIncome as number || 50000;
-      const householdSize = values.householdSize as number || 1;
-      const planType = values.planType as string || 'silver';
-      const location = values.location as string || 'urban';
-      const age = values.age as number || 35;
-
-      // Base premium calculation (simplified ACA marketplace rates)
-      let baseMonthlyPremium = 300; // Base for individual
-
-      // Household size adjustment
-      const householdMultiplier = Math.sqrt(householdSize); // Family plans cost more but not linearly
-
-      // Plan type multiplier (metal levels)
-      let planMultiplier = 1;
-      switch (planType) {
-        case 'bronze':
-          planMultiplier = 0.85;
-          break;
-        case 'silver':
-          planMultiplier = 1.0;
-          break;
-        case 'gold':
-          planMultiplier = 1.15;
-          break;
-        case 'platinum':
-          planMultiplier = 1.35;
-          break;
-      }
-
-      // Age factor (older = higher premiums)
-      let ageFactor = 1;
-      if (age < 25) ageFactor = 0.8;
-      else if (age < 35) ageFactor = 1.0;
-      else if (age < 45) ageFactor = 1.3;
-      else if (age < 55) ageFactor = 1.8;
-      else if (age < 65) ageFactor = 2.5;
-      else ageFactor = 3.0; // 65+ (Medicare eligible, but showing marketplace rates)
-
-      // Location factor
-      let locationFactor = 1;
-      switch (location) {
-        case 'urban':
-          locationFactor = 1.2; // Higher costs in cities
-          break;
-        case 'suburban':
-          locationFactor = 1.0;
-          break;
-        case 'rural':
-          locationFactor = 0.8; // Lower costs in rural areas
-          break;
-      }
-
-      // Calculate gross premium
-      const monthlyPremium = Math.round(baseMonthlyPremium * householdMultiplier * planMultiplier * ageFactor * locationFactor);
-      const annualPremium = monthlyPremium * 12;
-
-      // Calculate ACA subsidy (simplified - based on income % of FPL)
-      const federalPovertyLine = 14060; // 2024 FPL for individual
-      const householdPovertyLine = federalPovertyLine * householdSize;
-      const incomeRatio = annualIncome / householdPovertyLine;
-
-      let subsidy = 0;
-      if (incomeRatio <= 1.5) {
-        subsidy = annualPremium * 0.95; // 95% subsidy for low income
-      } else if (incomeRatio <= 2.0) {
-        subsidy = annualPremium * 0.87; // 87% subsidy
-      } else if (incomeRatio <= 2.5) {
-        subsidy = annualPremium * 0.73; // 73% subsidy
-      } else if (incomeRatio <= 4.0) {
-        subsidy = annualPremium * 0.60; // 60% subsidy
-      } else if (incomeRatio <= 6.0) {
-        subsidy = annualPremium * 0.50; // 50% subsidy
-      }
-
-      const netAnnualCost = annualPremium - subsidy;
-      const netMonthlyCost = Math.round(netAnnualCost / 12);
-
-      setResults({
-        monthlyPremium: monthlyPremium,
-        annualPremium: annualPremium,
-        subsidy: subsidy,
-        netAnnual: netAnnualCost,
-        netMonthly: netMonthlyCost,
-        subsidyPercentage: ((subsidy / annualPremium) * 100),
-        planLevel: planType.charAt(0).toUpperCase() + planType.slice(1)
-      });
-    };
-
     calculateInsurance();
   }, [values]);
 
@@ -152,7 +158,7 @@ export default function HealthInsuranceCalculator({ inputs, output, additionalOu
 
   return (
     <div className="space-y-4">
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid lg:grid-cols-2 gap-4">
         {/* Inputs */}
         <div className="space-y-3">
           <h3 className="text-base font-semibold text-gray-900 mb-3">Coverage Details</h3>
@@ -192,6 +198,22 @@ export default function HealthInsuranceCalculator({ inputs, output, additionalOu
             ))}
           </div>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateInsurance}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
         {/* Results */}
         <div className="space-y-3">

@@ -159,7 +159,7 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxCredits: "Tax Credits ($)",
       state: "State",
       taxYear: "Tax Year",
-      calculate: "Calculate Tax Liability",
+      calculate: "🔄 Recalculate",
       results: "Tax Calculation Results",
       totalTaxLiability: "Total Tax Liability",
       federalTax: "Federal Income Tax",
@@ -175,7 +175,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxAmount: "Tax Amount",
       deductionTypeOptions: {
         standard: "Standard Deduction",
-        itemized: "Itemized Deductions"
+        itemized: "Itemized Deductions",
+      reset: "Reset"
       },
       filingStatusOptions: {
         single: "Single",
@@ -256,7 +257,7 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxCredits: "Créditos Fiscales ($)",
       state: "Estado",
       taxYear: "Año Fiscal",
-      calculate: "Calcular Responsabilidad Fiscal",
+      calculate: "🔄 Recalcular",
       results: "Resultados del Cálculo de Impuestos",
       totalTaxLiability: "Responsabilidad Fiscal Total",
       federalTax: "Impuesto Federal a la Renta",
@@ -272,7 +273,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxAmount: "Monto de Impuesto",
       deductionTypeOptions: {
         standard: "Deducción Estándar",
-        itemized: "Deducciones Detalladas"
+        itemized: "Deducciones Detalladas",
+      reset: "Restablecer"
       },
       filingStatusOptions: {
         single: "Soltero",
@@ -353,7 +355,7 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxCredits: "Créditos Fiscais (R$)",
       state: "Estado",
       taxYear: "Ano Fiscal",
-      calculate: "Calcular Responsabilidade Fiscal",
+      calculate: "🔄 Recalcular",
       results: "Resultados do Cálculo de Impostos",
       totalTaxLiability: "Responsabilidade Fiscal Total",
       federalTax: "Imposto Federal de Renda",
@@ -369,7 +371,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxAmount: "Valor do Imposto",
       deductionTypeOptions: {
         standard: "Dedução Padrão",
-        itemized: "Deduções Detalhadas"
+        itemized: "Deduções Detalhadas",
+      reset: "Redefinir"
       },
       filingStatusOptions: {
         single: "Solteiro",
@@ -450,7 +453,7 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxCredits: "Crédits Fiscaux (€)",
       state: "État",
       taxYear: "Année Fiscale",
-      calculate: "Calculer Responsabilité Fiscale",
+      calculate: "🔄 Recalculer",
       results: "Résultats du Calcul d'Impôts",
       totalTaxLiability: "Responsabilité Fiscale Totale",
       federalTax: "Impôt Fédéral sur le Revenu",
@@ -466,7 +469,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxAmount: "Montant d'Impôt",
       deductionTypeOptions: {
         standard: "Déduction Standard",
-        itemized: "Déductions Détaillées"
+        itemized: "Déductions Détaillées",
+      reset: "Réinitialiser"
       },
       filingStatusOptions: {
         single: "Célibataire",
@@ -563,7 +567,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxAmount: "Steuerbetrag",
       deductionTypeOptions: {
         standard: "Standardabzug",
-        itemized: "Aufgeschlüsselte Abzüge"
+        itemized: "Aufgeschlüsselte Abzüge",
+      reset: "Zurücksetzen"
       },
       filingStatusOptions: {
         single: "Ledig",
@@ -660,7 +665,8 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       taxAmount: "Belastingbedrag",
       deductionTypeOptions: {
         standard: "Standaardaftrek",
-        itemized: "Gespecificeerde Aftrekposten"
+        itemized: "Gespecificeerde Aftrekposten",
+      reset: "Resetten"
       },
       filingStatusOptions: {
         single: "Alleenstaand",
@@ -746,6 +752,16 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
     const dependentDeduction = dependents * DEPENDENT_EXEMPTION_2024;
 
     return Math.max(0, grossIncome - deductions - dependentDeduction);
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   const calculateFederalTax = (taxableIncome: number, filingStatus: string): { totalTax: number; breakdown: Array<{ bracket: string; income: number; rate: number; tax: number }> } => {
@@ -987,7 +1003,24 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
                   <option key={value} value={value}>{label}</option>
                 ))}
               </select>
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateTaxableIncome}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 

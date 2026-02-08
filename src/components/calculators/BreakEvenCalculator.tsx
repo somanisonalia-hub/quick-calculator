@@ -30,7 +30,7 @@ export default function BreakEvenCalculator({ lang = 'en' }: BreakEvenCalculator
       breakEvenRevenue: "Break-Even Revenue ($)",
       contributionMargin: "Contribution Margin ($)",
       contributionRatio: "Contribution Ratio (%)",
-      calculate: "Calculate Break-Even",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       formula: "Break-Even Point = Fixed Costs / (Price - Variable Cost)"
     },
@@ -45,7 +45,7 @@ export default function BreakEvenCalculator({ lang = 'en' }: BreakEvenCalculator
       breakEvenRevenue: "Ingresos en Punto de Equilibrio ($)",
       contributionMargin: "Margen de Contribución ($)",
       contributionRatio: "Ratio de Contribución (%)",
-      calculate: "Calcular Punto de Equilibrio",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       formula: "Punto de Equilibrio = Costos Fijos / (Precio - Costo Variable)"
     },
@@ -60,7 +60,7 @@ export default function BreakEvenCalculator({ lang = 'en' }: BreakEvenCalculator
       breakEvenRevenue: "Receita no Ponto de Equilíbrio ($)",
       contributionMargin: "Margem de Contribução ($)",
       contributionRatio: "Razão de Contribução (%)",
-      calculate: "Calcular Ponto de Equilíbrio",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       formula: "Ponto de Equilíbrio = Custos Fixos / (Preço - Custo Variável)"
     },
@@ -75,7 +75,7 @@ export default function BreakEvenCalculator({ lang = 'en' }: BreakEvenCalculator
       breakEvenRevenue: "Chiffre d'Affaires au Seuil ($)",
       contributionMargin: "Marge de Contribution ($)",
       contributionRatio: "Ratio de Contribution (%)",
-      calculate: "Calculer le Seuil de Rentabilité",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       formula: "Seuil de Rentabilité = Coûts Fixes / (Prix - Coût Variable)"
     },
@@ -90,9 +90,24 @@ export default function BreakEvenCalculator({ lang = 'en' }: BreakEvenCalculator
       breakEvenRevenue: "Break-Even-Umsatz ($)",
       contributionMargin: "Deckungsbeitrag ($)",
       contributionRatio: "Deckungsquote (%)",
-      calculate: "Break-Even berechnen",
+      calculate: "🔄 Neu berechnen",
       reset: "Zurücksetzen",
       formula: "Break-Even-Punkt = Fixkosten / (Preis - Variable Kosten)"
+    },
+    nl: {
+      title: "Break-Even Rekenmachine",
+      description: "Bereken het break-even punt voor uw bedrijf en begrijp de winstgevendheid",
+      fixedCosts: "Vaste Kosten ($)",
+      unitPrice: "Verkoopprijs per Eenheid ($)",
+      variableCost: "Variabele Kosten per Eenheid ($)",
+      results: "Break-Even Analyse Resultaten",
+      breakEvenPoint: "Break-Even Punt (Eenheden)",
+      breakEvenRevenue: "Break-Even Omzet ($)",
+      contributionMargin: "Bijdragemarge ($)",
+      contributionRatio: "Bijdrageratio (%)",
+      calculate: "🔄 Herberekenen",
+      reset: "Reset",
+      formula: "Break-Even Punt = Vaste Kosten / (Prijs - Variabele Kosten)"
     }
   };
 
@@ -155,73 +170,81 @@ export default function BreakEvenCalculator({ lang = 'en' }: BreakEvenCalculator
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      {/* Input Section */}
-      <div className="bg-white rounded-lg shadow p-6 space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.fixedCosts}
-            </label>
-            <input
-              type="number"
-              value={fixedCosts}
-              onChange={(e) => setFixedCosts(parseFloat(e.target.value) || 0)}
-              min="0"
-              step="1000"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+      <div className="grid lg:grid-cols-2 gap-8">
+        {/* Left Column - Inputs */}
+        <div className="space-y-4">
+          <div className="bg-white rounded-lg shadow p-6 space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {t.fixedCosts}
+              </label>
+              <input
+                type="number"
+                value={fixedCosts}
+                onChange={(e) => setFixedCosts(parseFloat(e.target.value) || 0)}
+                min="0"
+                step="1000"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {t.unitPrice}
+              </label>
+              <input
+                type="number"
+                value={unitPrice}
+                onChange={(e) => setUnitPrice(parseFloat(e.target.value) || 0)}
+                min="0"
+                step="5"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {t.variableCost}
+              </label>
+              <input
+                type="number"
+                value={variableCost}
+                onChange={(e) => setVariableCost(parseFloat(e.target.value) || 0)}
+                min="0"
+                step="5"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            {/* Buttons */}
+            <div className="pt-3 flex gap-4">
+              <button
+                onClick={calculateBreakEven}
+                className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200 shadow-sm"
+              >
+                {t.calculate}
+              </button>
+              <button
+                onClick={resetCalculator}
+                className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200 shadow-sm"
+              >
+                {t.reset}
+              </button>
+            </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.unitPrice}
-            </label>
-            <input
-              type="number"
-              value={unitPrice}
-              onChange={(e) => setUnitPrice(parseFloat(e.target.value) || 0)}
-              min="0"
-              step="5"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.variableCost}
-            </label>
-            <input
-              type="number"
-              value={variableCost}
-              onChange={(e) => setVariableCost(parseFloat(e.target.value) || 0)}
-              min="0"
-              step="5"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+          <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+            <p className="text-sm font-semibold text-gray-900 mb-2">{t.formula}</p>
+            <p className="text-xs text-gray-600">
+              {lang === 'en' ? 'Contribution Margin = Selling Price - Variable Cost per Unit' : lang === 'es' ? 'Margen de Contribución = Precio de Venta - Costo Variable por Unidad' : lang === 'pt' ? 'Margem de Contribuição = Preço de Venda - Custo Variável por Unidade' : lang === 'fr' ? 'Marge de Contribution = Prix de Vente - Coût Variable par Unité' : 'Deckungsbeitrag = Verkaufspreis - Variable Kosten pro Einheit'}
+            </p>
           </div>
         </div>
 
-        {/* Auto-calculation note */}
-        <div className="pt-2 text-xs text-blue-600 text-center font-medium">
-          📊 {lang === 'en' ? 'Calculations update automatically as you change values' : lang === 'es' ? 'Los cálculos se actualizan automáticamente al cambiar valores' : lang === 'pt' ? 'Os cálculos são atualizados automaticamente ao alterar valores' : lang === 'fr' ? 'Les calculs se mettent à jour automatiquement au fur et à mesure que vous modifiez les valeurs' : 'Berechnungen werden automatisch aktualisiert, wenn Sie Werte ändern'}
-        </div>
+        {/* Right Column - Results */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-bold text-gray-900">{t.results}</h2>
 
-        {/* Buttons */}
-        <div className="pt-3 flex gap-4">
-          <button
-            onClick={resetCalculator}
-            className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200 shadow-sm"
-          >
-            {t.reset}
-          </button>
-        </div>
-      </div>
-
-      {/* Results Section */}
-      <div className="space-y-4">
-        <h2 className="text-xl font-bold text-gray-900">{t.results}</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <p className="text-sm text-gray-600">{t.breakEvenPoint}</p>
             <p className="text-2xl font-bold text-blue-600 mt-1">
@@ -251,12 +274,6 @@ export default function BreakEvenCalculator({ lang = 'en' }: BreakEvenCalculator
           </div>
         </div>
 
-        <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-          <p className="text-sm font-semibold text-gray-900 mb-2">{t.formula}</p>
-          <p className="text-xs text-gray-600">
-            {lang === 'en' ? 'Contribution Margin = Selling Price - Variable Cost per Unit' : lang === 'es' ? 'Margen de Contribución = Precio de Venta - Costo Variable por Unidad' : lang === 'pt' ? 'Margem de Contribução = Preço de Venda - Custo Variável por Unidade' : lang === 'fr' ? 'Marge de Contribution = Prix de Vente - Coût Variable par Unité' : 'Deckungsbeitrag = Verkaufspreis - Variable Kosten pro Einheit'}
-          </p>
-        </div>
       </div>
     </div>
   );

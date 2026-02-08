@@ -20,8 +20,9 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
       standard: "Standard",
       express: "Express",
       overnight: "Overnight",
-      calculate: "Calculate Shipping Cost",
-      result: "Estimated Shipping Cost"
+      calculate: "🔄 Recalculate",
+      result: "Estimated Shipping Cost",
+      reset: "Reset"
     },
     es: {
       weight: "Peso del Paquete (kg)",
@@ -30,8 +31,9 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
       standard: "Estándar",
       express: "Exprés",
       overnight: "De la Noche a la Mañana",
-      calculate: "Calcular Costo de Envío",
-      result: "Costo de Envío Estimado"
+      calculate: "🔄 Recalcular",
+      result: "Costo de Envío Estimado",
+      reset: "Restablecer"
     },
     pt: {
       weight: "Peso do Pacote (kg)",
@@ -40,8 +42,9 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
       standard: "Padrão",
       express: "Expresso",
       overnight: "Durante a Noite",
-      calculate: "Calcular Custo de Envio",
-      result: "Custo de Envio Estimado"
+      calculate: "🔄 Recalcular",
+      result: "Custo de Envio Estimado",
+      reset: "Redefinir"
     },
     fr: {
       weight: "Poids du Colis (kg)",
@@ -50,8 +53,9 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
       standard: "Standard",
       express: "Express",
       overnight: "Nuit",
-      calculate: "Calculer les frais d'expédition",
-      result: "Frais d'expédition estimés"
+      calculate: "🔄 Recalculer",
+      result: "Frais d'expédition estimés",
+      reset: "Réinitialiser"
     },
     de: {
       weight: "Paketgewicht (kg)",
@@ -61,7 +65,8 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
       express: "Express",
       overnight: "Über Nacht",
       calculate: "Versandkosten berechnen",
-      result: "Geschätzte Versandkosten"
+      result: "Geschätzte Versandkosten",
+      reset: "Zurücksetzen"
     }
   };
 
@@ -86,6 +91,16 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
     setResult(total.toFixed(2));
   };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
       <div className="space-y-4">
@@ -97,6 +112,16 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
             onChange={(e) => setWeight(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

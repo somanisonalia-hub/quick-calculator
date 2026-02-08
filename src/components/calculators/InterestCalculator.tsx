@@ -29,14 +29,15 @@ export default function InterestCalculator({ lang = 'en' }: InterestCalculatorPr
       quarterly: "Quarterly",
       monthly: "Monthly",
       daily: "Daily",
-      calculate: "Calculate Interest",
+      calculate: "🔄 Recalculate",
       results: "Results",
       interestEarned: "Interest Earned",
       futureValue: "Future Value",
       annualEquivalent: "Annual Equivalent Rate",
       calculationBreakdown: "Calculation Breakdown",
       simpleFormula: "Simple Interest = Principal × Rate × Time",
-      compoundFormula: "Compound Interest = Principal × (1 + Rate/Compounding)⁽ᶜᵒᵐᵖᵒᵘⁿᵈⁱⁿᵍ×ᵀⁱᵐᵉ⁾ - Principal"
+      compoundFormula: "Compound Interest = Principal × (1 + Rate/Compounding)⁽ᶜᵒᵐᵖᵒᵘⁿᵈⁱⁿᵍ×ᵀⁱᵐᵉ⁾ - Principal",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Intereses",
@@ -52,14 +53,15 @@ export default function InterestCalculator({ lang = 'en' }: InterestCalculatorPr
       quarterly: "Trimestralmente",
       monthly: "Mensualmente",
       daily: "Diariamente",
-      calculate: "Calcular Interés",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       interestEarned: "Interés Ganado",
       futureValue: "Valor Futuro",
       annualEquivalent: "Tasa Equivalente Anual",
       calculationBreakdown: "Desglose de Cálculo",
       simpleFormula: "Interés Simple = Principal × Tasa × Tiempo",
-      compoundFormula: "Interés Compuesto = Principal × (1 + Tasa/Capitalización)⁽ᶜᵃᵖⁱᵗᵃˡⁱᶻᵃᶜⁱᵒⁿ×ᵀⁱᵉᵐᵖᵒ⁾ - Principal"
+      compoundFormula: "Interés Compuesto = Principal × (1 + Tasa/Capitalización)⁽ᶜᵃᵖⁱᵗᵃˡⁱᶻᵃᶜⁱᵒⁿ×ᵀⁱᵉᵐᵖᵒ⁾ - Principal",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Juros",
@@ -75,14 +77,15 @@ export default function InterestCalculator({ lang = 'en' }: InterestCalculatorPr
       quarterly: "Trimestralmente",
       monthly: "Mensualmente",
       daily: "Diariamente",
-      calculate: "Calcular Juros",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       interestEarned: "Juros Ganhos",
       futureValue: "Valor Futuro",
       annualEquivalent: "Taxa Equivalente Anual",
       calculationBreakdown: "Detalhamento do Cálculo",
       simpleFormula: "Juros Simples = Principal × Taxa × Tempo",
-      compoundFormula: "Juros Compostos = Principal × (1 + Taxa/Capitalização)⁽ᶜᵃᵖⁱᵗᵃˡⁱᶻᵃᶜⁱᵒⁿ×ᵀⁱᵉᵐᵖᵒ⁾ - Principal"
+      compoundFormula: "Juros Compostos = Principal × (1 + Taxa/Capitalização)⁽ᶜᵃᵖⁱᵗᵃˡⁱᶻᵃᶜⁱᵒⁿ×ᵀⁱᵉᵐᵖᵒ⁾ - Principal",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur d'Intérêts",
@@ -98,14 +101,15 @@ export default function InterestCalculator({ lang = 'en' }: InterestCalculatorPr
       quarterly: "Trimestriellement",
       monthly: "Mensuellement",
       daily: "Quotidiennement",
-      calculate: "Calculer les Intérêts",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       interestEarned: "Intérêts Gagnés",
       futureValue: "Valeur Future",
       annualEquivalent: "Taux Équivalent Annuel",
       calculationBreakdown: "Décomposition du Calcul",
       simpleFormula: "Intérêts Simples = Principal × Taux × Temps",
-      compoundFormula: "Intérêts Composés = Principal × (1 + Taux/Capitalisation)⁽ᶜᵃᵖⁱᵗᵃˡⁱᶻᵃᶜⁱᵒⁿ×ᵀⁱᵉᵐᵖᵒ⁾ - Principal"
+      compoundFormula: "Intérêts Composés = Principal × (1 + Taux/Capitalisation)⁽ᶜᵃᵖⁱᵗᵃˡⁱᶻᵃᶜⁱᵒⁿ×ᵀⁱᵉᵐᵖᵒ⁾ - Principal",
+      reset: "Réinitialiser"
     },
     de: {
       title: "Zinsrechner",
@@ -121,14 +125,15 @@ export default function InterestCalculator({ lang = 'en' }: InterestCalculatorPr
       quarterly: "Vierteljährlich",
       monthly: "Monatlich",
       daily: "Täglich",
-      calculate: "Zinsen Berechnen",
+      calculate: "🔄 Neu berechnen",
       results: "Ergebnisse",
       interestEarned: "Verdiente Zinsen",
       futureValue: "Zukünftiger Wert",
       annualEquivalent: "Jährlicher Äquivalenzsatz",
       calculationBreakdown: "Berechnungsaufschlüsselung",
       simpleFormula: "Einfache Zinsen = Kapital × Satz × Zeit",
-      compoundFormula: "Zinseszinsen = Kapital × (1 + Satz/Verzinsung)⁽ᵛᵉʳᶻⁱⁿˢᵘⁿᵍ×ᶻᵉⁱᵗ⁾ - Kapital"
+      compoundFormula: "Zinseszinsen = Kapital × (1 + Satz/Verzinsung)⁽ᵛᵉʳᶻⁱⁿˢᵘⁿᵍ×ᶻᵉⁱᵗ⁾ - Kapital",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Renteberekening",
@@ -144,14 +149,15 @@ export default function InterestCalculator({ lang = 'en' }: InterestCalculatorPr
       quarterly: "Driemaandelijks",
       monthly: "Maandelijks",
       daily: "Dagelijks",
-      calculate: "Rente Berekenen",
+      calculate: "🔄 Herberekenen",
       results: "Resultaten",
       interestEarned: "Verdiende Rente",
       futureValue: "Toekomstige Waarde",
       annualEquivalent: "Jaarlijks Equivalentpercentage",
       calculationBreakdown: "Berekeningsopsplitsing",
       simpleFormula: "Eenvoudige Rente = Hoofdbedrag × Percentage × Tijd",
-      compoundFormula: "Samengestelde Rente = Hoofdbedrag × (1 + Percentage/Samenstelling)⁽ˢᵃᵐᵉⁿˢᵗᵉˡˡⁱⁿᵍ×ᵗⁱʲᵈ⁾ - Hoofdbedrag"
+      compoundFormula: "Samengestelde Rente = Hoofdbedrag × (1 + Percentage/Samenstelling)⁽ˢᵃᵐᵉⁿˢᵗᵉˡˡⁱⁿᵍ×ᵗⁱʲᵈ⁾ - Hoofdbedrag",
+      reset: "Resetten"
     }
   };
 
@@ -190,6 +196,16 @@ export default function InterestCalculator({ lang = 'en' }: InterestCalculatorPr
       calculationType,
       compoundingFrequency: calculationType === 'compound' ? compoundingFrequency : null
     });
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   useEffect(() => {
@@ -330,24 +346,27 @@ export default function InterestCalculator({ lang = 'en' }: InterestCalculatorPr
           📊 Calculations update automatically as you change values
         </div>
 
-        {/* Recalculate Button */}
-        <div className="pt-3">
-          <button
-            onClick={() => {
-              // Force recalculation (though auto-calc handles this)
-              calculateInterest();
-            }}
-            className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200 shadow-sm"
-          >
-            🔄 Recalculate
-          </button>
-        </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateInterest}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
 
-        {/* Results Section */}
-        <div className="space-y-6">
-          {Object.keys(results).length > 0 && (
+        {/* Results Section - Second Column */}
+        <div className="space-y-4">
+          {results.interestEarned !== undefined && (
             <>
-              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6">
+              <div className="bg-white rounded-lg border border-gray-200 p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">{t.results}</h2>
 
                 <div className="space-y-4">

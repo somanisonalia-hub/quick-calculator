@@ -40,38 +40,50 @@ export default function CompoundInterestCalculator({ inputs, output, additionalO
       investmentDetails: "Investment Details",
       investmentGrowth: "Investment Growth",
       powerOfCompounding: "Power of Compounding",
-      compoundingMessage: "Your money grows exponentially over time"
+      compoundingMessage: "Your money grows exponentially over time",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
     },
     es: {
       investmentDetails: "Detalles de Inversión",
       investmentGrowth: "Crecimiento de Inversión",
       powerOfCompounding: "Poder del Interés Compuesto",
-      compoundingMessage: "Tu dinero crece exponencialmente con el tiempo"
+      compoundingMessage: "Tu dinero crece exponencialmente con el tiempo",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       investmentDetails: "Detalhes do Investimento",
       investmentGrowth: "Crescimento do Investimento",
       powerOfCompounding: "Poder da Capitalização",
-      compoundingMessage: "Seu dinheiro cresce exponencialmente ao longo do tempo"
+      compoundingMessage: "Seu dinheiro cresce exponencialmente ao longo do tempo",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
     },
     fr: {
       investmentDetails: "Détails d'Investissement",
       investmentGrowth: "Croissance d'Investissement",
       powerOfCompounding: "Puissance de la Capitalisation",
-      compoundingMessage: "Votre argent croît de manière exponentielle au fil du temps"
+      compoundingMessage: "Votre argent croît de manière exponentielle au fil du temps",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     }
   ,
     de: {
       investmentDetails: "Investitionsdetails",
       investmentGrowth: "Investitionswachstum",
       powerOfCompounding: "Kraft des Zinseszinses",
-      compoundingMessage: "Ihr Geld wächst exponentiell im Laufe der Zeit"
+      compoundingMessage: "Ihr Geld wächst exponentiell im Laufe der Zeit",
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen"
     },
     nl: {
       investmentDetails: "Investeringsdetails",
       investmentGrowth: "Investeringsgroei",
       powerOfCompounding: "Kracht van Samengestelde Rente",
-      compoundingMessage: "Uw geld groeit exponentieel in de loop van de tijd"
+      compoundingMessage: "Uw geld groeit exponentieel in de loop van de tijd",
+      calculate: "🔄 Herberekenen",
+      reset: "Resetten"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
   
@@ -85,29 +97,37 @@ export default function CompoundInterestCalculator({ inputs, output, additionalO
 
   const [results, setResults] = useState<Record<string, number>>({});
 
-  // Calculate compound interest
+  const calculateCompoundInterest = () => {
+    const principal = values.principal as number || 0;
+    const rate = values.rate as number || 0;
+    const time = values.time as number || 0;
+    const compoundFrequency = values.compoundFrequency as number || 12;
+
+    if (principal > 0 && rate > 0 && time > 0 && compoundFrequency > 0) {
+      const r = rate / 100;
+      const amount = principal * Math.pow(1 + (r / compoundFrequency), compoundFrequency * time);
+      const interest = amount - principal;
+
+      setResults({
+        finalAmount: amount,
+        totalInterest: interest,
+        principal: principal
+      });
+    } else {
+      setResults({});
+    }
+  };
+
+  const resetCalculator = () => {
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   useEffect(() => {
-    const calculateCompoundInterest = () => {
-      const principal = values.principal as number || 0;
-      const rate = values.rate as number || 0;
-      const time = values.time as number || 0;
-      const compoundFrequency = values.compoundFrequency as number || 12;
-
-      if (principal > 0 && rate > 0 && time > 0 && compoundFrequency > 0) {
-        const r = rate / 100;
-        const amount = principal * Math.pow(1 + (r / compoundFrequency), compoundFrequency * time);
-        const interest = amount - principal;
-
-        setResults({
-          finalAmount: amount,
-          totalInterest: interest,
-          principal: principal
-        });
-      } else {
-        setResults({});
-      }
-    };
-
     calculateCompoundInterest();
   }, [values]);
 
@@ -130,7 +150,7 @@ export default function CompoundInterestCalculator({ inputs, output, additionalO
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid lg:grid-cols-2 gap-6">
         {/* Inputs */}
         <div className="space-y-4">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">{t.investmentDetails}</h3>
@@ -169,6 +189,23 @@ export default function CompoundInterestCalculator({ inputs, output, additionalO
             </div>
           ))}
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateCompoundInterest}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         <div className="space-y-4">

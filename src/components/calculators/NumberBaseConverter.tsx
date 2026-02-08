@@ -104,6 +104,14 @@ export default function NumberBaseConverter({ lang = 'en' }: NumberBaseConverter
   const [error, setError] = useState('');
   const [copied, setCopied] = useState<Base | null>(null);
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputBase(0);
+    setInput(0);
+    setResults('');
+    // Additional state resets may be needed
+  };
+
   const convert = () => {
     setError('');
     const cleanInput = input.trim().toUpperCase();
@@ -213,6 +221,22 @@ export default function NumberBaseConverter({ lang = 'en' }: NumberBaseConverter
       >
         {t.convert}
       </button>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={convert}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
       {/* Results */}
       <div className="space-y-3">

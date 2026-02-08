@@ -223,7 +223,7 @@ export default function BloodPressureCalculator({ lang = 'en' }: BloodPressureCa
       </div>
 
       {/* Input Fields */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             {t.systolic}
@@ -282,7 +282,7 @@ export default function BloodPressureCalculator({ lang = 'en' }: BloodPressureCa
             {t.results}
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
             <div className="p-4 bg-white rounded-lg shadow-sm">
               <p className="text-sm text-gray-600 mb-1">{t.bpCategory}</p>
               <p className={`text-2xl font-bold ${getTextColorClass(results.categoryKey)}`}>

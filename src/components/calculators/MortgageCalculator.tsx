@@ -56,6 +56,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       exportcsv: "Export CSV",
       principalInterest: "Principal & Interest",
       taxesInsurance: "Taxes & Insurance",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
   },
     es: {
       loanDetails: "Detalles del Préstamo",
@@ -81,6 +83,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       paymentnumberdatepaymentprincipalinterestbalancen: "Número de Pago,Fecha,Pago,Principal,Intereses,Saldo\n",
       hideamortizationschedule: "Ocultar Plan de Amortización",
       showamortizationschedule: "Mostrar Plan de Amortización",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
   },
     pt: {
       loanDetails: "Detalhes do Empréstimo",
@@ -106,6 +110,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       paymentnumberdatepaymentprincipalinterestbalancen: "Número do Pagamento,Data,Pagamento,Principal,Juros,Saldo\n",
       hideamortizationschedule: "Ocultar Plano de Amortização",
       showamortizationschedule: "Mostrar Plano de Amortização",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
   },
     fr: {
       loanDetails: "Détails du Prêt",
@@ -131,6 +137,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       paymentnumberdatepaymentprincipalinterestbalancen: "Numéro de Paiement,Date,Paiement,Principal,Intérêts,Solde\n",
       hideamortizationschedule: "Masquer le Plan d'Amortissement",
       showamortizationschedule: "Afficher le Plan d'Amortissement",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     },
     de: {
       loanDetails: "Darlehensdetails",
@@ -156,6 +164,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       paymentnumberdatepaymentprincipalinterestbalancen: "Zahlungsnummer,Datum,Zahlung,Kapitalbetrag,Zinsen,Saldo\n",
       hideamortizationschedule: "Tilgungsplan ausblenden",
       showamortizationschedule: "Tilgungsplan anzeigen",
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen"
     },
     nl: {
       loanDetails: "Lening Details",
@@ -181,6 +191,8 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
       paymentnumberdatepaymentprincipalinterestbalancen: "Betalingsnummer,Datum,Betaling,Hoofdsom,Rente,Saldo\n",
       hideamortizationschedule: "Aflossingsschema verbergen",
       showamortizationschedule: "Aflossingsschema weergeven",
+      calculate: "🔄 Herberekenen",
+      reset: "Resetten"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
 
@@ -221,60 +233,70 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
   const [amortizationSchedule, setAmortizationSchedule] = useState<any[]>([]);
   const [yearlySummary, setYearlySummary] = useState<any[]>([]);
 
+  const calculateMortgage = () => {
+    const loanAmount = values.loanAmount || 300000;
+    const loanTerm = values.loanTerm || 30;
+    const interestRate = values.interestRate || 6.5;
+    const propertyTax = values.propertyTax || 0;
+    const homeInsurance = values.homeInsurance || 0;
+
+    // Convert annual interest rate to monthly
+    const monthlyRate = interestRate / 100 / 12;
+
+    // Total number of payments
+    const totalPayments = loanTerm * 12;
+
+    let monthlyPrincipalInterest = 0;
+
+    if (monthlyRate > 0) {
+      // Standard mortgage formula
+      monthlyPrincipalInterest = loanAmount *
+        (monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) /
+        (Math.pow(1 + monthlyRate, totalPayments) - 1);
+    } else {
+      // If interest rate is 0, just divide by number of months
+      monthlyPrincipalInterest = loanAmount / totalPayments;
+    }
+
+    // Monthly taxes and insurance (annual amounts divided by 12)
+    const monthlyTaxesInsurance = (propertyTax + homeInsurance) / 12;
+
+    // Total monthly payment
+    const totalMonthly = monthlyPrincipalInterest + monthlyTaxesInsurance;
+
+    // Calculate total interest paid
+    const totalPaid = totalMonthly * totalPayments;
+    const totalInterest = totalPaid - loanAmount;
+
+    setResults({
+      monthlyPayment: totalMonthly,
+      principalInterest: monthlyPrincipalInterest,
+      taxesInsurance: monthlyTaxesInsurance,
+      totalInterest: totalInterest,
+      totalAmount: totalPaid
+    });
+
+    // Generate amortization schedule if loan amount > 0
+    if (loanAmount > 0 && monthlyPrincipalInterest > 0) {
+      generateAmortizationSchedule(loanAmount, monthlyRate, totalPayments, monthlyPrincipalInterest);
+    } else {
+      setAmortizationSchedule([]);
+      setYearlySummary([]);
+    }
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   // Auto-calculate mortgage payments when inputs change
   useEffect(() => {
-    const calculateMortgage = () => {
-      const loanAmount = values.loanAmount || 300000;
-      const loanTerm = values.loanTerm || 30;
-      const interestRate = values.interestRate || 6.5;
-      const propertyTax = values.propertyTax || 0;
-      const homeInsurance = values.homeInsurance || 0;
-
-      // Convert annual interest rate to monthly
-      const monthlyRate = interestRate / 100 / 12;
-
-      // Total number of payments
-      const totalPayments = loanTerm * 12;
-
-      let monthlyPrincipalInterest = 0;
-
-      if (monthlyRate > 0) {
-        // Standard mortgage formula
-        monthlyPrincipalInterest = loanAmount *
-          (monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) /
-          (Math.pow(1 + monthlyRate, totalPayments) - 1);
-      } else {
-        // If interest rate is 0, just divide by number of months
-        monthlyPrincipalInterest = loanAmount / totalPayments;
-      }
-
-      // Monthly taxes and insurance (annual amounts divided by 12)
-      const monthlyTaxesInsurance = (propertyTax + homeInsurance) / 12;
-
-      // Total monthly payment
-      const totalMonthly = monthlyPrincipalInterest + monthlyTaxesInsurance;
-
-      // Calculate total interest paid
-      const totalPaid = totalMonthly * totalPayments;
-      const totalInterest = totalPaid - loanAmount;
-
-      setResults({
-        monthlyPayment: totalMonthly,
-        principalInterest: monthlyPrincipalInterest,
-        taxesInsurance: monthlyTaxesInsurance,
-        totalInterest: totalInterest,
-        totalAmount: totalPaid
-      });
-
-      // Generate amortization schedule if loan amount > 0
-      if (loanAmount > 0 && monthlyPrincipalInterest > 0) {
-        generateAmortizationSchedule(loanAmount, monthlyRate, totalPayments, monthlyPrincipalInterest);
-      } else {
-        setAmortizationSchedule([]);
-        setYearlySummary([]);
-      }
-    };
-
     calculateMortgage();
   }, [values]);
 
@@ -378,7 +400,7 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
 
   return (
     <div className="space-y-4">
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid lg:grid-cols-2 gap-4">
         {/* Inputs */}
         <div className="space-y-3">
           <h3 className="text-base font-semibold text-gray-900 mb-2">{t.loanDetails}</h3>
@@ -404,16 +426,19 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
             📊 Calculations update automatically as you change values
           </div>
 
-          {/* Recalculate Button */}
-          <div className="pt-3">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
             <button
-              onClick={() => {
-                // Force recalculation
-                setResults((prev: any) => ({ ...prev }));
-              }}
-              className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200 shadow-sm"
+              onClick={calculateMortgage}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
-              🔄 Recalculate
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
             </button>
           </div>
         </div>

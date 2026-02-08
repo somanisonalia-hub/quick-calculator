@@ -35,7 +35,8 @@ export default function StudentLoanCalculator({ lang = 'en' }: StudentLoanCalcul
       totalInterest: "Total Interest Paid",
       effectiveInterest: "Effective Interest",
       paymentAfterGrace: "Payment After Grace Period",
-      reset: "Reset"
+      reset: "Reset",
+      calculate: "🔄 Recalculate"
     },
     es: {
       title: "Calculadora de Préstamo para Estudiantes",
@@ -50,7 +51,8 @@ export default function StudentLoanCalculator({ lang = 'en' }: StudentLoanCalcul
       totalInterest: "Interés Total Pagado",
       effectiveInterest: "Interés Efectivo",
       paymentAfterGrace: "Pago Después del Período de Gracia",
-      reset: "Reiniciar"
+      reset: "Reiniciar",
+      calculate: "🔄 Recalcular"
     },
     pt: {
       title: "Calculadora de Empréstimo para Estudantes",
@@ -65,7 +67,8 @@ export default function StudentLoanCalculator({ lang = 'en' }: StudentLoanCalcul
       totalInterest: "Juros Totais Pagos",
       effectiveInterest: "Juros Efetivos",
       paymentAfterGrace: "Pagamento Após Período de Carência",
-      reset: "Reiniciar"
+      reset: "Reiniciar",
+      calculate: "🔄 Recalcular"
     },
     fr: {
       title: "Calculateur de Prêt Étudiant",
@@ -80,7 +83,8 @@ export default function StudentLoanCalculator({ lang = 'en' }: StudentLoanCalcul
       totalInterest: "Intérêts Totaux Payés",
       effectiveInterest: "Intérêts Effectifs",
       paymentAfterGrace: "Paiement Après Période de Grâce",
-      reset: "Réinitialiser"
+      reset: "Réinitialiser",
+      calculate: "🔄 Recalculer"
     },
     de: {
       title: "Studentenkredit-Rechner",
@@ -95,7 +99,8 @@ export default function StudentLoanCalculator({ lang = 'en' }: StudentLoanCalcul
       totalInterest: "Gezahlte Gesamtzinsen",
       effectiveInterest: "Effektive Zinsen",
       paymentAfterGrace: "Zahlung Nach Karenzzeit",
-      reset: "Zurücksetzen"
+      reset: "Zurücksetzen",
+      calculate: "🔄 Neu berechnen"
     }
   };
 
@@ -168,7 +173,7 @@ export default function StudentLoanCalculator({ lang = 'en' }: StudentLoanCalcul
 
       {/* Input Section */}
       <div className="bg-white rounded-lg shadow p-6 space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.loanAmount}
@@ -247,9 +252,19 @@ export default function StudentLoanCalculator({ lang = 'en' }: StudentLoanCalcul
 
       {/* Results Section */}
       <div className="space-y-4">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateLoan}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+          </div>
+
         <h2 className="text-xl font-bold text-gray-900">{t.results}</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <p className="text-sm text-gray-600">{t.monthlyPayment}</p>
             <p className="text-2xl font-bold text-blue-600 mt-1">

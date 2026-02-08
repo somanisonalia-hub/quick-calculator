@@ -22,7 +22,7 @@ export default function SavingsCalculator({ lang = 'en' }: SavingsCalculatorProp
       futureValue: "Future Value",
       totalContributions: "Total Contributions",
       totalInterest: "Total Interest Earned",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       annually: "Annually",
       semiAnnually: "Semi-Annually",
@@ -49,7 +49,7 @@ export default function SavingsCalculator({ lang = 'en' }: SavingsCalculatorProp
       futureValue: "Valor Futuro",
       totalContributions: "Contribuciones Totales",
       totalInterest: "Intereses Totales Ganados",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       annually: "Anual",
       semiAnnually: "Semi-Anual",
@@ -76,7 +76,7 @@ export default function SavingsCalculator({ lang = 'en' }: SavingsCalculatorProp
       futureValue: "Valor Futuro",
       totalContributions: "Contribuições Totais",
       totalInterest: "Juros Totais Ganhos",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       annually: "Anual",
       semiAnnually: "Semi-Anual",
@@ -103,7 +103,7 @@ export default function SavingsCalculator({ lang = 'en' }: SavingsCalculatorProp
       futureValue: "Valeur Future",
       totalContributions: "Contributions Totales",
       totalInterest: "Intérêts Totaux Gagnés",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       annually: "Annuel",
       semiAnnually: "Semi-Annuel",
@@ -278,7 +278,7 @@ export default function SavingsCalculator({ lang = 'en' }: SavingsCalculatorProp
               }}
               className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200 shadow-sm"
             >
-              🔄 Recalculate
+              {t.calculate}
             </button>
             <button
               onClick={resetCalculator}

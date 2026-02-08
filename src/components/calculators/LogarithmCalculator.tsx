@@ -12,46 +12,55 @@ export default function LogarithmCalculator({ lang = 'en' }: LogarithmCalculator
     base: 10
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Logarithm Calculator",
       description: "Calculate logarithms with any base",
       value: "Value",
       base: "Base",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       result: "Result",
       naturalLog: "Natural Log (ln)",
-      commonLog: "Common Log (log₁₀)"
+      commonLog: "Common Log (log₁₀)",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Logaritmos",
       description: "Calcular logaritmos con cualquier base",
       value: "Valor",
       base: "Base",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
       naturalLog: "Logaritmo Natural (ln)",
-      commonLog: "Logaritmo Común (log₁₀)"
+      commonLog: "Logaritmo Común (log₁₀)",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Logaritmos",
       description: "Calcular logaritmos com qualquer base",
       value: "Valor",
       base: "Base",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
       naturalLog: "Logaritmo Natural (ln)",
-      commonLog: "Logaritmo Comum (log₁₀)"
+      commonLog: "Logaritmo Comum (log₁₀)",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Logarithmes",
       description: "Calculer les logarithmes avec n'importe quelle base",
       value: "Valeur",
       base: "Base",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       result: "Résultat",
       naturalLog: "Logarithme Naturel (ln)",
-      commonLog: "Logarithme Commun (log₁₀)"
+      commonLog: "Logarithme Commun (log₁₀)",
+      reset: "Réinitialiser"
     }
   };
 
@@ -75,6 +84,16 @@ export default function LogarithmCalculator({ lang = 'en' }: LogarithmCalculator
             step="0.01"
             className="w-full px-4 py-2 border rounded-lg"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

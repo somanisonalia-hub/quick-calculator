@@ -41,6 +41,8 @@ const translations = {
       longformcontentconsiderbreakingintosectionsorchapters: "Long-form content. Consider breaking into sections or chapters.",
       averagesentencelengthishightryvaryingsentencestructureforbetterreadability: "Average sentence length is high. Try varying sentence structure for better readability.",
       manyshortsentencesconsidercombiningsomeforbetterflow: "Many short sentences. Consider combining some for better flow.",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
   },
   es: {
     writingtips: "Consejos de escritura",
@@ -52,6 +54,8 @@ const translations = {
       longformcontentconsiderbreakingintosectionsorchapters: "Contenido de formato largo. Considera dividirlo en secciones o capítulos.",
       averagesentencelengthishightryvaryingsentencestructureforbetterreadability: "La longitud promedio de las oraciones es alta. Intenta variar la estructura de las oraciones para una mejor legibilidad.",
       manyshortsentencesconsidercombiningsomeforbetterflow: "Muchas oraciones cortas. Considera combinar algunas para un mejor flujo.",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
   },
   pt: {
     writingtips: "Consejos de escrita",
@@ -63,6 +67,8 @@ const translations = {
       longformcontentconsiderbreakingintosectionsorchapters: "Conteúdo de formato longo. Considere dividir em seções ou capítulos.",
       averagesentencelengthishightryvaryingsentencestructureforbetterreadability: "O comprimento médio das frases é alto. Tente variar a estrutura das frases para uma melhor legibilidade.",
       manyshortsentencesconsidercombiningsomeforbetterflow: "Muitas frases curtas. Considere combinar algumas para um melhor fluxo.",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
   },
   fr: {
     writingtips: "Conseils d'écriture",
@@ -74,6 +80,8 @@ const translations = {
       longformcontentconsiderbreakingintosectionsorchapters: "Contenu de longue forme. Envisagez de le diviser en sections ou chapitres.",
       averagesentencelengthishightryvaryingsentencestructureforbetterreadability: "La longueur moyenne des phrases est élevée. Essayez de varier la structure des phrases pour une meilleure lisibilité.",
       manyshortsentencesconsidercombiningsomeforbetterflow: "Beaucoup de phrases courtes. Envisagez d'en combiner certaines pour un meilleur flux.",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
   },
 };
 
@@ -137,6 +145,16 @@ export default function WordCounter({ inputs, output, additionalOutputs, lang = 
       });
     };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
     calculateStats();
   }, [values]);
 
@@ -172,6 +190,22 @@ export default function WordCounter({ inputs, output, additionalOutputs, lang = 
             <div className="text-xl sm:text-2xl font-bold text-blue-600">
               {results.words !== undefined ? results.words.toLocaleString() : output.default}
             </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateStats}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
           </div>
 
           {/* Additional Outputs */}

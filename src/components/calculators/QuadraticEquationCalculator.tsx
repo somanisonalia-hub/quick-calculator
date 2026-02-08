@@ -14,6 +14,14 @@ export default function QuadraticEquationCalculator({ lang = 'en' }: QuadraticEq
   const [discriminant, setDiscriminant] = useState(0);
   const [rootType, setRootType] = useState('');
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setA(0);
+    setB(0);
+    setC(0);
+    // Additional state resets may be needed
+  };
+
   const translations = {
     en: {
       title: "Quadratic Equation Calculator",
@@ -21,6 +29,8 @@ export default function QuadraticEquationCalculator({ lang = 'en' }: QuadraticEq
       coefficientA: "Coefficient a",
       coefficientB: "Coefficient b",
       coefficientC: "Coefficient c",
+      calculate: "🔄 Recalculate",
+      reset: "Reset",
       roots: "Roots",
       discriminant: "Discriminant",
       rootType: "Root Type",
@@ -34,6 +44,8 @@ export default function QuadraticEquationCalculator({ lang = 'en' }: QuadraticEq
       coefficientA: "Coeficiente a",
       coefficientB: "Coeficiente b",
       coefficientC: "Coeficiente c",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer",
       roots: "Raíces",
       discriminant: "Discriminante",
       rootType: "Tipo de Raíz",
@@ -47,6 +59,8 @@ export default function QuadraticEquationCalculator({ lang = 'en' }: QuadraticEq
       coefficientA: "Coeficiente a",
       coefficientB: "Coeficiente b",
       coefficientC: "Coeficiente c",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir",
       roots: "Raízes",
       discriminant: "Discriminante",
       rootType: "Tipo de Raíz",
@@ -60,6 +74,8 @@ export default function QuadraticEquationCalculator({ lang = 'en' }: QuadraticEq
       coefficientA: "Coefficient a",
       coefficientB: "Coefficient b",
       coefficientC: "Coefficient c",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser",
       roots: "Racines",
       discriminant: "Discriminant",
       rootType: "Type de Racine",
@@ -129,6 +145,22 @@ export default function QuadraticEquationCalculator({ lang = 'en' }: QuadraticEq
                 className="w-full px-2 py-1 text-sm border border-gray-300 rounded"
               />
             </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={() => setA(a)}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
           </div>
 
           <div className="text-center text-lg font-mono bg-gray-100 p-3 rounded">

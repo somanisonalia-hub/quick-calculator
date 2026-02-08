@@ -33,7 +33,8 @@ export default function MutualFundInflationCalculator({ lang = 'en' }: MutualFun
       nominalValue: 'Nominal Value',
       realValue: 'Real Value (Today\'s Rupees)',
       purchasingPowerLoss: 'Purchasing Power Loss',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Reset"
     }
   };
 
@@ -57,6 +58,16 @@ export default function MutualFundInflationCalculator({ lang = 'en' }: MutualFun
       realValue: realFinalValue,
       purchasingPowerLoss: purchasingPowerLoss
     });
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   return (
@@ -140,6 +151,16 @@ export default function MutualFundInflationCalculator({ lang = 'en' }: MutualFun
                   {t.rupee} {results.nominalValue.toLocaleString('en-IN', {maximumFractionDigits: 0})}
                 </p>
               </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
             </div>
             <div className="border-t border-blue-200 dark:border-blue-700 pt-4">
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.realValue}</p>

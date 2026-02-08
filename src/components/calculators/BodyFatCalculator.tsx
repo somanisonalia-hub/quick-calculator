@@ -36,7 +36,7 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       waist: "Waist Circumference",
       neck: "Neck Circumference",
       hips: "Hip Circumference",
-      calculate: "Calculate Body Fat",
+      calculate: "🔄 Recalculate",
       bodyFat: "Body Fat Percentage",
       leanMass: "Lean Body Mass",
       fatMass: "Body Fat Mass",
@@ -50,7 +50,8 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       athletes: "Athletes",
       fitness: "Fitness",
       average: "Average",
-      obese: "Obese"
+      obese: "Obese",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Grasa Corporal",
@@ -62,7 +63,7 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       waist: "Circunferencia de Cintura",
       neck: "Circunferencia de Cuello",
       hips: "Circunferencia de Cadera",
-      calculate: "Calcular Grasa Corporal",
+      calculate: "🔄 Recalcular",
       bodyFat: "Porcentaje de Grasa Corporal",
       leanMass: "Masa Corporal Magra",
       fatMass: "Masa de Grasa Corporal",
@@ -76,7 +77,8 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       athletes: "Atletas",
       fitness: "Fitness",
       average: "Promedio",
-      obese: "Obeso"
+      obese: "Obeso",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Gordura Corporal",
@@ -88,7 +90,7 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       waist: "Circunferência da Cintura",
       neck: "Circunferência do Pescoço",
       hips: "Circunferência do Quadril",
-      calculate: "Calcular Gordura Corporal",
+      calculate: "🔄 Recalcular",
       bodyFat: "Porcentagem de Gordura Corporal",
       leanMass: "Massa Corporal Magra",
       fatMass: "Massa de Gordura Corporal",
@@ -102,7 +104,8 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       athletes: "Atletas",
       fitness: "Fitness",
       average: "Média",
-      obese: "Obeso"
+      obese: "Obeso",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Graisse Corporelle",
@@ -114,7 +117,7 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       waist: "Circonférence de Taille",
       neck: "Circonférence du Cou",
       hips: "Circonférence des Hanches",
-      calculate: "Calculer Graisse Corporelle",
+      calculate: "🔄 Recalculer",
       bodyFat: "Pourcentage de Graisse Corporelle",
       leanMass: "Masse Corporelle Maigre",
       fatMass: "Masse de Graisse Corporelle",
@@ -128,7 +131,8 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       athletes: "Athlètes",
       fitness: "Fitness",
       average: "Moyenne",
-      obese: "Obèse"
+      obese: "Obèse",
+      reset: "Réinitialiser"
     }
   ,
     de: {
@@ -155,7 +159,8 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       athletes: "Athleten",
       fitness: "Fitness",
       average: "Durchschnitt",
-      obese: "Adipös"
+      obese: "Adipös",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Lichaamsvetcalculator",
@@ -167,7 +172,7 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       waist: "Tailleomtrek",
       neck: "Nekomtrek",
       hips: "Heupomtrek",
-      calculate: "Berekenen Lichaamsvet",
+      calculate: "🔄 Herberekenen",
       bodyFat: "Lichaamsvetpercentage",
       leanMass: "Vetvrije Lichaamsmassa",
       fatMass: "Lichaamsvetmassa",
@@ -181,7 +186,8 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
       athletes: "Atleten",
       fitness: "Fitness",
       average: "Gemiddeld",
-      obese: "Obesitas"
+      obese: "Obesitas",
+      reset: "Resetten"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
 
@@ -249,6 +255,15 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
     };
   };
 
+  const resetCalculator = () => {
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   useEffect(() => {
     const results = calculateBodyFat();
     setResults(results);
@@ -284,7 +299,7 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
         <p className="text-gray-600">Calculate your body fat percentage using scientifically validated methods</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-4">
           <div>
@@ -413,6 +428,22 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
         </div>
 
         {/* Results Section */}
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateBodyFat}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         <div className="space-y-4">
           <div className="bg-blue-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold text-blue-900 mb-2">{t.bodyFat}</h3>

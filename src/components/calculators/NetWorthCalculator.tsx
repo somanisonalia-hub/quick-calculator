@@ -21,7 +21,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       loans: "Loans ($)",
       creditCards: "Credit Card Debt ($)",
       otherDebts: "Other Debts ($)",
-      calculate: "Calculate Net Worth",
+      calculate: "🔄 Recalculate",
       results: "Results",
       totalAssets: "Total Assets",
       totalLiabilities: "Total Liabilities",
@@ -29,6 +29,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       status: "Financial Status",
       positive: "Positive net worth - Good job!",
       negative: "Negative net worth - Focus on reducing debt",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Patrimonio Neto",
@@ -43,7 +44,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       loans: "Préstamos ($)",
       creditCards: "Deuda de Tarjetas de Crédito ($)",
       otherDebts: "Otras Deudas ($)",
-      calculate: "Calcular Patrimonio Neto",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       totalAssets: "Activos Totales",
       totalLiabilities: "Pasivos Totales",
@@ -51,6 +52,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       status: "Estado Financiero",
       positive: "Patrimonio neto positivo - ¡Buen trabajo!",
       negative: "Patrimonio neto negativo - Enfócate en reducir deudas",
+      reset: "Restablecer"
     },
     fr: {
       title: "Calculateur de Valeur Nette",
@@ -65,7 +67,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       loans: "Prêts ($)",
       creditCards: "Dette de Carte de Crédit ($)",
       otherDebts: "Autres Dettes ($)",
-      calculate: "Calculer la Valeur Nette",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       totalAssets: "Actifs Totaux",
       totalLiabilities: "Passifs Totaux",
@@ -73,6 +75,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       status: "Statut Financier",
       positive: "Valeur nette positive - Bon travail !",
       negative: "Valeur nette négative - Concentrez-vous sur la réduction de la dette",
+      reset: "Réinitialiser"
     },
     pt: {
       title: "Calculadora de Patrimônio Líquido",
@@ -87,7 +90,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       loans: "Empréstimos ($)",
       creditCards: "Dívida de Cartão de Crédito ($)",
       otherDebts: "Outras Dívidas ($)",
-      calculate: "Calcular Patrimônio Líquido",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       totalAssets: "Ativos Totais",
       totalLiabilities: "Passivos Totais",
@@ -95,6 +98,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       status: "Status Financeiro",
       positive: "Patrimônio líquido positivo - Bom trabalho!",
       negative: "Patrimônio líquido negativo - Foque em reduzir dívidas",
+      reset: "Redefinir"
     },
   };
 
@@ -124,6 +128,16 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       netWorth,
       isPositive: netWorth > 0,
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
   };
 
   const results = calculateNetWorth();
@@ -132,7 +146,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
         <h3 className="text-xl font-bold mb-4 text-green-600">{t.assets}</h3>
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
+        <div className="grid lg:grid-cols-2 gap-4 mb-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">{t.cash}</label>
             <input
@@ -181,7 +195,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
         </div>
 
         <h3 className="text-xl font-bold mb-4 text-red-600">{t.liabilities}</h3>
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
+        <div className="grid lg:grid-cols-2 gap-4 mb-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">{t.mortgage}</label>
             <input
@@ -230,6 +244,16 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
 
       {calculated && (
         <div className="bg-white rounded-lg shadow-md p-6">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
           <h3 className="text-2xl font-bold mb-6 text-gray-800">{t.results}</h3>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">

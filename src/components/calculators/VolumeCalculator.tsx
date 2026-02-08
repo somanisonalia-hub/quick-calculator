@@ -32,7 +32,9 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
       pyramid: "Pyramid",
       volume: "Volume",
       formula: "Formula",
-      surfaceArea: "Surface Area"
+      surfaceArea: "Surface Area",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Volumen",
@@ -46,7 +48,9 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
       pyramid: "Pirámide",
       volume: "Volumen",
       formula: "Fórmula",
-      surfaceArea: "Área Superficial"
+      surfaceArea: "Área Superficial",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Volume",
@@ -60,7 +64,9 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
       pyramid: "Pirâmide",
       volume: "Volume",
       formula: "Fórmula",
-      surfaceArea: "Área Superficial"
+      surfaceArea: "Área Superficial",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Volume",
@@ -74,7 +80,9 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
       pyramid: "Pyramide",
       volume: "Volume",
       formula: "Formule",
-      surfaceArea: "Aire de Surface"
+      surfaceArea: "Aire de Surface",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     },
     de: {
       title: "Volumenrechner",
@@ -88,7 +96,9 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
       pyramid: "Pyramide",
       volume: "Volumen",
       formula: "Formel",
-      surfaceArea: "Oberfläche"
+      surfaceArea: "Oberfläche",
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Volume Rekenmachine",
@@ -102,7 +112,9 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
       pyramid: "Piramide",
       volume: "Volume",
       formula: "Formule",
-      surfaceArea: "Oppervlakte"
+      surfaceArea: "Oppervlakte",
+      calculate: "🔄 Herberekenen",
+      reset: "Resetten"
     }
   };
 
@@ -148,6 +160,16 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
     setVolume(vol);
     setSurfaceArea(sa);
     setFormula(form);
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   useEffect(() => {
@@ -251,6 +273,22 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
 
           {renderInputs()}
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateVolume}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
         <div className="space-y-4">
           <div className="bg-blue-50 p-4 rounded-lg">

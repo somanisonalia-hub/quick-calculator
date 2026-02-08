@@ -32,7 +32,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       imperial: "Imperial (ft/lbs)",
       height: "Height",
       weight: "Weight",
-      calculate: "Calculate BMI",
+      calculate: "🔄 Recalculate",
       yourBMI: "Your BMI",
       category: "BMI Category",
       healthyRange: "Healthy BMI Range",
@@ -55,7 +55,8 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       overweightLabel: "Overweight:",
       obeseLabel: "Obese:",
       num0: "≥ 30",
-      bmiCategories: "BMI Categories:"
+      bmiCategories: "BMI Categories:",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora IMC",
@@ -65,7 +66,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       imperial: "Imperial (ft/lbs)",
       height: "Altura",
       weight: "Peso",
-      calculate: "Calcular IMC",
+      calculate: "🔄 Recalcular",
       yourBMI: "Tu IMC",
       category: "Categoría IMC",
       healthyRange: "Rango IMC Saludable",
@@ -88,7 +89,8 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       overweightLabel: "Sobrepeso:",
       obeseLabel: "Obeso:",
       num0: "≥ 30",
-      bmiCategories: "Categorías IMC:"
+      bmiCategories: "Categorías IMC:",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora IMC",
@@ -98,7 +100,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       imperial: "Imperial (ft/lbs)",
       height: "Altura",
       weight: "Peso",
-      calculate: "Calcular IMC",
+      calculate: "🔄 Recalcular",
       yourBMI: "Seu IMC",
       category: "Categoria IMC",
       healthyRange: "Faixa IMC Saudável",
@@ -121,7 +123,8 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       overweightLabel: "Sobrepeso:",
       obeseLabel: "Obeso:",
       num0: "≥ 30",
-      bmiCategories: "Categorias IMC:"
+      bmiCategories: "Categorias IMC:",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur IMC",
@@ -131,7 +134,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       imperial: "Impérial (ft/lbs)",
       height: "Taille",
       weight: "Poids",
-      calculate: "Calculer IMC",
+      calculate: "🔄 Recalculer",
       yourBMI: "Votre IMC",
       category: "Catégorie IMC",
       healthyRange: "Gamme IMC Saine",
@@ -154,7 +157,8 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       overweightLabel: "Surpoids:",
       obeseLabel: "Obèse:",
       num0: "≥ 30",
-      bmiCategories: "Catégories IMC:"
+      bmiCategories: "Catégories IMC:",
+      reset: "Réinitialiser"
     },
     de: {
       title: "BMI-Rechner",
@@ -187,7 +191,8 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       overweightLabel: "Übergewichtig:",
       obeseLabel: "Adipositas:",
       num0: "≥ 30",
-      bmiCategories: "BMI-Kategorien:"
+      bmiCategories: "BMI-Kategorien:",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "BMI-rekenmachine",
@@ -220,7 +225,8 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
       overweightLabel: "Overgewicht:",
       obeseLabel: "Obese:",
       num0: "≥ 30",
-      bmiCategories: "BMI-categorieën:"
+      bmiCategories: "BMI-categorieën:",
+      reset: "Resetten"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
 
@@ -261,6 +267,16 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
     };
   };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   useEffect(() => {
     setResults(calculateBMI());
   }, [inputs]);
@@ -286,7 +302,7 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-4">
           <div>
@@ -385,6 +401,22 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
         </div>
 
         {/* Results Section */}
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateBMI}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         <div className="space-y-4">
           <div className="bg-blue-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold text-blue-900 mb-2">{t.yourBMI}</h3>

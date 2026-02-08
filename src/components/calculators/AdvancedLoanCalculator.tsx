@@ -40,7 +40,7 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       monthlyPayment: "Monthly Payment",
       totalInterest: "Total Interest",
       totalPayments: "Total Payments",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       result: "Result",
       error: "Error",
       yearlySummary: "Year-by-Year Summary",
@@ -67,14 +67,15 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       paymentAnalysis: "Payment Analysis",
       amortizationSchedule: "Amortization Schedule",
       csvYearlyHeader: "Year,Payments,Principal Paid,Interest Paid,Ending Balance\n",
-      csvMonthlyHeader: "Payment Number,Date,Payment,Principal,Interest,Balance\n"
+      csvMonthlyHeader: "Payment Number,Date,Payment,Principal,Interest,Balance\n",
+      reset: "Reset"
     },
     es: {
       loanDetails: "Detalles del Préstamo",
       monthlyPayment: "Pago Mensual",
       totalInterest: "Interés Total",
       totalPayments: "Pagos Totales",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
       error: "Error",
       yearlySummary: "Resumen Año por Año",
@@ -101,14 +102,15 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       paymentAnalysis: "Análisis de Pagos",
       amortizationSchedule: "Tabla de Amortización",
       csvYearlyHeader: "Año,Pagos,Principal Pagado,Intereses Pagados,Saldo Final\n",
-      csvMonthlyHeader: "Número de Pago,Fecha,Pago,Principal,Intereses,Saldo\n"
+      csvMonthlyHeader: "Número de Pago,Fecha,Pago,Principal,Intereses,Saldo\n",
+      reset: "Restablecer"
     },
     pt: {
       loanDetails: "Detalhes do Empréstimo",
       monthlyPayment: "Pagamento Mensal",
       totalInterest: "Juros Totais",
       totalPayments: "Pagamentos Totais",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
       error: "Erro",
       yearlySummary: "Resumo Ano a Ano",
@@ -135,14 +137,15 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       paymentAnalysis: "Análise de Pagamentos",
       amortizationSchedule: "Tabela de Amortização",
       csvYearlyHeader: "Ano,Pagamentos,Principal Pago,Juros Pagos,Saldo Final\n",
-      csvMonthlyHeader: "Número do Pagamento,Data,Pagamento,Principal,Juros,Saldo\n"
+      csvMonthlyHeader: "Número do Pagamento,Data,Pagamento,Principal,Juros,Saldo\n",
+      reset: "Redefinir"
     },
     fr: {
       loanDetails: "Détails du Prêt",
       monthlyPayment: "Paiement Mensuel",
       totalInterest: "Intérêt Total",
       totalPayments: "Paiements Totaux",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       result: "Résultat",
       error: "Erreur",
       yearlySummary: "Résumé Année par Année",
@@ -169,7 +172,8 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       paymentAnalysis: "Analyse de Paiement",
       amortizationSchedule: "Tableau d'Amortissement",
       csvYearlyHeader: "Année,Paiements,Principal Payé,Intérêts Payés,Solde Final\n",
-      csvMonthlyHeader: "Numéro de Paiement,Date,Paiement,Principal,Intérêts,Solde\n"
+      csvMonthlyHeader: "Numéro de Paiement,Date,Paiement,Principal,Intérêts,Solde\n",
+      reset: "Réinitialiser"
     }
   ,
     de: {
@@ -177,7 +181,7 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       monthlyPayment: "Monatliche Rate",
       totalInterest: "Gesamtzinsen",
       totalPayments: "Gesamtzahlungen",
-      calculate: "Berechnen",
+      calculate: "🔄 Neu berechnen",
       result: "Ergebnis",
       error: "Fehler",
       yearlySummary: "Jährliche Zusammenfassung",
@@ -204,14 +208,15 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       paymentAnalysis: "Zahlungsanalyse",
       amortizationSchedule: "Tilgungsplan",
       csvYearlyHeader: "Jahr,Zahlungen,Gezahltes Kapital,Gezahlte Zinsen,Endsaldo\n",
-      csvMonthlyHeader: "Zahlungsnummer,Datum,Zahlung,Kapital,Zinsen,Saldo\n"
+      csvMonthlyHeader: "Zahlungsnummer,Datum,Zahlung,Kapital,Zinsen,Saldo\n",
+      reset: "Zurücksetzen"
     },
     nl: {
       loanDetails: "Leningsdetails",
       monthlyPayment: "Maandelijkse Betaling",
       totalInterest: "Totale Rente",
       totalPayments: "Totale Betalingen",
-      calculate: "Berekenen",
+      calculate: "🔄 Herberekenen",
       result: "Resultaat",
       error: "Fout",
       yearlySummary: "Jaarlijks Overzicht",
@@ -238,7 +243,8 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       paymentAnalysis: "Betalingsanalyse",
       amortizationSchedule: "Aflossingsschema",
       csvYearlyHeader: "Jaar,Betalingen,Betaalde Hoofdsom,Betaalde Rente,Eindsaldo\n",
-      csvMonthlyHeader: "Betalingsnummer,Datum,Betaling,Hoofdsom,Rente,Saldo\n"
+      csvMonthlyHeader: "Betalingsnummer,Datum,Betaling,Hoofdsom,Rente,Saldo\n",
+      reset: "Resetten"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
   
@@ -256,87 +262,94 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
   const [amortizationSchedule, setAmortizationSchedule] = useState<any[]>([]);
   const [yearlySummary, setYearlySummary] = useState<any[]>([]);
 
-  // Calculate advanced loan details
-  useEffect(() => {
-    const calculateAdvancedLoan = () => {
-      const loanAmount = values.loanAmount || 0;
-      const interestRate = values.interestRate || 0;
-      const loanTerm = values.loanTerm || 0;
-      const downPayment = values.downPayment || 0;
-      const extraPayment = values.extraPayment || 0;
-      const propertyTax = values.propertyTax || 0;
-      const homeInsurance = values.homeInsurance || 0;
+  const calculateAdvancedLoan = () => {
+    const loanAmount = values.loanAmount || 0;
+    const interestRate = values.interestRate || 0;
+    const loanTerm = values.loanTerm || 0;
+    const downPayment = values.downPayment || 0;
+    const extraPayment = values.extraPayment || 0;
+    const propertyTax = values.propertyTax || 0;
+    const homeInsurance = values.homeInsurance || 0;
 
-      if (loanAmount > 0 && interestRate > 0 && loanTerm > 0) {
-        const principal = loanAmount - downPayment;
-        const monthlyRate = interestRate / 100 / 12;
-        const totalMonths = loanTerm * 12;
+    if (loanAmount > 0 && interestRate > 0 && loanTerm > 0) {
+      const principal = loanAmount - downPayment;
+      const monthlyRate = interestRate / 100 / 12;
+      const totalMonths = loanTerm * 12;
 
-        // Calculate principal & interest payment
-        const principalInterest = principal * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) /
-                                (Math.pow(1 + monthlyRate, totalMonths) - 1);
+      // Calculate principal & interest payment
+      const principalInterest = principal * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) /
+                              (Math.pow(1 + monthlyRate, totalMonths) - 1);
 
-        // Calculate other monthly costs
-        const monthlyPropertyTax = propertyTax / 12;
-        const monthlyInsurance = homeInsurance / 12;
+      // Calculate other monthly costs
+      const monthlyPropertyTax = propertyTax / 12;
+      const monthlyInsurance = homeInsurance / 12;
 
-        // Total monthly payment (without extra payment)
-        const totalMonthlyPayment = principalInterest + monthlyPropertyTax + monthlyInsurance;
+      // Total monthly payment (without extra payment)
+      const totalMonthlyPayment = principalInterest + monthlyPropertyTax + monthlyInsurance;
 
-        // Calculate payoff with extra payments
-        let remainingBalance = principal;
-        let totalInterest = 0;
-        let monthsWithExtra = 0;
-        let monthsWithoutExtra = totalMonths;
+      // Calculate payoff with extra payments
+      let remainingBalance = principal;
+      let totalInterest = 0;
+      let monthsWithExtra = 0;
+      let monthsWithoutExtra = totalMonths;
 
-        // Calculate normal payoff time
-        const monthlyPaymentNormal = principalInterest;
-        while (remainingBalance > 0.01 && monthsWithoutExtra < 600) {
-          const interestPayment = remainingBalance * monthlyRate;
-          const principalPayment = Math.min(monthlyPaymentNormal, remainingBalance);
-          remainingBalance -= principalPayment;
-          totalInterest += interestPayment;
-          monthsWithoutExtra++;
-        }
-
-        // Reset for extra payment calculation
-        remainingBalance = principal;
-        totalInterest = 0;
-        monthsWithExtra = 0;
-
-        // Calculate payoff with extra payments
-        const monthlyPaymentWithExtra = principalInterest + extraPayment;
-        while (remainingBalance > 0.01 && monthsWithExtra < 600) {
-          const interestPayment = remainingBalance * monthlyRate;
-          const principalPayment = Math.min(monthlyPaymentWithExtra - interestPayment, remainingBalance);
-          remainingBalance -= principalPayment;
-          totalInterest += interestPayment;
-          monthsWithExtra++;
-        }
-
-        const monthsSaved = monthsWithoutExtra - monthsWithExtra;
-
-        setResults({
-          totalMonthlyPayment: totalMonthlyPayment.toFixed(2),
-          principalInterest: principalInterest.toFixed(2),
-          monthsSaved: monthsSaved,
-          totalInterest: totalInterest.toFixed(2),
-          monthlyPropertyTax: monthlyPropertyTax.toFixed(2),
-          monthlyInsurance: monthlyInsurance.toFixed(2),
-          totalYearsSaved: (monthsSaved / 12).toFixed(1),
-          effectiveMonthlyPayment: (totalMonthlyPayment + extraPayment).toFixed(2)
-        });
-
-        // Generate amortization schedule
-        generateAmortizationSchedule(principal, monthlyRate, totalMonths, principalInterest, extraPayment);
-      } else {
-        setResults({});
-        setAmortizationSchedule([]);
-        setYearlySummary([]);
+      // Calculate normal payoff time
+      const monthlyPaymentNormal = principalInterest;
+      while (remainingBalance > 0.01 && monthsWithoutExtra < 600) {
+        const interestPayment = remainingBalance * monthlyRate;
+        const principalPayment = Math.min(monthlyPaymentNormal, remainingBalance);
+        remainingBalance -= principalPayment;
+        totalInterest += interestPayment;
+        monthsWithoutExtra++;
       }
-    };
 
-    const generateAmortizationSchedule = (loanAmount: number, monthlyRate: number, totalPayments: number, monthlyPI: number, extraPayment: number) => {
+      // Reset for extra payment calculation
+      remainingBalance = principal;
+      totalInterest = 0;
+      monthsWithExtra = 0;
+
+      // Calculate payoff with extra payments
+      const monthlyPaymentWithExtra = principalInterest + extraPayment;
+      while (remainingBalance > 0.01 && monthsWithExtra < 600) {
+        const interestPayment = remainingBalance * monthlyRate;
+        const principalPayment = Math.min(monthlyPaymentWithExtra - interestPayment, remainingBalance);
+        remainingBalance -= principalPayment;
+        totalInterest += interestPayment;
+        monthsWithExtra++;
+      }
+
+      const monthsSaved = monthsWithoutExtra - monthsWithExtra;
+
+      setResults({
+        totalMonthlyPayment: totalMonthlyPayment.toFixed(2),
+        principalInterest: principalInterest.toFixed(2),
+        monthsSaved: monthsSaved,
+        totalInterest: totalInterest.toFixed(2),
+        monthlyPropertyTax: monthlyPropertyTax.toFixed(2),
+        monthlyInsurance: monthlyInsurance.toFixed(2),
+        totalYearsSaved: (monthsSaved / 12).toFixed(1),
+        effectiveMonthlyPayment: (totalMonthlyPayment + extraPayment).toFixed(2)
+      });
+
+      // Generate amortization schedule
+      generateAmortizationSchedule(principal, monthlyRate, totalMonths, principalInterest, extraPayment);
+    } else {
+      setResults({});
+      setAmortizationSchedule([]);
+      setYearlySummary([]);
+    }
+  };
+
+  const resetCalculator = () => {
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
+  const generateAmortizationSchedule = (loanAmount: number, monthlyRate: number, totalPayments: number, monthlyPI: number, extraPayment: number) => {
       const schedule = [];
       const yearlyData: Record<number, any> = {};
 
@@ -391,6 +404,7 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
       setYearlySummary(Object.values(yearlyData));
     };
 
+  useEffect(() => {
     calculateAdvancedLoan();
   }, [values]);
 
@@ -476,6 +490,23 @@ export default function AdvancedLoanCalculator({ inputs, output, additionalOutpu
             ))}
           </div>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateAdvancedLoan}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">

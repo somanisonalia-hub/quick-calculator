@@ -139,6 +139,16 @@ export const DebtPayoffCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' 
     });
   };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   const addDebt = () => {
     setDebts([...debts, { id: Date.now().toString(), balance: 1000, rate: 10 }]);
   };
@@ -154,7 +164,7 @@ export const DebtPayoffCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' 
   };
 
   return (
-    <div id="calculator-section" className="w-full max-w-2xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg">
+    <div className="w-full max-w-2xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg">
       <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">{t.title}</h1>
 
       <div className="space-y-6">
@@ -254,6 +264,17 @@ export const DebtPayoffCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' 
         >
           {t.calculate}
         </button>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         {results && (

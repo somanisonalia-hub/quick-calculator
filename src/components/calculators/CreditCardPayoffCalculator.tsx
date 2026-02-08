@@ -13,52 +13,56 @@ export default function CreditCardPayoffCalculator({ lang = 'en' }: CreditCardPa
       balance: "Current Balance ($)",
       apr: "Annual Interest Rate (APR) (%)",
       monthlyPayment: "Monthly Payment ($)",
-      calculate: "Calculate Payoff",
+      calculate: "🔄 Recalculate",
       results: "Results",
       monthsToPayoff: "Months to Pay Off",
       totalInterest: "Total Interest Paid",
       totalPaid: "Total Amount Paid",
       payoffDate: "Estimated Payoff Date",
       tip: "Paying more than the minimum can save you significant interest!",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Pago de Tarjeta de Crédito",
       balance: "Saldo Actual ($)",
       apr: "Tasa de Interés Anual (APR) (%)",
       monthlyPayment: "Pago Mensual ($)",
-      calculate: "Calcular Pago",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       monthsToPayoff: "Meses para Pagar",
       totalInterest: "Interés Total Pagado",
       totalPaid: "Monto Total Pagado",
       payoffDate: "Fecha Estimada de Pago",
       tip: "¡Pagar más del mínimo puede ahorrarte mucho interés!",
+      reset: "Restablecer"
     },
     fr: {
       title: "Calculateur de Remboursement de Carte de Crédit",
       balance: "Solde Actuel ($)",
       apr: "Taux d'Intérêt Annuel (APR) (%)",
       monthlyPayment: "Paiement Mensuel ($)",
-      calculate: "Calculer le Remboursement",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       monthsToPayoff: "Mois pour Rembourser",
       totalInterest: "Intérêts Totaux Payés",
       totalPaid: "Montant Total Payé",
       payoffDate: "Date de Remboursement Estimée",
       tip: "Payer plus que le minimum peut vous faire économiser beaucoup d'intérêts !",
+      reset: "Réinitialiser"
     },
     pt: {
       title: "Calculadora de Pagamento de Cartão de Crédito",
       balance: "Saldo Atual ($)",
       apr: "Taxa de Juros Anual (APR) (%)",
       monthlyPayment: "Pagamento Mensal ($)",
-      calculate: "Calcular Pagamento",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       monthsToPayoff: "Meses para Pagar",
       totalInterest: "Juros Totais Pagos",
       totalPaid: "Valor Total Pago",
       payoffDate: "Data Estimada de Pagamento",
       tip: "Pagar mais do que o mínimo pode economizar muito em juros!",
+      reset: "Redefinir"
     },
   };
 
@@ -100,6 +104,16 @@ export default function CreditCardPayoffCalculator({ lang = 'en' }: CreditCardPa
       payoffDate: payoffDate.toLocaleDateString(lang),
       tooLow: months >= 600,
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
   };
 
   const results = calculatePayoff();
@@ -107,7 +121,7 @@ export default function CreditCardPayoffCalculator({ lang = 'en' }: CreditCardPa
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.balance}
@@ -156,9 +170,19 @@ export default function CreditCardPayoffCalculator({ lang = 'en' }: CreditCardPa
 
       {calculated && !results.tooLow && (
         <div className="bg-white rounded-lg shadow-md p-6">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
           <h3 className="text-2xl font-bold mb-6 text-gray-800">{t.results}</h3>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="grid lg:grid-cols-2 gap-4 mb-6">
             <div className="bg-blue-50 p-4 rounded-lg">
               <div className="text-sm text-gray-600 mb-1">{t.monthsToPayoff}</div>
               <div className="text-3xl font-bold text-blue-600">

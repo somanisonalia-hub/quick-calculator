@@ -30,7 +30,7 @@ export default function ROICalculator({ lang = 'en' }: ROICalculatorProps) {
       roiPercentage: "ROI Percentage",
       annualROI: "Annual ROI",
       totalReturn: "Total Return",
-      calculate: "Calculate ROI",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       formula: "ROI Formula: ((Final Value - Initial Investment) / Initial Investment) × 100"
     },
@@ -45,7 +45,7 @@ export default function ROICalculator({ lang = 'en' }: ROICalculatorProps) {
       roiPercentage: "Porcentaje de ROI",
       annualROI: "ROI Anual",
       totalReturn: "Rendimiento Total",
-      calculate: "Calcular ROI",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       formula: "Fórmula ROI: ((Valor Final - Inversión Inicial) / Inversión Inicial) × 100"
     },
@@ -60,7 +60,7 @@ export default function ROICalculator({ lang = 'en' }: ROICalculatorProps) {
       roiPercentage: "Porcentagem de ROI",
       annualROI: "ROI Anual",
       totalReturn: "Retorno Total",
-      calculate: "Calcular ROI",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       formula: "Fórmula ROI: ((Valor Final - Investimento Inicial) / Investimento Inicial) × 100"
     },
@@ -75,7 +75,7 @@ export default function ROICalculator({ lang = 'en' }: ROICalculatorProps) {
       roiPercentage: "Pourcentage de ROI",
       annualROI: "ROI Annuel",
       totalReturn: "Rendement Total",
-      calculate: "Calculer le ROI",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       formula: "Formule ROI: ((Valeur Finale - Investissement Initial) / Investissement Initial) × 100"
     },
@@ -208,9 +208,19 @@ export default function ROICalculator({ lang = 'en' }: ROICalculatorProps) {
 
       {/* Results Section */}
       <div className="space-y-4">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateROI}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+          </div>
+
         <h2 className="text-xl font-bold text-gray-900">{t.results}</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <p className="text-sm text-gray-600">{t.netProfit}</p>
             <p className="text-2xl font-bold text-blue-600 mt-1">

@@ -15,7 +15,7 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
       conversionType: "Conversion Type",
       inputRate: "Input Rate (%)",
       compoundingPeriods: "Compounding Periods per Year",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       convertedRate: "Converted Interest Rate",
       inputRateType: "Input Rate Type",
@@ -45,7 +45,7 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
       conversionType: "Tipo de Conversión",
       inputRate: "Tasa de Entrada (%)",
       compoundingPeriods: "Períodos de Capitalización por Año",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       convertedRate: "Tasa de Interés Convertida",
       inputRateType: "Tipo Tasa Entrada",
@@ -75,7 +75,7 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
       conversionType: "Tipo de Conversão",
       inputRate: "Taxa de Entrada (%)",
       compoundingPeriods: "Períodos de Capitalização por Ano",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       convertedRate: "Taxa de Juros Convertida",
       inputRateType: "Tipo Taxa Entrada",
@@ -105,7 +105,7 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
       conversionType: "Type de Conversion",
       inputRate: "Taux d'Entrée (%)",
       compoundingPeriods: "Périodes de Capitalisation par An",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       convertedRate: "Taux d'Intérêt Converti",
       inputRateType: "Type Taux Entrée",
@@ -261,25 +261,26 @@ export default function EffectiveInterestRateCalculator({ lang = 'en' }: Effecti
                 max="365"
               />
             </div>
-          </div>
 
-          <div className="flex gap-4">
-            <button
-              onClick={calculateConversion}
-              className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {t.calculate}
-            </button>
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
-            >
-              {t.reset}
-            </button>
+            {/* Button Section - Immediately after inputs */}
+            <div className="flex gap-4 mt-4">
+              <button
+                onClick={calculateConversion}
+                className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {t.calculate}
+              </button>
+              <button
+                onClick={resetCalculator}
+                className="flex-1 bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              >
+                {t.reset}
+              </button>
+            </div>
           </div>
 
           {/* Formula Display */}
-          <div className="bg-purple-50 p-4 rounded-lg">
+          <div className="bg-purple-50 p-4 rounded-lg mt-4">
             <h4 className="text-sm font-semibold text-purple-900 mb-2">{t.conversionFormulas}</h4>
             <div className="text-xs text-purple-700 space-y-1">
               <div>{t.nominalToEffectiveFormula}</div>

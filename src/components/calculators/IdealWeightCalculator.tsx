@@ -28,7 +28,7 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       height: "Height",
       method: "Calculation Method",
       bodyFrame: "Body Frame Size",
-      calculate: "Calculate Ideal Weight",
+      calculate: "🔄 Recalculate",
       idealRange: "Ideal Weight Range",
       minWeight: "Minimum Healthy Weight",
       maxWeight: "Maximum Healthy Weight",
@@ -44,7 +44,8 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       small: "Small Frame",
       medium: "Medium Frame",
       large: "Large Frame",
-      normal: "Normal Weight"
+      normal: "Normal Weight",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Peso Ideal",
@@ -52,7 +53,7 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       height: "Altura",
       method: "Método de Cálculo",
       bodyFrame: "Tamaño de Complexión Corporal",
-      calculate: "Calcular Peso Ideal",
+      calculate: "🔄 Recalcular",
       idealRange: "Rango de Peso Ideal",
       minWeight: "Peso Saludable Mínimo",
       maxWeight: "Peso Saludable Máximo",
@@ -68,7 +69,8 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       small: "Complexión Pequeña",
       medium: "Complexión Mediana",
       large: "Complexión Grande",
-      normal: "Peso Normal"
+      normal: "Peso Normal",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Peso Ideal",
@@ -76,7 +78,7 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       height: "Altura",
       method: "Método de Cálculo",
       bodyFrame: "Tamanho de Estrutura Corporal",
-      calculate: "Calcular Peso Ideal",
+      calculate: "🔄 Recalcular",
       idealRange: "Faixa de Peso Ideal",
       minWeight: "Peso Saudável Mínimo",
       maxWeight: "Peso Saudável Máximo",
@@ -92,7 +94,8 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       small: "Estrutura Pequena",
       medium: "Estrutura Média",
       large: "Estrutura Grande",
-      normal: "Peso Normal"
+      normal: "Peso Normal",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Poids Idéal",
@@ -100,7 +103,7 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       height: "Taille",
       method: "Méthode de Calcul",
       bodyFrame: "Taille Structure Corporelle",
-      calculate: "Calculer Poids Idéal",
+      calculate: "🔄 Recalculer",
       idealRange: "Gamme Poids Idéal",
       minWeight: "Poids Sain Minimum",
       maxWeight: "Poids Sain Maximum",
@@ -116,7 +119,8 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       small: "Structure Petite",
       medium: "Structure Moyenne",
       large: "Structure Grande",
-      normal: "Poids Normal"
+      normal: "Poids Normal",
+      reset: "Réinitialiser"
     }
   ,
     de: {
@@ -141,7 +145,8 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       small: "Schmaler Körperbau",
       medium: "Mittlerer Körperbau",
       large: "Breiter Körperbau",
-      normal: "Normalgewicht"
+      normal: "Normalgewicht",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Ideaal Gewicht Calculator",
@@ -149,7 +154,7 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       height: "Lengte",
       method: "Berekeningsmethode",
       bodyFrame: "Lichaamstype",
-      calculate: "Berekenen Ideaal Gewicht",
+      calculate: "🔄 Herberekenen",
       idealRange: "Ideaal Gewichtsbereik",
       minWeight: "Minimaal Gezond Gewicht",
       maxWeight: "Maximaal Gezond Gewicht",
@@ -165,7 +170,8 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       small: "Klein Postuur",
       medium: "Gemiddeld Postuur",
       large: "Groot Postuur",
-      normal: "Normaal Gewicht"
+      normal: "Normaal Gewicht",
+      reset: "Resetten"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
 
@@ -252,6 +258,16 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       maxWeight: Math.round(maxWeight * 10) / 10,
       bmiCategory
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
   };
 
   useEffect(() => {
@@ -273,7 +289,7 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
         <p className="text-gray-600">Calculate your ideal weight range for optimal health</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-4">
           <div>
@@ -341,6 +357,22 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
         </div>
 
         {/* Results Section */}
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateIdealWeight}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         <div className="space-y-4">
           <div className="bg-blue-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold text-blue-900 mb-2">{t.idealRange}</h3>

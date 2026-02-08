@@ -89,6 +89,14 @@ export default function RomanNumeralConverter({ lang = 'en' }: RomanNumeralConve
   const [result, setResult] = useState('');
   const [error, setError] = useState('');
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setMode(0);
+    setInput(0);
+    setResult('');
+    // Additional state resets may be needed
+  };
+
   const numberToRoman = (num: number): string => {
     if (num < 1 || num > 3999) return '';
     let result = '';
@@ -221,6 +229,22 @@ export default function RomanNumeralConverter({ lang = 'en' }: RomanNumeralConve
           {error}
         </div>
       )}
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={handleConvert}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
       {/* Result */}
       {result && !error && (

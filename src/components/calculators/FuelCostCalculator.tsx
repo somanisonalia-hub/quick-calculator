@@ -17,36 +17,41 @@ export default function FuelCostCalculator({ lang = 'en' }: FuelCostCalculatorPr
       distance: "Distance (km/miles)",
       fuelEfficiency: "Fuel Efficiency (km/L or mpg)",
       fuelPrice: "Fuel Price per Unit",
-      calculate: "Calculate Fuel Cost",
-      result: "Total Fuel Cost"
+      calculate: "🔄 Recalculate",
+      result: "Total Fuel Cost",
+      reset: "Reset"
     },
     es: {
       distance: "Distancia (km/millas)",
       fuelEfficiency: "Eficiencia de Combustible (km/L o mpg)",
       fuelPrice: "Precio por Unidad",
-      calculate: "Calcular Costo de Combustible",
-      result: "Costo Total de Combustible"
+      calculate: "🔄 Recalcular",
+      result: "Costo Total de Combustible",
+      reset: "Restablecer"
     },
     pt: {
       distance: "Distância (km/milhas)",
       fuelEfficiency: "Eficiência de Combustível (km/L ou mpg)",
       fuelPrice: "Preço por Unidade",
-      calculate: "Calcular Custo de Combustível",
-      result: "Custo Total de Combustível"
+      calculate: "🔄 Recalcular",
+      result: "Custo Total de Combustível",
+      reset: "Redefinir"
     },
     fr: {
       distance: "Distance (km/miles)",
       fuelEfficiency: "Efficacité énergétique (km/L ou mpg)",
       fuelPrice: "Prix par unité",
-      calculate: "Calculer le coût du carburant",
-      result: "Coût total du carburant"
+      calculate: "🔄 Recalculer",
+      result: "Coût total du carburant",
+      reset: "Réinitialiser"
     },
     de: {
       distance: "Entfernung (km/Meilen)",
       fuelEfficiency: "Kraftstoffeffizienz (km/L oder mpg)",
       fuelPrice: "Preis pro Einheit",
       calculate: "Kraftstoffkosten berechnen",
-      result: "Gesamte Kraftstoffkosten"
+      result: "Gesamte Kraftstoffkosten",
+      reset: "Zurücksetzen"
     }
   };
 
@@ -65,6 +70,16 @@ export default function FuelCostCalculator({ lang = 'en' }: FuelCostCalculatorPr
     setResult(totalCost.toFixed(2));
   };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
       <div className="space-y-4">
@@ -76,6 +91,16 @@ export default function FuelCostCalculator({ lang = 'en' }: FuelCostCalculatorPr
             onChange={(e) => setDistance(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

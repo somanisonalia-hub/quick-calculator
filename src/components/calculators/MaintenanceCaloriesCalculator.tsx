@@ -61,7 +61,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       activityLevel: "Activity Level",
       bmrMethod: "BMR Calculation Method",
       bodyFat: "Body Fat Percentage",
-      calculate: "Calculate Maintenance Calories",
+      calculate: "🔄 Recalculate",
       results: "Maintenance Calories Results",
       maintenanceCalories: "Maintenance Calories",
       bmr: "Basal Metabolic Rate (BMR)",
@@ -73,7 +73,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       methodOptions: {
         harris: "Harris-Benedict (Classic)",
         mifflin: "Mifflin-St Jeor (Most Accurate)",
-        katch: "Katch-McArdle (Requires Body Fat %)"
+        katch: "Katch-McArdle (Requires Body Fat %)",
+      reset: "Reset"
       },
       genderOptions: {
         male: "Male",
@@ -109,7 +110,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       activityLevel: "Nivel de Actividad",
       bmrMethod: "Método de Cálculo BMR",
       bodyFat: "Porcentaje de Grasa Corporal",
-      calculate: "Calcular Calorías de Mantenimiento",
+      calculate: "🔄 Recalcular",
       results: "Resultados de Calorías de Mantenimiento",
       maintenanceCalories: "Calorías de Mantenimiento",
       bmr: "Tasa Metabólica Basal (BMR)",
@@ -121,7 +122,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       methodOptions: {
         harris: "Harris-Benedict (Clásico)",
         mifflin: "Mifflin-St Jeor (Más Preciso)",
-        katch: "Katch-McArdle (Requiere % Grasa Corporal)"
+        katch: "Katch-McArdle (Requiere % Grasa Corporal)",
+      reset: "Restablecer"
       },
       genderOptions: {
         male: "Masculino",
@@ -157,7 +159,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       activityLevel: "Nível de Atividade",
       bmrMethod: "Método de Cálculo BMR",
       bodyFat: "Porcentagem de Gordura Corporal",
-      calculate: "Calcular Calorias de Manutenção",
+      calculate: "🔄 Recalcular",
       results: "Resultados de Calorias de Manutenção",
       maintenanceCalories: "Calorias de Manutenção",
       bmr: "Taxa Metabólica Basal (BMR)",
@@ -169,7 +171,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       methodOptions: {
         harris: "Harris-Benedict (Clássico)",
         mifflin: "Mifflin-St Jeor (Mais Preciso)",
-        katch: "Katch-McArdle (Requer % Gordura Corporal)"
+        katch: "Katch-McArdle (Requer % Gordura Corporal)",
+      reset: "Redefinir"
       },
       genderOptions: {
         male: "Masculino",
@@ -205,7 +208,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       activityLevel: "Niveau d'Activité",
       bmrMethod: "Méthode de Calcul BMR",
       bodyFat: "Pourcentage de Graisse Corporelle",
-      calculate: "Calculer Calories de Maintenance",
+      calculate: "🔄 Recalculer",
       results: "Résultats de Calories de Maintenance",
       maintenanceCalories: "Calories de Maintenance",
       bmr: "Taux Métabolique Basal (BMR)",
@@ -217,7 +220,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       methodOptions: {
         harris: "Harris-Benedict (Classique)",
         mifflin: "Mifflin-St Jeor (Plus Précis)",
-        katch: "Katch-McArdle (Nécessite % Graisse Corporelle)"
+        katch: "Katch-McArdle (Nécessite % Graisse Corporelle)",
+      reset: "Réinitialiser"
       },
       genderOptions: {
         male: "Masculin",
@@ -304,6 +308,20 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       carbGrams,
       fatGrams
     };
+  };
+
+  const resetCalculator = () => {
+    setFormData({
+      weight: 70,
+      weightUnit: 'kg',
+      height: 170,
+      heightUnit: 'cm',
+      gender: 'male',
+      age: 30,
+      activityLevel: 'moderately_active',
+      bmrMethod: 'mifflin',
+      bodyFat: 15
+    });
   };
 
   const results = useMemo((): CalorieResults => {
@@ -478,6 +496,23 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
             )}
           </div>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateCalories}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
@@ -547,7 +582,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       </div>
 
       {/* Information Cards */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
           <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
             🧮 BMR vs TDEE

@@ -12,6 +12,14 @@ export default function LinearEquationCalculator({ lang = 'en' }: LinearEquation
   const [c, setC] = useState('');
   const [result, setResult] = useState('');
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setA(0);
+    setB(0);
+    setC(0);
+    // Additional state resets may be needed
+  };
+
   const translations = {
     en: {
       title: "Solve: ax + b = c",
@@ -19,7 +27,8 @@ export default function LinearEquationCalculator({ lang = 'en' }: LinearEquation
       constantB: "Constant (b)",
       resultC: "Result (c)",
       calculate: "Solve for x",
-      result: "Solution: x ="
+      result: "Solution: x =",
+      reset: "Reset"
     },
     es: {
       title: "Resolver: ax + b = c",
@@ -27,7 +36,8 @@ export default function LinearEquationCalculator({ lang = 'en' }: LinearEquation
       constantB: "Constante (b)",
       resultC: "Resultado (c)",
       calculate: "Resolver para x",
-      result: "Solución: x ="
+      result: "Solución: x =",
+      reset: "Restablecer"
     },
     pt: {
       title: "Resolver: ax + b = c",
@@ -35,7 +45,8 @@ export default function LinearEquationCalculator({ lang = 'en' }: LinearEquation
       constantB: "Constante (b)",
       resultC: "Resultado (c)",
       calculate: "Resolver para x",
-      result: "Solução: x ="
+      result: "Solução: x =",
+      reset: "Redefinir"
     },
     fr: {
       title: "Résoudre: ax + b = c",
@@ -43,7 +54,8 @@ export default function LinearEquationCalculator({ lang = 'en' }: LinearEquation
       constantB: "Constante (b)",
       resultC: "Résultat (c)",
       calculate: "Résoudre pour x",
-      result: "Solution: x ="
+      result: "Solution: x =",
+      reset: "Réinitialiser"
     },
     de: {
       title: "Lösen: ax + b = c",
@@ -51,7 +63,8 @@ export default function LinearEquationCalculator({ lang = 'en' }: LinearEquation
       constantB: "Konstante (b)",
       resultC: "Ergebnis (c)",
       calculate: "Lösen für x",
-      result: "Lösung: x ="
+      result: "Lösung: x =",
+      reset: "Zurücksetzen"
     }
   };
 
@@ -90,6 +103,16 @@ export default function LinearEquationCalculator({ lang = 'en' }: LinearEquation
             onChange={(e) => setA(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

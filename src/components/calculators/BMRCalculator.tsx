@@ -32,7 +32,7 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
       weight: "Weight",
       formula: "Formula",
       activityLevel: "Activity Level",
-      calculate: "Calculate BMR",
+      calculate: "🔄 Recalculate",
       yourBMR: "Your BMR",
       maintenance: "Daily Calories (Maintenance)",
       weightLoss: "Daily Calories (Weight Loss)",
@@ -46,7 +46,8 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
       light: "Lightly active (light exercise 1-3 days/week)",
       moderate: "Moderately active (moderate exercise 3-5 days/week)",
       active: "Very active (hard exercise 6-7 days/week)",
-      veryActive: "Extremely active (very hard exercise, physical job)"
+      veryActive: "Extremely active (very hard exercise, physical job)",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora BMR",
@@ -56,7 +57,7 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
       weight: "Peso",
       formula: "Fórmula",
       activityLevel: "Nivel de Actividad",
-      calculate: "Calcular BMR",
+      calculate: "🔄 Recalcular",
       yourBMR: "Tu BMR",
       maintenance: "Calorías Diarias (Mantenimiento)",
       weightLoss: "Calorías Diarias (Pérdida de Peso)",
@@ -70,7 +71,8 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
       light: "Ligeramente activo (ejercicio ligero 1-3 días/semana)",
       moderate: "Moderadamente activo (ejercicio moderado 3-5 días/semana)",
       active: "Muy activo (ejercicio duro 6-7 días/semana)",
-      veryActive: "Extremadamente activo (ejercicio muy duro, trabajo físico)"
+      veryActive: "Extremadamente activo (ejercicio muy duro, trabajo físico)",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora BMR",
@@ -80,7 +82,7 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
       weight: "Peso",
       formula: "Fórmula",
       activityLevel: "Nível de Atividade",
-      calculate: "Calcular BMR",
+      calculate: "🔄 Recalcular",
       yourBMR: "Seu BMR",
       maintenance: "Calorias Diárias (Manutenção)",
       weightLoss: "Calorias Diárias (Perda de Peso)",
@@ -94,7 +96,8 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
       light: "Levemente ativo (exercício leve 1-3 dias/semana)",
       moderate: "Moderadamente ativo (exercício moderado 3-5 dias/semana)",
       active: "Muito ativo (exercício duro 6-7 dias/semana)",
-      veryActive: "Extremamente ativo (exercício muito duro, trabalho físico)"
+      veryActive: "Extremamente ativo (exercício muito duro, trabalho físico)",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur BMR",
@@ -104,7 +107,7 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
       weight: "Poids",
       formula: "Formule",
       activityLevel: "Niveau d'Activité",
-      calculate: "Calculer BMR",
+      calculate: "🔄 Recalculer",
       yourBMR: "Votre BMR",
       maintenance: "Calories Quotidiennes (Maintenance)",
       weightLoss: "Calories Quotidiennes (Perte de Poids)",
@@ -118,47 +121,57 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
       light: "Légèrement actif (exercice léger 1-3 jours/semaine)",
       moderate: "Modérément actif (exercice modéré 3-5 jours/semaine)",
       active: "Très actif (exercice dur 6-7 jours/semaine)",
-      veryActive: "Extrêmement actif (exercice très dur, travail physique)"
+      veryActive: "Extrêmement actif (exercice très dur, travail physique)",
+      reset: "Réinitialiser"
     }
   };
 
   const t = translations[lang as keyof typeof translations] || translations.en;
 
-  useEffect(() => {
-    const calculateBMR = () => {
-      const { age, gender, height, weight, formula } = inputs;
-      let bmr = 0;
+  const calculateBMR = () => {
+    const { age, gender, height, weight, formula } = inputs;
+    let bmr = 0;
 
-      if (formula === 'mifflin') {
-        // Mifflin-St Jeor Equation
-        if (gender === 'male') {
-          bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
-        } else {
-          bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
-        }
-      } else if (formula === 'harris') {
-        // Harris-Benedict Equation
-        if (gender === 'male') {
-          bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
-        } else {
-          bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
-        }
+    if (formula === 'mifflin') {
+      // Mifflin-St Jeor Equation
+      if (gender === 'male') {
+        bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+      } else {
+        bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
       }
+    } else if (formula === 'harris') {
+      // Harris-Benedict Equation
+      if (gender === 'male') {
+        bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+      } else {
+        bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+      }
+    }
 
-      return Math.round(bmr);
+    return Math.round(bmr);
+  };
+
+  const resetCalculator = () => {
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
+  const getActivityMultiplier = (activityLevel: string) => {
+    const multipliers = {
+      sedentary: 1.2,
+      light: 1.375,
+      moderate: 1.55,
+      active: 1.725,
+      very_active: 1.9
     };
+    return multipliers[activityLevel as keyof typeof multipliers] || 1.2;
+  };
 
-    const getActivityMultiplier = (activityLevel: string) => {
-      const multipliers = {
-        sedentary: 1.2,
-        light: 1.375,
-        moderate: 1.55,
-        active: 1.725,
-        very_active: 1.9
-      };
-      return multipliers[activityLevel as keyof typeof multipliers] || 1.2;
-    };
-
+  useEffect(() => {
     const bmr = calculateBMR();
     const activityMultiplier = getActivityMultiplier(inputs.activityLevel);
 
@@ -188,7 +201,7 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
         <p className="text-gray-600">Calculate your Basal Metabolic Rate (BMR) and daily calorie needs</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-4">
           <div>
@@ -282,6 +295,22 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
         </div>
 
         {/* Results Section */}
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateBMR}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         <div className="space-y-4">
           <div className="bg-blue-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold text-blue-900 mb-2">{t.yourBMR}</h3>

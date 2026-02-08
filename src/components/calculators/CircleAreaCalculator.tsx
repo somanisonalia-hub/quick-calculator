@@ -38,7 +38,9 @@ export default function CircleAreaCalculator({ lang = 'en' }: CircleAreaCalculat
       step3: "Step 3: Calculate the result",
       visualExplanation: "Visual Explanation",
       circleWithRadius: "Circle with radius r",
-      circleWithDiameter: "Circle with diameter d"
+      circleWithDiameter: "Circle with diameter d",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora del Área del Círculo",
@@ -62,7 +64,9 @@ export default function CircleAreaCalculator({ lang = 'en' }: CircleAreaCalculat
       step3: "Paso 3: Calcular el resultado",
       visualExplanation: "Explicación Visual",
       circleWithRadius: "Círculo con radio r",
-      circleWithDiameter: "Círculo con diámetro d"
+      circleWithDiameter: "Círculo con diámetro d",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora da Área do Círculo",
@@ -86,7 +90,9 @@ export default function CircleAreaCalculator({ lang = 'en' }: CircleAreaCalculat
       step3: "Passo 3: Calcular o resultado",
       visualExplanation: "Explicação Visual",
       circleWithRadius: "Círculo com raio r",
-      circleWithDiameter: "Círculo com diâmetro d"
+      circleWithDiameter: "Círculo com diâmetro d",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur d'Aire de Cercle",
@@ -110,7 +116,9 @@ export default function CircleAreaCalculator({ lang = 'en' }: CircleAreaCalculat
       step3: "Étape 3: Calculer le résultat",
       visualExplanation: "Explication Visuelle",
       circleWithRadius: "Cercle avec rayon r",
-      circleWithDiameter: "Cercle avec diamètre d"
+      circleWithDiameter: "Cercle avec diamètre d",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     }
   };
 
@@ -138,6 +146,16 @@ export default function CircleAreaCalculator({ lang = 'en' }: CircleAreaCalculat
     setDiameter(d);
     setCircumference(c);
     setFormula(f);
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   useEffect(() => {
@@ -215,7 +233,24 @@ export default function CircleAreaCalculator({ lang = 'en' }: CircleAreaCalculat
             <div className="text-lg font-mono text-green-700">{formula}</div>
             <div className="text-sm text-green-600 mt-2">
               π ≈ 3.14159
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateCircle}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 

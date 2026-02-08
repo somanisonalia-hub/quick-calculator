@@ -173,6 +173,16 @@ const MidpointCalculator: React.FC<MidpointCalculatorProps> = ({ lang = 'en' }) 
         z: (z1Val + z2Val) / 2,
       };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
       // Calculate 3D distance
       distance = Math.sqrt(
         Math.pow(x2Val - x1Val, 2) +
@@ -226,7 +236,7 @@ const MidpointCalculator: React.FC<MidpointCalculatorProps> = ({ lang = 'en' }) 
         </div>
 
         {/* Input Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           {/* Point 1 */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-700 border-b pb-2">
@@ -346,6 +356,16 @@ const MidpointCalculator: React.FC<MidpointCalculatorProps> = ({ lang = 'en' }) 
         {/* Results Section */}
         {result && (
           <div className="mt-6 space-y-6">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
             <h3 className="text-xl font-bold text-gray-800 border-b pb-2">
               {t.result}
             </h3>

@@ -29,7 +29,8 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
       totalInvestment: 'Total Investment',
       totalReturns: 'Expected Returns',
       finalAmount: 'Final Amount',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Reset"
     },
     es: {
       title: 'Calculadora SIP',
@@ -40,7 +41,8 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
       totalInvestment: 'Inversión Total',
       totalReturns: 'Retornos Esperados',
       finalAmount: 'Cantidad Final',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Restablecer"
     },
     pt: {
       title: 'Calculadora SIP',
@@ -51,7 +53,8 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
       totalInvestment: 'Investimento Total',
       totalReturns: 'Retornos Esperados',
       finalAmount: 'Valor Final',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Redefinir"
     },
     fr: {
       title: 'Calculateur PIA',
@@ -62,7 +65,8 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
       totalInvestment: 'Investissement Total',
       totalReturns: 'Rendements Attendus',
       finalAmount: 'Montant Final',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Réinitialiser"
     },
     de: {
       title: 'SIP-Rechner',
@@ -73,7 +77,8 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
       totalInvestment: 'Gesamtinvestition',
       totalReturns: 'Erwartete Rendite',
       finalAmount: 'Endbetrag',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Zurücksetzen"
     },
     nl: {
       title: 'SIP-Rekenmachine',
@@ -84,7 +89,8 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
       totalInvestment: 'Totale Investering',
       totalReturns: 'Verwachte Opbrengsten',
       finalAmount: 'Eindbedrag',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Resetten"
     }
   };
 
@@ -106,6 +112,16 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
       totalReturns: totalGain,
       finalAmount: futureValue
     });
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   // Auto-calculate when inputs change
@@ -196,6 +212,16 @@ export default function SIPCalculator({ lang = 'en' }: SIPCalculatorProps) {
                   {t.rupee} {results.finalAmount.toLocaleString('en-IN', {maximumFractionDigits: 0})}
                 </p>
               </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
             </div>
           </div>
         )}

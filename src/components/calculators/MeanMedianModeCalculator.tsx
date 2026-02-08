@@ -33,7 +33,7 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
       dataInput: "Data Input",
       enterData: "Enter numbers separated by commas or spaces",
       showSteps: "Show Step-by-Step Calculations",
-      calculate: "Calculate Statistics",
+      calculate: "🔄 Recalculate",
       clear: "Clear Data",
       results: "Statistical Results",
       mean: "Mean (Average)",
@@ -53,7 +53,8 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
       sortedData: "Sorted Data",
       calculation: "Calculation",
       result: "Result",
-      dataValidation: "Please enter valid numbers separated by commas or spaces."
+      dataValidation: "Please enter valid numbers separated by commas or spaces.",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Media Mediana Moda",
@@ -61,7 +62,7 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
       dataInput: "Entrada de Datos",
       enterData: "Ingresa números separados por comas o espacios",
       showSteps: "Mostrar Cálculos Paso a Paso",
-      calculate: "Calcular Estadísticas",
+      calculate: "🔄 Recalcular",
       clear: "Limpiar Datos",
       results: "Resultados Estadísticos",
       mean: "Media (Promedio)",
@@ -81,7 +82,8 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
       sortedData: "Datos Ordenados",
       calculation: "Cálculo",
       result: "Resultado",
-      dataValidation: "Por favor ingresa números válidos separados por comas o espacios."
+      dataValidation: "Por favor ingresa números válidos separados por comas o espacios.",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Média Mediana Moda",
@@ -89,7 +91,7 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
       dataInput: "Entrada de Dados",
       enterData: "Digite números separados por vírgulas ou espaços",
       showSteps: "Mostrar Cálculos Passo a Passo",
-      calculate: "Calcular Estatísticas",
+      calculate: "🔄 Recalcular",
       clear: "Limpar Dados",
       results: "Resultados Estatísticos",
       mean: "Média",
@@ -109,7 +111,8 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
       sortedData: "Dados Ordenados",
       calculation: "Cálculo",
       result: "Resultado",
-      dataValidation: "Por favor digite números válidos separados por vírgulas ou espaços."
+      dataValidation: "Por favor digite números válidos separados por vírgulas ou espaços.",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur Moyenne Médiane Mode",
@@ -117,7 +120,7 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
       dataInput: "Saisie de Données",
       enterData: "Entrez des nombres séparés par des virgules ou des espaces",
       showSteps: "Afficher les Calculs Étape par Étape",
-      calculate: "Calculer les Statistiques",
+      calculate: "🔄 Recalculer",
       clear: "Effacer les Données",
       results: "Résultats Statistiques",
       mean: "Moyenne",
@@ -137,7 +140,8 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
       sortedData: "Données Triées",
       calculation: "Calcul",
       result: "Résultat",
-      dataValidation: "Veuillez saisir des nombres valides séparés par des virgules ou des espaces."
+      dataValidation: "Veuillez saisir des nombres valides séparés par des virgules ou des espaces.",
+      reset: "Réinitialiser"
     }
   };
 
@@ -173,6 +177,7 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
 
     // Calculate mode
     const frequency: { [key: number]: number } = {};
+  
     numbers.forEach(num => {
       frequency[num] = (frequency[num] || 0) + 1;
     });
@@ -257,6 +262,14 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
     });
   };
 
+  const resetCalculator = () => {
+    setDataInput('2, 4, 6, 8, 10');
+    setData([2, 4, 6, 8, 10]);
+    setShowSteps(false);
+    const parsedData = [2, 4, 6, 8, 10];
+    calculateStatistics(parsedData);
+  };
+
   const formatMode = (modes: number[]): string => {
     if (modes.length === 0) return t.noMode;
     if (modes.length === 1) return modes[0].toString();
@@ -327,6 +340,16 @@ export default function MeanMedianModeCalculator({ lang = 'en' }: MeanMedianMode
           {data.length > 0 ? (
             <>
               <div className="bg-blue-50 p-4 rounded-lg">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
                 <h3 className="text-lg font-semibold text-blue-900 mb-3">{t.results}</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white p-3 rounded border">

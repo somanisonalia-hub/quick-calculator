@@ -98,6 +98,12 @@ export default function NumbersToWordsConverter({ inputs, output, additionalOutp
 
   const [results, setResults] = useState<Record<string, string | number>>({});
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setValues({});
+    setResults('');
+  };
+
   // Number to words conversion functions
   const englishUnits = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
   const englishTeens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
@@ -371,6 +377,22 @@ export default function NumbersToWordsConverter({ inputs, output, additionalOutp
             </div>
           ))}
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={handleInputChange}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">

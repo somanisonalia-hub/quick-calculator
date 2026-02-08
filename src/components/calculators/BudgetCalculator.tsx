@@ -43,6 +43,8 @@ export default function BudgetCalculator({ inputs, output, additionalOutputs, la
       budgetStatus: "Budget Status",
       expenseBreakdown: "Expense Breakdown",
       totalExpenses: "Total Expenses",
+      calculate: "🔄 Recalculate",
+      reset: "Reset",
       surplus: "surplus",
       balanced: "balanced",
       deficit: "deficit",
@@ -59,6 +61,8 @@ export default function BudgetCalculator({ inputs, output, additionalOutputs, la
       budgetStatus: "Estado del Presupuesto",
       expenseBreakdown: "Desglose de Gastos",
       totalExpenses: "Gastos Totales",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer",
       surplus: "surplus",
       balanced: "balanced",
       deficit: "deficit",
@@ -75,7 +79,9 @@ export default function BudgetCalculator({ inputs, output, additionalOutputs, la
       budgetStatus: "Status do Orçamento",
       expenseBreakdown: "Detalhamento de Despesas",
       totalExpenses: "Despesas Totais",
-        surplus: "surplus",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir",
+      surplus: "surplus",
       balanced: "balanced",
       deficit: "deficit",
       string: "string",
@@ -91,6 +97,8 @@ export default function BudgetCalculator({ inputs, output, additionalOutputs, la
       budgetStatus: "Statut du Budget",
       expenseBreakdown: "Détail des Dépenses",
       totalExpenses: "Dépenses Totales",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser",
       surplus: "surplus",
       balanced: "balanced",
       deficit: "deficit",
@@ -111,45 +119,50 @@ export default function BudgetCalculator({ inputs, output, additionalOutputs, la
   const [results, setResults] = useState<Record<string, any>>({});
 
   // Calculate budget
-  useEffect(() => {
-    const calculateBudget = () => {
-      const income = values.monthlyIncome || 0;
+  const calculateBudget = () => {
+    const income = values.monthlyIncome || 0;
 
-      // Calculate total expenses
-      const expenses = {
-        housing: values.housing || 0,
-        utilities: values.utilities || 0,
-        groceries: values.groceries || 0,
-        transportation: values.transportation || 0,
-        insurance: values.insurance || 0,
-        debtPayments: values.debtPayments || 0,
-        entertainment: values.entertainment || 0,
-        miscellaneous: values.miscellaneous || 0
-      };
-
-      const totalExpenses = Object.values(expenses).reduce((sum, amount) => sum + amount, 0);
-      const balance = income - totalExpenses;
-      const savingsGoal = values.savingsGoal || 0;
-      const savingsPotential = balance - savingsGoal;
-
-      // Calculate percentages
-      const expensePercentages = Object.entries(expenses).map(([category, amount]) => ({
-        category,
-        amount,
-        percentage: income > 0 ? ((amount / income) * 100).toFixed(1) : '0'
-      }));
-
-      setResults({
-        balance: balance >= 0 ? `$${balance.toFixed(2)}` : `-$${Math.abs(balance).toFixed(2)}`,
-        totalExpenses: `$${totalExpenses.toFixed(2)}`,
-        savingsPotential: savingsPotential >= 0 ? `$${savingsPotential.toFixed(2)}` : `-$${Math.abs(savingsPotential).toFixed(2)}`,
-        expenseBreakdown: expensePercentages,
-        budgetStatus: balance >= savingsGoal ? 'surplus' : balance >= 0 ? 'balanced' : 'deficit'
-      });
+    // Calculate total expenses
+    const expenses = {
+      housing: values.housing || 0,
+      utilities: values.utilities || 0,
+      groceries: values.groceries || 0,
+      transportation: values.transportation || 0,
+      insurance: values.insurance || 0,
+      debtPayments: values.debtPayments || 0,
+      entertainment: values.entertainment || 0,
+      miscellaneous: values.miscellaneous || 0
     };
 
-    calculateBudget();
-  }, [values]);
+    const totalExpenses = Object.values(expenses).reduce((sum, amount) => sum + amount, 0);
+    const balance = income - totalExpenses;
+    const savingsGoal = values.savingsGoal || 0;
+    const savingsPotential = balance - savingsGoal;
+
+    // Calculate percentages
+    const expensePercentages = Object.entries(expenses).map(([category, amount]) => ({
+      category,
+      amount,
+      percentage: income > 0 ? ((amount / income) * 100).toFixed(1) : '0'
+    }));
+
+    setResults({
+      balance: balance >= 0 ? `$${balance.toFixed(2)}` : `-$${Math.abs(balance).toFixed(2)}`,
+      totalExpenses: `$${totalExpenses.toFixed(2)}`,
+      savingsPotential: savingsPotential >= 0 ? `$${savingsPotential.toFixed(2)}` : `-$${Math.abs(savingsPotential).toFixed(2)}`,
+      expenseBreakdown: expensePercentages,
+      budgetStatus: balance >= savingsGoal ? 'surplus' : balance >= 0 ? 'balanced' : 'deficit'
+    });
+  };
+
+  const resetCalculator = () => {
+    const initial: Record<string, number> = {};
+    inputs.forEach(input => {
+      initial[input.name] = input.default;
+    });
+    setValues(initial);
+    setResults({});
+  };
 
   const handleInputChange = (name: string, value: number) => {
     setValues(prev => ({
@@ -218,6 +231,22 @@ export default function BudgetCalculator({ inputs, output, additionalOutputs, la
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-2">
+            <button
+              onClick={calculateBudget}
+              className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
           </div>
         </div>
 

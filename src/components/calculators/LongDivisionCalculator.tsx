@@ -12,46 +12,55 @@ export default function LongDivisionCalculator({ lang = 'en' }: LongDivisionCalc
     divisor: 5
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Long Division Calculator",
       description: "Perform long division with step-by-step solutions",
       dividend: "Dividend",
       divisor: "Divisor",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       results: "Results",
       quotient: "Quotient",
-      remainder: "Remainder"
+      remainder: "Remainder",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de División Larga",
       description: "Realizar división larga con soluciones paso a paso",
       dividend: "Dividendo",
       divisor: "Divisor",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       quotient: "Cociente",
-      remainder: "Resto"
+      remainder: "Resto",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Divisão Longa",
       description: "Realizar divisão longa com soluções passo a passo",
       dividend: "Dividendo",
       divisor: "Divisor",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       quotient: "Quociente",
-      remainder: "Resto"
+      remainder: "Resto",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Division Longue",
       description: "Effectuer une division longue avec solutions étape par étape",
       dividend: "Dividende",
       divisor: "Diviseur",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       quotient: "Quotient",
-      remainder: "Reste"
+      remainder: "Reste",
+      reset: "Réinitialiser"
     }
   };
 
@@ -73,6 +82,16 @@ export default function LongDivisionCalculator({ lang = 'en' }: LongDivisionCalc
             onChange={(e) => setInputs({ ...inputs, dividend: Number(e.target.value) })}
             className="w-full px-4 py-2 border rounded-lg"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

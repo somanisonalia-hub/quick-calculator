@@ -21,7 +21,7 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
       downPayment: "Down Payment",
       loanTerm: "Loan Term (Years)",
       interestRate: "Interest Rate (%)",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       showAmortization: "Show Amortization Schedule",
       hideAmortization: "Hide Amortization Schedule",
@@ -48,7 +48,7 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
       downPayment: "Pago Inicial",
       loanTerm: "Plazo del Préstamo (Años)",
       interestRate: "Tasa de Interés (%)",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       showAmortization: "Mostrar Programa de Amortización",
       hideAmortization: "Ocultar Programa de Amortización",
@@ -75,7 +75,7 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
       downPayment: "Entrada",
       loanTerm: "Prazo do Empréstimo (Anos)",
       interestRate: "Taxa de Juros (%)",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       showAmortization: "Mostrar Cronograma de Amortização",
       hideAmortization: "Ocultar Cronograma de Amortização",
@@ -102,7 +102,7 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
       downPayment: "Acompte",
       loanTerm: "Durée du Prêt (Années)",
       interestRate: "Taux d'Intérêt (%)",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       showAmortization: "Afficher l'Échéancier d'Amortissement",
       hideAmortization: "Masquer l'Échéancier d'Amortissement",
@@ -131,8 +131,7 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
   const [amortizationSchedule, setAmortizationSchedule] = useState<any[]>([]);
   const [yearlySummary, setYearlySummary] = useState<any[]>([]);
 
-  // Calculate car loan payment and amortization schedule
-  useEffect(() => {
+  const calculateLoan = () => {
     if (vehiclePrice > 0 && downPayment >= 0 && loanTerm > 0 && interestRate >= 0) {
       const loanAmount = vehiclePrice - downPayment;
       const monthlyRate = interestRate / 100 / 12;
@@ -198,7 +197,7 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
       setAmortizationSchedule([]);
       setYearlySummary([]);
     }
-  }, [vehiclePrice, downPayment, loanTerm, interestRate]);
+  };
 
   const resetCalculator = () => {
     setVehiclePrice(30000);
@@ -210,6 +209,11 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
     setAmortizationSchedule([]);
     setYearlySummary([]);
   };
+
+  // Calculate car loan payment and amortization schedule
+  useEffect(() => {
+    calculateLoan();
+  }, [vehiclePrice, downPayment, loanTerm, interestRate]);
 
   const exportToCSV = () => {
     if (amortizationSchedule.length === 0) return;
@@ -329,6 +333,22 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
             </button>
           </div>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateLoan}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
         {/* Results Section */}
         <div className="space-y-4">

@@ -15,6 +15,11 @@ export default function FitnessMetricsCalculator({ lang = 'en' }: FitnessMetrics
     activityLevel: 'moderate'
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Fitness Metrics Calculator",
@@ -31,8 +36,9 @@ export default function FitnessMetricsCalculator({ lang = 'en' }: FitnessMetrics
       moderate: "Moderate",
       active: "Active",
       veryActive: "Very Active",
-      calculate: "Calculate",
-      results: "Results"
+      calculate: "🔄 Recalculate",
+      results: "Results",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Métricas de Fitness",
@@ -49,8 +55,9 @@ export default function FitnessMetricsCalculator({ lang = 'en' }: FitnessMetrics
       moderate: "Moderado",
       active: "Activo",
       veryActive: "Muy Activo",
-      calculate: "Calcular",
-      results: "Resultados"
+      calculate: "🔄 Recalcular",
+      results: "Resultados",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Métricas de Fitness",
@@ -67,8 +74,9 @@ export default function FitnessMetricsCalculator({ lang = 'en' }: FitnessMetrics
       moderate: "Moderado",
       active: "Ativo",
       veryActive: "Muito Ativo",
-      calculate: "Calcular",
-      results: "Resultados"
+      calculate: "🔄 Recalcular",
+      results: "Resultados",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Métriques de Fitness",
@@ -85,8 +93,9 @@ export default function FitnessMetricsCalculator({ lang = 'en' }: FitnessMetrics
       moderate: "Modéré",
       active: "Actif",
       veryActive: "Très Actif",
-      calculate: "Calculer",
-      results: "Résultats"
+      calculate: "🔄 Recalculer",
+      results: "Résultats",
+      reset: "Réinitialiser"
     }
   };
 
@@ -108,6 +117,16 @@ export default function FitnessMetricsCalculator({ lang = 'en' }: FitnessMetrics
             onChange={(e) => setInputs({ ...inputs, weight: Number(e.target.value) })}
             className="w-full px-4 py-2 border rounded-lg"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

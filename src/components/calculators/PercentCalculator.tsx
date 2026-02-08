@@ -23,7 +23,7 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
       whatPercent: "What percent is X of Y?",
       value1: "Value 1",
       value2: "Value 2 (or percentage)",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       result: "Result",
       explanation: "Explanation",
       formula: "Formula",
@@ -37,6 +37,7 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
       increase: "Increase",
       decrease: "Decrease",
       resultpercentage100number: "Result = (Percentage ÷ 100) × Number",
+      reset: "Reset"
   },
     es: {
       title: "Calculadora de Porcentajes",
@@ -47,7 +48,7 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
       whatPercent: "¿Qué porcentaje es X de Y?",
       value1: "Valor 1",
       value2: "Valor 2 (o porcentaje)",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
       explanation: "Explicación",
       formula: "Fórmula",
@@ -61,6 +62,7 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
       increase: "Aumento",
       decrease: "Disminución",
       resultpercentage100number: "Resultado = (Porcentaje ÷ 100) × Número",
+      reset: "Restablecer"
   },
     pt: {
       title: "Calculadora de Porcentagem",
@@ -71,7 +73,7 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
       whatPercent: "Que porcentagem é X de Y?",
       value1: "Valor 1",
       value2: "Valor 2 (ou porcentagem)",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
       explanation: "Explicação",
       formula: "Fórmula",
@@ -85,6 +87,7 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
       increase: "Aumento",
       decrease: "Diminuição",
       resultpercentage100number: "Resultado = (Porcentagem ÷ 100) × Número",
+      reset: "Redefinir"
   },
     fr: {
       title: "Calculateur de Pourcentage",
@@ -95,7 +98,7 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
       whatPercent: "Quel pourcentage est X de Y?",
       value1: "Valeur 1",
       value2: "Valeur 2 (ou pourcentage)",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       result: "Résultat",
       explanation: "Explication",
       formula: "Formule",
@@ -109,6 +112,7 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
       increase: "Augmentation",
       decrease: "Diminution",
       resultpercentage100number: "Résultat = (Pourcentage ÷ 100) × Nombre",
+      reset: "Réinitialiser"
   }
   };
 
@@ -151,6 +155,16 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
 
     setResult(calcResult);
     setExplanation(calcExplanation);
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   useEffect(() => {
@@ -253,7 +267,18 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
                   <div>75 is what % of 300? = 25%</div>
                 </>
               )}
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 

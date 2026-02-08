@@ -25,8 +25,9 @@ export default function GeometryAreaCalculator({ lang = 'en' }: GeometryAreaCalc
       base: "Base",
       height: "Height",
       side: "Side",
-      calculate: "Calculate Area",
-      result: "Area"
+      calculate: "🔄 Recalculate",
+      result: "Area",
+      reset: "Reset"
     },
     es: {
       shape: "Seleccionar Forma",
@@ -40,8 +41,9 @@ export default function GeometryAreaCalculator({ lang = 'en' }: GeometryAreaCalc
       base: "Base",
       height: "Altura",
       side: "Lado",
-      calculate: "Calcular Área",
-      result: "Área"
+      calculate: "🔄 Recalcular",
+      result: "Área",
+      reset: "Restablecer"
     },
     pt: {
       shape: "Selecionar Forma",
@@ -55,8 +57,9 @@ export default function GeometryAreaCalculator({ lang = 'en' }: GeometryAreaCalc
       base: "Base",
       height: "Altura",
       side: "Lado",
-      calculate: "Calcular Área",
-      result: "Área"
+      calculate: "🔄 Recalcular",
+      result: "Área",
+      reset: "Redefinir"
     },
     fr: {
       shape: "Sélectionner la forme",
@@ -70,8 +73,9 @@ export default function GeometryAreaCalculator({ lang = 'en' }: GeometryAreaCalc
       base: "Base",
       height: "Hauteur",
       side: "Côté",
-      calculate: "Calculer l'aire",
-      result: "Aire"
+      calculate: "🔄 Recalculer",
+      result: "Aire",
+      reset: "Réinitialiser"
     },
     de: {
       shape: "Form auswählen",
@@ -86,7 +90,8 @@ export default function GeometryAreaCalculator({ lang = 'en' }: GeometryAreaCalc
       height: "Höhe",
       side: "Seite",
       calculate: "Fläche berechnen",
-      result: "Fläche"
+      result: "Fläche",
+      reset: "Zurücksetzen"
     }
   };
 
@@ -119,6 +124,16 @@ export default function GeometryAreaCalculator({ lang = 'en' }: GeometryAreaCalc
     setResult(area.toFixed(2));
   };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
       <div className="space-y-4">
@@ -134,6 +149,16 @@ export default function GeometryAreaCalculator({ lang = 'en' }: GeometryAreaCalc
             <option value="triangle">{t.triangle}</option>
             <option value="square">{t.square}</option>
           </select>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

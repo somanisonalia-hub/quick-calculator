@@ -157,6 +157,16 @@ const SquareRootCalculator: React.FC<SquareRootCalculatorProps> = ({ lang = 'en'
     setSimplifiedResult(simplified);
   };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   const simplifyRadical = (radicand: number, rootDegree: number): string => {
     const absRadicand = Math.abs(radicand);
     const isNegative = radicand < 0;
@@ -293,6 +303,17 @@ const SquareRootCalculator: React.FC<SquareRootCalculatorProps> = ({ lang = 'en'
             {error}
           </div>
         )}
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         {decimalResult && !error && (

@@ -51,7 +51,8 @@ export default function CaloriesBurnedCalculator({ lang = 'en' }: CaloriesBurned
       metabolicRate: "Caloric Burn Rate",
       hourlyBurn: "Hourly Burn Rate",
       dailyBurn: "Daily Burn (8 hrs)",
-      reset: "Reset"
+      reset: "Reset",
+      calculate: "🔄 Recalculate"
     },
     es: {
       title: "Calculadora de Calorías Quemadas",
@@ -70,7 +71,8 @@ export default function CaloriesBurnedCalculator({ lang = 'en' }: CaloriesBurned
       metabolicRate: "Tasa de Quema Calórica",
       hourlyBurn: "Tasa de Quema por Hora",
       dailyBurn: "Quema Diaria (8 hrs)",
-      reset: "Reiniciar"
+      reset: "Reiniciar",
+      calculate: "🔄 Recalcular"
     },
     pt: {
       title: "Calculadora de Calorias Queimadas",
@@ -89,7 +91,8 @@ export default function CaloriesBurnedCalculator({ lang = 'en' }: CaloriesBurned
       metabolicRate: "Taxa de Quema de Calorias",
       hourlyBurn: "Taxa de Quema por Hora",
       dailyBurn: "Quema Diária (8 hrs)",
-      reset: "Reiniciar"
+      reset: "Reiniciar",
+      calculate: "🔄 Recalcular"
     },
     fr: {
       title: "Calculateur de Calories Brûlées",
@@ -108,7 +111,8 @@ export default function CaloriesBurnedCalculator({ lang = 'en' }: CaloriesBurned
       metabolicRate: "Taux de Brûlure Calorique",
       hourlyBurn: "Taux de Brûlure par Heure",
       dailyBurn: "Brûlure Quotidienne (8 hrs)",
-      reset: "Réinitialiser"
+      reset: "Réinitialiser",
+      calculate: "🔄 Recalculer"
     },
     de: {
       title: "Kalorienverbrauch-Rechner",
@@ -127,7 +131,8 @@ export default function CaloriesBurnedCalculator({ lang = 'en' }: CaloriesBurned
       metabolicRate: "Kalorienverbrauchsrate",
       hourlyBurn: "Stündliche Verbrauchsrate",
       dailyBurn: "Täglicher Verbrauch (8 Std)",
-      reset: "Zurücksetzen"
+      reset: "Zurücksetzen",
+      calculate: "🔄 Neu berechnen"
     }
   };
 
@@ -182,7 +187,7 @@ export default function CaloriesBurnedCalculator({ lang = 'en' }: CaloriesBurned
 
       {/* Input Section */}
       <div className="bg-white rounded-lg shadow p-6 space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.weight} ({weightUnit})
@@ -274,9 +279,19 @@ export default function CaloriesBurnedCalculator({ lang = 'en' }: CaloriesBurned
 
       {/* Results Section */}
       <div className="space-y-4">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateCalories}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+          </div>
+
         <h2 className="text-xl font-bold text-gray-900">{t.results}</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="bg-red-50 border border-red-200 rounded-lg p-4">
             <p className="text-sm text-gray-600">{t.caloriesBurned}</p>
             <p className="text-2xl font-bold text-red-600 mt-1">

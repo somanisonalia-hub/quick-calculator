@@ -15,7 +15,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
       bedTime: "Bed Time",
       wakeTimeLabel: "What time do you want to wake up?",
       bedTimeLabel: "What time do you go to bed?",
-      calculate: "Calculate Sleep Times",
+      calculate: "🔄 Recalculate",
       results: "Results",
       suggestedBedTimes: "Suggested Bed Times",
       suggestedWakeTimes: "Suggested Wake Times",
@@ -23,6 +23,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
       hoursOfSleep: "hours of sleep",
       tip: "A good night's sleep consists of 5-6 complete sleep cycles.",
       note: "Each sleep cycle is approximately 90 minutes.",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Sueño",
@@ -31,7 +32,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
       bedTime: "Hora de Dormir",
       wakeTimeLabel: "¿A qué hora quieres despertar?",
       bedTimeLabel: "¿A qué hora te vas a dormir?",
-      calculate: "Calcular Horarios de Sueño",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       suggestedBedTimes: "Horas Sugeridas para Dormir",
       suggestedWakeTimes: "Horas Sugeridas para Despertar",
@@ -39,6 +40,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
       hoursOfSleep: "horas de sueño",
       tip: "Un buen sueño consiste en 5-6 ciclos completos de sueño.",
       note: "Cada ciclo de sueño dura aproximadamente 90 minutos.",
+      reset: "Restablecer"
     },
     fr: {
       title: "Calculateur de Sommeil",
@@ -47,7 +49,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
       bedTime: "Heure de Coucher",
       wakeTimeLabel: "À quelle heure voulez-vous vous réveiller ?",
       bedTimeLabel: "À quelle heure allez-vous vous coucher ?",
-      calculate: "Calculer les Heures de Sommeil",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       suggestedBedTimes: "Heures de Coucher Suggérées",
       suggestedWakeTimes: "Heures de Réveil Suggérées",
@@ -55,6 +57,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
       hoursOfSleep: "heures de sommeil",
       tip: "Un bon sommeil comprend 5 à 6 cycles de sommeil complets.",
       note: "Chaque cycle de sommeil dure environ 90 minutes.",
+      reset: "Réinitialiser"
     },
     pt: {
       title: "Calculadora de Sono",
@@ -63,7 +66,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
       bedTime: "Hora de Dormir",
       wakeTimeLabel: "A que horas você quer acordar?",
       bedTimeLabel: "A que horas você vai dormir?",
-      calculate: "Calcular Horários de Sono",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       suggestedBedTimes: "Horários Sugeridos para Dormir",
       suggestedWakeTimes: "Horários Sugeridos para Acordar",
@@ -71,6 +74,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
       hoursOfSleep: "horas de sono",
       tip: "Uma boa noite de sono consiste em 5-6 ciclos completos de sono.",
       note: "Cada ciclo de sono dura aproximadamente 90 minutos.",
+      reset: "Redefinir"
     },
   };
 
@@ -135,6 +139,16 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
     return times;
   };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   const results = calculateSleepTimes();
 
   return (
@@ -184,7 +198,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
             {mode === 'wake' ? t.suggestedBedTimes : t.suggestedWakeTimes}
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="grid lg:grid-cols-2 gap-4 mb-6">
             {results.map((result, index) => (
               <div key={index} className={`${index === 1 ? 'bg-green-50 border-2 border-green-300' : 'bg-blue-50'} p-4 rounded-lg`}>
                 <div className="text-3xl font-bold text-blue-600 mb-2">
@@ -208,6 +222,16 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
           <div className="border-t pt-4 space-y-2">
             <p className="text-gray-700">💡 {t.tip}</p>
             <p className="text-gray-600 text-sm">{t.note}</p>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
           </div>
         </div>
       )}

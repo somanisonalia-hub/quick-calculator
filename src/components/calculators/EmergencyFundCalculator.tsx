@@ -13,7 +13,7 @@ export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCa
       monthlyExpenses: "Monthly Expenses ($)",
       currentSavings: "Current Emergency Savings ($)",
       monthsNeeded: "Months of Expenses Needed",
-      calculate: "Calculate Emergency Fund",
+      calculate: "🔄 Recalculate",
       results: "Results",
       targetAmount: "Target Emergency Fund",
       stillNeed: "Still Need to Save",
@@ -21,13 +21,14 @@ export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCa
       recommendation: "Recommendation",
       goodJob: "Great job! You have a fully funded emergency fund.",
       needMore: "Continue saving to reach your emergency fund goal.",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Fondo de Emergencia",
       monthlyExpenses: "Gastos Mensuales ($)",
       currentSavings: "Ahorros de Emergencia Actuales ($)",
       monthsNeeded: "Meses de Gastos Necesarios",
-      calculate: "Calcular Fondo de Emergencia",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       targetAmount: "Fondo de Emergencia Objetivo",
       stillNeed: "Aún Necesitas Ahorrar",
@@ -35,13 +36,14 @@ export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCa
       recommendation: "Recomendación",
       goodJob: "¡Excelente trabajo! Tienes un fondo de emergencia completo.",
       needMore: "Continúa ahorrando para alcanzar tu objetivo de fondo de emergencia.",
+      reset: "Restablecer"
     },
     fr: {
       title: "Calculateur de Fonds d'Urgence",
       monthlyExpenses: "Dépenses Mensuelles ($)",
       currentSavings: "Économies d'Urgence Actuelles ($)",
       monthsNeeded: "Mois de Dépenses Nécessaires",
-      calculate: "Calculer le Fonds d'Urgence",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       targetAmount: "Fonds d'Urgence Cible",
       stillNeed: "Encore Besoin d'Économiser",
@@ -49,13 +51,14 @@ export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCa
       recommendation: "Recommandation",
       goodJob: "Excellent travail ! Vous avez un fonds d'urgence complet.",
       needMore: "Continuez à économiser pour atteindre votre objectif de fonds d'urgence.",
+      reset: "Réinitialiser"
     },
     pt: {
       title: "Calculadora de Fundo de Emergência",
       monthlyExpenses: "Despesas Mensais ($)",
       currentSavings: "Poupança de Emergência Atual ($)",
       monthsNeeded: "Meses de Despesas Necessários",
-      calculate: "Calcular Fundo de Emergência",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       targetAmount: "Fundo de Emergência Alvo",
       stillNeed: "Ainda Precisa Economizar",
@@ -63,6 +66,7 @@ export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCa
       recommendation: "Recomendação",
       goodJob: "Ótimo trabalho! Você tem um fundo de emergência completo.",
       needMore: "Continue economizando para atingir seu objetivo de fundo de emergência.",
+      reset: "Redefinir"
     },
   };
 
@@ -84,6 +88,16 @@ export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCa
       percentComplete,
       isComplete: currentSavings >= targetAmount,
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
   };
 
   const results = calculateEmergencyFund();
@@ -91,7 +105,7 @@ export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCa
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.monthlyExpenses}
@@ -139,6 +153,16 @@ export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCa
 
       {calculated && (
         <div className="bg-white rounded-lg shadow-md p-6">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
           <h3 className="text-2xl font-bold mb-6 text-gray-800">{t.results}</h3>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">

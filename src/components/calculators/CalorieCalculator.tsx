@@ -34,7 +34,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
       activityLevel: "Activity Level",
       goal: "Goal",
       rate: "Rate",
-      calculate: "Calculate Calories",
+      calculate: "🔄 Recalculate",
       bmr: "BMR",
       tdee: "TDEE",
       dailyCalories: "Daily Calories",
@@ -60,6 +60,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
       tdee500: "TDEE - 500",
       weightgain: "Weight Gain:",
       tdee500plus: "TDEE + 500",
+      reset: "Reset"
   },
     es: {
       title: "Calculadora de Calorías",
@@ -70,7 +71,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
       activityLevel: "Nivel de Actividad",
       goal: "Meta",
       rate: "Velocidad",
-      calculate: "Calcular Calorías",
+      calculate: "🔄 Recalcular",
       bmr: "BMR",
       tdee: "TDEE",
       dailyCalories: "Calorías Diarias",
@@ -96,6 +97,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
       tdee500: "TDEE - 500",
       weightgain: "Ganancia de Peso:",
       tdee500plus: "TDEE + 500",
+      reset: "Restablecer"
   },
     pt: {
       title: "Calculadora de Calorias",
@@ -106,7 +108,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
       activityLevel: "Nível de Atividade",
       goal: "Meta",
       rate: "Velocidade",
-      calculate: "Calcular Calorias",
+      calculate: "🔄 Recalcular",
       bmr: "BMR",
       tdee: "TDEE",
       dailyCalories: "Calorias Diárias",
@@ -132,6 +134,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
       tdee500: "TDEE - 500",
       weightgain: "Ganho de Peso:",
       tdee500plus: "TDEE + 500",
+      reset: "Redefinir"
   },
     fr: {
       title: "Calculateur de Calories",
@@ -142,7 +145,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
       activityLevel: "Niveau d'Activité",
       goal: "Objectif",
       rate: "Vitesse",
-      calculate: "Calculer Calories",
+      calculate: "🔄 Recalculer",
       bmr: "BMR",
       tdee: "TDEE",
       dailyCalories: "Calories Quotidiennes",
@@ -168,6 +171,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
       tdee500: "TDEE - 500",
       weightgain: "Gain de Poids:",
       tdee500plus: "TDEE + 500",
+      reset: "Réinitialiser"
   }
   };
 
@@ -180,6 +184,16 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
     } else {
       return (10 * weight) + (6.25 * height) - (5 * age) - 161;
     }
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   const getActivityMultiplier = (activityLevel: string) => {
@@ -247,7 +261,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
         <p className="text-gray-600">Calculate your daily calorie needs for your fitness goals</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
@@ -365,6 +379,22 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
         </div>
 
         {/* Results Section */}
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateBMR}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         <div className="space-y-4">
           <div className="bg-blue-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold text-blue-900 mb-2">{t.dailyCalories}</h3>

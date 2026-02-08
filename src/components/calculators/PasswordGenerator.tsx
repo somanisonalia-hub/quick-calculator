@@ -18,6 +18,8 @@ export default function PasswordGenerator({ lang = 'en' }: PasswordGeneratorProp
       numbers: "Include Numbers",
       symbols: "Include Symbols",
       generate: "Generate Password",
+      calculate: "🔄 Recalculate",
+      reset: "Reset",
       generatedPassword: "Generated Password",
       copy: "Copy to Clipboard"
     },
@@ -30,6 +32,8 @@ export default function PasswordGenerator({ lang = 'en' }: PasswordGeneratorProp
       numbers: "Incluir Números",
       symbols: "Incluir Símbolos",
       generate: "Generar Contraseña",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer",
       generatedPassword: "Contraseña Generada",
       copy: "Copiar al Portapapeles"
     },
@@ -42,6 +46,8 @@ export default function PasswordGenerator({ lang = 'en' }: PasswordGeneratorProp
       numbers: "Incluir Números",
       symbols: "Incluir Símbolos",
       generate: "Gerar Senha",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir",
       generatedPassword: "Senha Gerada",
       copy: "Copiar para Área de Transferência"
     },
@@ -54,6 +60,8 @@ export default function PasswordGenerator({ lang = 'en' }: PasswordGeneratorProp
       numbers: "Inclure Chiffres",
       symbols: "Inclure Symboles",
       generate: "Générer Mot de Passe",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser",
       generatedPassword: "Mot de Passe Généré",
       copy: "Copier dans le Presse-papiers"
     }
@@ -67,6 +75,14 @@ export default function PasswordGenerator({ lang = 'en' }: PasswordGeneratorProp
   const [includeNumbers, setIncludeNumbers] = useState(true);
   const [includeSymbols, setIncludeSymbols] = useState(false);
   const [password, setPassword] = useState('');
+
+  const resetCalculator = () => {
+    // Reset to default values
+    setLength(0);
+    setIncludeUppercase(0);
+    setIncludeLowercase(0);
+    // Additional state resets may be needed
+  };
 
   const generatePassword = () => {
     const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -109,6 +125,22 @@ export default function PasswordGenerator({ lang = 'en' }: PasswordGeneratorProp
             className="w-full"
           />
           <div className="text-center mt-1">{length} characters</div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={generatePassword}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div className="space-y-2">

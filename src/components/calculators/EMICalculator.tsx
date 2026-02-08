@@ -19,13 +19,13 @@ export default function EMICalculator({ lang = 'en' }: EMICalculatorProps) {
       totalInterest: "Total Interest",
       totalAmountPaid: "Total Amount Paid",
       emiFormula: "EMI Formula",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       loanAmount: "Loan Amount",
       interestRate: "Interest Rate (%)",
       loanTerm: "Loan Term (Years)",
       currency: "$",
-      calculateyouremi: "Calculate Your EMI",
+      calculateyouremi: "🔄 Recalculate",
       enterloandetailsinstruction: "Enter loan details above to see EMI breakdown"
     },
     es: {
@@ -38,7 +38,7 @@ export default function EMICalculator({ lang = 'en' }: EMICalculatorProps) {
       totalInterest: "Intereses Totales",
       totalAmountPaid: "Monto Total Pagado",
       emiFormula: "Fórmula EMI",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       loanAmount: "Monto del Préstamo",
       interestRate: "Tasa de Interés (%)",
@@ -57,7 +57,7 @@ export default function EMICalculator({ lang = 'en' }: EMICalculatorProps) {
       totalInterest: "Juros Totais",
       totalAmountPaid: "Valor Total Pago",
       emiFormula: "Fórmula EMI",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       loanAmount: "Valor do Empréstimo",
       interestRate: "Taxa de Juros (%)",
@@ -76,7 +76,7 @@ export default function EMICalculator({ lang = 'en' }: EMICalculatorProps) {
       totalInterest: "Intérêts Totaux",
       totalAmountPaid: "Montant Total Payé",
       emiFormula: "Formule EMI",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       loanAmount: "Montant du Prêt",
       interestRate: "Taux d'Intérêt (%)",
@@ -95,13 +95,13 @@ export default function EMICalculator({ lang = 'en' }: EMICalculatorProps) {
       totalInterest: "Gesamtzinsen",
       totalAmountPaid: "Gesamtbetrag bezahlt",
       emiFormula: "EMI-Formel",
-      calculate: "Berechnen",
+      calculate: "🔄 Neu berechnen",
       reset: "Zurücksetzen",
       loanAmount: "Darlehensbetrag",
       interestRate: "Zinssatz (%)",
       loanTerm: "Kreditlaufzeit (Jahre)",
       currency: "€",
-      calculateyouremi: "Berechnen Sie Ihre EMI",
+      calculateyouremi: "🔄 Neu berechnen",
       enterloandetailsinstruction: "Geben Sie die obigen Kreditdetails ein, um die EMI-Aufschlüsselung zu sehen"
     },
     nl: {
@@ -114,7 +114,7 @@ export default function EMICalculator({ lang = 'en' }: EMICalculatorProps) {
       totalInterest: "Totale Rente",
       totalAmountPaid: "Totaal betaald bedrag",
       emiFormula: "EMI-formule",
-      calculate: "Berekenen",
+      calculate: "🔄 Herberekenen",
       reset: "Opnieuw instellen",
       loanAmount: "Leningbedrag",
       interestRate: "Rentepercentage (%)",
@@ -167,7 +167,7 @@ export default function EMICalculator({ lang = 'en' }: EMICalculatorProps) {
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">{t.loanDetails}</h2>

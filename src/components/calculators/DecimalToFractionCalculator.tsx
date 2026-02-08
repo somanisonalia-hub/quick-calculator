@@ -24,6 +24,8 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
       calculationSteps: "Calculation Steps",
       invalidInput: "Please enter a valid decimal number",
       enterDecimal: "Enter a decimal number",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Decimal a Fracción",
@@ -34,6 +36,8 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
       calculationSteps: "Pasos de Cálculo",
       invalidInput: "Por favor ingresa un número decimal válido",
       enterDecimal: "Ingresa un número decimal",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Decimal para Fração",
@@ -44,6 +48,8 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
       calculationSteps: "Passos de Cálculo",
       invalidInput: "Por favor digite um número decimal válido",
       enterDecimal: "Digite um número decimal",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Décimal en Fraction",
@@ -54,6 +60,8 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
       calculationSteps: "Étapes de Calcul",
       invalidInput: "Veuillez entrer un nombre décimal valide",
       enterDecimal: "Entrez un nombre décimal",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     }
   };
 
@@ -209,6 +217,16 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
     }
   };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   return (
     <div className="w-full max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-lg p-8">
@@ -235,6 +253,22 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
             <p className="text-red-700">{error}</p>
           </div>
         )}
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateMixedNumber}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
         {/* Results Section */}
         {!error && numerator !== 0 && (

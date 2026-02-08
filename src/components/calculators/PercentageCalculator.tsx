@@ -83,6 +83,8 @@ export default function PercentageCalculator({ lang = 'en' }: PercentageCalculat
       percentagechange: "percentageChange",
       increaseby: "increaseBy",
       decreaseby: "decreaseBy",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
   },
     es: {
       title: "Calculadora de Porcentajes",
@@ -150,6 +152,8 @@ export default function PercentageCalculator({ lang = 'en' }: PercentageCalculat
       percentagechange: "percentageChange",
       increaseby: "increaseBy",
       decreaseby: "decreaseBy",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
   },
     pt: {
       title: "Calculadora de Porcentagem",
@@ -217,6 +221,8 @@ export default function PercentageCalculator({ lang = 'en' }: PercentageCalculat
       percentagechange: "percentageChange",
       increaseby: "increaseBy",
       decreaseby: "decreaseBy",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
   },
     fr: {
       title: "Calculateur de Pourcentage",
@@ -284,6 +290,8 @@ export default function PercentageCalculator({ lang = 'en' }: PercentageCalculat
       percentagechange: "percentageChange",
       increaseby: "increaseBy",
       decreaseby: "decreaseBy",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     },
     de: {
       title: "Prozentrechner",
@@ -346,6 +354,8 @@ export default function PercentageCalculator({ lang = 'en' }: PercentageCalculat
       percentagechange: "percentageChange",
       increaseby: "increaseBy",
       decreaseby: "decreaseBy",
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Percentagecalculator",
@@ -408,6 +418,8 @@ export default function PercentageCalculator({ lang = 'en' }: PercentageCalculat
       percentagechange: "percentageChange",
       increaseby: "increaseBy",
       decreaseby: "decreaseBy",
+      calculate: "🔄 Herberekenen",
+      reset: "Resetten"
     }
 };
 
@@ -480,6 +492,16 @@ export default function PercentageCalculator({ lang = 'en' }: PercentageCalculat
     setSteps(stepsText);
     setAnswer(finalAnswerValue);
     setPercentageValue(percentageDisplay);
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   useEffect(() => {
@@ -628,7 +650,7 @@ export default function PercentageCalculator({ lang = 'en' }: PercentageCalculat
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-4">
           <div>
@@ -689,7 +711,24 @@ export default function PercentageCalculator({ lang = 'en' }: PercentageCalculat
                   <div>{t.example100decreasedBy15}</div>
                 </>
               )}
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculatePercentage}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 

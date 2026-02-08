@@ -18,7 +18,9 @@ const translations = {
       high: "You're a perfect match! 💕",
       medium: "There's potential for a great relationship! 💖",
       low: "Love can bloom with effort and understanding! 💝",
-      perfect: "Soulmates! You were meant to be together! 💞"
+      perfect: "Soulmates! You were meant to be together! 💞",
+      reset: "Reset",
+      calculate: "🔄 Recalcular"
     },
     disclaimer: 'This is for entertainment purposes only.',
     enterNames: 'Enter both names to calculate love compatibility'
@@ -50,7 +52,8 @@ const translations = {
       high: "Vocês são o par perfeito! 💕",
       medium: "Há potencial para um ótimo relacionamento! 💖",
       low: "O amor pode florescer com esforço e compreensão! 💝",
-      perfect: "Almas gêmeas! Vocês foram feitos um para o outro! 💞"
+      perfect: "Almas gêmeas! Vocês foram feitos um para o outro! 💞",
+      reset: "Redefinir"
     },
     disclaimer: 'Isso é apenas para entretenimento.',
     enterNames: 'Digite ambos os nomes para calcular a compatibilidade'
@@ -59,14 +62,15 @@ const translations = {
     title: "Calculateur d'Amour",
     name1: 'Votre Nom',
     name2: 'Nom du Partenaire',
-    calculate: "Calculer l'Amour",
+    calculate: "🔄 Recalculer",
     result: 'Compatibilité Amoureuse',
     percentage: 'compatibilité',
     messages: {
       high: "Vous êtes le couple parfait ! 💕",
       medium: "Il y a du potentiel pour une belle relation ! 💖",
       low: "L'amour peut s'épanouir avec effort et compréhension ! 💝",
-      perfect: "Âmes sœurs ! Vous étiez faits l'un pour l'autre ! 💞"
+      perfect: "Âmes sœurs ! Vous étiez faits l'un pour l'autre ! 💞",
+      reset: "Réinitialiser"
     },
     disclaimer: 'Ceci est uniquement à des fins de divertissement.',
     enterNames: 'Entrez les deux noms pour calculer la compatibilité'
@@ -101,6 +105,16 @@ export default function LoveCalculator({ lang = 'en' }: LoveCalculatorProps) {
       setResult(percentage);
       setIsCalculating(false);
     }, 1500);
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   const getMessage = (percentage: number) => {
@@ -174,6 +188,16 @@ export default function LoveCalculator({ lang = 'en' }: LoveCalculatorProps) {
         <div className="mt-8 text-center animate-fade-in">
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
             <p className="text-gray-600 dark:text-gray-400 mb-2">{t.result}</p>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
             <div className={`text-6xl font-bold ${getHeartColor(result)} mb-4`}>
               {result}%
             </div>

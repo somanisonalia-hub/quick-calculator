@@ -39,7 +39,8 @@ const translations = {
     disclaimer: 'This is an estimate based on standard calorie calculations. Consult a healthcare professional for personalized advice.',
     errorWeightLoss: 'Goal weight must be less than current weight.',
     errorNegative: 'All values must be positive numbers.',
-    enterValues: 'Enter your current weight, goal weight, and timeline to calculate'
+    enterValues: 'Enter your current weight, goal weight, and timeline to calculate',
+      reset: "Reset"
   },
   es: {
     title: 'Calculadora de Déficit de Calorías',
@@ -73,7 +74,8 @@ const translations = {
     disclaimer: 'Esta es una estimación basada en cálculos de calorías estándar. Consulta a un profesional de la salud para consejos personalizados.',
     errorWeightLoss: 'El peso objetivo debe ser menor que el peso actual.',
     errorNegative: 'Todos los valores deben ser números positivos.',
-    enterValues: 'Ingresa tu peso actual, peso objetivo y timeline para calcular'
+    enterValues: 'Ingresa tu peso actual, peso objetivo y timeline para calcular',
+      reset: "Restablecer"
   },
   pt: {
     title: 'Calculadora de Déficit de Calorias',
@@ -107,7 +109,8 @@ const translations = {
     disclaimer: 'Esta é uma estimativa baseada em cálculos de calorias padrão. Consulte um profissional de saúde para orientação personalizada.',
     errorWeightLoss: 'O peso objetivo deve ser menor que o peso atual.',
     errorNegative: 'Todos os valores devem ser números positivos.',
-    enterValues: 'Digite seu peso atual, peso objetivo e cronograma para calcular'
+    enterValues: 'Digite seu peso atual, peso objetivo e cronograma para calcular',
+      reset: "Redefinir"
   },
   fr: {
     title: 'Calculatrice de Déficit Calorique',
@@ -174,7 +177,8 @@ const translations = {
       disclaimer: 'Dies ist eine Schätzung basierend auf Standard-Kalorieberechnungen. Konsultieren Sie einen Arzt für personalisierte Ratschläge.',
       errorWeightLoss: 'Zielgewicht muss kleiner als aktuelles Gewicht sein.',
       errorNegative: 'Alle Werte müssen positive Zahlen sein.',
-      enterValues: 'Geben Sie Ihr aktuelles Gewicht, Zielgewicht und Zeitrahmen ein, um zu berechnen'
+      enterValues: 'Geben Sie Ihr aktuelles Gewicht, Zielgewicht und Zeitrahmen ein, um zu berechnen',
+      reset: "Réinitialiser"
     },
     nl: {
       title: 'Caloriedeficitrekenmachine',
@@ -208,7 +212,8 @@ const translations = {
       disclaimer: 'Dit is een schatting gebaseerd op standaard calorieberekeningen. Raadpleeg een zorgverlener voor persoonlijk advies.',
       errorWeightLoss: 'Doelgewicht moet lager zijn dan huidigegewicht.',
       errorNegative: 'Alle waarden moeten positieve getallen zijn.',
-      enterValues: 'Voer uw huidigegewicht, doelgewicht en tijdlijn in om te berekenen'
+      enterValues: 'Voer uw huidigegewicht, doelgewicht en tijdlijn in om te berekenen',
+      reset: "Resetten"
     }
   }
 }
@@ -237,6 +242,16 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
     if (!current || !goal || !weeks) return null;
     if (current <= 0 || goal <= 0 || weeks <= 0) {
       return { error: t.errorNegative };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
     }
     if (goal >= current) {
       return { error: t.errorWeightLoss };
@@ -285,7 +300,7 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
       <div className="space-y-6">
         {/* Input Section */}
         <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t.currentWeightLabel}
@@ -315,7 +330,7 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t.timeframeLabel}
@@ -346,7 +361,24 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
                 <option value="very">{t.very}</option>
                 <option value="extremely">{t.extremely}</option>
               </select>
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateDeficit}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 
@@ -355,7 +387,7 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
           <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md">
             <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-4">{t.breakdown}</h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
               <div className="text-center p-4 bg-orange-50 dark:bg-gray-600 rounded-lg">
                 <p className="text-gray-600 dark:text-gray-300 text-sm">{t.deficitNeeded}</p>
                 <p className="text-3xl font-bold text-orange-600 dark:text-orange-400">{Math.abs(result.dailyDeficit || 0)}</p>
@@ -369,7 +401,7 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="text-center p-4 bg-orange-50 dark:bg-gray-600 rounded-lg">
                 <p className="text-gray-600 dark:text-gray-300 text-sm">{t.estimatedDailyIntake}</p>
                 <p className="text-3xl font-bold text-orange-600 dark:text-orange-400">{Math.max(result.dailyIntake || 0, 1200)}</p>

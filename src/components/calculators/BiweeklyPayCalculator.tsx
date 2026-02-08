@@ -18,7 +18,7 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
       hoursPerWeek: "Hours Per Week",
       taxRate: "Tax Rate (%)",
       preDeductions: "Pre-tax Deductions ($)",
-      calculate: "Calculate Pay",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       results: "Results",
       grossBiweekly: "Gross Biweekly Pay",
@@ -41,7 +41,7 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
       hoursPerWeek: "Horas por Semana",
       taxRate: "Tasa de Impuesto (%)",
       preDeductions: "Deducciones Previas a Impuestos ($)",
-      calculate: "Calcular Pago",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       results: "Resultados",
       grossBiweekly: "Pago Quincenal Bruto",
@@ -64,7 +64,7 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
       hoursPerWeek: "Horas por Semana",
       taxRate: "Taxa de Imposto (%)",
       preDeductions: "Deduções Pré-Imposto ($)",
-      calculate: "Calcular Pagamento",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       results: "Resultados",
       grossBiweekly: "Pagamento Quinzenal Bruto",
@@ -87,7 +87,7 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
       hoursPerWeek: "Heures par Semaine",
       taxRate: "Taux d'Imposition (%)",
       preDeductions: "Déductions Avant Impôts ($)",
-      calculate: "Calculer Salaire",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       results: "Résultats",
       grossBiweekly: "Salaire Brut Bihebdomadaire",
@@ -154,7 +154,7 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="space-y-6">
       <div className="mb-6 hidden">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.title}</h2>
         <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
@@ -164,172 +164,193 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
         </div>
       </div>
 
-      {/* Salary Type Selection */}
-      <div className="mb-6 hidden">
-        <label className="block text-sm font-medium text-gray-700 mb-3">
-          {t.salaryType}
-        </label>
-        <div className="flex gap-4">
-          <label className="flex items-center">
-            <input
-              type="radio"
-              checked={salaryType === 'annual'}
-              onChange={() => setSalaryType('annual')}
-              className="mr-2"
-            />
-            <span className="text-gray-700">{t.annual}</span>
-          </label>
-          <label className="flex items-center">
-            <input
-              type="radio"
-              checked={salaryType === 'hourly'}
-              onChange={() => setSalaryType('hourly')}
-              className="mr-2"
-            />
-            <span className="text-gray-700">{t.hourly}</span>
-          </label>
-        </div>
-      </div>
-
-      {/* Input Fields */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        {salaryType === 'annual' ? (
+      <div className="grid lg:grid-cols-2 gap-8">
+        {/* Input Section */}
+        <div className="space-y-4">
+          {/* Salary Type Selection */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.annualSalary}
+            <label className="block text-sm font-medium text-gray-700 mb-3">
+              {t.salaryType}
             </label>
-            <input
-              type="number"
-              value={annualSalary}
-              onChange={(e) => setAnnualSalary(parseFloat(e.target.value) || 0)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-              min="0"
-            />
+            <div className="flex gap-4">
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  checked={salaryType === 'annual'}
+                  onChange={() => setSalaryType('annual')}
+                  className="mr-2"
+                />
+                <span className="text-gray-700">{t.annual}</span>
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  checked={salaryType === 'hourly'}
+                  onChange={() => setSalaryType('hourly')}
+                  className="mr-2"
+                />
+                <span className="text-gray-700">{t.hourly}</span>
+              </label>
+            </div>
           </div>
-        ) : (
-          <>
+
+          {/* Input Fields */}
+          <div className="grid grid-cols-1 gap-4">
+            {salaryType === 'annual' ? (
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  {t.annualSalary}
+                </label>
+                <input
+                  type="number"
+                  value={annualSalary}
+                  onChange={(e) => setAnnualSalary(parseFloat(e.target.value) || 0)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  min="0"
+                />
+              </div>
+            ) : (
+              <>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {t.hourlyRate}
+                  </label>
+                  <input
+                    type="number"
+                    value={hourlyRate}
+                    onChange={(e) => setHourlyRate(parseFloat(e.target.value) || 0)}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                    min="0"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {t.hoursPerWeek}
+                  </label>
+                  <input
+                    type="number"
+                    value={hoursPerWeek}
+                    onChange={(e) => setHoursPerWeek(parseFloat(e.target.value) || 0)}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                    min="0"
+                  />
+                </div>
+              </>
+            )}
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                {t.hourlyRate}
+                {t.taxRate}
               </label>
               <input
                 type="number"
-                value={hourlyRate}
-                onChange={(e) => setHourlyRate(parseFloat(e.target.value) || 0)}
+                value={taxRate}
+                onChange={(e) => setTaxRate(parseFloat(e.target.value) || 0)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                min="0"
+                max="100"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {t.preDeductions}
+              </label>
+              <input
+                type="number"
+                value={preDeductions}
+                onChange={(e) => setPreDeductions(parseFloat(e.target.value) || 0)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                 min="0"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                {t.hoursPerWeek}
-              </label>
-              <input
-                type="number"
-                value={hoursPerWeek}
-                onChange={(e) => setHoursPerWeek(parseFloat(e.target.value) || 0)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                min="0"
-              />
-            </div>
-          </>
-        )}
+          </div>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            {t.taxRate}
-          </label>
-          <input
-            type="number"
-            value={taxRate}
-            onChange={(e) => setTaxRate(parseFloat(e.target.value) || 0)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-            min="0"
-            max="100"
-          />
+          <p className="text-xs text-gray-500">{t.format}</p>
+
+          {/* Action Buttons */}
+          <div className="flex gap-3">
+            <button
+              onClick={calculatePay}
+              className="flex-1 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 px-6 py-2 bg-gray-500 text-white font-semibold rounded-md hover:bg-gray-600 transition-colors"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+          {/* Info Box */}
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <h4 className="text-sm font-semibold text-blue-900 mb-2">{t.tip}</h4>
+            <p className="text-xs text-blue-700">{t.tipText}</p>
+          </div>
         </div>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            {t.preDeductions}
-          </label>
-          <input
-            type="number"
-            value={preDeductions}
-            onChange={(e) => setPreDeductions(parseFloat(e.target.value) || 0)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-            min="0"
-          />
+        {/* Results Section */}
+        <div className="space-y-4">
+          {results ? (
+            <>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg border border-blue-200">
+                  <p className="text-sm text-blue-700 mb-1">{t.grossBiweekly}</p>
+                  <p className="text-2xl font-bold text-blue-800">
+                    ${results.grossBiweekly.toFixed(2)}
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-lg border border-green-200">
+                  <p className="text-sm text-green-700 mb-1">{t.netBiweekly}</p>
+                  <p className="text-2xl font-bold text-green-800">
+                    ${results.netBiweekly.toFixed(2)}
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                  <p className="text-sm text-gray-600 mb-1">{t.grossAnnual}</p>
+                  <p className="text-lg font-bold text-gray-900">
+                    ${results.grossAnnual.toLocaleString('en-US', {minimumFractionDigits: 2})}
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                  <p className="text-sm text-gray-600 mb-1">{t.netAnnual}</p>
+                  <p className="text-lg font-bold text-gray-900">
+                    ${results.netAnnual.toLocaleString('en-US', {minimumFractionDigits: 2})}
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-red-50 to-red-100 p-4 rounded-lg border border-red-200">
+                <p className="text-sm text-red-700 mb-1">{t.taxAmount}</p>
+                <p className="text-2xl font-bold text-red-800">
+                  ${results.taxAmount.toFixed(2)}
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <p className="text-sm text-gray-700">
+                  <strong>{t.payPeriods}:</strong> {PAY_PERIODS_PER_YEAR}
+                </p>
+              </div>
+            </>
+          ) : (
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
+              <div className="text-gray-400 mb-2">
+                <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-medium text-gray-900 mb-1">Calculate Your Pay</h3>
+              <p className="text-gray-500">Enter your salary information to see biweekly and annual calculations</p>
+            </div>
+          )}
         </div>
       </div>
-
-      <p className="text-xs text-gray-500 mb-6">{t.format}</p>
-
-      {/* Action Buttons */}
-      <div className="flex gap-3 mb-6">
-        <button
-          onClick={calculatePay}
-          className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors"
-        >
-          {t.calculate}
-        </button>
-        <button
-          onClick={resetCalculator}
-          className="px-6 py-3 bg-gray-500 text-white font-semibold rounded-md hover:bg-gray-600 transition-colors"
-        >
-          {t.reset}
-        </button>
-      </div>
-
-      {/* Results */}
-      {results && (
-        <div className="mt-6 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">{t.results}</h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div className="p-4 bg-white rounded-lg shadow-sm">
-              <p className="text-sm text-gray-600 mb-1">{t.grossBiweekly}</p>
-              <p className="text-2xl font-bold text-blue-600">
-                ${results.grossBiweekly.toFixed(2)}
-              </p>
-            </div>
-
-            <div className="p-4 bg-white rounded-lg shadow-sm">
-              <p className="text-sm text-gray-600 mb-1">{t.netBiweekly}</p>
-              <p className="text-2xl font-bold text-green-600">
-                ${results.netBiweekly.toFixed(2)}
-              </p>
-            </div>
-
-            <div className="p-4 bg-white rounded-lg shadow-sm">
-              <p className="text-sm text-gray-600 mb-1">{t.grossAnnual}</p>
-              <p className="text-2xl font-bold text-blue-600">
-                ${results.grossAnnual.toLocaleString('en-US', {minimumFractionDigits: 2})}
-              </p>
-            </div>
-
-            <div className="p-4 bg-white rounded-lg shadow-sm">
-              <p className="text-sm text-gray-600 mb-1">{t.netAnnual}</p>
-              <p className="text-2xl font-bold text-green-600">
-                ${results.netAnnual.toLocaleString('en-US', {minimumFractionDigits: 2})}
-              </p>
-            </div>
-          </div>
-
-          <div className="p-4 bg-white rounded-lg shadow-sm border-t border-gray-200 mt-4">
-            <p className="text-sm text-gray-600 mb-1">{t.taxAmount}</p>
-            <p className="text-2xl font-bold text-red-600">
-              ${results.taxAmount.toFixed(2)}
-            </p>
-          </div>
-
-          <div className="mt-4 p-3 bg-gray-50 rounded-lg">
-            <p className="text-sm text-gray-700">
-              <strong>{t.payPeriods}:</strong> {PAY_PERIODS_PER_YEAR}
-            </p>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

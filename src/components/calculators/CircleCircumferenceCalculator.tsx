@@ -38,7 +38,9 @@ export default function CircleCircumferenceCalculator({ lang = 'en' }: CircleCir
       step3: "Step 3: Calculate the result",
       visualExplanation: "Visual Explanation",
       circleWithCircumference: "Circle showing circumference path",
-      circumferenceDefinition: "Circumference is the distance around the circle"
+      circumferenceDefinition: "Circumference is the distance around the circle",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Circunferencia del Círculo",
@@ -62,7 +64,9 @@ export default function CircleCircumferenceCalculator({ lang = 'en' }: CircleCir
       step3: "Paso 3: Calcular el resultado",
       visualExplanation: "Explicación Visual",
       circleWithCircumference: "Círculo mostrando trayectoria de circunferencia",
-      circumferenceDefinition: "La circunferencia es la distancia alrededor del círculo"
+      circumferenceDefinition: "La circunferencia es la distancia alrededor del círculo",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora da Circunferência do Círculo",
@@ -86,7 +90,9 @@ export default function CircleCircumferenceCalculator({ lang = 'en' }: CircleCir
       step3: "Passo 3: Calcular o resultado",
       visualExplanation: "Explicação Visual",
       circleWithCircumference: "Círculo mostrando trajetória de circunferência",
-      circumferenceDefinition: "A circunferência é a distância ao redor do círculo"
+      circumferenceDefinition: "A circunferência é a distância ao redor do círculo",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Circonférence de Cercle",
@@ -110,7 +116,9 @@ export default function CircleCircumferenceCalculator({ lang = 'en' }: CircleCir
       step3: "Étape 3: Calculer le résultat",
       visualExplanation: "Explication Visuelle",
       circleWithCircumference: "Cercle montrant trajet de circonférence",
-      circumferenceDefinition: "La circonférence est la distance autour du cercle"
+      circumferenceDefinition: "La circonférence est la distance autour du cercle",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     }
   };
 
@@ -138,6 +146,16 @@ export default function CircleCircumferenceCalculator({ lang = 'en' }: CircleCir
     setDiameter(d);
     setArea(a);
     setFormula(f);
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   useEffect(() => {
@@ -211,7 +229,24 @@ export default function CircleCircumferenceCalculator({ lang = 'en' }: CircleCir
             <div className="text-lg font-mono text-green-700">{formula}</div>
             <div className="text-sm text-green-600 mt-2">
               π ≈ 3.14159
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateCircumference}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 

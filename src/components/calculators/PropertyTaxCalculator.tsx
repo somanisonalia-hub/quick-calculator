@@ -44,39 +44,45 @@ export default function PropertyTaxCalculator({ inputs, output, additionalOutput
 
   const [results, setResults] = useState<Record<string, any>>({});
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setValues({});
+    setResults('');
+  };
+
+  const calculatePropertyTax = () => {
+    const propertyValue = values.propertyValue || 0;
+    const assessmentRate = values.assessmentRate || 0;
+    const taxRate = values.taxRate || 0;
+    const exemptions = values.exemptions || 0;
+
+    if (propertyValue > 0 && assessmentRate > 0 && taxRate > 0) {
+      // Calculate assessed value
+      const assessedValue = propertyValue * (assessmentRate / 100);
+
+      // Calculate taxable value (after exemptions)
+      const taxableValue = Math.max(0, assessedValue - exemptions);
+
+      // Calculate annual property tax
+      const annualTax = taxableValue * (taxRate / 100);
+
+      // Calculate monthly payment (annual tax / 12)
+      const monthlyPayment = annualTax / 12;
+
+      setResults({
+        assessedValue: `$${assessedValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        taxableValue: `$${taxableValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        annualTax: `$${annualTax.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        monthlyPayment: `$${monthlyPayment.toFixed(2)}`,
+        taxRatePercentage: `${taxRate}%`
+      });
+    } else {
+      setResults({});
+    }
+  };
+
   // Calculate property tax
   useEffect(() => {
-    const calculatePropertyTax = () => {
-      const propertyValue = values.propertyValue || 0;
-      const assessmentRate = values.assessmentRate || 0;
-      const taxRate = values.taxRate || 0;
-      const exemptions = values.exemptions || 0;
-
-      if (propertyValue > 0 && assessmentRate > 0 && taxRate > 0) {
-        // Calculate assessed value
-        const assessedValue = propertyValue * (assessmentRate / 100);
-
-        // Calculate taxable value (after exemptions)
-        const taxableValue = Math.max(0, assessedValue - exemptions);
-
-        // Calculate annual property tax
-        const annualTax = taxableValue * (taxRate / 100);
-
-        // Calculate monthly payment (annual tax / 12)
-        const monthlyPayment = annualTax / 12;
-
-        setResults({
-          assessedValue: `$${assessedValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          taxableValue: `$${taxableValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          annualTax: `$${annualTax.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          monthlyPayment: `$${monthlyPayment.toFixed(2)}`,
-          taxRatePercentage: `${taxRate}%`
-        });
-      } else {
-        setResults({});
-      }
-    };
-
     calculatePropertyTax();
   }, [values]);
 
@@ -89,7 +95,7 @@ export default function PropertyTaxCalculator({ inputs, output, additionalOutput
 
   return (
     <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-200">
-      <div className="grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
           <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Property Details</h3>
@@ -111,6 +117,22 @@ export default function PropertyTaxCalculator({ inputs, output, additionalOutput
             </div>
           ))}
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculatePropertyTax}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">

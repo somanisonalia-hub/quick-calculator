@@ -44,58 +44,64 @@ export default function StockReturnCalculator({ inputs, output, additionalOutput
 
   const [results, setResults] = useState<Record<string, string | number>>({});
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setValues({});
+    setResults('');
+  };
+
+  const calculateReturns = () => {
+    const initialInvestment = values.initialInvestment || 0;
+    const purchasePrice = values.purchasePrice || 0;
+    const currentPrice = values.currentPrice || 0;
+    const sharesOwned = values.sharesOwned || 0;
+    const holdingPeriod = values.holdingPeriod || 0;
+
+    if (sharesOwned > 0 && purchasePrice > 0) {
+      // Calculate actual values based on shares
+      const actualInitialInvestment = sharesOwned * purchasePrice;
+      const currentValue = sharesOwned * currentPrice;
+      const profitLoss = currentValue - actualInitialInvestment;
+      const totalReturn = actualInitialInvestment > 0 ? (profitLoss / actualInitialInvestment) * 100 : 0;
+      const annualizedReturn = holdingPeriod > 0
+        ? (Math.pow(1 + (totalReturn / 100), 1 / holdingPeriod) - 1) * 100
+        : 0;
+
+      const priceChange = ((currentPrice - purchasePrice) / purchasePrice) * 100;
+
+      setResults({
+        totalReturn: `${totalReturn >= 0 ? '+' : ''}${totalReturn.toFixed(2)}%`,
+        currentValue: `$${currentValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        profitLoss: `${profitLoss >= 0 ? '+' : ''}$${Math.abs(profitLoss).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        annualizedReturn: `${annualizedReturn >= 0 ? '+' : ''}${annualizedReturn.toFixed(2)}%`,
+        priceChange: `${priceChange >= 0 ? '+' : ''}${priceChange.toFixed(2)}%`,
+        actualInvestment: actualInitialInvestment.toLocaleString()
+      });
+    } else if (initialInvestment > 0 && purchasePrice > 0) {
+      // Calculate based on investment amount
+      const calculatedShares = initialInvestment / purchasePrice;
+      const currentValue = calculatedShares * currentPrice;
+      const profitLoss = currentValue - initialInvestment;
+      const totalReturn = (profitLoss / initialInvestment) * 100;
+      const annualizedReturn = holdingPeriod > 0
+        ? (Math.pow(1 + (totalReturn / 100), 1 / holdingPeriod) - 1) * 100
+        : 0;
+
+      setResults({
+        totalReturn: `${totalReturn >= 0 ? '+' : ''}${totalReturn.toFixed(2)}%`,
+        currentValue: `$${currentValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        profitLoss: `${profitLoss >= 0 ? '+' : ''}$${Math.abs(profitLoss).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        annualizedReturn: `${annualizedReturn >= 0 ? '+' : ''}${annualizedReturn.toFixed(2)}%`,
+        sharesOwned: calculatedShares.toFixed(2),
+        priceChange: `${(((currentPrice - purchasePrice) / purchasePrice) * 100).toFixed(2)}%`
+      });
+    } else {
+      setResults({});
+    }
+  };
+
   // Calculate stock returns
   useEffect(() => {
-    const calculateReturns = () => {
-      const initialInvestment = values.initialInvestment || 0;
-      const purchasePrice = values.purchasePrice || 0;
-      const currentPrice = values.currentPrice || 0;
-      const sharesOwned = values.sharesOwned || 0;
-      const holdingPeriod = values.holdingPeriod || 0;
-
-      if (sharesOwned > 0 && purchasePrice > 0) {
-        // Calculate actual values based on shares
-        const actualInitialInvestment = sharesOwned * purchasePrice;
-        const currentValue = sharesOwned * currentPrice;
-        const profitLoss = currentValue - actualInitialInvestment;
-        const totalReturn = actualInitialInvestment > 0 ? (profitLoss / actualInitialInvestment) * 100 : 0;
-        const annualizedReturn = holdingPeriod > 0
-          ? (Math.pow(1 + (totalReturn / 100), 1 / holdingPeriod) - 1) * 100
-          : 0;
-
-        const priceChange = ((currentPrice - purchasePrice) / purchasePrice) * 100;
-
-        setResults({
-          totalReturn: `${totalReturn >= 0 ? '+' : ''}${totalReturn.toFixed(2)}%`,
-          currentValue: `$${currentValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          profitLoss: `${profitLoss >= 0 ? '+' : ''}$${Math.abs(profitLoss).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          annualizedReturn: `${annualizedReturn >= 0 ? '+' : ''}${annualizedReturn.toFixed(2)}%`,
-          priceChange: `${priceChange >= 0 ? '+' : ''}${priceChange.toFixed(2)}%`,
-          actualInvestment: actualInitialInvestment.toLocaleString()
-        });
-      } else if (initialInvestment > 0 && purchasePrice > 0) {
-        // Calculate based on investment amount
-        const calculatedShares = initialInvestment / purchasePrice;
-        const currentValue = calculatedShares * currentPrice;
-        const profitLoss = currentValue - initialInvestment;
-        const totalReturn = (profitLoss / initialInvestment) * 100;
-        const annualizedReturn = holdingPeriod > 0
-          ? (Math.pow(1 + (totalReturn / 100), 1 / holdingPeriod) - 1) * 100
-          : 0;
-
-        setResults({
-          totalReturn: `${totalReturn >= 0 ? '+' : ''}${totalReturn.toFixed(2)}%`,
-          currentValue: `$${currentValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          profitLoss: `${profitLoss >= 0 ? '+' : ''}$${Math.abs(profitLoss).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          annualizedReturn: `${annualizedReturn >= 0 ? '+' : ''}${annualizedReturn.toFixed(2)}%`,
-          sharesOwned: calculatedShares.toFixed(2),
-          priceChange: `${(((currentPrice - purchasePrice) / purchasePrice) * 100).toFixed(2)}%`
-        });
-      } else {
-        setResults({});
-      }
-    };
-
     calculateReturns();
   }, [values]);
 
@@ -112,7 +118,7 @@ export default function StockReturnCalculator({ inputs, output, additionalOutput
 
   return (
     <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-200">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
           <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Stock Investment</h3>
@@ -134,6 +140,22 @@ export default function StockReturnCalculator({ inputs, output, additionalOutput
             </div>
           ))}
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateReturns}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">

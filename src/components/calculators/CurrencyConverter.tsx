@@ -329,6 +329,16 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
             </div>
           </div>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={convertCurrency}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+          </div>
+
 
         {/* Results Section */}
         <div className="space-y-4">

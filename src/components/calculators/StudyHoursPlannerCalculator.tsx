@@ -12,6 +12,14 @@ export default function StudyHoursPlannerCalculator({ lang = 'en' }: StudyHoursP
   const [hoursPerDay, setHoursPerDay] = useState('');
   const [result, setResult] = useState({ topicsPerDay: '', totalHours: '' });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setTotalTopics(0);
+    setDaysUntilExam(0);
+    setHoursPerDay(0);
+    // Additional state resets may be needed
+  };
+
   const translations = {
     en: {
       totalTopics: "Total Topics/Chapters",
@@ -19,7 +27,8 @@ export default function StudyHoursPlannerCalculator({ lang = 'en' }: StudyHoursP
       hoursPerDay: "Available Hours Per Day",
       calculate: "Create Study Plan",
       topicsPerDay: "Topics Per Day",
-      totalHours: "Total Study Hours"
+      totalHours: "Total Study Hours",
+      reset: "Reset"
     },
     es: {
       totalTopics: "Total de Temas/Capítulos",
@@ -27,7 +36,8 @@ export default function StudyHoursPlannerCalculator({ lang = 'en' }: StudyHoursP
       hoursPerDay: "Horas Disponibles Por Día",
       calculate: "Crear Plan de Estudio",
       topicsPerDay: "Temas Por Día",
-      totalHours: "Total de Horas de Estudio"
+      totalHours: "Total de Horas de Estudio",
+      reset: "Restablecer"
     },
     pt: {
       totalTopics: "Total de Tópicos/Capítulos",
@@ -35,7 +45,8 @@ export default function StudyHoursPlannerCalculator({ lang = 'en' }: StudyHoursP
       hoursPerDay: "Horas Disponíveis Por Dia",
       calculate: "Criar Plano de Estudo",
       topicsPerDay: "Tópicos Por Dia",
-      totalHours: "Total de Horas de Estudo"
+      totalHours: "Total de Horas de Estudo",
+      reset: "Redefinir"
     },
     fr: {
       totalTopics: "Total des Sujets/Chapitres",
@@ -43,7 +54,8 @@ export default function StudyHoursPlannerCalculator({ lang = 'en' }: StudyHoursP
       hoursPerDay: "Heures Disponibles Par Jour",
       calculate: "Créer un Plan d'Étude",
       topicsPerDay: "Sujets Par Jour",
-      totalHours: "Total d'Heures d'Étude"
+      totalHours: "Total d'Heures d'Étude",
+      reset: "Réinitialiser"
     },
     de: {
       totalTopics: "Anzahl der Themen/Kapitel",
@@ -51,7 +63,8 @@ export default function StudyHoursPlannerCalculator({ lang = 'en' }: StudyHoursP
       hoursPerDay: "Verfügbare Stunden Pro Tag",
       calculate: "Lernplan Erstellen",
       topicsPerDay: "Themen Pro Tag",
-      totalHours: "Gesamte Lernstunden"
+      totalHours: "Gesamte Lernstunden",
+      reset: "Zurücksetzen"
     }
   };
 
@@ -84,6 +97,16 @@ export default function StudyHoursPlannerCalculator({ lang = 'en' }: StudyHoursP
             onChange={(e) => setTotalTopics(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

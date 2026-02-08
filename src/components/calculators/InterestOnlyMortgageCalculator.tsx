@@ -44,55 +44,61 @@ export default function InterestOnlyMortgageCalculator({ inputs, output, additio
 
   const [results, setResults] = useState<Record<string, string | number>>({});
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setValues({});
+    setResults('');
+  };
+
+  const calculateInterestOnlyMortgage = () => {
+    const loanAmount = values.loanAmount || 0;
+    const interestRate = values.interestRate || 0;
+    const interestOnlyPeriod = values.interestOnlyPeriod || 0;
+    const amortizationPeriod = values.amortizationPeriod || 0;
+    const propertyTax = values.propertyTax || 0;
+    const homeInsurance = values.homeInsurance || 0;
+
+    if (loanAmount > 0 && interestRate > 0) {
+      const monthlyRate = interestRate / 100 / 12;
+
+      // Interest-only payment (first period)
+      const interestOnlyPayment = loanAmount * monthlyRate;
+
+      // Full payment after interest-only period
+      const remainingMonths = (amortizationPeriod - interestOnlyPeriod) * 12;
+      const fullPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, remainingMonths)) /
+                         (Math.pow(1 + monthlyRate, remainingMonths) - 1);
+
+      // Monthly costs
+      const monthlyPropertyTax = propertyTax / 12;
+      const monthlyInsurance = homeInsurance / 12;
+
+      // Current total monthly payment (interest-only period)
+      const currentTotalPayment = interestOnlyPayment + monthlyPropertyTax + monthlyInsurance;
+
+      // Future total monthly payment
+      const futureTotalPayment = fullPayment + monthlyPropertyTax + monthlyInsurance;
+
+      const paymentIncrease = futureTotalPayment - currentTotalPayment;
+      const increasePercentage = (paymentIncrease / currentTotalPayment) * 100;
+
+      setResults({
+        currentMonthlyPayment: currentTotalPayment.toFixed(2),
+        interestOnlyPayment: interestOnlyPayment.toFixed(2),
+        fullPayment: futureTotalPayment.toFixed(2),
+        paymentIncrease: paymentIncrease.toFixed(2),
+        increasePercentage: increasePercentage.toFixed(1),
+        interestOnlyMonths: interestOnlyPeriod * 12,
+        monthlyPropertyTax: monthlyPropertyTax.toFixed(2),
+        monthlyInsurance: monthlyInsurance.toFixed(2)
+      });
+    } else {
+      setResults({});
+    }
+  };
+
   // Calculate interest-only mortgage
   useEffect(() => {
-    const calculateInterestOnlyMortgage = () => {
-      const loanAmount = values.loanAmount || 0;
-      const interestRate = values.interestRate || 0;
-      const interestOnlyPeriod = values.interestOnlyPeriod || 0;
-      const amortizationPeriod = values.amortizationPeriod || 0;
-      const propertyTax = values.propertyTax || 0;
-      const homeInsurance = values.homeInsurance || 0;
-
-      if (loanAmount > 0 && interestRate > 0) {
-        const monthlyRate = interestRate / 100 / 12;
-
-        // Interest-only payment (first period)
-        const interestOnlyPayment = loanAmount * monthlyRate;
-
-        // Full payment after interest-only period
-        const remainingMonths = (amortizationPeriod - interestOnlyPeriod) * 12;
-        const fullPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, remainingMonths)) /
-                           (Math.pow(1 + monthlyRate, remainingMonths) - 1);
-
-        // Monthly costs
-        const monthlyPropertyTax = propertyTax / 12;
-        const monthlyInsurance = homeInsurance / 12;
-
-        // Current total monthly payment (interest-only period)
-        const currentTotalPayment = interestOnlyPayment + monthlyPropertyTax + monthlyInsurance;
-
-        // Future total monthly payment
-        const futureTotalPayment = fullPayment + monthlyPropertyTax + monthlyInsurance;
-
-        const paymentIncrease = futureTotalPayment - currentTotalPayment;
-        const increasePercentage = (paymentIncrease / currentTotalPayment) * 100;
-
-        setResults({
-          currentMonthlyPayment: currentTotalPayment.toFixed(2),
-          interestOnlyPayment: interestOnlyPayment.toFixed(2),
-          fullPayment: futureTotalPayment.toFixed(2),
-          paymentIncrease: paymentIncrease.toFixed(2),
-          increasePercentage: increasePercentage.toFixed(1),
-          interestOnlyMonths: interestOnlyPeriod * 12,
-          monthlyPropertyTax: monthlyPropertyTax.toFixed(2),
-          monthlyInsurance: monthlyInsurance.toFixed(2)
-        });
-      } else {
-        setResults({});
-      }
-    };
-
     calculateInterestOnlyMortgage();
   }, [values]);
 
@@ -109,7 +115,7 @@ export default function InterestOnlyMortgageCalculator({ inputs, output, additio
 
   return (
     <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-200">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
           <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Mortgage Terms</h3>
@@ -152,6 +158,22 @@ export default function InterestOnlyMortgageCalculator({ inputs, output, additio
             ))}
           </div>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateInterestOnlyMortgage}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">

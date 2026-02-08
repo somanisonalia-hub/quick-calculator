@@ -15,7 +15,7 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
       conception: "Conception Date",
       lmpLabel: "First day of last period",
       conceptionLabel: "Conception date",
-      calculate: "Calculate Due Date",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       results: "Pregnancy Timeline",
       dueDate: "Estimated Due Date",
@@ -40,7 +40,7 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
       conception: "Fecha de Concepción",
       lmpLabel: "Primer día del último período",
       conceptionLabel: "Fecha de concepción",
-      calculate: "Calcular Fecha de Parto",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       results: "Cronología del Embarazo",
       dueDate: "Fecha Estimada de Parto",
@@ -65,7 +65,7 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
       conception: "Data de Concepção",
       lmpLabel: "Primeiro dia do último período",
       conceptionLabel: "Data de concepção",
-      calculate: "Calcular Data de Parto",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       results: "Cronologia da Gravidez",
       dueDate: "Data Estimada de Parto",
@@ -90,7 +90,7 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
       conception: "Date de Conception",
       lmpLabel: "Premier jour du dernier jour des règles",
       conceptionLabel: "Date de conception",
-      calculate: "Calculer la Date d'Accouchement",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       results: "Chronologie de la Grossesse",
       dueDate: "Date Estimée d'Accouchement",
@@ -247,7 +247,7 @@ export default function PregnancyCalculator({ lang = 'en' }: PregnancyCalculator
         <div className="mt-6 p-6 bg-gradient-to-r from-pink-50 to-red-50 rounded-lg border border-pink-200">
           <h3 className="text-xl font-bold text-gray-900 mb-4">{t.results}</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="p-4 bg-white rounded-lg shadow-sm">
               <p className="text-sm text-gray-600 mb-1">{t.dueDate}</p>
               <p className="text-2xl font-bold text-pink-600">{results.dueDate}</p>

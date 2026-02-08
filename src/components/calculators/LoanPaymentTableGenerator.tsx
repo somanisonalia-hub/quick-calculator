@@ -44,7 +44,8 @@ export default function LoanPaymentTableGenerator({ lang = 'en' }: LoanPaymentTa
       summary: "Summary",
       paymentComparisonTable: "Payment Comparison Table",
       generateComparisonTable: "Generate a comparison table to see results",
-      examples: "Examples"
+      examples: "Examples",
+      calculate: "🔄 Recalculate"
     },
     es: {
       title: "Generador de Tabla de Pagos de Préstamo",
@@ -68,7 +69,8 @@ export default function LoanPaymentTableGenerator({ lang = 'en' }: LoanPaymentTa
       printTable: "Imprimir Tabla",
       tableGenerated: "¡Tabla de comparación generada exitosamente!",
       enterValidValues: "Por favor ingresa valores válidos de comparación",
-      noData: "No hay datos para mostrar"
+      noData: "No hay datos para mostrar",
+      calculate: "🔄 Recalcular"
     },
     pt: {
       title: "Gerador de Tabela de Pagamentos de Empréstimo",
@@ -92,7 +94,8 @@ export default function LoanPaymentTableGenerator({ lang = 'en' }: LoanPaymentTa
       printTable: "Imprimir Tabela",
       tableGenerated: "Tabela de comparação gerada com sucesso!",
       enterValidValues: "Por favor digite valores válidos de comparação",
-      noData: "Nenhum dado para exibir"
+      noData: "Nenhum dado para exibir",
+      calculate: "🔄 Recalcular"
     },
     fr: {
       title: "Générateur de Tableau de Paiements d'Emprunt",
@@ -116,7 +119,8 @@ export default function LoanPaymentTableGenerator({ lang = 'en' }: LoanPaymentTa
       printTable: "Imprimer Tableau",
       tableGenerated: "Tableau de comparaison généré avec succès!",
       enterValidValues: "Veuillez entrer des valeurs de comparaison valides",
-      noData: "Aucune donnée à afficher"
+      noData: "Aucune donnée à afficher",
+      calculate: "🔄 Recalculer"
     }
   };
 
@@ -337,6 +341,16 @@ export default function LoanPaymentTableGenerator({ lang = 'en' }: LoanPaymentTa
                 placeholder="6.0,6.5,7.0,7.5,8.0"
               />
             </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateMonthlyPayment}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+          </div>
           </div>
 
           <div className="flex gap-4">

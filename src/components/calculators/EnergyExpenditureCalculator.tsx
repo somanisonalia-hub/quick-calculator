@@ -13,6 +13,11 @@ export default function EnergyExpenditureCalculator({ lang = 'en' }: EnergyExpen
     duration: 30
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Energy Expenditure Calculator",
@@ -24,9 +29,10 @@ export default function EnergyExpenditureCalculator({ lang = 'en' }: EnergyExpen
       running: "Running",
       cycling: "Cycling",
       swimming: "Swimming",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       results: "Results",
-      caloriesBurned: "Calories Burned"
+      caloriesBurned: "Calories Burned",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Gasto Energético",
@@ -38,9 +44,10 @@ export default function EnergyExpenditureCalculator({ lang = 'en' }: EnergyExpen
       running: "Correr",
       cycling: "Ciclismo",
       swimming: "Natación",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
-      caloriesBurned: "Calorías Quemadas"
+      caloriesBurned: "Calorías Quemadas",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Gasto Energético",
@@ -52,9 +59,10 @@ export default function EnergyExpenditureCalculator({ lang = 'en' }: EnergyExpen
       running: "Corrida",
       cycling: "Ciclismo",
       swimming: "Natação",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
-      caloriesBurned: "Calorias Queimadas"
+      caloriesBurned: "Calorias Queimadas",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Dépense Énergétique",
@@ -66,9 +74,10 @@ export default function EnergyExpenditureCalculator({ lang = 'en' }: EnergyExpen
       running: "Course",
       cycling: "Cyclisme",
       swimming: "Natation",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
-      caloriesBurned: "Calories Brûlées"
+      caloriesBurned: "Calories Brûlées",
+      reset: "Réinitialiser"
     }
   };
 
@@ -90,6 +99,16 @@ export default function EnergyExpenditureCalculator({ lang = 'en' }: EnergyExpen
             onChange={(e) => setInputs({ ...inputs, weight: Number(e.target.value) })}
             className="w-full px-4 py-2 border rounded-lg"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

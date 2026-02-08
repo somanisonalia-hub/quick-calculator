@@ -45,7 +45,9 @@ export default function CarInsuranceCalculator({ inputs, output, additionalOutpu
       ageFactor: "Age Factor",
       vehicleFactor: "Vehicle Factor",
       coverageFactor: "Coverage Factor",
-      recordFactor: "Record Factor"
+      recordFactor: "Record Factor",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
     },
     es: {
       lowRisk: "Riesgo Bajo",
@@ -57,7 +59,9 @@ export default function CarInsuranceCalculator({ inputs, output, additionalOutpu
       ageFactor: "Factor de Edad",
       vehicleFactor: "Factor del Vehículo",
       coverageFactor: "Factor de Cobertura",
-      recordFactor: "Factor de Registro"
+      recordFactor: "Factor de Registro",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       lowRisk: "Baixo Risco",
@@ -69,7 +73,9 @@ export default function CarInsuranceCalculator({ inputs, output, additionalOutpu
       ageFactor: "Fator de Idade",
       vehicleFactor: "Fator do Veículo",
       coverageFactor: "Fator de Cobertura",
-      recordFactor: "Fator de Registro"
+      recordFactor: "Fator de Registro",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
     },
     fr: {
       lowRisk: "Risque Faible",
@@ -81,7 +87,9 @@ export default function CarInsuranceCalculator({ inputs, output, additionalOutpu
       ageFactor: "Facteur d'Âge",
       vehicleFactor: "Facteur du Véhicule",
       coverageFactor: "Facteur de Couverture",
-      recordFactor: "Facteur de Dossier"
+      recordFactor: "Facteur de Dossier",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     }
   };
 
@@ -96,15 +104,13 @@ export default function CarInsuranceCalculator({ inputs, output, additionalOutpu
 
   const [results, setResults] = useState<Record<string, string | number>>({});
 
-  // Calculate car insurance premium
-  useEffect(() => {
-    const calculateInsurance = () => {
-      const age = values.age as number || 30;
-      const vehicleValue = values.vehicleValue as number || 25000;
-      const coverageType = values.coverageType as string || 'full';
-      const deductible = values.deductible as number || 500;
-      const annualMileage = values.annualMileage as number || 12000;
-      const drivingRecord = values.drivingRecord as string || 'clean';
+  const calculateInsurance = () => {
+    const age = values.age as number || 30;
+    const vehicleValue = values.vehicleValue as number || 25000;
+    const coverageType = values.coverageType as string || 'full';
+    const deductible = values.deductible as number || 500;
+    const annualMileage = values.annualMileage as number || 12000;
+    const drivingRecord = values.drivingRecord as string || 'clean';
 
       // Base premium calculation
       let basePremium = 1200; // Base annual premium
@@ -182,8 +188,18 @@ export default function CarInsuranceCalculator({ inputs, output, additionalOutpu
         coverageFactor: coverageFactor.toFixed(2),
         recordFactor: recordFactor.toFixed(2)
       });
-    };
+  };
 
+  const resetCalculator = () => {
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
+  useEffect(() => {
     calculateInsurance();
   }, [values]);
 
@@ -200,7 +216,7 @@ export default function CarInsuranceCalculator({ inputs, output, additionalOutpu
 
   return (
     <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-200">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
           <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{t.insuranceDetails}</h3>
@@ -273,6 +289,23 @@ export default function CarInsuranceCalculator({ inputs, output, additionalOutpu
             ))}
           </div>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateInsurance}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">

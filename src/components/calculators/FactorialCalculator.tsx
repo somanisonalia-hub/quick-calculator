@@ -11,38 +11,47 @@ export default function FactorialCalculator({ lang = 'en' }: FactorialCalculator
     number: 5
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Factorial Calculator",
       description: "Calculate factorial (n!) of any positive integer",
       number: "Number",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       result: "Result",
-      factorial: "Factorial"
+      factorial: "Factorial",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Factoriales",
       description: "Calcular factorial (n!) de cualquier entero positivo",
       number: "Número",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
-      factorial: "Factorial"
+      factorial: "Factorial",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Fatorial",
       description: "Calcular fatorial (n!) de qualquer inteiro positivo",
       number: "Número",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
-      factorial: "Fatorial"
+      factorial: "Fatorial",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Factorielle",
       description: "Calculer la factorielle (n!) de tout entier positif",
       number: "Nombre",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       result: "Résultat",
-      factorial: "Factorielle"
+      factorial: "Factorielle",
+      reset: "Réinitialiser"
     }
   };
 
@@ -70,6 +79,16 @@ export default function FactorialCalculator({ lang = 'en' }: FactorialCalculator
         <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
           {t.calculate}
         </button>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
       </div>
 
       <div className="bg-gray-50 p-4 rounded-lg">

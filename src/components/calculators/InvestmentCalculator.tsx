@@ -49,6 +49,8 @@ const translations = {
     annually: "annually",
       quarterly: "quarterly",
       string: "string",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
   },
   es: {
     investmentDetails: "Detalles de Inversión",
@@ -63,6 +65,8 @@ const translations = {
     annually: "annually",
       quarterly: "quarterly",
       string: "string",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
   },
   pt: {
     investmentDetails: "Detalhes do Investimento",
@@ -77,6 +81,8 @@ const translations = {
     annually: "annually",
       quarterly: "quarterly",
       string: "string",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
   },
   fr: {
     investmentDetails: "Détails d'Investissement",
@@ -91,6 +97,8 @@ const translations = {
     annually: "annually",
       quarterly: "quarterly",
       string: "string",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
   },
   de: {
     investmentDetails: "Anlagedetails",
@@ -105,6 +113,8 @@ const translations = {
     annually: "annually",
     quarterly: "quarterly",
     string: "string",
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen"
   },
   nl: {
     investmentDetails: "Investeringsdetails",
@@ -119,6 +129,8 @@ const translations = {
     annually: "annually",
     quarterly: "quarterly",
     string: "string",
+      calculate: "🔄 Herberekenen",
+      reset: "Resetten"
   }
 };
 
@@ -142,71 +154,81 @@ export default function InvestmentCalculator({ inputs, output, additionalOutputs
 
   const [results, setResults] = useState<Record<string, string>>({});
 
+  const calculateInvestment = () => {
+    const initialInvestment = values.initialInvestment as number || 0;
+    const monthlyContribution = values.monthlyContribution as number || 0;
+    const investmentPeriod = values.investmentPeriod as number || 0;
+    const annualReturn = values.annualReturn as number || 0;
+    const compoundFrequency = values.compoundFrequency as string || 'monthly';
+
+    if ((initialInvestment > 0 || monthlyContribution > 0) && investmentPeriod > 0) {
+      // Convert annual return to periodic rate
+      const annualRate = annualReturn / 100;
+      let periodsPerYear = 1;
+      let periodicRate = annualRate;
+
+      switch (compoundFrequency) {
+        case 'annually':
+          periodsPerYear = 1;
+          periodicRate = annualRate;
+          break;
+        case 'quarterly':
+          periodsPerYear = 4;
+          periodicRate = annualRate / 4;
+          break;
+        case 'monthly':
+          periodsPerYear = 12;
+          periodicRate = annualRate / 12;
+          break;
+        case 'daily':
+          periodsPerYear = 365;
+          periodicRate = annualRate / 365;
+          break;
+      }
+
+      const totalPeriods = investmentPeriod * periodsPerYear;
+
+      // Future value of initial investment
+      const futureValuePrincipal = initialInvestment * Math.pow(1 + periodicRate, totalPeriods);
+
+      // Future value of annuity (monthly contributions)
+      const periodicContribution = compoundFrequency === 'monthly' ? monthlyContribution :
+                                  compoundFrequency === 'quarterly' ? monthlyContribution * 3 :
+                                  compoundFrequency === 'annually' ? monthlyContribution * 12 :
+                                  monthlyContribution * 12 / 365 * 30;
+
+      const futureValueAnnuity = periodicContribution *
+        (Math.pow(1 + periodicRate, totalPeriods) - 1) / periodicRate;
+
+      const totalFutureValue = futureValuePrincipal + futureValueAnnuity;
+      const totalContributions = initialInvestment + (periodicContribution * totalPeriods);
+      const totalReturns = totalFutureValue - totalContributions;
+      const returnPercentage = totalContributions > 0 ? (totalReturns / totalContributions) * 100 : 0;
+
+      setResults({
+        futureValue: `${totalFutureValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        totalContributions: `${totalContributions.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        totalReturns: `${totalReturns.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        returnPercentage: `${returnPercentage.toFixed(1)}%`,
+        annualizedReturn: annualReturn > 0 ? `${annualReturn.toFixed(1)}%` : '0%'
+      });
+    } else {
+      setResults({});
+    }
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   // Calculate investment growth
   useEffect(() => {
-    const calculateInvestment = () => {
-      const initialInvestment = values.initialInvestment as number || 0;
-      const monthlyContribution = values.monthlyContribution as number || 0;
-      const investmentPeriod = values.investmentPeriod as number || 0;
-      const annualReturn = values.annualReturn as number || 0;
-      const compoundFrequency = values.compoundFrequency as string || 'monthly';
-
-      if ((initialInvestment > 0 || monthlyContribution > 0) && investmentPeriod > 0) {
-        // Convert annual return to periodic rate
-        const annualRate = annualReturn / 100;
-        let periodsPerYear = 1;
-        let periodicRate = annualRate;
-
-        switch (compoundFrequency) {
-          case 'annually':
-            periodsPerYear = 1;
-            periodicRate = annualRate;
-            break;
-          case 'quarterly':
-            periodsPerYear = 4;
-            periodicRate = annualRate / 4;
-            break;
-          case 'monthly':
-            periodsPerYear = 12;
-            periodicRate = annualRate / 12;
-            break;
-          case 'daily':
-            periodsPerYear = 365;
-            periodicRate = annualRate / 365;
-            break;
-        }
-
-        const totalPeriods = investmentPeriod * periodsPerYear;
-
-        // Future value of initial investment
-        const futureValuePrincipal = initialInvestment * Math.pow(1 + periodicRate, totalPeriods);
-
-        // Future value of annuity (monthly contributions)
-        const periodicContribution = compoundFrequency === 'monthly' ? monthlyContribution :
-                                    compoundFrequency === 'quarterly' ? monthlyContribution * 3 :
-                                    compoundFrequency === 'annually' ? monthlyContribution * 12 :
-                                    monthlyContribution * 12 / 365 * 30;
-
-        const futureValueAnnuity = periodicContribution *
-          (Math.pow(1 + periodicRate, totalPeriods) - 1) / periodicRate;
-
-        const totalFutureValue = futureValuePrincipal + futureValueAnnuity;
-        const totalContributions = initialInvestment + (periodicContribution * totalPeriods);
-        const totalReturns = totalFutureValue - totalContributions;
-        const returnPercentage = totalContributions > 0 ? (totalReturns / totalContributions) * 100 : 0;
-
-        setResults({
-          futureValue: `$${totalFutureValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          totalContributions: `$${totalContributions.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          totalReturns: `$${totalReturns.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-          returnPercentage: `${returnPercentage.toFixed(1)}%`,
-          annualizedReturn: annualReturn > 0 ? `${annualReturn.toFixed(1)}%` : '0%'
-        });
-      } else {
-        setResults({});
-      }
-    };
-
     calculateInvestment();
   }, [values]);
 
@@ -219,7 +241,7 @@ export default function InvestmentCalculator({ inputs, output, additionalOutputs
 
   return (
     <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-200">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
         {/* Inputs */}
         <div className="space-y-2 sm:space-y-3">
           <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{t.investmentDetails}</h3>
@@ -256,6 +278,23 @@ export default function InvestmentCalculator({ inputs, output, additionalOutputs
             </div>
           ))}
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateInvestment}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         <div className="space-y-2 sm:space-y-3">

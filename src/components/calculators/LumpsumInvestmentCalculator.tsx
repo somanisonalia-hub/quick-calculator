@@ -29,7 +29,8 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
       initialInvestment: 'Initial Investment',
       totalReturns: 'Expected Returns',
       finalAmount: 'Final Maturity Value',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Reset"
     },
     es: {
       title: 'Calculadora de Inversión en Una Sola Vez',
@@ -40,7 +41,8 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
       initialInvestment: 'Inversión Inicial',
       totalReturns: 'Rendimientos Esperados',
       finalAmount: 'Valor de Vencimiento Final',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Restablecer"
     },
     pt: {
       title: 'Calculadora de Investimento Único',
@@ -51,7 +53,8 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
       initialInvestment: 'Investimento Inicial',
       totalReturns: 'Retornos Esperados',
       finalAmount: 'Valor Final de Vencimento',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Redefinir"
     },
     fr: {
       title: 'Calculateur d\'Investissement Forfaitaire',
@@ -62,7 +65,8 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
       initialInvestment: 'Investissement Initial',
       totalReturns: 'Rendements Attendus',
       finalAmount: 'Valeur Finale à l\'Échéance',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Réinitialiser"
     },
     de: {
       title: 'Einmalinvestitionsrechner',
@@ -73,7 +77,8 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
       initialInvestment: 'Anfängliche Investition',
       totalReturns: 'Erwartete Rendite',
       finalAmount: 'Endwert bei Fälligkeit',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Zurücksetzen"
     },
     nl: {
       title: 'Eenmalige Investering Rekenmachine',
@@ -84,7 +89,8 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
       initialInvestment: 'Initiële Investering',
       totalReturns: 'Verwachte Opbrengsten',
       finalAmount: 'Eindwaarde bij Vervaldatum',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Resetten"
     }
   };
 
@@ -103,6 +109,16 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
       totalReturns: totalGain,
       finalAmount: futureValue
     });
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   return (
@@ -178,6 +194,16 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
                   {t.rupee} {results.finalAmount.toLocaleString('en-IN', {maximumFractionDigits: 0})}
                 </p>
               </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
             </div>
           </div>
         )}

@@ -67,7 +67,7 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       age: "Age",
       activityLevel: "Activity Level",
       exerciseFrequency: "Exercise Frequency",
-      calculate: "Calculate TDEE",
+      calculate: "🔄 Recalculate",
       results: "TDEE Results",
       tdee: "Total Daily Energy Expenditure (TDEE)",
       bmr: "Basal Metabolic Rate (BMR)",
@@ -80,7 +80,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
         lightly_active: "Lightly Active (light exercise 1-3 days/week)",
         moderately_active: "Moderately Active (moderate exercise 3-5 days/week)",
         very_active: "Very Active (hard exercise 6-7 days/week)",
-        extremely_active: "Extremely Active (very hard exercise, physical job, or 2x training)"
+        extremely_active: "Extremely Active (very hard exercise, physical job, or 2x training)",
+      reset: "Reset"
       },
       exerciseFrequencyOptions: {
         none: "None (sedentary lifestyle)",
@@ -116,7 +117,7 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       age: "Edad",
       activityLevel: "Nivel de Actividad",
       exerciseFrequency: "Frecuencia de Ejercicio",
-      calculate: "Calcular TDEE",
+      calculate: "🔄 Recalcular",
       results: "Resultados de TDEE",
       tdee: "Gasto Energético Total Diario (TDEE)",
       bmr: "Tasa Metabólica Basal (BMR)",
@@ -129,7 +130,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
         lightly_active: "Ligeramente Activo (ejercicio ligero 1-3 días/semana)",
         moderately_active: "Moderadamente Activo (ejercicio moderado 3-5 días/semana)",
         very_active: "Muy Activo (ejercicio duro 6-7 días/semana)",
-        extremely_active: "Extremadamente Activo (ejercicio muy duro, trabajo físico, o 2x entrenamiento)"
+        extremely_active: "Extremadamente Activo (ejercicio muy duro, trabajo físico, o 2x entrenamiento)",
+      reset: "Restablecer"
       },
       exerciseFrequencyOptions: {
         none: "Ninguno (estilo de vida sedentario)",
@@ -165,7 +167,7 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       age: "Idade",
       activityLevel: "Nível de Atividade",
       exerciseFrequency: "Frequência de Exercício",
-      calculate: "Calcular TDEE",
+      calculate: "🔄 Recalcular",
       results: "Resultados de TDEE",
       tdee: "Gasto Energético Total Diário (TDEE)",
       bmr: "Taxa Metabólica Basal (BMR)",
@@ -178,7 +180,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
         lightly_active: "Ligeramente Ativo (exercício leve 1-3 dias/semana)",
         moderately_active: "Moderadamente Ativo (exercício moderado 3-5 dias/semana)",
         very_active: "Muito Ativo (exercício duro 6-7 dias/semana)",
-        extremely_active: "Extremamente Ativo (exercício muito duro, trabalho físico, ou 2x treinamento)"
+        extremely_active: "Extremamente Ativo (exercício muito duro, trabalho físico, ou 2x treinamento)",
+      reset: "Redefinir"
       },
       exerciseFrequencyOptions: {
         none: "Nenhum (estilo de vida sedentário)",
@@ -214,7 +217,7 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       age: "Âge",
       activityLevel: "Niveau d'Activité",
       exerciseFrequency: "Fréquence d'Exercice",
-      calculate: "Calculer TDEE",
+      calculate: "🔄 Recalculer",
       results: "Résultats TDEE",
       tdee: "Dépense Énergétique Totale Quotidienne (TDEE)",
       bmr: "Taux Métabolique Basal (BMR)",
@@ -227,7 +230,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
         lightly_active: "Légèrement Actif (exercice léger 1-3 jours/semaine)",
         moderately_active: "Modérément Actif (exercice modéré 3-5 jours/semaine)",
         very_active: "Très Actif (exercice dur 6-7 jours/semaine)",
-        extremely_active: "Extrêmement Actif (exercice très dur, travail physique, ou 2x entraînement)"
+        extremely_active: "Extrêmement Actif (exercice très dur, travail physique, ou 2x entraînement)",
+      reset: "Réinitialiser"
       },
       exerciseFrequencyOptions: {
         none: "Aucun (style de vie sédentaire)",
@@ -275,7 +279,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
         lightly_active: "Leicht aktiv (leichte Bewegung 1-3 Tage/Woche)",
         moderately_active: "Mäßig aktiv (moderate Bewegung 3-5 Tage/Woche)",
         very_active: "Sehr aktiv (intensive Bewegung 6-7 Tage/Woche)",
-        extremely_active: "Extrem aktiv (sehr intensive Bewegung, körperliche Arbeit, oder 2x Training)"
+        extremely_active: "Extrem aktiv (sehr intensive Bewegung, körperliche Arbeit, oder 2x Training)",
+      reset: "Zurücksetzen"
       },
       exerciseFrequencyOptions: {
         none: "Keine (sitzendes Leben)",
@@ -323,7 +328,8 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
         lightly_active: "Licht Actief (lichte beweging 1-3 dagen/week)",
         moderately_active: "Matig Actief (matige beweging 3-5 dagen/week)",
         very_active: "Zeer Actief (intensieve beweging 6-7 dagen/week)",
-        extremely_active: "Extreem Actief (zeer intensieve beweging, lichamelijk werk, of 2x training)"
+        extremely_active: "Extreem Actief (zeer intensieve beweging, lichamelijk werk, of 2x training)",
+      reset: "Resetten"
       },
       exerciseFrequencyOptions: {
         none: "Geen (zittend leven)",
@@ -392,6 +398,16 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
         very_active: "Muy Activo",
         extremely_active: "Extremadamente Activo"
       };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
       activityCategory = categories[data.activityLevel as keyof typeof categories] || "Moderado";
     } else if (lang === 'pt') {
       const categories = {
@@ -585,7 +601,24 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
                   <option key={value} value={value}>{label}</option>
                 ))}
               </select>
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateTDEE}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 
@@ -660,7 +693,7 @@ export default function TDEECalculator({ lang }: TDEECalculatorProps) {
       </div>
 
       {/* Information Cards */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
           <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
             🏃‍♂️ Activity Levels Explained

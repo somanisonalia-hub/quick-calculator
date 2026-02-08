@@ -20,11 +20,11 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
     en: {
       title: "Pythagorean Theorem Calculator",
       description: "Calculate missing sides of right triangles using a² + b² = c²",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       sideA: "Side a",
       sideB: "Side b",
       sideC: "Side c (hypotenuse)",
-      calculatedSide: "Calculated Side",
+      calculatedSide: "🔄 Recalculate",
       formulaUsed: "Formula Used",
       stepByStep: "Step-by-Step Solution",
       triangleType: "Triangle Type",
@@ -41,12 +41,13 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
       notRightTriangle: "Not a right triangle",
       pythagoreanTheorem: "Pythagorean Theorem",
       theoremExplanation: "In a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides",
-      stepsAppear: "Steps will appear here"
+      stepsAppear: "Steps will appear here",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora del Teorema de Pitágoras",
       description: "Calcula lados faltantes de triángulos rectángulos usando a² + b² = c²",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       sideA: "Lado a",
       sideB: "Lado b",
       sideC: "Lado c (hipotenusa)",
@@ -67,12 +68,13 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
       notRightTriangle: "No es triángulo rectángulo",
       pythagoreanTheorem: "Teorema de Pitágoras",
       theoremExplanation: "En un triángulo rectángulo, el cuadrado de la hipotenusa es igual a la suma de cuadrados de los otros dos lados",
-      stepsAppear: "Los pasos aparecerán aquí"
+      stepsAppear: "Los pasos aparecerán aquí",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora do Teorema de Pitágoras",
       description: "Calcule lados faltantes de triângulos retângulos usando a² + b² = c²",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       sideA: "Lado a",
       sideB: "Lado b",
       sideC: "Lado c (hipotenusa)",
@@ -93,12 +95,13 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
       notRightTriangle: "Não é triângulo retângulo",
       pythagoreanTheorem: "Teorema de Pitágoras",
       theoremExplanation: "Em um triângulo retângulo, o quadrado da hipotenusa é igual à soma dos quadrados dos outros dois lados",
-      stepsAppear: "Os passos aparecerão aqui"
+      stepsAppear: "Os passos aparecerão aqui",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur du Théorème de Pythagore",
       description: "Calculez côtés manquants de triangles rectangles utilisant a² + b² = c²",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       sideA: "Côté a",
       sideB: "Côté b",
       sideC: "Côté c (hypoténuse)",
@@ -119,7 +122,8 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
       notRightTriangle: "Pas un triangle rectangle",
       pythagoreanTheorem: "Théorème de Pythagore",
       theoremExplanation: "Dans un triangle rectangle, le carré de l'hypoténuse égale la somme des carrés des deux autres côtés",
-      stepsAppear: "Les étapes apparaîtront ici"
+      stepsAppear: "Les étapes apparaîtront ici",
+      reset: "Réinitialiser"
     }
   };
 
@@ -185,6 +189,16 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
     setFormula(formulaText);
     setSteps(stepsText);
     setTriangleType(triangleTypeText);
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   useEffect(() => {
@@ -284,7 +298,18 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
           <div className="p-4 bg-green-50 rounded-lg">
             <h4 className="text-sm font-semibold text-green-900 mb-2">{t.pythagoreanTheorem}</h4>
             <p className="text-sm text-green-700">{t.theoremExplanation}</p>
-            <div className="mt-2 text-lg font-mono text-green-800">{t.formulaPythagorean}</div>
+            <div className="mt-2 text-lg font-mono text-green-800">{t.formulaPythagorean}
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 

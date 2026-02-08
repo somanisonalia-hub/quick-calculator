@@ -12,50 +12,59 @@ export default function ProbabilityCalculator({ lang = 'en' }: ProbabilityCalcul
     totalOutcomes: 6
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Probability Calculator",
       description: "Calculate probability of events",
       favorableOutcomes: "Favorable Outcomes",
       totalOutcomes: "Total Possible Outcomes",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       results: "Results",
       probability: "Probability",
       percentage: "Percentage",
-      odds: "Odds"
+      odds: "Odds",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Probabilidad",
       description: "Calcular probabilidad de eventos",
       favorableOutcomes: "Resultados Favorables",
       totalOutcomes: "Total de Resultados Posibles",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       probability: "Probabilidad",
       percentage: "Porcentaje",
-      odds: "Probabilidades"
+      odds: "Probabilidades",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Probabilidade",
       description: "Calcular probabilidade de eventos",
       favorableOutcomes: "Resultados Favoráveis",
       totalOutcomes: "Total de Resultados Possíveis",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       probability: "Probabilidade",
       percentage: "Porcentagem",
-      odds: "Chances"
+      odds: "Chances",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Probabilité",
       description: "Calculer la probabilité des événements",
       favorableOutcomes: "Résultats Favorables",
       totalOutcomes: "Total des Résultats Possibles",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       probability: "Probabilité",
       percentage: "Pourcentage",
-      odds: "Cotes"
+      odds: "Cotes",
+      reset: "Réinitialiser"
     }
   };
 
@@ -78,6 +87,16 @@ export default function ProbabilityCalculator({ lang = 'en' }: ProbabilityCalcul
             min="0"
             className="w-full px-4 py-2 border rounded-lg"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

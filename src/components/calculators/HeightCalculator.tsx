@@ -36,7 +36,8 @@ const translations = {
     nutrition: 'Nutrition',
     sleep: 'Sleep Quality',
     exercise: 'Physical Activity',
-    health: 'Overall Health'
+    health: 'Overall Health',
+      reset: "Reset"
   },
   es: {
     title: 'Calculadora de Altura',
@@ -67,7 +68,8 @@ const translations = {
     nutrition: 'Nutrición',
     sleep: 'Calidad del Sueño',
     exercise: 'Actividad Física',
-    health: 'Salud General'
+    health: 'Salud General',
+      reset: "Restablecer"
   },
   pt: {
     title: 'Calculadora de Altura',
@@ -98,7 +100,8 @@ const translations = {
     nutrition: 'Nutrição',
     sleep: 'Qualidade do Sono',
     exercise: 'Atividade Física',
-    health: 'Saúde Geral'
+    health: 'Saúde Geral',
+      reset: "Redefinir"
   },
   fr: {
     title: 'Calculateur de Taille',
@@ -129,7 +132,8 @@ const translations = {
     nutrition: 'Nutrition',
     sleep: 'Qualité du Sommeil',
     exercise: 'Activité Physique',
-    health: 'Santé Générale'
+    health: 'Santé Générale',
+      reset: "Réinitialiser"
   }
 };
 
@@ -173,6 +177,16 @@ export default function HeightCalculator({ lang = 'en' }: HeightCalculatorProps)
       min: Math.round((predicted - margin) * 10) / 10,
       max: Math.round((predicted + margin) * 10) / 10
     });
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   const formatHeight = (cm: number) => {
@@ -314,7 +328,17 @@ export default function HeightCalculator({ lang = 'en' }: HeightCalculatorProps)
       </button>
 
       {result && (
-        <div className="mt-8 space-y-4">
+        <div className="space-y-4">
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+          <div className="mt-8 space-y-4">
           <div className="bg-gradient-to-r from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30 rounded-xl p-6 text-center">
             <p className="text-gray-600 dark:text-gray-400 mb-2">{t.predictedHeight}</p>
             <p className="text-4xl font-bold text-green-600 dark:text-green-400">
@@ -331,8 +355,7 @@ export default function HeightCalculator({ lang = 'en' }: HeightCalculatorProps)
 
           <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
             ⚠️ {t.disclaimer}
-          </p>
-        </div>
+          </p>          </div>        </div>
       )}
 
       {/* Height Factors */}

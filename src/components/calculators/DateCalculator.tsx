@@ -15,7 +15,9 @@ export default function DateCalculator({ lang = 'en' }: DateCalculatorProps) {
       startDate: "Start Date",
       endDate: "End Date",
       result: "Result",
-      daysBetween: "days between the dates"
+      daysBetween: "days between the dates",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Fechas",
@@ -23,7 +25,9 @@ export default function DateCalculator({ lang = 'en' }: DateCalculatorProps) {
       startDate: "Fecha de Inicio",
       endDate: "Fecha Final",
       result: "Resultado",
-      daysBetween: "días entre las fechas"
+      daysBetween: "días entre las fechas",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Datas",
@@ -31,7 +35,9 @@ export default function DateCalculator({ lang = 'en' }: DateCalculatorProps) {
       startDate: "Data Inicial",
       endDate: "Data Final",
       result: "Resultado",
-      daysBetween: "dias entre as datas"
+      daysBetween: "dias entre as datas",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Dates",
@@ -39,7 +45,9 @@ export default function DateCalculator({ lang = 'en' }: DateCalculatorProps) {
       startDate: "Date de Début",
       endDate: "Date de Fin",
       result: "Résultat",
-      daysBetween: "jours entre les dates"
+      daysBetween: "jours entre les dates",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     },
     de: {
       title: "Datumsrechner",
@@ -47,7 +55,9 @@ export default function DateCalculator({ lang = 'en' }: DateCalculatorProps) {
       startDate: "Startdatum",
       endDate: "Enddatum",
       result: "Resultat",
-      daysBetween: "Tage zwischen den Daten"
+      daysBetween: "Tage zwischen den Daten",
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Datumcalculator",
@@ -55,7 +65,9 @@ export default function DateCalculator({ lang = 'en' }: DateCalculatorProps) {
       startDate: "Startdatum",
       endDate: "Einddatum",
       result: "Resultaat",
-      daysBetween: "dagen tussen de datums"
+      daysBetween: "dagen tussen de datums",
+      calculate: "🔄 Herberekenen",
+      reset: "Resetten"
     }
   };
 
@@ -75,6 +87,16 @@ export default function DateCalculator({ lang = 'en' }: DateCalculatorProps) {
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
     setResult(`${diffDays} ${t.daysBetween}`);
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   return (
@@ -114,6 +136,16 @@ export default function DateCalculator({ lang = 'en' }: DateCalculatorProps) {
 
         {result && (
           <div className="bg-green-50 p-4 rounded-lg">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
             <h3 className="text-lg font-semibold text-green-900 mb-2">{t.result}</h3>
             <div className="text-xl font-bold text-green-600">{result}</div>
           </div>

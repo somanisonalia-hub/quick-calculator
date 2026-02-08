@@ -12,60 +12,71 @@ export default function ExponentCalculator({ lang = 'en' }: ExponentCalculatorPr
     exponent: 3
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Exponent Calculator",
       description: "Calculate powers and exponential expressions",
       base: "Base",
       exponent: "Exponent",
-      calculate: "Calculate",
+      calculate: "🔄 Recalculate",
       result: "Result",
-      formula: "Formula"
+      formula: "Formula",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Exponentes",
       description: "Calcular potencias y expresiones exponenciales",
       base: "Base",
       exponent: "Exponente",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
-      formula: "Fórmula"
+      formula: "Fórmula",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Expoentes",
       description: "Calcular potências e expressões exponenciais",
       base: "Base",
       exponent: "Expoente",
-      calculate: "Calcular",
+      calculate: "🔄 Recalcular",
       result: "Resultado",
-      formula: "Fórmula"
+      formula: "Fórmula",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur d'Exposants",
       description: "Calculer les puissances et expressions exponentielles",
       base: "Base",
       exponent: "Exposant",
-      calculate: "Calculer",
+      calculate: "🔄 Recalculer",
       result: "Résultat",
-      formula: "Formule"
+      formula: "Formule",
+      reset: "Réinitialiser"
     },
     de: {
       title: "Exponentenrechner",
       description: "Berechnen Sie Potenzen und exponentielle Ausdrücke",
       base: "Basis",
       exponent: "Exponent",
-      calculate: "Berechnen",
+      calculate: "🔄 Neu berechnen",
       result: "Ergebnis",
-      formula: "Formel"
+      formula: "Formel",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Machtscalculator",
       description: "Bereken machten en exponentiële uitdrukkingen",
       base: "Basis",
       exponent: "Exponent",
-      calculate: "Berekenen",
+      calculate: "🔄 Herberekenen",
       result: "Resultaat",
-      formula: "Formule"
+      formula: "Formule",
+      reset: "Resetten"
     }
   };
 
@@ -87,6 +98,16 @@ export default function ExponentCalculator({ lang = 'en' }: ExponentCalculatorPr
             onChange={(e) => setInputs({ ...inputs, base: Number(e.target.value) })}
             className="w-full px-4 py-2 border rounded-lg"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

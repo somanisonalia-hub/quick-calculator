@@ -31,7 +31,8 @@ const translations = {
     marathon: 'Marathon',
     halfMarathon: 'Half Marathon',
     tenK: '10K',
-    fiveK: '5K'
+    fiveK: '5K',
+      reset: "Reset"
   },
   es: {
     title: 'Calculadora de Ritmo',
@@ -57,7 +58,8 @@ const translations = {
     marathon: 'Maratón',
     halfMarathon: 'Medio Maratón',
     tenK: '10K',
-    fiveK: '5K'
+    fiveK: '5K',
+      reset: "Restablecer"
   },
   pt: {
     title: 'Calculadora de Ritmo',
@@ -83,7 +85,8 @@ const translations = {
     marathon: 'Maratona',
     halfMarathon: 'Meia Maratona',
     tenK: '10K',
-    fiveK: '5K'
+    fiveK: '5K',
+      reset: "Redefinir"
   },
   fr: {
     title: 'Calculateur d\'Allure',
@@ -109,7 +112,8 @@ const translations = {
     marathon: 'Marathon',
     halfMarathon: 'Semi-Marathon',
     tenK: '10K',
-    fiveK: '5K'
+    fiveK: '5K',
+      reset: "Réinitialiser"
   }
 };
 
@@ -177,6 +181,16 @@ export default function PaceCalculator({ lang = 'en' }: PaceCalculatorProps) {
 
     setResult(resultText);
     setSplits(newSplits.slice(0, 10));
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   const raceDistances = [
@@ -352,7 +366,17 @@ export default function PaceCalculator({ lang = 'en' }: PaceCalculatorProps) {
       </button>
 
       {result && (
-        <div className="mt-8 space-y-4">
+        <div className="space-y-4">
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+          <div className="mt-8 space-y-4">
           <div className="bg-gradient-to-r from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-xl p-6 text-center">
             <p className="text-gray-600 dark:text-gray-400 mb-2">
               {mode === 'pace' ? t.pace : mode === 'time' ? t.time : t.distance}
@@ -374,6 +398,7 @@ export default function PaceCalculator({ lang = 'en' }: PaceCalculatorProps) {
               </div>
             </div>
           )}
+          </div>
         </div>
       )}
     </div>

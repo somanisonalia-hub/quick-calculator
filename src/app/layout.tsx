@@ -79,6 +79,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Smooth Calculator Transition - Prevents Flash */}
+        <style dangerouslySetInnerHTML={{__html: `
+          #calculator-section { 
+            transition: opacity 0.15s ease-out; 
+          }
+          #interactive-calculator-overlay { 
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+          }
+          .calculator-ready #interactive-calculator-overlay { 
+            opacity: 1; 
+          }
+        `}} />
+        
         {/* Resource Hints for Performance */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

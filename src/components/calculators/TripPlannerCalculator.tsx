@@ -73,7 +73,8 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
       tip2: 'Food and activities should be 20-30%',
       tip3: 'Transport costs vary; budget 10-20% depending on distance',
       tip4: 'Keep 10-15% for miscellaneous and emergencies',
-      tip5: 'Research local prices and transport options in advance'
+      tip5: 'Research local prices and transport options in advance',
+      reset: "Reset"
     },
     es: {
       title: 'Planificador de Presupuesto de Viaje',
@@ -104,7 +105,8 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
       tip2: 'Comida y actividades deben ser el 20-30%',
       tip3: 'Los costos de transporte varían; presupueste 10-20% según la distancia',
       tip4: 'Mantenga el 10-15% para gastos varios y emergencias',
-      tip5: 'Investigue precios locales y opciones de transporte con antelación'
+      tip5: 'Investigue precios locales y opciones de transporte con antelación',
+      reset: "Restablecer"
     },
     pt: {
       title: 'Planejador de Orçamento de Viagem',
@@ -135,7 +137,8 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
       tip2: 'Comida e atividades devem ser 20-30%',
       tip3: 'Custos de transporte variam; orçamento de 10-20% dependendo da distância',
       tip4: 'Mantenha 10-15% para despesas diversas e emergências',
-      tip5: 'Pesquise preços locais e opções de transporte com antecedência'
+      tip5: 'Pesquise preços locais e opções de transporte com antecedência',
+      reset: "Redefinir"
     },
     fr: {
       title: 'Planificateur de Budget de Voyage',
@@ -166,7 +169,8 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
       tip2: 'La nourriture et les activités doivent être 20-30%',
       tip3: 'Les coûts de transport varient; budgétez 10-20% selon la distance',
       tip4: 'Behalten Sie 10-15% für sonstige Ausgaben und Notfälle',
-      tip5: 'Recherchieren Sie im Voraus lokale Preise und Transportoptionen'
+      tip5: 'Recherchieren Sie im Voraus lokale Preise und Transportoptionen',
+      reset: "Réinitialiser"
     },
     nl: {
       title: 'Reisbudgetplanner',
@@ -197,7 +201,8 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
       tip2: 'Voedsel en activiteiten moeten 20-30% bedragen',
       tip3: 'Vervoerskosten variëren; budget 10-20% afhankelijk van afstand',
       tip4: 'Houd 10-15% achter voor overige uitgaven en noodgevallen',
-      tip5: 'Onderzoek van tevoren lokale prijzen en vervoersopties'
+      tip5: 'Onderzoek van tevoren lokale prijzen en vervoersopties',
+      reset: "Resetten"
     },
     de: {
       title: 'Reisebudget-Planer',
@@ -228,7 +233,8 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
       tip2: 'Lebensmittel und Aktivitäten sollten 20-30% betragen',
       tip3: 'Transportkosten variieren; Budget 10-20% je nach Entfernung',
       tip4: 'Behalten Sie 10-15% für sonstige Ausgaben und Notfälle',
-      tip5: 'Recherchieren Sie im Voraus lokale Preise und Transportoptionen'
+      tip5: 'Recherchieren Sie im Voraus lokale Preise und Transportoptionen',
+      reset: "Zurücksetzen"
     }
   };
 
@@ -257,6 +263,16 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
     setCalculated(true);
   };
 
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
+
   const accommodationPercent = (results.totalAccommodation / results.grandTotal * 100).toFixed(1);
   const mealsPercent = (results.totalMeals / results.grandTotal * 100).toFixed(1);
   const activitiesPercent = (results.totalActivities / results.grandTotal * 100).toFixed(1);
@@ -267,7 +283,7 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
     <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
       <div className="space-y-6">
         {/* Input Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid lg:grid-cols-2 lg:grid-cols-4 gap-4">
           <div>
             <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2 text-sm">
               {t.numberOfPeople}
@@ -320,7 +336,7 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
         {/* Daily Costs */}
         <div className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t.dailyBudgetItems}</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid lg:grid-cols-2 lg:grid-cols-4 gap-4">
             <div>
               <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2 text-sm">
                 {t.dailyAccommodation}
@@ -414,6 +430,17 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
         >
           {t.calculate}
         </button>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         {calculated && (
@@ -445,7 +472,7 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
             {/* Detailed Breakdown */}
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t.breakdown}</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div className="space-y-3">
                   <div className="flex justify-between items-center pb-2 border-b border-gray-200 dark:border-gray-700">
                     <span className="text-gray-700 dark:text-gray-300 font-medium">{t.totalAccommodation}</span>

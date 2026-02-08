@@ -44,7 +44,8 @@ export default function RentVsBuyCalculator({ lang = 'en' }: RentVsBuyCalculator
       equity: "Your Equity",
       costDifference: "Cost Difference",
       betterOption: "Better Option",
-      reset: "Reset"
+      reset: "Reset",
+      calculate: "🔄 Recalculate"
     },
     es: {
       title: "Calculadora Alquilar vs Comprar",
@@ -64,7 +65,8 @@ export default function RentVsBuyCalculator({ lang = 'en' }: RentVsBuyCalculator
       equity: "Tu Patrimonio",
       costDifference: "Diferencia de Costo",
       betterOption: "Mejor Opción",
-      reset: "Reiniciar"
+      reset: "Reiniciar",
+      calculate: "🔄 Recalcular"
     },
     pt: {
       title: "Calculadora Alquilar vs Comprar",
@@ -84,7 +86,8 @@ export default function RentVsBuyCalculator({ lang = 'en' }: RentVsBuyCalculator
       equity: "Seu Patrimônio",
       costDifference: "Diferença de Custo",
       betterOption: "Melhor Opção",
-      reset: "Reiniciar"
+      reset: "Reiniciar",
+      calculate: "🔄 Recalcular"
     },
     fr: {
       title: "Calculateur Location vs Achat",
@@ -104,7 +107,8 @@ export default function RentVsBuyCalculator({ lang = 'en' }: RentVsBuyCalculator
       equity: "Votre Patrimoine",
       costDifference: "Différence de Coût",
       betterOption: "Meilleure Option",
-      reset: "Réinitialiser"
+      reset: "Réinitialiser",
+      calculate: "🔄 Recalculer"
     },
     de: {
       title: "Miete vs Kauf Rechner",
@@ -124,7 +128,8 @@ export default function RentVsBuyCalculator({ lang = 'en' }: RentVsBuyCalculator
       equity: "Ihr Eigenkapital",
       costDifference: "Kostendifferenz",
       betterOption: "Bessere Option",
-      reset: "Zurücksetzen"
+      reset: "Zurücksetzen",
+      calculate: "🔄 Neu berechnen"
     }
   };
 
@@ -340,6 +345,16 @@ export default function RentVsBuyCalculator({ lang = 'en' }: RentVsBuyCalculator
 
       {/* Results Section */}
       <div className="space-y-4">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateComparison}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+          </div>
+
         <h2 className="text-xl font-bold text-gray-900">{t.results}</h2>
 
         <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 text-center mb-4">
@@ -352,7 +367,7 @@ export default function RentVsBuyCalculator({ lang = 'en' }: RentVsBuyCalculator
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <p className="text-sm text-gray-600">{t.monthlyMortgage}</p>
             <p className="text-2xl font-bold text-blue-600 mt-1">

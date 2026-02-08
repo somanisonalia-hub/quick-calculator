@@ -12,13 +12,22 @@ export default function DiscountCalculator({ lang = 'en' }: DiscountCalculatorPr
   const [quantity, setQuantity] = useState<number>(1);
   const [showBreakdown, setShowBreakdown] = useState(true);
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setOriginalPrice(0);
+    setDiscountPercent(0);
+    setQuantity(0);
+    // Additional state resets may be needed
+  };
+
   const translations = {
     en: {
       title: 'Discount Calculator',
       originalPrice: 'Original Price',
       discountPercent: 'Discount (%)',
       quantity: 'Quantity',
-      calculate: 'Calculate',
+      calculate: '🔄 Recalculate',
+      reset: 'Reset',
       results: 'Results',
       discountAmount: 'Discount Amount',
       pricePerItem: 'Price Per Item (After Discount)',
@@ -41,7 +50,8 @@ export default function DiscountCalculator({ lang = 'en' }: DiscountCalculatorPr
       originalPrice: 'Precio Original',
       discountPercent: 'Descuento (%)',
       quantity: 'Cantidad',
-      calculate: 'Calcular',
+      calculate: '🔄 Recalcular',
+      reset: 'Restablecer',
       results: 'Resultados',
       discountAmount: 'Cantidad de Descuento',
       pricePerItem: 'Precio por Artículo (Después del Descuento)',
@@ -64,7 +74,8 @@ export default function DiscountCalculator({ lang = 'en' }: DiscountCalculatorPr
       originalPrice: 'Preço Original',
       discountPercent: 'Desconto (%)',
       quantity: 'Quantidade',
-      calculate: 'Calcular',
+      calculate: '🔄 Recalcular',
+      reset: 'Redefinir',
       results: 'Resultados',
       discountAmount: 'Valor do Desconto',
       pricePerItem: 'Preço por Item (Após Desconto)',
@@ -179,6 +190,22 @@ export default function DiscountCalculator({ lang = 'en' }: DiscountCalculatorPr
             />
           </div>
         </div>
+      </div>
+
+      {/* Buttons */}
+      <div className="flex gap-3 pt-4">
+        <button
+          onClick={() => setOriginalPrice(originalPrice)}
+          className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+        >
+          {t.calculate}
+        </button>
+        <button
+          onClick={resetCalculator}
+          className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+        >
+          {t.reset}
+        </button>
       </div>
 
       {/* Results Section */}

@@ -14,13 +14,14 @@ export default function SavingsGoalCalculator({ lang = 'en' }: SavingsGoalCalcul
       currentSavings: "Current Savings ($)",
       monthlyContribution: "Monthly Contribution ($)",
       annualReturn: "Expected Annual Return (%)",
-      calculate: "Calculate Timeline",
+      calculate: "🔄 Recalculate",
       results: "Results",
       monthsToGoal: "Months to Reach Goal",
       yearsToGoal: "Years to Reach Goal",
       totalContributions: "Total Contributions Needed",
       totalEarnings: "Total Investment Earnings",
       onTrack: "You're on track to reach your goal!",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Meta de Ahorro",
@@ -28,13 +29,14 @@ export default function SavingsGoalCalculator({ lang = 'en' }: SavingsGoalCalcul
       currentSavings: "Ahorros Actuales ($)",
       monthlyContribution: "Contribución Mensual ($)",
       annualReturn: "Rendimiento Anual Esperado (%)",
-      calculate: "Calcular Cronología",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       monthsToGoal: "Meses para Alcanzar la Meta",
       yearsToGoal: "Años para Alcanzar la Meta",
       totalContributions: "Contribuciones Totales Necesarias",
       totalEarnings: "Ganancias Totales de Inversión",
       onTrack: "¡Estás en camino de alcanzar tu meta!",
+      reset: "Restablecer"
     },
     fr: {
       title: "Calculateur d'Objectif d'Épargne",
@@ -42,13 +44,14 @@ export default function SavingsGoalCalculator({ lang = 'en' }: SavingsGoalCalcul
       currentSavings: "Épargne Actuelle ($)",
       monthlyContribution: "Cotisation Mensuelle ($)",
       annualReturn: "Rendement Annuel Prévu (%)",
-      calculate: "Calculer le Calendrier",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       monthsToGoal: "Mois pour Atteindre l'Objectif",
       yearsToGoal: "Années pour Atteindre l'Objectif",
       totalContributions: "Cotisations Totales Nécessaires",
       totalEarnings: "Gains Totaux d'Investissement",
       onTrack: "Vous êtes sur la bonne voie pour atteindre votre objectif !",
+      reset: "Réinitialiser"
     },
     pt: {
       title: "Calculadora de Meta de Poupança",
@@ -56,13 +59,14 @@ export default function SavingsGoalCalculator({ lang = 'en' }: SavingsGoalCalcul
       currentSavings: "Poupança Atual ($)",
       monthlyContribution: "Contribuição Mensal ($)",
       annualReturn: "Retorno Anual Esperado (%)",
-      calculate: "Calcular Cronograma",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       monthsToGoal: "Meses para Atingir a Meta",
       yearsToGoal: "Anos para Atingir a Meta",
       totalContributions: "Contribuições Totais Necessárias",
       totalEarnings: "Ganhos Totais de Investimento",
       onTrack: "Você está no caminho certo para atingir sua meta!",
+      reset: "Redefinir"
     },
   };
 
@@ -94,6 +98,16 @@ export default function SavingsGoalCalculator({ lang = 'en' }: SavingsGoalCalcul
       totalContributions,
       totalEarnings: Math.max(0, totalEarnings),
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
   };
 
   const results = calculateGoal();
@@ -101,7 +115,7 @@ export default function SavingsGoalCalculator({ lang = 'en' }: SavingsGoalCalcul
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.goalAmount}
@@ -162,9 +176,19 @@ export default function SavingsGoalCalculator({ lang = 'en' }: SavingsGoalCalcul
 
       {calculated && (
         <div className="bg-white rounded-lg shadow-md p-6">
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
           <h3 className="text-2xl font-bold mb-6 text-gray-800">{t.results}</h3>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="grid lg:grid-cols-2 gap-4 mb-6">
             <div className="bg-blue-50 p-4 rounded-lg">
               <div className="text-sm text-gray-600 mb-1">{t.yearsToGoal}</div>
               <div className="text-3xl font-bold text-blue-600">

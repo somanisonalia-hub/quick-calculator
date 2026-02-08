@@ -18,40 +18,48 @@ export default function TipCalculator({ lang = 'en' }: TipCalculatorProps) {
       description: "Calculate tips and split bills easily",
       billAmount: "Bill Amount",
       tipPercentage: "Tip Percentage",
-      calculateTip: "Calculate Tip",
+      calculateTip: "🔄 Recalculate",
       tipAmount: "Tip Amount",
       totalAmount: "Total Amount",
-      currency: "$"
+      currency: "$",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Propinas",
       description: "Calcula propinas y divide cuentas fácilmente",
       billAmount: "Monto de la Cuenta",
       tipPercentage: "Porcentaje de Propina",
-      calculateTip: "Calcular Propina",
+      calculateTip: "🔄 Recalcular",
       tipAmount: "Monto de Propina",
       totalAmount: "Monto Total",
-      currency: "$"
+      currency: "$",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Gorjeta",
       description: "Calcule gorjetas e divida contas facilmente",
       billAmount: "Valor da Conta",
       tipPercentage: "Porcentagem da Gorjeta",
-      calculateTip: "Calcular Gorjeta",
+      calculateTip: "🔄 Recalcular",
       tipAmount: "Valor da Gorjeta",
       totalAmount: "Valor Total",
-      currency: "R$"
+      currency: "R$",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Pourboire",
       description: "Calculez les pourboires et divisez les factures facilement",
       billAmount: "Montant de la Facture",
       tipPercentage: "Pourcentage de Pourboire",
-      calculateTip: "Calculer le Pourboire",
+      calculateTip: "🔄 Recalculer",
       tipAmount: "Montant du Pourboire",
       totalAmount: "Montant Total",
-      currency: "€"
+      currency: "€",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
     },
     de: {
       title: "Trinkgeldrechner",
@@ -61,7 +69,9 @@ export default function TipCalculator({ lang = 'en' }: TipCalculatorProps) {
       calculateTip: "Trinkgeld berechnen",
       tipAmount: "Trinkgeldbetrag",
       totalAmount: "Gesamtbetrag",
-      currency: "€"
+      currency: "€",
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Fooicalculator",
@@ -71,7 +81,9 @@ export default function TipCalculator({ lang = 'en' }: TipCalculatorProps) {
       calculateTip: "Fooi berekenen",
       tipAmount: "Fooibedrag",
       totalAmount: "Totaal bedrag",
-      currency: "€"
+      currency: "€",
+      calculate: "🔄 Herberekenen",
+      reset: "Resetten"
     }
   };
 
@@ -86,6 +98,16 @@ export default function TipCalculator({ lang = 'en' }: TipCalculatorProps) {
 
     setTipAmount(tip.toFixed(2));
     setTotalAmount(total.toFixed(2));
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   return (
@@ -104,6 +126,16 @@ export default function TipCalculator({ lang = 'en' }: TipCalculatorProps) {
             onChange={(e) => setBillAmount(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

@@ -73,7 +73,7 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       method: "Calculation Method",
       waist: "Waist Circumference",
       hip: "Hip Circumference",
-      calculate: "Calculate Body Composition",
+      calculate: "🔄 Recalculate",
       results: "Body Composition Results",
       leanBodyMass: "Lean Body Mass",
       bodyFatPercentage: "Body Fat Percentage",
@@ -83,7 +83,8 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       methodOptions: {
         bmi: "BMI Method (Basic)",
         navy: "Navy Method (Most Accurate)",
-        boer: "Boer Formula (Lean Mass Focus)"
+        boer: "Boer Formula (Lean Mass Focus)",
+      reset: "Reset"
       },
       genderOptions: {
         male: "Male",
@@ -131,7 +132,7 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       method: "Método de Cálculo",
       waist: "Circunferencia de Cintura",
       hip: "Circunferencia de Cadera",
-      calculate: "Calcular Composición Corporal",
+      calculate: "🔄 Recalcular",
       results: "Resultados de Composición Corporal",
       leanBodyMass: "Masa Corporal Magra",
       bodyFatPercentage: "Porcentaje de Grasa Corporal",
@@ -141,7 +142,8 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       methodOptions: {
         bmi: "Método IMC (Básico)",
         navy: "Método Navy (Más Preciso)",
-        boer: "Fórmula Boer (Enfoque Masa Magra)"
+        boer: "Fórmula Boer (Enfoque Masa Magra)",
+      reset: "Restablecer"
       },
       genderOptions: {
         male: "Masculino",
@@ -189,7 +191,7 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       method: "Método de Cálculo",
       waist: "Circunferência da Cintura",
       hip: "Circunferência do Quadril",
-      calculate: "Calcular Composição Corporal",
+      calculate: "🔄 Recalcular",
       results: "Resultados de Composição Corporal",
       leanBodyMass: "Massa Corporal Magra",
       bodyFatPercentage: "Porcentagem de Gordura Corporal",
@@ -199,7 +201,8 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       methodOptions: {
         bmi: "Método IMC (Básico)",
         navy: "Método Navy (Mais Preciso)",
-        boer: "Fórmula Boer (Foco Massa Magra)"
+        boer: "Fórmula Boer (Foco Massa Magra)",
+      reset: "Redefinir"
       },
       genderOptions: {
         male: "Masculino",
@@ -247,7 +250,7 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       method: "Méthode de Calcul",
       waist: "Tour de Taille",
       hip: "Tour de Hanches",
-      calculate: "Calculer Composition Corporelle",
+      calculate: "🔄 Recalculer",
       results: "Résultats de Composition Corporelle",
       leanBodyMass: "Masse Corporelle Maigre",
       bodyFatPercentage: "Pourcentage de Graisse Corporelle",
@@ -257,7 +260,8 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       methodOptions: {
         bmi: "Méthode IMC (Basique)",
         navy: "Méthode Navy (Plus Précise)",
-        boer: "Formule Boer (Focus Masse Maigre)"
+        boer: "Formule Boer (Focus Masse Maigre)",
+      reset: "Réinitialiser"
       },
       genderOptions: {
         male: "Masculin",
@@ -388,6 +392,16 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       bodyFatCategory: category,
       bmi: Math.round(bmi * 10) / 10
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
   };
 
   const results = useMemo((): BodyCompositionResults => {
@@ -591,6 +605,23 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
             )}
           </div>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateBodyComposition}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
@@ -647,7 +678,7 @@ export default function LeanBodyMassCalculator({ lang }: LeanBodyMassCalculatorP
       </div>
 
       {/* Information Cards */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
           <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
             {t.measurementtips}

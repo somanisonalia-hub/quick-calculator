@@ -281,7 +281,6 @@ export default async function LangCalculatorPage({ params }: { params: Promise<{
       ]
     };
   };
-
   const faqSchema = generateFAQSchema();
 
   return (
@@ -297,14 +296,14 @@ export default async function LangCalculatorPage({ params }: { params: Promise<{
         seoContent={seoContent}
         breadcrumbs={breadcrumbs}
         serverRenderedForm={serverRenderedForm || <div />}
-      />
-
-      {/* Interactive features loaded client-side */}
-      <CalculatorInteractive 
-        lang={lang}
-        slug={enSlug}
-        calculatorContent={calculatorContent}
-        relatedCalculators={relatedCalculators}
+        calculatorInteractive={
+          <CalculatorInteractive 
+            lang={lang}
+            slug={enSlug}
+            calculatorContent={calculatorContent}
+            relatedCalculators={relatedCalculators}
+          />
+        }
       />
       
       <Footer currentLang={lang} />

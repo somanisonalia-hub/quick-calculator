@@ -49,7 +49,7 @@ export default function OvertimePayCalculator({ lang = 'en' }: OvertimePayCalcul
       hourlyRate: "Regular Hourly Rate ($)",
       totalHours: "Total Hours Worked",
       overtimeMultiplier: "Overtime Multiplier",
-      calculate: "Calculate Overtime Pay",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       results: "Pay Breakdown",
       regularHours: "Regular Hours (40 max)",
@@ -72,7 +72,7 @@ export default function OvertimePayCalculator({ lang = 'en' }: OvertimePayCalcul
       hourlyRate: "Tarifa Horaria Regular ($)",
       totalHours: "Total de Horas Trabajadas",
       overtimeMultiplier: "Multiplicador de Horas Extras",
-      calculate: "Calcular Pago de Horas Extras",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       results: "Desglose de Pago",
       regularHours: "Horas Regulares (40 máx)",
@@ -95,7 +95,7 @@ export default function OvertimePayCalculator({ lang = 'en' }: OvertimePayCalcul
       hourlyRate: "Taxa Horária Regular ($)",
       totalHours: "Total de Horas Trabalhadas",
       overtimeMultiplier: "Multiplicador de Horas Extras",
-      calculate: "Calcular Pagamento de Horas Extras",
+      calculate: "🔄 Recalcular",
       reset: "Redefinir",
       results: "Detalhamento do Pagamento",
       regularHours: "Horas Regulares (40 máx)",
@@ -118,7 +118,7 @@ export default function OvertimePayCalculator({ lang = 'en' }: OvertimePayCalcul
       hourlyRate: "Taux Horaire Régulier ($)",
       totalHours: "Total des Heures Travaillées",
       overtimeMultiplier: "Multiplicateur d'Heures Supplémentaires",
-      calculate: "Calculer le Paiement des Heures Supplémentaires",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       results: "Décomposition du Paiement",
       regularHours: "Heures Régulières (40 max)",
@@ -152,7 +152,7 @@ export default function OvertimePayCalculator({ lang = 'en' }: OvertimePayCalcul
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Input Section */}
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">Input Values</h2>

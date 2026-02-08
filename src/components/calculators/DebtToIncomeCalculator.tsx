@@ -15,7 +15,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
       creditCards: "Credit Card Payments",
       studentLoans: "Student Loans",
       otherDebts: "Other Monthly Debts",
-      calculate: "Calculate DTI Ratio",
+      calculate: "🔄 Recalculate",
       results: "Results",
       dtiRatio: "Debt-to-Income Ratio",
       totalMonthlyDebts: "Total Monthly Debts",
@@ -29,6 +29,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
       goodRec: "Your debt-to-income ratio is good. Most lenders prefer ratios below 36%.",
       fairRec: "Your ratio is borderline. Consider reducing debt before applying for new loans.",
       poorRec: "Your DTI is too high. Focus on paying down debt before taking on new loans.",
+      reset: "Reset"
     },
     es: {
       monthlyIncome: "Ingreso Mensual Bruto",
@@ -37,7 +38,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
       creditCards: "Pagos de Tarjetas de Crédito",
       studentLoans: "Préstamos Estudiantiles",
       otherDebts: "Otras Deudas Mensuales",
-      calculate: "Calcular Ratio DTI",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       dtiRatio: "Relación Deuda-Ingresos",
       totalMonthlyDebts: "Deudas Mensuales Totales",
@@ -51,6 +52,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
       goodRec: "Tu relación deuda-ingresos es buena. La mayoría de prestamistas prefieren ratios bajo 36%.",
       fairRec: "Tu ratio está en el límite. Considera reducir deuda antes de solicitar nuevos préstamos.",
       poorRec: "Tu DTI es demasiado alto. Enfócate en pagar deuda antes de tomar nuevos préstamos.",
+      reset: "Restablecer"
     },
     fr: {
       monthlyIncome: "Revenu Mensuel Brut",
@@ -59,7 +61,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
       creditCards: "Paiements Cartes de Crédit",
       studentLoans: "Prêts Étudiants",
       otherDebts: "Autres Dettes Mensuelles",
-      calculate: "Calculer Ratio DTI",
+      calculate: "🔄 Recalculer",
       results: "Résultats",
       dtiRatio: "Ratio Dette-Revenu",
       totalMonthlyDebts: "Dettes Mensuelles Totales",
@@ -73,6 +75,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
       goodRec: "Votre ratio dette-revenu est bon. La plupart des prêteurs préfèrent des ratios inférieurs à 36%.",
       fairRec: "Votre ratio est limite. Envisagez de réduire vos dettes avant de demander de nouveaux prêts.",
       poorRec: "Votre DTI est trop élevé. Concentrez-vous sur le remboursement de vos dettes avant de contracter de nouveaux prêts.",
+      reset: "Réinitialiser"
     },
     pt: {
       monthlyIncome: "Renda Mensal Bruta",
@@ -81,7 +84,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
       creditCards: "Pagamentos de Cartão de Crédito",
       studentLoans: "Empréstimos Estudantis",
       otherDebts: "Outras Dívidas Mensais",
-      calculate: "Calcular Taxa DTI",
+      calculate: "🔄 Recalcular",
       results: "Resultados",
       dtiRatio: "Relação Dívida-Renda",
       totalMonthlyDebts: "Dívidas Mensais Totais",
@@ -95,6 +98,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
       goodRec: "Sua relação dívida-renda é boa. A maioria dos credores prefere taxas abaixo de 36%.",
       fairRec: "Sua taxa está no limite. Considere reduzir dívidas antes de solicitar novos empréstimos.",
       poorRec: "Seu DTI está muito alto. Foque em pagar dívidas antes de assumir novos empréstimos.",
+      reset: "Redefinir"
     },
   };
 
@@ -107,6 +111,14 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
   const [studentLoans, setStudentLoans] = useState<number | string>('300');
   const [otherDebts, setOtherDebts] = useState<number | string>('100');
   const [calculated, setCalculated] = useState(false);
+
+  const resetCalculator = () => {
+    // Reset to default values
+    setMonthlyIncome(0);
+    setMortgageRent(0);
+    setCarLoans(0);
+    // Additional state resets may be needed
+  };
 
   const totalDebts = (Number(mortgageRent) || 0) + (Number(carLoans) || 0) + (Number(creditCards) || 0) + (Number(studentLoans) || 0) + (Number(otherDebts) || 0);
   const income = Number(monthlyIncome) || 0;
@@ -124,7 +136,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.monthlyIncome}
@@ -196,6 +208,16 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
             />
           </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
         </div>
 
         <button
@@ -210,7 +232,7 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
         <div className="bg-white rounded-lg shadow-md p-6">
           <h3 className="text-2xl font-bold mb-6 text-gray-800">{t.results}</h3>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="grid lg:grid-cols-2 gap-4 mb-6">
             <div className="bg-blue-50 p-4 rounded-lg">
               <div className="text-sm text-gray-600 mb-1">{t.dtiRatio}</div>
               <div className={`text-3xl font-bold ${interpretation.color}`}>

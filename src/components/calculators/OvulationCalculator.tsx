@@ -12,7 +12,7 @@ export default function OvulationCalculator({ lang = 'en' }: OvulationCalculator
       title: "Ovulation Calculator",
       lastPeriodLabel: "First day of last menstrual period",
       cycleLengthLabel: "Average cycle length (days)",
-      calculate: "Calculate Ovulation",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       results: "Fertility Timeline",
       ovulationDate: "Ovulation Date",
@@ -29,7 +29,7 @@ export default function OvulationCalculator({ lang = 'en' }: OvulationCalculator
       title: "Calculadora de Ovulación",
       lastPeriodLabel: "Primer día del último período menstrual",
       cycleLengthLabel: "Duración promedio del ciclo (días)",
-      calculate: "Calcular Ovulación",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       results: "Cronología de Fertilidad",
       ovulationDate: "Fecha de Ovulación",
@@ -46,7 +46,7 @@ export default function OvulationCalculator({ lang = 'en' }: OvulationCalculator
       title: "Calculadora de Ovulação",
       lastPeriodLabel: "Primeiro dia do último período menstrual",
       cycleLengthLabel: "Duração média do ciclo (dias)",
-      calculate: "Calcular Ovulação",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       results: "Cronologia de Fertilidade",
       ovulationDate: "Data de Ovulação",
@@ -63,7 +63,7 @@ export default function OvulationCalculator({ lang = 'en' }: OvulationCalculator
       title: "Calculatrice d'Ovulation",
       lastPeriodLabel: "Premier jour du dernier jour des règles",
       cycleLengthLabel: "Durée moyenne du cycle (jours)",
-      calculate: "Calculer l'Ovulation",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       results: "Chronologie de la Fertilité",
       ovulationDate: "Date d'Ovulation",
@@ -157,7 +157,7 @@ export default function OvulationCalculator({ lang = 'en' }: OvulationCalculator
       </div>
 
       {/* Inputs */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             {t.lastPeriodLabel}
@@ -205,7 +205,7 @@ export default function OvulationCalculator({ lang = 'en' }: OvulationCalculator
         <div className="mt-6 p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-200">
           <h3 className="text-xl font-bold text-gray-900 mb-4">{t.results}</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
             <div className="p-4 bg-white rounded-lg shadow-sm border-2 border-red-200">
               <p className="text-sm text-gray-600 mb-1">{t.ovulationDate}</p>
               <p className="text-xl font-bold text-red-600">{results.ovulationDate}</p>

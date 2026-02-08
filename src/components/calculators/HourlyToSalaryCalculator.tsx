@@ -36,7 +36,7 @@ export default function HourlyToSalaryCalculator({ lang = 'en' }: HourlyToSalary
       includeOvertime: "Include Overtime Pay",
       overtimeHours: "Overtime Hours per Week",
       overtimeMultiplier: "Overtime Multiplier",
-      calculate: "Calculate Salary",
+      calculate: "🔄 Recalculate",
       reset: "Reset",
       results: "Salary Breakdown",
       annualSalary: "Annual Salary",
@@ -65,7 +65,7 @@ export default function HourlyToSalaryCalculator({ lang = 'en' }: HourlyToSalary
       includeOvertime: "Incluir Pago de Horas Extras",
       overtimeHours: "Horas Extras por Semana",
       overtimeMultiplier: "Multiplicador de Horas Extras",
-      calculate: "Calcular Salario",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       results: "Desglose Salarial",
       annualSalary: "Salario Anual",
@@ -94,7 +94,7 @@ export default function HourlyToSalaryCalculator({ lang = 'en' }: HourlyToSalary
       includeOvertime: "Incluir Pagamento de Horas Extras",
       overtimeHours: "Horas Extras por Semana",
       overtimeMultiplier: "Multiplicador de Horas Extras",
-      calculate: "Calcular Salário",
+      calculate: "🔄 Recalcular",
       reset: "Reiniciar",
       results: "Quebra Salarial",
       annualSalary: "Salário Anual",
@@ -123,7 +123,7 @@ export default function HourlyToSalaryCalculator({ lang = 'en' }: HourlyToSalary
       includeOvertime: "Inclure Paiement des Heures Supplémentaires",
       overtimeHours: "Heures Supplémentaires par Semaine",
       overtimeMultiplier: "Multiplicateur d'Heures Supplémentaires",
-      calculate: "Calculer le Salaire",
+      calculate: "🔄 Recalculer",
       reset: "Réinitialiser",
       results: "Ventilation Salariale",
       annualSalary: "Salaire Annuel",
@@ -203,7 +203,7 @@ export default function HourlyToSalaryCalculator({ lang = 'en' }: HourlyToSalary
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-6">
           <div>

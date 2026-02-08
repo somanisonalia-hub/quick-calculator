@@ -14,6 +14,11 @@ export default function WellnessTrackerCalculator({ lang = 'en' }: WellnessTrack
     stressLevel: 5
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Wellness Tracker Calculator",
@@ -24,7 +29,8 @@ export default function WellnessTrackerCalculator({ lang = 'en' }: WellnessTrack
       stressLevel: "Stress Level (1-10)",
       calculate: "Analyze",
       results: "Wellness Score",
-      wellnessScore: "Overall Wellness Score"
+      wellnessScore: "Overall Wellness Score",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Seguimiento de Bienestar",
@@ -35,7 +41,8 @@ export default function WellnessTrackerCalculator({ lang = 'en' }: WellnessTrack
       stressLevel: "Nivel de Estrés (1-10)",
       calculate: "Analizar",
       results: "Puntuación de Bienestar",
-      wellnessScore: "Puntuación General de Bienestar"
+      wellnessScore: "Puntuación General de Bienestar",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Monitoramento de Bem-Estar",
@@ -46,7 +53,8 @@ export default function WellnessTrackerCalculator({ lang = 'en' }: WellnessTrack
       stressLevel: "Nível de Estresse (1-10)",
       calculate: "Analisar",
       results: "Pontuação de Bem-Estar",
-      wellnessScore: "Pontuação Geral de Bem-Estar"
+      wellnessScore: "Pontuação Geral de Bem-Estar",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur de Suivi du Bien-Être",
@@ -57,7 +65,8 @@ export default function WellnessTrackerCalculator({ lang = 'en' }: WellnessTrack
       stressLevel: "Niveau de Stress (1-10)",
       calculate: "Analyser",
       results: "Score de Bien-Être",
-      wellnessScore: "Score Global de Bien-Être"
+      wellnessScore: "Score Global de Bien-Être",
+      reset: "Réinitialiser"
     }
   };
 
@@ -82,6 +91,16 @@ export default function WellnessTrackerCalculator({ lang = 'en' }: WellnessTrack
             step="0.5"
             className="w-full px-4 py-2 border rounded-lg"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

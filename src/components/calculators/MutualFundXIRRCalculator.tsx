@@ -50,7 +50,8 @@ export default function MutualFundXIRRCalculator({ lang = 'en' }: MutualFundXIRR
       poorPerformance: 'Below Average',
       subtitle: 'Calculate accurate time-weighted returns (XIRR) accounting for timing of your investments',
       action: 'Action',
-      overall: 'Overall profit ratio'
+      overall: 'Overall profit ratio',
+      reset: "Reset"
     },
     es: {
       title: 'Calculadora XIRR de Fondos Mutuos',
@@ -72,7 +73,8 @@ export default function MutualFundXIRRCalculator({ lang = 'en' }: MutualFundXIRR
       poorPerformance: 'Por Debajo del Promedio',
       subtitle: 'Calcule rendimientos precisos ponderados en el tiempo (XIRR) considerando el momento de sus inversiones',
       action: 'Acción',
-      overall: 'Proporción de ganancia total'
+      overall: 'Proporción de ganancia total',
+      reset: "Restablecer"
     },
     pt: {
       title: 'Calculadora XIRR de Fundos Mútuos',
@@ -94,7 +96,8 @@ export default function MutualFundXIRRCalculator({ lang = 'en' }: MutualFundXIRR
       poorPerformance: 'Abaixo da Média',
       subtitle: 'Calcule retornos precisos ponderados pelo tempo (XIRR) levando em conta o tempo de seus investimentos',
       action: 'Ação',
-      overall: 'Proporção de lucro geral'
+      overall: 'Proporção de lucro geral',
+      reset: "Redefinir"
     },
     fr: {
       title: 'Calculatrice XIRR de Fonds Communs de Placement',
@@ -116,7 +119,8 @@ export default function MutualFundXIRRCalculator({ lang = 'en' }: MutualFundXIRR
       poorPerformance: 'Sous la Moyenne',
       subtitle: 'Calculez les rendements précis pondérés dans le temps (XIRR) en tenant compte du moment de vos investissements',
       action: 'Action',
-      overall: 'Ratio de profit global'
+      overall: 'Ratio de profit global',
+      reset: "Réinitialiser"
     }
   };
 
@@ -152,6 +156,16 @@ export default function MutualFundXIRRCalculator({ lang = 'en' }: MutualFundXIRR
         return sum + cf.amount / Math.pow(1 + rate, years);
       }, 0);
     };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
+  };
 
     // Derivative of NPV
     const npvDerivative = (rate: number): number => {
@@ -322,7 +336,7 @@ export default function MutualFundXIRRCalculator({ lang = 'en' }: MutualFundXIRR
         </div>
 
         {/* Action Buttons */}
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4">
           <button
             onClick={addTransaction}
             className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
@@ -336,11 +350,22 @@ export default function MutualFundXIRRCalculator({ lang = 'en' }: MutualFundXIRR
             {t.calculate}
           </button>
         </div>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+
 
         {/* Results */}
         {calculated && (
           <div className="mt-8 space-y-4">
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               {/* XIRR */}
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-6 rounded-lg">
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-1 font-medium">{t.xirr}</p>

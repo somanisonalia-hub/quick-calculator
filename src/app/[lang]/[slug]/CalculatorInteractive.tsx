@@ -35,15 +35,10 @@ export default function CalculatorInteractive({
     if (lang && i18n.language !== lang) {
       i18n.changeLanguage(lang);
     }
+    // Mount calculator and add ready class for smooth transition
+    setCalculatorMounted(true);
+    document.body.classList.add('calculator-ready');
   }, [lang, i18n]);
-
-  // Mount interactive calculator after a short delay to avoid SSR/CSR mismatch
-  useEffect(() => {
-    if (isClient) {
-      const timer = setTimeout(() => setCalculatorMounted(true), 100);
-      return () => clearTimeout(timer);
-    }
-  }, [isClient]);
 
   // Search functionality
   useEffect(() => {
@@ -179,43 +174,51 @@ export default function CalculatorInteractive({
         </div>
       )}
 
-      {/* Interactive Calculator - Replaces static form once JS loads */}
+      {/* Hide SSR form when interactive loads */}
       {calculatorMounted && calculatorContent && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
-          <div id="interactive-calculator-overlay" className="bg-white rounded-lg shadow-lg p-6 mb-8 relative">
-            {(() => {
-              const componentName = calculatorContent.component 
-                || (typeof calculatorContent.calculatorComponent === 'string'
-                  ? calculatorContent.calculatorComponent
-                  : calculatorContent.calculatorComponent?.componentName);
+        <>
+          <style jsx global>{`
+            #calculator-section {
+              display: none !important;
+            }
+          `}</style>
+        </>
+      )}
 
-              const CalculatorComponent = getCalculatorComponent(componentName);
+      {/* Related Calculators Widget & Additional Sections */}
+      {calculatorContent && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Interactive Calculator - Only show when mounted */}
+          {calculatorMounted && (
+            <div id="interactive-calculator-overlay" className="bg-white rounded-lg shadow-lg p-6 mb-8 relative">
+              {(() => {
+                const componentName = calculatorContent.component 
+                  || (typeof calculatorContent.calculatorComponent === 'string'
+                    ? calculatorContent.calculatorComponent
+                    : calculatorContent.calculatorComponent?.componentName);
 
-              if (CalculatorComponent) {
-                // Position absolutely over the static form
-                return (
-                  <div className="calculator-interactive-wrapper">
-                    <style jsx>{`
-                      #calculator-section {
-                        display: none;
-                      }
-                    `}</style>
-                    {calculatorContent.calculatorComponent && typeof calculatorContent.calculatorComponent === 'object' && calculatorContent.calculatorComponent.inputs ? (
-                      <CalculatorComponent
-                        inputs={calculatorContent.calculatorComponent.inputs || []}
-                        output={calculatorContent.calculatorComponent.output || {}}
-                        additionalOutputs={calculatorContent.calculatorComponent.additionalOutputs || []}
-                        lang={lang}
-                      />
-                    ) : (
-                      <CalculatorComponent lang={lang} />
-                    )}
-                  </div>
-                );
-              }
-              return null;
-            })()}
-          </div>
+                const CalculatorComponent = getCalculatorComponent(componentName);
+
+                if (CalculatorComponent) {
+                  return (
+                    <div className="calculator-interactive-wrapper">
+                      {calculatorContent.calculatorComponent && typeof calculatorContent.calculatorComponent === 'object' && calculatorContent.calculatorComponent.inputs ? (
+                        <CalculatorComponent
+                          inputs={calculatorContent.calculatorComponent.inputs || []}
+                          output={calculatorContent.calculatorComponent.output || {}}
+                          additionalOutputs={calculatorContent.calculatorComponent.additionalOutputs || []}
+                          lang={lang}
+                        />
+                      ) : (
+                        <CalculatorComponent lang={lang} />
+                      )}
+                    </div>
+                  );
+                }
+                return null;
+              })()}
+            </div>
+          )}
 
           {/* Related Calculators Widget */}
           <RelatedCalculatorsWidget 

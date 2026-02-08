@@ -159,6 +159,18 @@ import fitnessMetricsCalculator from '../../content/calculators/fitness-metrics-
 import nutritionAnalysisCalculator from '../../content/calculators/nutrition-analysis-calculator.json';
 import wellnessTrackerCalculator from '../../content/calculators/wellness-tracker-calculator.json';
 
+// Additional missing calculators
+import breakEvenCalculator from '../../content/calculators/break-even-calculator.json';
+import caloriesBurnedCalculator from '../../content/calculators/calories-burned-calculator.json';
+import goalBasedInvestmentCalculator from '../../content/calculators/goal-based-investment-calculator.json';
+import lumpsumInvestmentCalculator from '../../content/calculators/lumpsum-investment-calculator.json';
+import mutualFundInflationCalculator from '../../content/calculators/mutual-fund-inflation-calculator.json';
+import mutualFundXirrCalculator from '../../content/calculators/mutual-fund-xirr-calculator.json';
+import rentVsBuyCalculator from '../../content/calculators/rent-vs-buy-calculator.json';
+import sipCalculator from '../../content/calculators/sip-calculator.json';
+import studentLoanCalculator from '../../content/calculators/student-loan-calculator.json';
+import xirrVsAbsoluteReturnCalculator from '../../content/calculators/xirr-vs-absolute-return-calculator.json';
+
 export type ContentType = 'calculators' | 'categories' | 'homepage' | 'labels';
 
 export interface ContentLoaderOptions {
@@ -325,6 +337,17 @@ export const contentRegistry: Record<string, any> = {
   'calculators-fitness-metrics-calculator': fitnessMetricsCalculator,
   'calculators-nutrition-analysis-calculator': nutritionAnalysisCalculator,
   'calculators-wellness-tracker-calculator': wellnessTrackerCalculator,
+  // Additional missing calculators
+  'calculators-break-even-calculator': breakEvenCalculator,
+  'calculators-calories-burned-calculator': caloriesBurnedCalculator,
+  'calculators-goal-based-investment-calculator': goalBasedInvestmentCalculator,
+  'calculators-lumpsum-investment-calculator': lumpsumInvestmentCalculator,
+  'calculators-mutual-fund-inflation-calculator': mutualFundInflationCalculator,
+  'calculators-mutual-fund-xirr-calculator': mutualFundXirrCalculator,
+  'calculators-rent-vs-buy-calculator': rentVsBuyCalculator,
+  'calculators-sip-calculator': sipCalculator,
+  'calculators-student-loan-calculator': studentLoanCalculator,
+  'calculators-xirr-vs-absolute-return-calculator': xirrVsAbsoluteReturnCalculator,
 };
 
 /**

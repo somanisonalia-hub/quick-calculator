@@ -14,6 +14,11 @@ export default function NutritionAnalysisCalculator({ lang = 'en' }: NutritionAn
     fat: 70
   });
 
+  const resetCalculator = () => {
+    // Reset to default values
+    setInputs(0);
+  };
+
   const translations = {
     en: {
       title: "Nutrition Analysis Calculator",
@@ -24,7 +29,8 @@ export default function NutritionAnalysisCalculator({ lang = 'en' }: NutritionAn
       fat: "Fat (g)",
       calculate: "Analyze",
       results: "Analysis Results",
-      macroBreakdown: "Macro Breakdown"
+      macroBreakdown: "Macro Breakdown",
+      reset: "Reset"
     },
     es: {
       title: "Calculadora de Análisis Nutricional",
@@ -35,7 +41,8 @@ export default function NutritionAnalysisCalculator({ lang = 'en' }: NutritionAn
       fat: "Grasa (g)",
       calculate: "Analizar",
       results: "Resultados del Análisis",
-      macroBreakdown: "Desglose de Macros"
+      macroBreakdown: "Desglose de Macros",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Análise Nutricional",
@@ -46,7 +53,8 @@ export default function NutritionAnalysisCalculator({ lang = 'en' }: NutritionAn
       fat: "Gordura (g)",
       calculate: "Analisar",
       results: "Resultados da Análise",
-      macroBreakdown: "Distribuição de Macros"
+      macroBreakdown: "Distribuição de Macros",
+      reset: "Redefinir"
     },
     fr: {
       title: "Calculateur d'Analyse Nutritionnelle",
@@ -57,7 +65,8 @@ export default function NutritionAnalysisCalculator({ lang = 'en' }: NutritionAn
       fat: "Lipides (g)",
       calculate: "Analyser",
       results: "Résultats de l'Analyse",
-      macroBreakdown: "Répartition des Macros"
+      macroBreakdown: "Répartition des Macros",
+      reset: "Réinitialiser"
     }
   };
 
@@ -79,6 +88,16 @@ export default function NutritionAnalysisCalculator({ lang = 'en' }: NutritionAn
             onChange={(e) => setInputs({ ...inputs, calories: Number(e.target.value) })}
             className="w-full px-4 py-2 border rounded-lg"
           />
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
         </div>
 
         <div>

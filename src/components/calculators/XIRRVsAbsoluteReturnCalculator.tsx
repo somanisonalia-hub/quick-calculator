@@ -29,7 +29,8 @@ export default function XIRRVsAbsoluteReturnCalculator({ lang = 'en' }: XIRRVsAb
       absoluteReturn: 'Absolute Return (%)',
       cagr: 'CAGR/XIRR (%)',
       totalProfit: 'Total Profit',
-      rupee: '₹'
+      rupee: '₹',
+      reset: "Reset"
     }
   };
 
@@ -45,6 +46,16 @@ export default function XIRRVsAbsoluteReturnCalculator({ lang = 'en' }: XIRRVsAb
       absoluteReturn: absoluteReturnPercent,
       cagr: cagr
     });
+  };
+
+  const resetCalculator = () => {
+    // Reset all input values to defaults
+    const initial: Record<string, number> = {};
+    inputs?.forEach(input => {
+      initial[input.name] = input.default || 0;
+    });
+    setValues(initial);
+    setResults({});
   };
 
   return (
@@ -108,6 +119,16 @@ export default function XIRRVsAbsoluteReturnCalculator({ lang = 'en' }: XIRRVsAb
                 <p className="text-2xl font-bold text-green-600 dark:text-green-400">
                   {t.rupee} {results.totalProfit.toLocaleString('en-IN', {maximumFractionDigits: 0})}
                 </p>
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
               </div>
               <div className="text-center border-b border-blue-200 dark:border-blue-700 pb-4">
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.absoluteReturn}</p>

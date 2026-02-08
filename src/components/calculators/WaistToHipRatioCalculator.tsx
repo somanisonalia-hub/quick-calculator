@@ -51,7 +51,7 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       hip: "Hip Circumference",
       measurementUnit: "Measurement Unit",
       gender: "Gender",
-      calculate: "Calculate WHR",
+      calculate: "🔄 Recalculate",
       results: "Waist-to-Hip Ratio Results",
       waistToHipRatio: "Waist-to-Hip Ratio",
       healthRisk: "Health Risk Category",
@@ -59,7 +59,8 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       riskLevel: "Risk Level",
       genderOptions: {
         male: "Male",
-        female: "Female"
+        female: "Female",
+      reset: "Reset"
       },
       measurementUnitOptions: {
         cm: "Centimeters (cm)",
@@ -89,7 +90,7 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       hip: "Circunferencia de Cadera",
       measurementUnit: "Unidad de Medición",
       gender: "Género",
-      calculate: "Calcular RCC",
+      calculate: "🔄 Recalcular",
       results: "Resultados de Relación Cintura-Cadera",
       waistToHipRatio: "Relación Cintura-Cadera",
       healthRisk: "Categoría de Riesgo de Salud",
@@ -97,7 +98,8 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       riskLevel: "Nivel de Riesgo",
       genderOptions: {
         male: "Masculino",
-        female: "Femenino"
+        female: "Femenino",
+      reset: "Restablecer"
       },
       measurementUnitOptions: {
         cm: "Centímetros (cm)",
@@ -127,7 +129,7 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       hip: "Circunferência do Quadril",
       measurementUnit: "Unidade de Medição",
       gender: "Gênero",
-      calculate: "Calcular RCQ",
+      calculate: "🔄 Recalcular",
       results: "Resultados de Relação Cintura-Quadril",
       waistToHipRatio: "Relação Cintura-Quadril",
       healthRisk: "Categoria de Risco de Saúde",
@@ -135,7 +137,8 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       riskLevel: "Nível de Risco",
       genderOptions: {
         male: "Masculino",
-        female: "Feminino"
+        female: "Feminino",
+      reset: "Redefinir"
       },
       measurementUnitOptions: {
         cm: "Centímetros (cm)",
@@ -165,7 +168,7 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       hip: "Circonférence de Hanches",
       measurementUnit: "Unité de Mesure",
       gender: "Genre",
-      calculate: "Calculer RTH",
+      calculate: "🔄 Recalculer",
       results: "Résultats de Rapport Taille-Hanches",
       waistToHipRatio: "Rapport Taille-Hanches",
       healthRisk: "Catégorie de Risque de Santé",
@@ -173,7 +176,8 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       riskLevel: "Niveau de Risque",
       genderOptions: {
         male: "Masculin",
-        female: "Féminin"
+        female: "Féminin",
+      reset: "Réinitialiser"
       },
       measurementUnitOptions: {
         cm: "Centimètres (cm)",
@@ -282,6 +286,15 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
     };
   };
 
+  const resetCalculator = () => {
+    setFormData({
+      waist: 80,
+      hip: 95,
+      measurementUnit: 'cm',
+      gender: 'male'
+    });
+  };
+
   const results = useMemo((): WHRResults => {
     return calculateWHR(formData);
   }, [formData]);
@@ -378,7 +391,24 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
                   <option key={value} value={value}>{label}</option>
                 ))}
               </select>
-            </div>
+            
+          {/* Buttons */}
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={calculateWHR}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
+
+</div>
           </div>
         </div>
 
@@ -429,7 +459,7 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       </div>
 
       {/* Information Cards */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
           <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
             📏 How to Measure

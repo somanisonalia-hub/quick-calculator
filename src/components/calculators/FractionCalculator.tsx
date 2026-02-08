@@ -48,7 +48,9 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
       addExample: "Add: 1/2 + 1/3 = 5/6",
       subtractExample: "Subtract: 3/4 - 1/2 = 1/4",
       multiplyExample: "Multiply: 2/3 × 3/4 = 1/2",
-      divideExample: "Divide: 1/2 ÷ 1/4 = 2"
+      divideExample: "Divide: 1/2 ÷ 1/4 = 2",
+      calculate: "🔄 Recalculate",
+      reset: "Reset"
   },
     es: {
       title: "Calculadora de Fracciones",
@@ -75,7 +77,9 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
       addExample: "Sumar: 1/2 + 1/3 = 5/6",
       subtractExample: "Restar: 3/4 - 1/2 = 1/4",
       multiplyExample: "Multiplicar: 2/3 × 3/4 = 1/2",
-      divideExample: "Dividir: 1/2 ÷ 1/4 = 2"
+      divideExample: "Dividir: 1/2 ÷ 1/4 = 2",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer"
     },
     pt: {
       title: "Calculadora de Frações",
@@ -102,7 +106,9 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
       addExample: "Somar: 1/2 + 1/3 = 5/6",
       subtractExample: "Subtrair: 3/4 - 1/2 = 1/4",
       multiplyExample: "Multiplicar: 2/3 × 3/4 = 1/2",
-      divideExample: "Dividir: 1/2 ÷ 1/4 = 2"
+      divideExample: "Dividir: 1/2 ÷ 1/4 = 2",
+      calculate: "🔄 Recalcular",
+      reset: "Redefinir"
   },
     fr: {
       title: "Calculateur de Fractions",
@@ -129,7 +135,9 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
       addExample: "Addition: 1/2 + 1/3 = 5/6",
       subtractExample: "Soustraction: 3/4 - 1/2 = 1/4",
       multiplyExample: "Multiplication: 2/3 × 3/4 = 1/2",
-      divideExample: "Division: 1/2 ÷ 1/4 = 2"
+      divideExample: "Division: 1/2 ÷ 1/4 = 2",
+      calculate: "🔄 Recalculer",
+      reset: "Réinitialiser"
   }
   };
 
@@ -288,6 +296,17 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
     calculateFractions();
   }, [operation, fraction1, fraction2, outputFormat]);
 
+  const resetCalculator = () => {
+    setFraction1({ whole: 0, numerator: 1, denominator: 2 });
+    setFraction2({ whole: 0, numerator: 1, denominator: 3 });
+    setOperation('add');
+    setOutputFormat('mixed');
+    setResult('');
+    setSimplified('');
+    setDecimal(0);
+    setSteps('');
+  };
+
   const updateFraction1 = (field: keyof Fraction, value: number) => {
     setFraction1(prev => ({ ...prev, [field]: value }));
   };
@@ -305,7 +324,7 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="space-y-4">
           {/* Operation Selection */}
@@ -437,6 +456,22 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
                 <div className="text-center text-sm text-gray-600">
                   <span dangerouslySetInnerHTML={{ __html: formatFraction(fraction2, 'mixed') }} />
                 </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 pt-3">
+            <button
+              onClick={calculateFractions}
+              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.calculate}
+            </button>
+            <button
+              onClick={resetCalculator}
+              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+            >
+              {t.reset}
+            </button>
+          </div>
               </div>
             </div>
           </div>
@@ -499,18 +534,6 @@ export default function FractionCalculator({ lang = 'en' }: FractionCalculatorPr
               <div>{t.multiplyExample}</div>
               <div>{t.divideExample}</div>
             </div>
-          </div>
-
-          {/* Recalculate Button */}
-          <div className="pt-2">
-            <button
-              onClick={() => {
-                calculateFractions();
-              }}
-              className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200 shadow-sm"
-            >
-              🔄 Recalculate
-            </button>
           </div>
         </div>
       </div>
