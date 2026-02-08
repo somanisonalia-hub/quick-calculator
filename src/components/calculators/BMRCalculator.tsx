@@ -152,12 +152,20 @@ export default function BMRCalculator({ lang = 'en' }: BMRCalculatorProps) {
   };
 
   const resetCalculator = () => {
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    setInputs({
+      age: 30,
+      gender: 'male',
+      height: 170,
+      weight: 70,
+      formula: 'mifflin',
+      activityLevel: 'sedentary'
     });
-    setValues(initial);
-    setResults({});
+    setResults({
+      bmr: 0,
+      maintenanceCalories: 0,
+      weightLossCalories: 0,
+      weightGainCalories: 0
+    });
   };
 
   const getActivityMultiplier = (activityLevel: string) => {

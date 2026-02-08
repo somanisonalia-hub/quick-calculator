@@ -74,8 +74,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
         harris: "Harris-Benedict (Classic)",
         mifflin: "Mifflin-St Jeor (Most Accurate)",
         katch: "Katch-McArdle (Requires Body Fat %)",
-      reset: "Reset"
       },
+      reset: "Reset",
       genderOptions: {
         male: "Male",
         female: "Female"
@@ -123,8 +123,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
         harris: "Harris-Benedict (Clásico)",
         mifflin: "Mifflin-St Jeor (Más Preciso)",
         katch: "Katch-McArdle (Requiere % Grasa Corporal)",
-      reset: "Restablecer"
       },
+      reset: "Restablecer",
       genderOptions: {
         male: "Masculino",
         female: "Femenino"
@@ -172,8 +172,8 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
         harris: "Harris-Benedict (Clássico)",
         mifflin: "Mifflin-St Jeor (Mais Preciso)",
         katch: "Katch-McArdle (Requer % Gordura Corporal)",
-      reset: "Redefinir"
       },
+      reset: "Redefinir",
       genderOptions: {
         male: "Masculino",
         female: "Feminino"
@@ -342,7 +342,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
   const showBodyFatInput = formData.bmrMethod === 'katch';
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div>
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
           {t.title}
@@ -351,7 +351,6 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
           {t.subtitle}
         </p>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Input Form */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
@@ -495,9 +494,9 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
               </div>
             )}
           </div>
-        </div>
+
           {/* Buttons */}
-          <div className="flex gap-3 pt-4">
+          <div className="flex gap-3 pt-6">
             <button
               onClick={calculateCalories}
               className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
@@ -511,10 +510,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
               {t.reset}
             </button>
           </div>
-
-
-
-        {/* Results */}
+        </div>
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
           <h2 className="text-xl font-semibold mb-6 text-gray-900 dark:text-white">
             {t.results}
@@ -608,12 +604,6 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
             <li>• Adjust based on your goals</li>
           </ul>
         </div>
-      </div>
-
-      {/* Disclaimer */}
-      <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
-        <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          {t.noteDisclaimer}</p>
       </div>
     </div>
   );

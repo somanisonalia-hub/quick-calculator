@@ -164,10 +164,9 @@ export const DebtPayoffCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' 
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg">
-      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">{t.title}</h1>
-
+    <div className="grid lg:grid-cols-2 gap-8">
       <div className="space-y-6">
+        <h1 className="text-3xl font-bold text-gray-800">{t.title}</h1>
         {/* Debts Section */}
         <div className="bg-white rounded-lg p-4 shadow">
           <h2 className="text-lg font-semibold mb-4 text-gray-700">Your Debts</h2>

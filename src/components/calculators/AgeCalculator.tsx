@@ -160,98 +160,101 @@ export default function AgeCalculator({ lang = 'en' }: AgeCalculatorProps) {
         <p className="text-gray-600">{t.pageDescription}</p>
       </div>
 
-      <div className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-{t.birthDate}
-          </label>
-          <input
-            type="date"
-            value={birthDate}
-            onChange={(e) => setBirthDate(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-
-        <div className="border-t pt-4">
-          <div className="flex items-center mb-3">
-            <input
-              type="checkbox"
-              id="useToday"
-              checked={useToday}
-              onChange={(e) => setUseToday(e.target.checked)}
-              className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-            />
-            <label htmlFor="useToday" className="ml-2 text-sm font-medium text-gray-700">
-              {t.useTodayDate}
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              {t.birthDate}
             </label>
+            <input
+              type="date"
+              value={birthDate}
+              onChange={(e) => setBirthDate(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
           </div>
 
-          {!useToday && (
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <label className="block text-sm font-medium text-gray-700 mb-3">
-                {t.customDate}
+          <div className="border-t pt-4">
+            <div className="flex items-center mb-3">
+              <input
+                type="checkbox"
+                id="useToday"
+                checked={useToday}
+                onChange={(e) => setUseToday(e.target.checked)}
+                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <label htmlFor="useToday" className="ml-2 text-sm font-medium text-gray-700">
+                {t.useTodayDate}
               </label>
-              <div className="grid grid-cols-3 gap-3">
-                <div>
-                  <label className="block text-xs text-gray-600 mb-1">{t.month}</label>
-                  <input
-                    type="number"
-                    min="1"
-                    max="12"
-                    value={customMonth}
-                    onChange={(e) => setCustomMonth(parseInt(e.target.value) || 1)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs text-gray-600 mb-1">{t.day}</label>
-                  <input
-                    type="number"
-                    min="1"
-                    max="31"
-                    value={customDay}
-                    onChange={(e) => setCustomDay(parseInt(e.target.value) || 1)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs text-gray-600 mb-1">{t.year}</label>
-                  <input
-                    type="number"
-                    min="1900"
-                    max="2100"
-                    value={customYear}
-                    onChange={(e) => setCustomYear(parseInt(e.target.value) || new Date().getFullYear())}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
+            </div>
+
+            {!useToday && (
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  {t.customDate}
+                </label>
+                <div className="grid grid-cols-3 gap-3">
+                  <div>
+                    <label className="block text-xs text-gray-600 mb-1">{t.month}</label>
+                    <input
+                      type="number"
+                      min="1"
+                      max="12"
+                      value={customMonth}
+                      onChange={(e) => setCustomMonth(parseInt(e.target.value) || 1)}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-gray-600 mb-1">{t.day}</label>
+                    <input
+                      type="number"
+                      min="1"
+                      max="31"
+                      value={customDay}
+                      onChange={(e) => setCustomDay(parseInt(e.target.value) || 1)}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-gray-600 mb-1">{t.year}</label>
+                    <input
+                      type="number"
+                      min="1900"
+                      max="2100"
+                      value={customYear}
+                      onChange={(e) => setCustomYear(parseInt(e.target.value) || new Date().getFullYear())}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
 
-        <div className="flex gap-2">
           <button
             onClick={calculateAge}
-            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {t.calculateAge}
           </button>
+
           <button
             onClick={resetCalculator}
-            className="flex-1 bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             {t.reset}
           </button>
         </div>
 
-        {age && (
-          <div className="bg-green-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-green-900 mb-2">{t.yourAge}</h3>
-            <div className="text-2xl font-bold text-green-600">{age}</div>
-          </div>
-        )}
+        <div className="space-y-4">
+          {age && (
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">{t.yourAge}</h3>
+              <div className="text-2xl font-bold text-green-600">{age}</div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

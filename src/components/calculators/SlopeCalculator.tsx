@@ -280,13 +280,13 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6">
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">{t.title}</h1>
-        <p className="text-gray-600 mb-6">{t.description}</p>
+    <div className="grid lg:grid-cols-2 gap-8">
+      <div className="space-y-4">
+        <h1 className="text-3xl font-bold text-gray-800">{t.title}</h1>
+        <p className="text-gray-600">{t.description}</p>
 
         {/* Input Section */}
-        <div className="grid lg:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-2 gap-4">
           {/* Point 1 */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-700">{t.point1}</h3>
@@ -345,21 +345,21 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
             </div>
           </div>
         </div>
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={() => setX1(x1)}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
+
+        <button
+          onClick={() => setX1(x1)}
+          className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+        >
+          {t.calculate}
+        </button>
+        <button
+          onClick={resetCalculator}
+          className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+        >
+          {t.reset}
+        </button>
+      </div>
+      <div className="space-y-4">
 
 
         {/* Results Section */}

@@ -36,6 +36,10 @@ const BudgetCalculator = dynamic(() => import('./BudgetCalculator'), {
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
 
+const GenericCalculator = dynamic(() => import('./GenericCalculator'), {
+  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+});
+
 const CurrencyConverter = dynamic(() => import('./CurrencyConverter'), {
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
 });
@@ -711,6 +715,7 @@ export const calculatorComponents: Record<string, any> = {
   'MutualFundInflationCalculator': MutualFundInflationCalculator,
   'XIRRVsAbsoluteReturnCalculator': XIRRVsAbsoluteReturnCalculator,
   'FuelCostCalculator': FuelCostCalculator,
+  'GenericCalculator': GenericCalculator,
   'GeometryAreaCalculator': GeometryAreaCalculator,
   'LinearEquationCalculator': LinearEquationCalculator,
   'ShippingCostCalculator': ShippingCostCalculator,

@@ -34,7 +34,9 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
       interest: "Interest",
       balance: "Balance",
       exportCSV: "Export to CSV",
-      currency: "$"
+      currency: "$",
+      calculateYourCarLoan: "Calculate Your Car Loan",
+      enterVehicleDetails: "Enter vehicle details above to see payment breakdown"
     },
     es: {
       title: "Calculadora de Préstamo de Auto",
@@ -61,7 +63,9 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
       interest: "Intereses",
       balance: "Saldo",
       exportCSV: "Exportar a CSV",
-      currency: "$"
+      currency: "$",
+      calculateYourCarLoan: "Calcula Tu Préstamo de Auto",
+      enterVehicleDetails: "Ingresa detalles del vehículo arriba para ver el desglose de pago"
     },
     pt: {
       title: "Calculadora de Empréstimo de Carro",
@@ -88,7 +92,9 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
       interest: "Juros",
       balance: "Saldo",
       exportCSV: "Exportar para CSV",
-      currency: "R$"
+      currency: "R$",
+      calculateYourCarLoan: "Calcule Seu Empréstimo de Carro",
+      enterVehicleDetails: "Insira detalhes do veículo acima para ver o detalhamento do pagamento"
     },
     fr: {
       title: "Calculateur de Prêt Auto",
@@ -115,7 +121,9 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
       interest: "Intérêts",
       balance: "Solde",
       exportCSV: "Exporter vers CSV",
-      currency: "€"
+      currency: "€",
+      calculateYourCarLoan: "Calculez Votre Prêt Auto",
+      enterVehicleDetails: "Entrez les détails du véhicule ci-dessus pour voir le détail des paiements"
     }
   };
 
@@ -396,8 +404,8 @@ export default function CarLoanCalculator({ lang = 'en' }: CarLoanCalculatorProp
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-1">Calculate Your Car Loan</h3>
-              <p className="text-gray-500">Enter vehicle details above to see payment breakdown</p>
+              <h3 className="text-lg font-medium text-gray-900 mb-1">{t.calculateYourCarLoan}</h3>
+              <p className="text-gray-500">{t.enterVehicleDetails}</p>
             </div>
           )}
 

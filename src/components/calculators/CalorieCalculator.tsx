@@ -186,14 +186,49 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
     }
   };
 
+  const calculate = () => {
+    const { age, gender, height, weight, activityLevel, goal, rate } = inputs;
+
+    const bmr = calculateBMR(age, gender, height, weight);
+    const activityMultiplier = getActivityMultiplier(activityLevel);
+    const tdee = Math.round(bmr * activityMultiplier);
+    const calorieAdjustment = getCalorieAdjustment(goal, rate);
+    const dailyCalories = tdee + calorieAdjustment;
+
+    let weeklyChange = '';
+    if (goal === 'maintain') {
+      weeklyChange = 'Maintain current weight';
+    } else {
+      const kgPerWeek = rate === 'slow' ? 0.25 : rate === 'fast' ? 1 : 0.5;
+      const direction = goal === 'lose' ? 'lose' : 'gain';
+      weeklyChange = `${direction} ${kgPerWeek} kg per week`;
+    }
+
+    setResults({
+      bmr,
+      tdee,
+      dailyCalories,
+      weeklyChange
+    });
+  };
+
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    setInputs({
+      age: 30,
+      gender: 'male',
+      height: 170,
+      weight: 70,
+      activityLevel: 'sedentary',
+      goal: 'maintain',
+      rate: 'moderate'
     });
-    setValues(initial);
-    setResults({});
+    setResults({
+      bmr: 0,
+      tdee: 0,
+      dailyCalories: 0,
+      weeklyChange: ''
+    });
   };
 
   const getActivityMultiplier = (activityLevel: string) => {
@@ -382,7 +417,7 @@ export default function CalorieCalculator({ lang = 'en' }: CalorieCalculatorProp
           {/* Buttons */}
           <div className="flex gap-3 pt-3">
             <button
-              onClick={calculateBMR}
+              onClick={calculate}
               className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
               {t.calculate}

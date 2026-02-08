@@ -73,49 +73,50 @@ export default function LogarithmCalculator({ lang = 'en' }: LogarithmCalculator
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      <div className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium mb-1">{t.value}</label>
-          <input
-            type="number"
-            value={inputs.value}
-            onChange={(e) => setInputs({ ...inputs, value: Number(e.target.value) })}
-            min="0"
-            step="0.01"
-            className="w-full px-4 py-2 border rounded-lg"
-          />
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">{t.value}</label>
+            <input
+              type="number"
+              value={inputs.value}
+              onChange={(e) => setInputs({ ...inputs, value: Number(e.target.value) })}
+              min="0"
+              step="0.01"
+              className="w-full px-4 py-2 border rounded-lg"
+            />
           </div>
 
+          <div>
+            <label className="block text-sm font-medium mb-1">{t.base}</label>
+            <input
+              type="number"
+              value={inputs.base}
+              onChange={(e) => setInputs({ ...inputs, base: Number(e.target.value) })}
+              min="0"
+              step="0.01"
+              className="w-full px-4 py-2 border rounded-lg"
+            />
+          </div>
+
+          <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+            {t.calculate}
+          </button>
+
+          <button
+            onClick={resetCalculator}
+            className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          >
+            {t.reset}
+          </button>
         </div>
 
-        <div>
-          <label className="block text-sm font-medium mb-1">{t.base}</label>
-          <input
-            type="number"
-            value={inputs.base}
-            onChange={(e) => setInputs({ ...inputs, base: Number(e.target.value) })}
-            min="0"
-            step="0.01"
-            className="w-full px-4 py-2 border rounded-lg"
-          />
+        <div className="space-y-4">
+          <div className="bg-gray-50 p-4 rounded-lg">
+            <h3 className="font-semibold mb-2">{t.result}</h3>
+            <p className="text-sm text-gray-600">Enter value and base to calculate the logarithm.</p>
+          </div>
         </div>
-
-        <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-          {t.calculate}
-        </button>
-      </div>
-
-      <div className="bg-gray-50 p-4 rounded-lg">
-        <h3 className="font-semibold mb-2">{t.result}</h3>
-        <p className="text-sm text-gray-600">Enter value and base to calculate the logarithm.</p>
       </div>
     </div>
   );

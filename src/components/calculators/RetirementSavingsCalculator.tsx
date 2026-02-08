@@ -107,24 +107,23 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
       years,
       monthlyIncome,
     };
+  };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+    setCurrentAge(30);
+    setRetirementAge(65);
+    setCurrentSavings(50000);
+    setMonthlyContribution(500);
+    setAnnualReturn(7);
+    setCalculated(false);
   };
 
   const results = calculateRetirement();
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <>
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.currentAge}
@@ -173,7 +172,7 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
             />
           </div>
 
-          <div className="md:col-span-2">
+          <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.annualReturn}
             </label>
@@ -187,29 +186,27 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
           </div>
         </div>
 
-        <button
-          onClick={() => setCalculated(true)}
-          className="w-full mt-6 bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors font-medium"
-        >
-          {t.calculate}
-        </button>
+        <div className="flex gap-3 pt-3">
+          <button
+            onClick={() => setCalculated(true)}
+            className="flex-1 bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors font-medium"
+          >
+            {t.calculate}
+          </button>
+          <button
+            onClick={resetCalculator}
+            className="flex-1 bg-gray-200 text-gray-800 py-3 rounded-md hover:bg-gray-300 transition-colors font-medium"
+          >
+            {t.reset}
+          </button>
+        </div>
       </div>
 
       {calculated && (
         <div className="bg-white rounded-lg shadow-md p-6">
-          {/* Buttons */}
-          <div className="flex gap-3 pt-3">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
-
           <h3 className="text-2xl font-bold mb-6 text-gray-800">{t.results}</h3>
 
-          <div className="grid lg:grid-cols-2 gap-4 mb-6">
+          <div className="grid grid-cols-1 gap-4 mb-6">
             <div className="bg-blue-50 p-4 rounded-lg">
               <div className="text-sm text-gray-600 mb-1">{t.totalSavings}</div>
               <div className="text-3xl font-bold text-blue-600">
@@ -246,6 +243,6 @@ export default function RetirementSavingsCalculator({ lang = 'en' }: RetirementS
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }

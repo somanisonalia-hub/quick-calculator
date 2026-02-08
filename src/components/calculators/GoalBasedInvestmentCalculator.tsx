@@ -73,105 +73,105 @@ export default function GoalBasedInvestmentCalculator({ lang = 'en' }: GoalBased
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
-      <div className="space-y-6">
-        <div>
-          <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-            {t.targetGoal}
-          </label>
-          <input
-            type="number"
-            min="100000"
-            step="100000"
-            value={inputs.targetGoal}
-            onChange={(e) => setInputs({...inputs, targetGoal: Number(e.target.value)})}
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
-          />
-        </div>
-
-        <div>
-          <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-            {t.years}
-          </label>
-          <input
-            type="number"
-            min="1"
-            step="0.5"
-            value={inputs.years}
-            onChange={(e) => setInputs({...inputs, years: Number(e.target.value)})}
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
-          />
-        </div>
-
-        <div>
-          <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-            {t.expectedReturn}
-          </label>
-          <input
-            type="number"
-            min="0"
-            step="0.5"
-            value={inputs.expectedReturn}
-            onChange={(e) => setInputs({...inputs, expectedReturn: Number(e.target.value)})}
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
-          />
-        </div>
-
-        <div>
-          <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-            {t.inflationRate}
-          </label>
-          <input
-            type="number"
-            min="0"
-            step="0.5"
-            value={inputs.inflationRate}
-            onChange={(e) => setInputs({...inputs, inflationRate: Number(e.target.value)})}
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
-          />
-        </div>
-
-        <button
-          onClick={calculateGoal}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-        >
-          {t.calculate}
-        </button>
-
-        {results.inflationAdjustedGoal > 0 && (
-          <div className="mt-8 bg-blue-50 dark:bg-blue-900 p-6 rounded-lg">
-            <div className="space-y-4">
-              <div className="text-center border-b border-blue-200 dark:border-blue-700 pb-4">
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.inflationAdjustedGoal}</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {t.rupee} {results.inflationAdjustedGoal.toLocaleString('en-IN', {maximumFractionDigits: 0})}
-                </p>
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8">
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-6">
+          <div>
+            <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
+              {t.targetGoal}
+            </label>
+            <input
+              type="number"
+              min="100000"
+              step="100000"
+              value={inputs.targetGoal}
+              onChange={(e) => setInputs({...inputs, targetGoal: Number(e.target.value)})}
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+            />
           </div>
 
-              </div>
-              <div className="text-center border-b border-blue-200 dark:border-blue-700 pb-4">
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.monthlySIP}</p>
-                <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                  {t.rupee} {results.monthlySIP.toLocaleString('en-IN', {maximumFractionDigits: 0})}
-                </p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.lumpsumNeeded}</p>
-                <p className="text-2xl font-bold text-green-600 dark:text-green-400">
-                  {t.rupee} {results.lumpsumNeeded.toLocaleString('en-IN', {maximumFractionDigits: 0})}
-                </p>
+          <div>
+            <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
+              {t.years}
+            </label>
+            <input
+              type="number"
+              min="1"
+              step="0.5"
+              value={inputs.years}
+              onChange={(e) => setInputs({...inputs, years: Number(e.target.value)})}
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
+              {t.expectedReturn}
+            </label>
+            <input
+              type="number"
+              min="0"
+              step="0.5"
+              value={inputs.expectedReturn}
+              onChange={(e) => setInputs({...inputs, expectedReturn: Number(e.target.value)})}
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
+              {t.inflationRate}
+            </label>
+            <input
+              type="number"
+              min="0"
+              step="0.5"
+              value={inputs.inflationRate}
+              onChange={(e) => setInputs({...inputs, inflationRate: Number(e.target.value)})}
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <button
+            onClick={calculateGoal}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          >
+            {t.calculate}
+          </button>
+          <button
+            onClick={resetCalculator}
+            className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          >
+            {t.reset}
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          {results.inflationAdjustedGoal > 0 && (
+            <div className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg">
+              <div className="space-y-4">
+                <div className="text-center border-b border-blue-200 dark:border-blue-700 pb-4">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.inflationAdjustedGoal}</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                    {t.rupee} {results.inflationAdjustedGoal.toLocaleString('en-IN', {maximumFractionDigits: 0})}
+                  </p>
+                </div>
+                <div className="text-center border-b border-blue-200 dark:border-blue-700 pb-4">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.monthlySIP}</p>
+                  <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                    {t.rupee} {results.monthlySIP.toLocaleString('en-IN', {maximumFractionDigits: 0})}
+                  </p>
+                </div>
+                <div className="text-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{t.lumpsumNeeded}</p>
+                  <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+                    {t.rupee} {results.lumpsumNeeded.toLocaleString('en-IN', {maximumFractionDigits: 0})}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

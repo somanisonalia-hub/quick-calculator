@@ -102,7 +102,7 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+    <div className="grid lg:grid-cols-2 gap-8">
       <div className="space-y-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">{t.weight}</label>
@@ -112,16 +112,6 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
             onChange={(e) => setWeight(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
-
         </div>
 
         <div>
@@ -154,6 +144,15 @@ export default function ShippingCostCalculator({ lang = 'en' }: ShippingCostCalc
           {t.calculate}
         </button>
 
+        <button
+          onClick={resetCalculator}
+          className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+        >
+          {t.reset}
+        </button>
+      </div>
+
+      <div className="space-y-4">
         {result && (
           <div className="bg-green-50 p-4 rounded-lg">
             <div><strong>{t.result}:</strong> ${result}</div>

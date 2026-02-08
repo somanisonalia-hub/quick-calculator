@@ -256,12 +256,22 @@ export default function BodyFatCalculator({ lang = 'en' }: BodyFatCalculatorProp
   };
 
   const resetCalculator = () => {
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    setInputs({
+      method: 'navy',
+      gender: 'male',
+      age: 30,
+      height: 170,
+      weight: 70,
+      waist: 80,
+      neck: 38,
+      hips: 95
     });
-    setValues(initial);
-    setResults({});
+    setResults({
+      bodyFatPercentage: 0,
+      leanMass: 0,
+      fatMass: 0,
+      category: ''
+    });
   };
 
   useEffect(() => {

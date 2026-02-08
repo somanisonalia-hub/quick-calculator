@@ -225,149 +225,153 @@ export default function HeightCalculator({ lang = 'en' }: HeightCalculatorProps)
         </button>
       </div>
 
-      {/* Gender Selection */}
-      <div className="mb-6 hidden">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          {t.childGender}
-        </label>
-        <div className="flex gap-4">
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          {/* Gender Selection */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t.childGender}
+            </label>
+            <div className="flex gap-4">
+              <button
+                onClick={() => setGender('male')}
+                className={`flex-1 py-3 rounded-lg font-medium border-2 transition-all ${
+                  gender === 'male' 
+                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-600' 
+                    : 'border-gray-200 dark:border-gray-600'
+                }`}
+              >
+                👦 {t.male}
+              </button>
+              <button
+                onClick={() => setGender('female')}
+                className={`flex-1 py-3 rounded-lg font-medium border-2 transition-all ${
+                  gender === 'female' 
+                    ? 'border-pink-500 bg-pink-50 dark:bg-pink-900/30 text-pink-600' 
+                    : 'border-gray-200 dark:border-gray-600'
+                }`}
+              >
+                👧 {t.female}
+              </button>
+            </div>
+          </div>
+
+          {/* Father's Height */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t.fatherHeight}
+            </label>
+            {unit === 'cm' ? (
+              <input
+                type="number"
+                value={fatherHeight.cm}
+                onChange={(e) => setFatherHeight({ ...fatherHeight, cm: parseFloat(e.target.value) || 0 })}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                placeholder="175"
+              />
+            ) : (
+              <div className="flex gap-2">
+                <input
+                  type="number"
+                  value={fatherHeight.feet}
+                  onChange={(e) => setFatherHeight({ ...fatherHeight, feet: parseInt(e.target.value) || 0 })}
+                  className="w-1/2 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                  placeholder="5"
+                />
+                <input
+                  type="number"
+                  value={fatherHeight.inches}
+                  onChange={(e) => setFatherHeight({ ...fatherHeight, inches: parseInt(e.target.value) || 0 })}
+                  className="w-1/2 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                  placeholder="9"
+                />
+              </div>
+            )}
+          </div>
+
+          {/* Mother's Height */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t.motherHeight}
+            </label>
+            {unit === 'cm' ? (
+              <input
+                type="number"
+                value={motherHeight.cm}
+                onChange={(e) => setMotherHeight({ ...motherHeight, cm: parseFloat(e.target.value) || 0 })}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                placeholder="162"
+              />
+            ) : (
+              <div className="flex gap-2">
+                <input
+                  type="number"
+                  value={motherHeight.feet}
+                  onChange={(e) => setMotherHeight({ ...motherHeight, feet: parseInt(e.target.value) || 0 })}
+                  className="w-1/2 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                  placeholder="5"
+                />
+                <input
+                  type="number"
+                  value={motherHeight.inches}
+                  onChange={(e) => setMotherHeight({ ...motherHeight, inches: parseInt(e.target.value) || 0 })}
+                  className="w-1/2 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                  placeholder="4"
+                />
+              </div>
+            )}
+          </div>
+
           <button
-            onClick={() => setGender('male')}
-            className={`flex-1 py-3 rounded-lg font-medium border-2 transition-all ${
-              gender === 'male' 
-                ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-600' 
-                : 'border-gray-200 dark:border-gray-600'
-            }`}
+            onClick={calculateHeight}
+            className="w-full py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-teal-600 transition-all"
           >
-            👦 {t.male}
+            {t.calculate}
           </button>
+
           <button
-            onClick={() => setGender('female')}
-            className={`flex-1 py-3 rounded-lg font-medium border-2 transition-all ${
-              gender === 'female' 
-                ? 'border-pink-500 bg-pink-50 dark:bg-pink-900/30 text-pink-600' 
-                : 'border-gray-200 dark:border-gray-600'
-            }`}
+            onClick={resetCalculator}
+            className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
           >
-            👧 {t.female}
+            {t.reset}
           </button>
         </div>
-  </div>
 
-      {/* Father's Height */}
-      <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          {t.fatherHeight}
-        </label>
-        {unit === 'cm' ? (
-          <input
-            type="number"
-            value={fatherHeight.cm}
-            onChange={(e) => setFatherHeight({ ...fatherHeight, cm: parseFloat(e.target.value) || 0 })}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-            placeholder="175"
-          />
-        ) : (
-          <div className="flex gap-2">
-            <input
-              type="number"
-              value={fatherHeight.feet}
-              onChange={(e) => setFatherHeight({ ...fatherHeight, feet: parseInt(e.target.value) || 0 })}
-              className="w-1/2 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-              placeholder="5"
-            />
-            <input
-              type="number"
-              value={fatherHeight.inches}
-              onChange={(e) => setFatherHeight({ ...fatherHeight, inches: parseInt(e.target.value) || 0 })}
-              className="w-1/2 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-              placeholder="9"
-            />
-          </div>
-        )}
-      </div>
-
-      {/* Mother's Height */}
-      <div className="mb-6 hidden">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          {t.motherHeight}
-        </label>
-        {unit === 'cm' ? (
-          <input
-            type="number"
-            value={motherHeight.cm}
-            onChange={(e) => setMotherHeight({ ...motherHeight, cm: parseFloat(e.target.value) || 0 })}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-            placeholder="162"
-          />
-        ) : (
-          <div className="flex gap-2">
-            <input
-              type="number"
-              value={motherHeight.feet}
-              onChange={(e) => setMotherHeight({ ...motherHeight, feet: parseInt(e.target.value) || 0 })}
-              className="w-1/2 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-              placeholder="5"
-            />
-            <input
-              type="number"
-              value={motherHeight.inches}
-              onChange={(e) => setMotherHeight({ ...motherHeight, inches: parseInt(e.target.value) || 0 })}
-              className="w-1/2 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-              placeholder="4"
-            />
-          </div>
-        )}
-      </div>
-
-      <button
-        onClick={calculateHeight}
-        className="w-full py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-teal-600 transition-all"
-      >
-        {t.calculate}
-      </button>
-
-      {result && (
         <div className="space-y-4">
-          <div className="flex gap-3 pt-3">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
+          {result && (
+            <>
+              <div className="bg-gradient-to-r from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30 rounded-xl p-6 text-center">
+                <p className="text-gray-600 dark:text-gray-400 mb-2">{t.predictedHeight}</p>
+                <p className="text-4xl font-bold text-green-600 dark:text-green-400">
+                  {formatHeight(result.predicted)}
+                </p>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 text-center">
+                <p className="text-sm text-gray-600 dark:text-gray-400">{t.range}</p>
+                <p className="text-lg font-semibold text-gray-800 dark:text-white">
+                  {formatHeight(result.min)} - {formatHeight(result.max)}
+                </p>
+              </div>
+
+              <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+                ⚠️ {t.disclaimer}
+              </p>
+            </>
+          )}
+
+          {/* Height Factors */}
+          <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
+            <h3 className="font-semibold text-gray-800 dark:text-white mb-3">{t.heightFactors}</h3>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li>🧬 {t.genetics}</li>
+              <li>🥗 {t.nutrition}</li>
+              <li>😴 {t.sleep}</li>
+              <li>🏃 {t.exercise}</li>
+              <li>❤️ {t.health}</li>
+            </ul>
           </div>
-
-          <div className="mt-8 space-y-4">
-          <div className="bg-gradient-to-r from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30 rounded-xl p-6 text-center">
-            <p className="text-gray-600 dark:text-gray-400 mb-2">{t.predictedHeight}</p>
-            <p className="text-4xl font-bold text-green-600 dark:text-green-400">
-              {formatHeight(result.predicted)}
-            </p>
-          </div>
-
-          <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 text-center">
-            <p className="text-sm text-gray-600 dark:text-gray-400">{t.range}</p>
-            <p className="text-lg font-semibold text-gray-800 dark:text-white">
-              {formatHeight(result.min)} - {formatHeight(result.max)}
-            </p>
-          </div>
-
-          <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-            ⚠️ {t.disclaimer}
-          </p>          </div>        </div>
-      )}
-
-      {/* Height Factors */}
-      <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-        <h3 className="font-semibold text-gray-800 dark:text-white mb-3">{t.heightFactors}</h3>
-        <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-          <li>🧬 {t.genetics}</li>
-          <li>🥗 {t.nutrition}</li>
-          <li>😴 {t.sleep}</li>
-          <li>🏃 {t.exercise}</li>
-          <li>❤️ {t.health}</li>
-        </ul>
+        </div>
       </div>
     </div>
   );

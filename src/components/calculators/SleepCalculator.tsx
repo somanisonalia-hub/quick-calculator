@@ -152,7 +152,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
   const results = calculateSleepTimes();
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
         <div className="mb-6 hidden">
           <label className="block text-sm font-medium text-gray-700 mb-3">{t.mode}</label>

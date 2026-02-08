@@ -172,179 +172,178 @@ export const MacroCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) =>
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg">
+    <div className="w-full p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg">
       <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">{t.title}</h1>
 
-      <div className="space-y-4">
-        {/* Age */}
-        <div className="bg-white rounded-lg p-4 shadow">
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.age}</label>
-          <input
-            type="number"
-            value={age}
-            onChange={(e) => setAge(Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-            min="15"
-            max="100"
-          />
-        </div>
-
-        {/* Gender */}
-        <div className="bg-white rounded-lg p-4 shadow">
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.gender}</label>
-          <div className="flex gap-4">
-            <label className="flex items-center">
-              <input
-                type="radio"
-                value="male"
-                checked={gender === 'male'}
-                onChange={(e) => setGender('male')}
-                className="mr-2"
-              />
-              <span>{t.male}</span>
-            </label>
-            <label className="flex items-center">
-              <input
-                type="radio"
-                value="female"
-                checked={gender === 'female'}
-                onChange={(e) => setGender('female')}
-                className="mr-2"
-              />
-              <span>{t.female}</span>
-            </label>
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          {/* Age */}
+          <div className="bg-white rounded-lg p-4 shadow">
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.age}</label>
+            <input
+              type="number"
+              value={age}
+              onChange={(e) => setAge(Number(e.target.value))}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              min="15"
+              max="100"
+            />
           </div>
-        </div>
 
-        {/* Weight */}
-        <div className="bg-white rounded-lg p-4 shadow">
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.weight}</label>
-          <input
-            type="number"
-            value={weight}
-            onChange={(e) => setWeight(Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-            min="50"
-            max="500"
-            step="5"
-          />
-        </div>
-
-        {/* Height */}
-        <div className="bg-white rounded-lg p-4 shadow">
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.height}</label>
-          <input
-            type="number"
-            value={height}
-            onChange={(e) => setHeight(Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-            min="36"
-            max="96"
-            step="0.5"
-          />
-        </div>
-
-        {/* Activity Level */}
-        <div className="bg-white rounded-lg p-4 shadow">
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.activity}</label>
-          <select
-            value={activity}
-            onChange={(e) => setActivity(Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-          >
-            <option value={1.2}>{t.sedentary}</option>
-            <option value={1.375}>{t.light}</option>
-            <option value={1.55}>{t.moderate}</option>
-            <option value={1.725}>{t.very}</option>
-          </select>
-        </div>
-
-        {/* Goal */}
-        <div className="bg-white rounded-lg p-4 shadow">
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.goal}</label>
-          <div className="space-y-2">
-            <label className="flex items-center">
-              <input
-                type="radio"
-                value="lose"
-                checked={goal === 'lose'}
-                onChange={(e) => setGoal('lose')}
-                className="mr-2"
-              />
-              <span>{t.lose}</span>
-            </label>
-            <label className="flex items-center">
-              <input
-                type="radio"
-                value="maintain"
-                checked={goal === 'maintain'}
-                onChange={(e) => setGoal('maintain')}
-                className="mr-2"
-              />
-              <span>{t.maintain}</span>
-            </label>
-            <label className="flex items-center">
-              <input
-                type="radio"
-                value="gain"
-                checked={goal === 'gain'}
-                onChange={(e) => setGoal('gain')}
-                className="mr-2"
-              />
-              <span>{t.gain}</span>
-            </label>
+          {/* Gender */}
+          <div className="bg-white rounded-lg p-4 shadow">
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.gender}</label>
+            <div className="flex gap-4">
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  value="male"
+                  checked={gender === 'male'}
+                  onChange={(e) => setGender('male')}
+                  className="mr-2"
+                />
+                <span>{t.male}</span>
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  value="female"
+                  checked={gender === 'female'}
+                  onChange={(e) => setGender('female')}
+                  className="mr-2"
+                />
+                <span>{t.female}</span>
+              </label>
+            </div>
           </div>
-        </div>
 
-        {/* Calculate Button */}
-        <button
-          onClick={calculateMacros}
-          className="w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition text-lg"
-        >
-          {t.calculate}
-        </button>
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          {/* Weight */}
+          <div className="bg-white rounded-lg p-4 shadow">
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.weight}</label>
+            <input
+              type="number"
+              value={weight}
+              onChange={(e) => setWeight(Number(e.target.value))}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              min="50"
+              max="500"
+              step="5"
+            />
+          </div>
+
+          {/* Height */}
+          <div className="bg-white rounded-lg p-4 shadow">
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.height}</label>
+            <input
+              type="number"
+              value={height}
+              onChange={(e) => setHeight(Number(e.target.value))}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              min="36"
+              max="96"
+              step="0.5"
+            />
+          </div>
+
+          {/* Activity Level */}
+          <div className="bg-white rounded-lg p-4 shadow">
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.activity}</label>
+            <select
+              value={activity}
+              onChange={(e) => setActivity(Number(e.target.value))}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              {t.reset}
-            </button>
+              <option value={1.2}>{t.sedentary}</option>
+              <option value={1.375}>{t.light}</option>
+              <option value={1.55}>{t.moderate}</option>
+              <option value={1.725}>{t.very}</option>
+            </select>
           </div>
 
-
-
-        {/* Results */}
-        {results && (
-          <div className="bg-gradient-to-br from-purple-100 to-pink-100 border-2 border-purple-300 rounded-lg p-6">
-            <h3 className="text-2xl font-bold text-purple-900 mb-4">Your Macros</h3>
-            
-            <div className="mb-6 hidden">
-              <p className="text-sm text-purple-700 font-medium">{t.tdee}</p>
-              <p className="text-4xl font-bold text-purple-900">{results.tdee}</p>
-              <p className="text-xs text-purple-600">kcal/day</p>
-            </div>
-
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-white rounded-lg p-4">
-                <p className="text-sm text-gray-600 font-medium">{t.protein}</p>
-                <p className="text-2xl font-bold text-purple-900">{results.protein}g</p>
-                <p className="text-xs text-gray-500">{results.proteinCals} kcal</p>
-              </div>
-              <div className="bg-white rounded-lg p-4">
-                <p className="text-sm text-gray-600 font-medium">{t.carbs}</p>
-                <p className="text-2xl font-bold text-pink-900">{results.carbs}g</p>
-                <p className="text-xs text-gray-500">{results.carbsCals} kcal</p>
-              </div>
-              <div className="bg-white rounded-lg p-4">
-                <p className="text-sm text-gray-600 font-medium">{t.fat}</p>
-                <p className="text-2xl font-bold text-orange-900">{results.fat}g</p>
-                <p className="text-xs text-gray-500">{results.fatCals} kcal</p>
-              </div>
+          {/* Goal */}
+          <div className="bg-white rounded-lg p-4 shadow">
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.goal}</label>
+            <div className="space-y-2">
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  value="lose"
+                  checked={goal === 'lose'}
+                  onChange={(e) => setGoal('lose')}
+                  className="mr-2"
+                />
+                <span>{t.lose}</span>
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  value="maintain"
+                  checked={goal === 'maintain'}
+                  onChange={(e) => setGoal('maintain')}
+                  className="mr-2"
+                />
+                <span>{t.maintain}</span>
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  value="gain"
+                  checked={goal === 'gain'}
+                  onChange={(e) => setGoal('gain')}
+                  className="mr-2"
+                />
+                <span>{t.gain}</span>
+              </label>
             </div>
           </div>
-        )}
+
+          {/* Calculate Button */}
+          <button
+            onClick={calculateMacros}
+            className="w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition text-lg"
+          >
+            {t.calculate}
+          </button>
+          <button
+            onClick={resetCalculator}
+            className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          >
+            {t.reset}
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          {/* Results */}
+          {results && (
+            <div className="bg-gradient-to-br from-purple-100 to-pink-100 border-2 border-purple-300 rounded-lg p-6">
+              <h3 className="text-2xl font-bold text-purple-900 mb-4">Your Macros</h3>
+              
+              <div className="mb-6 hidden">
+                <p className="text-sm text-purple-700 font-medium">{t.tdee}</p>
+                <p className="text-4xl font-bold text-purple-900">{results.tdee}</p>
+                <p className="text-xs text-purple-600">kcal/day</p>
+              </div>
+
+              <div className="grid grid-cols-1 gap-4">
+                <div className="bg-white rounded-lg p-4">
+                  <p className="text-sm text-gray-600 font-medium">{t.protein}</p>
+                  <p className="text-2xl font-bold text-purple-900">{results.protein}g</p>
+                  <p className="text-xs text-gray-500">{results.proteinCals} kcal</p>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <p className="text-sm text-gray-600 font-medium">{t.carbs}</p>
+                  <p className="text-2xl font-bold text-pink-900">{results.carbs}g</p>
+                  <p className="text-xs text-gray-500">{results.carbsCals} kcal</p>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <p className="text-sm text-gray-600 font-medium">{t.fat}</p>
+                  <p className="text-2xl font-bold text-orange-900">{results.fat}g</p>
+                  <p className="text-xs text-gray-500">{results.fatCals} kcal</p>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

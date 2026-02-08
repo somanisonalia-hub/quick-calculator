@@ -49,9 +49,9 @@ export const RothIRACalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) 
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg">
-      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">{t.title}</h1>
+    <div className="grid lg:grid-cols-2 gap-8">
       <div className="space-y-4">
+        <h1 className="text-3xl font-bold text-gray-800">{t.title}</h1>
         <div className="bg-white rounded-lg p-4 shadow">
           <label className="block text-sm font-medium text-gray-700 mb-2">{t.age}</label>
           <input type="number" value={age} onChange={(e) => setAge(Number(e.target.value))} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" min="18" />

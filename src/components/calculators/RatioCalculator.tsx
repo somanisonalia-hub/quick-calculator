@@ -38,7 +38,27 @@ export default function RatioCalculator({ lang = 'en' }: RatioCalculatorProps) {
       ratioSum: "Sum of Parts",
       explanation: "Explanation",
       steps: "Step-by-Step",
-      examples: "Examples"
+      examples: "Examples",
+      useColons: "Use colons (:) or commas (,) to separate values",
+      example1: "4:6:8 → 2:3:4 (divide by 2)",
+      example2: "9:12:15 → 3:4:5 (divide by 3)",
+      example3: "6:8:10 → 3:4:5 (divide by 2)",
+      example4: "Equivalent: 2:3:4 → 4:6:8, 6:9:12, etc.",
+      inputPreview: "Input Preview",
+      original: "Original:",
+      values: "Values:",
+      formula: "Formula",
+      formulaSimplify: "Simplified Ratio = Original ÷ GCD",
+      formulaEquivalent: "Equivalent Ratios = Original × Multiplier",
+      formulaMissing: "Missing Value = (Known Ratio × Total) ÷ Sum of Known Ratios",
+      formulaProportion: "a/b = c/d → Cross multiplication",
+      step1: "Parse input ratio:",
+      step2: "Find GCD of all numbers:",
+      step3: "Divide each number by GCD:",
+      step4: "Sum of parts:",
+      step5: "Generate equivalent ratios by multiplication",
+      visualRatio: "Visual Ratio",
+      ratio: "Ratio:"
     },
     es: {
       title: "Calculadora de Proporciones",
@@ -59,7 +79,27 @@ export default function RatioCalculator({ lang = 'en' }: RatioCalculatorProps) {
       ratioSum: "Suma de Partes",
       explanation: "Explicación",
       steps: "Paso a Paso",
-      examples: "Ejemplos"
+      examples: "Ejemplos",
+      useColons: "Usa dos puntos (:) o comas (,) para separar valores",
+      example1: "4:6:8 → 2:3:4 (dividir por 2)",
+      example2: "9:12:15 → 3:4:5 (dividir por 3)",
+      example3: "6:8:10 → 3:4:5 (dividir por 2)",
+      example4: "Equivalente: 2:3:4 → 4:6:8, 6:9:12, etc.",
+      inputPreview: "Vista Previa de Entrada",
+      original: "Original:",
+      values: "Valores:",
+      formula: "Fórmula",
+      formulaSimplify: "Proporción Simplificada = Original ÷ MCD",
+      formulaEquivalent: "Proporciones Equivalentes = Original × Multiplicador",
+      formulaMissing: "Valor Faltante = (Proporción Conocida × Total) ÷ Suma de Proporciones Conocidas",
+      formulaProportion: "a/b = c/d → Multiplicación cruzada",
+      step1: "Analizar proporción de entrada:",
+      step2: "Encontrar MCD de todos los números:",
+      step3: "Dividir cada número por MCD:",
+      step4: "Suma de partes:",
+      step5: "Generar proporciones equivalentes por multiplicación",
+      visualRatio: "Proporción Visual",
+      ratio: "Proporción:"
     },
     pt: {
       title: "Calculadora de Proporção",
@@ -80,7 +120,27 @@ export default function RatioCalculator({ lang = 'en' }: RatioCalculatorProps) {
       ratioSum: "Soma das Partes",
       explanation: "Explicação",
       steps: "Passo a Passo",
-      examples: "Exemplos"
+      examples: "Exemplos",
+      useColons: "Use dois pontos (:) ou vírgulas (,) para separar valores",
+      example1: "4:6:8 → 2:3:4 (dividir por 2)",
+      example2: "9:12:15 → 3:4:5 (dividir por 3)",
+      example3: "6:8:10 → 3:4:5 (dividir por 2)",
+      example4: "Equivalente: 2:3:4 → 4:6:8, 6:9:12, etc.",
+      inputPreview: "Visualização de Entrada",
+      original: "Original:",
+      values: "Valores:",
+      formula: "Fórmula",
+      formulaSimplify: "Proporção Simplificada = Original ÷ MDC",
+      formulaEquivalent: "Proporções Equivalentes = Original × Multiplicador",
+      formulaMissing: "Valor Faltante = (Proporção Conhecida × Total) ÷ Soma de Proporções Conhecidas",
+      formulaProportion: "a/b = c/d → Multiplicação cruzada",
+      step1: "Analisar proporção de entrada:",
+      step2: "Encontrar MDC de todos os números:",
+      step3: "Dividir cada número por MDC:",
+      step4: "Soma das partes:",
+      step5: "Gerar proporções equivalentes por multiplicação",
+      visualRatio: "Proporção Visual",
+      ratio: "Proporção:"
     },
     fr: {
       title: "Calculateur de Rapport",
@@ -101,7 +161,109 @@ export default function RatioCalculator({ lang = 'en' }: RatioCalculatorProps) {
       ratioSum: "Somme des Parties",
       explanation: "Explication",
       steps: "Étape par Étape",
-      examples: "Exemples"
+      examples: "Exemples",
+      useColons: "Utilisez deux points (:) ou virgules (,) pour séparer les valeurs",
+      inputPreview: "Aperçu de l'Entrée",
+      original: "Original:",
+      values: "Valeurs:",
+      formula: "Formule",
+      formulaSimplify: "Rapport Simplifié = Original ÷ PGCD",
+      formulaEquivalent: "Rapports Équivalents = Original × Multiplicateur",
+      formulaMissing: "Valeur Manquante = (Rapport Connu × Total) ÷ Somme des Rapports Connus",
+      formulaProportion: "a/b = c/d → Multiplication croisée",
+      step1: "Analyser rapport d'entrée:",
+      step2: "Trouver PGCD de tous les nombres:",
+      step3: "Diviser chaque nombre par PGCD:",
+      step4: "Somme des parties:",
+      step5: "Générer rapports équivalents par multiplication",
+      visualRatio: "Rapport Visuel",
+      ratio: "Rapport:",
+      example1: "4:6:8 → 2:3:4 (diviser par 2)",
+      example2: "9:12:15 → 3:4:5 (diviser par 3)",
+      example3: "6:8:10 → 3:4:5 (diviser par 2)",
+      example4: "Équivalent: 2:3:4 → 4:6:8, 6:9:12, etc."
+    },
+    de: {
+      title: "Verhältnisrechner",
+      description: "Berechnen Sie Verhältnisse und äquivalente Proportionen sofort",
+      calculationType: "Berechnungsart",
+      simplify: "Verhältnis vereinfachen",
+      equivalent: "Äquivalente Verhältnisse finden",
+      missing: "Fehlenden Wert finden",
+      proportion: "Proportion lösen",
+      ratioInput: "Verhältnis-Eingabe",
+      enterRatio: "Verhältnis mit Doppelpunkt getrennt eingeben (z.B. 2:3:4)",
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen",
+      results: "Ergebnisse",
+      simplifiedRatio: "Vereinfachtes Verhältnis",
+      equivalentRatios: "Äquivalente Verhältnisse",
+      greatestCommonDivisor: "Größter gemeinsamer Teiler",
+      ratioSum: "Summe der Teile",
+      explanation: "Erklärung",
+      steps: "Schritt für Schritt",
+      examples: "Beispiele",
+      useColons: "Verwenden Sie Doppelpunkte (:) oder Kommas (,) zur Trennung",
+      inputPreview: "Eingabevorschau",
+      original: "Original:",
+      values: "Werte:",
+      formula: "Formel",
+      formulaSimplify: "Vereinfachtes Verhältnis = Original ÷ ggT",
+      formulaEquivalent: "Äquivalente Verhältnisse = Original × Multiplikator",
+      formulaMissing: "Fehlender Wert = (Bekanntes Verhältnis × Gesamt) ÷ Summe bekannter Verhältnisse",
+      formulaProportion: "a/b = c/d → Kreuzmultiplikation",
+      step1: "Eingabeverhältnis analysieren:",
+      step2: "ggT aller Zahlen finden:",
+      step3: "Jede Zahl durch ggT teilen:",
+      step4: "Summe der Teile:",
+      step5: "Äquivalente Verhältnisse durch Multiplikation generieren",
+      visualRatio: "Visuelles Verhältnis",
+      ratio: "Verhältnis:",
+      example1: "4:6:8 → 2:3:4 (teilen durch 2)",
+      example2: "9:12:15 → 3:4:5 (teilen durch 3)",
+      example3: "6:8:10 → 3:4:5 (teilen durch 2)",
+      example4: "Äquivalent: 2:3:4 → 4:6:8, 6:9:12, usw."
+    },
+    nl: {
+      title: "Verhoudingscalculator",
+      description: "Bereken verhoudingen en equivalente ratio's direct",
+      calculationType: "Berekeningstype",
+      simplify: "Verhouding vereenvoudigen",
+      equivalent: "Equivalente verhoudingen vinden",
+      missing: "Ontbrekende waarde vinden",
+      proportion: "Proportie oplossen",
+      ratioInput: "Verhouding invoer",
+      enterRatio: "Voer verhouding in gescheiden door dubbele punten (bijv. 2:3:4)",
+      calculate: "🔄 Herberekenen",
+      reset: "Resetten",
+      results: "Resultaten",
+      simplifiedRatio: "Vereenvoudigde verhouding",
+      equivalentRatios: "Equivalente verhoudingen",
+      greatestCommonDivisor: "Grootste gemene deler",
+      ratioSum: "Som van delen",
+      explanation: "Uitleg",
+      steps: "Stap voor stap",
+      examples: "Voorbeelden",
+      useColons: "Gebruik dubbele punten (:) of komma's (,) om waarden te scheiden",
+      inputPreview: "Invoervoorbeeld",
+      original: "Origineel:",
+      values: "Waarden:",
+      formula: "Formule",
+      formulaSimplify: "Vereenvoudigde verhouding = Origineel ÷ GGD",
+      formulaEquivalent: "Equivalente verhoudingen = Origineel × Vermenigvuldiger",
+      formulaMissing: "Ontbrekende waarde = (Bekende verhouding × Totaal) ÷ Som van bekende verhoudingen",
+      formulaProportion: "a/b = c/d → Kruislingse vermenigvuldiging",
+      step1: "Invoerverhouding analyseren:",
+      step2: "GGD van alle getallen vinden:",
+      step3: "Elk getal delen door GGD:",
+      step4: "Som van delen:",
+      step5: "Equivalente verhoudingen genereren door vermenigvuldiging",
+      visualRatio: "Visuele verhouding",
+      ratio: "Verhouding:",
+      example1: "4:6:8 → 2:3:4 (delen door 2)",
+      example2: "9:12:15 → 3:4:5 (delen door 3)",
+      example3: "6:8:10 → 3:4:5 (delen door 2)",
+      example4: "Equivalent: 2:3:4 → 4:6:8, 6:9:12, enz."
     }
   };
 
@@ -204,7 +366,7 @@ export default function RatioCalculator({ lang = 'en' }: RatioCalculatorProps) {
               placeholder={t.enterRatio}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <p className="text-xs text-gray-500 mt-1">Use colons (:) or commas (,) to separate values</p>
+            <p className="text-xs text-gray-500 mt-1">{t.useColons}</p>
           </div>
 
           <div className="flex gap-4">
@@ -225,24 +387,24 @@ export default function RatioCalculator({ lang = 'en' }: RatioCalculatorProps) {
           {/* Input Preview */}
           {ratio.length > 0 && (
             <div className="bg-gray-50 p-3 rounded-lg">
-              <h4 className="text-sm font-semibold text-gray-900 mb-2">Input Preview</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">{t.inputPreview}</h4>
               <div className="text-sm text-gray-700">
-                Original: {formatRatio(ratio)}
+                {t.original} {formatRatio(ratio)}
               </div>
               <div className="text-sm text-gray-700">
-                Values: {ratio.join(', ')}
+                {t.values} {ratio.join(', ')}
               </div>
             </div>
           )}
 
           {/* Formula */}
           <div className="bg-green-50 p-4 rounded-lg">
-            <h4 className="text-sm font-semibold text-green-900 mb-2">Formula</h4>
+            <h4 className="text-sm font-semibold text-green-900 mb-2">{t.formula}</h4>
             <div className="text-sm font-mono text-green-700">
-              {calculationType === 'simplify' && 'Simplified Ratio = Original ÷ GCD'}
-              {calculationType === 'equivalent' && 'Equivalent Ratios = Original × Multiplier'}
-              {calculationType === 'missing' && 'Missing Value = (Known Ratio × Total) ÷ Sum of Known Ratios'}
-              {calculationType === 'proportion' && 'a/b = c/d → Cross multiplication'}
+              {calculationType === 'simplify' && t.formulaSimplify}
+              {calculationType === 'equivalent' && t.formulaEquivalent}
+              {calculationType === 'missing' && t.formulaMissing}
+              {calculationType === 'proportion' && t.formulaProportion}
             </div>
           </div>
         </div>
@@ -293,12 +455,12 @@ export default function RatioCalculator({ lang = 'en' }: RatioCalculatorProps) {
               <div className="bg-orange-50 p-4 rounded-lg">
                 <h4 className="text-sm font-semibold text-orange-900 mb-3">{t.steps}</h4>
                 <div className="space-y-2 text-sm">
-                  <div><strong>1.</strong> Parse input ratio: {formatRatio(ratio)}</div>
-                  <div><strong>2.</strong> Find GCD of all numbers: {results.gcd}</div>
-                  <div><strong>3.</strong> Divide each number by GCD: {formatRatio(results.simplified)}</div>
-                  <div><strong>4.</strong> Sum of parts: {results.sum}</div>
+                  <div><strong>1.</strong> {t.step1} {formatRatio(ratio)}</div>
+                  <div><strong>2.</strong> {t.step2} {results.gcd}</div>
+                  <div><strong>3.</strong> {t.step3} {formatRatio(results.simplified)}</div>
+                  <div><strong>4.</strong> {t.step4} {results.sum}</div>
                   {calculationType === 'equivalent' && (
-                    <div><strong>5.</strong> Generate equivalent ratios by multiplication</div>
+                    <div><strong>5.</strong> {t.step5}</div>
                   )}
                 </div>
               </div>
@@ -307,16 +469,16 @@ export default function RatioCalculator({ lang = 'en' }: RatioCalculatorProps) {
               <div className="bg-indigo-50 p-4 rounded-lg">
                 <h4 className="text-sm font-semibold text-indigo-900 mb-2">{t.examples}</h4>
                 <div className="text-xs text-indigo-700 space-y-1">
-                  <div>4:6:8 → 2:3:4 (divide by 2)</div>
-                  <div>9:12:15 → 3:4:5 (divide by 3)</div>
-                  <div>6:8:10 → 3:4:5 (divide by 2)</div>
-                  <div>Equivalent: 2:3:4 → 4:6:8, 6:9:12, etc.</div>
+                  <div>{t.example1}</div>
+                  <div>{t.example2}</div>
+                  <div>{t.example3}</div>
+                  <div>{t.example4}</div>
                 </div>
               </div>
 
               {/* Visual Ratio Representation */}
               <div className="bg-red-50 p-4 rounded-lg">
-                <h4 className="text-sm font-semibold text-red-900 mb-2">Visual Ratio</h4>
+                <h4 className="text-sm font-semibold text-red-900 mb-2">{t.visualRatio}</h4>
                 <div className="flex items-center justify-center space-x-2">
                   {results.simplified.map((value, index) => (
                     <div key={index} className="flex flex-col items-center">
@@ -332,7 +494,7 @@ export default function RatioCalculator({ lang = 'en' }: RatioCalculatorProps) {
                   ))}
                 </div>
                 <div className="text-center text-xs text-red-600 mt-2">
-                  Ratio: {formatRatio(results.simplified)}
+                  {t.ratio} {formatRatio(results.simplified)}
                 </div>
               </div>
             </>

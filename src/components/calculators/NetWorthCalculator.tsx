@@ -143,7 +143,7 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
   const results = calculateNetWorth();
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
         <h3 className="text-xl font-bold mb-4 text-green-600">{t.assets}</h3>
         <div className="grid lg:grid-cols-2 gap-4 mb-6">

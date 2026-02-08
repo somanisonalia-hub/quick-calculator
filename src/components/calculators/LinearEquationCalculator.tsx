@@ -94,59 +94,60 @@ export default function LinearEquationCalculator({ lang = 'en' }: LinearEquation
       <div className="mb-4 text-center text-gray-600 font-mono text-lg">
         {t.title}
       </div>
-      <div className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.coefficientA}</label>
-          <input
-            type="number"
-            value={a}
-            onChange={(e) => setA(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.coefficientA}</label>
+            <input
+              type="number"
+              value={a}
+              onChange={(e) => setA(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
           </div>
 
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.constantB}</label>
-          <input
-            type="number"
-            value={b}
-            onChange={(e) => setB(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.resultC}</label>
-          <input
-            type="number"
-            value={c}
-            onChange={(e) => setC(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-
-        <button
-          onClick={solveEquation}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          {t.calculate}
-        </button>
-
-        {result && (
-          <div className="bg-green-50 p-4 rounded-lg">
-            <div className="text-center text-lg"><strong>{t.result}</strong> {result}</div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.constantB}</label>
+            <input
+              type="number"
+              value={b}
+              onChange={(e) => setB(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
           </div>
-        )}
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.resultC}</label>
+            <input
+              type="number"
+              value={c}
+              onChange={(e) => setC(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <button
+            onClick={solveEquation}
+            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            {t.calculate}
+          </button>
+
+          <button
+            onClick={resetCalculator}
+            className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          >
+            {t.reset}
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          {result && (
+            <div className="bg-green-50 p-4 rounded-lg">
+              <div className="text-center text-lg"><strong>{t.result}</strong> {result}</div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

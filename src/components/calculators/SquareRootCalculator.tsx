@@ -241,104 +241,105 @@ const SquareRootCalculator: React.FC<SquareRootCalculatorProps> = ({ lang = 'en'
         {t.title}
       </h2>
 
-      <div className="space-y-4">
-        {/* Number Input */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            {t.numberLabel}
-          </label>
-          <input
-            type="number"
-            value={number}
-            onChange={(e) => setNumber(e.target.value)}
-            placeholder={t.numberPlaceholder}
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          />
-        </div>
-
-        {/* Root Type Selection */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            {t.rootTypeLabel}
-          </label>
-          <select
-            value={rootType}
-            onChange={(e) => setRootType(e.target.value as 'square' | 'cube' | 'nth')}
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
-            <option value="square">{t.squareRoot}</option>
-            <option value="cube">{t.cubeRoot}</option>
-            <option value="nth">{t.nthRoot}</option>
-          </select>
-        </div>
-
-        {/* N Value Input (only shown for nth root) */}
-        {rootType === 'nth' && (
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          {/* Number Input */}
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              {t.nValueLabel}
+              {t.numberLabel}
             </label>
             <input
               type="number"
-              value={nValue}
-              onChange={(e) => setNValue(e.target.value)}
-              placeholder={t.nValuePlaceholder}
-              min="2"
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
+              placeholder={t.numberPlaceholder}
               className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             />
           </div>
-        )}
 
-        {/* Calculate Button */}
-        <button
-          onClick={calculateRoot}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
-        >
-          {t.calculateButton}
-        </button>
-
-        {/* Error Message */}
-        {error && (
-          <div className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-400 rounded-lg">
-            {error}
-          </div>
-        )}
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          {/* Root Type Selection */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t.rootTypeLabel}
+            </label>
+            <select
+              value={rootType}
+              onChange={(e) => setRootType(e.target.value as 'square' | 'cube' | 'nth')}
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             >
-              {t.reset}
-            </button>
+              <option value="square">{t.squareRoot}</option>
+              <option value="cube">{t.cubeRoot}</option>
+              <option value="nth">{t.nthRoot}</option>
+            </select>
           </div>
 
+          {/* N Value Input (only shown for nth root) */}
+          {rootType === 'nth' && (
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                {t.nValueLabel}
+              </label>
+              <input
+                type="number"
+                value={nValue}
+                onChange={(e) => setNValue(e.target.value)}
+                placeholder={t.nValuePlaceholder}
+                min="2"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+              />
+            </div>
+          )}
 
+          {/* Calculate Button */}
+          <button
+            onClick={calculateRoot}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+          >
+            {t.calculateButton}
+          </button>
 
-        {/* Results */}
-        {decimalResult && !error && (
-          <div className="mt-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-100">
-              {t.result}
-            </h3>
-            
-            <div className="space-y-3">
-              <div className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
-                <span className="text-gray-600 dark:text-gray-400">{t.decimalForm}:</span>
-                <span className="font-mono text-lg font-semibold text-gray-900 dark:text-gray-100">
-                  {decimalResult}
-                </span>
-              </div>
+          {/* Reset Button */}
+          <button
+            onClick={resetCalculator}
+            className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          >
+            {t.reset}
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          {/* Error Message */}
+          {error && (
+            <div className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-400 rounded-lg">
+              {error}
+            </div>
+          )}
+
+          {/* Results */}
+          {decimalResult && !error && (
+            <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-100">
+                {t.result}
+              </h3>
               
-              <div className="flex justify-between items-center py-2">
-                <span className="text-gray-600 dark:text-gray-400">{t.simplifiedForm}:</span>
-                <span className="font-mono text-lg font-semibold text-gray-900 dark:text-gray-100">
-                  {simplifiedResult}
-                </span>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
+                  <span className="text-gray-600 dark:text-gray-400">{t.decimalForm}:</span>
+                  <span className="font-mono text-lg font-semibold text-gray-900 dark:text-gray-100">
+                    {decimalResult}
+                  </span>
+                </div>
+                
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600 dark:text-gray-400">{t.simplifiedForm}:</span>
+                  <span className="font-mono text-lg font-semibold text-gray-900 dark:text-gray-100">
+                    {simplifiedResult}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

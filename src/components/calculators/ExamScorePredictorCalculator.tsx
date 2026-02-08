@@ -100,7 +100,7 @@ export default function ExamScorePredictorCalculator({ lang = 'en' }: ExamScoreP
   const results = calculateRequiredScore();
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="p-6">
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
         <div className="grid lg:grid-cols-2 gap-6">
           <div>

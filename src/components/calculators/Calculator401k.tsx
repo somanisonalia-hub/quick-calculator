@@ -21,6 +21,7 @@ export const Calculator401k: React.FC<{ lang?: string }> = ({ lang = 'en' }) => 
       employerMatch: 'Employer Match (%)',
       annualReturn: 'Expected Annual Return (%)',
       calculate: 'Calculate',
+      reset: 'Reset',
       projectedBalance: 'Projected 401k Balance',
       totalContributions: 'Your Total Contributions',
       employerContributions: 'Employer Contributions',
@@ -36,6 +37,7 @@ export const Calculator401k: React.FC<{ lang?: string }> = ({ lang = 'en' }) => 
       employerMatch: 'Coincidencia del Empleador (%)',
       annualReturn: 'Rendimiento Anual Esperado (%)',
       calculate: 'Calcular',
+      reset: 'Reiniciar',
       projectedBalance: 'Saldo 401k Proyectado',
       totalContributions: 'Tus Contribuciones Totales',
       employerContributions: 'Contribuciones del Empleador',
@@ -51,6 +53,7 @@ export const Calculator401k: React.FC<{ lang?: string }> = ({ lang = 'en' }) => 
       employerMatch: 'Correspondência do Empregador (%)',
       annualReturn: 'Retorno Anual Esperado (%)',
       calculate: 'Calcular',
+      reset: 'Redefinir',
       projectedBalance: 'Saldo 401k Projetado',
       totalContributions: 'Suas Contribuições Totais',
       employerContributions: 'Contribuições do Empregador',
@@ -66,6 +69,7 @@ export const Calculator401k: React.FC<{ lang?: string }> = ({ lang = 'en' }) => 
       employerMatch: 'Correspondance de l\'Employeur (%)',
       annualReturn: 'Rendement Annuel Attendu (%)',
       calculate: 'Calculer',
+      reset: 'Réinitialiser',
       projectedBalance: 'Solde 401k Projeté',
       totalContributions: 'Vos Cotisations Totales',
       employerContributions: 'Cotisations de l\'Employeur',
@@ -105,19 +109,19 @@ export const Calculator401k: React.FC<{ lang?: string }> = ({ lang = 'en' }) => 
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    setCurrentAge(30);
+    setRetirementAge(65);
+    setSalary(60000);
+    setContribution(10);
+    setEmployerMatch(5);
+    setAnnualReturn(7);
+    setResults(null);
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 bg-gradient-to-br from-green-50 to-blue-50 rounded-xl shadow-lg">
-      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">{t.title}</h1>
-
+    <div className="grid lg:grid-cols-2 gap-8">
       <div className="space-y-4">
+        <h1 className="text-3xl font-bold text-gray-800">{t.title}</h1>
         <div className="bg-white rounded-lg p-4 shadow">
           <label className="block text-sm font-medium text-gray-700 mb-2">{t.currentAge}</label>
           <input type="number" value={currentAge} onChange={(e) => setCurrentAge(Number(e.target.value))} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" min="18" max="100" />

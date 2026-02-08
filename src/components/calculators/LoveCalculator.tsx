@@ -131,101 +131,102 @@ export default function LoveCalculator({ lang = 'en' }: LoveCalculatorProps) {
   };
 
   return (
-    <div className="bg-gradient-to-br from-pink-50 to-red-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-xl p-8 max-w-md mx-auto">
+    <div className="bg-gradient-to-br from-pink-50 to-red-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-xl p-8">
       <div className="text-center mb-8">
         <span className="text-5xl">💕</span>
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mt-4">{t.title}</h2>
       </div>
 
-      <div className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            {t.name1}
-          </label>
-          <input
-            type="text"
-            value={name1}
-            onChange={(e) => setName1(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg border border-pink-200 focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-            placeholder="Enter your name..."
-          />
-        </div>
-
-        <div className="flex justify-center">
-          <span className="text-3xl">❤️</span>
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            {t.name2}
-          </label>
-          <input
-            type="text"
-            value={name2}
-            onChange={(e) => setName2(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg border border-pink-200 focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-            placeholder="Enter partner's name..."
-          />
-        </div>
-
-        <button
-          onClick={calculateLove}
-          disabled={!name1.trim() || !name2.trim() || isCalculating}
-          className="w-full py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold rounded-lg hover:from-pink-600 hover:to-red-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isCalculating ? (
-            <span className="flex items-center justify-center gap-2">
-              <span className="animate-pulse">💕</span>
-              Calculating...
-            </span>
-          ) : (
-            t.calculate
-          )}
-        </button>
-      </div>
-
-      {result !== null && (
-        <div className="mt-8 text-center animate-fade-in">
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-            <p className="text-gray-600 dark:text-gray-400 mb-2">{t.result}</p>
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t.name1}
+            </label>
+            <input
+              type="text"
+              value={name1}
+              onChange={(e) => setName1(e.target.value)}
+              className="w-full px-4 py-3 rounded-lg border border-pink-200 focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              placeholder="Enter your name..."
+            />
           </div>
 
-            <div className={`text-6xl font-bold ${getHeartColor(result)} mb-4`}>
-              {result}%
-            </div>
-            <p className="text-lg text-gray-700 dark:text-gray-300">
-              {getMessage(result)}
-            </p>
-            <div className="mt-4 flex justify-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <span
-                  key={i}
-                  className={`text-2xl ${i < Math.ceil(result / 20) ? 'opacity-100' : 'opacity-30'}`}
-                >
-                  ❤️
-                </span>
-              ))}
-            </div>
-  </div>
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">
-            {t.disclaimer}
-          </p>
-        </div>
-      )}
+          <div className="flex justify-center">
+            <span className="text-3xl">❤️</span>
+          </div>
 
-      {result === null && name1.trim() && name2.trim() && (
-        <p className="text-center text-gray-500 dark:text-gray-400 mt-4 text-sm">
-          {t.enterNames}
-        </p>
-      )}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t.name2}
+            </label>
+            <input
+              type="text"
+              value={name2}
+              onChange={(e) => setName2(e.target.value)}
+              className="w-full px-4 py-3 rounded-lg border border-pink-200 focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              placeholder="Enter partner's name..."
+            />
+          </div>
+
+          <button
+            onClick={calculateLove}
+            disabled={!name1.trim() || !name2.trim() || isCalculating}
+            className="w-full py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold rounded-lg hover:from-pink-600 hover:to-red-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {isCalculating ? (
+              <span className="flex items-center justify-center gap-2">
+                <span className="animate-pulse">💕</span>
+                Calculating...
+              </span>
+            ) : (
+              t.calculate
+            )}
+          </button>
+
+          <button
+            onClick={resetCalculator}
+            className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          >
+            {t.reset}
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          {result !== null && (
+            <div className="text-center animate-fade-in">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+                <p className="text-gray-600 dark:text-gray-400 mb-2">{t.result}</p>
+                <div className={`text-6xl font-bold ${getHeartColor(result)} mb-4`}>
+                  {result}%
+                </div>
+                <p className="text-lg text-gray-700 dark:text-gray-300">
+                  {getMessage(result)}
+                </p>
+                <div className="mt-4 flex justify-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <span
+                      key={i}
+                      className={`text-2xl ${i < Math.ceil(result / 20) ? 'opacity-100' : 'opacity-30'}`}
+                    >
+                      ❤️
+                    </span>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">
+                  {t.disclaimer}
+                </p>
+              </div>
+            </div>
+          )}
+
+          {result === null && name1.trim() && name2.trim() && (
+            <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
+              {t.enterNames}
+            </p>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

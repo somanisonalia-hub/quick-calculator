@@ -98,22 +98,20 @@ export default function SavingsGoalCalculator({ lang = 'en' }: SavingsGoalCalcul
       totalContributions,
       totalEarnings: Math.max(0, totalEarnings),
     };
+  };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+    setGoalAmount(100000);
+    setCurrentSavings(10000);
+    setMonthlyContribution(1000);
+    setAnnualReturn(6);
+    setCalculated(false);
   };
 
   const results = calculateGoal();
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <>
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
         <div className="grid lg:grid-cols-2 gap-6">
           <div>
@@ -223,6 +221,6 @@ export default function SavingsGoalCalculator({ lang = 'en' }: SavingsGoalCalcul
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }

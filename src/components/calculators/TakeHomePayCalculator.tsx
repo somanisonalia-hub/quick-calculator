@@ -710,12 +710,16 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    setFormData({
+      grossPay: 2000,
+      payFrequency: 'biweekly',
+      filingStatus: 'single',
+      dependents: 0,
+      state: 'CA',
+      healthInsurance: 0,
+      retirement401k: 0,
+      otherDeductions: 0
     });
-    setValues(initial);
-    setResults({});
   };
 
   const calculateStateTax = (grossPay: number, payFrequency: string, state: string): number => {
@@ -811,7 +815,7 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="p-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
           {t.title}

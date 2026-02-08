@@ -268,13 +268,20 @@ export default function BMICalculator({ lang = 'en' }: BMICalculatorProps) {
   };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    setInputs({
+      unit: 'metric',
+      height: 170,
+      weight: 70,
+      heightFeet: 5,
+      heightInches: 9,
+      weightLbs: 154
     });
-    setValues(initial);
-    setResults({});
+    setResults({
+      bmi: 0,
+      category: '',
+      healthyRange: '',
+      bmiPrime: 0
+    });
   };
 
   useEffect(() => {

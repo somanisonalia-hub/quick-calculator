@@ -111,7 +111,65 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
       debtToEquityHigh: "Dette-Capitaux 1.0-2.0: Levier élevé",
       debtRatioLow: "Ratio d'Endettement < 30%: Position à faible risque",
       debtRatioModerate: "Ratio d'Endettement 30-50%: Risque modéré",
-      debtRatioHigh: "Ratio d'Endettement > 50%: Position à risque élevé"
+      debtRatioHigh: "Ratio d'Endettement > 50%: Position à risque élevé",
+      calculateDebtRatios: "Calculate Debt Ratios",
+      enterFinancialInfo: "Enter financial information above to see debt ratio analysis"
+    },
+    de: {
+      title: "Schuldenquoten-Rechner",
+      description: "Berechnen Sie wichtige Schuldenquoten einschließlich Verschuldungsgrad, Schuldenquote und Schulden-zu-Vermögen-Verhältnis, um finanzielle Hebelwirkung und Risiko zu bewerten.",
+      debtDetails: "Schulden- und Finanzinformationen",
+      totalDebt: "Gesamtschulden",
+      totalEquity: "Gesamtkapital",
+      totalAssets: "Gesamtvermögen",
+      shortTermDebt: "Kurzfristige Schulden",
+      longTermDebt: "Langfristige Schulden",
+      currentLiabilities: "Kurzfristige Verbindlichkeiten",
+      calculate: "🔄 Neu berechnen",
+      reset: "Zurücksetzen",
+      debtRatios: "Ergebnisse der Schuldenquoten",
+      debtToEquityRatio: "Verschuldungsgrad",
+      debtRatio: "Schuldenquote (Gesamtschulden zu Gesamtvermögen)",
+      longTermDebtRatio: "Langfristige Schuldenquote",
+      debtToAssetRatio: "Schulden-zu-Vermögen-Verhältnis",
+      interpretation: "Verhältnis-Interpretation",
+      currency: "€",
+      debtToEquityConservative: "Verschuldungsgrad < 0,5: Konservative Finanzierung",
+      debtToEquityModerate: "Verschuldungsgrad 0,5-1,0: Mäßige Hebelwirkung",
+      debtToEquityHigh: "Verschuldungsgrad 1,0-2,0: Hohe Hebelwirkung",
+      debtRatioLow: "Schuldenquote < 30%: Niedrige Risikoposition",
+      debtRatioModerate: "Schuldenquote 30-50%: Moderates Risiko",
+      debtRatioHigh: "Schuldenquote > 50%: Hohe Risikoposition",
+      calculateDebtRatios: "Schuldenquoten berechnen",
+      enterFinancialInfo: "Geben Sie oben finanzielle Informationen ein, um die Schuldenquotenanalyse zu sehen"
+    },
+    nl: {
+      title: "Schuldratio's Calculator",
+      description: "Bereken belangrijke schuldratio's inclusief schuld-naar-eigen-vermogen, schuldratio en schuld-naar-activa-ratio om financiële hefboomwerking en risico te beoordelen.",
+      debtDetails: "Schuld- en financiële informatie",
+      totalDebt: "Totale schuld",
+      totalEquity: "Totaal eigen vermogen",
+      totalAssets: "Totale activa",
+      shortTermDebt: "Schulden op korte termijn",
+      longTermDebt: "Schulden op lange termijn",
+      currentLiabilities: "Kortlopende verplichtingen",
+      calculate: "🔄 Opnieuw berekenen",
+      reset: "Herstellen",
+      debtRatios: "Resultaten schuldratio's",
+      debtToEquityRatio: "Schuld-naar-eigen-vermogen-ratio",
+      debtRatio: "Schuldratio (totale schuld naar totale activa)",
+      longTermDebtRatio: "Schuldratio op lange termijn",
+      debtToAssetRatio: "Schuld-naar-activa-ratio",
+      interpretation: "Ratio-interpretatie",
+      currency: "€",
+      debtToEquityConservative: "Schuld-naar-eigen-vermogen < 0,5: Conservatieve financiering",
+      debtToEquityModerate: "Schuld-naar-eigen-vermogen 0,5-1,0: Gematigde hefboomwerking",
+      debtToEquityHigh: "Schuld-naar-eigen-vermogen 1,0-2,0: Hoge hefboomwerking",
+      debtRatioLow: "Schuldratio < 30%: Lage risicopositie",
+      debtRatioModerate: "Schuldratio 30-50%: Matig risico",
+      debtRatioHigh: "Schuldratio > 50%: Hoge risicopositie",
+      calculateDebtRatios: "Schuldratio's berekenen",
+      enterFinancialInfo: "Voer hierboven financiële informatie in om de schuldratio-analyse te zien"
     }
   };
 
@@ -356,8 +414,8 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-1">Calculate Debt Ratios</h3>
-              <p className="text-gray-500">Enter financial information above to see debt ratio analysis</p>
+              <h3 className="text-lg font-medium text-gray-900 mb-1">{t.calculateDebtRatios}</h3>
+              <p className="text-gray-500">{t.enterFinancialInfo}</p>
             </div>
           )}
         </div>

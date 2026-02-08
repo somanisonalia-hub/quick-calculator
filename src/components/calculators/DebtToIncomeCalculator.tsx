@@ -134,104 +134,97 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
   const interpretation = getInterpretation();
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="grid lg:grid-cols-2 gap-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.monthlyIncome}
-            </label>
-            <input
-              type="number"
-              value={monthlyIncome}
-              onChange={(e) => setMonthlyIncome(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.mortgageRent}
-            </label>
-            <input
-              type="number"
-              value={mortgageRent}
-              onChange={(e) => setMortgageRent(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.carLoans}
-            </label>
-            <input
-              type="number"
-              value={carLoans}
-              onChange={(e) => setCarLoans(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.creditCards}
-            </label>
-            <input
-              type="number"
-              value={creditCards}
-              onChange={(e) => setCreditCards(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.studentLoans}
-            </label>
-            <input
-              type="number"
-              value={studentLoans}
-              onChange={(e) => setStudentLoans(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {t.otherDebts}
-            </label>
-            <input
-              type="number"
-              value={otherDebts}
-              onChange={(e) => setOtherDebts(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
+    <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+      <div className="grid lg:grid-cols-2 gap-6">
+        {/* ...existing code for all input fields and reset button... */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            {t.monthlyIncome}
+          </label>
+          <input
+            type="number"
+            value={monthlyIncome}
+            onChange={(e) => setMonthlyIncome(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+          />
         </div>
-
-        <button
-          onClick={() => setCalculated(true)}
-          className="w-full mt-6 bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors font-medium"
-        >
-          {t.calculate}
-        </button>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            {t.mortgageRent}
+          </label>
+          <input
+            type="number"
+            value={mortgageRent}
+            onChange={(e) => setMortgageRent(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            {t.carLoans}
+          </label>
+          <input
+            type="number"
+            value={carLoans}
+            onChange={(e) => setCarLoans(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            {t.creditCards}
+          </label>
+          <input
+            type="number"
+            value={creditCards}
+            onChange={(e) => setCreditCards(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            {t.studentLoans}
+          </label>
+          <input
+            type="number"
+            value={studentLoans}
+            onChange={(e) => setStudentLoans(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            {t.otherDebts}
+          </label>
+          <input
+            type="number"
+            value={otherDebts}
+            onChange={(e) => setOtherDebts(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        {/* Buttons */}
+        <div className="flex gap-3 pt-4">
+          <button
+            onClick={resetCalculator}
+            className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          >
+            {t.reset}
+          </button>
+        </div>
       </div>
+      <button
+        onClick={() => setCalculated(true)}
+        className="w-full mt-6 bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors font-medium"
+      >
+        {t.calculate}
+      </button>
 
+      {/* Results Section */}
       {calculated && (
         <div className="bg-white rounded-lg shadow-md p-6">
           <h3 className="text-2xl font-bold mb-6 text-gray-800">{t.results}</h3>
-
           <div className="grid lg:grid-cols-2 gap-4 mb-6">
             <div className="bg-blue-50 p-4 rounded-lg">
               <div className="text-sm text-gray-600 mb-1">{t.dtiRatio}</div>
@@ -239,7 +232,6 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
                 {dtiRatio.toFixed(1)}%
               </div>
             </div>
-
             <div className="bg-gray-50 p-4 rounded-lg">
               <div className="text-sm text-gray-600 mb-1">{t.totalMonthlyDebts}</div>
               <div className="text-3xl font-bold text-gray-800">
@@ -247,11 +239,9 @@ export default function DebtToIncomeCalculator({ lang = 'en' }: DebtToIncomeCalc
               </div>
             </div>
           </div>
-
           <div className="border-t pt-4">
             <h4 className="font-semibold text-gray-800 mb-2">{t.interpretation}</h4>
             <p className={`font-medium mb-2 ${interpretation.color}`}>{interpretation.level}</p>
-            <h4 className="font-semibold text-gray-800 mb-2 mt-4">{t.recommendation}</h4>
             <p className="text-gray-600">{interpretation.rec}</p>
           </div>
         </div>

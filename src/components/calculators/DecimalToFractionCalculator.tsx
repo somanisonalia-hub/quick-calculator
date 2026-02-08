@@ -228,13 +228,12 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6">
-      <div className="bg-white rounded-lg shadow-lg p-8">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">{t.title}</h2>
-        <p className="text-gray-600 mb-6">{t.description}</p>
+    <div className="grid lg:grid-cols-2 gap-8">
+      <div className="space-y-4">
+        <h2 className="text-3xl font-bold text-gray-800">{t.title}</h2>
+        <p className="text-gray-600">{t.description}</p>
 
-        {/* Input Section */}
-        <div className="mb-6 hidden">
+        <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             {t.decimalLabel}
           </label>
@@ -247,30 +246,26 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
           />
         </div>
 
-        {/* Error Message */}
         {error && (
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
+          <div className="p-4 bg-red-50 border border-red-200 rounded-md">
             <p className="text-red-700">{error}</p>
           </div>
         )}
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={calculateMixedNumber}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
+        <button
+          onClick={calculateMixedNumber}
+          className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+        >
+          {t.calculate}
+        </button>
+        <button
+          onClick={resetCalculator}
+          className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+        >
+          {t.reset}
+        </button>
 
-
-        {/* Results Section */}
+      </div>
+      <div className="space-y-4">
         {!error && numerator !== 0 && (
           <div className="space-y-6">
             {/* Simplified Fraction */}

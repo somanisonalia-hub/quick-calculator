@@ -16,5 +16,11 @@ export default function sitemapIndex(): MetadataRoute.Sitemap {
     {
       url: 'https://quick-calculator.org/sitemap-fr.xml',
     },
+    {
+      url: 'https://quick-calculator.org/sitemap-de.xml',
+    },
+    {
+      url: 'https://quick-calculator.org/sitemap-nl.xml',
+    },
   ]
 }

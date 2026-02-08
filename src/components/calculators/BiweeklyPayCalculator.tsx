@@ -29,7 +29,9 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
       payPeriods: "Pay Periods Per Year",
       tip: "Tip",
       tipText: "Biweekly pay means you receive 26 paychecks per year (every 2 weeks). Two months each year will have 3 paychecks instead of 2.",
-      format: "Enter amounts without $ or commas"
+      format: "Enter amounts without $ or commas",
+      calculateYourPay: "Calculate Your Pay",
+      enterSalaryInfo: "Enter your salary information to see biweekly and annual calculations"
     },
     es: {
       title: "Calculadora de Pago Quincenal",
@@ -52,7 +54,9 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
       payPeriods: "Períodos de Pago por Año",
       tip: "Consejo",
       tipText: "El pago quincenal significa que recibe 26 cheques de pago por año. Dos meses cada año tendrán 3 cheques en lugar de 2.",
-      format: "Ingrese montos sin $ ni comas"
+      format: "Ingrese montos sin $ ni comas",
+      calculateYourPay: "Calcula Tu Pago",
+      enterSalaryInfo: "Ingresa tu información de salario para ver cálculos quincenales y anuales"
     },
     pt: {
       title: "Calculadora de Pagamento Quinzenal",
@@ -75,7 +79,9 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
       payPeriods: "Períodos de Pagamento por Ano",
       tip: "Dica",
       tipText: "Pagamento quinzenal significa que você recebe 26 contracheques por ano. Dois meses a cada ano terão 3 contracheques em vez de 2.",
-      format: "Digite valores sem $ ou vírgulas"
+      format: "Digite valores sem $ ou vírgulas",
+      calculateYourPay: "Calcule Seu Pagamento",
+      enterSalaryInfo: "Digite suas informações de salário para ver cálculos quincenais e anuais"
     },
     fr: {
       title: "Calculateur de Paiement Bihebdomadaire",
@@ -98,7 +104,9 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
       payPeriods: "Périodes de Paie par An",
       tip: "Astuce",
       tipText: "Le paiement bihebdomadaire signifie que vous recevez 26 chèques de paie par an. Deux mois par an auront 3 chèques au lieu de 2.",
-      format: "Entrez les montants sans $ ou virgules"
+      format: "Entrez les montants sans $ ou virgules",
+      calculateYourPay: "Calculez Votre Paiement",
+      enterSalaryInfo: "Entrez vos informations de salaire pour ver les calculs quincenaux et anuels"
     }
   };
 
@@ -345,8 +353,8 @@ export default function BiweeklyPayCalculator({ lang = 'en' }: BiweeklyPayCalcul
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-1">Calculate Your Pay</h3>
-              <p className="text-gray-500">Enter your salary information to see biweekly and annual calculations</p>
+              <h3 className="text-lg font-medium text-gray-900 mb-1">{t.calculateYourPay}</h3>
+              <p className="text-gray-500">{t.enterSalaryInfo}</p>
             </div>
           )}
         </div>

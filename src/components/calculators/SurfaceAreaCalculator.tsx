@@ -47,10 +47,7 @@ export default function SurfaceAreaCalculator({ lang = 'en' }: SurfaceAreaCalcul
   }, [shape, side, radius, height]);
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold mb-4">{t.title}</h1>
-      <p className="text-gray-600 mb-6">{t.description}</p>
-
+    <div className="grid lg:grid-cols-2 gap-8">
       <div className="space-y-4">
         <select
           value={shape}
@@ -92,23 +89,22 @@ export default function SurfaceAreaCalculator({ lang = 'en' }: SurfaceAreaCalcul
           />
         )}
 
-        <div className="bg-blue-50 p-4 rounded-lg">
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={() => setSurfaceArea(surfaceArea)}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
+        <button
+          onClick={() => setSurfaceArea(surfaceArea)}
+          className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+        >
+          {t.calculate}
+        </button>
+        <button
+          onClick={resetCalculator}
+          className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+        >
+          {t.reset}
+        </button>
+      </div>
 
+      <div className="space-y-4">
+        <div className="bg-blue-50 p-4 rounded-lg">
           <h3 className="text-lg font-semibold text-blue-900 mb-2">Surface Area</h3>
           <div className="text-3xl font-bold text-blue-600">
             {surfaceArea.toFixed(2)} sq units

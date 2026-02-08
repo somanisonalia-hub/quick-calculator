@@ -117,52 +117,53 @@ export default function TipCalculator({ lang = 'en' }: TipCalculatorProps) {
         <p className="text-gray-600">{t.description}</p>
       </div>
 
-      <div className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.billAmount}</label>
-          <input
-            type="number"
-            value={billAmount}
-            onChange={(e) => setBillAmount(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.billAmount}</label>
+            <input
+              type="number"
+              value={billAmount}
+              onChange={(e) => setBillAmount(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
           </div>
 
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">{t.tipPercentage}</label>
+            <input
+              type="number"
+              value={tipPercentage}
+              onChange={(e) => setTipPercentage(Number(e.target.value))}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <button
+            onClick={calculateTip}
+            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            {t.calculateTip}
+          </button>
+
+          <button
+            onClick={resetCalculator}
+            className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+          >
+            {t.reset}
+          </button>
         </div>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">{t.tipPercentage}</label>
-          <input
-            type="number"
-            value={tipPercentage}
-            onChange={(e) => setTipPercentage(Number(e.target.value))}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-
-        <button
-          onClick={calculateTip}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          {t.calculateTip}
-        </button>
-
-        {tipAmount && (
-          <div className="bg-green-50 p-4 rounded-lg">
-            <div className="space-y-2">
-              <div><strong>{t.tipAmount}:</strong> {t.currency}{tipAmount}</div>
-              <div><strong>{t.totalAmount}:</strong> {t.currency}{totalAmount}</div>
+        <div className="space-y-4">
+          {tipAmount && (
+            <div className="bg-green-50 p-4 rounded-lg">
+              <div className="space-y-2">
+                <div><strong>{t.tipAmount}:</strong> {t.currency}{tipAmount}</div>
+                <div><strong>{t.totalAmount}:</strong> {t.currency}{totalAmount}</div>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
