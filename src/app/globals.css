@@ -23,6 +23,21 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Poppins", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Performance: GPU acceleration for smooth animations */
+.calculator-container,
+#interactive-calculator-overlay,
+#calculator-section {
+  will-change: opacity;
+  contain: layout style paint;
+}
+
+/* Performance: Reduce repaints on scroll */
+main {
+  contain: layout style;
 }
 
 /* Fraction styling for mathematical display */
@@ -100,15 +115,140 @@ body {
     padding-right: 0.75rem;
   }
   
-  /* Make input text more readable on mobile */
-  input[type="number"], select {
-    font-size: 16px; /* Prevents zoom on iOS */
+  /* Make inputs more compact on mobile */
+  input[type="number"], 
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="time"],
+  select,
+  textarea {
+    font-size: 14px !important; /* Slightly smaller but still readable */
+    padding: 0.5rem 0.625rem !important; /* py-2 px-2.5 equivalent - more compact */
+    min-height: 38px !important; /* Consistent compact height */
   }
   
-  /* Improve touch targets */
+  /* Compact select/dropdown styling */
+  select {
+    background-size: 16px 16px !important; /* Smaller dropdown arrow */
+    padding-right: 2rem !important; /* Space for arrow */
+  }
+  
+  /* Compact checkbox and radio button styling */
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 16px !important;
+    height: 16px !important;
+    min-height: 16px !important;
+  }
+  
+  /* Ensure checkbox/radio labels are readable */
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    font-size: 0.8125rem !important; /* ~13px */
+  }
+  
+  /* Compact textarea */
+  textarea {
+    min-height: 80px !important; /* Reduced from default */
+    line-height: 1.4 !important;
+  }
+  
+  /* Reduce label sizes */
+  label.block,
+  .text-sm.font-medium,
+  label {
+    font-size: 0.8125rem !important; /* ~13px */
+    line-height: 1.4 !important;
+  }
+  
+  /* Make buttons more compact but still touchable */
   button, .calculator-button {
     min-height: 44px; /* iOS recommended touch target size */
+    padding: 0.625rem 0.875rem !important; /* py-2.5 px-3.5 equivalent */
+    font-size: 0.875rem !important; /* text-sm */
   }
+  
+  /* Reduce spacing between calculator elements */
+  .space-y-4 > * + *,
+  .space-y-3 > * + * {
+    margin-top: 0.625rem !important; /* space-y-2.5 equivalent */
+  }
+  
+  .space-y-2 > * + * {
+    margin-top: 0.375rem !important; /* space-y-1.5 equivalent */
+  }
+  
+  /* Compact result boxes */
+  .bg-blue-50.border,
+  .bg-white.border,
+  .bg-gray-50.border {
+    padding: 0.625rem !important; /* p-2.5 */
+  }
+  
+  /* Smaller result text on mobile */
+  .text-2xl {
+    font-size: 1.5rem !important; /* text-xl equivalent */
+  }
+  
+  .text-xl {
+    font-size: 1.25rem !important; /* text-lg equivalent */
+  }
+  
+  .text-lg {
+    font-size: 1rem !important; /* text-base equivalent */
+  }
+  
+  /* Compact form groups */
+  .grid.gap-4,
+  .grid.gap-6 {
+    gap: 0.75rem !important; /* gap-3 equivalent */
+  }
+  
+  .grid.gap-3 {
+    gap: 0.5rem !important; /* gap-2 equivalent */
+  }
+  
+  /* Smaller border radius on mobile for compact look */
+  .rounded-lg,
+  input.rounded-lg,
+  select.rounded-lg,
+  button.rounded-lg,
+  .border.rounded-lg {
+    border-radius: 0.375rem !important; /* rounded-md equivalent (6px) */
+  }
+  
+  .rounded-xl {
+    border-radius: 0.5rem !important; /* rounded-lg equivalent (8px) */
+  }
+  
+  .rounded-2xl {
+    border-radius: 0.75rem !important; /* rounded-xl equivalent (12px) */
+  }
+}
+
+/* Performance optimizations for better rendering */
+/* Lazy load below-the-fold content */
+.lazy-load {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize images for faster loading */
+img {
+  content-visibility: auto;
 }
 
 /* Print Styles */

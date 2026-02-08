@@ -198,51 +198,42 @@ export default function CalculatorInteractive({
         </div>
       )}
 
-      {/* Hide SSR form when interactive loads */}
-      {calculatorMounted && calculatorContent && (
-        <>
-          <style jsx global>{`
-            #calculator-section {
-              display: none !important;
-            }
-          `}</style>
-        </>
-      )}
-
       {/* Related Calculators Widget & Additional Sections */}
       {calculatorContent && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Interactive Calculator - Only show when mounted */}
           {calculatorMounted && (
-            <div id="interactive-calculator-overlay" className="bg-white rounded-lg shadow-lg p-6 mb-8 relative">
-              {(() => {
-                const componentName = calculatorContent.component 
-                  || (typeof calculatorContent.calculatorComponent === 'string'
-                    ? calculatorContent.calculatorComponent
-                    : calculatorContent.calculatorComponent?.componentName);
+            <>
+              <div id="interactive-calculator-overlay" className="mb-8">
+                {(() => {
+                  const componentName = calculatorContent.component 
+                    || (typeof calculatorContent.calculatorComponent === 'string'
+                      ? calculatorContent.calculatorComponent
+                      : calculatorContent.calculatorComponent?.componentName);
 
-                const CalculatorComponent = getCalculatorComponent(componentName);
+                  const CalculatorComponent = getCalculatorComponent(componentName);
 
-                if (CalculatorComponent) {
-                  return (
-                    <div className="calculator-interactive-wrapper">
-                      {calculatorContent.calculatorComponent && typeof calculatorContent.calculatorComponent === 'object' && calculatorContent.calculatorComponent.inputs ? (
-                        <CalculatorComponent
-                          key={`${slug}-${lang}`}
-                          inputs={calculatorContent.calculatorComponent.inputs || []}
-                          output={calculatorContent.calculatorComponent.output || {}}
-                          additionalOutputs={calculatorContent.calculatorComponent.additionalOutputs || []}
-                          lang={lang}
-                        />
-                      ) : (
-                        <CalculatorComponent key={`${slug}-${lang}`} lang={lang} />
-                      )}
-                    </div>
-                  );
-                }
-                return null;
-              })()}
-            </div>
+                  if (CalculatorComponent) {
+                    return (
+                      <div className="calculator-interactive-wrapper">
+                        {calculatorContent.calculatorComponent && typeof calculatorContent.calculatorComponent === 'object' && calculatorContent.calculatorComponent.inputs ? (
+                          <CalculatorComponent
+                            key={`${slug}-${lang}`}
+                            inputs={calculatorContent.calculatorComponent.inputs || []}
+                            output={calculatorContent.calculatorComponent.output || {}}
+                            additionalOutputs={calculatorContent.calculatorComponent.additionalOutputs || []}
+                            lang={lang}
+                          />
+                        ) : (
+                          <CalculatorComponent key={`${slug}-${lang}`} lang={lang} />
+                        )}
+                      </div>
+                    );
+                  }
+                  return null;
+                })()}
+              </div>
+            </>
           )}
 
           {/* Related Calculators Widget */}

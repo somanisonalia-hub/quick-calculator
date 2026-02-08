@@ -1,53 +1,79 @@
 // @ts-nocheck
 import dynamic from 'next/dynamic';
+import CalculatorSkeleton from '../CalculatorSkeleton';
 
-// Lazy load calculator components
+// Optimized loading component with skeleton
+const LoadingComponent = () => <CalculatorSkeleton />;
+
+// Lazy load calculator components with skeleton loader
 const AverageCalculator = dynamic(() => import('./AverageCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false, // Disable SSR for interactive calculators
 });
 
 const MortgageCalculator = dynamic(() => import('./MortgageCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
 
 const LoanCalculator = dynamic(() => import('./LoanCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
 
 const BMICalculator = dynamic(() => import('./BMICalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
+
 const CreditCardCalculator = dynamic(() => import('./CreditCardCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
+
 const SavingsCalculator = dynamic(() => import('./SavingsCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
+
 const TaxCalculator = dynamic(() => import('./TaxCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
+
 const RetirementCalculator = dynamic(() => import('./RetirementCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
+
 const InvestmentCalculator = dynamic(() => import('./InvestmentCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
+
 const BudgetCalculator = dynamic(() => import('./BudgetCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
 
 const GenericCalculator = dynamic(() => import('./GenericCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
 
 const CurrencyConverter = dynamic(() => import('./CurrencyConverter'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
+
 const GPACalculator = dynamic(() => import('./GPACalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
+
 const PropertyTaxCalculator = dynamic(() => import('./PropertyTaxCalculator'), {
-  loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+  loading: LoadingComponent,
+  ssr: false,
 });
 const FutureValueCalculator = dynamic(() => import('./FutureValueCalculator'), {
   loading: () => <div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>

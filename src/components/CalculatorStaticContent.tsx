@@ -66,8 +66,8 @@ export default function CalculatorStaticContent({
 
       {/* Main Calculator Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4 sm:pb-8" id="calculator-main">
-        {/* Calculator Form - Visible to Google, hidden when interactive loads */}
-        <section id="calculator-section" className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        {/* Calculator Form - Hidden from users but visible to Google */}
+        <section id="calculator-section" className="sr-only">
           {serverRenderedForm}
         </section>
 

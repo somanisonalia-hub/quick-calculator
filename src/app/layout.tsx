@@ -79,7 +79,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Smooth Calculator Transition - Prevents Flash */}
+        {/* Critical CSS - Smooth Calculator Transition */}
         <style dangerouslySetInnerHTML={{__html: `
           #calculator-section { 
             transition: opacity 0.15s ease-out; 
@@ -93,10 +93,15 @@ export default function RootLayout({
           }
         `}} />
         
-        {/* Resource Hints for Performance */}
+        {/* Performance: Early DNS & Connection Setup */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Performance: Viewport optimization for mobile */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         
         {/* Google Analytics - Defer to improve FCP/LCP */}
         <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-WJ29X5ZT2M"></script>

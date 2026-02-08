@@ -52,23 +52,23 @@ export default function CalculatorFormSSR({
   };
 
   return (
-    <div className="calculator-form-ssr" itemScope itemType="https://schema.org/CalculatorAction">
+    <div className="calculator-form-ssr">
       {/* Hidden semantic data for crawlers */}
       <meta itemProp="name" content={calculatorName} />
       <meta itemProp="description" content={`${calculatorName} with ${inputs.length} input fields`} />
       
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
         {/* Input Section */}
-        <div className="space-y-4" role="form" aria-label={t('inputs')}>
-          <h2 className="sr-only">{t('inputs')}</h2>
+        <div className="space-y-2 sm:space-y-3" role="form" aria-label={t('inputs')}>
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{t('inputs')}</h3>
           
           {inputs.map((input, index) => (
-            <div key={`${input.name}-${index}`} className="form-group" itemProp="potentialAction" itemScope itemType="https://schema.org/ControlAction">
+            <div key={`${input.name}-${index}`} className="space-y-1 sm:space-y-2" itemProp="potentialAction" itemScope itemType="https://schema.org/ControlAction">
               <meta itemProp="name" content={input.label} />
               
               <label 
                 htmlFor={`calc-input-${input.name}`}
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-xs sm:text-sm font-medium text-gray-700"
               >
                 {input.label}
                 {input.unit && <span className="text-gray-500 ml-1">({input.unit})</span>}
@@ -85,7 +85,7 @@ export default function CalculatorFormSSR({
                         ? input.options[0] 
                         : input.options[0].value))
                   }
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  className="w-full px-2.5 py-2 sm:px-4 sm:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-sm"
                   itemProp="object"
                   aria-label={input.label}
                 >
@@ -109,7 +109,7 @@ export default function CalculatorFormSSR({
                   max={input.max}
                   step={input.step || 1}
                   placeholder={input.label}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-2.5 py-2 sm:px-4 sm:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                   itemProp="object"
                   aria-label={input.label}
                   aria-describedby={input.min !== undefined ? `${input.name}-range` : undefined}
@@ -127,27 +127,15 @@ export default function CalculatorFormSSR({
         </div>
 
         {/* Output Section */}
-        <div className="space-y-4">
-          <h2 className="sr-only">{t('results')}</h2>
+        <div className="space-y-2 sm:space-y-3">
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">{t('results')}</h3>
           
-          {/* Formula display for SEO */}
-          {formula && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
-              <h3 className="text-sm font-semibold text-blue-900 mb-2">{t('formula')}:</h3>
-              <div className="text-sm text-blue-800 font-mono bg-white p-2 rounded border border-blue-100">
-                {formula}
-              </div>
-            </div>
-          )}
-
           {/* Primary Output */}
           {output && (
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                {output.label}
-              </label>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-2.5 sm:p-3 lg:p-4">
+              <div className="text-xs text-gray-600 mb-1">{output.label}</div>
               <div 
-                className="text-3xl font-bold text-green-700"
+                className="text-xl sm:text-2xl font-bold text-blue-600"
                 itemProp="result"
                 aria-live="polite"
                 aria-atomic="true"
@@ -159,17 +147,17 @@ export default function CalculatorFormSSR({
 
           {/* Additional Outputs */}
           {additionalOutputs.length > 0 && (
-            <div className="space-y-3">
+            <>
               {additionalOutputs.map((addOutput) => (
                 <div 
                   key={addOutput.field}
-                  className="bg-white border border-gray-200 rounded-lg p-4"
+                  className="bg-white border border-gray-200 p-2.5 sm:p-3 rounded-md shadow-sm"
                 >
-                  <label className="block text-sm font-medium text-gray-600 mb-1">
+                  <div className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
                     {addOutput.label}
-                  </label>
+                  </div>
                   <div 
-                    className="text-lg font-semibold text-gray-900"
+                    className="text-base sm:text-lg font-bold text-gray-900"
                     itemProp="additionalProperty"
                     aria-live="polite"
                   >
@@ -177,6 +165,16 @@ export default function CalculatorFormSSR({
                   </div>
                 </div>
               ))}
+            </>
+          )}
+
+          {/* Formula display for SEO */}
+          {formula && (
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-2.5 sm:p-3 lg:p-4">
+              <div className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">{t('formula')}</div>
+              <div className="text-xs sm:text-sm font-mono text-gray-800 bg-white p-2 rounded border">
+                {formula}
+              </div>
             </div>
           )}
 
