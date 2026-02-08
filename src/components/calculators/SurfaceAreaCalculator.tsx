@@ -15,10 +15,11 @@ export default function SurfaceAreaCalculator({ lang = 'en' }: SurfaceAreaCalcul
 
   const resetCalculator = () => {
     // Reset to default values
-    setShape(0);
+    setShape('cube');
     setSurfaceArea(0);
-    setSide(0);
-    // Additional state resets may be needed
+    setSide(5);
+    setRadius(5);
+    setHeight(10);
   };
 
   const translations = {

@@ -173,10 +173,10 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
       incomeInBracket: "Income in Bracket",
       taxRate: "Tax Rate",
       taxAmount: "Tax Amount",
+      reset: "Reset",
       deductionTypeOptions: {
         standard: "Standard Deduction",
-        itemized: "Itemized Deductions",
-      reset: "Reset"
+        itemized: "Itemized Deductions"
       },
       filingStatusOptions: {
         single: "Single",
@@ -756,12 +756,16 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    setFormData({
+      grossIncome: 75000,
+      filingStatus: 'single',
+      dependents: 0,
+      deductionType: 'standard',
+      itemizedDeductions: 0,
+      taxCredits: 0,
+      state: 'CA',
+      taxYear: '2024'
     });
-    setValues(initial);
-    setResults({});
   };
 
   const calculateFederalTax = (taxableIncome: number, filingStatus: string): { totalTax: number; breakdown: Array<{ bracket: string; income: number; rate: number; tax: number }> } => {
@@ -1007,7 +1011,11 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
           {/* Buttons */}
           <div className="flex gap-3 pt-4">
             <button
-              onClick={calculateTaxableIncome}
+              onClick={() => {
+                // Optionally recalculate or update state here
+                // calculateTaxableIncome(formData.grossIncome, formData.deductionType, formData.itemizedDeductions, formData.dependents, formData.filingStatus);
+                // If you want to update state, add logic here
+              }}
               className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
               {t.calculate}
@@ -1016,7 +1024,7 @@ export default function IncomeTaxCalculator({ lang }: IncomeTaxCalculatorProps) 
               onClick={resetCalculator}
               className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
-              {t.reset}
+              {(t as any)['reset']}
             </button>
           </div>
 

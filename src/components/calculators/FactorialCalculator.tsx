@@ -13,7 +13,7 @@ export default function FactorialCalculator({ lang = 'en' }: FactorialCalculator
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({ number: 5 });
   };
 
   const translations = {

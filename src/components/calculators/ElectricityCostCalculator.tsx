@@ -138,6 +138,11 @@ const translations = {
 };
 
 export default function ElectricityCostCalculator({ lang = 'en' }: ElectricityCostCalculatorProps) {
+    const resetCalculator = () => {
+      setMonthlyUsage('');
+      setRate('');
+      setReduction('');
+    };
   const t = translations[lang as keyof typeof translations] || translations.en;
 
   const [monthlyUsage, setMonthlyUsage] = useState('');
@@ -164,13 +169,10 @@ export default function ElectricityCostCalculator({ lang = 'en' }: ElectricityCo
     };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    // Reset calculator to initial values
+    setMonthlyUsage('');
+    setRate('');
+    setReduction('');
   };
   };
 

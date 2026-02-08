@@ -258,16 +258,22 @@ export default function IdealWeightCalculator({ lang = 'en' }: IdealWeightCalcul
       maxWeight: Math.round(maxWeight * 10) / 10,
       bmiCategory
     };
+  }
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    setInputs({
+      gender: 'male',
+      height: 170,
+      method: 'healthy_bmi',
+      bodyFrame: 'medium'
     });
-    setValues(initial);
-    setResults({});
-  };
+    setResults({
+      idealWeightRange: '',
+      minWeight: 0,
+      maxWeight: 0,
+      bmiCategory: ''
+    });
   };
 
   useEffect(() => {

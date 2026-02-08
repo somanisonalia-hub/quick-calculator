@@ -72,12 +72,10 @@ export default function FuelCostCalculator({ lang = 'en' }: FuelCostCalculatorPr
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    setDistance('');
+    setFuelEfficiency('');
+    setFuelPrice('');
+    setResult('');
   };
 
   return (

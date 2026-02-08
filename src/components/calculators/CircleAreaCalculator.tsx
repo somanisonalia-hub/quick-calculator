@@ -149,13 +149,14 @@ export default function CircleAreaCalculator({ lang = 'en' }: CircleAreaCalculat
   };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    // Reset calculator to initial values
+    setInputMethod('radius');
+    setValue(5);
+    setArea(0);
+    setRadius(0);
+    setDiameter(0);
+    setCircumference(0);
+    setFormula('');
   };
 
   useEffect(() => {

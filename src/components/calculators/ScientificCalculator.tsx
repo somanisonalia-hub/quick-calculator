@@ -17,10 +17,13 @@ export default function ScientificCalculator({ lang = 'en' }: ScientificCalculat
 
   const resetCalculator = () => {
     // Reset to default values
-    setDisplay(0);
-    setPreviousValue(0);
-    setOperation(0);
-    // Additional state resets may be needed
+    setDisplay('0');
+    setPreviousValue(null);
+    setOperation(null);
+    setWaitingForOperand(false);
+    setMemory(0);
+    setAngleMode('deg');
+    setHistory([]);
   };
 
   const translations = {
@@ -401,22 +404,16 @@ export default function ScientificCalculator({ lang = 'en' }: ScientificCalculat
             <div className="text-2xl font-bold text-blue-600">
               {memory}
             </div>
+          </div>
+
           {/* Buttons */}
           <div className="flex gap-3 pt-4">
-            <button
-              onClick={handleKeyPress}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
             <button
               onClick={resetCalculator}
               className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
-              {t.reset}
+              Reset
             </button>
-          </div>
-
           </div>
 
           <div className="bg-green-50 p-4 rounded-lg">

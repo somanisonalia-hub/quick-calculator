@@ -126,12 +126,10 @@ export default function GeometryAreaCalculator({ lang = 'en' }: GeometryAreaCalc
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    setShape('circle');
+    setValue1('');
+    setValue2('');
+    setResult('');
   };
 
   return (

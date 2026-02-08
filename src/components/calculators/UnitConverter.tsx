@@ -73,7 +73,8 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
       days: "Days",
       weeks: "Weeks",
       months: "Months",
-      years: "Years"
+      years: "Years",
+      reset: "Reset"
     },
     es: {
       title: "Convertidor de Unidades",
@@ -139,7 +140,8 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
       days: "Días",
       weeks: "Semanas",
       months: "Meses",
-      years: "Años"
+      years: "Años",
+      reset: "Restablecer"
     },
     pt: {
       title: "Conversor de Unidades",
@@ -205,7 +207,8 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
       days: "Dias",
       weeks: "Semanas",
       months: "Meses",
-      years: "Anos"
+      years: "Anos",
+      reset: "Redefinir"
     },
     fr: {
       title: "Convertisseur d'Unités",
@@ -271,7 +274,8 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
       days: "Jours",
       weeks: "Semaines",
       months: "Mois",
-      years: "Années"
+      years: "Années",
+      reset: "Réinitialiser"
     },
     de: {
       title: "Einheitskonverter",
@@ -337,7 +341,8 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
       days: "Tage",
       weeks: "Wochen",
       months: "Monate",
-      years: "Jahre"
+      years: "Jahre",
+      reset: "Zurücksetzen"
     },
     nl: {
       title: "Eenheidsconverter",
@@ -403,7 +408,8 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
       days: "Dagen",
       weeks: "Weken",
       months: "Maanden",
-      years: "Jaren"
+      years: "Jaren",
+      reset: "Resetten"
     }
   };const t = translations[lang as keyof typeof translations] || translations.en;
 
@@ -415,10 +421,11 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
 
   const resetCalculator = () => {
     // Reset to default values
-    setValue(0);
-    setCategory(0);
-    setFromUnit(0);
-    // Additional state resets may be needed
+    setValue('');
+    setCategory('length');
+    setFromUnit('meters');
+    setToUnit('feet');
+    setResult('');
   };
 
   // Unit categories and their units
@@ -715,14 +722,8 @@ export default function UnitConverter({ lang = 'en' }: UnitConverterProps) {
           {/* Buttons */}
           <div className="flex gap-3 pt-4">
             <button
-              onClick={convertValue}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
               onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+              className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
               {t.reset}
             </button>

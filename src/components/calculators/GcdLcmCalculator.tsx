@@ -14,7 +14,7 @@ export default function GcdLcmCalculator({ lang = 'en' }: GcdLcmCalculatorProps)
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({ number1: 12, number2: 18 });
   };
 
   const translations = {

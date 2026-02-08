@@ -104,9 +104,9 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
         lightly_active: "Lightly Active (light exercise 1-3 days/week)",
         moderately_active: "Moderately Active (moderate exercise 3-5 days/week)",
         very_active: "Very Active (hard exercise 6-7 days/week)",
-        extremely_active: "Extremely Active (very hard exercise, physical job, or 2x training)",
-      reset: "Reset"
+        extremely_active: "Extremely Active (very hard exercise, physical job, or 2x training)"
       },
+      reset: "Reset",
       fitnessGoalOptions: {
         maintenance: "Maintenance (maintain current weight/muscle)",
         weight_loss: "Weight Loss (fat loss while preserving muscle)",
@@ -151,9 +151,9 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
         lightly_active: "Ligeramente Activo (ejercicio ligero 1-3 días/semana)",
         moderately_active: "Moderadamente Activo (ejercicio moderado 3-5 días/semana)",
         very_active: "Muy Activo (ejercicio duro 6-7 días/semana)",
-        extremely_active: "Extremadamente Activo (ejercicio muy duro, trabajo físico, o 2x entrenamiento)",
-      reset: "Restablecer"
+        extremely_active: "Extremadamente Activo (ejercicio muy duro, trabajo físico, o 2x entrenamiento)"
       },
+      reset: "Restablecer",
       fitnessGoalOptions: {
         maintenance: "Mantenimiento (mantener peso/músculo actual)",
         weight_loss: "Pérdida de Peso (pérdida grasa preservando músculo)",
@@ -198,9 +198,9 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
         lightly_active: "Ligeramente Ativo (exercício leve 1-3 dias/semana)",
         moderately_active: "Moderadamente Ativo (exercício moderado 3-5 dias/semana)",
         very_active: "Muito Ativo (exercício duro 6-7 dias/semana)",
-        extremely_active: "Extremamente Ativo (exercício muito duro, trabalho físico, ou 2x treinamento)",
-      reset: "Redefinir"
+        extremely_active: "Extremamente Ativo (exercício muito duro, trabalho físico, ou 2x treinamento)"
       },
+      reset: "Redefinir",
       fitnessGoalOptions: {
         maintenance: "Manutenção (manter peso/músculo atual)",
         weight_loss: "Perda de Peso (perda gordura preservando músculo)",
@@ -245,9 +245,9 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
         lightly_active: "Légèrement Actif (exercice léger 1-3 jours/semaine)",
         moderately_active: "Modérément Actif (exercice modéré 3-5 jours/semaine)",
         very_active: "Très Actif (exercice dur 6-7 jours/semaine)",
-        extremely_active: "Extrêmement Actif (exercice très dur, travail physique, ou 2x entraînement)",
-      reset: "Réinitialiser"
+        extremely_active: "Extrêmement Actif (exercice très dur, travail physique, ou 2x entraînement)"
       },
+      reset: "Réinitialiser",
       fitnessGoalOptions: {
         maintenance: "Maintenance (maintenir poids/muscle actuel)",
         weight_loss: "Perte de Poids (perte graisse préservant muscle)",
@@ -292,9 +292,9 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
         lightly_active: "Leicht Aktiv (leichtes Training 1-3 Tage/Woche)",
         moderately_active: "Mäßig Aktiv (mäßiges Training 3-5 Tage/Woche)",
         very_active: "Sehr Aktiv (intensives Training 6-7 Tage/Woche)",
-        extremely_active: "Extrem Aktiv (sehr intensives Training, körperliche Arbeit, oder 2x Training)",
-      reset: "Zurücksetzen"
+        extremely_active: "Extrem Aktiv (sehr intensives Training, körperliche Arbeit, oder 2x Training)"
       },
+      reset: "Zurücksetzen",
       fitnessGoalOptions: {
         maintenance: "Wartung (aktuelles Gewicht/Muskel erhalten)",
         weight_loss: "Gewichtsverlust (Fettabbau mit Muskelerhalt)",
@@ -339,9 +339,9 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
         lightly_active: "Licht Actief (licht training 1-3 dagen/week)",
         moderately_active: "Matig Actief (matig training 3-5 dagen/week)",
         very_active: "Zeer Actief (intensief training 6-7 dagen/week)",
-        extremely_active: "Extreem Actief (zeer intensief training, lichamelijk werk, of 2x training)",
-      reset: "Resetten"
+        extremely_active: "Extreem Actief (zeer intensief training, lichamelijk werk, of 2x training)"
       },
+      reset: "Resetten",
       fitnessGoalOptions: {
         maintenance: "Onderhoud (huidigegewicht/spier behouden)",
         weight_loss: "Gewichtsverlies (vetafname met spierretentie)",
@@ -566,12 +566,6 @@ export default function ProteinIntakeCalculator({ lang }: ProteinIntakeCalculato
             
           {/* Buttons */}
           <div className="flex gap-3 pt-4">
-            <button
-              onClick={calculateProteinRequirements}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
             <button
               onClick={resetCalculator}
               className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"

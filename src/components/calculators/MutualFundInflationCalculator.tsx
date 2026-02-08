@@ -62,12 +62,8 @@ export default function MutualFundInflationCalculator({ lang = 'en' }: MutualFun
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    setInputs({ initialInvestment: 100000, nominalReturnPercent: 12, inflationRate: 6, years: 10 });
+    setResults({ realReturn: 0, nominalValue: 0, realValue: 0, purchasingPowerLoss: 0 });
   };
 
   return (

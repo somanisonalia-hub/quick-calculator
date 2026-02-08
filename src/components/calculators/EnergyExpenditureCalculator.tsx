@@ -15,7 +15,7 @@ export default function EnergyExpenditureCalculator({ lang = 'en' }: EnergyExpen
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({ weight: 70, activityType: 'walking', duration: 30 });
   };
 
   const translations = {

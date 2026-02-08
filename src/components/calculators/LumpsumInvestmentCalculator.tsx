@@ -113,12 +113,8 @@ export default function LumpsumInvestmentCalculator({ lang = 'en' }: LumpsumInve
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    setInputs({ lumpsumAmount: 100000, years: 10, annualReturn: 10 });
+    setResults({ initialInvestment: 0, totalReturns: 0, finalAmount: 0 });
   };
 
   return (

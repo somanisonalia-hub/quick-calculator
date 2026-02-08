@@ -181,12 +181,9 @@ export default function HeightCalculator({ lang = 'en' }: HeightCalculatorProps)
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    setFatherHeight({ cm: 175, feet: 5, inches: 9 });
+    setMotherHeight({ cm: 162, feet: 5, inches: 4 });
+    setResult(null);
   };
 
   const formatHeight = (cm: number) => {

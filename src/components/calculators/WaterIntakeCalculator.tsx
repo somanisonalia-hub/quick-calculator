@@ -99,9 +99,9 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
         lightly_active: "Lightly Active (light exercise 1-3 days/week)",
         moderately_active: "Moderately Active (moderate exercise 3-5 days/week)",
         very_active: "Very Active (hard exercise 6-7 days/week)",
-        extremely_active: "Extremely Active (very hard exercise, physical job, or 2x training)",
-      reset: "Reset"
+        extremely_active: "Extremely Active (very hard exercise, physical job, or 2x training)"
       },
+      reset: "Reset",
       climateOptions: {
         normal: "Normal (moderate temperature and humidity)",
         hot_dry: "Hot & Dry (desert, summer heat)",
@@ -151,9 +151,9 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
         lightly_active: "Ligeramente Activo (ejercicio ligero 1-3 días/semana)",
         moderately_active: "Moderadamente Activo (ejercicio moderado 3-5 días/semana)",
         very_active: "Muy Activo (ejercicio duro 6-7 días/semana)",
-        extremely_active: "Extremadamente Activo (ejercicio muy duro, trabajo físico, o 2x entrenamiento)",
-      reset: "Restablecer"
+        extremely_active: "Extremadamente Activo (ejercicio muy duro, trabajo físico, o 2x entrenamiento)"
       },
+      reset: "Restablecer",
       climateOptions: {
         normal: "Normal (temperatura y humedad moderadas)",
         hot_dry: "Caliente y Seco (desierto, calor de verano)",
@@ -203,9 +203,9 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
         lightly_active: "Ligeramente Ativo (exercício leve 1-3 dias/semana)",
         moderately_active: "Moderadamente Ativo (exercício moderado 3-5 dias/semana)",
         very_active: "Muito Ativo (exercício duro 6-7 dias/semana)",
-        extremely_active: "Extremamente Ativo (exercício muito duro, trabalho físico, ou 2x treinamento)",
-      reset: "Redefinir"
+        extremely_active: "Extremamente Ativo (exercício muito duro, trabalho físico, ou 2x treinamento)"
       },
+      reset: "Redefinir",
       climateOptions: {
         normal: "Normal (temperatura e umidade moderadas)",
         hot_dry: "Quente e Seco (deserto, calor de verão)",
@@ -255,9 +255,9 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
         lightly_active: "Légèrement Actif (exercice léger 1-3 jours/semaine)",
         moderately_active: "Modérément Actif (exercice modéré 3-5 jours/semaine)",
         very_active: "Très Actif (exercice dur 6-7 jours/semaine)",
-        extremely_active: "Extrêmement Actif (exercice très dur, travail physique, ou 2x entraînement)",
-      reset: "Réinitialiser"
+        extremely_active: "Extrêmement Actif (exercice très dur, travail physique, ou 2x entraînement)"
       },
+      reset: "Réinitialiser",
       climateOptions: {
         normal: "Normal (température et humidité modérées)",
         hot_dry: "Chaud et Sec (désert, chaleur estivale)",
@@ -531,14 +531,8 @@ export default function WaterIntakeCalculator({ lang }: WaterIntakeCalculatorPro
           {/* Buttons */}
           <div className="flex gap-3 pt-4">
             <button
-              onClick={calculateWaterIntake}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
               onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+              className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
               {t.reset}
             </button>

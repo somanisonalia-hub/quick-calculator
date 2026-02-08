@@ -14,10 +14,10 @@ export default function StudyHoursPlannerCalculator({ lang = 'en' }: StudyHoursP
 
   const resetCalculator = () => {
     // Reset to default values
-    setTotalTopics(0);
-    setDaysUntilExam(0);
-    setHoursPerDay(0);
-    // Additional state resets may be needed
+    setTotalTopics('');
+    setDaysUntilExam('');
+    setHoursPerDay('');
+    setResult({ topicsPerDay: '', totalHours: '' });
   };
 
   const translations = {

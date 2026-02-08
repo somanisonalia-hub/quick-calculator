@@ -413,7 +413,11 @@ export default function InterestRateTableCalculator({ lang = 'en' }: InterestRat
           {/* Buttons */}
           <div className="flex gap-3 pt-4">
             <button
-              onClick={calculateMonthlyPayment}
+              onClick={() => {
+                // Optionally recalculate or update state here
+                // calculateMonthlyPayment(principal, annualRate, years);
+                // If you want to update state, add logic here
+              }}
               className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
               {t.calculate}

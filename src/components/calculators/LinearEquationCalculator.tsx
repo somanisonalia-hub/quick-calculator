@@ -14,9 +14,9 @@ export default function LinearEquationCalculator({ lang = 'en' }: LinearEquation
 
   const resetCalculator = () => {
     // Reset to default values
-    setA(0);
-    setB(0);
-    setC(0);
+    setA('0');
+    setB('0');
+    setC('0');
     // Additional state resets may be needed
   };
 

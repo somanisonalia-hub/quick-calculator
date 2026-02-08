@@ -114,15 +114,7 @@ export const SocialSecurityCalculator: React.FC<{ lang?: string }> = ({ lang = '
     });
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   return (
     <div className="grid lg:grid-cols-2 gap-8">
@@ -173,15 +165,6 @@ export const SocialSecurityCalculator: React.FC<{ lang?: string }> = ({ lang = '
 
         {results && (
           <div className="bg-gradient-to-br from-red-100 to-orange-100 border-2 border-red-300 rounded-lg p-6">
-          {/* Buttons */}
-          <div className="flex gap-3 pt-3">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
 
             <h3 className="text-2xl font-bold text-red-900 mb-4">Results</h3>
             

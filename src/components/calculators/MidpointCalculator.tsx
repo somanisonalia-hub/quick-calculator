@@ -24,6 +24,7 @@ interface Translations {
   distanceFormula: string;
   errorInvalidInput: string;
   coordinates: string;
+  reset: string;
 }
 
 const translations: Record<string, Translations> = {
@@ -47,6 +48,7 @@ const translations: Record<string, Translations> = {
     distanceFormula: 'Distance Formula',
     errorInvalidInput: 'Please enter valid numeric values for all coordinates',
     coordinates: 'Coordinates',
+    reset: 'Reset',
   },
   es: {
     title: 'Calculadora de Punto Medio',
@@ -68,6 +70,7 @@ const translations: Record<string, Translations> = {
     distanceFormula: 'Fórmula de Distancia',
     errorInvalidInput: 'Por favor ingrese valores numéricos válidos para todas las coordenadas',
     coordinates: 'Coordenadas',
+    reset: 'Restablecer',
   },
   pt: {
     title: 'Calculadora de Ponto Médio',
@@ -89,6 +92,7 @@ const translations: Record<string, Translations> = {
     distanceFormula: 'Fórmula de Distância',
     errorInvalidInput: 'Por favor digite valores numéricos válidos para todas as coordenadas',
     coordinates: 'Coordenadas',
+    reset: 'Redefinir',
   },
   fr: {
     title: 'Calculatrice de Point Milieu',
@@ -110,6 +114,7 @@ const translations: Record<string, Translations> = {
     distanceFormula: 'Formule de Distance',
     errorInvalidInput: 'Veuillez entrer des valeurs numériques valides pour toutes les coordonnées',
     coordinates: 'Coordonnées',
+    reset: 'Réinitialiser',
   },
 };
 
@@ -125,6 +130,17 @@ interface MidpointResult {
 }
 
 const MidpointCalculator: React.FC<MidpointCalculatorProps> = ({ lang = 'en' }) => {
+    const resetCalculator = () => {
+      setX1('');
+      setY1('');
+      setZ1('');
+      setX2('');
+      setY2('');
+      setZ2('');
+      setIs3D(false);
+      setResult(null);
+      setError('');
+    };
   const t = translations[lang] || translations.en;
   
   const [x1, setX1] = useState<string>('');
@@ -175,12 +191,15 @@ const MidpointCalculator: React.FC<MidpointCalculatorProps> = ({ lang = 'en' }) 
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    setX1('');
+    setY1('');
+    setZ1('');
+    setX2('');
+    setY2('');
+    setZ2('');
+    setIs3D(false);
+    setResult(null);
+    setError('');
   };
 
       // Calculate 3D distance

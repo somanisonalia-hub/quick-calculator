@@ -64,12 +64,18 @@ export default function GoalBasedInvestmentCalculator({ lang = 'en' }: GoalBased
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    setInputs({
+      targetGoal: 1000000,
+      years: 10,
+      expectedReturn: 10,
+      inflationRate: 5
     });
-    setValues(initial);
-    setResults({});
+    setResults({
+      inflationAdjustedGoal: 0,
+      monthlySIP: 0,
+      lumpsumNeeded: 0
+    });
+    // Already reset to default values above
   };
 
   return (

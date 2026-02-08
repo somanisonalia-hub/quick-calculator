@@ -14,7 +14,7 @@ export default function LogarithmCalculator({ lang = 'en' }: LogarithmCalculator
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({ value: 100, base: 10 });
   };
 
   const translations = {

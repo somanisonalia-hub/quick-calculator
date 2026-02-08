@@ -16,7 +16,12 @@ export default function NutritionAnalysisCalculator({ lang = 'en' }: NutritionAn
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({
+      calories: 2000,
+      protein: 50,
+      carbs: 250,
+      fat: 70
+    });
   };
 
   const translations = {

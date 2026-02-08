@@ -128,16 +128,20 @@ export default function NetWorthCalculator({ lang = 'en' }: NetWorthCalculatorPr
       netWorth,
       isPositive: netWorth > 0,
     };
+  };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+    // Reset all state values to defaults
+    setCash(25000);
+    setInvestments(75000);
+    setRealEstate(350000);
+    setVehicles(20000);
+    setOtherAssets(10000);
+    setMortgage(250000);
+    setLoans(15000);
+    setCreditCards(5000);
+    setOtherDebts(3000);
+    setCalculated(false);
   };
 
   const results = calculateNetWorth();

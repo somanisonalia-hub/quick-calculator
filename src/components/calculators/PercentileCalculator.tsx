@@ -14,7 +14,10 @@ export default function PercentileCalculator({ lang = 'en' }: PercentileCalculat
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({
+      values: '10, 20, 30, 40, 50, 60, 70, 80, 90, 100',
+      percentile: 75
+    });
   };
 
   const translations = {

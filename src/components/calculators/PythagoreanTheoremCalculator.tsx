@@ -191,15 +191,7 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
     setTriangleType(triangleTypeText);
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   useEffect(() => {
     calculatePythagorean();
@@ -299,15 +291,6 @@ export default function PythagoreanTheoremCalculator({ lang = 'en' }: Pythagorea
             <h4 className="text-sm font-semibold text-green-900 mb-2">{t.pythagoreanTheorem}</h4>
             <p className="text-sm text-green-700">{t.theoremExplanation}</p>
             <div className="mt-2 text-lg font-mono text-green-800">{t.formulaPythagorean}
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
 
 </div>
           </div>

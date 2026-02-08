@@ -167,9 +167,9 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
         single: "Single",
         married_filing_jointly: "Married Filing Jointly",
         married_filing_separately: "Married Filing Separately",
-        head_of_household: "Head of Household",
-      reset: "Reset"
+        head_of_household: "Head of Household"
       },
+      reset: "Reset",
       stateOptions: {
         CA: "California",
         TX: "Texas",
@@ -253,9 +253,9 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
         single: "Soltero",
         married_filing_jointly: "Casados Declarando Conjuntamente",
         married_filing_separately: "Casados Declarando por Separado",
-        head_of_household: "Cabeza de Hogar",
-      reset: "Restablecer"
+        head_of_household: "Cabeza de Hogar"
       },
+      reset: "Restablecer",
       stateOptions: {
         CA: "California",
         TX: "Texas",
@@ -339,9 +339,9 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
         single: "Solteiro",
         married_filing_jointly: "Casados Declarando em Conjunto",
         married_filing_separately: "Casados Declarando Separadamente",
-        head_of_household: "Chefe de Família",
-      reset: "Redefinir"
+        head_of_household: "Chefe de Família"
       },
+      reset: "Redefinir",
       stateOptions: {
         CA: "Califórnia",
         TX: "Texas",
@@ -425,9 +425,9 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
         single: "Célibataire",
         married_filing_jointly: "Mariés Déclarant Conjointement",
         married_filing_separately: "Mariés Déclarant Séparément",
-        head_of_household: "Chef de Famille",
-      reset: "Réinitialiser"
+        head_of_household: "Chef de Famille"
       },
+      reset: "Réinitialiser",
       stateOptions: {
         CA: "Californie",
         TX: "Texas",
@@ -512,13 +512,14 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
   };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    // Reset form data to defaults
+    setFormData({
+      grossIncome: 75000,
+      filingStatus: 'single',
+      dependents: 0,
+      state: 'CA',
+      taxYear: '2024'
     });
-    setValues(initial);
-    setResults({});
   };
 
   const calculateStateTax = (taxableIncome: number, state: string): number => {
@@ -673,15 +674,10 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
                   <option key={value} value={value}>{label}</option>
                 ))}
               </select>
+            </div>
             
           {/* Buttons */}
           <div className="flex gap-3 pt-4">
-            <button
-              onClick={calculateFederalTax}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
             <button
               onClick={resetCalculator}
               className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
@@ -689,9 +685,8 @@ export default function NetIncomeCalculator({ lang }: NetIncomeCalculatorProps) 
               {t.reset}
             </button>
           </div>
-
-</div>
           </div>
+
         </div>
 
         {/* Results */}

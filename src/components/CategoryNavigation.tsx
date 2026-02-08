@@ -58,8 +58,7 @@ export default function CategoryNavigation({ lang, className = '' }: CategoryNav
   const categoryList = categories[lang as keyof typeof categories] || categories.en;
 
   const getCategoryPath = (categoryKey: string) => {
-    const basePath = lang === 'en' ? '' : `/${lang}`;
-    return `${basePath}/categories/${categoryKey}/`;
+    return `/${lang}/categories/${categoryKey}/`;
   };
 
   const isActive = (categoryKey: string) => {

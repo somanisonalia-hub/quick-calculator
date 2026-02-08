@@ -1,3 +1,5 @@
+
+
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -38,6 +40,11 @@ const ACTIVITY_MULTIPLIERS = {
 };
 
 export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCaloriesCalculatorProps) {
+    const [results, setResults] = useState<CalorieResults | null>(null);
+
+    const handleCalculate = () => {
+      setResults(calculateCalories(formData));
+    };
   const [formData, setFormData] = useState<CalorieData>({
     weight: 70,
     weightUnit: 'kg',
@@ -220,9 +227,9 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
       methodOptions: {
         harris: "Harris-Benedict (Classique)",
         mifflin: "Mifflin-St Jeor (Plus Précis)",
-        katch: "Katch-McArdle (Nécessite % Graisse Corporelle)",
-      reset: "Réinitialiser"
+        katch: "Katch-McArdle (Nécessite % Graisse Corporelle)"
       },
+      reset: "Réinitialiser",
       genderOptions: {
         male: "Masculin",
         female: "Féminin"
@@ -324,9 +331,6 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
     });
   };
 
-  const results = useMemo((): CalorieResults => {
-    return calculateCalories(formData);
-  }, [formData]);
 
   const handleInputChange = (field: keyof CalorieData, value: string | number) => {
     setFormData(prev => ({
@@ -498,7 +502,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
           {/* Buttons */}
           <div className="flex gap-3 pt-6">
             <button
-              onClick={calculateCalories}
+              onClick={handleCalculate}
               className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
               {t.calculate}
@@ -523,7 +527,7 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
                 {t.maintenanceCalories}
               </span>
               <span className="text-2xl font-bold text-green-600 dark:text-green-400">
-                {formatNumber(results.maintenanceCalories)} {t.calories}
+                {results ? formatNumber(results.maintenanceCalories) : ''} {results ? t.calories : ''}
               </span>
             </div>
 
@@ -532,14 +536,14 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
               <div className="flex justify-between items-center">
                 <span className="text-gray-600 dark:text-gray-400">{t.bmr}</span>
                 <span className="font-medium text-gray-900 dark:text-white">
-                  {formatNumber(results.bmr)} {t.calories}
+                  {results ? formatNumber(results.bmr) : ''} {results ? t.calories : ''}
                 </span>
               </div>
 
               <div className="flex justify-between items-center">
                 <span className="text-gray-600 dark:text-gray-400">{t.tdee}</span>
                 <span className="font-medium text-gray-900 dark:text-white">
-                  {formatNumber(results.tdee)} {t.calories}
+                  {results ? formatNumber(results.tdee) : ''} {results ? t.calories : ''}
                 </span>
               </div>
             </div>
@@ -554,21 +558,21 @@ export default function MaintenanceCaloriesCalculator({ lang }: MaintenanceCalor
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-600 dark:text-gray-400">{t.proteinGrams}</span>
                   <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-                    {formatNumber(results.proteinGrams)} {t.grams}
+                    {results ? formatNumber(results.proteinGrams) : ''} {results ? t.grams : ''}
                   </span>
                 </div>
 
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-600 dark:text-gray-400">{t.carbGrams}</span>
                   <span className="text-sm font-medium text-green-600 dark:text-green-400">
-                    {formatNumber(results.carbGrams)} {t.grams}
+                    {results ? formatNumber(results.carbGrams) : ''} {results ? t.grams : ''}
                   </span>
                 </div>
 
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-600 dark:text-gray-400">{t.fatGrams}</span>
                   <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
-                    {formatNumber(results.fatGrams)} {t.grams}
+                    {results ? formatNumber(results.fatGrams) : ''} {results ? t.grams : ''}
                   </span>
                 </div>
               </div>

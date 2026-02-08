@@ -35,6 +35,7 @@ export const MacroCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) =>
       carbs: 'Carbs (g)',
       fat: 'Fat (g)',
       calories_from: 'Calories from',
+      reset: 'Reset',
     },
     es: {
       title: 'Calculadora de Macros',
@@ -59,6 +60,7 @@ export const MacroCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) =>
       carbs: 'Carbohidratos (g)',
       fat: 'Grasa (g)',
       calories_from: 'Calorías de',
+      reset: 'Restablecer',
     },
     pt: {
       title: 'Calculadora de Macros',
@@ -83,6 +85,7 @@ export const MacroCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) =>
       carbs: 'Carboidratos (g)',
       fat: 'Gordura (g)',
       calories_from: 'Calorias de',
+      reset: 'Redefinir',
     },
     fr: {
       title: 'Calculatrice de Macros',
@@ -107,6 +110,7 @@ export const MacroCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) =>
       carbs: 'Glucides (g)',
       fat: 'Lipides (g)',
       calories_from: 'Calories de',
+      reset: 'Réinitialiser',
     },
   };
 
@@ -163,12 +167,13 @@ export const MacroCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) =>
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    setAge(30);
+    setWeight(170);
+    setHeight(70);
+    setGender('male');
+    setActivity(1.55);
+    setGoal('maintain');
+    setResults(null);
   };
 
   return (

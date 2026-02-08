@@ -38,15 +38,7 @@ export const RothIRACalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) 
     });
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   return (
     <div className="grid lg:grid-cols-2 gap-8">
@@ -71,15 +63,6 @@ export const RothIRACalculator: React.FC<{ lang?: string }> = ({ lang = 'en' }) 
         <button onClick={calculate} className="w-full px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition text-lg">{t.calculate}</button>
         {results && (
           <div className="bg-gradient-to-br from-indigo-100 to-purple-100 border-2 border-indigo-300 rounded-lg p-6">
-          {/* Buttons */}
-          <div className="flex gap-3 pt-3">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
 
             <h3 className="text-2xl font-bold text-indigo-900 mb-4">Results</h3>
             <div className="space-y-3">

@@ -285,15 +285,7 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
     }
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   // Auto-calculate mortgage payments when inputs change
   useEffect(() => {
@@ -424,22 +416,6 @@ export default function MortgageCalculator({ lang = 'en' }: MortgageCalculatorPr
           {/* Auto-calculation note */}
           <div className="pt-2 text-xs text-blue-600 text-center font-medium">
             📊 Calculations update automatically as you change values
-          </div>
-
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={calculateMortgage}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
           </div>
         </div>
 

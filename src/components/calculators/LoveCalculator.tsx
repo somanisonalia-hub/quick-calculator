@@ -36,7 +36,8 @@ const translations = {
       high: "¡Son la pareja perfecta! 💕",
       medium: "¡Hay potencial para una gran relación! 💖",
       low: "¡El amor puede florecer con esfuerzo y comprensión! 💝",
-      perfect: "¡Almas gemelas! ¡Estaban destinados a estar juntos! 💞"
+      perfect: "¡Almas gemelas! ¡Estaban destinados a estar juntos! 💞",
+      reset: "Restablecer"
     },
     disclaimer: 'Esto es solo para entretenimiento.',
     enterNames: 'Ingresa ambos nombres para calcular la compatibilidad'
@@ -109,12 +110,9 @@ export default function LoveCalculator({ lang = 'en' }: LoveCalculatorProps) {
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    setName1('');
+    setName2('');
+    setResult(null);
   };
 
   const getMessage = (percentage: number) => {
@@ -188,7 +186,7 @@ export default function LoveCalculator({ lang = 'en' }: LoveCalculatorProps) {
             onClick={resetCalculator}
             className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
           >
-            {t.reset}
+            {t.messages.reset}
           </button>
         </div>
 

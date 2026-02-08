@@ -16,8 +16,8 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
     // Reset to default values
     setX1(0);
     setY1(0);
-    setX2(0);
-    // Additional state resets may be needed
+    setX2(4);
+    setY2(4);
   };
 
   const translations = {
@@ -55,6 +55,8 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
       point2: "Punto 2",
       xCoord: "coordenada x",
       yCoord: "coordenada y",
+      calculate: "🔄 Recalcular",
+      reset: "Restablecer",
       results: "Resultados",
       slope: "Pendiente (m)",
       lineEquation: "Ecuación de la Recta",
@@ -346,12 +348,6 @@ export default function SlopeCalculator({ lang = 'en' }: SlopeCalculatorProps) {
           </div>
         </div>
 
-        <button
-          onClick={() => setX1(x1)}
-          className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-        >
-          {t.calculate}
-        </button>
         <button
           onClick={resetCalculator}
           className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"

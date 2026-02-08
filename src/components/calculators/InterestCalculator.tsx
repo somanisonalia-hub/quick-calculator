@@ -200,11 +200,11 @@ export default function InterestCalculator({ lang = 'en' }: InterestCalculatorPr
 
   const resetCalculator = () => {
     // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
+    setCalculationType('simple');
+    setPrincipal(1000);
+    setRate(5);
+    setTime(1);
+    setCompoundingFrequency(12);
     setResults({});
   };
 

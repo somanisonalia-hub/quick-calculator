@@ -193,7 +193,11 @@ export default function CarInsuranceCalculator({ inputs, output, additionalOutpu
   const resetCalculator = () => {
     const initial: Record<string, number> = {};
     inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+      let value = input.default;
+      if (typeof value === 'string') {
+        value = parseFloat(value);
+      }
+      initial[input.name] = typeof value === 'number' && !isNaN(value) ? value : 0;
     });
     setValues(initial);
     setResults({});

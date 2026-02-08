@@ -59,9 +59,9 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       riskLevel: "Risk Level",
       genderOptions: {
         male: "Male",
-        female: "Female",
-      reset: "Reset"
+        female: "Female"
       },
+      reset: "Reset",
       measurementUnitOptions: {
         cm: "Centimeters (cm)",
         inches: "Inches (in)"
@@ -98,9 +98,9 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       riskLevel: "Nivel de Riesgo",
       genderOptions: {
         male: "Masculino",
-        female: "Femenino",
-      reset: "Restablecer"
+        female: "Femenino"
       },
+      reset: "Restablecer",
       measurementUnitOptions: {
         cm: "Centímetros (cm)",
         inches: "Pulgadas (in)"
@@ -137,9 +137,9 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       riskLevel: "Nível de Risco",
       genderOptions: {
         male: "Masculino",
-        female: "Feminino",
-      reset: "Redefinir"
+        female: "Feminino"
       },
+      reset: "Redefinir",
       measurementUnitOptions: {
         cm: "Centímetros (cm)",
         inches: "Polegadas (in)"
@@ -176,9 +176,9 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
       riskLevel: "Niveau de Risque",
       genderOptions: {
         male: "Masculin",
-        female: "Féminin",
-      reset: "Réinitialiser"
+        female: "Féminin"
       },
+      reset: "Réinitialiser",
       measurementUnitOptions: {
         cm: "Centimètres (cm)",
         inches: "Pouces (in)"
@@ -395,14 +395,8 @@ export default function WaistToHipRatioCalculator({ lang }: WaistToHipRatioCalcu
           {/* Buttons */}
           <div className="flex gap-3 pt-4">
             <button
-              onClick={calculateWHR}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
               onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+              className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
               {t.reset}
             </button>

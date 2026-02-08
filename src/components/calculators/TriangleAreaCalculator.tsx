@@ -195,15 +195,7 @@ export default function TriangleAreaCalculator({ lang = 'en' }: TriangleAreaCalc
     setFormula(formulaText);
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   useEffect(() => {
     calculateTriangleArea();
@@ -397,21 +389,6 @@ export default function TriangleAreaCalculator({ lang = 'en' }: TriangleAreaCalc
           <div className="p-4 bg-green-50 rounded-lg">
             <h4 className="text-sm font-semibold text-green-900 mb-2">{t.formulaUsed}</h4>
             <div className="text-sm font-mono text-green-700">{formula}
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={calculateTriangleArea}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
 
 </div>
           </div>

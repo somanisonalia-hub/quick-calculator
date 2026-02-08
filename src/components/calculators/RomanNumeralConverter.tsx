@@ -91,10 +91,10 @@ export default function RomanNumeralConverter({ lang = 'en' }: RomanNumeralConve
 
   const resetCalculator = () => {
     // Reset to default values
-    setMode(0);
-    setInput(0);
+    setMode('toRoman');
+    setInput('');
     setResult('');
-    // Additional state resets may be needed
+    setError('');
   };
 
   const numberToRoman = (num: number): string => {
@@ -235,13 +235,13 @@ export default function RomanNumeralConverter({ lang = 'en' }: RomanNumeralConve
               onClick={handleConvert}
               className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
-              {t.calculate}
+              {t.convert}
             </button>
             <button
               onClick={resetCalculator}
               className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
-              {t.reset}
+              Reset
             </button>
           </div>
 

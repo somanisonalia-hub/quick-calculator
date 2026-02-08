@@ -141,9 +141,9 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Weekly",
         biweekly: "Biweekly (every 2 weeks)",
         semimonthly: "Semimonthly (twice a month)",
-        monthly: "Monthly",
-      reset: "Reset"
+        monthly: "Monthly"
       },
+      reset: "Reset",
       filingStatusOptions: {
         single: "Single",
         married_filing_jointly: "Married Filing Jointly",
@@ -232,9 +232,9 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Semanal",
         biweekly: "Quincenal (cada 2 semanas)",
         semimonthly: "Semimensual (dos veces al mes)",
-        monthly: "Mensual",
-      reset: "Restablecer"
+        monthly: "Mensual"
       },
+      reset: "Restablecer",
       filingStatusOptions: {
         single: "Soltero",
         married_filing_jointly: "Casados Declarando Conjuntamente",
@@ -323,9 +323,9 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Semanal",
         biweekly: "Quinzenal (cada 2 semanas)",
         semimonthly: "Semimensal (duas vezes ao mês)",
-        monthly: "Mensal",
-      reset: "Redefinir"
+        monthly: "Mensal"
       },
+      reset: "Redefinir",
       filingStatusOptions: {
         single: "Solteiro",
         married_filing_jointly: "Casados Declarando em Conjunto",
@@ -414,9 +414,9 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Hebdomadaire",
         biweekly: "Bihebdomadaire (toutes les 2 semaines)",
         semimonthly: "Semi-mensuelle (deux fois par mois)",
-        monthly: "Mensuelle",
-      reset: "Réinitialiser"
+        monthly: "Mensuelle"
       },
+      reset: "Réinitialiser",
       filingStatusOptions: {
         single: "Célibataire",
         married_filing_jointly: "Mariés Déclarant Conjointement",
@@ -505,9 +505,9 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Wöchentlich",
         biweekly: "Zweiwöchentlich (alle 2 Wochen)",
         semimonthly: "Halbmonatlich (zweimal im Monat)",
-        monthly: "Monatlich",
-      reset: "Zurücksetzen"
+        monthly: "Monatlich"
       },
+      reset: "Zurücksetzen",
       filingStatusOptions: {
         single: "Ledig",
         married_filing_jointly: "Verheiratet, gemeinsame Veranlagung",
@@ -595,9 +595,9 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
         weekly: "Wekelijks",
         biweekly: "Tweewekelijks (elke 2 weken)",
         semimonthly: "Halfmaandelijks (twee keer per maand)",
-        monthly: "Maandelijks",
-      reset: "Resetten"
+        monthly: "Maandelijks"
       },
+      reset: "Resetten",
       filingStatusOptions: {
         single: "Alleenstaand",
         married_filing_jointly: "Getrouwd, Gezamenlijke Aangifte",
@@ -962,14 +962,8 @@ export default function TakeHomePayCalculator({ lang }: TakeHomePayCalculatorPro
           {/* Buttons */}
           <div className="flex gap-3 pt-4">
             <button
-              onClick={calculateFederalWithholding}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
               onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
+              className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
             >
               {t.reset}
             </button>

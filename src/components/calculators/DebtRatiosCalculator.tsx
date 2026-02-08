@@ -33,7 +33,9 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
       debtToEquityHigh: "Debt-to-Equity 1.0-2.0: High leverage",
       debtRatioLow: "Debt Ratio < 30%: Low risk position",
       debtRatioModerate: "Debt Ratio 30-50%: Moderate risk",
-      debtRatioHigh: "Debt Ratio > 50%: High risk position"
+        debtRatioHigh: "Debt Ratio > 50%: High risk position",
+        calculateDebtRatios: "Calculate Debt Ratios",
+        enterFinancialInfo: "Enter financial information above to see debt ratio analysis"
     },
     es: {
       title: "Calculadora de Ratios de Deuda",
@@ -59,7 +61,9 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
       debtToEquityHigh: "Deuda-Capital 1.0-2.0: Alto apalancamiento",
       debtRatioLow: "Ratio de Deuda < 30%: Posición de bajo riesgo",
       debtRatioModerate: "Ratio de Deuda 30-50%: Riesgo moderado",
-      debtRatioHigh: "Ratio de Deuda > 50%: Posición de alto riesgo"
+        debtRatioHigh: "Ratio de Deuda > 50%: Posición de alto riesgo",
+        calculateDebtRatios: "Calcular Ratios de Deuda",
+        enterFinancialInfo: "Ingrese información financiera arriba para ver el análisis de ratios de deuda"
     },
     pt: {
       title: "Calculadora de Índices de Dívida",
@@ -85,7 +89,9 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
       debtToEquityHigh: "Dívida-Capital 1.0-2.0: Alta alavancagem",
       debtRatioLow: "Índice de Dívida < 30%: Posição de baixo risco",
       debtRatioModerate: "Índice de Dívida 30-50%: Risco moderado",
-      debtRatioHigh: "Índice de Dívida > 50%: Posição de alto risco"
+        debtRatioHigh: "Índice de Dívida > 50%: Posição de alto risco",
+        calculateDebtRatios: "Calcular Índices de Dívida",
+        enterFinancialInfo: "Insira informações financeiras acima para ver a análise dos índices de dívida"
     },
     fr: {
       title: "Calculateur de Ratios d'Endettement",
@@ -111,9 +117,9 @@ export default function DebtRatiosCalculator({ lang = 'en' }: DebtRatiosCalculat
       debtToEquityHigh: "Dette-Capitaux 1.0-2.0: Levier élevé",
       debtRatioLow: "Ratio d'Endettement < 30%: Position à faible risque",
       debtRatioModerate: "Ratio d'Endettement 30-50%: Risque modéré",
-      debtRatioHigh: "Ratio d'Endettement > 50%: Position à risque élevé",
-      calculateDebtRatios: "Calculate Debt Ratios",
-      enterFinancialInfo: "Enter financial information above to see debt ratio analysis"
+        debtRatioHigh: "Ratio d'Endettement > 50%: Position à risque élevé",
+        calculateDebtRatios: "Calculer les ratios d'endettement",
+        enterFinancialInfo: "Entrez les informations financières ci-dessus pour voir l'analyse des ratios d'endettement"
     },
     de: {
       title: "Schuldenquoten-Rechner",

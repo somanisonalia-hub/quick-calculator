@@ -14,7 +14,7 @@ export default function ExponentCalculator({ lang = 'en' }: ExponentCalculatorPr
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({ base: 2, exponent: 3 });
   };
 
   const translations = {

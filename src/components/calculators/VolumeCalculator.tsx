@@ -162,15 +162,7 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
     setFormula(form);
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   useEffect(() => {
     calculateVolume();
@@ -273,21 +265,6 @@ export default function VolumeCalculator({ lang = 'en' }: VolumeCalculatorProps)
 
           {renderInputs()}
         </div>
-          {/* Buttons */}
-          <div className="flex gap-3 pt-3">
-            <button
-              onClick={calculateVolume}
-              className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.calculate}
-            </button>
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
 
 
         <div className="space-y-4">

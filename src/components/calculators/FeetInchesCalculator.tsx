@@ -160,13 +160,13 @@ export default function FeetInchesCalculator({ lang = 'en' }: FeetInchesCalculat
   };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    // Reset measurements and result to defaults
+    setMeasurements([
+      { feet: 5, inches: 6 },
+      { feet: 3, inches: 8 }
+    ]);
+    setResult({ feet: 0, inches: 0 });
+    setDecimalResult(0);
   };
 
   useEffect(() => {

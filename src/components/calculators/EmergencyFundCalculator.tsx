@@ -7,6 +7,11 @@ interface EmergencyFundCalculatorProps {
 }
 
 export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCalculatorProps) {
+    const resetCalculator = () => {
+      setMonthlyExpenses(0);
+      setCurrentSavings(0);
+      setMonthsNeeded(3);
+    };
   const translations = {
     en: {
       title: "Emergency Fund Calculator",
@@ -90,13 +95,10 @@ export default function EmergencyFundCalculator({ lang = 'en' }: EmergencyFundCa
     };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    // Reset calculator to initial values
+    setMonthlyExpenses(0);
+    setCurrentSavings(0);
+    setMonthsNeeded(3);
   };
   };
 

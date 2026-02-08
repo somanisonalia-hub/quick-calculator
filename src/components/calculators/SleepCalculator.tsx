@@ -139,15 +139,7 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
     return times;
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   const results = calculateSleepTimes();
 
@@ -222,16 +214,6 @@ export default function SleepCalculator({ lang = 'en' }: SleepCalculatorProps) {
           <div className="border-t pt-4 space-y-2">
             <p className="text-gray-700">💡 {t.tip}</p>
             <p className="text-gray-600 text-sm">{t.note}</p>
-          </div>
-
-          {/* Buttons */}
-          <div className="flex gap-3 pt-3">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
           </div>
         </div>
       )}

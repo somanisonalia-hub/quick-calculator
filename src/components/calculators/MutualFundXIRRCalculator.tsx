@@ -29,6 +29,24 @@ export default function MutualFundXIRRCalculator({ lang = 'en' }: MutualFundXIRR
   });
   const [calculated, setCalculated] = useState(false);
 
+  // Move resetCalculator up so it's defined before JSX usage
+  const resetCalculator = () => {
+    setTransactions([
+      { id: '1', date: '2024-01-01', amount: 50000 },
+      { id: '2', date: '2024-06-01', amount: 50000 },
+      { id: '3', date: '2025-01-01', amount: -150000 }
+    ]);
+    setCurrentValue(0);
+    setResults({
+      xirr: 0,
+      absoluteReturn: 0,
+      totalInvested: 0,
+      totalGain: 0,
+      annualizedReturn: 0
+    });
+    setCalculated(false);
+  };
+
   const translations = {
     en: {
       title: 'Mutual Fund XIRR Calculator',
@@ -158,13 +176,21 @@ export default function MutualFundXIRRCalculator({ lang = 'en' }: MutualFundXIRR
     };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
+    // Reset transactions and current value to defaults
+    setTransactions([
+      { id: '1', date: '2024-01-01', amount: 50000 },
+      { id: '2', date: '2024-06-01', amount: 50000 },
+      { id: '3', date: '2025-01-01', amount: -150000 }
+    ]);
+    setCurrentValue(0);
+    setResults({
+      xirr: 0,
+      absoluteReturn: 0,
+      totalInvested: 0,
+      totalGain: 0,
+      annualizedReturn: 0
     });
-    setValues(initial);
-    setResults({});
+    setCalculated(false);
   };
 
     // Derivative of NPV

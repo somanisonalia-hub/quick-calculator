@@ -10,6 +10,7 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
   // Embedded translations - CRITICAL REQUIREMENT
   const translations = {
     en: {
+      calculate: "Calculate",
       title: "Currency Converter",
       description: "Convert between different currencies with real-time exchange rates",
       fromAmount: "From Amount",
@@ -38,6 +39,7 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
       realTimeRatesDesc: "Exchange rates fluctuate constantly"
     },
     es: {
+      calculate: "Calcular",
       title: "Conversor de Moneda",
       description: "Convierte entre diferentes monedas con tasas de cambio en tiempo real",
       fromAmount: "Monto Desde",
@@ -66,6 +68,7 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
       realTimeRatesDesc: "Las tasas de cambio fluctúan constantemente"
     },
     pt: {
+      calculate: "Calcular",
       title: "Conversor de Moeda",
       description: "Converte entre diferentes moedas com taxas de câmbio em tempo real",
       fromAmount: "Valor De",
@@ -94,6 +97,7 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
       realTimeRatesDesc: "As taxas de câmbio flutuam constantemente"
     },
     fr: {
+      calculate: "Calculer",
       title: "Convertisseur de Devise",
       description: "Convertissez entre différentes devises avec des taux de change en temps réel",
       fromAmount: "Montant De",
@@ -122,6 +126,7 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
       realTimeRatesDesc: "Les taux de change fluctuent constamment"
     },
     de: {
+      calculate: "Berechnen",
       title: "Währungsumrechner",
       description: "Konvertieren Sie zwischen verschiedenen Währungen mit Echtzeit-Wechselkursen",
       fromAmount: "Von Betrag",
@@ -150,6 +155,7 @@ export default function CurrencyConverter({ lang = 'en' }: CurrencyConverterProp
       realTimeRatesDesc: "Wechselkurse schwanken ständig"
     },
     nl: {
+      calculate: "Berekenen",
       title: "Valutaomzetter",
       description: "Zet om tussen verschillende valuta's met realtime wisselkoersen",
       fromAmount: "Bedrag Van",

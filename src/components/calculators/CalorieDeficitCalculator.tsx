@@ -145,78 +145,9 @@ const translations = {
     errorWeightLoss: 'Le poids objectif doit être inférieur au poids actuel.',
     errorNegative: 'Toutes les valeurs doivent être des nombres positifs.',
     enterValues: 'Entrez votre poids actuel, poids objectif et délai pour calculer',
-    de: {
-      title: 'Kaloriendef Rechner',
-      currentWeightLabel: 'Aktuelles Gewicht (lbs)',
-      currentWeightPlaceholder: 'Gewicht eingeben',
-      goalWeightLabel: 'Zielgewicht (lbs)',
-      goalWeightPlaceholder: 'Ziel eingeben',
-      timeframeLabel: 'Zeitrahmen (Wochen)',
-      timeframePlaceholder: 'Wochen eingeben',
-      activityLabel: 'Aktivitätsniveau',
-      sedentary: 'Sitzend (wenig Training)',
-      lightly: 'Leicht Aktiv (1-3 Tage/Woche)',
-      moderately: 'Mäßig Aktiv (3-5 Tage/Woche)',
-      very: 'Sehr Aktiv (6-7 Tage/Woche)',
-      extremely: 'Extrem Aktiv (zweimal am Tag)',
-      calculate: 'Kaloriendef Berechnen',
-      deficitNeeded: 'Täglicher Def erforderlich',
-      caloriesPerDay: 'Kalorien pro Tag',
-      weeklyDeficit: 'Wöchentlicher Def',
-      totalWeight: 'Gesamtgewichtsverlust',
-      lbs: 'lbs',
-      timelineMonths: 'Monate',
-      breakdown: 'Defaufschlüsselung',
-      estimatedDailyIntake: 'Geschätzte tägliche Aufnahme',
-      caloriesPerWeek: 'Kalorien pro Woche',
-      results: 'Ergebnisse zum Gewichtsverlust',
-      safe: 'Sicher: 1-2 lbs/Woche',
-      warning: 'Sehr aggressiv. Streben Sie 1-2 lbs/Woche für nachhaltige Ergebnisse an.',
-      realistic: 'Dies ist ein realistisches und nachhaltiges Tempo.',
-      excellent: 'Ausgezeichnet - sehr realistischer Zeitplan für gesunden Gewichtsverlust.',
-      disclaimer: 'Dies ist eine Schätzung basierend auf Standard-Kalorieberechnungen. Konsultieren Sie einen Arzt für personalisierte Ratschläge.',
-      errorWeightLoss: 'Zielgewicht muss kleiner als aktuelles Gewicht sein.',
-      errorNegative: 'Alle Werte müssen positive Zahlen sein.',
-      enterValues: 'Geben Sie Ihr aktuelles Gewicht, Zielgewicht und Zeitrahmen ein, um zu berechnen',
-      reset: "Réinitialiser"
-    },
-    nl: {
-      title: 'Caloriedeficitrekenmachine',
-      currentWeightLabel: 'Huidigegewicht (lbs)',
-      currentWeightPlaceholder: 'Gewicht invoeren',
-      goalWeightLabel: 'Doelgewicht (lbs)',
-      goalWeightPlaceholder: 'Doel invoeren',
-      timeframeLabel: 'Tijdlijn (weken)',
-      timeframePlaceholder: 'Weken invoeren',
-      activityLabel: 'Activiteitsniveau',
-      sedentary: 'Zittend (weinig training)',
-      lightly: 'Licht Actief (1-3 dagen/week)',
-      moderately: 'Matig Actief (3-5 dagen/week)',
-      very: 'Zeer Actief (6-7 dagen/week)',
-      extremely: 'Extreem Actief (twee keer per dag)',
-      calculate: 'Caloried Berekenen',
-      deficitNeeded: 'Dagelijks Deficit Nodig',
-      caloriesPerDay: 'calorieën per dag',
-      weeklyDeficit: 'Wöchentliche Defizit',
-      totalWeight: 'Totaal Gewichtsverlies',
-      lbs: 'lbs',
-      timelineMonths: 'maanden',
-      breakdown: 'Deficitindeling',
-      estimatedDailyIntake: 'Geschätte dagelijkse inname',
-      caloriesPerWeek: 'calorieen per week',
-      results: 'Resultaten Gewichtsverlies',
-      safe: 'Veilig: 1-2 lbs/week',
-      warning: 'Zeer agressief. Streef naar 1-2 lbs/week voor duurzame resultaten.',
-      realistic: 'Dit is een realistisch en duurzaam tempo.',
-      excellent: 'Uitstekend - zeer realistisch schema voor gezond gewichtsverlies.',
-      disclaimer: 'Dit is een schatting gebaseerd op standaard calorieberekeningen. Raadpleeg een zorgverlener voor persoonlijk advies.',
-      errorWeightLoss: 'Doelgewicht moet lager zijn dan huidigegewicht.',
-      errorNegative: 'Alle waarden moeten positieve getallen zijn.',
-      enterValues: 'Voer uw huidigegewicht, doelgewicht en tijdlijn in om te berekenen',
-      reset: "Resetten"
-    }
+    reset: 'Réinitialiser'
   }
-}
+};
 
 export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficitCalculatorProps) {
   const t = translations[lang as keyof typeof translations] || translations.en;
@@ -226,6 +157,7 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
   const [timeframe, setTimeframe] = useState('');
   const [activity, setActivity] = useState('moderately');
 
+  // Activity factors for calculation
   const activityFactors: Record<string, number> = {
     sedentary: 1.2,
     lightly: 1.375,
@@ -234,6 +166,7 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
     extremely: 1.9
   };
 
+  // Calculation logic moved into a function
   const calculateDeficit = () => {
     const current = parseFloat(currentWeight);
     const goal = parseFloat(goalWeight);
@@ -242,16 +175,6 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
     if (!current || !goal || !weeks) return null;
     if (current <= 0 || goal <= 0 || weeks <= 0) {
       return { error: t.errorNegative };
-
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
     }
     if (goal >= current) {
       return { error: t.errorWeightLoss };
@@ -286,6 +209,14 @@ export default function CalorieDeficitCalculator({ lang = 'en' }: CalorieDeficit
       months: (weeks / 4.33).toFixed(1),
       assessment
     };
+  };
+
+  // Reset handler must be outside calculateDeficit
+  const resetCalculator = () => {
+    setCurrentWeight('');
+    setGoalWeight('');
+    setTimeframe('');
+    setActivity('moderately');
   };
 
   const result = calculateDeficit();

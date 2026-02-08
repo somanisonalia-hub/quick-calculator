@@ -218,13 +218,13 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
   };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    // Reset calculator to initial values
+    setDecimal('0.75');
+    setNumerator(0);
+    setDenominator(1);
+    setMixedNumber('');
+    setSteps([]);
+    setError('');
   };
 
   return (
@@ -252,7 +252,7 @@ export default function DecimalToFractionCalculator({ lang = 'en' }: DecimalToFr
           </div>
         )}
         <button
-          onClick={calculateMixedNumber}
+          onClick={() => calculateMixedNumber(numerator, denominator)}
           className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
         >
           {t.calculate}

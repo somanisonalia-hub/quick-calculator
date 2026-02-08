@@ -115,6 +115,7 @@ export default function DiscountCalculator({ lang = 'en' }: DiscountCalculatorPr
       finalTotal: 'Total Final',
       originalPriceQty: 'Prix Original × Quantité',
       discountLabel: 'Remise',
+      reset: 'Réinitialiser',
     },
   };
 

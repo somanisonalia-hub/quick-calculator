@@ -150,13 +150,10 @@ export default function DueDateCalculator({ lang = 'en' }: DueDateCalculatorProp
   };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    // Reset calculator to initial values
+    setLastPeriod('');
+    setCycleLength(28);
+    setResults(null);
   };
 
   const formatDate = (date: Date) => {

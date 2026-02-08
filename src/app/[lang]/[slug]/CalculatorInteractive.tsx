@@ -28,17 +28,30 @@ export default function CalculatorInteractive({
   const [isClient, setIsClient] = useState(false);
   const [calculatorMounted, setCalculatorMounted] = useState(false);
 
-  // Track when client-side JavaScript has loaded
+  // Initialize i18n language immediately on mount
   useEffect(() => {
     setIsClient(true);
-    // Ensure i18n is set to correct language
-    if (lang && i18n.language !== lang) {
-      i18n.changeLanguage(lang);
-    }
-    // Mount calculator and add ready class for smooth transition
-    setCalculatorMounted(true);
     document.body.classList.add('calculator-ready');
-  }, [lang, i18n]);
+  }, []);
+
+  // Handle language change and calculator mounting
+  useEffect(() => {
+    if (!isClient) return;
+    
+    // Reset calculator mounted state when language changes
+    setCalculatorMounted(false);
+    
+    // Ensure i18n is set to correct language before mounting calculator
+    const changeLanguage = async () => {
+      if (lang && i18n.language !== lang) {
+        await i18n.changeLanguage(lang);
+      }
+      // Only mount calculator after language is set
+      setCalculatorMounted(true);
+    };
+    
+    changeLanguage();
+  }, [lang, i18n, isClient]);
 
   // Search functionality
   useEffect(() => {
@@ -81,6 +94,17 @@ export default function CalculatorInteractive({
       lifestyle: { en: 'Lifestyle Calculators', es: 'Calculadoras de Estilo de Vida', pt: 'Calculadoras de Estilo de Vida', fr: 'Calculateurs de Style de Vie', de: 'Lebensstilrechner', nl: 'Levensstijlrekenmachines' }
     };
     return labels[category]?.[lang] || labels[category]?.en || category;
+  };
+
+  const getCategoryIcon = (category: string) => {
+    const icons: Record<string, string> = {
+      financial: '💰',
+      health: '🏥',
+      math: '🧮',
+      utility: '🛠️',
+      lifestyle: '🏠'
+    };
+    return icons[category] || '📊';
   };
 
   if (!isClient) {
@@ -204,13 +228,14 @@ export default function CalculatorInteractive({
                     <div className="calculator-interactive-wrapper">
                       {calculatorContent.calculatorComponent && typeof calculatorContent.calculatorComponent === 'object' && calculatorContent.calculatorComponent.inputs ? (
                         <CalculatorComponent
+                          key={`${slug}-${lang}`}
                           inputs={calculatorContent.calculatorComponent.inputs || []}
                           output={calculatorContent.calculatorComponent.output || {}}
                           additionalOutputs={calculatorContent.calculatorComponent.additionalOutputs || []}
                           lang={lang}
                         />
                       ) : (
-                        <CalculatorComponent lang={lang} />
+                        <CalculatorComponent key={`${slug}-${lang}`} lang={lang} />
                       )}
                     </div>
                   );
@@ -244,32 +269,146 @@ export default function CalculatorInteractive({
             </div>
             <div className="p-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {/* Current Category */}
-                {calculatorContent.category && (
-                  <Link
-                    href={`/${lang}/categories/${calculatorContent.category}`}
-                    className="flex items-center p-4 bg-blue-50 border-2 border-blue-200 rounded-lg hover:bg-blue-100 transition-colors group"
-                  >
-                    <div className="flex-1">
-                      <div className="text-sm font-semibold text-blue-900 group-hover:text-blue-700">
-                        {getCategoryLabel(calculatorContent.category)}
-                      </div>
-                      <div className="text-xs text-blue-600 mt-1">
-                        {lang === 'en' ? 'View all' : lang === 'es' ? 'Ver todo' : lang === 'pt' ? 'Ver tudo' : lang === 'fr' ? 'Voir tout' : lang === 'de' ? 'Alle anzeigen' : 'Bekijk alles'} →
-                      </div>
+                {/* Financial Calculators */}
+                <Link
+                  href={`/${lang}/categories/financial`}
+                  className={`flex items-center p-4 border-2 rounded-lg transition-colors group ${
+                    calculatorContent.category === 'financial'
+                      ? 'bg-blue-50 border-blue-200 hover:bg-blue-100'
+                      : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
+                  }`}
+                >
+                  <div className="flex-1">
+                    <div className={`text-sm font-semibold ${
+                      calculatorContent.category === 'financial'
+                        ? 'text-blue-900 group-hover:text-blue-700'
+                        : 'text-gray-900 group-hover:text-gray-700'
+                    }`}>
+                      <span className="mr-1.5">{getCategoryIcon('financial')}</span>
+                      {getCategoryLabel('financial')}
                     </div>
-                  </Link>
-                )}
+                    <div className={`text-xs mt-1 ${
+                      calculatorContent.category === 'financial' ? 'text-blue-600' : 'text-gray-600'
+                    }`}>
+                      {lang === 'en' ? 'View all' : lang === 'es' ? 'Ver todo' : lang === 'pt' ? 'Ver tudo' : lang === 'fr' ? 'Voir tout' : lang === 'de' ? 'Alle anzeigen' : 'Bekijk alles'} →
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Health Calculators */}
+                <Link
+                  href={`/${lang}/categories/health`}
+                  className={`flex items-center p-4 border-2 rounded-lg transition-colors group ${
+                    calculatorContent.category === 'health'
+                      ? 'bg-blue-50 border-blue-200 hover:bg-blue-100'
+                      : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
+                  }`}
+                >
+                  <div className="flex-1">
+                    <div className={`text-sm font-semibold ${
+                      calculatorContent.category === 'health'
+                        ? 'text-blue-900 group-hover:text-blue-700'
+                        : 'text-gray-900 group-hover:text-gray-700'
+                    }`}>
+                      <span className="mr-1.5">{getCategoryIcon('health')}</span>
+                      {getCategoryLabel('health')}
+                    </div>
+                    <div className={`text-xs mt-1 ${
+                      calculatorContent.category === 'health' ? 'text-blue-600' : 'text-gray-600'
+                    }`}>
+                      {lang === 'en' ? 'View all' : lang === 'es' ? 'Ver todo' : lang === 'pt' ? 'Ver tudo' : lang === 'fr' ? 'Voir tout' : lang === 'de' ? 'Alle anzeigen' : 'Bekijk alles'} →
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Math Calculators */}
+                <Link
+                  href={`/${lang}/categories/math`}
+                  className={`flex items-center p-4 border-2 rounded-lg transition-colors group ${
+                    calculatorContent.category === 'math'
+                      ? 'bg-blue-50 border-blue-200 hover:bg-blue-100'
+                      : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
+                  }`}
+                >
+                  <div className="flex-1">
+                    <div className={`text-sm font-semibold ${
+                      calculatorContent.category === 'math'
+                        ? 'text-blue-900 group-hover:text-blue-700'
+                        : 'text-gray-900 group-hover:text-gray-700'
+                    }`}>
+                      <span className="mr-1.5">{getCategoryIcon('math')}</span>
+                      {getCategoryLabel('math')}
+                    </div>
+                    <div className={`text-xs mt-1 ${
+                      calculatorContent.category === 'math' ? 'text-blue-600' : 'text-gray-600'
+                    }`}>
+                      {lang === 'en' ? 'View all' : lang === 'es' ? 'Ver todo' : lang === 'pt' ? 'Ver tudo' : lang === 'fr' ? 'Voir tout' : lang === 'de' ? 'Alle anzeigen' : 'Bekijk alles'} →
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Utility Calculators */}
+                <Link
+                  href={`/${lang}/categories/utility`}
+                  className={`flex items-center p-4 border-2 rounded-lg transition-colors group ${
+                    calculatorContent.category === 'utility'
+                      ? 'bg-blue-50 border-blue-200 hover:bg-blue-100'
+                      : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
+                  }`}
+                >
+                  <div className="flex-1">
+                    <div className={`text-sm font-semibold ${
+                      calculatorContent.category === 'utility'
+                        ? 'text-blue-900 group-hover:text-blue-700'
+                        : 'text-gray-900 group-hover:text-gray-700'
+                    }`}>
+                      <span className="mr-1.5">{getCategoryIcon('utility')}</span>
+                      {getCategoryLabel('utility')}
+                    </div>
+                    <div className={`text-xs mt-1 ${
+                      calculatorContent.category === 'utility' ? 'text-blue-600' : 'text-gray-600'
+                    }`}>
+                      {lang === 'en' ? 'View all' : lang === 'es' ? 'Ver todo' : lang === 'pt' ? 'Ver tudo' : lang === 'fr' ? 'Voir tout' : lang === 'de' ? 'Alle anzeigen' : 'Bekijk alles'} →
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Lifestyle Calculators */}
+                <Link
+                  href={`/${lang}/categories/lifestyle`}
+                  className={`flex items-center p-4 border-2 rounded-lg transition-colors group ${
+                    calculatorContent.category === 'lifestyle'
+                      ? 'bg-blue-50 border-blue-200 hover:bg-blue-100'
+                      : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
+                  }`}
+                >
+                  <div className="flex-1">
+                    <div className={`text-sm font-semibold ${
+                      calculatorContent.category === 'lifestyle'
+                        ? 'text-blue-900 group-hover:text-blue-700'
+                        : 'text-gray-900 group-hover:text-gray-700'
+                    }`}>
+                      <span className="mr-1.5">{getCategoryIcon('lifestyle')}</span>
+                      {getCategoryLabel('lifestyle')}
+                    </div>
+                    <div className={`text-xs mt-1 ${
+                      calculatorContent.category === 'lifestyle' ? 'text-blue-600' : 'text-gray-600'
+                    }`}>
+                      {lang === 'en' ? 'View all' : lang === 'es' ? 'Ver todo' : lang === 'pt' ? 'Ver tudo' : lang === 'fr' ? 'Voir tout' : lang === 'de' ? 'Alle anzeigen' : 'Bekijk alles'} →
+                    </div>
+                  </div>
+                </Link>
+
                 {/* All Calculators */}
                 <Link
                   href={`/${lang}`}
-                  className="flex items-center p-4 bg-gray-50 border-2 border-gray-200 rounded-lg hover:bg-gray-100 transition-colors group"
+                  className="flex items-center p-4 bg-gradient-to-br from-indigo-50 to-blue-50 border-2 border-indigo-200 rounded-lg hover:from-indigo-100 hover:to-blue-100 transition-colors group"
                 >
                   <div className="flex-1">
-                    <div className="text-sm font-semibold text-gray-900 group-hover:text-gray-700">
+                    <div className="text-sm font-semibold text-indigo-900 group-hover:text-indigo-700">
                       {lang === 'en' ? 'All Calculators' : lang === 'es' ? 'Todas las Calculadoras' : lang === 'pt' ? 'Todas as Calculadoras' : lang === 'fr' ? 'Tous les Calculateurs' : lang === 'de' ? 'Alle Rechner' : 'Alle rekenmachines'}
                     </div>
-                    <div className="text-xs text-gray-600 mt-1">
+                    <div className="text-xs text-indigo-600 mt-1">
                       {lang === 'en' ? 'Browse all →' : lang === 'es' ? 'Explorar →' : lang === 'pt' ? 'Navegar →' : lang === 'fr' ? 'Parcourir →' : lang === 'de' ? 'Durchsuchen →' : 'Bladeren →'}
                     </div>
                   </div>

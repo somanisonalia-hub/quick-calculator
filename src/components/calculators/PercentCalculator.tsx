@@ -157,15 +157,7 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
     setExplanation(calcExplanation);
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   useEffect(() => {
     calculate();
@@ -267,16 +259,6 @@ export default function PercentCalculator({ lang = 'en' }: PercentCalculatorProp
                   <div>75 is what % of 300? = 25%</div>
                 </>
               )}
-            
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
 
 </div>
           </div>

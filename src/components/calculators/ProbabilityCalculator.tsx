@@ -14,7 +14,10 @@ export default function ProbabilityCalculator({ lang = 'en' }: ProbabilityCalcul
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({
+      favorableOutcomes: 1,
+      totalOutcomes: 6
+    });
   };
 
   const translations = {

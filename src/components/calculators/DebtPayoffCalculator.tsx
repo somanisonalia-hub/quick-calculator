@@ -33,6 +33,7 @@ export const DebtPayoffCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' 
       months: 'months',
       strategy_result: 'Strategy Used',
       noPlan: 'Unable to calculate - payment may be too low',
+      reset: 'Reset',
     },
     es: {
       title: 'Calculadora de Pago de Deuda',
@@ -50,6 +51,7 @@ export const DebtPayoffCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' 
       months: 'meses',
       strategy_result: 'Estrategia Utilizada',
       noPlan: 'No se puede calcular - el pago puede ser demasiado bajo',
+      reset: 'Restablecer',
     },
     pt: {
       title: 'Calculadora de Pagamento de Dívida',
@@ -67,6 +69,7 @@ export const DebtPayoffCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' 
       months: 'meses',
       strategy_result: 'Estratégia Utilizada',
       noPlan: 'Não é possível calcular - o pagamento pode ser muito baixo',
+      reset: 'Redefinir',
     },
     fr: {
       title: 'Calculatrice de Remboursement de Dettes',
@@ -84,6 +87,7 @@ export const DebtPayoffCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' 
       months: 'mois',
       strategy_result: 'Stratégie Utilisée',
       noPlan: 'Impossible de calculer - le paiement peut être trop faible',
+      reset: 'Réinitialiser',
     },
   };
 
@@ -140,13 +144,11 @@ export const DebtPayoffCalculator: React.FC<{ lang?: string }> = ({ lang = 'en' 
   };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
+    // Reset calculator to initial values
+    setDebts([{ id: '1', balance: 5000, rate: 15 }]);
+    setMonthlyPayment(500);
+    setStrategy('avalanche');
+    setResults(null);
   };
 
   const addDebt = () => {

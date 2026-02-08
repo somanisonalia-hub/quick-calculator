@@ -17,7 +17,13 @@ export default function FitnessMetricsCalculator({ lang = 'en' }: FitnessMetrics
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({
+      weight: 70,
+      height: 170,
+      age: 30,
+      gender: 'male',
+      activityLevel: 'moderate'
+    });
   };
 
   const translations = {

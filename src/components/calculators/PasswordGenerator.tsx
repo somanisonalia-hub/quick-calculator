@@ -78,10 +78,12 @@ export default function PasswordGenerator({ lang = 'en' }: PasswordGeneratorProp
 
   const resetCalculator = () => {
     // Reset to default values
-    setLength(0);
-    setIncludeUppercase(0);
-    setIncludeLowercase(0);
-    // Additional state resets may be needed
+    setLength(12);
+    setIncludeUppercase(true);
+    setIncludeLowercase(true);
+    setIncludeNumbers(true);
+    setIncludeSymbols(false);
+    setPassword('');
   };
 
   const generatePassword = () => {

@@ -183,15 +183,7 @@ export default function PaceCalculator({ lang = 'en' }: PaceCalculatorProps) {
     setSplits(newSplits.slice(0, 10));
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   const raceDistances = [
     { name: t.fiveK, km: 5, mi: 3.1 },
@@ -368,12 +360,6 @@ export default function PaceCalculator({ lang = 'en' }: PaceCalculatorProps) {
       {result && (
         <div className="space-y-4">
           <div className="flex gap-3 pt-3">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
           </div>
 
           <div className="mt-8 space-y-4">

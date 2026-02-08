@@ -48,15 +48,7 @@ export default function XIRRVsAbsoluteReturnCalculator({ lang = 'en' }: XIRRVsAb
     });
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   return (
     <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8">
@@ -109,12 +101,6 @@ export default function XIRRVsAbsoluteReturnCalculator({ lang = 'en' }: XIRRVsAb
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             {t.calculate}
-          </button>
-          <button
-            onClick={resetCalculator}
-            className="w-full bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-          >
-            {t.reset}
           </button>
         </div>
 

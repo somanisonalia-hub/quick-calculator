@@ -14,7 +14,7 @@ export default function LongDivisionCalculator({ lang = 'en' }: LongDivisionCalc
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({ dividend: 125, divisor: 5 });
   };
 
   const translations = {

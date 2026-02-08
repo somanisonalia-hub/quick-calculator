@@ -85,16 +85,13 @@ export default function ExamScorePredictorCalculator({ lang = 'en' }: ExamScoreP
       difficult: requiredScore > 100,
       impossible: requiredScore > 120,
     };
+  };
 
   const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+    // Reset calculator to initial values
+    setCurrentAverage(0);
+    setExamWeight(0);
+    setDesiredGrade(0);
   };
 
   const results = calculateRequiredScore();

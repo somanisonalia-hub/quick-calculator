@@ -243,15 +243,7 @@ const PrimeFactorizationCalculator: React.FC<PrimeFactorizationCalculatorProps> 
     setShowResult(true);
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   // Render factor tree recursively
   const renderFactorTree = (node: FactorTreeNode | null, depth: number = 0): React.ReactNode => {
@@ -311,15 +303,6 @@ const PrimeFactorizationCalculator: React.FC<PrimeFactorizationCalculatorProps> 
 
         {showResult && (
           <div className="result-section">
-          {/* Buttons */}
-          <div className="flex gap-3 pt-3">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
 
             <h3 className="result-title">{t.result}</h3>
             

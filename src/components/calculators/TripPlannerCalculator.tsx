@@ -263,15 +263,7 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
     setCalculated(true);
   };
 
-  const resetCalculator = () => {
-    // Reset all input values to defaults
-    const initial: Record<string, number> = {};
-    inputs?.forEach(input => {
-      initial[input.name] = input.default || 0;
-    });
-    setValues(initial);
-    setResults({});
-  };
+
 
   const accommodationPercent = (results.totalAccommodation / results.grandTotal * 100).toFixed(1);
   const mealsPercent = (results.totalMeals / results.grandTotal * 100).toFixed(1);
@@ -430,15 +422,6 @@ export default function TripPlannerCalculator({ lang = 'en' }: TripPlannerCalcul
         >
           {t.calculate}
         </button>
-          {/* Buttons */}
-          <div className="flex gap-3 pt-4">
-            <button
-              onClick={resetCalculator}
-              className="flex-1 bg-gray-200 text-gray-800 py-2.5 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-semibold transition-colors duration-200"
-            >
-              {t.reset}
-            </button>
-          </div>
 
 
 

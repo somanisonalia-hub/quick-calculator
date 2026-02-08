@@ -16,7 +16,12 @@ export default function WellnessTrackerCalculator({ lang = 'en' }: WellnessTrack
 
   const resetCalculator = () => {
     // Reset to default values
-    setInputs(0);
+    setInputs({
+      sleepHours: 7,
+      waterIntake: 2,
+      exercise: 30,
+      stressLevel: 5
+    });
   };
 
   const translations = {
