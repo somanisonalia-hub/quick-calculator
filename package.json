@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "generate-sitemaps": "node scripts/generate-static-sitemaps.js",
     "fix-duplicates": "node scripts/fix_duplicates.js",
     "test-calculators": "node scripts/test-calculators.js",
     "validate-translations": "node scripts/validate-translations.js",
